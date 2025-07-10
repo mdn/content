@@ -17,6 +17,8 @@ There are tools, APIs, and best practices that help us measure and improve web p
 
 ## Web performance guides
 
+The [Performance guides](/en-US/docs/Web/Performance/Guides) are resources that describe how browsers work, what affects performance, and how to measure, optimize, and monitor performance across various aspects of your application.
+
 - [Performance fundamentals](/en-US/docs/Web/Performance/Guides/Fundamentals)
   - : Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 - [Populating the page: how browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)
@@ -41,7 +43,7 @@ There are tools, APIs, and best practices that help us measure and improve web p
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
   - : **Speculative loading** refers to the practice of performing navigation actions (such as DNS fetching, fetching resources, or rendering documents) before the associated pages are actually visited, based on predictions as to what pages the user is most likely to visit next.
 - [Performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets)
-  - : A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g. [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g. Time to Hero Element), or a threshold over a period of time.
+  - : A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g., [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g., Time to Hero Element), or a threshold over a period of time.
 - [Performance Monitoring: RUM vs. synthetic monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)
   - : **Synthetic monitoring** and **real user monitoring (RUM)** are two approaches for monitoring and providing insight into web performance. RUM and synthetic monitoring provide for different views of performance and have benefits, good use cases and shortfalls. RUM is generally best suited for understanding long-term trends whereas synthetic monitoring is very well suited to regression testing and mitigating shorter-term performance issues during development. In this article we define and compare these two performance monitoring approaches.
 - [CSS and JavaScript animation performance](/en-US/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
@@ -139,11 +141,11 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### HTML
 
-- [`<picture>`](/en-US/docs/Web/HTML/Element/picture) element
-- [`<video>`](/en-US/docs/Web/HTML/Element/video) element
-- [`<source>`](/en-US/docs/Web/HTML/Element/source) element
-- [`<img> srcset`](/en-US/docs/Web/HTML/Element/img#attributes) attribute for responsive images
-- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) attribute for preloading content via HTML
+- [`<picture>`](/en-US/docs/Web/HTML/Reference/Elements/picture) element
+- [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element
+- [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source) element
+- [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#attributes) attributes (like `srcset`) for responsive images
+- [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) attribute for preloading content via HTML
 
 ### CSS
 
@@ -157,18 +159,18 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### HTTP
 
-- [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
-- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
-- [HTTP/2](/en-US/docs/Web/HTTP/Messages#http2_messages)
-- [Client Hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Content-encoding](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding)
+- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
+- [HTTP/2](/en-US/docs/Web/HTTP/Guides/Messages#http2_messages)
+- [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 
 ## See also
 
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images) HTML guide
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) HTML guide
 - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API), including [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) and [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
-- [Caching](/en-US/docs/Web/HTTP/Caching)
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Caching](/en-US/docs/Web/HTTP/Guides/Caching)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - Glossary terms:
   - {{glossary('Beacon')}}
   - {{glossary('Brotli compression')}}

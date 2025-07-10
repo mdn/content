@@ -9,7 +9,46 @@ browser-compat: css.properties.border-bottom-width
 
 The **`border-bottom-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the bottom border of an element.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-width.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-width")}}
+
+```css interactive-example-choice
+border-bottom-width: thick;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2em;
+```
+
+```css interactive-example-choice
+border-bottom-width: 4px;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2ex;
+```
+
+```css interactive-example-choice
+border-bottom-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -35,9 +74,7 @@ border-bottom-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

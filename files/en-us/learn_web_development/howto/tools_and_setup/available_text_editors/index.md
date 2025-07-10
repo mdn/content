@@ -2,9 +2,8 @@
 title: What text editors are available?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 
@@ -81,7 +80,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -194,7 +193,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.notepad-plus-plus.org/" rel="external"
+        <a href="https://notepad-plus-plus.org/" rel="external"
           >Notepad++</a
         >
       </td>
@@ -261,7 +260,7 @@ Here are some popular editors:
       <td>Mac</td>
       <td>
         <a href="https://x.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>
@@ -347,7 +346,7 @@ Here are some popular editors:
 
 ## Active Learning
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g. Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 
@@ -407,7 +406,6 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 
 - [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
-- [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
 - [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
@@ -440,7 +438,6 @@ When you install a new text editor, your OS will probably continue to open text 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)

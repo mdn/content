@@ -12,10 +12,11 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 
 ```md
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
+title: 100 Continue
+slug: Web/HTTP/Reference/Status/100
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: http
 ---
 ```
 
@@ -43,7 +44,7 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
 - `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
 - `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
@@ -82,20 +83,20 @@ This section lists `page-type` values for pages under [Glossary](/en-US/docs/Glo
 
 This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web/HTML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete).
-- `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
-- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
+- `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete).
+- `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch).
+- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button).
 
 ### HTTP page types
 
 This section lists `page-type` values for pages under [Web/HTTP](/en-US/docs/Web/HTTP). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
-- `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed).
-- `http-permissions-policy-directive`: a [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) directive, like [`accelerometer`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer).
-- `http-header`: an [HTTP header](/en-US/docs/Web/HTTP/Headers), like [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer).
-- `http-method`: an [HTTP request method](/en-US/docs/Web/HTTP/Methods) like [`GET`](/en-US/docs/Web/HTTP/Methods/GET).
-- `http-status-code`: an [HTTP response status code](/en-US/docs/Web/HTTP/Status), like [`404`](/en-US/docs/Web/HTTP/Status/404).
+- `http-csp-directive`: a [CSP](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) directive, like [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
+- `http-cors-error`: a [CORS](/en-US/docs/Web/HTTP/Guides/CORS) error, like [`CORSDidNotSucceed`](/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed).
+- `http-permissions-policy-directive`: a [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) directive, like [`accelerometer`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer).
+- `http-header`: an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers), like [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer).
+- `http-method`: an [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) like [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET).
+- `http-status-code`: an [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status), like [`404`](/en-US/docs/Web/HTTP/Reference/Status/404).
 
 ### JavaScript page types
 
@@ -121,15 +122,15 @@ This section lists `page-type` values for pages under [Web/JavaScript](/en-US/do
 
 This section lists `page-type` values for pages under [Web/MathML](/en-US/docs/Web/MathML). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Global_attributes/mathcolor).
-- `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Element/msqrt).
+- `mathml-attribute`: an MathML attribute, like [`mathcolor`](/en-US/docs/Web/MathML/Reference/Global_attributes/mathcolor).
+- `mathml-element`: an HTML element, like [`<msqrt>`](/en-US/docs/Web/MathML/Reference/Element/msqrt).
 
 ### SVG page types
 
 This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/SVG). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin).
-- `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Element/circle).
+- `svg-attribute`: an SVG attribute, like [`crossorigin`](/en-US/docs/Web/SVG/Reference/Attribute/crossorigin).
+- `svg-element`: an SVG element, like [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle).
 
 ### Web API page types
 

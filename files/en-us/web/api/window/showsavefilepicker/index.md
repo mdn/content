@@ -18,14 +18,13 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ```js-nolint
 showSaveFilePicker()
+showSaveFilePicker(options)
 ```
 
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object containing options, which are as follows:
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : A boolean value that defaults to
         `false`. By default, the picker should include an option to not apply
@@ -41,15 +40,13 @@ showSaveFilePicker()
     - `suggestedName` {{Optional_Inline}}
       - : A {{jsxref('String')}}. The suggested file name.
     - `types` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of allowed file types to save. Each
         item is an object with the following options:
-
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files
             types allowed. Default to be an empty string.
         - `accept`
-          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
 
 ### Return value

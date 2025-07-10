@@ -10,11 +10,11 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Element/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
 To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
-Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
+Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g., `copy`) can work without an editable element.
 
 > [!NOTE]
 > Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
@@ -28,7 +28,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### Parameters
 
 - `aCommandName`
-
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument.
@@ -81,11 +80,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
-      - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Element/ol) for the selection or at the insertion point.
+      - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Reference/Elements/ol) for the selection or at the insertion point.
     - `insertUnorderedList`
-      - : Creates a [bulleted unordered list](/en-US/docs/Web/HTML/Element/ul) for the selection or at the insertion point.
+      - : Creates a [bulleted unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) for the selection or at the insertion point.
     - `insertParagraph`
-      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Element/p) around the selection or the current line.
+      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Reference/Elements/p) around the selection or the current line.
     - `insertText`
       - : Inserts the given plain text at the insertion point (deletes selection).
     - `italic`
@@ -111,15 +110,15 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `strikeThrough`
       - : Toggles strikethrough on/off for the selection or at the insertion point.
     - `subscript`
-      - : Toggles [subscript](/en-US/docs/Web/HTML/Element/sub) on/off for the selection or at the insertion point.
+      - : Toggles [subscript](/en-US/docs/Web/HTML/Reference/Elements/sub) on/off for the selection or at the insertion point.
     - `superscript`
-      - : Toggles [superscript](/en-US/docs/Web/HTML/Element/sup) on/off for the selection or at the insertion point.
+      - : Toggles [superscript](/en-US/docs/Web/HTML/Reference/Elements/sup) on/off for the selection or at the insertion point.
     - `underline`
-      - : Toggles [underline](/en-US/docs/Web/HTML/Element/u) on/off for the selection or at the insertion point.
+      - : Toggles [underline](/en-US/docs/Web/HTML/Reference/Elements/u) on/off for the selection or at the insertion point.
     - `undo`
       - : Undoes the last executed command.
     - `unlink`
-      - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
+      - : Removes the [anchor element](/en-US/docs/Web/HTML/Reference/Elements/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
         > [!NOTE]
@@ -139,7 +138,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 A boolean value that is `false` if the command is unsupported or disabled.
 
-> **Note:** `document.execCommand()` only returns
+> [!NOTE]
+> `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
 > verify browser support before calling a command.
 
@@ -149,7 +149,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 

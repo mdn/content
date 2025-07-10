@@ -28,12 +28,9 @@ let settingIcon = browser.browserAction.setIcon(
 ### Parameters
 
 - `details`
-
   - : `object`. An object containing the `imageData` or `path` property and, optionally, either or both of the `tabId` and `windowId` properties.
-
     - `imageData` {{optional_inline}}
-
-      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
+      - : {{WebExtAPIRef('browserAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
@@ -49,7 +46,6 @@ let settingIcon = browser.browserAction.setIcon(
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
     - `path` {{optional_inline}}
-
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:

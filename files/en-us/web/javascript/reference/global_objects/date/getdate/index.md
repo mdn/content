@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.getDate()
+short-title: getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDate
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.getDate()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getDate()", "shorter")}}
 
 ```js interactive-example
 const birthday = new Date("August 19, 1975 23:15:30");

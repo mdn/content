@@ -13,7 +13,16 @@ The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientat
 
 ## Syntax
 
-The `-moz-orient` property is specified as one of the keyword values chosen from the list below.
+```css
+-moz-orient: inline;
+
+/* Global values */
+-moz-orient: inherit;
+-moz-orient: initial;
+-moz-orient: revert;
+-moz-orient: revert-layer;
+-moz-orient: unset;
+```
 
 ### Values
 
@@ -32,10 +41,7 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ## Formal syntax
 
-```plain
--moz-orient =
-  inline | block | horizontal | vertical
-```
+{{CSSSyntaxRaw(`-moz-orient = inline | block | horizontal | vertical`)}}
 
 ## Examples
 

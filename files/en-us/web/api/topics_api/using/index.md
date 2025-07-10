@@ -28,8 +28,8 @@ If the `<iframe>` content from `ad-tech1.example` implements a [feature that ena
 
 1. Infer **topics of interest** from the site URL. The topics are taken from a [standard taxonomy](/en-US/docs/Web/API/Topics_API#what_topics_are_there); for the above URL examples, they would be "Fitness", "Fibre & textile arts", and "Soccer".
 2. **Mark the topics as observed**, which involves recording a **topics history entry** for each one in a private topics history storage. Each topics history entry includes the following information:
-   - A document id (i.e. an identifier for the current page).
-   - Topics calculation input data (i.e. the page hostname).
+   - A document id (i.e., an identifier for the current page).
+   - Topics calculation input data (i.e., the page hostname).
    - The time (since the Unix epoch) when the page was first observed.
    - The domain(s) where the topic was observed (known as **topic caller domains**).
 
@@ -45,7 +45,6 @@ On an ongoing basis, the browser will:
    Chrome places each of the 22 root topics (those without an ancestor) from the taxonomy into [one of two buckets](https://github.com/patcg-individual-drafts/topics/blob/main/topics-utility-buckets-v1.md) indicating higher or standard utility for the overall ad tech ecosystem. All descendants of the root topics inherit the same bucket assignment from their parent. The assignment of root topics to buckets is based on input about utility Google received from companies across the ecosystem.
 
 2. Select top topics for each user, at the end of each epoch:
-
    1. Chrome converts caller domain hostnames from the user's browsing history into topics.
    2. These topics are sorted first by bucket, and then by frequency (how many times they were matched in a hostname). That is, if two topics are in the same bucket but have different frequencies, the higher frequency topic is sorted higher.
    3. Chrome selects the top five topics as the user's top topics for that epoch, which are eligible to be shared with callers.
@@ -64,7 +63,6 @@ The following features all serve a dual purpose — they return the user's top t
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("Window/fetch", "fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("Window/fetch", "fetch()")}} call.
 - You can set a `browsingtopics` attribute on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. This could be done:
-
   - Declaratively on the HTML:
 
   ```html
@@ -85,7 +83,7 @@ When the request associated with one of the above features is sent:
 3. An {{httpheader("Observe-Browsing-Topics")}} header should be set on the response to the request — this has the effect of causing the browser to record the current page visit as observed by the calling ad tech provider, so the associated topic(s) will be recorded in a topics history entry, and subsequently be used in [topic selection](#selecting_topics_of_interest_to_influence_ad_choice).
 
    > [!NOTE]
-   > It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) as observed.
+   > It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e., the site where the ad tech `<iframe>` is embedded) as observed.
 
 ### The `browsingTopics()` method
 
@@ -148,11 +146,6 @@ const creative = await response.json();
 <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
 ```
 
-### Complete examples
-
-- [Topics API demo](https://topics-demo.glitch.me/): Demonstrates how `document.browsingTopics()` calls can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-demo)).
-- [Topics API header demo](https://topics-fetch-demo.glitch.me/): Demonstrates a `fetch()` request with a {{httpheader("Sec-Browsing-Topics")}} header can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-fetch-demo)).
-
 ## Testing hints
 
 ### Chrome
@@ -171,4 +164,4 @@ You can also test your Topics API code locally without [enrollment](/en-US/docs/
 
 ## See also
 
-- [Topics API](https://developers.google.com/privacy-sandbox/private-advertising/topics) on developers.google.com (2023)
+- [Topics API](https://privacysandbox.google.com/private-advertising/topics) on privacysandbox.google.com (2023)

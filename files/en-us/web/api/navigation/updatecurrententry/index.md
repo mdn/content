@@ -34,7 +34,7 @@ None (`undefined`).
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the `state` parameter had values included in it that are not structured-cloneable.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e. there is no current history entry. This could occur for example if the current page is `about:blank`.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e., there is no current history entry. This could occur for example if the current page is `about:blank`.
 
 ## Examples
 
@@ -58,4 +58,3 @@ detailsElem.addEventListener("toggle", () => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -41,15 +41,17 @@ dd:nth-last-of-type(3n) {
 
 ## Syntax
 
-The `nth-last-of-type` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
-
-See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
-
 ```css-nolint
 :nth-last-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:nth-last-of-type()` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
+
+See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
 
 ## Examples
 

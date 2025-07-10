@@ -1,5 +1,6 @@
 ---
 title: "ARIA: radiogroup role"
+short-title: radiogroup
 slug: Web/Accessibility/ARIA/Reference/Roles/radiogroup_role
 page-type: aria-role
 spec-urls:
@@ -14,7 +15,7 @@ The `radiogroup` role is a group of `radio` buttons.
 
 Radio groups are collections describing a set of related [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) options. A `radiogroup` is a type of [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role) list that can only have a single entry, or `radio`, checked at any one time.
 
-When using HTML's native input radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), the radio buttons are grouped when each of input radio buttons in the group is given the same [`name`](/en-US/docs/Web/HTML/Element/input#name). Once a group of same-named input radio buttons is established, selecting any input radio button in that group automatically deselects any currently-selected input radio button in the same group. While this will associate the radio buttons together, to expose a grouping of radio buttons as a `radiogroup` explicitly set the ARIA role.
+When using HTML's native input radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), the radio buttons are grouped when each of input radio buttons in the group is given the same [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name). Once a group of same-named input radio buttons is established, selecting any input radio button in that group automatically deselects any currently-selected input radio button in the same group. While this will associate the radio buttons together, to expose a grouping of radio buttons as a `radiogroup` explicitly set the ARIA role.
 
 It is recommended to create radio groups by using same-named HTML input radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom `radio` buttons can and should act like native HTML radio input buttons.
 
@@ -33,7 +34,7 @@ The `radiogroup` must have an accessible name either by a visible label referenc
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Reference to elements providing additional information about the `radiogroup`
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-  - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted. The required state is specified on the `radiogroup` element rather than one of the `radio` elements, unlike when using HTML radio buttons where the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is set directly on one or more radio {{HTMLElement('input')}} elements.
+  - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted. The required state is specified on the `radiogroup` element rather than one of the `radio` elements, unlike when using HTML radio buttons where the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute is set directly on one or more radio {{HTMLElement('input')}} elements.
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
   - : Identifies the element that provides an error message for the `radiogroup`, if there is an error. That message should be hidden while not relevant.
 
@@ -56,7 +57,7 @@ Arrow keys are used to navigate among elements of a toolbar. When a `radiogroup`
 
 User interactions for `radiogroup`s must replicate the user interaction of a user entering into a group of same-named HTML radio buttons. Keyboard events for tabs, space, and arrow keys must be captured. Click events on both the radio elements and their associated labels must also be captured. Additionally, [focus must be managed](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability).
 
-While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate through a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is one method to manage arrow key events.
+While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate through a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is one method to manage arrow key events.
 
 ### Required CSS features
 

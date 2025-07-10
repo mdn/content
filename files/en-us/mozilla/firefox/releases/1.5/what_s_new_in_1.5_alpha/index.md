@@ -2,9 +2,8 @@
 title: What's New in Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).
 
@@ -20,15 +19,15 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 #### CSS
 
 - CSS2 quotes nesting
-  - : Starting with this release, the [`quotes` CSS2 property](https://www.w3.org/TR/CSS21/generate.html#quotes-specify) is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
-- CSS3 `:only-child`
-  - : This CSS3 selector allows [selecting an element](https://www.w3.org/TR/2001/CR-css3-selectors-20011113/#only-child-pseudo) that has no other elements as siblings in the DOM.
+  - : Starting with this release, the [`quotes`](/en-US/docs/Web/CSS/quotes) CSS2 property is fully supported, with the correct quote (depending on the nesting level) used for open-quote and close-quote.
+- CSS3 [`:only-child`](/en-US/docs/Web/CSS/:only-child)
+  - : This CSS3 selector allows selecting an element that has no other elements as siblings in the DOM.
 - CSS3 columns
-  - : An experimental implementation of the proposed [CSS3 multicolumn layout](https://www.w3.org/TR/2001/WD-css3-multicol-20010118/) draft. This allows easily doing newspaper-like multicolumn presentation.
+  - : An experimental implementation of the proposed [CSS3 multicolumn layout](https://drafts.csswg.org/css-multicol/) draft. This allows easily doing newspaper-like multicolumn presentation.
 - CSS3 `overflow-x` and `overflow-y` properties
   - : These properties can be used to control the overflow behavior in the horizontal and vertical directions somewhat independently. For example, overflow in the horizontal direction could be hidden while overflow in the vertical direction can be scrolled to.
 - CSS3 cursors
-  - : More [mouse cursor names](https://www.w3.org/TR/css-ui-3/#cursor) are now supported.
+  - : More [mouse cursor names](/en-US/docs/Web/CSS/cursor) are now supported.
 - URI values on CSS `cursor` properties
   - : On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered.
     Any image format supported by Gecko can be used for the image.
@@ -37,9 +36,9 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - `-moz-outline-radius`
   - : CSS outlines can now have rounded corners.
 - CSS `outline` property
-  - : [CSS outlines](https://www.w3.org/TR/css-ui-3/#outline1) can now be used. These differ from borders in that they don't affect the page layout.
+  - : [CSS outlines](/en-US/docs/Web/CSS/outline) can now be used. These differ from borders in that they don't affect the page layout.
 - Counters in CSS-generated content
-  - : [CSS2 counters](https://www.w3.org/TR/CSS21/generate.html#counters) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
+  - : [CSS2 counters](/en-US/docs/Web/CSS/CSS_lists) are now completely supported (the implementation doesn't match the current CSS2.1 draft, but matches the upcoming one). This allows automatic numbering of sections, headings, and so forth via stylesheets.
 
 #### JavaScript and DOM
 
@@ -61,7 +60,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - SVG Support
   - : SVG is W3C specification providing resolution-independent scalable vector graphics, along with a DOM. A technology preview of native SVG support is included in this release. Currently a subset of SVG 1.1 Full, missing functionality includes filters, declarative animation, and SVG defined fonts.
 - `<canvas>` Support
-  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/Drawing_Graphics_with_Canvas).
+  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 #### Miscellaneous
 
@@ -75,56 +74,44 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 ### New Extension Developer Features
 
 - Hidden referrer column for history
-
   - : Extensions can now access the referer information for pages stored in the browser history. This feature can be used to provide alternate history views and other useful functionality. [Firefox bug 128398](https://bugzil.la/128398)
 
 - API for prioritizing HTTP connections
-
   - : The Mozilla networking library now supports the prioritization of connections to a specific server using `nsISupportsPriority`. [Firefox bug 278531](https://bugzil.la/278531)
 
 - API for managing user and UA stylesheets
-
   - : Extensions can now register stylesheet URIs as additional user and UA stylesheets. This means extensions no longer have to try to edit `userContent.css` to add styling (say for XBL binding attachment) to web pages. See [Using the Stylesheet Service](/en-US/docs/Archive/Add-ons/Using_the_Stylesheet_Service).
 
 - API for configuring proxies
-
   - : It is now possible for extensions to easily override the proxy configuration without affecting user-visible preferences. See `nsIProtocolProxyService`, `nsIProtocolProxyFilter`, and `nsIProtocolProxyCallback`. [Firefox bug 282442](https://bugzil.la/282442)
 
 - Dynamic Overlays
-
   - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. [Firefox bug 282103](https://bugzil.la/282103)
 
 - ECMAScript for XML (E4X)
-
   - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://ecma-international.org/publications-and-standards/standards/ecma-357/). [Firefox bug 246441](https://bugzil.la/246441)
 
 - Translucent Windows (Windows/Linux)
-
   - : On Windows and Linux, XUL windows with a transparent background are now supported. This allows whatever is below the window to shine through the window background.
 
 - Adding tokens to the User-Agent string
-
   - : It is now possible for applications, extensions, and vendors to all add tokens to the User-Agent string (using default preferences) without overwriting each other.
-    See [documentation](/en-US/docs/Web/HTTP/Headers/User-Agent). [Firefox bug 274928](https://bugzil.la/274928)
+    See [documentation](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent). [Firefox bug 274928](https://bugzil.la/274928)
 
 - Toolkit chrome registry
-
   - : Chrome registration has been significantly improved to use simple plaintext chrome registration manifests, and no longer keeps the chrome.rdf/overlayinfo cache.
     See [Chrome Registration](/en-US/docs/Mozilla/Chrome_Registration).
 
 - Extension Manager
-
   - : Following are the new features:
     - It is now possible to have Extensions outside the profile and application Extensions directories.
     - Installing extensions can now be done by dropping an XPI into the profile or application Extensions directory.
     - Uninstalling an Extension now involves deleting its folder from the profile or application Extensions directory.
 
 - New Preferences bindings
-
   - : These [new bindings](https://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
 
 - API for implementing new command-line switches
-
   - : An API has been introduced so that extensions can easily handle complex command-line flags. This API will be stable and frozen for 1.1. See the interfaces `nsICommandLine` and `nsICommandLineHandler`.
 
 - XTF Support

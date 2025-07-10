@@ -2,11 +2,10 @@
 title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[Firefox 3.6](https://www.mozilla.org/en-US/firefox/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
+[Firefox 3.6](https://www.mozilla.org/en-US/firefox/new/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
 ## For website and application developers
 
@@ -16,7 +15,7 @@ page-type: firefox-release-notes
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
 - [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
-- [Mozilla-specific media features](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#mozilla-specific_media_features)
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
@@ -27,12 +26,12 @@ page-type: firefox-release-notes
 
 #### Miscellaneous CSS changes
 
-- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit from [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) is now supported. [Firefox bug 472195](https://bugzil.la/472195)
+- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit is now supported. [Firefox bug 472195](https://bugzil.la/472195)
 - {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. [Firefox bug 423756](https://bugzil.la/423756)
 - {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.
 - Added {{cssxref(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. [Firefox bug 478416](https://bugzil.la/478416)
-- Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Element/input) elements whose `indeterminate` attribute is `true`.
+- Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Reference/Elements/input) elements whose `indeterminate` attribute is `true`.
 - Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.
 
 ### HTML
@@ -40,13 +39,13 @@ page-type: firefox-release-notes
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the `input type="file"` HTML element's new `multiple` attribute.
 - HTML5 video supports poster frames
-  - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Element/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
+  - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
 - Checkboxes and radio buttons support the `indeterminate` property
-  - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
+  - : HTML [`input`](/en-US/docs/Web/HTML/Reference/Elements/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
 - Canvas image smoothing can be controlled
-  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas) elements.
 - Asynchronous script execution
-  - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
+  - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Reference/Elements/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
 ### JavaScript
 

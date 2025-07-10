@@ -23,9 +23,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callback`
-
   - : Function to execute for each `Range` object, taking three arguments:
-
     - `range`, `key`
       - : The current `Range` object being processed in the `Highlight`. As there are no
         keys in `Highlight`, the `range` is passed for both arguments.

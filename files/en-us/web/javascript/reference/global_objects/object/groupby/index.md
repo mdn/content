@@ -1,11 +1,11 @@
 ---
 title: Object.groupBy()
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.groupBy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > In some versions of some browsers, this method was implemented as the method `Array.prototype.group()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
@@ -14,7 +14,23 @@ The **`Object.groupBy()`** static method groups the elements of a given iterable
 
 This method should be used when group names can be represented by strings. If you need to group elements using a key that is some arbitrary value, use {{jsxref("Map.groupBy()")}} instead.
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Syntax
 

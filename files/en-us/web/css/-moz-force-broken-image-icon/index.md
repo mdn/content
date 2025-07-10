@@ -14,10 +14,22 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Syntax
 
+```css
+-moz-force-broken-image-icon: 1;
+-moz-force-broken-image-icon: 0;
+
+/* Global values */
+-moz-force-broken-image-icon: inherit;
+-moz-force-broken-image-icon: initial;
+-moz-force-broken-image-icon: revert;
+-moz-force-broken-image-icon: revert-layer;
+-moz-force-broken-image-icon: unset;
+```
+
 ### Values
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.
+  - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.
 
 > [!NOTE]
 > Even if the value is set to `1` the `alt` attribute will still be displayed, alongside the broken image icon.
@@ -28,9 +40,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Formal syntax
 
-```plain
--moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
-```
+{{CSSSyntaxRaw(`-moz-force-broken-image-icon = <integer>`)}}
 
 ## Examples
 

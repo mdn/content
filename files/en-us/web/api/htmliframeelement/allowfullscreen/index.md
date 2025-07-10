@@ -40,5 +40,5 @@ console.log(el.allowFullscreen); // Output: true
 
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - {{domxref("Element.requestFullscreen()")}}
-- [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+- [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - {{httpheader("Permissions-Policy/fullscreen", "fullscreen")}} Permissions Policy directive

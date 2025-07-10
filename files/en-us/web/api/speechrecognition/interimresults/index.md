@@ -11,7 +11,7 @@ browser-compat: api.SpeechRecognition.interimResults
 The **`interimResults`** property of the
 {{domxref("SpeechRecognition")}} interface controls whether interim results should be
 returned (`true`) or not (`false`). Interim results are results
-that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property
+that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property
 is `false`).
 
 The default value for **`interimResults`** is `false`.
@@ -33,12 +33,12 @@ const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
+// recognition.continuous = false;
 recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-// ...
+// …
 ```
 
 ## Specifications

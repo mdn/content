@@ -1,10 +1,10 @@
 ---
 title: Installing basic software
+short-title: Installing software
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -15,7 +15,7 @@ In this article, we discuss what software you need to do simple web development 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic familiarity with your computer operating system.
+        Basic familiarity with your computer operating system (OS).
       </td>
     </tr>
     <tr>
@@ -41,27 +41,35 @@ For now, we would recommend that you install [Visual Studio Code](https://code.v
 
 Having modern web browsers available to you is essential for web development so that you can test your websites or apps on the browsers your visitors use to access them. You also need to keep your web browsers up-to-date so that they support the latest web technologies and have the latest security fixes applied.
 
-> [!NOTE]
-> Most browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page, for example available in the menu at _Firefox_ > _About Firefox_ or _Chrome_ > _About Google Chrome_ on Firefox/Chrome for macOS, or the menu icon > _Help_ > _About Firefox_ or menu icon > _Help_ > _About Google Chrome_ on Firefox/Chrome for Windows.
-
-For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. You'll most commonly come across web browsers on desktop, laptop, and mobile devices, but you will also come across web browsers on other devices such as tablets, watches, and TVs. If possible, make sure you have one browser from each line installed and available to test on (so you don't just test in multiple browsers based on the same rendering engine):
+The most common browsers you'll come across are as follows:
 
 - Desktop browsers:
-  - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/browsers/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
+  - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
   - Gecko: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/).
   - WebKit: [Apple Safari](https://www.apple.com/safari/).
 - Mobile/alternative device browsers:
-  - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/browsers/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
+  - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
   - Gecko (Android): [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/).
   - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]
     > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
+
+Most modern browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page. This is available in slightly different places on different browsers and OSes, for example:
+
+- Firefox: Available at _Firefox_ > _About Firefox_ on macOS, and menu icon > _Help_ > _About Firefox_ on Windows.
+- Chrome: Available at _Chrome_ > _About Google Chrome_ on macOS, and menu icon > _Help_ > _About Google Chrome_ on Windows.
+
+### Which browsers to install
+
+For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. If possible, install at least one browser from each of the sub-bullets shown previously, so you don't just test in multiple browsers based on the same rendering engine.
 
 ## Local web servers
 
 Normally, when you type in a web address in a browser to load a website, the files that are combined to render that site by your browser are fetched from a remote web server hosted on a server computer somewhere else in the world. You'll learn more about how this works in the next article in the series.
 
 When creating a website locally (on your own machine), you can often load up the main HTML index file directly in a browser to test it. However, some examples will need to be run through a locally-installed web server to work successfully.
+
+### Installing a local web server
 
 One of the easiest options we've found to make a local server available is to use a code editor extension — this way, it is available right inside your code editor. Do the following inside Visual Studio Code:
 
@@ -71,7 +79,7 @@ One of the easiest options we've found to make a local server available is to us
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
 
-The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
+The above option is simple, but not that flexible. In the future, you may want to have a more flexible local server option that can be used to load examples in any browser you have. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Graphics editors
 
@@ -79,17 +87,17 @@ Web developers are often required to manipulate image files for use on the websi
 
 None of the learning articles on MDN require you to create your own graphics, although a few of them may require you to manipulate the files that we provide.
 
-There are many graphic editing tools available. We would recommend that you don't spend money on an expensive commercial product until further along in your learning journey, _if_ you feel that you really need it. There are many free software tools and online services that will probably be good enough for now.
+We would recommend that you don't install a graphics editor until you need it later in your learning journey. Certainly don't spend money on an expensive commercial product unless you really think it will add value.
 
-For example:
+There are many free software tools and online services that will probably be good enough for now, for example:
 
 - macOS comes with a tool called [Preview](https://support.apple.com/en-gb/guide/preview/welcome/mac). This is mainly used for viewing images and PDFs, but it also has some really useful features for editing images, including resizing, rotating, cropping, annotating, and converting between different file types.
 - The built-in Windows [Photos app](https://support.microsoft.com/en-gb/windows/manage-photos-and-videos-with-microsoft-photos-app-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b) comes with many similar features.
 - The [tinypng](https://tinypng.com/) website, provides a free service allowing you to compress PNGs, JPEGs, and more. This is a very common task you'll have to do when preparing assets for use on a website.
 
-If you have more substantial graphics editing/creation needs, you'll want a fully-fledged graphics package. In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard, and there are also popular relative newcomers such as [Figma](https://www.figma.com/), [Sketch](https://www.sketch.com/), and [Canva](https://www.canva.com).
+In terms of commercial offerings, [Adobe Photoshop](https://www.adobe.com/products/photoshop.html) has long been the industry standard especially for photo editing, while programs like [Sketch](https://www.sketch.com/) are better suited to icon and UI work. There are also popular newcomers such as [Figma](https://www.figma.com/), [The Affinity Suite](https://affinity.serif.com/en-us/), and [Canva](https://www.canva.com/).
 
-If your budget is limited, most of the above apps have trials or free modes there are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://www.getpaint.net/).
+Most of the above apps have trials or free modes there are worth exploring. There are also some well-regarded free apps available such as [GIMP](https://www.gimp.org/), [Adobe Express](https://www.adobe.com/express/), and [Paint.NET](https://www.getpaint.net/).
 
 ## Version control tools
 
@@ -99,9 +107,9 @@ While version control tools are essential for web development teams, you don't n
 
 ## Site deployment apps
 
-After you've finished developing a website or app (on your local computer, or perhaps on a development server), you'll want to put it onto a remote web server so that your users can type in the web address associated with it, and view it on the web!
+After you've finished developing a website or app (on your local computer, or perhaps on a development server), you'll want to put it onto a remote web server so that your users can type in the web address associated with it and view it on the web!
 
-There are various ways you can do this, from buying hosting and using an [SFTP app](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), using a service like [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/), or even setting up a quick demo to share with others using something like [Glitch](https://glitch.com/) or [CodePen](https://codepen.io/).
+There are various ways you can do this, from buying hosting and using an [SFTP app](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp), using a service like [GitHub Pages](https://pages.github.com/) or [Netlify](https://www.netlify.com/), or even putting together a quick demo to share with others using something like [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 Such a list of options might seem overwhelming, but don't worry — you don't need to know anything about publishing websites right now. We'll look at this topic many times later in the course. You'll get practical experience of it soon enough, in our [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module.
 

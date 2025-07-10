@@ -2,9 +2,10 @@
 title: Styling our Angular app
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.
 
@@ -119,7 +120,7 @@ In `app.component.css`, add the following styles:
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .main {
     width: 70%;
   }

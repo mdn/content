@@ -10,7 +10,91 @@ browser-compat: css.types.transform-function.rotate3d
 The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around a
 fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
+{{InteractiveExample("CSS Demo: rotate3d()")}}
+
+```css interactive-example-choice
+transform: rotate3d(0, 0, 0, 0);
+```
+
+```css interactive-example-choice
+transform: rotate3d(1, 1, 1, 45deg);
+```
+
+```css interactive-example-choice
+transform: rotate3d(2, -1, -1, -0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 In 3D space, rotations have three degrees of freedom, which together describe a single axis of rotation. The axis of
 rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
@@ -23,11 +107,6 @@ the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without 
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
-
-The amount of rotation created by `rotate3d()` is specified by three {{cssxref("&lt;number&gt;")}}s and
-one {{cssxref("&lt;angle&gt;")}}. The `<number>`s represent the x-, y-, and z-coordinates of the
-vector denoting the axis of rotation. The `<angle>` represents the angle of rotation; if positive,
-the movement will be clockwise; if negative, it will be counter-clockwise.
 
 ```css
 rotate3d(x, y, z, a)

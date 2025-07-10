@@ -16,13 +16,15 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 
 ```css interactive-example
 abbr {
-  color: chocolate;
+  color: #860304;
+  font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 @media (hover: hover) {
   abbr:hover {
-    color: limegreen;
-    transition-duration: 1s;
+    color: #001ca8;
+    transition-duration: 0.5s;
   }
 }
 
@@ -43,11 +45,9 @@ abbr {
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
-
 ```css
 /* At the top level of your code */
-@media screen and (min-width: 900px) {
+@media screen and (width >= 900px) {
   article {
     padding: 1rem 3rem;
   }
@@ -55,13 +55,15 @@ The `@media` at-rule may be placed at the top level of your code or nested insid
 
 /* Nested within another conditional at-rule */
 @supports (display: flex) {
-  @media screen and (min-width: 900px) {
+  @media screen and (width >= 900px) {
     article {
       display: flex;
     }
   }
 }
 ```
+
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 For a discussion of media query syntax, please see [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
@@ -82,7 +84,7 @@ Except when using the `only` logical operator, the media type is optional and th
   - : Intended primarily for screens.
 
 > [!NOTE]
-> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
+> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and {{cssxref("@media/aural", "aural")}}), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
 
 ### Media features
 
@@ -154,7 +156,7 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/scan", "scan")}}
   - : Whether display output is progressive or interlaced.
 - {{cssxref("@media/scripting", "scripting")}}
-  - : Detects whether scripting (i.e. JavaScript) is available.
+  - : Detects whether scripting (i.e., JavaScript) is available.
     Added in Media Queries Level 5.
 - {{cssxref("@media/shape", "shape")}}
   - : Detects the shape of the device to distinguish rectangular and round displays.
@@ -164,6 +166,18 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
+- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
+  - : The number of device pixels per CSS pixel. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("animation")}}. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
+  - : The number of device pixels per CSS pixel. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
+- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
+  - : The browser supports `-webkit` prefixed 2D CSS {{cssxref("transform")}}. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+  - : The browser supports `-webkit` prefixed 3D CSS {{cssxref("transform")}}. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("transition")}}. Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 ### Logical operators
 
@@ -174,7 +188,6 @@ You can also combine multiple media queries into a single rule by separating the
   - : Used for combining multiple media features together into a single media query, requiring each chained feature to return `true` for the query to be `true`.
     It is also used for joining media features with media types.
 - `not`
-
   - : Used to negate a media query, returning `true` if the query would otherwise return `false`.
     If present in a comma-separated list of queries, it will only negate the specific query to which it is applied.
 
@@ -184,7 +197,7 @@ You can also combine multiple media queries into a single rule by separating the
 - `only`
   - : Applies a style only if an entire query matches.
     It is useful for preventing older browsers from applying selected styles.
-    When not using `only`, older browsers would interpret the query `screen and (max-width: 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens.
+    When not using `only`, older browsers would interpret the query `screen and (width <= 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens.
     If you use the `only` operator, you _must also_ specify a media type.
 - `,` (comma)
   - : Commas are used to combine multiple media queries into a single rule.
@@ -196,7 +209,7 @@ You can also combine multiple media queries into a single rule by separating the
 
 ### User agent client hints
 
-Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Client_hints).
+Some media queries have corresponding [user agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints).
 These are HTTP headers that request content that is pre-optimized for the particular media requirement.
 They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
 
@@ -210,7 +223,7 @@ To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs
 
 Both [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) works better if the user changes the browser text size.
 
-Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
+Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) to improve the user's experience.
 For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
 
 ## Security
@@ -239,12 +252,6 @@ Because of this potential, a browser may opt to fudge the returned values in som
 @media screen, print {
   body {
     line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
-  body {
-    line-height: 1.4;
   }
 }
 ```

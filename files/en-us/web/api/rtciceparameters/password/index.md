@@ -3,7 +3,7 @@ title: "RTCIceParameters: password property"
 short-title: password
 slug: Web/API/RTCIceParameters/password
 page-type: web-api-instance-property
-browser-compat: api.RTCIceParameters.password
+spec-urls: https://w3c.github.io/webrtc-pc/#dom-rtciceparameters-password
 ---
 
 {{APIRef("WebRTC")}}
@@ -21,7 +21,3 @@ A string containing the password that corresponds to the transport's
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

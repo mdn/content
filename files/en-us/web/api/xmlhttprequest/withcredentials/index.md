@@ -15,7 +15,8 @@ In addition, this flag is also used to indicate when cookies are to be ignored i
 > [!NOTE]
 > This never affects same-origin requests.
 
-> **Note:** `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
+> [!NOTE]
+> `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
 
 ## Value
 

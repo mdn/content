@@ -34,7 +34,7 @@ The origin of the "client", "page", and "viewport" coordinates systems are highl
 
 Coordinates specified using the "offset" model use the top-left corner of the element being examined, or on which an event has occurred.
 
-For example, when a {{domxref("MouseEvent", "mouse event")}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the _padding edge_, the edge between the padding area and the border area.
+For example, when a [mouse event](/en-US/docs/Web/API/MouseEvent) occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the _padding edge_, the edge between the padding area and the border area.
 
 ### Viewport
 
@@ -142,14 +142,12 @@ Here you can see the results in action. As you mouse in and around the blue box,
 - [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a {{domxref("MouseEvent")}}:
-
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} and {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}}
 
 - Coordinates of a {{domxref("Touch")}}:
-
   - {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}}
   - {{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}}

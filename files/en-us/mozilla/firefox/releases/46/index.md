@@ -2,9 +2,8 @@
 title: Firefox 46 for developers
 slug: Mozilla/Firefox/Releases/46
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 46 was released on April 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -29,7 +28,6 @@ Highlights:
 ### CSS
 
 - Our implementation of CSS Grids has been updated:
-
   - The keywords `auto-fill` and `auto-fit` are now allowed in the `repeat()` function ([Firefox bug 1118820](https://bugzil.la/1118820)).
   - The `true` value has been renamed to `unsafe`; this affects the properties {{cssxref("justify-content")}}, {{cssxref("align-content")}}, {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("align-items")}} ([Firefox bug 1230478](https://bugzil.la/1230478)).
 
@@ -59,9 +57,9 @@ Highlights:
 
 #### DOM & HTML DOM
 
-- The deprecated {{domxref("Window.showModalDialog()")}} method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
+- The deprecated `Window.showModalDialog()` method is no more available when Firefox runs in multi-process mode (e10s) ([Firefox bug 1234700](https://bugzil.la/1234700)).
 - Added support for {{domxref("Document.elementsFromPoint()")}} ([Firefox bug 1164427](https://bugzil.la/1164427)).
-- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/HTML/Element/select#selectedindex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/HTML/Element/select#selectedoptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/HTML/Element/select#value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
+- When a non-existent option of a {{HTMLElement("select")}} element is programmatically selected, instead of being incorrectly left unchanged, the [`selectedIndex`](/en-US/docs/Web/API/HTMLSelectElement/selectedIndex) value is now set to `-1`, the [`selectedOptions`](/en-US/docs/Web/API/HTMLSelectElement/selectedOptions) to an empty {{domxref("HTMLCollection")}}, and [`value`](/en-US/docs/Web/API/HTMLSelectElement/value) to an empty string ([Firefox bug 1203668](https://bugzil.la/1203668)).
 
 #### Canvas
 
@@ -100,7 +98,6 @@ _No change._
 
 - The asynchronous {{domxref("FileReader")}} is now available in Web workers ([Firefox bug 901097](https://bugzil.la/901097)).
 - Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) has been updated:
-
   - The `AnimationEffectTimingReadOnly` dictionary and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
 
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has now been enabled by default, for all release versions, not just Nightly as it previously was ([Firefox bug 1221106](https://bugzil.la/1221106).)

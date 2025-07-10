@@ -38,9 +38,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. The ID of the updated tab.
     - `changeInfo`
@@ -49,20 +47,17 @@ Events have three functions:
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
 - `filter` {{optional_inline}}
-
   - : `object`. A set of filters that restrict the events sent to this listener. This object can have one or more of these properties. Events are only sent if they satisfy all the filters provided.
-
     - `urls`
       - : `Array`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Fires the event only for tabs whose current `url` property matches any one of the patterns.
     - `properties`
-
       - : `Array`. An array of strings consisting of supported {{WebExtAPIRef("tabs.Tab")}} object property names. Fires the event only for changes to one of the properties named in the array. These properties can be used:
-
         - "attention"
         - "autoDiscardable"
         - "audible"
         - "discarded"
         - "favIconUrl"
+        - "groupId"
         - "hidden"
         - "isArticle"
         - "mutedInfo"
@@ -96,6 +91,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory but is visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
   - : `string`. The tab's new favicon URL. Not included when a tab loses its favicon (navigating from a page with a favicon to a page without one). Check `favIconUrl` in [tab](#tab) instead.
+- `groupId` {{optional_inline}}
+  - : `integer`. The ID of the group the tabs are in or `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) for ungrouped tabs.
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}

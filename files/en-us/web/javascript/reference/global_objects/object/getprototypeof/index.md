@@ -1,14 +1,14 @@
 ---
 title: Object.getPrototypeOf()
+short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getPrototypeOf
+sidebar: jsref
 ---
 
-{{JSRef}}
-
 The **`Object.getPrototypeOf()`** static method returns the prototype
-(i.e. the value of the internal `[[Prototype]]` property) of the specified
+(i.e., the value of the internal `[[Prototype]]` property) of the specified
 object.
 
 {{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}

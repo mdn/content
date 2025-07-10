@@ -37,7 +37,6 @@ Separately from the Page Visibility API, user agents typically have a number of 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
 - Timers such as {{domxref("Window.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
 - Browsers implement budget-based background timeout throttling. This operates in a similar way across modern browsers, with the details being as follows:
-
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
   - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
   - Timer tasks are only permitted when the budget is non-negative.
@@ -59,9 +58,7 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 - {{domxref("Document.hidden")}} {{ReadOnlyInline}}
   - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
-
   - : A string indicating the document's current visibility state. Possible values are:
-
     - `visible`
       - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
     - `hidden`
@@ -107,11 +104,9 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     playingOnHide = !audio.paused;
     audio.pause();
-  } else {
+  } else if (playingOnHide) {
     // Page became visible! Resume playing if audio was "playing on hide"
-    if (playingOnHide) {
-      audio.play();
-    }
+    audio.play();
   }
 });
 ```

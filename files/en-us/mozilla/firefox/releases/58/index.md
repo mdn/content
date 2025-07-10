@@ -2,9 +2,8 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
 
@@ -43,7 +42,6 @@ _No changes._
 #### New APIs
 
 - The {{domxref("PerformanceNavigationTiming")}} API has been implemented ([Firefox bug 1263722](https://bugzil.la/1263722)).
-
   - Gecko has also been given a pref that can be used to disable the interface if required — `dom.enable_performance_navigation_timing`, defaulting to `true` ([Firefox bug 1403926](https://bugzil.la/1403926)).
 
 #### DOM
@@ -65,7 +63,6 @@ _No changes._
 #### Canvas and WebGL
 
 - Support for prefixed WebGL extensions has been removed ([Firefox bug 1403413](https://bugzil.la/1403413)):
-
   - For `MOZ_WEBGL_compressed_texture_atc` use `WEBGL_compressed_texture_atc` instead.
   - For `MOZ_WEBGL_compressed_texture_pvrtc` use {{domxref("WEBGL_compressed_texture_pvrtc")}} instead.
   - For `MOZ_WEBGL_compressed_texture_s3tc` use {{domxref("WEBGL_compressed_texture_s3tc")}} instead.
@@ -74,10 +71,10 @@ _No changes._
 
 ### HTTP
 
-- [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
+- [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
 - Firefox now implements a TLS handshake timeout with a default value of 30 seconds. The timeout value can be varied by editing the `network.http.tls-handshake-timeout` pref in about:config ([Firefox bug 1393691](https://bugzil.la/1393691)).
-- The [`worker-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
-- The [425: Too Early](/en-US/docs/Web/HTTP/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
+- The [`worker-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
+- The [425: Too Early](/en-US/docs/Web/HTTP/Reference/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
 
 ### Security
 
@@ -101,7 +98,6 @@ _No changes._
 ### CSS
 
 - The following proprietary Mozilla system metric pseudo-classes are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `:-moz-system-metric(images-in-menus)`
   - `:-moz-system-metric(mac-graphite-theme)`
   - `:-moz-system-metric(scrollbar-end-backward)`
@@ -113,7 +109,6 @@ _No changes._
   - `:-moz-system-metric(windows-default-theme)`
 
 - The following proprietary Mozilla media features are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
   - `-moz-mac-graphite-theme`
@@ -146,7 +141,7 @@ _No changes._
 ### APIs
 
 - The proprietary `moz-blob` and `moz-chunked-text` values of the {{domxref("XMLHttpRequest.responseType")}} property were removed completely in Firefox 58 ([Firefox bug 1397145](https://bugzil.la/1397145), [Firefox bug 1397151](https://bugzil.la/1397151), [Firefox bug 1120171](https://bugzil.la/1120171)).
-- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API#aborting_a_fetch) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
+- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
 - The proprietary `mozSrcObject` property was removed in Firefox 58 ([Firefox bug 1183495](https://bugzil.la/1183495)). Use the standard {{domxref("HTMLMediaElement.srcObject")}} property instead.
 
 ### SVG
@@ -158,36 +153,30 @@ _No changes._
 ### WebExtensions
 
 - [browserSettings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [browserSettings.webNotificationsDisabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled) has been implemented (bug 1364942)
 
 - [browsingData](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [browsingData.localStorage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage) now supports deleting localStorage by host (bug 1388428)
 
 - [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to manage security devices (Bug 1357391)
 - privacy
-
   - first party isolation can now be toggled though firstPartyIsolate (bug 1409045)
   - resist fingerprinting pref can now be toggle through resistFingerprinting (bug [1397611)](https://bugzil.la/1397611)
 
 - tabs
-
-  - [tabs.discard](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
+  - [`tabs.discard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
   - isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)
-  - [toggleReaderMode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)() method implemented (Bug 1381992)
+  - [`toggleReaderMode()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) method implemented (Bug 1381992)
   - openInReaderMode option of tabs.created implemented (Bug 1408993)
   - tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)
 
 - theme
-
-  - [getCurrent](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent)() method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
+  - [`getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent) method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
   - onUpdated method to receive WebExtension theme updates (Bug [1349944](https://bugzil.la/1349944))
   - colors.bookmark_text now supported as alias of colors.toolbar_text (Bug [1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug [1347190)](https://bugzil.la/1347190)
 
 - webRequest
-
   - [webRequest.onBeforeRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) now includes a "frameAncestors" parameter
 
 ## Older versions

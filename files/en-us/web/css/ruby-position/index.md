@@ -9,7 +9,27 @@ browser-compat: css.properties.ruby-position
 
 The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position of a ruby element relative to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
 
-{{EmbedInteractiveExample("pages/css/ruby-position.html")}}
+{{InteractiveExample("CSS Demo: ruby-position")}}
+
+```css interactive-example-choice
+ruby-position: over;
+```
+
+```css interactive-example-choice
+ruby-position: under;
+```
+
+```html interactive-example
+<section id="default-example">
+  <ruby id="example-element"> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 2em;
+}
+```
 
 ## Syntax
 

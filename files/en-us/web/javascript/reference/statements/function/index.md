@@ -3,15 +3,14 @@ title: function
 slug: Web/JavaScript/Reference/Statements/function
 page-type: javascript-statement
 browser-compat: javascript.statements.function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`function`** declaration creates a {{Glossary("binding")}} of a new function to a given name.
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{InteractiveExample("JavaScript Demo: Statement - Function", "shorter")}}
+{{InteractiveExample("JavaScript Demo: function declaration", "shorter")}}
 
 ```js interactive-example
 function calcRectArea(width, height) {

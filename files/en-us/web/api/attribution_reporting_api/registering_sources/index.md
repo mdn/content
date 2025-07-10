@@ -26,7 +26,6 @@ What happens behind the scenes to register sources and retrieve and store the so
    ```
 
 2. When the server receives a request that includes an `Attribution-Reporting-Eligible` header, it can include an {{httpheader("Attribution-Reporting-Register-Source")}} header along with the response to complete source registration. Its value is a JSON string that provides the information the browser should store about the attribution source that was interacted with. The information included in this header also determines which types of report the browser will generate:
-
    - The following example will cause an [event-level report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#event-level_reports) to be generated when a [trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers) is matched to a source:
 
      ```js
@@ -46,13 +45,12 @@ What happens behind the scenes to register sources and retrieve and store the so
      ```
 
      The only required field in this context is `destination`, which specifies 1–3 sites on which a trigger is expected to occur. These are used to match the attribution trigger to the source when a trigger is interacted with. The other fields specified above do the following:
-
      - `"source_event_id"`: A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint (see [Generating reports > Basic process](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#basic_process) for endpoint information).
-     - `"trigger_data"`: An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place.
+     - `"trigger_data"`: An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place.
        > [!NOTE]
        > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
      - `"trigger_data_matching"`: A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. `"exact"` is the value you'll nearly always use, which matches exact values.
-     - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source).
+     - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e., subsequent triggers won't be attributable to this source).
      - `"priority"`: A string representing a priority value for the attribution source. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
      - `"debug_key"`: A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
      - `"event_report_window"`: A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports.
@@ -84,7 +82,6 @@ What happens behind the scenes to register sources and retrieve and store the so
      ```
 
      The additional fields in this example are:
-
      - `"aggregation_keys"`: An object containing user-provided keys representing different data points to aggregate report values under.
      - `"aggregatable_report_window"`: A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports.
 
@@ -137,7 +134,7 @@ In this case, the interaction occurs and the browser stores the source data when
 > When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screen reader and keyboard users.
 
 > [!NOTE]
-> To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
+> To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e., inside a user interaction event handler such as `click`) within five seconds of user interaction.
 
 ## Event-based attribution sources
 
@@ -162,7 +159,7 @@ const imgElem = document.querySelector("img");
 imgElem.attributionSrc = "";
 ```
 
-The browser stores the attribution source data when the browser receives the response containing the image file (i.e. when the `load` event occurs). Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
+The browser stores the attribution source data when the browser receives the response containing the image file (i.e., when the `load` event occurs). Bear in mind that users might not necessarily be able to perceive the image at all — it might be a 1x1 transparent tracking pixel that is only being used for attribution reporting.
 
 A {{htmlelement("script")}} example might look like so:
 
@@ -241,7 +238,7 @@ In this case, the interaction occurs and the browser stores the source data when
 
 ## Specifying URLs inside attributionsrc
 
-So far, in all the examples we have seen, the `attributionsrc` attribute/feature or `attributionSrc` property has been left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header.
+So far, in all the examples we have seen, the `attributionsrc` attribute/feature or `attributionSrc` property has been left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e., receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Source")}} header.
 
 However, it might be that the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin; these URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to register the source.
 

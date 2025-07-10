@@ -2,9 +2,8 @@
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 4, which shipped on March 22, 2011, enhances performance, adds more support for HTML5 and other evolving Web technologies, and further improves security. This article provides information about this release and what features are available for Web developers, add-on developers, and Gecko platform developers alike.
 
@@ -16,9 +15,9 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 
 - [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
-- [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [HTML5 Sections](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.
@@ -62,7 +61,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Support for touch properties is added. Details, and real article names, to come later.
 - [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
 
 #### New CSS properties
@@ -221,7 +220,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("text-shadow")}} property now caps the blur radius to 300px for sanity and performance reasons.
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
-- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/@media/-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 - Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
@@ -230,9 +229,9 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The developing WebGL standard is now supported by Firefox.
 - [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
-- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
+- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats/Containers#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
 - Using SVG as images and as CSS backgrounds
   - : You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS {{cssxref("background-image")}}.
@@ -266,16 +265,16 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 | -------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, `<blink>`, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
 | [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `HTMLWBRElement`                                         | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Miscellaneous DOM changes
 
 - The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - {{HTMLElement("script")}} elements created using {{domxref("Document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("File")}} objects now offer a `url` property.
-- [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
+- [`FormData`](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) support for `XMLHttpRequest`.
 - The {{domxref("HTMLElement.isContentEditable")}} property has been implemented.
-- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute", "afterscriptexecute")}} events are fired before and after a script element executes.
+- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute_event", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute_event", "afterscriptexecute")}} events are fired before and after a script element executes.
 - Added the `mozSourceNode` property to the {{domxref("DataTransfer")}} object.
 - Added the {{domxref("Selection.modify()")}} method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
@@ -284,7 +283,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("Element.setCapture()")}} and {{domxref("Document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
+- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Guides/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
 - The {{domxref("XMLHttpRequest")}} object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
@@ -299,13 +298,13 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 
 ### Security
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their websites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
-- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security is a security feature that lets a website tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
-- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
-- [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes
+- [User Agent string](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox) changes
   - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see [Firefox bug 572650](https://bugzil.la/572650)), the crypto strength and language tokens have been removed from the user agent string.
 
 ### JavaScript

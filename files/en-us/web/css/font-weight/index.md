@@ -9,7 +9,49 @@ browser-compat: css.properties.font-weight
 
 The **`font-weight`** [CSS](/en-US/docs/Web/CSS) property sets the weight (or boldness) of the font. The weights available depend on the {{cssxref("font-family")}} that is currently set.
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS Demo: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## Syntax
 
@@ -46,19 +88,15 @@ The `font-weight` property is specified using either a `<font-weight-absolute>` 
 ### Values
 
 - `normal`
-
   - : Normal font weight. Same as `400`.
 
 - `bold`
-
   - : Bold font weight. Same as `700`.
 
 - `<number>`
-
   - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. This allows fine-grain control for [variable fonts](#variable_fonts). For non-variable fonts, if the exact specified weight is unavailable, a [fallback weight](#fallback_weights) algorithm is used — numeric values that are divisible by 100 correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
 
 - `lighter`
-
   - : One relative font weight lighter than the parent element. Note that only four font weights are considered for relative weight calculation; see the [Meaning of relative weights](#meaning_of_relative_weights) section below.
 
 - `bolder`
@@ -69,7 +107,6 @@ The `font-weight` property is specified using either a `<font-weight-absolute>` 
 If the exact weight given is unavailable, then the following rule is used to determine the weight actually rendered:
 
 - If the target weight given is between `400` and `500` inclusive:
-
   - Look for available weights between the target and `500`, in ascending order.
   - If no match is found, look for available weights less than the target, in descending order.
   - If no match is found, look for available weights greater than `500`, in ascending order.
@@ -187,9 +224,8 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 .sample {
   text-transform: uppercase;
   font-weight: 500;
-  font:
-    1.5rem "MutatorSans",
-    sans-serif;
+  font-size: 1.5rem;
+  font-family: "MutatorSans", sans-serif;
 }
 ```
 

@@ -2,9 +2,8 @@
 title: Firefox 127 for developers
 slug: Mozilla/Firefox/Releases/127
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 was released on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
 
@@ -12,7 +11,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
-- [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Reference/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+- [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Reference/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Reference/Elements/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
 
 ### CSS
 
@@ -21,7 +20,6 @@ This article provides information about the changes in Firefox 127 that affect d
 ### JavaScript
 
 - The following [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) methods are now supported ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — Returns a new set containing elements in both this set and the given set.
   - [`Set.prototype.union()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — Returns a new set containing all elements in this set and the given set.
   - [`Set.prototype.difference()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — Returns a new set containing elements in this set but not in the given set.
@@ -32,7 +30,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh` and `rlh`](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh`](/en-US/docs/Web/CSS/length#lh) and [`rlh`](/en-US/docs/Web/CSS/length#rlh) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 ### Security
 
@@ -54,7 +52,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 #### WebDriver BiDi
 
-- Added the `permissions.setPermission` command which allows to update browser permissions (such as `geolocation`). The permissions module is an extension to the WebDriver BiDi specification [defined in the Permissions specification](https://www.w3.org/TR/permissions/#webdriver-bidi-module-permissions) ([Firefox bug 1875065](https://bugzil.la/1875065)).
+- Added the `permissions.setPermission` command which allows to update browser permissions (such as `geolocation`). The permissions module is an extension to the WebDriver BiDi specification [defined in the Permissions specification](https://w3c.github.io/permissions/#webdriver-bidi-module-permissions) ([Firefox bug 1875065](https://bugzil.la/1875065)).
 - Added support for a11y attributes `name` and `role` as locators for the `browsingContext.locateNodes` command ([Firefox bug 1885577](https://bugzil.la/1885577)).
 - Added support for the `devicePixelRatio` argument to `browsingContext.setViewport` which allows to emulate the behavior of the screens with different device pixel ratio ([Firefox bug 1857961](https://bugzil.la/1857961)).
 - Improved `browsingContext.navigate` to avoid race conditions leading to wait unnecessarily before resolving the command ([Firefox bug 1894305](https://bugzil.la/1894305)).

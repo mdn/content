@@ -158,7 +158,12 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "firefox-release-notes"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "firefox-release-notes",
+                "firefox-release-notes-active"
+              ]
             }
           }
         },
@@ -383,7 +388,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/Content-Security-Policy/"
+              "pattern": "^Web/HTTP/Reference/Headers/Content-Security-Policy/"
             }
           }
         },
@@ -397,7 +402,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/Permissions-Policy/"
+              "pattern": "^Web/HTTP/Reference/Headers/Permissions-Policy/"
             }
           }
         },
@@ -413,7 +418,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/"
+              "pattern": "^Web/HTTP/Reference/Headers/"
             }
           }
         },
@@ -425,7 +430,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Methods/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Reference/Methods/"
+            }
           }
         },
         "then": {
@@ -436,7 +444,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Status/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Reference/Status/"
+            }
           }
         },
         "then": {
@@ -447,7 +458,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/MathML/Element/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/MathML/Reference/Element/"
+            }
           }
         },
         "then": {
@@ -460,7 +474,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/MathML/Global_attributes/"
+              "pattern": "^Web/MathML/Reference/Global_attributes/"
             }
           }
         },
@@ -500,7 +514,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/CORS/Errors/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Guides/CORS/Errors/"
+            }
           }
         },
         "then": {
@@ -517,7 +534,7 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "reference"]
+              "enum": ["guide", "landing-page", "uri-scheme", "uri-component"]
             }
           }
         },

@@ -9,7 +9,53 @@ browser-compat: css.properties.border-image
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 > [!NOTE]
 > You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
@@ -50,7 +96,7 @@ border-image: unset;
 The `border-image` property may be specified with anywhere from one to five of the values listed below.
 
 > [!NOTE]
-> If the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
+> If the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
 
 ### Values
 

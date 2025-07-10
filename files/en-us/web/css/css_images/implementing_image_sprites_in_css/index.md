@@ -1,5 +1,6 @@
 ---
 title: Implementing image sprites in CSS
+short-title: Implementing image sprites
 slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 page-type: guide
 ---
@@ -38,13 +39,7 @@ A background position can be added either as two x, y values after the {{cssxref
 
 This would slide the starting point of the background image for the element with the ID `btn1` 20 pixels to the left and the element with the ID `btn2` 40 pixels to the left (assuming they have the class `tool-btn` assigned and are affected by the image rule above).
 
-Similarly, you can also make hover states with:
-
-```css
-#btn:hover {
-  background-position: <pixels shifted right>px <pixels shifted down>px;
-}
-```
+Similarly, you can also make hover states by targeting `#btn:hover`.
 
 ## See also
 

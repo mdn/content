@@ -9,7 +9,30 @@ browser-compat: css.properties.image-orientation
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
-{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+{{InteractiveExample("CSS Demo: image-orientation")}}
+
+```css interactive-example-choice
+image-orientation: none;
+```
+
+```css interactive-example-choice
+image-orientation: from-image;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/hummingbird.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: inherit;
+}
+```
 
 ## Syntax
 
@@ -33,7 +56,8 @@ image-orientation: unset;
 - `from-image`
   - : Default initial value. The [EXIF](https://en.wikipedia.org/wiki/EXIF) information contained in the image is used to rotate the image appropriately.
 
-> **Warning:** `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
+> [!WARNING]
+> `image-orientation: none;` **does not** override the orientation of non-secure-origin images as encoded by their [EXIF](https://en.wikipedia.org/wiki/EXIF) information, due to security concerns. Find out more from [the CSS working group draft issue](https://github.com/w3c/csswg-drafts/issues/5165).
 
 ## Description
 

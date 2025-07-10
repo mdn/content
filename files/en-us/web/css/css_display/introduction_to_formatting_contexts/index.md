@@ -1,5 +1,6 @@
 ---
 title: Introduction to formatting contexts
+short-title: Formatting contexts
 slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 page-type: guide
 ---
@@ -185,5 +186,5 @@ In this guide, we have looked in more detail at the block and Inline formatting 
 ## See also
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model)

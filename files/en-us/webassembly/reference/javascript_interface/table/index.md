@@ -19,7 +19,7 @@ The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-l
 ## Instance properties
 
 - [`Table.prototype.length`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/length) {{ReadOnlyInline}}
-  - : Returns the length of the table, i.e. the number of elements in the table.
+  - : Returns the length of the table, i.e., the number of elements in the table.
 
 ## Instance methods
 
@@ -63,7 +63,7 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 );
 ```
 
-Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`).
+Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g., `get(0)()` rather than `get(0)`).
 
 This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the Wasm instance too.
 
@@ -77,6 +77,6 @@ This example shows that we're creating and accessing the table from JavaScript, 
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

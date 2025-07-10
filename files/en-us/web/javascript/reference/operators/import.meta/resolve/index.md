@@ -3,9 +3,8 @@ title: import.meta.resolve()
 slug: Web/JavaScript/Reference/Operators/import.meta/resolve
 page-type: javascript-language-feature
 browser-compat: javascript.operators.import_meta.resolve
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **`import.meta.resolve()`** is a built-in function defined on the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object of a JavaScript module that resolves a module specifier to a URL using the current module's URL as base.
 
@@ -84,7 +83,7 @@ console.log(helperPath);
 This is also a useful replacement syntax when targeting older browsers. However, there are some differences:
 
 - `import.meta.resolve()` returns a string, while `new URL()` returns a `URL` object. It is possible to use [`href`](/en-US/docs/Web/API/URL/href) or [`toString()`](/en-US/docs/Web/API/URL/toString) on the constructed `URL`, but this may still not produce the exact same result in some JavaScript environments or when using tools like bundlers to statically analyze the code.
-- `import.meta.resolve()` is aware of additional resolution configurations, such as resolving bare module names using import maps, as described above. `new URL()` is not aware of import maps and treats bare module names as relative paths (i.e. `new URL("my-module", import.meta.url)` means `new URL("./my-module", import.meta.url)`).
+- `import.meta.resolve()` is aware of additional resolution configurations, such as resolving bare module names using import maps, as described above. `new URL()` is not aware of import maps and treats bare module names as relative paths (i.e., `new URL("my-module", import.meta.url)` means `new URL("./my-module", import.meta.url)`).
 
 Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dependency on `"./lib/helper.js"` (similar to an import), and take this into account for features like bundling, rewriting imports for moved files, "go to source" functionality, etc. However, since `import.meta.resolve()` is less ambiguous and specifically designed to indicate a module path resolution dependency, you should use `import.meta.resolve(moduleName)` instead of `new URL(moduleName, import.meta.url)` for these use cases wherever possible.
 

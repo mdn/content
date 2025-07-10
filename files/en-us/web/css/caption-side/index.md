@@ -9,7 +9,71 @@ browser-compat: css.properties.caption-side
 
 The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref("writing-mode")}} of the table.
 
-{{EmbedInteractiveExample("pages/css/caption-side.html")}}
+{{InteractiveExample("CSS Demo: caption-side")}}
+
+```css interactive-example-choice
+caption-side: top;
+```
+
+```css interactive-example-choice
+caption-side: bottom;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <caption>
+      Famous animals
+    </caption>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Giraffe</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Penguin</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Sloth</td>
+      <td>South America</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #000;
+}
+
+th,
+td {
+  padding: 0.2rem 1rem;
+}
+
+caption {
+  background: #fc3;
+  padding: 0.5rem 1rem;
+}
+
+tr {
+  background: #eee;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+```
 
 ## Syntax
 

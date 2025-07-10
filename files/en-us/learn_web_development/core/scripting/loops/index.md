@@ -1,10 +1,10 @@
 ---
 title: Looping code
+short-title: Loops
 slug: Learn_web_development/Core/Scripting/Loops
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
@@ -240,7 +240,6 @@ Here we have:
 
 1. The keyword `for`, followed by some parentheses.
 2. Inside the parentheses we have three items, separated by semicolons:
-
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
    2. A **condition** — this defines when the loop should stop looping.
@@ -435,7 +434,6 @@ btn.addEventListener("click", () => {
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
    Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
 4. Now on to the interesting part, the `for...of` loop:
-
    1. Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called `splitContact`.
    2. We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`.
       If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
@@ -585,43 +583,62 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 > With any kind of loop, you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
-## Active learning: Launch countdown
+## Implementing a launch countdown
 
 In this exercise, we want you to print out a simple launch countdown to the output box, from 10 down to Blastoff.
-Specifically, we want you to:
 
-- Loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
-- For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`.
-  In comments, we've provided you with three code lines that need to be used somewhere inside the loop:
+To complete the exercise:
 
-  - `const para = document.createElement('p');` — creates a new paragraph.
-  - `output.appendChild(para);` — appends the paragraph to the output `<div>`.
-  - `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
-
-- Different iteration numbers require different text to be put in the paragraph for that iteration (you'll need a conditional statement and multiple `para.textContent =` lines):
-
-  - If the number is 10, print "Countdown 10" to the paragraph.
-  - If the number is 0, print "Blast off!" to the paragraph.
-  - For any other number, print just the number to the paragraph.
-
-- Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Add code to loop from 10 down to 0. We've provided you with an initializer — `let i = 10;`.
+3. For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `const output = document.querySelector('.output');`. We've provided you with three code lines inside comment that need to be used somewhere inside the loop:
+   1. `const para = document.createElement('p');` — creates a new paragraph.
+   2. `output.appendChild(para);` — appends the paragraph to the output `<div>`.
+   3. `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right-hand side, after the equals sign.
+4. For the different iteration numbers listed below, write code to insert the required text inside the paragraph (you'll need a conditional statement and multiple `para.textContent =` lines):
+   1. If the number is 10, print "Countdown 10" to the paragraph.
+   2. If the number is 0, print "Blast off!" to the paragraph.
+   3. For any other number, print just the number to the paragraph.
+5. Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
 > [!NOTE]
-> If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> If you start typing the loop (for example `(while(i>=0)`), the browser might get stuck in an infinite loop because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
-If you make a mistake, you can always reset the example with the "Reset" button.
-If you get really stuck, press "Show solution" to see a solution.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
-```html hidden
-<h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;"></div>
+```html hidden live-sample___loops-1
+<div class="output"></div>
+```
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-<textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-const output = document.querySelector('.output');
+```css hidden live-sample___loops-1
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+
+.output {
+  height: 410px;
+  overflow: auto;
+}
+```
+
+```js live-sample___loops-1
+const output = document.querySelector(".output");
 output.textContent = "";
 
 // let i = 10;
@@ -629,77 +646,27 @@ output.textContent = "";
 // const para = document.createElement('p');
 // para.textContent = ;
 // output.appendChild(para);
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
 ```
 
-```css
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample("loops-1", "100%", 200) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished JavaScript should look something like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-let jsSolution = `const output = document.querySelector('.output');
+```js
+const output = document.querySelector(".output");
 output.textContent = "";
 
 let i = 10;
 
 while (i >= 0) {
-  const para = document.createElement('p');
+  const para = document.createElement("p");
   if (i === 10) {
-    para.textContent = \`Countdown \${i}\`;
+    para.textContent = `Countdown ${i}`;
   } else if (i === 0) {
-    para.textContent = 'Blast off!';
+    para.textContent = "Blast off!";
   } else {
     para.textContent = i;
   }
@@ -707,118 +674,41 @@ while (i >= 0) {
   output.appendChild(para);
 
   i--;
-}`;
-
-let solutionEntry = jsSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
 }
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
 ```
 
-{{ EmbedLiveSample('Active_learning_Launch_countdown', '100%', 900) }}
+</details>
 
-## Active learning: Filling in a guest list
+## Filling in a guest list
 
 In this exercise, we want you to take a list of names stored in an array and put them into a guest list. But it's not quite that easy — we don't want to let Phil and Lola in because they are greedy and rude, and always eat all the food! We have two lists, one for guests to admit, and one for guests to refuse.
 
-Specifically, we want you to:
+To complete the exercise:
 
-- Write a loop that will iterate through the `people` array.
-- During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
-
-  - If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
-  - If it isn't, concatenate the array item to the end of the `admitted` paragraph's `textContent`, followed by a comma and a space.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Write a loop that will iterate through the `people` array.
+3. During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
+   1. If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
+   2. If it isn't, concatenate the array item to the end of the `admitted` paragraph's `textContent`, followed by a comma and a space.
 
 We've already provided you with:
 
-- `refused.textContent +=` — the beginnings of a line that will concatenate something at the end of `refused.textContent`.
-- `admitted.textContent +=` — the beginnings of a line that will concatenate something at the end of `admitted.textContent`.
+- `refused.textContent +=` — the beginnings of a line that will concatenate something to the end of `refused.textContent`.
+- `admitted.textContent +=` — the beginnings of a line that will concatenate something to the end of `admitted.textContent`.
 
-Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one.
-Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end?
+Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end?
 Have a look at the [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) article for help.
 
-If you make a mistake, you can always reset the example with the "Reset" button.
-If you get really stuck, press "Show solution" to see a solution.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
-```html hidden
-<h2>Live output</h2>
+```html hidden live-sample___loops-2
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit:</p>
   <p class="refused">Refuse:</p>
 </div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
-const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
-
-const admitted = document.querySelector('.admitted');
-const refused = document.querySelector('.refused');
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: ';
-
-// loop starts here
-
-// refused.textContent += ;
-// admitted.textContent += ;
-
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
 ```
 
-```css hidden
+```css hidden live-sample___loops-2
 html {
   font-family: sans-serif;
 }
@@ -838,110 +728,76 @@ body {
   margin: 10px;
   background: #f5f9fa;
 }
+
+.output {
+  height: 100px;
+  overflow: auto;
+}
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+```js live-sample___loops-2
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
 
-function updateCode() {
-  eval(textarea.value);
-}
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
+// loop starts here
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
+// refused.textContent += ...;
+// admitted.textContent += ...;
+```
 
-const jsSolution = `
-const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+{{ EmbedLiveSample("loops-2", "100%", 200) }}
 
-const admitted = document.querySelector('.admitted');
-const refused = document.querySelector('.refused');
+<details>
+<summary>Click here to show the solution</summary>
 
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: ';
+Your finished JavaScript should look something like this:
+
+```js
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
+
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
 
 for (const person of people) {
-  if (person === 'Phil' || person === 'Lola') {
-    refused.textContent += \`\${person}, \`;
+  if (person === "Phil" || person === "Lola") {
+    refused.textContent += `${person}, `;
   } else {
-    admitted.textContent += \`\${person}, \`;
+    admitted.textContent += `${person}, `;
   }
 }
 
-refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
-admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';`;
-
-let solutionEntry = jsSolution;
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
+refused.textContent = `${refused.textContent.slice(0, -2)}.`;
+admitted.textContent = `${admitted.textContent.slice(0, -2)}.`;
 ```
 
-{{ EmbedLiveSample('Active_learning_Filling_in_a_guest_list', '100%', 680) }}
+</details>
 
 ## Which loop type should you use?
 
@@ -996,7 +852,7 @@ do {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
 
 ## Summary
 

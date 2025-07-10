@@ -1,5 +1,6 @@
 ---
 title: Aligning items in a flex container
+short-title: Aligning flex items
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 page-type: guide
 ---
@@ -96,7 +97,6 @@ In the example below, the value of `align-items` is `stretch`. Try the other val
 
 .box div {
   width: 100px;
-  height: 100px;
   background-color: rgb(96 139 168 / 0.2);
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;

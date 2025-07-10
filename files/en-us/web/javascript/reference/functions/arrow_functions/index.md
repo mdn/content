@@ -3,9 +3,8 @@ title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
 browser-compat: javascript.functions.arrow_functions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
@@ -13,7 +12,7 @@ An **arrow function expression** is a compact alternative to a traditional [func
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{InteractiveExample("JavaScript Demo: Arrow function expressions")}}
 
 ```js interactive-example
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
@@ -377,7 +376,7 @@ promise
     // …
   });
 
-// Parameterless arrow functions that are visually easier to parse
+// Arrow functions without parameters
 setTimeout(() => {
   console.log("I happen sooner");
   setTimeout(() => {
@@ -400,9 +399,9 @@ const obj = {
 globalThis.num = 42;
 
 // A traditional function to operate on "this"
-const add = function (a, b, c) {
+function add(a, b, c) {
   return this.num + a + b + c;
-};
+}
 
 console.log(add.call(obj, 1, 2, 3)); // 106
 console.log(add.apply(obj, [1, 2, 3])); // 106

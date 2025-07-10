@@ -40,20 +40,16 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 ## Guides
 
-- [Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-
-  - : Overview of CSS syntax, including CSS declarations, declaration blocks, rulesets, and statements.
+- [Introduction to CSS syntax: declarations, rulesets, and statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - : Explains the overall CSS syntax and how declarations, declaration blocks, rulesets, and statements form the style rules.
 
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
-- [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-
-  - : Overview of how the user agent handles invalid CSS.
+- [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+  - : Overview of how browsers handle invalid CSS.
 
 - [Learn CSS first steps: CSS syntax](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
-
   - : Introductory guide to CSS, including an introduction to CSS syntax.
 
 ## Related concepts
@@ -66,10 +62,10 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag
-- [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-- [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-- [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-- [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+- [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+- [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+- [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+- [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
 - [CSS inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{Glossary("Property/CSS", "CSS property")}}
 
@@ -93,8 +89,8 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - {{HTMLElement("style")}} element
 - {{HTMLElement("link")}} element
-- [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute
-- [`rel`](/en-US/docs/Web/HTML/Attributes/rel#stylesheet) attribute
+- [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute
+- [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet) attribute
 
 ## Specifications
 

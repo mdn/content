@@ -3,13 +3,12 @@ title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
 page-type: javascript-operator
 browser-compat: javascript.operators.multiplication
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **multiplication (`*`)** operator produces the product of the operands.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+{{InteractiveExample("JavaScript Demo: Multiplication (*) operator")}}
 
 ```js interactive-example
 console.log(3 * 4);

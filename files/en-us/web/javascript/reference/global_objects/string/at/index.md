@@ -1,15 +1,15 @@
 ---
 title: String.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.at
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`at()`** method of {{jsxref("String")}} values takes an integer value and returns a new {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
 
-{{InteractiveExample("JavaScript Demo: String.at()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.at()")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";
@@ -34,7 +34,7 @@ at(index)
 ### Parameters
 
 - `index`
-  - : The index (position) of the string character to be returned. Supports relative indexing from the end of the string when passed a negative index; i.e. if a negative number is used, the character returned will be found by counting back from the end of the string.
+  - : The index (position) of the string character to be returned. Supports relative indexing from the end of the string when passed a negative index; i.e., if a negative number is used, the character returned will be found by counting back from the end of the string.
 
 ### Return value
 

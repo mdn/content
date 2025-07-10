@@ -69,7 +69,3 @@ pc.getStats().then((stats) => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations")}}

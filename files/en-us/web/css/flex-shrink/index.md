@@ -10,9 +10,47 @@ browser-compat: css.properties.flex-shrink
 The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, the [flex items can shrink](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#the_flex-shrink_property) to fit according to their `flex-shrink` value. Each flex line's [negative free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) is distributed between the line's flex items that have a `flex-shrink` value greater than `0`.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-shrink`, {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} declarations. We have separated them here as this document covers one of the `flex` shorthand components: the `flex-shrink` property.
+> It is recommended to use the {{cssxref("flex")}} shorthand with a keyword value like `auto` or `initial` instead of setting `flex-basis` on its own. The [keyword values](/en-US/docs/Web/CSS/flex#values) expand to reliable combinations of {{cssxref("flex-grow")}}, `flex-shrink`, and {{cssxref("flex-basis")}}, which help to achieve the commonly desired flex behaviors.
 
-{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
+{{InteractiveExample("CSS Demo: flex-shrink")}}
+
+```css interactive-example-choice
+flex-shrink: 0;
+```
+
+```css interactive-example-choice
+flex-shrink: 1;
+```
+
+```css interactive-example-choice
+flex-shrink: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I shrink</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+```
 
 ## Syntax
 

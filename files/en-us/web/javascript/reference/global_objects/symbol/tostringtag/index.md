@@ -1,11 +1,11 @@
 ---
 title: Symbol.toStringTag
+short-title: toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.toStringTag
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.toStringTag`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.toStringTag`. {{jsxref("Object.prototype.toString()")}} looks up this symbol on the `this` value for the property containing a string that represents the type of the object.
 
@@ -41,7 +41,7 @@ Object.prototype.toString.call(3); // "[object Number]"
 Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+// … and more
 ```
 
 ### Built-in toStringTag symbols
@@ -54,7 +54,7 @@ For constructor objects like {{jsxref("Promise")}}, the property is installed on
 Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... and more
+// … and more
 ```
 
 ### Custom tag with toStringTag

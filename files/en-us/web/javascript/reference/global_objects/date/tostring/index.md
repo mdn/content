@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Date")}} instances returns a string representing this date interpreted in the local timezone.
 
-{{InteractiveExample("JavaScript Demo: Date.toString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toString()", "shorter")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");
@@ -44,7 +44,7 @@ The {{jsxref("Date")}} object overrides the {{jsxref("Object/toString", "toStrin
 - If you only want to get the _date_ part, use {{jsxref("Date/toDateString", "toDateString()")}}.
 - If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleString", "toLocaleString()")}}.
+- If you want to format the date in a more user-friendly format (e.g., localization), use {{jsxref("Date/toLocaleString", "toLocaleString()")}}.
 
 ## Examples
 

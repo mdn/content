@@ -2,9 +2,8 @@
 title: Firefox 108 for developers
 slug: Mozilla/Firefox/Releases/108
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 
@@ -12,7 +11,7 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Reference/Elements/source#height) & [`width`](/en-US/docs/Web/HTML/Reference/Elements/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ([Firefox bug 1795953](https://bugzil.la/1795953)).
 
 ### CSS
@@ -31,16 +30,16 @@ No notable changes
 
 ### HTTP
 
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) are now supported.
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr) are now supported.
   A server can use these to specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ([Firefox bug 1529338](https://bugzil.la/1529338)).
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ([Firefox bug 1529337](https://bugzil.la/1529337)).
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
-  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
+- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
 
 ### APIs
 
-- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+- [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are now supported.
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ([Firefox bug 1795647](https://bugzil.la/1795647)).
 

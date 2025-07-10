@@ -32,7 +32,6 @@ setDragImage(imgElement, xOffset, yOffset)
 ### Parameters
 
 - `imgElement`
-
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
     If {{domxref("Element")}} is an img element, then set the drag data store bitmap to
@@ -61,67 +60,57 @@ default drag image.
 [demo](https://codepen.io/webgeeker/full/KBzrxE/)
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Example of DataTransfer.setDragImage()</title>
-    <meta name="viewport" content="width=device-width" />
-    <style>
-      div {
-        margin: 0em;
-        padding: 2em;
-      }
-      #source {
-        color: blue;
-        border: 1px solid black;
-      }
-      #target {
-        border: 1px solid black;
-      }
-    </style>
-    <script>
-      function dragStartHandler(ev) {
-        console.log("dragStart");
-        // Set the drag's format and data. Use the event target's id for the data
-        ev.dataTransfer.setData("text/plain", ev.target.id);
-        // Create an image and use it for the drag image
-        // NOTE: change "example.gif" to an existing image or the image will not
-        // be created and the default drag image will be used.
-        const img = new Image();
-        img.src = "example.gif";
-        ev.dataTransfer.setDragImage(img, 10, 10);
-      }
+<div>
+  <p id="source" draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
+</div>
+<div id="target">Drop Zone</div>
+```
 
-      function dragOverHandler(ev) {
-        console.log("dragOver");
-        ev.preventDefault();
-      }
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+#target {
+  border: 1px solid black;
+}
+```
 
-      function dropHandler(ev) {
-        console.log("Drop");
-        ev.preventDefault();
-        // Get the data, which is the id of the drop target
-        const data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-      }
-    </script>
-  </head>
-  <body>
-    <h1>Example of <code>DataTransfer.setDragImage()</code></h1>
-    <div>
-      <p id="source" ondragstart="dragStartHandler(event);" draggable="true">
-        Select this element, drag it to the Drop Zone and then release the
-        selection to move the element.
-      </p>
-    </div>
-    <div
-      id="target"
-      ondrop="dropHandler(event);"
-      ondragover="dragOverHandler(event);">
-      Drop Zone
-    </div>
-  </body>
-</html>
+```js
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
+  console.log("dragStart");
+  // Set the drag's format and data. Use the event target's id for the data
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  // Create an image and use it for the drag image
+  // NOTE: change "example.gif" to an existing image or the image will not
+  // be created and the default drag image will be used.
+  const img = new Image();
+  img.src = "example.gif";
+  ev.dataTransfer.setDragImage(img, 10, 10);
+});
+
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+});
+
+target.addEventListener("drop", (ev) => {
+  console.log("Drop");
+  ev.preventDefault();
+  // Get the data, which is the id of the drop target
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+});
 ```
 
 ## Specifications

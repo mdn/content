@@ -58,7 +58,7 @@ Valid `<display-internal>` values:
 
 ### CSS tables example
 
-The following example demonstrates laying out a simple form using CSS table layout.
+The following example demonstrates laying out a form using CSS table layout.
 
 #### HTML
 
@@ -108,7 +108,6 @@ input {
 ## See also
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

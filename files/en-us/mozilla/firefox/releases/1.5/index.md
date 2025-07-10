@@ -2,9 +2,8 @@
 title: Firefox 1.5 for developers
 slug: Mozilla/Firefox/Releases/1.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/en-US/docs/Web/SVG) 1.1 and [`<canvas>`](/en-US/docs/Web/API/Canvas_API), [XForms](/en-US/docs/Glossary/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
 
@@ -12,7 +11,7 @@ Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improve
 
 Several tools and browser extensions are available to help developers support Firefox 1.5.
 
-- [DOM Inspector](/en-US/docs/DOM_Inspector), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
+- [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
 - JavaScript console, a tool to write and test JavaScript code as well as view JavaScript and CSS errors on a page.
 - View page source, with syntax highlighting and find features.
 - [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.
@@ -79,12 +78,12 @@ Some of the new features in Firefox 1.5:
 Firefox support for Web standards continues to lead the industry with consistent cross-platform implementations for:
 
 - Hypertext Markup Language ([HTML](/en-US/docs/Web/HTML)) and Extensible Hypertext Markup Language ([XHTML](/en-US/docs/Glossary/XHTML)): [HTML 4.01](https://www.w3.org/TR/html401/) and [XHTML 1.0/1.1](https://www.w3.org/TR/xhtml1/)
-- Cascading Style Sheets ([CSS](/en-US/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/REC-CSS1/), [CSS Level 2](https://www.w3.org/TR/CSS22/) and parts of [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
-- Document Object Model ([DOM](/en-US/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
+- Cascading Style Sheets ([CSS](/en-US/docs/Web/CSS)): [CSS Level 1](https://www.w3.org/TR/CSS1/), [CSS Level 2](https://www.w3.org/TR/CSS22/) and parts of [CSS Level 3](https://www.w3.org/Style/CSS/current-work.html)
+- Document Object Model ([DOM](/en-US/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/DOM-Level-1/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) and parts of [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3)
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
-- Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml/), [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/NOTE-FIXptr-20010425.htm)
-- XSL Transformations ([XSLT](/en-US/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt/)
-- XML Path Language ([XPath](/en-US/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath/)
+- Extensible Markup Language ([XML](/en-US/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/xml/), [Namespaces in XML](https://www.w3.org/TR/xml-names/), [Associating Style Sheets with XML Documents 1.0](https://www.w3.org/TR/xml-stylesheet/), [Fragment Identifier for XML](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/NOTE-FIXptr-20010425.htm)
+- XSL Transformations ([XSLT](/en-US/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt-10/)
+- XML Path Language ([XPath](/en-US/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath-10/)
 - Resource Description Framework ([RDF](/en-US/docs/Glossary/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262, revision 3](https://ecma-international.org/publications-and-standards/standards/ecma-262/)

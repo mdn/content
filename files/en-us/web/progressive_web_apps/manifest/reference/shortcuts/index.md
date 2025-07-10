@@ -2,10 +2,9 @@
 title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 page-type: web-manifest-member
-browser-compat: html.manifest.shortcuts
+browser-compat: manifests.webapp.shortcuts
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `shortcuts` manifest member is used to specify links to key tasks or pages within your web application.
 Browsers can use this information to create a context menu, which is typically displayed when a user interacts with the web app's icon.
@@ -53,35 +52,28 @@ Browsers can use this information to create a context menu, which is typically d
 ### Values
 
 - `shortcuts`
-
   - : An array of objects. Each object represents a key task or page in the web app.
 
     Each object can have one or more properties. Of these, only `name` and `url` are required.
     The possible properties include:
-
     - `name`
-
       - : A string that represents the name of the shortcut, which is displayed to users in a context menu.
 
     - `short_name` {{Optional_Inline}}
-
       - : A string that represents a short version of the shortcut's name.
         Browsers may use this in contexts where there isn't enough space to display the full name.
 
     - `description` {{Optional_Inline}}
-
       - : A string that describes the purpose of the shortcut.
         Browsers may expose this information to assistive technology, such as screen readers, which can help users understand the purpose of the shortcut.
 
     - `url`
-
       - : An app URL that opens when the associated shortcut is activated.
         The URL must be within the [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) of the web app manifest.
         If the value is absolute, it should be same-origin with the page that links to the manifest file.
         If the value is relative, it is resolved against the manifest file's URL.
 
     - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) {{Optional_Inline}}
-
       - : An array of icon objects representing the shortcut in various contexts.
         This has the same format as the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest member.
 

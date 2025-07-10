@@ -3,13 +3,12 @@ title: Static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 page-type: javascript-language-feature
 browser-compat: javascript.classes.static_initialization_blocks
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Classes")}}
+**Static initialization blocks** are declared within a {{jsxref("Statements/class", "class")}}. It contains statements to be evaluated during class initialization. This permits more flexible initialization logic than {{jsxref("Classes/static", "static")}} properties, such as using `try...catch` or setting multiple fields from a single value. Initialization is performed in the context of the current class declaration, with access to private state, which allows the class to share information of its private elements with other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
-**Static initialization blocks** are declared within a {{jsxref("Statements/class", "class")}}. It contains statements to be evaluated during class initialization. This permits more flexible initialization logic than {{jsxref("Classes/static", "static")}} properties, such as using `try...catch` or setting multiple fields from a single value. Initialization is performed in the context of the current class declaration, with access to private state, which allows the class to share information of its private properties with other classes or functions declared in the same scope (analogous to "friend" classes in C++).
-
-{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+{{InteractiveExample("JavaScript Demo: Class static initialization blocks")}}
 
 ```js interactive-example
 class ClassWithStaticInitializationBlock {
@@ -82,12 +81,12 @@ Note however that it is a syntax error to call {{jsxref("Operators/super", "supe
 
 The statements are evaluated synchronously. You cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} in this block. (Think of the initialization statements as being implicitly wrapped in a function.)
 
-The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) declared within the class without causing a syntax error.
+The scope of the static block is nested _within_ the lexical scope of the class body, and can access [private names](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) declared within the class without causing a syntax error.
 
 [Static field](/en-US/docs/Web/JavaScript/Reference/Classes/static) initializers and static initialization blocks are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
 
 > [!NOTE]
-> This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 A static initialization block may not have decorators (the class itself may).
 
@@ -147,7 +146,7 @@ class B extends A {
 // 'static field'
 ```
 
-### Access to private properties
+### Access to private elements
 
 This example below shows how access can be granted to a private instance field of a class from an object outside the class (example from the [v8.dev blog](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)):
 

@@ -3,9 +3,8 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 page-type: javascript-class
 browser-compat: javascript.builtins.Object
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Guide/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
@@ -17,7 +16,7 @@ Changes to the `Object.prototype` object are seen by **all** objects through pro
 
 ### Object prototype properties
 
-You should avoid calling any `Object.prototype` method directly from the instance, especially those that are not intended to be polymorphic (i.e. only its initial behavior makes sense and no descending object could override it in a meaningful way). All objects descending from `Object.prototype` may define a custom own property that has the same name, but with entirely different semantics from what you expect. Furthermore, these properties are not inherited by [`null`-prototype objects](#null-prototype_objects). All modern JavaScript utilities for working with objects are [static](#static_methods). More specifically:
+You should avoid calling any of the `Object.prototype` methods directly from the instance, especially those that are not intended to be polymorphic (i.e., only its initial behavior makes sense and no descending object could override it in a meaningful way). All objects descending from `Object.prototype` may define a custom own property that has the same name, but with entirely different semantics from what you expect. Furthermore, these properties are not inherited by [`null`-prototype objects](#null-prototype_objects). All modern JavaScript utilities for working with objects are [static](#static_methods). More specifically:
 
 - [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), and [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) exist to be polymorphic and you should expect the object to define its own implementation with sensible behaviors, so you can call them as instance methods. However, `valueOf()` and `toString()` are usually implicitly called through [type conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) and you don't need to call them yourself in your code.
 - [`__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) are deprecated and should not be used. Use the static alternatives {{jsxref("Object.defineProperty()")}} and {{jsxref("Object.getOwnPropertyDescriptor()")}} instead.
@@ -301,13 +300,12 @@ const current = Object.prototype.valueOf;
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
-  } else {
-    // It doesn't look like one of my objects, so let's fall back on
-    // the default behavior by reproducing the current behavior as best we can.
-    // The apply behaves like "super" in some other languages.
-    // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, args);
   }
+  // It doesn't look like one of my objects, so let's fall back on
+  // the default behavior by reproducing the current behavior as best we can.
+  // The apply behaves like "super" in some other languages.
+  // Even though valueOf() doesn't take arguments, some other hook may.
+  return current.apply(this, args);
 };
 ```
 

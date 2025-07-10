@@ -1,13 +1,13 @@
 ---
 title: AsyncGeneratorFunction.prototype.prototype
+short-title: prototype
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/prototype
 page-type: javascript-instance-data-property
 spec-urls:
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-prototype-prototype
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-instances-prototype
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`prototype`** property of `AsyncGeneratorFunction.prototype` is shared by all async generator functions. Its value is [`AsyncGenerator.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator). Each async generator function created with the `async function*` syntax or the `AsyncGeneratorFunction()` constructor also has its own `prototype` property, whose prototype is `AsyncGeneratorFunction.prototype.prototype`. When the async generator function is called, its `prototype` property becomes the prototype of the returned async generator object.
 
@@ -41,7 +41,7 @@ console.log(proto(gen) === genFunc.prototype); // true
 console.log(proto(proto(gen)) === AsyncGeneratorFunctionPrototype.prototype); // true
 ```
 
-The following diagram illustrates the prototype chain of an async generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e. a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
+The following diagram illustrates the prototype chain of an async generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e., a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
 
 ![The inheritance diagram of async generators and async generator functions](https://mdn.github.io/shared-assets/images/diagrams/javascript/asyncgeneratorfunction/prototype-chain.svg)
 

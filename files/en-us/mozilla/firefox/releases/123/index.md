@@ -2,9 +2,8 @@
 title: Firefox 123 for developers
 slug: Mozilla/Firefox/Releases/123
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 was released on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
@@ -23,9 +22,9 @@ No notable changes.
 ### JavaScript
 
 - The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
-  - Incorrect day of month (e.g. "31 April") now skips over to the following month (e.g. "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
-  - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
-  - Single number dates are now accepted (e.g. `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
+  - Incorrect day of month (e.g., "31 April") now skips over to the following month (e.g., "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
+  - Incomplete time zone (e.g., "1/1/70 gm") or AM/PM (e.g., "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
+  - Single number dates are now accepted (e.g., `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
 
 ### SVG
 
@@ -33,15 +32,15 @@ No notable changes.
 
 ### HTTP
 
-- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code is now enabled for [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources that the page is likely to need while the server is still preparing the full response.
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Reference/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code is now enabled for [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) resources that the page is likely to need while the server is still preparing the full response.
   This can significantly reduce page load time.
-  Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
+  Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
   For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
 
 ### APIs
 
 - The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) now supports cross-origin credential creation.
-  Specifically [`navigator.credentials.create({publicKey})`](/en-US/docs/Web/API/CredentialsContainer/create) can now be called in nested browsing contexts loaded from a different origin to the top-most document, if allowed by a [`Feature-Policy: publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) on the top level nesting [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe#allow).
+  Specifically [`navigator.credentials.create({publicKey})`](/en-US/docs/Web/API/CredentialsContainer/create) can now be called in nested browsing contexts loaded from a different origin to the top-most document, if allowed by a [`Feature-Policy: publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) on the top level nesting [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow).
   ([Firefox bug 1870863](https://bugzil.la/1870863)).
 
 #### DOM

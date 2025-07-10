@@ -2,9 +2,8 @@
 title: Firefox 53 for developers
 slug: Mozilla/Firefox/Releases/53
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers but also for Firefox and Gecko developers, as well as add-on developers.
 
@@ -59,7 +58,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### DOM
 
-- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
+- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return `"/x?a=true&b=false"` and `search` would return `""`, rather than `"/x"` and `"?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
 - The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see [Firefox bug 1321623](https://bugzil.la/1321623)).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see [Firefox bug 1274596](https://bugzil.la/1274596)).
@@ -98,21 +97,20 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 #### WebRTC
 
 - The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the `RTCSessionDescriptionInit` dictionary instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.
-- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary `RTCSessionDescriptionInit` dictionary. Existing code continues to work, but [can be simplified](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter).
+- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary `RTCSessionDescriptionInit` dictionary. Existing code continues to work, but can be simplified.
 - {{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialization object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ([Firefox bug 1263312](https://bugzil.la/1263312)).
 - {{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for more information on how this works.
 
 ### HTTP/Networking
 
 - Gecko now has a pref available in `about:config` to allow users to set their default {{HTTPHeader("Referrer-Policy")}} — `network.http.referer.userControlPolicy` ([Firefox bug 1304623](https://bugzil.la/1304623)). Possible values are:
-
   - 0 — `no-referrer`
   - 1 — `same-origin`
   - 2 — `strict-origin-when-cross-origin`
   - 3 — `no-referrer-when-downgrade` (the default)
 
 - Support for Next Protocol Negotiation (NPN) has been removed in favor of [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) — see [Firefox bug 1248198](https://bugzil.la/1248198).
-- The {{httpheader("Large-Allocation")}} HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
+- The `Large-Allocation` HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
 
 ### SVG
 

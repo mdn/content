@@ -3,9 +3,8 @@ title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 page-type: javascript-operator
 browser-compat: javascript.operators.logical_or
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **logical OR (`||`)** (logical disjunction) operator for a set of operands
 is true if and only if one or more of its operands is true. It is typically used with
@@ -14,7 +13,7 @@ the `||` operator actually returns the value of one of the specified
 operands, so if this operator is used with non-Boolean values, it will return a
 non-Boolean value.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical OR (||) operator", "shorter")}}
 
 ```js interactive-example
 const a = 3;

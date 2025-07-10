@@ -33,6 +33,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("exp()")}}
 - {{cssxref("hypot()")}}
 - {{cssxref("ident()")}}
+- {{cssxref("if()")}}
 - {{cssxref("inherit()")}}
 - {{cssxref("log()")}}
 - {{cssxref("max()")}}
@@ -41,13 +42,15 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("sibling-index()")}}
 - {{cssxref("sign()")}}
 - {{cssxref("sin()")}}
 - {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
-- {{cssxref("url()")}}
+- {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
 
 ### Data types
 
@@ -56,7 +59,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<animation-timeline>`](/en-US/docs/Web/CSS/animation-timeline)
 - [`<attr-name>`](/en-US/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/en-US/docs/Web/CSS/attr#attr-type)
-- [`<attr-unit>`](/en-US/docs/Web/CSS/attr#attr-unit)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
 - [`<calc-size-basis>`](/en-US/docs/Web/CSS/calc-size#calc-size-basis)
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
@@ -91,64 +93,60 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`cap`](/en-US/docs/Web/CSS/length#cap)
 - [`ch`](/en-US/docs/Web/CSS/length#ch)
 - [`cm`](/en-US/docs/Web/CSS/length#cm)
-- [`deg`](/en-US/docs/Web/CSS/length#deg)
-- [`dpcm`](/en-US/docs/Web/CSS/length#dpcm)
-- [`dpi`](/en-US/docs/Web/CSS/length#dpi)
-- [`dppx`](/en-US/docs/Web/CSS/length#dppx)
-- [`dvb`](/en-US/docs/Web/CSS/length#dvb)
-- [`dvh`](/en-US/docs/Web/CSS/length#dvh)
-- [`dvi`](/en-US/docs/Web/CSS/length#dvi)
-- [`dvmax`](/en-US/docs/Web/CSS/length#dvmax)
-- [`dvmin`](/en-US/docs/Web/CSS/length#dvmin)
-- [`dvw`](/en-US/docs/Web/CSS/length#dvw)
+- [`deg`](/en-US/docs/Web/CSS/angle#deg)
+- [`dpcm`](/en-US/docs/Web/CSS/resolution#dpcm)
+- [`dpi`](/en-US/docs/Web/CSS/resolution#dpi)
+- [`dppx`](/en-US/docs/Web/CSS/resolution#dppx)
+- [`dvb`](/en-US/docs/Web/CSS/length#vb)
+- [`dvh`](/en-US/docs/Web/CSS/length#vh)
+- [`dvi`](/en-US/docs/Web/CSS/length#vi)
+- [`dvmax`](/en-US/docs/Web/CSS/length#vmax)
+- [`dvmin`](/en-US/docs/Web/CSS/length#vmin)
+- [`dvw`](/en-US/docs/Web/CSS/length#vw)
 - [`em`](/en-US/docs/Web/CSS/length#em)
 - [`ex`](/en-US/docs/Web/CSS/length#ex)
-- [`grad`](/en-US/docs/Web/CSS/length#grad)
-- [`Hz`](/en-US/docs/Web/CSS/length#hz)
+- [`grad`](/en-US/docs/Web/CSS/angle#grad)
+- [`Hz`](/en-US/docs/Web/CSS/frequency#hz)
 - [`ic`](/en-US/docs/Web/CSS/length#ic)
 - [`in`](/en-US/docs/Web/CSS/length#in)
-- [`kHz`](/en-US/docs/Web/CSS/length#khz)
-- [`left`](/en-US/docs/Web/CSS/length#left)
+- [`kHz`](/en-US/docs/Web/CSS/frequency#khz)
 - [`lh`](/en-US/docs/Web/CSS/length#lh)
-- [`lvb`](/en-US/docs/Web/CSS/length#lvb)
-- [`lvh`](/en-US/docs/Web/CSS/length#lvh)
-- [`lvi`](/en-US/docs/Web/CSS/length#lvi)
-- [`lvmax`](/en-US/docs/Web/CSS/length#lvmax)
-- [`lvmin`](/en-US/docs/Web/CSS/length#lvmin)
-- [`lvw`](/en-US/docs/Web/CSS/length#lvw)
+- [`lvb`](/en-US/docs/Web/CSS/length#vb)
+- [`lvh`](/en-US/docs/Web/CSS/length#vh)
+- [`lvi`](/en-US/docs/Web/CSS/length#vi)
+- [`lvmax`](/en-US/docs/Web/CSS/length#vmax)
+- [`lvmin`](/en-US/docs/Web/CSS/length#vmin)
+- [`lvw`](/en-US/docs/Web/CSS/length#vw)
 - [`mm`](/en-US/docs/Web/CSS/length#mm)
-- [`ms`](/en-US/docs/Web/CSS/length#ms)
+- [`ms`](/en-US/docs/Web/CSS/time#ms)
 - [`pc`](/en-US/docs/Web/CSS/length#pc)
-- [`pi`](/en-US/docs/Web/CSS/length#pi)
 - [`pt`](/en-US/docs/Web/CSS/length#pt)
 - [`px`](/en-US/docs/Web/CSS/length#px)
 - [`Q`](/en-US/docs/Web/CSS/length#q)
-- [`rad`](/en-US/docs/Web/CSS/length#rad)
+- [`rad`](/en-US/docs/Web/CSS/angle#rad)
 - [`rcap`](/en-US/docs/Web/CSS/length#rcap)
 - [`rch`](/en-US/docs/Web/CSS/length#rch)
 - [`rem`](/en-US/docs/Web/CSS/length#rem)
 - [`rex`](/en-US/docs/Web/CSS/length#rex)
 - [`ric`](/en-US/docs/Web/CSS/length#ric)
 - [`rlh`](/en-US/docs/Web/CSS/length#rlh)
-- [`s`](/en-US/docs/Web/CSS/length#s)
-- [`size`](/en-US/docs/Web/CSS/length#size)
-- [`svb`](/en-US/docs/Web/CSS/length#svb)
-- [`svh`](/en-US/docs/Web/CSS/length#svh)
-- [`svi`](/en-US/docs/Web/CSS/length#svi)
-- [`svmax`](/en-US/docs/Web/CSS/length#svmax)
-- [`svmin`](/en-US/docs/Web/CSS/length#svmin)
-- [`svw`](/en-US/docs/Web/CSS/length#svw)
-- [`turn`](/en-US/docs/Web/CSS/length#turn)
-- [`up`](/en-US/docs/Web/CSS/length#up)
+- [`s`](/en-US/docs/Web/CSS/time#s)
+- [`svb`](/en-US/docs/Web/CSS/length#vb)
+- [`svh`](/en-US/docs/Web/CSS/length#vh)
+- [`svi`](/en-US/docs/Web/CSS/length#vi)
+- [`svmax`](/en-US/docs/Web/CSS/length#vmax)
+- [`svmin`](/en-US/docs/Web/CSS/length#vmin)
+- [`svw`](/en-US/docs/Web/CSS/length#vw)
+- [`turn`](/en-US/docs/Web/CSS/angle#turn)
 - [`vb`](/en-US/docs/Web/CSS/length#vb)
 - [`vh`](/en-US/docs/Web/CSS/length#vh)
 - [`vi`](/en-US/docs/Web/CSS/length#vi)
 - [`vmax`](/en-US/docs/Web/CSS/length#vmax)
 - [`vmin`](/en-US/docs/Web/CSS/length#vmin)
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
-- [`x`](/en-US/docs/Web/CSS/length#x)
+- [`x`](/en-US/docs/Web/CSS/resolution#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -158,11 +156,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [Dynamic viewport units](/en-US/docs/Web/CSS/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
 - [Frequency units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
 - [Large viewport-percentage units](/en-US/docs/Web/CSS/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
-- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch` ,`em`, `ex`, `ic`, `lh`)
+- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
 - [Physical units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
 - [Relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
 - [Resolution units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
-- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) (`rcap` ,`rch`, `rem`, `rex`, `ric`, `rlh`)
+- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
 - [Small viewport-percentage unit](/en-US/docs/Web/CSS/length#small_viewport_units) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
 - [Time units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#time_units) (`ms`, `s`)
 - [Viewport units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
@@ -190,37 +188,29 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 ## Guides
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-
   - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
 
 - [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-
   - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
 
 - [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
 - [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 - [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-
   - : The CSS math functions that allow a property value to be written as a mathematical expression.
 
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-
   - : A look at some of the most frequently used value types, what they are, and how they work.
 
 ## Related
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}
@@ -229,22 +219,18 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
   - {{cssxref("all")}}
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-
-  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
+  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module
-
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
 

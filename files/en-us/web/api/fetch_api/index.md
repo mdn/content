@@ -23,7 +23,7 @@ You can create a request and response directly using the {{DOMxRef("Request.Requ
 
 Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
-## Fetch Interfaces
+## Interfaces
 
 - {{domxref("Window.fetch()")}} and {{domxref("WorkerGlobalScope.fetch()")}}
   - : The `fetch()` method used to fetch a resource.
@@ -46,5 +46,5 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

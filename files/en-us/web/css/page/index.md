@@ -59,11 +59,11 @@ The print controls allow the user to select how the `section`s in the `article` 
     <input type="radio" id="single" name="type" value="single" checked />
     No Pages
   </label>
-  <label for="double">
+  <label for="grouped">
     <input type="radio" id="grouped" name="type" value="grouped" />Pages with
     Grouped Chapters
   </label>
-  <label for="double">
+  <label for="paged">
     <input type="radio" id="paged" name="type" value="paged" />
     Chapters Paged
   </label>
@@ -198,7 +198,7 @@ The `break-after: page;` is used to split them up, which splits each chapter int
   }
   section {
     font-size: 2rem;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
   }
   .chapter {
     border: tomato 2px solid;

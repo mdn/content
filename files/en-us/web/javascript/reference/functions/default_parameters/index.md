@@ -3,13 +3,12 @@ title: Default parameters
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 page-type: javascript-language-feature
 browser-compat: javascript.functions.default_parameters
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 **Default function parameters** allow named parameters to be initialized with default values if no value or `undefined` is passed.
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{InteractiveExample("JavaScript Demo: Default parameters")}}
 
 ```js interactive-example
 function multiply(a, b = 1) {

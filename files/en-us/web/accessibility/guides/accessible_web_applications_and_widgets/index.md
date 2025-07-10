@@ -98,7 +98,7 @@ ARIA provides attributes for declaring the current state of a UI widget. Example
 - `aria-grabbed`
   - : Indicates the 'grabbed' state of an object in a drag-and-drop operation.
 
-(For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria-1.1/#introstates).)
+(For a full list of ARIA states, consult the [ARIA list of states and properties](https://w3c.github.io/aria/#introstates).)
 
 Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).
 
@@ -106,7 +106,7 @@ Developers should use ARIA states to indicate the state of UI widget elements an
 
 When content visibility is changed (i.e., an element is hidden or shown), developers should change the **`aria-hidden`** property value. The techniques described above should be used to declare CSS to visually hide an element using `display:none`.
 
-Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
+Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a web form with tooltips containing instructions associated with the entry fields.
 
 ```html
 <div class="text">
@@ -174,5 +174,5 @@ So, for the Tabs widget example above, the user should be able to navigate into 
 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA Specification](https://w3c.github.io/aria/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

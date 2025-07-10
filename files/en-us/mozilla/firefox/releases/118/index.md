@@ -2,9 +2,8 @@
 title: Firefox 118 for developers
 slug: Mozilla/Firefox/Releases/118
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 118 that affect developers. Firefox 118 was released on September 26, 2023.
 
@@ -28,12 +27,12 @@ No notable changes.
 
 ### HTTP
 
-- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
+- The HTTP [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) header's [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) directive is now supported, which can be used to enable the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) interface for retrieving public-key credentials in a cross-origin iframe ([Firefox bug 1460986](https://bugzil.la/1460986)).
 
 ### MathML
 
-- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
-- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
+- The [`<semantics>`](/en-US/docs/Web/MathML/Reference/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Reference/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Reference/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
 ### APIs
 
@@ -58,7 +57,7 @@ No notable changes.
 
 #### Marionette
 
-- Added support for all the [Web Authentication extension commands](https://www.w3.org/TR/webauthn-2/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
+- Added support for all the [Web Authentication extension commands](https://w3c.github.io/webauthn/#sctn-automation), which allow users to authenticate themselves by Public Key Credentials ([Firefox bug 1846574](https://bugzil.la/1846574))
 
 ## Changes for add-on developers
 

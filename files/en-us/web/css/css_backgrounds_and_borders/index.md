@@ -145,7 +145,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
   - : Setting one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Changing the size and repeating behavior of background images.
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
   - : How SVG aspect ratio, SVG dimension values, and the CSS `background-size` property impact the scaling of SVG background images.
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Creating CSS gradients and using them as background images.

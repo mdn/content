@@ -10,21 +10,47 @@ browser-compat: css.types.transform-function.matrix
 The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a homogeneous 2D transformation matrix. Its result is
 a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
+> [!NOTE]
+> The `matrix(a, b, c, d, tx, ty)` function is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
 
-> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
-> `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
+{{InteractiveExample("CSS Demo: matrix()")}}
+
+```css interactive-example-choice
+transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+```
+
+```css interactive-example-choice
+transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+```
+
+```css interactive-example-choice
+transform: matrix(0, 1, 1, 0, 0, 0);
+```
+
+```css interactive-example-choice
+transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
-
-The `matrix()` function is specified with six values. The constant values are implied and not passed as
-parameters; the other parameters are described in the column-major order.
 
 ```css
 matrix(a, b, c, d, tx, ty)
 ```
 
 ### Values
+
+The `matrix()` function is specified with six values. The constant values are implied and not passed as
+parameters; the other parameters are described in the column-major order.
 
 - _a_ _b_ _c_ _d_
   - : Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.

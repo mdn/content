@@ -9,7 +9,32 @@ browser-compat: css.types.gradient.repeating-conic-gradient
 
 The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
-{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-conic-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-conic-gradient(red 0%, yellow 15%, red 33%);
+```
+
+```css interactive-example-choice
+background: repeating-conic-gradient(
+  from 45deg at 10% 50%,
+  brown 0deg 10deg,
+  darkgoldenrod 10deg 20deg,
+  chocolate 20deg 30deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 

@@ -2,9 +2,8 @@
 title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
 
@@ -36,11 +35,11 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### HTML
 
-- The {{HTMLElement("input")}} element's [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes now work correctly when the value of `min` is greater than the value of `max` for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ([Firefox bug 1608010](https://bugzil.la/1608010)).
+- The {{HTMLElement("input")}} element's [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes now work correctly when the value of `min` is greater than the value of `max` for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ([Firefox bug 1608010](https://bugzil.la/1608010)).
 
 ### CSS
 
-- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
+- Firefox now supports [CSS colors level 4 system colors](https://drafts.csswg.org/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
 
 ### SVG
 
@@ -59,7 +58,7 @@ _No changes._
 #### DOM
 
 - UI-parts related items in the `windowFeatures` parameter of {{domxref("window.open()")}} can no longer control the visibility of each UI part separately, but become a condition for whether to open a popup or not ([Firefox bug 1507375](https://bugzil.la/1507375)).
-- Attempts to navigate to an unknown protocol using methods such as [`location.href`](/en-US/docs/Web/API/Location/href) or [`<meta http-equiv="refresh">`](/en-US/docs/Web/HTML/Element/meta) are now blocked (see [Firefox bug 1528305](https://bugzil.la/1528305).
+- Attempts to navigate to an unknown protocol using methods such as [`location.href`](/en-US/docs/Web/API/Location/href) or [`<meta http-equiv="refresh">`](/en-US/docs/Web/HTML/Reference/Elements/meta) are now blocked (see [Firefox bug 1528305](https://bugzil.la/1528305).
 - The {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor now accepts a {{domxref("Document")}} object as its `root`, as well as an {{domxref("Element")}} object ([Firefox bug 1623623](https://bugzil.la/1623623)). This lets you explicitly use a window's entire content area as the intersection bounds.
 - The [Fetch API](/en-US/docs/Web/API/Fetch_API) now supports the `audioworklet` {{domxref("Request.destination", "destination")}} for requests. This causes received data to be dispatched to an {{domxref("AudioWorklet")}} ([Firefox bug 1402784](https://bugzil.la/1402784)).
 

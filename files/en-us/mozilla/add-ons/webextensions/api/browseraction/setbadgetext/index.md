@@ -24,11 +24,8 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `text`
-
       - : `string` or `null`. Any number of characters can be passed, but only about four can fit in the space.
 
         Use an empty string - `""` - if you don't want any badge.

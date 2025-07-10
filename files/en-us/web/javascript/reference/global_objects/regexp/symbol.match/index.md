@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype[Symbol.match]()
+short-title: "[Symbol.match]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
@@ -22,7 +22,7 @@ class RegExp1 extends RegExp {
   }
 }
 
-console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+console.log("2012-07-02".match(new RegExp1("(\\d+)-(\\d+)-(\\d+)")));
 // Expected output: "VALID"
 ```
 
@@ -72,7 +72,7 @@ for (let i = 0; i < 5; i++) {
 // [ 'a' ] 1
 ```
 
-When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it would still perform sticky matches — i.e., it would fail to match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
@@ -96,7 +96,7 @@ In addition, the `[Symbol.match]` property is used to check [whether an object i
 This method can be used in _almost_ the same way as {{jsxref("String.prototype.match()")}}, except the different `this` and the different arguments order.
 
 ```js
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02";
 const result = re[Symbol.match](str);
 console.log(result); // ["2016", "01", "02"]
@@ -119,7 +119,7 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+const re = new MyRegExp("(\\d+)-(\\d+)-(\\d+)");
 const str = "2016-01-02";
 const result = str.match(re); // String.prototype.match calls re[Symbol.match]().
 console.log(result.group(1)); // 2016

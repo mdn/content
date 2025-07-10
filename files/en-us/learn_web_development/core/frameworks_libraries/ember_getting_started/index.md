@@ -2,9 +2,8 @@
 title: Getting started with Ember
 slug: Learn_web_development/Core/Frameworks_libraries/Ember_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -51,11 +50,9 @@ What does it mean to be a component-service framework? Components are individual
 Generally, EmberJS works well for building apps that desire either or both of the following traits:
 
 - Single Page Applications, including native-like web apps, and [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs)
-
   - Ember works best when it is the entire front end of your application.
 
 - Increasing cohesion among many team's technology stacks
-
   - Community-backed "best practices" allow for faster long-term development speed.
   - Ember has clear conventions that are useful for enforcing consistency and helping team members get up to speed quickly.
 
@@ -167,7 +164,7 @@ Installing shared assets, as we're about to do, isn't normally a required step f
    npm install --save-dev todomvc-app-css todomvc-common
    ```
 
-3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
+3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/packages/app-blueprint/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
 
    We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly [`@import`](/en-US/docs/Web/CSS/@import) them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
 

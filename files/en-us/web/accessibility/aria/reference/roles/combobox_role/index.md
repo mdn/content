@@ -1,5 +1,6 @@
 ---
 title: "ARIA: combobox role"
+short-title: combobox
 slug: Web/Accessibility/ARIA/Reference/Roles/combobox_role
 page-type: aria-role
 spec-urls:
@@ -28,9 +29,9 @@ The popup element associated with a `combobox` can be either a [`listbox`](/en-U
 
 Comboboxes have an implicit [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) value of `listbox`, so including this attribute is optional if the popup is a `listbox`. If the combobox popup element is a `tree`, `grid`, or `dialog` (anything other than a `listbox`), the `aria-haspopup` attribute is required. The value of `aria-haspopup` must be either the `tree`, `grid`, `dialog`, or `listbox` role. Note that for this property, `true` means `menu`, so make sure that the value corresponds to the role of the popup, not a Boolean value.
 
-When a combobox's popup is displayed, ensure the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute on the combobox element is set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the popup `listbox`, `tree`, `grid`, or `dialog` element. This is how the relationship between the element with the `combobox` role and the popup it controls is indicated. (Note: In older ARIA specs, this was `aria-owns` rather than `aria-controls`, so you may see `aria-owns` in older combobox implementations. The `aria-owns` in the code should be updated to `aria-controls`!)
+When a combobox's popup is displayed, ensure the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute on the combobox element is set to the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the popup `listbox`, `tree`, `grid`, or `dialog` element. This is how the relationship between the element with the `combobox` role and the popup it controls is indicated. (Note: In older ARIA specs, this was `aria-owns` rather than `aria-controls`, so you may see `aria-owns` in older combobox implementations. The `aria-owns` in the code should be updated to `aria-controls`!)
 
-If the combobox UI includes a visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) role element with a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) of `-1`. Doing so will allow the button to be focusable but not included in keyboard tab sequence. It must not be a descendant of the element with role `combobox`.
+If the combobox UI includes a visible control, such as an icon, that allows the visibility of the popup to be controlled via pointer and touch events, that control should be a {{HTMLElement('button')}}, {{HTMLElement('input')}} of type `button`, or a [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) role element with a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) of `-1`. Doing so will allow the button to be focusable but not included in keyboard tab sequence. It must not be a descendant of the element with role `combobox`.
 
 To be keyboard accessible, keyboard support for moving focus between the `combobox` element (whether input or button) and elements contained in the popup `listbox`, `tree`, `grid`, or `dialog`, must be programmed in. One common convention is that <kbd>Down Arrow</kbd> moves focus from the input to the first focusable descendant of the popup element.
 
@@ -62,15 +63,13 @@ Note: Use only one of these methods; do not combine them.
   - : Opens the popup if closed and moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
-
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
 
-  - : Opens the popup if closed and moves focus to the previous option, or to the last option if none was selected.
+  - : Opens the popup if closed and moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
-
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
 
 - <kbd>Escape</kbd>
@@ -138,5 +137,4 @@ Note: Use only one of these methods; do not combine them.
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
-- [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque

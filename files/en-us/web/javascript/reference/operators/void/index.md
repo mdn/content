@@ -3,14 +3,13 @@ title: void operator
 slug: Web/JavaScript/Reference/Operators/void
 page-type: javascript-operator
 browser-compat: javascript.operators.void
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - void operator", "taller")}}
+{{InteractiveExample("JavaScript Demo: void operator", "taller")}}
 
 ```js interactive-example
 const output = void 1;
@@ -119,7 +118,8 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 </a>
 ```
 
-> **Note:** `javascript:` pseudo protocol is discouraged over
+> [!NOTE]
+> `javascript:` pseudo protocol is discouraged over
 > other alternatives, such as unobtrusive event handlers.
 
 ### Non-leaking Arrow Functions
@@ -133,7 +133,7 @@ For example, if `doSomething()` returns `false` in the code below, the checkbox 
 checkbox.onclick = () => doSomething();
 ```
 
-This is unlikely to be desired behaviour!
+This is unlikely to be desired behavior!
 To be safe, when the return value of a function is not intended to be used, it can be passed to the `void` operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.
 
 ```js example-good

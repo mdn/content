@@ -102,7 +102,7 @@ function log(text) {
 ```
 
 The code first checks if the `bytes()` method is supported.
-If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) event on the `<select>` element.
+If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) on the `<select>` element.
 When the value changes, it passes the value of the selection (a URL for an image file) to the `checkSignature()` method defined below.
 If the method is not supported it logs this information.
 
@@ -128,7 +128,7 @@ The file name and the file type are then logged.
 
 ```js
 async function checkSignature(url) {
-  if (url == "") return;
+  if (url === "") return;
   log(`File: ${url}`);
   const response = await fetch(url);
   const image = await response.bytes();
@@ -180,5 +180,5 @@ The log should then display the file name, along with the file type that was det
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

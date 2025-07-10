@@ -13,7 +13,7 @@ Some example use cases are:
 
 - **in a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)** to listen for messages from a [background script.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)
 - **in a background script** to listen for messages from a content script.
-- **in an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) or [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups) script** to listen for messages from a background script.
+- **in an [options page or popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_and_options_pages) script** to listen for messages from a background script.
 - **in a background script** to listen for messages from an options page or popup script.
 
 To send a message that is received by the `onMessage()` listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.
@@ -62,15 +62,12 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `message`
       - : `object`. The message. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
     - `sendResponse`
-
       - : A function to call, at most once, to send a response to the `message`. The function takes one argument: any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). This argument is passed back to the message sender.
 
         If you have more than one `onMessage()` listener in the same document, then only one can send a response.
@@ -78,7 +75,6 @@ Events have three functions:
         To send a response synchronously, call `sendResponse()` before the listener function returns.
 
         To send a response asynchronously, use one of these options:
-
         - Return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is the preferred approach.
         - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 
@@ -243,7 +239,7 @@ browser.runtime
   .then(handleResponse);
 ```
 
-Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
+Here is the background script. It uses {{WebExtAPIRef("bookmarks.search()")}} to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
 
 ```js
 // background-script.js

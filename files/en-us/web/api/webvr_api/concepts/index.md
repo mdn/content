@@ -62,12 +62,10 @@ The output information falls into four categories:
 1. Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR, the x, y, and z coordinates are represented by the array contained in {{domxref("VRPose.position")}}.
 2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
 3. Velocity — There are two types of velocity to consider in VR:
-
    - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
    - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
 
 4. Acceleration — There are two types of acceleration to consider in VR:
-
    - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
    - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
 
@@ -112,8 +110,8 @@ A term commonly used in VR because it is a major handicap of using an HMD — we
 
 To minimize this unwanted effect, we need to:
 
-- Avoid focusing on different depths (e.g. avoid using a lot of particles with different depths.)
-- Avoid eye convergence (e.g. if you have an object that comes towards the camera your eyes will follow and converge on it.)
+- Avoid focusing on different depths (e.g., avoid using a lot of particles with different depths.)
+- Avoid eye convergence (e.g., if you have an object that comes towards the camera your eyes will follow and converge on it.)
 - Use darker backgrounds with more subdued colors where possible; a bright screen will make the eyes more tired.
 - Avoid rapid brightness changes.
 - Avoid presenting the user with large amounts of text to read. You should also be careful with the distance between the eyes/camera and the text to read. 0.5m is uncomfortable, whereas at more than 2m the stereo effect starts to break down, so somewhere in between is advisable.

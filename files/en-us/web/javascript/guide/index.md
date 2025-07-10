@@ -2,9 +2,8 @@
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
@@ -19,7 +18,7 @@ Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
 - [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
 - [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
-- [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
+- [What's next](/en-US/docs/Web/JavaScript/Guide/Introduction#whats_next)
 
 ## Grammar and types
 
@@ -70,7 +69,7 @@ Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressio
 - [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
 - [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
+- [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_ternary_operator)
 
 ## Numbers and strings
 
@@ -161,15 +160,6 @@ Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationali
 - [Number formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#number_formatting)
 - [Collation](/en-US/docs/Web/JavaScript/Guide/Internationalization#collation)
 
-## Meta programming
-
-Overview: [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
-
-- [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
-- [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
-- [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
-- [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
-
 ## JavaScript modules
 
 Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
@@ -180,5 +170,18 @@ Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 - [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
 - [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
 - [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+
+## Advanced topics
+
+After you have learned all fundamental features of JavaScript, you can explore some more niche features, or dive deeper into the language's mechanisms and concepts.
+
+- [Language overview](/en-US/docs/Web/JavaScript/Guide/Language_overview)
+- [Data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
+- [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+- [Memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

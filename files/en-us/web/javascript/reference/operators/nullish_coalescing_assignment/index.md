@@ -3,13 +3,12 @@ title: Nullish coalescing assignment (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **nullish coalescing assignment (`??=`)** operator, also known as the **logical nullish assignment** operator, only evaluates the right operand and assigns to the left if the left operand is {{Glossary("nullish")}} (`null` or `undefined`).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+{{InteractiveExample("JavaScript Demo: Nullish coalescing assignment (??=) operator")}}
 
 ```js interactive-example
 const a = { duration: 50 };

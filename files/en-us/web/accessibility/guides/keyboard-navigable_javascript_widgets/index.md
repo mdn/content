@@ -9,7 +9,7 @@ Web applications often use JavaScript to mimic desktop widgets such as menus, tr
 
 ## Using tabindex
 
-By default, when people use the tab key to browse a webpage, only interactive elements (like links, form controls) get focused. With the `tabindex` [global attribute](/en-US/docs/Web/HTML/Global_attributes), authors can make other elements focusable, too. When set to `0`, the element becomes focusable by keyboard and script. When set to `-1`, the element becomes focusable by script, but it does not become part of the keyboard focus order.
+By default, when people use the tab key to browse a webpage, only interactive elements (like links, form controls) get focused. With the `tabindex` [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes), authors can make other elements focusable, too. When set to `0`, the element becomes focusable by keyboard and script. When set to `-1`, the element becomes focusable by script, but it does not become part of the keyboard focus order.
 
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
@@ -33,17 +33,17 @@ The following table describes `tabindex` behavior in modern browsers:
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
-      <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
+      <td>Negative (i.e., <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
       <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
-      <td>Zero (i.e. <code>tabindex="0"</code>)</td>
+      <td>Zero (i.e., <code>tabindex="0"</code>)</td>
       <td>Yes</td>
       <td>In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).</td>
     </tr>
     <tr>
-      <td>Positive (e.g. <code>tabindex="33"</code>)</td>
+      <td>Positive (e.g., <code>tabindex="33"</code>)</td>
       <td>Yes</td>
       <td><code>tabindex</code> value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, <code>tabindex="7"</code> will be positioned before <code>tabindex="11"</code>).</td>
     </tr>
@@ -114,8 +114,6 @@ Bind a key down handler to each element in the group, and when an arrow key is u
 2. update the `tabindex` of the focused element to "0", and
 3. update the `tabindex` of the previously focused element to "-1".
 
-Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
-
 ### Technique 2: `aria-activedescendant`
 
 This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets).)
@@ -148,7 +146,11 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
+<span tabindex="-1">…</span>
+```
+
+```js
+span.onkeydown = handleKeyDown;
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

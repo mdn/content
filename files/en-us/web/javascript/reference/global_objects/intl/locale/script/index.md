@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.script
+short-title: script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.script
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`script`** accessor property of {{jsxref("Intl.Locale")}} instances returns the script used for writing the particular language used in this locale.
 

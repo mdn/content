@@ -19,11 +19,11 @@ This ensures that the array is ordered as required, does not contain any unsuppo
 
 The specified set of codecs will be used for all future connections that include this transceiver until this method is called again.
 
-When preparing to open an {{domxref("RTCPeerConnection")}} the codecs should be set using `setCodecParameters()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}, as these initiate the negotiation (and will use codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by default).
+When preparing to open an {{domxref("RTCPeerConnection")}} the codecs should be set using `setCodecPreferences()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}, as these initiate the negotiation (and will use codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by default).
 
-The codecs can be changed when you have an ongoing communication, but you need to first call `setCodecParameters()` and then kick off a new negotiation.
+The codecs can be changed when you have an ongoing communication, but you need to first call `setCodecPreferences()` and then kick off a new negotiation.
 A WebRTC application will already have code for this in the [`negotiationneeded` event handler](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
-Note however that at time of writing the event is not automatically fired when you call `setCodecParameters()`, so you will have to call `onnegotiationneeded` yourself.
+Note however that at time of writing the event is not automatically fired when you call `setCodecPreferences()`, so you will have to call `onnegotiationneeded` yourself.
 
 A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs).
 
@@ -36,7 +36,6 @@ setCodecPreferences(codecs)
 ### Parameters
 
 - `codecs`
-
   - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
@@ -45,28 +44,23 @@ setCodecPreferences(codecs)
     > This lets you prevent the use of codecs you don't wish to use.
 
     Each codec object in the array has the following properties:
-
     - `channels` {{optional_inline}}
-
       - : A positive integer indicating the number of channels supported by the codec.
         For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
     - `clockRate`
-
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
         The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
-
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `sdpFmtpLine` {{optional_inline}}
-
       - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec, if the field is present.
         If there is no parameters field, this property is left out.
 

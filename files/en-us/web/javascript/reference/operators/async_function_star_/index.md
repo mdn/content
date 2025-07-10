@@ -3,31 +3,28 @@ title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
 page-type: javascript-operator
 browser-compat: javascript.operators.async_generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`async function*`** keywords can be used to define an async generator function inside an expression.
 
 You can also define async generator functions using the [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function* expression", "taller")}}
 
 ```js interactive-example
 async function joinAll(generator) {
   let str = "";
   for await (const val of generator()) {
-    str = str + val;
+    str += val;
   }
   return str;
 }
-
-const str = joinAll(async function* () {
+joinAll(async function* () {
   yield await Promise.resolve("a");
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
-});
-console.log(str);
+}).then((str) => console.log(str));
 // Expected output: "abc"
 ```
 

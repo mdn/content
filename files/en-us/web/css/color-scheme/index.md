@@ -18,7 +18,32 @@ Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@med
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## Syntax
 
@@ -42,13 +67,12 @@ The `color-scheme` property's value must be one of the following keywords.
 ### Values
 
 - `normal`
-  - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.
+  - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.
 - `light`
   - : Indicates that the element can be rendered using the operating system _light_ color scheme.
 - `dark`
   - : Indicates that the element can be rendered using the operating system _dark_ color scheme.
 - `only`
-
   - : Forbids the user agent from overriding the color scheme for the element.
 
     Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a specific element or `:root`.
@@ -87,7 +111,7 @@ footer {
 }
 ```
 
-Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme, helping prevent unwanted screen flashes during the page load.
+Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme, helping prevent unwanted screen flashes during the page load.
 
 ### Styling based on color schemes
 

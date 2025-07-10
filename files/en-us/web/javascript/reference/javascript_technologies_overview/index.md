@@ -2,9 +2,8 @@
 title: JavaScript technologies overview
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Introductory")}}
 
 Whereas [HTML](/en-US/docs/Web/HTML) defines a webpage's structure and content and [CSS](/en-US/docs/Web/CSS) sets the formatting and appearance, [JavaScript](/en-US/docs/Web/JavaScript) adds interactivity to a webpage and creates rich web applications.
 
@@ -65,11 +64,7 @@ The [WebIDL specification](https://webidl.spec.whatwg.org/) provides the glue be
 
 ### The Core of the DOM
 
-The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. The [W3C](/en-US/docs/Glossary/W3C) standardizes the Core Document Object Model, which defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. Among the things defined by the DOM, we can find:
-
-- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …
-- A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
-- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
+The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. Nowadays, the [DOM core](https://dom.spec.whatwg.org/) spec is maintained by [WHATWG](/en-US/docs/Glossary/WHATWG) (superseding the [W3C](/en-US/docs/Glossary/W3C) version). It defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. This includes: {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, and more.
 
 From the ECMAScript point of view, objects defined in the DOM specification are called "host objects".
 
@@ -89,33 +84,33 @@ Looking for the {{domxref("Document")}} object, {{domxref("Window")}} object, an
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas).
 - The [WebAssembly interface](https://webassembly.github.io/spec/js-api/) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
 Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as {{domxref("Window.fetch", "fetch()")}} and {{domxref("Window.setTimeout", "setTimeout()")}}.
 
 ## JavaScript implementations
 
-There are three main JavaScript implementations used in browser environments and beyond:
+JavaScript engines used in current web browsers include:
 
-- Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
-- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
-- Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore) (also known as SquirrelFish/Nitro), used in WebKit browsers such as Apple Safari, and [Bun](https://bun.sh/).
+- Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox, Servo, and Flow. Other non-browser usage includes MongoDB, CouchDB, and more. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
+- Google's [V8](https://v8.dev/), used in Chrome and Chromium-based browsers such as Opera, Edge, and Brave. Other non-browser usage includes [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
+- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.sh/).
+- [LibJS](https://serenityos.github.io/libjs-website/), used in [Ladybird](https://ladybird.org/).
 
-Besides the above implementations, there are other popular JavaScript engines such as:
+Some JavaScript engines used in earlier browsers include:
 
-- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in earlier versions of Opera.
-- Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) engine, used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used a new JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>).
-- [LibJS](https://serenityos.github.io/libjs-website/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
-- Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, a JavaScript implementation written in Java, created primarily by Norris Boyd (also at Netscape).
+- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in Opera before it became a Chromium-based browser.
+- Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>), used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used another JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>), before it became a Chromium-based browser.
 
-There are some engines specifically tailored for non-browser purposes:
+Some JavaScript engines specifically tailored for non-browser purposes include:
 
-- [Engine262](https://engine262.js.org/), a JavaScript engine written in JavaScript. It is created for JavaScript developers to explore new language features and find bugs in the specification.
-- [Moddable XS](https://www.moddable.com/), used in embedded systems such as IoT.
-- [QuickJS](https://bellard.org/quickjs/), a small and embeddable JavaScript engine.
-- Meta's [Hermes](https://github.com/facebook/hermes) engine, an engine optimized for [React Native](https://reactnative.dev/docs/hermes).
-- Oracle's [GraalJS](https://www.graalvm.org/), a high performance implementation built on the GraalVM by Oracle Labs.
+- [Engine262](https://engine262.js.org/), written in JavaScript and intended essentially as a reference implementation of the language.
+- Meta's [Hermes](https://github.com/facebook/hermes), optimized for [React Native](https://reactnative.dev/docs/hermes).
+- Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), written in Java.
+- Oracle's [GraalJS](https://www.graalvm.org/), written in Java and built on top of GraalVM.
+- [Moddable XS](https://www.moddable.com/), intended for IoT/embedded systems.
+- [QuickJS](https://bellard.org/quickjs/), intended to be small and lightweight.
 
 JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 

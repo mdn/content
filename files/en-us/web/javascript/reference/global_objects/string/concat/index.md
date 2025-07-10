@@ -1,16 +1,16 @@
 ---
 title: String.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.concat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`concat()`** method of {{jsxref("String")}} values concatenates
 the string arguments to this string and returns a new string.
 
-{{InteractiveExample("JavaScript Demo: String.concat()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.concat()")}}
 
 ```js interactive-example
 const str1 = "Hello";

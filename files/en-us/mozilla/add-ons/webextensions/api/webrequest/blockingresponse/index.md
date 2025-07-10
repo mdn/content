@@ -18,9 +18,7 @@ Note that you can't set all this object's properties in every listener: the prop
 Values of this type are objects. They contain the following properties:
 
 - `authCredentials` {{optional_inline}}
-
   - : `object`. If set, the request is made using the given credentials. You can only set this property in {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. The `authCredentials` property is an object with the following properties:
-
     - `username`
       - : `string`. Username to supply.
     - `password`
@@ -29,12 +27,11 @@ Values of this type are objects. They contain the following properties:
 - `cancel` {{optional_inline}}
   - : `boolean`. If `true`, the request is cancelled. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, and {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
 - `redirectUrl` {{optional_inline}}
-
   - : `string`. This is a URL, and if set, the original request is redirected to that URL. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} or {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
     Redirections to non-HTTP schemes such as `data:` are allowed. Redirects use the same request method as the original request unless initiated from `onHeadersReceived` stage, in which case the redirect uses the GET method.
 
-    If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
+    If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
 - `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. This is an {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} object, an array in which each object represents a header. If set, the request is made with these headers rather than the original headers. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}.

@@ -3,15 +3,14 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{InteractiveExample("JavaScript Demo: function* declaration")}}
 
 ```js interactive-example
 function* generator(i) {
@@ -45,7 +44,8 @@ function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > Generator functions do not have arrow function counterparts.
 
-> **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
 
 ### Parameters
 
@@ -77,7 +77,7 @@ However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
 A `return` statement in a generator, when executed, will make the generator
-finish (i.e. the `done` property of the object returned by it will be set to
+finish (i.e., the `done` property of the object returned by it will be set to
 `true`). If a value is returned, it will be set as the `value`
 property of the object returned by the generator.
 Much like a `return` statement, an error thrown inside the generator will
@@ -233,30 +233,18 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### Generator defined in an expression
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
-```
-
 ### Generator example
 
 ```js
 function* powers(n) {
-  //endless loop to generate
+  // Endless loop to generate
   for (let current = n; ; current *= n) {
     yield current;
   }
 }
 
 for (const power of powers(2)) {
-  // controlling generator
+  // Controlling generator
   if (power > 32) {
     break;
   }

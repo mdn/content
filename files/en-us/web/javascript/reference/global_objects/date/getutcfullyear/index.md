@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.getUTCFullYear()
+short-title: getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCFullYear()")}}
 
 ```js interactive-example
 const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");

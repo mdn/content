@@ -3,13 +3,12 @@ title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 page-type: javascript-operator
 browser-compat: javascript.operators.yield_star
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`yield*`** operator can be used within generator (sync or async) functions to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}. Inside async generator functions, it can additionally be used to delegate to another async iterable object, such as an {{jsxref("AsyncGenerator")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+{{InteractiveExample("JavaScript Demo: yield* operator")}}
 
 ```js interactive-example
 function* func1() {

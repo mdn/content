@@ -63,7 +63,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/width", "width")}}
 
 > [!NOTE]
-> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: {{cssxref("@media/environment-blending", "environment-blending")}}, {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}, {{cssxref("@media/nav-controls", "nav-controls")}}, {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}, and {{cssxref("@media/video-color-gamut", "video-color-gamut")}}
+> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: `environment-blending`, `horizontal-viewport-segments`, `nav-controls`, `vertical-viewport-segments`, and `video-color-gamut`.
 
 > [!NOTE]
 > CSS media queries level 4 deprecated three `@media` descriptors: {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, and {{cssxref("@media/device-width", "device-width")}}.
@@ -83,27 +83,21 @@ When designing reusable HTML components, you may also use [container queries](/e
 ## Guides
 
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
 
 - [Learn: Media query fundamentals](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
-
   - : Introduction to media queries and approaches for using them to create responsive designs.
 
 - [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
 
 - [Using media queries for accessibility](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
-
   - : Learn how media queries can help users understand your website better.
 
 - [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
-
   - : Tips and techniques for helping improve web content printer output.
 
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
-
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
   - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 
 ## Related concepts
@@ -128,10 +122,10 @@ When designing reusable HTML components, you may also use [container queries](/e
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
   - {{cssxref("@media/device-posture", "device-posture")}} descriptor
 - HTML
-  - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
-  - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
-  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- SVG [`media`](/en-US/docs/Web/SVG/Attribute/media) attribute
+  - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) for {{HTMLElement("picture")}}
+  - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link#media), [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style#media) [HTML](/en-US/docs/Web/HTML)
+  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
+- SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications
 
@@ -140,6 +134,6 @@ When designing reusable HTML components, you may also use [container queries](/e
 ## See also
 
 - [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
+- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

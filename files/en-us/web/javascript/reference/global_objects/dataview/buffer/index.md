@@ -1,15 +1,15 @@
 ---
 title: DataView.prototype.buffer
+short-title: buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.buffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`buffer`** accessor property of {{jsxref("DataView")}} instances returns the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by this view at construction time.
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.buffer")}}
 
 ```js interactive-example
 // Create an ArrayBuffer

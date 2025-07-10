@@ -16,20 +16,18 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 ![Visualization of the primary flow and additional flows described below.](we-flow.png)
 
 - The primary flow is:
-
-  - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
-  - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
-  - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
-  - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
+  - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
+  - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
+  - {{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}
+  - {{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}.
 
 - Additionally:
-
-  - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
+  - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
-Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).
+Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Each event's `addListener()` call accepts an optional filter parameter. The filter will specify one or more URL patterns, and the event will then only be fired for navigations in which the target URL matches one of the patterns.
 
@@ -47,7 +45,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 ## Functions
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe), and is uniquely identified by a tab ID and a frame ID.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Given a tab ID, retrieves information about all the frames it contains.
 
@@ -70,7 +68,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API (2011)](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
 
 ## Browser compatibility
 

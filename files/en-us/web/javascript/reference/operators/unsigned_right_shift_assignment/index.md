@@ -3,13 +3,12 @@ title: Unsigned right shift assignment (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.unsigned_right_shift_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **unsigned right shift assignment (`>>>=`)** operator performs [unsigned right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Unsigned right shift assignment (>>>=) operator")}}
 
 ```js interactive-example
 let a = 5; //  00000000000000000000000000000101

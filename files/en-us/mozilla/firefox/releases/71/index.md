@@ -2,9 +2,8 @@
 title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
 
@@ -59,7 +58,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 ### MathML
 
-- [MathML elements](/en-US/docs/Web/MathML/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
+- [MathML elements](/en-US/docs/Web/MathML/Reference/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
 
 ### APIs
 
@@ -103,7 +102,6 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ### API changes
 
 - {{WebExtAPIRef("downloads.download")}} now identifies and reports as errors the following HTTP response codes:
-
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`

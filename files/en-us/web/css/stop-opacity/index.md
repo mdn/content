@@ -34,11 +34,9 @@ stop-opacity: unset;
 The `<opacity-value>` is a {{cssxref("number")}} or {{cssxref("percentage")}} denoting the opacity of the SVG gradient `<stop>` element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the element is the full opacity of the `stop-color` value, which may or may not be partially opaque.
@@ -49,7 +47,7 @@ With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`stop-opacity = <number> | <percentage>`)}}
 
 ## Examples
 

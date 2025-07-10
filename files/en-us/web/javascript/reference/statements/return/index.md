@@ -3,13 +3,12 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 page-type: javascript-statement
 browser-compat: javascript.statements.return
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and specifies a value to be returned to the function caller.
 
-{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+{{InteractiveExample("JavaScript Demo: return statement")}}
 
 ```js interactive-example
 function getRectArea(width, height) {

@@ -2,9 +2,7 @@
 title: Comments
 slug: Web/CSS/CSS_syntax/Comments
 page-type: guide
-spec-urls:
-  - https://www.w3.org/TR/CSS21/syndata.html#comments
-  - https://drafts.csswg.org/css-syntax-3/#consume-comment
+spec-urls: https://drafts.csswg.org/css-syntax-3/#consume-comment
 ---
 
 {{CSSRef}}

@@ -2,10 +2,9 @@
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
 page-type: web-manifest-member
-browser-compat: html.manifest.scope
+browser-compat: manifests.webapp.scope
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `scope` manifest member is used to specify the top-level URL path that contains your web application's pages and subdirectories.
 When users install and use your web app, pages _within scope_ provide an app-like interface.
@@ -27,7 +26,6 @@ When users navigate to pages outside the app's scope, they still experience the 
 ### Values
 
 - `scope`
-
   - : A string that represents a URL.
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.
@@ -51,7 +49,7 @@ This helps users understand that they're viewing pages outside the app's defined
 
 > [!NOTE]
 > The `scope` member doesn't prevent users from navigating to app pages outside of the defined scope.
-> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
+> Off-scope navigations are not blocked by browsers and are allowed to be opened in a new top-level browsing context.
 
 Consider a web app for exploring hiking trails with the following directory structure:
 
@@ -106,7 +104,7 @@ For example:
 - If `start_url` is `/pages/welcome.html`, the scope will be `/pages/` on the same origin.
 - If `start_url` is `/pages/` (the trailing slash is important), the scope will be `/pages/`.
 
-If you rely on the fallback behaviour of `scope`, ensure that URLs of all pages in your app begin with the parent path of `start_url`.
+If you rely on the fallback behavior of `scope`, ensure that URLs of all pages in your app begin with the parent path of `start_url`.
 To avoid issues with scope determination in this way, it's recommended to explicitly specify `scope` in your manifest file.
 
 ### Scope matching mechanism

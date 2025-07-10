@@ -30,9 +30,9 @@ The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/CSS_cas
 
 If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where).
 
-The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
+The `:has()` pseudo-class cannot be nested within another `:has()`.
 
-Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`.
+Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
 ## Examples
 

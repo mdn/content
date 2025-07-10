@@ -1,20 +1,20 @@
 ---
 title: Function.prototype.bind()
+short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.bind
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
-{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.bind()", "taller")}}
 
 ```js interactive-example
 const module = {
   x: 42,
-  getX: function () {
+  getX() {
     return this.x;
   },
 };
@@ -230,7 +230,7 @@ p.toString();
 // '1,2'
 
 // The thisArg's value doesn't matter because it's ignored
-const YAxisPoint = Point.bind(null, 0 /*x*/);
+const YAxisPoint = Point.bind(null, 0 /* x */);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -246,7 +246,7 @@ The corollary is that you need not do anything special to create a bound functio
 
 ```js
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
+const YAxisPoint = Point.bind(emptyObj, 0 /* x */);
 
 // Can still be called as a normal function
 // (although usually this is undesirable)
@@ -286,7 +286,7 @@ Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use f
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -298,7 +298,7 @@ Note that you can't save `slice.call` and call it as a plain function, because t
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```

@@ -1,15 +1,15 @@
 ---
 title: Intl.NumberFormat() constructor
+short-title: Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat() constructor", "taller")}}
 
 ```js interactive-example
 const number = 123456.789;
@@ -50,23 +50,21 @@ Intl.NumberFormat(locales)
 Intl.NumberFormat(locales, options)
 ```
 
-> **Note:** `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.NumberFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.NumberFormat` instance; see [Return value](#return_value).
+> [!NOTE]
+> `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.NumberFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.NumberFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
-
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
 
     This key can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
 - `options` {{optional_inline}}
-
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [style options](#style_options), [digit options](#digit_options), and [other options](#other_options).
 
 #### Locale options
@@ -131,10 +129,8 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`. See [SignificantDigits/FractionDigits default values](#significantdigitsfractiondigits_default_values) for when this default gets applied.
 - `roundingPriority`
-
   - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified.
     Possible values are:
-
     - `"auto"` (default)
       - : The result from the significant digits property is used.
     - `"morePrecision"`
@@ -147,23 +143,20 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
     Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
 - `roundingIncrement`
-
   - : Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`; the default is `1`. It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
 
 - `roundingMode`
-
   - : How decimals should be rounded. Possible values are:
-
     - `"ceil"`
       - : Round toward +∞. Positive values round up. Negative values round "more positive".
     - `"floor"`
       - : Round toward -∞. Positive values round down. Negative values round "more negative".
     - `"expand"`
-      - : round away from 0. The _magnitude_ of the value is always increased by rounding. Positive values round up. Negative values round "more negative".
+      - : Round away from 0. The _magnitude_ of the value is always increased by rounding. Positive values round up. Negative values round "more negative".
     - `"trunc"`
       - : Round toward 0. This _magnitude_ of the value is always reduced by rounding. Positive values round down. Negative values round "less negative".
     - `"halfCeil"`
-      - : ties toward +∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"ceil"`.
+      - : Ties toward +∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"ceil"`.
     - `"halfFloor"`
       - : Ties toward -∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"floor"`.
     - `"halfExpand"` (default)
@@ -207,9 +200,7 @@ For the four options above (the `FractionDigits` and `SignificantDigits` options
 - `compactDisplay`
   - : Only used when `notation` is `"compact"`. Possible values are `"short"` and `"long"`; the default is `"short"`.
 - `useGrouping`
-
   - : Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators.
-
     - `"always"`
       - : Display grouping separators even if the locale prefers otherwise.
     - `"auto"`
@@ -262,7 +253,7 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 // }
 ```
 
-Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+Note that there's only one actual `Intl.NumberFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g., [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange)) would fail with "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainNumberFormat`, does not happen when `Intl.NumberFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.NumberFormat`. If you call it directly as `Intl.NumberFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.NumberFormat` instance is created normally.
 
@@ -796,11 +787,11 @@ const nf = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   maximumFractionDigits: 2,
-  roundingIncrement: 5,
+  roundingIncrement: 10,
 });
 
 console.log(nf.format(11.29)); // "$11.30"
-console.log(nf.format(11.25)); // "$11.25"
+console.log(nf.format(11.25)); // "$11.30"
 console.log(nf.format(11.22)); // "$11.20"
 ```
 

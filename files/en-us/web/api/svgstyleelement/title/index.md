@@ -8,14 +8,14 @@ browser-compat: api.SVGStyleElement.title
 
 {{APIRef("SVG")}}
 
-The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given SVG style element.
-It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
+The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given SVG style element.
+It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
 ## Value
 
 A string with any value.
 
-The value is initialized with the string specified in the corresponding style's [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute.
+The value is initialized with the string specified in the corresponding style's [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute.
 
 ## Examples
 
@@ -23,7 +23,7 @@ This example demonstrates programmatically getting and setting the `title` prope
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that has a `title`.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element that has a `title`.
 We also define a text area for logging the current title.
 
 ```html

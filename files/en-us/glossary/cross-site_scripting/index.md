@@ -6,13 +6,17 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Cross-site scripting** (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the [seventh most common Web app vulnerability](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>) in 2017.
+A **cross-site scripting** (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website. The code can then do anything that the site's own code can do. For example, the attacker could:
 
-These attacks succeed if the Web app does not employ enough validation or encoding. The user's browser cannot detect the malicious script is untrustworthy, and so gives it access to any cookies, session tokens, or other sensitive site-specific information, or lets the malicious script rewrite the {{glossary("HTML")}} content.
+- Access and modify all the content of the site's loaded pages, and any content in local storage
+- Make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
+
+All XSS attacks depend on a website doing two things:
+
+1. Accepting some input that could have been crafted by an attacker
+2. Including this input in a page without sanitizing it: that is, without ensuring that it won't be executable as JavaScript
 
 ## See also
 
-- [Type of Attacks: Cross-site scripting (XSS)](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
-- [Cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
+- [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
-- [Another article about Cross-site scripting](https://www.acunetix.com/blog/articles/dom-xss-explained/)

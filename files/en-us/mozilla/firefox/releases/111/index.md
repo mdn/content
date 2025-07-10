@@ -2,9 +2,8 @@
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 111 that affect developers. Firefox 111 was released on March 14, 2023.
 
@@ -12,8 +11,8 @@ This article provides information about the changes in Firefox 111 that affect d
 
 ### HTML
 
-- The [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ([Firefox bug 1692007](https://bugzil.la/1692007)).
-- The [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) global attribute is now supported ([Firefox bug 1418449](https://bugzil.la/1418449)).
+- The [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) global attribute is now supported by default. The default value for the attribute is `none`, so no capitalization occurs ([Firefox bug 1692007](https://bugzil.la/1692007)).
+- The [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) global attribute is now supported ([Firefox bug 1418449](https://bugzil.la/1418449)).
 
 ### CSS
 
@@ -28,11 +27,11 @@ No notable changes.
 ### SVG
 
 - The `context-stroke` and `context-fill` values are now supported inside `<marker>` elements.
-  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Element/marker) documentation ([Firefox bug 752638](https://bugzil.la/752638)).
+  For more information on using these values with `fill` and `stroke` properties, see the [`<marker>`](/en-US/docs/Web/SVG/Reference/Element/marker) documentation ([Firefox bug 752638](https://bugzil.la/752638)).
 
 ### HTTP
 
-- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from cross origin redirects.
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) header is removed from cross origin redirects.
   See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 
 ### APIs
@@ -41,7 +40,7 @@ No notable changes.
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
   See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.
-- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/Window/fetch#headers) argument).
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Reference/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/RequestInit#headers) argument).
   See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
 - The `none` value of the `options.imageOrientation` parameter passed to {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} has been renamed to `from-image`.
   This is to better match the meaning of the equivalent CSS [`image-orientation`](/en-US/docs/Web/CSS/image-orientation) property. ([Firefox bug 1809740](https://bugzil.la/1809740)).

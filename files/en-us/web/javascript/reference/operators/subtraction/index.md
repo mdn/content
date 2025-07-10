@@ -3,13 +3,12 @@ title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 page-type: javascript-operator
 browser-compat: javascript.operators.subtraction
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **subtraction (`-`)** operator subtracts the two operands, producing their difference.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+{{InteractiveExample("JavaScript Demo: Subtraction (-) operator")}}
 
 ```js interactive-example
 console.log(5 - 3);

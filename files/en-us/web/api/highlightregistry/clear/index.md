@@ -19,6 +19,10 @@ The **`clear()`** method of the {{domxref("HighlightRegistry")}} interface remov
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

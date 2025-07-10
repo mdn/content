@@ -16,9 +16,10 @@ The {{domxref("Window.beforeprint_event", "beforeprint")}} and `afterprint` even
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("afterprint", (event) => {});
-onafterprint = (event) => {};
+```js-nolint
+addEventListener("afterprint", (event) => { })
+
+onafterprint = (event) => { }
 ```
 
 ## Event type

@@ -3,13 +3,12 @@ title: Exponentiation (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 page-type: javascript-operator
 browser-compat: javascript.operators.exponentiation
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **exponentiation (`**`)** operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+{{InteractiveExample("JavaScript Demo: Exponentiation (**) operator")}}
 
 ```js interactive-example
 console.log(3 ** 4);

@@ -2,9 +2,8 @@
 title: Firefox 29 for developers
 slug: Mozilla/Firefox/Releases/29
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 29 was released on April 29, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -26,8 +25,8 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 ### CSS
 
-- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
-- Flexboxes now support {{cssxref("visibility")}}`: collapse` ([Firefox bug 783470](https://bugzil.la/783470)).
+- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- Flexboxes now support {{cssxref("visibility", "visibility: collapse")}} ([Firefox bug 783470](https://bugzil.la/783470)).
 - The {{cssxref("box-sizing")}} property has been unprefixed ([Firefox bug 243412](https://bugzil.la/243412)).
 - The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ([Firefox bug 940842](https://bugzil.la/940842))
 - Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values and derivatives, like {{cssxref("&lt;percentage&gt;")}} and unit values, but not {{cssxref("&lt;integer&gt;")}} ([Firefox bug 964529](https://bugzil.la/964529)).
@@ -46,15 +45,12 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Intl/Collator", "Intl.Collator")}}
     - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -81,7 +77,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 - The deprecated `Window.pkcs11` property has been removed; it was returning `null` since Firefox 3.0.14. ([Firefox bug 964964](https://bugzil.la/964964))
 - The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean `deep` argument. Until now, if omitted, these methods acted as if the value of `deep` was `true`. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was `false`. ([Firefox bug 937461](https://bugzil.la/937461))
 - `Window._content` is no longer available to Web content ([Firefox bug 946564](https://bugzil.la/946564)).
-- {{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ([Firefox bug 930450](https://bugzil.la/930450))
+- {{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0`. ([Firefox bug 930450](https://bugzil.la/930450))
 - {{domxref("Document.referrer")}} is now based on the incumbent script ([Firefox bug 887928](https://bugzil.la/887928)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) is enabled by default ([Firefox bug 878828](https://bugzil.la/878828)).
 - The `CanvasRenderingContext2D.drawSystemFocusRing()` method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ([Firefox bug 959820](https://bugzil.la/959820)).

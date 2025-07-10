@@ -1,5 +1,6 @@
 ---
 title: CSS nesting at-rules
+short-title: Nesting at-rules
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 page-type: guide
 ---
@@ -15,6 +16,7 @@ Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) whose body contains style 
 - {{cssxref('@layer')}}
 - {{cssxref('@scope')}}
 - {{cssxref('@container')}}
+- {{cssxref('@starting-style')}}
 
 ## Examples
 
@@ -71,7 +73,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
   display: grid;
   @media (orientation: landscape) {
     grid-auto-flow: column;
-    @media (min-width: 1024px) {
+    @media (width >= 1024px) {
       max-inline-size: 1024px;
     }
   }
@@ -89,7 +91,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
     grid-auto-flow: column;
   }
 }
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (orientation: landscape) and (width >= 1024px) {
   .foo {
     max-inline-size: 1024px;
   }

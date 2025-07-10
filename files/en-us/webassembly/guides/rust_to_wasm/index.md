@@ -148,7 +148,7 @@ Once again, we see the `#[wasm_bindgen]` attribute. In this case, it's not modif
 
 This function is named `greet`, and takes one argument, a string (written `&str`), `name`. It then calls the `alert` function we asked for in the `extern` block above. It passes a call to the `format!` macro, which lets us concatenate strings.
 
-The `format!` macro takes two arguments in this case: a format string, and a variable to put in it. The format string is the `"Hello, {}!"` bit. It contains `{}`s, where variables will be interpolated. The variable we're passing is `name`, the argument to the function, so if we call `greet("Steve")` we should see `"Hello, Steve!".`
+The `format!` macro takes two arguments in this case: a format string, and a variable to put in it. The format string is the `"Hello, {}!"` bit. It contains `{}`s, where variables will be interpolated. The variable we're passing is `name`, the argument to the function, so if we call `greet("Steve")` we should see `"Hello, Steve!"`.
 
 This is passed to `alert()`, so when we call this function we will see an alert box with "Hello, Steve!" in it.
 
@@ -238,6 +238,7 @@ Put the following content in the `index.html` file:
   <body>
     <script type="module">
       import init, { greet } from "./pkg/hello_wasm.js";
+
       init().then(() => {
         greet("WebAssembly");
       });
@@ -248,7 +249,7 @@ Put the following content in the `index.html` file:
 
 The script in this file will import the JavaScript glue code, initialize the Wasm module, and call the `greet` function we wrote in Rust.
 
-Serve the project root with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
+Serve the project root with a local web server, (e.g., `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 > [!NOTE]
 > Use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.

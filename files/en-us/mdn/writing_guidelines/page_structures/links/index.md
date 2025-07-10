@@ -12,15 +12,12 @@ MDN provides numerous macros to create always up-to-date links to MDN content. I
 MDN provides macros that create a list of links:
 
 - [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs)
-
   - : Inserts a definition list ({{HTMLElement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLElement("dt")}} term and its first paragraph as the {{HTMLElement("dd")}} term.
 
 - [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/list_subpages_for_sidebar.rs)
-
-  - : When included without parameters, inserts an ordered list of links to the current page's subpages. This macro is most often used within [sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) (hence the macro name), where the bullets are not rendered. The first parameter is a slug of the link tree's parent page. The link text is displayed as code. Setting a second parameter to `true` or `1` converts the links to plain text. Setting a third parameter to `true` or `1` adds a link to the slug (parent) page at the top of the list with "Overview" as the link text.
+  - : When included without parameters, inserts an ordered list of links to the current page's subpages. The first parameter is a slug of the link tree's parent page. The link text is displayed as code. Setting a second parameter to `true` or `1` converts the links to plain text. Setting a third parameter to `true` or `1` adds a link to the slug (parent) page at the top of the list with "Overview" as the link text.
 
 - [`\{{QuickLinksWithSubpages()}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/quick_links_with_subpages.rs)
-
   - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations. This creates hierarchical lists up to two levels deep. The pages' titles are used as the link text and their summaries as tooltips.
 
 ### Example link list
@@ -30,10 +27,6 @@ To include an ordered list of links that includes this page and its siblings, wr
 ```md
 \{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
 ```
-
-This produces:
-
-{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
 
 ## Cross-reference links
 
@@ -51,9 +44,9 @@ These macros are:
 - [`\{{HTTPMethod("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 - [`\{{HTTPStatus("")}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs)
 
-The first parameter of each of these macros is the last section of the slug of the document being referenced. For example, for HTML Elements, include `\{{HTMLElement("")}}` with the part of the slug that comes after `Web/HTML/Element/` in the slug being the first parameter. With `\{{CSSxRef("")}}`, add the part of the slug that comes after `Web/CSS/` in the slug. The link will go to this page.
+The first parameter of each of these macros is the last section of the slug of the document being referenced. For example, for HTML Elements, include `\{{HTMLElement("")}}` with the part of the slug that comes after `Web/HTML/Reference/Elements/` in the slug being the first parameter. With `\{{CSSxRef("")}}`, add the part of the slug that comes after `Web/CSS/` in the slug. The link will go to this page.
 
-By default, the text displayed is the linked resource as written in the first parameter, in angle brackets for the case of `\{{HTMLElement()}}`. This may not be what you want. For example, the slug for the range input type is `Web/HTML/Element/input/range`. Including `\{{HTMLElement("input/range")}}` produces "{{HTMLElement("input/range")}}". That is not what you want. All the macros accept additional parameters, so you can provide the text you want to display.
+By default, the text displayed is the linked resource as written in the first parameter, in angle brackets for the case of `\{{HTMLElement()}}`. This may not be what you want. For example, the slug for the range input type is `Web/HTML/Reference/Elements/input/range`. Including `\{{HTMLElement("input/range")}}` produces "{{HTMLElement("input/range")}}". That is not what you want. All the macros accept additional parameters, so you can provide the text you want to display.
 
 The second parameter, if present, provides the link text. In the input range case, we would write `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` which produces "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". This particular macro removes the {{htmlelement("code")}} and angle brackets when the second parameter includes a space, so we added the brackets and code tags.
 
@@ -70,5 +63,5 @@ To learn which parameters each macro supports and the order of parameters for ea
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
+- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros (`\{{Compat}}`) and specification macros (`\{{Specifications}}`).
 - [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.

@@ -2,10 +2,9 @@
 title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 page-type: web-manifest-member
-browser-compat: html.manifest.icons
+browser-compat: manifests.webapp.icons
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
 
@@ -44,21 +43,17 @@ The `icons` manifest member is used to specify one or more image files that defi
 ### Values
 
 - `icons`
-
   - : An array of objects.
     Each object represents an icon to be used in a specific context.
     For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
 
     Each icon object can have one or more properties. Of these, only `src` is required. The possible properties include:
-
     - `src`
-
       - : A string that specifies the path to the icon image file.
         If `src` is relative, the path is resolved relative to the manifest file's URL.
         For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
     - `sizes` {{Optional_Inline}}
-
       - : A string that specifies one or more sizes at which the icon file can be used.
         Each size is specified as `<width in pixels>x<height in pixels>`.
         If multiple sizes are specified, they are separated by spaces; for example, `48x48 96x96`.
@@ -67,16 +62,14 @@ The `icons` manifest member is used to specify one or more image files that defi
         For vector formats like SVG, you can use `any` to indicate scalability.
         If `sizes` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
-        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
+        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute.
 
     - `type` {{Optional_Inline}}
-
       - : A string that specifies the {{Glossary("MIME type")}} of the icon.
         The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image.
         If omitted, browsers typically infer the image type from the file extension.
 
     - `purpose` {{Optional_Inline}}
-
       - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
         The value can be a single keyword or multiple space-separated keywords.
         If omitted, the browser can use the icon for any purpose.
@@ -88,14 +81,11 @@ The `icons` manifest member is used to specify one or more image files that defi
         However, if only unrecognized purposes are specified (e.g., `fizzbuzz`), then it will be ignored.
 
         Valid values include:
-
         - `monochrome`
-
           - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
             With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
 
         - `maskable`
-
           - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
 
         - `any`
@@ -109,14 +99,14 @@ The context in which an icon can be used is determined by the browser and the op
 
 ## Security considerations
 
-The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
+The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
 
 For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/low-res` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
 
 ## Performance considerations
 
 Specifying the `type` property can significantly improve performance because it allows browsers to ignore images with unsupported formats more easily.
-If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) the file for a signature.
+If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) the file for a signature.
 
 At a minimum, if you omit the `type` property, use appropriate and unambiguous file extensions for your icon images.
 

@@ -25,25 +25,27 @@ new NavigateEvent(type, init)
 - `init`
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `canIntercept` {{optional_inline}}
-      - : A boolean defining whether the navigation can be intercepted or not (e.g. you can't intercept a cross-origin navigation). Defaults to `false`.
+      - : A boolean defining whether the navigation can be intercepted or not (e.g., you can't intercept a cross-origin navigation). Defaults to `false`.
     - `destination`
       - : A {{domxref("NavigationDestination")}} object representing the location being navigated to.
     - `downloadRequest` {{optional_inline}}
-      - : The filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute). Defaults to `null`.
+      - : The filename of the file requested for download, in the case of a download navigation (e.g., an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute). Defaults to `null`.
     - `formData` {{optional_inline}}
       - : The {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission. Defaults to `null`.
     - `hashChange` {{optional_inline}}
-      - : A boolean defining if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document). Defaults to `false`.
+      - : A boolean defining if the navigation is a fragment navigation (i.e., to a fragment identifier in the same document). Defaults to `false`.
     - `hasUAVisualTransition` {{optional_inline}}
       - : A boolean defining whether the user agent has performed a visual transition for this navigation before dispatching this event. Defaults to `false`.
     - `info` {{optional_inline}}
-      - : The `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}).
+      - : The `info` data value passed by the initiating navigation operation (e.g., {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}).
     - `navigationType` {{optional_inline}}
       - : The type of the navigation. Possible values — `push`, `reload`, `replace`, and `traverse`. Defaults to `push`.
     - `signal`
-      - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+      - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+    - `sourceElement` {{optional_inline}}
+      - : An {{domxref("Element")}} object representing the initiating element in cases where the navigation was initiated by an element, or `null` if the navigation was not initiated by an element. Defaults to `null`.
     - `userInitiated` {{optional_inline}}
-      - : A boolean defining whether the navigation was initiated by the user (e.g. by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons). Defaults to `false`.
+      - : A boolean defining whether the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons). Defaults to `false`.
 
 ### Return value
 
@@ -91,4 +93,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

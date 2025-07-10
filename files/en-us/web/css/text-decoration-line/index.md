@@ -9,7 +9,55 @@ browser-compat: css.properties.text-decoration-line
 
 The **`text-decoration-line`** [CSS](/en-US/docs/Web/CSS) property sets the kind of decoration that is used on text in an element, such as an underline or overline.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-line")}}
+
+```css interactive-example-choice
+text-decoration-line: none;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline;
+```
+
+```css interactive-example-choice
+text-decoration-line: overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+```
+
+```css interactive-example-choice
+text-decoration-line: grammar-error;
+```
+
+```css interactive-example-choice
+text-decoration-line: spelling-error;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline line-through;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 
@@ -22,6 +70,8 @@ text-decoration-line: underline;
 text-decoration-line: overline;
 text-decoration-line: line-through;
 text-decoration-line: blink;
+text-decoration-line: spelling-error;
+text-decoration-line: grammar-error;
 
 /* Multiple keywords */
 text-decoration-line: underline overline; /* Two decoration lines */
@@ -49,6 +99,13 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - : Each line of text has a decorative line going through its middle.
 - `blink`
   - : The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is **deprecated** in favor of [CSS animations](/en-US/docs/Web/CSS/animation).
+- `spelling-error`
+  - : Each line of text uses the user agents' method of highlighting spelling mistakes, which is a dotted red line in most browsers.
+- `grammar-error`
+  - : Each line of text uses the user agents' method of highlighting grammar mistakes, which is a dotted green line in most browsers.
+
+> [!NOTE]
+> When using `spelling-error` and `grammar-error` values, the browser disregards the other properties in the {{cssxref("text-decoration")}} shorthand (such as {{cssxref("text-underline-position")}}, `color`, or `stroke`).
 
 ## Formal definition
 
@@ -79,7 +136,30 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('basic_example',,90)}}
+
+### Errors example
+
+In this example, the first paragraph contains a spelling mistake and uses the browser's styling for spelling errors on the misspelled word. The second paragraph uses the browser's styling for grammar errors. There is no styling change in browsers that do not support these `text-decoration-line` values.
+
+<!-- cSpell:ignore speling -->
+
+```html
+<p>This text contains a <span class="spelling">speling</span> mistake.</p>
+<p class="grammar">This text contain grammatical errors.</p>
+```
+
+```css
+.spelling {
+  text-decoration-line: spelling-error;
+}
+
+.grammar {
+  text-decoration-line: grammar-error;
+}
+```
+
+{{EmbedLiveSample('errors_example',,90)}}
 
 ## Specifications
 
@@ -96,3 +176,5 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-decoration-thickness")}}
 - {{cssxref("text-underline-offset")}}
+- {{cssxref("::spelling-error")}}
+- {{cssxref("::grammar-error")}}

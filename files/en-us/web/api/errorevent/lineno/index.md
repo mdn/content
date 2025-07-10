@@ -18,7 +18,7 @@ An integer.
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("The error occur in line: " + ev.lineno);
+  console.log(`The error occur in line: ${ev.lineno}`);
 });
 ```
 

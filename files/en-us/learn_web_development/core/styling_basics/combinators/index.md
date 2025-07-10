@@ -2,9 +2,8 @@
 title: Combinators
 slug: Learn_web_development/Core/Styling_basics/Combinators
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
@@ -18,7 +17,7 @@ The final selectors we will look at are called combinators. Combinators are used
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>
@@ -38,7 +37,7 @@ The final selectors we will look at are called combinators. Combinators are used
 
 ## Descendant combinator
 
-The **descendant combinator** — typically represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
+The **descendant combinator** — represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (a parent, a parent's parent, or a parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
 body article p {
@@ -65,12 +64,12 @@ In the example below, we are matching only the `<p>` element which is inside an 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
 
 ```css
-article > p
+article > p {
+  /* … */
+}
 ```
 
 In this next example, we have an ordered list ({{htmlelement("ol")}}) nested inside an unordered list ({{htmlelement("ul")}}). The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
-
-If you remove the `>` that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.
 
 ```html live-sample___child
 <ul>
@@ -93,17 +92,19 @@ ul > li {
 
 {{EmbedLiveSample("child")}}
 
+In the previous example, try removing the `>` that designates the selector as a child selector. You will end up with a descendant selector, and all `<li>` elements will get a red border.
+
 ## Next-sibling combinator
 
 The **next-sibling combinator** (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that come right after the element matched by the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
-p + img
+p + img {
+  /* … */
+}
 ```
 
-A common use case is to do something with a paragraph that follows a heading, as in the example below. In that example, we are looking for any paragraph which shares a parent element with an `<h1>`, and immediately follows that `<h1>`.
-
-If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
+A common use case is to do something with a paragraph that follows a heading, as in the example below. Here, we select any paragraph that shares a parent element with an `<h1>`, and immediately follows that `<h1>`.
 
 ```html live-sample___adjacent
 <article>
@@ -136,15 +137,22 @@ h1 + p {
 
 {{EmbedLiveSample("adjacent", "", "220px")}}
 
+In the previous example:
+
+1. Try inserting another element such as an `<h2>` in-between the `<h1>` and the `<p>`. You will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
+2. Now modify the `h1 + p` selector so that the special style is applied to the first paragraph once more.
+
 ## Subsequent-sibling combinator
 
 If you want to select siblings of an element even if they are not directly adjacent, then you can use the **subsequent-sibling combinator** (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
-p ~ img
+p ~ img {
+  /* … */
+}
 ```
 
-In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
+In the example below, we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
 
 ```html live-sample___general
 <article>
@@ -170,64 +178,6 @@ h1 ~ p {
 
 {{EmbedLiveSample("general", "", "220px")}}
 
-## Creating complex selectors with nesting
-
-The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector).
-
-```css
-p {
-  ~ img {
-  }
-}
-/* This is parsed by the browser as */
-p ~ img {
-}
-```
-
-The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors:
-
-```css
-p {
-  & img {
-  }
-}
-/* This is parsed by the browser as */
-p img {
-}
-```
-
-Here's an example demonstrating complex selectors:
-
-```html live-sample___nesting
-<article>
-  <h1>A heading</h1>
-  <p>I am a paragraph.</p>
-  <div>I am a div</div>
-  <p>I am another paragraph.</p>
-</article>
-```
-
-```css live-sample___nesting
-body {
-  font-family: sans-serif;
-}
-
-h1 {
-  & ~ p {
-    /* this is parsed by the browser as h1 ~ p */
-    font-weight: bold;
-    background-color: #333;
-    color: #fff;
-    padding: 0.5em;
-  }
-}
-```
-
-{{EmbedLiveSample("nesting", "", "220px")}}
-
-> [!NOTE]
-> In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
-
 ## Combining combinators with selectors
 
 You can combine any of the selectors that we discovered in previous lessons with combinators in order to select part of your document. For example, to select list items with a `class` of `a` which are direct children of a `<ul>`, try the following:
@@ -243,7 +193,7 @@ It is often better to create a simple class and apply that to the element in que
 
 ## Test your skills!
 
-You've reached the end of our set of lessons about selectors, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks).
+You've reached the end of our set of lessons about selectors, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors).
 
 ## Summary
 

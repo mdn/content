@@ -1,5 +1,6 @@
 ---
-title: aria-relevant
+title: "ARIA: aria-relevant attribute"
+short-title: aria-relevant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-relevant
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-relevant
@@ -20,7 +21,7 @@ When `aria-relevant` is not defined, the value is inherited from the nearest anc
 
 While not a supported value, if the value of `none` makes the most sense, it should not be a live region.
 
-The values of `removals` and `all` should be used sparingly. For example, when a goal happens in the World Cup, the new score (the addition) is important, the old value (the removal) is not. Assistive technologies only need to be informed of content removal when its removal represents an important change, such as a when a player is taken out of the game.
+The values of `removals` and `all` should be used sparingly. For example, when a goal happens in the World Cup, the new score (the addition) is important, the old value (the removal) is not. Assistive technologies only need to be informed of content removal when its removal represents an important change, such as when a player is taken out of the game.
 
 ## Values
 

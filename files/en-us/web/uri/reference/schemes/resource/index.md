@@ -2,7 +2,7 @@
 title: "resource: URLs"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
-page-type: reference
+page-type: uri-scheme
 sidebar: urlsidebar
 ---
 
@@ -14,12 +14,14 @@ information is available to sites the browser connects to as well.
 
 ## Syntax
 
-Resource URLs are composed of two parts: a prefix (`resource:`), and a path
-pointing to the resource you want to load:
-
 ```url
 resource://<path>
 ```
+
+- `resource:`
+  - : The scheme of the URL.
+- `<path>`
+  - : A path pointing to the resource you want to load.
 
 An example:
 
@@ -46,7 +48,7 @@ websites, a web page could run internal scripts and inspect internal resources o
 Firefox, including the default preferences, which could be a serious security and
 privacy issue.
 
-For example, [a script on Browserleaks](https://browserleaks.com/resource-urls) highlights what Firefox reveals when queried by a simple script
+For example, [a script on Browserleaks](https://browserleaks.com/resource-urls) highlights what Firefox reveals when queried by a script
 running on the site (you can find the code in <https://browserleaks.com/resource-urls#more>).
 
 The file firefox.js passes preference names and values to the pref() function. For

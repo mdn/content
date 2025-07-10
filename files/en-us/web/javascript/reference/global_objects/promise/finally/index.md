@@ -1,17 +1,17 @@
 ---
 title: Promise.prototype.finally()
+short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.finally
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`finally()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is settled (either fulfilled or rejected). It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
-{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.finally()", "taller")}}
 
 ```js interactive-example
 function checkMail() {

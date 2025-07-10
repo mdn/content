@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+The read-only **`style`** property of the {{domxref("HTMLElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
@@ -37,15 +37,12 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 The following code snippet demonstrates how the values obtained using the element's `style` property relates to the style set on the HTML attribute:
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <body style="font-weight:bold">
-    <div style="border-top: 1px solid blue; color:red" id="elt">
-      An example div
-    </div>
-    <pre id="out"></pre>
-  </body>
-</html>
+<div style="font-weight: bold;">
+  <div style="border-top: 1px solid blue; color: red;" id="elt">
+    An example div
+  </div>
+  <pre id="out"></pre>
+</div>
 ```
 
 ```js
@@ -59,7 +56,7 @@ for (const prop in elementStyle) {
   // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
-    !Number.isNaN(Number.parseInt(prop))
+    !Number.isNaN(Number.parseInt(prop, 10))
   ) {
     out.textContent += `${
       elementStyle[prop]
@@ -86,4 +83,4 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 - {{domxref("SVGElement.style")}}
 - {{domxref("MathMLElement.style")}}
 - {{domxref("HTMLElement.attributeStyleMap")}}
-- HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
+- HTML [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute

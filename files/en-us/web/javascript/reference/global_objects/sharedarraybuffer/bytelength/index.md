@@ -1,15 +1,15 @@
 ---
 title: SharedArrayBuffer.prototype.byteLength
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.byteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteLength`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns the length (in bytes) of this `SharedArrayBuffer`.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.byteLength", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.byteLength", "shorter")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

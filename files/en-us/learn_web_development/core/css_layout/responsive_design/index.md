@@ -1,10 +1,9 @@
 ---
-title: Responsive design
+title: Responsive web design
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
@@ -46,20 +45,20 @@ The difference is mainly to do with the devices involved, and the technologies a
 - We used to talk about desktop or mobile, but now there are many different types of device available such as desktop, laptop, mobile, tablets, watches, etc. Instead of catering for a few different screen sizes, we now need to design sites defensively to cater for common screen sizes and resolutions, plus unknowns.
 - Mobile devices used to be low-powered in terms of CPU/GPU and available bandwidth. Some didn't support CSS or even HTML, and as a result, it was common to perform server-side browser sniffing to determine device/browser type before then serving a site that the device would be able to cope with. Mobile devices often had really simple, basic experiences served to them because it was all they could handle. These days, mobile devices are able to handle the same technologies as desktop computers, so such techniques are less common.
   - You should still use the techniques discussed in this article to serve mobile users a suitable experience, as there are still constraints such as battery life and bandwidth to worry about.
-  - User experience is also a concern. A mobile user of a travel site might just want to check flight times and delay information, for example, and not be presented with a 3D animated globe showing flight paths and your company history. This can be handled using responsive design techniques, however.
+  - User experience is still a concern. A mobile user of a travel site might just want to check flight times and delay information, for example, and not be presented with a 3D animated globe showing flight paths and your company history.
 - Modern technologies are much better for creating responsive experiences. For example, [responsive images/media technologies](#responsive_imagesmedia) now allow appropriate media to be served to different devices without having to rely on techniques like server-side sniffing.
 
 ## Introducing responsive web design
 
 HTML is fundamentally responsive, or _fluid_. If you create a web page containing only HTML, with no CSS, and resize the window, the browser will automatically reflow the text to fit the viewport.
 
-While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
+While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. This problem can be solved with CSS, for example by creating narrow columns to limit the line length. However, this can create new problems for users that narrow their browser window or view the site on a mobile device — the columns will look squashed and become harder to read.
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
 Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
 
-Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
+Responsive web design, or RWD, is a design approach that addresses the full range of available devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
 
 Responsive web design isn't a separate technology — it is an approach. It is a term used to describe a set of best practices used to create a layout that can _respond_ to any device being used to view the content.
 
@@ -69,23 +68,23 @@ At the time, the recommendation was to use CSS `float` for layout and media quer
 
 Modern CSS layout methods are inherently responsive, and, since the publication of Marcotte's article, we have a multitude of features built into the web platform to make designing responsive sites easier.
 
-The rest of this article will point you to the various web platform features you might want to use when creating a responsive site.
+The rest of this article will explain the various web platform features you might want to use when creating a responsive site.
 
 ## Media Queries
 
 [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow us to run a series of tests (for example, whether the user's screen is greater than a certain width or resolution) and apply CSS selectively to style the page appropriately for the user's needs.
 
-For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
+For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least `80rem` wide. The `.container` rule will only be applied if these two things are true.
 
 ```css
-@media screen and (min-width: 80rem) {
+@media screen and (width >= 80rem) {
   .container {
     margin: 1em 2em;
   }
 }
 ```
 
-You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as _breakpoints_.
+You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changes, are known as _breakpoints_.
 
 A common approach when using media queries is to create a simple single-column layout for narrow-screen devices (for example, mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first** design.
 
@@ -94,6 +93,9 @@ If using breakpoints, best practices encourage defining media query breakpoints 
 There are different approaches to the styles defined within a media query block; ranging from using media queries to {{htmlelement("link")}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
 
 Media queries can help with RWD, but are not a requirement. Flexible grids, relative units, and minimum and maximum unit values can be used without media queries.
+
+> [!NOTE]
+> Scrimba has a tutorial called [Aside: Media queries](https://scrimba.com/frontend-path-c0j/~0j3?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>, which provides an interactive introduction to media queries plus a challenge to test that you understand the basics.
 
 ## Responsive layout technologies
 
@@ -166,7 +168,7 @@ body {
 ```
 
 ```css live-sample___flex-based-rwd
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: flex;
   }
@@ -184,7 +186,7 @@ body {
 
 {{EmbedLiveSample("flex-based-rwd", "", "550px")}}
 
-Resize your screen. The layout will change when the size of the above example crosses the 600px width threshold.
+Resize your browser window. The layout will change between a single-column and a two-column layout when the size of the above example crosses the `600px` width threshold.
 
 ### CSS grid
 
@@ -244,7 +246,7 @@ body {
 ```
 
 ```css live-sample___grid-based-rwd
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -254,6 +256,8 @@ body {
 ```
 
 {{EmbedLiveSample("grid-based-rwd", "", "550px")}}
+
+Again, try resizing your browser window — you should see the example layout change at the `600px` width threshold, in the same way as the previous example.
 
 ## Responsive images/media
 
@@ -267,10 +271,10 @@ video {
 }
 ```
 
-This scales media to ensure they never overflow their containers.
+This scales media elements to ensure they never overflow their containers.
 
 > [!NOTE]
-> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Responsive_images).
+> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images).
 
 Other useful tips:
 
@@ -284,7 +288,7 @@ Responsive typography describes changing font sizes within media queries or usin
 
 ### Using media queries for responsive typography
 
-In this example, we want to set our level 1 heading to be `4rem`, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least `1200px`.
+In this example, we want to set our level 1 heading to be `4rem`, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first give the heading a smaller size of `2rem`, then use media queries to overwrite it with the larger size if we know that the user has a screen width of at least `1200px`.
 
 ```css
 html {
@@ -295,16 +299,14 @@ h1 {
   font-size: 2rem;
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   h1 {
     font-size: 4rem;
   }
 }
 ```
 
-We have edited our responsive grid example above to also include responsive type using the method outlined. You can see how the heading switches sizes as the layout goes to the two column version.
-
-On mobile the heading is smaller, but on desktop, we see the larger heading size:
+The next example is a modified version of our earlier responsive grid example, which includes a responsive heading using the method outlined. On mobile the heading is smaller, but on desktop, we see the larger heading size:
 
 ```html live-sample___type-rwd
 <div class="wrapper">
@@ -362,7 +364,7 @@ h1 {
   background-color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -376,6 +378,8 @@ h1 {
 ```
 
 {{EmbedLiveSample("type-rwd", "", "550px")}}
+
+As with previous examples, try changing the browser window width, and note how not only the layout changes at the `600px` width threshold, but also the heading size.
 
 As this approach to typography shows, you do not need to restrict media queries to only changing the layout of the page. They can be used to tweak any element to make it more usable or attractive at alternate screen sizes.
 
@@ -446,7 +450,7 @@ h1 {
   background-color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (width >= 600px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -457,6 +461,8 @@ h1 {
 
 {{EmbedLiveSample("type-vw", "", "550px")}}
 
+Try resizing the browser window, as before, and note how this time the heading size increases _gradually_ as the width changes.
+
 ## The viewport meta tag
 
 If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the `<head>` of the document.
@@ -465,21 +471,23 @@ If you look at the HTML source of a responsive page, you will usually see the fo
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+This [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag tells mobile browsers that they should set the width of the viewport to the device's width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
 
 Why is this needed? Because mobile browsers tend to lie about their viewport width.
 
 This meta tag exists because when smartphones first arrived, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 980 pixels, render the page at that width, and show the result as a zoomed-out version of the desktop layout. Users could zoom in and pan around the website to view the bits they were interested in, but it looked bad.
 
-By setting `width=device-width` you are overriding a mobile device's default, like Apple's default `width=980px`, with the actual width of the device. Without it, your responsive design with breakpoints and media queries may not work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, but the device is saying it is 980px wide, that user will not see your narrow screen layout.
+By setting `width=device-width` you are overriding a mobile device's default, like the iPhone's default `width=980px`, with the actual width of the device. Without it, your responsive design with breakpoints and media queries may not work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, but the device is saying it is 980px wide, that user will not see your narrow screen layout.
 
 **So you should _always_ include the viewport meta tag in the head of your documents.**
 
+There are a number of other options you can put inside the `content` attribute of the viewport meta tag — see [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for more details.
+
 ## Summary
 
-Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is now essentially just how we build websites by default. Consider the sites that you visit on your phone — it is probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.
+Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is essentially how we build websites by default. Consider the sites that you visit on your phone — it is probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.
 
-It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are using. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
+It has also become much easier to achieve responsive designs with the help of the layout methods covered in this article. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are using. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
 Next, we will study media queries in more detail and show how to use them to solve some common problems.
 
@@ -489,5 +497,6 @@ Next, we will study media queries in more detail and show how to use them to sol
   - [Touch events](/en-US/docs/Web/API/Touch_events) provide the ability to interpret finger (or stylus) activity on touch screens or trackpads, enabling quality support for complex touch-based user interfaces.
   - Use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
 - [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions. This includes a module on responsive design.
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

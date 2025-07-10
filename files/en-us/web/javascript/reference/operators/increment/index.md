@@ -3,13 +3,12 @@ title: Increment (++)
 slug: Web/JavaScript/Reference/Operators/Increment
 page-type: javascript-operator
 browser-compat: javascript.operators.increment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **increment (`++`)** operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{InteractiveExample("JavaScript Demo: Increment (++) operator")}}
 
 ```js interactive-example
 let x = 3;
@@ -40,7 +39,7 @@ If used postfix, with operator after operand (for example, `x++`), the increment
 
 If used prefix, with operator before operand (for example, `++x`), the increment operator increments and returns the value after incrementing.
 
-The increment operator can only be applied on operands that are references (variables and object properties; i.e. valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
+The increment operator can only be applied on operands that are references (variables and object properties; i.e., valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
 
 ```js-nolint example-bad
 ++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation

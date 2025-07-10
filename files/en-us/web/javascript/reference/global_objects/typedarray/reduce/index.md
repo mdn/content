@@ -1,15 +1,15 @@
 ---
 title: TypedArray.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reduce
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduce()`** method of {{jsxref("TypedArray")}} instances executes a user-supplied "reducer" callback function on each element of the typed array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the typed array is a single value. This method has the same algorithm as {{jsxref("Array.prototype.reduce()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.reduce()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.reduce()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([0, 1, 2, 3]);

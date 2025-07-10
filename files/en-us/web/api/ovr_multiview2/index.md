@@ -14,7 +14,7 @@ For more information, see also:
 
 - [Multiview on WebXR](https://error.ghost.org/)
 - [Multiview in babylon.js](https://doc.babylonjs.com/features/featuresDeepDive/cameras/multiViewsPart1)
-- [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/optimizing-virtual-reality-understanding-multiview)
+- [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/mobile-graphics-and-gaming-blog/posts/optimizing-virtual-reality-understanding-multiview)
 - [Multiview WebGL Rendering for Meta Quest](https://developers.meta.com/horizon/documentation/web/web-multiview/)
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
@@ -85,7 +85,7 @@ gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTe
 
 Shader code
 
-```cpp
+```glsl
 #version 300 es
 #extension GL_OVR_multiview2 : require
 precision mediump float;

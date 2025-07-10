@@ -9,7 +9,40 @@ browser-compat: css.types.calc
 
 The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+{{InteractiveExample("CSS Demo: calc()")}}
+
+```css interactive-example-choice
+width: calc(10px + 100px);
+```
+
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change my width.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 ## Syntax
 

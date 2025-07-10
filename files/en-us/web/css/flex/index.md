@@ -9,7 +9,54 @@ browser-compat: css.properties.flex
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+{{InteractiveExample("CSS Demo: flex")}}
+
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Constituent properties
 
@@ -55,22 +102,18 @@ flex: unset;
 The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
-
   - a valid value for {{cssxref("&lt;flex-grow&gt;")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> 1 0%`. However the specification says it should expand to `flex: <flex-grow> 1 0`.
   - a valid value for {{cssxref("&lt;flex-basis&gt;")}}: then the shorthand expands to `flex: 1 1 <flex-basis>`.
   - the keyword `none` or one of the global keywords.
 
 - **Two-value syntax:**
-
   - The first value must be a valid value for {{cssxref("flex-grow")}}.
 
   - The second value must be one of:
-
     - a valid value for {{cssxref("flex-shrink")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> <flex-shrink> 0%`.
     - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
-
   1. a valid value for {{cssxref("flex-grow")}}.
   2. a valid value for {{cssxref("flex-shrink")}}.
   3. a valid value for {{cssxref("flex-basis")}}.
@@ -215,7 +258,7 @@ This example shows how a flex item with `flex: auto` grows to absorb any free sp
 ```css hidden
 body * {
   padding: 1rem;
-  text-select: none;
+  user-select: none;
   box-sizing: border-box;
   font-family: Consolas, Arial, sans-serif;
 }
@@ -254,8 +297,8 @@ flexAutoItem.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- The `#flex-auto` item has a `flex` value of [`auto`](#auto). The `auto` value expands to `1 1 auto`, i.e. the item is allowed to expand.
-- The `#default` item has no `flex` value set so it defaults to the [`initial`](#initial) value. The `initial` value expands to `0 1 auto`, i.e. the item is not allowed to expand.
+- The `#flex-auto` item has a `flex` value of `auto`. The `auto` value expands to `1 1 auto`, i.e., the item is allowed to expand.
+- The `#default` item has no `flex` value set so it defaults to the `initial` value. The `initial` value expands to `0 1 auto`, i.e., the item is not allowed to expand.
 
 The `#default` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by the `#flex-auto` item.
 

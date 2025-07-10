@@ -21,7 +21,6 @@ browser.alarms.create(
 ### Parameters
 
 - `name` {{optional_inline}}
-
   - : `string`. A name for the alarm. Defaults to the empty string.
 
     This can be used to refer to a particular alarm in {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.clear()')}}. It will also be available in {{WebExtAPIRef('alarms.onAlarm')}} as the `name` property of the {{WebExtAPIRef('alarms.Alarm')}} object passed into the listener function.
@@ -29,13 +28,11 @@ browser.alarms.create(
     Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.
 
 - `alarmInfo` {{optional_inline}}
-
   - : `object`. You can use this to specify when the alarm will initially fire, either as an absolute value (`when`), or as a delay from the time the alarm is set (`delayInMinutes`). To make the alarm recur, specify `periodInMinutes`.
 
     On Chrome, unless the extension is loaded unpackaged, alarms it creates are not allowed to fire more than once per minute. If an extension tries to set `delayInMinutes` to a value < 1, or `when` to a value < 1 minute in the future, then the alarm will fire after 1 minute. If an extension tries to set `periodInMinutes` to a value < 1, then the alarm will fire every minute.
 
     The `alarmInfo` object may contain the following properties:
-
     - `when` {{optional_inline}}
       - : `double`. The time the alarm will fire first, given as [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). To get the number of milliseconds between the epoch and the current time, use [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now). If you specify `when`, don't specify `delayInMinutes`.
     - `delayInMinutes` {{optional_inline}}
@@ -43,16 +40,25 @@ browser.alarms.create(
     - `periodInMinutes` {{optional_inline}}
       - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments.
+
 ## Examples
 
 Create a one-time delay-based alarm with "" for the name:
 
 ```js
-const delayInMinutes = 5;
+function onAdded() {
+  console.log("Alarm Added!");
+}
 
-browser.alarms.create({
+let delayInMinutes = 5;
+
+let addingAlarm = browser.alarms.create({
   delayInMinutes,
 });
+addingAlarm.then(onAdded);
 ```
 
 Create a periodic delay-based alarm named "my-periodic-alarm":

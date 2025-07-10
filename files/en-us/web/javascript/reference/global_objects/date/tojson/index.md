@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.toJSON()
+short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toJSON
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toJSON()`** method of {{jsxref("Date")}} instances returns a string representing this date in the same ISO format as {{jsxref("Date/toISOString", "toISOString()")}}.
 
-{{InteractiveExample("JavaScript Demo: Date.toJSON()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toJSON()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30 UTC");

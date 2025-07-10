@@ -1,15 +1,15 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.substring
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
-{{InteractiveExample("JavaScript Demo: String.substring()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.substring()")}}
 
 ```js interactive-example
 const str = "Mozilla";
@@ -43,7 +43,7 @@ A new string containing the specified part of the given string.
 
 `substring()` extracts characters from `indexStart` up to _but not including_ `indexEnd`. In particular:
 
-- If `indexEnd` is omitted, `substring()` extracts characters to the end of the string.
+- If `indexEnd` is omitted or `undefined`, `substring()` extracts characters to the end of the string.
 - If `indexStart` is equal to `indexEnd`, `substring()` returns an empty string.
 - If `indexStart` is greater than `indexEnd`, then the effect of `substring()` is as if the two arguments were swapped; see example below.
 

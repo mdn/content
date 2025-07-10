@@ -33,6 +33,11 @@ The specification also defines the `baseline-shift`, `baseline-source`, `initial
 - {{glossary("baseline/typography", "baseline")}}
 - {{glossary("leading")}}
 
+## Guides
+
+- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+  - : Explains the inline formatting context.
+
 ## Related concepts
 
 - {{cssxref("font-size")}} property

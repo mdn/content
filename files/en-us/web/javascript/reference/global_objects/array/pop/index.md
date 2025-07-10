@@ -1,17 +1,17 @@
 ---
 title: Array.prototype.pop()
+short-title: pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.pop()")}}
 
 ```js interactive-example
 const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];

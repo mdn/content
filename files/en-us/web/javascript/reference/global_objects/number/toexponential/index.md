@@ -1,16 +1,16 @@
 ---
 title: Number.prototype.toExponential()
+short-title: toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toExponential
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
 this number in exponential notation.
 
-{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toExponential()")}}
 
 ```js interactive-example
 function expo(x, f) {

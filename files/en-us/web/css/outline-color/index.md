@@ -9,7 +9,44 @@ browser-compat: css.properties.outline-color
 
 The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
-{{EmbedInteractiveExample("pages/css/outline-color.html")}}
+{{InteractiveExample("CSS Demo: outline-color")}}
+
+```css interactive-example-choice
+outline-color: red;
+```
+
+```css interactive-example-choice
+outline-color: #32a1ce;
+```
+
+```css interactive-example-choice
+outline-color: rgb(170 50 220 / 0.6);
+```
+
+```css interactive-example-choice
+outline-color: hsl(60 90% 50% / 0.8);
+```
+
+```css interactive-example-choice
+outline-color: currentcolor;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 

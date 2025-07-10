@@ -69,7 +69,6 @@ Not part of any standard.
 ## See also
 
 - The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-
   - {{cssxref("::-webkit-progress-bar")}}
   - {{cssxref("::-webkit-progress-value")}}
 

@@ -1,10 +1,10 @@
 ---
 title: WAI-ARIA basics
+short-title: WAI-ARIA
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
@@ -39,7 +39,7 @@ Let's start by looking at what WAI-ARIA is, and what it can do for us.
 
 As web apps started to get more complex and dynamic, a new set of accessibility features and problems started to appear.
 
-For example, HTML introduced a number of semantic elements to define common page features ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.). Before these were available, developers would use {{htmlelement("div")}}s with IDs or classes, e.g. `<div class="nav">`, but these were problematic, as there was no easy way to easily find a specific page feature such as the main navigation programmatically.
+For example, HTML introduced a number of semantic elements to define common page features ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.). Before these were available, developers would use {{htmlelement("div")}}s with IDs or classes, e.g., `<div class="nav">`, but these were problematic, as there was no easy way to easily find a specific page feature such as the main navigation programmatically.
 
 The initial solution was to add one or more hidden links at the top of the page to link to the navigation (or whatever else), for example:
 
@@ -61,7 +61,7 @@ The problem here is that visually they work, but screen readers can't make any s
 
 ### Enter WAI-ARIA
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+[WAI-ARIA](https://w3c.github.io/aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 - [Roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}), `role="banner"` (document {{htmlelement("header")}}), `role="complementary"` ({{htmlelement("aside")}}) or , `role="search"` ({{htmlelement("search")}}). Some other roles describe different page structures that do not have elements with that match those roles, such as `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
@@ -73,9 +73,9 @@ The problem here is that visually they work, but screen readers can't make any s
 An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screen readers get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
 > [!NOTE]
-> You can find a useful list of all the ARIA roles and their uses, with links to further information, in the WAI-ARIA spec — see [Definition of Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) — on this site — see [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
+> You can find a useful list of all the ARIA roles and their uses, with links to further information, in the WAI-ARIA spec — see [Definition of Roles](https://w3c.github.io/aria/#role_definitions) — on this site — see [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
 >
-> The spec also contains a list of all the properties and states, with links to further information — see [Definitions of States and Properties (all `aria-*` attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> The spec also contains a list of all the properties and states, with links to further information — see [Definitions of States and Properties (all `aria-*` attributes)](https://w3c.github.io/aria/#state_prop_def).
 
 ### Where is WAI-ARIA supported?
 
@@ -126,7 +126,7 @@ See our section on [testing screen readers](/en-US/docs/Learn_web_development/Co
 
 ### Signposts/Landmarks
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
+WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
 
 ```html live-sample___aria-website-no-roles
 <header>
@@ -270,7 +270,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
@@ -523,7 +523,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
@@ -825,7 +825,7 @@ However, sometimes you will end up having to write code that either uses non-sem
 In terms of making non-focusable code focusable, WAI-ARIA extends the `tabindex` attribute with some new values:
 
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
-- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links.
+- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
 
 We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in).
 
@@ -916,7 +916,7 @@ function toggleMusician(bool) {
 
 #### Describing non-semantic buttons as buttons
 
-A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
+A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [Use semantic UI controls where possible](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
 
 But what about screen readers? They still won't see the elements as buttons. If we test our [`fake-div-buttons.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example in a screen reader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.
 
@@ -1088,8 +1088,7 @@ class TabsManual {
     this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
     this.tabpanels = [];
 
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs) {
       const tabpanel = document.getElementById(
         tab.getAttribute("aria-controls"),
       );
@@ -1101,9 +1100,7 @@ class TabsManual {
       tab.addEventListener("keydown", this.onKeydown.bind(this));
       tab.addEventListener("click", this.onClick.bind(this));
 
-      if (!this.firstTab) {
-        this.firstTab = tab;
-      }
+      this.firstTab ??= tab;
       this.lastTab = tab;
     }
 
@@ -1111,8 +1108,7 @@ class TabsManual {
   }
 
   setSelectedTab(currentTab) {
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs.length) {
       if (currentTab === tab) {
         tab.setAttribute("aria-selected", "true");
         tab.removeAttribute("tabindex");
@@ -1197,10 +1193,10 @@ class TabsManual {
 
 // Initialize tablist
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const tablists = document.querySelectorAll("[role=tablist].manual");
-  for (let i = 0; i < tablists.length; i++) {
-    new TabsManual(tablists[i]);
+  for (const tablist of tablists) {
+    new TabsManual(tablist);
   }
 });
 ```
@@ -1224,11 +1220,11 @@ ARIA features used include:
 
 We could have used `aria-hidden` to hide the content of the tabpanels from assistive technologies but if that content contained focusable content, such as links, the user would still be able to tab to that content even when aria-hidden=true is set for the non-active panels. In this example we have applied `class="is-hidden"` to tabpanels that correspond to the tabs with `aria-selected="false"` and using CSS to `display: none;` which prevents the hidden content from being tabbed to.
 
-In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g. "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
+In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g., "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA).
 
 ## Summary
 
@@ -1238,7 +1234,7 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 
 - [Aria states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes): All `aria-*` attributes
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles): Categories of ARIA roles and the roles covered on MDN
-- [ARIA in HTML](https://www.w3.org/TR/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
+- [ARIA in HTML](https://w3c.github.io/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
 - [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 

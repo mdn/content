@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
-{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.valueOf()")}}
 
 ```js interactive-example
 const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));

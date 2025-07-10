@@ -19,7 +19,7 @@ The color syntax converter below shows the values of the currently selected colo
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-Selecting a color via the [color picker](/en-US/docs/Web/HTML/Element/input/color) and an opacity via the [slider](/en-US/docs/Web/HTML/Element/input/range) updates the RGB, HEX, HSL, and HWB values. When you choose a new color or opacity value, the color of the background and the slider update via the CSS properties {{cssxref("background-color")}} and {{cssxref("accent-color")}}, respectively.
+Selecting a color via the [color picker](/en-US/docs/Web/HTML/Reference/Elements/input/color) and an opacity via the [slider](/en-US/docs/Web/HTML/Reference/Elements/input/range) updates the RGB, HEX, HSL, and HWB values. When you choose a new color or opacity value, the color of the background and the slider update via the CSS properties {{cssxref("background-color")}} and {{cssxref("accent-color")}}, respectively.
 
 To see the code for this color syntax converter, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
 
@@ -47,6 +47,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
+- [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 > [!NOTE]
@@ -86,6 +87,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+  - : A tool that lets you pick a color in the sRGB color space and converts it between various CSS color formats, helping you understand the syntax of the different color notations.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
@@ -110,12 +113,12 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - SVG color properties that are part of other specifications:
-  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/en-US/docs/Web/SVG/Attribute/color) attribute
+  - [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/en-US/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/en-US/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/en-US/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
 - The [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) descriptor
@@ -132,5 +135,5 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
-- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
+- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

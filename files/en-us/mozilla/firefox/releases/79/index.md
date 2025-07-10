@@ -2,9 +2,8 @@
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
 
@@ -36,8 +35,8 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ### HTML
 
-- The [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
-- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
+- The [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ([Firefox bug 1359867](https://bugzil.la/1359867)).
+- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) and [`<area>`](/en-US/docs/Web/HTML/Reference/Elements/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ([Firefox bug 1522083](https://bugzil.la/1522083)).
 
 ### CSS
 
@@ -50,13 +49,11 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} has been re-enabled in a post-Spectre-safe manner. It is available to cross-origin isolated sites ([Firefox bug 1619649](https://bugzil.la/1619649)).
-
   - To cross-origin isolate your site, you need to set the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers.
 
 - {{jsxref("Promise.any()")}} is now available ([Firefox bug 1599769](https://bugzil.la/1599769)).
 - {{jsxref("WeakRef")}} objects have been implemented ([Firefox bug 1639246](https://bugzil.la/1639246)).
 - [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) are now supported ([Firefox bug 1639591](https://bugzil.la/1639591))
-
   - [Logical nullish assignment (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - [Logical AND assignment (`&&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
   - [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

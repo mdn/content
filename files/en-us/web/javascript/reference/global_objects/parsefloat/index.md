@@ -3,13 +3,12 @@ title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 page-type: javascript-function
 browser-compat: javascript.builtins.parseFloat
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`parseFloat()`** function parses a string argument and returns a floating point number.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+{{InteractiveExample("JavaScript Demo: parseFloat()")}}
 
 ```js interactive-example
 function circumference(r) {

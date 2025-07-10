@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.blank
+short-title: blank
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/blank
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.blank
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`blank`** accessor property of {{jsxref("Temporal.Duration")}} instances returns a boolean that is `true` if this duration represents a zero duration, and `false` otherwise. It is equivalent to `duration.sign === 0`.
 

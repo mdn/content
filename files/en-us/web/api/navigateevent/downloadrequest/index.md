@@ -11,7 +11,7 @@ browser-compat: api.NavigateEvent.downloadRequest
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`downloadRequest`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
+{{domxref("NavigateEvent")}} interface returns the filename of the file requested for download, in the case of a download navigation (e.g., an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
 
 ## Value
 
@@ -56,4 +56,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

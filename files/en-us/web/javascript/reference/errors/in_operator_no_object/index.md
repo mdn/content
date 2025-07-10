@@ -2,9 +2,8 @@
 title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "right-hand side of 'in' should be an object" occurs when the
 [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
@@ -33,7 +32,7 @@ You can't search in strings, or in numbers, or other primitive types.
 
 ### Searching in strings
 
-Unlike in other programming languages (e.g. Python), you can't search in strings using
+Unlike in other programming languages (e.g., Python), you can't search in strings using
 the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad

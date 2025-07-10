@@ -6,7 +6,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This page describes how we use Markdown to write documentation on MDN Web Docs. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
+This page describes how we use Markdown to write documentation on MDN Web Docs.
+We have chosen GitHub-Flavored Markdown (GFM) as a baseline and added extensions to support the things we need on MDN.
 
 ## Baseline: GitHub-Flavored Markdown
 
@@ -20,7 +21,6 @@ The GFM specification defines two basic types of links:
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
 On MDN we allow only inline links.
-
 This is the correct way to write GFM links on MDN:
 
 ```md example-good
@@ -37,19 +37,7 @@ This is an incorrect way to write links on MDN:
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The specification states the following:
-
-> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
-
-It's permissible for the info string to contain multiple words, like:
-
-````md
-```fee fi fo fum
-// some example code
-```
-````
-
-On MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The language of the code sample must be specified using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - Programming Languages
   - JavaScript
@@ -68,7 +56,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
     - `sql` - SeQueL commands
-    - `wasm` - WebAssembly
+    - `wat` - WebAssembly
     - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS
@@ -97,7 +85,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
 - Templates
   - `django` - Django templates
   - `svelte` - Svelte templates
-  - `handlebars` - Handlebars templates
+  - `hbs` - Handlebars templates
   - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
@@ -117,6 +105,9 @@ const greeting = "I will get JavaScript syntax highlighting";
 If the highlighting that you wish to use is not listed above, you should markup the code block as `plain`.
 Additional languages may be requested in the process [discussed on GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
 
+> [!NOTE]
+> Use the language identifier exactly as listed above. For example, `javascript` is not allowed and you must write `js`.
+
 ### Suppressing linting
 
 Writers can add a `-nolint` suffix to any of the language identifiers:
@@ -135,7 +126,7 @@ Code blocks like this will get appropriate syntax highlighting and will be recog
 
 GFM supports [info strings](https://github.github.com/gfm/#info-string), which allow authors to supply additional information about a code block. On MDN, info strings are converted into class names.
 
-Writers will be able to supply any one of the following info strings:
+Writers can supply one of the following info strings:
 
 - `example-good`: style this example as a good example (one to follow)
 - `example-bad`: style this example as a bad example (one to avoid)
@@ -188,14 +179,6 @@ Writers can use the [GFM alerts syntax](https://docs.github.com/en/get-started/w
 - To add a callout, create a blockquote whose first line is `[!CALLOUT]`.
 
 Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
-
-> [!WARNING]
-> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e. `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`.
->
-> The older syntax is still supported for migration purposes. Avoid using it in new documentation.
-
-> [!WARNING]
-> Currently, due to a [Prettier bug](https://github.com/prettier/prettier/issues/15479), the GFM alert syntax cannot be used if the first character of a note or warning is a formatting symbol, such as a backquote, asterisk, square bracket or curly bracket. In this case, use the old syntax `> **Note:**` instead. Writers are not required to rephrase the content to work around the formatter.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
@@ -342,11 +325,8 @@ For example, this is a `<dl>`:
 
 ````md
 - term1
-
   - : My description of term1
-
 - `term2`
-
   - : My description of term2
 
     It can have multiple paragraphs, and code blocks too:
@@ -458,7 +438,7 @@ and not this style:
 cell 4 | cell 5 | cell 6
 ```
 
-Luckily, table formatting is auto-fixed by Prettier, so authors may rely on Prettier to format their tables properly.
+Tables are formatted by Prettier, so authors rely on tooling to format tables properly.
 
 ### When to use HTML tables
 
@@ -591,20 +571,14 @@ The first paragraph should therefore be both succinct and informative.
 
 This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 
-## KumaScript
+## Macros
 
-Writers will be able to include KumaScript macro calls in prose content:
+Writers use macros in prose for templating common linking patterns, or to include specific blocks of code or text:
 
 ```md
-The **`margin`** [CSS](/en-US/docs/Web/CSS) property
-sets the margin area on all four sides of an element. It is a shorthand for
-\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
-and \{{cssxref("margin-left")}}.
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-The top and bottom margins have no effect on replaced inline elements, such as
-\{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) property sets the margin area on all four sides of an element.
+It is a shorthand for \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}}, and \{{cssxref("margin-left")}}.
+…
 ```
 
-See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information on macros.
+See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information.

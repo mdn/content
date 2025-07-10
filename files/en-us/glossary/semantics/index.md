@@ -48,7 +48,7 @@ When approaching which markup to use, ask yourself, "What element(s) best descri
 
 ## Semantic elements
 
-These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Element) available:
+These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Reference/Elements) available:
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -67,8 +67,8 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 
 ## See also
 
-- [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
+- [HTML element reference](/en-US/docs/Web/HTML/Reference/Elements#inline_text_semantics) on MDN
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#usage_notes) on MDN
 - [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - Related glossary terms:
   - {{Glossary("SEO")}}

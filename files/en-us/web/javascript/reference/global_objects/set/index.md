@@ -3,9 +3,8 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
 browser-compat: javascript.builtins.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
 
@@ -143,8 +142,8 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`[Symbol.iterator]()`](#set.prototypesymbol.iterator).
-- Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
+- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- Writeable `Set`-like objects additionally have the methods: {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, and {{jsxref("Set/add", "add()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
 

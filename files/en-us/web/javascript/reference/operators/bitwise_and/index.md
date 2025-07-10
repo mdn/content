@@ -3,13 +3,12 @@ title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_and
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **bitwise AND (`&`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of both operands are `1`.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Bitwise AND (&) operator", "shorter")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101
@@ -54,9 +53,10 @@ Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
 
-For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
+> [!WARNING]
+> You may see people using `& -1` to truncate numbers to integers. Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer, which additionally removes leading bits for numbers outside the range -2147483648 to 2147483647. Use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
 
-Bitwise ANDing any number `x` with `-1` returns `x` converted to a 32-bit integer. Do not use `& -1` to truncate numbers to integers; use [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) instead.
+For BigInts, there's no truncation. Conceptually, understand positive BigInts as having an infinite number of leading `0` bits, and negative BigInts having an infinite number of leading `1` bits.
 
 ## Examples
 

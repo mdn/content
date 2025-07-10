@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.setFullYear()
+short-title: setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFullYear()`** method of {{jsxref("Date")}} instances changes the year, month, and/or day of month for this date according to local time.
 
-{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setFullYear()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

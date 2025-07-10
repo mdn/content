@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
 
@@ -35,7 +34,7 @@ The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 `if (elt.localName === "img" && elt.namespaceURI === "http://www.w3.org/1999/xhtml")`
 
-#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
+#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g., SVG) script-inserted elements
 
 `if (elt.tagName === "IMG")`
 

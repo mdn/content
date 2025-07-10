@@ -9,7 +9,47 @@ browser-compat: css.properties.overflow-y
 
 The **`overflow-y`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content. This property may also be set by using the [`overflow`](/en-US/docs/Web/CSS/overflow) shorthand property.
 
-{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
+{{InteractiveExample("CSS Demo: overflow-y")}}
+
+```css interactive-example-choice
+overflow-y: visible;
+```
+
+```css interactive-example-choice
+overflow-y: hidden;
+```
+
+```css interactive-example-choice
+overflow-y: clip;
+```
+
+```css interactive-example-choice
+overflow-y: scroll;
+```
+
+```css interactive-example-choice
+overflow-y: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## Syntax
 

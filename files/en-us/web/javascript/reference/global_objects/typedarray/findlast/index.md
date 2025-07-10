@@ -1,15 +1,15 @@
 ---
 title: TypedArray.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findLast
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLast()`** method of {{jsxref("TypedArray")}} instances iterates the typed array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, {{jsxref("undefined")}} is returned. This method has the same algorithm as {{jsxref("Array.prototype.findLast()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findLast()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findLast()")}}
 
 ```js interactive-example
 function isNegative(element /*, index, array */) {
@@ -57,12 +57,15 @@ See {{jsxref("Array.prototype.findLast()")}} for more details. This method is no
 The following example returns the last element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -75,47 +78,8 @@ uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLast(isPrime)); // 11
 ```
 
-### All elements are visited and may be modified by the callback
-
-The following examples show that all elements _are_ visited, and that the value passed to the callback is their value when visited:
-
-```js
-// Declare array with no elements at indexes 2, 3, and 4
-// The missing elements will be initialized to zero.
-const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
-
-// Iterate through the elements in reverse order.
-// Note that all elements are visited.
-uint8.findLast((value, index) => {
-  console.log(`Visited index ${index} with value ${value}`);
-});
-
-// Shows all indexes, including deleted
-uint8.findLast((value, index) => {
-  // Modify element 3 on first iteration
-  if (index === 6) {
-    console.log("Set uint8[3] to 44");
-    uint8[3] = 44;
-  }
-  // Element 3 is still visited but will have a new value.
-  console.log(`Visited index ${index} with value ${value}`);
-});
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 0
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-// Set uint8[3] to 44
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 44
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-```
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ## Specifications
 

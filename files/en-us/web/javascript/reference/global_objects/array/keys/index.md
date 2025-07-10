@@ -1,15 +1,15 @@
 ---
 title: Array.prototype.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.keys
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.keys()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

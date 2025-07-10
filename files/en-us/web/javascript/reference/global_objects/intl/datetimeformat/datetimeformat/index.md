@@ -1,15 +1,15 @@
 ---
 title: Intl.DateTimeFormat() constructor
+short-title: Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat() constructor", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
@@ -46,16 +46,15 @@ Intl.DateTimeFormat(locales)
 Intl.DateTimeFormat(locales, options)
 ```
 
-> **Note:** `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
+> [!NOTE]
+> `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.DateTimeFormat` instance. However, there's a special behavior when it's called without `new` and the `this` value is another `Intl.DateTimeFormat` instance; see [Return value](#return_value).
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
-
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
     - `ca`
@@ -66,7 +65,6 @@ Intl.DateTimeFormat(locales, options)
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
 - `options` {{optional_inline}}
-
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
 
 #### Locale options
@@ -82,7 +80,7 @@ Intl.DateTimeFormat(locales, options)
 - `hourCycle`
   - : The hour cycle to use. Possible values are `"h11"`, `"h12"`, `"h23"`, and `"h24"`. This option can also be set through the `hc` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `timeZone`
-  - : The time zone to use. Time zone names correspond to the Zone and Link names of the [IANA Time Zone Database](https://www.iana.org/time-zones), such as `"UTC"`, `"Asia/Shanghai"`, `"Asia/Kolkata"`, and `"America/New_York"`. Additionally, time zones can be given as UTC offsets in the format "±hh:mm", "±hhmm", or "±hh", for example as `"+01:00"`, `"-2359"`, or `"+23"`. The default is the runtime's default time zone.
+  - : The time zone to use. Can be any [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), including named identifiers such as `"UTC"`, `"America/New_York"`, and `"Etc/GMT+8"`, and offset identifiers such as `"+01:00"`, `"-2359"`, and `"+23"`.
 
 #### Date-time component options
 
@@ -93,7 +91,7 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Thu`
     - `"narrow"`
-      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g. `Tuesday`'s narrow style is also `T`).
+      - : E.g., `T`. Two weekdays may have the same narrow style for some locales (e.g., `Tuesday`'s narrow style is also `T`).
 - `era`
   - : The representation of the era. Possible values are:
     - `"long"`
@@ -115,11 +113,10 @@ Intl.DateTimeFormat(locales, options)
     - `"short"`
       - : E.g., `Mar`
     - `"narrow"`
-      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g. `May`'s narrow style is also `M`).
+      - : E.g., `M`). Two months may have the same narrow style for some locales (e.g., `May`'s narrow style is also `M`).
 - `day`
   - : The representation of the day. Possible values are `"numeric"` and `"2-digit"`.
 - `dayPeriod`
-
   - : The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values are
     `"narrow"`, `"short"`, and `"long"`.
 
@@ -135,9 +132,7 @@ Intl.DateTimeFormat(locales, options)
 - `fractionalSecondDigits`
   - : The number of digits used to represent fractions of a second (any additional digits are truncated). Possible values are from `1` to `3`.
 - `timeZoneName`
-
   - : The localized representation of the time zone name. Possible values are:
-
     - `"long"`
       - : Long localized form (e.g., `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
     - `"short"`
@@ -188,7 +183,8 @@ The date-time component styles requested might not directly correspond to a vali
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
-> **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
+> [!NOTE]
+> `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g., `weekday`, `hour`, `month`, etc.).
 
 You can format different object types depending on which of the style shortcut options you include:
 
@@ -222,7 +218,7 @@ console.log(Object.getOwnPropertyDescriptors(formatter));
 // }
 ```
 
-Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g. [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
+Note that there's only one actual `Intl.DateTimeFormat` instance here: the one hidden in `[Symbol(IntlLegacyConstructedSymbol)]`. Calling the [`format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format) and [`resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions) methods on `formatter` would correctly use the options stored in that instance, but calling all other methods (e.g., [`formatRange()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)) would fail: "TypeError: formatRange method called on incompatible Object", because those methods don't consult the hidden instance's options.
 
 This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTimeFormat()` is called without `new` but with `this` set to anything else that's not an `instanceof Intl.DateTimeFormat`. If you call it directly as `Intl.DateTimeFormat()`, the `this` value is [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and a new `Intl.DateTimeFormat` instance is created normally.
 

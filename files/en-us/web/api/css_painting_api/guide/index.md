@@ -319,7 +319,7 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Adding complexity
 
-The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g. by positioning some decorative [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) with `::before`, or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
+The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g., by positioning some decorative [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) with `::before`, or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
 
 Let's take a look at a more complex paint example.
 
@@ -436,21 +436,29 @@ li {
 Now we can use the `inputArguments()` method in the `registerPaint()` class to access the custom argument we have added to our `paint()` function.
 
 ```js
-static get inputArguments() { return ['*']; }
+class Worklet {
+  static get inputArguments() {
+    return ["*"];
+  }
+  // …
+}
 ```
 
 We then have access to that argument.
 
 ```js
-paint(ctx, size, props, args) {
+class Worklet {
+  // …
+  paint(ctx, size, props, args) {
+    // use our custom arguments
+    const hasStroke = args[0].toString();
 
-  // use our custom arguments
-  const hasStroke = args[0].toString();
-
-  // if stroke arg is 'stroke', don't fill
-  if (hasStroke === 'stroke') {
-    ctx.fillStyle = 'transparent';
-    ctx.strokeStyle = color;
+    // if stroke arg is 'stroke', don't fill
+    if (hasStroke === "stroke") {
+      ctx.fillStyle = "transparent";
+      ctx.strokeStyle = color;
+    }
+    // …
   }
   // …
 }
@@ -469,7 +477,13 @@ li {
 When we `get` our list of argument values, we can ask specifically for a `<length>` unit.
 
 ```js
-static get inputArguments() { return ['*', '<length>']; }
+class Worklet {
+  // …
+  static get inputArguments() {
+    return ["*", "<length>"];
+  }
+  // …
+}
 ```
 
 In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a {{domxref('CSSUnparsedValue')}}. The second will be a {{domxref('CSSStyleValue')}}.
@@ -479,16 +493,19 @@ If the custom argument is a CSS value, for instance a unit, we can invoke Typed 
 Now we can access the type and value properties, meaning we can get the number of pixels and a number type right out of the box. (Admittedly, `ctx.lineWidth` takes a float as a value rather than a value with length units, but for example's sake…)
 
 ```js
-paint(ctx, size, props, args) {
+class Worklet {
+  // …
+  paint(ctx, size, props, args) {
+    const strokeWidth = args[1];
 
-  const strokeWidth = args[1];
+    if (strokeWidth.unit === "px") {
+      ctx.lineWidth = strokeWidth.value;
+    } else {
+      ctx.lineWidth = 1.0;
+    }
 
-  if (strokeWidth.unit === 'px') {
-    ctx.lineWidth = strokeWidth.value;
-  } else {
-    ctx.lineWidth = 1.0;
+    // …
   }
-
   // …
 }
 ```
@@ -534,7 +551,7 @@ registerPaint(
       // the values passed in the paint() function in the CSS
       const color = props.get("--boxColor");
       const strokeType = args[0].toString();
-      const strokeWidth = parseInt(args[1]);
+      const strokeWidth = parseInt(args[1], 10);
 
       // set the stroke width
       ctx.lineWidth = strokeWidth ?? 1.0;

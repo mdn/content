@@ -3,13 +3,12 @@ title: break
 slug: Web/JavaScript/Reference/Statements/break
 page-type: javascript-statement
 browser-compat: javascript.statements.break
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`break`** statement terminates the current loop or {{jsxref("Statements/switch", "switch")}} statement and transfers program control to the statement following the terminated statement. It can also be used to jump past a [labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label) when used within that labeled statement.
 
-{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+{{InteractiveExample("JavaScript Demo: break statement")}}
 
 ```js interactive-example
 let i = 0;
@@ -18,7 +17,7 @@ while (i < 6) {
   if (i === 3) {
     break;
   }
-  i = i + 1;
+  i += 1;
 }
 
 console.log(i);

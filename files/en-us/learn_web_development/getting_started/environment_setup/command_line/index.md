@@ -1,10 +1,10 @@
 ---
 title: Command line crash course
+short-title: Command line
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -71,7 +71,7 @@ And below, you can see the macOS terminal application.
 
 ### How do you access the terminal?
 
-Many developers today are using Unix-based tools (e.g. the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
+Many developers today are using Unix-based tools (e.g., the terminal, and the tools you can access through it). Many tutorials and tools that exist on the web today support (and sadly assume) Unix-based systems, but not to worry — they are available on most systems. In this section, we'll look at how to get access to the terminal on your chosen system.
 
 #### Linux/Unix
 
@@ -112,7 +112,6 @@ Although there's a great wealth of tools available from the command line, if you
 Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
-
   - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
@@ -139,21 +138,21 @@ When you visit the command line you will inevitably need to navigate to a partic
 
 The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
-To change the directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
+1. To change the directory, type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
 
-![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
+   ![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
 
-Try typing this into your system's terminal:
+2. Try typing this into your system's terminal:
 
-```bash
-cd Desktop
-```
+   ```bash
+   cd Desktop
+   ```
 
-If you want to move back up to the previous directory, you can use two dots:
+3. To move back up to the previous directory, you can use two dots. Type this now:
 
-```bash
-cd ..
-```
+   ```bash
+   cd ..
+   ```
 
 > [!NOTE]
 > A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
@@ -177,7 +176,7 @@ cd Desktop/project/src
 Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
 
 > [!NOTE]
-> On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> On windows, you use backslashes instead of forward slashes, e.g., `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
 
 ### Listing directory contents
 
@@ -238,9 +237,10 @@ We've alluded to this before, but to be clear — you need to be careful with th
 Let's say you had 1000 text files in a directory, and you wanted to go through them all and only delete the ones that have a certain substring inside the filename. If you are not careful, then you might end up deleting something important, losing you a load of your work in the process.
 One good habit to get into is to write your terminal command out inside a text editor, figure out how you think it should look, and then make a backup copy of your directory and try running the command on that first, to test it.
 
-Another good tip — if you're not comfortable trying terminal commands out on your own machine, a nice safe place to try them is over at [Glitch.com](https://glitch.com/). Along with being a great place to try out web development code, the projects also give you access to a terminal, so you can run all these commands directly in that terminal, safe in the knowledge that you won't break your own machine.
+If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
-![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
+- Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
+- The [Command-line playground](https://sandbox.bio/playgrounds/terminal) on sandbox.bio is a great place to try out terminal commands so you can familiarize yourself with command line interfaces and common shells like Bash.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 
@@ -280,38 +280,31 @@ The pipe operator can _connect_ these inputs and outputs together, allowing us t
 
 Let's go through something a bit more complicated.
 
-We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`.
-Try it now:
+1. We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`. Try it now:
 
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-```
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+   ```
 
-You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)).
-We need to explicitly tell `curl` to follow redirects using the `-L` flag.
+   You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)). We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
-Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
+2. Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location"). Try running the following (you'll see that there is just one redirect before we reach the final page):
 
-Try running the following (you'll see that there is just one redirect before we reach the final page):
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+   ```
 
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
-```
+   Your output should look something like this (`curl` will first output some download counters and suchlike):
 
-Your output should look something like this (`curl` will first output some download counters and suchlike):
+   ```bash
+   location: /en-US/docs/Web/API/Window/fetch
+   ```
 
-```bash
-location: /en-US/docs/Web/API/Window/fetch
-```
+3. Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!). Try running this:
 
-Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out.
-For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
-
-Try running this:
-
-```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
-```
+   ```bash
+   curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+   ```
 
 Your final output should look something like this:
 
@@ -376,21 +369,19 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html).
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/install.html).
 
-Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
+1. Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
-```bash
-npm install --save-dev prettier
-```
+   ```bash
+   npm install --save-dev prettier
+   ```
 
-You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool.
-Running the command without any arguments, as with many other commands, will offer up usage and help information.
-Try this now:
+2. You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool. Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:
 
-```bash
-npx prettier
-```
+   ```bash
+   npx prettier
+   ```
 
 Your output should look something like this:
 
@@ -415,59 +406,57 @@ It'll help you to understand better how the tool is intended to be used.
 
 Let's have a quick play with Prettier, so you can see how it works.
 
-First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
+1. First of all, create a new directory somewhere on your file system that is easy to find. Maybe a directory called `prettier-test` on your `Desktop`.
 
-Now save the following code in a new file called `index.js`, inside your test directory:
+2. Now save the following code in a new file called `index.js`, inside your test directory:
 
-```js-nolint
-const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
-```
+   ```js-nolint
+   const myObj = {
+   a:1,b:{c:2}}
+   function printMe(obj){console.log(obj.b.c)}
+   printMe(myObj)
+   ```
 
-We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
+3. We can run Prettier against a codebase to just check if our code wants adjusting. `cd` into your directory, and try running this command:
 
-```bash
-npx prettier --check index.js
-```
+   ```bash
+   npx prettier --check index.js
+   ```
 
-You should get an output along the lines of:
+   You should get an output along the lines of:
 
-```bash
-Checking formatting...
-index.js
-Code style issues found in the above file(s). Forgot to run Prettier?
-```
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues found in the above file(s). Forgot to run Prettier?
+   ```
 
-So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code.
+4. So, there's some code styles that can be fixed. No problem. Adding the `--write` option to the `prettier` command will fix those up, leaving us to focus on actually writing useful code. Now try running this version of the command:
 
-Now try running this version of the command:
+   ```bash
+   npx prettier --write index.js
+   ```
 
-```bash
-npx prettier --write index.js
-```
+   You'll get an output like this:
 
-You'll get an output like this
+   ```bash
+   Checking formatting...
+   index.js
+   Code style issues fixed in the above file(s).
+   ```
 
-```bash
-Checking formatting...
-index.js
-Code style issues fixed in the above file(s).
-```
+   But more importantly, if you look back at your JavaScript file you'll find it has been reformatted to something like this:
 
-But more importantly, if you look back at your JavaScript file you'll find it has been reformatted to something like this:
-
-```js
-const myObj = {
-  a: 1,
-  b: { c: 2 },
-};
-function printMe(obj) {
-  console.log(obj.b.c);
-}
-printMe(myObj);
-```
+   ```js
+   const myObj = {
+     a: 1,
+     b: { c: 2 },
+   };
+   function printMe(obj) {
+     console.log(obj.b.c);
+   }
+   printMe(myObj);
+   ```
 
 Depending on your workflow (or the workflow that you pick) you can make this an automated part of your process. Automation is really where tools excel; our personal preference is the kind of automation that "just happens" without having to configure anything.
 
@@ -477,7 +466,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
 - As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
 
-Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
+Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 
 ## Other tools to play with
 

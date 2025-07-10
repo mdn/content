@@ -1,23 +1,23 @@
 ---
 title: RegExp.prototype.global
+short-title: global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.global
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `g` flag is used with this regular expression.
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
 
 ```js interactive-example
-const regex1 = new RegExp("foo", "g");
+const regex1 = /foo/g;
 
 console.log(regex1.global);
 // Expected output: true
 
-const regex2 = new RegExp("bar", "i");
+const regex2 = /bar/i;
 
 console.log(regex2.global);
 // Expected output: false

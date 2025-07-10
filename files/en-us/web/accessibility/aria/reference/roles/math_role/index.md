@@ -1,5 +1,6 @@
 ---
 title: "ARIA: math role"
+short-title: math
 slug: Web/Accessibility/ARIA/Reference/Roles/math_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#math
@@ -45,5 +46,5 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 ## See also
 
-- [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Element/math) element (not HTML)
-- [The MathML specification](https://www.w3.org/TR/MathML3/)
+- [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Reference/Element/math) element (not HTML)
+- [The MathML specification](https://w3c.github.io/mathml/spec.html)

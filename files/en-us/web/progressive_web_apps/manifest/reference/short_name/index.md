@@ -2,10 +2,9 @@
 title: short_name
 slug: Web/Progressive_web_apps/Manifest/Reference/short_name
 page-type: web-manifest-member
-browser-compat: html.manifest.short_name
+browser-compat: manifests.webapp.short_name
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `short_name` manifest member is used to specify a short name for your web application, which may be used when the full [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) is too long for the available space.
 

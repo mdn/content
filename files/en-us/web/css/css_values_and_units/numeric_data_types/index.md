@@ -19,7 +19,7 @@ A {{cssxref("&lt;number&gt;")}} represents a real number, which may or may not h
 
 ## Dimensions
 
-A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between the number and the unit identifier: i.e. `1 cm` is not valid.
+A {{cssxref("&lt;dimension&gt;")}} is a `<number>` with a unit attached to it, for example `45deg`, `100ms`, or `10px`. The attached unit identifier is case insensitive. There is never a space or any other characters between the number and the unit identifier: i.e., `1 cm` is not valid.
 
 CSS uses dimensions to specify:
 
@@ -40,7 +40,7 @@ There are two types of relative lengths: font-relative lengths and viewport-perc
 
 #### Local font-relative lengths
 
-Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
+Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Reference/Elements) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
 
 | Unit  | Relative to                                                                                                                            |
@@ -73,12 +73,12 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 
 | Unit   | Relative to                                                                                           |
 | ------ | ----------------------------------------------------------------------------------------------------- |
-| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                            |
-| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                             |
-| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                |
-| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                 |
-| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                |
-| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                 |
+| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic_viewport_units) viewport's height.             |
+| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic_viewport_units) viewport's width.              |
+| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large_viewport_units) viewport's height.                 |
+| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large_viewport_units) viewport's width.                  |
+| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small_viewport_units) viewport's height.                 |
+| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small_viewport_units) viewport's width.                  |
 | `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Glossary/Flow_relative_values).  |
 | `vh`   | 1% of viewport's height.                                                                              |
 | `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Glossary/Flow_relative_values). |
@@ -181,7 +181,7 @@ As an example, if you specify the {{cssxref("width")}} of a box as a percentage,
 
 ## Mixing percentages and dimensions
 
-Some properties accept a dimension that could be either one of two types, for example a `<length>` **or** a `<percentage>`. In this case the allowed value is detailed in the specification as a combination unit, e.g. {{cssxref("&lt;length-percentage&gt;")}}. Other possible combinations are as follows:
+Some properties accept a dimension that could be either one of two types, for example a `<length>` **or** a `<percentage>`. In this case the allowed value is detailed in the specification as a combination unit, e.g., {{cssxref("&lt;length-percentage&gt;")}}. Other possible combinations are as follows:
 
 - {{cssxref("&lt;frequency-percentage&gt;")}}
 - {{cssxref("&lt;angle-percentage&gt;")}}
@@ -195,15 +195,15 @@ Some properties accept a dimension that could be either one of two types, for ex
 
 ### Color
 
-The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g. it's background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
+The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g., it's background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
 
 ### Image
 
-The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/).
+The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://drafts.csswg.org/css-images-4/).
 
 ### Position
 
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://drafts.csswg.org/css-backgrounds/).
 
 ## Functional notation
 
@@ -212,7 +212,6 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 - {{cssxref("max", "max()")}}
 - {{cssxref("minmax", "minmax()")}}
 - {{cssxref("clamp", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
@@ -220,6 +219,8 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
 Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `hsl()`, and `hsla()`, used commas, but commas are generally only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+
+The spec also defines the `toggle()` function. It has not been implemented anywhere yet.
 
 ## Specifications
 

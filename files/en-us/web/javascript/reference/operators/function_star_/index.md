@@ -3,15 +3,14 @@ title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
 page-type: javascript-operator
 browser-compat: javascript.operators.generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`function*`** keyword can be used to define a generator function inside an expression.
 
 You can also define generator functions using the [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{InteractiveExample("JavaScript Demo: function* expression", "taller")}}
 
 ```js interactive-example
 const foo = function* () {
@@ -22,7 +21,7 @@ const foo = function* () {
 
 let str = "";
 for (const val of foo()) {
-  str = str + val;
+  str += val;
 }
 
 console.log(str);

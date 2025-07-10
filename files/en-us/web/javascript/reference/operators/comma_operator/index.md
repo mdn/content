@@ -3,13 +3,12 @@ title: Comma operator (,)
 slug: Web/JavaScript/Reference/Operators/Comma_operator
 page-type: javascript-operator
 browser-compat: javascript.operators.comma
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **comma (`,`)** operator evaluates each of its operands (from left to right) and returns the value of the last operand. This is commonly used to provide multiple updaters to a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop's afterthought.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+{{InteractiveExample("JavaScript Demo: Comma (,) operator")}}
 
 ```js interactive-example
 let x = 1;

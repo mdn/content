@@ -3,13 +3,12 @@ title: Remainder (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 page-type: javascript-operator
 browser-compat: javascript.operators.remainder
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **remainder (`%`)** operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+{{InteractiveExample("JavaScript Demo: Remainder (%) operator")}}
 
 ```js interactive-example
 console.log(13 % 5);
@@ -39,7 +38,7 @@ For the operation `n % d`, `n` is called the dividend and `d` is called the divi
 
 When both operands are non-zero and finite, the remainder `r` is calculated as `r := n - d * q` where `q` is the integer such that `r` has the same sign as the dividend `n` while being as close to 0 as possible.
 
-Note that while in most languages, '%' is a remainder operator, in some (e.g. [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) it is a modulo operator. Modulo is defined as `k := n - d * q` where `q` is the integer such that `k` has the same sign as the divisor `d` while being as close to 0 as possible. For two values of the same sign, the two are equivalent, but when the operands are of different signs, the modulo result always has the same sign as the _divisor_, while the remainder has the same sign as the _dividend_, which can make them differ by one unit of `d`. To obtain a modulo in JavaScript, in place of `n % d`, use `((n % d) + d) % d`. In JavaScript, the modulo operation (which doesn't have a dedicated operator) is used to normalize the second operand of bitwise shift operators ([`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift), etc.), making the offset always a positive value.
+Note that while in most languages, '%' is a remainder operator, in some (e.g., [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) it is a modulo operator. Modulo is defined as `k := n - d * q` where `q` is the integer such that `k` has the same sign as the divisor `d` while being as close to 0 as possible. For two values of the same sign, the two are equivalent, but when the operands are of different signs, the modulo result always has the same sign as the _divisor_, while the remainder has the same sign as the _dividend_, which can make them differ by one unit of `d`. To obtain a modulo in JavaScript, in place of `n % d`, use `((n % d) + d) % d`. In JavaScript, the modulo operation (which doesn't have a dedicated operator) is used to normalize the second operand of bitwise shift operators ([`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift), etc.), making the offset always a positive value.
 
 For BigInt division, a {{jsxref("RangeError")}} is thrown if the divisor `y` is `0n`. This is because number remainder by zero returns `NaN`, but BigInt has no concept of `NaN`.
 

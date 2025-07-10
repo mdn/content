@@ -3,13 +3,12 @@ title: Unary negation (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 page-type: javascript-operator
 browser-compat: javascript.operators.unary_negation
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **unary negation (`-`)** operator precedes its operand and negates it.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{InteractiveExample("JavaScript Demo: Unary negation (-) operator")}}
 
 ```js interactive-example
 const x = 4;
