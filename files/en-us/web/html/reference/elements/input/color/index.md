@@ -13,22 +13,22 @@ The element's presentation may vary substantially from one browser and/or platfo
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Choose your monster's colors:</p>
+<p>Choose your colors:</p>
 
 <div>
-  <input type="color" id="head" name="head" value="#e66465" />
-  <label for="head">Head</label>
+  <input type="color" id="foreground" name="foreground" value="#e66465" />
+  <label for="foreground">Foreground color</label>
 </div>
 
 <div>
   <input
     type="color"
-    id="body"
-    name="body"
+    id="background"
+    name="background"
     value="oklab(50% 0.1 0.1 / 0.5)"
     colorspace="display-p3"
     alpha />
-  <label for="body">Body</label>
+  <label for="background">Background color</label>
 </div>
 ```
 
@@ -232,7 +232,7 @@ The final result looks like this:
       <td><strong>IDL attributes</strong></td>
       <td>
         <code><a href="/en-US/docs/Web/API/HTMLInputElement/alpha">alpha</a></code>,
-        <code><a href="/en-US/docs/Web/API/HTMLInputElement/colorspace">colorspace</a></code>,
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/colorSpace">colorSpace</a></code>,
         <code><a href="/en-US/docs/Web/API/HTMLInputElement/list">list</a></code>, and
         <code><a href="/en-US/docs/Web/API/HTMLInputElement/value">value</a></code>
       </td>
