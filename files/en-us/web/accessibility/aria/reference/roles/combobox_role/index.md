@@ -59,7 +59,6 @@ Note: Use only one of these methods; do not combine them.
 ### Keyboard interactions
 
 - <kbd>Down Arrow</kbd>
-
   - : Opens the popup if closed and moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Down Arrow</kbd> (Optional)
