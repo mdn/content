@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.alpha
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLInputElement.alpha`** property indicate whether the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
+The **`alpha`** property of the {{domxref("HTMLInputElement" interface returns a boolean value that indicates whether the color's alpha component can be manipulated by the end user and does not have to be fully opaque. It reflects the {{htmlelement("input")}} element's [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) attribute, which indicates the CSS color's alpha component can be manipulated by the end user and does not have to be fully opaque, and is only relevant to [color](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color) controls.
 
 ## Value
 

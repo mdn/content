@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.colorSpace
 
 {{ApiRef("HTML DOM")}}
 
-The **`colorSpace`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute, indicating the color space of the serialized CSS color (SRGB or display-p3).
+The **`colorSpace`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute. Relevant to the `color` input type only, it indicates whether the {{glossary("color space")}} of the serialized CSS color is `sRGB` (the default) or `display-p3`.
 
 ## Value
 
