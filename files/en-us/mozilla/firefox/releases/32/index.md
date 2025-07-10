@@ -71,7 +71,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("Navigato.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("Navigator.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```js
   const constraints = {
