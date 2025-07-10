@@ -137,8 +137,9 @@ canvas {
 
 ```html
 <p>
-  Start <button type="button">⏯</button> playing the video. Pause the video to read the metadata.
-  Drawing video frames on the canvas is synced with the actual video framerate.
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
 </p>
 <video controls playsinline></video>
 <canvas width="960" height="540"></canvas>
