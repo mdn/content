@@ -143,7 +143,7 @@ canvas {
 <video controls playsinline></video>
 <canvas width="960" height="540"></canvas>
 <p><span id="fps-info">0</span>fps</p>
-<p><pre id="metadata-info"></pre></p>
+<pre id="metadata-info"></pre>
 ```
 
 {{embedlivesample("", , "540")}}
