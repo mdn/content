@@ -3,9 +3,8 @@ title: "SuppressedError: error"
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError/error
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.SuppressedError.error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`error`** data property of a {{jsxref("SuppressedError")}} instance contains a reference to the error that results in the suppression.
 

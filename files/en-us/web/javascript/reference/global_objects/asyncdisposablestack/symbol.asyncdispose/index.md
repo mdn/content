@@ -3,9 +3,8 @@ title: AsyncDisposableStack.prototype[Symbol.asyncDispose]()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.@@asyncDispose
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.asyncDispose]()`** method of {{jsxref("AsyncDisposableStack")}} instances implements the _async disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/await_using", "await using")}}. It is an alias for the {{jsxref("AsyncDisposableStack/disposeAsync", "disposeAsync()")}} method.
 

@@ -3,9 +3,8 @@ title: AsyncDisposableStack
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncDisposableStack
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncDisposableStack`** object represents a stack of [async disposers](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its `move()` method will transfer responsibility for calling the current registered disposers to a new `AsyncDisposableStack` and prevent registering any additional disposers.
 

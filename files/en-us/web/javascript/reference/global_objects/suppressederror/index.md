@@ -3,9 +3,8 @@ title: SuppressedError
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError
 page-type: javascript-class
 browser-compat: javascript.builtins.SuppressedError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`SuppressedError`** object represents an error generated while handing another error. It is generated during resource disposal using {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 

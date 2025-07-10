@@ -3,9 +3,8 @@ title: Iterator.prototype[Symbol.dispose]()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.@@dispose
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.dispose]()`** method of {{jsxref("Iterator")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}}. It calls the `return()` method of `this`, if it exists.
 

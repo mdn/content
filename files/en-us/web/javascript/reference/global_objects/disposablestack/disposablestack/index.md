@@ -3,9 +3,8 @@ title: DisposableStack() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/DisposableStack
 page-type: javascript-constructor
 browser-compat: javascript.builtins.DisposableStack.DisposableStack
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`DisposableStack()`** constructor creates {{jsxref("DisposableStack")}} objects.
 

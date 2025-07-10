@@ -3,9 +3,8 @@ title: DisposableStack.prototype.adopt()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/adopt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.adopt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`adopt()`** method of {{jsxref("DisposableStack")}} instances registers a value that doesn't implement the disposable protocol to the stack by providing a custom disposer function.
 

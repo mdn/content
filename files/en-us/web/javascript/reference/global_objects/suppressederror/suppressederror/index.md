@@ -3,9 +3,8 @@ title: SuppressedError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError/SuppressedError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SuppressedError.SuppressedError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`SuppressedError()`** constructor creates {{jsxref("SuppressedError")}} objects.
 

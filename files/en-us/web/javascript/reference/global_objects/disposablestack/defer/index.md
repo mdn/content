@@ -3,9 +3,8 @@ title: DisposableStack.prototype.defer()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/defer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.defer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`defer()`** method of {{jsxref("DisposableStack")}} instances takes a callback function to be called when the stack is disposed.
 

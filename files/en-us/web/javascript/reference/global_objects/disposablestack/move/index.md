@@ -3,9 +3,8 @@ title: DisposableStack.prototype.move()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/move
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.move
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`move()`** method of {{jsxref("DisposableStack")}} instances creates a new `DisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
 

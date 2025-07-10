@@ -3,9 +3,8 @@ title: Symbol.asyncDispose
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.asyncDispose
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.asyncDispose`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.asyncDispose`. The {{jsxref("Statements/await_using", "await using")}} declaration looks up this symbol on the variable initializer for the method to call when the variable goes out of scope.
 

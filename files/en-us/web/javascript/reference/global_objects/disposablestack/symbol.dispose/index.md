@@ -3,9 +3,8 @@ title: DisposableStack.prototype[Symbol.dispose]()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.@@dispose
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.dispose]()`** method of {{jsxref("DisposableStack")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It is an alias for the {{jsxref("DisposableStack/dispose", "dispose()")}} method.
 

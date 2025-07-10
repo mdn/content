@@ -3,9 +3,8 @@ title: AsyncDisposableStack.prototype.use()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/use
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.use
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`use()`** method of {{jsxref("AsyncDisposableStack")}} instances registers a value that implements the [async disposable protocol](/en-US/docs/Web/JavaScript/Guide/Resource_management) to the stack.
 

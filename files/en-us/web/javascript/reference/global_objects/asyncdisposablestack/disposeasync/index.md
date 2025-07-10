@@ -3,9 +3,8 @@ title: AsyncDisposableStack.prototype.disposeAsync()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/disposeAsync
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.disposeAsync
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`disposeAsync()`** method of {{jsxref("AsyncDisposableStack")}} instances disposes this stack by calling all disposers registered to it in reverse order of registration, awaiting for each one's completion before calling the next one. If the stack is already disposed, this method does nothing.
 
