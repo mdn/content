@@ -65,7 +65,6 @@ Note: Use only one of these methods; do not combine them.
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
-
   - : Opens the popup if closed and moves focus to the next option, or to the first option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
