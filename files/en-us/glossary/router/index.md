@@ -2,9 +2,8 @@
 title: Router
 slug: Glossary/Router
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 On the web, the term **router** can refer to different concepts depending on the context:
 
