@@ -3,9 +3,8 @@ title: "<body>: The Document Body element"
 slug: Web/HTML/Reference/Elements/body
 page-type: html-element
 browser-compat: html.elements.body
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of an HTML document. There can be only one `<body>` element in a document.
 

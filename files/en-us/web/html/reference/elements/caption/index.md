@@ -3,9 +3,8 @@ title: "<caption>: The Table Caption element"
 slug: Web/HTML/Reference/Elements/caption
 page-type: html-element
 browser-compat: html.elements.caption
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible description")}}.
 

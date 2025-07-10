@@ -4,9 +4,8 @@ short-title: writingsuggestions
 slug: Web/HTML/Reference/Global_attributes/writingsuggestions
 page-type: html-attribute
 browser-compat: html.global_attributes.writingsuggestions
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`writingsuggestions`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an {{glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 

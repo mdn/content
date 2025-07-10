@@ -3,9 +3,8 @@ title: "<wbr>: The Line Break Opportunity element"
 slug: Web/HTML/Reference/Elements/wbr
 page-type: html-element
 browser-compat: html.elements.wbr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
 
