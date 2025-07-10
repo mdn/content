@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.from
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainDate.from()`** static method creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format) string.
 

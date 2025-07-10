@@ -4,9 +4,8 @@ short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.delete
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specified element from this `WeakSet`.
 

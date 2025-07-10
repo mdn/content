@@ -4,9 +4,8 @@ short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.shift
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`shift()`** method of {{jsxref("Array")}} instances removes the **first**
 element from an array and returns that removed element. This method changes the length

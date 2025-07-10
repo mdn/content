@@ -4,9 +4,8 @@ short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.fromEntries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.fromEntries()`** static method transforms a list of key-value pairs into an object.
 

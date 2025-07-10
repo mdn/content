@@ -4,9 +4,8 @@ short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Array.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array[Symbol.species]`** static accessor property returns the constructor used to construct return values from array methods.
 

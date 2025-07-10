@@ -4,9 +4,8 @@ short-title: preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.preventExtensions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.preventExtensions()")}}. It prevents new properties from ever being added to an object (i.e., prevents future extensions to the object).
 

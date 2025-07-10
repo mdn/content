@@ -4,9 +4,8 @@ short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isExtensible
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.isExtensible()`** static method determines if an object
 is extensible (whether it can have new properties added to it).

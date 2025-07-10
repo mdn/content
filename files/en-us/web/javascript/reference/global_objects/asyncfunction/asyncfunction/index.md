@@ -4,9 +4,8 @@ short-title: AsyncFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncFunction()`** constructor creates {{jsxref("AsyncFunction")}} objects.
 

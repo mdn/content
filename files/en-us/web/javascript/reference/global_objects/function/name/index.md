@@ -4,9 +4,8 @@ short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.name
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`name`** data property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 

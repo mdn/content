@@ -4,9 +4,8 @@ short-title: ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}}, etc.
 

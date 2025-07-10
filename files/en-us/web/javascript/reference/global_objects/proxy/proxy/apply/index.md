@@ -4,9 +4,8 @@ short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
