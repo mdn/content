@@ -65,7 +65,7 @@ Note: Use only one of these methods; do not combine them.
   - : If the popup is available but not displayed, displays the popup without moving focus.
 
 - <kbd>Up Arrow</kbd>
-  - : Opens the popup if closed and moves focus to the next option, or to the first option if none was selected.
+  - : Opens the popup if closed and moves focus to the previous option, or to the last option if none was selected.
 
 - <kbd>Alt</kbd> + <kbd>Up Arrow</kbd> (Optional)
   - : If the popup has focus, returns focus to the combobox, otherwise it closes the popup.
@@ -76,8 +76,8 @@ Note: Use only one of these methods; do not combine them.
 #### Editable combobox keyboard interactions
 
 - <kbd>Enter</kbd>
-
-  - : If an autocomplete suggestion is selected in the popup, accepts the suggestion by updating the combobox value and placing the input cursor at the end. May also trigger a default action (e.g., in a messaging application, adding the accepted value to a list of recipients).
+  - : If an autocomplete suggestion is selected in the popup, accepts the suggestion by updating the combobox value and placing the input cursor at the end.
+    May also trigger a default action (e.g., in a messaging application, adding the accepted value to a list of recipients).
 
 - <kbd>Tab</kbd>
   - : Accepts the current value and moves focus to the next focusable element.
@@ -85,11 +85,9 @@ Note: Use only one of these methods; do not combine them.
 #### Select-only combobox keyboard interactions
 
 - <kbd>Enter</kbd> or <kbd>Space</kbd>
-
   - : When the popup is closed, opens the popup. When the popup is open and an option is selected, accepts the selected option as the combobox value and closes the popup.
 
 - <kbd>Tab</kbd>
-
   - : Accepts the current selection and moves focus to the next focusable element.
 
 - <kbd>Home</kbd> or <kbd>End</kbd>
