@@ -38,14 +38,14 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 - The new `DOMRequest` interface, used for reporting the status and result of background operations, has been added.
 - The {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} method now returns `0` instead of the incorrect `-1` when the {{HTMLElement("option")}} is inside a {{HTMLElement("datalist")}} HTML element.
 - {{domxref("DOMException")}} as defined in DOM Level 4 has been implemented.
-- The {{domxref("FileError")}} interface has been removed in favor of the {{domxref("DOMError")}} interface as defined in the latest FileAPI specification.
+- The `FileError` interface has been removed in favor of the {{domxref("DOMError")}} interface as defined in the latest FileAPI specification.
 - The {{domxref("Range")}} object no longer throws a `RangeException`. Instead a {{domxref("DOMException")}} as defined in DOM 4 is used.
 - {{domxref("element.getAttributeNS()")}} now always returns `null` instead of the empty string for non-existent attributes. Previously, there were cases in which the empty string could be returned. This is in keeping with the DOM4 specification, which now says this should return null for non-existent attributes, instead of an empty string.
 - The {{domxref("HTMLCanvasElement")}} interface now has a non-standard `mozFetchAsStream()` method, which provides an input stream containing the element's image data in the specified format.
 
 ### UA string
 
-- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Gecko_user_agent_string_reference#mobile_and_tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
+- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox#mobile_and_tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
 - The UA string no longer exposes the Gecko patch number or release status in the version number; that is, the version number is now always of the form "X.Y", where X is the major release number and Y the minor. For example, "13.0" or "14.1". It will no longer be something like "14.0.1b1".
 
 ### SVG

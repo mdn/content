@@ -19,7 +19,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 - [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 - Removed support for using the {{domxref("XMLHttpRequest")}} `responseType` and `withCredentials` attributes when performing synchronous requests. Attempting to do so throws an `NS_ERROR_DOM_INVALID_ACCESS_ERR` exception. This change has been proposed to the W3C for standardization.
 - The new {{domxref("Navigator/vibrate", "navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
-- `navigator.mozApps` returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).
+- `navigator.mozApps` returns an `Apps` object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).
 - `MozBeforePaint` events are no longer fired. {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} consumers who used these should pass a callback function instead.
 - Support for canceling animation frame requests has been added; {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} now returns a request ID value, which you can pass to {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} to cancel the request.
 - Several {{domxref("Event")}} constructors (`Event`, HTML events, `UIEvent`, and `MouseEvent`) introduced in DOM4 specifications are now supported.
@@ -35,7 +35,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### CSS
 
 - the [`text-size-adjust`](/en-US/docs/Web/CSS/text-size-adjust) property is now supported
-- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#conditional_rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)).
+- [CSS3](/en-US/docs/CSS) [Conditional Rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#block_at-rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)).
 
 ### JavaScript
 
@@ -78,7 +78,7 @@ _No change._
 ### Network
 
 - The change in Firefox 8 that removed support for double quote characters as delimiters for {{rfc(2231)}} and {{rfc(5987)}} has been reverted, as this broke some sites, including Outlook Web Access.
-- The user agent string in HTTP headers now includes an identifier that [lets the server know if the Firefox accessing it is a phone or a tablet](/en-US/docs/Gecko_user_agent_string_reference#mobile_and_tablet_indicators).
+- The user agent string in HTTP headers now includes an identifier that [lets the server know if the Firefox accessing it is a phone or a tablet](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox#mobile_and_tablet_indicators).
 
 ### Developer tools
 
