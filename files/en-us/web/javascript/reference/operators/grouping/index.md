@@ -10,11 +10,11 @@ The **grouping `( )`** operator controls the precedence of evaluation in express
 
 {{InteractiveExample("JavaScript Demo: Grouping operator")}}
 
-```js interactive-example
+```js-nolint interactive-example
 console.log(1 + 2 * 3); // 1 + 6
 // Expected output: 7
 
-console.log(1 + 2 * 3); // 1 + 6
+console.log(1 + (2 * 3)); // 1 + 6
 // Expected output: 7
 
 console.log((1 + 2) * 3); // 3 * 3

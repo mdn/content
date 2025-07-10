@@ -3,9 +3,8 @@ title: "<option>: The HTML Option element"
 slug: Web/HTML/Reference/Elements/option
 page-type: html-element
 browser-compat: html.elements.option
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an item contained in a {{HTMLElement("select")}}, an {{HTMLElement("optgroup")}}, or a {{HTMLElement("datalist")}} element. As such, `<option>` can represent menu items in popups and other lists of items in an HTML document.
 

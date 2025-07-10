@@ -3,9 +3,8 @@ title: HTML attribute reference
 short-title: Attributes
 slug: Web/HTML/Reference/Attributes
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 

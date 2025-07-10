@@ -3,9 +3,8 @@ title: Using date and time formats in HTML
 short-title: Date and time formats
 slug: Web/HTML/Guides/Date_and_time_formats
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 
