@@ -114,7 +114,7 @@ Or you could specify it directly on the `<iframe>` like this:
 
 In this example, when an SMS message arrives and the user grants permission, an {{domxref("OTPCredential")}} object is returned with an OTP. This password is then prefilled into the verification form field, and the form is submitted.
 
-[Try this demo using a phone](https://web-otp.glitch.me/).
+[Try this demo using a phone](https://chrome.dev/web-otp-demo/).
 
 The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute with the value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even though the WebOTP API isn't fully supported in Safari.
 

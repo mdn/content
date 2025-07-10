@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/X-Robots-Tag
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`X-Robots-Tag`** {{Glossary("response header")}} defines how {{glossary("Crawler", "crawlers")}} should index URLs.
 While not part of any specification, it is a de-facto standard method for communicating with search bots, web crawlers, and similar user agents.
@@ -34,8 +33,6 @@ Specifying indexing rules in a HTTP header is useful for non-HTML documents like
 </table>
 
 ## Syntax
-
-One or more indexing rules as a comma-separated list:
 
 ```http
 X-Robots-Tag: <indexing-rule>
@@ -103,7 +100,6 @@ Any of the following indexing rules may be used:
   - : Do not index images on this page.
     If omitted, images on the page may be indexed and shown in search results.
 - `unavailable_after: <date/time>`
-
   - : Requests not to show this page in search results after the specified `<date/time>`.
     Ignored if no valid `<date/time>` is specified.
     A date must be specified in a format such as {{RFC("822")}}, {{RFC("850")}}, or ISO 8601.

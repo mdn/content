@@ -4,9 +4,8 @@ short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 

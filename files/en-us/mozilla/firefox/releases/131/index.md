@@ -2,9 +2,8 @@
 title: Firefox 131 for developers
 slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 

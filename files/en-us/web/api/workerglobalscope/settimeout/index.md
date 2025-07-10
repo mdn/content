@@ -33,7 +33,6 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     recommended** for the same reasons that make using
     {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-
   - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle.
@@ -43,7 +42,6 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     Also note that if the value isn't a number, implicit {{glossary("type coercion")}} is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](/en-US/docs/Web/API/Window/setTimeout#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
 - `param1`, …, `paramN` {{optional_inline}}
-
   - : Additional arguments which are passed through to the function specified by `functionRef`.
 
 ### Return value

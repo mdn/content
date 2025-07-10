@@ -4,9 +4,8 @@ short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteLength`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in bytes) of this typed array.
 

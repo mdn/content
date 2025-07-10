@@ -33,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Details of the tab that was created.
 

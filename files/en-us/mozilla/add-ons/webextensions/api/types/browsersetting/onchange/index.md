@@ -33,13 +33,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `details`
-
       - : An `object` containing details of the change that occurred. Its properties are as follows:
-
         - `value`
           - : The new value of the setting. The type of this property is determined by the particular setting.
         - `levelOfControl`

@@ -2,9 +2,8 @@
 title: Firefox 36 for developers
 slug: Mozilla/Firefox/Releases/36
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -46,7 +45,6 @@ Highlights:
 ### JavaScript
 
 - The [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ([Firefox bug 1066322](https://bugzil.la/1066322)):
-
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
@@ -54,12 +52,10 @@ Highlights:
 
 - The old placeholder string `"@@iterator"` has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) interface property key ([Firefox bug 918828](https://bugzil.la/918828)).
 - The spec-internal abstract operation `ToNumber(string)` now supports binary (`0b`) and octal (`0o`) literals, this is a potentially breaking change from ES5 ([Firefox bug 1079120](https://bugzil.la/1079120)).
-
   - `Number("0b11")` now returns `3`, not `NaN`.
   - `"0o11" == 9` now returns `true`, not `false`.
 
 - The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also can not be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
-
   - `{const a=1}; a;` now throws a {{jsxref("ReferenceError")}} and does not return `1` anymore due to block-scoping.
   - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration"): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
@@ -74,7 +70,6 @@ Highlights:
 - The {{domxref("CanvasRenderingContext2D.resetTransform()")}} method of the Canvas API has been implemented ([Firefox bug 1099148](https://bugzil.la/1099148)).
 - ECDSA is now supported in the Web Crypto API ([Firefox bug 1034854](https://bugzil.la/1034854)).
 - Our experimental implementation of WebGL 2.0 is going forward!
-
   - The {{domxref("WebGLQuery")}} interface is available ([Firefox bug 1048719](https://bugzil.la/1048719)).
   - The {{domxref("WebGL2RenderingContext.invalidateFrameBuffer()")}} method has been implemented ([Firefox bug 1076456](https://bugzil.la/1076456)).
 

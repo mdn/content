@@ -35,9 +35,7 @@ let setting = setting.set(
 ### Parameters
 
 - `details`
-
   - : An object that must contain the following property:
-
     - `value`
       - : `any`. The value you want to change the setting to. Its type depends on the particular setting.
 

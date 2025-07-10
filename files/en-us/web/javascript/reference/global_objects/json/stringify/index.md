@@ -4,9 +4,8 @@ short-title: stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.stringify
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 
@@ -43,7 +42,6 @@ JSON.stringify(value, replacer, space)
 - `replacer` {{optional_inline}}
   - : A function that alters the behavior of the stringification process, or an array of strings and numbers that specifies properties of `value` to be included in the output. If `replacer` is an array, all elements in this array that are not strings or numbers (either primitives or wrapper objects), including {{jsxref("Symbol")}} values, are completely ignored. If `replacer` is anything other than a function or an array (e.g., [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or not provided), all string-keyed properties of the object are included in the resulting JSON string.
 - `space` {{optional_inline}}
-
   - : A string or number that's used to insert white space (including indentation, line break characters, etc.) into the output JSON string for readability purposes.
 
     If this is a number, it indicates the number of space characters to be used as indentation, clamped to 10 (that is, any number greater than `10` is treated as if it were `10`). Values less than 1 indicate that no space should be used.
@@ -74,11 +72,9 @@ A JSON string representing the given value, or undefined.
 - Arrays are serialized as arrays (enclosed by square brackets). Only array indices between 0 and `length - 1` (inclusive) are serialized; other properties are ignored.
 - The special raw JSON object created with {{jsxref("JSON.rawJSON()")}} is serialized as the raw JSON text it contains (by accessing its `rawJSON` property).
 - For other objects:
-
   - All {{jsxref("Symbol")}}-keyed properties will be completely ignored, even when using the [`replacer`](#the_replacer_parameter) parameter.
 
   - If the value has a `toJSON()` method, it's responsible to define what data will be serialized. Instead of the object being serialized, the value returned by the `toJSON()` method when called will be serialized. `JSON.stringify()` calls `toJSON` with one parameter, the `key`, which has the same semantic as the `key` parameter of the [`replacer`](#the_replacer_parameter) function:
-
     - if this object is a property value, the property name
     - if it is in an array, the index in the array, as a string
     - if `JSON.stringify()` was directly called on this object, an empty string

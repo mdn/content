@@ -4,9 +4,8 @@ short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.unshift
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`unshift()`** method of {{jsxref("Array")}} instances adds the specified elements to the
 beginning of an array and returns the new length of the array.

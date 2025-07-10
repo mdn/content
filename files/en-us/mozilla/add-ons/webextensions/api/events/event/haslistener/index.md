@@ -18,7 +18,6 @@ events.Event.hasListener(listener)
 ### Parameters
 
 - `listener`
-
   - : `function`. The listener to check.
 
 ### Return value

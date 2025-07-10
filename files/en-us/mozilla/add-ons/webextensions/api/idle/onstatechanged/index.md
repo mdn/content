@@ -35,9 +35,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. The new idle state.
 

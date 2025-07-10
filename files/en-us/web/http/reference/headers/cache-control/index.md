@@ -4,9 +4,8 @@ short-title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 page-type: http-header
 browser-compat: http.headers.Cache-Control
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Guides/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
 
@@ -33,6 +32,10 @@ The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both re
 </table>
 
 ## Syntax
+
+```http
+Cache-Control: <directive>, <directive>, ...
+```
 
 Cache directives follow these rules:
 

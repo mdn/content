@@ -4,9 +4,8 @@ short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
@@ -30,7 +29,6 @@ match(regexp)
 ### Parameters
 
 - `regexp`
-
   - : A regular expression object, or any object that has a [`Symbol.match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) method.
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.match` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.

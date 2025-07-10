@@ -30,7 +30,6 @@ This descriptor is specified as either the keyword `normal` or as a comma-separa
 - `normal`
   - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-
   - : Represents a space-separated tuple consisting of a tag name and an optional value.
 
     The tag name is always a {{cssxref("&lt;string&gt;")}} of four {{Glossary("ASCII")}} characters. If the tag name has more or fewer characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
@@ -75,10 +74,10 @@ p {
   margin: 0.7rem 3rem;
 }
 .swash-off {
-  font-family: MonteCarlo;
+  font-family: MonteCarlo, cursive;
 }
 .swash-on {
-  font-family: MonteCarlo2;
+  font-family: MonteCarlo2, cursive;
 }
 ```
 

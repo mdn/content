@@ -2,9 +2,8 @@
 title: "TypeError: invalid 'instanceof' operand 'x'"
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid 'instanceof' operand" occurs when the right-hand side
 operands of the [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)

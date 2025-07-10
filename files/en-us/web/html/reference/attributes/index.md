@@ -3,9 +3,8 @@ title: HTML attribute reference
 short-title: Attributes
 slug: Web/HTML/Reference/Attributes
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -278,7 +277,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -670,7 +669,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>
@@ -700,17 +699,6 @@ Elements in HTML have **attributes**; these are additional values that configure
           <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
           value that allows browsers to verify what they fetch.
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("img") }}</td>
-      <td>
-        This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it's the size specified in the attribute.
       </td>
     </tr>
     <tr>
@@ -1120,14 +1108,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         Defines the cells that the header test (defined in the
         <code>th</code> element) relates to.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
-        {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("style") }}</td>
-      <td></td>
     </tr>
     <tr>
       <td>

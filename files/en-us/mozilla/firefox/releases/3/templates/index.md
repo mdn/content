@@ -2,9 +2,8 @@
 title: Templates in Firefox 3
 slug: Mozilla/Firefox/Releases/3/Templates
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Templates have been significantly improved in Firefox 3. The key improvement allows the use of [custom query processors](/en-US/docs/How_to_implement_a_custom_XUL_query_processor_component) to handle other types of datasources besides RDF. A new query syntax makes this possible. Built-in support for SQL ([mozStorage](/en-US/docs/Storage)) and XML datasources is also provided. A full description of the new features available for templates [is available](https://wiki.mozilla.org/XUL:Template_Features_in_1.9). ([Firefox bug 285631](https://bugzil.la/285631))
 

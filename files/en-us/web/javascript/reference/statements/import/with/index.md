@@ -3,9 +3,8 @@ title: Import attributes
 slug: Web/JavaScript/Reference/Statements/import/with
 page-type: javascript-language-feature
 browser-compat: javascript.statements.import.import_attributes
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 > [!NOTE]
 > A previous version of this proposal used the `assert` keyword instead of `with`. The assertion feature is now non-standard. Check the [browser compatibility table](#browser_compatibility) for details.
@@ -51,7 +50,7 @@ On the web, each import statement results in a HTTP request. The response is the
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 ...
-{"name":"John"}
+{"name":"Maria"}
 ```
 
 Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g., the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
@@ -104,7 +103,7 @@ In `data.json`:
 
 ```json
 {
-  "name": "John"
+  "name": "Shilpa"
 }
 ```
 
@@ -127,7 +126,7 @@ In `index.html`:
 </html>
 ```
 
-Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `John` on the page.
+Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `Shilpa` on the page.
 
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).

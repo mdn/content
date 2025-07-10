@@ -2,9 +2,8 @@
 title: Updating add-ons for Firefox 8
 slug: Mozilla/Firefox/Releases/8/Updating_add-ons
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8) for a complete list of everything that changed in Firefox 8.
 

@@ -2,9 +2,8 @@
 title: Firefox 33 for developers
 slug: Mozilla/Firefox/Releases/33
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -35,7 +34,6 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Fixed CSS animations with empty keyframes rule so they also dispatch events ([Firefox bug 1004377](https://bugzil.la/1004377)).
 - Added support for `rebeccapurple`, a new {{cssxref("&lt;color&gt;")}} name defined in CSS Colors level 4 ([Firefox bug 1024642](https://bugzil.la/1024642)).
 - Our experimental implementation of CSS Fonts Level 3 is progressing. Its activation is governed by the `layout.css.font-features.enabled` preference, enabled by default in Nightly. Newly implemented features are:
-
   - The fallback algorithm of {{cssxref("font-variant-caps")}}, creating synthetic alternates for missing glyphs ([Firefox bug 961558](https://bugzil.la/961558)).
   - The {{cssxref("font-synthesis")}} CSS property has been implemented ([Firefox bug 871453](https://bugzil.la/871453)).
 

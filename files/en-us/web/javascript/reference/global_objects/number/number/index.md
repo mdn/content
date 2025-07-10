@@ -4,9 +4,8 @@ short-title: Number()
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Number.Number
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number()`** constructor creates {{jsxref("Number")}} objects. When called as a function, it returns primitive values of type Number.
 
@@ -17,7 +16,8 @@ new Number(value)
 Number(value)
 ```
 
-> **Note:** `Number()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `Number()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 

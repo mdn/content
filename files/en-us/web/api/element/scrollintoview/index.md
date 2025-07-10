@@ -24,9 +24,7 @@ scrollIntoView(scrollIntoViewOptions)
 ### Parameters
 
 - `alignToTop` {{optional_inline}}
-
   - : A boolean value:
-
     - If `true`, the top of the element will be aligned to the top of the
       visible area of the scrollable ancestor. Corresponds to
       `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is
@@ -37,9 +35,7 @@ scrollIntoView(scrollIntoViewOptions)
 
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
-
   - : An Object with the following properties:
-
     - `behavior` {{optional_inline}}
       - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
         - `smooth`: scrolling should animate smoothly

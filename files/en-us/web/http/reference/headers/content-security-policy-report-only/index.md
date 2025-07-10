@@ -4,9 +4,8 @@ short-title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy-Report-Only
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy-Report-Only`** {{Glossary("response header")}} helps to monitor Content Security Policy (CSP) violations and their effects without enforcing the security policies.
 This header allows you to test or repair violations before a specific {{HTTPHeader("Content-Security-Policy")}} is applied and enforced.

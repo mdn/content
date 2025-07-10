@@ -4,9 +4,8 @@ short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.defineProperty()`** static method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
 
@@ -55,9 +54,7 @@ Property descriptors present in objects come in two main flavors: data descripto
 Both data and accessor descriptors are objects. They share the following optional keys (please note: the **defaults** mentioned here are in the case of defining properties using `Object.defineProperty()`):
 
 - `configurable`
-
   - : when this is set to `false`,
-
     - the type of this property cannot be changed between data property and accessor property, and
     - the property may not be deleted, and
     - other attributes of its descriptor cannot be changed (however, if it's a data descriptor with `writable: true`, the `value` can be changed, and `writable` can be changed to `false`).

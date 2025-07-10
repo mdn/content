@@ -4,9 +4,8 @@ short-title: baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.baseName
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`baseName`** accessor property of {{jsxref("Intl.Locale")}} instances returns a substring of this locale's string representation, containing core information about this locale, including the language, and the script and region if available.
 

@@ -61,11 +61,9 @@ position-area: unset;
 The property value is two `<position-area>` keyterms, or the keyword `none`. If only one `<position-area>` keyterm is provided, the second keyterm is implied.
 
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-
   - : Specifies the area of the position area grid on which to place selected positioned elements.
 
 - `none`
-
   - : No position area is set.
 
 ## Description
@@ -142,7 +140,7 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>`
 <p class="positionedElement" contenteditable="true">This can be edited.</p>
 
 <style contenteditable="true">.positionedElement {
-    position-area: CHANGEME;
+    position-area: top center;
   }
 </style>
 ```
@@ -187,7 +185,7 @@ style {
 
 {{ EmbedLiveSample("Basic example", "100%", "360") }}
 
-Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the invalid "CHANGEME" value of the `position-area` property to a valid value.
+Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the value of the `position-area` property to something else, like `center`.
 
 ### `position-area` value comparison
 

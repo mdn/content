@@ -29,7 +29,6 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with an {{cssxref("opacity")}} value less than `1`.
 - Element with a {{cssxref("mix-blend-mode")}} value other than `normal`.
 - Element with any of the following properties with a value other than `none`:
-
   - {{cssxref("transform")}}
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
@@ -221,10 +220,8 @@ ARTICLE #3's z-index is `4`, but this value is independent of the `z-index` of t
 In our example (sorted according to the final rendering order):
 
 - Root
-
   - ARTICLE #2: (`z-index`: 2), which results in a rendering order of `2-0`
   - ARTICLE #3: (`z-index`: 4), which results in a rendering order of `4-0`
-
     - SECTION #5: (`z-index`: 1), stacked under an element (`z-index`: 4), which results in a rendering order of `4-1`
     - SECTION #6: (`z-index`: 3), stacked under an element (`z-index`: 4), which results in a rendering order of `4-3`
     - SECTION #4: (`z-index`: 6), stacked under an element (`z-index`: 4), which results in a rendering order of `4-6`

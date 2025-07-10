@@ -134,7 +134,6 @@ animation-delay: unset;
 ### Values
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : The time offset, from the moment at which the animation is applied to the element, at which the animation should begin. This may be specified in either seconds (`s`) or milliseconds (`ms`). The unit is required.
 
     A positive value indicates that the animation should begin after the specified amount of time has elapsed. A value of `0s`, which is the default, indicates that the animation should begin as soon as it's applied.
@@ -144,7 +143,8 @@ animation-delay: unset;
 > [!NOTE]
 > When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-> **Note:** `animation-delay` has no effect on [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations).
+> [!NOTE]
+> `animation-delay` has no effect on [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations).
 
 ## Formal definition
 

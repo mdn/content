@@ -4,9 +4,8 @@ short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSpliced
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toSpliced()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/splice", "splice()")}} method. It returns a new array with some elements removed and/or replaced at a given index.
 
@@ -23,14 +22,12 @@ toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 ### Parameters
 
 - `start`
-
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length` or `start` is omitted, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
 
 - `skipCount` {{optional_inline}}
-
   - : An integer indicating the number of elements in the array to remove (or, to skip) from `start`.
 
     If `skipCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `skipCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
@@ -39,7 +36,6 @@ toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
     In this case, you should specify at least one new element (see below).
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `toSpliced()` will only remove elements from the array.

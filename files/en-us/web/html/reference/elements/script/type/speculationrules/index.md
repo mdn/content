@@ -6,9 +6,10 @@ page-type: html-attribute-value
 status:
   - experimental
 browser-compat: html.elements.script.type.speculationrules
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains speculation rules.
 
@@ -81,26 +82,21 @@ Each action field contains an array, which in turn contains one or more objects.
 Each object can contain the following properties:
 
 - `"source"` {{experimental_inline}}
-
   - : A string indicating the source of the URLs to which the rule applies. This is optional because the value can always be inferred from other properties.
 
     This can be one of:
-
     - `"document"`
       - : Specifies that the URLs will be matched from navigation links in the associated document (as defined in {{htmlelement("a")}} and {{htmlelement("area")}} elements), based on the conditions described by a `"where"` key. Note that the presence of a `"where"` key implies `"source": "document"`, so it is optional.
     - `"list"`
       - : Specifies that the URLs will come from a list, specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
 
 - `"urls"` {{experimental_inline}}
-
   - : An array of strings representing a list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched). `"urls"` and `"where"` cannot both be set in the same rule.
 
 - `"where"` {{experimental_inline}}
-
   - : An object representing the conditions by which the rule matches URLs contained in the associated document. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it. `"where"` and `"urls"` cannot both be set in the same rule.
 
     This object can contain exactly one of the following properties:
-
     - `"href_matches"`
       - : A string containing a URL pattern, or an array containing multiple URL pattern strings, which follow the standard [URL Pattern API syntax](/en-US/docs/Web/API/URL_Pattern_API). Links in the document whose URLs match the pattern(s) will have the rule applied.
     - `"relative_to"`
@@ -117,9 +113,7 @@ Each object can contain the following properties:
     `"where"` conditions can be nested multiple levels deep to create complex conditions, or you can choose to split them into separate rules to keep them simple. See [where examples](#where_syntax_examples) for more explanation, and multiple examples of use.
 
 - `"eagerness"` {{experimental_inline}}
-
   - : A string providing a hint to the browser as to how eagerly it should prefetch/prerender link targets in order to balance performance advantages against resource overheads. Possible values are:
-
     - `"immediate"`
       - : The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/prerender should start as soon as possible, subject only to considerations such as user preferences and resource limits.
     - `"eager"`
@@ -132,11 +126,9 @@ Each object can contain the following properties:
     If `"eagerness"` is not explicitly specified, list (`"urls"`) rules default to `immediate` and document (`"where"`) rules default to `conservative`. The browser takes this hint into consideration along with its own heuristics, so it may select a link that the author has hinted as less eager than another, if the less eager candidate is considered a better choice.
 
 - `"expects_no_vary_search"` {{experimental_inline}}
-
   - : A string providing a hint to the browser as to what {{httpheader("No-Vary-Search")}} header value will be set on responses for documents that it is receiving prefetch/prerender requests for. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 
 - `"referrer_policy"` {{experimental_inline}}
-
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
 
     > [!NOTE]
@@ -146,9 +138,7 @@ Each object can contain the following properties:
     > In the case of document rules, the matched link's specified referrer policy (e.g., using the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
 
 - `"relative_to"` {{experimental_inline}}
-
   - : A string specifying where you want links matched by URL to be matched relative to. The value can be one of:
-
     - `document`
       - : URLs should be matched relative to the document the speculation rules are being set on.
     - `ruleset`
@@ -157,14 +147,12 @@ Each object can contain the following properties:
     This key setting is only relevant for rules defined in an external file (set using the {{httpheader("Speculation-Rules")}} header). When rules are specified inside the same document they are being set for (i.e., in an inline `<script>` element), it makes no difference.
 
 - `"requires"` {{experimental_inline}}
-
   - : An array of strings representing capabilities of the browser parsing the rule, which must be available if the rule is to be applied to the specified URLs.
 
     > [!WARNING]
     > Prefetches will automatically fail in browsers that cannot meet a specified requirement, even if they support the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 
     Possible values are:
-
     - `"anonymous-client-ip-when-cross-origin"`
       - : (prefetch-only) Specifies that the rule matches only if the user agent can prevent the client IP address from being visible to the origin server if a cross-origin prefetch request is issued. Exactly how this works is dependent on browser implementation specifics. For example:
         - Chrome's implementation hides the IP address using a Google-owned proxy, therefore by default it only works for Google-controlled referrers (since in that case, sending the URLs of the destination to Google is not an additional privacy leak). When used on a non-Google-owned site, rules that include this will only match for users that turn on "Enhanced preloading" in `chrome://settings/preloading`.
@@ -173,11 +161,9 @@ Each object can contain the following properties:
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
 - `"tag"` {{experimental_inline}}
-
   - : A string used to identify a rule or ruleset. This will be included in the {{HTTPHeader("Sec-Speculation-Tags")}} request header for any speculations covered by that rule.
 
 - `"target_hint"` {{experimental_inline}}
-
   - : A string indicating where the page expects the prerendered content to be activated.
     The directive not supported for prefetch speculations.
     Allowed values are:
@@ -287,8 +273,6 @@ if (
   document.body.append(specScript);
 }
 ```
-
-You can see this in action in this [prerender demos](https://prerender-demos.glitch.me/) page.
 
 ### `where` syntax examples
 
@@ -404,14 +388,12 @@ In the above example, only the first `"href_matches"` will be matched relative t
 1. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then `/home` always equates to `https://example.com/home` regardless of whether `relative_to` is set to `document` or `ruleset`.
 
 2. However, if the document is located at `https://example.com/some/subpage.html` and the rules are at `https://other.example/resources/rules.json` (for example, on a third-party or cookieless resource origin), then:
-
    - `"relative_to": "document"` will cause `/home` to equate to `https://example.com/home`.
    - `"relative_to": "ruleset"` will cause `/home` to equate to `https://other.example/home`.
 
    This is the typical use case for `"relative_to"`.
 
 3. Another potential (but rarer) use case is when your URLs are specified in the form `home` instead of `/home`. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then:
-
    - `"relative_to": "document"` would cause `home` to equate to `https://example.com/some/home`.
    - `"relative_to": "ruleset"` would cause `home` to equate to `https://example.com/resources/home`.
 

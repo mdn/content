@@ -2,9 +2,8 @@
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
@@ -82,7 +81,6 @@ Next, you should configure your server to map the .pac filename extension to the
 These functions can be used in building the PAC file:
 
 - Hostname based conditions
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -90,28 +88,23 @@ These functions can be used in building the PAC file:
   - [`isInNet()`](#isinnet)
 
 - Related utility functions
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - URL/hostname based conditions
-
   - [`shExpMatch()`](#shexpmatch)
 
 - Time based conditions
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - Logging utility
-
   - [`alert()`](#alert)
 
 - There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
-
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
 > [!NOTE]
@@ -390,7 +383,8 @@ If only one parameter is present, the function returns a value of true on the we
 
 If both **wd1** and **wd2** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
-> **Warning:** _The order of the days matters_.
+> [!WARNING]
+> _The order of the days matters_.
 > Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
 > Now `weekdayRange("WED", "SUN")` will only evaluate to `true`
 > if the current day is Wednesday or Sunday.
@@ -442,7 +436,8 @@ dateRange(day1, month1, year1, day2, month2, year2, gmt)
 
 If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-> **Warning:** **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
+> [!WARNING]
+> **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
 
 #### Examples
 
@@ -497,7 +492,8 @@ timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)
 
 If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-> **Warning:** **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
+> [!WARNING]
+> **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
 
 #### Examples
 

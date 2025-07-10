@@ -4,9 +4,8 @@ short-title: replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replaceAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`replaceAll()`** method of {{jsxref("String")}} values returns a new string with all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function to be called for each match. The original string is left unchanged.
 
@@ -33,7 +32,6 @@ replaceAll(pattern, replacement)
 ### Parameters
 
 - `pattern`
-
   - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
 
     If `pattern` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.

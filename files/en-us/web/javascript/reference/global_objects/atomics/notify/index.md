@@ -4,9 +4,8 @@ short-title: notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.notify
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.notify()`** static
 method notifies up some agents that are sleeping in the wait queue.

@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: http.headers.DNT
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
+{{Deprecated_header}}{{non-standard_header}}
 
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.

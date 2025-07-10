@@ -112,7 +112,6 @@ Although there's a great wealth of tools available from the command line, if you
 Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
-
   - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
@@ -241,7 +240,7 @@ One good habit to get into is to write your terminal command out inside a text e
 If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
 - Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
-- [Glitch.com](https://glitch.com/) is a great place to try out web development code, and Glitch projects also include a terminal for running commands.
+- The [Command-line playground](https://sandbox.bio/playgrounds/terminal) on sandbox.bio is a great place to try out terminal commands so you can familiarize yourself with command line interfaces and common shells like Bash.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 

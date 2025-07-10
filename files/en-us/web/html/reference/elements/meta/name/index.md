@@ -4,12 +4,11 @@ short-title: <meta> name
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}
-
 The **`name`** attribute of the {{htmlelement("meta")}} element provides metadata in name-value pairs.
-When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute defines the corresponding value.
+When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding value.
 The metadata is _document-level metadata_ that applies to the whole page.
 
 For example, the following `<meta>` tag provides a `description` as metadata for a document:
@@ -27,7 +26,6 @@ For example, the following `<meta>` tag provides a `description` as metadata for
 The HTML specification defines the following set of standard metadata names:
 
 - `application-name`
-
   - : Browsers may use this to identify the application running in the web page.
     It is different from the {{HTMLElement("title")}} element, which may contain an application (or website) name, but a `<title>` may add contextual information like a document name or a status.
     Individual pages shouldn't define their own, unique `application-name`.

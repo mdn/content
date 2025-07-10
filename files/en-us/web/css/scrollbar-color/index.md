@@ -36,7 +36,6 @@ scrollbar-color: unset;
 ### Values
 
 - `<scrollbar-color>`
-
   - : Defines the color of the scrollbar.
 
     <table class="standard-table">
@@ -58,7 +57,8 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-> **Note:** [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
+> [!NOTE]
+> [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
 
 ## Accessibility
 
