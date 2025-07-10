@@ -6,9 +6,7 @@ sidebar: mdnsidebar
 ---
 
 This page lists many of the general-purpose macros created for use on MDN.
-For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
-
-See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
+For generic how-to information on using them in MDN content, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
 ## Linking
 
@@ -70,7 +68,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML Elements reference</a> (/Web/HTML/Element)
+        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML Elements reference</a> (/Web/HTML/Reference/Elements)
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}
@@ -115,7 +113,7 @@ Most macros will also take a second argument allowing you to change the display 
         <code><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Headers).
+        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Reference/Headers).
       </td>
       <td>
         <code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}
@@ -126,7 +124,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
+        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Reference/Methods).
       </td>
       <td>
         <code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}
@@ -137,7 +135,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</a> (/Web/HTTP/Status)
+        <a href="/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</a> (/Web/HTTP/Reference/Status)
       </td>
       <td>
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
@@ -267,3 +265,4 @@ The following macros are included on all reference pages, but are also supported
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
 - [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other): infrequently used or deprecated macros

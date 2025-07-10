@@ -26,7 +26,7 @@ Alternatively, you can load PlayCanvas from a CDN:
 <script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
 ```
 
-If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for PlayCanvas
@@ -208,7 +208,7 @@ boxMaterial.diffuse.set(0, 0.58, 0.86);
 boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   app.resizeCanvas(canvas.width, canvas.height);
 });
 ```
@@ -393,7 +393,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 // Animate shapes
 let timer = 0;
-app.on("update", function (deltaTime) {
+app.on("update", (deltaTime) => {
   timer += deltaTime;
   box.rotate(deltaTime * 10, deltaTime * 20, deltaTime * 3);
   cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);

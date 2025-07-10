@@ -36,14 +36,11 @@ container-name: unset;
 ### Values
 
 - `none`
-
   - : Default value. The query container has no name.
 
 - {{cssxref("custom-ident")}}
-
   - : A case-sensitive string that is used to identify the container.
     The following conditions apply:
-
     - The name must not equal `or`, `and`, `not`, or `default`.
     - The name value must not be in quotes.
     - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
@@ -98,13 +95,13 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` element and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
 
 ```css
-@container excerpt (min-width: 400px) {
+@container excerpt (width >= 400px) {
   p {
     visibility: hidden;
   }
 }
 
-@container (min-width: 400px) {
+@container (width >= 400px) {
   p {
     font-size: 2rem;
   }
@@ -128,13 +125,13 @@ This will allow you to target the container using either name in the {{cssxref("
 This is useful if you want to target the same container with multiple container queries where either condition could be true:
 
 ```css
-@container meta (max-width: 500px) {
+@container meta (width <= 500px) {
   p {
     visibility: hidden;
   }
 }
 
-@container card (max-height: 200px) {
+@container card (width <= 200px) {
   h2 {
     font-size: 1.5em;
   }

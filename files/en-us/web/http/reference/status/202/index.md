@@ -3,9 +3,8 @@ title: 202 Accepted
 slug: Web/HTTP/Reference/Status/202
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`202 Accepted`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that a request has been accepted for processing, but processing has not been completed or may not have started.
 The actual processing of the request is not guaranteed; a task or action may fail or be disallowed when a server tries to process it.

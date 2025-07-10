@@ -1,11 +1,11 @@
 ---
 title: Iterator() constructor
+short-title: Iterator()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Iterator.Iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Iterator()`** constructor is intended to be used as the [superclass](/en-US/docs/Web/JavaScript/Reference/Classes/extends) of other classes that create iterators. It throws an error when constructed by itself.
 
@@ -15,7 +15,8 @@ The **`Iterator()`** constructor is intended to be used as the [superclass](/en-
 new Iterator()
 ```
 
-> **Note:** `Iterator()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}. In addition, `Iterator()` cannot actually be constructed itself — it's usually implicitly constructed through [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) calls inside the constructor of a subclass.
+> [!NOTE]
+> `Iterator()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}. In addition, `Iterator()` cannot actually be constructed itself — it's usually implicitly constructed through [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) calls inside the constructor of a subclass.
 
 ### Parameters
 

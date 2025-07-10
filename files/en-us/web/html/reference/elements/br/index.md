@@ -3,9 +3,8 @@ title: "<br>: The Line Break element"
 slug: Web/HTML/Reference/Elements/br
 page-type: html-element
 browser-compat: html.elements.br
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
 
@@ -118,7 +117,7 @@ USA<br />
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

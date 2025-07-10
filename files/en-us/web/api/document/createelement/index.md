@@ -112,7 +112,7 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 The new element will be given an [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute whose value is the custom element's tag name.
 
 > [!NOTE]
-> For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+> For backwards compatibility, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
 
 ## Specifications
 

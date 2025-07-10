@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDate.prototype.month
+short-title: month
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/month
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.month
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`month`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based month index in the year of this date. The first month of this year is `1`, and the last month is the {{jsxref("Temporal/PlainDate/monthsInYear", "monthsInYear")}}. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

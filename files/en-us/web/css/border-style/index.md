@@ -111,9 +111,7 @@ Each value is a keyword chosen from the list below.
 ### Values
 
 - `<line-style>`
-
   - : Describes the style of the border. It can have the following values:
-
     - `none`
       - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
     - `hidden`

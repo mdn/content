@@ -2,12 +2,10 @@
 title: scroll-timeline-name
 slug: Web/CSS/scroll-timeline-name
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.scroll-timeline-name
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline-name` is set on the scroller that will provide the timeline.
 
@@ -32,10 +30,10 @@ Allowed values for `scroll-timeline-name` are:
 - `none`
   - : The timeline has no name.
 - `<dashed-ident>`
-
   - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property.
 
-    > **Note:** [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > [!NOTE]
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

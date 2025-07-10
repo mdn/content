@@ -105,7 +105,6 @@ This property is specified as either the keyword `normal` or as a comma-separate
 - `normal`
   - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-
   - : Represents a space-separated tuple consisting of a tag name and an optional value.
 
     The tag name is always a {{cssxref("&lt;string&gt;")}} of four {{Glossary("ASCII")}} characters. If the tag name has more or fewer characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
@@ -167,7 +166,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancy-style {
-  font-family: Gabriola;
+  font-family: Gabriola, cursive;
   font-feature-settings: "ss07";
 }
 ```

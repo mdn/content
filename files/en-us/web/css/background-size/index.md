@@ -131,7 +131,6 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
 - **If the `background-size` is `contain` or `cover`:** While preserving its intrinsic proportions, the image is rendered at the largest size contained within, or covering, the background positioning area.
   If the image has no intrinsic proportions, then it's rendered at the size of the background positioning area.
 - **If the `background-size` is `auto` or `auto auto`:**
-
   - If the image has both horizontal and vertical intrinsic dimensions, it's rendered at that size.
   - If the image has no intrinsic dimensions and has no intrinsic proportions, it's rendered at the size of the background positioning area.
   - If the image has no intrinsic dimensions but has intrinsic proportions, it's rendered as if `contain` had been specified instead.
@@ -143,7 +142,6 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
   > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
 
 - **If the `background-size` has one `auto` component and one non-`auto` component:**
-
   - If the image has intrinsic proportions, it's stretched to the specified dimension.
     The unspecified dimension is computed using the specified dimension and the intrinsic proportions.
   - If the image has no intrinsic proportions, it's stretched to the specified dimension.
@@ -205,5 +203,5 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 ## See also
 
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

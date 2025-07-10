@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Array")}} instances returns a string representing
 the elements of the array. The elements are converted to strings using their
@@ -44,7 +44,10 @@ A string representing the elements of the array.
 
 ## Description
 
-The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ","). Note that the method itself does not consume the two parameters — it only passes them to the `toLocaleString()` of each element. The choice of the separator string depends on the host's current locale, not the `locales` parameter.
+The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ",").
+
+> [!NOTE]
+> The `locales` or `options` arguments do not control the separator used between array elements; they are simply passed to the `toLocaleString()` method of each element. The actual separator (usually a comma) depends solely on the host's current locale. If you expect localized list formatting, consider using {{jsxref("Intl.ListFormat")}} instead.
 
 If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
@@ -63,6 +66,22 @@ const prices = ["￥7", 500, 8123, 12];
 prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 // "￥7,￥500,￥8,123,￥12"
+```
+
+### List separators
+
+The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.ListFormat")}} instead.
+
+```js
+const nums = [8888, 9999];
+console.log(nums.toLocaleString("zh")); // "8,888,9,999"
+
+const formatter = new Intl.ListFormat("zh", {
+  type: "conjunction",
+  style: "narrow",
+});
+console.log(formatter.format(nums.map((x) => x.toLocaleString("zh"))));
+// "8,888、9,999"
 ```
 
 ### Using toLocaleString() on sparse arrays

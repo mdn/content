@@ -28,7 +28,7 @@ border: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+border: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example

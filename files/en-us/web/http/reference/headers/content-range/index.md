@@ -1,11 +1,11 @@
 ---
-title: Content-Range
+title: Content-Range header
+short-title: Content-Range
 slug: Web/HTTP/Reference/Headers/Content-Range
 page-type: http-header
 browser-compat: http.headers.Content-Range
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Range`** {{Glossary("response header")}} is used in [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) to indicate where the content of a response body belongs in relation to a complete resource.
 

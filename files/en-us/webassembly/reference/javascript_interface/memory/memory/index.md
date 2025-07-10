@@ -21,9 +21,7 @@ new WebAssembly.Memory(memoryDescriptor)
 ### Parameters
 
 - `memoryDescriptor`
-
   - : An object that can contain the following members:
-
     - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
     - `maximum` {{optional_inline}}
@@ -106,6 +104,6 @@ The `shared` attribute is only documented in [the Threading proposal for WebAsse
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

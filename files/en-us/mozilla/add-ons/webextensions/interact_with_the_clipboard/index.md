@@ -108,7 +108,8 @@ Depending on the browser, this may not work. On Firefox, it will not work, and y
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
-> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
+> [!NOTE]
+> {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
 
 ### Browser-specific considerations
 

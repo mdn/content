@@ -30,7 +30,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
-  await /* the function to call */ ;
+  await doSomethingAsync();
 
   // After completing the async operation, check whether the menu is still shown.
   if (menuInstanceId !== lastMenuInstanceId) {
@@ -48,7 +48,7 @@ Note that it is possible to call menus API functions synchronously, and in this 
 
 ```js
 browser.menus.onShown.addListener(async (info, tab) => {
-  browser.menus.update(menuId /*, …*/);
+  browser.menus.update(menuId /*, … */);
   // Note: Not waiting for returned promise.
   browser.menus.refresh();
 });
@@ -61,7 +61,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
-  await browser.menus.update(menuId /*, …*/);
+  await browser.menus.update(menuId /*, … */);
   // must now perform the check
   if (menuInstanceId !== lastMenuInstanceId) {
     return;
@@ -94,13 +94,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `info`
-
       - : `Object`. This is just like the {{WebExtAPIRef('menus.OnClickData')}} object, except it contains two extra properties:
-
         - `contexts`: an array of all the {{WebExtAPIRef("menus.ContextType", "contexts")}} that are applicable to this menu.
         - `menuIds`: an array of IDs of all menu items belonging to this extension that are being shown in this menu.
 

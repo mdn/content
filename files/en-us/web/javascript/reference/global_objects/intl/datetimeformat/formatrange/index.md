@@ -1,11 +1,11 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRange()
+short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatRange()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a
 date range in the most concise way based on the locales and
@@ -52,7 +52,7 @@ formatRange(startDate, endDate)
 
 ### Return value
 
-A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
+A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object. If the start and end dates are equivalent at the precision of the output, the output will only contain a single date.
 
 ## Examples
 

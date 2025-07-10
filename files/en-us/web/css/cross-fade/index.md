@@ -110,13 +110,13 @@ When using background images, make sure the contrast in color is great enough th
 #### HTML
 
 ```html
-<div class="crossfade"></div>
+<div class="cross-fade"></div>
 ```
 
 #### CSS
 
 ```css
-.crossfade {
+.cross-fade {
   width: 300px;
   height: 300px;
   background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);

@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.getWeekInfo()
+short-title: getWeekInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getWeekInfo
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getWeekInfo()`** method of {{jsxref("Intl.Locale")}} instances returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for this locale.
 

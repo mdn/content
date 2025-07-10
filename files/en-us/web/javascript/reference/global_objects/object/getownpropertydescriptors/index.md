@@ -1,11 +1,11 @@
 ---
 title: Object.getOwnPropertyDescriptors()
+short-title: getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyDescriptors()`** static method returns all
 own property descriptors of a given object.

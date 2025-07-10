@@ -50,9 +50,7 @@ Non-terminal data types are of two kinds:
 
 _Brackets_ enclose several entities, combinators, and multipliers, then transform them as a single component. They are used to **group components to bypass the precedence rules**.
 
-```css
-bold [ thin && <length> ]
-```
+{{CSSSyntaxRaw(`example = bold [ thin && <length> ]`)}}
 
 This example matches the following values:
 
@@ -68,9 +66,7 @@ But not:
 
 Placing several keywords, literals, or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
-```css
-bold <length>, thin
-```
+{{CSSSyntaxRaw(`example = bold <length>, thin`)}}
 
 This example matches the following values:
 
@@ -89,9 +85,7 @@ But not:
 
 Separating two or more components, by a _double ampersand_, `&&`, means that all these entities are **mandatory but may appear in any order**.
 
-```css
-bold && <length>
-```
+{{CSSSyntaxRaw(`example = bold && <length>`)}}
 
 This example matches the following values:
 
@@ -112,15 +106,13 @@ But not:
 
 Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
-```css
-<'border-width'> || <'border-style'> || <'border-color'>
-```
+{{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
 This example matches the following values:
 
-- `1em solid blue`
+- `1em 1 blue`
 - `blue 1em`
-- `solid 1px yellow`
+- `1 1px yellow`
 
 But not:
 
@@ -134,9 +126,7 @@ But not:
 
 Separating two or more entities by a _single bar_, `|`, means that all entities are exclusive options: **exactly one of these options must be present**. This is typically used to separate a list of possible keywords.
 
-```css
-<percentage> | <length> | left | center | right | top | bottom
-```
+{{CSSSyntaxRaw(`example = <percentage> | <length> | left | center | right | top | bottom`)}}
 
 This example matches the following values:
 
@@ -167,9 +157,7 @@ Multipliers cannot be added and have precedence over all combinators.
 
 The _asterisk multiplier_ indicates that the entity may appear **zero, one or several times**.
 
-```css
-bold smaller*
-```
+{{CSSSyntaxRaw(`example = bold smaller*`)}}
 
 This example matches the following values:
 
@@ -186,9 +174,7 @@ But not:
 
 The _plus multiplier_ indicates that the entity may appear **one or several times**.
 
-```css
-bold smaller+
-```
+{{CSSSyntaxRaw(`example = bold smaller+`)}}
 
 This example matches the following values:
 
@@ -205,9 +191,7 @@ But not:
 
 The _question mark multiplier_ indicates that the entity is optional, and **must appear zero or one time**.
 
-```css
-bold smaller?
-```
+{{CSSSyntaxRaw(`example = bold smaller?`)}}
 
 This example matches the following values:
 
@@ -223,9 +207,7 @@ But not:
 
 The _curly braces multiplier_, enclosing two integers separated by a comma, A and B, indicates that the entity **must appear at least A times and at most B times**.
 
-```css
-bold smaller{1,3}
-```
+{{CSSSyntaxRaw(`example = bold smaller{1,3}`)}}
 
 This example matches the following values:
 
@@ -243,9 +225,7 @@ But not:
 
 The _hash mark multiplier_ indicates that the entity may be repeated one or more times (for example, the plus multiplier), but each occurrence is separated by a comma (',').
 
-```css
-bold smaller#
-```
+{{CSSSyntaxRaw(`example = bold smaller#`)}}
 
 This example matches the following values:
 
@@ -261,9 +241,7 @@ But not:
 
 The hash mark may optionally be followed by curly braces to indicate how many times the entity repeats.
 
-```css
-bold smaller#{1,3}
-```
+{{CSSSyntaxRaw(`example = bold smaller#{1,3}`)}}
 
 This example matches the following values:
 
@@ -275,9 +253,7 @@ But not:
 
 - `bold smaller, smaller, smaller, smaller`, as `smaller` must appear at most three times.
 
-```css
-bold smaller#{2}
-```
+{{CSSSyntaxRaw(`example = bold smaller#{2}`)}}
 
 This example matches the following value:
 
@@ -291,9 +267,7 @@ But not:
 
 The _exclamation point multiplier_ after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.
 
-```css
-[ bold? smaller? ]!
-```
+{{CSSSyntaxRaw(`example = [ bold? smaller? ]!`)}}
 
 This example matches the following values:
 
@@ -311,9 +285,7 @@ But not:
 
 Some types can accept numeric values within a certain range. For example, the [`column-count`](/en-US/docs/Web/CSS/column-count) property can accept an integer value between positive 1 and infinity, inclusive. The corresponding syntax looks like this:
 
-```plain
-<integer [1,∞]>
-```
+{{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 
 Any value outside this specified range causes the whole declaration to be invalid, therefore the browser will ignore it.
 

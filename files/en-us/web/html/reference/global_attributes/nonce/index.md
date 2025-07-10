@@ -1,11 +1,11 @@
 ---
-title: nonce
+title: HTML nonce global attribute
+short-title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
 page-type: html-attribute
 browser-compat: html.global_attributes.nonce
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`nonce`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes)
 is a content attribute defining a cryptographic nonce ("number used once") which can be used by
@@ -33,7 +33,8 @@ From your web server, generate a random base64-encoded string of at least 128 bi
 random number generator. Nonces should be generated differently each time the page loads (nonce only once!). For example, in nodejs:
 
 ```js
-const crypto = require("crypto");
+import crypto from "node:crypto";
+
 crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```

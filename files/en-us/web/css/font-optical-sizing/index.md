@@ -21,7 +21,7 @@ font-optical-sizing: none;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element" style="font-optical-sizing: auto">
+  <div id="example-element">
     <h2>Chapter 3</h2>
     <p>
       On this particular Thursday, something was moving quietly through the
@@ -41,7 +41,7 @@ font-optical-sizing: none;
 }
 
 #example-element {
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
   text-align: left;
 }
 
@@ -114,7 +114,7 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 
 p {
   font-size: 36px;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 
 .no-optical-sizing {

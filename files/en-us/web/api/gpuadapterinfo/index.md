@@ -2,12 +2,10 @@
 title: GPUAdapterInfo
 slug: Web/API/GPUAdapterInfo
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUAdapterInfo
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUAdapterInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} contains identifying information about a {{domxref("GPUAdapter")}}.
 
@@ -19,17 +17,17 @@ This object allows developers to access specific details about the user's GPU so
 
 ## Instance properties
 
-- {{domxref("GPUAdapterInfo.architecture", "architecture")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.architecture", "architecture")}} {{ReadOnlyInline}}
   - : The name of the family or class of GPUs the adapter belongs to. Returns an empty string if it is not available.
-- {{domxref("GPUAdapterInfo.description", "description")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.description", "description")}} {{ReadOnlyInline}}
   - : A human-readable string describing the adapter. Returns an empty string if it is not available.
-- {{domxref("GPUAdapterInfo.device", "device")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.device", "device")}} {{ReadOnlyInline}}
   - : A vendor-specific identifier for the adapter. Returns an empty string if it is not available.
-- {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{ReadOnlyInline}}
   - : The name of the adapter vendor. Returns an empty string if it is not available.
-- {{domxref("GPUAdapterInfo.subgroupMaxSize", "subgroupMaxSize")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.subgroupMaxSize", "subgroupMaxSize")}} {{ReadOnlyInline}}
   - : The maximum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
-- {{domxref("GPUAdapterInfo.subgroupMinSize", "subgroupMinSize")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUAdapterInfo.subgroupMinSize", "subgroupMinSize")}} {{ReadOnlyInline}}
   - : The minimum supported [subgroup size](https://gpuweb.github.io/gpuweb/wgsl/#subgroup-size) for the {{domxref("GPUAdapter")}}.
 
 ## Examples

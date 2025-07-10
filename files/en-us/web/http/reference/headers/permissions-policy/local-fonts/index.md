@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: local-fonts"
+title: "Permissions-Policy: local-fonts directive"
+short-title: local-fonts
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/local-fonts
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.local-fonts
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `local-fonts` directive controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method.
 

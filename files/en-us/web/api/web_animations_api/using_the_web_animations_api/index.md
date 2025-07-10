@@ -34,14 +34,14 @@ Notice that the background moves, Alice spins, and her color changes at an offse
 @keyframes aliceTumbling {
   0% {
     color: #000;
-    transform: rotate(0) translate3D(-50%, -50%, 0);
+    transform: rotate(0) translate3d(-50%, -50%, 0);
   }
   30% {
     color: #431236;
   }
   100% {
     color: #000;
-    transform: rotate(360deg) translate3D(-50%, -50%, 0);
+    transform: rotate(360deg) translate3d(-50%, -50%, 0);
   }
 }
 ```
@@ -58,9 +58,9 @@ The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web
 
 ```js
 const aliceTumbling = [
-  { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+  { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
   { color: "#431236", offset: 0.3 },
-  { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+  { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
 ];
 ```
 
@@ -106,9 +106,9 @@ The `animate()` method can be called on any DOM element that could be animated w
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
     { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
   ],
   {
     duration: 3000,
@@ -122,9 +122,9 @@ What's more, if we only wanted to specify the duration of the animation and not 
 ```js
 document.getElementById("alice").animate(
   [
-    { transform: "rotate(0) translate3D(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(0) translate3d(-50%, -50%, 0)", color: "#000" },
     { color: "#431236", offset: 0.3 },
-    { transform: "rotate(360deg) translate3D(-50%, -50%, 0)", color: "#000" },
+    { transform: "rotate(360deg) translate3d(-50%, -50%, 0)", color: "#000" },
   ],
   3000,
 );

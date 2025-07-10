@@ -85,9 +85,14 @@ We now have an app that displays a list of to-do items. However, we can't update
 5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:
 
    ```js
-   components: {
-     ToDoItem, ToDoForm,
-   }
+   export default {
+     // …
+     components: {
+       ToDoItem,
+       ToDoForm,
+     },
+     // …
+   };
    ```
 
 6. Finally for this section, render your `ToDoForm` component inside your app by adding the `<to-do-form />` element inside your `App`'s `<template>`, like so:
@@ -144,7 +149,6 @@ To make a method available to the `ToDoForm` component, we need to add it to the
 3. When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event's default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
 
    Modifiers are appended to the end of an event with a dot like so: `@event.modifier`. Here is a list of event modifiers:
-
    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
    - `.self`: Triggers the handler only if the event was dispatched from this exact element.
@@ -210,11 +214,13 @@ The first thing we need is a `data` property in our form to track the value of t
    Update your `onSubmit()` method to look like this:
 
    ```js
-   methods: {
-     onSubmit() {
-       console.log('Label value: ', this.label);
-     }
-   },
+   export default {
+     methods: {
+       onSubmit() {
+         console.log("Label value: ", this.label);
+       },
+     },
+   };
    ```
 
 4. Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:
@@ -257,15 +263,15 @@ In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` even
      data() {
        return {
          ToDoItems: [
-           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
+           { id: `todo-${nanoid()}`, label: "Learn Vue", done: false },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           { id: `todo-${nanoid()}`, label: "Have fun", done: true },
            {
-             id: "todo-" + nanoid(),
+             id: `todo-${nanoid()}`,
              label: "Create a to-do list",
              done: false,
            },
@@ -339,7 +345,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
        // …
        addToDo(toDoLabel) {
          this.ToDoItems.push({
-           id: "todo-" + nanoid(),
+           id: `todo-${nanoid()}`,
            label: toDoLabel,
            done: false,
          });

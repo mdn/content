@@ -6,12 +6,24 @@ sidebar:
   - type: section
     link: /Web/HTML/Guides
     title: Guides
-  - type: listSubPages
-    path: /Web/HTML/Guides
+  - /Web/HTML/Guides/Content_categories
+  - /Web/HTML/Guides/Comments
+  - /Web/HTML/Guides/Date_and_time_formats
+  - /Web/HTML/Guides/Constraint_validation
+  - /Web/HTML/Guides/Viewport_meta_element
+  - /Web/HTML/Guides/Responsive_images
+  - /Web/HTML/Guides/Microdata
+  - /Web/HTML/Guides/Microformats
+  - /Web/HTML/Guides/Quirks_mode_and_standards_mode
+  - /Web/HTML/Guides/Cheatsheet
   - type: section
     link: /Web/HTML/How_to
-  - type: listSubPages
-    path: /Web/HTML/How_to
+  - /Web/HTML/How_to/Define_terms_with_HTML
+  - /Web/HTML/How_to/Use_data_attributes
+  - /Web/HTML/How_to/CORS_enabled_image
+  - /Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+  - /Web/HTML/How_to/Author_fast-loading_HTML_pages
+  - /Web/HTML/How_to/Add_JavaScript_to_your_web_page
   - type: section
     link: /Web/HTML/Reference
     title: Reference
@@ -45,15 +57,17 @@ sidebar:
       - type: listSubPages
         path: /Web/HTML/Reference/Elements/script/type
         tags: html-attribute-value
+        link: /Web/HTML/Reference/Elements/script/type
         title: Script_types
         details: closed
         code: true
       - type: listSubPages
         path: /Web/HTML/Reference/Elements/meta/name
-        tags: html-attribute-value
-        title: Meta_names
+        depth: 2
+        link: /Web/HTML/Reference/Elements/meta/name
         details: closed
         code: true
+      - link: /Web/HTML/Reference/Elements/meta/http-equiv
   - title: Attribute_values
     details: closed
     children:
@@ -77,9 +91,8 @@ l10n:
     Attributes: Attributes
     Attributes_element: Attributes by element
     Attribute_values: Attribute values
-    Input_types: <code>&lt;input&gt;</code> types
-    Script_types: <code>&lt;script&gt;</code> types
-    Meta_names: <code>&lt;meta&gt;</code> names
+    Input_types: <code>&lt;input&gt;</code> type
+    Script_types: <code>&lt;script&gt;</code> type
     Rel_keywords: <code>rel</code> keywords
     Guides: Guides
   fr:
@@ -94,7 +107,11 @@ l10n:
     HTML_Elements: 要素
     Global_attributes: グローバル属性
     Attributes: 属性
+    Attributes_element: 要素別の属性
+    Attribute_values: 属性値
     Input_types: <code>&lt;input&gt;</code> 型
+    Script_types: <code>&lt;script&gt;</code> 型
+    Rel_keywords: <code>rel</code> キーワード
     Guides: ガイド
   ko:
     Reference: "참고서:"

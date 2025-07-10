@@ -23,12 +23,6 @@ mask-clip: view-box;
 /* Keyword values */
 mask-clip: no-clip;
 
-/* Non-standard keyword values */
--webkit-mask-clip: border;
--webkit-mask-clip: padding;
--webkit-mask-clip: content;
--webkit-mask-clip: text;
-
 /* Multiple values */
 mask-clip: padding-box, no-clip;
 mask-clip: view-box, fill-box, border-box;
@@ -41,9 +35,9 @@ mask-clip: revert-layer;
 mask-clip: unset;
 ```
 
-One or more of the keyword values listed below, separated by commas.
-
 ### Values
+
+The property accepts a comma-separated list of keyword values. Each value is a `<coord-box>` or `no-clip`:
 
 - `content-box`
   - : The painted content is clipped to the content box.
@@ -68,6 +62,16 @@ One or more of the keyword values listed below, separated by commas.
 - `text`
   - : This keyword clips the mask image to the text of the element.
 
+## Description
+
+The `mask-clip` property defines the area of the element that is affected by the applied mask.
+
+For mask layer images that do not reference an SVG {{svgelement("mask")}} element, the `mask-clip` property defines the mask painting area, or the area affected by the mask. The painted content of the element will be restricted to this area.
+
+The `mask-clip` property has no affect on a mask layer image that references a `<mask>` element. The `<mask>` element's {{svgAttr("x")}}, {{svgAttr("y")}}, {{svgAttr("width")}}, {{svgAttr("height")}}, and {{svgAttr("maskUnits")}} attributes determine the mask painting area when the source of the {{cssxref("mask-image")}} is a `<mask>`.
+
+An element can have multiple mask layers applied. The number of layers is determined by the number of comma-separated values in the `mask-image` property value (even if a value is `none`). Each `mask-clip` value in the comma-separated list of values is matched up with the `mask-image` values, in order. If the number of values in the two properties differs, any excess values of `mask-clip` are not used, or, if `mask-clip` has fewer values than `mask-image`, the `mask-clip` values are repeated.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -80,26 +84,57 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Clipping a mask to the border box
 
-Click "Play" in the live sample to open the code in the MDN Playground and change the `mask-clip` value to any of the allowed values described above.
+This examples demonstrates three `mask-clip` values.
+
+#### HTML
+
+We include three elements, each with a different `<coord-box>` value as a class name.
 
 ```html live-sample___mask-clip-example
-<div class="masked"></div>
+<div class="border-box"></div>
+<div class="padding-box"></div>
+<div class="content-box"></div>
 ```
 
+#### CSS
+
+The CSS defines the element to have a background, border, padding, and margin, along with a mask image, with each `<div>` having a different `<coord-box>`. We generated content with the name of the class, moving that text up 10px to prevent it from being masked out of view.
+
 ```css live-sample___mask-clip-example
-.masked {
+div {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
-  margin: 20px;
+  margin: 10px;
   border: 20px solid #8ca0ff;
   padding: 20px;
-
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
   mask-size: 100% 100%;
+}
+.content-box {
+  mask-clip: content-box;
+}
+.border-box {
   mask-clip: border-box;
 }
+.padding-box {
+  mask-clip: padding-box;
+}
+div::before {
+  content: attr(class);
+  position: relative;
+  top: -10px;
+}
 ```
+
+```css hidden live-sample___mask-clip-example
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+#### Results
 
 {{EmbedLiveSample("mask-clip-example", "", "250px")}}
 
@@ -113,4 +148,17 @@ Click "Play" in the live sample to open the code in the MDN Playground and chang
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-size")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("clip-path")}}
+- {{cssxref("background-clip")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

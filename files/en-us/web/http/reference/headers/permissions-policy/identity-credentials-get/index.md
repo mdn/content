@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: identity-credentials-get"
+title: "Permissions-Policy: identity-credentials-get directive"
+short-title: identity-credentials-get
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/identity-credentials-get
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.identity-credentials-get
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `identity-credentials-get` directive controls whether the current document is allowed to use the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API), and more specifically the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method with an `identity` option.
 

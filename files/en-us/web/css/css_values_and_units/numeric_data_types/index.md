@@ -199,11 +199,11 @@ The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature
 
 ### Image
 
-The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/).
+The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://drafts.csswg.org/css-images-4/).
 
 ### Position
 
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://drafts.csswg.org/css-backgrounds/).
 
 ## Functional notation
 
@@ -212,7 +212,6 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 - {{cssxref("max", "max()")}}
 - {{cssxref("minmax", "minmax()")}}
 - {{cssxref("clamp", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
@@ -220,6 +219,8 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
 Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `hsl()`, and `hsla()`, used commas, but commas are generally only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+
+The spec also defines the `toggle()` function. It has not been implemented anywhere yet.
 
 ## Specifications
 

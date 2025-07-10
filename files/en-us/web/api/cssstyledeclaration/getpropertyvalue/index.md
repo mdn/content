@@ -44,16 +44,15 @@ const value = declaration.getPropertyValue("margin"); // "1px 2px"
 
 The returned string might differ from the value specified in the style specification of the element. For instance this styling:
 
-```html
-<style>
-  p#blueish {
-    color: hsl(250 90 50);
-  }
-</style>
-<script>
-  const declaration = document.styleSheets[0].cssRules[0].style;
-  const value = declaration.getPropertyValue("color");
-</script>
+```css
+p#blueish {
+  color: hsl(250 90 50);
+}
+```
+
+```js
+const declaration = document.styleSheets[0].cssRules[0].style;
+const value = declaration.getPropertyValue("color");
 ```
 
 Will set a value `rgb(51, 13, 242);`. This is important when comparing styles by string.

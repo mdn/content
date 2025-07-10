@@ -1,5 +1,6 @@
 ---
-title: aria-live
+title: "ARIA: aria-live attribute"
+short-title: aria-live
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-live
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live

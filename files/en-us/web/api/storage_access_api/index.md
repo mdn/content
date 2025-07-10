@@ -115,7 +115,6 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 ## Examples
 
 - See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an implementation guide with code examples.
-- See [Storage Access API Demo](https://storage-access-api-demo.glitch.me/) for a live demo.
 
 ## API methods
 

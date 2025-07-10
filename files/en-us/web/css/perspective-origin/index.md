@@ -70,32 +70,32 @@ perspective-origin: 500% 200%;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -126,18 +126,14 @@ perspective-origin: unset;
 ### Values
 
 - _x-position_
-
   - : Indicates the position of the abscissa of the _vanishing point_. It can have one of the following values:
-
     - {{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the width of the element. The value may be negative.
     - `left`, a keyword being a shortcut for the `0` length value.
     - `center`, a keyword being a shortcut for the `50%` percentage value.
     - `right`, a keyword being a shortcut for the `100%` percentage value.
 
 - _y-position_
-
   - : Indicates the position of the ordinate of the _vanishing point_. It can have one of the following values:
-
     - {{cssxref("&lt;length-percentage&gt;")}} indicating the position as an absolute length value or relative to the height of the element. The value may be negative.
     - `top`, a keyword being a shortcut for the `0` length value.
     - `center`, a keyword being a shortcut for the `50%` percentage value.

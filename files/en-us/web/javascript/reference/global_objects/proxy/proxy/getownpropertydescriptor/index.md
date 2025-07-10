@@ -1,11 +1,11 @@
 ---
 title: handler.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.getOwnPropertyDescriptor()`** method is a trap for the `[[GetOwnProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 

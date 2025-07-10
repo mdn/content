@@ -22,9 +22,7 @@ let gettingWindow = browser.windows.getLastFocused(
 ### Parameters
 
 - `getInfo` {{optional_inline}}
-
   - : `object`.
-
     - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) matching the tab's URL.
     - `windowTypes` {{optional_inline}}

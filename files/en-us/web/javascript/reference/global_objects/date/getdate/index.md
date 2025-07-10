@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.getDate()
+short-title: getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDate
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to local time.
 

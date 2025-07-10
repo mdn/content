@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.daysInYear
+short-title: daysInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/daysInYear
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.daysInYear
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`daysInYear`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a positive integer representing the number of days in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

@@ -2,9 +2,10 @@
 title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
 
@@ -36,7 +37,7 @@ To create an array with non-zero length, but without any items, either of the fo
 // This...
 const arr1 = new Array(arrayLength);
 
-// ...results in the same array as this
+// … results in the same array as this
 const arr2 = Array(arrayLength);
 
 // This has exactly the same effect

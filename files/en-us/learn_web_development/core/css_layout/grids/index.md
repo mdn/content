@@ -504,7 +504,7 @@ aside {
 }
 ```
 
-With out the placement defined, you can see that _auto-placement_ is placing each item into its own cell in the grid. The {{htmlelement("header")}} is taking up `1fr` (one quarter) and the {{htmlelement("main")}} is taking up `3fr` (three quarters).
+Without the placement defined, you can see that _auto-placement_ is placing each item into its own cell in the grid. The {{htmlelement("header")}} is taking up `1fr` (one quarter) and the {{htmlelement("main")}} is taking up `3fr` (three quarters).
 
 {{EmbedLiveSample('grid-placement_0', '100%', "230") }}
 

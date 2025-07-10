@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.clear()
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.clear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`clear()`** method of {{jsxref("Set")}} instances removes all elements from this set.
 

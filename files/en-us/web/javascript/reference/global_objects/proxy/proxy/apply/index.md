@@ -1,11 +1,11 @@
 ---
 title: handler.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
@@ -17,7 +17,7 @@ function sum(a, b) {
 }
 
 const handler = {
-  apply: function (target, thisArg, argumentsList) {
+  apply(target, thisArg, argumentsList) {
     console.log(`Calculate sum: ${argumentsList}`);
     // Expected output: "Calculate sum: 1,2"
 

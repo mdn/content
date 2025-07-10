@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: usb"
+title: "Permissions-Policy: usb directive"
+short-title: usb
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/usb
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.usb
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `usb` directive controls whether the current document is allowed to use the {{domxref("WebUSB API", "WebUSB API", "", "nocode")}}.
 

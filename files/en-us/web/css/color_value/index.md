@@ -8,7 +8,7 @@ browser-compat: css.types.color
 {{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a color.
-A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
+A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://drafts.fxtf.org/compositing-1/#simplealphacompositing) with its background.
 
 > [!NOTE]
 > Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
@@ -73,9 +73,10 @@ A `<color>` value can be specified using one of the methods listed below:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
-  - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+  - Other color spaces: {{CSSXref("color_value/color", "color()")}}, {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}.
 - By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
+- By specifying a color that you want a contrasting color returned for: {{CSSXref("color_value/contrast-color", "contrast-color()")}}.
 - By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
 ### `currentcolor` keyword
@@ -85,11 +86,22 @@ The `currentcolor` keyword represents the value of an element's {{Cssxref("color
 If `currentcolor` is used as the value of the `color` property, it instead takes its value from the inherited value of the `color` property.
 
 ```html
-<div style="color: blue; border: 1px dashed currentcolor;">
+<div class="container">
   The color of this text is blue.
-  <div style="background: currentcolor; height:9px;"></div>
+  <div class="child"></div>
   This block is surrounded by a blue border.
 </div>
+```
+
+```css
+.container {
+  color: blue;
+  border: 1px dashed currentcolor;
+}
+.child {
+  background: currentcolor;
+  height: 9px;
+}
 ```
 
 {{EmbedLiveSample("currentcolor_keyword", "100%", 80)}}

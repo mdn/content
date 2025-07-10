@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/subtract
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.subtract
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`subtract()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

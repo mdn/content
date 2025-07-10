@@ -40,7 +40,7 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
 
 In CSS we have several types of boxes that generally fit into the categories of **block boxes** and **inline boxes**. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an **inner display type** and an **outer display type**.
 
-In general, you can set various values for the display type using the {{cssxref("display")}} property, which can have various values.
+In general, you can set various values for the display type using the {{cssxref("display")}} property.
 
 If a box has a display value of `block`, then:
 
@@ -76,11 +76,11 @@ Don't worry too much about the inner and outer terminology for now; this is what
 
 The example below has three different HTML elements, all of which have an outer display type of `block`.
 
-- A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and extends the entire available width.
+- A paragraph with a border added in CSS. The browser renders this as a block box. The paragraph starts on a new line and extends horizontally to fill the entire available width.
 
-- A list, which is laid out using `display: flex`. This establishes flex layout for the children of the container, which are flex items. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
+- A list, which is laid out using `display: flex`. This establishes flex layout for the children of the container, which are flex items that are by default laid out in a row. The list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
 
-- A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of "block" which gets set to `display: block`.
+- A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of `block` and gets set to `display: block`. As a result, that single word starts on a new line that spans the full width of its parent.
 
 ```html live-sample___block
 <p>I am a paragraph. A short one.</p>
@@ -211,7 +211,7 @@ If we assume that a box has the following CSS:
 }
 ```
 
-The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).
+The _actual_ space taken up by the box will be `410px` wide (350 + 25 + 25 + 5 + 5) and `210px` high (150 + 25 + 25 + 5 + 5).
 
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
@@ -220,7 +220,7 @@ The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5
 
 ### The alternative CSS box model
 
-In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.
+In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). This is convenient as there is no need to add up the border and padding to get the real size of the box.
 
 To turn on the alternative model for an element, set `box-sizing: border-box` on it:
 
@@ -242,7 +242,7 @@ If we assume the box has the same CSS as above:
 }
 ```
 
-Now, the _actual_ space taken up by the box will be 350px in the inline direction and 150px in the block direction.
+The _actual_ space taken up by the box will now be `350px` in the inline direction and `150px` in the block direction.
 
 ![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
@@ -290,9 +290,9 @@ Can you change the size of the second box (by adding CSS to the `.alternate` cla
 {{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
-> You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
+> You can find a solution for this task [in our css-examples repo](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
 
-### Use browser DevTools to view the box model
+### Using browser DevTools to view the box model
 
 Your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) can make understanding the box model far easier — they can show you the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
@@ -315,7 +315,9 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
 
-In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.
+#### Playing with margins
+
+Edit the example below. Try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.
 
 ```html live-sample___margin
 <div class="container">
@@ -423,7 +425,9 @@ To set the width, style, or color of a single side, use one of the more granular
 - {{cssxref("border-left-style")}}
 - {{cssxref("border-left-color")}}
 
-In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different available border styles.
+#### Playing with borders
+
+In the example below, we have used various shorthands and longhands to create borders. Edit the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different available border styles.
 
 ```html live-sample___border
 <div class="container">
@@ -466,7 +470,9 @@ The {{cssxref("padding")}} property controls the padding on all sides of an elem
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
 
-In the example below, you can change the values for padding on the class `.box` to see that this changes where the text begins in relation to the box. You can also change the padding on the class `.container` to create space between the container and the box. You can change the padding on any element to create space between its border and whatever is inside the element.
+#### Playing with padding
+
+In the example below, edit the values for padding on the class `.box` and see how this changes where the text begins in relation to the box. You can also change the padding on the class `.container` to create space between the container and the box. You can change the padding on any element to create space between its border and whatever is inside the element.
 
 ```html live-sample___padding
 <div class="container">
@@ -539,6 +545,8 @@ An element with `display: inline-block` does a subset of the block things we alr
 - `padding`, `margin`, and `border` will cause other elements to be pushed away from the box.
 
 It does not, however, break onto a new line, and will only become larger than its content if you explicitly add `width` and `height` properties.
+
+### Playing with inline-block
 
 In this next example, we have added `display: inline-block` to our `<span>` element. Try changing this to `display: block` or removing the line completely to see the difference in display models:
 

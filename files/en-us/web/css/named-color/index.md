@@ -887,15 +887,15 @@ In addition to these 16 colors, about 150 other colors have a keyword associated
   </tbody>
 </table>
 
-Initially, in [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units), only 16 basic colors were defined, with `orange` added in [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color). Web designers found this list too short, and browser vendors added numerous names for colors based on the X11 color names. In [SVG 1](https://www.w3.org/TR/SVG11/types.html#DataTypeColor), then in [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/#svg-color), these names got standardized, formally defined, and made uniform (some had different spellings that are now aliases). They are called _extended color keywords_, _X11 colors_, or _SVG colors_.
+Initially, in [CSS Level 1](https://www.w3.org/TR/CSS1/#color-units), only 16 basic colors were defined, with `orange` added in [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color). Web designers found this list too short, and browser vendors added numerous names for colors based on the X11 color names. In [SVG 1](https://www.w3.org/TR/SVG11/types.html#DataTypeColor), then in [CSS Colors Level 3](https://drafts.csswg.org/css-color-3/#svg-color), these names got standardized, formally defined, and made uniform (some had different spellings that are now aliases). They are called _extended color keywords_, _X11 colors_, or _SVG colors_.
 
-In [CSS Colors Level 4](https://www.w3.org/TR/css-color-4/#named-colors), an additional color, `rebeccapurple` was added to honor [web pioneer Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/).
+In [CSS Colors Level 4](https://drafts.csswg.org/css-color-4/#named-colors), an additional color, `rebeccapurple` was added to honor [web pioneer Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/).
 
 ### transparent
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgb(0 0 0 / 0%)`.
 
-To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
+To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://drafts.csswg.org/css-color/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
 
 The `transparent` keyword wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 

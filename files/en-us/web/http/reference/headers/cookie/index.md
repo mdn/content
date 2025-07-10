@@ -1,11 +1,11 @@
 ---
-title: Cookie
+title: Cookie header
+short-title: Cookie
 slug: Web/HTTP/Reference/Headers/Cookie
 page-type: http-header
 browser-compat: http.headers.Cookie
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cookie`** {{Glossary("request header")}} contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) associated with the server (i.e., previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in JavaScript using {{domxref("Document.cookie")}}).
 

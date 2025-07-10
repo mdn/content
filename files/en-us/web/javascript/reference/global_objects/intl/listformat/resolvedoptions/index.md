@@ -1,11 +1,11 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.ListFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `ListFormat` object.
 

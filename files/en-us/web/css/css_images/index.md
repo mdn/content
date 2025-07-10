@@ -31,8 +31,9 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
 - {{CSSxRef("element", "element()")}}
-- {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
+
+The specification also defines the {{CSSxRef("image/image", "image()")}} function, which is not yet supported by any browser.
 
 ### Data types
 
@@ -42,15 +43,15 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 ## Guides
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
 
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
 
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Styling replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - : Introduces the properties that only apply to _replaced elements_.
 
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
 ## Related concepts

@@ -1089,7 +1089,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 ## IME and composition keys
 
-Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
+Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple key presses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
@@ -1225,7 +1225,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
           >ISO/IEC 9995 keyboard</a
         >. Each key may have multiple groups of characters, each in its own
-        column. Pressing this key instructs the device to interpret keypresses
+        column. Pressing this key instructs the device to interpret key presses
         as coming from the first column on subsequent keystrokes.
       </td>
       <td></td>

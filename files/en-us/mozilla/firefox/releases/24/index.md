@@ -2,9 +2,10 @@
 title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 24 was released on September 17, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 

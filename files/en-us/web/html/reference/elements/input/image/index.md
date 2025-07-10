@@ -3,9 +3,8 @@ title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_image
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e., submit buttons that take the form of an image rather than text.
 
@@ -168,18 +167,14 @@ Let's look at a basic example that includes all the essential features you'd nee
 - `formaction`
   - : The URI of a program that processes the information submitted by the input element; overrides the [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute of the element's form owner.
 - `formenctype`
-
   - : Specifies the type of content that is used to submit the form to the server. Possible values are:
-
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `text/plain`.
 
     If this attribute is specified, it overrides the [`enctype`](/en-US/docs/Web/HTML/Reference/Elements/form#enctype) attribute of the element's form owner.
 
 - `formmethod`
-
   - : Specifies the HTTP method that the browser uses to submit the form. Possible values are:
-
     - `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form is appended to the **`form`** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side effects and contains only ASCII characters.
 
@@ -188,9 +183,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 - `formnovalidate`
   - : A Boolean attribute specifying that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Reference/Elements/form#novalidate) attribute of the element's form owner.
 - `formtarget`
-
   - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Reference/Elements/form#target) attribute of the element's form owner. The following keywords have special meanings:
-
     - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.

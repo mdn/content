@@ -112,33 +112,40 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 <div>
   <img />
 </div>
-
-<div style="color-scheme: light">
+<div class="light">
   <img />
 </div>
-<div style="color-scheme: dark">
+<div class="dark">
   <img />
 </div>
+```
 
-<!-- Embed an SVG for all <img> elements -->
-<script>
-  for (let img of document.querySelectorAll("img")) {
-    img.alt = "circle";
-    img.src =
-      "data:image/svg+xml;base64," +
-      window.btoa(`
-      <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <style>
-          :root { color: blue }
-          @media (prefers-color-scheme: dark) {
-            :root { color: purple }
-          }
-        </style>
-        <circle fill="currentColor" cx="16" cy="16" r="16"/>
-      </svg>
-    `);
-  }
-</script>
+```css
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+```
+
+```js
+// Embed an SVG for all <img> elements
+for (let img of document.querySelectorAll("img")) {
+  img.alt = "circle";
+  img.src = `data:image/svg+xml;base64,${window.btoa(`
+    <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        :root { color: blue }
+        @media (prefers-color-scheme: dark) {
+          :root { color: purple }
+        }
+      </style>
+      <circle fill="currentColor" cx="16" cy="16" r="16"/>
+    </svg>
+  `)}`;
+}
 ```
 
 {{EmbedLiveSample("Color_scheme_inheritance")}}
@@ -154,7 +161,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 ## See also
 
 - {{cssxref("color-scheme")}} property
-- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#color-scheme)
+- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
 - {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [Video: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)

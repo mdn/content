@@ -1,11 +1,11 @@
 ---
 title: handler.isExtensible()
+short-title: isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.isExtensible()`** method is a trap for the `[[IsExtensible]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.isExtensible()")}}.
 

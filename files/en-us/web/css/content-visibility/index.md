@@ -36,15 +36,15 @@ content-visibility: hidden;
 .container {
   width: 140px;
   height: 140px;
-  border: 3px solid rgb(64, 28, 163);
-  background-color: rgb(135, 136, 184);
+  border: 3px solid rgb(64 28 163);
+  background-color: rgb(135 136 184);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .child {
-  border: 3px solid rgb(64, 28, 163);
+  border: 3px solid rgb(64 28 163);
   background-color: wheat;
   color: black;
   width: 80%;
@@ -74,7 +74,7 @@ content-visibility: unset;
 ### Values
 
 - `visible`
-  - : No effect. The element's contents are laid out and rendered as normal.
+  - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`
   - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`

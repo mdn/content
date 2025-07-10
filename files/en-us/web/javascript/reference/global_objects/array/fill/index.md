@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.fill
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`fill()`** method of {{jsxref("Array")}} instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
 

@@ -53,19 +53,19 @@ grid-template:
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   grid-area: a;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-area: b;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-area: c;
 }
@@ -114,11 +114,10 @@ grid-template: unset;
 ### Values
 
 - `none`
-  - : Is a keyword that sets all three longhand properties to `none`, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
+  - : Sets all three longhand properties to `none`, meaning there is no explicit grid. There are no named grid areas. Rows and columns will be implicitly generated; their size will be determined by the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. This is the default value.
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : Sets {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} to the specified values, and sets {{cssxref("grid-template-areas")}} to `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-
   - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
 
     > [!NOTE]

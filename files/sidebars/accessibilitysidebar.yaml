@@ -52,10 +52,12 @@ sidebar:
     path: /Web/Accessibility/ARIA/Reference/Attributes
     link: /Web/Accessibility/ARIA/Reference/Attributes
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/Accessibility/ARIA/Reference/Roles
     link: /Web/Accessibility/ARIA/Reference/Roles
     details: closed
+    code: true
 l10n:
   de:
     ARIA: ARIA
@@ -64,6 +66,10 @@ l10n:
     Beginners: Tutorials for beginners
     ARIA: ARIA
     ARIA_guides: ARIA guides
+  ja:
+    Beginners: 初心者向けチュートリアル
+    ARIA: ARIA
+    ARIA_guides: ARIA ガイド
   zh-CN:
     ARIA: ARIA
     ARIA_guides: ARIA 指南

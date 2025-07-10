@@ -49,7 +49,7 @@ flex-flow: column wrap;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;
@@ -109,7 +109,7 @@ See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on th
 In this example, the main-axis is the block direction with a reversed main-start and main-end. The flex items are allowed to wrap, creating new lines if needed.
 
 ```css
-element {
+.container {
   flex-flow: column-reverse wrap;
 }
 ```

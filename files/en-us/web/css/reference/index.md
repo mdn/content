@@ -12,7 +12,7 @@ Use this **CSS reference** to browse an [alphabetical index](#index) of all of t
 
 ### Style rule syntax
 
-```css
+```plain
 style-rule ::=
     selectors-list {
       properties-list
@@ -21,7 +21,7 @@ style-rule ::=
 
 Where:
 
-```css
+```plain
 selectors-list ::=
     selector[:pseudo-class] [::pseudo-element]
     [, selectors-list]
@@ -44,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely ({{Glossary("ASCII")}}) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
+For a beginner-level introduction to the syntax of selectors, see our [guide on CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Be aware that any [syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (Unicode) [text-based](https://drafts.csswg.org/css-syntax/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://drafts.csswg.org/cssom/#introduction).
 
 ### At-rule syntax
 
@@ -167,4 +167,4 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ## External Links
 
-- [CSS Indices (w3.org)](https://www.w3.org/TR/CSS/#indices)
+- [CSS Indices (w3.org)](https://www.w3.org/TR/css/#indices)

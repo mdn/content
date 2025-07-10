@@ -1,11 +1,11 @@
 ---
-title: ETag
+title: ETag header
+short-title: ETag
 slug: Web/HTTP/Reference/Headers/ETag
 page-type: http-header
 browser-compat: http.headers.ETag
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`ETag`** (entity tag) {{Glossary("response header")}} is an identifier for a specific version of a resource.
 It lets [caches](/en-US/docs/Web/HTTP/Guides/Caching) be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.

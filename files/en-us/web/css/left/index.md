@@ -87,9 +87,7 @@ left: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
-
     - for _absolutely positioned elements_, it represents the distance to the left edge of the containing block.
     - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
     - for _relatively positioned elements_, it represents the distance that the element is moved to the right of its normal position.
@@ -97,14 +95,9 @@ left: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
 - `auto`
-
   - : Specifies that:
-
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("right")}} property, while `width: auto` is treated as a width based on the content; or if `right` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("right")}} property; or if `right` is also `auto`, the element is not moved horizontally at all.
-
-- `inherit`
-  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
 
 ## Description
 
@@ -195,8 +188,6 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
 }
 
 pre {
-  white-space: pre;
-  white-space: pre-wrap;
   white-space: pre-line;
   word-wrap: break-word;
 }

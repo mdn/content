@@ -21,21 +21,17 @@ new Request(input, options)
 ### Parameters
 
 - `input`
-
   - : Defines the resource that you wish to fetch. This can either be:
-
     - A string containing the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
     - A {{domxref("Request")}} object, effectively creating a copy. Note the following
       behavioral updates to retain security while making the constructor less likely to
       throw exceptions:
-
       - If this object exists on another origin to the constructor call, the
         {{domxref("Request.referrer")}} is stripped out.
       - If this object has a {{domxref("Request.mode")}} of `navigate`,
         the `mode` value is converted to `same-origin`.
 
 - `options` {{optional_inline}}
-
   - : A {{domxref("RequestInit")}} object containing any custom settings that you want to apply to the request.
 
     If you construct a new `Request` from an existing `Request`, any options you set in an _options_ argument for the new request replace any corresponding options set in the original `Request`. For example:
@@ -92,7 +88,7 @@ const options = {
 const req = new Request("flowers.jpg", options);
 
 fetch(req).then((response) => {
-  // ...
+  // …
 });
 ```
 
@@ -100,7 +96,7 @@ Note that you could also pass `options` into the `fetch` call to get the same ef
 
 ```js
 fetch(req, options).then((response) => {
-  // ...
+  // …
 });
 ```
 

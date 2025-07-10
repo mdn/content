@@ -96,7 +96,6 @@ text-transform: unset;
 ```
 
 - `capitalize`
-
   - : Is a keyword that converts the first _letter_ of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories; thus, any punctuation marks or symbols at the beginning of a word are ignored.
 
     > [!NOTE]
@@ -124,7 +123,7 @@ text-transform: unset;
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## Formal definition
 

@@ -14,7 +14,6 @@ The type **`tabs.Tab`** contains information about a tab. This provides access t
 Values of this type are objects. They contain the following properties:
 
 - `active`
-
   - : `boolean`. Whether the tab is active in its window. This may be true even if the tab's window is not currently focused.
 
     The active tab is usually the selected one. However, on Firefox for Android, extension popups open in a new tab. When this popup tab is selected, the active tab will instead be the one in which the popup opened.
@@ -32,13 +31,12 @@ Values of this type are objects. They contain the following properties:
 - `favIconUrl` {{optional_inline}}
   - : `string`. The URL of the tab's favicon. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). It may also be `undefined` if the page has no favicon, or an empty string if the tab is loading.
 - `groupId` {{optional_inline}}
-  - : `integer`. The ID of the tab group the tab belongs to. Set to `-1` if the tab doesn't belong to a tab group. See {{WebExtAPIRef("tabs.group")}}.
+  - : `integer`. The ID of the tab group the tab belongs to. Set to `-1` ({{WebExtAPIRef("tabGroups.TAB_GROUP_ID_NONE")}}) if the tab doesn't belong to a tab group. See {{WebExtAPIRef("tabs.group")}}. For more information on tab groups, see {{WebExtAPIRef("tabGroups")}}.
 - `height` {{optional_inline}}
   - : `integer`. The height of the tab in pixels.
 - `hidden`
   - : `boolean`. Whether the tab is hidden.
 - `highlighted`
-
   - : `boolean`. Whether the tab is highlighted, i.e., part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
     Firefox for Android doesn't support highlighting multiple tabs.

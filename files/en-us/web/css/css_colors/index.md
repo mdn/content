@@ -47,6 +47,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
+- [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 > [!NOTE]
@@ -86,6 +87,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+  - : A tool that lets you pick a color in the sRGB color space and converts it between various CSS color formats, helping you understand the syntax of the different color notations.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

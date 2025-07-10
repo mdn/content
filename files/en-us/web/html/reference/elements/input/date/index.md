@@ -3,9 +3,8 @@ title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_date
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date. The appearance of the date picker input UI varies based on the browser and operating system. The value is normalized to the format `yyyy-mm-dd`.
 
@@ -266,9 +265,9 @@ input:valid + span::after {
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
-        <code>valueAsDate</code>,
-        <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/API/HTMLInputElement/value"><code>value</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsDate"><code>valueAsDate</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>
@@ -285,7 +284,7 @@ input:valid + span::after {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

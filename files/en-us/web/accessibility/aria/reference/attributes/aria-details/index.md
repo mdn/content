@@ -1,5 +1,6 @@
 ---
-title: aria-details
+title: "ARIA: aria-details attribute"
+short-title: aria-details
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-details
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
@@ -22,7 +23,8 @@ Elements referenced by `aria-details` are intended to contain more information t
 
 The elements referenced by `aria-details` should be visible to all users. `aria-details` informs users that otherwise might not be able to scan a screen and discern quickly that the explanatory content is available.
 
-> **Note:** `aria-details` has no impact on the accessible description.
+> [!NOTE]
+> `aria-details` has no impact on the accessible description.
 
 Unlike `aria-describedby`, elements referenced by `aria-details` are not used in accessible descriptions and are not turned into a plain string when presented to assistive technology users. If the associated content is not too long and flattening the contents of the referenced element to a simple string of text wouldn't cause loss of information, consider using `aria-describedby` instead. That said, it is valid for an element to have both `aria-details` and a description specified with either `aria-describedby` or `aria-description`.
 
@@ -59,6 +61,15 @@ When it comes to definition and term roles, the `aria-details` would be included
 
 - ID reference list
   - : An `id` or space separated list of ids of elements that provide or link to additional related information.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : The `ariaDetailsElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-details` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

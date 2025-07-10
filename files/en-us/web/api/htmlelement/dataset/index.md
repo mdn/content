@@ -35,15 +35,13 @@ they are read or written:
 Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Web/HTML/How_to/Use_data_attributes).
 
 ### Name conversion
 
 - `dash-style` to `camelCase` conversion
-
   - : A custom data attribute name is transformed to a key for the
     {{domxref("DOMStringMap") }} entry by the following:
-
     1. Lowercase all ASCII capital letters (`A` to
        `Z`);
     2. Remove the prefix `data-` (including the dash);
@@ -52,10 +50,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_develo
     4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
-
   - : The opposite transformation, which maps a key to an attribute name, uses the
     following:
-
     1. **Restriction:** Before transformation, a dash _must not_ be
        immediately followed by an ASCII lowercase letter `a` to
        `z`;
@@ -132,5 +128,5 @@ if (el.dataset.someDataAttr === undefined) {
 
 - The HTML [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) class
   of global attributes
-- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

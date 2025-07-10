@@ -87,7 +87,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 }
 ```
 
-```css-nolint
+```css
 @font-face {
   font-family: "Noto Color Emoji";
   font-style: normal;
@@ -97,7 +97,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 }
 
 .emoji {
-  font-family: "Noto Color Emoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
 }
 @font-palette-values --red {
@@ -137,7 +137,7 @@ Using [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), this 
   src: url("[path-to-font]/RocherColorGX.woff2") format("woff2");
 }
 h2 {
-  font-family: "Rocher";
+  font-family: "Rocher", fantasy;
 }
 @font-palette-values --override-palette {
   font-family: "Rocher";
@@ -158,7 +158,7 @@ h2 {
 
 #### Result
 
-This example shows the that in `base-palette` `3`, the color at index 0 is overridden with `rebeccapurple`.
+This example shows that in `base-palette` `3`, the color at index 0 is overridden with `rebeccapurple`.
 
 ![Example showing base-palette and base-palette with 1 color overridden](override-base-palette-color.jpg)
 

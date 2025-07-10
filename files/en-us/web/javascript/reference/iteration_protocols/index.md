@@ -3,9 +3,8 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iteration
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
 
@@ -38,7 +37,6 @@ An object is an iterator when it implements a **`next()`** method with the follo
 All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected to return an object implementing the `IteratorResult` interface. It must have the following properties:
 
 - `done` {{optional_inline}}
-
   - : A boolean that's `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
 
     Has the value `true` if the iterator has completed its sequence. In this case, `value` optionally specifies the return value of the iterator.
@@ -68,7 +66,7 @@ It is very easy to make an iterator also iterable: just implement an `[Symbol.it
 // Satisfies both the Iterator Protocol and Iterable
 const myIterator = {
   next() {
-    // ...
+    // …
   },
   [Symbol.iterator]() {
     return this;
@@ -238,7 +236,7 @@ The [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await
 
 ## Error handling
 
-Because iteration involves transferring control back and forth between the iterator and the consumer, error handling happens in both ways: how the consumer handles errors thrown by the iterator, and how the iterator handles errors thrown by the consumer. When you are using one of the built-in ways of iteration, the language may also throw errors because the iterable breaks certain invariants. We will describe how built-in syntaxes generate and handle errors, which can be used as a guideline for your own code if you are manually stepping the iterator.
+Because iteration involves transferring control back and forth between the iterator and the consumer, error handling happens in both ways: how the consumer handles errors thrown by the iterator, and how the iterator handles errors thrown by the consumer. When you are using one of the built-in ways of iteration, the language may also throw errors because the iterable breaks certain {{Glossary("invariant", "invariants")}}. We will describe how built-in syntaxes generate and handle errors, which can be used as a guideline for your own code if you are manually stepping the iterator.
 
 ### Non-well-formed iterables
 
@@ -278,7 +276,7 @@ Usually, the caller implements error handling like this:
 ```js
 try {
   for (const value of iterable) {
-    // ...
+    // …
   }
 } catch (e) {
   // Handle the error
@@ -376,7 +374,7 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### Defining an iterable with a generator
@@ -407,12 +405,12 @@ const it = idMaker();
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
-// ...
+// …
 ```
 
 ### Defining an iterable with a class
 
-State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) as well.
+State encapsulation can be done with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) as well.
 
 ```js
 class SimpleClass {
@@ -432,11 +430,10 @@ class SimpleClass {
       // Note: using an arrow function allows `this` to point to the
       // one of `[Symbol.iterator]()` instead of `next()`
       next: () => {
-        if (index < this.#data.length) {
-          return { value: this.#data[index++], done: false };
-        } else {
+        if (index >= this.#data.length) {
           return { done: true };
         }
+        return { value: this.#data[index++], done: false };
       },
     };
   }
@@ -563,9 +560,9 @@ class MyIterable {
     return false;
   }
   *[Symbol.iterator]() {
-    for (let i = 0; i < this.#data.length; i++) {
-      if (this.#data[i] !== tombstone) {
-        yield this.#data[i];
+    for (const data of this.#data) {
+      if (data !== tombstone) {
+        yield data;
       }
     }
   }

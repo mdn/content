@@ -37,7 +37,7 @@ The CSS below includes a selector `.foo` that contains two declarations and a me
 ```css
 .foo {
   background-color: silver;
-  @media (screen) {
+  @media screen {
     color: tomato;
   }
   color: black;
@@ -48,8 +48,8 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 
 - A {{domxref("CSSStyleRule")}} object that represents the `background-color: silver` rule.
   This can be returned via `document.styleSheets[0].cssRules[0]`.
-- A {{domxref("CSSMediaRule")}} object that represents the `@media (screen)` rule, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]`.
-  - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which represents the `color: tomato` rule nested by the `@media (screen)` rule.
+- A {{domxref("CSSMediaRule")}} object that represents the `@media screen` rule, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]`.
+  - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which represents the `color: tomato` rule nested by the `@media screen` rule.
     This can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]`.
 - The final rule is a `CSSNestedDeclaration` object that represents the `color: black` rule in the stylesheet, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]`.
 

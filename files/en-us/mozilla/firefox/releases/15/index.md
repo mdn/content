@@ -2,9 +2,8 @@
 title: Firefox 15 for developers
 slug: Mozilla/Firefox/Releases/15
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 15 shipped on August 28, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -29,18 +28,18 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 ### DOM
 
-- The DOM Events Level 3 methods [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29) and [`MouseEvent.getModifierState()`](/en-US/docs/Web/API/MouseEvent#getmodifierstate%28%29), which let you query the state of modifier keys, like `Ctrl` or `Shift`, have been implemented (bugs [630811](https://bugzil.la/630811) and [731878](https://bugzil.la/731878)). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ([Firefox bug 769190](https://bugzil.la/769190)).
+- The DOM Events Level 3 methods [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent/getModifierState) and [`MouseEvent.getModifierState()`](/en-US/docs/Web/API/MouseEvent/getModifierState), which let you query the state of modifier keys, like `Ctrl` or `Shift`, have been implemented (bugs [630811](https://bugzil.la/630811) and [731878](https://bugzil.la/731878)). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ([Firefox bug 769190](https://bugzil.la/769190)).
 - On mouse events, support for querying the state of the mouse buttons using the [`MouseEvent.buttons`](/en-US/docs/Web/API/MouseEvent) attribute, has been implemented.
-- On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/en-US/docs/Web/API/KeyboardEvent#attributes_location) attribute, has been implemented ([Firefox bug 166240](https://bugzil.la/166240)).
-- KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/en-US/docs/Web/API/KeyboardEvent#virtual_key_codes).
+- On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/en-US/docs/Web/API/KeyboardEvent/location) attribute, has been implemented ([Firefox bug 166240](https://bugzil.la/166240)).
+- KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 - The [`range.detach()`](/en-US/docs/Web/API/Range/detach) method has been transformed in a no-op and will probably be removed in the future.
 - The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug 480376](https://bugzil.la/480376))
 - The `Performance` API has a new method, [`now()`](/en-US/docs/Web/API/Performance/now), supporting high resolution timers of type `DOMHighResTimeStamp`. ([bug 539095](https://bugzil.la/539095)).
 - The [WebSMS API](https://web.archive.org/web/20210620092659/https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Mobile_Messaging_API) has been updated and now supports a `read` attribute indicating whether an SMS text message is read or unread.
 - The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
 - The [`Blob`](/en-US/docs/Web/API/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzil.la/752402))
-- The `DeviceLightEvent` specified in the [Ambient Light Events Working Draft](https://www.w3.org/TR/ambient-light/) has been implemented.
-- The `DeviceProximityEvent` and `UserProximityEvent` [Proximity Events](https://www.w3.org/TR/proximity/) have been implemented.
+- The `DeviceLightEvent` specified in the [Ambient Light Events Working Draft](https://w3c.github.io/ambient-light/) has been implemented.
+- The `DeviceProximityEvent` and `UserProximityEvent` [Proximity Events](https://w3c.github.io/proximity/) have been implemented.
 - The {{domxref("File")}} `lastModifiedDate` property has been implemented. ([Firefox bug 673586](https://bugzil.la/673586))
 
 ### JavaScript
@@ -52,7 +51,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 ### WebGL
 
-- Support for the [`WEBGL_compressed_texture_s3tc`](/en-US/docs/Web/API/WebGL_API/Using_Extensions#webgl_compressed_texture_s3tc) extension has been added. Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
+- Support for the [`WEBGL_compressed_texture_s3tc`](/en-US/docs/Web/API/WEBGL_compressed_texture_s3tc) extension has been added. Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
 ### MathML
 
@@ -75,7 +74,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 ### Interface changes
 
 - `nsIDOMWindowUtils`
-  - : `aModifiers` of `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` and `sendKeyEvent()` supports all modifier keys which are supported by [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29). Use `MODIFIER_*` values. And now the 5th parameter of `sendKeyEvent()` is changed from `boolean` to `unsigned long`. For backward compatibility, if caller passes `true` or `false` to it, the behavior isn't changed. This change allows callers to specify the key's location.
+  - : `aModifiers` of `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` and `sendKeyEvent()` supports all modifier keys which are supported by [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent/getModifierState). Use `MODIFIER_*` values. And now the 5th parameter of `sendKeyEvent()` is changed from `boolean` to `unsigned long`. For backward compatibility, if caller passes `true` or `false` to it, the behavior isn't changed. This change allows callers to specify the key's location.
 - `nsIBrowserHistory`
   - : The `hidePage()` method was never implemented, and has been removed entirely in this release. The `addPageWithDetails()` method has also been removed as part of the ongoing work to make all 'Places APIs' asynchronous; use `mozIAsyncHistory.updatePlaces()` instead. Also, the `count` attribute was removed; it had not returned an actual count in some time (instead, it was indicating whether or not any entries existed). You can use `nsINavHistoryService.hasHistoryEntries` instead.
 - `nsIDOMUtils`

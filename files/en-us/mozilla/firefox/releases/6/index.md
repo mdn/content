@@ -2,9 +2,8 @@
 title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article provides links to information about the changes that affect developers in this release.
 
@@ -34,7 +33,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - {{ cssxref("-moz-orient", "-moz-orient") }}
   - : A new (currently Mozilla-specific) property which lets you control the vertical or horizontal orientation of certain elements (particularly {{ HTMLElement("progress") }}).
 - {{ cssxref("::-moz-progress-bar") }}
-  - : A Mozilla-specific pseudo-element that lets you style the area of an {{ HTMLElement("progress") }} element representing the completed portion of a task.
+  - : A Mozilla-specific pseudo-element that lets you style the area of a {{ HTMLElement("progress") }} element representing the completed portion of a task.
 
 #### Other changes
 
@@ -115,7 +114,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ## Changes for Mozilla and add-on developers
 
-For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
+For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Releases/6/Updating_add-ons).
 
 > [!NOTE]
 > Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
@@ -162,7 +161,7 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsIHttpUpgradeListener`
   - : The callback interface for handling HTTP upgrade requests via the `nsIHttpChannelInternal.HTTPUpgrade()` method.
 - `nsIStructuredCloneContainer`
-  - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
+  - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `nsITelemetry`
   - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See [Firefox bug 649502](https://bugzil.la/649502) and [Firefox bug 585196](https://bugzil.la/585196).
 - `nsITimedChannel`

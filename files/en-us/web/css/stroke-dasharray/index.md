@@ -39,19 +39,15 @@ stroke-dasharray: unset;
 The value is a list of comma and/or white space separated `<number>`, `<length>`, and / or `<percentage>` values that specify the lengths of alternating dashes and gaps, or the keyword `none`. If an odd number of values are given, the entire value will be repeated in order to set an even number of values.
 
 - `none`
-
   - : The stroke will be drawn without any dashes. The default value.
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : A number of SVG units, the size of which are defined by the current unit space. Negative values are invalid.
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with respect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Negative values are invalid.
 
 - {{cssxref("&lt;percentage&gt;")}}
-
   - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
 
 ## Formal definition

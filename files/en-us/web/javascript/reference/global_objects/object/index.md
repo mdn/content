@@ -3,9 +3,8 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 page-type: javascript-class
 browser-compat: javascript.builtins.Object
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Guide/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
@@ -301,13 +300,12 @@ const current = Object.prototype.valueOf;
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
-  } else {
-    // It doesn't look like one of my objects, so let's fall back on
-    // the default behavior by reproducing the current behavior as best we can.
-    // The apply behaves like "super" in some other languages.
-    // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, args);
   }
+  // It doesn't look like one of my objects, so let's fall back on
+  // the default behavior by reproducing the current behavior as best we can.
+  // The apply behaves like "super" in some other languages.
+  // Even though valueOf() doesn't take arguments, some other hook may.
+  return current.apply(this, args);
 };
 ```
 

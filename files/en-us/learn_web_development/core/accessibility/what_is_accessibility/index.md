@@ -58,7 +58,7 @@ People with visual impairments include people with blindness, low-level vision, 
 
 - Paid commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows).
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on ChromeOS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/features/?vision) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on ChromeOS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and play around with it, to get an idea of how it works. See our [screen reader tutorials](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
 
@@ -162,7 +162,7 @@ Different operating systems have different accessibility APIs available:
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
+Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://w3c.github.io/aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
 ## Summary
 
@@ -171,7 +171,6 @@ This article should have given you a useful high-level overview of accessibility
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

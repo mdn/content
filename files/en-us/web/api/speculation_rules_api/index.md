@@ -260,6 +260,9 @@ It is also potentially risky to prefetch a document whose server-rendered conten
 > [!NOTE]
 > Browsers will cache prefetched pages for a short time (Chrome for example caches them for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
 
+Stale prefetches can be cleared using the {{httpheader("Clear-Site-Data#prefetchCache", "prefetchCache")}} value of the {{httpheader("Clear-Site-Data")}} response header.
+This might be used, for example, when for state changing requests mean that the cached data is no longer valid, such as when logging out of a site.
+
 Prefetching is safe if all side effects of fetching the page result from JavaScript execution, since the JavaScript will not run until activation.
 
 One final tip is to audit the URLs listed as disallowed in your {{glossary("robots.txt")}} file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e., they exhibit the conditions described above).
@@ -305,6 +308,10 @@ User-specific state problems can occur for other user settings, for example lang
 - The user sees an empty cart, even though they just added something to it.
 
 The best mitigation for these cases, and indeed any time when content can get out of sync with the server, is for pages to refresh themselves as needed. For example, a server might use the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("Window/fetch", "fetch()")}} or a {{domxref("WebSocket")}}. Pages can then update themselves appropriately, including speculatively loaded pages that have not yet been activated.
+
+Where refreshes are not possible, speculations can be cleared using the {{httpheader("Clear-Site-Data")}} response header with the {{httpheader("Clear-Site-Data#prefetchCache", `prefetchCache`)}} or {{httpheader("Clear-Site-Data#prerenderCache", `prerenderCache`)}} values (or both) as appropriate.
+
+The header can be returned on any same-site HTTP request (such as an `/api/add-to-cart` API call).
 
 ## Session history behavior for prerendered documents
 
@@ -381,7 +388,7 @@ APIs that require the containing document to be focused:
 
 APIs that require the containing document's {{domxref("Document.visibilityState")}} to be `"visible"`:
 
-- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible", _or_ {{glossary("transient activation")}})
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible"`, _or_ {{glossary("transient activation")}})
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### Other restricted features
@@ -421,6 +428,8 @@ The Speculation Rules API does not define any interfaces of its own.
 
 - {{httpheader("Content-Security-Policy")}} `'inline-speculation-rules'` value {{experimental_inline}}
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
+- {{httpheader("Clear-Site-Data")}} `'prefetchCache'` and `'prerenderCache'` values {{experimental_inline}}
+  - : Use to clear speculations. For example, when state changes that renders the speculations stale.
 - {{httpheader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{httpheader("Supports-Loading-Mode")}} {{experimental_inline}}
@@ -433,7 +442,7 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## Examples
 
-You can find a [complete prerender demo here](https://prerender-demos.glitch.me/).
+For code examples, see [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2025)
 
 ## Specifications
 
@@ -445,5 +454,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 
 ## See also
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

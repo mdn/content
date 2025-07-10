@@ -16,10 +16,10 @@ This event is cancelable and may bubble up to the {{domxref("Document")}} and {{
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dragover", (event) => {});
+```js-nolint
+addEventListener("dragover", (event) => { })
 
-ondragover = (event) => {};
+ondragover = (event) => { }
 ```
 
 ## Event type
@@ -123,7 +123,6 @@ target.addEventListener("drop", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

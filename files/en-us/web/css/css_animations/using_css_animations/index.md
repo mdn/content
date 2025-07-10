@@ -1,5 +1,6 @@
 ---
 title: Using CSS animations
+short-title: Using animations
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 page-type: guide
 ---

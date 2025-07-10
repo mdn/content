@@ -3,12 +3,10 @@ title: "GPUQueue: submit() method"
 short-title: submit()
 slug: Web/API/GPUQueue/submit
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUQueue.submit
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`submit()`** method of the
 {{domxref("GPUQueue")}} interface schedules the execution of command buffers represented by one or more {{domxref("GPUCommandBuffer")}} objects by the GPU.
@@ -42,7 +40,7 @@ The following criteria must be met when calling **`submit()`**, otherwise a {{do
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), a number of commands are recorded via a {{domxref("GPUCommandEncoder")}}:
 
 ```js
-// ...
+// …
 
 // Create GPUCommandEncoder
 const commandEncoder = device.createCommandEncoder();
@@ -72,7 +70,7 @@ passEncoder.draw(3);
 
 passEncoder.end();
 
-// ...
+// …
 ```
 
 The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a `submit()` call, ready to be processed by the GPU.

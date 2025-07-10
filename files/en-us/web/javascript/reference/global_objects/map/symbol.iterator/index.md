@@ -1,11 +1,11 @@
 ---
 title: Map.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.@@iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.iterator]()`** method of {{jsxref("Map")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Map` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [map iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map in insertion order.
 

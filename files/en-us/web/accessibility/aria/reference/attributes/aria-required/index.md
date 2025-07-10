@@ -1,5 +1,6 @@
 ---
-title: aria-required
+title: "ARIA: aria-required attribute"
+short-title: aria-required
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-required
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-required

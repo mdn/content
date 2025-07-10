@@ -119,7 +119,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -127,7 +127,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";
@@ -202,27 +202,24 @@ Say you wanted to include the MDN glossary on one of your web pages using the {{
 If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
-<head>
-  <style>
-    iframe {
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <iframe
-    src="https://developer.mozilla.org/en-US/docs/Glossary"
-    width="100%"
-    height="500"
-    allowfullscreen
-    sandbox>
-    <p>
-      <a href="/en-US/docs/Glossary">
-        Fallback link for browsers that don't support iframes
-      </a>
-    </p>
-  </iframe>
-</body>
+<iframe
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  width="100%"
+  height="500"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="/en-US/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a>
+  </p>
+</iframe>
+```
+
+```css
+iframe {
+  border: none;
+}
 ```
 
 If you have a look at your browser's console, you'll see an error message like the following:
@@ -255,7 +252,8 @@ Above we mentioned security concerns — let's go into this in a bit more detail
 
 Browser makers and Web developers have learned the hard way that iframes are a common target (official term: **attack vector**) for bad people on the Web (often termed **hackers**, or more accurately, **crackers**) to attack if they are trying to maliciously modify your webpage, or trick people into doing something they don't want to do, such as reveal sensitive information like usernames and passwords. Because of this, spec engineers and browser developers have developed various security mechanisms for making `<iframe>`s more secure, and there are also best practices to consider — we'll cover some of these below.
 
-> **Note:** [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
+> [!NOTE]
+> [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
 
 A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) Instead of the page you expected, you'll probably see some kind of message to the effect of "I can't open this page", and if you look at the _Console_ in the [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told something like _The loading of "https\://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking), which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
 
@@ -276,7 +274,8 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
 
-> **Note:** [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
+> [!NOTE]
+> [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
 > If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
 
 #### Always use the `sandbox` attribute

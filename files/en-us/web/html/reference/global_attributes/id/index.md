@@ -1,13 +1,13 @@
 ---
-title: id
+title: HTML id global attribute
+short-title: id
 slug: Web/HTML/Reference/Global_attributes/id
 page-type: html-attribute
 browser-compat: html.global_attributes.id
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
-The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) defines an identifier (ID) which must be unique in the whole document.
+The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) defines an identifier (ID) that must be unique within the entire document.
 
 {{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
 
@@ -26,29 +26,13 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes
   box-shadow: 2px 2px 1px black;
 }
 
-#exciting:before {
+#exciting::before {
   content: "ℹ️";
   margin-right: 5px;
 }
 ```
 
-## Description
-
-The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI#fragment)), scripting, or styling (with {{glossary("CSS")}}).
-
-Elements with ID attributes are available as global properties. The property name is the ID attribute, and the property value is the element. For example, given markup like:
-
-```html
-<p id="preamble"></p>
-```
-
-You could access the paragraph element in JavaScript using code like:
-
-```js
-const content = window.preamble.textContent;
-```
-
-### Syntax
+## Syntax
 
 An ID attribute's value must not contain [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html) characters. Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute, which allows space-separated values, elements can only have one single ID value.
 
@@ -57,6 +41,27 @@ Technically, the value for an ID attribute may contain any other Unicode charact
 For this reason, it's recommended that developers choose values for ID attributes that are valid CSS identifiers that don't require escaping.
 
 Also, not all valid ID attribute values are valid JavaScript identifiers. For example, `1234` is a valid attribute value but not a valid JavaScript identifier. This means that the value is not a valid variable name, so you can't access the element using code like `window.1234`. However, you can access it using `window["1234"]`.
+
+## Description
+
+The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment)), scripting, or styling (with {{glossary("CSS")}}).
+
+You can access elements with ID attributes as global properties of the `window` object, where the property name is the ID value, and the property value is the corresponding element. For example, given this markup:
+
+```html
+<p id="preamble"></p>
+```
+
+You can access this paragraph element in JavaScript using the following code:
+
+```js
+const content = window.preamble.textContent;
+```
+
+> [!WARNING]
+> Relying on the `window["id-value"]` or `window.idValue` pattern is dangerous and discouraged because it can lead to unexpected conflicts with existing or future APIs in the browser.
+> For example, if a browser introduces a built-in global property named `preamble` in the future, your code may no longer be able to access the HTML element.
+> To avoid such conflicts, always use the {{domxref("Document.getElementById()")}} or {{domxref("Document.querySelector()")}} method to access elements by ID.
 
 ## Specifications
 

@@ -296,18 +296,18 @@ blockquote p::after {
 
 ## Guides
 
-- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
-  - : An overview of the Multiple-column Layout specification
+- [Basic concepts of multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+  - : Overview of the multiple-column layout specification.
 - [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-  - : Guide to using multi-column properties to layout out text.
+  - : Guide to using multi-column properties for laying out text.
 - [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
-  - : How to use column rules and manage the spacing between columns.
+  - : Guide to styling columns and managing spacing between columns.
 - [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
   - : How to make elements span across all columns and control the way columns are filled.
 - [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
-  - : Introduction to the Fragmentation specification and how to control where column content breaks.
+  - : Introduction to the fragmentation specification and how to control where column content breaks.
 
 ## Related concepts
 

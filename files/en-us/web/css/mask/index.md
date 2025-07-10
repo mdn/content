@@ -7,7 +7,7 @@ browser-compat: css.properties.mask
 
 {{CSSRef}}
 
-The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) hides an element (partially or fully) by masking or clipping a specified area of the image. It is a shorthand for all the [`mask-*`](#constituent-properties) properties. The property accepts one or more comma-separated values, where each value corresponds to a [`<mask-layer>`](#mask-layer).
+The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) hides an element (partially or fully) by masking or clipping a specified area of the image. It is a shorthand for all the [`mask-*`](#constituent_properties) properties. The property accepts one or more comma-separated values, where each value corresponds to a [`<mask-layer>`](#mask-layer).
 
 ## Constituent properties
 
@@ -21,9 +21,6 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("mask-position")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
-
-> [!NOTE]
-> As the `mask` shorthand resets all the component properties as well as the {{cssxref("mask-border")}} properties to their initial values, the specification authors recommend using the `mask` shorthand rather than the individual component properties to override any mask values set earlier in the cascade. This ensures that `mask-border` is also reset, allowing the new styles to take effect.
 
 ## Syntax
 
@@ -60,9 +57,7 @@ mask: unset;
 ### Values
 
 - `<mask-layer>`
-
   - : One or more comma-separated mask layers, consisting of the following components:
-
     - `<mask-reference>`
       - : Sets the mask image source. See {{cssxref("mask-image")}}.
     - `<masking-mode>`
@@ -74,7 +69,7 @@ mask: unset;
     - `<repeat-style>`
       - : Sets the repetition of the mask image. See {{cssxref("mask-repeat")}}.
     - `<geometry-box>`
-      - : If only one `<geometry-box>` value is given, it sets both {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}}. If two `<geometry-box>` values are present, then the first sets {{cssxref("mask-origin")}} and the second sets {{cssxref("mask-clip")}}.
+      - : If only one `<geometry-box>` value is given, it sets both the {{cssxref("mask-origin")}} and {{cssxref("mask-clip")}} property values. If two `<geometry-box>` values are present, the first defines the `mask-origin` and the second defines the `mask-clip`.
     - `<geometry-box> | no-clip`
       - : Sets the area affected by the mask image. See {{cssxref("mask-clip")}}.
     - `<compositing-operator>`
@@ -82,7 +77,7 @@ mask: unset;
 
 ## Description
 
-The `mask` property hides part or all of the element it is applied to. Which parts are hidden, visible, or partially rendered depends on the opacity of the mask at that pixel. The sections masked by opaque parts of the mask are completely hidden, whereas transparent sections of the mask render the element visible.
+The `mask` shorthand property hides part or all of the element it is applied to. The parts of the element that are hidden, visible, or partially shown depend on either the opacity (alpha channel of the mask) or the brightness (luminance) of the mask. In alpha masking, opaque areas of the mask reveal the element, and transparent areas hide it. In luminance masking, light opaque areas of the mask reveal the element, and dark or transparent areas hide it.
 
 While not all constituent mask properties need to be declared, any values that are omitted default to their initial values, which are:
 
@@ -196,6 +191,9 @@ div {
 
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("filter")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("mask")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

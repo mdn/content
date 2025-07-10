@@ -59,7 +59,6 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
 ![The tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
 
 - manifest.json
-
   - : Here is the [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json):
 
     ```json
@@ -83,7 +82,6 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
     > - **Permissions includes tabs.** This is needed to support the tab list feature, as the extension reads the title of the tabs for display in the popup.
 
 - tabs.html
-
   - : `tabs.html` defines the content of the extension's popup:
 
     ```html
@@ -119,7 +117,6 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
     ```
 
     This does the following:
-
     1. The menu items are declared.
     2. An empty `div` with the ID `tabs-list` is declared to contain the list of tabs.
     3. `tabs.js` is called.
@@ -154,42 +151,53 @@ To start with:
 
 ```js
 function listTabs() {
- getCurrentWindowTabs().then((tabs) => {
-    const tabsList = document.getElementById('tabs-list');
+  getCurrentWindowTabs().then((tabs) => {
+    const tabsList = document.getElementById("tabs-list");
     const currentTabs = document.createDocumentFragment();
     const limit = 5;
     let counter = 0;
 
-    tabsList.textContent = '';
+    tabsList.textContent = "";
+    // ...
+  });
+}
 ```
 
 Next, we'll create the links for each tab:
 
 1. Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
 2. For each item, add a hyperlink to the document fragment.
-
    - The link's label—that is, its text—is set using the tab's `title` (or the `id`, if it has no `title`).
    - The link's address is set using the tab's `id`.
 
 ```js
-for (const tab of tabs) {
-  if (!tab.active && counter <= limit) {
-    const tabLink = document.createElement("a");
+function listTabs() {
+  getCurrentWindowTabs().then((tabs) => {
+    // ...
+    for (const tab of tabs) {
+      if (!tab.active && counter <= limit) {
+        const tabLink = document.createElement("a");
 
-    tabLink.textContent = tab.title || tab.id;
+        tabLink.textContent = tab.title || tab.id;
 
-    tabLink.setAttribute("href", tab.id);
-    tabLink.classList.add("switch-tabs");
-    currentTabs.appendChild(tabLink);
-  }
+        tabLink.setAttribute("href", tab.id);
+        tabLink.classList.add("switch-tabs");
+        currentTabs.appendChild(tabLink);
+      }
 
-  counter += 1;
+      counter += 1;
+    }
+    // ...
+  });
 }
 ```
 
 Finally, the document fragment is written to the `<div id="tabs-list">` element:
 
 ```js
+function listTabs() {
+  getCurrentWindowTabs().then((tabs) => {
+    // ...
     tabsList.appendChild(currentTabs);
   });
 }
@@ -200,11 +208,12 @@ Finally, the document fragment is written to the `<div id="tabs-list">` element:
 Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
 
 ```js
-else if (e.target.id === "tabs-alert-info") {
+// Other if conditions...
+if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
-      props += `${ item } = ${ tab[item] } \n`;
+      props += `${item} = ${tab[item]} \n`;
     }
     alert(props);
   });
@@ -263,7 +272,6 @@ But first, here is a demonstration of the feature in action:
 - manifest.json
   - : None of the functions require a permission to operate, so there are no features in the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json) file that need to be highlighted.
 - tabs.html
-
   - : [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an `id`, which is used in `tabs.js` to determine which menu item is being requested.
 
     ```html
@@ -282,7 +290,6 @@ But first, here is a demonstration of the feature in action:
     ```
 
 - tabs.js
-
   - : To implement the "menu" defined in `tabs.html`, [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) includes a listener for clicks in `tabs.html`:
 
     ```js
@@ -381,7 +388,6 @@ Let's take a look at how the zoom in is implemented.
 - tabs.html
   - : We have already discussed how the [`tabs.html`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.html) defines the options for this extension, nothing new or unique is done to provide the zoom options.
 - tabs.js
-
   - : [`tabs.js`](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js) starts by defining several constants used in the zoom code:
 
     ```js
@@ -396,22 +402,23 @@ Let's take a look at how the zoom in is implemented.
     For the zoom in feature, this runs:
 
     ```js
-      else if (e.target.id === "tabs-add-zoom") {
-        callOnActiveTab((tab) => {
-          browser.tabs.getZoom(tab.id).then((zoomFactor) => {
-            //the maximum zoomFactor is 5, it can't go higher
-            if (zoomFactor >= MAX_ZOOM) {
-              alert("Tab zoom factor is already at max!");
-            } else {
-              let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
-              //if the newZoomFactor is set to higher than the max accepted
-              //it won't change, and will never alert that it's at maximum
-              newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
-              browser.tabs.setZoom(tab.id, newZoomFactor);
-            }
-          });
+    // Other if conditions...
+    if (e.target.id === "tabs-add-zoom") {
+      callOnActiveTab((tab) => {
+        browser.tabs.getZoom(tab.id).then((zoomFactor) => {
+          // The maximum zoomFactor is 5, it can't go higher
+          if (zoomFactor >= MAX_ZOOM) {
+            alert("Tab zoom factor is already at max!");
+          } else {
+            let newZoomFactor = zoomFactor + ZOOM_INCREMENT;
+            // If the newZoomFactor is set to higher than the max accepted
+            // it won't change, and does not alert that it's at maximum
+            newZoomFactor = newZoomFactor > MAX_ZOOM ? MAX_ZOOM : newZoomFactor;
+            browser.tabs.setZoom(tab.id, newZoomFactor);
+          }
         });
-      }
+      });
+    }
     ```
 
     This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab's current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
@@ -431,9 +438,7 @@ The [apply-css](https://github.com/mdn/webextensions-examples/tree/main/apply-cs
 Let's walk through how it's set up.
 
 - manifest.json
-
   - : The [`manifest.json`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/manifest.json) requests permissions required to use the CSS features. You need either:
-
     - `"tabs"` permission and [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions); or,
     - `"activeTab"` permission.
 
@@ -463,12 +468,10 @@ Let's walk through how it's set up.
     You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension's script to access the tab's URL, the importance of which we'll see in a moment.
 
     The other main features in the manifest.json file are the definition of:
-
     - **a background script**, which starts running as soon as the extension is loaded.
     - **a "page action"**, which defines an icon to be added to the browser's address bar.
 
 - background.js
-
   - : On startup, [`background.js`](https://github.com/mdn/webextensions-examples/blob/main/apply-css/background.js) sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
 
     ```js
@@ -517,14 +520,11 @@ Let's walk through how it's set up.
     ```
 
     `toggleCSS()` gets the title of the `pageAction` and then takes the action described:
-
     - **For "Apply CSS":**
-
       - toggles the `pageAction` icon and title to the "remove" versions.
       - applies the CSS using {{WebExtAPIRef("tabs.insertCSS()")}}.
 
     - **For "Remove CSS":**
-
       - toggles the `pageAction` icon and title to the "apply" versions.
       - removes the CSS using {{WebExtAPIRef("tabs.removeCSS()")}}.
 

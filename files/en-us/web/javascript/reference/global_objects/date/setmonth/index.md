@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.setMonth()
+short-title: setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to local time.
 
@@ -62,10 +62,10 @@ This is because in 2016 February had 29 days.
 const theBigDay = new Date();
 theBigDay.setMonth(6);
 
-//Watch out for end of month transitions
+// Watch out for end of month transitions
 const endOfMonth = new Date(2016, 7, 31);
 endOfMonth.setMonth(1);
-console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
+console.log(endOfMonth); // Wed Mar 02 2016 00:00:00
 ```
 
 ## Specifications
