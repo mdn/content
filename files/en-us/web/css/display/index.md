@@ -77,34 +77,66 @@ code {
 ## Syntax
 
 ```css
-/* precomposed values */
-display: block;
-display: inline;
+/* Two Keyword values */
+display: block flow;
+display: block flow-root;
+display: block table;
+display: block flex;
+display: block grid;
+display: block ruby;
+
+display: inline flow;
+display: inline flow-root;
+display: inline table;
+display: inline flex;
+display: inline grid;
+display: inline ruby;
+
+
+display: run-in flow;
+display: run-in flow-root;
+display: run-in table;
+display: run-in flex;
+display: run-in grid;
+display: run-in ruby;
+
+
+/* List Item values */
+
+display: block flow list-item;
+display: block flow-root list-item;
+
+display: inline flow list-item;
+display: inline flow-root list-item;
+
+
+/* Precomposed Inline-level values */
+
 display: inline-block;
-display: flex;
+display: inline-table;
 display: inline-flex;
-display: grid;
 display: inline-grid;
-display: flow-root;
+
+
+/* Internal values */
+
+display: table-row-group;
+display: table-header-group;
+display: table-footer-group;
+display: table-row;
+display: table-cell;
+display: table-column-group;
+display: table-column;
+display: table-caption;
+display: ruby-base;
+display: ruby-text;
+display: ruby-base-container;
+display: ruby-text-container;
+   
 
 /* Box suppression */
 display: none;
 display: contents;
-
-/* multi-keyword syntax */
-display: block flex;
-display: block flow;
-display: block flow-root;
-display: block grid;
-display: inline flex;
-display: inline flow;
-display: inline flow-root;
-display: inline grid;
-
-/* other values */
-display: table;
-display: table-row; /* all table elements have an equivalent CSS display value */
-display: list-item;
 
 /* Global values */
 display: inherit;
