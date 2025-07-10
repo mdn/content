@@ -4,9 +4,8 @@ short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.DurationFormat")}} instances formats a duration according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
 

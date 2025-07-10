@@ -60,7 +60,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - SVG Support
   - : SVG is W3C specification providing resolution-independent scalable vector graphics, along with a DOM. A technology preview of native SVG support is included in this release. Currently a subset of SVG 1.1 Full, missing functionality includes filters, declarative animation, and SVG defined fonts.
 - `<canvas>` Support
-  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/Drawing_Graphics_with_Canvas).
+  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 #### Miscellaneous
 

@@ -111,7 +111,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
   - 3 — `no-referrer-when-downgrade` (the default)
 
 - Support for Next Protocol Negotiation (NPN) has been removed in favor of [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) — see [Firefox bug 1248198](https://bugzil.la/1248198).
-- The {{httpheader("Large-Allocation")}} HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
+- The `Large-Allocation` HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
 
 ### SVG
 

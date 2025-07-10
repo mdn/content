@@ -50,7 +50,7 @@ Highlights:
   - `HTMLInputElement.getFilesAndDirectories()`
   - `HTMLInputElement.chooseDirectory()`
 
-- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and {{domxref("Directory.getContents")}} can be exposed by setting the `dom.input.dirpicker` preference to `true`.
+- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and `Directory.getContents` can be exposed by setting the `dom.input.dirpicker` preference to `true`.
 - The `HTMLMediaElement.mozSrcObject` has been renamed in {{domxref('HTMLMediaElement.srcObject')}} ([Firefox bug 1175523](https://bugzil.la/1175523)).
 
 #### Service Workers

@@ -755,8 +755,8 @@ refused.textContent = "Refuse: ";
 
 // loop starts here
 
-// refused.textContent += ;
-// admitted.textContent += ;
+// refused.textContent += ...;
+// admitted.textContent += ...;
 ```
 
 {{ EmbedLiveSample("loops-2", "100%", 200) }}
@@ -793,10 +793,8 @@ for (const person of people) {
   }
 }
 
-refused.textContent =
-  refused.textContent.slice(0, refused.textContent.length - 2) + ".";
-admitted.textContent =
-  admitted.textContent.slice(0, admitted.textContent.length - 2) + ".";
+refused.textContent = `${refused.textContent.slice(0, -2)}.`;
+admitted.textContent = `${admitted.textContent.slice(0, -2)}.`;
 ```
 
 </details>

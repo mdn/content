@@ -3,9 +3,8 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 

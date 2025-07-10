@@ -4,9 +4,8 @@ short-title: SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > The `SharedArrayBuffer` constructor may not always be globally available unless certain [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.

@@ -138,7 +138,7 @@ _No change._
 
 ### Search plugins
 
-Starting in Firefox 45, search plugins located in the user's profile's `searchplugins` directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via [OpenSearch discovery](/en-US/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox), for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.
+Starting in Firefox 45, search plugins located in the user's profile's `searchplugins` directory are no longer automatically loaded on startup. Instead, a list of user-installed plugins is maintained and only those plugins are loaded. In effect, this means that the only ways to install new search plugins are for the user to do so in the Firefox UX (via [OpenSearch discovery](/en-US/docs/Web/XML/Guides/OpenSearch), for instance) or for an add-on to install it. Also, when a new search plugin is installed, more information is recorded about where it came from, for future use by profile debugging and cleaning tools.
 
 ### Other
 
