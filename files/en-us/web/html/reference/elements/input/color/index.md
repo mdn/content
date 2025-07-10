@@ -60,8 +60,8 @@ In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attr
   - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute, if present, indicates the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
 
 - `colorspace`
-  - : Defines the  the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated", "enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb),  [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+  - : Defines the the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated", "enumerated")}} values are:
+    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
