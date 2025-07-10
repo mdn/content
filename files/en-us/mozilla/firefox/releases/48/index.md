@@ -125,4 +125,3 @@ sidebar: firefox
 
 - The [Social Worker API](/en-US/docs/Mozilla/Projects/Social_API/Service_worker_API_reference) has been removed.
 - Added the `-moz-bool-pref()` [CSS](/en-US/docs/Web/CSS) {{CSSxRef("@supports")}} function to allow hiding portions of chrome stylesheets behind boolean preferences. ([Firefox bug 1259889](https://bugzil.la/1259889))
-
