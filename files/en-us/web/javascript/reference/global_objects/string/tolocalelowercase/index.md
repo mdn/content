@@ -4,9 +4,8 @@ short-title: toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toLocaleLowerCase
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleLowerCase()`** method of {{jsxref("String")}} values returns this string converted to lower case, according to any locale-specific case mappings.
 

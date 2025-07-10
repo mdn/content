@@ -3,9 +3,8 @@ title: "<dialog>: The Dialog element"
 slug: Web/HTML/Reference/Elements/dialog
 page-type: html-element
 browser-compat: html.elements.dialog
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a modal or non-modal dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
 

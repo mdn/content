@@ -4,9 +4,8 @@ short-title: getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getHours
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to local time.
 

@@ -4,9 +4,8 @@ short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.defineProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.defineProperty()`** static method is like {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.
 

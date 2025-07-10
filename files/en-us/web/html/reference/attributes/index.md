@@ -3,9 +3,8 @@ title: HTML attribute reference
 short-title: Attributes
 slug: Web/HTML/Reference/Attributes
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Attributes")}}
 
 Elements in HTML have **attributes**; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 
@@ -704,17 +703,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("img") }}</td>
-      <td>
-        This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it's the size specified in the attribute.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
@@ -1120,14 +1108,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         Defines the cells that the header test (defined in the
         <code>th</code> element) relates to.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
-        {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("style") }}</td>
-      <td></td>
     </tr>
     <tr>
       <td>

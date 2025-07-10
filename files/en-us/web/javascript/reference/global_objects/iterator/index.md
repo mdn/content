@@ -3,9 +3,8 @@ title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 page-type: javascript-class
 browser-compat: javascript.builtins.Iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 An **`Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All built-in iterators inherit from the `Iterator` class. The `Iterator` class provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
 

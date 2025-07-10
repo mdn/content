@@ -4,9 +4,8 @@ short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.some
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`some()`** method of {{jsxref("Array")}} instances tests whether
 at least one element in the array passes the test implemented by the provided

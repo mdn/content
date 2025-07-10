@@ -4,9 +4,8 @@ short-title: toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toLocaleTimeString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the time portion of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 
