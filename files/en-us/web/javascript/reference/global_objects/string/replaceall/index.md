@@ -64,7 +64,10 @@ function semiSafeRedactName(text, name) {
 }
 function superSafeRedactName(text, name) {
   // only match at word boundaries
-  return text.replaceAll(new RegExp(`\\b${RegExp.escape(name)}\\b`, 'g'), "[REDACTED]");
+  return text.replaceAll(
+    new RegExp(`\\b${RegExp.escape(name)}\\b`, "g"),
+    "[REDACTED]",
+  );
 }
 
 let report =
