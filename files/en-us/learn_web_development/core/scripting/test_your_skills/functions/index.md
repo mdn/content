@@ -33,7 +33,7 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 To complete our first functions task:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Define a simple function—`chooseName()`—that prints a random name from the provided array (`names`) into the provided paragraph (`para`).
+2. Define a function—`chooseName()`—that prints a random name from the provided array (`names`) into the provided paragraph (`para`).
 3. Call the `chooseName()` function once.
 
 > [!CALLOUT]
