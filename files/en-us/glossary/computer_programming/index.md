@@ -2,9 +2,8 @@
 title: Computer Programming
 slug: Glossary/Computer_Programming
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Computer programming** is the process of composing and organizing a collection of instructions. These tell a computer/software program what to do in a language which the computer understands. These instructions come in the form of many different languages such as C++, Java, JavaScript, HTML, Python, Ruby, and Rust.
 

@@ -3,9 +3,8 @@ title: Head-of-line blocking
 short-title: HOL blocking
 slug: Glossary/Head_of_line_blocking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In computer networking, **head-of-line blocking** (_HOL blocking_) refers to a performance bottleneck that occurs when a queue of packets is held up by the first packet in the queue, even though other packets in the queue could be processed.
 

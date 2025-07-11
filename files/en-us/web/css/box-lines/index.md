@@ -23,7 +23,7 @@ If the children in a horizontal box still do not fit on a line after being reduc
 
 A similar process occurs for children in a vertical box. Later lines in normal direction boxes are placed to the right of earlier lines and to the left in reverse direction boxes.
 
-Once the number of lines has been determined, elements with a computed value for {{CSSxRef("box-flex")}} other than `0` stretch as necessary in an attempt to fill the remaining space on the lines. Each line computes flexes independently, so only elements on that line are considered when evaluating {{CSSxRef("box-flex")}} and {{CSSxRef("box-flex-groups")}}. The packing of elements in a line, as specified by the {{CSSxRef("box-pack")}} property, is also computed independently for each line.
+Once the number of lines has been determined, elements with a computed value for {{CSSxRef("box-flex")}} other than `0` stretch as necessary in an attempt to fill the remaining space on the lines. Each line computes flexes independently, so only elements on that line are considered when evaluating {{CSSxRef("box-flex")}} and {{CSSxRef("box-flex-group")}}. The packing of elements in a line, as specified by the {{CSSxRef("box-pack")}} property, is also computed independently for each line.
 
 ## Syntax
 

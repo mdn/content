@@ -4,9 +4,8 @@ short-title: worker-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.worker-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`worker-src`** directive specifies valid sources for

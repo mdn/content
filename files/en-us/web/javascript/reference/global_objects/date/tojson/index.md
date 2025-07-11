@@ -4,9 +4,8 @@ short-title: toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toJSON
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toJSON()`** method of {{jsxref("Date")}} instances returns a string representing this date in the same ISO format as {{jsxref("Date/toISOString", "toISOString()")}}.
 

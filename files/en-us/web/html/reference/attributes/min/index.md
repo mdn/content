@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.min
   - html.elements.meter.min
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
 

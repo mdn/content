@@ -4,9 +4,8 @@ short-title: acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.acos
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.acos()`** static method returns the inverse cosine (in radians) of a number. That is,
 

@@ -69,6 +69,9 @@ While masking provides more control and options, clipping can perform better if 
 - [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
   - : Introduction to mask layers and how to declare multiple mask images.
 
+- [CSS mask properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+  - : An exploration of CSS masking and the `mask` shorthand component properties, with explanations and examples.
+
 ## Related concepts
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)

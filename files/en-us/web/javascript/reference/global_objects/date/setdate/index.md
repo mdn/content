@@ -4,9 +4,8 @@ short-title: setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setDate
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setDate()`** method of {{jsxref("Date")}} instances changes the day of the month for this date according to local time.
 

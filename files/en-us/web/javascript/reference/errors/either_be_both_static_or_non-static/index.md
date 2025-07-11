@@ -2,9 +2,8 @@
 title: "SyntaxError: getter and setter for private name #x should either be both static or non-static"
 slug: Web/JavaScript/Reference/Errors/Either_be_both_static_or_non-static
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "mismatched placement" occurs when a private [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) are mismatched in whether or not they are {{jsxref("Classes/static", "static")}}.
 

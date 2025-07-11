@@ -37,7 +37,7 @@ addRoutes(routerRules)
         - `runningStatus` {{optional_inline}}
           - : An enumerated value representing the required running status of the service worker for a request to match the rule. Values can be `"running"` or `"not-running"`.
         - `urlPattern` {{optional_inline}}
-          - : A {{domxref("URLPattern")}} instance, or a `URLPattern()` constructor [`input`](/en-US/docs/Web/API/URLPattern/URLPattern#input) pattern representing the URLs that match the rule.
+          - : A {{domxref("URLPattern")}} instance, or a `URLPattern()` constructor [`input`](/en-US/docs/Web/API/URLPattern/URLPattern#input) pattern representing the URLs that match the rule. Regular expression capturing groups are not allowed, so {{domxref("URLPattern.hasRegExpGroups")}} must be `false`.
 
     - `source`
       - : An enumerated value or an object specifying the source from which matching resources will be loaded. Possible enumerated values are:

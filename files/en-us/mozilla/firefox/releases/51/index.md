@@ -166,7 +166,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
   - Social service provider manifest properties supporting the removed functionality are no longer supported.
 
 - If an add-on uses `mimeTypes.rdf` to provide a file extension to MIME type mapping, it must now register an entry in the `"ext-to-type-mapping"` category ([Firefox bug 306471](https://bugzil.la/306471)).
-- The [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the [`mozbrowserlocationchange`](/en-US/docs/Web/Events/mozbrowserlocationchange) event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).
+- The [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the `mozbrowserlocationchange` event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).
 
 ## Older versions
 

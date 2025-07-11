@@ -2,9 +2,8 @@
 title: Device pixel
 slug: Glossary/Device_pixel
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **device pixel** is the smallest physical display unit capable of displaying a full color independent of its neighbor. It is the smallest physical unit of a display (such as a monitor or mobile phone screen), also known as a _hardware pixel_ or _physical pixel_. Each device pixel is an individual dot that composes the output of the display. Device pixels are fixed and do not scale based on the viewport or CSS.
 

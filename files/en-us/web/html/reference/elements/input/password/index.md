@@ -3,9 +3,8 @@ title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_password
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 `<input>` elements of type **`password`** provide a way for the user to securely enter a password.
 

@@ -230,7 +230,6 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - Dragging and dropping files (Firefox only): <https://jsfiddle.net/9C2EF/>
 - Dragging and dropping files (All browsers): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
-- A parking project using the Drag and Drop API: <https://park.glitch.me/> ([Edit it here](https://glitch.com/edit/#!/park))
 
 ## Specifications
 

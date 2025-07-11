@@ -3,9 +3,8 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 page-type: javascript-statement
 browser-compat: javascript.statements.var
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`var`** statement declares function-scoped or globally-scoped variables, optionally initializing each to a value.
 

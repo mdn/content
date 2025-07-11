@@ -19,7 +19,6 @@ Firefox supports several extensions to [CSS](/en-US/docs/Web/CSS), which are pre
 
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}: Use `alt` text instead.
-- {{CSSxRef("-moz-image-region")}}
 - {{CSSxRef("-moz-orient")}}
 - `-moz-osx-font-smoothing`: A similar {{CSSxRef("font-smooth")}} equivalent exists.
 - {{CSSxRef("-moz-user-focus")}} {{deprecated_inline}}

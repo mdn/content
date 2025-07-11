@@ -4,9 +4,8 @@ short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code unit values.
 

@@ -55,11 +55,11 @@ The server computer could be located on your premises and connected to the Inter
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
 > [!NOTE]
-> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> Pre-built environments can make setting up your website easier because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
-Other hosting providers support Express as part of a _Platform as a Service_ (_PaaS_) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy because you just need to concentrate on your web application and not any other server infrastructure.
+Other hosting providers support Express as part of a _Platform as a Service_ (_PaaS_) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite straightforward because you just need to concentrate on your web application and not any other server infrastructure.
 
-Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.
+Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and scaling effort of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.
 
 > [!NOTE]
 > If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [DigitalOcean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
@@ -86,10 +86,10 @@ Some of the things to consider when choosing a host:
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
 These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
 They are however great for testing low-traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
-Popular choices in this category include [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), etc.
+Popular choices in this category include [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html) and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/).
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.com/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.com/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion.
@@ -143,7 +143,7 @@ async function main() {
 ```
 
 > [!NOTE]
-> Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
+> Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the [dotenv](https://www.npmjs.com/package/dotenv) module from npm).
 
 ### Set NODE_ENV to 'production'
 
@@ -362,7 +362,7 @@ The steps are:
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-   - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
+   - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (such as "Local Library website written in Express").
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.
@@ -457,162 +457,16 @@ git checkout -b my_changes # Create a new branch
 > Git is incredibly powerful!
 > To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
-## Example: Hosting on Glitch
-
-This section provides a practical demonstration of how to host _LocalLibrary_ on [Glitch](https://glitch.com/).
-
-### Why Glitch?
-
-We are choosing to use Glitch for several reasons:
-
-- Glitch has a [free starter plan](https://glitch.com/pricing) that is _really_ free, albeit with some limitations.
-  The fact that it is affordable for all developers is really important to MDN!
-- Glitch takes care of the infrastructure so you don't have to.
-  Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- The skills and concepts you will learn when using Glitch are transferrable.
-- The service and plan limitations do not really impact us using Glitch for the tutorial.
-  For example:
-  - The starter plan only offers 1000 "project hours" per month, which is reset monthly.
-    This is used when you're actively editing the site or if someone is accessing it.
-    If no one is accessing or editing the site it will sleep.
-  - The starter plan environment has a limited amount of container RAM and storage space.
-    There is more than enough for the tutorial, in particular because our database is hosted elsewhere.
-  - Custom domains are not well supported (at time of writing).
-  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/s/article/Technical-Restrictions).
-
-While Glitch is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
-
-### How does Glitch work?
-
-Glitch provides a web-based interface in which you can create projects from starter templates, or import them from GitHub, and then add and edit the project files.
-As you make changes, the project is built and run in its own isolated and independent virtualized container.
-
-How this all works "under the hood" is a mystery — Glitch doesn't say.
-What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/s/article/Technical-Restrictions), your application should "just work".
-
-Once the application is running, it can be configured for production using [private data](https://help.glitch.com/s/article/Adding-Private-Data) supplied in a `.env` file.
-The values in the secret data are read by the application as environment variables, which, as you will recall from a previous section, is how we configured our application to get its database URL.
-Note that the variables are _secret_: the `.env` should not be included in your GitHub repository.
-
-The Glitch editing view also provides _terminal_ access to the web app environment, which you can use to work with the web app as though it was running on your local machine.
-
-That's all the overview you need to get started.
-Next, we will set up a Glitch account, upload the Library project from GitHub, and connect it to a database.
-
-### Get a Glitch account
-
-To start using Glitch you will first need to create an account:
-
-- Go to [glitch.com](https://glitch.com/) and click the **Sign up** button in the top toolbar.
-- Select GitHub in the popup to sign up using your GitHub credentials.
-- You'll then be logged in to the Glitch dashboard: <https://glitch.com/dashboard>.
-
-### Troubleshooting Node.js version
-
-Hosting providers commonly support some major version of recent Node.js releases.
-If the exact "minor" version you have specified in your `package.json` file is not supported they will usually fall back to the closest version they support (and often this will just work).
-
-Unfortunately, at time of writing, the highest supported version on Glitch is Node.js 16.
-If you have been developing with Node.js 17 or later, you should reduce the version used in your `package.json` file as shown.
-You will also need to retest:
-
-```json
-  "engines": {
-    "node": ">=v16"
-  },
-```
-
-Glitch [plans to update node and keep it better updated in future](https://blog.glitch.com/post/rebuilding-glitch/) — and it may be that by the time you read this the version limit no longer exists.
-Instead of downgrading the `node` version, you could upload your project to see if it builds.
-If there are errors and your application doesn't load, you should try setting the `node` version to `>=v16` in your `package.json` in the Glitch editor.
-
-> [!NOTE]
-> You can also check the supported versions by entering the following command into the terminal of any Glitch project:
->
-> ```sh
-> ls -l /opt/nvm/versions/node | grep '^d' | awk '{ print $9 }'
-> ```
-
-### Deploy on Glitch from GitHub
-
-Next we'll import the Library project from GitHub.
-First choose the **Dashboard** option from the site top menu, then select the **New project** button.
-Glitch will display a list of options for the new project; select **Import from GitHub**.
-
-![Glitch website dashboard showing a new project button and a popup menu with "Import from GitHub" option](glitch_new_project_import_github.png)
-
-A popup will appear.
-Enter the URL of your GitHub library repository into the popup and press **OK**.
-Below, we have entered the repo for the worked project.
-
-![Glitch popup for entering URL of GitHub repo to import](glitch_new_project_github_repo_url.png)
-
-Glitch will then import the project, displaying notifications of progress.
-Upon completion, it will display the editing view for the new project, as shown below.
-
-![Glitch editor view for imported project](glitch_imported_project_in_editor.png)
-
-You can get the live site URL by selecting the **Share** button.
-
-![Glitch editor view for imported project](glitch_share_project.png)
-
-Open a new browser tab and copy the link for the live site into the address bar.
-The local library site should open and display data from the development database.
-
-> [!NOTE]
-> This process was a one-off import from GitHub.
-> You can also use GitHub actions such as [glitch-project-sync](https://github.com/marketplace/actions/glitch-project-sync) to keep Glitch and > your project synchronized.
-
-### Use a production MongoDB database
-
-You should set up a different database for production than development.
-While Glitch only hosts SQLite databases (and we are set up to use MongoDB), many other sites provide MongoDB databases as a service.
-
-One option is to follow the [Setting up the MongoDB database](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database) instructions from earlier in the tutorial to set up a new production database.
-
-To make the production database accessible to the library application, open the `.env` file in the editor view for the project.
-Enter the database URL variable `MONGODB_URI` and the URL of your production database.
-The site updates as you enter values into the editor.
-
-![Glitch .env file editor for private data with production variables](glitch_env.png)
-
-> [!NOTE]
-> We didn't create this file.
-> It is intended for [private data](https://help.glitch.com/s/article/Adding-Private-Data) and was created automatically on import to Glitch.
-> It is never exported or copied.
-
-### Other configuration variables
-
-You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#set_node_env_to_production) in order to improve our performance and generate less-verbose error messages. We do this in the same file as we set the `MONGODB_URI` variable.
-
-Open `.env` and add a `NODE_ENV` variable with value `production` (see the screenshot in the previous section).
-
-The local library application is now set up and configured for production use.
-You can add data through the website interface, and it should work as it did during development (though with less debug information exposed for invalid pages).
-
-> [!NOTE]
-> If you only want to add some data for testing, you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
-
-### Debugging Express apps on Glitch
-
-Glitch allows effective debugging.
-Some of the things you can do are:
-
-- Select the logs button at the bottom of the editor view to see log information from your server, such as console log output.
-- Select the terminal button at the bottom of the editor view to open a terminal in the hosting environment.
-  You can use this to run commands and tools in the environment.
-  For example, you might use `node -v` to check the node version.
-- Interactive debugging in VS Code using the GLITCH extension for VS Code.
-
 ## Example: Hosting on Railway
 
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
-### Why Railway?
+> [!NOTE]
+> MDN has migrated this project from a number of hosting services that no longer offer free tiers.
+> We've decided to use Railway for the current hosting option, which has an inexpensive hobby tier.
+> Most services have similar deployment methods, so the instructions below should help you publish your project on the platform of your choice.
 
-> [!WARNING]
-> Railway no longer has a completely free starter tier.
-> We've kept these instructions because Railway has some great features, and will be a better option for some users.
+### Why Railway?
 
 Railway is an attractive hosting option for several reasons:
 
@@ -622,6 +476,7 @@ Railway is an attractive hosting option for several reasons:
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.com/) is clear and complete.
+- It has a comparably inexpensive [Hobby Tier](https://railway.com/pricing).
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
 You should take the time to determine if Railway is [suitable for your own website](#choosing_a_hosting_provider).

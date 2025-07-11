@@ -2,9 +2,8 @@
 title: A typical HTTP session
 slug: Web/HTTP/Guides/Session
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:
 

@@ -4,9 +4,8 @@ short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatRange()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a
 date range in the most concise way based on the locales and

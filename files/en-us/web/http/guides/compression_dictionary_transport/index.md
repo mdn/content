@@ -14,9 +14,10 @@ browser-compat:
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
 spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 
@@ -114,7 +115,7 @@ If the response is cacheable, it must include a {{HTTPHeader("Vary")}} header to
 Vary: accept-encoding, available-dictionary
 ```
 
-An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the diction by the hash:
+An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the dictionary by the hash:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"

@@ -59,7 +59,7 @@ _No change._
 
 #### IndexedDB
 
-- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
+- A new feature called locale-aware sorting has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
 
 #### Service Workers
 

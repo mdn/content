@@ -220,7 +220,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("text-shadow")}} property now caps the blur radius to 300px for sanity and performance reasons.
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
-- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/@media/-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 - Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
@@ -229,7 +229,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The developing WebGL standard is now supported by Firefox.
 - [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
-- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
+- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats/Containers#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
@@ -265,16 +265,16 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 | -------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, `<blink>`, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
 | [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `HTMLWBRElement`                                         | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Miscellaneous DOM changes
 
 - The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - {{HTMLElement("script")}} elements created using {{domxref("Document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("File")}} objects now offer a `url` property.
-- [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
+- [`FormData`](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) support for `XMLHttpRequest`.
 - The {{domxref("HTMLElement.isContentEditable")}} property has been implemented.
-- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute", "afterscriptexecute")}} events are fired before and after a script element executes.
+- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute_event", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute_event", "afterscriptexecute")}} events are fired before and after a script element executes.
 - Added the `mozSourceNode` property to the {{domxref("DataTransfer")}} object.
 - Added the {{domxref("Selection.modify()")}} method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
@@ -321,7 +321,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 
 ## Changes for Mozilla and add-on developers
 
-For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en-US/docs/Extensions/Updating_extensions_for_Firefox_4). There are several key changes that break compatibility with existing add-ons, so be sure to read that article.
+For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en-US/docs/Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4). There are several key changes that break compatibility with existing add-ons, so be sure to read that article.
 
 If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US/docs/Theme_changes_in_Firefox_4) to understand some critical changes you'll need to be aware of.
 
@@ -331,7 +331,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
   - : The `Services.jsm` code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.
 - [JS-ctypes API](/en-US/docs/JavaScript_code_modules/ctypes.jsm)
   - : The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.
-- [Add-ons Manager](/en-US/docs/Addons/Add-on_Manager)
+- [Add-ons Manager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/index.html)
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
 - [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
   - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
@@ -488,7 +488,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Default plugin removed
   - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See [Firefox bug 533891](https://bugzil.la/533891).
 - Extension Manager replaced by Addon Manager
-  - : `nsIExtensionManager` has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
+  - : `nsIExtensionManager` has been replaced by [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
 - Child HWNDs no longer used
   - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes

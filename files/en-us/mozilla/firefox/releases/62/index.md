@@ -44,7 +44,7 @@ _No changes._
 
 #### Removals
 
-- All [XUL `display` values](/en-US/docs/Web/CSS/display#xul_values) with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
+- All XUL `display` values with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
 
 ### SVG
 
@@ -106,7 +106,7 @@ _No changes._
 
 #### Removals
 
-- The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ([Firefox bug 1302449](https://bugzil.la/1302449)).
+- The deprecated CSP `referrer` directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ([Firefox bug 1302449](https://bugzil.la/1302449)).
 
 ### Security
 
@@ -131,7 +131,7 @@ _No changes._
 
 #### Bug fixes
 
-- `WebDriver:ExecuteScript` caused cyclic reference error for [WebElement](/en-US/docs/Web/WebDriver/WebElement) collections ([Firefox bug 1447977](https://bugzil.la/1447977)).
+- `WebDriver:ExecuteScript` caused cyclic reference error for [WebElement](/en-US/docs/Web/WebDriver/Reference/WebElement) collections ([Firefox bug 1447977](https://bugzil.la/1447977)).
 - Dispatching a `pointerMove` or `pause` action primitive could cause a hang, and the command to never send a reply ([Firefox bug 1467743](https://bugzil.la/1467743), [Firefox bug 1447449](https://bugzil.la/1447449)).
 
 ### Other

@@ -40,7 +40,7 @@ Several changes have been made that affect add-ons and applications that include
 
 The overhauled Add-on Manager is implemented as a tab instead of in a separate window. Among the changes that affect your browser from a user experience perspective is that your add-on's icon can be 64x64 pixels now instead of 32x32. While 32x32 pixel icons still work, obviously your add-on will look better if it provides a 64x64 pixel icon instead. Fortunately, 64x64 icons are backward compatible and scale down well, so you can just switch instead of needing both sizes.
 
-In addition, the back-end of the Add-on Manager was redesigned. The `nsIExtensionManager` interface is gone, as is the old RDF-based storage it used. Add-on metadata is now stored in an SQLite database, and the Add-on Manager is now a [JavaScript code module](/en-US/docs/JavaScript_code_modules) called [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
+In addition, the back-end of the Add-on Manager was redesigned. The `nsIExtensionManager` interface is gone, as is the old RDF-based storage it used. Add-on metadata is now stored in an SQLite database, and the Add-on Manager is now a [JavaScript code module](/en-US/docs/JavaScript_code_modules) called [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
 
 A key difference with the new API is that requesting add-on metadata is now asynchronous instead of synchronous; this applies to add-ons using FUEL as well, so all add-ons that request metadata about add-ons will need to be updated.
 
@@ -72,7 +72,7 @@ If your extension contains any of the following then you will need to include `<
 - `dictionaries/`
 - Window icons (might get [fixed](https://bugzil.la/595462))
 
-If your extension code accesses other files that you have packaged in the XPI then you will either need to include `<em:unpack>` in the install.rdf or you may be able to support packed installation by making some changes to your code. Any code that used getInstallLocation() and nsIFile will either need em:unpack or needs to be changed. You can use the method [`Addon.getResourceURI()`](/en-US/docs/Addons/Add-on_Manager/Addon#getResourceURI%28%29), it will return an `nsIURI` pointing to the requested file. If the extension is unpacked then it will be a `file://` URI. If the extension is packed then it will be a `jar://` URI. You can open streams to these URIs by opening a channel using the `nsIIOService` which will allow you to load the files contents without any unpacking.
+If your extension code accesses other files that you have packaged in the XPI then you will either need to include `<em:unpack>` in the install.rdf or you may be able to support packed installation by making some changes to your code. Any code that used getInstallLocation() and nsIFile will either need em:unpack or needs to be changed. You can use the method `Addon.getResourceURI()`, it will return an `nsIURI` pointing to the requested file. If the extension is unpacked then it will be a `file://` URI. If the extension is packed then it will be a `jar://` URI. You can open streams to these URIs by opening a channel using the `nsIIOService` which will allow you to load the files contents without any unpacking.
 
 ## Child HWNDs have been removed
 

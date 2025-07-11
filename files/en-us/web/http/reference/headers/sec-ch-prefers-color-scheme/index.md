@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-Prefers-Color-Scheme`** {{Glossary("request header")}} is a [media feature client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_preference_media_features_client_hints) which provides the user's preference for light or dark color themes.
 A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
