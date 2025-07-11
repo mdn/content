@@ -3,9 +3,8 @@ title: "<progress>: The Progress Indicator element"
 slug: Web/HTML/Reference/Elements/progress
 page-type: html-element
 browser-compat: html.elements.progress
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
 

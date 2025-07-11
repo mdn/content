@@ -4,9 +4,8 @@ short-title: lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.lastIndexOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`lastIndexOf()`** method of {{jsxref("TypedArray")}} instances returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at `fromIndex`. This method has the same algorithm as {{jsxref("Array.prototype.lastIndexOf()")}}.
 

@@ -4,9 +4,8 @@ short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Proxy.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 

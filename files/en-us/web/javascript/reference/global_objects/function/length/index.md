@@ -4,9 +4,8 @@ short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Function.length
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 

@@ -4,9 +4,8 @@ short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.ListFormat.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.ListFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in list formatting without having to fall back to the runtime's default locale.
 

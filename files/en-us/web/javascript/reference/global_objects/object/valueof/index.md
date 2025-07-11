@@ -4,9 +4,8 @@ short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Object")}} instances converts the `this` value [to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) logic.
 

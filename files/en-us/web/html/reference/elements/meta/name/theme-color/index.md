@@ -4,9 +4,8 @@ short-title: theme-color
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.theme-color
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`theme-color`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface.
 If specified, you define a theme color using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a CSS {{cssxref("&lt;color&gt;")}} value.

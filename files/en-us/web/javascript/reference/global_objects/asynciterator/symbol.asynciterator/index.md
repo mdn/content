@@ -4,9 +4,8 @@ short-title: "[Symbol.asyncIterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncIterator.@@asyncIterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.asyncIterator]()`** method of {{jsxref("AsyncIterator")}} instances implements the [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) and allows built-in async iterators to be consumed by most syntaxes expecting async iterables, such as [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the async iterator object itself.
 

@@ -4,9 +4,8 @@ short-title: WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`WeakSet()`** constructor creates {{jsxref("WeakSet")}} objects.
 
