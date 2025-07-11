@@ -71,7 +71,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("Navigator.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```js
   const constraints = {
@@ -110,7 +110,7 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 
 - Added [`exclude`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) option to `PageMod`.
 - Added [`anonymous`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) option to `Request`.
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/) now includes a Console and a Scratchpad.
 
 #### Details
 

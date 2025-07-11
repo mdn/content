@@ -3,9 +3,8 @@ title: "<time>: The (Date) Time element"
 slug: Web/HTML/Reference/Elements/time
 page-type: html-element
 browser-compat: html.elements.time
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 

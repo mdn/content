@@ -4,9 +4,8 @@ short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLastIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLastIndex()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.

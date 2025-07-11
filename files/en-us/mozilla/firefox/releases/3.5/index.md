@@ -40,7 +40,7 @@ sidebar: firefox
   - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
 - `-moz-box-shadow`, `-moz-border-image`, `-moz-column-rule`, `-moz-column-rule-width`, `-moz-column-rule-style`, `-moz-column-rule-color`
   - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
-- The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
+- The `-moz-nativehyperlinktext` color value
   - : This new color value represents the user's system's default hyperlink color.
 - The `-moz-window-shadow` property and the `:-moz-system-metric(mac-graphite-theme)` pseudo-class
   - : These new CSS features were added to facilitate theming.

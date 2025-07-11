@@ -4,9 +4,8 @@ short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 page-type: html-attribute
 browser-compat: html.global_attributes.inert
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`inert`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating that the element and all of its flat tree descendants become _inert_. Modal {{htmlelement("dialog")}}s generated with [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) escape inertness, meaning that they don't inherit inertness from their ancestors, but can only be made inert by having the `inert` attribute explicitly set on themselves.
 

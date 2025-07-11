@@ -4,9 +4,8 @@ short-title: isSupersetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSupersetOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isSupersetOf()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if all elements of the given set are in this set.
 

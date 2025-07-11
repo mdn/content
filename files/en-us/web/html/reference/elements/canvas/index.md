@@ -3,9 +3,8 @@ title: "<canvas>: The Graphics Canvas element"
 slug: Web/HTML/Reference/Elements/canvas
 page-type: html-element
 browser-compat: html.elements.canvas
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 

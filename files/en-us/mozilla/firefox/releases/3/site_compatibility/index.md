@@ -35,7 +35,7 @@ In Gecko 1.8, the `preventBubble` method existed on events to prevent events fro
 
 ### A few other old event APIs are no longer supported
 
-[`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents), [`window.releaseEvents`](/en-US/docs/Web/API/Window/releaseEvents) and [`window.routeEvent`](/en-US/docs/Web/API/Window/routeEvent) are now considered deprecated since Gecko 1.9.
+[`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents), [`window.releaseEvents`](/en-US/docs/Web/API/Window/releaseEvents) and `window.routeEvent` are now considered deprecated since Gecko 1.9.
 
 ## DOM
 

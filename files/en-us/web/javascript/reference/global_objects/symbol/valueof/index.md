@@ -4,9 +4,8 @@ short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 

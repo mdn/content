@@ -4,9 +4,8 @@ short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
 page-type: html-attribute
 browser-compat: html.global_attributes.is
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 > [!NOTE]
 > [Safari does not plan to support custom built-in elements](https://github.com/WebKit/standards-positions/issues/97) and [browser vendors are exploring alternative solutions to customizing built-ins](https://github.com/WICG/webcomponents/issues/1029). Check the [browser compatibility](#browser_compatibility) section for support information.

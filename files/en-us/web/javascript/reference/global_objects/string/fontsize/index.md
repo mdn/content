@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.fontsize
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`fontsize()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes this string to be displayed in the specified font size.
 

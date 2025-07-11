@@ -6,9 +6,10 @@ page-type: javascript-static-accessor-property
 status:
   - deprecated
 browser-compat: javascript.builtins.RegExp.input
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
