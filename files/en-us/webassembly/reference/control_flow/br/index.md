@@ -7,6 +7,8 @@ sidebar: webassemblysidebar
 
 The **`br`** statement branches to a [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or an [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statement.
 
+Other variants of `br` include [`br_if`](/en-us/WebAssembly/Reference/Control_flow/br_if) and [`br_table`](/en-us/WebAssembly/Reference/Control_flow/br_table).
+
 {{InteractiveExample("Wat Demo: br", "tabbed-taller")}}
 
 ```wat interactive-example
