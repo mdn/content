@@ -147,7 +147,7 @@ const para2 = document.createElement("p");
 const finalNumberCheck =
   isNaN(finalNumber) === false
     ? "finalNumber is a number type. Well done!"
-    : `Ooops! finalNumber is not a number.`;
+    : `Oops! finalNumber is not a number.`;
 para2.textContent = finalNumberCheck;
 section.appendChild(para1);
 section.appendChild(para2);
