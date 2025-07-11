@@ -249,7 +249,7 @@ renderInput();
 renderTodoList();
 ```
 
-{{EmbedLiveSample("the_verbosity_of_dom_change", "", "400", , , , "allow-forms")}}
+{{EmbedLiveSample("the_verbosity_of_dom_change", "", "400", , , , , "allow-forms")}}
 
 Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI at the right time and in the right way.
 
