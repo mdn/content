@@ -16,7 +16,7 @@ This is the same object returned by {{domxref("ServiceWorkerRegistration.active"
 
 A {{domxref("ServiceWorker")}} object if its state is `activating` or `activated`, or `null` if there is no active worker.
 
-The property also returns `null` if the request is a force refresh (<kbd>Shit</kbd> + refresh)
+The property also returns `null` if the request is a force refresh (<kbd>Shift</kbd> + refresh)
 
 ## Examples
 
