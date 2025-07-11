@@ -156,7 +156,9 @@ The keyword values can be grouped into six value categories.
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
     - `flow-root`
-      - : The element generates a block box that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
+      - : Depending on its display property, the element generates either a block box (with block flow-root) or an inline-level box (with inline flow-root). In both cases, it generates a block container that establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), defining where the formatting root lies.
+
+
     - `table`
       - : These elements behave like HTML {{HTMLElement("table")}} elements. It defines a block-level box.
     - `flex`
