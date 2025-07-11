@@ -34,7 +34,7 @@ This example creates a basic area that you can drop files into and displays some
 #output {
   min-height: 200px;
   border: 1px solid black;
-	padding: 1em;
+  padding: 1em;
 }
 ```
 
