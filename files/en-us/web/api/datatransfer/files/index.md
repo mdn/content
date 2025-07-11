@@ -17,15 +17,52 @@ This feature can be used to drag files from a user's desktop to the browser.
 
 ## Value
 
-A {{domxref("FileList","list")}} of the files in a drag operation, one list item for
+A {{domxref("FileList")}} of the files in a drag operation, one list item for
 each file in the operation. If the drag operation had no files, the list is empty.
 
 ## Examples
 
-There are two live examples of this interface:
+### Reading the files list
 
-- Firefox only: <https://jsfiddle.net/9C2EF/>
-- All browsers: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
+This example creates a basic area that you can drop files into and displays some metadata.
+
+```html
+<div id="output">Drop files here from your file system</div>
+```
+
+```css
+#output {
+  min-height: 200px;
+  white-space: pre;
+  border: 1px solid black;
+}
+```
+
+```js
+const output = document.getElementById("output");
+
+output.addEventListener("dragenter", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  output.textContent = "";
+});
+output.addEventListener("dragover", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+});
+output.addEventListener("drop", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  const files = event.dataTransfer.files;
+  log(`File Count: ${files.length}\n`);
+
+  for (const file of files) {
+    log(`  File ${i}: <${file}> ${file.name} ${file.size}\n`);
+  }
+});
+```
+
+{{EmbedLiveSample("reading_the_files_list", "", "300")}}
 
 ## Specifications
 
