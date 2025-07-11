@@ -112,7 +112,7 @@ The default allowlist for both directives is `self`, which lets any content with
 
 These features are [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), meaning that making sure they are not disallowed via a `Permissions-Policy` is not the only consideration. If they are not disallowed via a `Permissions-Policy`, the user will still be asked for permission to use the listed features via a browser prompt, which uses the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required, that is, the features must be invoked inside an appropriate event handler function. For example, the user must click a button to use page zooming functionality.
+In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required. See the individual method pages for more details.
 
 ## Specifications
 

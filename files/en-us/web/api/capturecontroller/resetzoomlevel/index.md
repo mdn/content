@@ -12,7 +12,7 @@ browser-compat: api.CaptureController.resetZoomLevel
 
 The {{domxref("CaptureController")}} interface's **`resetZoomLevel()`** method resets the captured display surface's zoom to its initial level, which is `100`.
 
-The `resetZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll and zoom tabs. If the relevant permission is already `"granted"`, permission gathering is not needed.
+The `resetZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user denies permission the zoom level cannot be changed even with transient activation.
 
 ## Syntax
 

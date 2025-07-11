@@ -12,7 +12,7 @@ browser-compat: api.CaptureController.increaseZoomLevel
 
 The {{domxref("CaptureController")}} interface's **`increaseZoomLevel()`** method increases the captured display surface's zoom level by one increment.
 
-The `increaseZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll and zoom tabs. If the relevant permission is already `"granted"`, permission gathering is not needed.
+The `increaseZoomLevel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user denies permission the zoom level cannot be changed even with transient activation.
 
 ## Syntax
 

@@ -12,7 +12,7 @@ browser-compat: api.CaptureController.forwardWheel
 
 The {{domxref("CaptureController")}} interface's **`forwardWheel()`** method starts forwarding {{domxref("Element.wheel_event", "wheel")}} events fired on the referenced element to the viewport of an associated captured display surface.
 
-The `forwardWheel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). Specifically, the only events that can successfully invoke it are `click` and `input`. In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll and zoom tabs. If the relevant permission is already `"granted"`, transient activation and permission gathering are not needed.
+The `forwardWheel()` method must be invoked via [transient activation](/en-US/docs/Glossary/Transient_activation). Specifically, the only events that can successfully invoke it are `click` and `input`. In addition, the user is asked for permission to share tabs when screen capture is first attempted; if the user grants permission, this also includes permission to scroll captured tabs. If the relevant permission is already `"granted"`, transient activation is not needed.
 
 ## Syntax
 
