@@ -68,7 +68,7 @@ The following interfaces are present in the Compute Pressure API and the API sur
 - {{domxref("PressureRecord")}}
   - : Describes the pressure trend at a specific moment of transition.
 
-### Permission-Policy directive
+### Permissions-Policy directive
 
 - {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} directive
   - : Controls access to the Compute Pressure API.

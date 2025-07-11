@@ -2,9 +2,8 @@
 title: Client-side rendering (CSR)
 slug: Glossary/CSR
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Client-side rendering** (CSR) refers to the practice of generating HTML content using JavaScript in the browser. CSR is opposed to {{glossary("SSR", "server-side rendering")}}, where the server generates the HTML content. Both techniques are not mutually exclusive and can be used together in the same application.
 

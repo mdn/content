@@ -2,9 +2,8 @@
 title: Content header
 slug: Glossary/Content_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Content headers** are the group of [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) that describe the content of the body of an HTTP message, after any message framing in the body has been removed.
 They specifically describe the properties of the {{Glossary("HTTP Content", "message content")}} that is conveyed in a particular message _as it is transported_, such as the length of the content, the transport encoding, which part of the resource is carried in the data (for multi-part messages), and message integrity checks.

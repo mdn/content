@@ -2,9 +2,8 @@
 title: Debounce
 slug: Glossary/Debounce
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Debouncing**, in the context of programming, means to discard operations that occur too close together during a specific interval, and consolidate them into a single invocation.
 

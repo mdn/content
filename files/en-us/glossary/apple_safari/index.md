@@ -2,9 +2,8 @@
 title: Apple Safari
 slug: Glossary/Apple_Safari
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 [**Safari**](https://www.apple.com/safari/) is a {{Glossary("Browser","web browser")}} developed by Apple and is built into Apple's operating systems, including macOS (for Mac computers), iPadOS (for iPad tablets), iOS (for iPhones), and visionOS (for augmented reality devices like the Apple Vision Pro).
 

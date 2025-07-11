@@ -2,9 +2,8 @@
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
