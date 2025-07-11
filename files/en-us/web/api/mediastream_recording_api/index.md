@@ -126,16 +126,15 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 ```html
 <button id="start">Start</button>
 <button id="stop">Stop</button>
-<video id="player" src="" autoplay></video>
+<video id="player" src="" autoplay controls></video>
 ```
 
 ```js
 const record = document.getElementById("start");
 const stop = document.getElementById("stop");
 const video = document.getElementById("player");
-video.setAttribute("controls", "");
 
-const chunks = [];
+let chunks = [];
 
 const constraints = { video: true };
 
