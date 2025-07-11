@@ -155,13 +155,12 @@ If you are curious, we have a full running demo below. You can click the "Play" 
 ```html hidden
 <h1>TodoMatic</h1>
 <form id="todo-form">
-  <label for="todo-input">
-    What needs to be done?
-  </label>
-  <input type="text" id="todo-input" name="mozTodoDemoItemName" autocomplete="on" />
-  <button type="submit">
-    Add
-  </button>
+  <label for="todo-input">What needs to be done?</label>
+  <input
+    type="text"
+    id="todo-input"
+    autocomplete="on" />
+  <button type="submit">Add</button>
 </form>
 <ul id="todo-list"></ul>
 ```
@@ -171,7 +170,6 @@ If you are curious, we have a full running demo below. You can click the "Play" 
   margin-top: 0.4rem;
 }
 
-
 html {
   font-size: 62.5%;
 }
@@ -179,8 +177,9 @@ html {
 body {
   font-size: 2rem;
   line-height: 1.25;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", Roboto, Helvetica, Arial, sans-serif;
   color: hsl(0 0 0.13);
 
   width: 95%;
