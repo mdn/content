@@ -3,9 +3,8 @@ title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_button
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`button`** are rendered as push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
 

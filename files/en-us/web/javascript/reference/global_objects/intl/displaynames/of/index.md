@@ -4,9 +4,8 @@ short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DisplayNames.of
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`of()`** method of {{jsxref("Intl.DisplayNames")}} instances receives a code and returns a string based on the locale and options provided when instantiating this `Intl.DisplayNames` object.
 

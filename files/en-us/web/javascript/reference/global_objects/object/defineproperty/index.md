@@ -4,9 +4,8 @@ short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.defineProperty()`** static method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
 

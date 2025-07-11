@@ -4,9 +4,8 @@ short-title: xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.xor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.xor()`** static
 method computes a bitwise XOR with a given value at a given position in the array, and

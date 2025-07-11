@@ -4,9 +4,8 @@ short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reverse
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
 

@@ -46,7 +46,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Full Screen API
 
 - Support for {{ domxref("Document/fullscreenEnabled", "document.fullscreenEnabled") }} has been added.
-- The new {{ cssxref(":-moz-full-screen-ancestor") }} property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
+- The new `:-moz-full-screen-ancestor` property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
 
 #### Battery API
 
@@ -115,7 +115,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ## Changes for Mozilla and add-on developers
 
-For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10).
+For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Releases/10/Updating_add-ons).
 
 > [!NOTE]
 > The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.

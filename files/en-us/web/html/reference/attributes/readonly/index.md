@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.readonly
   - html.elements.textarea.readonly
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user can not edit the control.
 
