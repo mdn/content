@@ -169,7 +169,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
 });
 ```
 
-{{EmbedLiveSample("Basic video recording", "", "400")}}
+{{EmbedLiveSample("Basic video recording", , "400", , , , "camera *")}}
 
 ## Specifications
 
