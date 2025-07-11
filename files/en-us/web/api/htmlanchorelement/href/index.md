@@ -32,7 +32,7 @@ console.log(anchor.href); // "https://developer.mozilla.org/en-US/docs/"
 anchor.href = "";
 console.log(anchor.href); // "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/href"
 
-anchor.removeAttribute('href');
+anchor.removeAttribute("href");
 // Getter is empty again due to removing attribute
 console.log(anchor.href); // ""
 ```
