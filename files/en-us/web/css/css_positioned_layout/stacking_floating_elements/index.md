@@ -2,9 +2,8 @@
 title: Stacking floating elements
 slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 For floating elements, the stacking order is a bit different. Floating elements are placed between non-positioned elements and positioned elements:
 

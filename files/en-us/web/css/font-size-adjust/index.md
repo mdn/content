@@ -3,9 +3,8 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 page-type: css-property
 browser-compat: css.properties.font-size-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property provides a way to modify the size of lowercase letters relative to the size of uppercase letters, which defines the overall {{cssxref("font-size")}}. This property is useful for situations where font fallback can occur.
 

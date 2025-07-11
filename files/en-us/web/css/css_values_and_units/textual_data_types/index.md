@@ -2,9 +2,8 @@
 title: Textual data types
 slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can include various data types depending on the property, such as a single keyword, integer, function, or a combination of different types; some values have units, while others do not. This guide provides an overview of the textual data types. Refer to the page for each value type for more detailed information.
 

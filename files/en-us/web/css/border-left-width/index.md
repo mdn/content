@@ -3,9 +3,8 @@ title: border-left-width
 slug: Web/CSS/border-left-width
 page-type: css-property
 browser-compat: css.properties.border-left-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.
 

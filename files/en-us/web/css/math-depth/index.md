@@ -3,9 +3,8 @@ title: math-depth
 slug: Web/CSS/math-depth
 page-type: css-property
 browser-compat: css.properties.math-depth
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`math-depth`** property describes a notion of _depth_ for each element of a mathematical formula, with respect to the top-level container of that formula. This is used to scale the computed value of the [font-size](/en-US/docs/Web/CSS/font-size) of elements when `font-size: math` is applied.
 

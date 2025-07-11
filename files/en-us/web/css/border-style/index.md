@@ -3,9 +3,8 @@ title: border-style
 slug: Web/CSS/border-style
 page-type: css-shorthand-property
 browser-compat: css.properties.border-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-style`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
 

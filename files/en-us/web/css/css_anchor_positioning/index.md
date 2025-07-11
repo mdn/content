@@ -3,9 +3,8 @@ title: CSS anchor positioning
 slug: Web/CSS/CSS_anchor_positioning
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-anchor-position-1/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS anchor positioning** module defines features that allow you to tether elements together. Certain elements are defined as **anchor elements**; **anchor-positioned elements** can then have their size and position set based on the size and location of the anchor elements to which they are bound.
 

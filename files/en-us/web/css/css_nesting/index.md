@@ -3,9 +3,8 @@ title: CSS nesting
 slug: Web/CSS/CSS_nesting
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-nesting-1/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS nesting** module defines a syntax for nesting selectors, providing the ability to nest one style rule inside another, with the selector of the child rule relative to the selector of the parent rule.
 

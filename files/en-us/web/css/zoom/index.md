@@ -3,9 +3,8 @@ title: zoom
 slug: Web/CSS/zoom
 page-type: css-property
 browser-compat: css.properties.zoom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element.
 {{cssxref("transform-function/scale", "transform: scale()")}} can be used as an alternative to this property.

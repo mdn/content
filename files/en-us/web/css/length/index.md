@@ -3,9 +3,8 @@ title: <length>
 slug: Web/CSS/length
 page-type: css-type
 browser-compat: css.types.length
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
 

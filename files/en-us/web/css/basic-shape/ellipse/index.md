@@ -3,9 +3,8 @@ title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
 page-type: css-function
 browser-compat: css.types.basic-shape.ellipse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
 

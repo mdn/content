@@ -3,9 +3,8 @@ title: Grids, logical values, and writing modes
 short-title: Logical values and writing modes
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 One of the most important features of CSS grid layout is the support for different writing modes built into the specification. In this guide, we look at this feature of CSS grid layout and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
