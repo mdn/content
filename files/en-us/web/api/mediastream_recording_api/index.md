@@ -159,7 +159,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
 
   mediaRecorder.addEventListener("stop", (e) => {
     console.log("onstop fired");
-    const blob = new Blob(chunks, { "type" : "video/ogv; codecs=opus" });
+    const blob = new Blob(chunks, { type: "video/ogv; codecs=opus" });
     video.src = window.URL.createObjectURL(blob);
   });
 
