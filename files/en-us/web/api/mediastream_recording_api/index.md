@@ -124,52 +124,56 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 ### Basic video recording
 
 ```html
-<button id="start">Start</button>
-<button id="stop">Stop</button>
+<button id="record-btn">Start</button>
 <video id="player" src="" autoplay controls></video>
 ```
 
 ```js
-const record = document.getElementById("start");
-const stop = document.getElementById("stop");
+const recordBtn = document.getElementById("record-btn");
 const video = document.getElementById("player");
 
 let chunks = [];
+let isRecording = false;
+let mediaRecorder = null;
 
 const constraints = { video: true };
 
-navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-  const mediaRecorder = new MediaRecorder(stream);
-
-  record.addEventListener("click", () => {
+recordBtn.addEventListener("click", async () => {
+  if (!isRecording) {
+    // Acquire a recorder on load
+    if (!mediaRecorder) {
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.addEventListener("dataavailable", () => {
+        console.log("data available");
+        chunks.push(e.data);
+      });
+    
+      mediaRecorder.addEventListener("stop", (e) => {
+        console.log("onstop fired");
+        const blob = new Blob(chunks, { type: "video/ogv; codecs=opus" });
+        video.src = window.URL.createObjectURL(blob);
+      });
+    
+      mediaRecorder.addEventListener("error", (e) => {
+        console.error("An error occured:", e);
+      });
+    }
+    isRecording = true;
+    recordBtn.textContent = "Stop";
     chunks = [];
     mediaRecorder.start();
     console.log("recorder started");
-  });
-
-  stop.addEventListener("click", () => {
+  } else {
+    isRecording = false;
+    recordBtn.textContent = "Start";
     mediaRecorder.stop();
     console.log("recorder stopped");
-  });
-
-  mediaRecorder.addEventListener("dataavailable", () => {
-    console.log("data available");
-    chunks.push(e.data);
-  });
-
-  mediaRecorder.addEventListener("stop", (e) => {
-    console.log("onstop fired");
-    const blob = new Blob(chunks, { type: "video/ogv; codecs=opus" });
-    video.src = window.URL.createObjectURL(blob);
-  });
-
-  mediaRecorder.addEventListener("error", (e) => {
-    console.error("An error occured:", e);
-  });
+  }
 });
 ```
 
-{{EmbedLiveSample("Basic video recording", , "400", , , , "camera *")}}
+{{EmbedLiveSample("Basic video recording", , "400", , , , "camera")}}
 
 ## Specifications
 
