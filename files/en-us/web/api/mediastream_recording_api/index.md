@@ -148,13 +148,11 @@ recordBtn.addEventListener("click", async () => {
         console.log("data available");
         chunks.push(e.data);
       });
-    
       mediaRecorder.addEventListener("stop", (e) => {
         console.log("onstop fired");
         const blob = new Blob(chunks, { type: "video/ogv; codecs=opus" });
         video.src = window.URL.createObjectURL(blob);
       });
-    
       mediaRecorder.addEventListener("error", (e) => {
         console.error("An error occured:", e);
       });
