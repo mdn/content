@@ -71,7 +71,6 @@ i32.const 1
         ;; 0 = jump to `block`; since item 0 in br_table is 1, it jumps up one level
         ;; 1 = jump to `if`; since item 1 in br_table is 2, it jumps up two levels
         ;; 2 = jump to `loop`; since item 2 in br_table is 0, it doesn't jump any levels (causing an infinite loop)
-        
         ;; Create a br_table with the targets
         (br_table 1 2 0)
       )
