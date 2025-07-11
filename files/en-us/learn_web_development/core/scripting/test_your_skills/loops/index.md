@@ -210,7 +210,7 @@ Your finished JavaScript should look something like this:
 
 do {
   if (isPrime(i)) {
-    para.textContent += `${i} `;
+    para.textContent += `${i}, `;
   }
   i--;
 } while (i > 1);
