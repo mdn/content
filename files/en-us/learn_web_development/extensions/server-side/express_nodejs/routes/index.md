@@ -135,23 +135,9 @@ router.post("/about", (req, res) => {
 
 The route paths define the endpoints at which requests can be made. The examples we've seen so far have just been strings, and are used exactly as written: '/', '/about', '/book', '/any-random.path'.
 
-Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched. The syntax is listed below (note that the hyphen (`-`) and the dot (`.`) are interpreted literally by string-based paths):
-
-- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g., a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
-- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g., a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
-- `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g., `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
-
-The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
-
-```js
-app.get(/.*fish$/, (req, res) => {
-  // …
-});
-```
-
-> [!NOTE]
-> Most of our routes for the LocalLibrary will use strings and not regular expressions. We'll also use route parameters as discussed in the next section.
+Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched.
+Most of our routes for the LocalLibrary will use strings and not regular expressions
+We'll also use route parameters as discussed in the next section.
 
 ### Route parameters
 
@@ -167,12 +153,58 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 });
 ```
 
-The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
-
 > [!NOTE]
 > The URL _/book/create_ will be matched by a route like `/book/:bookId` (because `:bookId` is a placeholder for _any_ string, therefore `create` matches). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs specifically, their route handler must be defined before your `/book/:bookId` route.
 
-That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+The names of route parameters can be any valid JavaScript identifier like `bookId` above, starting with a letter, `_` or `$`, digits after the first character, and no hyphens or spaces.
+You can also use names that aren't valid JavaScript identifiers, including spaces, hyphens, emoticons, or any other character, but you need to define them with a quoted string and access them using bracket notation.
+For example:
+
+```js
+app.get('/users/:"user id"/books/:"book-id"', (req, res) => {
+  // Access quoted param using bracket notation
+  const user = req.params["user id"];
+  const book = req.params["book-id"];
+  res.send({ user, book });
+});
+```
+
+### Wildcards
+
+Wildcard parameters match one or more characters across multiple segments, returning each segment as a value in an array.
+They are defined the same way as regular parameters, but are prefixed with an asterisk.
+
+So for example, consider the URL `http://localhost:3000/users/34/books/8989`, we can extract all the information after `users/` with the `example` wildcard:
+
+```js
+app.get("/users/*example", (req, res) => {
+  // req.params would contain { "example": ["34", "books", "8989"]}
+  res.send(req.params);
+});
+```
+
+### Optional parts
+
+Braces can be used to define parts of the path that are optional.
+For for example, below we match a filename with any extension (or none).
+
+```js
+app.get("/file/:filename{.:ext}", (req, res) => {
+  // Given URL: http://localhost:3000/file/somefile.md`
+  // req.params would contain { "filename": "somefile", "ext": "md"}
+  res.send(req.params);
+});
+```
+
+### Reserved characters
+
+The following characters are reserved:`(()[]?+!)`.
+If you want to use them you will have to first escape them with the backslash (`\`).
+
+You also can't use the pipe character (`|`) in a regular expression.
+
+That's all you need to get started with routes.
+If needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
 ### Handling errors in the route functions
 
