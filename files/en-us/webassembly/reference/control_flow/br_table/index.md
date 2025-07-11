@@ -5,15 +5,15 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`br_table`** statement branches to different loops, blocks, or ifs, based on an argument.
+The **`br_table`** statement branches to different [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statements, based on an argument.
 
-You can think of if like a `switch` statement in some sense.
+In some ways, `br_table` is similar to the [`switch`](/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement, branching to different code blocks depending on the argument.
 
 {{InteractiveExample("Wat Demo: br_table", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  ;; import the browser console object, you'll need to pass this in from JavaScript
+  ;; Import the browser console object, which you'll need to pass in from JavaScript
   (import "console" "log" (func $log (param i32)))
 
   (func
@@ -58,13 +58,13 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## Syntax
 
 ```wat
-;; add true to the top of the stack so that the if is exectuted.
+;; Add true to the top of the stack so that the `if` statement is executed.
 i32.const 1
 (if ;; 2
   (then
     (block ;; 1
       (loop ;; 0
-        ;; add variable to top of the stack
+        ;; Add a variable to the top of the stack
         i32.const 2
 
         ;; 0 = jump to the block, item 0 in br_table is 1 so we jump to 1 level.

@@ -5,32 +5,32 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`br_if`** statement branches to a loop, block, or if, based on a boolean (0 or 1) condition.
+The **`br_if`** statement branches to a [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or an [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statement, based on a boolean (`0` or `1`) condition.
 
 {{InteractiveExample("Wat Demo: br_if", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  ;; import the browser console object, you'll need to pass this in from JavaScript
+  ;; Import the browser console object, which you'll need to pass in from JavaScript
   (import "console" "log" (func $log (param i32)))
 
-  ;; create a global variable and initialize it to 0
+  ;; Create a global variable and initialize it to 0
   (global $i (mut i32) (i32.const 0))
 
   (func
     (loop $my_loop
 
-      ;; add one to $i
+      ;; Add 1 to $i
       global.get $i
       i32.const 1
       i32.add
       global.set $i
 
-      ;; log the current value of $i
+      ;; Log the current value of $i
       global.get $i
       call $log
 
-      ;; if $i is less than 10 branch to loop
+      ;; If $i is less than 10, branch to loop
       global.get $i
       i32.const 10
       i32.lt_s
@@ -39,7 +39,7 @@ The **`br_if`** statement branches to a loop, block, or if, based on a boolean (
     )
   )
 
-  (start 1) ;; run the first function automatically
+  (start 1) ;; Run the first function automatically
 )
 ```
 

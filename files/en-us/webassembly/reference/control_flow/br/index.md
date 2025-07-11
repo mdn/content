@@ -5,23 +5,23 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`br`** statement branches to a loop, block, or if.
+The **`br`** statement branches to a [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or an [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statement.
 
 {{InteractiveExample("Wat Demo: br", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  ;; import the browser console object, you'll need to pass this in from JavaScript
+  ;; Import the browser console object, which you'll need to pass in from JavaScript
   (import "console" "log" (func $log (param i32)))
 
   (func
     (block $my_block
 
-      ;; break out fo the block.
-      ;; if this is removed the code will throw an error when it reaches `unreachable`
+      ;; Break out of the block
+      ;; If this is removed, the code will throw an error when it reaches `unreachable`
       br $my_block
 
-      ;; we'll never reach this point since we broke out of the block
+      ;; The code will never reach this point since we broke out of the block
       unreachable
 
     )
