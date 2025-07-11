@@ -1,5 +1,5 @@
 ---
-title: Flex Container
+title: Flex container
 slug: Glossary/Flex_Container
 page-type: glossary-definition
 ---

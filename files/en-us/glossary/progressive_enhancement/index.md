@@ -1,5 +1,5 @@
 ---
-title: Progressive Enhancement
+title: Progressive enhancement
 slug: Glossary/Progressive_Enhancement
 page-type: glossary-definition
 ---
