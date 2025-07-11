@@ -42,7 +42,7 @@ This example creates a basic area that you can drop files into and displays some
 const output = document.getElementById("output");
 
 function log(text) {
-  output.innerText = text;
+  output.innerText += text;
 }
 
 output.addEventListener("dragenter", (e) => {
