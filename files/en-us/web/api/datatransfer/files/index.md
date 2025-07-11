@@ -27,19 +27,23 @@ each file in the operation. If the drag operation had no files, the list is empt
 This example creates a basic area that you can drop files into and displays some metadata.
 
 ```html
-<div id="output">Drop files here from your file system</div>
+<pre id="output">Drop files here from your file system.</pre>
 ```
 
 ```css
 #output {
   min-height: 200px;
-  white-space: pre;
   border: 1px solid black;
+	padding: 1em;
 }
 ```
 
 ```js
 const output = document.getElementById("output");
+
+function log(text) {
+  output.innerText = text;
+}
 
 output.addEventListener("dragenter", (e) => {
   e.stopPropagation();
@@ -57,7 +61,7 @@ output.addEventListener("drop", (e) => {
   log(`File Count: ${files.length}\n`);
 
   for (const file of files) {
-    log(`  File ${i}: <${file}> ${file.name} ${file.size}\n`);
+    log(`  File: ${file}, ${file.name}, ${file.size} bytes\n`);
   }
 });
 ```
