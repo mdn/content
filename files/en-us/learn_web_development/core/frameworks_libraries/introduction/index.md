@@ -156,10 +156,7 @@ If you are curious, we have a full running demo below. You can click the "Play" 
 <h1>TodoMatic</h1>
 <form id="todo-form">
   <label for="todo-input">What needs to be done?</label>
-  <input
-    type="text"
-    id="todo-input"
-    autocomplete="on" />
+  <input type="text" id="todo-input" autocomplete="on" />
   <button type="submit">Add</button>
 </form>
 <ul id="todo-list"></ul>
