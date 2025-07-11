@@ -2,8 +2,6 @@
 title: attributeType
 slug: Web/SVG/Reference/Attribute/attributeType
 page-type: svg-attribute
-status:
-  - deprecated
 browser-compat: svg.elements.animate.attributeType
 sidebar: svgref
 ---
