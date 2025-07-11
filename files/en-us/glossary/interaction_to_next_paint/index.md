@@ -2,9 +2,8 @@
 title: Interaction to Next Paint (INP)
 slug: Glossary/Interaction_to_next_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Interaction to Next Paint** (INP) measures the responsiveness of a website to user interactions (for example, when they click a link, tap on a button, or use a custom, JavaScript-powered control).
 

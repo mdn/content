@@ -2,9 +2,8 @@
 title: Hash function
 slug: Glossary/Hash_function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **hash function** is a function that takes a variable-length input and produces a fixed-length output, also called a _digest_ (or just a "hash"). Hash functions should be quick to compute, and different inputs should as far as possible produce different outputs (this is called _collision-resistance_).
 

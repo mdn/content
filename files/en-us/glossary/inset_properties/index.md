@@ -2,9 +2,8 @@
 title: Inset properties
 slug: Glossary/Inset_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, **inset properties** control positioned elements' location by specifying offsets from the elements' default positions. There are physical, logical, and shorthand inset properties.
 
