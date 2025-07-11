@@ -102,7 +102,7 @@ _No change._
 
 Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects).
 
-A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to `Addon` instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
