@@ -69,7 +69,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - URIs always sent as UTF8
   - : URIs are now always sent to the server as UTF8, regardless of the linking page's encoding. This fixes images and links on sites with non-ASCII filenames.
 - XForms support
-  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](/en-US/docs/Archive/Web/XForms).
+  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www-archive.mozilla.org/projects/xforms/).
 
 ### New Extension Developer Features
 
