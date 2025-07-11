@@ -51,13 +51,13 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## Syntax
 
 ```wat
-;; label the loop so that it can be branched to
+;; Label the loop to enable branching to it later
 (loop $my_loop
 
-  ;; add 1 (true) to the stack
+  ;; Add 1 (true) to the stack
   i32.const 1
 
-  ;; branch to the loop if the top of the stack is 1
+  ;; Branch to the loop if the top of the stack is 1
   br_if $my_loop
 
 )

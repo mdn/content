@@ -17,28 +17,29 @@ In some ways, `br_table` is similar to the [`switch`](/en-US/docs/Web/JavaScript
   (import "console" "log" (func $log (param i32)))
 
   (func
-    ;; label each block for easy reference.
-    ;; (could also be referenced by index)
+    ;; Label each block for easy reference
+    ;; (they can also be referenced by their index)
     (block $outer_block
       (block $middle_block
         (block $inner_block
 
-          ;; choose which block to break out of based on their order in the br_table
+          ;; Choose which block to break out of based on their order in the br_table
           ;; 0 is `$inner_block`, 1 is `$outer_block`, 2 is `$middle_block`
           i32.const 0
 
-          ;; create a br_table with three targets
+          ;; Create a br_table with three targets
           (br_table $inner_block $outer_block $middle_block)
 
-          ;; we'll never reach this point since we broke out of the block
+          ;; The code will never reach this point since we broke out of the block
           unreachable
 
         )
 
-        ;; if you jump out of the `$inner_block` block but stay in `$middle_block`,
-        ;; 42 will be logged.
-        ;; if also jump out of the `$middle_block` block, either by jumping out of
-        ;; `$middle_block` or `$outer_block`, this will be skipped.
+        ;; If you jump out of `$inner_block` but stay in `$middle_block`,
+        ;; 42 will be logged
+        ;; If you jump out of `$middle_block` also,
+        ;; by jumping out of either `$middle_block` or `$outer_block`,
+        ;; this will be skipped
         i32.const 42
         call $log
 
@@ -46,7 +47,7 @@ In some ways, `br_table` is similar to the [`switch`](/en-US/docs/Web/JavaScript
     )
   )
 
-  (start 1) ;; run the first function automatically
+  (start 1) ;; Run the first function automatically
 )
 ```
 
@@ -67,9 +68,11 @@ i32.const 1
         ;; Add a variable to the top of the stack
         i32.const 2
 
-        ;; 0 = jump to the block, item 0 in br_table is 1 so we jump to 1 level.
-        ;; 1 = jump to the if, item 1 in br_table is 2 so we jump to 2 levels.
-        ;; 2 = jump to the loop, item 2 in br_table is 0 so we jump to 0 levels. (this will cuase an infinite loop)
+        ;; 0 = jump to `block`; since item 0 in br_table is 1, it jumps up one level
+        ;; 1 = jump to `if`; since item 1 in br_table is 2, it jumps up two levels
+        ;; 2 = jump to `loop`; since item 2 in br_table is 0, it doesn't jump any levels (causing an infinite loop)
+        
+        ;; Create a br_table with the targets
         (br_table 1 2 0)
       )
     )
