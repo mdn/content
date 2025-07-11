@@ -1647,10 +1647,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.1.3.tgz#83b728b7bc1f354d791eeeafd6762bc0183d903d"
   integrity sha512-yV69YDzMLY3iqF66yhs8QYTAjhWqOrehOfBSp5M+bDF0RM6Qjoodceomcdypr/wClvtPsXEald0d57t+CsE9XA==
 
-"@mdn/yari@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-5.0.0.tgz#f437915cf7b936683de67d1b33e9355923f510b9"
-  integrity sha512-54SFLbhcs2XCzKeV260UBQpUZodycQXw3pIHgK25K9/L1xu9bIR6d//Nl9OSltcFI1PFe811uHsLfJPHzpAB6Q==
+"@mdn/yari@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-5.0.1.tgz#0ed31c279e72a683c4cfaf34adaf4b3f02f37952"
+  integrity sha512-OAfKf3Ol+ZPRb8nkiqolnXCYJs3N+nFbg0ghaxlL8dYjtK0WaUTb2aw3ohjbQDW7ZFOiTdKCVVhBk79eVYJ53Q==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -1689,7 +1689,7 @@
     css-tree "^2.3.1"
     dayjs "^1.11.13"
     dexie "^4.0.11"
-    dotenv "^17.0.1"
+    dotenv "^17.2.0"
     ejs "^3.1.10"
     express "^4.21.2"
     fdir "^6.4.6"
@@ -1706,7 +1706,7 @@
     imagemin-mozjpeg "^10.0.0"
     imagemin-pngquant "^10.0.0"
     imagemin-svgo "^11.0.1"
-    is-svg "^6.0.0"
+    is-svg "^6.1.0"
     js-yaml "^4.1.0"
     lit "^3.3.0"
     loglevel "^1.9.2"
@@ -4164,10 +4164,10 @@ dot-prop@^8.0.2:
   dependencies:
     type-fest "^3.8.0"
 
-dotenv@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.0.1.tgz#79bc4d232fadb42a4092685ff1206d31b2a43f95"
-  integrity sha512-GLjkduuAL7IMJg/ZnOPm9AnWKJ82mSE2tzXLaJ/6hD6DhwGfZaXG77oB8qbReyiczNxnbxQKyh0OE5mXq0bAHA==
+dotenv@^17.2.0:
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.2.0.tgz#e19678fdabcf86d4bfdb6764a758d7d44efbb6a2"
+  integrity sha512-Q4sgBT60gzd0BB0lSyYD3xM4YxrXA9y4uBDof1JNYGzOXrQdQ6yX+7XIAqoFOGQFOTK1D3Hts5OllpxMDZFONQ==
 
 download@^6.2.2:
   version "6.2.5"
@@ -6060,10 +6060,10 @@ is-svg@^5.0.1:
   dependencies:
     fast-xml-parser "^4.4.1"
 
-is-svg@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/is-svg/-/is-svg-6.0.0.tgz#e03ff43cb14d5de1254642d70d879f49534e4fb8"
-  integrity sha512-dGyV+26JXUyoWF8Su3LfFS9tcmrR/uYYSyABE66iv4zJnS77y8T3PZB0nWRKOJJiU1lelGMGuYMylqrFu8D7yQ==
+is-svg@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/is-svg/-/is-svg-6.1.0.tgz#b75936327dcbd3fa3af1f1098d5390245fbdd8b1"
+  integrity sha512-i7YPdvYuSCYcaLQrKwt8cvKTlwHcdA6Hp8N9SO3Q5jIzo8x6kH3N47W0BvPP7NdxVBmIHx7X9DK36czYYW7lHg==
   dependencies:
     "@file-type/xml" "^0.4.3"
 
