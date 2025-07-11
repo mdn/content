@@ -321,7 +321,7 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 
 ## Changes for Mozilla and add-on developers
 
-For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en-US/docs/Extensions/Updating_extensions_for_Firefox_4). There are several key changes that break compatibility with existing add-ons, so be sure to read that article.
+For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en-US/docs/Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4). There are several key changes that break compatibility with existing add-ons, so be sure to read that article.
 
 If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US/docs/Theme_changes_in_Firefox_4) to understand some critical changes you'll need to be aware of.
 
@@ -331,7 +331,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
   - : The `Services.jsm` code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.
 - [JS-ctypes API](/en-US/docs/JavaScript_code_modules/ctypes.jsm)
   - : The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.
-- [Add-ons Manager](/en-US/docs/Addons/Add-on_Manager)
+- [Add-ons Manager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/index.html)
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
 - [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
   - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
@@ -488,7 +488,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - Default plugin removed
   - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See [Firefox bug 533891](https://bugzil.la/533891).
 - Extension Manager replaced by Addon Manager
-  - : `nsIExtensionManager` has been replaced by [AddonManager](/en-US/docs/Addons/Add-on_Manager/AddonManager).
+  - : `nsIExtensionManager` has been replaced by [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
 - Child HWNDs no longer used
   - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes

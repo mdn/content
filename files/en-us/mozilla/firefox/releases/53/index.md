@@ -162,7 +162,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
+- The asynchronous [AddonManager APIs](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
 
 ## Older versions
 
