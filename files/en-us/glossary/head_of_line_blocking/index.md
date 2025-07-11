@@ -15,7 +15,7 @@ HTTP/1.1 requests are sent sequentially, so a delay in fully receiving a respons
 A mechanism called _HTTP pipelining_ tried to work around this, where multiple requests were sent off by a client without waiting for any responses.
 Pipelining proved tricky to implement in reality, so this mechanism is rarely used, if ever, and most browsers no longer support it.
 
-HTTP/2 addresses some problems in HTTP/1.1 through request _multiplexing_.
+HTTP/2 addresses the HOL blocking problems in HTTP/1.1 through request _multiplexing_.
 Multiplexing means a single TCP connection can be used to interleave requests and responses in numbered streams.
 A client can send many requests over a single connection without waiting for earlier responses.
 This eliminates HOL blocking in the protocol layer, but it still exists at the transport ({{glossary("TCP")}}) layer.
