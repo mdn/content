@@ -14,9 +14,9 @@ includes a certain value among its entries, returning `true` or
 {{InteractiveExample("JavaScript Demo: Array.prototype.includes()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
-console.log(array1.includes(2));
+console.log(array.includes(2));
 // Expected output: true
 
 const pets = ["cat", "dog", "bat"];

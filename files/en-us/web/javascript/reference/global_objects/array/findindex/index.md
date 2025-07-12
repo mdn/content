@@ -15,11 +15,11 @@ See also the {{jsxref("Array/find", "find()")}} method, which returns the first 
 {{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+const array = [5, 12, 8, 130, 44];
 
 const isLargeNumber = (element) => element > 13;
 
-console.log(array1.findIndex(isLargeNumber));
+console.log(array.findIndex(isLargeNumber));
 // Expected output: 3
 ```
 

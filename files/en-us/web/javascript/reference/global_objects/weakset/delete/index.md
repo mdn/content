@@ -12,17 +12,17 @@ The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specifi
 {{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
 
 ```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+const weakset = new WeakSet();
+const object = {};
 
-weakset1.add(object1);
+weakset.add(object);
 
-console.log(weakset1.has(object1));
+console.log(weakset.has(object));
 // Expected output: true
 
-weakset1.delete(object1);
+weakset.delete(object);
 
-console.log(weakset1.has(object1));
+console.log(weakset.has(object));
 // Expected output: false
 ```
 

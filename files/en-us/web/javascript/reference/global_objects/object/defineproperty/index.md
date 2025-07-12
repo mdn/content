@@ -12,17 +12,17 @@ The **`Object.defineProperty()`** static method defines a new property directly 
 {{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-Object.defineProperty(object1, "property1", {
+Object.defineProperty(object, "foo", {
   value: 42,
   writable: false,
 });
 
-object1.property1 = 77;
+object.foo = 77;
 // Throws an error in strict mode
 
-console.log(object1.property1);
+console.log(object.foo);
 // Expected output: 42
 ```
 

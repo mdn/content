@@ -12,10 +12,10 @@ The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method returns an arra
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup" };
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
 
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options));
 // Expected output: Array ["id-u-co-pinyin", "de-ID"]
 // (Note: the exact output may be browser-dependent)
 ```

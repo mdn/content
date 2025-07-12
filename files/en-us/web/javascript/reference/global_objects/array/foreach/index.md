@@ -13,9 +13,9 @@ for each array element.
 {{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-array1.forEach((element) => console.log(element));
+array.forEach((element) => console.log(element));
 
 // Expected output: "a"
 // Expected output: "b"

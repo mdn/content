@@ -12,10 +12,10 @@ The **`Intl.Segmenter.supportedLocalesOf()`** static method returns an array con
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup", granularity: "string" };
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup", granularity: "string" };
 
-console.log(Intl.Segmenter.supportedLocalesOf(locales1, options1));
+console.log(Intl.Segmenter.supportedLocalesOf(locales, options));
 // Expected output: Array ["id-u-co-pinyin", "de-ID"]
 // (Note: the exact output may be browser-dependent)
 ```

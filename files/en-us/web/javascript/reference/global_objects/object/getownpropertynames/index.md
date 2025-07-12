@@ -12,13 +12,13 @@ The **`Object.getOwnPropertyNames()`** static method returns an array of all pro
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: 1,
   b: 2,
   c: 3,
 };
 
-console.log(Object.getOwnPropertyNames(object1));
+console.log(Object.getOwnPropertyNames(object));
 // Expected output: Array ["a", "b", "c"]
 ```
 

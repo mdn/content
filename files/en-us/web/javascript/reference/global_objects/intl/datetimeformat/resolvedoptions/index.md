@@ -12,16 +12,16 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.DateTimeFormat")}} instance
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
-const options1 = region1.resolvedOptions();
+const region = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });
+const options = region.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output: "zh-CN"
 
-console.log(options1.calendar);
+console.log(options.calendar);
 // Expected output: "gregory"
 
-console.log(options1.numberingSystem);
+console.log(options.numberingSystem);
 // Expected output: "latn"
 ```
 

@@ -12,14 +12,14 @@ The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.pre
 {{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-console.log(Reflect.isExtensible(object1));
+console.log(Reflect.isExtensible(object));
 // Expected output: true
 
-Reflect.preventExtensions(object1);
+Reflect.preventExtensions(object);
 
-console.log(Reflect.isExtensible(object1));
+console.log(Reflect.isExtensible(object));
 // Expected output: false
 ```
 

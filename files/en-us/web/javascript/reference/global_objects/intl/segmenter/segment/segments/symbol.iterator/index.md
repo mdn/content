@@ -13,11 +13,11 @@ The **`[Symbol.iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
 
-for (const segment of iterator1) {
+for (const segment of iterator) {
   if (segment.segment.length > 4) {
     console.log(segment.segment);
   }
