@@ -5,7 +5,7 @@ page-type: web-api-interface
 spec-urls: https://w3c-fedid.github.io/FedCM/#dictdef-identitycredentialrequestoptions
 ---
 
-{{APIRef("FedCM API")}}{{SecureContext_Header}}
+{{APIRef("FedCM API")}}
 
 The **`IdentityCredentialRequestOptions`** dictionary represents the object passed to {{domxref("CredentialsContainer.get()")}} as the value of the `identity` option.
 
