@@ -4,7 +4,7 @@ slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
 

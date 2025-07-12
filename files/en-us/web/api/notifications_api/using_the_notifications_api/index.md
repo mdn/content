@@ -4,7 +4,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Web Notifications")}}
 
 The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
