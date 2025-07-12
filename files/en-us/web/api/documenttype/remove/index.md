@@ -9,6 +9,7 @@ browser-compat: api.DocumentType.remove
 {{APIRef("DOM")}}
 
 The **`DocumentType.remove()`** method removes a document's `doctype`.
+If it is already detached from the document, calling `remove()` does nothing.
 
 ## Syntax
 
