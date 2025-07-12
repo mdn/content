@@ -4,9 +4,8 @@ short-title: getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to universal time, as a zero-based value (where zero indicates the first month of the year).
 

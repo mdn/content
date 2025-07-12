@@ -4,9 +4,8 @@ short-title: Int16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int16Array.Int16Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Int16Array()`** constructor creates {{jsxref("Int16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 

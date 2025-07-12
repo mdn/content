@@ -3,9 +3,8 @@ title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_text
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 

@@ -4,9 +4,8 @@ short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 page-type: html-attribute
 browser-compat: html.global_attributes.exportparts
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) allows you to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
 

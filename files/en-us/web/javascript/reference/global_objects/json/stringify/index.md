@@ -4,9 +4,8 @@ short-title: stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.stringify
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 

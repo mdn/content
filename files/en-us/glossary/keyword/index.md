@@ -2,9 +2,8 @@
 title: Keyword
 slug: Glossary/Keyword
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **keyword** is a word or phrase that describes content. Online keywords are used as queries for search engines or as words identifying content on websites.
 

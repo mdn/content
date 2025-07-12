@@ -97,7 +97,7 @@ _No change._
 
 Highlights:
 
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/)
 - Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
 - Updated the default theme used for panels on Mac OS X.
 - Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.

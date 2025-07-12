@@ -4,9 +4,8 @@ short-title: SyntaxError()
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SyntaxError.SyntaxError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`SyntaxError()`** constructor creates {{jsxref("SyntaxError")}} objects.
 

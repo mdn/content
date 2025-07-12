@@ -3,9 +3,8 @@ title: "<tr>: The Table Row element"
 slug: Web/HTML/Reference/Elements/tr
 page-type: html-element
 browser-compat: html.elements.tr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
 

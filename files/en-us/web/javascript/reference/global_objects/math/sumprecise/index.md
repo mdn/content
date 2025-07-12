@@ -4,9 +4,8 @@ short-title: sumPrecise()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sumPrecise
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sumPrecise
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.sumPrecise()`** static method takes an iterable of numbers and returns the sum of them. It is more precise than summing them up in a loop, because it avoids floating point precision loss in intermediate results.
 

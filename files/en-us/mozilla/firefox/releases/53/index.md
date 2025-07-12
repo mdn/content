@@ -110,7 +110,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
   - 3 — `no-referrer-when-downgrade` (the default)
 
 - Support for Next Protocol Negotiation (NPN) has been removed in favor of [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) — see [Firefox bug 1248198](https://bugzil.la/1248198).
-- The {{httpheader("Large-Allocation")}} HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
+- The `Large-Allocation` HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
 
 ### SVG
 
@@ -162,7 +162,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
+- The asynchronous [AddonManager APIs](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
 
 ## Older versions
 
