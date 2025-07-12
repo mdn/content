@@ -1,5 +1,6 @@
 ---
 title: Firefox 63 for developers
+short-title: Firefox 63
 slug: Mozilla/Firefox/Releases/63
 page-type: firefox-release-notes
 sidebar: firefox
@@ -208,7 +209,3 @@ _No changes._
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, `keaGroupName`, and `signatureSchemeName`. This change was uplifted to Firefox 62 ([Firefox bug 1471959](https://bugzil.la/1471959)).
 - {{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ([Firefox bug 1351663](https://bugzil.la/1351663)).
 - Match patterns for URLs now explicitly match the "data" URL scheme ([Firefox bug 1280370](https://bugzil.la/1280370)).
-
-## Older versions
-
-{{Firefox_for_developers}}

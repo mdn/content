@@ -1,5 +1,6 @@
 ---
 title: Firefox 50 for developers
+short-title: Firefox 50
 slug: Mozilla/Firefox/Releases/50
 page-type: firefox-release-notes
 sidebar: firefox
@@ -142,7 +143,3 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 - We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ([Firefox bug 1289255](https://bugzil.la/1289255)). This is enabled by default.
 - The `HTMLInputElement.directory` property, part of the [Directory Upload API](https://wicg.github.io/directory-upload/proposal.html) proposal, has been renamed to `allowdirs` ([Firefox bug 1288681](https://bugzil.la/1288681)). This property is hidden behind a preference.
-
-## Older versions
-
-{{Firefox_for_developers}}

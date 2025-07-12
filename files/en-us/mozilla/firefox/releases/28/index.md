@@ -1,5 +1,6 @@
 ---
 title: Firefox 28 for developers
+short-title: Firefox 28
 slug: Mozilla/Firefox/Releases/28
 page-type: firefox-release-notes
 sidebar: firefox
@@ -81,7 +82,3 @@ _No change._
 
 - CSP was not enforced in sandboxed iframes. This has been fixed ([Firefox bug 886164](https://bugzil.la/886164)).
 - The CSP 1.1 experimental `script-nonce` directive has been implemented. The preference `security.csp.experimentalEnabled` should be set to `true` to enable this functionality ([Firefox bug 855326](https://bugzil.la/855326)).
-
-### Older versions
-
-{{Firefox_for_developers}}

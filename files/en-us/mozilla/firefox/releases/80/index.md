@@ -1,5 +1,6 @@
 ---
 title: Firefox 80 for developers
+short-title: Firefox 80
 slug: Mozilla/Firefox/Releases/80
 page-type: firefox-release-notes
 sidebar: firefox
@@ -56,7 +57,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

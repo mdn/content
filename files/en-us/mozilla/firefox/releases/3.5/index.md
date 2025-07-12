@@ -1,5 +1,6 @@
 ---
 title: Firefox 3.5 for developers
+short-title: Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5
 page-type: firefox-release-notes
 sidebar: firefox
@@ -188,7 +189,3 @@ If you're an extension developer, you should start by reading [Updating extensio
   - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine. Web applications are much faster than in Firefox 3.
 - Faster page rendering
   - : Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."
-
-## See also
-
-{{Firefox_for_developers}}

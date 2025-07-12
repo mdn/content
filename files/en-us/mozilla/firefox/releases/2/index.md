@@ -1,5 +1,6 @@
 ---
 title: Firefox 2 for developers
+short-title: Firefox 2
 slug: Mozilla/Firefox/Releases/2
 page-type: firefox-release-notes
 sidebar: firefox
@@ -76,7 +77,3 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 ### Security and privacy
 
 - **Phishing Protection** to warn users when the website you're looking at appears to be a forgery.
-
-## See also
-
-{{Firefox_for_developers}}

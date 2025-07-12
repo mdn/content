@@ -79,7 +79,3 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-
-## Older versions
-
-{{Firefox_for_developers}}

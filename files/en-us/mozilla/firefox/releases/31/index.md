@@ -1,5 +1,6 @@
 ---
 title: Firefox 31 for developers
+short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
 page-type: firefox-release-notes
 sidebar: firefox
@@ -105,7 +106,3 @@ Highlights:
 [GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 52 for developers
+short-title: Firefox 52
 slug: Mozilla/Firefox/Releases/52
 page-type: firefox-release-notes
 sidebar: firefox
@@ -193,7 +194,3 @@ New APIs:
 
 - `tabbrowser.loadTabs(uris, params)` method overload has been added ([Firefox bug 92737](https://bugzil.la/92737)).
 - `browser.droppedLinkHandler` function signature has been changed ([Firefox bug 92737](https://bugzil.la/92737)).
-
-## Older versions
-
-{{Firefox_for_developers}}

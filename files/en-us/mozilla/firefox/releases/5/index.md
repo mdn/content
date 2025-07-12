@@ -1,5 +1,6 @@
 ---
 title: Firefox 5 for developers
+short-title: Firefox 5
 slug: Mozilla/Firefox/Releases/5
 page-type: firefox-release-notes
 sidebar: firefox
@@ -126,7 +127,3 @@ The following interfaces were implementation details that are no longer needed:
 ### Build system changes
 
 - You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
-
-## See also
-
-{{Firefox_for_developers}}

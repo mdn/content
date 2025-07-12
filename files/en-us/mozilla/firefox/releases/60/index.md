@@ -1,5 +1,6 @@
 ---
 title: Firefox 60 for developers
+short-title: Firefox 60
 slug: Mozilla/Firefox/Releases/60
 page-type: firefox-release-notes
 sidebar: firefox
@@ -148,7 +149,3 @@ Theme API:
   - **frame_inactive**
   - **button_background_active**
   - **button_background_hover**
-
-## Older versions
-
-{{Firefox_for_developers}}

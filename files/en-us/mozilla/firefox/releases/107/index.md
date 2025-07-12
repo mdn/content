@@ -1,5 +1,6 @@
 ---
 title: Firefox 107 for developers
+short-title: Firefox 107
 slug: Mozilla/Firefox/Releases/107
 page-type: firefox-release-notes
 sidebar: firefox
@@ -62,7 +63,3 @@ No notable changes
 ### Other
 
 - The `error` property returned when an error occurs in {{WebExtAPIRef("scripting.executeScript")}} now represents any value the script throws or rejects with, instead of being just an object with a message property [Firefox bug 1740608](https://bugzil.la/1740608).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 111 for developers
+short-title: Firefox 111
 slug: Mozilla/Firefox/Releases/111
 page-type: firefox-release-notes
 sidebar: firefox
@@ -70,7 +71,3 @@ No notable changes.
 - `matchDiacritics` has been added to the {{WebExtAPIRef("Find.find")}} API. This option enables searches to distinguish between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume" [Firefox bug 1680606](https://bugzil.la/1680606).
 - {{WebExtAPIRef("search.query")}} has been added, providing search API compatibility with Chromium-based browsers [Firefox bug 1804357](https://bugzil.la/1804357).
 - The `disposition` property has been added to {{WebExtAPIRef("search.search")}}, enabling results to be displayed in a new tab or window [Firefox bug 1811274](https://bugzil.la/1811274).
-
-## Older versions
-
-{{Firefox_for_developers}}

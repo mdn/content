@@ -1,5 +1,6 @@
 ---
 title: Firefox 108 for developers
+short-title: Firefox 108
 slug: Mozilla/Firefox/Releases/108
 page-type: firefox-release-notes
 sidebar: firefox
@@ -67,7 +68,3 @@ No notable changes
 ## Changes for add-on developers
 
 - Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ([Firefox bug 1793925](https://bugzil.la/1793925)).
-
-## Older versions
-
-{{Firefox_for_developers}}

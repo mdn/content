@@ -1,5 +1,6 @@
 ---
 title: Firefox 126 for developers
+short-title: Firefox 126
 slug: Mozilla/Firefox/Releases/126
 page-type: firefox-release-notes
 sidebar: firefox
@@ -91,7 +92,3 @@ These features are newly shipped in Firefox 126 but are disabled by default. To 
 - **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
 
   You can use the {{cssxref("basic-shape/shape","shape()")}} function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the {{cssxref("basic-shape/path","path()")}} function ([Firefox bug 1823463](https://bugzil.la/1823463) for `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for `shape()` function support in `offset-path`, [Firefox bug 1884425](https://bugzil.la/1884425) for `shape()` interpolation support).
-
-## Older versions
-
-{{Firefox_for_developers}}

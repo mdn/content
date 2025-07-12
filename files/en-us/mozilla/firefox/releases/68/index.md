@@ -1,5 +1,6 @@
 ---
 title: Firefox 68 for developers
+short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
 sidebar: firefox
@@ -107,7 +108,7 @@ _No changes._
 
 #### DOM events
 
-- [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
+- [Firefox for Android](https://firefox-source-docs.mozilla.org/mobile/android/index.html) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
 - The dispatching of events for non-primary mouse buttons has been made to more closely follow the specification; the {{domxref("Element.click_event", "click")}} event is no longer sent when non-primary buttons are clicked, instead using {{domxref("Element.auxclick_event", "auxclick")}}. In addition, {{domxref("Element.dblclick_event", "dblclick")}} no longer fires for non-primary buttons ([Firefox bug 1379466](https://bugzil.la/1379466)).
 - The proprietary `mozPressure` property has been deprecated, and will now trigger a warning in the console ([Firefox bug 1165211](https://bugzil.la/1165211)).
 
@@ -178,7 +179,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 68: BigInts, Contrast Checks, and the QuantumBar](https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/)
-
-## Older versions
-
-{{Firefox_for_developers}}

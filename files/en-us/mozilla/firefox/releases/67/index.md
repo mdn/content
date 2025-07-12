@@ -1,5 +1,6 @@
 ---
 title: Firefox 67 for developers
+short-title: Firefox 67
 slug: Mozilla/Firefox/Releases/67
 page-type: firefox-release-notes
 sidebar: firefox
@@ -138,7 +139,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 67: Dark Mode CSS, WebRender, and more](https://hacks.mozilla.org/2019/05/firefox-67-dark-mode-css-webrender/)
-
-## Older versions
-
-{{Firefox_for_developers}}

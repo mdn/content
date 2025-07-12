@@ -1,5 +1,6 @@
 ---
 title: Firefox 21 for developers
+short-title: Firefox 21
 slug: Mozilla/Firefox/Releases/21
 page-type: firefox-release-notes
 sidebar: firefox
@@ -102,7 +103,3 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 - [Firefox 21 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/21.0/releasenotes/)
 - [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
-
-### Older versions
-
-{{Firefox_for_developers}}

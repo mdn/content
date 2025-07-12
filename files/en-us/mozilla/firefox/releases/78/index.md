@@ -1,5 +1,6 @@
 ---
 title: Firefox 78 for developers
+short-title: Firefox 78
 slug: Mozilla/Firefox/Releases/78
 page-type: firefox-release-notes
 sidebar: firefox
@@ -77,7 +78,3 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 - When using [`proxy.onRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest), a filter that limits based on tab id or window id is now correctly applied. This could be useful for add-ons that want to provide proxy functionality just in just one window.
 - [Clicking within the context menu](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) from the "all tabs" dropdown now passed the appropriate tab object. In the past, the active tab was erroneously passed.
 - When using [`downloads.download`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) with the saveAs option, the recently used directory is now remembered. While this information is not available to developers, it is very convenient to users.
-
-## Older versions
-
-{{Firefox_for_developers}}

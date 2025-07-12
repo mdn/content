@@ -1,5 +1,6 @@
 ---
 title: Firefox 44 for developers
+short-title: Firefox 44
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
 sidebar: firefox
@@ -211,7 +212,3 @@ _No change._
 ### Other
 
 - Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
-
-## Older versions
-
-{{Firefox_for_developers}}

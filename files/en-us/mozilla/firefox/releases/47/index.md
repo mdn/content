@@ -1,5 +1,6 @@
 ---
 title: Firefox 47 for developers
+short-title: Firefox 47
 slug: Mozilla/Firefox/Releases/47
 page-type: firefox-release-notes
 sidebar: firefox
@@ -133,7 +134,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

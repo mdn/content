@@ -1,5 +1,6 @@
 ---
 title: Firefox 6 for developers
+short-title: Firefox 6
 slug: Mozilla/Firefox/Releases/6
 page-type: firefox-release-notes
 sidebar: firefox
@@ -191,7 +192,3 @@ The following interfaces were implementation details that are no longer needed:
 
 - [Using preferences from application code](/en-US/docs/Mozilla/Preferences/Using_preferences_from_application_code)
   - : A new static API is available for easily accessing preferences; this is only available to application code and can't be used by add-ons.
-
-## See also
-
-{{Firefox_for_developers}}

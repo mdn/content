@@ -1,5 +1,6 @@
 ---
 title: Firefox 53 for developers
+short-title: Firefox 53
 slug: Mozilla/Firefox/Releases/53
 page-type: firefox-release-notes
 sidebar: firefox
@@ -163,7 +164,3 @@ Enhanced APIs:
 ### JavaScript code modules
 
 - The asynchronous [AddonManager APIs](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
-
-## Older versions
-
-{{Firefox_for_developers}}

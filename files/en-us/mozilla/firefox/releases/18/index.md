@@ -1,5 +1,6 @@
 ---
 title: Firefox 18 for developers
+short-title: Firefox 18
 slug: Mozilla/Firefox/Releases/18
 page-type: firefox-release-notes
 sidebar: firefox
@@ -85,7 +86,3 @@ The following interfaces have been removed.
 - [Firefox 18 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/18.0beta/releasenotes/)
 - [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
-
-### Older versions
-
-{{Firefox_for_developers}}

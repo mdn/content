@@ -1,5 +1,6 @@
 ---
 title: Firefox 14 for developers
+short-title: Firefox 14
 slug: Mozilla/Firefox/Releases/14
 page-type: firefox-release-notes
 sidebar: firefox
@@ -72,7 +73,3 @@ _No change._
 ### Spellchecking
 
 - Dictionary names are now parsed as full [BCP 47](https://www.rfc-editor.org/info/bcp47) language tags ([bug 730209](https://bugzil.la/730209), [bug 741842](https://bugzil.la/741842)). Developers are encouraged to not hard-code the name of their language in their dictionary names.
-
-## See also
-
-{{Firefox_for_developers}}

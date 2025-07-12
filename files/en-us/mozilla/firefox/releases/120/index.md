@@ -1,5 +1,6 @@
 ---
 title: Firefox 120 for developers
+short-title: Firefox 120
 slug: Mozilla/Firefox/Releases/120
 page-type: firefox-release-notes
 sidebar: firefox
@@ -70,7 +71,3 @@ This article provides information about the changes in Firefox 120 that affect d
 ## Changes for add-on developers
 
 - Although {{domxref("PointerEvent.getCoalescedEvents()")}} has been restricted to secure contexts ([Firefox bug 1858434](https://bugzil.la/1858434)), content scripts can use this method in documents that aren't a secure context ([Firefox bug 1870498](https://bugzil.la/1870498)).
-
-## Older versions
-
-{{Firefox_for_developers}}

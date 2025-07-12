@@ -1,5 +1,6 @@
 ---
 title: Firefox 13 for developers
+short-title: Firefox 13
 slug: Mozilla/Firefox/Releases/13
 page-type: firefox-release-notes
 sidebar: firefox
@@ -109,7 +110,3 @@ Starting in Firefox 13, Firefox for Windows requires at least Windows XP Service
 - The new message manager wake-up service, implemented by `nsIMessageWakeupService`, has been implemented. See [Firefox bug 591052](https://bugzil.la/591052).
 - The aliases `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset`, and `MozOutlineColor`, all of which were removed in previous versions of Gecko, have been removed from `nsIDOMCSS2Properties`, which should have been done with the aliases were initially removed.
 - The `nsINavHistoryQueryOptions` attribute `excludeItemIfParentHasAnnotation` has been removed, along with the corresponding query operation. It existed to support livemarks, which no longer exist.
-
-## See also
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 58 for developers
+short-title: Firefox 58
 slug: Mozilla/Firefox/Releases/58
 page-type: firefox-release-notes
 sidebar: firefox
@@ -178,7 +179,3 @@ _No changes._
 
 - webRequest
   - [webRequest.onBeforeRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) now includes a "frameAncestors" parameter
-
-## Older versions
-
-{{Firefox_for_developers}}

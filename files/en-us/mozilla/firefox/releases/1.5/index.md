@@ -1,5 +1,6 @@
 ---
 title: Firefox 1.5 for developers
+short-title: Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5
 page-type: firefox-release-notes
 sidebar: firefox

@@ -1,5 +1,6 @@
 ---
 title: Firefox 23 for developers
+short-title: Firefox 23
 slug: Mozilla/Firefox/Releases/23
 page-type: firefox-release-notes
 sidebar: firefox
@@ -66,7 +67,3 @@ Addons that overlay chrome://browser/content/debugger.xul must now overlay chrom
 ## See also
 
 - [Firefox 23 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/23.0a2/auroranotes/)
-
-### Older versions
-
-{{Firefox_for_developers}}
