@@ -2,8 +2,6 @@
 title: Generating attribution reports
 slug: Web/API/Attribution_Reporting_API/Generating_reports
 page-type: guide
-status:
-  - experimental
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
