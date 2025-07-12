@@ -28,7 +28,7 @@ A generic {{domxref("Event")}}.
 
 ### Handling the sourceclose event
 
-This example demonstrates detaching a media element from a `MediaSource` and handling the `sourceclose` event for proper resource management. The code sets up a {{domxref("MediaSource")}}, attaches it to a video element, and listens for the `sourceclose event`. When the event fires, it performs cleanup tasks.
+This example demonstrates detaching a media element from a `MediaSource` and handling the `sourceclose` event for proper resource management. The code sets up a {{domxref("MediaSource")}}, attaches it to a video element, and listens for the `sourceclose` event. When the event fires, it performs cleanup tasks (`revokeObjectURL`).
 
 ```js
 const video = document.getElementById("myVideo");
