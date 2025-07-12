@@ -76,8 +76,6 @@ Note that the following deprecated historical errors don't have an error name bu
   - : The operation was aborted. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
 - `URLMismatchError` {{experimental_inline}}
   - : The given URL does not match another URL. (Legacy code value: `21` and legacy constant name: `URL_MISMATCH_ERR`)
-- `QuotaExceededError` {{experimental_inline}}
-  - : The quota has been exceeded. (Legacy code value: `22` and legacy constant name: `QUOTA_EXCEEDED_ERR`)
 - `TimeoutError`
   - : The operation timed out. (Legacy code value: `23` and legacy constant name: `TIMEOUT_ERR`)
 - `InvalidNodeTypeError` {{experimental_inline}}
