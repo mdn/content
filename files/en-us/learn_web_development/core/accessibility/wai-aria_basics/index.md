@@ -77,7 +77,7 @@ An important point about WAI-ARIA attributes is that they don't affect anything 
 >
 > The spec also contains a list of all the properties and states, with links to further information — see [Definitions of States and Properties (all `aria-*` attributes)](https://w3c.github.io/aria/#state_prop_def).
 
-### Where is WAI-ARIA supported?
+## Where is WAI-ARIA supported?
 
 This is not an easy question to answer. It is difficult to find a conclusive resource that states what features of WAI-ARIA are supported, and where, because:
 
@@ -96,7 +96,7 @@ In this article, we won't attempt to cover every WAI-ARIA feature, and its exact
 > [!NOTE]
 > Some JavaScript libraries support WAI-ARIA, meaning that when they generate UI features like complex form controls, they add ARIA attributes to improve the accessibility of those features. If you are looking for a 3rd party JavaScript solution for rapid UI development, you should definitely consider the accessibility of its UI widgets as an important factor when making your choice. Good examples are jQuery UI (see [About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), and [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
 
-### When should you use WAI-ARIA?
+## When should you use WAI-ARIA?
 
 We talked about some of the problems that prompted WAI-ARIA to be created earlier on, but essentially, there are four main areas that WAI-ARIA is useful in:
 
@@ -109,22 +109,19 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Accessibility of non-semantic controls
   - : When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tablist`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
-#### You should only use WAI-ARIA when you need to!
+In the next section, we'll look at the four main areas described earlier in more detail, along with examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through. See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
 
-Using the correct HTML elements implicitly gives you the roles that are needed and you should _always_ use [native HTML features](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
-
-But again, only use it when necessary!
-
-> [!NOTE]
+> [!CALLOUT]
+>
+> **You should only use WAI-ARIA when you need to!**
+>
+> Using the correct HTML elements implicitly gives you the roles that are needed and you should _always_ use [native HTML features](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
+>
+> But again, only use it when necessary!
+>
 > Also, try to make sure you test your site with a variety of _real_ users — non-disabled people, people using screen readers, people using keyboard navigation, etc. They will have better insights than you about how well it works.
 
-## Practical WAI-ARIA implementations
-
-In the next section, we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through.
-
-See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
-
-### Signposts/Landmarks
+## Signposts/Landmarks
 
 WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
 
@@ -650,24 +647,36 @@ If you need to support older browsers such as IE8; it is worth including ARIA ro
 
 You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the [Accessibility of non-semantic controls](#accessibility_of_non-semantic_controls) section. For now though, let's look at how ARIA can help with dynamic content updates.
 
-### Dynamic content updates
+## Dynamic content updates
 
 Content loaded into the DOM can be easily accessed using a screen reader, from textual content to alternative text attached to images. Traditional static websites with largely text content are therefore easy to make accessible for people with visual impairments.
 
 The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server (in this example we are using a static array of quotes) and updating the DOM. These are sometimes referred to as **live regions**.
 
+Let's look at an example — a random quote generator:
+
 ```html live-sample___aria-no-live
 <section>
-  <h1>Random quote</h1>
+  <h1>Random quote generator</h1>
+  <button>Start giving me quotes</button>
   <blockquote>
     <p></p>
   </blockquote>
 </section>
 ```
 
-```css live-sample___aria-no-live
+```css hidden live-sample___aria-no-live live-sample___aria-live
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 h1 {
@@ -679,16 +688,15 @@ p {
 }
 
 section {
+  height: 100%;
   padding: 10px;
-  width: calc(100% - 20px);
   background: #666;
   text-shadow: 1px 1px 1px black;
   color: white;
-  min-height: 160px;
 }
 ```
 
-```js live-sample___aria-no-live
+```js live-sample___aria-no-live live-sample___aria-live
 let quotes = [
   {
     quote:
@@ -708,18 +716,22 @@ let quotes = [
 ];
 ```
 
-```js live-sample___aria-no-live
+```js live-sample___aria-no-live live-sample___aria-live
 const quotePara = document.querySelector("section p");
+const btn = document.querySelector("button");
 
-window.setInterval(showQuote, 10000);
+btn.addEventListener("click", () => {
+  window.setInterval(showQuote, 5000);
+  btn.disabled = true;
 
-function showQuote() {
-  let random = Math.floor(Math.random() * quotes.length);
-  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
-}
+  function showQuote() {
+    let random = Math.floor(Math.random() * quotes.length);
+    quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
+  }
+});
 ```
 
-{{EmbedLiveSample("aria-no-live", "100", "180")}}
+{{EmbedLiveSample("aria-no-live", "100", "220")}}
 
 This works OK, but it is not good for accessibility — the content update is not detected by screen readers, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
 
@@ -732,91 +744,33 @@ WAI-ARIA, fortunately, provides a useful mechanism to provide these alerts — t
 - `assertive`
   - : Updates should be announced to the user as soon as possible.
 
-Here we update the `<section>` opening tag as follows:
+Here we update the `<blockquote>` opening tag as follows:
 
 ```html
-<section aria-live="assertive">…</section>
+<blockquote aria-live="assertive">…</blockquote>
 ```
 
-This will cause a screen reader to read out the content as it is updated.
+This will cause a screen reader to read out the content as it is updated: try testing the updated the updated live version:
 
-There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
-
-```html
-<section aria-live="assertive" aria-atomic="true">…</section>
-```
-
-The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
-
-```html live-sample___aria-live
-<section aria-live="assertive" aria-atomic="true">
-  <h1>Random quote</h1>
-  <blockquote>
+```html hidden live-sample___aria-live
+<section>
+  <h1>Random quote generator</h1>
+  <button>Start giving me quotes</button>
+  <blockquote aria-live="assertive">
     <p></p>
   </blockquote>
 </section>
 ```
 
-```css live-sample___aria-live
-html {
-  font-family: sans-serif;
-}
-
-h1 {
-  letter-spacing: 2px;
-}
-
-p {
-  line-height: 1.6;
-}
-
-section {
-  padding: 10px;
-  width: calc(100% - 20px);
-  background: #666;
-  text-shadow: 1px 1px 1px black;
-  color: white;
-  min-height: 160px;
-}
-```
-
-```js live-sample___aria-live
-let quotes = [
-  {
-    quote:
-      "Every child is an artist. The problem is how to remain an artist once he grows up.",
-    author: "Pablo Picasso",
-  },
-  {
-    quote:
-      "You can never cross the ocean until you have the courage to lose sight of the shore.",
-    author: "Christopher Columbus",
-  },
-  {
-    quote:
-      "I love deadlines. I love the whooshing noise they make as they go by.",
-    author: "Douglas Adams",
-  },
-];
-```
-
-```js live-sample___aria-live
-const quotePara = document.querySelector("section p");
-
-window.setInterval(showQuote, 10000);
-
-function showQuote() {
-  let random = Math.floor(Math.random() * quotes.length);
-  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
-}
-```
-
-{{EmbedLiveSample("aria-live", "100", "180")}}
+{{EmbedLiveSample("aria-live", "100", "220")}}
 
 > [!NOTE]
-> The [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
+> There are some other ARIA properties related to `aria-live` that are also worth knowing about:
+>
+> - The [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) property, when set to `true`, tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated. This is useful when only a section's contents are being updated, but you also want the heading to be read out each time something changes, to remind the user of its content.
+> - The [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) property is useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
 
-### Enhancing keyboard accessibility
+## Enhancing keyboard accessibility
 
 As discussed in a few other places in the module, one of the key strengths of HTML with respect to accessibility is the built-in keyboard accessibility of features such as buttons, form controls, and links. Generally, you can use the tab key to move between controls, the Enter/Return key to select or activate controls, and occasionally other controls as needed (for example the up and down cursor to move between options in a `<select>` box).
 
@@ -829,11 +783,11 @@ In terms of making non-focusable code focusable, WAI-ARIA extends the `tabindex`
 
 We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in).
 
-### Accessibility of non-semantic controls
+## Accessibility of non-semantic controls
 
 This follows on from the previous section — when a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, not only can keyboard accessibility suffer, but screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In such situations, ARIA can help to provide those missing semantics.
 
-#### Form validation and error alerts
+### Form validation and error alerts
 
 First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
 
@@ -914,7 +868,7 @@ function toggleMusician(bool) {
 }
 ```
 
-#### Describing non-semantic buttons as buttons
+### Describing non-semantic buttons as buttons
 
 A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [Use semantic UI controls where possible](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
 
@@ -933,294 +887,11 @@ Now when you try this using a screen reader, you'll have buttons be reported usi
 > [!NOTE]
 > Don't forget however that using the correct semantic element where possible is always better. If you want to create a button, and can use a {{htmlelement("button")}} element, you should use a {{htmlelement("button")}} element!
 
-#### Guiding users through complex widgets
+### Guiding users through complex widgets
 
 There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role). You can see several useful examples in the [Deque university code library](https://dequeuniversity.com/library/) to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_tabbed_info-box).
-
-```html live-sample___aria-tabbed-info-box
-<section class="info-box">
-  <div role="tablist" class="manual">
-    <button
-      id="tab-1"
-      type="button"
-      role="tab"
-      aria-selected="true"
-      aria-controls="tabpanel-1">
-      <span>Tab 1</span>
-    </button>
-    <button
-      id="tab-2"
-      type="button"
-      role="tab"
-      aria-selected="false"
-      aria-controls="tabpanel-2"
-      tabindex="-1">
-      <span>Tab 2</span>
-    </button>
-    <button
-      id="tab-3"
-      type="button"
-      role="tab"
-      aria-selected="false"
-      aria-controls="tabpanel-3"
-      tabindex="-1">
-      <span>Tab 3</span>
-    </button>
-  </div>
-  <div class="panels">
-    <article id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
-      <h2>The first tab</h2>
-      <p>This is the content for tab one and is just a paragraph.</p>
-    </article>
-    <article
-      id="tabpanel-2"
-      role="tabpanel"
-      aria-labelledby="tab-2"
-      class="is-hidden">
-      <h2>The second tab</h2>
-      <p>This is the content for tab two and is just a paragraph.</p>
-    </article>
-    <article
-      id="tabpanel-3"
-      role="tabpanel"
-      aria-labelledby="tab-3"
-      class="is-hidden">
-      <h2>The third tab</h2>
-      <p>This is the content for tab three and is a paragraph and a list.</p>
-      <ul>
-        <li>Cat</li>
-        <li>Dog</li>
-        <li>Horse</li>
-      </ul>
-    </article>
-  </div>
-</section>
-```
-
-```css live-sample___aria-tabbed-info-box
-/* General setup */
-
-html {
-  font-family: sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-/* info-box setup */
-
-.info-box {
-  width: 452px;
-  height: 250px;
-  margin: 1.25rem auto 0;
-}
-
-/* styling info-box tabs */
-
-.info-box [role="tablist"] {
-  min-width: 100%;
-  display: flex;
-}
-
-.info-box [role="tab"] {
-  border: none;
-  background: white;
-  padding: 0 1rem 0 1rem;
-  line-height: 3rem;
-  color: #b60000;
-  font-weight: bold;
-  outline: none;
-}
-
-.info-box [role="tab"]:focus span,
-.info-box [role="tab"]:hover span {
-  outline: 1px solid blue;
-  outline-offset: 6px;
-  border-radius: 4px;
-}
-
-.info-box [role="tab"][aria-selected="true"] {
-  background-color: #b60000;
-  color: white;
-}
-
-/* styling info-box panels */
-
-.info-box .panels {
-  height: 200px;
-  clear: both;
-  position: relative;
-}
-
-.info-box [role="tabpanel"] {
-  color: white;
-  position: absolute;
-  padding: 0.8rem 1.2rem;
-  height: 200px;
-  width: 100%;
-  top: 0;
-  background-color: #b60000;
-  left: 0;
-}
-
-.info-box [role="tabpanel"].is-hidden {
-  display: none;
-}
-```
-
-```js live-sample___aria-tabbed-info-box
-class TabsManual {
-  constructor(groupNode) {
-    this.tablistNode = groupNode;
-
-    this.tabs = [];
-
-    this.firstTab = null;
-    this.lastTab = null;
-
-    this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
-    this.tabpanels = [];
-
-    for (const tab of this.tabs) {
-      const tabpanel = document.getElementById(
-        tab.getAttribute("aria-controls"),
-      );
-
-      tab.tabIndex = -1;
-      tab.setAttribute("aria-selected", "false");
-      this.tabpanels.push(tabpanel);
-
-      tab.addEventListener("keydown", this.onKeydown.bind(this));
-      tab.addEventListener("click", this.onClick.bind(this));
-
-      this.firstTab ??= tab;
-      this.lastTab = tab;
-    }
-
-    this.setSelectedTab(this.firstTab);
-  }
-
-  setSelectedTab(currentTab) {
-    for (const tab of this.tabs.length) {
-      if (currentTab === tab) {
-        tab.setAttribute("aria-selected", "true");
-        tab.removeAttribute("tabindex");
-        this.tabpanels[i].classList.remove("is-hidden");
-      } else {
-        tab.setAttribute("aria-selected", "false");
-        tab.tabIndex = -1;
-        this.tabpanels[i].classList.add("is-hidden");
-      }
-    }
-  }
-
-  moveFocusToTab(currentTab) {
-    currentTab.focus();
-  }
-
-  moveFocusToPreviousTab(currentTab) {
-    let index;
-
-    if (currentTab === this.firstTab) {
-      this.moveFocusToTab(this.lastTab);
-    } else {
-      index = this.tabs.indexOf(currentTab);
-      this.moveFocusToTab(this.tabs[index - 1]);
-    }
-  }
-
-  moveFocusToNextTab(currentTab) {
-    let index;
-
-    if (currentTab === this.lastTab) {
-      this.moveFocusToTab(this.firstTab);
-    } else {
-      index = this.tabs.indexOf(currentTab);
-      this.moveFocusToTab(this.tabs[index + 1]);
-    }
-  }
-
-  /* EVENT HANDLERS */
-
-  onKeydown(event) {
-    const tgt = event.currentTarget;
-    let flag = false;
-
-    switch (event.key) {
-      case "ArrowLeft":
-        this.moveFocusToPreviousTab(tgt);
-        flag = true;
-        break;
-
-      case "ArrowRight":
-        this.moveFocusToNextTab(tgt);
-        flag = true;
-        break;
-
-      case "Home":
-        this.moveFocusToTab(this.firstTab);
-        flag = true;
-        break;
-
-      case "End":
-        this.moveFocusToTab(this.lastTab);
-        flag = true;
-        break;
-
-      default:
-        break;
-    }
-
-    if (flag) {
-      event.stopPropagation();
-      event.preventDefault();
-    }
-  }
-
-  // Since this example uses buttons for the tabs, the click onr also is activated
-  // with the space and enter keys
-  onClick(event) {
-    this.setSelectedTab(event.currentTarget);
-  }
-}
-
-// Initialize tablist
-
-window.addEventListener("load", () => {
-  const tablists = document.querySelectorAll("[role=tablist].manual");
-  for (const tablist of tablists) {
-    new TabsManual(tablist);
-  }
-});
-```
-
-{{EmbedLiveSample("aria-tabbed-info-box", "100", "270")}}
-
-In this example we have used a combination of semantic elements, aria roles and aria attributes. The first of these is we have used a {{htmlelement("button")}} element as a _tab_, this means that the tab can be selected via a mouse click or via the keyboard using space or enter.
-
-ARIA features used include:
-
-- New roles — [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role), [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)
-  - : These identify the important areas of the tabbed interface — the container for the tabs, the tabs themselves, and the corresponding tabpanels.
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-  - : Defines which tab is currently selected. As different tabs are selected by the user, the value of this attribute on the different tabs is updated via JavaScript.
-- `tabindex="-1"`
-  - : `tabindex="-1"` takes the element out of the tab order. As we are using JavaScript to allow the user to control the tabs via keyboard or mouse we do not want the user to be able to use the tab key to navigate to the buttons.
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-  - : This attribute identifies an element (by its `id`) that labels the element, in this example the `<article>` is labelled by the corresponding tab or `<button>`.
-- [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
-  - : This attribute identifies an element (by its `id`) that is controlled the element, in this example the `<article>` is controlled by the corresponding tab or `<button>`.
-
-We could have used `aria-hidden` to hide the content of the tabpanels from assistive technologies but if that content contained focusable content, such as links, the user would still be able to tab to that content even when aria-hidden=true is set for the non-active panels. In this example we have applied `class="is-hidden"` to tabpanels that correspond to the tabs with `aria-selected="false"` and using CSS to `display: none;` which prevents the hidden content from being tabbed to.
-
-In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g., "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
+You can also find several live examples in our [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) documentation. See for example, our [ARIA: tab role example](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role#example), which explains how to implement an accessible tabbed interface.
 
 ## Test your skills!
 
