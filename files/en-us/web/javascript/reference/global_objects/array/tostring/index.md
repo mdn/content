@@ -4,9 +4,8 @@ short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.

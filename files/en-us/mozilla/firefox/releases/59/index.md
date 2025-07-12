@@ -2,9 +2,8 @@
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.
 
@@ -117,7 +116,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 
 ### JavaScript
 
-- Non-standard [conditional catch clauses](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
+- Non-standard conditional catch clauses have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
 
 ### APIs
 

@@ -3,7 +3,7 @@ title: Firefox 140 for developers
 short-title: Firefox 140 (Stable)
 slug: Mozilla/Firefox/Releases/140
 page-type: firefox-release-notes-active
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 was released on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).

@@ -2,9 +2,8 @@
 title: Content Security Policy (CSP)
 slug: Web/HTTP/Guides/CSP
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Content Security Policy** (CSP) is a feature that helps to prevent or minimize the risk of certain types of security threats. It consists of a series of instructions from a website to a browser, which instruct the browser to place restrictions on the things that the code comprising the site is allowed to do.
 
@@ -376,7 +375,7 @@ The `strict-dynamic` keyword is provided to help with this problem. It is a keyw
 For example, consider a document like this:
 
 ```html
-<html>
+<html lang="en-US">
   <head>
     <script
       src="./main.js"

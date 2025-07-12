@@ -74,10 +74,7 @@ To use the Topics API in your sites, you must specify it in a [privacy sandbox e
 
 ## Examples
 
-For complete working examples, see:
-
-- [Topics API demo](https://topics-demo.glitch.me/): Demonstrates how `document.browsingTopics()` calls can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-demo)).
-- [Topics API header demo](https://topics-fetch-demo.glitch.me/): Demonstrates a `fetch()` request with a {{httpheader("Sec-Browsing-Topics")}} header can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-fetch-demo)).
+See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for code examples.
 
 ## Specifications
 

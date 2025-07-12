@@ -2,9 +2,8 @@
 title: What's New in Deer Park Alpha
 slug: Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page is based largely on [https://www.squarefree.com/burningedg...eases/](https://www.squarefree.com/burningedge/releases/) (thanks Jesse).
 
@@ -61,7 +60,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - SVG Support
   - : SVG is W3C specification providing resolution-independent scalable vector graphics, along with a DOM. A technology preview of native SVG support is included in this release. Currently a subset of SVG 1.1 Full, missing functionality includes filters, declarative animation, and SVG defined fonts.
 - `<canvas>` Support
-  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/Drawing_Graphics_with_Canvas).
+  - : `<canvas>` is a scriptable drawing surface for dynamically creating bitmap graphics. For a further introduction, see [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 #### Miscellaneous
 
@@ -70,7 +69,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 - URIs always sent as UTF8
   - : URIs are now always sent to the server as UTF8, regardless of the linking page's encoding. This fixes images and links on sites with non-ASCII filenames.
 - XForms support
-  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](/en-US/docs/Archive/Web/XForms).
+  - : The [W3C's XML Forms](https://www.w3.org/MarkUp/Forms/) language allows writing complex forms in XML, and includes features that regular HTML forms do not have, such as client side validation against [XML Schema](https://www.w3.org/XML/Schema) and XML submission/retrieval. Support for XForms comes as an extension, see [Mozilla XForms Project Page](https://www-archive.mozilla.org/projects/xforms/).
 
 ### New Extension Developer Features
 

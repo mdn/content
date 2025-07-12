@@ -260,7 +260,7 @@
 /en-US/docs/CSS/-moz-hidden-unscrollable	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/-moz-hyphens	/en-US/docs/Web/CSS/hyphens
 /en-US/docs/CSS/-moz-image-rect	/en-US/docs/Web/CSS/-moz-image-rect
-/en-US/docs/CSS/-moz-image-region	/en-US/docs/Web/CSS/-moz-image-region
+/en-US/docs/CSS/-moz-image-region	/en-US/docs/Web/CSS/clip
 /en-US/docs/CSS/-moz-initial	/en-US/docs/Web/CSS/initial
 /en-US/docs/CSS/-moz-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/CSS/-moz-margin-end	/en-US/docs/Web/CSS/margin-inline-end
@@ -878,7 +878,7 @@
 /en-US/docs/CSS:-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /en-US/docs/CSS:-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
 /en-US/docs/CSS:-moz-hidden-unscrollable	/en-US/docs/Web/CSS/overflow
-/en-US/docs/CSS:-moz-image-region	/en-US/docs/Web/CSS/-moz-image-region
+/en-US/docs/CSS:-moz-image-region	/en-US/docs/Web/CSS/clip
 /en-US/docs/CSS:-moz-locale-dir(ltr)	/en-US/docs/Web/CSS/:-moz-locale-dir_ltr
 /en-US/docs/CSS:-moz-locale-dir(rtl)	/en-US/docs/Web/CSS/:-moz-locale-dir_rtl
 /en-US/docs/CSS:-moz-margin-end	/en-US/docs/Web/CSS/margin-inline-end
@@ -6949,8 +6949,8 @@
 /en-US/docs/SVG	/en-US/docs/Web/SVG
 /en-US/docs/SVG-TEST	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Attribute	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/From
-/en-US/docs/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/To
+/en-US/docs/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/from
+/en-US/docs/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/to
 /en-US/docs/SVG/Attribute/accent-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/SVG/Attribute/accumulate	/en-US/docs/Web/SVG/Reference/Attribute/accumulate
 /en-US/docs/SVG/Attribute/additive	/en-US/docs/Web/SVG/Reference/Attribute/additive
@@ -8027,6 +8027,7 @@
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
 /en-US/docs/Web/API/AudioWorkletNode/onprocessorerror	/en-US/docs/Web/API/AudioWorkletNode/processorerror_event
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
+/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors_static
 /en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event
 /en-US/docs/Web/API/BarcodeDetector/getSupportedFormats	/en-US/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
@@ -10594,6 +10595,7 @@
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
+/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading	/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs
 /en-US/docs/Web/API/WebRTC_API/High-level_guide	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
@@ -11898,6 +11900,7 @@
 /en-US/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
 /en-US/docs/Web/CSS/-moz-hidden-unscrollable	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/-moz-hyphens	/en-US/docs/Web/CSS/hyphens
+/en-US/docs/Web/CSS/-moz-image-region	/en-US/docs/Web/CSS/clip
 /en-US/docs/Web/CSS/-moz-initial	/en-US/docs/Web/CSS/initial
 /en-US/docs/Web/CSS/-moz-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-moz-margin-end	/en-US/docs/Web/CSS/margin-inline-end
@@ -14530,10 +14533,10 @@
 /en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Events	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/Web/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/From
+/en-US/docs/Web/SVG/Attribute/From	/en-US/docs/Web/SVG/Reference/Attribute/from
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Reference/Attribute
-/en-US/docs/Web/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/To
+/en-US/docs/Web/SVG/Attribute/To	/en-US/docs/Web/SVG/Reference/Attribute/to
 /en-US/docs/Web/SVG/Attribute/accent-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/accumulate	/en-US/docs/Web/SVG/Reference/Attribute/accumulate
 /en-US/docs/Web/SVG/Attribute/additive	/en-US/docs/Web/SVG/Reference/Attribute/additive

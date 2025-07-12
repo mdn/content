@@ -4,9 +4,8 @@ short-title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
 page-type: http-header
 browser-compat: http.headers.Cross-Origin-Embedder-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")}} configures the current document's policy for loading and embedding cross-origin resources.
 

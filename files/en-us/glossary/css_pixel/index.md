@@ -2,9 +2,8 @@
 title: CSS pixel
 slug: Glossary/CSS_pixel
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The term **CSS pixel** is synonymous with the CSS unit of absolute length _px_ — which is [normatively defined](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) as being exactly 1/96th of 1 CSS inch (_in_).
 

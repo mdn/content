@@ -26,6 +26,8 @@ It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constr
   - : An `unsigned long` representing the actual height, in pixels, of the `ImageData`.
 - {{domxref("ImageData.width")}} {{ReadOnlyInline}}
   - : An `unsigned long` representing the actual width, in pixels, of the `ImageData`.
+- {{domxref("ImageData.pixelFormat")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A string indicating the format to use for the `ImageData`.
 
 ## Specifications
 

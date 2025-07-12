@@ -3,9 +3,8 @@ title: "<object>: The External Object element"
 slug: Web/HTML/Reference/Elements/object
 page-type: html-element
 browser-compat: html.elements.object
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 
@@ -64,7 +63,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   data="/shared-assets/videos/flower.webm"
   width="600"
   height="140">
-  <img src="path/image.jpg" alt="useful image description" />
+  <img
+    src="/shared-assets/images/examples/flowers.jpg"
+    alt="Some beautiful flowers" />
 </object>
 ```
 

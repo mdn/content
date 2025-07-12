@@ -95,6 +95,27 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
     Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on using extensions, and which ones are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
+- `hints` {{optional_inline}} {{experimental_inline}}
+  - : An array of strings providing hints as to what UI the browser should provide for the user to create a public key credential.
+
+    The strings can be any of the following:
+    - `"security-key"`
+      - : The UI should recommend using a separate physical security key (such as a YubiKey) to create the credential.
+    - `"client-device"`
+      - : The UI should recommend using an authenticator available on the same device they are using to access the RP client to create the credential. It is analogous to the `authenticatorAttachment` [`platform`](#platform) value.
+    - `"hybrid"`
+      - : The UI should recommend using a general-purpose authenticator, such as a smartphone-based authenticator app, to create the credential. This favors using a cross-device approach to handling authentication, relying on a combination of laptop and smartphone, for example.
+
+    The `authenticatorAttachment` [`cross-platform`](#cross-platform) value is essentially a combination of the `hints` option `security-key` and `hybrid` values — if a device doesn't have bluetooth and an RP specifies `attachment: "cross-platform"`, the resulting UI will likely be similar to the `hints: "security-key"` UI.
+
+    When multiple strings are included in the array, their order denotes the order of preference, from high to low. Supporting browsers that respect the hints should use the first one that they understand.
+
+    The `hints` option provides a more flexible way to specify UI preferences for creating a credential than the [`authenticatorAttachment`](#authenticatorattachment) option, which completely hides the non-chosen option. `hints` also allow indicating a preference for either security keys or hybrid, which is not possible to do with `authenticatorAttachment`.
+
+    Specified `hints` may contradict hints provided in the `authenticatorAttachment` option. When the provided `hints` contradict this option, the `hints` take precedence. `hints` may also be ignored by the browser under specific circumstances, for example if a hinted authenticator type is not usable on the user's device.
+
+    For some specific code and UI examples, see [Introducing hints, Related Origin Requests and JSON serialization for WebAuthn in Chrome](https://developer.chrome.com/blog/passkeys-updates-chrome-129#hints).
+
 - `pubKeyCredParams`
   - : An {{jsxref("Array")}} of objects which specify the key types and signature algorithms the Relying Party supports, ordered from most preferred to least preferred. The client and authenticator will make a best-effort to create a credential of the most preferred type possible. These objects will contain the following properties:
     - `alg`
@@ -132,24 +153,13 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 - `user`
   - : An object describing the user account for which the credential is generated. It can contain the following properties:
     - `displayName`
-      - : A string providing a human-friendly user display name (example: `"John Doe"`), which will have been set by user during initial registration with the relying party.
+      - : A string providing a human-friendly user display name (example: `"Maria Sanchez"`), which will have been set by user during initial registration with the relying party.
 
     - `id`
       - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing a unique ID for the user account. This value has a maximum length of 64 bytes, and is not intended to be displayed to the user.
 
     - `name`
-      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"john.doe@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"JohnDoe667"`).
-
-- `hints` {{optional_inline}} {{experimental_inline}}
-  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
-
-    The values can be any of the following:
-    - `"security-key"`
-      - : Authentication requires a separate dedicated physical device to provide the key.
-    - `"client-device"`
-      - : The user authenticates using their own device, such as a phone.
-    - `"hybrid"`
-      - : Authentication relies on a combination of authorization/authentication methods, potentially relying on both user and server-based mechanisms.
+      - : A string providing a human-friendly identifier for the user's account, to help distinguish between different accounts with similar `displayName`s. This could be an email address (such as `"elaina.sanchez@example.com"`), phone number (for example `"+12345678901"`), or some other kind of user account identifier (for example `"ElainaSanchez667"`).
 
 ## Examples
 

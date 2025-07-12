@@ -2,9 +2,8 @@
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provides links to information about the changes that affect developers in this release.
 
@@ -14,7 +13,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 - All HTML elements now have the {{ domxref("HTMLElement.accessKey", "accessKey") }} attribute, as well as the {{ domxref("HTMLElement.blur()", "blur()") }}, {{ domxref("HTMLElement.click()", "click()") }}, and {{ domxref("HTMLElement.focus()", "focus()") }} methods. These are specified in the {{ domxref("HTMLElement") }} interface.
 - In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
-- When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Reference/Elements/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
+- When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
 - WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
 
@@ -44,7 +43,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - The {{domxref("Selection")}} object's {{domxref("Selection.modify", "modify()")}} method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.
 - The {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} methods are now clamped to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
 - Similarly, the {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} method now clamps to no more than one interval per second in inactive tabs.
-- [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
+- [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
 - The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named `mozSlice()` for now.
 - The value of {{ domxref("Navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers).
 - The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
@@ -61,11 +60,11 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### SVG
 
 - The {{ SVGAttr("class") }} SVG attribute can now be animated.
-- The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a `length` property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, and {{ domxref("SVGPointList") }}.
+- The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a `length` property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, `SVGPathSegList`, and {{ domxref("SVGPointList") }}.
 
 ### HTTP
 
-- Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.
+- Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or `Proxy-Connection` header with the value "keep-alive" anyway.
 - The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a [FIFO](https://en.wikipedia.org/wiki/FIFO) queue, Necko now attempts to sort the pool with connections with the largest [congestion window](https://en.wikipedia.org/wiki/Congestion_window) (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
 - Firefox now handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See [Firefox bug 588781](https://bugzil.la/588781).
 
@@ -79,7 +78,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ## Changes for Mozilla and add-on developers
 
-For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Updating_add-ons).
+For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Releases/5/Updating_add-ons).
 
 > [!NOTE]
 > Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.

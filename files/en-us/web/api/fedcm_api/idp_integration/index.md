@@ -111,22 +111,22 @@ The response to a successful request returns a list of all the IdP accounts that
 {
   "accounts": [
     {
-      "id": "john_doe",
-      "given_name": "John",
-      "name": "John Doe",
-      "email": "john_doe@idp.example",
+      "id": "elaina_maduro",
+      "given_name": "Elaina",
+      "name": "Elaina Maduro",
+      "email": "elaina_maduro@idp.example",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
-      "login_hints": ["john_doe", "john_doe@idp.example"]
+      "login_hints": ["elaina_maduro", "elaina_maduro@idp.example"]
     },
     {
-      "id": "johnny",
-      "given_name": "Johnny",
-      "name": "Johnny",
-      "email": "johnny@idp.example",
+      "id": "elly",
+      "given_name": "Elly",
+      "name": "Elly",
+      "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
-      "login_hints": ["johnny", "johnny@idp.example"]
+      "login_hints": ["elly", "elly@idp.example"]
     }
   ]
 }

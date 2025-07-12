@@ -10,10 +10,10 @@ browser-compat: api.CSSContainerRule.containerQuery
 
 The read-only **`containerQuery`** property of the {{domxref("CSSContainerRule")}} interface returns a string representing the container conditions that are evaluated when the container changes size in order to determine if the styles in the associated {{cssxref("@container")}} are applied.
 
-For example, the value of `containerQuery` for the {{cssxref("@container")}} below is `(min-width: 700px)`:
+For example, the value of `containerQuery` for the {{cssxref("@container")}} below is `(width >= 700px)`:
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width >= 700px) {
   .card {
     font-size: 2em;
   }

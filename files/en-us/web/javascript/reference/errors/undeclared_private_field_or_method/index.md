@@ -2,9 +2,8 @@
 title: "SyntaxError: reference to undeclared private field or method #x"
 slug: Web/JavaScript/Reference/Errors/Undeclared_private_field_or_method
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "reference to undeclared private field or method #x" occurs when a [private name](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) is used, but this private name is not declared in the class scope.
 

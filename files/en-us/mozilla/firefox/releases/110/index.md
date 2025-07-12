@@ -2,9 +2,8 @@
 title: Firefox 110 for developers
 slug: Mozilla/Firefox/Releases/110
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 110 that will affect developers. Firefox 110 was released on February 14, 2023.
 

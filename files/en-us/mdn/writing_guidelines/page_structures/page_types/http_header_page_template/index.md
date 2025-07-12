@@ -26,7 +26,7 @@ sidebar: mdnsidebar
 >   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
-> sidebar: httpsidebar
+> sidebar: http
 > ---
 > ```
 >
@@ -51,7 +51,7 @@ sidebar: mdnsidebar
 >     For these cases, remove the browser-compat key and value.
 >
 > - **sidebar**
->   - : This is always `httpsidebar`.
+>   - : This is always `http`.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---

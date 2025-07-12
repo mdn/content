@@ -89,7 +89,7 @@ In the CSS, we import a color font from Google Fonts, and define two custom `fon
 }
 
 p {
-  font-family: "Nabla";
+  font-family: "Nabla", fantasy;
   font-size: 4rem;
   text-align: center;
   margin: 0;

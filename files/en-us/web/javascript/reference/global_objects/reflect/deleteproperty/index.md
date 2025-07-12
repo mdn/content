@@ -4,9 +4,8 @@ short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.deleteProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.deleteProperty()`** static method is like the {{jsxref("Operators/delete", "delete")}} operator, but as a function. It deletes a property from an object.
 

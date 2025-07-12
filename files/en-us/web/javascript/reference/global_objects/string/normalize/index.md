@@ -4,9 +4,8 @@ short-title: normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.normalize
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
 Form of this string.

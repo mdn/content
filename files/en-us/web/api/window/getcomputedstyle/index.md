@@ -119,7 +119,7 @@ h3::after {
 
 ```js
 const h3 = document.querySelector("h3");
-const result = getComputedStyle(h3, ":after").content;
+const result = getComputedStyle(h3, "::after").content;
 
 console.log("the generated content is: ", result); // returns ' rocks!'
 ```
