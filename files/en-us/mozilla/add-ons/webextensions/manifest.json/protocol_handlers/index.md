@@ -50,9 +50,7 @@ With this key, you can register a website as a handler for a particular protocol
 Each protocol handler has three properties, all mandatory:
 
 - `protocol`
-
   - : A string defining the protocol. This must be either:
-
     - one of the following: "bitcoin", "dat", "dweb", "ftp", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "matrix", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
     - a string consisting of a custom name prefixed with "web+" or "ext+". For example: "web+foo" or "ext+foo". The custom name must consist only of lower-case {{Glossary("ASCII")}} characters. It's recommended that extensions use the "ext+" form.
 

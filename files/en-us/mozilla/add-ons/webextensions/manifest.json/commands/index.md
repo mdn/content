@@ -179,7 +179,6 @@ Key combinations must consist of 2 or 3 keys:
 1. **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
 2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
 3. **key** (mandatory). This can be any one of:
-
    - the letters `A` – `Z`
    - the numbers `0` – `9`
    - the function keys `F1` – `F12`

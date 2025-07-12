@@ -32,7 +32,7 @@ removeUnsafe()
 
 None.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

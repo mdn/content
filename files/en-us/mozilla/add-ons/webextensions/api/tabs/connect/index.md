@@ -27,9 +27,7 @@ browser.tabs.connect(
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to connect to.
 - `connectInfo` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
     - `frameId` {{optional_inline}}

@@ -27,10 +27,12 @@ fetch(url).then((response) => {
 });
 ```
 
-> **Note:** `put()` will overwrite any key/value pair
+> [!NOTE]
+> `put()` will overwrite any key/value pair
 > previously stored in the cache that matches the request.
 
-> **Note:** {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} do not
+> [!NOTE]
+> {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} do not
 > cache responses with `Response.status` values that are not in the 200
 > range, whereas `Cache.put` lets you store any request/response pair. As a
 > result, {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} can't be used to store

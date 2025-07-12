@@ -101,7 +101,6 @@ Generally speaking, you should select a templating engine that delivers all the 
 - Style — Some template engines use specific markup to indicate inserted content within "ordinary" HTML, while others construct the HTML using a different syntax (for example, using indentation and block names).
 - Performance/rendering time.
 - Features — you should consider whether the engines you look at have the following features available:
-
   - Layout inheritance: Allows you to define a base template and then "inherit" just the parts of it that you want to be different for a particular page. This is typically a better approach than building templates by including a number of required components or building a template from scratch each time.
   - "Include" support: Allows you to build up templates by including other templates.
   - Concise variable and loop control syntax.
@@ -195,7 +194,6 @@ At this point, we have a complete skeleton project. The website doesn't actually
    ```
 
 2. Then run the application.
-
    - On the Windows CMD prompt, use this command:
 
      ```batch

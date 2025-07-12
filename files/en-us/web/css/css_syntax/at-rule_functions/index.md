@@ -11,7 +11,7 @@ page-type: guide
 
 ## Syntax
 
-```css
+```plain
 @identifier function([argument]? [, argument]!) {
 }
 ```

@@ -4,9 +4,8 @@ short-title: Alt-Svc
 slug: Web/HTTP/Reference/Headers/Alt-Svc
 page-type: http-header
 browser-compat: http.headers.Alt-Svc
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Alt-Svc`** {{Glossary("response header")}} lets a server indicate that another network location (the "alternative service") can be treated as authoritative for that origin when making future requests.
 

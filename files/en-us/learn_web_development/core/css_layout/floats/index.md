@@ -325,7 +325,7 @@ You should see that the second paragraph now clears the floated element and no l
 
 ## Clearing boxes wrapped around a float
 
-You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around _both_ elements.
+You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box containing _both_ elements.
 
 ### The problem
 

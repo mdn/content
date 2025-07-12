@@ -197,5 +197,4 @@ Now:
 - [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API reference documentation
 - open the settings page directly from your extension using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
 - Settings page example:
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

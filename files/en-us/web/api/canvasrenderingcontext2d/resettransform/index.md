@@ -18,6 +18,14 @@ method of the Canvas 2D API resets the current transform to the identity matrix.
 resetTransform()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Resetting the matrix

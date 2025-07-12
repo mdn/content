@@ -9,13 +9,16 @@ browser-compat: api.ImageData.data
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The readonly **`ImageData.data`** property returns a
-{{jsxref("Uint8ClampedArray")}} that contains the {{domxref("ImageData")}} object's
+{{jsxref("Uint8ClampedArray")}} or {{jsxref("Float16Array")}} that contains the {{domxref("ImageData")}} object's
 pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer
 values between `0` and `255` (inclusive).
 
 ## Value
 
-A {{jsxref("Uint8ClampedArray")}}.
+The type depends on the {{domxref("ImageData.pixelFormat")}} used:
+
+- A {{jsxref("Uint8ClampedArray")}} if the `pixelFormat` is `"rgba-unorm8"`.
+- A {{jsxref("Float16Array")}} if the `pixelFormat` is `"rgba-float16"`.
 
 ## Examples
 
@@ -29,6 +32,16 @@ for each pixel, making 4 x 10,000, or 40,000 values in all.
 let imageData = new ImageData(100, 100);
 console.log(imageData.data); // Uint8ClampedArray[40000]
 console.log(imageData.data.length); // 40000
+```
+
+If the `ImageData` object is set up for floating-point pixels — for example, for high dynamic range (HDR) images —`data` will be a {{jsxref("Float16Array")}} instead.
+
+```js
+let floatArray = new Float16Array(4 * 200 * 200);
+let imageData = new ImageData(floatArray, 200, 200, {
+  pixelFormat: "rgba-float16",
+});
+console.log(imageData.data); // Float16Array
 ```
 
 ### Filling a blank ImageData object

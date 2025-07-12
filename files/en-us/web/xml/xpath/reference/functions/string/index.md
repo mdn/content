@@ -26,7 +26,6 @@ A string
 
 - If the object is a node-set, the string value of the first node in the set is returned.
 - A number is converted as follows:
-
   - NaN is converted to the string NaN.
   - Positive zero is converted to the string 0.
   - Negative zero is converted to the string 0.

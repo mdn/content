@@ -23,7 +23,6 @@ If omitted, the default overflow alignment is a blend of `safe` and `unsafe`.
 The following keyword values are represented by the `<overflow-position>` grammar term:
 
 - `safe`
-
   - : If the size of the {{glossary("alignment subject")}} overflows the {{glossary("alignment container")}}, the alignment subject is instead aligned as if the alignment mode were `start`.
 
 - `unsafe`

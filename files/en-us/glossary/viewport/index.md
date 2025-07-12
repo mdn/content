@@ -2,9 +2,8 @@
 title: Viewport
 slug: Glossary/Viewport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In computer graphics, a **viewport** represents a polygonal (normally rectangular) area that is currently being viewed.
 

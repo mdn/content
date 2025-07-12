@@ -2,9 +2,8 @@
 title: Thread
 slug: Glossary/Thread
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Thread in computer science is the execution of running multiple tasks or programs at the same time. Each unit capable of executing code is called a **thread**.
 

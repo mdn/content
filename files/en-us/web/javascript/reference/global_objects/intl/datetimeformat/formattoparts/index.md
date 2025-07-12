@@ -4,9 +4,8 @@ short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
@@ -38,7 +37,6 @@ formatToParts(date)
 ### Parameters
 
 - `date` {{optional_inline}}
-
   - : The date to format. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}} object. Additionally can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}} object if the `DateTimeFormat` object was configured to print at least one relevant part of the date.
 
     > [!NOTE]

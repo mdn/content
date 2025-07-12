@@ -43,7 +43,6 @@ stroke-miterlimit: unset;
 ### Values
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : Any real positive number equal to or greater than `1`; values below that are invalid. The initial value is `4`.
 
 ## Formal definition

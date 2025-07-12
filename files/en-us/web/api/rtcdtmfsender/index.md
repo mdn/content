@@ -16,7 +16,6 @@ The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communica
 ## Instance properties
 
 - {{domxref("RTCDTMFSender.canInsertDTMF")}} {{ReadOnlyInline}}
-
   - : A boolean value which is `true` if the `RTCDTMFSender` is capable of sending DTMF tones, or `false` if it is not.
 
 - {{domxref("RTCDTMFSender.toneBuffer")}} {{ReadOnlyInline}}

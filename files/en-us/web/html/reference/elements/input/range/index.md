@@ -3,9 +3,8 @@ title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 

@@ -4,9 +4,8 @@ short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
 page-type: html-attribute
 browser-compat: html.global_attributes.spellcheck
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that defines whether the element may be checked for spelling errors.
 

@@ -39,7 +39,6 @@ A string which indicates the type of content the request is asking for. This typ
 Possible values are:
 
 - `""`
-
   - : The empty string is the default value, and is used for destinations that do not have their own value. This is the value when requests are made using the following APIs (among others):
     - [`<a ping>`](/en-US/docs/Web/HTML/Reference/Elements/a#ping)
     - [`<area ping>`](/en-US/docs/Web/HTML/Reference/Elements/area#ping)

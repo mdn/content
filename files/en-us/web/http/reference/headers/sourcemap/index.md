@@ -4,9 +4,8 @@ short-title: SourceMap
 slug: Web/HTTP/Reference/Headers/SourceMap
 page-type: http-header
 browser-compat: http.headers.SourceMap
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`SourceMap`** {{Glossary("response header")}} provides the location of a {{Glossary("source map")}} for the resource.
 

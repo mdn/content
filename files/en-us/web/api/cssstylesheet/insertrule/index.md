@@ -27,10 +27,8 @@ insertRule(rule, index)
 ### Parameters
 
 - `rule`
-
   - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
-
     - **For [rule-sets](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)**, both
       a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.

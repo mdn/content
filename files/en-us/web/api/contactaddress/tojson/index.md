@@ -18,6 +18,10 @@ The **`toJSON()`** method of the {{domxref("ContactAddress")}} interface is a st
 toJSON()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A JSON object.

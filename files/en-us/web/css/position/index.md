@@ -75,7 +75,7 @@ section {
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   float: left;
   width: 65px;
@@ -125,25 +125,21 @@ position: unset;
 - `static`
   - : The element is positioned according to the [Normal Flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow) of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
 - `relative`
-
   - : The element is positioned according to the normal flow of the document, and then offset _relative to itself_ based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
 
     This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. Its effect on `table-*-group`, `table-row`, `table-column`, `table-cell`, and `table-caption` elements is undefined.
 
 - `absolute`
-
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) with other margins.
 
 - `fixed`
-
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block), which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). In printed documents, the element is placed in the same position on _every page_.
 
 - `sticky`
-
   - : The element is positioned according to the normal flow of the document, and then offset relative to its _nearest scrolling ancestor_ and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) (nearest block-level ancestor), including table-related elements, based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
@@ -503,7 +499,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: verdana;
+  font-family: Verdana;
   border: 1px solid;
 }
 

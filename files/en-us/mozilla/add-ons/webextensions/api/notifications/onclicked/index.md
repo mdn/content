@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `notificationId`
       - : `string`. ID of the notification that the user clicked.
 

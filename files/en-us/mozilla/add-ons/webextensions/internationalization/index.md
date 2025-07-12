@@ -16,33 +16,24 @@ The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather 
 An internationalized extension can contain the same features as any other extension — [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:
 
 - extension-root-directory/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - English messages (strings)
 
     - de
-
       - messages.json
-
         - German messages (strings)
 
     - etc.
 
   - manifest.json
-
     - locale-dependent metadata
 
   - myJavascript.js
-
     - JavaScript for retrieving browser locale, locale-specific messages, etc.
 
   - myStyles.css
-
     - locale-dependent CSS
 
 Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.
@@ -235,25 +226,17 @@ Locales can be specified using a language code, such as `fr` or `en` or qualifie
 Take this example:
 
 - extension-root-directory/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`.

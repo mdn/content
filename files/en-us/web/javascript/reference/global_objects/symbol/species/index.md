@@ -4,9 +4,8 @@ short-title: species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.species`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.species`. Methods that create copies of an object may look up this symbol on the object for the constructor function to use when creating the copy.
 

@@ -2,9 +2,8 @@
 title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 38 was released on May 12th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -27,11 +26,10 @@ Highlights:
 ### CSS
 
 - Support for {{cssxref("ruby-position")}} and {{cssxref("ruby-align")}} have been added and is available by default ([Firefox bug 1055676](https://bugzil.la/1055676) [Firefox bug 1123917](https://bugzil.la/1123917) and [Firefox bug 1039006](https://bugzil.la/1039006)).
-- The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
+- The `:unresolved` pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ([Firefox bug 1120721](https://bugzil.la/1120721)).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ([Firefox bug 1110277](https://bugzil.la/1110277)).
 - The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
-
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("min-width")}} and {{cssxref("min-height")}}: {{cssxref("min-block-size")}} and {{cssxref("min-inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("max-width")}} and {{cssxref("max-height")}}: {{cssxref("max-block-size")}} and {{cssxref("max-block-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
@@ -54,7 +52,6 @@ Highlights:
 - {{jsxref("Functions/set", "Setter")}} with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is now a {{jsxref("SyntaxError")}} ([Firefox bug 1089632](https://bugzil.la/1089632)).
 - The {{jsxref("Function/name", "name")}} property of functions is configurable now ([Firefox bug 1084019](https://bugzil.la/1084019)).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
-
   - The {{jsxref("TypedArray.of", "of()")}} and {{jsxref("TypedArray.from", "from()")}} methods ([Firefox bug 896608](https://bugzil.la/896608)).
   - The {{jsxref("TypedArray.forEach", "forEach()")}} method ([Firefox bug 1107645](https://bugzil.la/1107645)).
   - The {{jsxref("TypedArray.filter", "filter()")}} and {{jsxref("TypedArray.map", "map()")}} methods ([Firefox bug 1121936](https://bugzil.la/1121936)).

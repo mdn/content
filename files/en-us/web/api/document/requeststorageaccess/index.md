@@ -25,9 +25,7 @@ requestStorageAccess(types)
 ### Parameters
 
 - `types` {{optional_inline}}
-
   - : An object containing properties that control what unpartitioned state is made accessible. If not specified, the default value of the property is `false`. Available properties are as follows:
-
     - `all`
       - : A boolean specifying all possible unpartitioned states should be made accessible.
     - `cookies`

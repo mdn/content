@@ -2,9 +2,8 @@
 title: Build the brick field
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
 

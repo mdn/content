@@ -4,9 +4,8 @@ short-title: transfer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transfer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`transfer()`** method of {{jsxref("ArrayBuffer")}} instances creates a new `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 

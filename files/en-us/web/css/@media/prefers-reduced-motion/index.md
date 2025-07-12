@@ -14,12 +14,6 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 
 Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
 
-```css
-@media (prefers-reduced-motion: reduce) {
-  /* styles to apply if a user's device settings are set to reduced motion */
-}
-```
-
 ## Syntax
 
 - `no-preference`
@@ -32,7 +26,6 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
-
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 

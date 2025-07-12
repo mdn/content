@@ -290,7 +290,7 @@ For our layout above, we might like to have a very basic layout at narrow widths
 We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout, we keep the nine-column track grid, redefining where items are placed using `grid-template-areas`.
 
 ```css
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .wrapper {
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
@@ -299,7 +299,7 @@ We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_
       "sd sd sd  ft  ft   ft   ft   ft   ft";
   }
 }
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .wrapper {
     grid-template-areas:
       "hd hd hd   hd   hd   hd   hd   hd hd"

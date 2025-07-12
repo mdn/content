@@ -20,12 +20,7 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 ## Examples
 
 ```html
-<html>
-  <header>
-    <link rel="stylesheet" href="styles.css" />
-    …
-  </header>
-</html>
+<link rel="stylesheet" href="styles.css" />
 ```
 
 The `sheet` property of the `HTMLLinkElement` object will return the {{domxref("StyleSheet")}} object describing `styles.css`.

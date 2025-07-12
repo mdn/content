@@ -4,9 +4,8 @@ short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
@@ -43,7 +42,6 @@ format(date)
 ### Parameters
 
 - `date`
-
   - : The date to format. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}} object. Additionally can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}} object if the `DateTimeFormat` object was configured to print at least one relevant part of the date.
 
     > [!NOTE]

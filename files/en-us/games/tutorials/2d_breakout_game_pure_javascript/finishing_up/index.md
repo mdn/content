@@ -2,9 +2,8 @@
 title: Finishing up
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
@@ -285,7 +284,7 @@ function draw() {
 
 const runButton = document.getElementById("runButton");
 runButton.addEventListener("click", () => {
-  startGame();
+  draw();
   runButton.disabled = true;
 });
 ```

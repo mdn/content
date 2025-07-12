@@ -64,9 +64,7 @@ The key features of the library are:
 - [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)
   - : Returns an `IDBFileStorage` instance, creating the named storage if it does not exist.
 - [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html)
-
   - : Provides the methods to save and retrieve files, such as:
-
     - list to obtain an optionally filtered list of file in the database.
     - put to add a file or blob to the database.
     - get to retrieve a file or blob from the database.

@@ -28,7 +28,6 @@ The {{domxref("TouchEvent")}} interface represents an event sent when the state 
 - {{domxref("TouchEvent.touches","touches")}} - a list of all of the touch points currently on the screen.
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - a list of the touch points on the _target_ DOM element.
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - a list of the touch points whose items depend on the associated event type:
-
   - For the {{domxref("Element/touchstart_event", "touchstart")}} event, it is a list of the touch points that became active with the current event.
   - For the {{domxref("Element/touchmove_event", "touchmove")}} event, it is a list of the touch points that have changed since the last event.
   - For the {{domxref("Element/touchend_event", "touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).

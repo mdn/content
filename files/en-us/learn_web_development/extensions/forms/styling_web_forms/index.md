@@ -356,7 +356,7 @@ button {
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 

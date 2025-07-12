@@ -3,9 +3,8 @@ title: "<s>: The Strikethrough element"
 slug: Web/HTML/Reference/Elements/s
 page-type: html-element
 browser-compat: html.elements.s
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethrough, or a line through it. Use the `<s>` element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not appropriate when indicating document edits; for that, use the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements, as appropriate.
 

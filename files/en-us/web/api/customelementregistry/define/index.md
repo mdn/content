@@ -24,9 +24,7 @@ define(name, constructor, options)
 - `constructor`
   - : Constructor for the new custom element.
 - `options` {{optional_inline}}
-
   - : Object that controls how the element is defined. One option is currently supported:
-
     - `extends`
       - : String specifying the name of a built-in element to
         extend. Used to create a customized built-in element.

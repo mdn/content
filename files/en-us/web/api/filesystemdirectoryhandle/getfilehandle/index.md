@@ -26,9 +26,7 @@ getFileHandle(name, options)
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the file you wish to retrieve.
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `create` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`. When
         set to `true` if the file is not found, one with the specified name

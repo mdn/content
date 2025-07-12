@@ -35,11 +35,11 @@ This SVG gradient image is both dimensionless and proportionless. It doesn't car
   <title>Corner-to-corner gradient</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop style="stop-color:pink" offset="0" />
-      <stop style="stop-color:goldenrod" offset="1" />
+      <stop stop-color="pink" offset="0" />
+      <stop stop-color="goldenrod" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g)" width="100%" height="100%" />
+  <rect fill="url(#g)" width="100%" height="100%" />
 </svg>
 ```
 
@@ -54,11 +54,11 @@ This image specifies a width of 100 pixels but no height or intrinsic ratio. Thi
   <title>Vertical gradient, with a fixed width</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: purple;" offset="0" />
-      <stop style="stop-color: lime;" offset="1" />
+      <stop stop-color="purple" offset="0" />
+      <stop stop-color="lime" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url(#g)" width="100%" height="100%" />
 </svg>
 ```
 
@@ -75,11 +75,11 @@ This is very much like specifying a specific width and height; since once you ha
   <title>Vertical gradient, with a fixed height and intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: teal;" offset="0" />
-      <stop style="stop-color: orange;" offset="1" />
+      <stop stop-color="teal" offset="0" />
+      <stop stop-color="orange" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url(#g)" width="100%" height="100%" />
 </svg>
 ```
 
@@ -94,11 +94,11 @@ This image doesn't specify either a width or a height; instead, it specifies an 
   <title>Intrinsic ratio</title>
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop style="stop-color: navy;" offset="0" />
-      <stop style="stop-color: maroon;" offset="1" />
+      <stop stop-color="navy" offset="0" />
+      <stop stop-color="maroon" offset="1" />
     </linearGradient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <rect fill="url(#g)" width="100%" height="100%" />
 </svg>
 ```
 

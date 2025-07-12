@@ -4,9 +4,8 @@ short-title: FinalizationRegistry()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 page-type: javascript-constructor
 browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegistry")}} objects.
 
@@ -16,7 +15,8 @@ The **`FinalizationRegistry()`** constructor creates {{jsxref("FinalizationRegis
 new FinalizationRegistry(callbackFn)
 ```
 
-> **Note:** `FinalizationRegistry()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `FinalizationRegistry()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

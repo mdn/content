@@ -464,7 +464,7 @@ body {
   background-color: pink;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   body {
     background-color: blue;
   }
@@ -531,7 +531,7 @@ body {
   max-width: 33em;
 }
 
-@media (min-width: 70em) {
+@media (width >= 70em) {
   /* Increase the global font size on larger screens or windows
      for better readability */
   body {
@@ -545,7 +545,7 @@ h1 {
 
 /* Handle specific elements nested in the DOM */
 div p,
-#id:first-line {
+#id::first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -591,7 +591,7 @@ body {
   max-width: 33em;
 }
 
-@media (min-width: 70em) {
+@media (width >= 70em) {
   body {
     font-size: 130%;
   }
@@ -606,7 +606,7 @@ The next example shows the same CSS in a more compressed format, with all extra 
 
 ```css-nolint
 body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
-@media(min-width:70em){body{font-size:130%;}}
+@media(width>=70em){body{font-size:130%;}}
 h1{font-size:1.5em;}
 ```
 

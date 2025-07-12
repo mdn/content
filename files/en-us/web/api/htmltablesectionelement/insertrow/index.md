@@ -12,7 +12,8 @@ The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} inter
 ({{HtmlElement("tr")}}) in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or
 {{HTMLElement("tbody")}}), then returns a reference to this new row.
 
-> **Note:** `insertRow()` inserts the row directly into the
+> [!NOTE]
+> `insertRow()` inserts the row directly into the
 > section. The row does not need to be appended separately as would be the case if
 > {{domxref("Document.createElement()")}} had been used to create the new
 > `<tr>` element.

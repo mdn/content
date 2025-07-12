@@ -136,7 +136,8 @@ Inside this context, whitespace character processing can be summarized as follow
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
-> **Note:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
+> [!NOTE]
+> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
 ### Whitespace in block formatting contexts
 

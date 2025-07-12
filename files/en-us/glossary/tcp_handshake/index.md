@@ -2,9 +2,8 @@
 title: TCP handshake
 slug: Glossary/TCP_handshake
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 {{glossary('TCP','TCP (Transmission Control Protocol)')}} uses a **three-way handshake** (aka TCP-handshake, three message handshake, and/or SYN-SYN-ACK) to set up a TCP/IP connection over an IP based network. Similarly, a **four-way handshake** is used to terminate the connection.
 

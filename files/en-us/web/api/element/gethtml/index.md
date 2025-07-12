@@ -27,9 +27,7 @@ getHTML(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object with the following optional parameters:
-
     - `serializableShadowRoots`
       - : A boolean value that specifies whether to include {{domxref("ShadowRoot/serializable","serializable")}} shadow roots.
         The default value is `false`.

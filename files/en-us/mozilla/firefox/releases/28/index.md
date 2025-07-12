@@ -2,9 +2,8 @@
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -40,7 +39,6 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 ### JavaScript
 
 - ECMAScript 2015 implementation continues:
-
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ([Firefox bug 894658](https://bugzil.la/894658)).
 
 - A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ([Firefox bug 724768](https://bugzil.la/724768)).

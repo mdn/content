@@ -31,7 +31,6 @@ Not part of any standard.
 
 - {{CSSxRef("::-webkit-slider-thumb")}}
 - Similar pseudo-elements used by other browsers:
-
   - {{CSSxRef("::-moz-range-track")}}
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

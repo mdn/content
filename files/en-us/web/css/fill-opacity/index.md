@@ -32,11 +32,9 @@ fill-opacity: unset;
 The {{cssxref("number")}} and {{cssxref("percentage")}} values denote the opacity of the `fill` of the element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%`, the element is fully transparent. With `1` or `100%`, the element is fully opaque. With values in between, the element is semi-transparent, with content behind the element being visible.

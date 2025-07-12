@@ -2,9 +2,8 @@
 title: Firefox 119 for developers
 slug: Mozilla/Firefox/Releases/119
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 119 that affect developers. Firefox 119 was released on October 24, 2023.
 

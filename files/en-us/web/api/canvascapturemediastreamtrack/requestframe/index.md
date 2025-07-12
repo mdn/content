@@ -25,6 +25,10 @@ the stream.
 requestFrame()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

@@ -20,6 +20,7 @@ There are several different features and problems on the web platform that gener
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) violations.
 - [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) violations.
+- [Integrity-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -63,11 +64,12 @@ The only difference is that server reports are JSON serializations of the object
 
 The mapping of report `type` to `body` is shown below.
 
-| `type`          | `body`                                | Items reported                                                                   |
-| --------------- | ------------------------------------- | -------------------------------------------------------------------------------- |
-| `deprecation`   | {{domxref("DeprecationReportBody")}}  | Deprecated features used by the site.                                            |
-| `intervention`  | {{domxref("InterventionReportBody")}} | Features blocked by the user agent, for example, if permissions are not granted. |
-| `csp-violation` | {{domxref("CSPViolationReportBody")}} | Violations of the site's CSP policy.                                             |
+| `type`                | `body`                                      | Items reported                                                                   |
+| --------------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
+| `deprecation`         | {{domxref("DeprecationReportBody")}}        | Deprecated features used by the site.                                            |
+| `integrity-violation` | {{domxref("IntegrityViolationReportBody")}} | Violations of the page's integrity policy.                                       |
+| `intervention`        | {{domxref("InterventionReportBody")}}       | Features blocked by the user agent, for example, if permissions are not granted. |
+| `csp-violation`       | {{domxref("CSPViolationReportBody")}}       | Violations of the site's CSP policy.                                             |
 
 ### Generating reports via WebDriver
 
@@ -93,6 +95,11 @@ These interfaces are defined as part of the HTTP [Content Security Policy (CSP)]
 - {{domxref("SecurityPolicyViolationEvent")}}
   - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
 
+This interface is defined as part of the [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) specification:
+
+- {{domxref("IntegrityViolationReportBody")}}
+  - : Contains information about a resource that was blocked because it did not meet the Subresource Integrity guarantees required by its {{httpheader("Integrity-Policy")}}, or that would be blocked for report-only policies set using {{httpheader("Integrity-Policy-Report-Only")}}.
+
 ## Related HTTP Headers
 
 These HTTP response headers define the endpoints where reports are sent.
@@ -103,11 +110,15 @@ These HTTP response headers define the endpoints where reports are sent.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
   - : No longer part of the Reporting API but still supported by some browsers. This sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers especially for [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) that has not yet been updated to support `Reporting-Endpoints`. Other Reporting API reports should use `Reporting-Endpoints` instead for better future support.
 
-Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
+Report endpoints can be set for the following reports using the {{CSP("report-to")}} directive on the corresponding headers:
 
-- CSP Violations
+- CSP violations
+  - : {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
-  - : {{CSP("report-to")}} on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+Report endpoints can be set for the following reports using the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in a structured dictionary on the corresponding headers:
+
+- Integrity-Policy violations
+  - : {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 
 ## Examples
 

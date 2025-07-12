@@ -29,9 +29,7 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie. Defaults to `null`.
     - `expires` {{Optional_Inline}}

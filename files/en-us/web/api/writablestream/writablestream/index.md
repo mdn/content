@@ -20,11 +20,9 @@ new WritableStream(underlyingSink, queuingStrategy)
 ### Parameters
 
 - `underlyingSink` {{optional_inline}}
-
   - : An object containing methods and properties that define how the constructed stream instance will behave.
     The `controller` parameter passed to this object's methods is a {{domxref("WritableStreamDefaultController")}} that provides abort and error signaling.
     `underlyingSink` can contain the following:
-
     - `start(controller)` {{optional_inline}}
       - : This is a method, called immediately when the object is constructed.
         The contents of this method are defined by the developer, and should aim to get access to the underlying sink. If this process is to be done asynchronously, it can return a promise to signal success or failure.
@@ -44,10 +42,8 @@ new WritableStream(underlyingSink, queuingStrategy)
         The `reason` parameter contains a string describing why the stream was aborted.
 
 - `queuingStrategy` {{optional_inline}}
-
   - : An object that optionally defines a queuing strategy for the stream.
     This takes two parameters:
-
     - `highWaterMark`
       - : A non-negative integer — this defines the total number of chunks that can be contained in the internal queue before backpressure is applied.
     - `size(chunk)`

@@ -2,9 +2,8 @@
 title: Logical properties
 slug: Glossary/Logical_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 CSS **logical properties** provide a way to lay out content based on the document's writing mode and direction rather than the physical dimensions of the viewport. This enables more flexible and maintainable designs, especially for websites supporting multiple languages.
 

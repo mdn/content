@@ -24,16 +24,14 @@ removeElement(element)
 ### Parameters
 
 - `element`
-
   - : A string indicating the name of the element to be disallowed, or an object with the following properties:
-
     - `name`
       - : A string containing the name of the element.
     - `namespace` {{optional_inline}}
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

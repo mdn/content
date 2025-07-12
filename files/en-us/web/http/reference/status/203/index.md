@@ -3,9 +3,8 @@ title: 203 Non-Authoritative Information
 slug: Web/HTTP/Reference/Status/203
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`203 Non-Authoritative Information`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that the request was successful, but a _transforming {{Glossary("Proxy server", "proxy")}}_ has modified the headers or enclosed content from the origin server's {{HTTPStatus("200")}} (`OK`) response.
 

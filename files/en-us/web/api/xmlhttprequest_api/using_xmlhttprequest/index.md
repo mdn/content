@@ -50,7 +50,8 @@ If you use `XMLHttpRequest` to get the content of a remote XML document, the {{d
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document beforehand. You might want to remove line breaks, if you use `RegExp` to scan with regard to line breaks. However, this method is a "last resort" since if the XML code changes slightly, the method will likely fail.
 
-> **Note:** `XMLHttpRequest` can now interpret HTML for you, using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn how to do this.
+> [!NOTE]
+> `XMLHttpRequest` can now interpret HTML for you, using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the article about [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn how to do this.
 
 ### Processing a `responseText` property containing an HTML document
 

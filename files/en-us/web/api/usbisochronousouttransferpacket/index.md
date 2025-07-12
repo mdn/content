@@ -21,9 +21,7 @@ The `USBIsochronousOutTransferPacket` interface of the [WebUSB API](/en-US/docs/
 - {{domxref("USBIsochronousOutTransferPacket.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the packet that were sent to the device.
 - {{domxref("USBIsochronousOutTransferPacket.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : Returns the status of the transfer request, one of:
-
     - `"ok"` - The transfer was successful.
     - `"stall"` - The device indicated an error by generating a stall condition on the endpoint. A stall on an isochronous endpoint does not need to be cleared.
 

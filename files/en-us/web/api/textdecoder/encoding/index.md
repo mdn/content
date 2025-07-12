@@ -8,9 +8,9 @@ browser-compat: api.TextDecoder.encoding
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextDecoder.encoding`** read-only property returns a string containing the name of the decoding algorithm used by the specific decoder object.
+The **`TextDecoder.encoding`** read-only property returns a string containing the name of the character encoding that this decoder will use.
 
-The encoding is set by the [constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder) `label` parameter, and defaults to `utf-8`.
+The encoding is set by the [`label`](/en-US/docs/Web/API/TextDecoder/TextDecoder#label) parameter passed to the constructor, and defaults to `utf-8`.
 
 ## Value
 

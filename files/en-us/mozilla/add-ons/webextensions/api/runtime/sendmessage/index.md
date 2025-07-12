@@ -33,7 +33,6 @@ let sending = browser.runtime.sendMessage(
 ### Parameters
 
 - `extensionId` {{optional_inline}}
-
   - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
     If `extensionId` is omitted, the message is sent to your extension.
@@ -41,11 +40,8 @@ let sending = browser.runtime.sendMessage(
 - `message`
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `includeTlsChannelId` {{optional_inline}}
-
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
 
         This option is only supported in Chromium-based browsers.
@@ -54,9 +50,7 @@ Depending on the arguments it is given, this API is sometimes ambiguous. The fol
 
 - **if one argument is given**, it is the message to send, and the message will be sent internally.
 - **if two arguments are given:**
-
   - the arguments are interpreted as `(message, options)`, and the message is sent internally, if the second argument is any of the following:
-
     1. a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
     2. null
     3. undefined

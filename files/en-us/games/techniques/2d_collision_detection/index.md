@@ -2,9 +2,8 @@
 title: 2D collision detection
 slug: Games/Techniques/2D_collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g., Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
 

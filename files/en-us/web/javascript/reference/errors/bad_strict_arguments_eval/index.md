@@ -2,9 +2,8 @@
 title: "SyntaxError: 'arguments'/'eval' can't be defined or assigned to in strict mode code"
 slug: Web/JavaScript/Reference/Errors/Bad_strict_arguments_eval
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "'arguments' can't be defined or assigned to in strict mode code" or "'eval' can't be defined or assigned to in strict mode code" occurs when attempting to create a {{Glossary("binding")}} called `arguments` or `eval`, or assign to such a name.
 

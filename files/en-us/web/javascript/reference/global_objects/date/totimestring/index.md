@@ -4,9 +4,8 @@ short-title: toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toTimeString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 

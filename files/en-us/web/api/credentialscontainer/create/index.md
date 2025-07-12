@@ -28,20 +28,16 @@ create(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
-
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
     Each of the following properties represents a _credential type_ being created. One and only one of them must be specified:
-
     - `federated` {{optional_inline}}
       - : A {{domxref("FederatedCredentialInit")}} object containing requirements for creating a federated identify provider credential.
     - `password` {{optional_inline}}
       - : A {{domxref("PasswordCredentialInit")}} object containing requirements for creating a password credential.
     - `publicKey` {{optional_inline}}
-
       - : A {{domxref("PublicKeyCredentialCreationOptions")}} object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
 
         > [!NOTE]

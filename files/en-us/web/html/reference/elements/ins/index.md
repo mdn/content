@@ -3,9 +3,8 @@ title: "<ins>: The Inserted Text element"
 slug: Web/HTML/Reference/Elements/ins
 page-type: html-element
 browser-compat: html.elements.ins
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been added to a document. You can use the {{HTMLElement("del")}} element to similarly represent a range of text that has been deleted from the document.
 

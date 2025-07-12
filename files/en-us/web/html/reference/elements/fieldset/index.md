@@ -3,9 +3,8 @@ title: "<fieldset>: The Field Set element"
 slug: Web/HTML/Reference/Elements/fieldset
 page-type: html-element
 browser-compat: html.elements.fieldset
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<fieldset>`** [HTML](/en-US/docs/Web/HTML) element is used to group several controls as well as labels ({{HTMLElement("label")}}) within a web form.
 
@@ -51,7 +50,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `form`
   - : This attribute takes the value of the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute of a {{HTMLElement("form")}} element you want the `<fieldset>` to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the {{HTMLElement("input")}} elements inside the `<fieldset>` to be associated with the form, you need to use the `form` attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using {{domxref("HTMLFormElement.elements")}}.
 - `name`
-
   - : The name associated with the group.
 
     > [!NOTE]

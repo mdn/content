@@ -2,9 +2,8 @@
 title: Game over
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 

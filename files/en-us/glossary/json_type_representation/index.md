@@ -2,9 +2,8 @@
 title: JSON type representation
 slug: Glossary/JSON_type_representation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 {{glossary("JSON")}} is a convenient and widely used format for serializing objects, arrays, numbers, strings, booleans, and null.
 [JSON does not support all data types allowed by JavaScript](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#javascript_and_json_differences), which means that JavaScript objects that use these incompatible types cannot be directly serialized to JSON.

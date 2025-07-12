@@ -24,9 +24,7 @@ new IIRFilterNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options`
-
   - : Options are as follows:
-
     - `feedforward`
       - : A sequence of feedforward coefficients.
     - `feedback`

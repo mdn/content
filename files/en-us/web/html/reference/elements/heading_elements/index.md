@@ -9,9 +9,8 @@ browser-compat:
   - html.elements.h4
   - html.elements.h5
   - html.elements.h6
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest. By default, all heading elements create a [block-level](/en-US/docs/Glossary/Block-level_content) box in the layout, starting on a new line and taking up the full width available in their containing block.
 
@@ -152,24 +151,19 @@ Given the following page structure:
 Screen readers would generate a list like this:
 
 1. `h1` Beetles
-
    1. `h2` Etymology
    2. `h2` Distribution and Diversity
    3. `h2` Evolution
-
       1. `h3` Late Paleozoic
       2. `h3` Jurassic
       3. `h3` Cretaceous
       4. `h3` Cenozoic
 
    4. `h2` External Morphology
-
       1. `h3` Head
-
          1. `h4` Mouthparts
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 

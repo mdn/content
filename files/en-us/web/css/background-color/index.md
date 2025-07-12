@@ -20,19 +20,19 @@ background-color: #74992e;
 ```
 
 ```css interactive-example-choice
-background-color: rgb(255, 255, 128);
+background-color: rgb(255 255 128);
 ```
 
 ```css interactive-example-choice
-background-color: rgba(255, 255, 128, 0.5);
+background-color: rgb(255 255 128 / 0.5);
 ```
 
 ```css interactive-example-choice
-background-color: hsl(50, 33%, 25%);
+background-color: hsl(50 33% 25%);
 ```
 
 ```css interactive-example-choice
-background-color: hsla(50, 33%, 25%, 0.75);
+background-color: hsl(50 33% 25% / 0.75);
 ```
 
 ```html interactive-example

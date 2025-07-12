@@ -3,9 +3,8 @@ title: "<legend>: The Field Set Legend element"
 slug: Web/HTML/Reference/Elements/legend
 page-type: html-element
 browser-compat: html.elements.legend
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 

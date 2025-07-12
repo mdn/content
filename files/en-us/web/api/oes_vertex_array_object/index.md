@@ -61,7 +61,6 @@ oes_vao_ext.bindVertexArrayOES(vao);
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
 - WebGL2 equivalent methods:
-
   - {{domxref("WebGL2RenderingContext.createVertexArray()")}}
   - {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
   - {{domxref("WebGL2RenderingContext.isVertexArray()")}}

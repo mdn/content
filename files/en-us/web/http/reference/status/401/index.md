@@ -3,9 +3,8 @@ title: 401 Unauthorized
 slug: Web/HTTP/Reference/Status/401
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.401
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`401 Unauthorized`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.
 This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on the [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) the server expects the client to include to make the request successfully.

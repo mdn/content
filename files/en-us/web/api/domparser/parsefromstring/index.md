@@ -26,9 +26,7 @@ parseFromString(string, mimeType)
     {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("XHTML")}}, or
     {{Glossary("svg")}} document.
 - `mimeType`
-
   - : A string. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
-
     - `text/html`
     - `text/xml`
     - `application/xml`

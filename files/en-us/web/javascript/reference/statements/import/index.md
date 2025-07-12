@@ -3,9 +3,8 @@ title: import
 slug: Web/JavaScript/Reference/Statements/import
 page-type: javascript-statement
 browser-compat: javascript.statements.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The static **`import`** declaration is used to import read-only live {{Glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
@@ -93,7 +92,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
+> [!NOTE]
+> `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
 #### Default import
 
@@ -138,7 +138,7 @@ Here, `myModule` represents a _namespace_ object which contains all exports as p
 myModule.doAllTheAmazingThings();
 ```
 
-`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
+`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export is available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 > [!NOTE]
 > JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.

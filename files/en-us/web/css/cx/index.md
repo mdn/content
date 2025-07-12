@@ -32,11 +32,9 @@ cx: unset;
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the horizontal center of the circle or ellipse.
 
 - {{cssxref("length")}}
-
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the width of the current SVG viewport.
 
 ## Formal definition

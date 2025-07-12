@@ -4,9 +4,8 @@ short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.setPrototypeOf()`** method is a trap for the `[[SetPrototypeOf]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.setPrototypeOf()")}}.
 

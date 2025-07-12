@@ -38,6 +38,13 @@ In the first above example, the width will be at most 200px, but will be smaller
 
 ## Syntax
 
+```css
+max(1, 2, 3)
+max(1px, 2px, 3px)
+```
+
+### Parameters
+
 The `min()` function takes one or more comma-separated expressions as its parameter, with the smallest (most negative) expression value result used as the value.
 
 The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).

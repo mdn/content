@@ -4,9 +4,8 @@ short-title: match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.match`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.match`. The {{jsxref("String.prototype.match()")}} method looks up this symbol on its first argument for the method used to match an input string against the current object. This symbol is also used to determine if an object should be [treated as a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 

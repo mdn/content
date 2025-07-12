@@ -4,9 +4,8 @@ short-title: captureStackTrace()
 slug: Web/JavaScript/Reference/Global_Objects/Error/captureStackTrace
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Error.captureStackTrace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Error.captureStackTrace()`** static method installs stack trace information on a provided object as the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property.
 

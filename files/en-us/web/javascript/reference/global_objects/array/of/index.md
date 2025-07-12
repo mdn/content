@@ -4,9 +4,8 @@ short-title: of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.of
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the

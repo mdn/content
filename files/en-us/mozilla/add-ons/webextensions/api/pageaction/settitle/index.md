@@ -20,13 +20,10 @@ browser.pageAction.setTitle(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. The ID of the tab whose title you want to set.
     - `title`
-
       - : `string` or `null`. The tooltip text.
 
         If `null` is passed here, the title is reset to the title that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.

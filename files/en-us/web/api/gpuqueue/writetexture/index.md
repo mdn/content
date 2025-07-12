@@ -22,13 +22,9 @@ writeTexture(destination, data, dataLayout, size)
 ### Parameters
 
 - `destination`
-
   - : An object defining the texture subresource and origin to write the data source to, which can take the following properties:
-
     - `aspect` {{optional_inline}}
-
       - : An enumerated value defining which aspects of the texture to write the data to. Possible values are:
-
         - `"all"`
           - : All available aspects of the texture format will be written to, which can mean all or any of color, depth, and stencil, depending on what kind of format you are dealing with.
         - `"depth-only"`
@@ -41,7 +37,6 @@ writeTexture(destination, data, dataLayout, size)
     - `mipLevel` {{optional_inline}}
       - : A number representing the mip-map level of the texture to write the data to. If omitted, `mipLevel` defaults to 0.
     - `origin` {{optional_inline}}
-
       - : An object or array specifying the origin of the copy — the minimum corner of the texture region to write the data to. Together with `size`, this defines the full extent of the region to copy to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
         For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.

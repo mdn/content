@@ -33,9 +33,7 @@ This API is also available as `browser.extension.sendRequest()` in a version tha
 - `request`
   - : `any`.
 - `responseCallback` {{optional_inline}}
-
   - : `function`. The function is passed these arguments:
-
     - `response`
       - : `any`. The JSON response object sent by the handler of the request. If an error occurs while connecting to the extension, the callback will be called with no arguments and {{WebExtAPIRef('runtime.lastError')}} will be set to the error message.
 

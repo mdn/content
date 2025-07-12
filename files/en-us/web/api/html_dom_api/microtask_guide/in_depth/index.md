@@ -62,19 +62,15 @@ greetUser("Veronica");
 This short program contains three execution contexts, some of which are created and destroyed several times over the course of the program's execution. As each context is created, it is placed on the **execution context stack**. When it exits, the context is removed from the context stack.
 
 - Upon starting the program, the global context is created.
-
   - When `greetUser("Mike")` is reached, a context is created for the `greetUser()` function; this execution context is pushed onto the execution context stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed. Program execution resumes with the next context found on the stack, which is `greetUser()`; this function resumes execution where it left off.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 
   - When `greetUser("Teresa")` is reached, a context is created for it and pushed onto the stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed. `greetUser()` continues to execute where it left off.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 
   - When `greetUser("Veronica")` is reached, a context is created for it and pushed onto the stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 

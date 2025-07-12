@@ -34,15 +34,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs.
 
     The `listener` function is called with these arguments:
-
     - `details`
-
       - : [`object`](#details). Details about the navigation event. **`details`** has the following properties:
-
         - `tabId`
           - : `integer`. The ID of the tab in which the navigation was happening.
         - `url`
@@ -50,7 +46,6 @@ Events have three functions:
         - `processId` {{optional_inline}} {{deprecated_inline}}
           - : `integer`. This value is never set in modern browsers. It used to represent the ID of the process running the renderer for this tab.
         - `frameId`
-
           - : `integer`. Frame in which the navigation was happening.
 
             `0` indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}.
@@ -65,7 +60,6 @@ Events have three functions:
           - : `string`. The error code. This is an internal error code, and is not guaranteed to stay the same or be consistent from one browser to another.
 
 - `filter` {{optional_inline}}
-
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects.
 
     If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array.

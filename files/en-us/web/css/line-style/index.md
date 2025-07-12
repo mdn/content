@@ -25,10 +25,6 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 
 ## Syntax
 
-```css
-<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
-```
-
 ### Values
 
 The `<line-style>` enumerated type is specified using one of the values listed below:
@@ -56,6 +52,10 @@ The `<line-style>` enumerated type is specified using one of the values listed b
 
 > [!NOTE]
 > When `<outline-style>` is used as the value type for {{cssxref("outline")}} and {{cssxref("outline-style")}} properties, it is similar to `<line-style>`, but does not support `hidden` and includes the `auto` value. When `auto` is set, the user-agent defined `<line-style>` value is used.
+
+## Formal syntax
+
+{{CSSSyntaxRaw(`<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset`)}}
 
 ## Examples
 

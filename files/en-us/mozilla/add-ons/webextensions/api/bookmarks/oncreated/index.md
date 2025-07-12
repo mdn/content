@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `id`
       - : `string`. The new bookmark item's ID.
     - `bookmark`

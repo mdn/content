@@ -24,7 +24,8 @@ Install the _Latin Modern Math_ and _STIX Two Math_ fonts as follows:
 5. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular` file.
 6. Open the `STIXTwoMath-Regular` file and click the **Install** button. If desired, you may also do the same for the other font files in the directory.
 
-> **Note:** _Cambria Math_ is installed by default on Windows and should ensure relatively good MathML rendering.
+> [!NOTE]
+> _Cambria Math_ is installed by default on Windows and should ensure relatively good MathML rendering.
 
 ### macOS
 

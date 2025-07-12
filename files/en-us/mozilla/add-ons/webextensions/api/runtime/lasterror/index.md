@@ -64,7 +64,8 @@ const setCookie = browser.cookies.set({
 setCookie.then(logCookie, logError);
 ```
 
-> **Note:** `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
+> [!NOTE]
+> `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
 
 ## Browser compatibility
 

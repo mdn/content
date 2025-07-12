@@ -2,9 +2,8 @@
 title: Guaranteed-invalid value
 slug: Glossary/guaranteed_invalid_value
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS the guaranteed-invalid value is {{CSSXref("initial")}}.
 

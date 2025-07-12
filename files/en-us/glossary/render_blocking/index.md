@@ -2,9 +2,8 @@
 title: Render-blocking
 slug: Glossary/Render_blocking
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Render-blocking** refers to any part of the process of loading a website that blocks the rendering of the user interface. Render-blocking is bad for web performance because it increases the length of time until users can interact with the site — for example, viewing content or interacting with controls.
 

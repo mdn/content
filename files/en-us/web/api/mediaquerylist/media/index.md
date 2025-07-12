@@ -18,14 +18,14 @@ A string representing a serialized media query.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and displays the
+This example runs the media query `(width <= 600px)` and displays the
 value of the resulting `MediaQueryList`'s `media` property in a
 {{HTMLElement("span")}}.
 
 ### JavaScript
 
 ```js
-let mql = window.matchMedia("(max-width: 600px)");
+let mql = window.matchMedia("(width <= 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```

@@ -344,7 +344,6 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is empty, we set
 1. A new unordered list ({{HTMLElement("ul")}}) element is created.
 2. The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.
 3. For each {{DOMxRef("File")}} in the {{DOMxRef("FileList")}} represented by `files`:
-
    1. Create a new list item ({{HTMLElement("li")}}) element and insert it into the list.
    2. Create a new image ({{HTMLElement("img")}}) element.
    3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.

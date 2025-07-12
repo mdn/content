@@ -27,9 +27,7 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `name`
       - : A string with the name of a cookie.
     - `url`
@@ -45,31 +43,24 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 The object returned for a match contains the following properties:
 
 - `domain`
-
   - : A string containing the domain of the cookie.
 
 - `expires`
-
   - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 
 - `name`
-
   - : A string containing the name of the cookie.
 
 - `partitioned`
-
   - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
 
 - `path`
-
   - : A string containing the path of the cookie.
 
 - `sameSite`
-
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values: [`"strict"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#strict), [`"lax"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#lax), or [`"none"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none).
 
 - `secure`
-
   - : A boolean value indicating whether the cookie is to be used in secure contexts only (`true`) or not (`false`).
 
 - `value`

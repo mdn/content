@@ -17,10 +17,8 @@ What can be considered strange is that DIV #2 (`z-index`: 2) is above DIV #4 (`z
 To better understand the situation, this is the stacking context hierarchy:
 
 - Root stacking context
-
   - DIV #2 (`z-index`: 2)
   - DIV #3 (`z-index`: 1)
-
     - DIV #4 (`z-index`: 10)
 
 > [!NOTE]

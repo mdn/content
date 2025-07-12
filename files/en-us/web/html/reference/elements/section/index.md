@@ -3,9 +3,8 @@ title: "<section>: The Generic Section element"
 slug: Web/HTML/Reference/Elements/section
 page-type: html-element
 browser-compat: html.elements.section
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
 

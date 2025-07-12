@@ -4,9 +4,8 @@ short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asin
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.asin()`** static method returns the inverse sine (in radians) of a number. That is,
 

@@ -2,9 +2,8 @@
 title: Gutters
 slug: Glossary/Gutters
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Gutters** or _alleys_ are spacing between content {{glossary("grid_tracks", "tracks")}}. These can be created in [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) using the {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, or {{cssxref("gap")}} properties.
 
@@ -62,7 +61,6 @@ The `row-gap` and `column-gap` properties are not the only things that can cause
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - Property reference
-
   - {{cssxref("column-gap")}}
   - {{cssxref("row-gap")}}
   - {{cssxref("gap")}}

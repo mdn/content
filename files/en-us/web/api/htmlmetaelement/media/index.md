@@ -50,7 +50,7 @@ document.head.appendChild(meta1);
 // Add a theme-color for small devices
 const meta2 = document.createElement("meta");
 meta2.name = "theme-color";
-meta2.media = "(max-width: 600px)";
+meta2.media = "(width <= 600px)";
 meta2.content = "#000000";
 document.head.appendChild(meta2);
 ```

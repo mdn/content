@@ -32,6 +32,10 @@ removeChild(child)
 - `child`
   - : A {{domxref("Node")}} that is the child node to be removed from the DOM.
 
+### Return value
+
+The removed `child` node.
+
 ### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}

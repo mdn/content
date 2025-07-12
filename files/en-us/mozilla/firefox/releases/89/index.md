@@ -2,9 +2,8 @@
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 was released on June 1, 2021.
 
@@ -47,7 +46,6 @@ _No changes._
 #### Removals
 
 - The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
-
   - `DeviceProximityEvent` and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `UserProximityEvent` and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `DeviceLightEvent` and its event handler `window.ondevicelight` ([Firefox bug 1701824](https://bugzil.la/1701824)).

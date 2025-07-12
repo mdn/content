@@ -4,9 +4,8 @@ short-title: itemscope
 slug: Web/HTML/Reference/Global_attributes/itemscope
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemscope
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** is a boolean [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) that defines the scope of associated metadata. Specifying the **`itemscope`** attribute for an element creates a new item, which results in a number of name-value pairs that are associated with the element.
 
@@ -273,7 +272,6 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
 - Other microdata related global attributes:
-
   - [`itemid`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemid)
   - [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - [`itemref`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemref)

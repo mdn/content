@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 spec-urls: https://w3c.github.io/dnt/drafts/tracking-dnt.html#dfn-tk
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
+{{Deprecated_header}}{{non-standard_header}}
 
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.

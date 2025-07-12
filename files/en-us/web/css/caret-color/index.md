@@ -65,7 +65,6 @@ caret-color: unset;
 ### Values
 
 - `auto`
-
   - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentcolor`, the background, shadows, and other factors.
 
     > [!NOTE]

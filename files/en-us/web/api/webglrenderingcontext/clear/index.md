@@ -24,10 +24,8 @@ clear(mask)
 ### Parameters
 
 - `mask`
-
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} bitwise OR mask that indicates the buffers to be
     cleared. Possible values are:
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

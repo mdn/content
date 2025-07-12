@@ -105,13 +105,10 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) role
-
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : The value of `aria-checked` defines the state of a radio. When used with radio elements, the attribute has one of two possible values:
-
     - `true`
       - : The radio is checked.
     - `false`
@@ -123,15 +120,12 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Keyboard interactions
 
 - <kbd>Tab</kbd> + <kbd>Shift</kbd>
-
   - : Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 - <kbd>Space</kbd>
-
   - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group.
 
 - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
-
   - : Move focus to and checks the next radio button in the group, unchecking the previously focused radio button. If focus is on the last radio button, focus moves to the first radio button.
 
 - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>

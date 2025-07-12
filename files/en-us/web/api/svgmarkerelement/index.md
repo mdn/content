@@ -18,9 +18,7 @@ The following properties and methods all return, or act on the attributes of the
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGMarkerElement.markerUnits")}} {{ReadOnlyInline}}
-
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-
     - 0
       - : `SVG_MARKERUNITS_UNKNOWN` which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.
     - 1
@@ -33,9 +31,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGMarkerElement.markerHeight")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.
 - {{domxref("SVGMarkerElement.orientType")}} {{ReadOnlyInline}}
-
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-
     - 0
       - : `SVG_MARKER_ORIENT_UNKNOWN` which means that the {{SVGattr("orient")}} attribute has a value other than the two predefined keywords.
     - 1

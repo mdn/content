@@ -3,9 +3,8 @@ title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Locale
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Locale`** object is a standard built-in property of the Intl object that represents a Unicode locale identifier.
 

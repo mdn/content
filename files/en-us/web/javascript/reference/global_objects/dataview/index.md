@@ -3,9 +3,8 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 page-type: javascript-class
 browser-compat: javascript.builtins.DataView
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).
 
@@ -25,7 +24,8 @@ const littleEndian = (() => {
 console.log(littleEndian); // true or false
 ```
 
-> **Note:** `DataView` defaults to big-endian read and write, but most platforms use little-endian.
+> [!NOTE]
+> `DataView` defaults to big-endian read and write, but most platforms use little-endian.
 
 ## Constructor
 

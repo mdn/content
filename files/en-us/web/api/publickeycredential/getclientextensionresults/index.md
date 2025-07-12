@@ -12,7 +12,8 @@ The **`getClientExtensionResults()`** method of the {{domxref("PublicKeyCredenti
 
 During the creation or fetching of a `PublicKeyCredential` (via {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} and {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} respectively), it is possible to request "custom" processing by the client for different extensions, specified in the `publicKey` option's `extensions` property. You can find more information about requesting the different extensions in [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
-> **Note:** `getClientExtensionResults()` only returns the results from extensions processed by the user agent (client). The results from extensions processed by the authenticator can be found in the [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) available in {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}.
+> [!NOTE]
+> `getClientExtensionResults()` only returns the results from extensions processed by the user agent (client). The results from extensions processed by the authenticator can be found in the [authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) available in {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}.
 
 ## Syntax
 

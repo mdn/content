@@ -21,7 +21,8 @@ RTCPeerConnection.generateCertificate(keygenAlgorithm)
 - `keygenAlgorithm`
   - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) algorithm identifier string or object. See {{domxref("SubtleCrypto.generateKey()")}} for details on the format of the object.
 
-> **Note:** `generateCertificate()` is a static method, so it is always called on the `RTCPeerConnection` interface itself, not an instance thereof.
+> [!NOTE]
+> `generateCertificate()` is a static method, so it is always called on the `RTCPeerConnection` interface itself, not an instance thereof.
 
 ### Return value
 

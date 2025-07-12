@@ -17,9 +17,9 @@ The **`format`** read-only property of the {{domxref("Summarizer")}} interface r
 An enumerated value specifying the format of returned summaries. Possible values are:
 
 - `markdown`
-  - : Summaries contain no formatting.
-- `plain-text`
   - : Summaries contain markdown formatting (conforming to the [CommonMark](https://spec.commonmark.org/) spec).
+- `plain-text`
+  - : Summaries contain no formatting.
 
 ## Examples
 

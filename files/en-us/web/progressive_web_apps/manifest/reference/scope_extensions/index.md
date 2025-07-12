@@ -26,9 +26,7 @@ The `scope_extensions` manifest member is used to extend the scope of a web app 
 ### Values
 
 - `scope_extensions`
-
   - : An array of objects each containing the following properties:
-
     - `type`
       - : A string defining the type of scope extension. This is currently always `origin`, but future extensions may add other types.
     - `origin`
@@ -114,9 +112,6 @@ To opt-in to the app's scope, `https://example.co.uk` and `https://help.example.
   }
 }
 ```
-
-> [!NOTE]
-> See [Scope Extensions API Demo](https://main-pwa-origin-2.glitch.me/) for a working example.
 
 ## Specifications
 

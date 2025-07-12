@@ -2,9 +2,8 @@
 title: Response header
 slug: Glossary/Response_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **response header** is an {{glossary("HTTP header")}} that can be used in an HTTP response and that doesn't relate to the content of the message. Response headers, like {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} or {{HTTPHeader("Server")}} are used to give a more detailed context of the response.
 

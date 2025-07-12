@@ -46,19 +46,19 @@ grid: repeat(3, 80px) / auto-flow;
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-column: auto / span 3;
   grid-row: auto / span 2;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-column: auto / span 2;
 }
@@ -117,13 +117,11 @@ grid: unset;
 - `<'grid-template'>`
   - : Defines the {{cssxref("grid-template")}} including {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-areas")}}.
 - `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
-
   - : Sets up an auto-flow by setting the row tracks explicitly via the {{cssxref("grid-template-rows")}} property (and the {{cssxref("grid-template-columns")}} property to `none`) and specifying how to auto-repeat the column tracks via {{cssxref("grid-auto-columns")}} (and setting {{cssxref("grid-auto-rows")}} to `auto`). {{cssxref("grid-auto-flow")}} is also set to `column` accordingly, with `dense` if it's specified.
 
     All other `grid` sub-properties are reset to their initial values.
 
 - `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
-
   - : Sets up an auto-flow by setting the column tracks explicitly via the {{cssxref("grid-template-columns")}} property (and the {{cssxref("grid-template-rows")}} property to `none`) and specifying how to auto-repeat the row tracks via {{cssxref("grid-auto-rows")}} (and setting {{cssxref("grid-auto-columns")}} to `auto`). {{cssxref("grid-auto-flow")}} is also set to `row` accordingly, with `dense` if it's specified.
 
     All other `grid` sub-properties are reset to their initial values.

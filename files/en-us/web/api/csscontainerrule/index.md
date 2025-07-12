@@ -163,7 +163,7 @@ The card has a default font size, which is overridden for the `@container` named
     font-size: 1em;
   }
 
-  @container sidebar (min-width: 700px) {
+  @container sidebar (width >= 700px) {
     .card {
       font-size: 2em;
     }

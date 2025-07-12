@@ -28,7 +28,6 @@ new CSSTranslate(x, y, z)
   - : A value for the y-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length-percentage')}}.
 - {{domxref('CSSTranslate.z','z')}} {{optional_inline}}
-
   - : A value for the z-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length')}}.
 

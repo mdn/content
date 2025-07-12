@@ -21,11 +21,9 @@ beginTransformFeedback(primitiveMode)
 ### Parameters
 
 - `primitiveMode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the output type of the primitives that will be
     recorded into the buffer objects that are bound for transform feedback. Possible
     values:
-
     - `gl.POINTS`
     - `gl.LINES`
     - `gl.TRIANGLES`

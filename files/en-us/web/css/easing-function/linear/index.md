@@ -24,14 +24,12 @@ linear(0, 0.5 25% 75%, 1)
 The function accepts two or more of the following values, which represent progress points in the animation timeline:
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : Represents a point in time along the duration of the animation or transition.
     At least two values must be specified.
     The value `0` represents the start of the transition, and `1` represents the end.
     Values outside the `0` to `1` range are also allowed.
 
 - {{cssxref("&lt;percentage&gt;")}} {{optional_inline}}
-
   - : Indicates when the progress `<number>` is reached during the animation timeline.
     It can be specified after any `<number>` value except the first and last and can take up to two values.
     If two percentage values are specified, they define the length of the stop: the first percentage indicates the starting point and the second percentage indicates the ending point for that segment in the animation or transition. If no `<percentage>` value is specified, the progress values are distributed evenly along the timeline.

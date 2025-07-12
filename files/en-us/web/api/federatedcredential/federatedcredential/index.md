@@ -24,9 +24,7 @@ new FederatedCredential(init)
 ### Parameters
 
 - `init`
-
   - : Options are:
-
     - `provider`
       - : A string; identifying the credential
         provider.

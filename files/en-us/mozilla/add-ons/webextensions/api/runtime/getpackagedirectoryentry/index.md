@@ -25,7 +25,6 @@ browser.runtime.getPackageDirectoryEntry(
 ### Parameters
 
 - `callback` {{optional_inline}}
-
   - : `function`. If provided, the function will be passed a `DirectoryEntry` object. If absent, the function returns a promise instead.
 
 ### Return value

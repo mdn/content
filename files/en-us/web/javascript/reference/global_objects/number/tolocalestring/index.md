@@ -4,9 +4,8 @@ short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Number")}} values returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method delegates to `Intl.NumberFormat`.
 
@@ -44,13 +43,11 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), these parameters correspond exactly to the [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor's parameters. Implementations without `Intl.NumberFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored.

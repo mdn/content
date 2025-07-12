@@ -2,11 +2,9 @@
 title: Generating attribution reports
 slug: Web/API/Attribution_Reporting_API/Generating_reports
 page-type: guide
-status:
-  - experimental
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{DefaultAPISidebar("Attribution Reporting API")}}
 
 This article explains how [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) reports are generated — both attribution reports and debug reports — and how you can control the generated reports. This includes handling noise, prioritizing reports, filtering reports, and generating debug reports.
 
@@ -117,11 +115,8 @@ The properties are as follows:
     - `"version"`
       - : A string representing the version of the API used to generate the report.
 - `"aggregation_service_payloads"`
-
   - : An array of objects representing payload objects containing the histogram contributions used by the aggregation service to assemble the data contained in the report. Currently, only a single payload is supported per report, configured by the browser. In the future multiple, customizable payloads may be supported. Each payload object can contain the following properties:
-
     - `"payload"`
-
       - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure (using JSON for notation only):
 
         ```json
@@ -268,9 +263,11 @@ For example:
 }
 ```
 
-> **Note:** `"source_type"` is an automatically populated field available on the source's `"filter_data"`.
+> [!NOTE]
+> `"source_type"` is an automatically populated field available on the source's `"filter_data"`.
 
-> **Note:** `not_filters`, which filters with negation, is also supported.
+> [!NOTE]
+> `not_filters`, which filters with negation, is also supported.
 
 In this context, `filters` can be an object or an array of objects. When a list is specified, only one dictionary has to match for the trigger to be considered.
 
@@ -339,7 +336,6 @@ To use debug reports, you need to:
    ```
 
 4. Set up appropriate endpoints to receive the debug reports you want to generate. Debug reports are sent to three separate endpoints in the reporting origin:
-
    - Endpoint for event-level success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
    - Endpoint for aggregatable success debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
    - Endpoint for verbose debug reports: `<reporting-origin>/.well-known/attribution-reporting/debug/verbose`

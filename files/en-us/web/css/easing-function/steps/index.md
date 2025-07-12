@@ -29,16 +29,13 @@ steps(3, jump-both)
 The function accepts the following parameters:
 
 - `<integer>`
-
   - : Represents the number of equidistant intervals or 'steps'.
     It must be a positive integer greater than `0` unless the second parameter is `jump-none`, in which case, it must be a positive integer greater than `1`.
 
 - `<step-position>`
-
   - : Specifies when the jump between values occurs.
     If omitted, it defaults to `end`.
     The possible keyword values include:
-
     - `jump-start` or `start`
       - : Indicates that the first step happens when the animation begins.
     - `jump-end` or `end`

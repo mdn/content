@@ -131,7 +131,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -215,7 +215,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -239,7 +239,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -258,7 +258,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   #app {
     padding: 4rem;
   }
@@ -445,7 +445,7 @@ Next, copy the following CSS into the newly created `<style>` element:
 .custom-checkbox > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (width >= 40rem) {
   label,
   input,
   .custom-checkbox {

@@ -75,7 +75,6 @@ svg {
 - `none`
   - : Choose the size of the font based only on the {{ Cssxref("font-size") }} property.
 - {{cssxref("&lt;number&gt;")}}
-
   - : Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.
 
     The number specified should generally be the {{glossary("aspect ratio")}} (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.

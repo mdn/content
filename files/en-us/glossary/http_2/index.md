@@ -2,9 +2,8 @@
 title: HTTP/2
 slug: Glossary/HTTP_2
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP).
 

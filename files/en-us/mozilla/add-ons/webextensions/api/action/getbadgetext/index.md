@@ -25,9 +25,7 @@ let gettingText = browser.action.getBadgeText(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
     - `windowId` {{optional_inline}}

@@ -2,9 +2,8 @@
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
 
@@ -13,11 +12,11 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 ### HTML
 
 - The `value` attribute of {{ HTMLElement("li") }} now can be negative. Previously negative values were converted to 0.
-- You can now [specify the start and stop time of media](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) in the URI of the media when using {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
-- {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements [now respect the value of the `lang` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language) when invoking the spell checker.
+- You can now [specify the start and stop time of media](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery#specifying_playback_range) in the URI of the media when using {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
+- {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements now respect the value of the `lang` attribute when invoking the spell checker.
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with `type="file"` and `accept="image/*"`.
 - Windows Vista style PNG ICO images are now supported.
-- Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) when CORS is granted.
+- Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases) when CORS is granted.
 - The value of the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute may now be as large as 65,534, up from 8190.
 
 ### CSS
@@ -69,10 +68,10 @@ _No change._
 
 ### Networking
 
-- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
 - The HTTP `Accept` header for XSLT requests has been changed to `*/*` for simplicity. Since fetching XSLT has always fallen back to `*/*` anyway, it made sense to simplify the initial request.
-- Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/en-US/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
+- Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now result in a "bad connection" error instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
 - Content served with an empty {{ HTTPHeader("Content-Disposition") }} were previously treated as if the {{ HTTPHeader("Content-Disposition") }} were "attachment"; this didn't always work as expected. These are now handled as if the {{ HTTPHeader("Content-Disposition") }} were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
@@ -89,7 +88,7 @@ See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9/Upda
 
 - The `<xul:tab>` element now has a `pending` attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
 - The `<xul:tab>` element now has an `unread` attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
-- You can now use a `<xul:panel>` as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
+- You can now use a `<xul:panel>` as a drag image for DOM drag and drop operations. This lets you use the [standard drag & drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) for drag and drop of XUL content.
 - The `<xul:notificationbox>` element's `appendNotification`) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
 ### JavaScript code module changes

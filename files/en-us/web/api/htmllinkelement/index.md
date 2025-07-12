@@ -55,7 +55,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
   - : A string representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
-
   - : A string representing the reverse relationship of the linked resource from the resource to the document.
 
     > [!NOTE]

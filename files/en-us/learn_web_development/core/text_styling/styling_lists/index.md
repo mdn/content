@@ -222,7 +222,6 @@ Here we've done the following:
 - Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the ordered list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
 - Set the {{cssxref("list-style-type")}} to `none`, so that no bullet appears by default. We're going to use {{cssxref("background")}} properties to handle the bullets instead.
 - Inserted a bullet onto each unordered list item. The relevant properties are as follows:
-
   - {{cssxref("background-image")}}: This references the path to the image file you want to use as the bullet.
   - {{cssxref("background-position")}}: This defines where in the background of the selected element the image will appear — in this case we are saying `0 0`, which means the bullet will appear in the very top left of each list item.
   - {{cssxref("background-size")}}: This sets the size of the background image. We ideally want the bullets to be the same size as the list items (or very slightly smaller or larger). We are using a size of `1.6rem` (`16px`), which fits very nicely with the `20px` padding we've allowed for the bullet to sit inside — 16px plus 4px of space between the bullet and the list item text works well.

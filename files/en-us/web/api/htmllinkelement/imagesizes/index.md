@@ -27,7 +27,7 @@ Given the following `<link>` element:
   rel="preload"
   as="image"
   imagesrcset="narrow.png, medium.png 600w, wide.png 1200w"
-  imagesizes="(max-width: 400px) 200px, (width < 600px) 75vw, 50vw" />
+  imagesizes="(width < 400px) 200px, (400px <= width < 600px) 75vw, 50vw" />
 ```
 
 ```html hidden

@@ -67,6 +67,7 @@ sidebar:
         link: /Web/HTML/Reference/Elements/meta/name
         details: closed
         code: true
+      - link: /Web/HTML/Reference/Elements/meta/http-equiv
   - title: Attribute_values
     details: closed
     children:
@@ -106,7 +107,11 @@ l10n:
     HTML_Elements: 要素
     Global_attributes: グローバル属性
     Attributes: 属性
+    Attributes_element: 要素別の属性
+    Attribute_values: 属性値
     Input_types: <code>&lt;input&gt;</code> 型
+    Script_types: <code>&lt;script&gt;</code> 型
+    Rel_keywords: <code>rel</code> キーワード
     Guides: ガイド
   ko:
     Reference: "참고서:"

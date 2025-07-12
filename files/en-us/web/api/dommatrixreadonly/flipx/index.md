@@ -16,6 +16,10 @@ The **`flipX()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creat
 flipX()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).

@@ -41,7 +41,8 @@ insertBefore(newNode, referenceNode)
   - : The node before which `newNode` is inserted. If this is
     `null`, then `newNode` is inserted at the end of
     node's child nodes.
-    > **Note:** `referenceNode` is **not** an optional parameter.
+    > [!NOTE]
+    > `referenceNode` is **not** an optional parameter.
     > You must explicitly pass a {{domxref("Node")}} or `null`.
     > Failing to provide it or passing invalid values may [behave](https://crbug.com/419780) [differently](https://bugzil.la/119489) in different browser versions.
 

@@ -4,9 +4,8 @@ short-title: Set-Login
 slug: Web/HTTP/Reference/Headers/Set-Login
 page-type: http-header
 browser-compat: http.headers.Set-Login
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Set-Login`** {{Glossary("response header")}} is sent by a federated identity provider (IdP) to set its login status, and indicates whether any users are logged into the IdP on the current browser or not.
 This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API) to reduce the number of requests it makes to the IdP as the browser doesn't need to request accounts when there are no users logged in to the IdP.
@@ -39,9 +38,7 @@ Set-Login: <status>
 ## Directives
 
 - `<status>`
-
   - : A string representing the login status to set for the IdP. Possible values are:
-
     - `logged-in`: The IdP has at least one user account signed in.
     - `logged-out`: All IdP user accounts are currently signed out.
 

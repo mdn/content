@@ -189,11 +189,7 @@ tfoot {
 thead th,
 tfoot th,
 tfoot td {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.5));
   border: 3px solid purple;
   text-shadow: 1px 1px 1px black;
 }

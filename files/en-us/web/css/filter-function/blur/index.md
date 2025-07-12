@@ -35,8 +35,6 @@ filter: blur(1.5rem);
 
 ## Syntax
 
-The `blur()` function applies a Gaussian blur to the elements on which it is applied.
-
 ```css
 blur(radius)
 ```
@@ -126,7 +124,7 @@ svg:not([height]) {
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
+        <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>

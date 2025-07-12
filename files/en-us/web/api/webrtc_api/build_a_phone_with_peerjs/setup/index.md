@@ -13,7 +13,6 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 1. First find a sensible place on your local file structure and run `mkdir audio_app` and then `cd audio_app` to create a directory to contain your app and enter into it.
 2. Next, create a new app by running `yarn init`. Follow the prompts, providing a name, version, description, etc. to your project.
 3. Next, install the required dependencies using the following commands:
-
    - [Express](https://expressjs.com/): `yarn add express`
    - [PeerJS](https://peerjs.com/docs/): `yarn add peerjs`
    - [Peer](https://github.com/peers/peerjs-server): `yarn add peer`
@@ -43,37 +42,22 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 4. To finish the setup, you should copy the following HTML and CSS files into the root of your project folder. You can name both files `index`, so the HTML file will be `index.html` and the CSS file will be `index.css`. You won't need to modify these much in the articles that follow.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Lola's Web Phone!</title>
-
-    <meta property="og:title" content="Teleprompter!" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lady_ada_king" />
-    <meta name="twitter:creator" content="@lady_ada_king" />
-    <meta property="og:url" content="https://teleprompter.glitch.me" />
     <meta
       property="og:description"
-      content="Cast your computer to your phone or tablet to use it in a teleprompter" />
-    <meta
-      name="description"
-      content="Cast your computer to your phone or tablet to use it in a teleprompter" />
-    <!--     <meta property="og:image" content="https://cdn.glitch.com/1695682e-08d3-41c8-a322-1e235b5782e1%2Fimage.png?v=1561449954420"> -->
+      content="Cast your computer to your devices as a teleprompter" />
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/index.css" />
-
-    <link rel="manifest" href="/manifest.json" />
-
-    <!-- import the webpage's javascript file -->
+    <!-- import the javascript -->
+    <script src="script.js" defer></script>
     <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -105,8 +89,8 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 
 ```css
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -172,7 +156,7 @@ button {
   display: block;
   padding: 1rem;
   border-radius: 3rem;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0 15px 4px rgb(0 0 0 / 0.19);
   border: none;
   width: 50%;
 }

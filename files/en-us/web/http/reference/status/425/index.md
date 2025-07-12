@@ -3,9 +3,8 @@ title: 425 Too Early
 slug: Web/HTTP/Reference/Status/425
 page-type: http-status-code
 browser-compat: http.status.425
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`425 Too Early`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server was unwilling to risk processing a request that might be replayed to avoid potential replay attacks.
 

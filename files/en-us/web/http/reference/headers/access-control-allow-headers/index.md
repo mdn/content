@@ -4,9 +4,8 @@ short-title: Access-Control-Allow-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Headers
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Allow-Headers`** {{Glossary("response header")}} is used in response to a {{Glossary("preflight request")}} to indicate the HTTP headers that can be used during the actual request.
 This header is required if the preflight request contains {{HTTPHeader("Access-Control-Request-Headers")}}.

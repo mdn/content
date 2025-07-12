@@ -2,9 +2,8 @@
 title: Anatomy of a video game
 slug: Games/Anatomy
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools. Experienced game programmers who are new to web development could also benefit, too.
 
@@ -215,15 +214,12 @@ Other methods of tackling the problem exist.
 One common technique is to update the simulation at a constant frequency and then draw as much (or as little) of the actual frames as possible. The update method can continue looping without care about what the user sees. The draw method can view the last update and when it happened. Since draw knows when it represents, and the simulation time for the last update, it can predict a plausible frame to draw for the user. It does not matter whether this is more frequent than the official update loop (or even less frequent). The update method sets checkpoints and, as frequently as the system allows, the render method draws instants of time around them. There are many ways to separate the update method in web standards:
 
 - Draw on `requestAnimationFrame()` and update on a {{domxref("Window.setInterval", "setInterval()")}} or {{domxref("Window.setTimeout", "setTimeout()")}}.
-
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
 - Draw on `requestAnimationFrame()` and update on a {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} or {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} in a [Web Worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
-
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 
 - Draw on `requestAnimationFrame()` and use it to poke a Web Worker containing the update method with the number of ticks to compute, if any.
-
   - This sleeps until `requestAnimationFrame()` is called and does not pollute the main thread, plus you are not relying on old-fashioned methods. Again, this is a bit more complex than the previous two options, and _starting_ each update will be blocked until the browser decides to fire rAF callbacks.
 
 Each of these methods have similar tradeoffs:
@@ -317,15 +313,12 @@ I want to be clear that any of the above, or none of them, could be best for you
 An important thing to remember for managed platforms, like the web, is that your loop may stop execution for significant periods of time. This could occur when the user unselects your tab and the browser sleeps (or slows) its `requestAnimationFrame` callback interval. You have many ways to deal with this situation and this could depend on whether your game is single player or multiplayer. Some choices are:
 
 - Consider the gap "a pause" and skip the time.
-
   - You can probably see how this is problematic for most multiplayer games.
 
 - You can simulate the gap to catch up.
-
   - This can be a problem for long drops and/or complex updates.
 
 - You can recover the game state from a peer or the server.
-
   - This is ineffective if your peers or server are out-of-date too, or they don't exist because the game is single player and doesn't have a server.
 
 Once your main loop has been developed and you have decided on a set of assumptions and tradeoffs which suit your game, it is now just a matter of using your decisions to calculate any applicable physics, AI, sounds, network synchronization, and whatever else your game may require.

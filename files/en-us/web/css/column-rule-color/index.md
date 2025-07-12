@@ -16,11 +16,11 @@ column-rule-color: red;
 ```
 
 ```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+column-rule-color: rgb(48 125 222);
 ```
 
 ```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+column-rule-color: hsl(120 80% 40% / 0.6);
 ```
 
 ```css interactive-example-choice

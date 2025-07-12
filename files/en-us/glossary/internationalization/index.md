@@ -2,9 +2,8 @@
 title: Internationalization (i18n)
 slug: Glossary/Internationalization
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Internationalization**, often shortened to "i18n", is the practice of designing a system in such a way that it can easily be adapted for different target audiences, that may vary in region, language, or culture.
 

@@ -2,18 +2,15 @@
 title: Layout mode
 slug: Glossary/Layout_mode
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **layout mode**, sometimes called _layout_, is a [CSS](/en-US/docs/Web/CSS) algorithm that determines the position and size of element boxes based on the way they interact with their sibling and ancestor boxes.
 
 There are several layout modes:
 
 - **[Flow layout or normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)**
-
   - : All elements are part of normal flow until you do something to take them out of it.Normal flow includes:
-
     - **[Block layout](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)**
       - : Designed for laying out boxes such as paragraphs.
     - **[Inline layout](/en-US/docs/Web/CSS/CSS_inline_layout)**

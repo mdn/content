@@ -20,6 +20,14 @@ that this channel is not needed anymore.
 close()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

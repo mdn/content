@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.ECT
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`ECT`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) to indicate the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, or `4g`.
 
@@ -73,7 +74,6 @@ ECT: 2g
 
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Network client hints
-
   - {{HTTPHeader("Downlink")}}
   - {{HTTPHeader("RTT")}}
   - {{HTTPHeader("Save-Data")}}

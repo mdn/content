@@ -4,9 +4,8 @@ short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Array")}} instances returns a string representing
 the elements of the array. The elements are converted to strings using their

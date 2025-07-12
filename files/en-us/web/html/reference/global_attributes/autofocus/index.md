@@ -4,9 +4,8 @@ short-title: autofocus
 slug: Web/HTML/Reference/Global_attributes/autofocus
 page-type: html-attribute
 browser-compat: html.global_attributes.autofocus
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a Boolean attribute indicating that an element should be focused on page load, or when the {{HTMLElement("dialog")}} that it is part of is displayed.
 

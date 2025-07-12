@@ -98,7 +98,6 @@ para.addEventListener("pointerdown", (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}

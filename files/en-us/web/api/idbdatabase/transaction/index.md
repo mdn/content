@@ -21,7 +21,6 @@ transaction(storeNames, mode, options)
 ### Parameters
 
 - `storeNames`
-
   - : The names of object stores that are in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access.
     If you need to access only one object store, you can specify its name as a string.
     Therefore the following lines are equivalent:
@@ -40,10 +39,8 @@ transaction(storeNames, mode, options)
     Passing an empty array will throw an exception.
 
 - `mode` {{optional_inline}}
-
   - : The types of access that can be performed in the transaction.
     Transactions are opened in one of three modes:
-
     - `readonly`
       - : Open a transaction for reading from an object store. This is the default mode.
     - `readwrite`
@@ -54,13 +51,9 @@ transaction(storeNames, mode, options)
         This might be used for storing critical data that cannot be recomputed later.
 
 - `options` {{optional_inline}}
-
   - : Object defining additional options, including:
-
     - `durability`
-
       - : One of the three string-literal values below:
-
         - `"strict"`
           - : The user agent may consider that the transaction has successfully committed only after verifying that all outstanding changes have been successfully written to a persistent storage medium.
             This is recommended where the risk of data loss outweighs the impact of its use on performance and power (compared to `relaxed`).

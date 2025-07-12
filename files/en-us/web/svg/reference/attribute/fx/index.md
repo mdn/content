@@ -50,12 +50,7 @@ svg {
   </defs>
 
   <circle cx="100" cy="100" r="100" fill="url(#gradient1)" />
-  <circle
-    cx="100"
-    cy="100"
-    r="100"
-    fill="url(#gradient2)"
-    style="transform: translateX(240px);" />
+  <circle cx="340" cy="100" r="100" fill="url(#gradient2)" />
 </svg>
 ```
 

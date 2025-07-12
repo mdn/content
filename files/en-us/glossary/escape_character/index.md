@@ -2,9 +2,8 @@
 title: Escape character
 slug: Glossary/Escape_character
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **escape character** is a {{glossary("character")}} that causes one or more characters that follow it to be interpreted differently. This forms an **escape sequence**, which is often used to represent a character that has an alternative meaning when printed literally, such as the quote character in a string literal. Escape sequences can have other usages too, especially in [regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences).
 

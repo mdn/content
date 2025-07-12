@@ -20,7 +20,6 @@ Values of this type are strings. The item is displayed when the given context ap
 - audio
   - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Reference/Elements/audio) element.
 - bookmark
-
   - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd>+<kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
 
 - browser_action
@@ -42,7 +41,6 @@ Values of this type are strings. The item is displayed when the given context ap
 - selection
   - : Applies when part of the page is selected.
 - tab
-
   - : Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).
 
     From Firefox 63, clicking the menu item on a tab grants the [activeTab](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) permission for the tab clicked, even if that isn't the currently active tab.

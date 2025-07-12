@@ -8,10 +8,8 @@ browser-compat: api.TextEncoder.encodeInto
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder.encodeInto()`** method takes a
-string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the
-progress of the encoding.
-This is potentially more performant than the older `encode()` method — especially when the target buffer is a view into a Wasm heap.
+The **`TextEncoder.encodeInto()`** method takes a string to encode and a destination {{jsxref("Uint8Array")}} to put resulting {{glossary("UTF-8")}} encoded text into, and returns an object indicating the progress of the encoding.
+This is potentially more performant than the {{domxref("TextEncoder.encode()", "encode()")}} method — especially when the target buffer is a view into a [Wasm](/en-US/docs/WebAssembly) heap.
 
 ## Syntax
 
@@ -31,7 +29,7 @@ encodeInto(string, uint8Array)
 An object, which contains two members:
 
 - `read`
-  - : The number of UTF-16 units of code from the source that has been converted over to UTF-8.
+  - : The number of {{glossary("UTF-16", "UTF-16 code units")}} from the source that have been converted to UTF-8.
     This may be less than `string.length` if `uint8Array` did not have enough space.
 - `written`
   - : The number of bytes modified in the destination `Uint8Array`.
@@ -112,6 +110,8 @@ function encodeIntoWithSentinel(string, u8array, position) {
 
 ## Examples
 
+### Encoding into a buffer
+
 ```html
 <p class="source">This is a sample paragraph.</p>
 <p class="result"></p>
@@ -132,7 +132,7 @@ resultPara.textContent +=
   ` | Encoded result: ${utf8}`;
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Encoding into a buffer')}}
 
 ## Specifications
 

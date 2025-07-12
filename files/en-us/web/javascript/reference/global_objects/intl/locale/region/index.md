@@ -4,9 +4,8 @@ short-title: region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.region
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 

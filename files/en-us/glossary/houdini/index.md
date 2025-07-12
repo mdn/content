@@ -2,9 +2,8 @@
 title: Houdini
 slug: Glossary/Houdini
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Houdini is a set of low level APIs that give developers the power to extend CSS, providing the ability to hook into the styling and layout process of a browser's rendering engine. Houdini gives developers access to the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) ({{Glossary("CSSOM")}}), enabling developers to write code the browser can parse as CSS.
 

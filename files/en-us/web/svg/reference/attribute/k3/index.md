@@ -55,14 +55,14 @@ svg {
     y="0"
     width="200"
     height="200"
-    style="filter: url(#composite1);" />
+    filter="url(#composite1)" />
   <image
     href="mdn.svg"
-    x="0"
+    x="220"
     y="0"
     width="200"
     height="200"
-    style="filter: url(#composite2); transform: translateX(220px);" />
+    filter="url(#composite2)" />
 </svg>
 ```
 

@@ -44,7 +44,6 @@ Our final Ember article provides you with a list of resources that you can use t
 ## Further resources
 
 - [Ember.JS Guides](https://guides.emberjs.com/release/)
-
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release/)

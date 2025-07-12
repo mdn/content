@@ -2,9 +2,8 @@
 title: Physical properties
 slug: Glossary/Physical_properties
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 CSS **physical properties** define positions based on physical directions or element sides. For example:
 

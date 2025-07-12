@@ -2,9 +2,8 @@
 title: BCP 47 language tag
 slug: Glossary/BCP_47_language_tag
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **BCP 47 language tag** is a string of characters that precisely specifies a human language in terms of the basic language, but also optionally the writing system and dialect. For example, `en` specifies English, but `en-GB` and `en-US` more precisely specify British English and American English, respectively.
 
@@ -27,7 +26,6 @@ A language tag is made of hyphen-separated _subtags_, where each subtag indicate
 - Language subtag
   - : A 2-or-3-character code that defines the basic language, typically written in all lowercase. For example, the language code for English is `en`, and the code for Badeshi is `bdz`.
 - Script subtag {{optional_inline}}
-
   - : This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and Japanese written with the Katakana alphabet is `ja-Kana`.
 
     > [!NOTE]

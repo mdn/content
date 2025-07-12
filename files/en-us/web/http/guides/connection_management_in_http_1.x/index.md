@@ -2,9 +2,8 @@
 title: Connection management in HTTP/1.x
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 Connection management is a key topic in HTTP: opening and maintaining connections largely impacts the performance of websites and Web applications. In HTTP/1.x, there are several models: _short-lived connections_, _persistent connections_, and _HTTP pipelining._
 

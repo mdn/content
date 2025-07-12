@@ -2,9 +2,8 @@
 title: Grid Column
 slug: Glossary/Grid_Column
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **grid column** is a vertical track in a [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), and is the space between two vertical grid lines. It is defined by the {{cssxref("grid-template-columns")}} property or in the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties.
 

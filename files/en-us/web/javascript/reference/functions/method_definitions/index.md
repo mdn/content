@@ -3,9 +3,8 @@ title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 page-type: javascript-language-feature
 browser-compat: javascript.functions.method_definitions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -155,7 +154,7 @@ const instance = new SubClass();
 console.log(instance.subPublicMethod()); // "hello world"
 ```
 
-Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
+Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Computed property names
 

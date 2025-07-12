@@ -22,9 +22,7 @@ new PannerNode(context, options)
 - `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
 - `options` {{optional_inline}}
-
   - : A [`PannerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions) dictionary object defining the properties you want the `PannerNode` to have:
-
     - `panningModel`
       - : The {{domxref("PannerNode.panningModel")}} you want the {{domxref("PannerNode")}} to have (the default is `equalpower`.)
     - `distanceModel`

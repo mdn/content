@@ -24,15 +24,12 @@ fetch(id, requests, options)
 - `id`
   - : A developer-defined identifier that can be passed to the other methods to retrieve the {{domxref("BackgroundFetchRegistration")}} for this operation.
 - `requests`
-
   - : A `RequestInfo` object or an array of `RequestInfo` objects.
 
     Each `RequestInfo` object is a {{domxref("Request")}} object or a string that will be given as the `input` argument to the {{domxref("Request.Request()", "Request()")}} constructor.
 
 - `options` {{optional_inline}}
-
   - : An object which will be used to customize the fetch progress dialog that the browser shows to the user. It has the following properties:
-
     - `title` {{optional_inline}}
       - : A string that will be used as the title for the progress dialog.
     - `icons` {{optional_inline}}
@@ -46,7 +43,6 @@ fetch(id, requests, options)
         - `label` {{optional_inline}}
           - : A string representing the accessible name of the icon.
     - `downloadTotal` {{optional_inline}}
-
       - : A number representing the estimated total download size, in bytes, for the fetch operation. This is used to show the user how big the download is and to show the user download progress.
 
         As soon as the total download size exceeds `downloadTotal`, then the fetch is aborted.

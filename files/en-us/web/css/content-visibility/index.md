@@ -36,15 +36,15 @@ content-visibility: hidden;
 .container {
   width: 140px;
   height: 140px;
-  border: 3px solid rgb(64, 28, 163);
-  background-color: rgb(135, 136, 184);
+  border: 3px solid rgb(64 28 163);
+  background-color: rgb(135 136 184);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .child {
-  border: 3px solid rgb(64, 28, 163);
+  border: 3px solid rgb(64 28 163);
   background-color: wheat;
   color: black;
   width: 80%;

@@ -39,7 +39,6 @@ A `TaskSignal` instance. It will be aborted when the first signal passed into `s
 - Its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the signal that caused this signal to abort.
 
 - Its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the `priority` parameter:
-
   - If the `priority` parameter was a string, it will be the value of the string.
   - If the `priority` parameter was a `TaskSignal`, it will be the value of that signal's {{domxref("TaskSignal/priority","priority")}}.
 

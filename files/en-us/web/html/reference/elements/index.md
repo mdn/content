@@ -3,9 +3,8 @@ title: HTML elements reference
 short-title: Elements
 slug: Web/HTML/Reference/Elements
 page-type: landing-page
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("HTML_Elements")}}
 
 This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}}, which are created using {{Glossary("Tag", "tags")}}.
 

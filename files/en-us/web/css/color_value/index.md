@@ -73,7 +73,7 @@ A `<color>` value can be specified using one of the methods listed below:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
-  - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+  - Other color spaces: {{CSSXref("color_value/color", "color()")}}, {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}.
 - By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 - By specifying a color that you want a contrasting color returned for: {{CSSXref("color_value/contrast-color", "contrast-color()")}}.

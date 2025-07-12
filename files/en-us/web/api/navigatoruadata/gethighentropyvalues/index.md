@@ -27,9 +27,7 @@ getHighEntropyValues(hints)
 ### Parameters
 
 - `hints`
-
   - : An array containing the hints to be returned, one or more of:
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactor"`

@@ -22,7 +22,6 @@ A live {{domxref("DOMTokenList")}} of strings.
 
 ```js
 const areas = document.getElementsByTagName("area");
-const length = areas.length;
 
 for (const area of areas) {
   console.log("New area found.");

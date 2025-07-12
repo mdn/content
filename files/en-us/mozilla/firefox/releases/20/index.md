@@ -2,9 +2,8 @@
 title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
 

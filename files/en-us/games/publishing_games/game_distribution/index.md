@@ -2,9 +2,8 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 You've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! This article covers all you need to know about the ways in which you can distribute your newly created game into the wild. This includes hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
 

@@ -35,15 +35,12 @@ ry: unset;
 The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value denotes the vertical radius of ellipses and the vertical border-radius of rectangles.
 
 - {{cssxref("length")}}
-
   - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the height of the current SVG viewport. The used value for a `<rect>` is never more than 50% of the height of the rectangle.
 
 - `auto`
-
   - : When set or defaulting to `auto`, the `ry` value equals the absolute length value used for {{cssxref("rx")}}. If both `ry` and `rx` have a computed value of `auto`, the used value is `0`.
 
 ## Formal definition

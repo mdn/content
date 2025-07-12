@@ -32,9 +32,7 @@ let gettingTopSites = browser.topSites.get(
 ### Parameters
 
 - `options`
-
   - : `object`. Options to modify the list of pages returned. This may include any of the following properties:
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Include pages that the user has removed from the "New Tab" page. Defaults to `false`.
     - `includeFavicon` {{optional_inline}}

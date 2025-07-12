@@ -41,11 +41,9 @@ calc-size(<calc-size-basis>, <calc-sum>)
 The parameters are:
 
 - `<calc-size-basis>`
-
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
-
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value

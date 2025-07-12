@@ -2,9 +2,8 @@
 title: Site
 slug: Glossary/Site
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 

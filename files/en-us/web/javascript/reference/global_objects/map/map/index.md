@@ -4,9 +4,8 @@ short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Map.Map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Map()`** constructor creates {{jsxref("Map")}} objects.
 
@@ -17,7 +16,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **Note:** `Map()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Map()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

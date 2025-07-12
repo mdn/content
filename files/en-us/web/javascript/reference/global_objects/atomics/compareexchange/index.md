@@ -4,9 +4,8 @@ short-title: compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.compareExchange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.compareExchange()`** static method exchanges a given replacement value at a given position in the array, if a given expected value equals the old value. It returns the old value at that position whether it was equal to the expected value or not. This atomic operation guarantees that no other write happens until the modified value is written back.
 

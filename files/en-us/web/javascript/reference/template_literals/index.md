@@ -3,9 +3,8 @@ title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
 page-type: javascript-language-feature
 browser-compat: javascript.grammar.template_literals
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
@@ -322,7 +321,8 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 - `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
 - `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
-> **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
+> [!NOTE]
+> `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 

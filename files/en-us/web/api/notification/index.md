@@ -23,9 +23,7 @@ These notifications' appearance and specific functionality vary across platforms
 _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
-
   - : A string representing the current permission to display notifications. Possible values are:
-
     - `denied` — The user refuses to have notifications displayed.
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.

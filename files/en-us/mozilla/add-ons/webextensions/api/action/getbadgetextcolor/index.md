@@ -29,9 +29,7 @@ browser.action.getBadgeTextColor(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge text color from.
     - `windowId` {{optional_inline}}

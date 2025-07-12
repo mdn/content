@@ -15,7 +15,7 @@ JavaScript is a huge topic, with so many different features, styles, and techniq
 Before starting this module, you don't need any previous JavaScript knowledge, but you should have worked through the previous modules in the course. You should at least know [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and the [basic fundamentals of CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

@@ -29,7 +29,7 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
   - : Gets or sets the maximum age for outgoing datagrams, in milliseconds. Returns `null` if no maximum age has been set.
 - {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming datagrams from the stream.
-- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}}
+- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing datagrams to the stream.
 
 ## Examples

@@ -4,9 +4,8 @@ short-title: capture
 slug: Web/HTML/Reference/Attributes/capture
 page-type: html-attribute
 browser-compat: html.elements.input.capture
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`capture`** attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept) attribute.
 

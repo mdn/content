@@ -4,9 +4,8 @@ short-title: getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTime
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getTime()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 

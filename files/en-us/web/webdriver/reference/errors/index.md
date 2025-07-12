@@ -19,7 +19,6 @@ The **error object** is a JSON Object that bears three, and sometimes four, fiel
 - `stacktrace`
   - : Stacktrace report of the active stack frames at the time when the error occurred.
 - `data` (optional)
-
   - : Arbitrary and implementation-defined data that it can be useful to present the user with.
 
     Many drivers include the [user prompt](/en-US/docs/Web/API/Window/alert)'s text when encountering an [unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen) error.

@@ -43,12 +43,12 @@ scroll-timeline: --custom_name_for_timeline;
 
 The `scroll-timeline` shorthand property can be applied to a container element as a combination of the `<scroll-timeline-name>` and `<scroll-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<scroll-timeline-name>` value followed by the `<scroll-timeline-axis>` value.
 
-> **Note:** `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> [!NOTE]
+> `<scroll-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 
 - `<scroll-timeline-name>`
-
   - : See [`scroll-timeline-name`](/en-US/docs/Web/CSS/scroll-timeline-name).
 
 - `<scroll-timeline-axis>`

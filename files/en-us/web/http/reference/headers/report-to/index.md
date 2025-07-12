@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Report-To
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}{{non-standard_header}}
+{{deprecated_header}}{{non-standard_header}}
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.

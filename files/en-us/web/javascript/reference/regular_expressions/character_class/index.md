@@ -3,9 +3,8 @@ title: "Character class: [...], [^...]"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_class
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **character class** matches any character in or not in a custom set of characters. When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 

@@ -21,10 +21,8 @@ copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
       texture.

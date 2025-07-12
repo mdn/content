@@ -2,9 +2,8 @@
 title: Intrinsic size
 slug: Glossary/Intrinsic_Size
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, the _intrinsic size_ of an element is the size it would be based purely on its content without taking into account the effects of the context it appears in. For example, the sizing applied by CSS [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties. An element's intrinsic sizes are represented by its {{cssxref("min-content")}} and {{cssxref("max-content")}} sizes.
 

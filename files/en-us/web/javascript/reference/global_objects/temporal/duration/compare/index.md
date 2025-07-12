@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.compare
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 

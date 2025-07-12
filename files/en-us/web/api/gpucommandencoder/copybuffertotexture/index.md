@@ -30,13 +30,9 @@ copyBufferToTexture(source, destination, copySize)
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image inside the data. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 - `destination`
-
   - : An object defining the texture to write the data to. Combined with `copySize`, defines the region of the destination texture subresource. `destination` can take the following properties:
-
     - `aspect` {{optional_inline}}
-
       - : An enumerated value defining which aspects of the texture to write the data to. Possible values are:
-
         - `"all"`
           - : All available aspects of the texture format will be written to, which can mean all or any of color, depth, and stencil, depending on what kind of format you are dealing with.
         - `"depth-only"`
@@ -49,7 +45,6 @@ copyBufferToTexture(source, destination, copySize)
     - `mipLevel` {{optional_inline}}
       - : A number representing the mip-map level of the texture to write the data to. If omitted, `mipLevel` defaults to 0.
     - `origin` {{optional_inline}}
-
       - : An object or array specifying the origin of the copy — the minimum corner of the texture region to write the data to. Together with `size`, this defines the full extent of the region to copy to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
         For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.
@@ -58,7 +53,6 @@ copyBufferToTexture(source, destination, copySize)
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
 
 - `copySize`
-
   - : An object or array specifying the width, height, and depth/array layer count of the copied data. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
 
     For example, you can pass an array `[16, 16, 2]`, or its equivalent object `{ width: 16, height: 16, depthOrArrayLayers: 2 }`.

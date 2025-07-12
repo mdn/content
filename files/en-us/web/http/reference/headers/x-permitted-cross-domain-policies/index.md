@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/X-Permitted-Cross-Domain-Policies
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} defines a meta-policy that controls whether site resources can be accessed cross-origin by a document running in a web client like Adobe Acrobat or Microsoft Silverlight.
 

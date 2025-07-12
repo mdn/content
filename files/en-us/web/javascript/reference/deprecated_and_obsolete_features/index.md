@@ -2,9 +2,8 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
 

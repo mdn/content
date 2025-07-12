@@ -2,9 +2,8 @@
 title: Scroll snap
 slug: Glossary/Scroll_snap
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Scroll snapping** is when content "snaps" to a specific position, rather than stopping at any random point, when a scroll operation finishes. Normal scrolling operations lack precision. They don't align to a paragraph, a sentence, or an image boundary. For example, in a carousel, a scrolling operation could finish in the middle of an image, leaving it partially visible. Web developers have long relied on JavaScript-based solutions. Browsers have recently started supporting [CSS scroll-snapping features](/en-US/docs/Web/CSS/CSS_scroll_snap) that enable defining scroll-snap containers and snapping behaviors.
 

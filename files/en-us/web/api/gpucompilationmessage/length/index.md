@@ -15,7 +15,7 @@ The **`length`** read-only property of the
 
 A number.
 
-To be precise, `length` is the number of UTF-16 code units in the shader code substring that the message corresponds to. If the message corresponds to a single point rather than a substring, `length` will be 0.
+To be precise, `length` is the number of {{glossary("UTF-16", "UTF-16 code units")}} in the shader code substring that the message corresponds to. If the message corresponds to a single point rather than a substring, `length` will be 0.
 
 ## Examples
 

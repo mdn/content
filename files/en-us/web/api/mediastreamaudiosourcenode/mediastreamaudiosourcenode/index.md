@@ -30,9 +30,7 @@ new MediaStreamAudioSourceNode(context, options)
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to
     be associated with.
 - `options`
-
   - : An object defining the properties you want the `MediaStreamAudioSourceNode` to have:
-
     - `mediaStream`
       - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.
 

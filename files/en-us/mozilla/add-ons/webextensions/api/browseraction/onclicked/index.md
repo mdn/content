@@ -33,15 +33,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the icon was clicked.
     - `OnClickData`
-
       - : An object containing information about the click.
-
         - `modifiers`
           - : An `array`. The keyboard modifiers active at the time of the click, being one or more of `Shift`, `Alt`, `Command`, `Ctrl`, or `MacCtrl`.
         - `button`

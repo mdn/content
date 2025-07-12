@@ -6,9 +6,10 @@ page-type: http-csp-directive
 status:
   - deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
@@ -78,7 +79,6 @@ The report JSON object has a single top-level property, `"csp-report"`, which co
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
-
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Violations originating from external files are not included in the report.
 

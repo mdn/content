@@ -4,9 +4,8 @@ short-title: getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.getPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.getPrototypeOf()`** static method is like {{jsxref("Object.getPrototypeOf()")}}. It returns the prototype of the specified object.
 

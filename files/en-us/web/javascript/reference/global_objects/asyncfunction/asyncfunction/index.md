@@ -4,9 +4,8 @@ short-title: AsyncFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncFunction()`** constructor creates {{jsxref("AsyncFunction")}} objects.
 
@@ -32,7 +31,8 @@ AsyncFunction(arg1, arg2, functionBody)
 AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
+> [!NOTE]
+> `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
 
 ### Parameters
 

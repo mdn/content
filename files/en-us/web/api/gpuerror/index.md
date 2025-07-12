@@ -2,12 +2,10 @@
 title: GPUError
 slug: Web/API/GPUError
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the base interface for errors surfaced by {{domxref("GPUDevice.popErrorScope")}} and the {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event.
 
@@ -15,7 +13,7 @@ The **`GPUError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "n
 
 ## Instance properties
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUError.message", "message")}} {{ReadOnlyInline}}
   - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples

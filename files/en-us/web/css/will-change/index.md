@@ -9,7 +9,8 @@ browser-compat: css.properties.will-change
 
 The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
 
-> **Warning:** `will-change` is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
+> [!WARNING]
+> `will-change` is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 Proper usage of this property can be a bit tricky:
 

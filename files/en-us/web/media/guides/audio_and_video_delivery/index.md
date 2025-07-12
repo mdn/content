@@ -479,7 +479,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://jwplayer.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
+- [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
 - [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 

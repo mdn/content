@@ -3,9 +3,8 @@ title: "<pre>: The Preformatted Text element"
 slug: Web/HTML/Reference/Elements/pre
 page-type: html-element
 browser-compat: html.elements.pre
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or [monospaced](https://en.wikipedia.org/wiki/Monospaced_font) font.
 
@@ -28,8 +27,8 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
             O N
             D  E
             DONT
-           E SUIS
-           LA LAN
+          JE SUIS
+          LA  LAN
           G U E  É
          L O Q U E N
         TE      QUESA

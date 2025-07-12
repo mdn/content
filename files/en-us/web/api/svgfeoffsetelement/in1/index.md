@@ -33,7 +33,7 @@ In this example, we access the `in` attribute value of the `<feOffset>` element 
     y="20"
     width="100"
     height="100"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#offsetFilter)" />
 </svg>
 ```

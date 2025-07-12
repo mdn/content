@@ -4,9 +4,8 @@ short-title: getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getInt16
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getInt16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit signed integer. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 

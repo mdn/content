@@ -23,7 +23,7 @@ A string.
   id="el"
   src="large.webp"
   type="video/webp"
-  media="screen and (min-width: 600px)" />
+  media="screen and (width >= 600px)" />
 ```
 
 ```js

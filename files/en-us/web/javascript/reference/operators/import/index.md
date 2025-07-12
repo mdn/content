@@ -3,9 +3,8 @@ title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
 browser-compat: javascript.operators.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
@@ -42,7 +41,8 @@ Returns a promise which:
   - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE]
+> `import()` never synchronously throws an error.
 
 ## Description
 

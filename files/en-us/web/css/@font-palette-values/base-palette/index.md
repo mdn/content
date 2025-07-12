@@ -55,7 +55,7 @@ Using the [Rocher Color Font](https://www.harbortype.com/fonts/rocher-color/), t
 }
 
 h2 {
-  font-family: "Rocher";
+  font-family: "Rocher", fantasy;
 }
 
 @font-palette-values --two {

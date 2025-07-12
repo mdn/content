@@ -53,9 +53,6 @@ in that dimension. The value `1` has no effect.
 
 ## Syntax
 
-The `scale()` function is specified with either one or two values, which represent the amount of scaling
-to be applied in each direction.
-
 ```css
 scale(sx)
 
@@ -66,7 +63,7 @@ scale(sx, sy)
 
 - `sx`
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa (horizontal, x-component) of the scaling vector.
-- `sy`
+- `sy` {{optional_inline}}
   - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate (vertical, y-component) of the scaling vector.
     If not defined, its default value is `sx`, resulting in a uniform scaling that preserves the element's {{glossary("aspect ratio")}}.
 

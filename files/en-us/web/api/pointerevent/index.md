@@ -28,7 +28,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 - {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
@@ -70,7 +70,6 @@ The `PointerEvent` interface has several event types. To determine which event f
 - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - : This event is fired when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a `pointerdown` event from a device that does not support hover (see `pointerdown`). This event type is similar to `pointerover`, but differs in that it does not bubble.
 - {{domxref('Element/pointerdown_event', 'pointerdown')}}
-
   - : The event is fired when a pointer becomes _active_. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
     > [!NOTE]

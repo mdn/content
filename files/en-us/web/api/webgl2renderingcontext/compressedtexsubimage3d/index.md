@@ -25,10 +25,8 @@ compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height,
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
@@ -48,9 +46,7 @@ compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height,
 - `depth`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.
 - `format`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Possible values:
-
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`

@@ -2,9 +2,8 @@
 title: Robots.txt
 slug: Glossary/Robots.txt
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **robots.txt** is a file that is usually placed in the root of a website (for example, `https://www.example.com/robots.txt`).
 It specifies whether or not {{Glossary("crawler", "crawlers")}} are allowed access to an entire website, or to specified resources.

@@ -3,9 +3,8 @@ title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 page-type: javascript-class
 browser-compat: javascript.builtins.Symbol
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
 

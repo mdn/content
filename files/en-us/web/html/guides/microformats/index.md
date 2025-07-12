@@ -3,9 +3,8 @@ title: Using microformats in HTML
 short-title: Microformats
 slug: Web/HTML/Guides/Microformats
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 [_Microformats_](https://microformats.org/wiki/Main_Page) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
@@ -49,22 +48,18 @@ All microformats consist of a root, and a collection of properties. Properties a
 All microformats class names use prefixes. Prefixes are **syntax independent of vocabularies**, which are developed separately.
 
 - **"h-\*" for root class names**, e.g., "h-card", "h-entry", "h-feed", and many more. These top-level root classes usually indicate a type and corresponding expected vocabulary of properties. For example:
-
   - [h-card](https://microformats.org/wiki/h-card) describes a person or organization
   - [h-entry](https://microformats.org/wiki/h-entry) describes episodic or date stamped online content like a blog post
   - [h-feed](https://microformats.org/wiki/h-feed) describes a stream or feed of posts
   - You can find many more [vocabularies on the microformats2 wiki.](https://microformats.org/wiki/microformats2#v2_vocabularies)
 
 - **"p-\*" for plain (text) properties**, e.g., "p-name", "p-summary"
-
   - Generic plain text parsing, element text in general. On certain HTML elements, use special attributes first, e.g., img/alt, abbr/title.
 
 - **"u-\*" for URL properties**, e.g., "u-url", "u-photo", "u-logo"
-
   - Special parsing: element attributes a/href, img/src, object/data etc. attributes over element contents.
 
 - **"dt-\*" for datetime properties**, e.g., "dt-start", "dt-end", "dt-bday"
-
   - Special parsing: time element datetime attribute, [value-class-pattern](https://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" for element tree properties** where the entire contained element hierarchy is the value, e.g., "e-content". The "e-" prefix can also be mnemonically remembered as "element tree", "embedded markup", or "encapsulated markup".

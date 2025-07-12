@@ -4,9 +4,8 @@ short-title: ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ReferenceError()`** constructor creates {{jsxref("ReferenceError")}} objects.
 
@@ -26,7 +25,8 @@ ReferenceError(message, fileName)
 ReferenceError(message, fileName, lineNumber)
 ```
 
-> **Note:** `ReferenceError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `ReferenceError` instance.
+> [!NOTE]
+> `ReferenceError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `ReferenceError` instance.
 
 ### Parameters
 

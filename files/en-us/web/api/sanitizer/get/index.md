@@ -27,7 +27,7 @@ get()
 
 None
 
-### Returns
+### Return value
 
 A {{domxref("SanitizerConfig")}}.
 

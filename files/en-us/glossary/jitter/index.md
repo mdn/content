@@ -2,9 +2,8 @@
 title: Jitter
 slug: Glossary/Jitter
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Jitter** is the term used in computer networking to refer to [packet delay variation](https://en.wikipedia.org/wiki/Packet_delay_variation) — the variance in the rate at which packets arrive at a destination (the average of the squared difference from the mean packet arrival rate).
 

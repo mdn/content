@@ -7,9 +7,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: http.headers.X-XSS-Protection
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > Even though this feature can protect users of older web browsers that don't support {{Glossary("CSP")}}, in some cases, **`X-XSS-Protection` can create XSS vulnerabilities** in otherwise safe websites.

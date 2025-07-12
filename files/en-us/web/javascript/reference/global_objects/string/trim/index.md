@@ -4,9 +4,8 @@ short-title: trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trim
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`trim()`** method of {{jsxref("String")}} values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 

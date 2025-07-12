@@ -24,9 +24,7 @@ LanguageDetector.create(options)
 ### Parameters
 
 - `options`
-
   - : An object specifying configuration options for the `LanguageDetector`. Possible values include:
-
     - `expectedInputLanguages`
       - : An array of strings specifying the expected languages of the input text, which helps improve the accuracy of the language detection. These should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`.
     - `monitor` {{optional_inline}}

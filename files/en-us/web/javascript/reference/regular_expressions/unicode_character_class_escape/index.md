@@ -3,9 +3,8 @@ title: "Unicode character class escape: \\p{...}, \\P{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.unicode_character_class_escape
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
@@ -40,10 +39,10 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 ### Parameters
 
 - `loneProperty`
-
   - : A lone Unicode property name or value, following the same syntax as `value`. It specifies the value for the `General_Category` property, or a [binary property name](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). In [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) mode, it can also be a [binary Unicode property of strings](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings).
 
-    > **Note:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) syntax allows omitting the `Script` property name as well, but JavaScript does not support this, because most of the time `Script_Extensions` is more useful than `Script`.
+    > [!NOTE]
+    > [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) syntax allows omitting the `Script` property name as well, but JavaScript does not support this, because most of the time `Script_Extensions` is more useful than `Script`.
 
 - `property`
   - : A Unicode property name. Must be made of {{Glossary("ASCII")}} letters (`A–Z`, `a–z`) and underscores (`_`), and must be one of the [non-binary property names](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties).

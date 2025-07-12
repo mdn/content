@@ -24,11 +24,9 @@ new BarcodeDetector(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object containing a series of `BarcodeFormats` to search for
     in the subsequent {{domxref('BarcodeDetector.detect()','detect()')}} calls. The
     options are:
-
     - `formats` {{optional_inline}}
       - : An {{jsxref('Array')}} of barcode formats as strings.
         If not provided, `detect()` calls search for all supported formats.

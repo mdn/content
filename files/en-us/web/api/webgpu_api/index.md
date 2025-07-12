@@ -32,7 +32,6 @@ There are several layers of abstraction between a device GPU and a web browser r
 ![A basic stack diagram showing the position of the different elements of a WebGPU architecture on a device](basic-webgpu-stack.png)
 
 - Physical devices have GPUs. Most devices only have one GPU, but some have more than one. Different GPU types are available:
-
   - Integrated GPUs, which live on the same board as the CPU and share its memory.
   - Discrete GPUs, which live on their own board, separate from the CPU.
   - Software "GPUs", implemented on the CPU.
@@ -76,7 +75,6 @@ async function init() {
 A pipeline is a logical structure containing programmable stages that are completed to get your program's work done. WebGPU is currently able to handle two types of pipeline:
 
 - A render pipeline renders graphics, typically into a {{htmlelement("canvas")}} element, but it could also render graphics offscreen. It has two main stages:
-
   - A vertex stage, in which a vertex shader takes positioning data fed into the GPU and uses it to position a series of vertices in 3D space by applying specified effects like rotation, translation, or perspective. The vertices are then assembled into primitives such as triangles (the basic building block of rendered graphics) and rasterized by the GPU to figure out what pixels each one should cover on the drawing canvas.
 
   - A fragment stage, in which a fragment shader computes the color for each pixel covered by the primitives produced by the vertex shader. These computations frequently use inputs such as images (in the form of textures) that provide surface details and the position and color of virtual lights.

@@ -13,10 +13,8 @@ The **`<mtable>`** [MathML](/en-US/docs/Web/MathML) element allows you to create
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes). Some browsers may also support the following attributes:
 
 - `align` {{Non-standard_Inline}}
-
   - : Specifies the **vertical** alignment of the table with respect to its environment.
     Possible values are:
-
     - `axis` (default): The vertical center of the table aligns on the environment's axis (typically the minus sign).
     - `baseline`: The vertical center of the table aligns on the environment's baseline.
     - `bottom`: The bottom of the table aligns on the environments baseline.

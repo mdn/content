@@ -4,9 +4,8 @@ short-title: keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.keyFor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.keyFor()`** static method retrieves a shared symbol
 key from the global symbol registry for the given symbol.

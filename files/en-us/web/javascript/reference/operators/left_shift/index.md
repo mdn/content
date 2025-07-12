@@ -3,9 +3,8 @@ title: Left shift (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 page-type: javascript-operator
 browser-compat: javascript.operators.left_shift
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **left shift (`<<`)** operator returns a number or BigInt whose binary representation is the first operand shifted by the specified number of bits to the left. Excess bits shifted off to the left are discarded, and zero bits are shifted in from the right.
 

@@ -17,12 +17,10 @@ You may specify SVG in styles either within the same document or an external sty
 
 To apply an SVG effect using CSS styles, you first need to create the CSS style that references the SVG to apply.
 
-```html
-<style>
-  p {
-    mask: url(#my-mask);
-  }
-</style>
+```css
+p {
+  mask: url(#my-mask);
+}
 ```
 
 In the above example, all paragraphs are masked by an [SVG `<mask>`](/en-US/docs/Web/SVG/Reference/Element/mask) with the [ID](/en-US/docs/Web/HTML/Reference/Global_attributes/id) `my-mask`.
@@ -53,6 +51,9 @@ p {
   border: 1px solid #000;
   display: inline-block;
 }
+p.target {
+  background: lime;
+}
 ```
 
 Note that in the CSS, the mask is specified using a URL to the ID `#mask-1`, which is the ID of the SVG mask specified below it. Everything else specifies details about the gradient mask itself.
@@ -60,7 +61,7 @@ Note that in the CSS, the mask is specified using a URL to the ID `#mask-1`, whi
 Applying the SVG effect to HTML is accomplished by assigning the `target` class defined above to an element, like this:
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -83,7 +84,7 @@ The above example would be rendered with the mask applied to it.
 This example demonstrates using SVG to clip HTML content. Notice that even the clickable areas for links are clipped.
 
 ```html
-<p class="target" style="background:lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -96,7 +97,7 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
   Ut enim ad minim veniam.
 </p>
 
-<button onclick="toggleRadius()">Toggle radius</button>
+<button>Toggle radius</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
@@ -115,6 +116,9 @@ p {
   border: 1px solid #000;
   display: inline-block;
 }
+p.target {
+  background: lime;
+}
 ```
 
 This establishes a clipping area made of a circle and rectangle, assigns it the ID `#clipping-path-1`, then references it in the CSS. The clip path can be assigned to any element with the `target` class.
@@ -122,10 +126,13 @@ This establishes a clipping area made of a circle and rectangle, assigns it the 
 You can make changes to the SVG in real time and see them immediately affect the rendering of the HTML. For example, you can resize the circle in the clip path established above:
 
 ```js
+const circle = document.getElementById("circle");
+
 function toggleRadius() {
-  const circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
 }
+
+document.querySelector("button").addEventListener("click", toggleRadius);
 ```
 
 {{EmbedLiveSample('Example_Clipping', 650, 200)}}
@@ -135,7 +142,7 @@ function toggleRadius() {
 This demonstrates applying a filter to HTML content using SVG. It establishes several filters, which are applied with CSS to three elements in both the normal and mouse [hover](/en-US/docs/Web/CSS/:hover) states.
 
 ```html
-<p class="target" style="background: lime;">
+<p class="target">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 </p>
@@ -148,6 +155,12 @@ This demonstrates applying a filter to HTML content using SVG. It establishes se
   >
   Ut enim ad minim veniam.
 </p>
+```
+
+```css hidden
+p.target {
+  background: lime;
+}
 ```
 
 Any SVG filter can be applied this way. For example, to apply a blur effect, you might use:
@@ -181,9 +194,11 @@ And some more filters:
   <filter id="f3">
     <feConvolveMatrix
       filterRes="100 100"
-      style="color-interpolation-filters:sRGB"
+      color-interpolation-filters="sRGB"
       order="3"
-      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
+      kernelMatrix="0 -1 0
+                   -1 4 -1
+                    0 -1 0"
       preserveAlpha="true" />
   </filter>
   <filter id="f4">
@@ -198,10 +213,10 @@ And some more filters:
   <filter id="f5">
     <feColorMatrix
       values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0"
-      style="color-interpolation-filters:sRGB" />
+              0 1 0 0 0
+              0 0 1 0 0
+              0 1 0 0 0"
+      color-interpolation-filters="sRGB" />
   </filter>
 </svg>
 ```

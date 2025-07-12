@@ -119,5 +119,4 @@ Note that this is not resilient to other influences.
 
 ## See also
 
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
 - [Streams—The Definitive Guide](https://web.dev/articles/streams)

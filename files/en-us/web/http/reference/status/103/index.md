@@ -3,9 +3,8 @@ title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
 page-type: http-status-code
 browser-compat: http.status.103
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`103 Early Hints`** [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server expects the final response will link to.
 This allows a browser to [preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) resources even before the server has prepared and sent a final response.

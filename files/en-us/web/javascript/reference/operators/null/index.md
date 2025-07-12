@@ -3,9 +3,8 @@ title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 page-type: javascript-language-feature
 browser-compat: javascript.operators.null
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`null`** value represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and

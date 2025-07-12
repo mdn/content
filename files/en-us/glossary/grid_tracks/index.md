@@ -2,9 +2,8 @@
 title: Grid Tracks
 slug: Glossary/Grid_Tracks
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **grid track** is the space between two adjacent {{glossary("grid lines")}}. They are defined in the _explicit grid_ by using the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties or the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties. Tracks are also created in the _implicit grid_ by positioning a grid item outside of the tracks created in the explicit grid.
 
@@ -68,7 +67,6 @@ Tracks created in the implicit grid are auto-sized by default, however you can d
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Definition of grid tracks in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - Property reference
-
   - {{cssxref("grid-template-columns")}}
   - {{cssxref("grid-template-rows")}}
   - {{cssxref("grid")}}

@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Save-Data
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Save-Data`** {{Glossary("request header")}} is a [network client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#network_client_hints) which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.

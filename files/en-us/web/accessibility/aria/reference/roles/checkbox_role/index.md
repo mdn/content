@@ -58,9 +58,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
-
     - `true`
       - : The checkbox is checked.
     - `false`
@@ -84,7 +82,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 - `onclick`
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 - `onKeyDown`
-
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
 ## Examples

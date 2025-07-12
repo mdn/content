@@ -25,14 +25,12 @@ new File(fileBits, fileName, options)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
-    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
+    Note that strings here are encoded as {{glossary("UTF-8")}}, unlike the usual JavaScript {{glossary("UTF-16")}} strings.
 - `fileName`
   - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
-
   - : An options object containing optional attributes for the file. Available options are
     as follows:
-
     - `type` {{optional_inline}}
       - : A string representing the MIME type of the
         content that will be put into the file. Defaults to a value of `""`.

@@ -374,7 +374,7 @@ Now that the player has its basic look and feel taken care of, some other stylin
 The player currently works fairly well until displayed on a "medium" screen (e.g., 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
 
 ```css
-@media screen and (max-width: 64em) {
+@media screen and (width <= 64em) {
   figure {
     padding-left: 0;
     padding-right: 0;
@@ -390,7 +390,7 @@ The player currently works fairly well until displayed on a "medium" screen (e.g
 This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to be changed:
 
 ```css
-@media screen and (max-width: 42.5em) {
+@media screen and (width <= 42.5em) {
   .controls {
     height: auto;
   }

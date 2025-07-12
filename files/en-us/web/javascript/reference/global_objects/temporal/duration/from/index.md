@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.from
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Duration.from()`** static method creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 
@@ -21,13 +22,10 @@ Temporal.Duration.from(info)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.Duration")}} instance, which creates a copy of the instance.
     - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format) string representing a duration.
     - An object containing at least one of the following properties (in the order they are retrieved and validated):
-
       - {{jsxref("Temporal/Duration/days", "days")}}
       - {{jsxref("Temporal/Duration/hours", "hours")}}
       - {{jsxref("Temporal/Duration/microseconds", "microseconds")}}

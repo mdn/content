@@ -4,9 +4,8 @@ short-title: Service-Worker-Allowed
 slug: Web/HTTP/Reference/Headers/Service-Worker-Allowed
 page-type: http-header
 browser-compat: http.headers.Service-Worker-Allowed
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Service-Worker-Allowed`** {{Glossary("response header")}} is used to broaden the path restriction for a service worker's default `scope`.
 

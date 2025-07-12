@@ -9,7 +9,8 @@ browser-compat: css.types.filter-function.saturate
 
 The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) super-saturates or desaturates the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-> **Note:** `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
+> [!NOTE]
+> `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
 
 {{InteractiveExample("CSS Demo: saturate()")}}
 

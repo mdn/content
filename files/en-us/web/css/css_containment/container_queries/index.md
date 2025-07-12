@@ -65,7 +65,7 @@ Specifically, this query will apply a larger font size for the card title if the
 }
 
 /* If the container is larger than 700px */
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: 2em;
   }
@@ -93,7 +93,7 @@ The following example creates a containment context with the name `sidebar`:
 You can then target this containment context using the `@container` at-rule:
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width > 700px) {
   .card {
     font-size: 2em;
   }
@@ -134,7 +134,7 @@ The container query length units are:
 The following example uses the `cqi` unit to set the font size of a heading based on the inline size of the container:
 
 ```css
-@container (min-width: 700px) {
+@container (width > 700px) {
   .card h2 {
     font-size: max(1.5em, 1.23em + 2cqi);
   }
@@ -158,7 +158,7 @@ The following example uses a {{cssxref("grid-template-columns")}} declaration to
 If you want to use a single-column layout for devices with a smaller viewport, you can use a media query to change the grid template:
 
 ```css
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .card {
     grid-template-columns: 1fr;
   }

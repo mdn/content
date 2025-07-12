@@ -54,5 +54,4 @@ Not part of any standard.
 ## See also
 
 - Similar pseudo-elements used by other browsers:
-
   - {{cssxref("::-webkit-color-swatch")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)

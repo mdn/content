@@ -561,7 +561,6 @@ The conformance criteria under this guideline ensures that users are able to int
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. Operable
   3. [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

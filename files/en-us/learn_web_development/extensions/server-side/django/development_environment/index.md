@@ -144,7 +144,6 @@ This will either display the Python version number, which indicates that Python 
 You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/macos/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -164,7 +163,6 @@ pip3 list
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/windows/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -437,7 +435,6 @@ The steps are:
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form.
    While these are not compulsory, they are strongly recommended.
-
    - Enter a repository name: "django_local_library".
    - Enter a new repository description: "Local Library website written in Django".
    - Select "Public" for the repository (the default).

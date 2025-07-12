@@ -29,15 +29,12 @@ text-anchor: unset;
 ### Values
 
 - `start`
-
   - : Aligns the text such that the inline start of the text string is aligned with the anchor point. This alignment is relative to the writing direction of the text; thus, for example, in right-to-left top-to-bottom writing, the text will be placed to the left of the anchor point. If the text's inline direction is vertical, as with many Asian languages, the top edge of the text is aligned with the anchor point.
 
 - `middle`
-
   - : Aligns the text such that the center (middle) of the text string's inline box is aligned with the anchor point.
 
 - `end`
-
   - : Aligns the text such that the inline end of the text string is aligned with the anchor point. This alignment is relative to the writing direction of the text; thus, for example, in right-to-left top-to-bottom writing, the text will be placed to the right of the anchor point. If the text's inline direction is vertical, as with many Asian languages, the bottom edge of the text is aligned with the anchor point.
 
 ## Formal definition

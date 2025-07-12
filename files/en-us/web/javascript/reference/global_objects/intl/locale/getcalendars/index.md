@@ -4,9 +4,8 @@ short-title: getCalendars()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getCalendars
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getCalendars()`** method of {{jsxref("Intl.Locale")}} instances returns a list of one or more unique calendar identifiers for this locale.
 

@@ -13,7 +13,8 @@ browser-compat: api.BeforeUnloadEvent.returnValue
 The **`returnValue`** property of the
 {{domxref("BeforeUnloadEvent")}} interface, when set to a truthy value, triggers a browser-generated confirmation dialog asking users to confirm if they _really_ want to leave the page when they try to close or reload it, or navigate somewhere else. This is intended to help prevent loss of unsaved data.
 
-> **Note:** `returnValue` is a legacy feature, and best practice is to trigger the dialog by invoking {{domxref("Event.preventDefault()")}} on the `BeforeUnloadEvent` object, while also setting `returnValue` to support legacy cases. See the {{domxref("Window/beforeunload_event", "beforeunload")}} event reference for detailed up-to-date guidance.
+> [!NOTE]
+> `returnValue` is a legacy feature, and best practice is to trigger the dialog by invoking {{domxref("Event.preventDefault()")}} on the `BeforeUnloadEvent` object, while also setting `returnValue` to support legacy cases. See the {{domxref("Window/beforeunload_event", "beforeunload")}} event reference for detailed up-to-date guidance.
 
 ## Value
 

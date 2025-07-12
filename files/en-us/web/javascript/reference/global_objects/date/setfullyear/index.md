@@ -4,9 +4,8 @@ short-title: setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFullYear()`** method of {{jsxref("Date")}} instances changes the year, month, and/or day of month for this date according to local time.
 

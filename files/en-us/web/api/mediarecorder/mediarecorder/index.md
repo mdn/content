@@ -30,9 +30,7 @@ new MediaRecorder(stream, options)
     from a stream created using {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
     {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
 - `options` {{optional_inline}}
-
   - : A dictionary object that can contain the following properties:
-
     - `mimeType` {{optional_inline}}
       - : A MIME type specifying the format for the resulting
         media; you may specify the container format (the browser will select its preferred

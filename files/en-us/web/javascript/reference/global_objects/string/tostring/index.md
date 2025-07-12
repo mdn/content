@@ -4,9 +4,8 @@ short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("String")}} values returns this string value.
 

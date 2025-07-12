@@ -4,9 +4,8 @@ short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.filter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`filter()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields only those elements of the iterator for which the provided callback function returns `true`.
 

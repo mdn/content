@@ -50,29 +50,23 @@ clip-path: path(
 
 ## Syntax
 
-When used in {{cssxref("offset-path")}} or {{cssxref("d")}}:
-
 ```css
-path(<string>)
-```
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 
-When used in {{cssxref("clip-path")}}:
-
-```css
-path( [<fill-rule>,]? <string> )
+/* When used in clip-path only */
+path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
 ```
 
 ### Parameters
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-
   - : Defines what parts of the path are inside the shape. The possible values include:
-
     - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
 
     - `evenodd`: A point is considered to be inside the shape if a ray drawn from the point crosses an odd number of path segments. This means that for each time the ray enters the shape, it has not exited an equal number of times, indicating an odd count of entries without corresponding exits.
 
-    > **Warning:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
+    > [!WARNING]
+    > `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - {{cssxref("string")}}
   - : A [data string](/en-US/docs/Web/SVG/Reference/Attribute/d), contained in quotes, which defines an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
@@ -86,13 +80,6 @@ Returns a {{cssxref("basic-shape")}} value.
 {{csssyntax}}
 
 ## Examples
-
-### Examples of correct values for path()
-
-```css
-path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-```
 
 ### Using a `path()` function as an `offset-path` value
 

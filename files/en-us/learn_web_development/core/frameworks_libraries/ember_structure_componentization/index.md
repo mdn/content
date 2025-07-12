@@ -71,7 +71,8 @@ However, we don't want this. Instead, we want it to contain the TodoMVC app stru
 </section>
 ```
 
-> **Note:** [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) provides a label for assistive technology to make use of — for example, for a screen reader to read out. This is useful in such cases where we have an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) being used with no corresponding HTML text that could be turned into a label.
+> [!NOTE]
+> [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) provides a label for assistive technology to make use of — for example, for a screen reader to read out. This is useful in such cases where we have an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) being used with no corresponding HTML text that could be turned into a label.
 
 When you save `application.hbs`, the development server you started earlier will automatically rebuild the app and refresh the browser. The rendered output should now look like this:
 
@@ -157,7 +158,6 @@ The component groupings are as follows:
 
 - The main input / "new-todo" (red in the image)
 - The containing body of the todo list + the `mark-all-complete` button (purple in the image)
-
   - The `mark-all-complete button`, explicitly highlighted for reasons given below (yellow in the image)
   - Each todo is an individual component (green in the image)
 

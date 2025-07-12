@@ -164,12 +164,10 @@ For this component, we'll use the object registration method.
 2. Add a `props` property inside the export `default {}` object, which contains an empty object.
 3. Inside this object, add two properties with the keys `label` and `done`.
 4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
-
    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
 
 5. Now on to the `done` prop.
-
    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
 

@@ -28,7 +28,6 @@ Where `<storageType>` is the {{WebExtAPIRef("storage.session")}} storage type.
 ### Parameters
 
 - `accessLevel`
-
   - : `String`. The access level of the storage area. Possible values are `TRUSTED_CONTEXTS` or `TRUSTED_AND_UNTRUSTED_CONTEXTS`.
 
 ### Return value

@@ -2,9 +2,8 @@
 title: "TypeError: Iterator/AsyncIterator constructor can't be used directly"
 slug: Web/JavaScript/Reference/Errors/Constructor_cant_be_used_directly
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "Iterator constructor can't be used directly" or "AsyncIterator constructor can't be used directly" occurs when you try to use the {{jsxref("Iterator/Iterator", "Iterator()")}} or {{jsxref("AsyncIterator/AsyncIterator", "AsyncIterator()")}} constructors directly to create instances. These constructors are _abstract classes_ and should only be inherited from.
 

@@ -2,9 +2,8 @@
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.
 

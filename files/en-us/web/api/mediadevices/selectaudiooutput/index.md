@@ -26,11 +26,8 @@ selectAudioOutput(options)
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object that configures what device(s) may be offered in the user prompt.
-
     - `deviceId` {{Optional_Inline}}
-
       - : A string representing the ID of a single previously exposed/permitted device.
         If not set, a prompt with all available audio output devices will be displayed.
 

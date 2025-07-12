@@ -14,7 +14,7 @@ The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alp
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -24,7 +24,7 @@ shape-image-threshold: 0.2;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -34,7 +34,7 @@ shape-image-threshold: 0.4;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -70,7 +70,7 @@ shape-image-threshold: 0.6;
   margin: 20px;
   background-image: linear-gradient(
     50deg,
-    rgb(77, 26, 103),
+    rgb(77 26 103),
     transparent 80%,
     transparent
   );

@@ -22,7 +22,6 @@ new ChannelSplitterNode(context, options)
 - `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
 - `options` {{optional_inline}}
-
   - : An object defining the properties you want the `ChannelSplitterNode` to have:
     - `numberOfOutputs` {{optional_inline}}
       - : A number defining the number of outputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.

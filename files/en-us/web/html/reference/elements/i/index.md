@@ -3,9 +3,8 @@ title: "<i>: The Idiomatic Text element"
 slug: Web/HTML/Reference/Elements/i
 page-type: html-element
 browser-compat: html.elements.i
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element.
 
@@ -38,7 +37,6 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 ## Usage notes
 
 - Use the `<i>` element for text that is set off from the normal prose for readability reasons. This would be a range of text with different semantic meaning than the surrounding text. Among the use cases for the `<i>` element are spans of text representing a different quality or mode of text, such as:
-
   - Alternative voice or mood
   - Taxonomic designations (such as the genus and species "_Homo sapiens_")
   - Idiomatic terms from another language (such as "_et cetera_"); these should include the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute to identify the language
@@ -49,7 +47,6 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 - In earlier versions of the HTML specification, the `<i>` element was merely a presentational element used to display text in italics, much like the `<b>` element was used to display text in bold letters. This is no longer true, as these tags now define semantics rather than typographic appearance. A browser will typically still display the contents of the `<i>` element in italic type, but is, by definition, no longer required to do so. To display text in italic type, authors should use the CSS {{cssxref("font-style")}} property.
 - Be sure the text in question is not actually more appropriately marked up with another element.
-
   - Use {{HTMLElement("em")}} to indicate stress emphasis.
   - Use {{HTMLElement("strong")}} to indicate importance, seriousness, or urgency.
   - Use {{HTMLElement("mark")}} to indicate relevance.

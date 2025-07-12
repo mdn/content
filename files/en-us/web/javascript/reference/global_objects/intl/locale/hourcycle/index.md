@@ -4,9 +4,8 @@ short-title: hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.hourCycle
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`hourCycle`** accessor property of {{jsxref("Intl.Locale")}} instances returns the hour cycle type for this locale.
 

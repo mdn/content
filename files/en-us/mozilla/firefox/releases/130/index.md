@@ -2,9 +2,8 @@
 title: Firefox 130 for developers
 slug: Mozilla/Firefox/Releases/130
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 was released on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
 

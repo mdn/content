@@ -3,9 +3,8 @@ title: Empty statement
 slug: Web/JavaScript/Reference/Statements/Empty
 page-type: javascript-statement
 browser-compat: javascript.statements.empty
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
 JavaScript syntax would expect one.

@@ -2,9 +2,8 @@
 title: Layout viewport
 slug: Glossary/Layout_viewport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **layout viewport** is the {{glossary("viewport")}} into which the browser draws a web page. Essentially, it represents what is available to be seen, whereas the {{Glossary("visual viewport")}} represents the currently visible portion of the layout viewport, the currently visible subsection of the layout viewport that is currently visible on the user's display device.
 

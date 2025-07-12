@@ -24,9 +24,7 @@ caretPositionFromPoint(x, y, options)
 - `y`
   - : The vertical coordinate of a point.
 - `options` {{optional_inline}}
-
   - : The following optional properties may also be specified.
-
     - `shadowRoots` {{optional_inline}}
       - : An array of {{domxref("ShadowRoot")}} objects.
         The method can return a caret position for a node that is defined within the shadow DOM of a supplied shadow root.

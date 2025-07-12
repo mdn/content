@@ -2,9 +2,10 @@
 title: Expressions and operators
 slug: Web/JavaScript/Guide/Expressions_and_operators
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
@@ -432,7 +433,8 @@ const var2 = 4;
   </tbody>
 </table>
 
-> **Note:** `=>` is not a comparison operator but rather is the notation
+> [!NOTE]
+> `=>` is not a comparison operator but rather is the notation
 > for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ## Arithmetic operators

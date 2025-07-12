@@ -4,9 +4,8 @@ short-title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
 page-type: http-method
 browser-compat: http.methods.CONNECT
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy")}} establish a HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
 

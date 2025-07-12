@@ -6,9 +6,10 @@ page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.milliseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`milliseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of milliseconds in the duration.
 

@@ -2,9 +2,8 @@
 title: Audio for Web games
 slug: Games/Techniques/Audio_for_Web_Games
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Audio is an important part of any game; it adds feedback and atmosphere. Web-based audio is maturing fast, but there are still many browser differences to navigate. We often need to decide which audio parts are essential to our games' experience and which are nice to have but not essential, and devise a strategy accordingly. This article provides a detailed guide to implementing audio for web games, looking at what works currently across as wide a range of platforms as possible.
 

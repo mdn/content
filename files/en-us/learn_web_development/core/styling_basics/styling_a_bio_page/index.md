@@ -11,7 +11,7 @@ sidebar: learnsidebar
 In this challenge you will style a simple bio page, testing you on some of the skills you learned in the last couple of lessons including writing selectors and text styling.
 
 > [!NOTE]
-> You can click "Play" in the live samples below to open the code in the MDN Playground, or you can copy and paste the code into your own IDE or an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can click "Play" in the live samples below to open the code in the MDN Playground, or you can copy and paste the code into your own IDE or an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief

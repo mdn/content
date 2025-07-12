@@ -15,7 +15,7 @@ HTML is the technology that defines the content and structure of any website. Wr
 Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). Both are parts of our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) complete beginner's module.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

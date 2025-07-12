@@ -37,11 +37,9 @@ of the following filter functions in a string.
     value of `0%` will create a drawing that is completely black. A value of
     `100%` leaves the drawing unchanged.
 - [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow)
-
   - : Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
-
     - `<offset-x>`
       - : See {{cssxref("&lt;length&gt;")}} for possible
         units. Specifies the horizontal distance of the shadow.

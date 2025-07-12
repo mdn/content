@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this note block before publishing._
+> [!NOTE]
+> _Remove this note block before publishing._
 >
 > ---
 >

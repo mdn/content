@@ -3,9 +3,8 @@ title: "<picture>: The Picture element"
 slug: Web/HTML/Reference/Elements/picture
 page-type: html-element
 browser-compat: html.elements.picture
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
 
@@ -66,7 +65,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <source srcset="mdn-logo-wide.png" media="(width >= 600px)" />
   <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```

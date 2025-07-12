@@ -32,14 +32,11 @@ fetchLater(resource, options)
 The `fetchLater()` method takes all the same parameters as {{domxref("Window.fetch", "fetch()")}}, but with one additional `activateAfter` option.
 
 - `resource`
-
   - : This defines the resource that you wish to fetch. Identical to {{domxref("Window.fetch", "fetch()")}}, this can either be:
-
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context.
     - A {{domxref("Request")}} object.
 
 - `options` {{optional_inline}}
-
   - : A {{domxref("DeferredRequestInit")}} object containing any custom settings that you want to apply to the request, including an `activateAfter` timeout value that defines how long the result should be deferred for before sending.
 
 ### Exceptions
@@ -47,11 +44,9 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions) can be raised for `fetchLater()`, along with the following additional exceptions:
 
 - `QuotaExceededError` {{domxref("DOMException")}}
-
   - : Use of this feature was blocked due to exceeding the available quota. See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details. Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they are embedding third-party JavaScript.
 
 - `RangeError` {{domxref("DOMException")}}
-
   - : Thrown when a negative `activateAfter` value is specified.
 
 - `TypeError` {{domxref("DOMException")}}

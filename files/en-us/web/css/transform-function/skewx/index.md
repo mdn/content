@@ -43,7 +43,8 @@ each point within an element by a certain angle in the horizontal direction. The
 modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
 origin a point is, the greater will be the value added it.
 
-> **Note:** `skewX(a)` is equivalent to
+> [!NOTE]
+> `skewX(a)` is equivalent to
 > `skew(a)`.
 
 ## Syntax

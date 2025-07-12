@@ -107,7 +107,7 @@ In this section, you'll study some code using the DOM inspector and see how the 
 1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
 
    ```html-nolint
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8">
@@ -149,7 +149,6 @@ In this section, you'll study some code using the DOM inspector and see how the 
    ```
 
 4. Let's review the problems:
-
    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been rendered in bold.
    - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
@@ -157,7 +156,6 @@ In this section, you'll study some code using the DOM inspector and see how the 
 
 5. Now let's examine the rendered DOM, as opposed to the source code. To do this, open your browser's DOM inspector. You will see a representation of the rendered markup: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 6. Look at how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
-
    - The paragraphs and list items have been given closing tags.
    - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text in its own `<strong>` element, right down to the bottom of the document!
    - The incorrect nesting has been fixed by the browser as shown here:

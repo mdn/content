@@ -98,7 +98,6 @@ An effective research network consists of several groups of people with differen
 
 - Peers: It is useful to share information with and ask questions of your immediate peers — this could be your class mates or your team mates — as they might have useful insights to share or want to work on the problem together. They might also have worked on the same problem previously and be able to provide an answer.
 - Teachers or senior colleagues: If your peers can't help, the next step is normally to ask a senior colleague, manager, or teacher. They will have more experience than your peers, but bear in mind that they will have less free time available. You will get better results and more appreciation if you demonstrate that you've already tried to solve the problem yourself first, and are being respectful of their time. To do so:
-
   - Keep a record of what you've already tried to do. What already failed?
   - If the research subject is a specific code example or technique that you can't get to work, create an online test case using a site like [CodePen](https://codepen.io) or [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup> that you can show to them.
   - Think carefully about what questions to ask them — what specifically is the problem? If you have multiple problems to ask them about, put them in order of priority to make sure you cover the most important items.

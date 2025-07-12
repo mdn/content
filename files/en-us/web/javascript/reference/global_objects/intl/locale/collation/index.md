@@ -4,9 +4,8 @@ short-title: collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.collation
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`collation`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [collation type](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) for this locale, which is used to order strings according to the locale's rules.
 

@@ -4,9 +4,8 @@ short-title: fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCharCode
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`String.fromCharCode()`** static method returns a string created from the specified sequence of UTF-16 code units.
 

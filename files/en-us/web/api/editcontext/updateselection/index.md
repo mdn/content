@@ -23,14 +23,16 @@ updateSelection(start, end)
 - `start`
   - : A number representing the new selection start.
 - `end`
-  - : A number representing the new selection end.
+  - : A number representing the new selection end. If the `start` and `end` values are the same, the selection is equivalent to a caret.
 
-If the `start` and `end` values are the same, the selection is equivalent to a caret.
+### Return value
+
+None (`undefined`).
 
 ### Exceptions
 
-- If only one argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- If either argument is not a non-negative number, a {{domxref("DOMException")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if the method is called with fewer than two arguments, or if either argument is not a non-negative number.
 
 ## Examples
 

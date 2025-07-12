@@ -36,27 +36,21 @@ reading-flow: unset;
 The `reading-flow` property takes one of the following keywords as its value:
 
 - `normal`
-
   - : The default value. The reading order follows the order of elements in the DOM.
 
 - `flex-visual`
-
   - : Only affects {{glossary("Flex Container", "flex containers")}}. The reading order follows the visual order of the `flex` items, taking the {{cssxref("writing-mode")}} into account. Therefore, a document in English with `flex-direction: row-reverse` and `reading-flow: flex-visual` set would have a reading order of left-to-right.
 
 - `flex-flow`
-
   - : Only affects flex containers. The reading order follows the {{cssxref("flex-flow")}} direction.
 
 - `grid-columns`
-
   - : Only affects {{glossary("Grid Container", "grid containers")}}. The reading order follows the visual order of grid items, column by column, taking the writing mode into account.
 
 - `grid-rows`
-
   - : Only affects grid containers. The reading order follows the visual order of grid items, row by row, taking the writing mode into account.
 
 - `grid-order`
-
   - : Only affects grid containers. if the {{cssxref("order")}} property is applied to any of the container's children, the reading order follows the modified item order. If the `order` property is not applied to the grid items, `grid-order` behaves as `normal`.
 
 - `source-order`

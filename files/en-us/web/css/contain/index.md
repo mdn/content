@@ -317,11 +317,11 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 body {
   quotes: "[" "]" "‹" "›";
 }
-.open-quote:before {
+.open-quote::before {
   content: open-quote;
 }
 
-.close-quote:after {
+.close-quote::after {
   content: close-quote;
 }
 ```

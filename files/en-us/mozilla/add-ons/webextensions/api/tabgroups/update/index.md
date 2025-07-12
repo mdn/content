@@ -21,7 +21,6 @@ let updatedTabGroup = await browser.tabGroups.update(
 ### Parameters
 
 - `groupId`
-
   - : `integer` The ID of the tab group to update.
 
 - `updateProperties`

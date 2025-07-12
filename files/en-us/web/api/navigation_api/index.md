@@ -113,7 +113,7 @@ There are a few perceived limitations with the Navigation API:
 ## Examples
 
 > [!NOTE]
-> Check out Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/).
+> Check out the [Navigation API live demo](https://mdn.github.io/dom-examples/navigation-api/) ([view demo source](https://github.com/mdn/dom-examples/tree/main/navigation-api)).
 
 ### Handling a navigation using `intercept()`
 

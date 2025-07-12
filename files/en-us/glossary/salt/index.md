@@ -2,9 +2,8 @@
 title: Salt
 slug: Glossary/Salt
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In cryptography, **salt** is random data added to a password before it is {{glossary("hash function", "hashed")}}. This makes it impossible for an attacker to derive passwords from their hashes using precomputed tables of passwords and the corresponding hashes.
 

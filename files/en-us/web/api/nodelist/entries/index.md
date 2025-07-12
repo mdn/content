@@ -18,6 +18,10 @@ contained in this object. The values are {{domxref("Node")}} objects.
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.

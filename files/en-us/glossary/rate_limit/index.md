@@ -2,9 +2,8 @@
 title: Rate limit
 slug: Glossary/Rate_limit
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In computing, especially in networking, **rate limiting** means controlling how many operations can be performed in a given amount of time, usually to avoid overloading the system and causing performance degradation. For example, a server might limit the number of requests it will accept from a single client in a given time period, which not only optimizes the server's overall performance but also mitigates attacks like {{Glossary("Denial of Service", "DoS attack")}}.
 

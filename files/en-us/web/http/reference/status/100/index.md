@@ -3,9 +3,8 @@ title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`100 Continue`** [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code indicates that the initial part of a request has been received and has not yet been rejected by the server.
 The client should continue with a request or discard the 100 response if the request is already finished.

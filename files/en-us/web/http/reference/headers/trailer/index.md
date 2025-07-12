@@ -4,9 +4,8 @@ short-title: Trailer
 slug: Web/HTTP/Reference/Headers/Trailer
 page-type: http-header
 browser-compat: http.headers.Trailer
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent.
 
@@ -44,10 +43,8 @@ Trailer: header-names
 ## Directives
 
 - `header-names`
-
   - : HTTP header fields which will be present in the trailer part of chunked messages.
     The following header names are **disallowed**:
-
     - {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer`
     - Authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}})
     - Message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}})

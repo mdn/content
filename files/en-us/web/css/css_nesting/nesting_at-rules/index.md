@@ -73,7 +73,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
   display: grid;
   @media (orientation: landscape) {
     grid-auto-flow: column;
-    @media (min-width: 1024px) {
+    @media (width >= 1024px) {
       max-inline-size: 1024px;
     }
   }
@@ -91,7 +91,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
     grid-auto-flow: column;
   }
 }
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (orientation: landscape) and (width >= 1024px) {
   .foo {
     max-inline-size: 1024px;
   }

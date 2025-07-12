@@ -2,9 +2,8 @@
 title: Ink overflow
 slug: Glossary/Ink_overflow
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **ink overflow** of a box refers to the part of the box and its contents that creates a visual effect outside of the box's border box. Being visual only, ink overflow does not affect layout as it has no impact on box model properties.
 

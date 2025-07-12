@@ -252,11 +252,11 @@ A date and time control is created using the {{HTMLElement("input")}} element an
 ```
 
 ```css hidden live-sample___date1
-input:invalid + span:after {
+input:invalid + span::after {
   content: " ✖";
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: " ✓";
 }
 ```

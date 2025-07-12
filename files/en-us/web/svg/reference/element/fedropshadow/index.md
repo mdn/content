@@ -62,11 +62,9 @@ svg {
     </filter>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
-
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
-
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <circle cx="5" cy="50%" r="4" fill="pink" filter="url(#shadow)" />
+  <circle cx="15" cy="50%" r="4" fill="pink" filter="url(#shadow2)" />
+  <circle cx="25" cy="50%" r="4" fill="pink" filter="url(#shadow3)" />
 </svg>
 ```
 

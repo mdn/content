@@ -59,9 +59,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### Values
 
 - `<shape-radius>`
-
   - : This may be a {{cssxref("length")}}, or a {{cssxref("percentage")}} or values `closest-side` and `farthest-side`.
-
     - `closest-side`
       - : Uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension.
     - `farthest-side`

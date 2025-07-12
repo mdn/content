@@ -24,9 +24,7 @@ showOpenFilePicker(options)
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object containing options, which are as follows:
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : A boolean value that defaults to
         `false`. By default the picker should include an option to not apply
@@ -43,10 +41,8 @@ showOpenFilePicker(options)
       - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `types` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of allowed file types to pick. Each
         item is an object with the following options:
-
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files types allowed. Defaults to an empty string.
         - `accept`

@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Date.setYear
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 

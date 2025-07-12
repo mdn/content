@@ -68,6 +68,14 @@
       "inh": "Node",
       "impl": []
     },
+    "Attribution": {
+      "inh": "",
+      "impl": []
+    },
+    "AttributionAggregationServices": {
+      "inh": "",
+      "impl": []
+    },
     "AudioBuffer": {
       "inh": "",
       "impl": []
@@ -476,10 +484,6 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
@@ -502,10 +506,6 @@
     },
     "CryptoKey": {
       "inh": "",
-      "impl": []
-    },
-    "CSPViolationReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "CSSAnimation": {
@@ -878,10 +878,6 @@
     },
     "DelegatedInkTrailPresenter": {
       "inh": "",
-      "impl": []
-    },
-    "DeprecationReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "DeviceChangeEvent": {
@@ -1872,6 +1868,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityCredentialError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "IdentityProvider": {
       "inh": "",
       "impl": []
@@ -1940,10 +1940,6 @@
       "inh": "",
       "impl": []
     },
-    "IntegrityPolicyViolationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
@@ -1970,10 +1966,6 @@
     },
     "IntersectionObserverEntry": {
       "inh": "",
-      "impl": []
-    },
-    "InterventionReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "IntrinsicSizes": {
@@ -2624,10 +2616,6 @@
       "inh": "",
       "impl": []
     },
-    "PermissionsPolicyViolationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "PermissionStatus": {
       "inh": "EventTarget",
       "impl": []
@@ -2717,14 +2705,6 @@
       "impl": []
     },
     "PrivateAggregation": {
-      "inh": "",
-      "impl": []
-    },
-    "PrivateAttribution": {
-      "inh": "",
-      "impl": []
-    },
-    "PrivateAttributionAggregationServices": {
       "inh": "",
       "impl": []
     },
@@ -2846,14 +2826,6 @@
     },
     "RemotePlayback": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "Report": {
-      "inh": "",
-      "impl": []
-    },
-    "ReportBody": {
-      "inh": "",
       "impl": []
     },
     "ReportingObserver": {
@@ -3032,10 +3004,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "ScriptingPolicyReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "ScriptProcessorNode": {
       "inh": "AudioNode",
       "impl": []
@@ -3158,6 +3126,14 @@
     },
     "SourceBufferList": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SpeechGrammar": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechGrammarList": {
+      "inh": "",
       "impl": []
     },
     "SpeechRecognition": {

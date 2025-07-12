@@ -52,11 +52,9 @@ width: clamp(100px, calc(30% / 2rem + 10px), 900px);
 The `clamp(min, val, max)` function accepts three comma-separated expressions as its parameters.
 
 - `min`
-
   - : The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
 
 - `val`
-
   - : The preferred value is the expression whose value will be used as long as the result is between the minimum and maximum values.
 
 - `max`

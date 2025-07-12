@@ -31,13 +31,11 @@ If a web server or application reports an incorrect MIME type for content (inclu
 Some web browsers may try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
 
 - Loss of control
-
   - : If the browser ignores the reported MIME type, web administrators and authors no longer have control over how their content is to be processed.
 
     For example, a website oriented for web developers might wish to send certain example HTML documents as either `text/html` or `text/plain` in order to have the documents either processed and displayed as HTML or as source code. If the browser guesses the MIME type, this option is no longer available to the author.
 
 - Security
-
   - : Some content types, such as executable programs, are inherently unsafe. For this reason, these MIME types are usually restricted in terms of what actions a web browser will take when given that type of content. An executable program should not be executed on the user's computer and should at least cause a dialog to appear **asking the user** if they wish to download the file.
 
 ## JavaScript legacy MIME types
@@ -74,16 +72,13 @@ There are several ways to determine the correct MIME type value to be used to se
 ## How to check the MIME type of received content
 
 - In Firefox
-
   - Load the file and go to **Tools > Page Info** to get the content type for the page you accessed.
   - You can also go to **Tools > Web Developer > Network** and reload the page. The request tab gives you a list of all the resources the page loaded. Clicking on any resource will list all the information available, including the page's [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) header.
 
 - In Chrome
-
   - Load the file and go to **View > Developer > Developer Tools** and choose the _Network_ tab. Reload the page and select the resource you want to inspect. Under headers look for `Content-Type` and it will report the content type of the resource.
 
 - Look for a `<meta>` element in the page source that gives the MIME type, for example `<meta http-equiv="Content-Type" content="text/html">`.
-
   - According to the standards, the `<meta>` element that specifies the MIME type should be ignored if there's a Content-Type header available.
 
 [IANA](https://www.iana.org/) keeps a list of registered [MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). The [HTTP specification](https://www.w3.org/Protocols/rfc2616/rfc2616.html) defines a superset of MIME types, which is used to describe the media types used on the web.

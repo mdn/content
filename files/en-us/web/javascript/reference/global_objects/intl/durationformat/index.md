@@ -3,9 +3,8 @@ title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DurationFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
 

@@ -28,7 +28,8 @@ SharedWorker(aURL, options)
 - `options` {{optional_inline}}
   - : See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}.
 
-> **Note:** `options.sameSiteCookies` only supports the value "none", which is the default.
+> [!NOTE]
+> `options.sameSiteCookies` only supports the value "none", which is the default.
 
 ### Return value
 

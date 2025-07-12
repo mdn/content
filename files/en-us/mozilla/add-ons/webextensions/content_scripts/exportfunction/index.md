@@ -32,9 +32,7 @@ let exportedFunction = exportFunction(
 - `targetScope`
   - : `object`. The object to attach the function to. This doesn't have to be the global window object; it could be an object in the target window or created by the caller.
 - `options` {{optional_inline}}
-
   - : `object`. Options for the function.
-
     - `defineAs` {{optional_inline}}
       - : `string`. The name of the function in `targetScope`. If omitted, you need to assign the return value of `exportFunction()` to an object in the target scope.
     - `allowCrossOriginArguments` {{optional_inline}}

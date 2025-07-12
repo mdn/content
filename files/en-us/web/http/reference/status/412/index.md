@@ -3,9 +3,8 @@ title: 412 Precondition Failed
 slug: Web/HTTP/Reference/Status/412
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.412
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`412 Precondition Failed`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that access to the target resource was denied.
 This happens with [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) on methods other than {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} when the condition defined by the {{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-Match")}} headers is not fulfilled.

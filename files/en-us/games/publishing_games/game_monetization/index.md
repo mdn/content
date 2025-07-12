@@ -2,9 +2,8 @@
 title: Game monetization
 slug: Games/Publishing_games/Game_monetization
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavor on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
 

@@ -24,9 +24,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Get the title for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
