@@ -5,10 +5,11 @@ slug: Web/API/VRLayerInit/source
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getLayers
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`source`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
 

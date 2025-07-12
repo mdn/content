@@ -4,7 +4,7 @@ slug: Web/API/Attribution_Reporting_API/Registering_triggers
 page-type: guide
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Attribution Reporting API")}}
+{{DefaultAPISidebar("Attribution Reporting API")}}
 
 This article explains how to register attribution triggers.
 
