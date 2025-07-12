@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.translateStreaming
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`translateStreaming()`** method of the {{domxref("Translator")}} interface generates a translation as a {{domxref("ReadableStream")}}.
 

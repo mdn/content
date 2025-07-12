@@ -7,7 +7,7 @@ status:
 browser-compat: api.LanguageDetector
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`LanguageDetector`** interface of the {{domxref("Translator and Language Detector APIs", "Translator and Language Detector APIs", "", "nocode")}} contains all the language detection functionality, including checking AI model availability, creating a new `LanguageDetector` instance, using it to detect a language, and more.
 

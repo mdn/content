@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.length
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`length`** read-only property of the {{domxref("Summarizer")}} interface returns the relative length of the generated summaries.
 

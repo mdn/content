@@ -47,6 +47,7 @@ This section lists APIs that specifications make available only in secure contex
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - {{domxref("Shared Storage API", "", "", "nocode")}}
 - [Storage API](/en-US/docs/Web/API/Storage_API)
+- [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs)
 - {{domxref("VirtualKeyboard API", "", "", "nocode")}}
 - [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
 - [Web Bluetooth](/en-US/docs/Web/API/Web_Bluetooth_API)

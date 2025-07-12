@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.format
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`format`** read-only property of the {{domxref("Summarizer")}} interface returns the text format summaries will be returned in.
 

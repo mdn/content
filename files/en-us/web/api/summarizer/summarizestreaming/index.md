@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.summarizeStreaming
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`summarizeStreaming()`** method of the {{domxref("Summarizer")}} interface generates a new summary as a {{domxref("ReadableStream")}}.
 

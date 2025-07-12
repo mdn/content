@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.availability_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("Summarizer")}} interface returns an enumerated value that indicates whether the browser AI model supports (or will support) a given `Summarizer` configuration.
 
