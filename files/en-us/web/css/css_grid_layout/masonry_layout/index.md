@@ -22,9 +22,13 @@ The child elements of this container will now lay out item by item along the row
 
 As the items move onto new rows, they will display according to the masonry algorithm. Items will load into the column with the most room, causing a tightly packed layout without strict row tracks.
 
-```css hidden live-sample___block-axis
+```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
   box-sizing: border-box;
+}
+
+body {
+  font: 1.2em sans-serif;
 }
 
 .grid {
@@ -51,57 +55,46 @@ As the items move onto new rows, they will display according to the masonry algo
 }
 ```
 
-```html live-sample___block-axis
+```html live-sample___block-axis live-sample___inline-axis
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
+```
+
+```js live-sample___block-axis live-sample___spanners live-sample___positioned
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "3.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.blockSize = itemSizes[i];
+}
 ```
 
 {{EmbedLiveSample("block-axis", "", "250px")}}
 
 It is also possible to create a masonry layout with items loading into rows.
 
-```html hidden live-sample___inline-axis
-<div class="grid">
-  <div class="item" style="inline-size: 2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 1.6em;"></div>
-  <div class="item" style="inline-size: 4em;"></div>
-  <div class="item" style="inline-size: 2.2em;"></div>
-  <div class="item" style="inline-size: 3em;"></div>
-  <div class="item" style="inline-size: 4.5em;"></div>
-  <div class="item" style="inline-size: 1em;"></div>
-  <div class="item" style="inline-size: 3.5em;"></div>
-  <div class="item" style="inline-size: 2.8em;"></div>
-</div>
-```
-
-```css hidden live-sample___inline-axis
-* {
-  box-sizing: border-box;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
+```js live-sample___inline-axis
+// prettier-ignore
+const itemSizes = [
+  "2em", "3em", "1.6em", "4em", "2.2em",
+  "3em", "4.5em", "1em", "3.5em", "2.8em",
+];
+const items = document.querySelectorAll(".item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.inlineSize = itemSizes[i];
 }
 ```
 
@@ -126,37 +119,17 @@ In this example two of the items span two tracks, and the masonry items work aro
 
 ```html live-sample___spanners
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em; grid-column-end: span 2;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item" style="block-size: 2.2em; grid-column-end: span 2"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item span-2"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
-```
-
-```css hidden live-sample___spanners
-* {
-  box-sizing: border-box;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
-}
 ```
 
 ```css live-sample___spanners
@@ -166,6 +139,10 @@ In this example two of the items span two tracks, and the masonry items work aro
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-template-rows: masonry;
 }
+
+.span-2 {
+  grid-column-end: span 2;
+}
 ```
 
 {{EmbedLiveSample("spanners", "", "270px")}}
@@ -174,41 +151,17 @@ This example includes an item which has positioning for columns. Items with defi
 
 ```html live-sample___positioned
 <div class="grid">
-  <div class="item" style="block-size: 2em;"></div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 1.6em;"></div>
-  <div class="item" style="block-size: 4em;"></div>
-  <div class="item positioned" style="block-size: 3.2em;">positioned.</div>
-  <div class="item" style="block-size: 3em;"></div>
-  <div class="item" style="block-size: 4.5em;"></div>
-  <div class="item" style="block-size: 1em;"></div>
-  <div class="item" style="block-size: 3.5em;"></div>
-  <div class="item" style="block-size: 2.8em;"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item positioned">positioned.</div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
-```
-
-```css hidden live-sample___positioned
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font: 1.2em sans-serif;
-}
-
-.grid {
-  padding: 10px;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.item {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  color: #d9480f;
-}
 ```
 
 ```css live-sample___positioned
