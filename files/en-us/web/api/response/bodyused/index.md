@@ -31,7 +31,7 @@ When the user clicks "Use response", we check whether the response has been used
 ```html
 <p><button id="use">Use response</button> <button id="reset">Reset</button></p>
 <p><img id="my-image" src="" width="150" /></p>
-<p id="log"></p>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
