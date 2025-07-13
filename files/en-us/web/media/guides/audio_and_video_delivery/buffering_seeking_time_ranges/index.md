@@ -55,10 +55,12 @@ audio.buffered.end(1); // returns 19
 
 To try out and visualize buffered time ranges we can write a bit of HTML:
 
-```html
+```html live-sample___timeranges
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg" />
+    <source
+      src="/shared-assets/audio/voices-around-a-fire.mp3"
+      type="audio/mpeg" />
   </audio>
 </p>
 <p>
@@ -68,41 +70,38 @@ To try out and visualize buffered time ranges we can write a bit of HTML:
 
 and a bit of JavaScript:
 
-```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const canvas = document.getElementById("my-canvas");
-  const context = canvas.getContext("2d");
+```js live-sample___timeranges
+const audio = document.getElementById("my-audio");
+const canvas = document.getElementById("my-canvas");
+const context = canvas.getContext("2d");
 
-  context.fillStyle = "lightgray";
-  context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = "red";
-  context.strokeStyle = "white";
+context.fillStyle = "lightgray";
+context.fillRect(0, 0, canvas.width, canvas.height);
+context.fillStyle = "red";
+context.strokeStyle = "white";
 
-  const inc = canvas.width / audio.duration;
+const inc = canvas.width / audio.duration;
 
-  // Display TimeRanges
+// Display TimeRanges
 
-  audio.addEventListener("seeked", () => {
-    for (let i = 0; i < audio.buffered.length; i++) {
-      const startX = audio.buffered.start(i) * inc;
-      const endX = audio.buffered.end(i) * inc;
-      const width = endX - startX;
+audio.addEventListener("seeked", () => {
+  for (let i = 0; i < audio.buffered.length; i++) {
+    const startX = audio.buffered.start(i) * inc;
+    const endX = audio.buffered.end(i) * inc;
+    const width = endX - startX;
 
-      context.fillRect(startX, 0, width, canvas.height);
-      context.rect(startX, 0, width, canvas.height);
-      context.stroke();
-    }
-  });
-};
+    context.fillRect(startX, 0, width, canvas.height);
+    context.rect(startX, 0, width, canvas.height);
+    context.stroke();
+  }
+});
 ```
 
 This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should get something like this. Each red filled white rectangle represents a time range.
 
 ![An audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
-> [!NOTE]
-> You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
+{{EmbedLiveSample("timeranges", "", 200)}}
 
 ## Seekable
 
@@ -128,9 +127,11 @@ It is better perhaps to give an indication of how much media has actually downlo
 
 So let's build this. The HTML for our player looks like this:
 
-```html
+```html live-sample___buffered-progress
 <audio id="my-audio" preload controls>
-  <source src="music.mp3" type="audio/mpeg" />
+  <source
+    src="/shared-assets/audio/voices-around-a-fire.mp3"
+    type="audio/mpeg" />
 </audio>
 <div class="buffered">
   <span id="buffered-amount"></span>
@@ -142,7 +143,7 @@ So let's build this. The HTML for our player looks like this:
 
 We'll use the following CSS to style the buffering display:
 
-```css
+```css live-sample___buffered-progress
 .buffered {
   height: 20px;
   position: relative;
@@ -174,36 +175,33 @@ We'll use the following CSS to style the buffering display:
 
 And the following JavaScript provides our functionality:
 
-```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
+```js live-sample___buffered-progress
+const audio = document.getElementById("my-audio");
 
-  audio.addEventListener("progress", () => {
-    const duration = audio.duration;
-    if (duration > 0) {
-      for (let i = 0; i < audio.buffered.length; i++) {
-        if (
-          audio.buffered.start(audio.buffered.length - 1 - i) <
-          audio.currentTime
-        ) {
-          document.getElementById("buffered-amount").style.width = `${
-            (audio.buffered.end(audio.buffered.length - 1 - i) * 100) / duration
-          }%`;
-          break;
-        }
+audio.addEventListener("progress", () => {
+  const duration = audio.duration;
+  if (duration > 0) {
+    for (let i = 0; i < audio.buffered.length; i++) {
+      if (
+        audio.buffered.start(audio.buffered.length - 1 - i) < audio.currentTime
+      ) {
+        document.getElementById("buffered-amount").style.width = `${
+          (audio.buffered.end(audio.buffered.length - 1 - i) * 100) / duration
+        }%`;
+        break;
       }
     }
-  });
+  }
+});
 
-  audio.addEventListener("timeupdate", () => {
-    const duration = audio.duration;
-    if (duration > 0) {
-      document.getElementById("progress-amount").style.width = `${
-        (audio.currentTime / duration) * 100
-      }%`;
-    }
-  });
-};
+audio.addEventListener("timeupdate", () => {
+  const duration = audio.duration;
+  if (duration > 0) {
+    document.getElementById("progress-amount").style.width = `${
+      (audio.currentTime / duration) * 100
+    }%`;
+  }
+});
 ```
 
 The progress event is fired as data is downloaded, this is a good event to react to if we want to display download or buffering progress.
@@ -214,8 +212,7 @@ This should give you results similar to the following, where the light grey bar 
 
 ![An audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
 
-> [!NOTE]
-> You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
+{{EmbedLiveSample("buffered-progress", "", 200)}}
 
 ## A quick word about Played
 
