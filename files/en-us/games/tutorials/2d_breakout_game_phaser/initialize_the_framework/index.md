@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
 
-This is the first of 16 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). After completing this tutorial you can find the source code for this section at [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
+This is the first of 16 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). After completing this tutorial you can find the source code for this section at [2D_Breakout_game_Phaser/lesson01.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson01.html).
 
 Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML — the Phaser framework will generate the required {{htmlelement("canvas")}} element.
 
@@ -76,7 +76,33 @@ The {{htmlelement("canvas")}} element is generated automatically by the framewor
 
 Here's the full source code of the first lesson, running live:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/h6cwzv2b/","","400")}}
+```html interactive-example
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser-arcade-physics.min.js"></script>
+```
+
+```js interactive-example
+class Example extends Phaser.Scene {
+  preload() {}
+  create() {}
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: Example,
+};
+
+const game = new Phaser.Game(config);
+```
+
+```css interactive-example
+* {
+  padding: 0;
+  margin: 0;
+}
+```
 
 ## Next steps
 
