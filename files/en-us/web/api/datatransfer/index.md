@@ -46,6 +46,124 @@ The **`DataTransfer`** object is used to hold any data transferred between conte
 
 Every method and property listed in this document has its own reference page and each reference page either directly includes an example of the interface or has a link to an example.
 
+### Reading the data in a paste or drop event
+
+In the following example, we have a {{htmlelement("form")}} containing three different types of text inputs: a text {{htmlelement("input")}} element, a {{htmlelement("textarea")}} element, and a {{htmlelement("div")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set to `true`. The user can paste or drop text into any of these elements, and the data in the {{domxref("ClipboardEvent.clipboardData")}} or {{domxref("DragEvent.dataTransfer")}} object will be displayed.
+
+#### HTML
+
+```html
+<form>
+  <fieldset>
+    <legend>&lt;input /></legend>
+    <input type="text" />
+    <table class="center">
+      <tr>
+        <th scope="row">Operation type</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Content type</th>
+        <td><ol></ol></td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>&lt;textarea /></legend>
+    <textarea></textarea>
+    <table class="center">
+      <tr>
+        <th scope="row">Operation type</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Content type</th>
+        <td><ol></ol></td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>&lt;div contenteditable /></legend>
+    <div contenteditable></div>
+    <table class="center">
+      <tr>
+        <th scope="row">Operation type</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Content type</th>
+        <td><ol></ol></td>
+      </tr>
+    </table>
+  </fieldset>
+  <p class="center">
+    <input type="reset" />
+  </p>
+</form>
+```
+
+#### CSS
+
+```css
+.center {
+  text-align: center;
+}
+
+form > fieldset > * {
+  vertical-align: top;
+}
+form input,
+form textarea,
+form [contenteditable] {
+  min-width: 15rem;
+  padding: 0.25rem;
+}
+[contenteditable] {
+  appearance: textfield;
+  display: inline-block;
+  min-height: 1rem;
+  border: 1px solid;
+}
+
+form table {
+  display: inline-table;
+}
+table ol {
+  text-align: left;
+}
+```
+
+#### JavaScript
+
+```js
+const form = document.querySelector("form");
+
+function displayData(event) {
+  if (event.type === "drop") event.preventDefault();
+
+  const cells = event.target.nextElementSibling.querySelectorAll("td");
+  cells[0].textContent = event.type;
+  const transfer = event.clipboardData || event.dataTransfer;
+
+  cells[1].firstChild.innerHTML = Array.from(
+    transfer.items,
+    (item) => `<li>${item.kind} ${item.type}</li>`,
+  ).join("\n");
+}
+
+form.addEventListener("paste", displayData);
+form.addEventListener("drop", displayData);
+form.addEventListener("reset", () => {
+  for (const cell of form.querySelectorAll("[contenteditable], td")) {
+    cell.textContent = "";
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Reading the data in a paste or drop event", "", 400, , , , , "allow-forms")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -59,4 +177,3 @@ Every method and property listed in this document has its own reference page and
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
