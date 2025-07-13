@@ -31,14 +31,20 @@ The HTML document structure is quite simple, as the game will be rendered entire
   </head>
   <body>
     <script>
-      const game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-        preload,
-        create,
-        update,
-      });
-      function preload() {}
-      function create() {}
-      function update() {}
+      class Example extends Phaser.Scene {
+        preload() {}
+        create() {}
+        update() {}
+      }
+
+      const config = {
+        type: Phaser.CANVAS,
+        width: 480,
+        height: 320,
+        scene: Example,
+      };
+
+      const game = new Phaser.Game(config);
     </script>
   </body>
 </html>
@@ -46,10 +52,10 @@ The HTML document structure is quite simple, as the game will be rendered entire
 
 ## Downloading the Phaser code
 
-Next, we need to go through the process of downloading the Phaser source code and applying it to our HTML document. This tutorial uses Phaser V2 — it won't work with the current version on Phaser (V3). The V2 library is still available on the Phaser download page, below the links for the V3 download.
+Next, we need to go through the process of downloading the Phaser source code and applying it to our HTML document. This tutorial uses Phaser V3. It's available on the Phaser download page, below the links for the V3 download.
 
 1. Go to the [Phaser download page](https://phaser.io/download/stable).
-2. Choose an option that suits you best — we recommend the _min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway. **Please make sure to use Phaser version 2 as that's what this tutorial was written for.**
+2. Choose an option that suits you best — we recommend the _min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway. **Please make sure to use Phaser version 3 as that's what this tutorial was written for.**
 3. Save the Phaser code inside a `/js` directory in the same location as your `index.html` file.
 4. Update the `src` value of the first {{htmlelement("script")}} element as shown above.
 
@@ -60,16 +66,15 @@ At this point we have a `charset` defined, {{htmlelement("title")}} and some bas
 The {{htmlelement("canvas")}} element is generated automatically by the framework. We are initializing it by creating a new `Phaser.Game` object and assigning it to the game variable. The parameters are:
 
 - The width and height to set the {{htmlelement("canvas")}} to.
-- The rendering method. The three options are `AUTO`, `CANVAS` and `WEBGL`. We can set one of the latter two explicitly or use `AUTO` to let Phaser decide which one to use. It usually uses WebGL if available in the browser, falling back to Canvas 2D if not.
-- The `id` of the {{htmlelement("canvas")}} to use for rendering if one already exists on the page (we've specified null because we want Phaser to create its own.)
-- The names to use for Phaser's three key functions that load and start the game, and update the game loop on every frame; we will use the same names to keep it clean.
+- The rendering method. The three options are `AUTO`, `CANVAS`, `WEBGL`, `HEADLESS`. We can set either `CANVAS` or `WEBGL` explicitly or use `AUTO` to let Phaser decide which one to use. It usually uses WebGL if available in the browser, falling back to Canvas 2D if not. The last option, `HEADLESS`, is used for server-side rendering or testing, which is not relevant for this tutorial.
+- The scene to add to the game. In this case, we are creating a new class called `Example` that extends `Phaser.Scene`. This class implements the methods that Phaser calls at different stages of the game lifecycle. We'll fill in these methods among them later:
   - `preload` takes care of preloading the assets
   - `create` is executed once when everything is loaded and ready
   - `update` is executed on every frame.
 
 ## Compare your code
 
-Here's the full source code of the first lesson, running live in a JSFiddle:
+Here's the full source code of the first lesson, running live:
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/h6cwzv2b/","","400")}}
 
