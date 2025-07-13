@@ -29,9 +29,8 @@ When the user clicks "Use response", we check whether the response has been used
 #### HTML
 
 ```html
-<p><button id="use">Use response</button>
-<button id="reset">Reset</button></p>
-<p><img id="my-image" src="" width="200"></p>
+<p><button id="use">Use response</button> <button id="reset">Reset</button></p>
+<p><img id="my-image" src="" width="200" /></p>
 <p id="log"></p>
 ```
 
