@@ -19,7 +19,7 @@ foo(); // Invoke it using the variable
 // foobar
 ```
 
-We assigned an _Anonymous Function_ in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
+We assigned an _Anonymous Function_ to a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
 
 > [!NOTE]
 > Even if your function was named, you can use the variable name to invoke it. Naming it will be helpful when debugging your code. _But it won't affect the way we invoke it._

@@ -2,9 +2,8 @@
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 

@@ -2,9 +2,8 @@
 title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
 
