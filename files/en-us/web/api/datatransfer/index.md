@@ -64,7 +64,7 @@ In the following example, we have a {{htmlelement("form")}} containing three dif
       </tr>
       <tr>
         <th scope="row">Content type</th>
-        <td><ol></ol></td>
+        <td></td>
       </tr>
     </table>
   </fieldset>
@@ -78,7 +78,7 @@ In the following example, we have a {{htmlelement("form")}} containing three dif
       </tr>
       <tr>
         <th scope="row">Content type</th>
-        <td><ol></ol></td>
+        <td></td>
       </tr>
     </table>
   </fieldset>
@@ -92,7 +92,7 @@ In the following example, we have a {{htmlelement("form")}} containing three dif
       </tr>
       <tr>
         <th scope="row">Content type</th>
-        <td><ol></ol></td>
+        <td></td>
       </tr>
     </table>
   </fieldset>
@@ -144,11 +144,13 @@ function displayData(event) {
   const cells = event.target.nextElementSibling.querySelectorAll("td");
   cells[0].textContent = event.type;
   const transfer = event.clipboardData || event.dataTransfer;
-
-  cells[1].firstChild.innerHTML = Array.from(
-    transfer.items,
-    (item) => `<li>${item.kind} ${item.type}</li>`,
-  ).join("\n");
+  const ol = document.createElement("ol");
+  cells[1].appendChild(ol);
+  for (const item of transfer.items) {
+    const li = document.createElement("li");
+    li.textContent = `${item.kind} ${item.type}`;
+    ol.appendChild(li);
+  }
 }
 
 form.addEventListener("paste", displayData);
