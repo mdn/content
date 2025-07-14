@@ -56,7 +56,7 @@ If you need help or have any questions, feel free to get in touch with one of th
 
 ## Machine-translated locales
 
-The following experimental locales are machine-translated from the English locale.
+The following experimental locales are machine-translated from English, and are managed in separate repositories from other locales.
 
 ### German (`de`)
 
