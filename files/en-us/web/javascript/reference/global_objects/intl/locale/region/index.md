@@ -48,4 +48,4 @@ console.log(locale.region); // Prints "FR"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode region chart](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_containment_un_m_49.html)
+- [Unicode region chart](https://www.unicode.org/cldr/charts/47/supplemental/territory_containment_un_m_49.html)
