@@ -110,7 +110,7 @@ A site can also specify a desire to use the [Captured Surface Control API](/en-U
 
 The default allowlist for both directives is `self`, which permits any content within the same origin use Screen Capture.
 
-These features are [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), meaning that making sure they are not disallowed via a `Permissions-Policy` is not the only consideration. If they are not disallowed via a `Permissions-Policy`, the user will still be asked for permission to use the listed features via a browser prompt, which uses the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+These methods are considered [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
 
 In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required. See the individual method pages for more details.
 
