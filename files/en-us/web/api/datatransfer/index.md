@@ -145,6 +145,7 @@ function displayData(event) {
   cells[0].textContent = event.type;
   const transfer = event.clipboardData || event.dataTransfer;
   const ol = document.createElement("ol");
+  cells[1].textContent = "";
   cells[1].appendChild(ol);
   for (const item of transfer.items) {
     const li = document.createElement("li");
