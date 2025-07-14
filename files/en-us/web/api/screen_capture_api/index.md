@@ -108,7 +108,7 @@ Websites that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissio
 
 A site can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
 
-The default allowlist for both directives is `self`, which lets any content within the same origin use Screen Capture.
+The default allowlist for both directives is `self`, which permits any content within the same origin use Screen Capture.
 
 These features are [powerful features](/en-US/docs/Web/Security#secure_contexts_and_feature_permissions), meaning that making sure they are not disallowed via a `Permissions-Policy` is not the only consideration. If they are not disallowed via a `Permissions-Policy`, the user will still be asked for permission to use the listed features via a browser prompt, which uses the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
