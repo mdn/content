@@ -3,9 +3,8 @@ title: ry
 slug: Web/CSS/ry
 page-type: css-property
 browser-compat: css.properties.ry
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ry`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis, or vertical, radius of an SVG {{SVGElement("ellipse")}} and the vertical curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("ry")}} attribute.
 

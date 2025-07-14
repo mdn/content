@@ -3,9 +3,8 @@ title: color-gamut
 slug: Web/CSS/@media/color-gamut
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-gamut
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on the approximate range of color {{glossary("gamut")}} supported by the {{glossary("user agent")}} and the output device.
 

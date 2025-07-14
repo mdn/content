@@ -3,9 +3,8 @@ title: Realizing common layouts using grids
 short-title: Common grid layouts
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 To round off this [set of CSS grid layout guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides), we're going to walk through a few different layouts, which demonstrate some of the techniques you can use when designing with grid layout. We will look at an example using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to get the results you want with CSS grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
 

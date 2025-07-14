@@ -3,9 +3,8 @@ title: position-area
 slug: Web/CSS/position-area
 page-type: css-property
 browser-compat: css.properties.position-area
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 

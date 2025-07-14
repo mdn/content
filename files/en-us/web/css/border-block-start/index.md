@@ -3,9 +3,8 @@ title: border-block-start
 slug: Web/CSS/border-block-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-block-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical block-start border property values in a single place in the style sheet.
 

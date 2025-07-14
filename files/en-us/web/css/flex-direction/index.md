@@ -3,9 +3,8 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 page-type: css-property
 browser-compat: css.properties.flex-direction
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-direction`** [CSS](/en-US/docs/Web/CSS) property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
 

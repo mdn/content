@@ -3,9 +3,8 @@ title: grid-template-columns
 slug: Web/CSS/grid-template-columns
 page-type: css-property
 browser-compat: css.properties.grid-template-columns
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-columns`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 

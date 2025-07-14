@@ -3,9 +3,8 @@ title: CSS at-rule functions
 short-title: At-rule functions
 slug: Web/CSS/CSS_syntax/At-rule_functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) functions** are at-rule statements that represent complex rules or can invoke special data processing or calculations.
 

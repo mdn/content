@@ -2,9 +2,8 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
 

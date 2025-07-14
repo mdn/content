@@ -3,9 +3,8 @@ title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
 page-type: css-pseudo-class
 browser-compat: css.selectors.picture-in-picture
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the element which is currently in picture-in-picture mode.
 

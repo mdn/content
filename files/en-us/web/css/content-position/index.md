@@ -3,9 +3,8 @@ title: <content-position>
 slug: Web/CSS/content-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-content-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<content-position>`** {{glossary("enumerated")}} value type is used by {{cssxref("justify-content")}} and {{cssxref("align-content")}} properties, and the {{cssxref("place-content")}} shorthand, to align the box's contents within itself.
 

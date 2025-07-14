@@ -3,9 +3,8 @@ title: d
 slug: Web/CSS/d
 page-type: css-property
 browser-compat: css.properties.d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`d`** [CSS](/en-US/docs/Web/CSS) property defines a path to be drawn by the SVG {{SVGElement("path")}} element. If present, it overrides the element's {{SVGAttr("d")}} attribute.
 

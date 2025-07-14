@@ -3,9 +3,8 @@ title: Layout using named grid lines
 short-title: Using named grid lines
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In previous guides, we've looked at placing items on the lines created by [defining grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) and also how to place items [using named template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas). In this guide, we look at how these two things work together when we use named lines.
 

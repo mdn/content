@@ -3,9 +3,8 @@ title: pointer-events
 slug: Web/CSS/pointer-events
 page-type: css-property
 browser-compat: css.properties.pointer-events
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
 

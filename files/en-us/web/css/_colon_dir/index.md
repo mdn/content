@@ -3,9 +3,8 @@ title: :dir()
 slug: Web/CSS/:dir
 page-type: css-pseudo-class
 browser-compat: css.selectors.dir
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.
 

@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-color-5/#color-function
   - https://drafts.csswg.org/css-color-5/#relative-color-function
   - https://drafts.csswg.org/css-color/#color-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified {{glossary("color space")}} rather than the implicit sRGB color space that most of the other color functions operate in.
 

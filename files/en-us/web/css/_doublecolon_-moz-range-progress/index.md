@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-range-progress
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the lower portion of the _track_ (i.e., groove) in which the indicator slides in an {{HTMLElement("input")}} of `type="range"`. This portion corresponds to values lower than the value currently selected by the _thumb_ (i.e., virtual knob).
 

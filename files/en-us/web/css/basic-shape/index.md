@@ -3,9 +3,8 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 page-type: css-type
 browser-compat: css.types.basic-shape
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 

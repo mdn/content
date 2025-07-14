@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-moz-orient
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientation of the element to which it's applied.
 

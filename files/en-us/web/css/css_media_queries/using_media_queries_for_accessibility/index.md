@@ -2,9 +2,8 @@
 title: Using media queries for accessibility
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [**CSS media queries**](/en-US/docs/Web/CSS/CSS_media_queries) can be used to help users with disabilities better experience your website.
 

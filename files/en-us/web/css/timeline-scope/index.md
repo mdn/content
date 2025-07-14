@@ -3,9 +3,8 @@ title: timeline-scope
 slug: Web/CSS/timeline-scope
 page-type: css-property
 browser-compat: css.properties.timeline-scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`timeline-scope`** [CSS](/en-US/docs/Web/CSS) property modifies the scope of a named animation timeline.
 

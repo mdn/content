@@ -3,9 +3,8 @@ title: CSS overscroll behavior
 slug: Web/CSS/CSS_overscroll_behavior
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-overscroll/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS overscroll behavior** module provides properties to control the behavior of a {{Glossary("Scroll_container", "scroll container")}} when its scroll position reaches the {{Glossary("Scroll_boundary", "scroll boundary")}}. Controlling this aspect is particularly useful in scenarios where embedded scrollable areas should not trigger scrolling of the parent container.
 

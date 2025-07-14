@@ -3,9 +3,8 @@ title: <display-box>
 slug: Web/CSS/display-box
 page-type: css-type
 browser-compat: css.properties.display.contents
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.
 

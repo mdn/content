@@ -3,9 +3,8 @@ title: view-transition-class
 slug: Web/CSS/view-transition-class
 page-type: css-property
 browser-compat: css.properties.view-transition-class
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with an identifying class (a {{cssxref("custom-ident")}}), providing an additional method of styling the view transitions for those elements.
 

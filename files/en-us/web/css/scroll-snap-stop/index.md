@@ -3,9 +3,8 @@ title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
 page-type: css-property
 browser-compat: css.properties.scroll-snap-stop
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
 

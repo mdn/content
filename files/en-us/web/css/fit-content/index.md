@@ -3,9 +3,8 @@ title: fit-content
 slug: Web/CSS/fit-content
 page-type: css-keyword
 browser-compat: css.properties.width.fit-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `fit-content` sizing keyword represents an element size that adapts to its content while staying within the limits of its container.
 The keyword ensures that the element is never smaller than its minimum intrinsic size ({{cssxref("min-content")}}) or larger than its maximum intrinsic size ({{cssxref("max-content")}}).

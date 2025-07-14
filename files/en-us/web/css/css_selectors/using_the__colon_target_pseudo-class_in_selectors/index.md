@@ -3,9 +3,8 @@ title: Using the :target pseudo-class in selectors
 short-title: Using :target
 slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When a URL points at a specific piece of a document using a [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment), it can be difficult for the user to notice. This guide discusses using CSS to draw attention to the target of a URL to improve user experience.
 

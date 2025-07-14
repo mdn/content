@@ -3,9 +3,8 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.

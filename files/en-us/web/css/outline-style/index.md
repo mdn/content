@@ -3,9 +3,8 @@ title: outline-style
 slug: Web/CSS/outline-style
 page-type: css-property
 browser-compat: css.properties.outline-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`outline-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 

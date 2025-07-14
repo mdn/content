@@ -3,9 +3,8 @@ title: prefix
 slug: Web/CSS/@counter-style/prefix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The {{cssxref('@counter-style')}} rule's **`prefix`** descriptor specifies content that will be added to the beginning of the counter's marker representation.
 

@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-conditional-5/
   - https://drafts.csswg.org/css-conditional-4/
   - https://drafts.csswg.org/css-conditional-3/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS conditional rules** module defines CSS media and support queries, enabling you to define styles that are only applied if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewport capabilities. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 

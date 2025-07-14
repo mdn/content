@@ -3,9 +3,8 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
 browser-compat: css.properties.mix-blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
 

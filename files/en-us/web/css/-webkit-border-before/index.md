@@ -5,9 +5,10 @@ page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-border-before
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
 

@@ -3,9 +3,8 @@ title: CSS scroll anchoring
 slug: Web/CSS/CSS_scroll_anchoring
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scroll-anchoring/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scroll anchoring** module defines a mechanism to prevent page movement due to DOM changes above the visible region of a scrolling box while the user is consuming the visible content.
 

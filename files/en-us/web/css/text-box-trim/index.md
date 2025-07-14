@@ -3,9 +3,8 @@ title: text-box-trim
 slug: Web/CSS/text-box-trim
 page-type: css-property
 browser-compat: css.properties.text-box-trim
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under edges of text content to trim from a text element's block container.
 

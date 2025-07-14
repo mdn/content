@@ -2,9 +2,8 @@
 title: Using scroll snap events
 slug: Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module defines two **scroll snap events**: {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}}. These enable running JavaScript in response to the browser determining that new [scroll snap targets](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts) are pending and selected, respectively.
 

@@ -3,9 +3,8 @@ title: counter()
 slug: Web/CSS/counter
 page-type: css-function
 browser-compat: css.types.counter
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a string representing the current value of the named counter, if there is one.
 

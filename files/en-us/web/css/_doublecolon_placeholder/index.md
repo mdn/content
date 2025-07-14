@@ -3,9 +3,8 @@ title: ::placeholder
 slug: Web/CSS/::placeholder
 page-type: css-pseudo-element
 browser-compat: css.selectors.placeholder
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 

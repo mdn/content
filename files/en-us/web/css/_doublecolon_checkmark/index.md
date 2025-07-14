@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.checkmark
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`::checkmark`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the checkmark placed inside the currently-selected {{htmlelement("option")}} element of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select). It can be used to provide a visual indication of which option is selected.
 

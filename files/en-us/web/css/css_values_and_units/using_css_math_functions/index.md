@@ -3,9 +3,8 @@ title: Using CSS math functions
 short-title: Using math functions
 slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS math functions** allow a property value - such as the `height`, `animation-duration`, or `font-size` of an element - to be written as a mathematical expression.
 

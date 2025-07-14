@@ -2,9 +2,8 @@
 title: Using multi-column layouts
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The properties defined in the **CSS multi-column layout module** extend the _block layout mode_, enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
 

@@ -3,9 +3,8 @@ title: contain-intrinsic-block-size
 slug: Web/CSS/contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
 

@@ -2,9 +2,8 @@
 title: Styling columns
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 As column boxes created inside multi-column (_multicol_) containers are anonymous boxes, styling individual columns is not possible, but we can style the gaps between the columns and the container in general. This guide explains how to change the gap and style rules between columns.
 

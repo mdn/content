@@ -2,9 +2,8 @@
 title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 ## Description
 

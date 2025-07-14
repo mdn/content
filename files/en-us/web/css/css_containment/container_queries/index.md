@@ -3,9 +3,8 @@ title: CSS container queries
 short-title: Container queries
 slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Container queries enable you to apply styles to an element based on certain attributes of its container:
 

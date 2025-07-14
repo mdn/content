@@ -3,9 +3,8 @@ title: CSS table
 slug: Web/CSS/CSS_table
 page-type: css-module
 spec-urls: https://www.w3.org/TR/CSS22/tables.html
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS table** module helps you define how to lay out table data.
 

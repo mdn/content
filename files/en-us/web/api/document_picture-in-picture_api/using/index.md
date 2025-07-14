@@ -4,7 +4,7 @@ slug: Web/API/Document_Picture-in-Picture_API/Using
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 

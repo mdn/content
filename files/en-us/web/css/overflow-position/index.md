@@ -3,9 +3,8 @@ title: <overflow-position>
 slug: Web/CSS/overflow-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-overflow-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<overflow-position>`** {{glossary("enumerated")}} value type defines how an alignment subject that is larger than its alignment container will overflow that container. For example, if centered items are wider than their container, the overflow may be displayed beyond the viewport's start edge, which can't be scrolled to. The `<overflow-position>` value defines whether the alignment mode should be overridden to ensure the content is visible (`safe`) or if the alignment mode must be adhered to (`unsafe`).
 

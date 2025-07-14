@@ -3,9 +3,8 @@ title: <overflow>
 slug: Web/CSS/overflow_value
 page-type: css-type
 browser-compat: css.types.overflow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<overflow>`** {{glossary("enumerated")}} value type represents the keyword values for the {{cssxref("overflow-block")}}, {{cssxref("overflow-inline")}}, {{cssxref("overflow-x")}}, and {{cssxref("overflow-y")}} longhand properties and the {{cssxref("overflow")}} shorthand property. These properties apply to block containers, flex containers, and grid containers.
 

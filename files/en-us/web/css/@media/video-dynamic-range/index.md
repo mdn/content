@@ -3,9 +3,8 @@ title: video-dynamic-range
 slug: Web/CSS/@media/video-dynamic-range
 page-type: css-media-feature
 browser-compat: css.at-rules.media.video-dynamic-range
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`video-dynamic-range`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the combination of brightness, contrast ratio, and color depth that are supported by the video plane of the {{glossary("user agent")}} and the output device.
 

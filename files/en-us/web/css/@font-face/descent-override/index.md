@@ -3,9 +3,8 @@ title: descent-override
 slug: Web/CSS/@font-face/descent-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.descent-override
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`descent-override`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines the descent metric for the font. The descent metric is the height below the baseline that CSS uses to lay out line boxes in an inline formatting context.
 

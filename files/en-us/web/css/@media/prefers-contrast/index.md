@@ -3,9 +3,8 @@ title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-contrast
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect whether the user has requested the web content to be presented with a lower or higher contrast.
 

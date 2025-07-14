@@ -3,9 +3,8 @@ title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
 page-type: css-property
 browser-compat: css.properties.font-optical-sizing
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-optical-sizing`** [CSS](/en-US/docs/Web/CSS) property sets whether text rendering is optimized for viewing at different sizes.
 

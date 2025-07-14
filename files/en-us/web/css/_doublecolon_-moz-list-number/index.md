@@ -6,9 +6,10 @@ status:
   - experimental
   - non-standard
 browser-compat: css.selectors.-moz-list-number
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{SeeCompatTable}}
+{{Non-standard_header}}{{SeeCompatTable}}
 
 The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a number) of a list item ({{HTMLElement("li")}}) in an ordered list ({{HTMLElement("ol")}}).
 

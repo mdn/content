@@ -3,9 +3,8 @@ title: overflow-x
 slug: Web/CSS/overflow-x
 page-type: css-property
 browser-compat: css.properties.overflow-x
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-x`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content. This property may also be set by using the [`overflow`](/en-US/docs/Web/CSS/overflow) shorthand property.
 

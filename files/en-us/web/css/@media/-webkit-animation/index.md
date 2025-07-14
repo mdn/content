@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.media.-webkit-animation
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 > [!NOTE]
 > All browsers support the [`animation`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.

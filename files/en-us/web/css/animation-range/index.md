@@ -3,9 +3,8 @@ title: animation-range
 slug: Web/CSS/animation-range
 page-type: css-shorthand-property
 browser-compat: css.properties.animation-range
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 

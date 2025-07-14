@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-position-x
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.
 

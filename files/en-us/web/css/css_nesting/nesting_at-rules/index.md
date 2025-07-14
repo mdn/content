@@ -3,9 +3,8 @@ title: CSS nesting at-rules
 short-title: Nesting at-rules
 slug: Web/CSS/CSS_nesting/Nesting_at-rules
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Any [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) whose body contains style rules can be nested inside another style rule using CSS nesting. Style rules nested inside at-rules take their nesting selector definition from the nearest ancestor style rule. Properties can be directly included inside a nested at-rule, acting as if they were nested in a `& {...}` block.
 

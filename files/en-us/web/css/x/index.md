@@ -3,9 +3,8 @@ title: x
 slug: Web/CSS/x
 page-type: css-property
 browser-compat: css.properties.x
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("x")}} attribute.
 

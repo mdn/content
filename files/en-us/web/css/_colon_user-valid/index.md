@@ -3,9 +3,8 @@ title: :user-valid
 slug: Web/CSS/:user-valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.user-valid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Web/HTML/Guides/Constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
 

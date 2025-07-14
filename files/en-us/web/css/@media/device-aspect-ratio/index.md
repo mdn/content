@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - deprecated
 browser-compat: css.at-rules.media.device-aspect-ratio
+sidebar: cssref
 ---
 
-{{CSSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > To query for the {{glossary("aspect ratio")}} of the viewport, developers should use the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature instead.

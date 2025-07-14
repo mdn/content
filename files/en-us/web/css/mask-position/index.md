@@ -3,9 +3,8 @@ title: mask-position
 slug: Web/CSS/mask-position
 page-type: css-property
 browser-compat: css.properties.mask-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
 

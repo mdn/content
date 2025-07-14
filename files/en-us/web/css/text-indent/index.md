@@ -3,9 +3,8 @@ title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
 browser-compat: css.properties.text-indent
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-indent`** [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block.
 

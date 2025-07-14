@@ -3,9 +3,8 @@ title: "@page"
 slug: Web/CSS/@page
 page-type: css-at-rule
 browser-compat: css.at-rules.page
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@page`** at-rule is a CSS at-rule used to modify different aspects of printed pages. It targets and modifies the page's dimensions, orientation, and margins. The `@page` at-rule can be used to target all pages in a print-out or a subset using its various pseudo-classes.
 

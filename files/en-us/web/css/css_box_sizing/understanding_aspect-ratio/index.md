@@ -3,9 +3,8 @@ title: Understanding and setting aspect ratios
 slug: Web/CSS/CSS_box_sizing/Understanding_aspect-ratio
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 

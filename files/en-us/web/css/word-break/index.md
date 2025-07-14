@@ -3,9 +3,8 @@ title: word-break
 slug: Web/CSS/word-break
 page-type: css-property
 browser-compat: css.properties.word-break
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line breaks appear wherever the text would otherwise overflow its content box.
 

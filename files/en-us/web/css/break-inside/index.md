@@ -3,9 +3,8 @@ title: break-inside
 slug: Web/CSS/break-inside
 page-type: css-property
 browser-compat: css.properties.break-inside
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`break-inside`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
 

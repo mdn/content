@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.math-shift
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `math-shift` property indicates whether superscripts inside MathML formulas should be raised by a normal or compact shift.
 
@@ -50,6 +51,13 @@ math {
   math-shift: compact;
   font-size: 64pt;
 }
+
+.normal-shift {
+  math-shift: normal;
+}
+.compact-shift {
+  math-shift: compact;
+}
 ```
 
 ### MathML
@@ -58,11 +66,11 @@ The following MathML displays two versions of "x squared" using a font with an O
 
 ```html
 <math>
-  <msup style="math-shift: normal">
+  <msup class="normal-shift">
     <mi>x</mi>
     <mn>2</mn>
   </msup>
-  <msup style="math-shift: compact">
+  <msup class="compact-shift">
     <mi>x</mi>
     <mn>2</mn>
   </msup>

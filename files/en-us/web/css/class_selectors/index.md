@@ -3,9 +3,8 @@ title: Class selectors
 slug: Web/CSS/Class_selectors
 page-type: css-selector
 browser-compat: css.selectors.class
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute.
 

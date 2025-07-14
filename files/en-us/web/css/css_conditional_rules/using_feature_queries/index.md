@@ -2,9 +2,8 @@
 title: Using feature queries
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Feature queries** are conditional group rules that test whether the user agent supports or doesn't support one or more CSS features, such as CSS properties and property values. Feature queries give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide, you will learn how to implement progressive enhancement using feature queries.
 

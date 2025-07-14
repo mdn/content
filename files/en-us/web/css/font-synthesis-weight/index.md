@@ -3,9 +3,8 @@ title: font-synthesis-weight
 slug: Web/CSS/font-synthesis-weight
 page-type: css-property
 browser-compat: css.properties.font-synthesis-weight
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-synthesis-weight`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the bold typeface when it is missing in a font family.
 

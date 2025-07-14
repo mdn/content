@@ -3,9 +3,8 @@ title: ::view-transition-new()
 slug: Web/CSS/::view-transition-new
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-new
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::view-transition-new()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
 

@@ -3,9 +3,8 @@ title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.additive-symbols
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`additive-symbols`** descriptor of the {{cssxref('@counter-style')}} at-rule is used to specify counter symbols when the `@counter-style` {{cssxref('@counter-style/system', 'system')}} descriptor value is set as `additive`. The additive system is used to construct [sign-value numbering](https://en.wikipedia.org/wiki/Sign-value_notation) systems such as Roman numerals.
 

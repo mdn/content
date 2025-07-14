@@ -3,9 +3,8 @@ title: justify-items
 slug: Web/CSS/justify-items
 page-type: css-property
 browser-compat: css.properties.justify-items
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 

@@ -3,9 +3,8 @@ title: <color>
 slug: Web/CSS/color_value
 page-type: css-type
 browser-compat: css.types.color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://drafts.fxtf.org/compositing-1/#simplealphacompositing) with its background.

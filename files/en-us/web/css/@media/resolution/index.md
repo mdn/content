@@ -3,9 +3,8 @@ title: resolution
 slug: Web/CSS/@media/resolution
 page-type: css-media-feature
 browser-compat: css.at-rules.media.resolution
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the pixel density of the output device.
 

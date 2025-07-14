@@ -3,9 +3,8 @@ title: column-fill
 slug: Web/CSS/column-fill
 page-type: css-property
 browser-compat: css.properties.column-fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
 

@@ -3,9 +3,8 @@ title: position-try
 slug: Web/CSS/position-try
 page-type: css-shorthand-property
 browser-compat: css.properties.position-try
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-try`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} properties.
 

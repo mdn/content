@@ -3,9 +3,8 @@ title: widows
 slug: Web/CSS/widows
 page-type: css-property
 browser-compat: css.properties.widows
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`widows`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
 

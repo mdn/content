@@ -3,9 +3,8 @@ title: shape-margin
 slug: Web/CSS/shape-margin
 page-type: css-property
 browser-compat: css.properties.shape-margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`shape-margin`** [CSS](/en-US/docs/Web/CSS) property sets a margin for a CSS shape created using {{cssxref("shape-outside")}}.
 

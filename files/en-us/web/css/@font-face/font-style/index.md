@@ -3,9 +3,8 @@ title: font-style
 slug: Web/CSS/@font-face/font-style
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-style`** CSS descriptor allows authors to specify font styles for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 

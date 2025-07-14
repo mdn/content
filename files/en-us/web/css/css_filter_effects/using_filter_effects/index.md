@@ -2,9 +2,8 @@
 title: Using filter effects
 slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations required image editing software, time, and additional HTTP requests.
 

@@ -3,9 +3,8 @@ title: text-anchor
 slug: Web/CSS/text-anchor
 page-type: css-property
 browser-compat: css.properties.text-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-anchor`** [CSS](/en-US/docs/Web/CSS) property aligns a box containing a string of text where the wrapping area is determined from the {{cssxref("inline-size")}} property, and the text is then placed relative to the anchor point of the element, which is defined using the {{SVGAttr('x')}} and {{SVGAttr('y')}} (or {{SVGAttr('dx')}} and {{SVGAttr('dy')}}) attributes. If present, the value of the CSS property overrides any value of the element's {{SVGAttr("text-anchor")}} attribute.
 

@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.reading-order
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`reading-order`** [CSS](/en-US/docs/Web/CSS) property enables changing the order in which a child of a [reading flow container](/en-US/docs/Glossary/Reading_order#reading_flow_container) is read relative to its element siblings.
 

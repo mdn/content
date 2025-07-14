@@ -3,9 +3,8 @@ title: mask-image
 slug: Web/CSS/mask-image
 page-type: css-property
 browser-compat: css.properties.mask-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as the mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
 

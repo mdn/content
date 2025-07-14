@@ -3,9 +3,8 @@ title: :seeking
 slug: Web/CSS/:seeking
 page-type: css-pseudo-class
 browser-compat: css.selectors.seeking
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:seeking`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when the playable element is seeking a playback position in the media resource.
 A resource is considered to be seeking if the user has requested playback of a specific position in the media resource, but the media element has not yet reached that position.

@@ -6,9 +6,8 @@ browser-compat: css.types.color.lch
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-LCH
   - https://drafts.csswg.org/css-color/#lab-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`lch()`** functional notation expresses a given color using the LCH {{glossary("color space")}}, which represents lightness, chroma, and hue. It uses the same `L` axis as the {{cssxref("color_value/lab","lab()")}} color function of the [CIELab color space](/en-US/docs/Glossary/Color_space#cielab_color_spaces), but it uses the polar coordinates `C` (Chroma) and `H` (Hue).
 

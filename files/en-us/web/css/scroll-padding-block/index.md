@@ -3,9 +3,8 @@ title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-block
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-padding-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the block dimension.
 

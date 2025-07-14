@@ -3,9 +3,8 @@ title: translate()
 slug: Web/CSS/transform-function/translate
 page-type: css-function
 browser-compat: css.types.transform-function.translate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element in the horizontal and/or vertical
 directions. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.

@@ -3,9 +3,8 @@ title: overscroll-behavior-block
 slug: Web/CSS/overscroll-behavior-block
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-block
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overscroll-behavior-block`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
 

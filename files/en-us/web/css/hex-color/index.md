@@ -3,9 +3,8 @@ title: <hex-color>
 slug: Web/CSS/hex-color
 page-type: css-type
 browser-compat: css.types.color.rgb_hexadecimal_notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<hex-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is a notation for describing the _hexadecimal color syntax_ of an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency.
 

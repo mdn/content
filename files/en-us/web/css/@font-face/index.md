@@ -3,9 +3,8 @@ title: "@font-face"
 slug: Web/CSS/@font-face
 page-type: css-at-rule
 browser-compat: css.at-rules.font-face
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) specifies a custom font with which to display text; the font can be loaded from either a remote server or a locally-installed font on the user's own computer.
 

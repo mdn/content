@@ -3,9 +3,8 @@ title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
 browser-compat: css.properties.min-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
 

@@ -3,9 +3,8 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 page-type: css-property
 browser-compat: css.properties.animation-timing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.
 

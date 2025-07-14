@@ -3,9 +3,8 @@ title: container
 slug: Web/CSS/container
 page-type: css-shorthand-property
 browser-compat: css.properties.container
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **container** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property establishes the element as a query container and specifies the name and type of the [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 

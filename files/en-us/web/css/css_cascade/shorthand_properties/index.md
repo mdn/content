@@ -2,9 +2,8 @@
 title: Shorthand properties
 slug: Web/CSS/CSS_cascade/Shorthand_properties
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
 

@@ -2,9 +2,8 @@
 title: CSS value functions
 slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) and they may take some input arguments to calculate the return value.
 

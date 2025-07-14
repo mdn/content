@@ -3,9 +3,8 @@ title: background-position
 slug: Web/CSS/background-position
 page-type: css-property
 browser-compat: css.properties.background-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 

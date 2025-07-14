@@ -3,9 +3,8 @@ title: :root
 slug: Web/CSS/:root
 page-type: css-pseudo-class
 browser-compat: css.selectors.root
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the root element of a tree representing the document. In HTML, `:root` represents the {{HTMLElement("html")}} element and is identical to the selector `html`, except that its [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is higher.
 

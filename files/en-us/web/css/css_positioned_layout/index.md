@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-position/
   - https://drafts.csswg.org/css-position-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS positioned layout** module defines how to position elements on a web page.
 

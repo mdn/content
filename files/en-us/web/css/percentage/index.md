@@ -3,9 +3,8 @@ title: <percentage>
 slug: Web/CSS/percentage
 page-type: css-type
 browser-compat: css.types.percentage
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.
 

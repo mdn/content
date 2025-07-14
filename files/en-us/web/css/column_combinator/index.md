@@ -5,9 +5,10 @@ page-type: css-combinator
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/selectors/#selectordef-column
+sidebar: cssref
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 

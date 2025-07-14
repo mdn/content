@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.box-align
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard.

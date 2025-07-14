@@ -6,9 +6,8 @@ browser-compat: css.types.color.oklab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklab
   - https://drafts.csswg.org/css-color/#ok-lab
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`oklab()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}, which attempts to mimic how color is perceived by the human eye.
 

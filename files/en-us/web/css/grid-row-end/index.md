@@ -3,9 +3,8 @@ title: grid-row-end
 slug: Web/CSS/grid-row-end
 page-type: css-property
 browser-compat: css.properties.grid-row-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-row-end`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its {{glossary("grid areas", "grid area")}}.
 

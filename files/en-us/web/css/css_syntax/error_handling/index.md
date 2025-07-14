@@ -3,9 +3,8 @@ title: CSS error handling
 short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 

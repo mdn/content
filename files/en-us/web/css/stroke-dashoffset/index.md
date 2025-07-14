@@ -3,9 +3,8 @@ title: stroke-dashoffset
 slug: Web/CSS/stroke-dashoffset
 page-type: css-property
 browser-compat: css.properties.stroke-dashoffset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-dashoffset`** [CSS](/en-US/docs/Web/CSS) property defines an offset for the starting point of the rendering of an [SVG](/en-US/docs/Web/SVG) element's associated [dash array](/en-US/docs/Web/CSS/stroke-dasharray). If present, it overrides the element's {{SVGAttr("stroke-dashoffset")}} attribute.
 

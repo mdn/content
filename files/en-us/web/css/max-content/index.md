@@ -3,9 +3,8 @@ title: max-content
 slug: Web/CSS/max-content
 page-type: css-keyword
 browser-compat: css.properties.width.max-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `max-content` sizing keyword represents the [maximum intrinsic size](/en-US/docs/Glossary/Intrinsic_Size#maximum_intrinsic_size) of an element.
 The keyword expands the element to the largest size needed to display its content without any soft wraps.

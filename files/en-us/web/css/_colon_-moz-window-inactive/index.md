@@ -5,9 +5,10 @@ page-type: css-pseudo-class
 status:
   - non-standard
 browser-compat: css.selectors.-moz-window-inactive
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches any element while it's in an inactive window.
 

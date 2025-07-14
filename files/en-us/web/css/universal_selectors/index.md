@@ -3,9 +3,8 @@ title: Universal selectors
 slug: Web/CSS/Universal_selectors
 page-type: css-selector
 browser-compat: css.selectors.universal
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **universal selector** (`*`) matches elements of any type.
 

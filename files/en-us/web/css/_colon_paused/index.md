@@ -3,9 +3,8 @@ title: :paused
 slug: Web/CSS/:paused
 page-type: css-pseudo-class
 browser-compat: css.selectors.paused
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:paused`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when that element is "paused" (i.e., not "playing").
 

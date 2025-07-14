@@ -3,9 +3,8 @@ title: border-right-color
 slug: Web/CSS/border-right-color
 page-type: css-property
 browser-compat: css.properties.border-right-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's right [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-right")}}.
 

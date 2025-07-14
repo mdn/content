@@ -3,9 +3,8 @@ title: ruby-overhang
 slug: Web/CSS/ruby-overhang
 page-type: css-property
 browser-compat: css.properties.ruby-overhang
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ruby-overhang`** [CSS](/en-US/docs/Web/CSS) property specifies whether or not a {{htmlelement("ruby")}} annotation overhangs any surrounding text.
 

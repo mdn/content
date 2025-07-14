@@ -2,9 +2,8 @@
 title: Declaring multiple masks
 slug: Web/CSS/CSS_masking/Multiple_masks
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS masking is a technique that enables you to use images as masks to define which sections of an element are fully visible or semi-opaque. The CSS mask selectively reveals or hides parts of the element based on the alpha channel and in some cases the brightness of the colors of the applied mask images.
 

@@ -3,9 +3,8 @@ title: appearance
 slug: Web/CSS/appearance
 page-type: css-property
 browser-compat: css.properties.appearance
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`appearance`** [CSS](/en-US/docs/Web/CSS) property is used to display UI elements with platform-specific styling, based on the operating system's theme.
 

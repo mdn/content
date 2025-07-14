@@ -3,9 +3,8 @@ title: Subsequent-sibling combinator
 slug: Web/CSS/Subsequent-sibling_combinator
 page-type: css-combinator
 browser-compat: css.selectors.subsequent-sibling
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **subsequent-sibling combinator** (`~`, a tilde) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
 

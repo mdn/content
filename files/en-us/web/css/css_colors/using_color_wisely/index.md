@@ -2,9 +2,8 @@
 title: Using color wisely
 slug: Web/CSS/CSS_colors/Using_color_wisely
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Choosing the right colors for a website can be tricky, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or worse, leave the content unreadable due to problems with contrast or conflicting colors. Using the wrong colors can result in your content being outright unusable by people with certain vision problems, particularly color blindness.
 

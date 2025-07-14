@@ -3,9 +3,8 @@ title: :valid
 slug: Web/CSS/:valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.valid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 

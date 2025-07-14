@@ -3,9 +3,8 @@ title: counter-reset
 slug: Web/CSS/counter-reset
 page-type: css-property
 browser-compat: css.properties.counter-reset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) and initializes them to a specific value. It supports creating counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
 

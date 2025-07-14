@@ -3,9 +3,8 @@ title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.

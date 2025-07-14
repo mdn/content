@@ -3,9 +3,8 @@ title: CSS flow layout
 short-title: Flow layout
 slug: Web/CSS/CSS_display/Flow_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 _Normal Flow_, or Flow Layout, is the way that block and inline elements are displayed on a page before any changes are made to their layout. The flow is essentially a set of things that are all working together and know about each other in your layout. Once something is taken _out of flow_ it works independently.
 

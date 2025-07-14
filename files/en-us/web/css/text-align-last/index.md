@@ -3,9 +3,8 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 page-type: css-property
 browser-compat: css.properties.text-align-last
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-align-last`** [CSS](/en-US/docs/Web/CSS) property sets how the last line of a block or a line, right before a forced line break, is aligned.
 

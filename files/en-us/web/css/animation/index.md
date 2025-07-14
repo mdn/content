@@ -3,9 +3,8 @@ title: animation
 slug: Web/CSS/animation
 page-type: css-shorthand-property
 browser-compat: css.properties.animation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}.
 

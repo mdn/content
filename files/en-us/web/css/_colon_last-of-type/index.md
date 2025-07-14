@@ -3,9 +3,8 @@ title: :last-of-type
 slug: Web/CSS/:last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-of-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:last-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element of its type (tag name) among a group of sibling elements.
 

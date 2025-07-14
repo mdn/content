@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.page-break-inside
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-inside")}} property.

@@ -3,9 +3,8 @@ title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
 page-type: css-property
 browser-compat: css.properties.text-emphasis-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.
 

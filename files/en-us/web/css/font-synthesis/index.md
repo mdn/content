@@ -3,9 +3,8 @@ title: font-synthesis
 slug: Web/CSS/font-synthesis
 page-type: css-shorthand-property
 browser-compat: css.properties.font-synthesis
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-synthesis`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the bold, italic, small-caps, and/or subscript and superscript typefaces when they are missing in the specified font-family.
 

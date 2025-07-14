@@ -3,9 +3,8 @@ title: Controlling ratios of flex items along the main axis
 short-title: Controlling flex item ratios
 slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we explore the three properties that control the size and flexibility of flex items along the main axis: {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}. Fully understanding how these properties work with growing and shrinking items is the key to mastering [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 

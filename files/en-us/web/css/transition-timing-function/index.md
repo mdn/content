@@ -3,9 +3,8 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 page-type: css-property
 browser-compat: css.properties.transition-timing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 

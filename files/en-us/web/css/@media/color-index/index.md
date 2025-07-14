@@ -3,9 +3,8 @@ title: color-index
 slug: Web/CSS/@media/color-index
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-index
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of entries in the output device's color lookup table.
 

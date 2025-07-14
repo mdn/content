@@ -3,9 +3,8 @@ title: contain-intrinsic-inline-size
 slug: Web/CSS/contain-intrinsic-inline-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-inline-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`contain-intrinsic-inline-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) defines the inline-size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
 

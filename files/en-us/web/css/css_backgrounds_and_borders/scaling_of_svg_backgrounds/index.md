@@ -2,9 +2,8 @@
 title: Scaling SVG backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
 

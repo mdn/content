@@ -3,9 +3,8 @@ title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 page-type: css-property
 browser-compat: css.properties.scroll-behavior
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
 

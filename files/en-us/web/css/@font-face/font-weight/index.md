@@ -3,9 +3,8 @@ title: font-weight
 slug: Web/CSS/@font-face/font-weight
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-weight
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-weight`** CSS {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired [font weight](/en-US/docs/Web/CSS/font-weight).
 

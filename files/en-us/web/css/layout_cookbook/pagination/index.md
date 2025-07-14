@@ -2,9 +2,8 @@
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This cookbook pattern demonstrates the navigation pattern used to display pagination, where the user can move between pages of content such as search results.
 

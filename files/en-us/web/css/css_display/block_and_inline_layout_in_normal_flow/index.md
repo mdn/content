@@ -3,9 +3,8 @@ title: Block and inline layout in normal flow
 short-title: Block and inline layout
 slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we will explore the basics of how Block and Inline elements behave when they are part of the normal flow.
 

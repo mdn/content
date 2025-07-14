@@ -3,9 +3,8 @@ title: min-content
 slug: Web/CSS/min-content
 page-type: css-keyword
 browser-compat: css.properties.width.min-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `min-content` sizing keyword represents the [minimum intrinsic size](/en-US/docs/Glossary/Intrinsic_Size#minimum_intrinsic_size) of an element.
 The keyword shrinks the element to the smallest possible size without causing avoidable overflow of its content.

@@ -3,9 +3,8 @@ title: view-transition-name
 slug: Web/CSS/view-transition-name
 page-type: css-property
 browser-compat: css.properties.view-transition-name
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
 

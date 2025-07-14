@@ -3,9 +3,8 @@ title: ::spelling-error
 slug: Web/CSS/::spelling-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.spelling-error
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as incorrectly spelled.
 

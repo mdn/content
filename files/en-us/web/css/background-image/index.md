@@ -3,9 +3,8 @@ title: background-image
 slug: Web/CSS/background-image
 page-type: css-property
 browser-compat: css.properties.background-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images on an element.
 

@@ -3,9 +3,8 @@ title: hyphenate-character
 slug: Web/CSS/hyphenate-character
 page-type: css-property
 browser-compat: css.properties.hyphenate-character
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.
 

@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
   - https://drafts.csswg.org/css-images-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS images** module defines the types of images that can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
 

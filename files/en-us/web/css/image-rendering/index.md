@@ -3,9 +3,8 @@ title: image-rendering
 slug: Web/CSS/image-rendering
 page-type: css-property
 browser-compat: css.properties.image-rendering
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
 

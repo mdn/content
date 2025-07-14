@@ -3,9 +3,8 @@ title: mask-mode
 slug: Web/CSS/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property is set on the element being masked. It sets whether the mask reference defined by the {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 

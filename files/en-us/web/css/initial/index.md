@@ -3,9 +3,8 @@ title: initial
 slug: Web/CSS/initial
 page-type: css-keyword
 browser-compat: css.types.global_keywords.initial
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`initial`** CSS keyword applies the [initial (or default) value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) of a property to an element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}. With `all` set to `initial`, all CSS properties can be restored to their respective initial values in one go instead of restoring each one separately.
 

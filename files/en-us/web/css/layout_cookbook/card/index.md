@@ -2,9 +2,8 @@
 title: Card
 slug: Web/CSS/Layout_cookbook/Card
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This pattern is a list of "card" components with optional footers. A card contains a title, an image, a description or other content, and an attribution or footer. Cards are generally displayed within a group or collection.
 

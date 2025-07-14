@@ -3,9 +3,8 @@ title: lighting-color
 slug: Web/CSS/lighting-color
 page-type: css-property
 browser-compat: css.properties.lighting-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`lighting-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the light source for the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} SVG lighting filter primitives within an SVG {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("lighting-color")}} attribute.
 

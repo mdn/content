@@ -3,9 +3,8 @@ title: font-family
 slug: Web/CSS/@font-face/font-family
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-family
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-family`** CSS descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} at-rule.
 

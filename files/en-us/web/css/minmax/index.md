@@ -3,9 +3,8 @@ title: minmax()
 slug: Web/CSS/minmax
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
 

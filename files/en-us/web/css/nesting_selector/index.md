@@ -3,9 +3,8 @@ title: "& nesting selector"
 slug: Web/CSS/Nesting_selector
 page-type: css-selector
 browser-compat: css.selectors.nesting
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
 

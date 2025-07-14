@@ -3,9 +3,8 @@ title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 page-type: css-type
 browser-compat: css.types.angle-percentage
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<angle-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{Cssxref("angle")}} or a {{Cssxref("percentage")}}.
 

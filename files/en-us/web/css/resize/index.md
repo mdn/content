@@ -3,9 +3,8 @@ title: resize
 slug: Web/CSS/resize
 page-type: css-property
 browser-compat: css.properties.resize
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
 

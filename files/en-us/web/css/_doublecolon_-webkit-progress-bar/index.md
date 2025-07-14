@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-progress-bar
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-webkit-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the entire bar of a {{HTMLElement("progress")}} element. Normally it's only visible as the unfilled portion of the bar, since by default it's rendered below the {{ cssxref("::-webkit-progress-value") }} pseudo-element. It is a child of the {{cssxref("::-webkit-progress-inner-element")}} pseudo-element and the parent of the {{cssxref("::-webkit-progress-value")}} pseudo-element.
 

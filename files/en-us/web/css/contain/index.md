@@ -3,9 +3,8 @@ title: contain
 slug: Web/CSS/contain
 page-type: css-property
 browser-compat: css.properties.contain
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
 Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
@@ -163,10 +162,14 @@ div {
   margin: 10px;
   font-size: 20px;
 }
+
+.contain-paint {
+  contain: paint;
+}
 ```
 
 ```html
-<div style="contain: paint">
+<div class="contain-paint">
   <p>This text will be clipped to the bounds of the box.</p>
 </div>
 <div>
@@ -181,7 +184,7 @@ div {
 Consider the example below which shows how elements behave with and without layout containment applied:
 
 ```html
-<div class="card" style="contain: layout;">
+<div class="card contain-layout">
   <h2>Card 1</h2>
   <div class="fixed"><p>Fixed box 1</p></div>
   <div class="float"><p>Float box 1</p></div>
@@ -233,6 +236,10 @@ div {
   float: left;
   margin: 10px;
   background: aquamarine;
+}
+
+.contain-layout {
+  contain: layout;
 }
 ```
 
@@ -297,20 +304,20 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 <!-- With style containment -->
 <span class="open-quote">
   outer
-  <span style="contain: style;">
-    <span class="open-quote"> inner </span>
+  <span class="contain-style">
+    <span class="open-quote">inner</span>
   </span>
 </span>
-<span class="close-quote"> close </span>
+<span class="close-quote">close</span>
 <br />
 <!-- Without containment -->
 <span class="open-quote">
   outer
   <span>
-    <span class="open-quote"> inner </span>
+    <span class="open-quote">inner</span>
   </span>
 </span>
-<span class="close-quote"> close </span>
+<span class="close-quote">close</span>
 ```
 
 ```css
@@ -323,6 +330,10 @@ body {
 
 .close-quote::after {
   content: close-quote;
+}
+
+.contain-style {
+  contain: style;
 }
 ```
 

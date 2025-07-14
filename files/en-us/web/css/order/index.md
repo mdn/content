@@ -3,9 +3,8 @@ title: order
 slug: Web/CSS/order
 page-type: css-property
 browser-compat: css.properties.order
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order. Items not given an explicit `order` value are assigned the default value of `0`.
 

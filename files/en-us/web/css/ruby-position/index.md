@@ -3,9 +3,8 @@ title: ruby-position
 slug: Web/CSS/ruby-position
 page-type: css-property
 browser-compat: css.properties.ruby-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position of a ruby element relative to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
 

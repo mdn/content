@@ -3,9 +3,8 @@ title: Typical use cases of flexbox
 short-title: Typical use cases
 slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we will take a look at some of the common use cases for flexbox — those places where flexbox makes more sense than another layout method.
 

@@ -3,9 +3,8 @@ title: width
 slug: Web/CSS/@media/width
 page-type: css-media-feature
 browser-compat: css.at-rules.media.width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the width of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
 

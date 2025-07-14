@@ -3,9 +3,8 @@ title: stroke
 slug: Web/CSS/stroke
 page-type: css-property
 browser-compat: css.properties.stroke
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke`** [CSS](/en-US/docs/Web/CSS) property defines the color or SVG paint server used to draw an element's stroke. As such, `stroke` only has an effect on elements that can be given a stroke (for example, {{SVGElement('rect')}} or {{SVGElement('ellipse')}}); see the page on the SVG {{SVGAttr('stroke')}} attribute for a complete list. When declared, the CSS value overrides any value of the element's {{SVGAttr("stroke")}} SVG attribute.
 

@@ -4,9 +4,10 @@ slug: Web/CSS/:-moz-locale-dir_ltr
 page-type: css-pseudo-class
 status:
   - non-standard
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`:-moz-locale-dir(ltr)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element if the user interface is being displayed left-to-right. This is determined by the preference `intl.uidirection.locale` (where `locale` is the current locale) being set to "ltr".
 

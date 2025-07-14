@@ -3,9 +3,8 @@ title: Inheritance
 slug: Web/CSS/CSS_cascade/Inheritance
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade-5/#css-inheritance
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **inheritance** controls what happens when no value is specified for a property on an element.
 

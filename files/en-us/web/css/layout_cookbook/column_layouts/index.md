@@ -2,9 +2,8 @@
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 You will often need to create a layout which has a number of columns, and CSS provides several ways to do this. Whether you use [Multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout will depend on what you are trying to achieve, and in this recipe we explore these options.
 

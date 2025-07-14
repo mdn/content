@@ -3,9 +3,8 @@ title: border-right-width
 slug: Web/CSS/border-right-width
 page-type: css-property
 browser-compat: css.properties.border-right-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the right border of an element.
 

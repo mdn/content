@@ -3,9 +3,8 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 page-type: css-property
 browser-compat: css.properties.overflow-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
 

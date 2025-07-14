@@ -3,9 +3,8 @@ title: Animatable CSS properties
 short-title: Animatable properties
 slug: Web/CSS/CSS_animated_properties
 page-type: landing-page
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) and [Transitions](/en-US/docs/Web/CSS/CSS_transitions) rely on the concept of **animatable** properties, and all CSS properties are animatable unless otherwise specified. Each property's _animation type_ determines how values [combine](https://drafts.csswg.org/css-values/#combining-values) - interpolate, add, or accumulate - for this property. Transitions only involve interpolation, whereas animations may use all three combination methods.
 

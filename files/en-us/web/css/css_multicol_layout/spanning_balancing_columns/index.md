@@ -2,9 +2,8 @@
 title: Spanning and balancing columns
 slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we look at how to make elements span across columns inside the multi-column (_multicol_) container and how to control how the columns are filled.
 

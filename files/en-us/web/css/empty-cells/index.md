@@ -3,9 +3,8 @@ title: empty-cells
 slug: Web/CSS/empty-cells
 page-type: css-property
 browser-compat: css.properties.empty-cells
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`empty-cells`** [CSS](/en-US/docs/Web/CSS) property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.
 

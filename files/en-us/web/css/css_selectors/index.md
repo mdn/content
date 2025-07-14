@@ -3,9 +3,8 @@ title: CSS selectors
 slug: Web/CSS/CSS_selectors
 page-type: css-module
 spec-urls: https://drafts.csswg.org/selectors/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 

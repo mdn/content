@@ -3,9 +3,8 @@ title: Namespace separator
 slug: Web/CSS/Namespace_separator
 page-type: css-combinator
 browser-compat: css.selectors.namespace
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **namespace separator** (`|`) separates the selector from the namespace, identifying the {{glossary("namespace")}}, or lack thereof, for a type selector.
 

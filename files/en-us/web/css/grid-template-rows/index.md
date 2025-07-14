@@ -3,9 +3,8 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-rows`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid_row", "grid rows")}}.
 

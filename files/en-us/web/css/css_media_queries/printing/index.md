@@ -2,9 +2,8 @@
 title: Printing
 slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 There may be times in which your website or application would like to improve the user's experience when printing content. There are several possible scenarios:
 

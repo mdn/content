@@ -3,9 +3,8 @@ title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 page-type: css-property
 browser-compat: css.properties.print-color-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`print-color-adjust`** [CSS](/en-US/docs/Web/CSS) property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.
 By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.

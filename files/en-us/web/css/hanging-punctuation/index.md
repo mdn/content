@@ -3,9 +3,8 @@ title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
 page-type: css-property
 browser-compat: css.properties.hanging-punctuation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
 

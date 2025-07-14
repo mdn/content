@@ -3,9 +3,8 @@ title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 

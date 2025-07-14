@@ -3,9 +3,8 @@ title: font-synthesis-style
 slug: Web/CSS/font-synthesis-style
 page-type: css-property
 browser-compat: css.properties.font-synthesis-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-synthesis-style`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the oblique typeface when it is missing in a font family.
 

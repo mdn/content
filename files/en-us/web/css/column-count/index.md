@@ -3,9 +3,8 @@ title: column-count
 slug: Web/CSS/column-count
 page-type: css-property
 browser-compat: css.properties.column-count
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-count`** [CSS](/en-US/docs/Web/CSS) property breaks an element's content into the specified number of columns.
 

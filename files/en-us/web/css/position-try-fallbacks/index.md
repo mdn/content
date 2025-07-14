@@ -3,9 +3,8 @@ title: position-try-fallbacks
 slug: Web/CSS/position-try-fallbacks
 page-type: css-property
 browser-compat: css.properties.position-try-fallbacks
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you to specify a list of one or more alternative **position try fallback options** for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
 

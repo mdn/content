@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-display/
   - https://drafts.csswg.org/css-display-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS display** module defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.
 

@@ -3,9 +3,8 @@ title: padding-block-end
 slug: Web/CSS/padding-block-end
 page-type: css-property
 browser-compat: css.properties.padding-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 

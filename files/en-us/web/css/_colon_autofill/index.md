@@ -3,9 +3,8 @@ title: :autofill
 slug: Web/CSS/:autofill
 page-type: css-pseudo-class
 browser-compat: css.selectors.autofill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
 

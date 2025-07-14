@@ -2,9 +2,8 @@
 title: Logical properties for floating and positioning
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module contains logical mappings for the physical values of {{cssxref("float")}} and {{cssxref("clear")}}, and also for the positioning properties used with [positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout). This guide takes a look at how to use these.
 

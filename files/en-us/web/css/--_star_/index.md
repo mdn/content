@@ -3,9 +3,8 @@ title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 page-type: css-property
 browser-compat: css.properties.custom-property
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.
 

@@ -3,9 +3,8 @@ title: Selector list
 slug: Web/CSS/Selector_list
 page-type: css-combinator
 browser-compat: css.selectors.list
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **selector list** (`,`) selects all the matching nodes. A selector list is a comma-separated list of selectors.
 

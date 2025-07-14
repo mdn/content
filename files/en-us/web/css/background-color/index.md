@@ -3,9 +3,8 @@ title: background-color
 slug: Web/CSS/background-color
 page-type: css-property
 browser-compat: css.properties.background-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-color`** [CSS](/en-US/docs/Web/CSS) property sets the background color of an element.
 

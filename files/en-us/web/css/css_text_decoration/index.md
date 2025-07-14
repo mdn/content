@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text-decor/
   - https://drafts.csswg.org/css-text-decor-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks.
 

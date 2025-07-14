@@ -3,9 +3,8 @@ title: animation-range-end
 slug: Web/CSS/animation-range-end
 page-type: css-property
 browser-compat: css.properties.animation-range-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end.
 

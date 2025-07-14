@@ -3,9 +3,8 @@ title: grid-column-start
 slug: Web/CSS/grid-column-start
 page-type: css-property
 browser-compat: css.properties.grid-column-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-column-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the {{glossary("grid areas", "grid area")}}.
 

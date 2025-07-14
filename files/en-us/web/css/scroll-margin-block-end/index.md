@@ -3,9 +3,8 @@ title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
 page-type: css-property
 browser-compat: css.properties.scroll-margin-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 

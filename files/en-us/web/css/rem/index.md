@@ -3,9 +3,8 @@ title: rem()
 slug: Web/CSS/rem
 page-type: css-function
 browser-compat: css.types.rem
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a remainder left over when the first parameter is divided by the second parameter, similar to the JavaScript [remainder operator (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). The remainder is the value left over when one operand, the dividend, is divided by a second operand, the divisor. It always takes the sign of the dividend.
 

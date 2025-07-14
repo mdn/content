@@ -3,9 +3,8 @@ title: text-orientation
 slug: Web/CSS/text-orientation
 page-type: css-property
 browser-compat: css.properties.text-orientation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-orientation`** [CSS](/en-US/docs/Web/CSS) property sets the orientation of the text characters in a line. It only affects text in vertical mode (when {{cssxref("writing-mode")}} is not `horizontal-tb`). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.
 

@@ -3,9 +3,8 @@ title: fill-rule
 slug: Web/CSS/fill-rule
 page-type: css-property
 browser-compat: css.properties.fill-rule
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill-rule`** [CSS](/en-US/docs/Web/CSS) property defines the rule used to determine which parts of the SVG shape's canvas are included inside a shape to be filled. If present, it overrides the element's {{SVGAttr("fill-rule")}} attribute.
 

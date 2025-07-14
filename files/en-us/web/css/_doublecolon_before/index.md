@@ -3,9 +3,8 @@ title: ::before
 slug: Web/CSS/::before
 page-type: css-pseudo-element
 browser-compat: css.selectors.before
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property. It is inline by default.
 

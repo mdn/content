@@ -3,9 +3,8 @@ title: alignment-baseline
 slug: Web/CSS/alignment-baseline
 page-type: css-property
 browser-compat: css.properties.alignment-baseline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`alignment-baseline`** [CSS](/en-US/docs/Web/CSS) property specifies the specific [baseline](/en-US/docs/Glossary/Baseline/Typography) used to align the box's text and inline-level contents. **Baseline alignment** is the relationship among the baselines of multiple alignment subjects within an alignment context. When performing baseline alignment, the `alignment-baseline` property value specifies which baseline of the box is aligned to the corresponding baseline of its alignment context.
 

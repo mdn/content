@@ -3,9 +3,8 @@ title: content
 slug: Web/CSS/content
 page-type: css-property
 browser-compat: css.properties.content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 

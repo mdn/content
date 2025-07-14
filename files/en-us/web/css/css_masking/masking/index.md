@@ -2,9 +2,8 @@
 title: Introduction to CSS masking
 slug: Web/CSS/CSS_masking/Masking
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS masking enables you to reveal or hide parts of an element selectively by applying one or more mask images to it. These mask images can be gradients, images, or SVG sources. Unlike [CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping), which either fully shows or hides areas of an element based on the shape of a single path, masking allows for nuanced transparency and blending effects based on the alpha transparency and, optionally, luminance of the mask images.
 

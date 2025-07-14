@@ -2,9 +2,8 @@
 title: CSS mask properties
 slug: Web/CSS/CSS_masking/Mask_properties
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS masking is a technique that enables you to define visible portions of an element by applying a mask, which selectively reveals or hides parts of the element based on the alpha channels, and optionally colors, of the applied mask images.
 

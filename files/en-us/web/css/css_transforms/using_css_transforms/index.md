@@ -3,9 +3,8 @@ title: Using CSS transforms
 short-title: Using transforms
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
 

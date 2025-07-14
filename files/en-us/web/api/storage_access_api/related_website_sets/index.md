@@ -4,6 +4,7 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
+browser-compat: api.Document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
@@ -155,6 +156,10 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#first-party-sets)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-93)
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

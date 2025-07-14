@@ -3,9 +3,8 @@ title: update
 slug: Web/CSS/@media/update
 page-type: css-media-feature
 browser-compat: css.at-rules.media.update
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content once rendered.
 

@@ -2,9 +2,8 @@
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this recipe, you will see how to center one box inside another by using [flexbox](#using_flexbox) and [grid](#using_grid), centering content both horizontally and vertically.
 

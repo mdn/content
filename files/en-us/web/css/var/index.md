@@ -3,9 +3,8 @@ title: var()
 slug: Web/CSS/var
 page-type: css-function
 browser-compat: css.types.var
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
 

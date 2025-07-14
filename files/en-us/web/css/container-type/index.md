@@ -3,9 +3,8 @@ title: container-type
 slug: Web/CSS/container-type
 page-type: css-property
 browser-compat: css.properties.container-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 An element can be established as a query container using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of container context used in a container query. The available container contexts are:
 

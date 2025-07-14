@@ -3,9 +3,8 @@ title: mask-composite
 slug: Web/CSS/mask-composite
 page-type: css-property
 browser-compat: css.properties.mask-composite
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
 

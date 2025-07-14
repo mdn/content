@@ -3,9 +3,8 @@ title: Using CSS nesting
 short-title: Using nesting
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 

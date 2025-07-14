@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/scroll-animations-1/
   - https://drafts.csswg.org/css-animations-2/
   - https://drafts.csswg.org/web-animations-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling a scrollable element, rather than just by the passing of time.
 

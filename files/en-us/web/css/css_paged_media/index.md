@@ -3,9 +3,8 @@ title: CSS paged media
 slug: Web/CSS/CSS_paged_media
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-page/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS paged media** module defines the properties that control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable areas, style left and right pages differently, and control breaks inside elements.
 

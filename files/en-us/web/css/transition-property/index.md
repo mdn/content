@@ -3,9 +3,8 @@ title: transition-property
 slug: Web/CSS/transition-property
 page-type: css-property
 browser-compat: css.properties.transition-property
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
 

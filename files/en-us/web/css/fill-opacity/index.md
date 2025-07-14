@@ -3,9 +3,8 @@ title: fill-opacity
 slug: Web/CSS/fill-opacity
 page-type: css-property
 browser-compat: css.properties.fill-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the painting operation (color, gradient, pattern, etc.) applied to SVG shapes or text content elements to fill the element. The property defines the opacity of the element's `fill` only; it does not affect the stroke. If present, it overrides the element's {{SVGAttr("fill-opacity")}} attribute.
 

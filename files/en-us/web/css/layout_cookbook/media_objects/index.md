@@ -2,9 +2,8 @@
 title: "Recipe: Media objects"
 slug: Web/CSS/Layout_cookbook/Media_objects
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. It refers to a two-column box with an image on one side and descriptive text on the other, e.g., a social media post.
 

@@ -3,9 +3,8 @@ title: table-layout
 slug: Web/CSS/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`table-layout`** [CSS](/en-US/docs/Web/CSS) property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 

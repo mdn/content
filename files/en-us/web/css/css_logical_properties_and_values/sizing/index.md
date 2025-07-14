@@ -2,9 +2,8 @@
 title: Logical properties for sizing
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we will explain the flow-relative mappings between physical dimension properties and logical properties used for sizing elements on our pages.
 

@@ -3,9 +3,8 @@ title: symbols
 slug: Web/CSS/@counter-style/symbols
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.symbols
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`symbols`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@counter-style")}} at-rule is used to specify the symbols for creating counter representations in the specified counter system. Specifying this descriptor is mandatory when the value of the {{cssxref('@counter-style/system', 'system')}} descriptor is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`.
 

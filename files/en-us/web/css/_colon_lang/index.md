@@ -3,9 +3,8 @@ title: :lang()
 slug: Web/CSS/:lang
 page-type: css-pseudo-class
 browser-compat: css.selectors.lang
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the language they are determined to be in.
 

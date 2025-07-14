@@ -3,9 +3,8 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 page-type: css-property
 browser-compat: css.properties.border-collapse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-collapse`** [CSS](/en-US/docs/Web/CSS) property sets whether cells inside a {{htmlElement("table")}} have shared or separate borders.
 

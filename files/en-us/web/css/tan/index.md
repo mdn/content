@@ -3,9 +3,8 @@ title: tan()
 slug: Web/CSS/tan
 page-type: css-function
 browser-compat: css.types.tan
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians.
 

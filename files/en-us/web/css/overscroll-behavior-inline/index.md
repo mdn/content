@@ -3,9 +3,8 @@ title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overscroll-behavior-inline`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 

@@ -3,9 +3,8 @@ title: CSS lists and counters
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS lists and counters** module enables styling and positioning of list item bullets and manipulating their values with a combination of strings, counters, and other features.
 

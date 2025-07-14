@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries-3/
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/mediaqueries-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS media queries** module enables testing and querying of viewport values and browser or device features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and other contexts and languages such as HTML and JavaScript.
 

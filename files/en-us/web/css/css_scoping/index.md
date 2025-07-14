@@ -3,9 +3,8 @@ title: CSS scoping
 slug: Web/CSS/CSS_scoping
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scoping/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms, focusing on the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) [scoping](https://css.oddbird.net/scope/) mechanism.
 

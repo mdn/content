@@ -3,9 +3,8 @@ title: color
 slug: Web/CSS/@media/color
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of bits per color component (red, green, blue) of the output device.
 

@@ -3,9 +3,8 @@ title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-width`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
 

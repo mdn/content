@@ -2,9 +2,8 @@
 title: Logical properties for margins, borders, and padding
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module defines flow-relative mappings for the various margin, border, and padding properties and their shorthands. In this guide, we take a look at these.
 

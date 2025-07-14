@@ -3,9 +3,8 @@ title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
 browser-compat: css.types.gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<gradient>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is a special type of {{cssxref("&lt;image&gt;")}} that consists of a progressive transition between two or more colors.
 

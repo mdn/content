@@ -3,9 +3,8 @@ title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 

@@ -3,9 +3,8 @@ title: offset-path
 slug: Web/CSS/offset-path
 page-type: css-property
 browser-compat: css.properties.offset-path
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for an element to follow and determines the element's positioning within the path's parent container or the SVG coordinate system. The path is a line, a curve, or a geometrical shape along which the element gets positioned or moves.
 

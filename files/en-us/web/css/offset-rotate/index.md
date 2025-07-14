@@ -3,9 +3,8 @@ title: offset-rotate
 slug: Web/CSS/offset-rotate
 page-type: css-property
 browser-compat: css.properties.offset-rotate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 

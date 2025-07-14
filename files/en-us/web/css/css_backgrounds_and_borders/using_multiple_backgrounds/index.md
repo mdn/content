@@ -2,9 +2,8 @@
 title: Using multiple backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
 

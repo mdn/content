@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - deprecated
 browser-compat: css.at-rules.media.device-width
+sidebar: cssref
 ---
 
-{{CSSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > To query for the width of the viewport, developers should use the [`width`](/en-US/docs/Web/CSS/@media/width) media feature instead.

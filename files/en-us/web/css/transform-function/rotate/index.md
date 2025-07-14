@@ -3,9 +3,8 @@ title: rotate()
 slug: Web/CSS/transform-function/rotate
 page-type: css-function
 browser-compat: css.types.transform-function.rotate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around a
 fixed point on the 2D plane, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data

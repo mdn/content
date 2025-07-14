@@ -4,9 +4,8 @@ slug: Web/CSS/Mozilla_Extensions
 page-type: landing-page
 status:
   - non-standard
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A {{glossary("vendor prefix")}} is used to indicate that a feature is specific to a certain browser.
 Firefox supports several extensions to [CSS](/en-US/docs/Web/CSS), which are prefixed with `-moz-`.

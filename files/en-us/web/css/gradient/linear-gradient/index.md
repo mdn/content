@@ -3,9 +3,8 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.linear-gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 

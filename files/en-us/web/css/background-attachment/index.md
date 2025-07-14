@@ -3,9 +3,8 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-attachment`** [CSS](/en-US/docs/Web/CSS) property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.
 

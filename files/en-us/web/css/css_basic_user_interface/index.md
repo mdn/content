@@ -3,9 +3,8 @@ title: CSS basic user interface
 slug: Web/CSS/CSS_basic_user_interface
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ui/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS basic user interface** module lets you define the rendering and functionality of features related to the user interface including outline properties, visual feedback to pointing device and keyboard, and altering the default appearance of UI widgets.
 

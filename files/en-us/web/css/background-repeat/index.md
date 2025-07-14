@@ -3,9 +3,8 @@ title: background-repeat
 slug: Web/CSS/background-repeat
 page-type: css-property
 browser-compat: css.properties.background-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
 

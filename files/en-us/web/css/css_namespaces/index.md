@@ -3,9 +3,8 @@ title: CSS namespaces
 slug: Web/CSS/CSS_namespaces
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-namespaces/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS namespaces** module defines the syntax for using {{glossary("namespace", "namespaces")}} in CSS.
 

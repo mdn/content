@@ -3,9 +3,8 @@ title: <time-percentage>
 slug: Web/CSS/time-percentage
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<time-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{Cssxref("time")}} or a {{Cssxref("percentage")}}.
 

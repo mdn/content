@@ -3,9 +3,8 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 page-type: css-property
 browser-compat: css.properties.border-left-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-left-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
 

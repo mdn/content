@@ -3,9 +3,8 @@ title: <generic-family>
 slug: Web/CSS/generic-family
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
 

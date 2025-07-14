@@ -3,9 +3,8 @@ title: background-origin
 slug: Web/CSS/background-origin
 page-type: css-property
 browser-compat: css.properties.background-origin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-origin`** [CSS](/en-US/docs/Web/CSS) property sets the background's origin: from the border start, inside the border, or inside the padding.
 

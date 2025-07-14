@@ -3,9 +3,8 @@ title: Aligning items in a flex container
 short-title: Aligning flex items
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 One of the reasons flexbox is so useful is that it enables proper alignment, including providing a quick method of vertically centering elements. In this guide, we will take a thorough look at how the alignment and justification properties work in flexbox.
 
