@@ -3,9 +3,8 @@ title: "<button>: The Button element"
 slug: Web/HTML/Reference/Elements/button
 page-type: html-element
 browser-compat: html.elements.button
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.
 

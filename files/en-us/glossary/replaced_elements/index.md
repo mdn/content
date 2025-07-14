@@ -2,9 +2,8 @@
 title: Replaced elements
 slug: Glossary/Replaced_elements
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In web development, **replaced elements** are HTML elements whose content are replaced by external resources or content defined outside of the document structure, and are not considered in the CSS rendering model. They are external objects whose representation is independent of the CSS formatting model.
 

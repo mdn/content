@@ -3,9 +3,8 @@ title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_search
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`search`** are text fields designed for the user to enter search queries into. These are functionally identical to [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) inputs, but may be styled differently by the {{Glossary("user agent")}}.
 

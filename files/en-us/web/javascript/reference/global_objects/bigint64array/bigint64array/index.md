@@ -4,9 +4,8 @@ short-title: BigInt64Array()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`BigInt64Array()`** constructor creates {{jsxref("BigInt64Array")}} objects. The contents are initialized to `0n` unless initialization data is explicitly provided.
 

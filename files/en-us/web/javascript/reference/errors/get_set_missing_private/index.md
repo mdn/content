@@ -2,9 +2,8 @@
 title: "TypeError: can't access/set private field or method: object is not the right class"
 slug: Web/JavaScript/Reference/Errors/Get_set_missing_private
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "can't access private field or method: object is not the right class" or "can't set private field: object is not the right class" occurs when a private field or method is get or set on an object that does not have this [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) defined.
 

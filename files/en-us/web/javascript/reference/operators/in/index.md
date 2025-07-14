@@ -3,9 +3,8 @@ title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`in`** operator returns `true` if the specified property is in the specified object or its prototype chain.
 

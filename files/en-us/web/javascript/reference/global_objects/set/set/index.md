@@ -4,9 +4,8 @@ short-title: Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Set.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 

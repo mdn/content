@@ -4,9 +4,8 @@ short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.keys
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`keys()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each element in this map in insertion order.
 

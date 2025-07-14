@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Now.plainDateTimeISO
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Now.plainDateTimeISO()`** static method returns the current date and time as a {{jsxref("Temporal.PlainDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 

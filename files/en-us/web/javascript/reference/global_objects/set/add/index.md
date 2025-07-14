@@ -4,9 +4,8 @@ short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.add
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with a specified value in to this set, if there isn't an element with the same value already in this set
 

@@ -2,9 +2,8 @@
 title: Global object
 slug: Glossary/Global_object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **global object** in JavaScript is an {{glossary("object")}} which represents the {{glossary("global scope")}}.
 

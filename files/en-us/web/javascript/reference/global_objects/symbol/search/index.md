@@ -4,9 +4,8 @@ short-title: search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.search
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.search`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.search`. The {{jsxref("String.prototype.search()")}} method looks up this symbol on its first argument for the method that returns the index within a string that matches the current object.
 

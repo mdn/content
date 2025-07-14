@@ -2,9 +2,8 @@
 title: Grid lines
 slug: Glossary/Grid_Lines
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Grid lines** are created anytime you use a [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 

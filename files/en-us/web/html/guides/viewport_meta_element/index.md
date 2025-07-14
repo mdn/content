@@ -4,9 +4,8 @@ short-title: Viewport meta element
 slug: Web/HTML/Guides/Viewport_meta_element
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-viewport/#viewport-meta
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
 

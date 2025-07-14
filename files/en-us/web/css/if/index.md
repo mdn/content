@@ -73,9 +73,9 @@ A value or {{glossary("guaranteed_invalid_value", "guaranteed-invalid")}}.
 
 ## Description
 
-The CSS `if()` function provides conditional logic to CSS property values, and works in a similar fashion to JavaScript [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements.
+The CSS `if()` function provides conditional logic to CSS property values, and works in a similar fashion to JavaScript [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements.
 
-The `if()` function can be used inside the value of any property, and can contain zero or more semi-colon-separated `<if-condition>`s. Each `<if-condition>` is either an `<if-test> : <value>` pair or or an `else : <value>` pair. The semi-colon after the last `<if-condition>` is optional.
+The `if()` function can be used inside the value of any property, and can contain zero or more semi-colon-separated `<if-condition>`s. Each `<if-condition>` is either an `<if-test> : <value>` pair or an `else : <value>` pair. The semi-colon after the last `<if-condition>` is optional.
 
 The return value is calculated as follows:
 
@@ -607,4 +607,4 @@ Try selecting different color scheme values to see the effect on the look and fe
 - [Container style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries)
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS values and units module](/en-US/docs/Web/CSS/CSS_values_and_units)
+- [CSS values and units module](/en-US/docs/Web/CSS/CSS_Values_and_Units)

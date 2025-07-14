@@ -1,12 +1,10 @@
 ---
 title: Web technology for developers
+short-title: Web
 slug: Web
 page-type: landing-page
+sidebar: web
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our Web technology documentation.
 
@@ -78,5 +76,5 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Documentation for the set of web-developer tools built into Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
   - : Documentation for the set of web-developer tools built into Safari.
-- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/landing/)
+- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools/landing/)
   - : Documentation for the set of web-developer tools built into Edge.

@@ -1398,7 +1398,8 @@
       "overview": ["Screen Capture API"],
       "guides": [
         "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
-        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture",
+        "/docs/Web/API/Screen_Capture_API/Captured_Surface_Control"
       ],
       "interfaces": [
         "BrowserCaptureMediaStreamTrack",

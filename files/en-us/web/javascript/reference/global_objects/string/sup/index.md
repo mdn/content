@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.sup
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`sup()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("sup")}} element (`<sup>str</sup>`), which causes this string to be displayed as superscript.
 

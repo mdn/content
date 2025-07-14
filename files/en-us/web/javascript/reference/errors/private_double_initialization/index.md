@@ -2,9 +2,8 @@
 title: "TypeError: Initializing an object twice is an error with private fields/methods"
 slug: Web/JavaScript/Reference/Errors/Private_double_initialization
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "Initializing an object twice is an error with private fields/methods" occurs when an object that was created via a class constructor goes through the class construction again, and the class contains a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements). This is usually caused by the [return override](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object) trick.
 

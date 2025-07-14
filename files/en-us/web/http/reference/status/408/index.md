@@ -3,9 +3,8 @@ title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`408 Request Timeout`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server would like to shut down this unused connection.
 A `408` is sent on an idle connection by some servers, _even without any previous request by the client_.

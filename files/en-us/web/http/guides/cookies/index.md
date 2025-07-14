@@ -2,9 +2,8 @@
 title: Using HTTP cookies
 slug: Web/HTTP/Guides/Cookies
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 A **cookie** (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is [stateless](/en-US/docs/Web/HTTP/Guides/Overview#http_is_stateless_but_not_sessionless).
 

@@ -2,9 +2,8 @@
 title: GLSL shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
 

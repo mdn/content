@@ -3,9 +3,8 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 page-type: javascript-statement
 browser-compat: javascript.statements.const
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`const`** declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), but if a constant is an [object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects), its properties can be added, updated, or removed.
 

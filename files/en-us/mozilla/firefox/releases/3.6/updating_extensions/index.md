@@ -19,7 +19,7 @@ In order to allow add-ons' icons to be displayed even when they're disabled, Gec
 
 The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
 
-- The [`localName`](/en-US/docs/Web/API/Element/localName) DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 [`tagName`](/en-US/docs/DOM/node.tagName) continues to return in upper case in HTML documents.)
+- The [`localName`](/en-US/docs/Web/API/Element/localName) DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 [`tagName`](/en-US/docs/Web/API/Element/tagName) continues to return in upper case in HTML documents.)
 - The [`namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) DOM property now returns `"http://www.w3.org/1999/xhtml"` on HTML element nodes. Previously, in HTML documents, it returned `null`.
 - `document.createElementNS(null, "FOO")` no longer creates an HTML element node in HTML documents. `document.createElement("FOO")`
   or `document.createElementNS("http://www.w3.org/1999/xhtml", "foo")` continue

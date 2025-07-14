@@ -3,9 +3,8 @@ title: static
 slug: Web/JavaScript/Reference/Classes/static
 page-type: javascript-language-feature
 browser-compat: javascript.classes.static
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`static`** keyword defines a [static method or field](/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_fields) for a class, or a [static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) (see the link for more information about this usage). Static properties cannot be directly accessed on instances of the class. Instead, they're accessed on the class itself.
 

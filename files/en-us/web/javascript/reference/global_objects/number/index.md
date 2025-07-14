@@ -3,9 +3,8 @@ title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
 browser-compat: javascript.builtins.Number
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Number`** values represent floating-point numbers like `37` or `-9.25`.
 

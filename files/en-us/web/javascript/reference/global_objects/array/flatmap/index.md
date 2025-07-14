@@ -4,9 +4,8 @@ short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`flatMap()`** method of {{jsxref("Array")}} instances returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array/map", "map()")}} followed by a {{jsxref("Array/flat", "flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
