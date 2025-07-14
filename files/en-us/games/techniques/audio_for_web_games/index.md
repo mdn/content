@@ -90,7 +90,7 @@ Now we have buttons with start and stop times in seconds. The "countdown.mp3" MP
 
 Let's add some JavaScript to make this work:
 
-```js
+```js live-sample___audio-sprite
 const myAudio = document.getElementById("myAudio");
 const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
