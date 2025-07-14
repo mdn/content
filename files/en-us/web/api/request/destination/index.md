@@ -16,7 +16,7 @@ The string must be one of the `audio`, `audioworklet`,
 `document`, `embed`, `fencedframe`, `font`, `frame`,
 `iframe`, `image`, `json`, `manifest`, `object`,
 `paintworklet`, `report`, `script`, `sharedworker`,
-`style`, `track`, `video`, `worker`
+`speculationrules`, `style`, `track`, `video`, `worker`
 or `xslt` strings, or the empty string, which is the default value.
 
 The `destination` is used by the {{Glossary("user agent")}} to, for example,
@@ -79,6 +79,8 @@ Possible values are:
   - : The target is a service worker.
 - `"sharedworker"`
   - : The target is a shared worker.
+- `"speculationrules"`
+  - : The target is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON document.
 - `"style"`
   - : The target is a style
 - `"track"`
