@@ -4,7 +4,7 @@ slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.MediaStreamTrackProcessor
+browser-compat: api.VideoTrackGenerator
 spec-urls: https://w3c.github.io/mediacapture-transform/
 ---
 
