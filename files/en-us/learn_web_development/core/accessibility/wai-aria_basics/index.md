@@ -109,7 +109,7 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Accessibility of non-semantic controls
   - : When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tablist`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
-In the next section, we'll look at the four main areas described earlier in more detail, along with examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through. See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
+In the next section, we'll look at the four main areas described earlier in more detail, along with examples. Before you continue, you should put a screen reader testing setup in place, so you can test some of the examples as you go through. See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
 
 > [!CALLOUT]
 >
