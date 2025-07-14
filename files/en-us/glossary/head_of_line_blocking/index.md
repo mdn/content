@@ -17,7 +17,7 @@ Pipelining proved tricky to implement in reality, so this mechanism is rarely us
 HTTP/2 addresses the HOL blocking problems in HTTP/1.1 through request _multiplexing_.
 Multiplexing allows a single TCP connection to interleave requests and responses in numbered streams.
 A client can send many requests over a single connection without waiting for earlier responses.
-Note that while HOL has been fixed in HTTP, it is still a problem at the transport ({{glossary("TCP")}}) layer level.
+Note that while HOL blocking has been fixed in HTTP/2, it is still a problem at the transport ({{glossary("TCP")}}) layer level.
 
 ## See also
 
