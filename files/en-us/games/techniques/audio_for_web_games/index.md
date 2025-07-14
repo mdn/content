@@ -72,7 +72,7 @@ You'll need to sample the current time to know when to stop. If you space your i
 
 Here's an example of an audio sprite player — first let's set up the user interface in HTML:
 
-```html
+```html live-sample___audio-sprite
 <audio id="myAudio" src="/shared-assets/audio/countdown.mp3"></audio>
 <button data-start="18" data-stop="19">0</button>
 <button data-start="16" data-stop="17">1</button>
@@ -118,7 +118,7 @@ myAudio.addEventListener(
 );
 ```
 
-{{EmbedLiveSample("audio sprites", "", 200)}}
+{{EmbedLiveSample("audio-sprite", "", 200)}}
 
 > [!NOTE]
 > On mobile we may need to trigger this code from a user-initiated event such as a start button being pressed, as described above.
