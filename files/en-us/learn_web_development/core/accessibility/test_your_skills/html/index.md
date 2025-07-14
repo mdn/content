@@ -15,7 +15,7 @@ The aim of this skill test is to help you assess whether you've understood our [
 
 ## HTML accessibility 1
 
-In this task we will test your understanding of text semantics, and why they are good for accessibility. The given text is an information panel with action buttons, but the HTML is really bad.
+In this task we will test your understanding of semantic HTML, and why it is good for accessibility. The given text is an information panel with action buttons, but the HTML is really bad.
 
 To complete the task:
 
