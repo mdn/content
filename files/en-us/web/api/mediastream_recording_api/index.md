@@ -171,7 +171,8 @@ recordBtn.addEventListener("click", async () => {
 });
 ```
 
-{{EmbedLiveSample("Basic video recording", , "400", , , , "camera")}}
+<!-- TODO: re-enable when blob: URLs are allowed by CSP settings -->
+<!-- {{EmbedLiveSample("Basic video recording", , "400", , , , "camera")}} -->
 
 ## Specifications
 
