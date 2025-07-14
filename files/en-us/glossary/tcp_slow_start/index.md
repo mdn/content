@@ -12,7 +12,9 @@ To implement TCP slow start, the congestion window (_cwnd_) sets an upper limit 
 
 ## Congestion control
 
-Congestion itself is a state that happens within a network layer when the message traffic is too busy it slows the network response time. The server sends data in TCP packets, the user's client then confirms delivery by returning ACKs. The connection has a limited capacity depending on hardware and network conditions. If the server sends too many packets too quickly, they will be dropped (meaning, there will be no acknowledgement). The server registers this as missing ACKs. Congestion control algorithms use this flow of sent packets and ACKs to determine a send rate.
+Network congestion occurs when more data is sent than the network is able to transfer between nodes at a particular time.
+When a network is congested, machines on the network experience degraded quality of service, including slow data transfers and dropped packets.
+The slow start algorithm is one major part of TCP congestion control, as it ensures that new connections progressively increase data rates and that those rates do not exceed configured congestion limits.
 
 ## See also
 
