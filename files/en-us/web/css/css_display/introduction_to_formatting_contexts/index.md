@@ -1,10 +1,10 @@
 ---
 title: Introduction to formatting contexts
+short-title: Formatting contexts
 slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This article introduces the concept of formatting contexts, of which there are several types, including block formatting contexts, inline formatting contexts, and flex formatting contexts. The basics of how they behave and how you can make use of these behaviors are also introduced.
 
@@ -185,5 +185,5 @@ In this guide, we have looked in more detail at the block and Inline formatting 
 ## See also
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model)

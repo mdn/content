@@ -1,16 +1,16 @@
 ---
 title: Using CSS anchor positioning
+short-title: Using anchor positioning
 slug: Web/CSS/CSS_anchor_positioning/Using
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS anchor positioning** module defines features that allow you to tether elements together. Elements can be defined as **anchor elements** and **anchor-positioned elements**. Anchor-positioned elements can be bound to anchor elements. The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
 
 CSS anchor positioning also provides CSS-only mechanisms for specifying multiple alternative positions for an anchor-positioned element. For example, if a tooltip is anchored to a form field but the tooltip would otherwise be rendered offscreen in its default position settings, the browser can try rendering it in a different suggested position so it is placed onscreen, or, alternatively, hide it altogether if desired.
 
-This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ## Fundamental concepts
 
@@ -23,15 +23,15 @@ It's very common to want to tether, or bind, one element to another. For example
 
 Modern interfaces frequently call for some content — often reusable and dynamically-generated — to be situated relative to an anchor element. Creating such use cases would be fairly straightforward if the element to tether to (aka the **anchor element**) was always in the same place in the UI and the tethered element (aka the **anchor-positioned element**, or just **positioned element**) could always be placed immediately before or after it in the source order. However, things are rarely that simple.
 
-The location of positioned elements relative to their anchor element needs to be maintained and adjusted as the anchor element moves or otherwise changes configuration (e.g. by scrolling, changing the viewport size, drag and drop, etc.). For example, if an element such as a form field gets close to the edge of the viewport, its tooltip may end up offscreen. Generally, you want to bind the tooltip to its form control and ensure the tooltip is kept fully visible on-screen as long as the form field is visible, automatically moving the tooltip if needed. You may have noticed this as the default behavior in your operating system when you right-click (<kbd>Ctrl</kbd> + click) context menus on your desktop or laptop.
+The location of positioned elements relative to their anchor element needs to be maintained and adjusted as the anchor element moves or otherwise changes configuration (e.g., by scrolling, changing the viewport size, drag and drop, etc.). For example, if an element such as a form field gets close to the edge of the viewport, its tooltip may end up offscreen. Generally, you want to bind the tooltip to its form control and ensure the tooltip is kept fully visible on-screen as long as the form field is visible, automatically moving the tooltip if needed. You may have noticed this as the default behavior in your operating system when you right-click (<kbd>Ctrl</kbd> + click) context menus on your desktop or laptop.
 
 Historically, associating an element with another element and dynamically changing a positioned element's location and size based on an anchor's position required JavaScript, which added complexity and performance issues. It also wasn't guaranteed to work in all situations. The features defined in the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module enable implementing such use cases performantly and declaratively with CSS (and HTML) instead of JavaScript.
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This creates an anchor reference between the two. This association can be created explicitly via CSS or implicitly.
 
-### CSS-only method
+### Explicit CSS anchor association
 
 To declare an element as an anchor with CSS, you need to set an anchor name on it via the {{cssxref("anchor-name")}} property. The anchor name needs to be a {{cssxref("dashed-ident")}}. In this example, we also set the anchor's {{cssxref("width")}} to `fit-content` to get a small square anchor, which better demonstrates the anchoring effect.
 
@@ -90,58 +90,16 @@ This will render as follows:
 
 The anchor and infobox are now associated, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action when we look at [positioning elements based on anchor position](#positioning_elements_relative_to_their_anchor).
 
-### HTML method
+### Implicit anchor association
 
-To associate a positioned element with an anchor in HTML, you can use the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. You need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `anchor` attribute is then set on the anchor-positioned element, with a value equal to the `id` of the anchor element you want to associate it with.
+In some cases, an implicit anchor reference will be made between two elements, due to the semantic nature of their relationship. For example, when using the [Popover API](/en-US/docs/Web/API/Popover_API) to associate a popover with a control, an implicit anchor reference is made between the two. This can occur when:
 
-We have done this in the HTML below:
-
-```html
-<div class="anchor" id="example-anchor">⚓︎</div>
-
-<div class="infobox" anchor="example-anchor">
-  <p>This is an information box.</p>
-</div>
-```
-
-Elements need to be absolutely or fixed positioned to be associated with anchors, so we give the infobox a `position` value of `fixed`:
-
-```css hidden
-.anchor {
-  font-size: 1.8rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: hsl(240 100% 75%);
-  width: fit-content;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 3px;
-}
-
-.infobox {
-  color: darkblue;
-  background-color: azure;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-```
-
-```css
-.infobox {
-  position: fixed;
-}
-```
-
-This gives us the same result that we achieved earlier with CSS. We associated a positioned element with an anchor element using the `anchor` attribute on the positioned element rather than the anchor element's `anchor-name` property and the positioned element's `position-anchor` property.
-
-{{ EmbedLiveSample("HTML method", "100%", "120") }}
+- Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes.
+- Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+- A {{htmlelement("select")}} element and its dropdown picker are opted into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two, which also means they'll have an implicit anchor reference.
 
 > [!NOTE]
-> The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
-
-We've associated the two elements, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
+> The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
 
 ## Positioning elements relative to their anchor
 
@@ -163,17 +121,14 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute.
+  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
-    > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. Only the `position-anchor` property and `anchor` attributes create the association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
+    > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
-
   - : Specifies the position relative to a side, or sides, of the anchor. Valid values include the `center` of the anchor, physical (`top`, `left`, etc.) or logical (`start`, `self-end`, etc.) sides of the anchor, or a `<percentage>` between the start (`0%`) and end (`100%`) of the axis of the inset property `anchor()` is set on. If a value is used that is not [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the inset property on which the `anchor()` function is set, the fallback value is used.
 
 - `<fallback>`
-
   - : A {{cssxref("length-percentage")}} defining the distance to use as a fallback value if the element is not absolutely or fixed positioned, if the `<anchor-side>` value used is not compatible with the inset property on which the `anchor()` function is set, or if the anchor element doesn't exist.
 
 The return value of the `anchor()` function is a length value calculated based on the position of the anchor. If you set a length or percentage directly on an anchor-positioned element's inset property, it is positioned as if it were not bound to the anchor element. This is the same behavior seen if the `<anchor-side>` value is incompatible with the inset property on which it is set and the fallback is used. These two declarations are equivalent:
@@ -601,7 +556,7 @@ This rule sizes the positioned element's inline size to 4 times the anchor eleme
 }
 ```
 
-Let's look at an example. The HTML and base CSS are the same as in the previous examples, except that the anchor element is given a [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to make it focusable. The infobox is given fixed positioning and associated with the anchor in the same way as before. However, this time around we tether it to the right of the anchor using a `position-area`, and give it a width five times the width of the anchor's width:
+Let's look at an example. The HTML and base CSS are the same as in the previous examples, except that the anchor element is given a [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to make it focusable. The infobox is given fixed positioning and associated with the anchor in the same way as before. However, this time around we tether it to the right of the anchor using a `position-area`, and give it a width five times the width of the anchor's width:
 
 ```html hidden
 <p>
@@ -724,7 +679,7 @@ This can be useful in cases where you want to set an anchor-positioned element's
 
 Let's look at an example where we set an anchor-positioned element's margin and position relative to the anchor element's width.
 
-In the HTML, we specify two {{htmlelement("div")}} elements, one `anchor` element and one `infobox` element that we'll position relative to the anchor. We give the anchor element a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute so that it can be focused via the keyboard. We also include filler text to make the {{htmlelement("body")}} tall enough to require scrolling, but this has been hidden for the sake of brevity.
+In the HTML, we specify two {{htmlelement("div")}} elements, one `anchor` element and one `infobox` element that we'll position relative to the anchor. We give the anchor element a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute so that it can be focused via the keyboard. We also include filler text to make the {{htmlelement("body")}} tall enough to require scrolling, but this has been hidden for the sake of brevity.
 
 ```html hidden
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -829,7 +784,7 @@ Try tabbing to the anchor or hovering over it with the mouse pointer, and note h
 ## See also
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [Learn: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

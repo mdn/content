@@ -32,7 +32,7 @@ browser-compat: css.property.text-align
 
 Some features are not maintained in the above repository.
 In these cases, specification information can be added to the page front matter using the `spec-urls` key.
-For example, the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute has the front matter key:
+For example, the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute has the front matter key:
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

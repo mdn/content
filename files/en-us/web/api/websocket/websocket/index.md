@@ -20,15 +20,13 @@ new WebSocket(url, protocols)
 ### Parameters
 
 - `url`
-
   - : The URL of the target WebSocket server to connect to.
-    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Fragment).
+    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment).
     If a relative URL is provided, it is relative to the base URL of the calling script.
 
 - `protocols` {{optional_inline}}
-
   - : A single string or an array of strings representing the [sub-protocol(s)](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) that the client would like to use, in order of preference.
-    If it is omitted, an empty array is used by default, i.e. `[]`.
+    If it is omitted, an empty array is used by default, i.e., `[]`.
 
     A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value.
     Note however that only one sub-protocol can be selected per connection.
@@ -43,13 +41,11 @@ new WebSocket(url, protocols)
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : Thrown if:
-
     - parsing of [`url`](#url) fails
     - [`url`](#url) has a scheme other than `ws`, `wss`, `http`, or `https`
-    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Fragment)
-    - any of the values in [`protocols`](#protocols) occur more than once, or otherwise fail to match the requirements for elements that comprise the value of [`Sec-WebSocket-Protocol`](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) fields as defined by the WebSocket Protocol specification
+    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Reference/Fragment)
+    - any of the values in [`protocols`](#protocols) occur more than once, or otherwise fail to match the requirements for elements that comprise the value of [`Sec-WebSocket-Protocol`](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#sec-websocket-protocol) fields as defined by the WebSocket Protocol specification
 
 ## Examples
 
@@ -58,9 +54,11 @@ The examples below show how you might connect to a `WebSocket`.
 The code below shows how we can connect to a socket using an URL with the `wss` schema:
 
 ```js
-const wssWebSocket = new WebSocket('wss://websocket.example.org');
+const wssWebSocket = new WebSocket("wss://websocket.example.org");
 console.log(wssWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
+
+// Do something with socket
+
 wssWebSocket.close();
 ```
 
@@ -68,9 +66,11 @@ The code for connecting to an HTTPS URL is nearly the same.
 Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the schema "wss:".
 
 ```js
-const httpsWebSocket = new WebSocket('https://websocket.example.org');
+const httpsWebSocket = new WebSocket("https://websocket.example.org");
 console.log(httpsWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
+
+// Do something with socket
+
 httpsWebSocket.close();
 ```
 
@@ -78,8 +78,10 @@ We can also resolve relative URLs.
 The absolute URL will depend on the base URL of the context in which it is called.
 
 ```js
-relativeWebSocket = new WebSocket('/local/url');
-... // Do something with socket
+relativeWebSocket = new WebSocket("/local/url");
+
+// Do something with socket
+
 relativeWebSocket.close();
 ```
 

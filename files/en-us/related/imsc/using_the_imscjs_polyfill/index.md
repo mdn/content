@@ -15,7 +15,7 @@ You currently need a polyfill to render IMSC on the web. imscJS is a good choice
 First you need to embed the imscJS library:
 
 ```html
-<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js">
+<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js"></script>
 ```
 
 Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the below sections.
@@ -137,7 +137,7 @@ What happens is the following:
 
 To map this into HTML we need at least two cues: one that represents the text "Hello" from second 1-2 and the other representing the text "Hello world!" from second 2-3.
 
-But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g. representing a different speaker). This subtitle is shown in parallel to the other subtitle but the accumulating words may have different start times and therefore different intervals.
+But this is a simplified easy scenario. Imagine that you have 5 more words accumulating. They may have all the same end time but different start times. Or imagine you have a subtitle in a different location (e.g., representing a different speaker). This subtitle is shown in parallel to the other subtitle but the accumulating words may have different start times and therefore different intervals.
 
 Luckily in IMSC and imscJS this scenario is quite easy to cover, because IMSC has a mechanism of stateless subtitle rendering.
 
@@ -165,7 +165,6 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 - Iterate over the array we get back from `getMediaEvents()`
 - For each time event:
-
   - Create a corresponding cue.
   - Use an `onenter` event to render the ISD.
   - Use an `onexit` event to remove the rendering layer again.

@@ -13,7 +13,7 @@ The **`Navigation`** interface of the {{domxref("Navigation API", "Navigation AP
 
 It is accessed via the {{domxref("Window.navigation")}} property.
 
-The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
+The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g., not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 
@@ -25,11 +25,11 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
   - : Returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document.
 - {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate backwards in the navigation history
-    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
+    (i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
     and `false` if it is not.
 - {{domxref("Navigation.canGoForward", "canGoForward")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate forwards in the navigation history
-    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
+    (i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
     and `false` if it is not.
 - {{domxref("Navigation.currentEntry", "currentEntry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently
@@ -139,4 +139,4 @@ navigation.updateCurrentEntry({ state: newState });
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)
+- [Navigation API live demo](https://mdn.github.io/dom-examples/navigation-api/) ([view demo source](https://github.com/mdn/dom-examples/tree/main/navigation-api))

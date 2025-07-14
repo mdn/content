@@ -22,7 +22,7 @@ console.log(msg, subst1, /* …, */ substN)
 ### Parameters
 
 - `val1` … `valN`
-  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `obj1` is a string, which is described subsequently.
+  - : A list of JavaScript values to output. A representation of each of these values is output to the console in the order given with some type of separation between each of them. There is a special case if `val1` is a string, which is described subsequently.
 - `msg`
   - : A JavaScript string containing zero or more substitution strings, which are replaced with `subst1` through `substN` in consecutive order up to the number of substitution strings. See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a description of how substitutions work.
 - `subst1` … `substN`
@@ -44,6 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.log()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#log)
+- [Microsoft Edge's documentation for `console.log()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#log)
 - [Node.js documentation for `console.log()`](https://nodejs.org/docs/latest/api/console.html#consolelogdata-args)
 - [Google Chrome's documentation for `console.log()`](https://developer.chrome.com/docs/devtools/console/api/#log)

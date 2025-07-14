@@ -23,7 +23,7 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 2. Next, let's create a simple HTML file called `index.html` in the same directory as your Wasm file (can use our [simple template](https://github.com/mdn/webassembly-examples/blob/main/template/template.html) if you haven't got one easily available).
 3. Now, to help us understand what is going on here, let's look at the text representation of our Wasm module (which we also meet in [Converting WebAssembly format to Wasm](/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm#a_first_look_at_the_text_format)):
 
-   ```wasm
+   ```wat
    (module
      (func $i (import "my_namespace" "imported_func") (param i32))
      (func (export "exported_func")
@@ -53,7 +53,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
+The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it in a browser that supports WebAssembly, you'll see this in action!
 
 > [!NOTE]
 > This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
@@ -227,7 +227,6 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 You can see that this takes two parameters:
 
 - An object that contains two properties describing the global variable:
-
   - `value`: its data type, which can be any data type accepted within WebAssembly modules — `i32`, `i64`, `f32`, or `f64`.
   - `mutable`: a boolean defining whether the value is mutable or not.
 

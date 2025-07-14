@@ -21,7 +21,7 @@ Usually, the response is parsed as `"text/xml"`. If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
 `"document"` and the request was made asynchronously, instead the response is
 parsed as `"text/html"`. `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 `"text/xml"` or `"application/xml"`, you can use

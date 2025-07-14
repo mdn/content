@@ -22,7 +22,6 @@ encrypt(algorithm, key, data)
 ### Parameters
 
 - `algorithm`
-
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
@@ -44,9 +43,9 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 The promise is rejected when the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm).
+  - : Raised when the requested operation is not valid for the provided key (e.g., invalid encryption algorithm, or invalid key for the specified encryption algorithm).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes).
+  - : Raised when the operation failed for an operation-specific reason (e.g., algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2<sup>39</sup>−256 bytes).
 
 ## Supported algorithms
 
@@ -208,14 +207,7 @@ function encryptMessage(key) {
   let encoded = getMessageEncoding();
   // iv will be needed for decryption
   iv = window.crypto.getRandomValues(new Uint8Array(16));
-  return window.crypto.subtle.encrypt(
-    {
-      name: "AES-CBC",
-      iv: iv,
-    },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-CBC", iv }, key, encoded);
 }
 ```
 
@@ -236,11 +228,7 @@ function encryptMessage(key) {
   const encoded = getMessageEncoding();
   // iv will be needed for decryption
   const iv = window.crypto.getRandomValues(new Uint8Array(12));
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv: iv },
-    key,
-    encoded,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoded);
 }
 ```
 

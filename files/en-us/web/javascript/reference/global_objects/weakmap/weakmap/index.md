@@ -1,11 +1,11 @@
 ---
 title: WeakMap() constructor
+short-title: WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`WeakMap()`** constructor creates {{jsxref("WeakMap")}} objects.
 
@@ -16,7 +16,8 @@ new WeakMap()
 new WeakMap(iterable)
 ```
 
-> **Note:** `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -32,7 +33,7 @@ const wm1 = new WeakMap();
 const wm2 = new WeakMap();
 const wm3 = new WeakMap();
 const o1 = {};
-const o2 = function () {};
+const o2 = () => {};
 const o3 = window;
 
 wm1.set(o1, 37);

@@ -108,7 +108,8 @@ Opus is a royalty-free and open format that manages to optimize quality at vario
 
 Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.
 
-> **Note:** [Opus is a mandatory format](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
+> [!NOTE]
+> [Opus is a mandatory format](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
 
 ### MP3, AAC, Ogg Vorbis
 
@@ -132,7 +133,8 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 [SHOUTcast](https://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
 
-> **Note:** [SHOUTcast URLs may require a semicolon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> [!NOTE]
+> [SHOUTcast URLs may require a semicolon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 
@@ -148,10 +150,10 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 ## See also
 
 - [HTTP Live Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](https://jwplayer.com/blog/http-live-streaming/)
+- [HLS Browser Support](https://caniuse.com/?search=hls)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](https://larryjordan.com/articles/basics-of-http-live-streaming/)
-- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](https://reference.dashif.org/dash.js/v4.4.0/samples/dash-if-reference-player/index.html)

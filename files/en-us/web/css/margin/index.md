@@ -3,13 +3,66 @@ title: margin
 slug: Web/CSS/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Constituent properties
 
@@ -62,9 +115,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 ### Values
 
 - {{cssxref("length")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}
@@ -76,7 +127,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 
 This property can be used to set a margin on all four sides of an element. Margins create extra space _around_ an element, unlike {{cssxref("padding")}}, which creates extra space _within_ an element.
 
-The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_element)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ### Horizontal centering
 
@@ -98,7 +149,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -124,7 +175,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 }
 ```
 
-{{ EmbedLiveSample('Simple_example','100%',120) }}
+{{ EmbedLiveSample('Basic_example','100%',120) }}
 
 ### More examples
 
@@ -166,5 +217,5 @@ margin: auto; /* top and bottom: 0 margin     */
 - {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
 - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

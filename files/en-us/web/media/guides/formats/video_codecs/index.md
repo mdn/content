@@ -305,7 +305,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="moire-pattern.jpg"><img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" /></a>
+        <img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" />
       </td>
     </tr>
     <tr>
@@ -320,11 +320,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="staircase-effect.jpg"
-          ><img alt="
-          Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect
-          " src="staircase-effect.jpg"
-        /></a>
+        <img alt="Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect" src="staircase-effect.jpg" />
       </td>
     </tr>
     <tr>
@@ -345,9 +341,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="stroboscopic-effect.gif"
-          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
-        /></a>
+        <img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif" />
       </td>
     </tr>
   </tbody>
@@ -1038,7 +1032,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
               <th scope="row">HEVC / H.265 support</th>
               <td>107</td>
               <td>18</td>
-              <td>No</td>
+              <td>120</td>
               <td>94</td>
               <td>11</td>
             </tr>
@@ -1049,7 +1043,14 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">HEVC video extensions from the Microsoft Store</a>
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
-        <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
+        <p>Firefox enables HEVC on:
+          <ul>
+            <li>Windows from Firefox 134 using either hardware (on devices that support it, where the range is the same as Edge) or software (on Windows the user must pay for and install an extension)</li>
+            <li>macOS from Firefox 136 using either hardware or software.</li>
+            <li>Linux from Firefox 137 using either hardware or software (via the system ffmpeg).</li>
+            <li>Android from Firefox 137 using hardware only.</li>
+          </ul>
+        </p>
         <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
         <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>
@@ -1502,7 +1503,7 @@ Theora was originally based upon the VC3 codec by On2 Technologies. The codec an
 
 One drawback to Theora is that it only supports 8 bits per color component, with no option to use 10 or more in order to avoid color banding. That said, 8 bits per component is still the most commonly-used color format in use today, so this is only a minor inconvenience in most cases. Also, Theora can only be used in an Ogg container. The biggest drawback of all, however, is that it is not supported by Safari, leaving Theora unavailable not only on macOS but on all those millions and millions of iPhones and iPads.
 
-The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers additional details about Theora as well as the Ogg container format it is used within.
+The [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/) offers additional details about Theora as well as the Ogg container format it is used within.
 
 <table class="standard-table">
   <tbody>
@@ -1904,7 +1905,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 To prepare video for archival purposes from outside your website or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
 ```bash
-x264 --crf 18 -preset ultrafast --output out-file.mp4 infile
+x264 --crf 18 -preset ultrafast --output out-file.mp4 in-file
 ```
 
 While other codecs may have better best-case quality levels when compressing the video by a significant margin, their encoders tend to be slow enough that the nearly-lossless encoding you get with this compression is vastly faster at about the same overall quality level.

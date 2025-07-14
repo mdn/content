@@ -2,10 +2,9 @@
 title: CSS motion path
 slug: Web/CSS/CSS_motion_path
 page-type: css-module
-browser-compat: css.properties.offset-path
+spec-urls: https://drafts.fxtf.org/motion/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS motion path** module allows authors to animate any graphical object along a custom path.
 
@@ -56,7 +55,3 @@ The idea is that when you want to animate an element moving along a path, you pr
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

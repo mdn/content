@@ -2,9 +2,8 @@
 title: Using scroll snap events
 slug: Web/CSS/CSS_scroll_snap/Using_scroll_snap_events
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module defines two **scroll snap events**: {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}}. These enable running JavaScript in response to the browser determining that new [scroll snap targets](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts) are pending and selected, respectively.
 
@@ -197,7 +196,7 @@ The style changes mentioned above will be applied through classes applied to the
 
 ### JavaScript
 
-In the JavaScript, we start by grabbing a reference to the `<main>` element and defining the number of `<section>` elements to generate (in this case, 21) and a variable to begin counting from. We then use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to generate the `<section>` elements, giving each one a child [`h2`](/en-US/docs/Web/HTML/Element/Heading_Elements) with text that reads `Section` plus the current value of `n`.
+In the JavaScript, we start by grabbing a reference to the `<main>` element and defining the number of `<section>` elements to generate (in this case, 21) and a variable to begin counting from. We then use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to generate the `<section>` elements, giving each one a child [`h2`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) with text that reads `Section` plus the current value of `n`.
 
 ```js
 const mainElem = document.querySelector("main");
@@ -214,7 +213,7 @@ while (n <= sectionCount) {
 }
 ```
 
-Now on to the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event handler function. When a child of the `<main>` element (i.e. any `<section>` element) becomes a pending snap target selection, we:
+Now on to the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event handler function. When a child of the `<main>` element (i.e., any `<section>` element) becomes a pending snap target selection, we:
 
 1. Check to see if an element previously had the `pending` class applied and, if so, remove it. This is so that only the current pending target is given the `pending` class and colored darker gray. We don't want previously-pending targets that are no longer pending to keep the styling.
 2. Give the element referenced by the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} property (which will be one of the `<section>` elements) the `pending` class so it turns a darker gray.
@@ -235,7 +234,7 @@ mainElem.addEventListener("scrollsnapchanging", (event) => {
 
 When a scrolling gesture ends, and a `<section>` element is actually selected as a snap target, the {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event handler function fires. This:
 
-1. Checks to see if a snap target was previously selected — i.e. if a `select-section` class was previously applied to an element. If so, we remove it.
+1. Checks to see if a snap target was previously selected — i.e., if a `select-section` class was previously applied to an element. If so, we remove it.
 2. Applies the `select-section` class to the `<section>` element referenced in the `snapTargetBlock` property so that the snap target that was just selected will have the selection animation applied to it.
 
 ```js

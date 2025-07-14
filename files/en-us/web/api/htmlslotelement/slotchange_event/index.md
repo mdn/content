@@ -11,7 +11,7 @@ browser-compat: api.HTMLSlotElement.slotchange_event
 The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
 
 > [!NOTE]
-> The `slotchange` event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.
+> The `slotchange` event doesn't fire if the children of a slotted node change — only if you change (e.g., add or delete) the actual nodes themselves.
 
 In order to trigger a **slotchange** event, one has to set or remove the `slot` attribute.
 
@@ -21,10 +21,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("slotchange", (event) => {});
+```js-nolint
+addEventListener("slotchange", (event) => { })
 
-onslotchange = (event) => {};
+onslotchange = (event) => { }
 ```
 
 ## Event type

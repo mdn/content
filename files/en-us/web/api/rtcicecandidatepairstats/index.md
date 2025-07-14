@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair
 
 The **`RTCIceCandidatePairStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics that provide insight into the quality and performance of an {{domxref("RTCPeerConnection")}} while connected and configured as described by the specified pair of {{Glossary("ICE")}} candidates.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `"candidate-pair"`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](/en-US/docs/Web/API/RTCIceCandidatePairStats/type) of `"candidate-pair"`.
 
 ## Instance properties
 

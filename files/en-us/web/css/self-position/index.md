@@ -2,10 +2,9 @@
 title: <self-position>
 slug: Web/CSS/self-position
 page-type: css-type
-browser-compat: css.types.self-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-self-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<self-position>`** {{glossary("enumerated")}} value data type is used by the {{cssxref("justify-self")}} and {{cssxref("align-self")}} properties, and the {{cssxref("place-self")}} shorthand, to align the box within its alignment container. It is also used by the {{cssxref("justify-items")}} and {{cssxref("align-items")}} properties, and the {{cssxref("place-items")}} shorthand, to specify default values for `justify-self` and `align-self`.
 
@@ -40,10 +39,6 @@ The following keyword values are represented by the `<self-position>` grammar te
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

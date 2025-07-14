@@ -79,5 +79,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

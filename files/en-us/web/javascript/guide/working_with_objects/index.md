@@ -2,9 +2,10 @@
 title: Working with objects
 slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript is designed on an object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
@@ -144,7 +145,7 @@ You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syn
 
 ### Using the Object.create() method
 
-Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
+Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
 
 ```js
 // Animal properties and method encapsulation
@@ -198,7 +199,7 @@ myCar["model"] = "Mustang";
 myCar["year"] = 1969;
 ```
 
-An object property name can be any JavaScript string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), including an empty string. However, you cannot use dot notation to access a property whose name is not a valid JavaScript identifier. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determinable until runtime. Examples are as follows:
+An object property name can be any JavaScript string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), including an empty string. However, you cannot use dot notation to access a property whose name is not a valid JavaScript identifier. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e., not determinable until runtime. Examples are as follows:
 
 ```js
 const myObj = {};
@@ -321,7 +322,7 @@ function listAllProperties(myObj) {
 }
 ```
 
-For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ### Deleting properties
 
@@ -329,9 +330,7 @@ You can remove a non-inherited property using the [`delete`](/en-US/docs/Web/Jav
 
 ```js
 // Creates a new object, myObj, with two properties, a and b.
-const myObj = new Object();
-myObj.a = 5;
-myObj.b = 12;
+const myObj = { a: 5, b: 12 };
 
 // Removes the a property, leaving myObj with only the b property.
 delete myObj.a;
@@ -340,7 +339,7 @@ console.log("a" in myObj); // false
 
 ## Inheritance
 
-All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more information.
+All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) for more information.
 
 ### Defining properties for all objects of one type
 
@@ -512,7 +511,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

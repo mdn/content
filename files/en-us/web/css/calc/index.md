@@ -3,13 +3,45 @@ title: calc()
 slug: Web/CSS/calc
 page-type: css-function
 browser-compat: css.types.calc
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
-The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
+{{InteractiveExample("CSS Demo: calc()")}}
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+```css interactive-example-choice
+width: calc(10px + 100px);
+```
+
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change my width.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 ## Syntax
 
@@ -98,7 +130,7 @@ h1 {
 
 This ensures that text size will scale if the page is zoomed.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Examples
@@ -230,5 +262,5 @@ For another example of using the `calc()` function to derive relative colors, se
 
 - {{CSSxRef("&lt;calc-sum&gt;")}}
 - {{CSSxRef("&lt;calc-keyword&gt;")}}
-- [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

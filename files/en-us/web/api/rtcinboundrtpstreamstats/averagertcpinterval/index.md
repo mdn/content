@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: averageRtcpInterval property"
 short-title: averageRtcpInterval
 slug: Web/API/RTCInboundRtpStreamStats/averageRtcpInterval
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.averageRtcpInterval
+browser-compat: api.RTCStatsReport.type_inbound-rtp.averageRtcpInterval
 ---
 
 {{APIRef("WebRTC")}}

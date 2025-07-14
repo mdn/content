@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry in this map with a specified key and a value.
 
@@ -31,9 +31,9 @@ set(key, value)
 ### Parameters
 
 - `key`
-  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The key of the element to add to the `Map` object. The key may be any [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects)).
 - `value`
-  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Data_structures#objects)).
+  - : The value of the element to add to the `Map` object. The value may be any [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures) (any [primitive value](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) or any type of [JavaScript object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects)).
 
 ### Return value
 

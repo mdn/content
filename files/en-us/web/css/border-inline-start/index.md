@@ -3,13 +3,47 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-start
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
 
-The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
+{{InteractiveExample("CSS Demo: border-inline-start")}}
 
-{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
+```css interactive-example-choice
+border-inline-start: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-start: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-start: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Constituent properties
 

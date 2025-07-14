@@ -2,10 +2,12 @@
 title: CSS multi-column layout
 slug: Web/CSS/CSS_multicol_layout
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-multicol/
+spec-urls:
+  - https://drafts.csswg.org/css-multicol/
+  - https://drafts.csswg.org/css-multicol-2/
+sidebar: cssref
 ---
 
-{{CSSRef}}
 The **CSS multi-column layout** module lets you divide content across multiple columns. By using the properties in this module, you can define the preferred number and width of columns, the gap size between columns, and the visual appearance of the optional column dividing lines (known as column rules). You can also define how content should flow from column to column and how to break content between columns.
 
 ## Multi-column layout in action
@@ -286,22 +288,26 @@ blockquote p::after {
   - {{cssxref("column-width")}}
 
 > [!NOTE]
-> Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
+> Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
+
+## Selectors and pseudo-elements
+
+- {{cssxref("::column")}}
 
 ## Guides
 
-- [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
-  - : An overview of the Multiple-column Layout specification
+- [Basic concepts of multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+  - : Overview of the multiple-column layout specification.
 - [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-  - : Guide to using multi-column properties to layout out text.
+  - : Guide to using multi-column properties for laying out text.
 - [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
-  - : How to use column rules and manage the spacing between columns.
+  - : Guide to styling columns and managing spacing between columns.
 - [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
   - : How to make elements span across all columns and control the way columns are filled.
 - [Handling overflow in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)
-  - : Introduction to the Fragmentation specification and how to control where column content breaks.
+  - : Introduction to the fragmentation specification and how to control where column content breaks.
 
 ## Related concepts
 

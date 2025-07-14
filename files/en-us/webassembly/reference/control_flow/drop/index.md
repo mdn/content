@@ -7,11 +7,33 @@ sidebar: webassemblysidebar
 
 The **`drop`** instruction, pops a value from the stack, and discards it.
 
-{{EmbedInteractiveExample("pages/wat/drop.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: drop", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    ;; load two values onto the stack
+    i32.const 10
+    i32.const 20
+
+    ;; drop the top item from the stack (`20`)
+    drop
+
+    call $log ;; log the top value on the stack (`10`)
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; push multiple values onto the stack
 i32.const 1
 i32.const 2

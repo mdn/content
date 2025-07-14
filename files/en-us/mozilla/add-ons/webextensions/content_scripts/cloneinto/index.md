@@ -44,7 +44,7 @@ let clonedObject = cloneInto(
     - `wrapReflectors` {{optional_inline}}
       - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#cloning_objects_that_contain_dom_elements).
 
-### Return Value
+### Return value
 
 A reference to the cloned object.
 
@@ -83,7 +83,7 @@ You can also pass it into a function defined in the page script. Suppose the pag
 ```js
 // page script
 function foo(greeting) {
-  console.log("they said: " + greeting.message);
+  console.log(`they said: ${greeting.message}`);
 }
 ```
 

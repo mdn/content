@@ -22,13 +22,14 @@ Values of this type are strings. Possible values are:
 - `image`
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
-  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute.
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute.
+- `json`
+  - : JSON modules loaded through an [import statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
   - : Resources loaded by a {{HTMLElement("video")}} or {{HTMLElement("audio")}} element.
 - `object`
-
   - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.
 
     Browsers that don't have a dedicated `object_subrequest` type (see browser compatibility below), also label subsequent requests sent by the plugin as `object`.
@@ -36,8 +37,7 @@ Values of this type are strings. Possible values are:
 - `object_subrequest`
   - : Requests sent by plugins.
 - `ping`
-
-  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute, when the hyperlink is followed.
+  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
@@ -50,7 +50,7 @@ Values of this type are strings. Possible values are:
 - `sub_frame`
   - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
 - `web_manifest`
-  - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+  - : [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) loaded for websites that can be installed to the homescreen.
 - `webbundle`
   - : Requests initiating a connection to a server through a Web Bundle or [packaged website](https://github.com/WICG/webpackage).
 - `websocket`

@@ -3,13 +3,33 @@ title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
 browser-compat: css.types.clamp
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
-The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+{{InteractiveExample("CSS Demo: clamp()")}}
 
-{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
+```css interactive-example-choice
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1.5rem, 2.5vw, 4rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1rem, 10vw, 2rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    The font-size of this text varies depending on the base font of the page,
+    and the size of the viewport.
+  </div>
+</section>
+```
 
 Note that using `clamp()` for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) but in one line, and without the use of media queries.
 
@@ -31,11 +51,9 @@ width: clamp(100px, calc(30% / 2rem + 10px), 900px);
 The `clamp(min, val, max)` function accepts three comma-separated expressions as its parameters.
 
 - `min`
-
   - : The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
 
 - `val`
-
   - : The preferred value is the expression whose value will be used as long as the result is between the minimum and maximum values.
 
 - `max`
@@ -48,13 +66,13 @@ You can use different units for each value in your expressions and different uni
 Keep the following aspects in mind while working with the function:
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
-- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
+- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as basic parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
 - The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 - Oftentimes you will want to use {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} within a `clamp()` function.
 
 ### Return value
 
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`.
+`clamp(MIN, VAL, MAX)` is resolved as `max(MIN, min(VAL, MAX))`.
 
 Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 
@@ -78,11 +96,11 @@ In all three cases, the page uses a combination of a viewport-relative units ([`
 
 The example is at <https://mdn.github.io/css-examples/min-max-clamp/>. Open it in a new window and try adjusting the window width.
 
-The **line length** (controlled by the [`width`](/en-US/docs/Web/CSS/width) of the [`<body>`](/en-US/docs/Web/HTML/Element/body) element) will increase as the window width increases, but only up to a certain point (`1000px`), and beyond that point, it won't increase anymore. We're using `min()` to set a **maximum line length**: it can go under `1000px`, but won't go over. This is helpful because long lines are harder to read, so we often want to limit how long a line can be. To achieve this we use `min(1000px, calc(70% + 100px))`: when the result of the percentage-based calculation goes above `1000px`, we switch to the fixed `1000px` value.
+The **line length** (controlled by the [`width`](/en-US/docs/Web/CSS/width) of the [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) element) will increase as the window width increases, but only up to a certain point (`1000px`), and beyond that point, it won't increase anymore. We're using `min()` to set a **maximum line length**: it can go under `1000px`, but won't go over. This is helpful because long lines are harder to read, so we often want to limit how long a line can be. To achieve this we use `min(1000px, calc(70% + 100px))`: when the result of the percentage-based calculation goes above `1000px`, we switch to the fixed `1000px` value.
 
-The **size of the paragraph text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<p>`](/en-US/docs/Web/HTML/Element/p) element, decreases as the window gets narrower, but only up to a certain point, and beyond that point (the point where `1.2vw` is less than `1.2rem`) it doesn't get any smaller: it stays at `1.2rem`. We're using `max()` to set a **minimum font size**: the font can grow above `1.2rem` but will never go below it. This is helpful because really small text is hard to read. To achieve this we use `max(1.2rem, 1.2vw)`. This means that the `font-size` will be set at `1.2rem`, unless the computed value of `1.2vw` is greater than that of `1.2rem`, in which case it will be set to `1.2vw` instead.
+The **size of the paragraph text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<p>`](/en-US/docs/Web/HTML/Reference/Elements/p) element, decreases as the window gets narrower, but only up to a certain point, and beyond that point (the point where `1.2vw` is less than `1.2rem`) it doesn't get any smaller: it stays at `1.2rem`. We're using `max()` to set a **minimum font size**: the font can grow above `1.2rem` but will never go below it. This is helpful because really small text is hard to read. To achieve this we use `max(1.2rem, 1.2vw)`. This means that the `font-size` will be set at `1.2rem`, unless the computed value of `1.2vw` is greater than that of `1.2rem`, in which case it will be set to `1.2vw` instead.
 
-The **size of the heading text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element, has a viewport-relative value with both a maximum and a minimum threshold. To achieve this we use `clamp(1.8rem, 2.5vw, 2.8rem)`. The viewport-relative value is `2.5vw` but it is clamped between `1.8rem` and `2.8rem`, so:
+The **size of the heading text**, controlled by the [`font-size`](/en-US/docs/Web/CSS/font-size) of the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element, has a viewport-relative value with both a maximum and a minimum threshold. To achieve this we use `clamp(1.8rem, 2.5vw, 2.8rem)`. The viewport-relative value is `2.5vw` but it is clamped between `1.8rem` and `2.8rem`, so:
 
 - if the calculated value of `2.5vw` is less than `1.8rem`, then `1.8rem` will be used
 - if the calculated value of `2.5vw` is greater than `2.8rem`, then `2.8rem` will be used.
@@ -92,7 +110,7 @@ This prevents the heading text from getting too small in a very narrow window, o
 #### HTML
 
 ```html
-<h1>Simple responsive test</h1>
+<h1>Basic responsive test</h1>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
   eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat

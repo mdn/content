@@ -3,9 +3,8 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 
@@ -13,14 +12,14 @@ The **`Array`** object, as with arrays in other programming languages, enables [
 
 In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
 
-- **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) instead.)
+- **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Guide/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) instead.)
 - **JavaScript arrays are not associative arrays** and so, array elements cannot be accessed using arbitrary strings as indexes, but must be accessed using nonnegative integers (or their respective string form) as indexes.
 - **JavaScript arrays are [zero-indexed](https://en.wikipedia.org/wiki/Zero-based_numbering)**: the first element of an array is at index `0`, the second is at index `1`, and so on — and the last element is at the value of the array's {{jsxref("Array/length", "length")}} property minus `1`.
 - **JavaScript [array-copy operations](#copy_an_array) create [shallow copies](/en-US/docs/Glossary/Shallow_copy)**. (All standard built-in copy operations with _any_ JavaScript objects create shallow copies, rather than [deep copies](/en-US/docs/Glossary/Deep_copy)).
 
 ### Array indices
 
-`Array` objects cannot use arbitrary strings as element indexes (as in an [associative array](https://en.wikipedia.org/wiki/Associative_array)) but must use nonnegative integers (or their respective string form). Setting or accessing via non-integers will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's [object property collection](/en-US/docs/Web/JavaScript/Data_structures#properties). The array's object properties and list of array elements are separate, and the array's [traversal and mutation operations](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) cannot be applied to these named properties.
+`Array` objects cannot use arbitrary strings as element indexes (as in an [associative array](https://en.wikipedia.org/wiki/Associative_array)) but must use nonnegative integers (or their respective string form). Setting or accessing via non-integers will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's [object property collection](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties). The array's object properties and list of array elements are separate, and the array's [traversal and mutation operations](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) cannot be applied to these named properties.
 
 Array elements are object properties in the same way that `toString` is a property (to be specific, however, `toString()` is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:
 
@@ -83,7 +82,7 @@ This is explained further on the {{jsxref("Array/length", "length")}} page.
 
 ### Array methods and empty slots
 
-Array methods have different behaviors when encountering empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). In general, older methods (e.g. `forEach`) treat empty slots differently from indices that contain `undefined`.
+Array methods have different behaviors when encountering empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). In general, older methods (e.g., `forEach`) treat empty slots differently from indices that contain `undefined`.
 
 Methods that have special treatment for empty slots include the following: {{jsxref("Array/concat", "concat()")}}, {{jsxref("Array/copyWithin", "copyWithin()")}}, {{jsxref("Array/every", "every()")}}, {{jsxref("Array/filter", "filter()")}}, {{jsxref("Array/flat", "flat()")}}, {{jsxref("Array/flatMap", "flatMap()")}}, {{jsxref("Array/forEach", "forEach()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/reduce", "reduce()")}}, {{jsxref("Array/reduceRight", "reduceRight()")}}, {{jsxref("Array/reverse", "reverse()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/some", "some()")}}, {{jsxref("Array/sort", "sort()")}}, and {{jsxref("Array/splice", "splice()")}}. Iteration methods such as `forEach` don't visit empty slots at all. Other methods, such as `concat`, `copyWithin`, etc., preserve empty slots when doing the copying, so in the end the array is still sparse.
 
@@ -102,7 +101,7 @@ colors.forEach((item, index) => {
 colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']
 ```
 
-Newer methods (e.g. `keys`) do not treat empty slots specially and treat them as if they contain `undefined`. Methods that conflate empty slots with `undefined` elements include the following: {{jsxref("Array/entries", "entries()")}}, {{jsxref("Array/fill", "fill()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/includes", "includes()")}}, {{jsxref("Array/join", "join()")}}, {{jsxref("Array/keys", "keys()")}}, {{jsxref("Array/toLocaleString", "toLocaleString()")}}, {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, {{jsxref("Array/values", "values()")}}, and {{jsxref("Array/with", "with()")}}.
+Newer methods (e.g., `keys`) do not treat empty slots specially and treat them as if they contain `undefined`. Methods that conflate empty slots with `undefined` elements include the following: {{jsxref("Array/entries", "entries()")}}, {{jsxref("Array/fill", "fill()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/includes", "includes()")}}, {{jsxref("Array/join", "join()")}}, {{jsxref("Array/keys", "keys()")}}, {{jsxref("Array/toLocaleString", "toLocaleString()")}}, {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/toSpliced", "toSpliced()")}}, {{jsxref("Array/values", "values()")}}, and {{jsxref("Array/with", "with()")}}.
 
 ```js
 const colors = ["red", "yellow", "blue"];
@@ -485,7 +484,8 @@ console.log(removedItem);
 // Orange
 ```
 
-> **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
+> [!NOTE]
+> `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
 
 ### Remove multiple items from the end of an array
 
@@ -528,7 +528,8 @@ console.log(removedItem);
 // Apple
 ```
 
-> **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
+> [!NOTE]
+> `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
 
 ### Remove multiple items from the beginning of an array
 
@@ -681,7 +682,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 You can also create deep copies using the {{DOMxRef("Window.structuredClone", "structuredClone()")}} method, which has the advantage of allowing [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the source to be _transferred_ to the new copy, rather than just cloned.
 
-Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
+Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 const fruits = ["Strawberry", "Mango"];

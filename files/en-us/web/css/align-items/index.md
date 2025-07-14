@@ -3,13 +3,56 @@ title: align-items
 slug: Web/CSS/align-items
 page-type: css-property
 browser-compat: css.properties.align-items
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In grid layout, it controls the alignment of items on the block axis within their {{glossary("grid areas")}}.
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 The interactive example below demonstrates some of the values for `align-items` using grid and flex layout.
 
@@ -34,7 +77,9 @@ align-items: anchor-center;
 /* Baseline alignment */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+align-items: last baseline;
+
+/* Overflow alignment (for positional alignment only) */
 align-items: safe center;
 align-items: unsafe center;
 
@@ -49,9 +94,7 @@ align-items: unset;
 ### Values
 
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
@@ -59,49 +102,38 @@ align-items: unset;
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `center`
-
   - : The flex items' margin boxes are centered within the line on the cross-axis. If the cross-size of an item is larger than the flex container, it will overflow equally in both directions.
 
 - `start`
-
   - : The items are packed flush to each other toward the start edge of the alignment container in the appropriate axis.
 
 - `end`
-
   - : The items are packed flush to each other toward the end edge of the alignment container in the appropriate axis.
 
 - `self-start`
-
   - : The items are packed flush to the edge of the alignment container's start side of the item, in the appropriate axis.
 
 - `self-end`
-
   - : The items are packed flush to the edge of the alignment container's end side of the item, in the appropriate axis.
 
 - `baseline`, `first baseline`, `last baseline`
-
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 
 - `stretch`
-
   - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
 
 - `anchor-center`
-
   - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
 - `safe`
-
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 
 - `unsafe`
-
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
 There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
 
 - `flex-start`
-
   - : Used in flex layout only, aligns the flex items flush against the flex container's main-start or cross-start side. When used outside of a flex formatting context, this value behaves as `start`.
 
 - `flex-end`

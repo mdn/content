@@ -2,9 +2,8 @@
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -25,10 +24,8 @@ Highlights:
 ### CSS
 
 - Our experimental implementation of CSS Fonts Level 3 progresses. Newly implemented features are:
-
   - the fallback algorithm of {{cssxref("font-variant-position")}}, creating synthetic alternates for missing glyphs, based on the subscript and superscript metrics supplied by the font ([Firefox bug 1024804](https://bugzil.la/1024804)).
   - The `layout.css.font-features.enabled` preference has been removed, meaning the following properties have been activated by default:
-
     - The CSS Font Level 3 version of {{cssxref("font-variant")}} which is now a shorthand property.
     - The longhand properties {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, and {{cssxref("font-variant-alternates")}}.
     - The properties {{cssxref("font-kerning")}} and {{cssxref("font-synthesis")}}
@@ -45,23 +42,21 @@ _No change._
 ### JavaScript
 
 - The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ([Firefox bug 924688](https://bugzil.la/924688)).
-
-  - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ([Firefox bug 1048384](https://bugzil.la/1048384)) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring).
+  - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ([Firefox bug 1048384](https://bugzil.la/1048384)) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#computed_object_property_names_and_destructuring).
 
 - The ES2015 [shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ([Firefox bug 924672](https://bugzil.la/924672)).
 - The ES2015 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ([Firefox bug 937855](https://bugzil.la/937855)).
 - ES2015 [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) and the {{jsxref("String.raw()")}} method are now supported ([Firefox bug 1038259](https://bugzil.la/1038259), [Firefox bug 1039774](https://bugzil.la/1039774)).
 - A new ES2015 object {{jsxref("WeakSet")}} has been added ([Firefox bug 792439](https://bugzil.la/792439)).
 - ES2015 [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (only available in the Nightly channel) have been updated to conform with recent specification changes ([Firefox bug 1042602](https://bugzil.la/1042602)):
-
   - When trying to convert a symbol to a number, a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) will be thrown now.
   - When using loose equality, `Object(sym) == sym` returns `true` now.
 
-- The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
+- The experimental `TypedArray.prototype.move()` method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
 - In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ([Firefox bug 1041128](https://bugzil.la/1041128)).
 - In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see [Firefox bug 369778](https://bugzil.la/369778) and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox-specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ([Firefox bug 1053944](https://bugzil.la/1053944)).
-- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 933276](https://bugzil.la/933276)).
-- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) now uses iterator protocol instead of array-like protocol ([Firefox bug 933276](https://bugzil.la/933276)).
+- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 933276](https://bugzil.la/933276)).
+- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) now uses iterator protocol instead of array-like protocol ([Firefox bug 933276](https://bugzil.la/933276)).
 - {{jsxref("Proxy.revocable()")}} has been implemented ([Firefox bug 978279](https://bugzil.la/978279)).
 
 ### Interfaces/APIs/DOM
@@ -70,14 +65,13 @@ _No change._
 - The {{domxref("Performance.now()")}} method is now available to Web workers ([Firefox bug 908390](https://bugzil.la/908390)).
 - The non-standard interface `MozNamedAttrMap` has been renamed to the standard {{domxref("NamedNodeMap")}} and {{domxref("Element.attributes")}} has been adapted to use it ([Firefox bug 1055467](https://bugzil.la/1055467)).
 - The {{domxref("Path2D.addPath()")}} method has been added ([Firefox bug 985801](https://bugzil.la/985801)).
-- The non-standard [Device Storage API](/en-US/docs/Web/API/Device_Storage_API) is now also enabled for privileged apps installed on Android ([Firefox bug 886627](https://bugzil.la/886627)).
+- The non-standard Device Storage API is now also enabled for privileged apps installed on Android ([Firefox bug 886627](https://bugzil.la/886627)).
 - Web Crypto API has been enabled by default ([Firefox bug 1074001](https://bugzil.la/1074001)).
 - The {{domxref("MediaStreamTrack.stop()")}} method has been added ([Firefox bug 1057955](https://bugzil.la/1057955)).
 - Our experimental implementation of EME continues. The `MediaKeySession.getUsableKeyIds()` method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
 - Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
-
   - an experiment implementation of `RTPSender` and `RTPReceiver` working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
-  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
+  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and `MediaTrackConstraintSet` now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
   - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ([Firefox bug 1041493](https://bugzil.la/1041493)).
 
 - For Web Components, event retargeting is now implemented ([Firefox bug 887541](https://bugzil.la/887541)).
@@ -114,7 +108,7 @@ _No change._
 - New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
 - [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
 - `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
-- Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#attaching_stylesheets).
+- Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#manipulating_a_tabs_css).
 
 #### Details
 

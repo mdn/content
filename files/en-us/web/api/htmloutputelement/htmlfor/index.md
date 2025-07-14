@@ -8,7 +8,7 @@ browser-compat: api.HTMLOutputElement.htmlFor
 
 {{ APIRef("HTML DOM") }}
 
-The **`htmlFor`** property of the {{DOMxRef("HTMLOutputElement")}} interface is a string containing a space-separated list of other elements' `id`s, indicating that those elements contributed input values to (or otherwise affected) the calculation. It reflects the [`for`](/en-US/docs/Web/HTML/Element/output#for) attribute of the {{HTMLElement("output")}} element.
+The **`htmlFor`** property of the {{DOMxRef("HTMLOutputElement")}} interface is a string containing a space-separated list of other elements' `id`s, indicating that those elements contributed input values to (or otherwise affected) the calculation. It reflects the [`for`](/en-US/docs/Web/HTML/Reference/Elements/output#for) attribute of the {{HTMLElement("output")}} element.
 
 ## Value
 

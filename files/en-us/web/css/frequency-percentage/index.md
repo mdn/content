@@ -3,11 +3,10 @@ title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-frequency-percentage
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<frequency-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{Cssxref("frequency")}} or a {{Cssxref("percentage")}}. Frequency values, e.g. the pitch of a speaking voice, are not currently used in any CSS properties.
+The **`<frequency-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{Cssxref("frequency")}} or a {{Cssxref("percentage")}}. Frequency values, e.g., the pitch of a speaking voice, are not currently used in any CSS properties.
 
 ## Syntax
 
@@ -68,8 +67,7 @@ No browser currently supports this feature.
 ## See also
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - Related CSS data types:
-
   - {{cssxref("frequency", "&lt;frequency&gt;")}}
   - {{cssxref("percentage", "&lt;percentage&gt;")}}

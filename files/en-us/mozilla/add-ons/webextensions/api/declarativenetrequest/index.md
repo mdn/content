@@ -11,7 +11,7 @@ This API enables extensions to specify conditions and actions that describe how 
 
 ## Permissions
 
-To use this API, an extension must request the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, an extension must request the `"declarativeNetRequest"` or `"declarativeNetRequestWithHostAccess"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. The `"declarativeNetRequest"` permission is shown to users in permission prompts, the `"declarativeNetRequestWithHostAccess"` is not.
 
 The `"declarativeNetRequest"` permission allows extensions to block and upgrade requests without any [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Host permissions are required if the extension wants to redirect requests or modify headers on requests or when the `"declarativeNetRequestWithHostAccess"` permission is used instead of the `"declarativeNetRequest"` permission. To act on requests in these cases, host permissions are required for the request URL. For all requests, except for navigation requests (i.e., resource type `main_frame` and `sub_frame`), host permissions are also required for the request's initiator. The initiator of a request is usually the document or worker that triggered the request.
 
@@ -169,6 +169,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 ## Types
 
+- {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}
+  - : The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array.
 - {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}
   - : Details of a matched rule.
 - {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}
@@ -228,7 +230,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
   - : Returns the set of session-scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
-  - : Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+  - : Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCondition.regexFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#regexfilter) rule condition.
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
   - : Configures how the action count for tabs are handled.
 - {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome()")}}

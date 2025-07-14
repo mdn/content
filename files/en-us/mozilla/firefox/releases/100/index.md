@@ -2,9 +2,8 @@
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 100 that will affect developers. Firefox 100 was released on May 3, 2022.
 
@@ -26,7 +25,7 @@ No notable changes.
 
 #### Removals
 
-- The non-standard {{httpheader("Large-Allocation")}} HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
+- The non-standard `Large-Allocation` HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
 
 ### APIs
 
@@ -44,7 +43,7 @@ No notable changes.
 
 ### WebDriver conformance (Marionette)
 
-- Added support for user prompts (e.g. `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
+- Added support for user prompts (e.g., `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
 
 ## Changes for add-on developers
 

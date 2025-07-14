@@ -2,9 +2,8 @@
 title: Code editors
 slug: Learn_web_development/Getting_started/Environment_setup/Code_editors
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -36,7 +35,7 @@ Previously, we told you to install a code editor, as you'll need one to work thr
 Before starting to code, you may have had some experience working on text documents in a program like Microsoft Word. You might also be wondering whether you can work with code in these same programs. Unfortunately, the answer is "not really":
 
 - Programs like Microsoft Word are **Binary file** editors; their files contain a non-text format that can only be understood by those programs. Website source code, on the other hand, is stored as plain text.
-- Word _can_ open and edit plain text files, but it doesn't handle them very well. It doesn't have a featureset designed for working with code — it is for writing documents such as letters and reports. You need a program that is designed to cleanly handle and output plain text, and work with code.
+- Word _can_ open and edit plain text files, but it doesn't handle them very well. It doesn't have a feature set designed for working with code — it is for writing documents such as letters and reports. You need a program that is designed to cleanly handle and output plain text, and work with code.
 
 You probably already have a plain text editor on your computer. By default, Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; the Ubuntu 22.04 LTS release comes with [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) by default. Default OS plain text editors can be OK, but they also have a limited feature set.
 
@@ -45,7 +44,7 @@ You are better off with a fully-fledged code editor like [Visual Studio Code](ht
 We would recommend Visual Studio Code (VS Code), as it is the editor we mostly use. If you do not already have VS Code (or another code editor) installed, you should [install it before proceeding](https://code.visualstudio.com/).
 
 > [!NOTE]
-> Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
+> Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
 
 ## Basic code editor functionality
 
@@ -55,7 +54,7 @@ In this section, we'll look at some of the most significant functionality that y
 > The sections below only scratch the surface of what a code editor can do. For a more complete feature list, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs) (or search the web for your chosen code editor's documentation if you are using something different).
 
 > [!NOTE]
-> If you are a keyboard-only user, be aware that VS Code has a powerful set of keyboard shortcuts. See the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
+> If you are a keyboard-only user, be aware that VS Code has a powerful set of keyboard shortcuts. See the VS Code [Default keyboard shortcuts reference](https://code.visualstudio.com/docs/reference/default-keybindings).
 
 ### Opening and editing files
 
@@ -148,16 +147,18 @@ The concept of search and replace should be fairly familiar to you if you've use
 4. Type `sayHello` into the _Replace_ box that should now be visible.
 5. You can now replace all instances of `createGreeting` in the code with `sayHello` using the two buttons to the right of the _Replace_ box. The left button moves to the next instance of the search string with one click and replaces it with a second click. The right button replaces all instances with a single click.
 
-VS Code has many powerful find and replace features — see [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace).
+VS Code has many powerful find and replace features — see [Find and replace](https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace).
 
 ## Enhancing your code editor with extensions
 
 Most code editors have an extension or plugin system to allow you to add functionality to the program that is not available to it by default. These can do a variety of tasks, such as:
 
-- Enable code competition, linting, or debugging functionality for languages not supported by default, or provide additional functionality for those that are.
+- Enable code completing, linting, or debugging functionality for languages not supported by default, or provide additional functionality for those that are.
 - Allow you to use the functionality of other tools from right inside the code editor, such as version control tools or local testing servers.
 - Provide additional user interface or code highlighting themes/color schemes.
-- Suggest code snippets to fulfill requirements. These can be generated from static templates, or via AI tools. Using AI to generate code snippets has many of the same advantages and caveats as using it to generate search results (see [Searching for information > Using AI](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) for more infomation).
+- Suggest code snippets to fulfill requirements. These can be generated from static templates, or via AI tools. Using AI to generate code snippets has many of the same advantages and caveats as using it to generate search results (see [Searching for information > Using AI](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) for more information).
+
+### Exploring VS Code extensions
 
 VS Code extensions are managed via the Extensions Marketplace panel in VS Code, accessed via the _View_ > _Extensions_ menu. Let's explore it now.
 

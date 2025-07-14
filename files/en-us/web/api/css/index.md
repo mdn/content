@@ -3,9 +3,6 @@ title: CSS
 slug: Web/API/CSS
 page-type: web-api-interface
 browser-compat: api.CSS
-spec-urls:
-  - https://drafts.csswg.org/cssom/#namespacedef-css
-  - https://www.w3.org/TR/css-properties-values-api-1/
 ---
 
 {{APIRef("CSSOM")}}
@@ -34,7 +31,6 @@ _No inherited static methods_.
 - {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
   - : Can be used to escape a string mostly for use as part of a CSS selector.
 - [CSS factory functions](/en-US/docs/Web/API/CSS/factory_functions_static)
-
   - : Can be used to return a new [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) with a value of the parameter number of the units of the name of the factory function method used.
 
     ```js

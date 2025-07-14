@@ -1,15 +1,15 @@
 ---
 title: Array.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
 
 ```js interactive-example
 const words = ["spray", "elite", "exuberant", "destruction", "present"];
@@ -74,17 +74,26 @@ The following example returns all prime numbers in the array:
 ```js
 const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-function isPrime(num) {
-  for (let i = 2; num > i; i++) {
-    if (num % i === 0) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return num > 1;
+  return true;
 }
 
 console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 ```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Filtering invalid entries from JSON
 
@@ -148,7 +157,7 @@ The `array` argument is useful if you want to access another element in the arra
 ```js
 const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
 const greatIDs = names
-  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
   .filter((id, idx, arr) => {
     // Without the arr argument, there's no way to easily access the
     // intermediate array without saving it to a variable.
@@ -197,6 +206,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.filter`](https://www.npmjs.com/package/array.prototype.filter)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

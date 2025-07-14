@@ -3,13 +3,73 @@ title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 page-type: css-property
 browser-compat: css.properties.font-feature-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) property controls advanced typographic features in OpenType fonts.
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## Syntax
 
@@ -44,7 +104,6 @@ This property is specified as either the keyword `normal` or as a comma-separate
 - `normal`
   - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-
   - : Represents a space-separated tuple consisting of a tag name and an optional value.
 
     The tag name is always a {{cssxref("&lt;string&gt;")}} of four {{Glossary("ASCII")}} characters. If the tag name has more or fewer characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
@@ -106,7 +165,7 @@ td.tabular {
 
 /* enable stylistic set 7 */
 .fancy-style {
-  font-family: Gabriola;
+  font-family: Gabriola, cursive;
   font-feature-settings: "ss07";
 }
 ```

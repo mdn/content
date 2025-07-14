@@ -3,11 +3,10 @@ title: :defined
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built into the browser and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
+The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built into the browser and custom elements that have been successfully defined (i.e., with the {{domxref("CustomElementRegistry.define()")}} method).
 
 ```css
 /* Selects any defined element */

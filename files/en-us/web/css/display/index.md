@@ -3,15 +3,75 @@ title: display
 slug: Web/CSS/display
 page-type: css-property
 browser-compat: css.properties.display
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_display/Flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
-The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_display/flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_display/flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
 
-Formally, the **`display`** property sets an element's inner and outer _display types_. The outer type sets an element's participation in [flow layout](/en-US/docs/Web/CSS/CSS_display/flow_layout); the inner type sets the layout of children. Some values of `display` are fully defined in their own individual specifications; for example the detail of what happens when `display: flex` is declared is defined in the CSS Flexible Box Model specification.
+{{InteractiveExample("CSS Demo: display")}}
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## Syntax
 
@@ -26,7 +86,7 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* box generation */
+/* Box suppression */
 display: none;
 display: contents;
 
@@ -62,9 +122,7 @@ The keyword values can be grouped into six value categories.
 ### Outside
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
-
   - : These keywords specify the element's outer display type, which is essentially its role in flow layout:
-
     - `block`
       - : The element generates a block box, generating line breaks both before and after the element when in the normal flow.
     - `inline`
@@ -88,11 +146,8 @@ The keyword values can be grouped into six value categories.
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-
   - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
-
     - `flow`
-
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
         If its outer display type is `inline`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block box.
@@ -130,10 +185,8 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Internal
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
-
   - : Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill.
     This section defines those "internal" display values, which only have meaning within that particular layout mode.
-
     - `table-row-group`
       - : These elements behave like {{HTMLElement("tbody")}} HTML elements.
     - `table-header-group`
@@ -162,11 +215,8 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Box
 
 - {{CSSxRef("&lt;display-box&gt;")}}
-
   - : These values define whether an element generates display boxes at all.
-
     - `contents`
-
       - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
     - `none`
@@ -176,29 +226,23 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 ### Precomposed
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
-
   - : CSS 2 used a single-keyword, precomposed syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode.
-
     - `inline-block`
-
       - : The element generates a block box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
 
         It is equivalent to `inline flow-root`.
 
     - `inline-table`
-
       - : The `inline-table` value does not have a direct mapping in HTML. It behaves like an HTML {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is a block-level context.
 
         It is equivalent to `inline table`.
 
     - `inline-flex`
-
       - : The element behaves like an inline-level element and lays out its content according to the flexbox model.
 
         It is equivalent to `inline flex`.
 
     - `inline-grid`
-
       - : The element behaves like an inline-level element and lays out its content according to the grid model.
 
         It is equivalent to `inline grid`.
@@ -225,15 +269,6 @@ This can also be specified using the legacy single value:
 ```
 
 For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) guide.
-
-### Global
-
-```css
-/* Global values */
-display: inherit;
-display: initial;
-display: unset;
-```
 
 ## Description
 
@@ -317,7 +352,7 @@ In some browsers, changing the `display` value of a {{HTMLElement("table")}} ele
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Formal definition

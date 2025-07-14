@@ -45,7 +45,7 @@ The following macros are automatically added to the content in order to match th
 - `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
 
-[Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) in order to change these values.
+[Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) in order to change these values.
 
 > [!NOTE]
 > While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.

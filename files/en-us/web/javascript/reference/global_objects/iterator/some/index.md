@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.some
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element produced by the iterator passes the test implemented by the provided function. It returns a boolean value.
 
@@ -75,6 +75,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.some` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.some`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.find()")}}

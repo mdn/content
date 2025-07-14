@@ -2,9 +2,8 @@
 title: Primitive
 slug: Glossary/Primitive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In {{Glossary("JavaScript")}}, a **primitive** (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}} or {{Glossary("property/javascript", "properties")}}. There are 7 primitive data types:
 
@@ -24,7 +23,7 @@ Primitives have no methods but still behave as if they do. When properties are a
 
 ## See also
 
-- [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [Primitive data type](https://en.wikipedia.org/wiki/Primitive_data_type) (Wikipedia)
 - Related glossary terms:
   - {{Glossary("JavaScript")}}

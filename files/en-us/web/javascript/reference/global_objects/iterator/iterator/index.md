@@ -1,11 +1,11 @@
 ---
 title: Iterator() constructor
+short-title: Iterator()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Iterator.Iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Iterator()`** constructor is intended to be used as the [superclass](/en-US/docs/Web/JavaScript/Reference/Classes/extends) of other classes that create iterators. It throws an error when constructed by itself.
 
@@ -15,7 +15,8 @@ The **`Iterator()`** constructor is intended to be used as the [superclass](/en-
 new Iterator()
 ```
 
-> **Note:** `Iterator()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}. In addition, `Iterator()` cannot actually be constructed itself — it's usually implicitly constructed through [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) calls inside the constructor of a subclass.
+> [!NOTE]
+> `Iterator()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}. In addition, `Iterator()` cannot actually be constructed itself — it's usually implicitly constructed through [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) calls inside the constructor of a subclass.
 
 ### Parameters
 
@@ -28,7 +29,7 @@ A new {{jsxref("Iterator")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e. when the `Iterator` constructor itself is constructed.
+  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e., when the `Iterator` constructor itself is constructed.
 
 ## Description
 
@@ -141,5 +142,6 @@ The subclassing pattern is useful if you want to create many custom iterators. I
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

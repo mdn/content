@@ -2,9 +2,8 @@
 title: JavaScript frameworks and libraries
 slug: Learn_web_development/Core/Frameworks_libraries
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Introduction", "Learn_web_development/Core")}}
 
@@ -22,6 +21,9 @@ We are not aiming to exhaustively teach you everything you need to know about Re
 After that, we'll provide some tutorials covering the essentials React, a popular framework choice, to provide you with enough context and familiarity to start going into greater depth yourself. We want you to go forward and learn about frameworks in a pragmatic way that doesn't forget about web platform fundamental best practices such as accessibility.
 
 We also provide some tutorials covering the basics of other framework choices, for those who want to make a different choice to React.
+
+> [!NOTE]
+> Scrimba's [Libraries/Frameworks](https://scrimba.com/learn-react-c0e/~033a?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial provides a useful summary of frameworks versus libraries, a brief history of libraries and frameworks on the web, and some background information specifically on React.
 
 ## Prerequisites
 
@@ -45,7 +47,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 - [Getting started with React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
-- [Beginning our React todo list](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
+- [Beginning our React ToDo app](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
   - : Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
 - [Componentizing our React app](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_components)
   - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article, we will show you a sensible way to break our app up into components.
@@ -74,7 +76,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 - [Ember interactivity: Events, classes and state](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state)
   - : At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
 - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer)
-  - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
+  - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e., where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
 - [Routing in Ember](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Ember_routing)
   - : In this article we learn about routing or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
 - [Ember resources and troubleshooting](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Ember_resources)

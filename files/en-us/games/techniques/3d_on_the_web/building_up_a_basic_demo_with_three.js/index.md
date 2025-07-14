@@ -2,9 +2,8 @@
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to view it, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three.js, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
@@ -122,7 +121,7 @@ There are other types of camera available (Cube, Orthographic), but the simplest
 - The `z` position, with the value of 50 units, is the distance between the camera and the center of the scene on the `z` axis. Here we're moving the camera back, so the objects in the scene can be viewed. 50 feels about right. It's not too near, or too far, and the sizes of the objects allow them to stay on the scene, within the given field of view. The `x` and `y` values, if not specified, will default to 0.
 
 You should experiment with these values and see how they change what you see in the scene.
-The distance values (e.g. for the camera z position) are unitless, and can be anything you deem suitable for your scene: millimeters, meters, feet, or miles. It's up to you.
+The distance values (e.g., for the camera z position) are unitless, and can be anything you deem suitable for your scene: millimeters, meters, feet, or miles. It's up to you.
 
 ## Rendering the scene
 

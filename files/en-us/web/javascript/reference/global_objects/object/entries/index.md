@@ -1,11 +1,11 @@
 ---
 title: Object.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.entries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.entries()`** static method returns an array of a given object's own enumerable string-keyed property key-value pairs.
 
@@ -13,7 +13,7 @@ The **`Object.entries()`** static method returns an array of a given object's ow
 
 ```js interactive-example
 const object1 = {
-  a: "somestring",
+  a: "some string",
   b: 42,
 };
 
@@ -22,7 +22,7 @@ for (const [key, value] of Object.entries(object1)) {
 }
 
 // Expected output:
-// "a: somestring"
+// "a: some string"
 // "b: 42"
 ```
 
@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an Object
 
-Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring), you can iterate through objects easily.
 
 ```js
 // Using for...of loop
@@ -126,7 +126,8 @@ Object.entries(obj).forEach(([key, value]) => {
 ## See also
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims polyfill of `Object.entries`](https://www.npmjs.com/package/object.entries)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

@@ -2,9 +2,8 @@
 title: Firefox 43 for developers
 slug: Mozilla/Firefox/Releases/43
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -46,7 +45,7 @@ Highlights:
 
 - To match the ES2015 specification, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) no longer have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. The `arguments` object is now lexically bound (inherited from the outer function). In most cases, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are a good alternative `(...args) => args[i]`, see [Firefox bug 889158](https://bugzil.la/889158).
 - The [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is now allowed in conjunction with [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) ([Firefox bug 1133298](https://bugzil.la/1133298)).
-- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1175394](https://bugzil.la/1175394)).
+- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1175394](https://bugzil.la/1175394)).
 
 #### Other changes
 
@@ -60,7 +59,7 @@ _No change._
 
 #### IndexedDB
 
-- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
+- A new feature called locale-aware sorting has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
 
 #### Service Workers
 
@@ -75,7 +74,7 @@ _No change._
 #### Miscellaneous
 
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ([Firefox bug 1050749](https://bugzil.la/1050749)).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_request_header", "forbidden request headers")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
 - The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ([Firefox bug 1161276](https://bugzil.la/1161276)).
 - The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance APIs](/en-US/docs/Web/API/Performance_API) has been implemented ([Firefox bug 1165796](https://bugzil.la/1165796)).
 - The Frame Timing API has been added: the `PerformanceRenderTiming` and `PerformanceCompositeTiming` interfaces are now available ([Firefox bug 1191178](https://bugzil.la/1191178)).
@@ -108,7 +107,7 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
+- Access to Web Storage (i.e., `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
 - This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ([Firefox bug 1201023](https://bugzil.la/1201023)). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
 - Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ([Firefox bug 992096](https://bugzil.la/992096)).
 

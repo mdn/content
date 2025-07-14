@@ -8,13 +8,13 @@ browser-compat: api.SecurityPolicyViolationEvent.violatedDirective
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`violatedDirective`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) directive that was violated.
+The **`violatedDirective`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) directive that was violated.
 
 This is a historical alias of {{domxref("SecurityPolicyViolationEvent.effectiveDirective")}}, and has the same value.
 
 ## Value
 
-A string representing the [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives) that was violated.
+A string representing the [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) that was violated.
 
 ## Examples
 

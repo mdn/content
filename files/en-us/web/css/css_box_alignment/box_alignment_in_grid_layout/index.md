@@ -2,9 +2,8 @@
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. On this page, we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
@@ -14,7 +13,44 @@ As this guide aims to detail things which are specific to CSS grid layout and Bo
 
 In this example using [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), there is extra space in the {{glossary("grid container")}} after laying out the fixed-width tracks on the inline {{glossary("main axis")}}. This space is distributed using {{cssxref("justify-content")}}. On the block {{glossary("cross axis")}} the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
+```html live-sample___grid-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
+
+```css hidden live-sample___grid-align-items
+body {
+  font-family: sans-serif;
+}
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___grid-align-items
+.box {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  align-items: start;
+  justify-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("grid-align-items", , 200)}}
 
 ## Grid axes
 

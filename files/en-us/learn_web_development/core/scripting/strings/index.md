@@ -1,10 +1,10 @@
 ---
 title: Handling text — strings in JavaScript
+short-title: Strings
 slug: Learn_web_development/Core/Scripting/Strings
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
@@ -121,12 +121,12 @@ Joining strings together like this is called _concatenation_.
 
 Let's have a look at concatenation being used in action:
 
-```html
+```html live-sample___string-concat
 <button>Press me</button>
 <div id="greeting"></div>
 ```
 
-```js
+```js live-sample___string-concat
 const button = document.querySelector("button");
 
 function greet() {
@@ -138,7 +138,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
+{{EmbedLiveSample('string-concat', , '50', , , , , 'allow-modals')}}
 
 Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} function, which prompts the user to answer a question via a popup dialog box and then stores the text they enter inside a given variable — in this case `name`. We then display a string that inserts the name into a generic greeting message.
 

@@ -2,9 +2,8 @@
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 102 that will affect developers. Firefox 102 was released on June 28, 2022.
 
@@ -34,7 +33,7 @@ No notable changes.
 
 ### Security
 
-- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
+- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
   A document with a CSP that restricts scripts will no longer load and execute WebAssembly unless the CSP uses `'wasm-unsafe-eval'` or the existing `'unsafe-eval'` keyword ([Firefox bug 1740263](https://bugzil.la/1740263)).
 
 #### DOM

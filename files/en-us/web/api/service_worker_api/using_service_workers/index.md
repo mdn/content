@@ -144,9 +144,11 @@ self.addEventListener("install", (event) => {
 3. If the promise is rejected, the installation fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
-> **Note:** [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
+> [!NOTE]
+> [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
-> **Note:** [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
+> [!NOTE]
+> [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
 
 ### Custom responses to requests
 
@@ -204,18 +206,18 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async (request) => {
+const cacheFirst = async (request, event) => {
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
   return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+  event.respondWith(cacheFirst(event.request, event));
 });
 ```
 
@@ -223,7 +225,7 @@ If the request URL is not available in the cache, we request the resource from t
 
 Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
-What might look a bit weird is that the promise returned by `putInCache()` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
+What might look a bit weird is that the promise returned by `putInCache()` is not awaited. The reason is that we don't want to wait until the response clone has been added to the cache before returning a response. However, we do need to call `event.waitUntil()` on the promise, to make sure the service worker doesn't terminate before the cache is populated.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
@@ -233,7 +235,7 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, fallbackUrl }) => {
+const cacheFirst = async ({ request, fallbackUrl, event }) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -246,7 +248,7 @@ const cacheFirst = async ({ request, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -268,6 +270,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -308,7 +311,12 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({
+  request,
+  preloadResponsePromise,
+  fallbackUrl,
+  event,
+}) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -319,7 +327,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
+    event.waitUntil(putInCache(request, preloadResponse.clone()));
     return preloadResponse;
   }
 
@@ -329,7 +337,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -379,6 +387,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -450,7 +459,7 @@ self.addEventListener("activate", (event) => {
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - The "Forget about this site" button, available in [Firefox's toolbar customization options](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars), can be used to clear service workers and their caches.
-- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/service-workers/)
 
 ## See also
 

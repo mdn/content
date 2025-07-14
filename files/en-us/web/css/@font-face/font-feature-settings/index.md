@@ -3,9 +3,8 @@ title: font-feature-settings
 slug: Web/CSS/@font-face/font-feature-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-feature-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-feature-settings`** CSS descriptor allows you to define the initial settings to use for the font defined by the {{cssxref("@font-face")}} at-rule. You can further use this descriptor to control typographic font features such as ligatures, small caps, and swashes, for the font defined by `@font-face`. The values for this descriptor are the same as the {{cssxref("font-feature-settings")}} property, except for the global keyword values.
 
@@ -30,7 +29,6 @@ This descriptor is specified as either the keyword `normal` or as a comma-separa
 - `normal`
   - : Indicates that text is laid out using default font settings. This is the default value.
 - `<feature-tag-value>`
-
   - : Represents a space-separated tuple consisting of a tag name and an optional value.
 
     The tag name is always a {{cssxref("&lt;string&gt;")}} of four {{Glossary("ASCII")}} characters. If the tag name has more or fewer characters or if it contains characters outside the `U+20` – `U+7E` code point range, the descriptor is invalid.
@@ -75,10 +73,10 @@ p {
   margin: 0.7rem 3rem;
 }
 .swash-off {
-  font-family: MonteCarlo;
+  font-family: MonteCarlo, cursive;
 }
 .swash-on {
-  font-family: MonteCarlo2;
+  font-family: MonteCarlo2, cursive;
 }
 ```
 

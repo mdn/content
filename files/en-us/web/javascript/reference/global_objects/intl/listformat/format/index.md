@@ -1,16 +1,16 @@
 ---
 title: Intl.ListFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.ListFormat")}} instances returns a string with a
 language-specific representation of the list.
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

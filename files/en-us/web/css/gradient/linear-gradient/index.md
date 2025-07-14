@@ -3,17 +3,50 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.linear-gradient
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 
-The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgb(255 0 0 / 0.8), rgb(255 0 0 / 0) 70.71%),
+  linear-gradient(127deg, rgb(0 255 0 / 0.8), rgb(0 255 0 / 0) 70.71%),
+  linear-gradient(336deg, rgb(0 0 255 / 0.8), rgb(0 0 255 / 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 
 ```css
+/* A gradient with a single color of red */
+linear-gradient(red)
+
 /* A gradient tilted 45 degrees,
    starting blue and finishing red */
 linear-gradient(45deg, blue, red)
@@ -52,7 +85,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ### Values
 
 - `<side-or-corner>`
-
   - : The position of the gradient line's starting point. If specified, it consists of the word `to` and up to two keywords: one indicates the horizontal side (`left` or `right`), and the other the vertical side (`top` or `bottom`). The order of the side keywords does not matter. If unspecified, it defaults to `to bottom`.
 
     The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg`, respectively. The other values are translated into an angle.
@@ -65,7 +97,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
   - : An {{glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > [!NOTE]
-> Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 

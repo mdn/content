@@ -2,9 +2,8 @@
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
 
@@ -48,7 +47,7 @@ No changes
 
 #### Media, WebRTC, and Web Audio
 
-- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
+- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
 
 ### WebDriver conformance (Marionette)
 

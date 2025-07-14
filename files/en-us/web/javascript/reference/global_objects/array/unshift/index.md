@@ -1,16 +1,16 @@
 ---
 title: Array.prototype.unshift()
+short-title: unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.unshift
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`unshift()`** method of {{jsxref("Array")}} instances adds the specified elements to the
 beginning of an array and returns the new length of the array.
 
-{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.unshift()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];
@@ -127,6 +127,7 @@ console.log(plainObj);
 ## See also
 
 - [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.unshift`](https://www.npmjs.com/package/array.prototype.unshift)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}

@@ -3,25 +3,46 @@ title: rotate()
 slug: Web/CSS/transform-function/rotate
 page-type: css-function
 browser-compat: css.types.transform-function.rotate
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
+The **`rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around a
 fixed point on the 2D plane, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data
 type.
 
-{{EmbedInteractiveExample("pages/css/function-rotate.html")}}
+{{InteractiveExample("CSS Demo: rotate()")}}
+
+```css interactive-example-choice
+transform: rotate(0);
+```
+
+```css interactive-example-choice
+transform: rotate(90deg);
+```
+
+```css interactive-example-choice
+transform: rotate(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotate(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 The fixed point that the element rotates around — mentioned above — is also known as the **transform
 origin**. This defaults to the center of the element, but you can set your own custom transform origin using
 the {{ cssxref("transform-origin") }} property.
 
 ## Syntax
-
-The amount of rotation created by `rotate()` is specified by an {{cssxref("&lt;angle&gt;")}}. If positive,
-the movement will be clockwise; if negative, it will be counter-clockwise. A rotation by 180° is called _point
-reflection_.
 
 ```css
 rotate(a)
@@ -32,7 +53,7 @@ rotate(a)
 - _a_
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. The direction of rotation depends on the writing direction.
     In a left-to-right context, a positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one. In a right-to-left context,
-    a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one.
+    a positive angle denotes a counter-clockwise rotation, a negative angle a clockwise one. A rotation by 180° is called _point reflection_.
 
 <table class="standard-table">
   <thead>

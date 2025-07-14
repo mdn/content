@@ -3,12 +3,10 @@ title: "ImageCapture: takePhoto() method"
 short-title: takePhoto()
 slug: Web/API/ImageCapture/takePhoto
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ImageCapture.takePhoto
 ---
 
-{{APIRef("Image Capture API")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}
 
 The **`takePhoto()`** method of the
 {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
@@ -25,9 +23,7 @@ takePhoto(photoSettings)
 ### Parameters
 
 - `photoSettings` {{optional_inline}}
-
   - : An object that sets options for the photo to be taken. The available options are:
-
     - `fillLightMode`
       - : The flash setting of the capture device, one of
         `"auto"`, `"off"`, or `"flash"`.

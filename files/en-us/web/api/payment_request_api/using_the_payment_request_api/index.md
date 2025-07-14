@@ -4,7 +4,7 @@ slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
 
@@ -108,7 +108,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
 
 ## Detecting availability of the Payment Request API
 
-You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e. `if (window.PaymentRequest)`.
+You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e., `if (window.PaymentRequest)`.
 
 In the following snippet, a merchant page performs this check, and if it returns `true` updates the checkout button to use `PaymentRequest` instead of legacy web forms.
 
@@ -290,14 +290,16 @@ If the merchant desires to collect additional information not part of the API (e
 ```js
 request
   .show()
-  .then((paymentResponse) => {
+  .then((paymentResponse) => paymentResponse.complete("success"))
+  .then(() => {
     // Process payment here.
     // Close the UI:
-    paymentResponse.complete('success').then(() => {
-      // Request additional shipping address details.
-      const additionalDetailsContainer = document.getElementById('additional-details-container');
-      additionalDetailsContainer.style.display = 'block';
-      window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
+    // Request additional shipping address details.
+    const additionalDetailsContainer = document.getElementById(
+      "additional-details-container",
+    );
+    additionalDetailsContainer.style.display = "block";
+    window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
   })
   .catch((error) => {
     // Handle error.

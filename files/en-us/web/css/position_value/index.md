@@ -3,9 +3,8 @@ title: <position>
 slug: Web/CSS/position_value
 page-type: css-type
 browser-compat: css.types.position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
 
@@ -84,7 +83,7 @@ bottom top
 
 ## See also
 
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}

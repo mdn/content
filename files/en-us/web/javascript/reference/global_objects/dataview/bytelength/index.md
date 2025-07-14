@@ -1,15 +1,15 @@
 ---
 title: DataView.prototype.byteLength
+short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.byteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteLength`** accessor property of {{jsxref("DataView")}} instances returns the length (in bytes) of this view.
 
-{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.byteLength")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

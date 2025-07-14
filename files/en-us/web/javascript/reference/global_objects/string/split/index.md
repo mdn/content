@@ -1,15 +1,15 @@
 ---
 title: String.prototype.split()
+short-title: split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.split
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.split()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";
@@ -45,15 +45,20 @@ split(separator, limit)
 
 ### Return value
 
-An {{jsxref("Array")}} of strings, split at each point where the `separator` occurs in the given string.
+If `separator` is a string, an {{jsxref("Array")}} of strings is returned, split at each point where the `separator` occurs in the given string.
+
+If `separator` is a regex, the returned {{jsxref("Array")}} also contains the [captured groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) for each separator match; see below for details. The capturing groups may be unmatched, in which case they are `undefined` in the array.
+
+If `separator` has a custom `[Symbol.split]()` method, its return value is directly returned.
 
 ## Description
 
-If `separator` is a non-empty string, the target string is split by all matches of the `separator` without including `separator` in the results. For example, a string containing tab separated values (TSV) could be parsed by passing a tab character as the separator, like `myString.split("\t")`. If `separator` contains multiple characters, that entire character sequence must be found in order to split. If `separator` appears at the beginning (or end) of the string, it still has the effect of splitting, resulting in an empty (i.e. zero length) string appearing at the first (or last) position of the returned array. If `separator` does not occur in `str`, the returned array contains one element consisting of the entire string.
+If `separator` is a non-empty string, the target string is split by all matches of the `separator` without including `separator` in the results. For example, a string containing tab separated values (TSV) could be parsed by passing a tab character as the separator, like `myString.split("\t")`. If `separator` contains multiple characters, that entire character sequence must be found in order to split. If `separator` appears at the beginning (or end) of the string, it still has the effect of splitting, resulting in an empty (i.e., zero length) string appearing at the first (or last) position of the returned array. If `separator` does not occur in `str`, the returned array contains one element consisting of the entire string.
 
 If `separator` is an empty string (`""`), `str` is converted to an array of each of its UTF-16 "characters", without empty strings on either ends of the resulting string.
 
-> **Note:** `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator` and `limit` is not `0`.
+> [!NOTE]
+> `"".split("")` is therefore the only way to produce an empty array when a string is passed as `separator` and `limit` is not `0`.
 
 > [!WARNING]
 > When the empty string (`""`) is used as a separator, the string is **not** split by _user-perceived characters_ ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) or unicode characters (code points), but by UTF-16 code units. This destroys [surrogate pairs](https://unicode.org/faq/utf_bom.html#utf16-2). See ["How do you get a string to a character array in JavaScript?" on Stack Overflow](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402).
@@ -186,7 +191,8 @@ console.log(splits);
 // [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **Note:** `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) for digits between 0 and 9.
+> [!NOTE]
+> `\d` matches the [character class](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) for digits between 0 and 9.
 
 ### Using a custom splitter
 
@@ -308,6 +314,7 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 ## See also
 
 - [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.split`](https://www.npmjs.com/package/string.prototype.split)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}

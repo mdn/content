@@ -14,10 +14,10 @@ The **`scroll`** event of the {{domxref("VisualViewport")}} interface is fired w
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scroll", (event) => {});
+```js-nolint
+addEventListener("scroll", (event) => { })
 
-onscroll = (event) => {};
+onscroll = (event) => { }
 ```
 
 ## Event type

@@ -22,9 +22,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the tab to retrieve all frames from.
-
     - `tabId`
       - : `integer`. The ID of the tab.
 
@@ -33,7 +31,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of objects, each of which has the following properties:
 
 - `errorOccurred`
-  - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
+  - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e., the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
 - `processId` {{optional_inline}} {{deprecated_inline}}
   - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`

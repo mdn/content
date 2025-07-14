@@ -2,9 +2,8 @@
 title: Grid template areas
 slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In the [grid layout using line-based placement guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), we looked at grid lines and how to position items against those lines. When you use CSS grid layout, you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
 
@@ -29,7 +28,7 @@ We can also define an area by giving it a name and then specify the location of 
 - a sidebar
 - the main content
 
-![An image showing a simple two column layout with header and footer](4_layout.png)
+![An image showing a two column layout with header and footer](4_layout.png)
 
 With the {{cssxref("grid-area")}} property we can assign each of these areas a name. By itself, this does not create any layout. Rather, it provides named areas to use in a layout.
 
@@ -237,7 +236,7 @@ As our layout is now contained in one part of the CSS, this makes it very easy t
 
 When doing this, define the names for your areas outside of any media queries. That way the content area would always be called `main` no matter where on the grid it is placed.
 
-For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking our four items into four rows.
+For our layout above, we might like to have a very basic layout at narrow widths, defining a single column grid and stacking our four items into four rows.
 
 ```css hidden
 * {
@@ -290,7 +289,7 @@ For our layout above, we might like to have a very simple layout at narrow width
 We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout, we keep the nine-column track grid, redefining where items are placed using `grid-template-areas`.
 
 ```css
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .wrapper {
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
@@ -299,7 +298,7 @@ We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_
       "sd sd sd  ft  ft   ft   ft   ft   ft";
   }
 }
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .wrapper {
     grid-template-areas:
       "hd hd hd   hd   hd   hd   hd   hd hd"
@@ -325,7 +324,7 @@ Many of the grid examples you will find online make the assumption that you will
 
 ### Media object example
 
-As a very simple example we can create a "[media object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
+As an example, we can create a "[media object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects)". This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.
 
 ![Images showing an example media object design](4_media_objects.png)
 
@@ -468,7 +467,7 @@ The {{cssxref("grid")}} shorthand goes a step further and also sets properties u
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 
-You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware than when doing so you will reset the other values set by the property.
+You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware that when doing so you will reset the other values set by the property.
 
 ```css
 .wrapper {

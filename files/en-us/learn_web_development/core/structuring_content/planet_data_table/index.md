@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Structuring a planet data table"
+short-title: "Challenge: Planet data table"
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
@@ -15,7 +15,7 @@ In this challenge, we provide you with some data on the planets in our solar sys
 To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
 
 > [!NOTE]
-> You can try solutions in your code editor or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions in your code editor or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -38,7 +38,7 @@ The following steps describe what you need to do to complete the table example. 
 ## Hints and tips
 
 - The first cell of the header row needs to be blank, and span two columns.
-- The group row headings (e.g. _Jovian planets_) that sit to the left of the planet name row headings (e.g. _Saturn_) are a little tricky to sort out — you need to make sure each one spans the correct number of rows and columns.
+- The group row headings (e.g., _Jovian planets_) that sit to the left of the planet name row headings (e.g., _Saturn_) are a little tricky to sort out — you need to make sure each one spans the correct number of rows and columns.
 - One way of associating headers with their rows/columns is a lot easier than the other way.
 
 ## Example

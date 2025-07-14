@@ -42,10 +42,10 @@ async function initTransport(url) {
   // The connection can be used once ready fulfills
   await transport.ready;
 
-  // ...
+  // …
 }
 
-// ...
+// …
 
 async function closeTransport(transport) {
   // Respond to connection closing
@@ -160,7 +160,8 @@ async function receiveUnidirectional() {
 To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}.
 This contains `readable` and `writable` properties returning references to `WebTransportReceiveStream` and `WebTransportSendStream` instances that can be used to read from and write to the server.
 
-> **Note:** `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
+> [!NOTE]
+> `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
 
 ```js
 async function setUpBidirectional() {
@@ -171,7 +172,7 @@ async function setUpBidirectional() {
   // stream.writable is a WebTransportSendStream
   const writable = stream.writable;
 
-  ...
+  // …
 }
 ```
 

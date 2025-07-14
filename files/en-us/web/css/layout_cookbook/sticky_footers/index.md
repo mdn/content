@@ -2,20 +2,17 @@
 title: Sticky footers
 slug: Web/CSS/Layout_cookbook/Sticky_footers
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A sticky footer pattern is one where the footer of your page "sticks" to the bottom of the viewport in cases where the content is shorter than the viewport height. We'll look at a couple of techniques for creating one in this recipe.
 
-![A sticky footer pushed to the bottom of a box](cookbook-footer.png)
-
 ## Requirements
 
-The Sticky footer pattern needs to meet the following requirements:
+The sticky footer pattern needs to meet the following requirements:
 
 - Footer sticks to the bottom of the viewport when content is short.
-- If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.
+- If the content of the page extends past the viewport bottom, the footer gets pushed down, always sitting below the content as normal.
 
 ## The recipe
 
@@ -26,8 +23,9 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   <header class="page-header">This is the header</header>
   <main class="page-body">
     <p contenteditable>
-      Main page content here, add more to this text if you want to see the
-      footer push down.
+      The footer sticks to the bottom even though this paragraph is short. Add
+      content to this editable area to see the footer push down when needed to
+      fit the content.
     </p>
   </main>
   <footer class="page-footer">Sticky footer</footer>
@@ -78,21 +76,22 @@ body {
 
 ## Choices made
 
-In the above example we achieve the sticky footer using CSS grid layout. The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
+In the above example we achieve the sticky footer using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout). The `.wrapper` has a minimum height of `100%` which means it is as tall as the container it is in. We then create a single column grid layout with three rows, one row for each part of our layout.
 
-Grid auto-placement will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
+[Grid auto-placement](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) will place our items in source order and so the header goes into the first auto sized track, the main content into the `1fr` track and the footer into the final auto sized track. The `1fr` track will take up all available space and so grows to fill the gap.
 
 ## Alternate method
 
-You can also use flexbox to create a sticky footer.
+You can also use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to create a sticky footer.
 
 ```html live-sample___sticky-footer-flexbox-example
 <div class="wrapper">
   <header class="page-header">This is the header</header>
   <main class="page-body">
     <p contenteditable>
-      Main page content here, add more to this text if you want to see the
-      footer push down.
+      The footer sticks to the bottom even though this paragraph is short. Add
+      content to this editable area to see the footer push down when needed to
+      fit the content.
     </p>
   </main>
   <footer class="page-footer">Sticky footer</footer>
@@ -144,7 +143,7 @@ body {
 
 {{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
 
-The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set `flex-direction` to `column`. Then we set our main content to `flex-grow: 1` and the other two elements to `flex-shrink: 0` — this prevents them from shrinking smaller when content fills the main area.
+The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set {{cssxref("flex-direction")}} to `column`. Then we set our main content to [`flex-grow: 1`](/en-US/docs/Web/CSS/flex-grow) and the other two elements to [`flex-shrink: 0`](/en-US/docs/Web/CSS/flex-shrink) — this prevents them from shrinking smaller when content fills the main area.
 
 ## Resources on MDN
 

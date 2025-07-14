@@ -99,7 +99,7 @@ window.onload = () => {
 
 This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should get something like this. Each red filled white rectangle represents a time range.
 
-![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
+![An audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
 > [!NOTE]
 > You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
@@ -107,7 +107,7 @@ This works better with longer pieces of audio or video, but press play and click
 ## Seekable
 
 The `seekable` attribute returns a {{ domxref("TimeRanges") }} object and tells us which parts of the media can be played without delay; this is irrespective of whether that part has been downloaded or not. Some parts of the media may be seekable but not buffered if byte-range requests are enabled on the server. Byte range requests allow parts of the media file to be delivered from the server and so can be ready to play almost immediately — thus they are seekable.
-For more information on byte range requests see [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests).
+For more information on byte range requests see [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests).
 
 ```js
 const seekableTimeRanges = audio.seekable;
@@ -121,7 +121,8 @@ If we wish to create our own custom player, we may want to provide feedback on h
 const seekableEnd = audio.seekable.end(audio.seekable.length - 1);
 ```
 
-> **Note:** `audio.seekable.end(audio.seekable.length - 1)` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough as the browser either enables range requests or it doesn't. If it doesn't then `audio.seekable` will be equivalent to `audio.buffered`, which will give a valid indication of the end of seekable media. If range requests are enabled this value usually becomes the duration of the media almost instantly.
+> [!NOTE]
+> `audio.seekable.end(audio.seekable.length - 1)` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough as the browser either enables range requests or it doesn't. If it doesn't then `audio.seekable` will be equivalent to `audio.buffered`, which will give a valid indication of the end of seekable media. If range requests are enabled this value usually becomes the duration of the media almost instantly.
 
 It is better perhaps to give an indication of how much media has actually downloaded — this what the browser's native players seem to display.
 
@@ -211,7 +212,7 @@ The timeupdate event is fired 4 times a second as the media plays and that's whe
 
 This should give you results similar to the following, where the light grey bar represents the buffered progress and green bar shows the played progress:
 
-![A simple audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
+![An audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
 
 > [!NOTE]
 > You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).

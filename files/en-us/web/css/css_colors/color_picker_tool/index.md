@@ -2,9 +2,8 @@
 title: Color picker tool
 slug: Web/CSS/CSS_colors/Color_picker_tool
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This tool lets you pick a color in the sRGB {{glossary("color space")}} and converts it between various CSS [color formats](/en-US/docs/Web/CSS/color_value), helping you understand the syntax of the following sRGB color notations:
 
@@ -18,7 +17,7 @@ When you select a color, it gets displayed in four standard CSS color formats. C
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt")}} data type is supported in CSS.
+The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
 ## See also
 
@@ -26,7 +25,7 @@ The generated color values can be used anywhere the {{cssxref("color_value", "&l
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Learn: Styling backgrounds and borders using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Learn accessibility: Color and color contrast](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)

@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.maximize()
+short-title: maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.maximize
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`maximize()`** method of {{jsxref("Intl.Locale")}} instances gets the
 most likely values for the language, script, and region of this locale based on

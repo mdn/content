@@ -3,9 +3,8 @@ title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 page-type: javascript-class
 browser-compat: javascript.builtins.AggregateError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AggregateError`** object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by {{jsxref("Promise.any()")}}, when all promises passed to it reject.
 
@@ -73,5 +72,6 @@ try {
 ## See also
 
 - [Polyfill of `AggregateError` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `AggregateError`](https://www.npmjs.com/package/es-aggregate-error)
 - {{jsxref("Error")}}
 - {{jsxref("Promise.any")}}

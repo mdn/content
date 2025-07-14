@@ -9,7 +9,7 @@ browser-compat: api.FeaturePolicy
 
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
-The `FeaturePolicy` interface represents the set of [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to the current execution context.
+The `FeaturePolicy` interface represents the set of [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to the current execution context.
 
 ## Instance methods
 

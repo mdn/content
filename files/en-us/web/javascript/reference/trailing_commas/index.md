@@ -3,9 +3,8 @@ title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
 page-type: javascript-language-feature
 browser-compat: javascript.grammar.trailing_commas
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Trailing commas** (sometimes called "final commas") can be useful when adding new elements, parameters, or properties to JavaScript code. If you want to add a new property, you can add a new line without modifying the previously last line if that line already uses a trailing comma. This makes version-control diffs cleaner and editing code might be less troublesome.
 
@@ -134,7 +133,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Trailing commas in destructuring
 
-A trailing comma is also allowed on the left-hand side when using [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+A trailing comma is also allowed within a [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) pattern:
 
 ```js-nolint
 // array destructuring with trailing comma
@@ -148,7 +147,7 @@ const o = {
 const { p, q, } = o;
 ```
 
-Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
+However, a trailing comma is not allowed after the rest element, if present
 
 ```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];

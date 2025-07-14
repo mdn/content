@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
+[Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -52,7 +52,7 @@ Now, the audio context we've created needs some sound to play through it. There 
 ```
 
 > [!NOTE]
-> If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) for more information.
+> If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) for more information.
 
 To use all the nice things we get with the Web Audio API, we need to grab the source from this element and _pipe_ it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -138,7 +138,7 @@ audioElement.addEventListener(
 
 Let's delve into some basic modification nodes, to change the sound that we have. This is where the Web Audio API really starts to come in handy. First of all, let's change the volume. This can be done using a {{domxref("GainNode")}}, which represents how big our sound wave is.
 
-There are two ways you can create nodes with the Web Audio API. You can use the factory method on the context itself (e.g. `audioContext.createGain()`) or via a constructor of the node (e.g. `new GainNode()`). We'll use the factory method in our code:
+There are two ways you can create nodes with the Web Audio API. You can use the factory method on the context itself (e.g., `audioContext.createGain()`) or via a constructor of the node (e.g., `new GainNode()`). We'll use the factory method in our code:
 
 ```js
 const gainNode = audioContext.createGain();
@@ -156,7 +156,7 @@ This will make our audio graph look like this:
 
 The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
-Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
+Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Reference/Elements/input/range):
 
 ```html
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
@@ -180,7 +180,7 @@ volumeControl.addEventListener(
 ```
 
 > [!NOTE]
-> The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
+> The values of node objects (e.g., `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
 
 Great, now the user can update the track's volume! The gain node is the perfect node to use if you want to add mute functionality.
 
@@ -235,7 +235,7 @@ Let's adjust our audio graph again, to connect all the nodes together:
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-The only thing left to do is give the app a try: [Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/).
+The only thing left to do is give the app a try: [Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/).
 
 ## Summary
 

@@ -26,15 +26,14 @@ setProperty(propertyName, value, priority)
 - `value` {{optional_inline}}
   - : A string containing the new property value. If not specified, treated
     as the empty string. A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
-    > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
+    > [!NOTE]
+    > `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
+  - : A string allowing the CSS priority to be set to important. Only the values listed below are accepted:
+    - `"important"` (case-insensitive) for setting the property as `!important`;
+    - `""`, `undefined`, or `null` for removing the `!important` flag if present.
 
-  - : A string allowing the "important" CSS priority to be set. If not
-    specified, treated as the empty string. The following values are accepted:
-
-    - String value `"important"`
-    - Keyword `undefined`
-    - String empty value `""`
+    Anything else causes the method to return early and no change to happen (unless `value` is empty, in which case the property is removed regardless of the `priority` value). `false`, for example, is not a valid priority value.
 
 ### Return value
 

@@ -2,9 +2,8 @@
 title: Firefox 131 for developers
 slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 
@@ -20,14 +19,14 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### HTTP
 
-- A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. In addition, since Firefox interprets an unspecified `SameSite` value as `SameSite=None`, cookies that don't specify `SameSite` will have the same restriction. ([Firefox bug 1909673](https://bugzil.la/1909673)).
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", are now supported.
-  This feature allows developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the {{HTTPHeader("Set-Cookie")}} HTTP header. When set, cookies have separate storage for each top-level site and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking while still enabling legitimate uses of third-party cookies, such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1908160](https://bugzil.la/1908160)).
+- A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. In addition, since Firefox interprets an unspecified `SameSite` value as `SameSite=None`, cookies that don't specify `SameSite` will have the same restriction. ([Firefox bug 1909673](https://bugzil.la/1909673)).
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", are now supported.
+  This feature allows developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) directive of the {{HTTPHeader("Set-Cookie")}} HTTP header. When set, cookies have separate storage for each top-level site and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking while still enabling legitimate uses of third-party cookies, such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1908160](https://bugzil.la/1908160)).
 
 ### APIs
 
 - The {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} and {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} properties of the {{domxref('PointerEvent')}} interface are now supported. These provide the angle between the pointer/stylus and the screen (X-Y plane), and the rotation of the stylus over the screen relative to its x-axis, respectively. ([Firefox bug 1656377](https://bugzil.la/1656377)).
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are now supported, allowing users to link to and highlight specific portions of text in a web page. This feature uses a particular syntax in the [URL fragment](/en-US/docs/Web/URI/Fragment) that identifies the target based on patterns in the rendered text.
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) are now supported, allowing users to link to and highlight specific portions of text in a web page. This feature uses a particular syntax in the [URL fragment](/en-US/docs/Web/URI/Reference/Fragment) that identifies the target based on patterns in the rendered text.
   Developers can now also use the existence of the {{domxref("Document.fragmentDirective")}} property (an instance of the {{domxref("FragmentDirective")}} interface) to feature-check for text fragment support. Additionally, the {{CSSxRef("::target-text")}} pseudo-element can be used to select and style text that has been selected using a text fragment link. ([Firefox bug 1914877](https://bugzil.la/1914877))
 - The {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} method of the {{domxref("Document")}} interface has been updated to return the text node and offset for a caret position within a shadow DOM, provided the shadow root corresponding to the point has been supplied to the method. {{domxref("ShadowRoot")}} objects can be passed to the method using the `shadowRoots` property of the newly added `options` argument. ([Firefox bug 1914596](https://bugzil.la/1914596)).
 
@@ -52,7 +51,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ## Changes for add-on developers
 
-- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 134 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
+- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 137 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("storage.session")}} now supports the {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}} API and the {{WebExtAPIRef("storage.session.QUOTA_BYTES")}} property. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("tabs.onUpdated")}} is now triggered when `openerTabId` is changed through `tabs.update()` ([Firefox bug 1409262](https://bugzil.la/1409262)).
 - {{WebExtAPIRef("tabs.update")}} now accepts `openerTabId` set to `-1` to clear `openerTabId` ([Firefox bug 1409262](https://bugzil.la/1409262)).

@@ -1,11 +1,11 @@
 ---
 title: WeakSet.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.add
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`add()`** method of {{jsxref("WeakSet")}} instances appends a new object to the end of this `WeakSet`.
 

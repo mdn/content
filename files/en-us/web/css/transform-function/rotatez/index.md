@@ -3,18 +3,44 @@ title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
 page-type: css-function
 browser-compat: css.types.transform-function.rotateZ
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around the
+The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around the
 z-axis without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-rotateZ.html")}}
+{{InteractiveExample("CSS Demo: rotateZ()")}}
+
+```css interactive-example-choice
+transform: rotateZ(0);
+```
+
+```css interactive-example-choice
+transform: rotateZ(90deg);
+```
+
+```css interactive-example-choice
+transform: rotateZ(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotateZ(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
-> **Note:** `rotateZ(a)` is equivalent to
+> [!NOTE]
+> `rotateZ(a)` is equivalent to
 > `rotate(a)` or
 > `rotate3d(0, 0, 1, a)`.
 
@@ -23,9 +49,6 @@ The axis of rotation passes through an origin, defined by the {{ cssxref("transf
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
-
-The amount of rotation created by `rotateZ()` is specified by an {{cssxref("&lt;angle&gt;")}}. If
-positive, the movement will be clockwise; if negative, it will be counter-clockwise.
 
 ```css
 rotateZ(a)

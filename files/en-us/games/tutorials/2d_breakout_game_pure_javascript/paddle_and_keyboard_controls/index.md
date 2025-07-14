@@ -2,9 +2,8 @@
 title: Paddle and keyboard controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
@@ -149,17 +148,17 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = true;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = true;
   }
 }
 
 function keyUpHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = false;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = false;
   }
 }
@@ -211,9 +210,10 @@ function startGame() {
   setInterval(draw, 10);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
   startGame();
-  this.disabled = true;
+  runButton.disabled = true;
 });
 ```
 

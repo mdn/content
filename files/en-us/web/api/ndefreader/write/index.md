@@ -22,10 +22,8 @@ write(message, options)
 ### Parameters
 
 - `message`
-
   - : The message to be written, either a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
     a {{jsxref("DataView")}}, or an array of records. A record has the following members:
-
     - `data` {{optional_inline}}
       - : Contains the data to be transmitted, a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
         a {{jsxref("DataView")}}, or an array of nested records
@@ -36,17 +34,15 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     - `mediaType` {{optional_inline}}
-      - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
     - `recordType`
-
       - : A string indicating the type of data stored in `data`. It must be one of the following values:
-
         - `"absolute-url"`
           - : An absolute URL to the data.
         - `"empty"`
           - : An empty {{domxref("NDEFRecord")}}.
         - `"mime"`
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
         - `"smart-poster"`
           - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
         - `"text"`
@@ -57,9 +53,7 @@ write(message, options)
           - : A URL as defined by the [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) specification.
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `overwrite`
       - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
     - `signal` {{optional_inline}}
@@ -134,7 +128,8 @@ ndef.onreading = (event) => console.log("We read a tag!");
 function write(data, { timeout } = {}) {
   return new Promise((resolve, reject) => {
     const controller = new AbortController();
-    controller.signal.onabort = () => reject("Time is up, bailing out!");
+    controller.signal.onabort = () =>
+      reject(new Error("Time is up, bailing out!"));
     setTimeout(() => controller.abort(), timeout);
 
     ndef.addEventListener(

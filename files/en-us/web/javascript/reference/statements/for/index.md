@@ -3,19 +3,18 @@ title: for
 slug: Web/JavaScript/Reference/Statements/for
 page-type: javascript-statement
 browser-compat: javascript.statements.for
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for`** statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
 
-{{InteractiveExample("JavaScript Demo: Statement - For")}}
+{{InteractiveExample("JavaScript Demo: for statement")}}
 
 ```js interactive-example
 let str = "";
 
 for (let i = 0; i < 9; i++) {
-  str = str + i;
+  str += i;
 }
 
 console.log(str);
@@ -30,13 +29,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
-  - : An expression (including [assignment expressions](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)) or variable declaration evaluated once before the loop begins. Typically used to initialize a counter variable. This expression may optionally declare new variables with `var` or `let` keywords. Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for` loop is in. Variables declared with `let` are local to the statement.
+  - : An expression (including [assignment expressions](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)) or variable declaration evaluated once before the loop begins. Typically used to initialize a counter variable. This expression may optionally declare new variables with `var` or `let` keywords. Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for` loop is in. Variables declared with `let` are local to the statement.
 
     The result of this expression is discarded.
 
 - `condition` {{optional_inline}}
-
   - : An expression to be evaluated before each loop iteration. If this expression [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. If the expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution exits the loop and goes to the first statement after the `for` construct.
 
     This conditional test is optional. If omitted, the condition always evaluates to true.
@@ -136,7 +133,7 @@ while (i <= 3) {
 
 ### Lexical declarations in the initialization block
 
-Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Closures) within the loop body. For example, for the code below:
+Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Guide/Closures) within the loop body. For example, for the code below:
 
 ```js
 for (let i = 0; i < 3; i++) {
@@ -159,7 +156,7 @@ for (; i < 3; i++) {
 
 It logs `3`, `3`, and `3`. The reason is that each `setTimeout` creates a new closure that closes over the `i` variable, but if the `i` is not scoped to the loop body, all closures will reference the same variable when they eventually get called — and due to the asynchronous nature of {{domxref("Window.setTimeout", "setTimeout()")}}, it will happen after the loop has already exited, causing the value of `i` in all queued callbacks' bodies to have the value of `3`.
 
-This also happens if you use a `var` statement as the initialization, because variables declared with `var` are only function-scoped, but not lexically scoped (i.e. they can't be scoped to the loop body).
+This also happens if you use a `var` statement as the initialization, because variables declared with `var` are only function-scoped, but not lexically scoped (i.e., they can't be scoped to the loop body).
 
 ```js
 for (var i = 0; i < 3; i++) {

@@ -18,9 +18,10 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 ## Instance properties
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
+  - : A {{domxref("ServiceWorker")}} object that represents the active service worker controlling the current page or `null` if the page has no active or activating service worker.
 - {{domxref("ServiceWorkerContainer.ready")}} {{ReadOnlyInline}}
-  - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
+  - : Returns a {{jsxref('Promise')}} that resolves with the {{domxref("ServiceWorkerRegistration")}} associated with the current page, but only when there is an active service worker.
+    This provides a mechanism to defer code execution until a service worker is active.
 
 ## Instance methods
 
@@ -31,18 +32,16 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 - {{domxref("ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
 - {{domxref("ServiceWorkerContainer.startMessages()")}}
-  - : Explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
+  - : Explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g., sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
 
 ## Events
 
 - {{domxref("ServiceWorkerContainer/controllerchange_event", "controllerchange")}}
   - : Fired when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- {{domxref("ServiceWorkerContainer/error_event", "error")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired whenever an error occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer/message_event", "message")}}
-  - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 - {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}
-  - : Fired when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Fired when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Examples
 

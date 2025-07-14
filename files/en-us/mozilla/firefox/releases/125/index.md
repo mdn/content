@@ -2,9 +2,8 @@
 title: Firefox 125 for developers
 slug: Mozilla/Firefox/Releases/125
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 125 that affect developers. Firefox 125 was released on [April 16, 2024](https://whattrainisitnow.com/release/?version=125).
 
@@ -18,7 +17,7 @@ No notable changes.
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
 - The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
-- The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
+- The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 
 ### JavaScript
 
@@ -33,37 +32,33 @@ No notable changes.
   The popover and its triggering button/input can be created using either HTML attributes or JavaScript, and styled using CSS.
 
   The following Web APIs are implemented:
-
   - [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement) properties [`popoverTargetElement`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetElement) and [`popoverTargetAction`](/en-US/docs/Web/API/HTMLButtonElement/popoverTargetAction).
   - [`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement) properties [`popoverTargetElement`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetElement) and [`popoverTargetAction`](/en-US/docs/Web/API/HTMLInputElement/popoverTargetAction).
   - [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) property [`popover`](/en-US/docs/Web/API/HTMLElement/popover), [`hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover), [`showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover), and [`togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) methods, and [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle_event`](/en-US/docs/Web/API/HTMLElement/toggle_event) events (of type [`ToggleEvent`](/en-US/docs/Web/API/ToggleEvent)).
 
   The following CSS pseudo class and element are now supported for use with popovers:
-
   - [`:popover-open`](/en-US/docs/Web/CSS/:popover-open)
   - [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) has been extended to support popovers
 
   The following HTML global attributes are supported:
-
-  - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
-  - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
+  - [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
   ([Firefox bug 1823757](https://bugzil.la/1823757), [Firefox bug 1866993](https://bugzil.la/1866993)).
 
 - The {{domxref("RTCIceTransport")}} properties {{domxref("RTCIceTransport/state","state")}} and {{domxref("RTCIceTransport/gatheringState","gatheringState")}}, and their associated events {{domxref("RTCIceTransport/statechange_event","statechange")}} and {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}}, are now supported, along with the {{domxref("RTCDtlsTransport.iceTransport")}} property (which returns the underlying `RTCIceTransport` for a {{domxref("RTCDtlsTransport")}}).
   These allow much finer-grained monitoring than provided by the {{domxref("RTCPeerConnection")}} properties {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} and {{domxref("RTCPeerConnection.connectionState","connectionState")}}.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
-- {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
+- {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
 - Added support to allow web applications to gracefully recover if a canvas temporarily loses its 2D context, which might happen if the canvas is running hardware-accelerated on a GPU, and its driver crashes ([Firefox bug 1887729](https://bugzil.la/1887729)).
   Here are some additional details on the events for lost and restored canvas contexts:
-
   - Applications can monitor for [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) events, which are fired on at [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement) when the context is lost and recovered, respectively, and can also check the context using [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost).
   - After emitting `contextlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
   - Offscreen canvases can be monitored in the same way, but using [`OffScreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) events [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event), along with [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#context).
 
-- Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
-  These set the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that has been created declaratively using the [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
+- Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
+  These set the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) that has been created declaratively using the [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) element.
   ([Firefox bug 1880188](https://bugzil.la/1880188)).
 
 - The [`readText()`](/en-US/docs/Web/API/Clipboard/readText) method of the [`Clipboard`](/en-US/docs/Web/API/Clipboard) interface is now supported for asynchronously reading text from the system clipboard.
@@ -104,7 +99,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
+- The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
 
 ## Experimental web features
 
@@ -117,7 +112,7 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 
 - **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
 
-  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
   > [!NOTE]
   > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.

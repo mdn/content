@@ -27,6 +27,8 @@ It also provides messaging APIs enabling you to:
   - : Identifies the browser's processor architecture.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
   - : Contains information about the platform the browser is running on.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}}
+  - : The native client architecture. This may be different from `PlatformArch` on some platforms.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
@@ -70,9 +72,9 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.connectNative()")}}
   - : Connects the extension to a native application on the user's computer.
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Sends a single message to event listeners within your extension or a different extension. Similar to {{WebExtAPIRef('runtime.connect')}} but only sends a single message, with an optional response.
+  - : Sends a message to event listeners within your extension or a different extension. Similar to {{WebExtAPIRef('runtime.connect')}} but only sends a single message, with an optional response.
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : Sends a single message from an extension to a native application.
+  - : Sends a message from an extension to a native application.
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
   - : Returns information about the current platform.
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
@@ -98,10 +100,14 @@ It also provides messaging APIs enabling you to:
   - : Fired when a connection is made with either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onConnectExternal")}}
   - : Fired when a connection is made with another extension.
+- {{WebExtAPIRef("runtime.onUserScriptConnect")}}
+  - : Fired when a connection is made with a user script registered by the extension.
 - {{WebExtAPIRef("runtime.onMessage")}}
   - : Fired when a message is sent from either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
   - : Fired when a message is sent from another extension. Cannot be used in a content script.
+- {{WebExtAPIRef("runtime.onUserScriptMessage")}}
+  - : Fired when a message is sent from a user script registered by the extension.
 - {{WebExtAPIRef("runtime.onPerformanceWarning")}}
   - : Fired when a runtime performance issue is detected for the extension.
 - {{WebExtAPIRef("runtime.onRestartRequired")}}

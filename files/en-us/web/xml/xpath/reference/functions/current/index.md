@@ -31,7 +31,7 @@ For an outermost expression (an expression not occurring within another expressi
 <xsl:value-of select="."/>
 ```
 
-In an inner expression (e.g. in square brackets), the current node is still the same as it would have been in an outermost expression. Thus within all of the following three expressions the `current` function (not the entire expressions) returns the same node. Moreover, the latter two are semantically equivalent.
+In an inner expression (e.g., in square brackets), the current node is still the same as it would have been in an outermost expression. Thus within all of the following three expressions the `current` function (not the entire expressions) returns the same node. Moreover, the latter two are semantically equivalent.
 
 ```xml
 <xsl:value-of select="current()"/>
@@ -63,7 +63,7 @@ the `.` returns the `bar` node, which may be different from the current node.
 
 ## Specifications
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-current)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt-10/#function-current)
 
 ## Gecko support
 

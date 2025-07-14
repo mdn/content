@@ -46,7 +46,7 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.compile()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compile_static)
   - : Compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) from WebAssembly binary code, leaving instantiation as a separate step.
 - [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static)
-  - : compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) directly from a streamed underlying source, leaving instantiation as a separate step.
+  - : Compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) directly from a streamed underlying source, leaving instantiation as a separate step.
 - [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static)
   - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static)
@@ -82,6 +82,6 @@ The `ResultObject`'s `.instance` property is then accessed, and the contained ex
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)

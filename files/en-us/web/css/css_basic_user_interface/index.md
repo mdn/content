@@ -3,9 +3,8 @@ title: CSS basic user interface
 slug: Web/CSS/CSS_basic_user_interface
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ui/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS basic user interface** module lets you define the rendering and functionality of features related to the user interface including outline properties, visual feedback to pointing device and keyboard, and altering the default appearance of UI widgets.
 
@@ -85,15 +84,8 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
-
-- {{CSSxRef("caret")}}, shorthand for:
-  - {{CSSxRef("caret-color")}}
-  - {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret-color")}}
 - {{CSSxRef("cursor")}}
-- {{CSSxRef("nav-down")}}
-- {{CSSxRef("nav-left")}}
-- {{CSSxRef("nav-right")}}
-- {{CSSxRef("nav-up")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}
@@ -103,6 +95,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
+> [!NOTE]
+> The spec also defines the properties: `caret`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up`. These properties have not been implemented in any browser yet.
+
 ## Guides
 
 - [Learn forms: advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
@@ -111,7 +106,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 ## Related concepts
 
 - CSS [`cursor`](/en-US/docs/Web/CSS/cursor) property
-- SVG [`cursor`](/en-US/docs/Web/SVG/Attribute/cursor) attribute
+- SVG [`cursor`](/en-US/docs/Web/SVG/Reference/Attribute/cursor) attribute
 - CSS {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, and {{CSSxRef(":focus-visible")}} pseudoclasses
 - {{DOMXref("CaretPosition")}} Interface
 

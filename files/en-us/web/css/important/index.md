@@ -2,9 +2,8 @@
 title: "!important"
 slug: Web/CSS/important
 page-type: css-keyword
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade). A declaration that is not _important_ is called _normal_.
 
@@ -18,7 +17,7 @@ selector {
 }
 ```
 
-The `!important` comes after the value of the property value pair declaration, preceded by at least one space. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semicolon, but nothing else.
+The `!important` comes after the value of the property value pair declaration, preceded by zero or more spaces. The important flag must be the last token in the declaration. In other words, there can be white space and comments between the flag and the declaration's ending semicolon, but nothing else.
 
 ## Impact on the cascade
 
@@ -53,7 +52,7 @@ Within each of the three origins for style sheets – author, user, and user-age
 
 ### Inline styles
 
-Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attributes. They can also be normal or important. Inline _normal_ styles take precedence over all _normal_ declarations, no matter the origin. Inline _important_ styles take precedence over all other _important_ author styles, no matter the layer, but important styles from user's or user-agent's style sheets and transitions override them.
+Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attributes. They can also be normal or important. Inline _normal_ styles take precedence over all _normal_ declarations, no matter the origin. Inline _important_ styles take precedence over all other _important_ author styles, no matter the layer, but important styles from user's or user-agent's style sheets and transitions override them.
 
 ### !important and specificity
 

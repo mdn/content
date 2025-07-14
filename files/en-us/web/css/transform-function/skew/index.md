@@ -3,14 +3,39 @@ title: skew()
 slug: Web/CSS/transform-function/skew
 page-type: css-function
 browser-compat: css.types.transform-function.skew
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`skew()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element on the 2D
+The **`skew()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element on the 2D
 plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(0.312rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the horizontal and vertical directions. The effect is as if you
@@ -20,10 +45,6 @@ The coordinates of each point are modified by a value proportionate to the speci
 origin. Thus, the farther from the origin a point is, the greater the value added to it.
 
 ## Syntax
-
-The `skew()` function is specified with either one or two values, which represent the amount of skewing to
-be applied in each direction. If you only specify one value it is used for the x-axis and there will be no skewing on
-the y-axis.
 
 ```css
 skew(ax)
@@ -35,7 +56,7 @@ skew(ax, ay)
 
 - `ax`
   - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the x-axis.
-- `ay`
+- `ay` {{optional_inline}}
   - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the y-axis. If not defined, its default value is `0`, resulting in a purely horizontal skewing.
 
 <table class="standard-table">

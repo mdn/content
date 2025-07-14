@@ -90,8 +90,6 @@ const processor = {
       frame.data[i * 4 + 2] = grey;
     }
     this.ctx1.putImageData(frame, 0, 0);
-
-    return;
   },
 };
 ```
@@ -106,12 +104,12 @@ processor.doLoad();
 
 {{EmbedLiveSample("Video_and_canvas", '100%', 580)}}
 
-This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
+This is an example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
 You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS) on your video server.
 
 ### Video and WebGL
 
@@ -128,70 +126,43 @@ We can also adjust the rate that audio and video plays at using an attribute of 
 
 Note that the `playbackRate` property works with both `<audio>` and `<video>`, but in both cases, it changes the playback speed but _not_ the pitch. To manipulate the audio's pitch you need to use the Web Audio API. See the {{domxref("AudioBufferSourceNode.playbackRate")}} property.
 
-#### HTML
-
-```html
-<video
-  id="my-video"
-  controls
-  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
-```
-
-#### JavaScript
-
-```js
-const myVideo = document.getElementById("my-video");
-myVideo.playbackRate = 2;
-```
-
-#### Editable example
-
-```html hidden
-<video id="my-video" controls width="480" height="270">
-  <source
-    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
-    type="video/webm" />
-  <source
-    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
-    type="video/mp4" />
+```html live-sample___playback-rate
+<video id="my-video" controls loop>
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
 </video>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-const myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
->
+<label for="rate">Playback rate <output id="rate-value">1.0</output></label>
+<input type="range" id="rate" name="rate" min="0" max="4" value="1" step=".2" />
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
+```js live-sample___playback-rate
+const rateSlider = document.getElementById("rate");
+const rateValue = document.getElementById("rate-value");
+const myVideo = document.getElementById("my-video");
 
-function setPlaybackRate() {
-  eval(textarea.value);
+rateSlider.addEventListener("input", () => {
+  myVideo.playbackRate = rateSlider.value;
+  rateValue.textContent = parseFloat(rateSlider.value);
+});
+```
+
+```css hidden live-sample___playback-rate live-sample___audio-filter
+body {
+  font-family: sans-serif;
 }
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  setPlaybackRate();
-});
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-});
-
-textarea.addEventListener("input", setPlaybackRate);
-window.addEventListener("load", setPlaybackRate);
+video,
+label,
+input {
+  display: block;
+  padding: 0.5em;
+  width: 80%;
+  margin: auto;
+}
 ```
 
-{{ EmbedLiveSample('Editable_example', 700, 450) }}
+Start the video, then adjust the slider to change the playback rate of the media:
 
-> [!NOTE]
-> Try the [playbackRate example](https://jsbin.com/qomuvefu/2/edit) live.
+{{EmbedLiveSample('playback-rate', , 450)}}
 
 ## Audio manipulation
 
@@ -201,26 +172,29 @@ window.addEventListener("load", setPlaybackRate);
 
 The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
 
-| If the audio source is…                                                                                                                                                  | Use this Web Audio node type               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                 | {{domxref("MediaElementAudioSourceNode")}} |
-| A plain raw audio data buffer in memory                                                                                                                                  | {{domxref("AudioBufferSourceNode")}}       |
-| An oscillator generating a sine wave or other computed waveform                                                                                                          | {{domxref("OscillatorNode")}}              |
-| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}}  |
+| If the audio source is…                                                                                                                                                   | Use this Web Audio node type               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                                  | {{domxref("MediaElementAudioSourceNode")}} |
+| A plain raw audio data buffer in memory                                                                                                                                   | {{domxref("AudioBufferSourceNode")}}       |
+| An oscillator generating a sine wave or other computed waveform                                                                                                           | {{domxref("OscillatorNode")}}              |
+| An audio track from [WebRTC](/en-US/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). | {{domxref("MediaStreamAudioSourceNode")}}  |
 
 ### Audio filters
 
 The Web Audio API has a lot of different filter/effects that can be applied to audio using the {{domxref("BiquadFilterNode")}}, for example.
 
-#### HTML
-
-```html
-<video id="my-video" controls src="my-video.mp4" type="video/mp4"></video>
+```html live-sample___audio-filter
+<video id="my-video" controls loop>
+  <source src="/shared-assets/videos/friday.mp4" type="video/mp4" />
+</video>
+<label for="freq">Filter freq. <output id="freq-value">1.0</output>hz</label>
+<input type="range" id="freq" name="freq" max="20000" value="1000" step="100" />
 ```
 
-#### JavaScript
+```js live-sample___audio-filter
+const freqSlider = document.getElementById("freq");
+const freqValue = document.getElementById("freq-value");
 
-```js
 const context = new AudioContext();
 const audioSource = context.createMediaElementSource(
   document.getElementById("my-video"),
@@ -232,66 +206,18 @@ filter.connect(context.destination);
 // Configure filter
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;
-```
+filter.gain.value = 20;
 
-#### Editable example
-
-```html hidden
-<video id="my-video" controls width="480" height="270" crossorigin="anonymous">
-  <source
-    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
-    type="video/webm" />
-  <source
-    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
-    type="video/mp4" />
-</video>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-  filter.type = "lowshelf";
-  filter.frequency.value = 1000;
-  filter.gain.value = 25;
-</textarea>
-```
-
-```js hidden
-const context = new AudioContext();
-const audioSource = context.createMediaElementSource(
-  document.getElementById("my-video"),
-);
-const filter = context.createBiquadFilter();
-audioSource.connect(filter);
-filter.connect(context.destination);
-
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
-
-function setFilter() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  setFilter();
+freqSlider.addEventListener("input", () => {
+  filter.frequency.value = freqSlider.value;
+  freqValue.textContent = parseFloat(freqSlider.value);
 });
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-});
-
-textarea.addEventListener("input", setFilter);
-window.addEventListener("load", setFilter);
 ```
 
-{{ EmbedLiveSample('Editable_example_2', 700, 450) }}
+{{EmbedLiveSample('audio-filter', , 550)}}
 
 > [!NOTE]
-> Unless you have [CORS](/en-US/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> Unless you have [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Common audio filters
 

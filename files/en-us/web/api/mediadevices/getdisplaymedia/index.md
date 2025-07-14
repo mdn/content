@@ -26,24 +26,21 @@ getDisplayMedia(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}. The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified. The list of possible option properties for `getDisplayMedia()` is as follows:
-
     - `video` {{optional_inline}}
-      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the stream will contain a video track A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
+      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
     - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
-
       - : An enumerated value specifying whether the browser should offer entire screens in the screen capture options presented to the user alongside tab and window options. This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps. Possible values are `include`, which hints that the browser should include screen options, and `exclude`, which hints that they should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
         > [!NOTE]
         > You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory. Trying to do so will result in the `getDisplayMedia()` call failing with a `TypeError`.
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
-      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+      - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e., as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `selfBrowserSurface` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture. This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display. Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `surfaceSwitching` {{Experimental_Inline}} {{optional_inline}}
@@ -73,7 +70,7 @@ audio track.
     not fully active or does not focused. Or if the `controller` options has been already used in creating
     another {{domxref("MediaStream")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
+  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}
@@ -145,7 +142,7 @@ perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack(
 add the video track from the stream.
 
 > [!NOTE]
-> The [Screen sharing controls](https://screen-sharing-controls.glitch.me/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
+> The [Screen sharing controls](https://chrome.dev/screen-sharing-controls/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
 
 ## Specifications
 

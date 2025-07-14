@@ -1,10 +1,10 @@
 ---
 title: Mastering wrapping of flex items
+short-title: Wrapping flex items
 slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Flexbox was designed as a single-dimensional layout tool — it deals with laying out items as a row or column — but not both at once. It is, however, possible to wrap flex items onto new lines, creating new rows if {{cssxref("flex-direction")}} is `row` and new columns if `flex-direction` is `column`. This guide explains flexbox wrapping, what it is designed for, and what situations require [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) rather than flexbox.
 
@@ -257,7 +257,7 @@ To see how the `gap` property differs from `margin` in both axes, try changing t
 
 The flexbox specification details what should happen if a flex item is collapsed by setting `visibility: collapse` on an item. See the MDN documentation for the {{cssxref("visibility")}} property. The specification describes the behavior as follows:
 
-> "Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line's cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container's main size, but is guaranteed to have no effect on its cross size and won't cause the rest of the page's layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change." - [Collapsed items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)
+> "Specifying `visibility: collapse` on a flex item causes it to become a _collapsed flex item_, producing an effect similar to `visibility: collapse` on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line's cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container's main size, but is guaranteed to have no effect on its cross size and won't cause the rest of the page's layout to "wobble". Flex line wrapping _is_ re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change." - [Collapsed items](https://drafts.csswg.org/css-flexbox-1/#visibility-collapse)
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
@@ -309,7 +309,7 @@ p:has(:checked) + div .collapse {
 
 The above was a single-line, non-wrapping flex container with a set size of `600px` so whether the item is visible or collapsed, the width is the same. It is important to understand that while the container retains a strut of the collapsed item's cross-size, the main size is not preserved. Multi-line flex containers rewrap their items after removing collapsed items from rendering. The new space that a collapsed item leaves in the main direction may cause non-collapsed items to be placed in a different line than if the item were not collapsed. Because each line is laid out like an independent single-line flex container and its composition may change after collapsing, its cross-axis size may change too.
 
-The following example shows this behavior. The third flex item is collapsed, so it occupies zero space along the main axis (the inline-size is `0`). When collapsed, its strut is on the first row after the fourth item, with the first row being tall enough to fit the three lines of text that the third item would have had. Then, if you uncollapse the item (e.g. by removing the `collapse` class), there is no longer enough horizontal space for the fifth item on the first row, and it moves to the second. This causes the second row to grow to fit the two lines of text of its new member, and the last flex item is pushed onto a new row. With a taller second line and a new third line, the flex container is much taller than it was before.
+The following example shows this behavior. The third flex item is collapsed, so it occupies zero space along the main axis (the inline-size is `0`). When collapsed, its strut is on the first row after the fourth item, with the first row being tall enough to fit the three lines of text that the third item would have had. Then, if you uncollapse the item (e.g., by removing the `collapse` class), there is no longer enough horizontal space for the fifth item on the first row, and it moves to the second. This causes the second row to grow to fit the two lines of text of its new member, and the last flex item is pushed onto a new row. With a taller second line and a new third line, the flex container is much taller than it was before.
 
 > [!NOTE]
 > Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.

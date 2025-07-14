@@ -32,6 +32,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Get changed files
+        id: check
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
@@ -40,23 +41,23 @@ jobs:
 
           # filter out files that are not markdown files
           GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
-          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> "$GITHUB_OUTPUT"
 
           # filter out files that are not attachments
           GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
-          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js environment
-        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -64,8 +65,14 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         env:
+          GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
+
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
           CONTENT_ROOT: ${{ github.workspace }}/files
 
           # This is so that if there's a single 'unsafe_html' flaw, it
@@ -119,7 +126,7 @@ jobs:
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
       - name: Merge static assets with built documents
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
@@ -127,13 +134,15 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_FILES
+        env:
+          GIT_DIFF_FILES: ${{ steps.check.outputs.GIT_DIFF_FILES }}
         run: |
           echo $GIT_DIFF_FILES
 

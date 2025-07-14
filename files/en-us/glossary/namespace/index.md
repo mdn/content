@@ -2,9 +2,8 @@
 title: Namespace
 slug: Glossary/Namespace
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Namespace is a context for identifiers, a logical grouping of names used in a program. Within the same context and same scope, an identifier must uniquely identify an entity.
 
@@ -14,7 +13,7 @@ In HTML, CSS, and XML-based languages, a namespace is the explicitly declared or
 
 ## See also
 
-- [Namespaces crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course)
+- [Namespaces crash course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course)
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
 - CSS {{CSSXref("@namespace")}}
 - [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) method

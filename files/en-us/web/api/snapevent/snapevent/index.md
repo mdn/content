@@ -38,7 +38,7 @@ For example:
 
 ```js
 mainElem.addEventListener("scrollsnapchange", (event) => {
-  // ...
+  // …
 
   // Log a SnapEvent object instance to the console
   console.log(event);

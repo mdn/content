@@ -2,10 +2,9 @@
 title: <content-position>
 slug: Web/CSS/content-position
 page-type: css-type
-browser-compat: css.types.content-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-content-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<content-position>`** {{glossary("enumerated")}} value type is used by {{cssxref("justify-content")}} and {{cssxref("align-content")}} properties, and the {{cssxref("place-content")}} shorthand, to align the box's contents within itself.
 
@@ -37,14 +36,10 @@ The `<content-position>` enumerated value type is specified using one of the fol
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - Properties that use this data type: {{cssxref("align-content")}}, {{cssxref("justify-content")}}, {{cssxref("place-content")}}
-- Other box alignment data types: {{cssxref("baseline-position")}}, {{cssxref("content-distribution")}}, {{cssxref("content-position")}}, {{cssxref("overflow-position")}}, and {{cssxref("self-position")}}
+- Other box alignment data types: {{cssxref("baseline-position")}}, {{cssxref("content-distribution")}}, `content-position`, {{cssxref("overflow-position")}}, and {{cssxref("self-position")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module

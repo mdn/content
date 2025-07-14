@@ -3,15 +3,42 @@ title: hyphenate-character
 slug: Web/CSS/hyphenate-character
 page-type: css-property
 browser-compat: css.properties.hyphenate-character
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.
 
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
 
-{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
+{{InteractiveExample("CSS Demo: hyphenate-character")}}
+
+```css interactive-example-choice
+hyphenate-character: auto;
+```
+
+```css interactive-example-choice
+hyphenate-character: "=";
+```
+
+```css interactive-example-choice
+hyphenate-character: "—";
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+  hyphens: auto;
+}
+```
 
 ## Syntax
 

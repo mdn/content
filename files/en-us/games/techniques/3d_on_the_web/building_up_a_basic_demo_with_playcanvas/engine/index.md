@@ -2,9 +2,8 @@
 title: Building up a basic demo with the PlayCanvas engine
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Built for modern browsers, **PlayCanvas** is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with [ammo.js](https://github.com/kripken/ammo.js/)), audio, and facilities to handle control inputs from various devices (including gamepads).
 That's quite an impressive list of features — let's see some in action.
@@ -26,7 +25,7 @@ Alternatively, you can load PlayCanvas from a CDN:
 <script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
 ```
 
-If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for PlayCanvas
@@ -148,7 +147,7 @@ The code above assign a dark grey ambient light for the whole scene. The box loo
 
 ## Material
 
-This example uses a material called [Standard material](https://api.playcanvas.com/classes/Engine.StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
+This example uses a material called [Standard material](https://api.playcanvas.com/engine/classes/StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
 Add the following lines to your code:
 
 ```js
@@ -208,7 +207,7 @@ boxMaterial.diffuse.set(0, 0.58, 0.86);
 boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   app.resizeCanvas(canvas.width, canvas.height);
 });
 ```
@@ -393,7 +392,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 // Animate shapes
 let timer = 0;
-app.on("update", function (deltaTime) {
+app.on("update", (deltaTime) => {
   timer += deltaTime;
   box.rotate(deltaTime * 10, deltaTime * 20, deltaTime * 3);
   cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);

@@ -3,13 +3,12 @@ title: Exponentiation assignment (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.exponentiation_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **exponentiation assignment (`**=`)** operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Exponentiation assignment (**=) operator")}}
 
 ```js interactive-example
 let a = 3;

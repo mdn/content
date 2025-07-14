@@ -3,11 +3,10 @@ title: abs()
 slug: Web/CSS/abs
 page-type: css-function
 browser-compat: css.types.abs
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
+The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns the absolute value of the argument, as the same type as the input.
 
 ## Syntax
 

@@ -3,13 +3,12 @@ title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 page-type: javascript-operator
 browser-compat: javascript.operators.instanceof
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`instanceof`** operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{InteractiveExample("JavaScript Demo: instanceof operator")}}
 
 ```js interactive-example
 function Car(make, model, year) {
@@ -239,7 +238,7 @@ This will always be `false`. (`!myCar` will be evaluated before `instanceof`, so
 
 ### Overriding the behavior of instanceof
 
-A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) of `C` from `x`, it would still fail:
+A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) of `C` from `x`, it would still fail:
 
 ```js
 class C {

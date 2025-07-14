@@ -1,11 +1,11 @@
 ---
 title: Object.getOwnPropertyNames()
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyNames
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyNames()`** static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
 
@@ -132,7 +132,7 @@ console.log(nonEnumOnly);
 ## See also
 
 - [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

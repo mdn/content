@@ -3,21 +3,54 @@ title: transform
 slug: Web/CSS/transform
 page-type: css-property
 browser-compat: css.properties.transform
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
-It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
+It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model).
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
 
-If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) will be created.
 In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 > [!WARNING]
 > Only transformable elements can be `transform`ed.
-> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Glossary/Inline-level_content), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Glossary/Inline-level_content), [table-column boxes](/en-US/docs/Web/HTML/Reference/Elements/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Reference/Elements/colgroup).
 
 ## Syntax
 
@@ -79,7 +112,7 @@ Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "pre
 
 Find out more:
 
-- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Formal definition
@@ -143,8 +176,8 @@ div {
 .original {
   border: 1px dashed;
 }
-.original:before,
-.original:after {
+.original::before,
+.original::after {
   content: "";
   position: absolute;
   top: 100px;
@@ -153,7 +186,7 @@ div {
   height: 1px;
   border-top: 2px dotted;
 }
-.original:after {
+.original::after {
   transform: rotate(135deg);
 }
 .one {

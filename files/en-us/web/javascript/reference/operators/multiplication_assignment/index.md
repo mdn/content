@@ -3,13 +3,12 @@ title: Multiplication assignment (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.multiplication_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **multiplication assignment (`*=`)** operator performs [multiplication](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Multiplication assignment (*=) operator")}}
 
 ```js interactive-example
 let a = 2;

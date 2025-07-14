@@ -1,17 +1,17 @@
 ---
 title: String.prototype.charCodeAt()
+short-title: charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.charCodeAt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`charCodeAt()`** method of {{jsxref("String")}} values returns an integer between `0` and `65535` representing the UTF-16 code unit at the given index.
 
 `charCodeAt()` always indexes the string as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters), so it may return lone surrogates. To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}}.
 
-{{InteractiveExample("JavaScript Demo: String.charCodeAt()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.charCodeAt()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

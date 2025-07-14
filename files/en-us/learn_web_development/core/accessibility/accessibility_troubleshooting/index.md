@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Accessibility troubleshooting"
+short-title: "Challenge: A11y debugging"
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
@@ -14,7 +14,7 @@ In the challenge for this module, we present to you a simple site with a number 
 
 To start this challenge, you should go and grab the [ZIP containing the files that comprise the example](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip). Decompress the contents into a new directory somewhere on your local computer.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 The finished challenge site should look like so:
 

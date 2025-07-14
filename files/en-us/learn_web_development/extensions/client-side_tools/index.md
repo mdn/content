@@ -2,9 +2,8 @@
 title: Understanding client-side web development tools
 slug: Learn_web_development/Extensions/Client-side_tools
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_tools/Overview", "Learn_web_development/Extensions")}}
 

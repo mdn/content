@@ -20,23 +20,19 @@ browser.browserAction.setPopup(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the popup only for the specified window.
     - `popup`
-
       - : `string` or `null`. The HTML file to show in a popup, specified as a URL.
 
-        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g. `https://example.org/`).
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g., `https://example.org/`).
 
         If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("browserAction.onClicked")}} events.
 
         If `popup` is `null`:
-
         - If `tabId` is specified, removes the tab-specific popup so that the tab inherits the global popup.
         - If `windowId` is specified, removes the window-specific popup so that the window inherits the global popup.
         - If `tabId` and `windowId` are both omitted, reverts the global popup to the default value.

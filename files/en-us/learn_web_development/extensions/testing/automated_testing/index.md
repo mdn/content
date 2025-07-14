@@ -1,10 +1,12 @@
 ---
 title: Introduction to automated testing
+short-title: Automated testing
 slug: Learn_web_development/Extensions/Testing/Automated_testing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as Sauce Labs, BrowserStack, and TestingBot.
 
@@ -113,8 +115,8 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    ```
 
 2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder.
-   You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
-3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
+   You can try your own test content if you like, but bear in mind that such tools don't work well with JS/CSS inlined in the HTML file — you need separate files.
+3. Install gulp globally (meaning, it will be available across all projects) using the following command:
 
    ```bash
    npm install --global gulp-cli
@@ -137,7 +139,9 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    }
    ```
 
-   This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
+   This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. In the next few sections, we will change this `export default` statement to something more useful.
+
+   Each gulp task is exported in the same basic format — `exports function taskName(cb) {...}`. Each function takes one parameter — a callback to run when the task is completed.
 
 6. You can run your gulp's default task with the following command — try this now:
 
@@ -147,6 +151,26 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 
 ### Adding some real tasks to Gulp
 
+Now we are ready to add more tasks to our Gulp file. Each addition may require you to modify the `gulpfile.mjs` file in the following way:
+
+- When we ask you to add some `import` statements, add them below the existing `import` statement.
+- When we ask you to add a new `export function ...` statement, add it to the end of the file.
+- When we ask you to change the default export, change the `export default` statement in the way we specify.
+
+So your `gulpfile.mjs` file will grow like this:
+
+```js
+import gulp from "gulp";
+// Add any new imports here
+
+// Our latest default export
+// export default ...
+
+// Add any new task exports here
+// export function ...
+// export function ...
+```
+
 To add some real tasks to Gulp, we need to think about what we want to do. A reasonable set of basic functionalities to run on our project is as follows:
 
 - html-tidy, css-lint, and js-hint to lint and report/fix common HTML/CSS/JS errors (see [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy), [gulp-csslint](https://www.npmjs.com/package/gulp-csslint), [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)).
@@ -155,7 +179,7 @@ To add some real tasks to Gulp, we need to think about what we want to do. A rea
 
 See the links above for full instructions on the different gulp packages we are using.
 
-To use each plugin, you need to first install it via npm, then require any dependencies at the top of the `gulpfile.js` file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.
+To use each plugin, you need to first install it via npm, then require any dependencies at the top of the `gulpfile.mjs` file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.
 
 #### html-tidy
 
@@ -165,15 +189,16 @@ To use each plugin, you need to first install it via npm, then require any depen
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
+   > [!NOTE]
+   > `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
 
-2. Add the following dependency to `gulpfile.js`:
+2. Add the following dependency to `gulpfile.mjs`:
 
    ```js
    import htmltidy from "gulp-htmltidy";
    ```
 
-3. Add the following test to the bottom of `gulpfile.js`:
+3. Add the following test to the bottom of `gulpfile.mjs`:
 
    ```js
    export function html() {
@@ -205,14 +230,14 @@ In the input version of the file, you may have noticed that we put an empty {{ht
    npm install --save-dev gulp-csslint
    ```
 
-2. Add the following dependencies to `gulpfile.js`:
+2. Add the following dependencies to `gulpfile.mjs`:
 
    ```js
    import autoprefixer from "gulp-autoprefixer";
    import csslint from "gulp-csslint";
    ```
 
-3. Add the following test to the bottom of `gulpfile.js`:
+3. Add the following test to the bottom of `gulpfile.mjs`:
 
    ```js
    export function css() {
@@ -255,14 +280,14 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
    npm install jshint gulp-jshint --save-dev
    ```
 
-2. Add the following dependencies to `gulpfile.js`:
+2. Add the following dependencies to `gulpfile.mjs`:
 
    ```js
    import babel from "gulp-babel";
    import jshint from "gulp-jshint";
    ```
 
-3. Add the following test to the bottom of `gulpfile.js`:
+3. Add the following test to the bottom of `gulpfile.mjs`:
 
    ```js
    export function js() {
@@ -297,7 +322,7 @@ You can then try out the files output by your automated tasks by looking at them
 
 If you get errors, check that you've added all the dependencies and the tests as shown above; also try commenting out the HTML/CSS/JavaScript code sections and then rerunning gulp to see if you can isolate what the problem is.
 
-Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.js`:
+Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.mjs`:
 
 ```js
 export function watch() {
@@ -562,7 +587,6 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-
    - Stop the session
    - Give someone else a URL so they can observe the test remotely.
    - Copy text/notes to a remote clipboard.
@@ -643,7 +667,6 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the website running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
-
    - Stop the session
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
@@ -677,7 +700,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
      api_secret: "your-tb-secret",
    });
 
-   tb.getTests(function (err, tests) {
+   tb.getTests((err, tests) => {
      console.log(tests);
    });
    ```

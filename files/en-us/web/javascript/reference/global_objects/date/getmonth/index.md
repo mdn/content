@@ -1,15 +1,15 @@
 ---
 title: Date.prototype.getMonth()
+short-title: getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to local time, as a zero-based value (where zero indicates the first month of the year).
 
-{{InteractiveExample("JavaScript Demo: Date.getMonth()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getMonth()", "shorter")}}
 
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 00:20:18");

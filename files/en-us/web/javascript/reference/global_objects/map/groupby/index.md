@@ -1,11 +1,11 @@
 ---
 title: Map.groupBy()
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Map.groupBy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
@@ -96,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function. This is a very succinct way to access the relevant values of elements within a function.
+Note that the function argument `{ quantity }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `quantity` property of an object passed as a parameter, and assigns it to a variable named `quantity` in the body of the function. This is a very succinct way to access the relevant values of elements within a function.
 
 The key to a `Map` can be modified and still used. However you can't recreate the key and still use it. For this reason it is important that anything that needs to use the map keeps a reference to its keys.
 
@@ -122,6 +122,7 @@ console.log(result.get(restock2)); // undefined
 ## See also
 
 - [Polyfill of `Map.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [es-shims polyfill of `Map.groupBy`](https://www.npmjs.com/package/map.groupby)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Map/Map", "Map()")}}

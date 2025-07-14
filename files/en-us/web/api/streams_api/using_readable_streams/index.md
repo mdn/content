@@ -50,7 +50,7 @@ fetch("./tortoise.png")
   });
 ```
 
-Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g. by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.
+Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g., by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.
 
 Also note that the previous example can be reduced by one step, as `response.body` is synchronous and so doesn't need the promise:
 
@@ -125,7 +125,8 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
+> [!NOTE]
+> `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
 If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 
@@ -274,9 +275,7 @@ class MockPushSource {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   static #randomChars(length = 8) {
@@ -356,7 +355,7 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          if (result.data.length == 0) {
+          if (result.data.length === 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;
@@ -379,9 +378,7 @@ function makePushSourceStream() {
 
 ```js hidden
 // Monkey patch fetch() so it returns a response that is a mocked stream
-window.fetch = async (...args) => {
-  return { body: stream };
-};
+window.fetch = async (...args) => ({ body: stream });
 ```
 
 The code below shows a more complete example.
@@ -456,9 +453,9 @@ The constructor takes two objects as parameters. The first object is required, a
 
 The first object can contain up to five members, only the first of which is required:
 
-1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
+1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g., beginning generation of data or otherwise getting access to the source.
 2. `pull(controller)` — A method that, when included, is called repeatedly until the stream's internal queue is full. This can be used to control the stream as more chunks are enqueued.
-3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
+3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
 4. `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream.
    Bytestreams are covered separately in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), as they are somewhat different in purpose and use case to regular (default) streams.
 

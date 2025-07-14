@@ -2,9 +2,8 @@
 title: Firefox 114 for developers
 slug: Mozilla/Firefox/Releases/114
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 was released on June 06, 2023.
 
@@ -12,7 +11,7 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### Developer Tools
 
-- Fixed an issue where the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
+- Fixed an issue where the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role) were displayed.
   Roles that cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
 
 ### HTML
@@ -35,7 +34,7 @@ No notable changes.
 
 ### SVG
 
-- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
+- The [`crossorigin`](/en-US/docs/Web/SVG/Reference/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Reference/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Reference/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 ### APIs
 

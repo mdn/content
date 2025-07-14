@@ -31,11 +31,10 @@ The code below is an example of a basic audio implementation using HTML5:
 
 - Here we define an {{ htmlelement("audio") }} element with multiple sources — we do this as not all browsers support the same audio formats. To ensure reasonable coverage, we should specify at least two different formats. The two formats that will give maximum coverage are mp3 and ogg vorbis.
 - We do this using the {{ htmlelement("source") }} element, which takes the attributes `src` and `type`.
-
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
-- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However, any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
+- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However, any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
 ## HTML audio in detail
@@ -226,7 +225,7 @@ audio.volume = 0.5;
 
 ## Creating your own custom audio player
 
-The JavaScript media API allows you to create your own custom player. Let's take a look at a very minimal example. We can combine HTML and JavaScript to create a very simple player with a play and a pause button. First, we'll set up the audio in the HTML, without the `controls` attribute, since we are creating our own controls:
+The JavaScript media API allows you to create your own custom player. Let's take a look at a very minimal example. We can combine HTML and JavaScript to create a player with a play and a pause button. First, we'll set up the audio in the HTML, without the `controls` attribute, since we are creating our own controls:
 
 ```html
 <audio id="my-audio">
@@ -265,7 +264,7 @@ window.onload = () => {
 
 ## Media loading events
 
-Above we have shown how you can create a very simple audio player, but what if we want to show progress, buffering and only activate the buttons when the media is ready to play? Fortunately, there are a number of events we can use to let our player know exactly what is happening.
+Above we have shown how you can create an audio player, but what if we want to show progress, buffering and only activate the buttons when the media is ready to play? Fortunately, there are a number of events we can use to let our player know exactly what is happening.
 
 First, let's take a look at the media loading process in order:
 
@@ -275,7 +274,7 @@ The `loadstart` event tells us that load process has started and the browser is 
 
 ```js
 audio.addEventListener("loadstart", () => {
-  //grabbing the file
+  // Grabbing the file
 });
 ```
 
@@ -285,7 +284,7 @@ If you just want to know as soon as the duration of your media is established, t
 
 ```js
 audio.addEventListener("durationchange", () => {
-  //you can display the duration now
+  // You can display the duration now
 });
 ```
 
@@ -295,7 +294,7 @@ Metadata can consist of more than just duration — if you want to wait for all 
 
 ```js
 audio.addEventListener("loadedmetadata", () => {
-  //you can display the duration now
+  // You can display the duration now
 });
 ```
 
@@ -305,7 +304,7 @@ The `loadeddata` event is fired when the first bit of media arrives. The playhea
 
 ```js
 audio.addEventListener("loadeddata", () => {
-  //you could display the playhead now
+  // You could display the playhead now
 });
 ```
 
@@ -325,7 +324,7 @@ audio.addEventListener("progress", () => {
 
 ```js
 audio.addEventListener("canplay", () => {
-  //audio is ready to play
+  // Audio is ready to play
 });
 ```
 
@@ -335,7 +334,7 @@ audio.addEventListener("canplay", () => {
 
 ```js
 audio.addEventListener("canplaythrough", () => {
-  //audio is ready to play all the way through
+  // Audio is ready to play all the way through
 });
 ```
 
@@ -370,7 +369,7 @@ The `timeupdate` event is triggered every time the `currentTime` property change
 
 ```js
 audio.addEventListener("timeupdate", () => {
-  //update something related to playback progress
+  // Update something related to playback progress
 });
 ```
 
@@ -396,7 +395,7 @@ The `ended` event is initiated when the end of the media is reached.
 
 ```js
 audio.addEventListener("ended", () => {
-  //do something once audio track has finished playing
+  // Do something once audio track has finished playing
 });
 ```
 
@@ -422,8 +421,8 @@ Consider this snippet of HTML:
 
 <div id="controls">
   <span id="loading">loading</span>
-  <button id="play" style="display:none">play</button>
-  <button id="pause" style="display:none">pause</button>
+  <button id="play">play</button>
+  <button id="pause">pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -448,53 +447,56 @@ Styled like so:
   background-color: green;
   width: 0;
 }
+
+#play,
+#pause {
+  display: none; /* hide until media is ready */
+}
 ```
 
 Now let's wire this thing up with JavaScript:
 
 ```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const play = document.getElementById("play");
-  const pause = document.getElementById("pause");
-  const loading = document.getElementById("loading");
-  const bar = document.getElementById("bar");
+const audio = document.getElementById("my-audio");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
+const loading = document.getElementById("loading");
+const bar = document.getElementById("bar");
 
-  function displayControls() {
-    loading.style.display = "none";
-    play.style.display = "block";
-  }
+function displayControls() {
+  loading.style.display = "none";
+  play.style.display = "block";
+}
 
-  // Check that the media is ready before displaying the controls
-  if (audio.paused) {
+// Check that the media is ready before displaying the controls
+if (audio.paused) {
+  displayControls();
+} else {
+  // not ready yet - wait for canplay event
+  audio.addEventListener("canplay", () => {
     displayControls();
-  } else {
-    // not ready yet - wait for canplay event
-    audio.addEventListener("canplay", () => {
-      displayControls();
-    });
-  }
-
-  play.addEventListener("click", () => {
-    audio.play();
-    play.style.display = "none";
-    pause.style.display = "block";
   });
+}
 
-  pause.addEventListener("click", () => {
-    audio.pause();
-    pause.style.display = "none";
-    play.style.display = "block";
-  });
+play.addEventListener("click", () => {
+  audio.play();
+  play.style.display = "none";
+  pause.style.display = "block";
+});
 
-  // Display progress
-  audio.addEventListener("timeupdate", () => {
-    // Sets the percentage
-    bar.style.width = `${Math.floor(
-      (audio.currentTime / audio.duration) * 100,
-    )}%`;
-  });
-};
+pause.addEventListener("click", () => {
+  audio.pause();
+  pause.style.display = "none";
+  play.style.display = "block";
+});
+
+// Display progress
+audio.addEventListener("timeupdate", () => {
+  // Sets the percentage
+  bar.style.width = `${Math.floor(
+    (audio.currentTime / audio.duration) * 100,
+  )}%`;
+});
 ```
 
 You should end up with something like this:

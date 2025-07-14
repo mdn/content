@@ -2,9 +2,10 @@
 title: Keyed collections
 slug: Web/JavaScript/Guide/Keyed_collections
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 This chapter introduces collections of data which are indexed by a key; `Map` and `Set` objects contain elements which are iterable in the order of insertion.
 
@@ -55,7 +56,7 @@ These three tips can help you to decide whether to use a `Map` or an `Object`:
 
 ### WeakMap object
 
-A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
+A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
 The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration. So there is no method to obtain a list of the keys in a `WeakMap`. If there were, the list would depend on the state of garbage collection, introducing non-determinism.
 
@@ -111,7 +112,8 @@ for (const item of mySet) {
 
 You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Also, the `Set` constructor accepts an `Array` to convert in the other direction.
 
-> **Note:** `Set` objects store _unique values_—so any duplicate elements from an Array are deleted when converting!
+> [!NOTE]
+> `Set` objects store _unique values_—so any duplicate elements from an Array are deleted when converting!
 
 ```js
 Array.from(mySet);
@@ -143,7 +145,7 @@ The use cases of `WeakSet` objects are limited. They will not leak memory, so it
 
 ## Key and value equality of Map and Set
 
-Both the key equality of `Map` objects and the value equality of `Set` objects are based on the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality):
+Both the key equality of `Map` objects and the value equality of `Set` objects are based on the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality):
 
 - Equality works like the identity comparison operator `===`.
 - `-0` and `+0` are considered equal.

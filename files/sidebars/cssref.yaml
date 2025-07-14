@@ -65,6 +65,7 @@ sidebar:
     tags:
       - css-property
       - css-shorthand-property
+    link: /Web/CSS/Properties
     title: Properties
     details: closed
   - type: listSubPages
@@ -80,35 +81,46 @@ sidebar:
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-class
+    link: /Web/CSS/Pseudo-classes
     title: Pseudo-classes
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-element
+    link: /Web/CSS/Pseudo-elements
     title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-at-rule
+    link: /Web/CSS/CSS_syntax/At-rule
     title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-function
     depth: 2
+    link: /Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
     title: Functions
     details: closed
   - type: listSubPages
     path: /Web/CSS
     tags: css-type
+    link: /Web/CSS/CSS_Values_and_Units/CSS_data_types
     title: Types
     details: closed
   - type: section
     link: /Web/CSS/Guides
     title: Guides
+  - title: Anchor_positioning
+    details: closed
+    children:
+      - /Web/CSS/CSS_anchor_positioning/Using
+      - /Web/CSS/CSS_anchor_positioning/Try_options_hiding
   - title: Animations
     details: closed
     children:
+      - /Web/CSS/CSS_animated_properties
       - /Web/CSS/CSS_animations/Using_CSS_animations
   - title: Backgrounds_and_Borders
     details: closed
@@ -116,9 +128,12 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
       - link: /Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
         title: Resizing_background_images
+      - /Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
   - title: Box alignment
     details: closed
     children:
+      - link: /Web/CSS/CSS_box_alignment/Box_alignment
+        title: Overview
       - link: /Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
         title: Box_alignment_in_block_layout
       - /Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
@@ -129,6 +144,18 @@ sidebar:
     children:
       - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
       - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
+  - title: Cascade
+    details: closed
+    children:
+      - /Web/CSS/CSS_cascade/Cascade
+      - /Web/CSS/CSS_cascade/Inheritance
+      - /Web/CSS/CSS_cascade/Specificity
+      - /Web/CSS/CSS_cascade/Value_processing
+      - /Web/CSS/CSS_cascade/Shorthand_properties
+  - type: listSubPages
+    path: /Web/CSS/CSS_cascading_variables
+    title: Custom_properties
+    details: closed
   - title: Colors
     details: closed
     children:
@@ -137,15 +164,16 @@ sidebar:
       - /Web/CSS/CSS_colors/Color_values
       - /Web/CSS/CSS_colors/Relative_colors
       - /Web/CSS/CSS_colors/Using_color_wisely
-      - link: /Web/Accessibility/Understanding_Colors_and_Luminance
+      - link: /Web/Accessibility/Guides/Colors_and_Luminance
         title: Accessibility_Understanding_colors_and_luminance
-      - link: /Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+      - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
         title: Color_contrast
   - title: Columns
     details: closed
     children:
       - /Web/CSS/CSS_multicol_layout/Basic_concepts
       - /Web/CSS/CSS_multicol_layout/Styling_columns
+      - /Web/CSS/CSS_multicol_layout/Using_multicol_layouts
       - /Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
       - /Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
       - /Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
@@ -153,25 +181,36 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_conditional_rules/Using_feature_queries
+      - /Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
   - title: Containment
     details: closed
     children:
-      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_queries
+      - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_size_and_style_queries
   - title: CSSOM_view
     details: closed
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
+      - /Web/CSS/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
     children:
       - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
+      - /Web/CSS/CSS_display/Flow_layout
       - /Web/CSS/CSS_display/Flow_layout_and_overflow
+      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
+      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
+      - /Web/CSS/CSS_display/Containing_block
+      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
+      - /Web/CSS/CSS_display/Block_formatting_context
+      - /Web/CSS/CSS_inline_layout/Inline_formatting_context
       - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
+      - /Web/CSS/CSS_display/Visual_formatting_model
+  - type: listSubPages
+    path: /Web/CSS/CSS_filter_effects
+    title: Filter_effects
+    details: closed
   - title: Flexbox
     details: closed
     children:
@@ -182,30 +221,31 @@ sidebar:
       - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
       - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
       - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-  - title: Fonts
+  - type: listSubPages
+    path: /Web/CSS/CSS_fonts
+    title: Fonts
     details: closed
-    children:
-      - /Web/CSS/CSS_fonts/OpenType_fonts_guide
-      - /Web/CSS/CSS_fonts/Variable_fonts_guide
   - title: Grid
     details: closed
     children:
       - /Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
       - /Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_template_areas
+      - /Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
       - /Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
       - /Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
       - /Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
       - /Web/CSS/CSS_grid_layout/Subgrid
+      - /Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
       - /Web/CSS/CSS_grid_layout/Masonry_layout
   - title: Images
     details: closed
     children:
       - /Web/CSS/CSS_images/Using_CSS_gradients
+      - /Web/CSS/CSS_images/Replaced_element_properties
+      - /Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
   - title: Lists_and_counters
     details: closed
     children:
@@ -218,10 +258,6 @@ sidebar:
       - /Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
       - /Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
       - /Web/CSS/CSS_logical_properties_and_values/Sizing
-  - title: Math_functions
-    details: closed
-    children:
-      - /Web/CSS/CSS_Functions/Using_CSS_math_functions
   - title: Media_queries
     details: closed
     children:
@@ -232,24 +268,47 @@ sidebar:
   - title: Nesting
     details: closed
     children:
-      - /Web/CSS/CSS_nesting/Using_CSS_nesting
       - /Web/CSS/CSS_nesting/Nesting_at-rules
       - /Web/CSS/CSS_nesting/Nesting_and_specificity
+      - /Web/CSS/CSS_nesting/Using_CSS_nesting
+  - type: listSubPages
+    path: /Web/CSS/CSS_overflow
+    title: Overflow
+    details: closed
   - title: Positioning
     details: closed
     children:
+      - /Web/CSS/CSS_positioned_layout/Stacking_context
+      - /Web/CSS/CSS_positioned_layout/Stacking_floating_elements
       - /Web/CSS/CSS_positioned_layout/Understanding_z-index
-  - title: Scroll_snap
+      - /Web/CSS/CSS_positioned_layout/Using_z-index
+      - /Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+  - type: listSubPages
+    path: /Web/CSS/CSS_scroll_anchoring
+    title: Scroll_anchoring
     details: closed
-    children:
-      - /Web/CSS/CSS_scroll_snap/Basic_concepts
+  - type: listSubPages
+    path: /Web/CSS/CSS_scroll_snap
+    title: Scroll_snap
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS/CSS_selectors
+    title: Selectors
+    details: closed
   - title: Shapes
     details: closed
     children:
       - /Web/CSS/CSS_shapes/Overview_of_shapes
       - /Web/CSS/CSS_shapes/From_box_values
-      - /Web/CSS/CSS_shapes/Basic_shapes
       - /Web/CSS/CSS_shapes/Shapes_from_images
+      - /Web/CSS/CSS_shapes/Basic_shapes
+  - title: Syntax
+    details: closed
+    children:
+      - /Web/CSS/CSS_syntax/Syntax
+      - /Web/CSS/CSS_syntax/Comments
+      - /Web/CSS/CSS_syntax/At-rule_functions
+      - /Web/CSS/CSS_syntax/Error_handling
   - title: Text
     details: closed
     children:
@@ -262,6 +321,13 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_transitions/Using_CSS_transitions
+  - title: Values and units
+    details: closed
+    children:
+      - /Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+      - /Web/CSS/CSS_Values_and_Units/Numeric_data_types
+      - /Web/CSS/CSS_Values_and_Units/Textual_data_types
+      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
   - type: section
     link: /Web/CSS/Layout_cookbook
   - children:
@@ -314,7 +380,6 @@ l10n:
     Images: Bilder
     Lists_and_counters: Listen und Zähler
     Logical_properties: Logische Eigenschaften
-    Math_functions: Mathematische Funktionen
     Media_queries: Media-Abfragen
     Modules: Module
     Nesting: Verschachteln von Stilregeln
@@ -331,36 +396,45 @@ l10n:
     Tools: Werkzeuge
     Types: Typen
   en-US:
+    Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
+    Applying_color_to_HTML_elements: Applying color to HTML
     Beginners: Beginner's tutorials
     Styling_the_content: "Your first website: Styling the content"
     CSS_styling_basics: CSS styling basics
     CSS_text_styling: CSS text styling
     CSS_layout: CSS layout
     Guides: Guides
+    Anchor_positioning: Anchor positioning
     Animations: Animations
-    Backgrounds_and_Borders: Backgrounds and Borders
+    Backgrounds_and_Borders: Backgrounds and borders
     Resizing_background_images: Resizing background images
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
+    Cascade: Cascade
     Colors: Colors
     Color_contrast: "Accessibility: Color contrast"
     Columns: Columns
     Conditional_rules: Conditional rules
     Containment: Containment
+    Custom_properties: Custom properties
     CSSOM_view: CSSOM view
     Display: Display
+    Filter_effects: Filter effects
     Flexbox: Flexbox
     Fonts: Fonts
     Grid: Grid
     Images: Images
     Lists_and_counters: Lists and counters
     Logical_properties: Logical properties
-    Math_functions: Math functions
     Media_queries: Media queries
     Nesting: Nesting style rules
+    Overflow: Overflow
     Positioning: Positioning
+    Selectors: Selectors
+    Scroll_anchoring: Scroll anchoring
     Scroll_snap: Scroll snap
     Shapes: Shapes
+    Syntax: Syntax
     Text: Text
     Transforms: Transforms
     Transitions: Transitions
@@ -392,6 +466,9 @@ l10n:
     Transitions: Transitions
     Tools: Outils
   ja:
+    Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
+    Applying_color_to_HTML_elements: HTML への色の適用
+    At-rules: アットルール
     Beginners: 初心者向けチュートリアル
     Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
     CSS_styling_basics: CSS スタイル設定の基本
@@ -401,31 +478,41 @@ l10n:
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
     Resizing_background_images: 背景画像の拡大縮小
+    Box alignment: ボックス配置
     Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
     Columns: 段組み
+    Combinators: 結合子
     Conditional_rules: 条件付きルール
-    Containment: 拘束
-    Display: フローレイアウト
+    Containment: コンテナー
     CSSOM_view: CSSOM view
+    Display: 表示方法
     Flexbox: フレックスボックス
     Fonts: フォント
+    Functions: 関数
     Grid: グリッド
     Images: 画像
     Lists_and_counters: リストとカウンター
     Logical_properties: 論理的プロパティ
-    Math_functions: 数学関数
     Media_queries: メディアクエリー
+    Modules: モジュール
     Nesting: 入れ子のスタイルルール
+    Overview: 概要
     Positioning: 位置指定
+    Properties: プロパティ
+    Pseudo-classes: 擬似クラス
+    Pseudo-elements: 擬似要素
     Scroll_snap: スクロールスナップ
+    Selectors: セレクター
     Shapes: シェイプ
     Text: テキスト
     Transforms: 座標変換
     Transitions: トランジション
     Tools: ツール
+    Types: データ型
+    Values and units: 値と単位
   ko:
     CSS_layout: CSS 레이아웃
     Guides: 안내서
@@ -491,19 +578,23 @@ l10n:
     CSS_layout: CSS 布局概述
     Combinators: 关系选择器
     Guides: 指南
+    Anchor_positioning: 锚点定位
     Animations: 动画
     At-rules: At 规则
     Backgrounds_and_Borders: 背景和边框
-    Resizing_background_images: 重设背景图片的大小
+    Resizing_background_images: 调整背景图片的大小
     Box alignment: 盒对齐
     Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
+    Cascade: 层叠
     Colors: 颜色
     Color_contrast: Web 无障碍：色彩对比度
     Columns: 多列
     Conditional_rules: 条件规则
+    Custom_properties: 自定义属性
     CSSOM_view: CSS 对象模型视图
     Display: 流式布局
+    Filter_effects: 滤镜效果
     Flexbox: 弹性盒布局
     Fonts: 字体
     Functions: 函数
@@ -511,25 +602,27 @@ l10n:
     Images: 图片
     Lists_and_counters: 列表和计数器
     Logical_properties: 逻辑属性
-    Math_functions: 数学函数
     Media_queries: 媒体查询
     Nesting: 嵌套样式规则
+    Overflow: 溢出
     Positioning: 定位
+    Scroll_anchoring: 滚动锚定
     Scroll_snap: 滚动吸附
     Shapes: 形状
+    Syntax: 语法
     Text: 文本
     Transforms: 变换
     Transitions: 过渡
     Tools: 工具
     Accessibility_Understanding_colors_and_luminance: 无障碍：理解颜色和亮度
     Applying_color_to_HTML_elements: 为 HTML 元素应用颜色
-    Resizing_background_images: 调整背景图片的大小
     Modules: 模块
     Pseudo-classes: 伪类
     Pseudo-elements: 伪元素
     Properties: 属性
     Selectors: 选择器
     Types: 类型
+    Values and units: 值和单位
   zh-TW:
     CSS_layout: CSS 版面配置
     Flexbox: 彈性區塊

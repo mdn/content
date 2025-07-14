@@ -7,7 +7,7 @@ browser-compat: api.Element
 
 {{APIRef("DOM")}}
 
-**`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
+**`Element`** is the most general base class from which all element objects (i.e., objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
 
 For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements. Similarly, the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements, and the {{DOMxRef("MathMLElement")}} interface is the base interface for MathML elements. Most functionality is specified further down the class hierarchy.
 
@@ -42,7 +42,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : A number indicating the effective zoom size of the element, or 1.0 if the element is not rendered.
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
+  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
@@ -54,18 +54,13 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : A string representing the local part of the qualified name of the element.
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : The namespace URI of the element, or `null` if it is no namespace.
-
-    > [!NOTE]
-    > In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
-
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
 - {{DOMxRef("Element.part")}}
-  - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
+  - : Represents the part identifier(s) of the element (i.e., set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
@@ -94,89 +89,123 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 _The `Element` interface also includes the following properties._
 
 - {{domxref("Element.ariaAtomic")}}
-  - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
+  - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute.
 - {{domxref("Element.ariaAutoComplete")}}
-  - : A string reflecting the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+  - : A string reflecting the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
 - {{domxref("Element.ariaBrailleLabel")}}
-  - : A string reflecting the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) attribute, which defines the braille label of the element.
+  - : A string reflecting the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) attribute, which defines the braille label of the element.
 - {{domxref("Element.ariaBrailleRoleDescription")}}
-  - : A string reflecting the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
+  - : A string reflecting the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 - {{domxref("Element.ariaBusy")}}
-  - : A string reflecting the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
+  - : A string reflecting the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 - {{domxref("Element.ariaChecked")}}
-  - : A string reflecting the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
+  - : A string reflecting the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
 - {{domxref("Element.ariaColCount")}}
-  - : A string reflecting the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
+  - : A string reflecting the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndex")}}
-  - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+  - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndexText")}}
-  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
-  - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaCurrent")}}
-  - : A string reflecting the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
+  - : A string reflecting the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
 - {{domxref("Element.ariaDescription")}}
-  - : A string reflecting the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+  - : A string reflecting the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
 - {{domxref("Element.ariaDisabled")}}
-  - : A string reflecting the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+  - : A string reflecting the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 - {{domxref("Element.ariaExpanded")}}
-  - : A string reflecting the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+  - : A string reflecting the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 - {{domxref("Element.ariaHasPopup")}}
-  - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+  - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 - {{domxref("Element.ariaHidden")}}
-  - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+  - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
+- {{domxref("Element.ariaInvalid")}}
+  - : A string reflecting the [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid) attribute, which indicates the entered value does not conform to the format expected by the application.
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
+  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 - {{domxref("Element.ariaLabel")}}
-  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
+  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current element.
 - {{domxref("Element.ariaLevel")}}
-  - : A string reflecting the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
+  - : A string reflecting the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
 - {{domxref("Element.ariaLive")}}
-  - : A string reflecting the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+  - : A string reflecting the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 - {{domxref("Element.ariaModal")}}
-  - : A string reflecting the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
+  - : A string reflecting the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
 - {{domxref("Element.ariaMultiline")}}
-  - : A string reflecting the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
+  - : A string reflecting the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : A string reflecting the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
+  - : A string reflecting the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
 - {{domxref("Element.ariaOrientation")}}
-  - : A string reflecting the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
+  - : A string reflecting the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 - {{domxref("Element.ariaPlaceholder")}}
-  - : A string reflecting the [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
+  - : A string reflecting the [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
 - {{domxref("Element.ariaPosInSet")}}
-  - : A string reflecting the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
+  - : A string reflecting the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
 - {{domxref("Element.ariaPressed")}}
-  - : A string reflecting the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
+  - : A string reflecting the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 - {{domxref("Element.ariaReadOnly")}}
-  - : A string reflecting the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
+  - : A string reflecting the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
 - {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
-  - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
+  - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("Element.ariaRequired")}}
-  - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+  - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
 - {{domxref("Element.ariaRoleDescription")}}
-  - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
+  - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
 - {{domxref("Element.ariaRowCount")}}
-  - : A string reflecting the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
+  - : A string reflecting the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndex")}}
-  - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+  - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndexText")}}
-  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 - {{domxref("Element.ariaRowSpan")}}
-  - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaSelected")}}
-  - : A string reflecting the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
+  - : A string reflecting the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 - {{domxref("Element.ariaSetSize")}}
-  - : A string reflecting the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
+  - : A string reflecting the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
 - {{domxref("Element.ariaSort")}}
-  - : A string reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+  - : A string reflecting the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 - {{domxref("Element.ariaValueMax")}}
-  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 - {{domxref("Element.ariaValueMin")}}
-  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
+  - : A string reflecting the [`aria-valueMin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 - {{domxref("Element.ariaValueNow")}}
-  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
+  - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
-  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of `aria-valuenow` for a range widget.
+- {{domxref("Element.role")}}
+  - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute, which provides the semantic role of the element.
+
+#### Instance properties reflected from ARIA element references
+
+The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
+
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : An element that represents the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    Reflects the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute.
+- {{domxref("Element.ariaControlsElements")}}
+  - : An array of elements whose contents or presence are controlled by the element it is applied to.
+    Reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : An array of elements that contain the accessible description for the element it is applied to.
+    Reflects the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute.
+- {{domxref("Element.ariaDetailsElements")}}
+  - : An array of elements that provide accessible details for the element it is applied to.
+    Reflects the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute.
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : An array of elements that provide an error message for the element it is applied to.
+    Reflects the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute.
+- {{domxref("Element.ariaFlowToElements")}}
+  - : An array of elements that identify the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
+    Reflects the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute.
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : An array of elements that provide the accessible name for the element it is applied to.
+    Reflects the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
+- {{domxref("Element.ariaOwnsElements")}}
+  - : An array of elements owned by the element this is applied to.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
+    Reflects the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute.
 
 ## Instance methods
 
@@ -240,6 +269,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a given text node at a given position relative to the element it is invoked upon.
 - {{DOMxRef("Element.matches()")}}
   - : Returns a boolean value indicating whether or not the element would be selected by the specified selector string.
+- {{DOMxRef("Element.moveBefore()")}} {{Experimental_Inline}}
+  - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
 - {{DOMxRef("Element.querySelector()")}}
@@ -284,8 +315,10 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Sets the value of the attribute with the specified name and namespace, from the current node.
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : Parses and [sanitizes](/en-US/docs/Web/API/HTML_Sanitizer_API) a string of HTML into a document fragment, which then replaces the element's original subtree in the DOM.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
-  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](#element.innerhtml).
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -295,13 +328,13 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script has been executed.
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an input element is about to be modified.
-- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
+  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script is about to be executed.
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : Fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched.
@@ -310,7 +343,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/input_event","input")}}
   - : Fires when an element's value is changed as a direct result of a user action.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 
@@ -431,7 +464,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
 - {{domxref("Element/pointerover_event", "pointerover")}}
   - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}
   - : Fired when a pointer changes any properties that don't fire {{domxref("Element/pointerdown_event", "pointerdown")}} or {{domxref("Element/pointerup_event", "pointerup")}} events.
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
@@ -445,7 +478,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Touch events
 

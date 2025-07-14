@@ -2,9 +2,8 @@
 title: The web standards model
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
 
@@ -75,7 +74,6 @@ For now, we'll give you a general, high-level understanding of how standards pro
 2. The person discusses this feature with other developers, browser engineers, etc., and starts to create interest in implementing the feature. Usually they write an explainer document that explains the need for the feature and how it will work, and a code demo that shows what the feature would look like in action.
 3. If there is enough interest in the feature, it is formally discussed inside the relevant standards body working group. For example, CSS features are usually discussed by the [CSS Working Group](https://www.w3.org/groups/wg/css/) (WG) (see also the [CSS Working Group Wikipedia page](https://en.wikipedia.org/wiki/CSS_Working_Group) for a bit more description and history). Before a new web technology is accepted, it must be rigorously evaluated to make sure it is good for the web — for example, it doesn't introduce any security problems, it is [accessible and compatible](#accessible_and_interoperable) with other web technologies, and it doesn't rely on patents.
 4. To prove out the feature, several things happen. These points can all happen around the same time as Point 3., or even before (browser vendors sometimes implement proprietary/non-standard features and then attempt to standardize them afterwards):
-
    1. One or more browser vendors will implement an experimental version of the new feature, often disabled by default, but which can be enabled by people who want to test it and provide feedback.
    2. A working group member will also add it to a technology specification so that browser vendors are able to implement it consistently.
    3. They will also seek out feedback from other browser vendors to see what issues they have with the proposal, and how likely they are to implement it. These are called Standards positions. See for example [Mozilla Standards Positions](https://mozilla.github.io/standards-positions/).
@@ -104,7 +102,7 @@ Let's look at each of these in a little more detail.
 
 ### "Open" standards
 
-One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of of money, and those costs would then be passed onto the browser users.
+One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they are free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of money, and those costs would then be passed on to the browser users.
 
 In addition, because web technologies are created openly, in collaboration between many different companies, it means that no one company gets to control them, which is a really good thing. You wouldn't want a single company suddenly deciding to put the entire web behind a paywall, or releasing a new version of HTML that everyone has to buy to continue making websites, or worse still, deciding they aren't interested any more and just turning it off.
 
@@ -134,54 +132,13 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 ### HTML, CSS, and JavaScript
 
-[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website.
+[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website. You met these in the [previous module](/en-US/docs/Learn_web_development/Getting_started/Your_first_website), but, to recap:
 
-- HTML is for structure and semantics (meaning).
-- CSS is for styling and layout.
-- JavaScript and APIs are for controlling dynamic behavior.
-
-#### HTML
-
-HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
-
-```html
-<h1>This is a top-level heading</h1>
-
-<p>This is a paragraph of text.</p>
-
-<img src="cat.jpg" alt="A picture of my cat" />
-```
-
-If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
-
-#### CSS
-
-Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn all HTML paragraphs red:
-
-```css
-p {
-  color: red;
-}
-```
-
-In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
-
-#### JavaScript (and APIs)
-
-**JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript store a reference to a paragraph in memory and change the text inside it:
-
-```js
-let pElem = document.querySelector("p");
-pElem.textContent = "We changed the text!";
-```
-
-You'll also hear the term **APIs** along with JavaScript. API stands for **Application Programming Interface**. In general terms, an API is a bit of code that allows you to control other more complex bits of code or other functionality on your computer (such as hardware devices like your webcam or microphone) in a manageable way.
-
-For example, writing your own interface to communicate with your webcam and capture a video stream from it, but the JavaScript [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia#examples) API method allows you to do this fairly easily. It does all the hard work for you, behind the scenes, so you don't need to reinvent the wheel each time.
-
-The simple code snippet above also uses an API. [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`textContent`](/en-US/docs/Web/API/Node/textContent) are both parts of the [Document Object Model (DOM)](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) family of APIs, which allow you to use JavaScript to manipulate web documents.
-
-In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
+- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
+- **JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics.
+  - You'll also hear the term **API** along with JavaScript, which stands for **Application Programming Interface**. A JavaScript API is functionality built on top of JavaScript that allows you to control other more complex bits of code or other functionality on your computer (such as hardware devices like your webcam or microphone) in a manageable way.
+  - In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
 
 ### Other web technologies
 

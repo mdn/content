@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Fundamental CSS comprehension"
+short-title: "Challenge: Business card"
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
@@ -17,7 +17,7 @@ To start this challenge, you should:
 - Go and grab the [HTML file for the exercise](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/index.html), and the [associated image file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/chris.jpg), and save them in a new directory on your local computer. If you want to use your own image file and fill your own name in, you are welcome to — just make sure the image is square.
 - Grab the [CSS resources text file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — this contains a set of raw selectors and rulesets that you'll need to study and combine to answer part of this challenge.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 You could paste the HTML and fill in the CSS into one of these online editors, and use [this URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) to point the `<img>` element to the image file.
 
 > [!NOTE]
@@ -38,7 +38,6 @@ Taking care of the selectors and rulesets provided in the CSS resource file:
 
 - Next up, we'd like you to look at the four selectors, and calculate the specificity for each one. Write these down somewhere where they can be found later on, such as in a comment at the top of your CSS.
 - Now it's time to put the right selector on the right rule set! You've got four pairs of selector and ruleset to match in your CSS resources. Do this now, and add them to your CSS file. You need to:
-
   - Give the main card container a fixed width/height, solid background color, border, and border-radius (rounded corners!), amongst other things.
   - Give the header a background gradient that goes from darker to lighter, plus rounded corners that fit in with the rounded corners set on the main card container.
   - Give the footer a background gradient that goes from lighter to darker, plus rounded corners that fit in with the rounded corners set on the main card container.

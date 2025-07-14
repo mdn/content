@@ -8,12 +8,13 @@ browser-compat: api.Window.load_event
 
 {{APIRef}}
 
-The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts, iframes, and images, except those that are [loaded lazily](/en-US/docs/Web/Performance/Lazy_loading#images_and_iframes).
+The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts, iframes, and images, except those that are [loaded lazily](/en-US/docs/Web/Performance/Guides/Lazy_loading#images_and_iframes).
 This is in contrast to {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
 
 This event is not cancelable and does not bubble.
 
-> **Note:** _All events named `load` will not propagate to `Window`_, even with `bubbles` initialized to `true`. To catch `load` events on the `window`, that `load` event must be dispatched directly to the `window`.
+> [!NOTE]
+> _All events named `load` will not propagate to `Window`_, even with `bubbles` initialized to `true`. To catch `load` events on the `window`, that `load` event must be dispatched directly to the `window`.
 
 > [!NOTE]
 > The `load` event that is dispatched when the main document has loaded _is_ dispatched on the `window`, but has two mutated properties: `target` is `document`, and `path` is `undefined`. These two properties are mutated due to legacy conformance.
@@ -22,10 +23,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("load", (event) => {});
+```js-nolint
+addEventListener("load", (event) => { })
 
-onload = (event) => {};
+onload = (event) => { }
 ```
 
 ## Event type

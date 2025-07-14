@@ -47,7 +47,6 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
    ```
 
    Let's walk through the most important parts of this code:
-
    - `call.answer(window.localStream)`: if `answerCall` is `true`, you'll want to call peerJS's `answer()` function on the call to create an answer, passing it the local stream.
    - `showCallContent`: Similar to what you did in the call button event listener, you want to ensure the person being called sees the correct HTML content.
    - Everything in the `call.on('stream', () => { }` block is exactly the same as it is in call button's event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.

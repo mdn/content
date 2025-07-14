@@ -2,9 +2,8 @@
 title: Firefox 3.5 for developers
 slug: Mozilla/Firefox/Releases/3.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/3.5/releasenotes/) (_released June 30, 2009)_ introduces a number of new features, as well as additional and improved support for a wide variety of web standards. This article offers an extensive list, with links to articles covering the major improvements.
 
@@ -15,7 +14,7 @@ page-type: firefox-release-notes
 #### HTML 5 support
 
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-  - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Element/audio) and [`video`](/en-US/docs/Web/HTML/Element/video) elements.
+  - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Reference/Elements/audio) and [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) elements.
 - Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -30,7 +29,7 @@ page-type: firefox-release-notes
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
@@ -39,21 +38,9 @@ page-type: firefox-release-notes
   - : This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.
 - `white-space` property supports the `pre-line` value
   - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
-- `-moz-box-shadow`
-
-  `-moz-border-image`
-
-  `-moz-column-rule`
-
-  `-moz-column-rule-width`
-
-  `-moz-column-rule-style`
-
-  `-moz-column-rule-color`
-
+- `-moz-box-shadow`, `-moz-border-image`, `-moz-column-rule`, `-moz-column-rule-width`, `-moz-column-rule-style`, `-moz-column-rule-color`
   - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
-
-- The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
+- The `-moz-nativehyperlinktext` color value
   - : This new color value represents the user's system's default hyperlink color.
 - The `-moz-window-shadow` property and the `:-moz-system-metric(mac-graphite-theme)` pseudo-class
   - : These new CSS features were added to facilitate theming.
@@ -61,25 +48,12 @@ page-type: firefox-release-notes
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
-- {{ cssxref(":nth-child") }}
-
-  {{ cssxref(":nth-last-child") }}
-
-  {{ cssxref(":nth-of-type") }}
-
-  {{ cssxref(":nth-last-of-type") }}
-
-  {{ cssxref(":first-of-type") }}
-
-  {{ cssxref(":last-of-type") }}
-
-  {{ cssxref(":only-of-type") }}
-
+- {{ cssxref(":nth-child") }}, {{ cssxref(":nth-last-child") }}, {{ cssxref(":nth-of-type") }}, {{ cssxref(":nth-last-of-type") }}, {{ cssxref(":first-of-type") }}, {{ cssxref(":last-of-type") }}, {{ cssxref(":only-of-type") }}
   - : These selectors are all newly-supported in Firefox 3.5.
 
 #### New DOM features
 
-- [localStorage](/en-US/docs/Web/API/Web_Storage_API#localstorage)
+- [localStorage](/en-US/docs/Web/API/Window/localStorage)
   - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
@@ -127,18 +101,18 @@ page-type: firefox-release-notes
 - [`createImageData()`](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
 - `moz-opaque` attribute
-  - : Added the [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque) attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
+  - : Added the [`moz-opaque`](/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. See also {{domxref("HTMLCanvasElement.mozOpaque")}}.
 
 #### New SVG features
 
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : You can now apply SVG effects to HTML and XHTML content; this article describes how.
 
 #### Miscellaneous new features
 
 - [ICC color correction in Firefox](/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 now supports ICC color correction for tagged images.
-- The `defer` attribute is now supported on [`script`](/en-US/docs/Web/HTML/Element/script) elements
+- The `defer` attribute is now supported on [`script`](/en-US/docs/Web/HTML/Reference/Elements/script) elements
   - : This attribute indicates to the browser that it _may_ choose to continue to parse and render the page without waiting for the script to finish executing.
 
 ### Other improvements
@@ -154,7 +128,7 @@ page-type: firefox-release-notes
 - In non-chrome scope, caught objects in exceptions are now the actual thrown object instead of an [`XPConnect`](https://web.archive.org/web/20210423135742/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect) wrapper containing the thrown object.
 - SVG ID references are now live.
 - SVG filters now work for `foreignObject`.
-- The `GetSVGDocument()` method has been added to [`object`](/en-US/docs/Web/HTML/Element/object) and [`iframe`](/en-US/docs/Web/HTML/Element/iframe) elements for compatibility.
+- The `GetSVGDocument()` method has been added to [`object`](/en-US/docs/Web/HTML/Reference/Elements/object) and [`iframe`](/en-US/docs/Web/HTML/Reference/Elements/iframe) elements for compatibility.
 - Implicit setting of properties in object and array initializers no longer execute setters in JavaScript.
 - The `gDownloadLastDir.path` variable has been renamed to `gDownloadLastDir.file` since it refers to an `nsIFile`, not a path.
 - The `gDownloadLastDirPath` variable has been renamed to `gDownloadLastDirFile` since it refers to an `nsIFile`, not a path.

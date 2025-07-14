@@ -10,7 +10,7 @@ browser-compat: api.SVGRadialGradientElement.r
 
 The **`r`** read-only property of the {{domxref("SVGRadialGradientElement")}} interface describes the radius of the radial gradient as an {{domxref("SVGAnimatedLength")}}. It reflects the computed value of the {{SVGAttr("r")}} attribute on the {{SVGElement("radialGradient")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the radius of the radial gradient in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the radius of the radial gradient in the user coordinate system.
 
 ## Value
 

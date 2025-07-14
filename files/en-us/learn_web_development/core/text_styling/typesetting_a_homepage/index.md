@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Typesetting a community school homepage"
+short-title: "Challenge: Community school homepage"
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
@@ -17,7 +17,7 @@ To start this challenge, you should:
 - Go and grab the [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/style.css) files for the exercise, and the provided [external link icon](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - Make a copy of them on your local computer.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 You could paste the HTML and fill in the CSS into one of these online editors, and use [this external link icon](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) as a background image.
 
 > [!NOTE]

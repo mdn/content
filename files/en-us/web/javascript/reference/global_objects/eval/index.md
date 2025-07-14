@@ -3,16 +3,15 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 page-type: javascript-function
 browser-compat: javascript.builtins.eval
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 > [!WARNING]
 > Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+{{InteractiveExample("JavaScript Demo: eval()")}}
 
 ```js interactive-example
 console.log(eval("2 + 2"));
@@ -256,7 +255,7 @@ function runCodeWithAddFunction(obj) {
 console.log(runCodeWithAddFunction("add(5, 7)")); // 12
 ```
 
-Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
+Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
 
 #### Using bracket accessors
 
@@ -336,7 +335,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-[Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
+[Closures](/en-US/docs/Web/JavaScript/Guide/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
 
 #### Using JSON
 

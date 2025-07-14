@@ -21,7 +21,7 @@ Before looking at codec-specific capabilities and requirements, there are a few 
 
 Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.
 
-SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
+SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
 
 ## Supported video codecs
 
@@ -42,25 +42,28 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#vp8">VP8</a></th>
+      <th id="vp8_table" scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
-      <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
+      <td><p>Chrome, Edge, Firefox, Safari (12.1+)</p>
+        <p>
+          Firefox 134 supports VP8 for <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#simulcast">simulcast</a>.
+          Firefox 136+ supports the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with VP8.
+        </p>
+      </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
+      <th id="h264_table" scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
         <p>
-          Firefox for Android 68 and later do not support AVC (H.264) anymore.
-          This is due to a change in Google Play store requirements that prevent
-          Firefox from downloading and installing the OpenH264 codec needed to
-          handle H.264 in WebRTC connections. See
-          <a
-            href="https://support.mozilla.org/en-US/kb/firefox-android-openh264"
-            >this article on SUMO</a
-          >
-          for details.
+          <ul>
+            <li>Firefox 137+ supports the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with H264 on desktop.
+            Firefox on Android does not support the DD header (<a href="https://bugzil.la/1947116">Firefox bug 1947116</a>).</li>
+            <li>Firefox 136+ supports H.264 for simulcast.</li>
+            <li>Firefox for Android 73+ is hardware supported.</li>
+            <li>Firefox for Android versions 68 to 72 do not support H.264 (due to a change in <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">Google Play store requirements</a> that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections).</li>
+          </ul>
         </p>
       </td>
     </tr>
@@ -89,9 +92,22 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
   </thead>
   <tbody>
     <tr>
-      <th scope="row">VP9</th>
+      <th id="vp9_table" scope="row">VP9</th>
       <td>—</td>
-      <td>Chrome (48+), Firefox</td>
+      <td>
+        <p>Chrome (48+), Firefox</p>
+        <p>Firefox does not support VP9 for simulcast by default (<a href="https://bugzil.la/1633876">Firefox bug 1633876</a>).
+        Firefox 136+ supports the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with VP9.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th id="av1_table" scope="row"><a href="#av1">AV1</a></th>
+      <td>—</td>
+      <td>
+        <p>Chrome (113+), Firefox (136+)</p>
+        <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -158,6 +174,16 @@ Unless signaled otherwise, the pixel aspect ratio is 1:1, indicating that pixels
 #### Other notes
 
 The payload format used for AVC in WebRTC is described in {{RFC(6184, "RTP Payload Format for H.264 Video")}}. AVC implementations for WebRTC are required to support the special "filler payload" and "full frame freeze" SEI messages; these are used to support switching among multiple input streams seamlessly.
+
+### AV1
+
+AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
+
+#### Dependency Descriptor RTP Header Extension
+
+WebRTC supports two main technologies for efficiently sending video for consumption by recipients that are operating with different capabilities and network conditions.
+
+AV1 uses the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) to provide frame dependency information needed to support [multi-party conferencing use cases](/en-US/docs/Web/API/WebRTC_API/Protocols#multi-party_video_conferencing).
 
 ## Supported audio codecs
 
@@ -305,7 +331,6 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
     senders.forEach((sender) => {
       if (sender.track.kind === "video") {
         codecList = sender.getParameters().codecs;
-        return;
       }
     });
   }

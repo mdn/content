@@ -35,10 +35,8 @@ new SharedWorker(aURL, options)
   - : A string specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is useful for creating new instances of the same SharedWorker and debugging.
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can set when creating the object
     instance. Available properties are as follows:
-
     - `type`
       - : A string specifying the type of worker to
         create. The value can be `classic` or `module`. If not
@@ -54,7 +52,7 @@ new SharedWorker(aURL, options)
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
         scope of the worker, which is mainly useful for debugging purposes.
     - `sameSiteCookies`
-      - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
+      - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)
         should be available to the worker. Can have one of the following two values:
         - 'all'
           - : `SameSite=Strict`, `SameSite=Lax`, and `SameSite=None` cookies will all be available to the worker.
@@ -68,7 +66,7 @@ new SharedWorker(aURL, options)
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the document is not allowed to start workers, for example if the URL has an invalid syntax or if the same-origin policy is violated, or if the `sameSiteCookies` value is not supported in the given context.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Thrown if the MIME type of the worker script is incorrect. It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/MIME_types#textjavascript) may be accepted).
+  - : Thrown if the MIME type of the worker script is incorrect. It should _always_ be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if `aURL` cannot be parsed.
 

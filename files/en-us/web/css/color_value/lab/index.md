@@ -6,9 +6,8 @@ browser-compat: css.types.color.lab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Lab
   - https://drafts.csswg.org/css-color/#lab-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* {{glossary("color space")}}.
 
@@ -117,7 +116,7 @@ This example:
 The final output color is `lab(54.29 -100 69.8997)`.
 
 > [!NOTE]
-> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e., using the same channels).
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 

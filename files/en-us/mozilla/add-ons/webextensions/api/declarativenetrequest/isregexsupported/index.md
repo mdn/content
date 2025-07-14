@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.isRegexSupported
 
 {{AddonSidebar}}
 
-Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCondition.regexFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#regexfilter) rule condition.
 
 ## Syntax
 
@@ -20,7 +20,6 @@ let count = await browser.declarativeNetRequest.isRegexSupported(
 ### Parameters
 
 - `regexOptions`
-
   - : An object containing the regular expression to check.
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean` Whether the regex specified is case sensitive. Default is `true`.

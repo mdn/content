@@ -9,7 +9,8 @@ browser-compat: webextensions.api.extension
 
 Utilities related to your extension. Get URLs to resources packages with your extension. Get the [`Window`](/en-US/docs/Web/API/Window) object for your extension's pages. Get the values for various settings.
 
-> **Note:** **The messaging APIs in this module are deprecated** in favor of the equivalent APIs in the [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) module.
+> [!NOTE]
+> **The messaging APIs in this module are deprecated** in favor of the equivalent APIs in the [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) module.
 
 ## Types
 
@@ -21,7 +22,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.lastError")}} {{deprecated_inline}}
   - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
 - {{WebExtAPIRef("extension.inIncognitoContext")}}
-  - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)
+  - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with `"incognito": "split"` set in their manifest.json file.)
 
 ## Functions
 

@@ -12,14 +12,16 @@ The **`mouseout`** event is fired at an {{domxref("Element")}} when a pointing d
 
 `mouseout` is also delivered to an element if the cursor enters a child element, because the child element obscures the visible area of the element.
 
+If the target element has child elements, `mouseout` and `mouseover` events fire as the mouse moves over the boundaries of these elements too, not just the target element itself. Usually, {{domxref("Element/mouseenter_event", "mouseenter")}} and {{domxref("Element/mouseleave_event", "mouseleave")}} events' behavior is more sensible, because they are not affected by moving into child elements.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseout", (event) => {});
+```js-nolint
+addEventListener("mouseout", (event) => { })
 
-onmouseout = (event) => {};
+onmouseout = (event) => { }
 ```
 
 ## Event type
@@ -161,3 +163,4 @@ test.addEventListener(
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerout_event", "pointerout")}}

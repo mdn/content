@@ -28,9 +28,7 @@ requestSession(mode, options)
 ### Parameters
 
 - `mode`
-
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
-
     - {{Experimental_Inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
       but the rendered content will be blended with the real-world environment.
       The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
@@ -45,7 +43,6 @@ requestSession(mode, options)
       available on any {{Glossary("user agent")}} offering WebXR API support.
 
 - `options` {{Optional_Inline}}
-
   - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
     - `requiredFeatures` {{Optional_Inline}}: An array of values which the returned {{domxref("XRSession")}}
       _must_ support. See [Session features](#session_features) below.
@@ -109,7 +106,7 @@ The following session features and reference spaces can be requested, either as 
 
 ## Security
 
-Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Permissions-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
+Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Permissions-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
 | Session feature | User consent requirement            | Permissions policy requirement |
 | --------------- | ----------------------------------- | ------------------------------ |

@@ -2,9 +2,8 @@
 title: Mastering margin collapsing
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.
 
@@ -79,13 +78,13 @@ p {
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Layout modes](/en-US/docs/Glossary/Layout_mode)
+  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - {{glossary("Replaced elements")}}

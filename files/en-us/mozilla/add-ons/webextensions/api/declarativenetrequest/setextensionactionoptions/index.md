@@ -20,7 +20,6 @@ let settingCount = browser.declarativeNetRequest.setExtensionActionOptions(
 ### Parameters
 
 - `extensionActionOptions`
-
   - : An object containing the configuration details for the action count for tabs.
     - `displayActionCountAsBadgeText` {{optional_inline}}
       - : `boolean` Whether to automatically display the action count for a page as the extension's badge text. This preference persists across sessions.

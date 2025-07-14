@@ -2,9 +2,8 @@
 title: Client-side web APIs
 slug: Learn_web_development/Extensions/Client-side_APIs
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions")}}
 
@@ -17,7 +16,7 @@ Before starting this module, You should really have learnt the fundamentals of [
 It would also be helpful to have some familiarity with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials
 
@@ -30,6 +29,6 @@ It would also be helpful to have some familiarity with [HTML](/en-US/docs/Learn_
 - [Client-side storage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)
   - : Modern web browsers feature a number of different technologies that allow you to store data related to websites and retrieve it when necessary allowing you to persist data long term, save sites offline, and more. This article explains the very basics of how these work.
 - [Third party APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs)
-  - : The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data or services (e.g. displaying custom Google Maps on your site, or using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
+  - : The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data or services (e.g., displaying custom Google Maps on your site, or using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions")}}

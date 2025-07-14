@@ -2,9 +2,8 @@
 title: Share data between apps
 slug: Web/Progressive_web_apps/How_to/Share_data_between_apps
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Application sharing is the ability of one application to pass information or data to another application on the same device. This feature is useful for users as it allows them to share information between two applications without the need for these applications to have prior knowledge of each other.
 
@@ -149,7 +148,7 @@ For more information, see the [sharing files example](/en-US/docs/Web/API/Naviga
 
 ## Handling shared data from other apps
 
-To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/Reference/share_target) web app manifest member.
+To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target) web app manifest member.
 
 The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps. Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
 
@@ -184,7 +183,7 @@ Here is a web app manifest example using the `share_target` member:
 
 When your app is selected by the user to handle another apps' shared content, your app is launched and the shared content is passed to it in a similar way to that in which {{htmlelement("form")}} elements are submitted.
 
-In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
+In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
 
 The `GET` request will look like this: `/shared-handler?description=...&link=...`.
 
@@ -196,11 +195,11 @@ const sharedDescription = url.searchParams.get("description");
 const sharedLink = url.searchParams.get("link");
 ```
 
-For more information, see the example [Receive share data using GET](/en-US/docs/Web/Manifest/Reference/share_target#receiving_share_data_using_get) on the `share_target` web app manifest member page.
+For more information, see the example [Receive share data using GET](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_share_data_using_get) on the `share_target` web app manifest member page.
 
 ### Handling shared files
 
-In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
+In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
 
 The following code snippet shows how a PWA can be configured to accept different types of shared files:
 
@@ -240,7 +239,7 @@ The following code snippet shows how a PWA can be configured to accept different
 }
 ```
 
-As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/MIME_types) or file extensions.
+As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) or file extensions.
 
 When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
 
@@ -281,12 +280,12 @@ self.addEventListener("fetch", (event) => {
 
 In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an [Indexed DB](/en-US/docs/Web/API/IndexedDB_API) database which can be accessed both by your service worker and app's main JavaScript code.
 
-For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/Reference/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
+For more information, see the [receiving shared files](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
 
 ## See also
 
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
-- [`share_target` manifest member](/en-US/docs/Web/Manifest/Reference/share_target)
+- [`share_target` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
 - [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
 - [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
-- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com
+- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/share) on microsoft.com

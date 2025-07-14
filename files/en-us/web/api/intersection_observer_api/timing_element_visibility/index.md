@@ -199,7 +199,7 @@ That brings us to the JavaScript code which makes everything work. Let's start w
 let contentBox;
 
 let nextArticleID = 1;
-const visibleAds = new Set();
+let visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -265,7 +265,7 @@ function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
-      visibleAds = [];
+      visibleAds = new Set();
       previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
@@ -371,7 +371,7 @@ function updateAdTimer(adBox) {
 }
 ```
 
-To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)) on every ad:
+To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)) on every ad:
 
 - `lastViewStarted`
   - : The time in milliseconds, relative to the time at which the document was created, at which the ad's visibility count was last updated, or the ad last became visible. 0 if the ad was not visible as of the last time it was checked.

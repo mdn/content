@@ -26,14 +26,12 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   <tbody>
     <tr>
       <td>
-        <code>FileWriterSync
-          <a href="#createreader" title="#createWriter">createWriter</a> ());
-        </code>
+        <code>FileWriterSync <a href="#createwriter">createWriter</a> ();</code>
       </td>
     </tr>
     <tr>
       <td>
-        <code>File <a href="#file">file</a> ());</code>
+        <code>File <a href="#file">file</a> ();</code>
       </td>
     </tr>
   </tbody>
@@ -101,5 +99,4 @@ This feature is not part of any specification anymore. It is no longer on track 
 
 ## See also
 
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-- [Basic Concepts About the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)

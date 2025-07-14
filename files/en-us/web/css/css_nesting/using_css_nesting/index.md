@@ -1,10 +1,10 @@
 ---
 title: Using CSS nesting
+short-title: Using nesting
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
@@ -24,26 +24,26 @@ There are certain instances where using the `&` nesting selector can be necessar
 
 ```css
 /* Without nesting selector */
-parent {
+.parent {
   /* parent styles */
-  child {
+  .child {
     /* child of parent styles */
   }
 }
 
 /* With nesting selector */
-parent {
+.parent {
   /* parent styles */
-  & child {
+  & .child {
     /* child of parent styles */
   }
 }
 
 /* the browser will parse both of these as */
-parent {
+.parent {
   /* parent styles */
 }
-parent child {
+.parent .child {
   /* child of parent styles */
 }
 ```
@@ -329,7 +329,7 @@ As opposed to:
 
 #### Appending nesting selector
 
-In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured .h2` can be nested in the style for the `h2`.
+In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured h2` can be nested in the style for the `h2`.
 
 ##### HTML
 
@@ -392,7 +392,7 @@ With the following CSS:
 ```css
 .foo {
   background-color: silver;
-  @media (screen) {
+  @media screen {
     color: tomato;
   }
   color: black;
@@ -403,7 +403,7 @@ The `background-color` is parsed first and set to silver, then the `@media` rule
 
 The CSSOM parses the CSS in the following way:
 
-```txt
+```plain
 ↳ CSSStyleRule
   .style
     - background-color: silver

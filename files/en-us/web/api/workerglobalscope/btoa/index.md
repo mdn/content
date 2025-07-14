@@ -59,7 +59,7 @@ For more information and workarounds see [`Window.btoa()`](/en-US/docs/Web/API/W
 ## See also
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
+- [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}
 - {{domxref("Window.btoa()")}}: the same method, but in window scopes.
 - {{jsxref("Uint8Array.prototype.toBase64()")}}

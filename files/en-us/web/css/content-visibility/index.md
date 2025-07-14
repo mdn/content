@@ -3,16 +3,56 @@ title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
 > [!NOTE]
-> The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
+> The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g., drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
-{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+{{InteractiveExample("CSS Demo: content-visibility")}}
+
+```css interactive-example-choice
+content-visibility: visible;
+```
+
+```css interactive-example-choice
+content-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="container" id="example-element">
+    <div class="child">
+      <span>This is an inner div</span>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container {
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgb(64 28 163);
+  background-color: rgb(135 136 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child {
+  border: 3px solid rgb(64 28 163);
+  background-color: wheat;
+  color: black;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
 
 ## Syntax
 
@@ -33,7 +73,7 @@ content-visibility: unset;
 ### Values
 
 - `visible`
-  - : No effect. The element's contents are laid out and rendered as normal.
+  - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`
   - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`
@@ -190,7 +230,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### CSS
 
-In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
 
 ```css
 div {

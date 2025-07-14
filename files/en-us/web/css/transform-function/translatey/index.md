@@ -3,16 +3,58 @@ title: translateY()
 slug: Web/CSS/transform-function/translateY
 page-type: css-function
 browser-compat: css.types.transform-function.translateY
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element vertically on the 2D plane. Its result
+The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element vertically on the 2D plane. Its result
 is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-translateY.html")}}
+{{InteractiveExample("CSS Demo: translateY()")}}
 
-> **Note:** `translateY(ty)` is equivalent to
+```css interactive-example-choice
+transform: translateY(0);
+```
+
+```css interactive-example-choice
+transform: translateY(42px);
+```
+
+```css interactive-example-choice
+transform: translateY(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateY(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
+
+> [!NOTE]
+> `translateY(ty)` is equivalent to
 > `translate(0, ty)` or
 > `translate3d(0, ty, 0)`.
 

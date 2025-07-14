@@ -1,16 +1,16 @@
 ---
 title: Array.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.concat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.
 
-{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.concat()", "shorter")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -117,7 +117,7 @@ console.log(numbers);
 
 ### Concatenating array-like objects with Symbol.isConcatSpreadable
 
-`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g. `true`).
+`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g., `true`).
 
 ```js
 const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
@@ -163,6 +163,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.concat`](https://www.npmjs.com/package/array.prototype.concat)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}

@@ -3,9 +3,8 @@ title: counter-increment
 slug: Web/CSS/counter-increment
 page-type: css-property
 browser-compat: css.properties.counter-increment
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property can be used to increase or decrease the value of the named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) by the specified values, or to prevent all counters or an individual counter's value from being changed.
 
@@ -13,7 +12,40 @@ If a named counter in the list of space-separated counters and values doesn't ex
 
 The counter's value can be reset to any integer value with the {{cssxref("counter-reset")}} CSS property.
 
-{{EmbedInteractiveExample("pages/css/counter-increment.html")}}
+{{InteractiveExample("CSS Demo: counter-increment")}}
+
+```css interactive-example-choice
+counter-increment: example-counter;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 0;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 5;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Counter value:</div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-reset: example-counter;
+}
+
+#example-element::after {
+  content: counter(example-counter);
+}
+```
 
 ## Syntax
 

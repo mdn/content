@@ -1,11 +1,11 @@
 ---
 title: Math.fround()
+short-title: fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.fround
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.fround()`** static method returns the nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of a number.
 
@@ -84,4 +84,5 @@ Math.fround(2 ** 150); // Infinity
 ## See also
 
 - [Polyfill of `Math.fround` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.fround`](https://www.npmjs.com/package/math.fround)
 - {{jsxref("Math.round()")}}

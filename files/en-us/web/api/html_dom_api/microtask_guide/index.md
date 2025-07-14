@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("HTML DOM")}}
 
-A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Event_loop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
+A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
 
 This event loop may be either the browser's main event loop or the event loop driving a [web worker](/en-US/docs/Web/API/Web_Workers_API). This lets the given function run without the risk of interfering with another script's execution, yet also ensures that the microtask runs before the user agent has the opportunity to react to actions taken by the microtask.
 
@@ -74,7 +74,7 @@ The main reason to use microtasks is that: to ensure consistent ordering of task
 One situation in which microtasks can be used to ensure that the ordering of execution is always consistent is when promises are used in one clause of an `if...else` statement (or other conditional statement), but not in the other clause. Consider code such as this:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
@@ -122,7 +122,7 @@ Even worse, sometimes the element's `data` property will be set and other times 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];

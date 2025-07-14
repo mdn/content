@@ -22,7 +22,6 @@ let staticRulesUpdated = browser.declarativeNetRequest.updateStaticRules(
 ### Parameters
 
 - `options`
-
   - : An object specifying a static ruleset and the rules to enable or disable in that ruleset.
     - `rulesetId` rulesetId
       - : `string` The ID of the static ruleset to modify.

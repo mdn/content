@@ -48,4 +48,4 @@ console.log(el.ariaPlaceholder); // "12345"
 
 ## See also
 
-- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

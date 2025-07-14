@@ -2,9 +2,8 @@
 title: Firefox 101 for developers
 slug: Mozilla/Firefox/Releases/101
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
 
@@ -59,7 +58,7 @@ No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
+Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
 
 The following commands and events are available:
 
@@ -80,7 +79,7 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
   - Addition of the [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
   - The content script execution environment has changed for Manifest V3 extensions:
-    - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
+    - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
     - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
 
 ## Older versions

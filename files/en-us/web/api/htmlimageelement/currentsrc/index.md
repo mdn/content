@@ -24,7 +24,7 @@ determine which image from the set of provided images was selected by the browse
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock. One is 200px
-wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is
+wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute is
 provided to indicate that the image should be drawn at 50% of the document width if the
 viewport is under 400px wide; otherwise, the image is drawn at 90% width of the
 document.
@@ -33,13 +33,13 @@ document.
 
 ```html
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
+  src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png"
   alt="Clock"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
-  sizes="(max-width: 400px) 50%, 90%" />
+  sizes="(width <= 400px) 50%, 90%" />
 ```
 
 ### JavaScript

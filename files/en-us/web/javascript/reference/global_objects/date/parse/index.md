@@ -1,18 +1,20 @@
 ---
 title: Date.parse()
+short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.parse
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date.parse()`** static method parses a string representation of a date, and returns the date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 {{InteractiveExample("JavaScript Demo: Date.parse()")}}
 
 ```js interactive-example
-const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+// Standard date-time string format
+const unixTimeZero = Date.parse("1970-01-01T00:00:00Z");
+// Non-standard format resembling toUTCString()
 const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
 
 console.log(unixTimeZero);
@@ -41,7 +43,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 This function is useful for setting date values based on string values, for example in conjunction with the {{jsxref("Date/setTime", "setTime()")}} method.
 
-The formats that `parse()` can handle are not explicitly specified, but there are a few invariants:
+The formats that `parse()` can handle are not explicitly specified, but there are a few {{Glossary("invariant", "invariants")}}:
 
 - The [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (produced by {{jsxref("Date/toISOString", "toISOString()")}}) must be supported.
 - If `x` is any Date whose milliseconds amount is zero, then `x.valueOf()` should be equal to any of the following: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. This means the formats produced by {{jsxref("Date/toString", "toString()")}} and {{jsxref("Date/toUTCString", "toUTCString()")}} should be supported too.

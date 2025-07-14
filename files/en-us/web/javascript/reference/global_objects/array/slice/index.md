@@ -1,18 +1,18 @@
 ---
 title: Array.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.slice
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`slice()`** method of {{jsxref("Array")}} instances returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
 an array into a new array object selected from `start` to `end`
 (`end` not included) where `start` and `end` represent
 the index of items in that array. The original array will not be modified.
 
-{{InteractiveExample("JavaScript Demo: Array.slice()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.slice()", "taller")}}
 
 ```js interactive-example
 const animals = ["ant", "bison", "camel", "duck", "elephant"];
@@ -55,7 +55,7 @@ slice(start, end)
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
-    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be extracted.
+    - If `end >= array.length` or `end` is omitted or `undefined`, `array.length` is used, causing all elements until the end to be extracted.
     - If `end` implies a position before or at the position that `start` implies, an empty array is returned.
 
 ### Return value
@@ -236,6 +236,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.slice`](https://www.npmjs.com/package/array.prototype.slice)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}

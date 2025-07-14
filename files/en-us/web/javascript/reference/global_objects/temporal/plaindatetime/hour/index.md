@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDateTime.prototype.hour
+short-title: hour
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/hour
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.hour
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`hour`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a integer from 0 to 23 representing the hour component of this time.
 

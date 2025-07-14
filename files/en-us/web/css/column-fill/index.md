@@ -3,13 +3,38 @@ title: column-fill
 slug: Web/CSS/column-fill
 page-type: css-property
 browser-compat: css.properties.column-fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
 
-{{EmbedInteractiveExample("pages/css/column-fill.html")}}
+{{InteractiveExample("CSS Demo: column-fill")}}
+
+```css interactive-example-choice
+column-fill: auto;
+```
+
+```css interactive-example-choice
+column-fill: balance;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  height: 90%;
+  columns: 3;
+  text-align: left;
+}
+```
 
 ## Syntax
 

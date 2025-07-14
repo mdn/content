@@ -14,10 +14,10 @@ The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => {};
+onchange = (event) => { }
 ```
 
 ## Event type
@@ -38,7 +38,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 ## Example
 
 ```js
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.onchange = (e) => {
   if (e.matches) {

@@ -3,17 +3,36 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 page-type: css-function
 browser-compat: css.types.filter-function.blur
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+{{InteractiveExample("CSS Demo: blur()")}}
 
-{{EmbedInteractiveExample("pages/css/function-blur.html")}}
+```css interactive-example-choice
+filter: blur(0);
+```
+
+```css interactive-example-choice
+filter: blur(4px);
+```
+
+```css interactive-example-choice
+filter: blur(1.5rem);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
-
-The `blur()` function applies a Gaussian blur to the elements on which it is applied.
 
 ```css
 blur(radius)
@@ -21,13 +40,15 @@ blur(radius)
 
 ### Parameters
 
-- `radius`
-  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid.
+- `radius` {{Optional_Inline}}
+  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid. The default value is `0px`.
 
-### Setting a blur with pixels and with rem
+### Examples of blur values
 
 ```css
+blur()         /* No effect */
 blur(0)        /* No effect */
+
 blur(8px)      /* Blur with 8px radius */
 blur(1.17rem)  /* Blur with 1.17rem radius */
 ```
@@ -102,7 +123,7 @@ svg:not([height]) {
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
+        <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>

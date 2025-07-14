@@ -3,13 +3,12 @@ title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 page-type: javascript-function
 browser-compat: javascript.builtins.encodeURI
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURIComponent()")}}, this function encodes fewer characters, preserving those that are part of the URI syntax.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+{{InteractiveExample("JavaScript Demo: encodeURI()")}}
 
 ```js interactive-example
 const uri = "https://mozilla.org/?x=шеллы";

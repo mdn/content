@@ -1,15 +1,15 @@
 ---
 title: TypedArray.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.values()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.values()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

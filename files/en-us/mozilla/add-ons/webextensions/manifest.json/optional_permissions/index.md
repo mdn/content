@@ -86,8 +86,10 @@ The optional API permissions are:
 - `search`
 - `sessions`
 - `tabHide`
+- `tabGroups`
 - `tabs`
 - `topSites`
+- 'userScripts' ([optional-only](#optional-only_permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
@@ -101,6 +103,7 @@ These optional permissions are granted silently, without a user prompt:
 - `activeTab`
 - `cookies`
 - `idle`
+- `tabGroups`
 - `webRequest`
 - `webRequestBlocking`
 - `webRequestFilterResponse`
@@ -108,10 +111,11 @@ These optional permissions are granted silently, without a user prompt:
 
 ### Optional-only permissions
 
-Optional permissions are generally available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key so they can be requested at install time. However, some browsers support the concept of optional-only permissions, permissions that can only be requested at runtime using the {{webextapiref("permissions.request()")}} API. In addition, optional-only permissions must be requested individually and alone through the {{webextapiref("permissions.request()")}} API.
+Optional permissions are generally available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key, so they can be requested at install time. However, some browsers support the concept of optional-only permissions, permissions that can only be requested at runtime. For example, in Firefox, optional-only permissions can be granted by the user from the [extension's options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) or using {{webextapiref("permissions.request()")}}. Optional-only permissions must be requested individually and alone through the {{webextapiref("permissions.request()")}} API.
 
-> [!NOTE]
-> No optional-only permissions were generally available at the time of writing, December 2024.
+The optional-only API permissions are:
+
+- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 
 ## Examples
 

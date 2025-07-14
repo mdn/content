@@ -26,9 +26,7 @@ Values of this type are objects that can contain these properties:
 - `name`
   - : A `string` representing the name of the cookie.
 - `partitionKey` {{optional_inline}}
-
   - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
-
     - `topLevelSite`
       - : A `string` representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.
 

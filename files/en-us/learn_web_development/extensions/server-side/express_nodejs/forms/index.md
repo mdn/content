@@ -1,10 +1,12 @@
 ---
 title: "Express Tutorial Part 6: Working with forms"
+short-title: "6: Working with forms"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 In this tutorial we'll show you how to work with HTML Forms in Express using Pug. In particular, we'll discuss how to write forms to create, update, and delete documents from the site's database.
 
@@ -62,9 +64,8 @@ The `submit` input will be displayed as a button (by default)—this can be pres
 
 - `action`: The resource/URL where data is to be sent for processing when the form is submitted. If this is not set (or set to an empty string), then the form will be submitted back to the current page URL.
 - `method`: The HTTP method used to send the data: `POST` or `GET`.
-
   - The `POST` method should always be used if the data is going to result in a change to the server's database, because this can be made more resistant to cross-site forgery request attacks.
-  - The `GET` method should only be used for forms that don't change user data (e.g. a search form). It is recommended for when you want to be able to bookmark or share the URL.
+  - The `GET` method should only be used for forms that don't change user data (e.g., a search form). It is recommended for when you want to be able to bookmark or share the URL.
 
 ### Form handling process
 
@@ -77,13 +78,12 @@ A process flowchart for processing form requests is shown below, starting with a
 As shown in the diagram above, the main things that form handling code needs to do are:
 
 1. Display the default form the first time it is requested by the user.
-
-   - The form may contain blank fields (e.g. if you're creating a new record), or it may be pre-populated with initial values (e.g. if you are changing a record, or have useful default initial values).
+   - The form may contain blank fields (e.g., if you're creating a new record), or it may be pre-populated with initial values (e.g., if you are changing a record, or have useful default initial values).
 
 2. Receive data submitted by the user, usually in an HTTP `POST` request.
 3. Validate and sanitize the data.
 4. If any data is invalid, re-display the form—this time with any user populated values and error messages for the problem fields.
-5. If all data is valid, perform required actions (e.g. save the data in the database, send a notification email, return the result of a search, upload a file, etc.)
+5. If all data is valid, perform required actions (e.g., save the data in the database, send a notification email, return the result of a search, upload a file, etc.)
 6. Once all actions are complete, redirect the user to another page.
 
 Often form handling code is implemented using a `GET` route for the initial display of the form and a `POST` route to the same path for handling validation and processing of form data. This is the approach that will be used in this tutorial.

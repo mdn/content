@@ -3,9 +3,8 @@ title: "CycleTracker: JavaScript functionality"
 short-title: JavaScript functionality
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
@@ -44,7 +43,7 @@ This is a beginner-level demonstration application. The goal is to teach the bas
 
 ## Form submission
 
-The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `start-date` and `end-date` respectively.
+The page contains a {{HTMLelement("form")}} with date pickers for selecting the start and end dates of each menstrual cycle. The date pickers are {{HTMLElement("input")}} of type {{HTMLElement("input/date", "date")}} with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `start-date` and `end-date` respectively.
 
 The form has no method or action. Instead, we add an event listener with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) to the form. When the user tries to submit the form, we prevent the form from submitting, store the new menstrual cycle, render this period along with previous ones, and then reset the form.
 
@@ -111,7 +110,7 @@ function checkDatesInvalid(startDate, endDate) {
 }
 ```
 
-In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to alert assistive technology users to the error.
+In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) to alert assistive technology users to the error.
 
 ## Local storage
 
@@ -147,9 +146,7 @@ function storeNewPeriod(startDate, endDate) {
 
   // Sort the array so that periods are ordered by start date, from newest
   // to oldest.
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
 
   // Store the updated array back in the storage.
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
@@ -268,9 +265,7 @@ function checkDatesInvalid(startDate, endDate) {
 function storeNewPeriod(startDate, endDate) {
   const periods = getAllStoredPeriods();
   periods.push({ startDate, endDate });
-  periods.sort((a, b) => {
-    return new Date(b.startDate) - new Date(a.startDate);
-  });
+  periods.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
 }
 

@@ -90,7 +90,7 @@ canvas.addEventListener("pointermove", async (evt) => {
   const pointSize = 10;
   ctx.fillStyle = style.color;
   ctx.fillRect(evt.pageX, evt.pageY, pointSize, pointSize);
-  if (move_cnt == 20) {
+  if (move_cnt === 20) {
     const r = getRandomInt(0, 255);
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
@@ -123,7 +123,3 @@ canvas.height = window.innerHeight;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

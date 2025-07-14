@@ -20,7 +20,7 @@ round( decimal )
 
 ### Return value
 
-The nearest integer less then, greater than, or equal to `decimal`.
+The nearest integer less than, greater than, or equal to `decimal`.
 
 ## Description
 
@@ -28,7 +28,7 @@ The nearest integer less then, greater than, or equal to `decimal`.
 
 ## Specifications
 
-[XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath-10/#function-round)
 
 ## Gecko support
 

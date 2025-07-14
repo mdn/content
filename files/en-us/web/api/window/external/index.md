@@ -27,10 +27,7 @@ The `External` object has the following methods:
         <code>AddSearchProvider(descriptionURL)</code>
       </td>
       <td>
-        Dummy function; does nothing. See
-        <a href="/en-US/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
-          >Autodiscovery of search plugins</a
-        >.
+        Dummy function; does nothing. Used to <a href="/en-US/docs/Web/XML/Guides/OpenSearch">register search descriptions</a>.
       </td>
     </tr>
     <tr>

@@ -3,9 +3,8 @@ title: At-rules
 slug: Web/CSS/CSS_syntax/At-rule
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-syntax/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **At-rules** are [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements) that instruct CSS how to behave. They begin with an at-sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declaration_blocks), whichever comes first.
 
@@ -102,7 +101,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 
 ## See also
 
-- [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - [Nesting CSS at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface

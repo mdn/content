@@ -2,9 +2,8 @@
 title: Collision detection
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
@@ -180,17 +179,17 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = true;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = true;
   }
 }
 
 function keyUpHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
+  if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = false;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = false;
   }
 }
@@ -198,7 +197,7 @@ function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       let b = bricks[c][r];
-      if (b.status == 1) {
+      if (b.status === 1) {
         if (
           x > b.x &&
           x < b.x + brickWidth &&
@@ -229,7 +228,7 @@ function drawPaddle() {
 function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
-      if (bricks[c][r].status == 1) {
+      if (bricks[c][r].status === 1) {
         let brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
         let brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
         bricks[c][r].x = brickX;
@@ -258,7 +257,7 @@ function draw() {
     dy = -dy;
   } else if (y + dy > canvas.height - ballRadius) {
     if (x > paddleX && x < paddleX + paddleWidth) {
-      if ((y = y - paddleHeight)) {
+      if ((y -= paddleHeight)) {
         dy = -dy;
       }
     } else {
@@ -282,9 +281,10 @@ function startGame() {
   interval = setInterval(draw, 10);
 }
 
-document.getElementById("runButton").addEventListener("click", function () {
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
   startGame();
-  this.disabled = true;
+  runButton.disabled = true;
 });
 ```
 

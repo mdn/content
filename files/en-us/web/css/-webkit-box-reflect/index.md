@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-box-reflect
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
 
@@ -49,10 +50,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Formal syntax
 
-```plain
--webkit-box-reflect =
-  [ above | below | right | left ]? <length>? <image>?
-```
+{{CSSSyntaxRaw(`-webkit-box-reflect = [ above | below | right | left ]? <length>? <image>?`)}}
 
 ## Specifications
 

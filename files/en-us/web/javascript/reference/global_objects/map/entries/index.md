@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.entries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`entries()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the `[key, value]` pairs for each element in this map in insertion order.
 

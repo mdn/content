@@ -1,10 +1,10 @@
 ---
 title: How to add a shadow to an element
+short-title: Add a shadow to an element
 slug: Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{LearnSidebar}}
 
 In this guide you can find out how to add a shadow to any box on your page.
 

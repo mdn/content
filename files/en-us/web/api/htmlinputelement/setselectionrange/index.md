@@ -16,7 +16,7 @@ Optionally, you can specify the direction in which selection should be considere
 
 This method updates the {{domxref("HTMLInputElement.selectionStart")}}, {{domxref("HTMLInputElement.selectionEnd")}}, and {{domxref("HTMLInputElement.selectionDirection")}} properties in one call.
 
-The element must be of one of the following input types: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), or [`url`](/en-US/docs/Web/HTML/Element/input/url). Otherwise the browser throws an `InvalidStateError` exception.
+The element must be of one of the following input types: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url). Otherwise the browser throws an `InvalidStateError` exception.
 
 If you wish to select **all** text of an input element, you can use the [HTMLInputElement.select()](/en-US/docs/Web/API/HTMLInputElement/select) method instead.
 
@@ -33,16 +33,13 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
   - : The 0-based index of the first selected character. An index greater than the length
     of the element's value is treated as pointing to the end of the value.
 - `selectionEnd`
-
   - : The 0-based index of the character _after_ the last selected character. An
     index greater than the length of the element's value is treated as pointing to the end
     of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`.
 
 - `selectionDirection` {{optional_inline}}
-
   - : A string indicating the direction in which the selection is considered to have been
     performed. Possible values:
-
     - `"forward"`
     - `"backward"`
     - `"none"` if the direction is unknown or irrelevant. Default value.
@@ -54,7 +51,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the element is not one of the following input types: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), or [`url`](/en-US/docs/Web/HTML/Element/input/url).
+  - : Thrown if the element is not one of the following input types: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url).
 
 ## Examples
 
@@ -65,7 +62,7 @@ the text box ("zil" in the word "Mozilla").
 
 ```html
 <input type="text" id="text-box" size="20" value="Mozilla" />
-<button onclick="selectText()">Select text</button>
+<button>Select text</button>
 ```
 
 ### JavaScript
@@ -76,6 +73,8 @@ function selectText() {
   input.focus();
   input.setSelectionRange(2, 5);
 }
+
+document.querySelector("button").addEventListener("click", selectText);
 ```
 
 ### Result

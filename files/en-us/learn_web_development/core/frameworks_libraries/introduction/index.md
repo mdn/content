@@ -1,10 +1,10 @@
 ---
 title: Introduction to client-side frameworks
+short-title: Introduction
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -82,18 +82,21 @@ We can examine the difficulty of this problem by looking at just _one_ feature o
 
 ## The verbosity of DOM changes
 
-Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is an array of objects structured like this:
+Building HTML elements and rendering them in the browser at the appropriate time takes a surprising amount of code. Let's say that our state is a key-value store containing the `taskName` (controlled by the text input) and the list of `tasks`:
 
 ```js
-const state = [
-  {
-    id: "todo-0",
-    name: "Learn some frameworks!",
-  },
-];
+const state = {
+  taskName: "",
+  tasks: [
+    {
+      id: "todo-0",
+      name: "Learn some frameworks!",
+    },
+  ],
+};
 ```
 
-How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
+How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Reference/Elements/ul)). How do we make it? That could look something like this:
 
 ```js
 function buildTodoItemEl(id, name) {
@@ -118,13 +121,17 @@ The previous snippet references another build function: `buildDeleteButtonEl()`.
 function buildDeleteButtonEl(id) {
   const button = document.createElement("button");
   button.setAttribute("type", "button");
+  button.addEventListener("click", () => {
+    state.tasks = state.tasks.filter((t) => t.id !== id);
+    renderTodoList();
+  });
   button.textContent = "Delete";
 
   return button;
 }
 ```
 
-This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might read something like this:
+The interesting part to note is that every time we update the state, we need to manually call `renderTodoList` so our state gets synced to the screen. The code that will render our items on the page might read something like this:
 
 ```js
 function renderTodoList() {
@@ -134,8 +141,8 @@ function renderTodoList() {
     frag.appendChild(item);
   });
 
-  while (todoListEl.firstChild) {
-    todoListEl.removeChild(todoListEl.firstChild);
+  while (todoListEl.lastChild) {
+    todoListEl.removeChild(todoListEl.lastChild);
   }
   todoListEl.appendChild(frag);
 }
@@ -143,11 +150,110 @@ function renderTodoList() {
 
 We've now got almost thirty lines of code dedicated _just_ to the UI – _just_ to render something in the DOM – and at no point do we add classes that we could use later to style our list-items!
 
+If you are curious, we have a full running demo below. You can click the "Play" button to view the source code in the playground.
+
+```html hidden
+<h1>TodoMatic</h1>
+<form id="todo-form">
+  <label for="todo-input">What needs to be done?</label>
+  <input type="text" id="todo-input" autocomplete="on" />
+  <button type="submit">Add</button>
+</form>
+<ul id="todo-list"></ul>
+```
+
+```css hidden
+* + * {
+  margin-top: 0.4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", Roboto, Helvetica, Arial, sans-serif;
+  color: hsl(0 0 0.13);
+
+  width: 95%;
+  max-width: 30em;
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+
+button,
+input[type="text"] {
+  font-size: 100%;
+  line-height: 1.15;
+  font-family: inherit;
+  margin: 0;
+
+  padding: 0.5rem;
+  border: 1px solid #707070;
+  border-radius: 2px;
+}
+
+* + button {
+  margin-left: 0.4rem;
+}
+
+label {
+  display: table;
+}
+
+ul {
+  margin-top: 1.6rem;
+  padding-left: 2em;
+}
+
+label + input[type="text"] {
+  margin-top: 0.4rem;
+}
+```
+
+```js hidden
+const todoFormEl = document.querySelector("#todo-form");
+const todoInputEl = document.querySelector("#todo-input");
+const todoListEl = document.querySelector("#todo-list");
+
+function generateUniqueId(prefix = "prefix") {
+  return `${prefix}-${Math.floor(Math.random() * Date.now())}`;
+}
+
+function createTask(name) {
+  return {
+    name,
+    id: generateUniqueId("todo"),
+  };
+}
+
+function renderInput() {
+  todoInputEl.value = state.taskName;
+}
+
+todoInputEl.addEventListener("change", (e) => {
+  state.taskName = e.target.value;
+});
+todoFormEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  state.tasks = [...state.tasks, createTask(state.taskName)];
+  state.taskName = "";
+  renderInput();
+  renderTodoList();
+});
+renderInput();
+renderTodoList();
+```
+
+{{EmbedLiveSample("the_verbosity_of_dom_change", "", "400", , , , , "allow-forms")}}
+
 Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI at the right time and in the right way.
 
 JavaScript frameworks were created to make this kind of work a lot easier — they exist to provide a better _developer experience_. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.
-
-If you want to see code samples from this section in action, you can check out a [working version of the app on CodePen](https://codepen.io/mxmason/pen/XWbPNmw), which also allows users to add and delete new tasks.
 
 Read more about the JavaScript features used in this section:
 
@@ -229,7 +335,7 @@ Frameworks are not the source of our problems. With the wrong priorities, any ap
 
 ## Accessibility on a framework-driven web
 
-Let's build on what we said in the previous section, and talk a bit more about accessibility. Making user interfaces accessible always requires some thought and effort, and frameworks can complicate that process. You often have to employ advanced framework APIs to access native browser features like ARIA [live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) or focus management.
+Let's build on what we said in the previous section, and talk a bit more about accessibility. Making user interfaces accessible always requires some thought and effort, and frameworks can complicate that process. You often have to employ advanced framework APIs to access native browser features like ARIA [live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) or focus management.
 
 In some cases, framework applications create accessibility barriers that do not exist for traditional websites. The biggest example of this is in client-side routing, as mentioned earlier.
 
@@ -287,7 +393,7 @@ If you're looking for tools to expedite the web development process, and you kno
 
 **Content-management systems** (**CMSes**) are any tools that allow a user to create content for the web without directly writing code themselves. They're a good solution for large projects, especially projects that require input from content writers who have limited coding ability, or for programmers who want to save time. They do, however, require a significant amount of time to set up, and utilizing a CMS means that you surrender at least some measure of control over the final output of your website. For example: if your chosen CMS doesn't author accessible content by default, it's often difficult to improve this.
 
-A few popular CMS systems include [WordPress](https://wordpress.com/), [Joomla](https://www.joomla.org/), and [Drupal](https://www.drupal.org/).
+A few popular CMS systems include [WordPress](https://wordpress.com/), [Joomla](https://www.joomla.org/), and [Drupal](https://new.drupal.org/).
 
 ### Server-side rendering
 

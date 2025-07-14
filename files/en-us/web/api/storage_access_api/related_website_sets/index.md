@@ -4,6 +4,7 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
+browser-compat: api.Document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
@@ -12,7 +13,7 @@ spec-urls: https://wicg.github.io/first-party-sets/
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
+Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
 
 ## Concepts and usage
 
@@ -112,7 +113,7 @@ The primary site's `.well-known` file must explicitly list out the full set stru
 }
 ```
 
-Each associate and service site needs to specify its primary site in a `.well-known` file. Each non-primary site in the above example (e.g. `https://associateA.com`) would need a `/.well-known/related-website-set.json` file like this:
+Each associate and service site needs to specify its primary site in a `.well-known` file. Each non-primary site in the above example (e.g., `https://associateA.com`) would need a `/.well-known/related-website-set.json` file like this:
 
 ```json
 {
@@ -135,16 +136,15 @@ Once a set is active:
 
 RWS has been designed with security in mind. It would be disastrous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
 
-- **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (`i.e.` by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
-- **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e. if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
+- **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (i.e., by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
+- **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e., if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
 - **`site1.example.com` and `site2.example.com` are intentionally in the same set, but `site1.example.com` gets hijacked by `evilsite.example.com`**: The impact of a site hijacking attack within a set isn't any worse than it would usually be, once the other sites are updated accordingly:
   - The regular [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) requires an active opt-in by the embedded site, so `site2.example.com` can stop calling `document.requestStorageAccess()` when it's embedded in `site1.example.com`, avoiding a {{glossary("CSRF")}} attack.
-  - Use of `requestStorageAccessFor()` requires [CORS](/en-US/docs/Web/HTTP/CORS), so `site2.example.com` could choose not to respond with the appropriate CORS headers when network requests are coming from `site1.example.com`, thereby avoiding a CSRF attack.
+  - Use of `requestStorageAccessFor()` requires [CORS](/en-US/docs/Web/HTTP/Guides/CORS), so `site2.example.com` could choose not to respond with the appropriate CORS headers when network requests are coming from `site1.example.com`, thereby avoiding a CSRF attack.
 
 ## Examples
 
-- The [Related Website Sets demo](https://related-website-sets.glitch.me/) demonstrates how RWS is used.
-- Also see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using).
+For code examples, see [Related Website Sets: developer guide](https://privacysandbox.google.com/cookies/related-website-sets-integration) on privacysandbox.google.com (2024)
 
 ## Specifications
 
@@ -157,8 +157,11 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#first-party-sets)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-93)
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developers.google.com/privacy-sandbox/cookies/related-website-sets) on developers.google.com (2023)
-- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/cookies/related-website-sets-integration) on developers.google.com (2023)
+- [Related Website Sets](https://privacysandbox.google.com/cookies/related-website-sets) on privacysandbox.google.com (2023)

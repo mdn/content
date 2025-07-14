@@ -1,10 +1,10 @@
 ---
 title: "Challenge: A cool-looking box"
+short-title: "Challenge: Fancy box styles"
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
@@ -38,7 +38,7 @@ To get this assessment started, you should:
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -62,7 +62,7 @@ html {
 /* Your CSS below here */
 ```
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 You could paste the HTML and fill in the CSS into one of these online editors.
 
 > [!NOTE]

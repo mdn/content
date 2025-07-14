@@ -1,11 +1,11 @@
 ---
 title: Promise.withResolvers()
+short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.withResolvers
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.withResolvers()`** static method returns an object containing a new {{jsxref("Promise")}} object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
@@ -104,6 +104,7 @@ resolve("hello");
 ## See also
 
 - [Polyfill of `Promise.withResolvers` in `core-js`](https://github.com/zloirock/core-js#promisewithresolvers)
+- [es-shims polyfill of `Promise.withResolvers`](https://www.npmjs.com/package/promise.withresolvers)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}
 - [`Promise()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)

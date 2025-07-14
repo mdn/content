@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.-moz-float-edge
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.
 
@@ -38,10 +39,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-```plain
--moz-float-edge =
-  content-box | margin-box
-```
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
 ## Examples
 

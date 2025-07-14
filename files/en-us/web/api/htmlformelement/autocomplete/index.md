@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.autocomplete
 
 {{ APIRef("HTML DOM") }}
 
-The **`autocomplete`** property of the {{DOMxRef("HTMLFormElement")}} interface indicates whether the value of the form's controls can be automatically completed by the browser. It reflects the {{htmlelement("form")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute.
+The **`autocomplete`** property of the {{DOMxRef("HTMLFormElement")}} interface indicates whether the value of the form's controls can be automatically completed by the browser. It reflects the {{htmlelement("form")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute.
 
 ## Value
 
@@ -32,6 +32,6 @@ console.log(formElement.autocomplete);
 ## See also
 
 - {{HTMLElement("form")}}
-- HTML [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
-- ARIA [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute
+- HTML [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute
+- ARIA [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute
 - [Turning off autocompletion](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

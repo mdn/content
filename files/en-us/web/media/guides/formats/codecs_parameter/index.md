@@ -5,7 +5,7 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
+At a fundamental level, you can specify the type of a media file using a basic {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
 
 For that reason, the `codecs` parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.
 
@@ -48,6 +48,7 @@ The containers below support extended codec options in their `codecs` parameters
 
 - [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [AV1](#av1)
+- [HEVC](#hevc_mp4_quicktime_matroska)
 - [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
@@ -588,12 +589,14 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1[.PPCCLL]` (AVC video)
-
   - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 
     The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
+
+- `avc3[.PPCCLL]` (Variable resolution AVC)
+  - : The `avc3` codec parameters have the same syntax as the `avc1` codec parameters.
 
 #### AVC profiles
 
@@ -899,6 +902,50 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
   </tbody>
 </table>
 
+### HEVC: MP4, Quicktime, Matroska
+
+The [High Efficiency Video Coding](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) codec, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
+
+Use of HEVC is generally described using a supporting MIME type with the `codecs` parameter appended; syntax examples are as follows:
+
+```plain
+video/mp4;codecs=hvc1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hvc1.1.6.L186.B0,opus
+video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hev1.1.6.L186.B0,opus
+```
+
+The syntaxes for each of the supported codecs look like this:
+
+- `hvc1[.A.B.C.D]` (HEVC video)
+  - : The value starts with the codec's four-character identifier (`hvc1`), followed by four or more values separated by periods (`.`):
+    - `A`
+      - : The **`general_profile_space`**. This is encoded as one or two characters:
+        - The first character is `A`, `B`, or `C`, representing `general_profile_space` `1`, `2`, or `3`, or no character, representing `general_profile_space` `0`.
+        - The second character is a decimal number representing the `general_profile_idc`.
+          > [!NOTE]
+          > In the above examples, the value `1` means `general_profile_space === 0` (no character) and `general_profile_idc === 1`.
+    - `B`
+      - : A 32-bit value representing one or more **general profile compatibility flags** (`general_profile_compatibility_flag`), encoded in hexadecimal (leading zeroes may be omitted), and specified in reverse bit order from most to least significant. The values can range from `31` (most significant) to `0` (least significant), and are specified in [ISO/IEC 23008-2](https://www.iso.org/standard/90502.html).
+
+        > [!NOTE]
+        > In the above examples, the value `6` means `general_profile_compatibility_flag === 6`.
+
+    - `C`
+      - : The **`general_tier_flag`**, encoded as `L` (`general_tier_flag === 0`) or `H` (`general_tier_flag === 1`), followed by the **`general_level_idc`**, encoded as a decimal number.
+
+        > [!NOTE]
+        > In the above examples, the value `L186` means `general_tier_flag === 0` followed by `general_level_idc === 186`.
+
+    - `D`
+      - : One or more 6-byte **constraint flags**. Note that each flag is encoded as a hexadecimal number, and separated by an additional period; trailing bytes that are zero may be omitted.
+
+        > [!NOTE]
+        > In the above examples, there is only one constraint flag present — `B0`.
+
+- `hev1[.A.B.C.D]` (Variable resolution HEVC)
+  - : The `hev1` codec parameters have the same syntax as the `hvc1` codec parameters.
+
 ### WebM
 
 The basic form for a WebM `codecs` parameter is to list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:
@@ -929,3 +976,4 @@ You can also use the codecs parameter when specifying a MIME media type to the {
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Video_codecs)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Getting the correct HTML codecs parameter for an AV1 video](https://jakearchibald.com/2022/html-codecs-parameter-for-av1/)
+- [High Efficiency Video Coding](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) on Wikipedia

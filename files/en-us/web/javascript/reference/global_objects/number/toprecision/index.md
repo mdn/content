@@ -1,15 +1,15 @@
 ---
 title: Number.prototype.toPrecision()
+short-title: toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toPrecision
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toPrecision()`** method of {{jsxref("Number")}} values returns a string representing this number to the specified number of significant digits.
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toPrecision()")}}
 
 ```js interactive-example
 function precise(x) {
@@ -37,8 +37,6 @@ toPrecision(precision)
 
 - `precision` {{optional_inline}}
   - : An integer specifying the number of significant digits.
-- {{jsxref("TypeError")}}
-  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ### Return value
 
@@ -48,6 +46,8 @@ A string representing the given number, using the given number of significant di
 
 - {{jsxref("RangeError")}}
   - : Thrown if `precision` is not between `1` and `100` (inclusive).
+- {{jsxref("TypeError")}}
+  - : Thrown if this method is invoked on an object that is not a {{jsxref("Number")}}.
 
 ## Examples
 

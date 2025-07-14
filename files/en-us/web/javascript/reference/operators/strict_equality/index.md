@@ -3,16 +3,15 @@ title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 page-type: javascript-operator
 browser-compat: javascript.operators.strict_equality
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **strict equality (`===`)** operator checks whether its two operands are
 equal, returning a Boolean result. Unlike the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator,
 the strict equality operator always considers operands of different types to be
 different.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+{{InteractiveExample("JavaScript Demo: Strict equality (===) operator")}}
 
 ```js interactive-example
 console.log(1 === 1);
@@ -36,7 +35,7 @@ x === y
 
 ## Description
 
-The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using) semantic.
+The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using) semantic.
 
 - If the operands are of different types, return `false`.
 - If both operands are objects, return `true` only if they refer to the
@@ -45,7 +44,6 @@ The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/e
   return `true`.
 - If either operand is `NaN`, return `false`.
 - Otherwise, compare the two operand's values:
-
   - Numbers must have the same numeric values. `+0` and `-0`
     are considered to be the same value.
   - Strings must have the same characters in the same order.

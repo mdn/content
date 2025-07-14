@@ -3,25 +3,54 @@ title: :not()
 slug: Web/CSS/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+
+```css interactive-example
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+```html interactive-example
+<p>
+  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
+  the same as an Earth day, only <strong>37 minutes</strong> longer.
+</p>
+
+<p class="irrelevant">
+  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
+  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
+  and atmospheric pressure.
+</p>
+```
 
 The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
 ## Syntax
-
-The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ```css-nolint
 :not(<complex-selector-list>) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ## Description
 
@@ -153,7 +182,6 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
-
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

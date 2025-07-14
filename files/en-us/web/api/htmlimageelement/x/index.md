@@ -55,8 +55,8 @@ including their user ID, their full name, and their avatar image.
 ```html
 <table id="userinfo">
   <colgroup>
-    <col span="2" class="group1">
-    <col>
+    <col span="2" class="group1" />
+    <col />
   </colgroup>
   <tr>
     <th>UserID</th>
@@ -66,11 +66,12 @@ including their user ID, their full name, and their avatar image.
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
-  </th>
+    <td>
+      <img src="/shared-assets/images/examples/grapefruit-slice.jpg" />
+    </td>
+  </tr>
 </table>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 ### JavaScript

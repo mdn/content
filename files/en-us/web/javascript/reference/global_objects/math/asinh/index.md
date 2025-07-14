@@ -1,11 +1,11 @@
 ---
 title: Math.asinh()
+short-title: asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asinh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.asinh()`** static method returns the inverse hyperbolic sine of a number. That is,
 
@@ -74,6 +74,7 @@ Math.asinh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.asinh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.asinh`](https://www.npmjs.com/package/math.asinh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

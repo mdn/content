@@ -14,34 +14,26 @@ Enables extensions to get, set, and remove cookies, and be notified when they ch
 For an extension to use this API, it must specify the `"cookies"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file and [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites whose cookies it wants to access. The extension can get, set, or remove any cookies that can be read, written, or deleted by a URL matching the host permissions. For example:
 
 - `http://*.example.com/`
-
   - : An extension with this host permission can:
-
     - Read a non-secure cookie for `www.example.com` with any path.
     - Write a secure or non-secure cookie for `www.example.com` with any path.
 
     It can _not_:
-
     - Read a secure cookie for `www.example.com`.
 
 - `http://www.example.com/`
-
   - : An extension with this host permission can:
-
     - Read a non-secure cookie for `www.example.com` with any path.
     - Read a non-secure cookie for `.example.com` with any path.
     - Write a secure or non-secure cookie for `www.example.com` with any path.
     - Write a secure or non-secure cookie for `.example.com` with any path.
 
     It can _not_:
-
     - Read or write a cookie for `foo.example.com`.
     - Read or write a cookie for `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : An extension with this host permission can:
-
     - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
 ## Tracking protection
@@ -56,11 +48,11 @@ Firefox includes two features to prevent tracking: [dynamic partitioning](#stora
 From Firefox 103, dynamic partitioning is the default feature used. However, if the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning.
 
 > [!NOTE]
-> When private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for details.
+> When private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/Guides/State_Partitioning#status_of_partitioning_in_firefox), for details.
 
 ### Storage partitioning
 
-When using [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning), Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for implementation details.
+When using [dynamic partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning#dynamic_partitioning), Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/Guides/State_Partitioning#status_of_partitioning_in_firefox), for implementation details.
 
 Storage partitions are keyed by the schemeful URL of the top-level {{glossary("Site","website")}} and, when dynamic partitioning is active, the key value is available through the `partitionKey.topLevelSite` property in the cookies API, for example, `partitionKey: {topLevelSite: "http://site"}`.
 

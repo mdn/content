@@ -18,7 +18,7 @@ All content on MDN Web Docs must be relevant to the technology section in which 
 Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.
 
 > [!NOTE]
-> You will see links to commercial sites in the MDN [Learn web development](/en-US/docs/Learn_web_development) section, but these are used sparingly, and we only link to trusted education partners. You can read more about this at [Learn web development writing guidelines > External links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#external_links_and_embeds).
+> You will see links to commercial sites in the MDN [Learn web development](/en-US/docs/Learn_web_development) section, but these are used sparingly, and we only link to trusted education partners. You can read more about this at [Learn web development writing guidelines > Partner links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds).
 
 ### Neutrality
 
@@ -34,7 +34,7 @@ If you'd like to suggest content for MDN Web Docs, please make sure you read thi
 
 For new reference pages or guides, please open a [new issue](https://github.com/mdn/mdn/issues/new/choose) outlining what content you are suggesting and why (please be as explicit as possible).
 
-For suggesting larger projects that involve new sections of content, please refer to the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion) page, which also outlines the application process.
+For suggesting larger projects that involve new sections of content, please refer to the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion) page, which also outlines the application process.
 
 ## Topics that belong on MDN Web Docs
 
@@ -64,7 +64,7 @@ We also document some broader topics, such as [SVG](/en-US/docs/Web/SVG), [XML](
 
 All content on MDN Web Docs must be relevant to the technology section in which it appears. Contributors are expected to follow these [MDN writing guidelines](/en-US/docs/MDN/Writing_guidelines) for writing style, code samples, and other topics.
 
-For more details about the criteria for whether or not a technology can be documented on MDN Web Docs, see the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion) page.
+For more details about the criteria for whether or not a technology can be documented on MDN Web Docs, see the [Criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion) page.
 
 ### When we document a new technology
 

@@ -3,9 +3,8 @@ title: revert
 slug: Web/CSS/revert
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property either to user agent set value, to user set value, to its inherited value (if it is inheritable), or to initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
@@ -23,9 +22,9 @@ Revert will not affect rules applied to children of an element you reset (but wi
 > Revert is just a value. It is still possible to override the `revert` value using [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 > [!NOTE]
-> The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
+> The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
 >
-> For example, the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
+> For example, the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
 
 ## Examples
 

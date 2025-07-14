@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Set.size
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`size`** accessor property of {{jsxref("Set")}} instances returns the number of (unique) elements in this set.
 

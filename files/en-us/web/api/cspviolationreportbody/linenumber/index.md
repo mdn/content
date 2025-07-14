@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.lineNumber
 
 {{APIRef("Reporting API")}}
 
-The **`lineNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the line number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation.
+The **`lineNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the line number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
 Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
 If the resource that triggers the CSP violation is not loaded, the value will be `null`.
@@ -28,7 +28,7 @@ This example triggers a CSP violation using an inline script, and reports the vi
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
 The document also includes an inline script, which should therefore trigger a CSP violation.
 
 ```html

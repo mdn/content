@@ -5,9 +5,10 @@ page-type: javascript-class
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.ZonedDateTime`** object represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 
@@ -37,7 +38,7 @@ To know the offset, we need two pieces of information, the _time zone_, and the 
 
 The time zones are stored in the [IANA Time Zone Database](https://www.iana.org/time-zones). Each IANA time zone has:
 
-- A _primary time zone identifier_ that uniquely identifies the time zone. It usually refers to a geographic area anchored by a city (e.g. `Europe/Paris` or `Africa/Kampala`), but can also denote single-offset time zones like `UTC` (a consistent `+00:00` offset) or `Etc/GMT+5` (which for historical reasons is a negative offset `-05:00`). For historical reasons, the primary name for the UTC time zone is `UTC`, though in IANA it is `Etc/UTC`.
+- A _primary time zone identifier_ that uniquely identifies the time zone. It usually refers to a geographic area anchored by a city (e.g., `Europe/Paris` or `Africa/Kampala`), but can also denote single-offset time zones like `UTC` (a consistent `+00:00` offset) or `Etc/GMT+5` (which for historical reasons is a negative offset `-05:00`). For historical reasons, the primary name for the UTC time zone is `UTC`, though in IANA it is `Etc/UTC`.
 - A _time zone definition_ in the form of a table that maps UTC date/time ranges (including future ranges) to specific offsets.
 - Zero or more _non-primary time zone identifiers_ that are aliases to the primary time zone identifier. These are usually historical names that are no longer in use, but are kept for compatibility reasons. See below for more information.
 
@@ -68,11 +69,11 @@ The IANA time zone database changes from time to time, usually to add new time z
 | `Asia/Ho_Chi_Minh`               | `Asia/Saigon`                   |
 | `Europe/Kyiv`                    | `Europe/Kiev`                   |
 
-Historically, these renames caused problems for programmers because the Unicode [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
+Historically, these renames caused problems for programmers because the Unicode [CLDR database](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
 
 With the introduction of Temporal, this behavior is now more standardized:
 
-- [CLDR data](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) now includes an `"_iana"` attribute that indicates the most up-to-date identifier if the older, stable identifier has been renamed. Browsers can use this new attribute to provide up-to-date identifiers to callers.
+- [CLDR data](https://github.com/unicode-org/cldr/blob/main/common/bcp47/timezone.xml) now includes an `"_iana"` attribute that indicates the most up-to-date identifier if the older, stable identifier has been renamed. Browsers can use this new attribute to provide up-to-date identifiers to callers.
 - Time zone identifiers provided by the programmer will never be replaced with an alias. For example, if the caller provides `Asia/Calcutta` or `Asia/Kolkata` as the identifier input to {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}, then the same identifier is returned in the resulting instance's {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}}. Note that the letter case of outputs are normalized to match IANA, so that `ASIA/calCuTTa` as input generates a {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} of `Asia/Calcutta` as output.
 - When a time zone identifier is not provided by a caller but is instead sourced from the system itself (for example, when using {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}), modern identifiers are returned in all browsers. For city renames, there is a two-year lag before these system-provided-identifier APIs expose the new name, thereby giving other components (like a Node server) time to update their copies of the IANA database to recognize the new name.
 
@@ -107,7 +108,7 @@ YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm [time_zone_id] [u-ca=calendar_id]
 - `[time_zone_id]`
   - : Replace `time_zone_id` with the time zone identifier (named or offset) as described above. May have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag generally tells other systems that it cannot be ignored if they don't support it. Note that it is required for `Temporal.ZonedDateTime.from()`: omitting it causes a `RangeError`. If you want to parse ISO 8601 / RFC 3339 strings without time zone identifier annotations, use {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} instead.
 - `[u-ca=calendar_id]` {{optional_inline}}
-  - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted as an ISO 8601 calendar date and then converted to the specified calendar.
+  - : Replace `calendar_id` with the calendar to use. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `[u-ca=iso8601]`. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Note that the `YYYY-MM-DD` is always interpreted as an ISO 8601 calendar date and then converted to the specified calendar.
 
 As an input, other annotations in the `[key=value]` format are ignored, and they must not have the critical flag.
 
@@ -160,7 +161,7 @@ When constructing a `ZonedDateTime` with {{jsxref("Temporal/ZonedDateTime/from",
 - `prefer`
   - : Use the offset if it's valid, otherwise calculate the offset from the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} (see the method for more details). This is different from `ignore` because in the case of local time ambiguity, the offset is used to resolve it rather than the `disambiguation` option.
 
-Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time. In other words, `Z` enforces the same behavior as the `ignore` option and its results can never be ambiguous.
+Note that the `Z` offset is not equivalent to `+00:00`. The `Z` offset means "the time in UTC is known, but the offset to local time is unknown", as per [RFC 9557](https://www.rfc-editor.org/rfc/rfc9557.html#name-update-to-rfc-3339). When the time string uses the `Z` offset, the `offset` option is ignored, and the offset is derived from the time zone ID. On the other hand, the `+00:00` offset is interpreted as a local time offset that happens to match UTC and is validated against the time zone ID.
 
 > [!NOTE]
 > Although {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} also takes an [RFC 9557](#rfc_9557_format) string in the same form, there is no ambiguity because it always ignores the time zone identifier and reads the offset only.
@@ -173,7 +174,7 @@ Note that the `Z` offset does not mean `+00:00`; it is always considered valid r
 ## Static methods
 
 - {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}} {{experimental_inline}}
-  - : Returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
+  - : Returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two date-times.
 - {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} {{experimental_inline}}
   - : Creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and time zone properties, or an [RFC 9557](#rfc_9557_format) string.
 
@@ -202,9 +203,9 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "Temporal.ZonedDateTime.prototype.epochNanoseconds")}} {{experimental_inline}}
   - : Returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 - {{jsxref("Temporal/ZonedDateTime/era", "Temporal.ZonedDateTime.prototype.era")}} {{experimental_inline}}
-  - : Returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g. ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"gregory"` or `"gregory-inverse"`.
+  - : Returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g., ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"gregory"` or `"gregory-inverse"`.
 - {{jsxref("Temporal/ZonedDateTime/eraYear", "Temporal.ZonedDateTime.prototype.eraYear")}} {{experimental_inline}}
-  - : Returns a non-negative integer representing the year of this date within the era, or `undefined` if the calendar does not use eras (e.g. ISO 8601). The year index usually starts from 1 (more common) or 0, and years in an era can decrease with time (e.g. Gregorian BCE). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+  - : Returns a non-negative integer representing the year of this date within the era, or `undefined` if the calendar does not use eras (e.g., ISO 8601). The year index usually starts from 1 (more common) or 0, and years in an era can decrease with time (e.g., Gregorian BCE). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/hour", "Temporal.ZonedDateTime.prototype.hour")}} {{experimental_inline}}
   - : Returns a integer from 0 to 23 representing the hour component of this time.
 - {{jsxref("Temporal/ZonedDateTime/hoursInDay", "Temporal.ZonedDateTime.prototype.hoursInDay")}} {{experimental_inline}}
@@ -275,7 +276,7 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/until", "Temporal.ZonedDateTime.prototype.until()")}} {{experimental_inline}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date-time to another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}). The duration is positive if the other date-time is after this date-time, and negative if before.
 - {{jsxref("Temporal/ZonedDateTime/valueOf", "Temporal.ZonedDateTime.prototype.valueOf()")}} {{experimental_inline}}
-  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.ZonedDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
+  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.ZonedDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} {{experimental_inline}}
   - : Returns a new `Temporal.ZonedDateTime` object representing this date-time with some fields replaced by new values.
 - {{jsxref("Temporal/ZonedDateTime/withCalendar", "Temporal.ZonedDateTime.prototype.withCalendar()")}} {{experimental_inline}}

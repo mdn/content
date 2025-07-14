@@ -1,11 +1,11 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
+short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatRangeToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/formatRange", "formatRange()")}}. It is useful for building custom strings from the locale-specific tokens.
 

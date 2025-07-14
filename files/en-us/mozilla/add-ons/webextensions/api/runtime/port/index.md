@@ -71,7 +71,6 @@ Values of this type are objects. They contain the following properties:
 - `error`
   - : `object`. If the port was disconnected due to an error, this will be set to an object with a string property `message`, giving you more information about the error. See `onDisconnect`.
 - `onDisconnect`
-
   - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called `Port.disconnect()`. This event will only be fired once for each port. The listener function will be passed the `Port` object. If the port was disconnected due to an error, then the `Port` argument will contain an `error` property giving more information about the error:
 
     ```js
@@ -89,7 +88,7 @@ Values of this type are objects. They contain the following properties:
 - `postMessage`
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. Only present on ports passed to the {{WebExtAPIRef('runtime.onConnect')}}, {{WebExtAPIRef('runtime.onConnectExternal')}}, or {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners.
 
 ## Lifecycle
 
@@ -139,7 +138,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script.
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`.
   - sends the content script a message using the port.
   - starts listening to messages received on the port, and logs them.

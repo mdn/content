@@ -3,9 +3,8 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 page-type: javascript-class
 browser-compat: javascript.builtins.Map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
 Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
@@ -44,7 +43,7 @@ The specification requires maps to be implemented "that, on average, provide acc
 
 ### Key equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Objects vs. Maps
 
@@ -302,8 +301,8 @@ interface RTCStatsReport {
 
 `Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
-- Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
+- Read-only `Map`-like objects have the property {{jsxref("Map/size", "size")}}, and the methods: {{jsxref("Map/entries", "entries()")}}, {{jsxref("Map/forEach", "forEach()")}}, {{jsxref("Map/get", "get()")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}, {{jsxref("Map/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
+- Writeable `Map`-like objects additionally have the methods: {{jsxref("Map/clear", "clear()")}}, {{jsxref("Map/delete", "delete()")}}, and {{jsxref("Map/set", "set()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
 
@@ -376,7 +375,7 @@ const myMap = new Map();
 
 const keyString = "a string";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
@@ -392,7 +391,7 @@ console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
 console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
-console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
+console.log(myMap.get(() => {})); // undefined, because keyFunc !== () => {}
 ```
 
 ### Using NaN as Map keys
@@ -497,7 +496,7 @@ console.log(original === clone); // false (useful for shallow comparison)
 ```
 
 > [!NOTE]
-> Keep in mind that _the data itself_ is not cloned.
+> Keep in mind that _the data itself_ is not cloned. In other words, it is only a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the `Map`.
 
 Maps can be merged, maintaining key uniqueness:
 
@@ -555,6 +554,7 @@ console.log(merged.get(3)); // three
 ## See also
 
 - [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
+- [es-shims polyfill of `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

@@ -3,13 +3,53 @@ title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 page-type: css-property
 browser-compat: css.properties.backdrop-filter
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect the element or its background needs to be transparent or partially transparent.
 
-{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+
+```css interactive-example-choice
+backdrop-filter: blur(10px);
+```
+
+```css interactive-example-choice
+backdrop-filter: invert(80%);
+```
+
+```css interactive-example-choice
+backdrop-filter: sepia(90%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+#example-element {
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgb(255 255 255 / 0.2);
+}
+```
 
 ## Syntax
 
@@ -48,7 +88,7 @@ backdrop-filter: unset;
 - `none`
   - : No filter is applied to the backdrop.
 - `<filter-value-list>`
-  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
+  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
 
 ## Formal definition
 

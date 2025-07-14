@@ -17,7 +17,7 @@ over the full surface area of the app window, turning the control buttons (maxim
 
 Before using this feature, the following conditions must be true:
 
-- The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/Reference/display_override) member must be set to `window-controls-overlay`.
+- The Web App Manifest's [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) member must be set to `window-controls-overlay`.
 - The Progressive Web App must be installed on a desktop operating system.
 
 ## Main concepts
@@ -70,4 +70,4 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
-- [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/window-controls-overlay)

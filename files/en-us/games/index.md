@@ -2,9 +2,8 @@
 title: Game development
 slug: Games
 page-type: landing-page
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
@@ -17,15 +16,9 @@ We've also included a reference section so you can easily find information about
 > [!NOTE]
 > Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learn web development](/en-US/docs/Learn_web_development) section is a good place to go to get started with the basics.
 
-## Port native games to the Web
+## Guides
 
-If you are a native developer (for example writing games in C++), and you are interested in how you can port your games over to the Web, you should learn more about our [Emscripten](https://emscripten.org/index.html) tool — this is an LLVM to JavaScript compiler, which takes LLVM bytecode (e.g. generated from C/C++ using Clang, or from another language) and compiles that into [asm.js](/en-US/docs/Games/Tools/asm.js), which can be run on the Web.
-
-To get started, see:
-
-- [About Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html) for an introduction including high-level details.
-- [Download and Install](https://emscripten.org/docs/getting_started/downloads.html) for installing the toolchain.
-- [Emscripten Tutorial](https://emscripten.org/docs/getting_started/Tutorial.html) for a tutorial to teach you how to get started.
+{{SubpagesWithSummaries}}
 
 ## Examples
 
@@ -43,7 +36,7 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
   - : Weekly newsletter about HTML game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : List of the most popular HTML game frameworks along with their rating, features and samples.
-- [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
+- [Tuts+ Game Development](https://code.tutsplus.com/c/game-development)
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various useful resources around the web.

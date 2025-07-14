@@ -2,9 +2,8 @@
 title: Page load time
 slug: Glossary/Page_load_time
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Page load time** is the time it takes for a page to load, measured from [navigation start](/en-US/docs/Web/API/PerformanceTiming/navigationStart) to the [start of the load event](/en-US/docs/Web/API/PerformanceTiming/loadEventStart).
 
@@ -18,6 +17,6 @@ While page load time 'sounds' like the perfect web performance metric, it isn't.
 
 ## See also
 
-- [Navigation and resource timing](/en-US/docs/Web/Performance/Navigation_and_resource_timings)
+- [Navigation and resource timing](/en-US/docs/Web/Performance/Guides/Navigation_and_resource_timings)
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}},

@@ -3,16 +3,63 @@ title: text-wrap
 slug: Web/CSS/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-wrap`** CSS shorthand property controls how text inside an element is wrapped. The different values provide:
 
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.
 
-{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+{{InteractiveExample("CSS Demo: text-wrap")}}
+
+```css interactive-example-choice
+text-wrap: wrap;
+```
+
+```css interactive-example-choice
+text-wrap: nowrap;
+```
+
+```css interactive-example-choice
+text-wrap: balance;
+```
+
+```css interactive-example-choice
+text-wrap: pretty;
+```
+
+```css interactive-example-choice
+text-wrap: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## Constituent properties
 
@@ -64,7 +111,7 @@ When the styled content will be limited to a short number of lines, such as head
 
 For longer sections of text, `text-wrap: pretty` can be used. Note that `pretty` has a negative effect on performance, so it should be only used for longer blocks of text when the layout is more important than speed.
 
-The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
+The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
 
 ## Formal definition
 
@@ -134,5 +181,6 @@ The text in the example is editable. Change the text, adding long words, to view
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)
-- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com
-- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com
+- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com (2023)
+- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com (2023)
+- [Balancing Japanese and Korean typography](https://ryelle.codes/2025/04/typography-troubles-balancing-in-japanese-korean/) by Kelly Choyce-Dwan (2025)

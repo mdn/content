@@ -1,11 +1,11 @@
 ---
 title: Math.log1p()
+short-title: log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log1p
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.log1p()`** static method returns the natural logarithm (base [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E)) of `1 + x`, where `x` is the argument. That is:
 
@@ -82,6 +82,7 @@ Math.log1p(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.log1p` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.log1p`](https://www.npmjs.com/package/math.log1p)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}

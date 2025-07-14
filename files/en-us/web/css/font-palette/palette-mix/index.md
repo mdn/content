@@ -5,11 +5,12 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.properties.font-palette.palette-mix_function
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-The **`palette-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to create a new {{cssxref("font-palette")}} value by blending together two `font-palette` values by specified percentages and color interpolation methods.
+The **`palette-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to create a new {{cssxref("font-palette")}} value by blending together two `font-palette` values by specified percentages and color interpolation methods.
 
 ## Syntax
 
@@ -44,9 +45,7 @@ palette-mix(method, palette1 [p1], palette2 [p2])
 - `palette1`, `palette2`
   - : The {{cssxref("font-palette")}} values to blend together. These can be _any_ `font-palette` values, including `palette-mix()` functions, `normal`, `dark`, and `light`.
 - `p1`, `p2` {{optional_inline}}
-
   - : {{cssxref("&lt;percentage&gt;")}} values between `0%` and `100%` specifying the amount of each palette to mix. They are normalized as follows:
-
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
     - If `p1` is omitted, then `p1 = 100% - p2`.
     - If `p2` is omitted, then `p2 = 100% - p1`.
@@ -91,7 +90,7 @@ In the CSS, we import a color font from Google Fonts, and define two custom `fon
 }
 
 p {
-  font-family: "Nabla";
+  font-family: "Nabla", fantasy;
   font-size: 4rem;
   text-align: center;
   margin: 0;

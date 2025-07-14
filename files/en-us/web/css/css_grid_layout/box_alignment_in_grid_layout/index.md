@@ -1,10 +1,10 @@
 ---
 title: Aligning items in CSS grid layout
+short-title: Aligning items
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) implements [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment), which is the same standard [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) uses for aligning items in its flex container. The alignment module details how alignment should work in all the layout methods.
 
@@ -316,7 +316,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ## Aligning the grid tracks on the block axis
 
-If you have a situation where your grid tracks use an area that is smaller than the grid container you can align the grid tracks themselves inside that container. The {{cssxref("align-content")}} aligns the tracks on the block axis and {{cssxref("justify-content")}} aligns on the inline axis. As with the `*-items` and `*-item` properties, the {{CSSxRef("place-content")}} property is shorthand for `align-content` and `justify-content.
+If you have a situation where your grid tracks use an area that is smaller than the grid container you can align the grid tracks themselves inside that container. The {{cssxref("align-content")}} aligns the tracks on the block axis and {{cssxref("justify-content")}} aligns on the inline axis. As with the `*-items` and `*-item` properties, the {{CSSxRef("place-content")}} property is shorthand for `align-content` and `justify-content`.
 
 The values for `align-content`, `justify-content` and `place-content` all include the {{cssxref("content-distribution")}} and {{cssxref("content-position")}} values. The `align-content` property also accepts {{cssxref("baseline-position")}} values and, like the other `justify-*` properties, `justify-content` also accepts `left` and `right`.
 
@@ -536,7 +536,7 @@ We can also apply the {{cssxref("content-distribution")}} space distribution val
 
 If an item spans more than one grid track, using a space distribution value will likely cause items on your grid to become larger because the space that's added between the tracks is added to the spanning item. Therefore, if you use these values, make sure the content of the tracks can cope with the extra space or that you have used alignment properties on the items, so they move to the start or end rather than stretch.
 
-In the below image, we placed the grid with two different `align-content` values to compare `start` and `space-between`. You can see how the first two items, which span two row tracks, have taken on extra height in the `space-between` example as they gain the space that exists because of the of the free space that was distributed _between_ the three rows:
+In the below image, we placed the grid with two different `align-content` values to compare `start` and `space-between`. You can see how the first two items, which span two row tracks, have taken on extra height in the `space-between` example as they gain the space that exists because of the free space that was distributed _between_ the three rows:
 
 ![Demonstrating how items become larger if we use space-between.](7_space-between.png)
 

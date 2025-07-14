@@ -1,16 +1,16 @@
 ---
 title: Using CSS animations
+short-title: Using animations
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS animations** make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
 
 There are three key advantages to CSS animations over traditional script-driven animation techniques:
 
-1. They're easy to use for simple animations; you can create them without even having to know JavaScript.
+1. They're easy to use for basic animations; you can create them without even having to know JavaScript.
 2. The animations run well, even under moderate system load. Simple animations can often perform poorly in JavaScript. The rendering engine can use frame-skipping and other techniques to keep the performance as smooth as possible.
 3. Letting the browser control the animation sequence lets the browser optimize performance and efficiency by, for example, reducing the update frequency of animations running in tabs that aren't currently visible.
 
@@ -105,9 +105,6 @@ animation-iteration-count: 2, 1;
 If the mismatch in the number of animations and animation property values is inverted, say there are five `animation-duration` values for three `animation-name` values, then the extra or unused animation property values, in this case, two `animation-duration` values, don't apply to any animation and are ignored.
 
 ## Examples
-
-> [!NOTE]
-> Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
 
 ### Making text slide across the browser window
 

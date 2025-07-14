@@ -2,9 +2,8 @@
 title: Object building practice
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
@@ -107,11 +106,14 @@ This handles the properties, but what about the methods? We want to get our ball
 First add the following `draw()` method to the `Ball` class:
 
 ```js
-draw() {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
+class Ball {
+  // …
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+  }
 }
 ```
 
@@ -120,7 +122,6 @@ Using this function, we can tell the ball to draw itself onto the screen, by cal
 - First, we use [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) to state that we want to draw a shape on the paper.
 - Next, we use [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) to define what color we want the shape to be — we set it to our ball's `color` property.
 - Next, we use the [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) method to trace an arc shape on the paper. Its parameters are:
-
   - The `x` and `y` position of the arc's center — we are specifying the ball's `x` and `y` properties.
   - The radius of the arc — in this case, the ball's `size` property.
   - The last two parameters specify the start and end number of degrees around the circle that the arc is drawn between. Here we specify 0 degrees, and `2 * PI`, which is the equivalent of 360 degrees in radians (annoyingly, you have to specify this in radians). That gives us a complete circle. If you had specified only `1 * PI`, you'd get a semi-circle (180 degrees).
@@ -153,25 +154,28 @@ You can start testing your object out already.
 We can draw the ball in position, but to actually move the ball, we need an update function of some kind. Add the following code inside the class definition for `Ball`:
 
 ```js
-update() {
-  if ((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
-  }
+class Ball {
+  // …
+  update() {
+    if (this.x + this.size >= width) {
+      this.velX = -this.velX;
+    }
 
-  if ((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
-  }
+    if (this.x - this.size <= 0) {
+      this.velX = -this.velX;
+    }
 
-  if ((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
-  }
+    if (this.y + this.size >= height) {
+      this.velY = -this.velY;
+    }
 
-  if ((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
-  }
+    if (this.y - this.size <= 0) {
+      this.velY = -this.velY;
+    }
 
-  this.x += this.velX;
-  this.y += this.velY;
+    this.x += this.velX;
+    this.y += this.velY;
+  }
 }
 ```
 
@@ -255,15 +259,18 @@ Now for a bit of fun, let's add some collision detection to our program, so our 
 First, add the following method definition to your `Ball` class.
 
 ```js
-collisionDetect() {
-  for (const ball of balls) {
-    if (this !== ball) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+class Ball {
+  // …
+  collisionDetect() {
+    for (const ball of balls) {
+      if (this !== ball) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
       }
     }
   }

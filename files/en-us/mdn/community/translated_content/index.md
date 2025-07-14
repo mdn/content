@@ -6,13 +6,14 @@ page-type: mdn-community-guide
 sidebar: mdnsidebar
 ---
 
-Since December 14th 2020, MDN has been running on the new GitHub-based [Yari platform](https://github.com/mdn/yari). This has a lot of advantages for MDN, but we've needed to make radical changes to the way in which we handle localization. This is because we've ended up with a lot of unmaintained and out-of-date content in our non-English locales, and we want to manage it better in the future.
-
-We have archived all locales, **except** for the ones listed below, meaning that they are read-only on GitHub and cannot be viewed on MDN. The active locales have dedicated teams taking responsibility for maintaining them.
+MDN Web Docs contains close to 14000 pages of documentation in the `en-US` locale.
+MDN content is translated into eight locales maintained by a dedicated and diverse community of contributors.
 
 ## How to contribute
 
-If you want to contribute to one of the existing active locales, check out the [mdn/translated-content GitHub repository](https://github.com/mdn/translated-content). This repository contains all of the localized documents for all active locales, as well as issue tracking. We recommend reading the [translation guide](https://github.com/mdn/translated-content/tree/main/docs) first.
+If you want to contribute to one of the existing active locales, check out the [mdn/translated-content GitHub repository](https://github.com/mdn/translated-content).
+This repository contains all of the localized documents for all active locales, as well as issue tracking projects.
+We recommend reading the [translation guide](https://github.com/mdn/translated-content/tree/main/docs) first.
 
 If you need help or have any questions, feel free to get in touch with one of the active members or communities listed below, or [contact us](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -53,9 +54,34 @@ If you need help or have any questions, feel free to get in touch with one of th
 - Discussions: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Current maintainers: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
+## Machine-translated locales
+
+The following experimental locales are machine-translated from English, and are managed in separate repositories from other locales.
+
+### German (`de`)
+
+- Repository: [mdn/translated-content-de](https://github.com/mdn/translated-content-de)
+- Discussions: [Discord (`#german`)](/discord)
+- Current maintainers: [caugner](https://github.com/caugner)
+
+### Italian (`it`)
+
+- Repository: [mdn/translated-content-it](https://github.com/mdn/translated-content-it)
+- Discussions: [Discord (`#italian`)](/discord)
+- Current maintainers: [caugner](https://github.com/caugner)
+
+## Retired locales
+
+Since December 14th 2020, MDN runs on a platform that's [maintained on GitHub](/en-US/docs/MDN/Community/Our_repositories).
+This has a lot of advantages, but we needed to make radical changes to the way in which we handled localization before this migration.
+A lot of unmaintained and out-of-date content ended up in non-English locales, and we want to manage it better going forward.
+
+For this reason, we have archived all locales, **except** for the ones listed on this page, meaning that they are read-only on GitHub and cannot be viewed on developer.mozilla.org.
+The active locales have dedicated teams taking responsibility for maintaining them.
+
 ## See also
 
-- [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — the latest state of localization on MDN
-- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/2020/12/an-update-on-mdn-web-docs-localization-strategy/) — updated strategy based on community feedback
-- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — more on the advantages of the new platform, and the rationale behind the localization changes
+- [MDN localization update, February 2021](https://hacks.mozilla.org/2021/02/mdn-localization-update-february-2021/) — the latest state of localization on MDN (2021)
+- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/2020/12/an-update-on-mdn-web-docs-localization-strategy/) — updated strategy based on community feedback (2020)
+- [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/) — more on the advantages of the new platform, and the rationale behind the localization changes (2020)
 - [MDN communication channels](/en-US/docs/MDN/Community/Communication_channels)

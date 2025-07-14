@@ -1,11 +1,11 @@
 ---
 title: Math.cosh()
+short-title: cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cosh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cosh()`** static method returns the hyperbolic cosine of a number. That is,
 
@@ -74,6 +74,7 @@ Math.cosh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.cosh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.cosh`](https://www.npmjs.com/package/math.cosh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

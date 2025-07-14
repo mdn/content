@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.filter()
+short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.filter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`filter()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields only those elements of the iterator for which the provided callback function returns `true`.
 
@@ -97,6 +97,7 @@ for (const n of fibonacci()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.filter`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.forEach()")}}
 - {{jsxref("Iterator.prototype.every()")}}

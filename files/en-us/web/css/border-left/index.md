@@ -3,13 +3,50 @@ title: border-left
 slug: Web/CSS/border-left
 page-type: css-shorthand-property
 browser-compat: css.properties.border-left
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-left`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
-The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
+{{InteractiveExample("CSS Demo: border-left")}}
 
-{{EmbedInteractiveExample("pages/css/border-left.html")}}
+```css interactive-example-choice
+border-left: solid;
+```
+
+```css interactive-example-choice
+border-left: dashed red;
+```
+
+```css interactive-example-choice
+border-left: 1rem solid;
+```
+
+```css interactive-example-choice
+border-left: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-left: 4mm ridge rgb(211 220 50 / 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 

@@ -2,6 +2,7 @@
 title: Origin private file system
 slug: Web/API/File_System_API/Origin_private_file_system
 page-type: guide
+browser-compat: api.StorageManager.getDirectory
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -19,7 +20,7 @@ The [File System Access API](https://wicg.github.io/file-system-access/), which 
 
 This works, but it has some restrictions. These changes are being made to the user-visible file system, so there are a lot of security checks in place (for example, [safe browsing](https://developers.google.com/safe-browsing) in Chrome) to guard against malicious content being written to that file system. These writes are not in-place, and instead use a temporary file. The original is not modified unless it passes all the security checks.
 
-As a result, these operations are fairly slow. It is not so noticeable when you are making small text updates, but the performance suffers when making more significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
+As a result, these operations are fairly slow. It is not so noticeable when you are making small text updates, but the performance suffers when making more significant, large-scale file updates such as [SQLite](https://sqlite.org/wasm) database modifications.
 
 ## How does the OPFS solve such problems?
 
@@ -191,6 +192,10 @@ console.log(textDecoder.decode(dataView));
 // Truncate the file after 4 bytes.
 accessHandle.truncate(4);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

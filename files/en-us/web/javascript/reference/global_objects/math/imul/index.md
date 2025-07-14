@@ -1,11 +1,11 @@
 ---
 title: Math.imul()
+short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.imul
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.imul()`** static method returns the result of the C-like 32-bit multiplication of the two parameters.
 
@@ -73,4 +73,5 @@ Math.imul(0xfffffffe, 5); // -10
 ## See also
 
 - [Polyfill of `Math.imul` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.imul`](https://www.npmjs.com/package/math.imul)
 - [Emscripten](https://en.wikipedia.org/wiki/Emscripten) on Wikipedia

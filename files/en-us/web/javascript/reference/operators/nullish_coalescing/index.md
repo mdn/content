@@ -3,16 +3,15 @@ title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+{{InteractiveExample("JavaScript Demo: Nullish coalescing (??) operator")}}
 
 ```js interactive-example
 const foo = null ?? "default string";

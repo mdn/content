@@ -3,13 +3,13 @@ title: :has-slotted
 slug: Web/CSS/:has-slotted
 page-type: css-pseudo-class
 browser-compat: css.selectors.has-slotted
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:has-slotted`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the content of a {{HTMLElement("slot")}} element is not empty or not using the default value (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
-> [!NOTE] Even a single whitespace text node is sufficient to make `:has-slotted` apply.
+> [!NOTE]
+> Even a single whitespace text node is sufficient to make `:has-slotted` apply.
 
 This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 

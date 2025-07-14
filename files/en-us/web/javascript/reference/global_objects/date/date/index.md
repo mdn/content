@@ -1,15 +1,15 @@
 ---
 title: Date() constructor
+short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 
-{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+{{InteractiveExample("JavaScript Demo: Date() constructor")}}
 
 ```js interactive-example
 const date1 = new Date("December 17, 1995 03:24:00");
@@ -18,11 +18,8 @@ const date1 = new Date("December 17, 1995 03:24:00");
 const date2 = new Date("1995-12-17T03:24:00");
 // Sun Dec 17 1995 03:24:00 GMT...
 
-console.log(date1 === date2);
-// Expected output: false
-
-console.log(date1 - date2);
-// Expected output: 0
+console.log(date1.getTime() === date2.getTime());
+// Expected output: true
 ```
 
 ## Syntax
@@ -43,7 +40,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **Note:** `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `Date()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
@@ -68,7 +66,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `dateObject`
   - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
 
-When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 

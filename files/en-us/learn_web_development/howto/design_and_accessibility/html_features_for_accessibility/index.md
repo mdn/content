@@ -2,15 +2,14 @@
 title: What HTML features promote accessibility?
 slug: Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_accessibility
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 The following content describes specific features of HTML that should be used to make a web page more accessible to people with different disabilities.
 
 ## Link text
 
-If you have a link that isn't self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
+If you have a link that isn't self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attributes.
 
 ```html
 <p>
@@ -40,7 +39,7 @@ Note that, most of the time, it is better to instead write useful link text:
 
 ## Skip Links
 
-To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links) that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
+To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Reference/Elements/a#skip_links) that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
 
 ```html
 <header>
@@ -59,7 +58,7 @@ To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip
 
 ## Alt attribute for image
 
-Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
+Every image should have an [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
 
 ```html
 <!-- decorative image -->
@@ -70,7 +69,7 @@ Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribu
   role="img" />
 ```
 
-The `alt` attribute for the same content may vary depending on the context. In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Element/progress) element:
+The `alt` attribute for the same content may vary depending on the context. In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) element:
 
 ```html
 <img alt="20% complete" src="load-progress.gif" />
@@ -81,7 +80,7 @@ The `alt` attribute for the same content may vary depending on the context. In t
 
 ## ARIA role attribute
 
-By default, all semantic elements in HTML have a [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles); for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when using SVG images, add `role="img"` to the opening tag, as there is an [SVG VoiceOver bug](https://webkit.org/b/216364) whereby VoiceOver does not correctly announce SVG images.
+By default, all semantic elements in HTML have a [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles); for example, `<input type="radio">` has the `radio` role. Non-semantic elements in HTML do not have a role. ARIA roles can be used to describe elements that don't natively exist in HTML, such as a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) widget. Roles are also helpful for newer elements that exist but don't yet have full browser support. For example, when using SVG images, add `role="img"` to the opening tag, as there is an [SVG VoiceOver bug](https://webkit.org/b/216364) whereby VoiceOver does not correctly announce SVG images.
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />

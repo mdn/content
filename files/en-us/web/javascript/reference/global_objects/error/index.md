@@ -3,9 +3,8 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 page-type: javascript-class
 browser-compat: javascript.builtins.Error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Error`** objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
@@ -48,8 +47,10 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- {{jsxref("Error.captureStackTrace()")}} {{non-standard_inline}}
+- {{jsxref("Error.captureStackTrace()")}}
   - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
+- {{jsxref("Error.isError()")}}
+  - : Returns `true` if the argument is an error, or `false` otherwise.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
   - : A non-standard function that, if provided by user code, is called by the JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stack traces. See the [V8 Stack Trace API](https://v8.dev/docs/stack-trace-api#customizing-stack-traces) docs.
 
@@ -120,7 +121,7 @@ try {
 
 ### Differentiate between similar errors
 
-Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
+Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e., with the same type and message).
 
 If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
 The original error should be passed to the new `Error` in the constructor's [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) parameter as its `cause` property. This ensures that the original error and stack trace are available to higher-level try/catch blocks.
@@ -223,6 +224,7 @@ try {
 ## See also
 
 - [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

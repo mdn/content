@@ -3,15 +3,63 @@ title: inset-inline
 slug: Web/CSS/inset-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inset-inline`** [CSS](/en-US/docs/Web/CSS) property defines the logical start and end offsets of an element in the inline direction, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}} and {{cssxref("bottom")}}, or {{cssxref("right")}} and {{cssxref("left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/inset-inline.html")}}
+{{InteractiveExample("CSS Demo: inset-inline")}}
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-inline: 10px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inset-inline: 5% 10%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
 
 ## Constituent properties
 

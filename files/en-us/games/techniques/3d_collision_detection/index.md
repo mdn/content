@@ -2,9 +2,8 @@
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.
 
@@ -77,7 +76,7 @@ function intersect(a, b) {
 
 ## Bounding spheres
 
-Using bounding spheres to detect collisions is a bit more complex than AABB, but still fairly quick to test. The main advantage of spheres is that they are invariant to rotation, so if the wrapped entity rotates, the bounding sphere would still be the same. Their main disadvantage is that unless the entity they are wrapping is actually spherical, the wrapping is usually not a good fit (i.e. wrapping a person with a bounding sphere will cause a lot of false positives, whereas an AABB would be a better match).
+Using bounding spheres to detect collisions is a bit more complex than AABB, but still fairly quick to test. The main advantage of spheres is that they are invariant to rotation, so if the wrapped entity rotates, the bounding sphere would still be the same. Their main disadvantage is that unless the entity they are wrapping is actually spherical, the wrapping is usually not a good fit (i.e., wrapping a person with a bounding sphere will cause a lot of false positives, whereas an AABB would be a better match).
 
 ### Point vs. sphere
 

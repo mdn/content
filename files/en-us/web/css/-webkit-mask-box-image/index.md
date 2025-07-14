@@ -5,11 +5,12 @@ page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-box-image
+sidebar: cssref
 ---
 
-{{CSSRef}} {{ Non-standard_header() }}
+{{ Non-standard_header() }}
 
-The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) property sets the mask image for an element's border box.
+The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) property sets the mask image for an element's border box.
 
 > [!NOTE]
 > This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.
@@ -78,24 +79,14 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal definition
 
-- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value): `none`
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value): `none`
 - Applies to: all elements
 - [Inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance): no
-- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value): as specified
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value): as specified
 
 ## Formal syntax
 
-```plain
--webkit-mask-box-image: <mask-image-source> [<mask-image-offset>{4} <mask-border-repeat>{1,2} ]
-
-Where:
-
-<mask-image-source> = {{cssxref("url_value", "&lt;url&gt;")}} | <gradient> | none
-
-<mask-image-offset> = <length> | <percentage> | <number>
-
-<repeat-style> = repeat | stretch | round | space
-```
+{{CSSSyntaxRaw(`-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]`)}}
 
 ## Examples
 
@@ -111,7 +102,7 @@ Where:
 
 ```css
 .example-two {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100px 100px 0px 0px round round;
 }
 ```
 

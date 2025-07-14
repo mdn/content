@@ -4,9 +4,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
 spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
@@ -153,7 +152,7 @@ function fn() {} // Function declaration
 const obj = { key: "value" }; // Object keys
 // Class declaration
 class C {
-  #priv = "value"; // Private property
+  #priv = "value"; // Private field
 }
 lbl: console.log(1); // Label
 ```
@@ -164,7 +163,7 @@ In JavaScript, identifiers are commonly made of alphanumeric characters, undersc
 - After the first character, you can use any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category plus U+200C (ZWNJ) and U+200D (ZWJ).
 
 > [!NOTE]
-> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
+> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e., ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
 In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
 
@@ -179,7 +178,7 @@ Not all places accept the full range of identifiers. Certain syntaxes, such as f
 function import() {} // Illegal: import is a reserved word.
 ```
 
-Most notably, private properties and object properties allow reserved words.
+Most notably, private elements and object properties allow reserved words.
 
 ```js
 const obj = { import: "value" }; // Legal despite `import` being reserved
@@ -317,7 +316,7 @@ null
 
 ### Boolean literal
 
-See also [boolean type](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) for more information.
+See also [boolean type](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type) for more information.
 
 ```js-nolint
 true
@@ -326,7 +325,7 @@ false
 
 ### Numeric literals
 
-The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) types use numeric literals.
+The [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) types use numeric literals.
 
 #### Decimal
 
@@ -380,14 +379,14 @@ Octal number syntax uses a leading zero followed by a lowercase or uppercase Lat
 Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). Any character after the `0x` that is outside the range (0123456789ABCDEF) will terminate the literal sequence.
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 #### BigInt literal
 
-The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
+The [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js-nolint
 123456789123456789n     // 123456789123456789
@@ -408,7 +407,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n;
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#bigint_type).
+For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type).
 
 #### Numeric separators
 
@@ -438,7 +437,7 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
+A [string](/en-US/docs/Web/JavaScript/Guide/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
 - U+005C \ (backslash)
 - U+000D \<CR>
@@ -533,9 +532,9 @@ The lexical grammar is very lenient: not all regular expression literals that ge
 
 See also {{jsxref("RegExp")}} for more information.
 
-```js-nolint
-/ab+c/g
-/[/]/
+```js
+/ab+c/g;
+/[/]/;
 ```
 
 A regular expression literal cannot start with two forward slashes (`//`), because that would be a line comment. To specify an empty regular expression, use `/(?:)/`.
@@ -546,15 +545,15 @@ One template literal consists of several tokens: `` `xxx${ `` (template head), `
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
-```js-nolint
-`string text`
+```js
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag`string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Automatic semicolon insertion
@@ -566,7 +565,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' s
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
-- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties))
+- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements))
 - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import), [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 However, to make the language more approachable and convenient, JavaScript is able to automatically insert semicolons when consuming the token stream, so that some invalid token sequences can be "fixed" to valid syntax. This step happens after the program text has been parsed to tokens according to the lexical grammar. There are three cases when semicolons are automatically inserted:
@@ -590,7 +589,7 @@ The ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements
 
 ```js-nolint
 do {
-  // ...
+  // …
 } while (condition) /* ; */ // ASI here
 const a = 1
 ```
@@ -779,7 +778,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
   ```js-nolint example-bad
   // The () may be merged with the previous line as a function call
   (() => {
-    // ...
+    // …
   })()
 
   // The [ may be merged with the previous line as a property access
@@ -800,7 +799,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 
   ```js-nolint example-good
   ;(() => {
-    // ...
+    // …
   })()
   ;[1, 2, 3].forEach(console.log)
   ;`string text ${data}`.match(pattern).forEach(console.log)

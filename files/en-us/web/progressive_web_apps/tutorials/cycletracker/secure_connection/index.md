@@ -3,11 +3,10 @@ title: "CycleTracker: Secure connection"
 short-title: Secure connection
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
-
-{{PWASidebar}}
 
 PWAs can only be installed using a manifest file when served with the `https://` protocol, or when served locally from `127.0.0.1` and `localhost` URLs with the `http://` protocol.
 They also commonly use APIs that are [restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
@@ -59,7 +58,7 @@ By default, entering `localhost:8080` in the browser URL bar will load the page.
 
 You can choose a different port number. Entering `npx http-server /user/yourName/CycleTracker -p 8787` will start local server at port `8787` if available. If not, if you enter a port number that is already being used, you will get an `address already in use` or similar error. If successful, entering `localhost:8787` in the browser URL bar will render the index file stored as `~/user/yourName/CycleTracker/index.html`, or will display the directory contents of `~/user/yourName/CycleTracker/` if no index file is present.
 
-This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configurable your local web server to be served over HTTPS, you can [add a built-in TLS certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
+This non-configurable static HTTP server suffices for our basic app. Apps served via `localhost` and `127.0.0.1` are exempt from https and always considered secure. Browser insecure warnings, if given, can be bypassed. While not necessary, to configure your local web server to be served over HTTPS, you can [add a built-in TLS certificate](https://github.com/lwsjs/local-web-server/wiki/How-to-get-the-%22green-padlock%22-using-the-built-in-certificate). With the certificate, you will be able to install and run [local-web-server](<https://github.com/lwsjs/local-web-server/wiki/How-to-launch-a-secure-local-web-server-(HTTPS)>) from the command line to serve your project locally over `https`, preventing any security warning.
 
 ```bash
 npm install -g local-web-server

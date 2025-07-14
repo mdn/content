@@ -1,10 +1,10 @@
 ---
 title: Structuring content with HTML
+short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}
 
@@ -15,13 +15,13 @@ HTML is the technology that defines the content and structure of any website. Wr
 Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). Both are parts of our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) complete beginner's module.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
 - [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
   - : Covers the absolute basics of {{glossary("HTML")}}, to get you started — we define elements, attributes, and other important terms, and show where they fit in the language. We also show how a typical HTML page is structured and how an HTML element is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!
-- [What's in the head? Webpage metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- [What's in the head? Web page metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
   - : The {{Glossary("Head","head")}} of an HTML document is the part that **is not** displayed in the web browser when the page is loaded. It contains metadata information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you want to style your HTML content with CSS), links to custom favicons, and metadata (data about the HTML, such as who wrote it, and important keywords that describe the document).
 - [Headings and paragraphs](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
   - : One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains how HTML can be used to provide fundamental page structure by defining headings and paragraphs.
@@ -32,7 +32,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 - [Structuring documents](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
   - : In addition to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
 - [Advanced text features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
-  - : There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.
+  - : There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
 - [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
   - : Links (also known as hyperlinks) are really important — they are what makes the Web _a web_. This article shows the syntax required to make a link, and discusses link best practices.
 - [Marking up a letter](/en-US/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter) <sup>Challenge</sup>
@@ -55,6 +55,8 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : HTML forms and buttons are powerful tools for interacting with users — most commonly they are used for collecting data from users or allowing them to control a user interface. In this article we provide an introduction to the basics of forms and buttons.
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
+- [Test your skills: HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills)
+  - : This page lists HTML tests you can try so you can verify if you've understood the content in this module.
 
 ## Additional tutorials
 
@@ -67,11 +69,11 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 ## See also
 
-- [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
-  - : A useful (and free resource) for learning HTML basics.
-- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
-- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
+  - : Another useful resource for learning HTML basics.
+- [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : This interactive lesson provides a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}

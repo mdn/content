@@ -1,10 +1,10 @@
 ---
 title: "Challenge: Silly story generator"
+short-title: "Challenge: Story generator"
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
@@ -17,7 +17,8 @@ To get this challenge started, you should:
 - Go and [grab the HTML file](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html) for the example, save a local copy of it as `index.html` in a new directory somewhere on your computer, and do the challenge locally to begin with. This also has the CSS to style the example contained within it.
 - Go to the [page containing the raw text](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt) and keep this open in a separate browser tab somewhere. You'll need it later.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have a separate JavaScript panel, feel free to put it inline in a `<script>` element inside the HTML page.
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+If the online editor you are using doesn't have a separate JavaScript panel, you can put it inline in a `<script>` element inside the HTML page.
 
 > [!NOTE]
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
@@ -50,7 +51,6 @@ Initial variables and functions:
 
 1. In the raw text file, copy all of the code underneath the heading "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" and paste it into the top of the `main.js` file. This gives you three variables that store references to the "Enter custom name" text field (`customName`), the "Generate random story" button (`randomize`), and the {{htmlelement("p")}} element at the bottom of the HTML body that the story will be copied into (`story`), respectively. In addition you've got a function called `randomValueFromArray()` that takes an array, and returns one of the items stored inside the array at random.
 2. Now look at the second section of the raw text file — "2. RAW TEXT STRINGS". This contains text strings that will act as input into our program. We'd like you to contain these inside variables inside `main.js`:
-
    1. Store the first, big long, string of text inside a variable called `storyText`.
    2. Store the first set of three strings inside an array called `insertX`.
    3. Store the second set of three strings inside an array called `insertY`.
@@ -60,7 +60,6 @@ Placing the event handler and incomplete function:
 
 1. Now return to the raw text file.
 2. Copy the code found underneath the heading "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" and paste it into the bottom of your `main.js` file. This:
-
    - Adds a click event listener to the `randomize` variable so that when the button it represents is clicked, the `result()` function is run.
    - Adds a partially-completed `result()` function definition to your code. For the remainder of the challenge, you'll be filling in lines inside this function to complete it and make it work properly.
 
@@ -71,7 +70,6 @@ Completing the `result()` function:
 3. Next we want to replace the three placeholders in the `newStory` string — `:insertx:`, `:inserty:`, and `:insertz:` — with the strings stored in `xItem`, `yItem`, and `zItem`. There are two possible string methods that will help you here — in each case, make the call to the method equal to `newStory`, so each time it is called, `newStory` is made equal to itself, but with substitutions made. So each time the button is pressed, these placeholders are each replaced with a random silly string. As a further hint, depending on the method you choose, you might need to make one of the calls twice.
 4. Inside the first `if` block, add another string replacement method call to replace the name 'Bob' found in the `newStory` string with the `name` variable. In this block we are saying "If a value has been entered into the `customName` text input, replace Bob in the story with that custom name."
 5. Inside the second `if` block, we are checking to see if the `uk` radio button has been selected. If so, we want to convert the weight and temperature values in the story from pounds and Fahrenheit into stones and centigrade. What you need to do is as follows:
-
    1. Look up the formulas for converting pounds to stone, and Fahrenheit to centigrade.
    2. Inside the line that defines the `weight` variable, replace 300 with a calculation that converts 300 pounds into stones. Concatenate `' stone'` onto the end of the result of the overall `Math.round()` call.
    3. Inside the line that defines the `temperature` variable, replace 94 with a calculation that converts 94 Fahrenheit into centigrade. Concatenate `' centigrade'` onto the end of the result of the overall `Math.round()` call.

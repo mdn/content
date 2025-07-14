@@ -3,15 +3,53 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 page-type: css-property
 browser-compat: css.properties.border-image-outset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-outset`** [CSS](/en-US/docs/Web/CSS) property sets the distance by which an element's [border image](/en-US/docs/Web/CSS/border-image) is set out from its border box.
 
 The parts of the border image that are rendered outside the element's border box with `border-image-outset` do not trigger overflow scrollbars and don't capture mouse events.
 
-{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
+{{InteractiveExample("CSS Demo: border-image-outset")}}
+
+```css interactive-example-choice
+border-image-outset: 0;
+```
+
+```css interactive-example-choice
+border-image-outset: 15px;
+```
+
+```css interactive-example-choice
+border-image-outset: 30px;
+```
+
+```css interactive-example-choice
+border-image-outset: 40px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## Syntax
 

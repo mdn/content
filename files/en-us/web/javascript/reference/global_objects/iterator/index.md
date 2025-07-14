@@ -3,9 +3,8 @@ title: Iterator
 slug: Web/JavaScript/Reference/Global_Objects/Iterator
 page-type: javascript-class
 browser-compat: javascript.builtins.Iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 An **`Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All built-in iterators inherit from the `Iterator` class. The `Iterator` class provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
 
@@ -28,7 +27,8 @@ Web APIs may return iterators too. Some reuse core JavaScript iterators while ot
 - [Map-Like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) objects from Web APIs such as [`Headers`](/en-US/docs/Web/API/Headers) return their own iterator type like _Headers Iterator_ from their respective methods `keys()`, `values()`, `entries()`, and `[Symbol.iterator]()`.
 - [Set-Like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) objects from Web APIs such as [`FontFaceSet`](/en-US/docs/Web/API/FontFaceSet) return their own iterator type like _FontFaceSet Iterator_ from their respective methods `keys()`, `values()`, `entries()`, and `[Symbol.iterator]()`.
 
-> **Note:** [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) and other old interfaces are named as such but do not conform to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) or [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+> [!NOTE]
+> [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) and other old interfaces are named as such but do not conform to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) or [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 Each of these iterators have a distinct prototype object, which defines the `next()` method used by the particular iterator. For example, all string iterator objects inherit from a hidden object `StringIteratorPrototype`, which has a `next()` method that iterates this string by code points. `StringIteratorPrototype` also has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property whose initial value is the string `"String Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}. Similarly, other iterator prototypes also have their own `[Symbol.toStringTag]` values, which are the same as the names given above.
 
@@ -92,7 +92,8 @@ You will find many iterator methods analogous to array methods, such as:
 
 ### Iterator helper objects
 
-> **Note:** _Iterator helper objects_ and _iterator helper methods_ are two different concepts. An Iterator helper object is detectable at runtime, while "iterator helper method" is just a name for a set of methods for comprehension. _Iterator helper_ may refer to either the object or the method, depending on the context.
+> [!NOTE]
+> _Iterator helper objects_ and _iterator helper methods_ are two different concepts. An Iterator helper object is detectable at runtime, while "iterator helper method" is just a name for a set of methods for comprehension. _Iterator helper_ may refer to either the object or the method, depending on the context.
 
 Among the iterator helper methods, {{jsxref("Iterator/filter", "filter()")}}, {{jsxref("Iterator/flatMap", "flatMap()")}}, {{jsxref("Iterator/map", "map()")}}, {{jsxref("Iterator/drop", "drop()")}}, and {{jsxref("Iterator/take", "take()")}} return a new _Iterator Helper_ object. The iterator helper is also an `Iterator` instance, making these helper methods chainable. All iterator helper objects inherit from a common prototype object, which implements the iterator protocol:
 
@@ -146,7 +147,6 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Iterator` instances, the initial value is the {{jsxref("Iterator/Iterator", "Iterator")}} constructor.
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
     > [!NOTE]
@@ -204,5 +204,6 @@ for (const value of arrIterator) {
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Statements/function*", "function*")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

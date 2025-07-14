@@ -2,9 +2,9 @@
 title: Security changes in Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Security_changes
 page-type: guide
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
 This article covers security-related changes in Firefox 3.5.
 
 ## Changes to chrome registration
@@ -25,7 +25,7 @@ In previous versions of Firefox 3, SSL certificate errors resulted in the presen
 
 `about:certerror?e=error&u=url&d=desc`
 
-Embedders needing to provide custom certificate error pages can now do so by supplying their own `about:` page implementation, and setting the `security.alternate_certificate_error_page` preference to the appropriate page name (e.g. `"certerror`").
+Embedders needing to provide custom certificate error pages can now do so by supplying their own `about:` page implementation, and setting the `security.alternate_certificate_error_page` preference to the appropriate page name (e.g., `"certerror"`).
 
 ## See also
 

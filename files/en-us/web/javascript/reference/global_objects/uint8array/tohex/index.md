@@ -1,11 +1,11 @@
 ---
 title: Uint8Array.prototype.toHex()
+short-title: toHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.toHex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toHex()`** method of {{jsxref("Uint8Array")}} instances returns a hex-encoded string based on the data in this `Uint8Array` object.
 
@@ -54,7 +54,8 @@ for (let i = 0; i < data.length; i += 3) {
 
 ## See also
 
-- [Polyfill of `Uint8Array.toHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.prototype.toHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.prototype.toHex`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromHex()")}}
 - {{jsxref("Uint8Array.prototype.setFromHex()")}}

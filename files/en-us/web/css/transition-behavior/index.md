@@ -3,9 +3,8 @@ title: transition-behavior
 slug: Web/CSS/transition-behavior
 page-type: css-property
 browser-compat: css.properties.transition-behavior
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-behavior`** [CSS](/en-US/docs/Web/CSS) property specifies whether transitions will be started for properties whose animation behavior is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
 
@@ -62,7 +61,7 @@ The `transition-behavior` value can be included as part of a shorthand {{cssxref
 }
 ```
 
-In the above snippet we include the `transition` property twice. The first instance does not include the `allow-discrete` value — this provides cross-browser support, ensuring the card's other properties still transition in browsers that don't support `transition-behavior.`
+In the above snippet we include the `transition` property twice. The first instance does not include the `allow-discrete` value — this provides cross-browser support, ensuring the card's other properties still transition in browsers that don't support `transition-behavior`.
 
 ### Discrete animation behavior
 
@@ -91,7 +90,7 @@ In this example, a [popover](/en-US/docs/Web/API/Popover_API) is animated as it 
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute.
+The HTML contains a {{htmlelement("div")}} element declared as a popover using the [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, and a {{htmlelement("button")}} element designated as the popover's display control using its [popovertarget](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute.
 
 ```html
 <button popovertarget="mypopover">Show the popover</button>

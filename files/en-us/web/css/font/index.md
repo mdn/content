@@ -3,13 +3,73 @@ title: font
 slug: Web/CSS/font
 page-type: css-shorthand-property
 browser-compat: css.properties.font
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
-The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+{{InteractiveExample("CSS Demo: font")}}
 
-{{EmbedInteractiveExample("pages/css/font.html")}}
+```css interactive-example-choice
+font:
+  1.2rem "Fira Sans",
+  sans-serif;
+```
+
+```css interactive-example-choice
+font:
+  italic 1.2rem "Fira Sans",
+  serif;
+```
+
+```css interactive-example-choice
+font: italic small-caps bold 16px/2 cursive;
+```
+
+```css interactive-example-choice
+font: small-caps bold 24px/1 sans-serif;
+```
+
+```css interactive-example-choice
+font: caption;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Italic"),
+    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+```
 
 As with any shorthand property, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties). Though not directly settable by `font`, the longhands {{cssxref("font-size-adjust")}} and {{cssxref("font-kerning")}} are also reset to their initial values.
 
@@ -51,12 +111,10 @@ If `font` is specified as a system keyword, it must be one of: `caption`, `icon`
 If `font` is specified as a shorthand for several font-related properties, then:
 
 - it must include values for:
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - it may optionally include values for:
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}
@@ -158,29 +216,25 @@ p {
         id="font-style-none"
         name="font_style"
         checked=""
-        value=""
-        onchange="setCss()" />
+        value="" />
       <label for="font-style-none">none</label><br />
       <input
         type="radio"
         id="font-style-normal"
         name="font_style"
-        value="normal"
-        onchange="setCss()" />
+        value="normal" />
       <label for="font-style-normal">normal</label><br />
       <input
         type="radio"
         id="font-style-italic"
         name="font_style"
-        value="italic"
-        onchange="setCss()" />
+        value="italic" />
       <label for="font-style-italic">italic</label><br />
       <input
         type="radio"
         id="font-style-oblique"
         name="font_style"
-        value="oblique"
-        onchange="setCss()" />
+        value="oblique" />
       <label for="font-style-oblique">oblique</label>
     </div>
 
@@ -191,74 +245,53 @@ p {
         id="font-variant-none"
         name="font_variant"
         checked=""
-        value=" "
-        onchange="setCss()" />
+        value=" " />
       <label for="font-variant-none">none</label><br />
       <input
         type="radio"
         id="font-variant-normal"
         name="font_variant"
-        value="normal"
-        onchange="setCss()" />
+        value="normal" />
       <label for="font-variant-normal">normal</label><br />
       <input
         type="radio"
         id="font-variant-small-caps"
         name="font_variant"
-        value="small-caps"
-        onchange="setCss()" />
+        value="small-caps" />
       <label for="font-variant-small-caps">small-caps</label>
     </div>
 
     <div class="setPropCont">
       font-weight<br />
-      <input
-        type="radio"
-        id="font-weight-none"
-        name="font_weight"
-        value=""
-        onchange="setCss()" />
+      <input type="radio" id="font-weight-none" name="font_weight" value="" />
       <label for="font-weight-none">none</label><br />
       <input
         type="radio"
         id="font-weight-normal"
         checked=""
         name="font_weight"
-        value="400"
-        onchange="setCss()" />
+        value="400" />
       <label for="font-weight-normal">normal</label><br />
       <input
         type="radio"
         id="font-weight-bold"
         name="font_weight"
-        value="700"
-        onchange="setCss()" />
+        value="700" />
       <label for="font-weight-bold">bold</label>
     </div>
 
     <div class="setPropCont">
       font-size<br />
-      <input
-        type="radio"
-        id="font-size-12px"
-        name="font_size"
-        value="12px"
-        onchange="setCss()" />
+      <input type="radio" id="font-size-12px" name="font_size" value="12px" />
       <label for="font-size-12px">12px</label><br />
       <input
         type="radio"
         id="font-size-16px"
         name="font_size"
         value="16px"
-        checked=""
-        onchange="setCss()" />
+        checked="" />
       <label for="font-size-16px">16px</label><br />
-      <input
-        type="radio"
-        id="font-size-24px"
-        name="font_size"
-        value="24px"
-        onchange="setCss()" />
+      <input type="radio" id="font-size-24px" name="font_size" value="24px" />
       <label for="font-size-24px">24px</label>
     </div>
 
@@ -269,22 +302,15 @@ p {
         id="line-height-none"
         name="line_height"
         checked=""
-        value=""
-        onchange="setCss()" />
+        value="" />
       <label for="line-height-none">none</label><br />
       <input
         type="radio"
         id="line-height-1.2"
         name="line_height"
-        value="/1.2"
-        onchange="setCss()" />
+        value="/1.2" />
       <label for="line-height-1.2">1.2</label><br />
-      <input
-        type="radio"
-        id="line-height-3"
-        name="line_height"
-        value="/3"
-        onchange="setCss()" />
+      <input type="radio" id="line-height-3" name="line_height" value="/3" />
       <label for="line-height-3">3</label>
     </div>
     <br />
@@ -296,57 +322,49 @@ p {
         id="font-family-courier"
         name="font_family"
         checked=""
-        value="courier"
-        onchange="setCss(5,'courier')" />
+        value="courier" />
       <label for="font-family-courier">courier</label><br />
       <input
         type="radio"
         id="font-family-serif"
         name="font_family"
-        value="serif"
-        onchange="setCss()" />
+        value="serif" />
       <label for="font-family-serif">serif</label><br />
       <input
         type="radio"
         id="font-family-sans-serif"
         name="font_family"
-        value="sans-serif"
-        onchange="setCss()" />
+        value="sans-serif" />
       <label for="font-family-sans-serif">sans-serif</label><br />
       <input
         type="radio"
         id="font-family-arial"
         name="font_family"
-        value="arial"
-        onchange="setCss()" />
+        value="arial" />
       <label for="font-family-arial">Arial</label><br />
       <input
         type="radio"
         id="font-family-monospace"
         name="font_family"
-        value="monospace"
-        onchange="setCss()" />
+        value="monospace" />
       <label for="font-family-monospace">monospace</label><br />
       <input
         type="radio"
         id="font-family-cursive"
         name="font_family"
-        value="cursive"
-        onchange="setCss()" />
+        value="cursive" />
       <label for="font-family-cursive">cursive</label><br />
       <input
         type="radio"
         id="font-family-fantasy"
         name="font_family"
-        value="fantasy"
-        onchange="setCss()" />
+        value="fantasy" />
       <label for="font-family-fantasy">fantasy</label><br />
       <input
         type="radio"
         id="font-family-system-ui"
         name="font_family"
-        value="system-ui"
-        onchange="setCss()" />
+        value="system-ui" />
       <label for="font-family-system-ui">system-ui</label><br />
     </div>
   </div>
@@ -394,7 +412,7 @@ p {
 ```css hidden
 body,
 input {
-  font: 14px arial;
+  font: 14px Arial;
   overflow: hidden;
 }
 
@@ -462,13 +480,13 @@ function getProperties() {
 
 function getCheckedValue(radioName) {
   const radios = document.forms[0].elements[radioName];
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
+  for (const radio of radios) {
+    if (radio.checked) {
       const curElemName = `input_${radioName}`;
       const curElem = document.getElementById(curElemName);
-      curElem.value = radios[i].value;
+      curElem.value = radio.value;
 
-      return radios[i].value;
+      return radio.value;
     }
   }
 }
@@ -488,6 +506,10 @@ function injectCss(cssFragment) {
 }
 
 setCss();
+
+document.querySelectorAll("input[type='radio']").forEach((el) => {
+  el.addEventListener("change", setCss);
+});
 ```
 
 {{ EmbedLiveSample('Live_sample','100%', '440px')}}

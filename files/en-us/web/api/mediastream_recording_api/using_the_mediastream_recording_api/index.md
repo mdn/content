@@ -57,7 +57,7 @@ This is fairly well documented already, but we thought we'd give a mention to th
 
 ```css
 label {
-  font-family: "NotoColorEmoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
   position: absolute;
   top: 2px;
@@ -198,7 +198,7 @@ stop.onclick = () => {
 };
 ```
 
-Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
+Note that the recording may also stop naturally if the media stream ends (e.g., if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
 
 ## Grabbing and using the blob
 
@@ -251,7 +251,7 @@ Next, we create an HTML structure like the following, inserting it into our clip
 </article>
 ```
 
-After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/en-US/docs/Web/HTML/Element/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
+After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
 
 Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 

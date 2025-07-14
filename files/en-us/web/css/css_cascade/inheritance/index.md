@@ -3,22 +3,21 @@ title: Inheritance
 slug: Web/CSS/CSS_cascade/Inheritance
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-cascade-5/#css-inheritance
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **inheritance** controls what happens when no value is specified for a property on an element.
 
 CSS properties can be categorized in two types:
 
-- **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) of the parent element
-- **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) of the property
+- **inherited properties**, which by default are set to the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the parent element
+- **non-inherited properties**, which by default are set to [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) of the property
 
 Refer to [any CSS property](/en-US/docs/Web/CSS/Reference#index) definition to see whether a specific property inherits by default ("Inherited: yes") or not ("Inherited: no").
 
 ## Inherited properties
 
-When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) given in the property's summary.
+When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) given in the property's summary.
 
 A typical example of an inherited property is the [`color`](/en-US/docs/Web/CSS/color) property. Consider the following style rules and the markup:
 
@@ -38,7 +37,7 @@ The words "emphasized text" will appear green, since the `em` element has inheri
 
 ## Non-inherited properties
 
-When no value for a **non-inherited property** has been specified on an element, the element gets the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) of that property (as specified in the property's summary).
+When no value for a **non-inherited property** has been specified on an element, the element gets the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) of that property (as specified in the property's summary).
 
 A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Consider the following style rules and the markup:
 
@@ -94,6 +93,10 @@ em {
 
 We can see here another border around the word "emphasized text".
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
@@ -105,6 +108,6 @@ We can see here another border around the word "emphasized text".
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

@@ -14,7 +14,7 @@ This may only be used on images located within an {{HTMLElement("a")}} element.
 
 > [!NOTE]
 > For accessibility reasons, you should generally avoid using
-> server-side image maps, as they require the use of a mouse. Use a [client-side image map](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image) instead.
+> server-side image maps, as they require the use of a mouse. Use a [client-side image map](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image) instead.
 
 ## Value
 
@@ -29,7 +29,7 @@ mouse was clicked as offsets from the top-left corner of the image, specified in
 pixels.
 
 The browser then fetches that URL from the server and displays or downloads it
-depending on the value of the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute.
+depending on the value of the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute.
 
 Unlike server-side image maps, client-side image maps don't cause the
 {{HTMLElement("img")}} element to adopt interactive content mode.

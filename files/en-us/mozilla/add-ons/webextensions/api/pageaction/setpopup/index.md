@@ -20,13 +20,10 @@ browser.pageAction.setPopup(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. The ID of the tab for which you want to set the popup.
     - `popup`
-
       - : `string` or `null`. URL to the HTML file to show in a popup.
 
         If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("pageAction.onClicked")}} events.

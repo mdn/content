@@ -1,15 +1,15 @@
 ---
 title: String.prototype.match()
+short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
-{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.match()", "shorter")}}
 
 ```js interactive-example
 const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
@@ -29,7 +29,6 @@ match(regexp)
 ### Parameters
 
 - `regexp`
-
   - : A regular expression object, or any object that has a [`Symbol.match`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) method.
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.match` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.
@@ -85,7 +84,7 @@ The following example demonstrates the use of the global flag and ignore-case fl
 
 ```js
 const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const regexp = /[A-E]/gi;
+const regexp = /[a-e]/gi;
 const matches = str.match(regexp);
 
 console.log(matches);
@@ -135,17 +134,15 @@ When the `regexp` parameter is a string or a number, it is implicitly converted 
 
 ```js
 const str1 =
-  "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.";
+  "All numbers except NaN satisfy <= Infinity and >= -Infinity in JavaScript.";
 const str2 =
   "My grandfather is 65 years old and My grandmother is 63 years old.";
 const str3 = "The contract was declared null and void.";
 str1.match("number"); // "number" is a string. returns ["number"]
 str1.match(NaN); // the type of NaN is the number. returns ["NaN"]
 str1.match(Infinity); // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity); // returns ["Infinity"]
 str1.match(-Infinity); // returns ["-Infinity"]
 str2.match(65); // returns ["65"]
-str2.match(+65); // A number with a positive sign. returns ["65"]
 str3.match(null); // returns ["null"]
 ```
 

@@ -1,15 +1,15 @@
 ---
 title: Intl.NumberFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this `Intl.NumberFormat` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
 const amount = 654321.987;

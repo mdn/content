@@ -30,14 +30,13 @@ Apart from writing and testing code, contributions include creating and updating
 Depending on the frequency of your contributions, you can be someone who contributes occasionally or an active contributor.
 If you demonstrate a large impact on the project, you may be nominated as a [spotlight contributor](#spotlight_contributor) or be promoted to an [organization member](#organization_member).
 
-If you're new here and you would like to become a contributor, take a look at our [contribution guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
+If you're new here and you would like to become a contributor, take a look at our [Getting started guide](/en-US/docs/MDN/Community/Getting_started) and the [repositories in the MDN GitHub organization](https://github.com/orgs/mdn/repositories).
 
 As a contributor, you can get involved with the project by engaging in the following activities:
 
 - Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
-- Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
-  If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
+- Submitting bug reports. Check out [the main repositories](/en-US/docs/MDN/Community/Our_repositories) for more information.
 - Commenting on issues to move conversations towards a fruitful resolution.
 - Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.
@@ -48,7 +47,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 To be a contributor, you must follow:
 
 - [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
-- Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
+- The specific guidelines for each repository. If there are any project-specific hints or guidelines, you will find them in a `CONTRIBUTING.md` file in the project repository root.
 
 **Privileges:**
 
@@ -318,7 +317,6 @@ The teams in the [MDN GitHub organization](https://github.com/orgs/mdn/teams) in
 - `@OWD`: Contributors from the Open Web Docs non-profit organization
 - `@sre`: Site reliability engineers who support MDN Web Docs
 - `@yari-content`: The umbrella team for all MDN Web Docs content reviewers
-
   - There is a subteam for the different topic areas — accessibility, Add-ons, CSS, HTML, HTTP, JavaScript, SVG, Web API, and WebAssembly. For example, there's `@yari-content-css` and `@yari-content-svg`.
   - There are also subteams for different languages — Brazilian Portuguese, Chinese, French, Japanese, Korean, Russian, and Spanish. For example, there's `@yari-content-fr` and `@yari-content-ko`.
 

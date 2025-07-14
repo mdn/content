@@ -3,13 +3,12 @@ title: Rest parameters
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 page-type: javascript-language-feature
 browser-compat: javascript.functions.rest_parameters
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
-{{InteractiveExample("JavaScript Demo: Functions Rest Parameters", "taller")}}
+{{InteractiveExample("JavaScript Demo: Rest parameters", "taller")}}
 
 ```js interactive-example
 function sum(...theArgs) {
@@ -61,7 +60,7 @@ myFun("one", "two", "three", "four", "five", "six");
 // manyMoreArgs, ["three", "four", "five", "six"]
 ```
 
-The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows you to ignore certain parameter positions.
+The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), which allows you to ignore certain parameter positions.
 
 ```js
 function ignoreFirst(...[, b, c]) {

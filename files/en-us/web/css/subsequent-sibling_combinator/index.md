@@ -3,9 +3,8 @@ title: Subsequent-sibling combinator
 slug: Web/CSS/Subsequent-sibling_combinator
 page-type: css-combinator
 browser-compat: css.selectors.subsequent-sibling
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **subsequent-sibling combinator** (`~`, a tilde) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
 
@@ -95,7 +94,7 @@ The example below shows that the target element in the complex selector must sha
 In the above HTML, the two siblings of `.foo p` are `span` and `.foo`. The green `span` is a descendant of the `.foo` class, which is a sibling of `p`.
 
 - When the target selector is `span`, the `span` element that is a sibling of `p` is selected. The `p` element is a descendant of `.foo`, so are its `span` siblings.
-- In `.foo p ~ .foo span`, the target selector is `span` that is a descendant of `.foo`. In this case, the `span` element that's a descendent of `.foo` is selected if that `.foo` is a sibling of `p`; essentially, both are nested in an ancestor of `.foo`.
+- In `.foo p ~ .foo span`, the target selector is `span` that is a descendant of `.foo`. In this case, the `span` element that's a descendant of `.foo` is selected if that `.foo` is a sibling of `p`; essentially, both are nested in an ancestor of `.foo`.
 
 ## Specifications
 

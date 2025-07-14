@@ -3,11 +3,10 @@ title: "CycleTracker: Base HTML and CSS"
 short-title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
-
-{{PWASidebar}}
 
 To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
@@ -69,7 +68,7 @@ The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the c
 <!doctype html>
 ```
 
-The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
+The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute defining the primary language of the page.
 
 ```html
 <!doctype html>
@@ -82,7 +81,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
-The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -107,7 +106,7 @@ For right now, the last component we include in the `<head>` is a {{HTMLelement(
 <link rel="stylesheet" href="style.css" />
 ```
 
-The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
+The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
 We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) file.
 
@@ -115,7 +114,7 @@ We will revisit the `<link>` element and its `rel` attribute in a future section
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -136,9 +135,9 @@ Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLeleme
 </form>
 ```
 
-The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
+The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
 
 ```html
 <label for="start-date">Start date</label>
@@ -194,7 +193,7 @@ This content, other than the container `<section id="past-periods"></section>`, 
 
 ### JavaScript link
 
-Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
+Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>

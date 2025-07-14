@@ -2,9 +2,8 @@
 title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2022.
 

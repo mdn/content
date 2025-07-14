@@ -3,13 +3,12 @@ title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 page-type: javascript-operator
 browser-compat: javascript.operators.less_than
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+{{InteractiveExample("JavaScript Demo: Less than (<) operator")}}
 
 ```js interactive-example
 console.log(5 < 3);
@@ -36,7 +35,7 @@ x < y
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[Symbol.toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
+- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[Symbol.toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
 - If both values are strings, they are compared as strings, based on the values of the UTF-16 code units (not Unicode code points) they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.

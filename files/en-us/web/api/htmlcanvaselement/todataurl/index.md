@@ -8,7 +8,7 @@ browser-compat: api.HTMLCanvasElement.toDataURL
 
 {{APIRef("Canvas API")}}
 
-The **`HTMLCanvasElement.toDataURL()`** method returns a [data URL](/en-US/docs/Web/URI/Schemes/data) containing a representation of the image in the format specified by the `type` parameter.
+The **`HTMLCanvasElement.toDataURL()`** method returns a [data URL](/en-US/docs/Web/URI/Reference/Schemes/data) containing a representation of the image in the format specified by the `type` parameter.
 
 The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
@@ -18,7 +18,8 @@ Browsers are required to support `image/png`; many will support additional forma
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
-> **Warning:** `toDataURL()` encodes the whole image in an in-memory string. For larger images, this can have performance implications, and may even overflow browsers' URL length limit when assigned to {{domxref("HTMLImageElement.src")}}. You should generally prefer [`toBlob()`](/en-US/docs/Web/API/HTMLCanvasElement/toBlob) instead, in combination with {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}.
+> [!WARNING]
+> `toDataURL()` encodes the whole image in an in-memory string. For larger images, this can have performance implications, and may even overflow browsers' URL length limit when assigned to {{domxref("HTMLImageElement.src")}}. You should generally prefer [`toBlob()`](/en-US/docs/Web/API/HTMLCanvasElement/toBlob) instead, in combination with {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Syntax
 
@@ -39,9 +40,9 @@ toDataURL(type, quality)
 
 ### Return value
 
-A string containing the requested [data URL](/en-US/docs/Web/URI/Schemes/data).
+A string containing the requested [data URL](/en-US/docs/Web/URI/Reference/Schemes/data).
 
-If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
+If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Reference/Elements/canvas#maximum_canvas_size), the string `"data:,"` is returned.
 
 ### Exceptions
 
@@ -143,4 +144,4 @@ function removeColors() {
 
 ## See also
 
-- [Data URLs](/en-US/docs/Web/URI/Schemes/data) in the [HTTP](/en-US/docs/Web/HTTP) reference.
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) in the [HTTP](/en-US/docs/Web/HTTP) reference.

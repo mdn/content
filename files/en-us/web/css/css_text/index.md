@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS text** module defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
 
@@ -42,7 +41,6 @@ The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-line
 ### Guides
 
 - [Wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
-
   - : A guide to the various ways in which overflowing text can be managed in CSS.
 
 ## Related concepts
@@ -81,3 +79,4 @@ The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-line
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
+- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module

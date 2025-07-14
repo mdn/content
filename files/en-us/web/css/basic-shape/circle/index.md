@@ -3,13 +3,50 @@ title: circle()
 slug: Web/CSS/basic-shape/circle
 page-type: css-function
 browser-compat: css.types.basic-shape.circle
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
-The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
+{{InteractiveExample("CSS Demo: circle()")}}
 
-{{EmbedInteractiveExample("pages/css/function-circle.html")}}
+```css interactive-example-choice
+clip-path: circle(50px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at right center);
+```
+
+```css interactive-example-choice
+clip-path: circle(10% at 2rem 90%);
+```
+
+```css interactive-example-choice
+clip-path: circle(closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: circle(farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -21,9 +58,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### Values
 
 - `<shape-radius>`
-
   - : This may be a {{cssxref("length")}}, or a {{cssxref("percentage")}} or values `closest-side` and `farthest-side`.
-
     - `closest-side`
       - : Uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension.
     - `farthest-side`

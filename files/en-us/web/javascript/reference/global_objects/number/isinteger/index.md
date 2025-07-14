@@ -1,11 +1,11 @@
 ---
 title: Number.isInteger()
+short-title: isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isInteger
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.isInteger()`** static method determines whether the passed value is an integer.
 
@@ -87,4 +87,5 @@ Number.isInteger(4500000000000000.1); // true, because of loss of precision
 ## See also
 
 - [Polyfill of `Number.isInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.isInteger`](https://www.npmjs.com/package/number.isinteger)
 - {{jsxref("Number")}}

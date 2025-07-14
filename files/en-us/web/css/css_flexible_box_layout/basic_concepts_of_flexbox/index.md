@@ -1,10 +1,10 @@
 ---
 title: Basic concepts of flexbox
+short-title: Basic concepts
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module (usually referred to as flexbox) is a one-dimensional layout model for distributing space between items and includes numerous alignment capabilities. This article gives an outline of the main features of flexbox, which we will explore in more detail in the rest of these guides.
 
@@ -286,7 +286,7 @@ There are also some predefined shorthand values which cover most of the use case
 - `flex: none`
 - `flex: <positive-number>`
 
-The `initial` value is a [CSS-wide value](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values) that represents the initial value for a property. Setting `flex: initial` resets the item to the [initial values](#initial_values) of the three longhand properties, which is the same as `flex: 0 1 auto`. The initial value of `flex-grow` is `0`, so items will not grow larger than their `flex-basis` size. The initial value of `flex-shrink` is `1`, so items can shrink if they need to rather than overflowing. The initial value of `flex-basis` is `auto`. Items will either use any size set on the item in the main dimension, or they will get their size from the content size.
+The `initial` value is a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) that represents the initial value for a property. Setting `flex: initial` resets the item to the [initial values](#initial_values) of the three longhand properties, which is the same as `flex: 0 1 auto`. The initial value of `flex-grow` is `0`, so items will not grow larger than their `flex-basis` size. The initial value of `flex-shrink` is `1`, so items can shrink if they need to rather than overflowing. The initial value of `flex-basis` is `auto`. Items will either use any size set on the item in the main dimension, or they will get their size from the content size.
 
 Using `flex: auto` is the same as using `flex: 1 1 auto`; this is similar to `flex: initial`, except that the items can grow and fill the container as well as shrink if needed.
 

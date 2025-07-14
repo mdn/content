@@ -1,11 +1,11 @@
 ---
 title: Math.acosh()
+short-title: acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.acosh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.acosh()`** static method returns the inverse hyperbolic cosine of a number. That is,
 
@@ -72,6 +72,7 @@ Math.acosh(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.acosh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.acosh`](https://www.npmjs.com/package/math.acosh)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}

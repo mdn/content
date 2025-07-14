@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.getWeekInfo()
+short-title: getWeekInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getWeekInfo
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getWeekInfo()`** method of {{jsxref("Intl.Locale")}} instances returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for this locale.
 
@@ -31,7 +31,7 @@ An object representing week information associated with the Locale data specifie
 - `weekend`
   - : An array of integers between 1 and 7 indicating the weekend days for the locale. This is usually continuous because UTS 35 stores `weekendStart` and `weekendEnd` instead.
 - `minimalDays`
-  - : An integer between 1 and 7 (commonly 1 and 4) indicating the minimal days required in the first week of a month or year, for week-of-year or week-of-month calculations (e.g. The 20th week of the year). For example, in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) calendar, the first week of a year must have at least 4 days in this year, so if January 1 is a Friday, Saturday, or Sunday, it will be numbered as part of the last week of the previous year.
+  - : An integer between 1 and 7 (commonly 1 and 4) indicating the minimal days required in the first week of a month or year, for week-of-year or week-of-month calculations (e.g., The 20th week of the year). For example, in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) calendar, the first week of a year must have at least 4 days in this year, so if January 1 is a Friday, Saturday, or Sunday, it will be numbered as part of the last week of the previous year.
 
 ## Examples
 

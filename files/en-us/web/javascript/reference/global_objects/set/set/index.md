@@ -1,15 +1,15 @@
 ---
 title: Set() constructor
+short-title: Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Set.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{InteractiveExample("JavaScript Demo: Set() constructor")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);
@@ -31,12 +31,12 @@ new Set()
 new Set(iterable)
 ```
 
-> **Note:** `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `iterable` {{optional_inline}}
-
   - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
     `Set`.
 
@@ -73,4 +73,5 @@ mySet.add(o);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Set")}}

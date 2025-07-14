@@ -3,11 +3,10 @@ title: steps()
 slug: Web/CSS/easing-function/steps
 page-type: css-function
 browser-compat: css.types.easing-function.steps
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`steps()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transition that divides the input time into a specified number of intervals that are equal in length. This subclass of step functions are sometimes also called _staircase functions_.
+The **`steps()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transition that divides the input time into a specified number of intervals that are equal in length. This subclass of step functions are sometimes also called _staircase functions_.
 
 ## Syntax
 
@@ -29,16 +28,13 @@ steps(3, jump-both)
 The function accepts the following parameters:
 
 - `<integer>`
-
   - : Represents the number of equidistant intervals or 'steps'.
     It must be a positive integer greater than `0` unless the second parameter is `jump-none`, in which case, it must be a positive integer greater than `1`.
 
 - `<step-position>`
-
   - : Specifies when the jump between values occurs.
     If omitted, it defaults to `end`.
     The possible keyword values include:
-
     - `jump-start` or `start`
       - : Indicates that the first step happens when the animation begins.
     - `jump-end` or `end`

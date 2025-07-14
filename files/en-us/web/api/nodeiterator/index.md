@@ -23,7 +23,6 @@ _This interface doesn't inherit any property._
   - : Returns a {{domxref("Node")}} representing the root node, as specified when the
     `NodeIterator` was created.
 - {{domxref("NodeIterator.whatToShow")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` bitmask that describes the types of {{domxref("Node")}}
     to be matched. Non-matching nodes are skipped, but relevant child nodes may be included.
 
@@ -48,7 +47,6 @@ _This interface doesn't inherit any property._
 - {{domxref("NodeIterator.filter")}} {{ReadOnlyInline}}
   - : Returns a `NodeFilter` used to select the relevant nodes.
 - {{domxref("NodeIterator.referenceNode")}} {{ReadOnlyInline}}
-  {{experimental_inline() }}
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.
 - {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether or not the `NodeIterator` is anchored _before_ the {{domxref("NodeIterator.referenceNode")}}. If `false`, it indicates that the iterator is anchored _after_ the reference node.

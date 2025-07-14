@@ -3,15 +3,14 @@ title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
 
 You can also define functions using the [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) or the [arrow syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-{{InteractiveExample("JavaScript Demo: Expressions - function expression", "shorter")}}
+{{InteractiveExample("JavaScript Demo: function expression", "shorter")}}
 
 ```js interactive-example
 const getRectArea = function (width, height) {
@@ -92,7 +91,7 @@ const math = {
   },
 };
 
-math.factorial(3); //3;2;1;
+math.factorial(3); // 3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).
@@ -149,16 +148,14 @@ button.addEventListener("click", function (event) {
   console.log(a + b);
 })(1, 2); // logs 3
 
-
 // IIFE being used to initialize a variable
 const value = (() => {
   const randomValue = Math.random();
   if (randomValue > 0.5) {
     return "heads";
-  } else {
-    return "tails";
   }
-}());
+  return "tails";
+})();
 ```
 
 Here, we introduce several use cases with examples.

@@ -3,15 +3,14 @@ title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 page-type: javascript-language-feature
 browser-compat: javascript.operators.null
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`null`** value represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
 is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+{{InteractiveExample("JavaScript Demo: null")}}
 
 ```js interactive-example
 function getVowels(str) {
@@ -43,13 +42,13 @@ can be expected but no object is relevant.
 
 ```js
 // foo does not exist. It is not defined and has never been initialized:
-foo; //ReferenceError: foo is not defined
+foo; // ReferenceError: foo is not defined
 ```
 
 ```js
 // foo is known to exist now but it has no type or value:
 const foo = null;
-foo; //null
+foo; // null
 ```
 
 ## Examples

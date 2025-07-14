@@ -2,9 +2,8 @@
 title: Mutable
 slug: Glossary/Mutable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **mutable** value is one that can be changed without creating an entirely new value, in comparison with {{Glossary("immutable", "immutable values")}}.
 

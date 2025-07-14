@@ -1,12 +1,10 @@
 ---
 title: Web technology for developers
+short-title: Web
 slug: Web
 page-type: landing-page
+sidebar: web
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our Web technology documentation.
 
@@ -55,7 +53,7 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : WebDriver is a browser-automation mechanism for remotely controlling a browser by emulating the actions of a real person using the browser. It's widely used for cross-browser testing of Web apps.
 - [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
   - : Web Extensions are a way for you to give users enhanced capabilities in their browsers — for doing things such as blocking ads and other content, customizing the appearance of pages, and more.
-- [Web App Manifests](/en-US/docs/Web/Manifest)
+- [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest)
   - : Web App Manifests let you enable users to install Web apps to their device home screens, with aspects such as portrait/landscape screen orientation and display mode (e.g., full screen) pre-set.
 - [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps)
   - : Progressive Web Apps provide a user experience similar to native mobile apps.
@@ -78,5 +76,5 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Documentation for the set of web-developer tools built into Chrome.
 - [Safari Web Inspector](https://webkit.org/web-inspector/)
   - : Documentation for the set of web-developer tools built into Safari.
-- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/landing/)
+- [Edge DevTools](https://learn.microsoft.com/en-us/microsoft-edge/devtools/landing/)
   - : Documentation for the set of web-developer tools built into Edge.

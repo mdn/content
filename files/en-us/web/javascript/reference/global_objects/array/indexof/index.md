@@ -1,16 +1,16 @@
 ---
 title: Array.prototype.indexOf()
+short-title: indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.indexOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
 given element can be found in the array, or -1 if it is not present.
 
-{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.indexOf()")}}
 
 ```js interactive-example
 const beasts = ["ant", "bison", "camel", "duck", "bison"];
@@ -149,6 +149,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.indexOf`](https://www.npmjs.com/package/array.prototype.indexof)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

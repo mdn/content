@@ -33,7 +33,6 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     recommended** for the same reasons that make using
     {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-
   - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle.
@@ -43,17 +42,13 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     Also note that if the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
 - `param1`, …, `paramN` {{optional_inline}}
-
   - : Additional arguments which are passed through to the function specified by `functionRef`.
 
 ### Return value
 
-The returned `timeoutID` is a positive integer value which
-identifies the timer created by the call to `setTimeout()`. This value can be
-passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to
-cancel the timeout.
+The `setTimeout()` method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call. This identifier, often referred to as a "timeout ID", can be passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to cancel the timer.
 
-It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to `setTimeout()` or `setInterval()` on the same window while the timer is still active. However, different objects use separate pools of IDs.
+Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active. However, separate global environments maintain their own independent pools of timer IDs.
 
 ## Description
 
@@ -322,9 +317,25 @@ using a Web Audio API {{domxref("AudioContext")}}.
 
 The specifics of this are browser-dependent:
 
-- Firefox Desktop and Chrome both have a minimum timeout of 1 second for inactive tabs.
+- Firefox Desktop has a minimum timeout of 1 second for inactive tabs.
 - Firefox for Android has a minimum timeout of 15 minutes for inactive tabs and may unload them entirely.
 - Firefox does not throttle inactive tabs if the tab contains an {{domxref("AudioContext")}}.
+- Chrome uses different levels of throttling depending on the tab activity:
+  - **Minimal throttling**: Applies to timers when the page is visible, has made sound recently, or is otherwise considered active by Chrome. Timers run close to the requested interval.
+
+  - **Throttling**: Applies to timers when minimal throttle conditions are not met and any of these conditions are true:
+    - Nesting count (i.e., number of chained timer calls) is lower than 5.
+    - Page has been invisible for less than 5 minutes.
+    - WebRTC is active.
+
+  Timers in this state are checked once per second, which may be batched together with other timers that have similar timeouts.
+  - **Intensive throttling**: Introduced in Chrome 88 (January 2021). Applies to timers when neither minimal throttling nor throttling conditions are met, and all of the following conditions are met:
+    - Nesting count is 5 or higher.
+    - Page has been invisible for more than 5 minutes.
+    - Page has been silent for more than 30 seconds.
+    - WebRTC is inactive.
+
+  Timers in this state are checked once per minute, which may be batched together with other timers that have similar timeouts.
 
 #### Throttling of tracking scripts
 
@@ -408,8 +419,8 @@ timeout by pressing on the second button.
 #### HTML
 
 ```html
-<button onclick="delayedMessage();">Show a message after two seconds</button>
-<button onclick="clearMessage();">Cancel message before it happens</button>
+<button id="show">Show a message after two seconds</button>
+<button id="cancel">Cancel message before it happens</button>
 
 <div id="output"></div>
 ```
@@ -431,6 +442,9 @@ function delayedMessage() {
 function clearMessage() {
   clearTimeout(timeoutID);
 }
+
+document.getElementById("show").addEventListener("click", delayedMessage);
+document.getElementById("cancel").addEventListener("click", clearMessage);
 ```
 
 ```css hidden

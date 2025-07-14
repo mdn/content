@@ -14,7 +14,7 @@ The `LargestContentfulPaint` interface provides timing information about the lar
 The key moment this API provides is the {{Glossary("Largest Contentful Paint")}} (LCP) metric. It provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The following elements are considered when determining the LCP:
 
 - {{HTMLElement("img")}} elements.
-- [`<image>`](/en-US/docs/Web/SVG/Element/image) elements inside an SVG.
+- [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.
 - The poster images of {{HTMLElement("video")}} elements.
 - Elements with a {{cssxref("background-image")}}.
 - Groups of text nodes, such as {{HTMLElement("p")}}.
@@ -102,7 +102,7 @@ Like in the code example, you can use {{domxref("PerformanceEntry.startTime", "s
 If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
 
 ```js
-const isAccurateLCP = entry.renderTime ? true : false;
+const isAccurateLCP = Boolean(entry.renderTime);
 ```
 
 ## Specifications

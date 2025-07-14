@@ -69,12 +69,12 @@ It is good practice to organize the links into three groups:
 Some terms can have multiple meanings depending upon context.
 To resolve ambiguity, follow these guidelines:
 
-- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) macro.
+- The term's main page must be a disambiguation page containing the [`GlossaryDisambiguation`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossarydisambiguation.rs) macro.
 - The term has subpages that define the term for different contexts.
 
 Let's illustrate this with an example.
 The term _signature_ can have different meanings in at least two different contexts: security and function.
 
-1. The page [Glossary/Signature](/en-US/docs/Glossary/Signature) is the disambiguation page with the [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) macro.
+1. The page [Glossary/Signature](/en-US/docs/Glossary/Signature) is the disambiguation page with the [`GlossaryDisambiguation`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/glossarydisambiguation.rs) macro.
 2. The page [Glossary/Signature/Security](/en-US/docs/Glossary/Signature/Security) is the page defining a signature in a security context.
 3. The page [Glossary/Signature/Function](/en-US/docs/Glossary/Signature/Function) is the page defining a function signature.

@@ -2,9 +2,8 @@
 title: Best practices for PWAs
 slug: Web/Progressive_web_apps/Guides/Best_practices
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can be installed on devices and used as traditional websites in web browsers. This means that PWAs need to be able to adapt to different environments and to different user expectations.
 
@@ -79,11 +78,11 @@ Learn how to make your app accessible in [accessibility](/en-US/docs/Web/Accessi
 Users expect installed PWAs to behave like any installed platform-specific app. To provide the app-like experience that users expect, integrate your app with the operating system in some way. For example:
 
 - Use the [Notifications API](/en-US/docs/Web/API/Notifications_API) to send notifications to the user's device.
-- Handle files with the [`file_handlers`](/en-US/docs/Web/Manifest/Reference/file_handlers) web app manifest member.
+- Handle files with the [`file_handlers`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) web app manifest member.
 - [Display badges](/en-US/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon) on the app icon.
 - Enable [data sharing between apps](/en-US/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps).
 
-Many of the [web app manifest members](/en-US/docs/Web/Manifest#members) can be used to customize the way your app is displayed on the user's device and integrate more deeply within the operating system.
+Many of the [web app manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest#members) can be used to customize the way your app is displayed on the user's device and integrate more deeply within the operating system.
 
 ### App look and feel
 
@@ -101,4 +100,4 @@ Make sure your PWA provides an app-like experience by considering the following 
 ## See also
 
 - [What makes a good Progressive Web App](https://web.dev/articles/pwa-checklist) on web.dev (2022).
-- [Best practices for PWAs](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (2023).
+- [Best practices for PWAs](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/best-practices) on learn.microsoft.com (2023).

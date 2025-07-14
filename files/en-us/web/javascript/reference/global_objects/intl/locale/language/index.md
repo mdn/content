@@ -1,17 +1,17 @@
 ---
 title: Intl.Locale.prototype.language
+short-title: language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.language
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 
 ## Description
 
-Language is one of the core attributes of a locale. The Unicode specification treats the language identifier of a locale as the language and the region together (to make a distinction between dialects and variations, e.g. British English vs. American English). The `language` property of a {{jsxref("Intl.Locale")}} returns strictly the locale's language subtag. The `language` property's value is set at construction time, either through the `language` subtag (first part) of the locale identifier or through the `language` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present.
+Language is one of the core attributes of a locale. The Unicode specification treats the language identifier of a locale as the language and the region together (to make a distinction between dialects and variations, e.g., British English vs. American English). The `language` property of a {{jsxref("Intl.Locale")}} returns strictly the locale's language subtag. The `language` property's value is set at construction time, either through the `language` subtag (first part) of the locale identifier or through the `language` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present.
 
 The set accessor of `language` is `undefined`. You cannot change this property directly.
 

@@ -3,11 +3,10 @@ title: atan2()
 slug: Web/CSS/atan2
 page-type: css-function
 browser-compat: css.types.atan2
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
+The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
 
 ## Syntax
 

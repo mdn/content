@@ -13,6 +13,7 @@ Bopomofo
 Chakma
 Chiki
 Citi
+Cloquet
 Côte
 d'Ivoire
 dakuten
@@ -22,7 +23,6 @@ furigana
 Gannen
 Garay
 geng-zi
-Gondi
 Gunjala
 Gurung
 Halloumi
@@ -30,8 +30,8 @@ Hanifi
 Hankaku
 Henkan
 Hijri
+Hinckley
 Hiroko
-Hmong
 háček
 Jeonja
 Kayah
@@ -39,6 +39,7 @@ Khema
 Khudawadi
 Kirat
 Kolkata
+Kursha
 Laing
 Lepcha
 Limbu
@@ -50,17 +51,18 @@ Meetei
 Mihret
 Minguo
 Minh
+Miramichi
 Muhenkan
 Mundari
 Mundi
 Newa
 nosinė
 Nyiakeng
-Ol
 Onal
 Osmanya
 Oyayubi
 Pahawh
+Peshtigo
 Puachue
 Reiwa
 Reykjavík
@@ -79,7 +81,6 @@ Tham
 Tirhuta
 Tlayolotl
 Totnes
-Uruk
 Wancho
 Warang
 Zenkaku

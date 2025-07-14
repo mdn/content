@@ -17,12 +17,10 @@ The address bar button (or page action) is similar to the toolbar button (or bro
 The differences are:
 
 - **The button's location:**
-
   - The page action is displayed inside the browser address bar.
   - The browser action is displayed outside the address bar, in the browser toolbar.
 
 - **The button's visibility:**
-
   - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) to show or hide it in specific tabs.
   - The browser action is always displayed.
 
@@ -85,7 +83,7 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

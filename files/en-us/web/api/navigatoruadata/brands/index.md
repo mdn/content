@@ -39,4 +39,4 @@ console.log(navigator.userAgentData.brands);
 
 ## See also
 
-- {{HTTPHeader("Sec-CH-UA")}} (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)) contains the same information.
+- {{HTTPHeader("Sec-CH-UA")}} (a [low-entropy client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)) contains the same information.

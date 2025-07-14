@@ -3,9 +3,8 @@ title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 page-type: javascript-operator
 browser-compat: javascript.operators.equality
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **equality (`==`)** operator checks whether its two operands are equal,
 returning a Boolean result.
@@ -36,7 +35,7 @@ x == y
 
 ## Description
 
-The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using) semantic. This can be roughly summarized as follows:
+The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#loose_equality_using) semantic. This can be roughly summarized as follows:
 
 1. If the operands have the same type, they are compared as follows:
    - Object: return `true` only if both operands reference the same object.
@@ -46,7 +45,7 @@ The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/
    - BigInt: return `true` only if both operands have the same value.
    - Symbol: return `true` only if both operands reference the same symbol.
 2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
-3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion).
+3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion).
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
@@ -129,7 +128,7 @@ console.log(string4 == string4); // true
 ```js
 const d = new Date("1995-12-17T03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s); //true
+console.log(d == s); // true
 ```
 
 ### Comparing arrays and strings

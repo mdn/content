@@ -3,13 +3,34 @@ title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
 page-type: css-function
 browser-compat: css.types.filter-function.drop-shadow
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+{{InteractiveExample("CSS Demo: drop-shadow()")}}
 
-{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
+```css interactive-example-choice
+filter: drop-shadow(30px 10px 4px #4444dd);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 -6mm 4mm rgb(160 0 210));
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 0 0.75rem crimson);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.
 
@@ -48,7 +69,6 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 ### Parameters
 
 - `<color>` {{optional_inline}}
-
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `<length>`

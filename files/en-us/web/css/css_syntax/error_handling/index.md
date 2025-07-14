@@ -1,10 +1,10 @@
 ---
 title: CSS error handling
+short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
@@ -52,7 +52,7 @@ Different at-rules have different grammar rules, different (or no) descriptors, 
 
 For example, the `@font-face` rule requires both a [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) and [`src`](/en-US/docs/Web/CSS/@font-face/src) descriptor. If either of these is omitted or invalid, the entire `@font-face` rule is invalid. Including an unrelated descriptor, any other valid font descriptor with an invalid value, or a property style declaration within the `@font-face` nested block will not invalidate the font declaration. As long as the font name and font source are included and valid, any invalid CSS within the at-rule is ignored, but the `@font-face` block is still parsed.
 
-While the grammar of the `@keyframe` at-rule is very different from the `@font-face` rule grammar, the type of error still impacts what gets ignored. Important declarations (marked with the {{cssxref("important")}} flag) and properties that can't be animated are ignored in keyframe rules, but they don't impact other styles declared in the same keyframe selector block. Including an invalid keyframe selector (such as a percentage value less than `0%` or greater than `100%`, or a {{cssxref("number")}} omitting the `%`) invalidates the keyframe selector list and therefore the style block is ignored. An invalid keyframe selector only invalidates the invalid selector's style block; it does not invalidate the entire `@keyframe` declaration. Including styles between two keyframe selector blocks, on the other hand, will invalidate the entire `@keyframe` at-rule.
+While the grammar of the `@keyframes` at-rule is very different from the `@font-face` rule grammar, the type of error still impacts what gets ignored. Important declarations (marked with the {{cssxref("important")}} flag) and properties that can't be animated are ignored in keyframe rules, but they don't impact other styles declared in the same keyframe selector block. Including an invalid keyframe selector (such as a percentage value less than `0%` or greater than `100%`, or a {{cssxref("number")}} omitting the `%`) invalidates the keyframe selector list and therefore the style block is ignored. An invalid keyframe selector only invalidates the invalid selector's style block; it does not invalidate the entire `@keyframes` declaration. Including styles between two keyframe selector blocks, on the other hand, will invalidate the entire `@keyframes` at-rule.
 
 Some at-rules are almost always valid. The {{cssxref("@layer")}} at-rule comes in both regular and nested forms. The `@layer` statement syntax contains just the prelude, ending with a semi-colon. Alternatively, the nested syntax has layer styles nested between curly braces coming after the prelude. Omitting a closing curly brace may be a logic error but is not a syntax error. In the case of a missing closing brace in `@layer`, any styles coming after where the closing brace should have been are parsed as being in the cascade layer defined in the at-rule's prelude. The CSS is valid as there are no syntax errors; nothing is discarded. A syntax error may cause the named or anonymous layer to be empty, but the layer is still created.
 
@@ -78,13 +78,13 @@ When it comes to CSS properties and values within a declaration block, if either
 
 This example contains an error. The parser ignores the error (and the comments), seeks forward until it encounters a semi-colon, then restarts parsing:
 
-```css-nolint bad
+```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```
@@ -128,9 +128,9 @@ In this example, the last declaration in each block is valid in all browsers —
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
 > [!NOTE]
-> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
-If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframe` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
+If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframes` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
 ```html-nolint example-bad
 <style>
@@ -167,11 +167,11 @@ Each CSS property accepts specific data types. For example, the {{cssxref("backg
 
 ### Invalid custom properties
 
-Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e. they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
+Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e., they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
 
 Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 
-When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
+When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
 
 Let's look at an example to illustrate this behavior:
 
@@ -200,4 +200,4 @@ To better control the way custom properties fall back, use the {{cssxref("@prope
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

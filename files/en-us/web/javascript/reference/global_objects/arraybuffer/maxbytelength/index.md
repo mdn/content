@@ -1,15 +1,15 @@
 ---
 title: ArrayBuffer.prototype.maxByteLength
+short-title: maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.maxByteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`maxByteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances returns the maximum length (in bytes) that this array buffer can be resized to.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.maxByteLength")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.maxByteLength")}}
 
 ```js interactive-example
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });

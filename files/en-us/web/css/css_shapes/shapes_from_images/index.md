@@ -1,10 +1,10 @@
 ---
 title: Shapes from images
+short-title: Image-based shapes
 slug: Web/CSS/CSS_shapes/Shapes_from_images
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we will take a look at how we can create a shape from an image file with an alpha channel or even from a CSS Gradient. This is a very flexible way to create shapes. Rather than drawing a path with a complex polygon in CSS, you can create the shape in a graphics program and then use the path created by the pixels less opaque than a threshold value.
 
@@ -82,7 +82,7 @@ img {
 
 ## CORS compatibility
 
-Something that you will run into when creating shapes from an image is that the image you use must be [CORS compatible](/en-US/docs/Web/HTTP/CORS). An image hosted on the same domain as your site should work, however, if your images are hosted on a different domain such as on a CDN you should ensure that they are sending the correct headers to enable them to be used for Shapes. Due to this requirement for CORS-compatible images, if you are previewing your file locally without using a local web server, your shape will not work.
+Something that you will run into when creating shapes from an image is that the image you use must be [CORS compatible](/en-US/docs/Web/HTTP/Guides/CORS). An image hosted on the same domain as your site should work, however, if your images are hosted on a different domain such as on a CDN you should ensure that they are sending the correct headers to enable them to be used for Shapes. Due to this requirement for CORS-compatible images, if you are previewing your file locally without using a local web server, your shape will not work.
 
 ### Is it a CORS issue?
 

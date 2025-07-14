@@ -1,11 +1,11 @@
 ---
 title: Reflect.ownKeys()
+short-title: ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.ownKeys
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.ownKeys()`** static method returns an array of the `target` object's own property keys.
 
@@ -94,6 +94,7 @@ Reflect.ownKeys(obj);
 ## See also
 
 - [Polyfill of `Reflect.ownKeys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [es-shims polyfill of `Reflect.ownKeys`](https://www.npmjs.com/package/reflect.ownkeys)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.getOwnPropertySymbols()")}}

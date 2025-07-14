@@ -1,15 +1,15 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Collator.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in collation without having to fall back to the runtime's default locale.
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

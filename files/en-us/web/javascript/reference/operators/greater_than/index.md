@@ -3,14 +3,13 @@ title: Greater than (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
 page-type: javascript-operator
 browser-compat: javascript.operators.greater_than
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **greater than (`>`)** operator returns `true` if the left
 operand is greater than the right operand, and `false` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+{{InteractiveExample("JavaScript Demo: Greater than (>) operator")}}
 
 ```js interactive-example
 console.log(5 > 3);

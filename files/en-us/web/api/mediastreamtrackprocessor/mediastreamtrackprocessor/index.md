@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
+The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a video {{domxref("MediaStreamTrack")}} object's source and generates a stream of {{domxref("VideoFrame")}}s.
 
 ## Syntax
 

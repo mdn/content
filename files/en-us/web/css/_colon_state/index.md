@@ -3,21 +3,22 @@ title: :state()
 slug: Web/CSS/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
 
 ## Syntax
-
-The `:state()` pseudo-class takes as its argument a custom identifier that represents the state of the custom element to match.
 
 ```css-nolint
 :state(<custom identifier>) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:state()` pseudo-class takes as its argument a custom identifier that represents the state of the custom element to match.
 
 ## Description
 
@@ -70,7 +71,7 @@ For a live example of this code in action, see the [Matching the custom state of
 
 This example shows how the `:state()` pseudo-class can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element.
 
-Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as a shadow part named `checkbox`:
 
 ```js

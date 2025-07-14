@@ -3,13 +3,89 @@ title: animation-duration
 slug: Web/CSS/animation-duration
 page-type: css-property
 browser-compat: css.properties.animation-duration
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-duration`** [CSS](/en-US/docs/Web/CSS) property sets the length of time that an animation takes to complete one cycle.
 
-{{EmbedInteractiveExample("pages/css/animation-duration.html")}}
+{{InteractiveExample("CSS Demo: animation-duration")}}
+
+```css interactive-example-choice
+animation-duration: 750ms;
+```
+
+```css interactive-example-choice
+animation-duration: 3s;
+```
+
+```css interactive-example-choice
+animation-duration: 0s;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+  <button id="play-pause">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-play-state: paused;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#play-pause {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const button = document.getElementById("play-pause");
+
+  button.addEventListener("click", () => {
+    if (el.classList.contains("running")) {
+      el.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      el.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 It is often convenient to use the shorthand property {{ cssxref("animation") }} to set all animation properties at once.
 
@@ -36,15 +112,12 @@ animation-duration: unset;
 ### Values
 
 - `auto`
-
   - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), `auto` fills the entire timeline with the animation.
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
 
     If no value is provided, the default value of `0s` is used, in which case the animation still executes (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events are fired). Whether or not the animation will be visible when the duration is `0s` will depend on the value of [`animation-fill-mode`](/en-US/docs/Web/CSS/animation-fill-mode), as explained below:
-
     - If `animation-fill-mode` is set to `backwards` or `both`, the first frame of the animation as defined by `animation-direction` will be displayed during [`animation-delay`](/en-US/docs/Web/CSS/animation-delay) countdown.
     - If `animation-fill-mode` is set to `forwards` or `both`, the last frame of the animation will be displayed, as defined by `animation-direction`, after the `animation-delay` expires.
     - If `animation-fill-mode` is set to `none`, the animation will have no visible effect.

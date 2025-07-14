@@ -2,9 +2,8 @@
 title: Firefox 133 for developers
 slug: Mozilla/Firefox/Releases/133
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 133 that affect developers. Firefox 133 was released on [November 26, 2024](https://whattrainisitnow.com/release/?version=133).
 
@@ -12,7 +11,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### HTML
 
-- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
+- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
 
 ### CSS
 
@@ -23,7 +22,6 @@ No notable changes
 - Support for {{jsxref("Uint8Array")}} methods to ease conversions between {{glossary("base64")}}- and hex-encoded strings and byte arrays. ([Firefox bug 1917885](https://bugzil.la/1917885) and [Firefox bug 1862220](https://bugzil.la/1862220)).
 
   The new methods include:
-
   - {{jsxref("Uint8Array.fromBase64()")}} and {{jsxref("Uint8Array.fromHex()")}} static methods for constructing a new `Uint8Array` object from a base64- and hex-encoded string, respectively.
   - {{jsxref("Uint8Array.prototype.setFromBase64()")}}, and {{jsxref("Uint8Array.prototype.setFromHex()")}} instance methods for populating an existing `Uint8Array` object with bytes from a base64- or hex-encoded string.
   - {{jsxref("Uint8Array.prototype.toBase64()")}} and {{jsxref("Uint8Array.prototype.toHex()")}} instance methods, which return a base64- and hex- encoded string from the data in a `Uint8Array` object.
@@ -37,11 +35,11 @@ No notable changes
 - The [`keepalive`](/en-US/docs/Web/API/RequestInit#keepalive) initialization option to the global {{domxref('Window.fetch','fetch()')}} method and the [`Request()` constructor](/en-US/docs/Web/API/Request/Request#options) are now supported, along with the {{domxref("Request.keepalive")}} property. `keepalive` can be set to `true` to prevent the browser from aborting the associated request if the page that initiated it is unloaded before the request is complete.
   This might be used, for example, to send analytics at the end of a session, even if the user navigates away from or closes the page.
 
-  Using `fetch()` with `keepalive` has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, such as allowing the use of HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customizable request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment. It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952), [Firefox bug 1923044](https://bugzil.la/1923044)).
+  Using `fetch()` with `keepalive` has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, such as allowing the use of HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customizable request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment. It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952), [Firefox bug 1923044](https://bugzil.la/1923044)).
 
 - The [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event) content attribute can now be specified on {{htmlelement("audio")}}/{{htmlelement("video")}} elements to set an inline event handler for the `waitingforkey` event. ([Firefox bug 1925952](https://bugzil.la/1925952)).
 - {{domxref("ServiceWorkerContainer")}} is now exposed in all worker contexts via {{domxref("WorkerNavigator.serviceWorker")}}, allowing workers to inspect and manage the {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} associated with the current origin. Previously `ServiceWorkerContainer` was only available in the main thread, via {{domxref("Navigator.serviceWorker")}}. ([Firefox bug 1113522](https://bugzil.la/1113522)).
-- The [`name`](/en-US/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) property of `PerformanceNavigationTiming` now omits [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) from the returned URL, matching the specification. This kind of {{domxref("PerformanceResourceTiming")}} object is returned by {{domxref("Performance.getEntries()")}} for entries with an {{domxref("PerformanceEntry/entryType", "entryType")}} of `navigation`. ([Firefox bug 1919565](https://bugzil.la/1919565)).
+- The [`name`](/en-US/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) property of `PerformanceNavigationTiming` now omits [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) from the returned URL, matching the specification. This kind of {{domxref("PerformanceResourceTiming")}} object is returned by {{domxref("Performance.getEntries()")}} for entries with an {{domxref("PerformanceEntry/entryType", "entryType")}} of `navigation`. ([Firefox bug 1919565](https://bugzil.la/1919565)).
 
 #### Removals
 
@@ -76,7 +74,7 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
 
-  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 

@@ -3,13 +3,61 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 page-type: css-type
 browser-compat: css.types.basic-shape
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -20,24 +68,21 @@ The `<basic-shape>` data type is used to create basic shapes including rectangle
 The parameters common across the syntax of some basic shape functions include:
 
 - `round <'border-radius'>`
-
   - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property.
 
 - `<shape-radius>`
-
   - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
 
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
 
 - `<position>`
-
   - : Defines the center [`<position>`](/en-US/docs/Web/CSS/position_value) of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
 
 - `<fill-rule>`
-
   - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
 
-    > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
+    > [!NOTE]
+    > `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 ### Syntax for rectangles by container insets
 
@@ -101,13 +146,13 @@ The function takes a list of comma-separated coordinate pairs, each consisting o
 
 ### Syntax for paths
 
-The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Reference/Attribute/d).
 
 ```plain
 path( <'fill-rule'>? , <string> )
 ```
 
-The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
+The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Reference/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes
 
@@ -117,7 +162,7 @@ The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an
 shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
-The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ## Description
 
@@ -148,10 +193,9 @@ Each value in the lists of the two `<basic-shape>` functions is interpolated bas
 
 - **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value if they use the same `<fill-rule>` and have the same number of comma-separated coordinate pairs.
 
-- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
 
 - **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
-
   - If they use the `<curve-command>` or the `<smooth-command>`, the number of control points must match for interpolation.
 
   - If they use the `<arc-command>` with different `<arc-sweep>` directions, the interpolated result goes clockwise (`cw`). If they use different `<arc-size>` keywords, the size is interpolated using the `large` value.
@@ -236,7 +280,10 @@ div {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}},
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
+- SVG shape elements: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Edit shape paths in Firefox developer tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

@@ -1,18 +1,18 @@
 ---
 title: Array.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findIndex()`** method of {{jsxref("Array")}} instances returns the index of the first element in an array that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
@@ -62,12 +62,15 @@ The `findIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Globa
 The following example returns the index of the first element in the array that is a prime number, or `-1` if there is no prime number.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -77,6 +80,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Using the third argument of callbackFn
 
@@ -132,6 +138,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.findIndex`](https://www.npmjs.com/package/array.prototype.findindex)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

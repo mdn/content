@@ -42,8 +42,6 @@ if (sources.length > 0) {
 }
 ```
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

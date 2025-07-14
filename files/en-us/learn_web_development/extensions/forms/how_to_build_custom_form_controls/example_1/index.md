@@ -2,9 +2,8 @@
 title: Example 1
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This is the first example of code that explains [how to build a custom form widget](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
@@ -72,7 +71,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -208,7 +206,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -344,7 +341,6 @@ This is the first example of code that explains [how to build a custom form widg
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
-  background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 

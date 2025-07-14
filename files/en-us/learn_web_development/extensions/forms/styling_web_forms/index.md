@@ -2,9 +2,10 @@
 title: Styling web forms
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 In the previous few articles, we showed how to create web forms in HTML. Now, we'll show how to style them in [CSS](/en-US/docs/Web/CSS).
 
@@ -42,7 +43,7 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+3. Single-line text {{HTMLElement("input")}}s (e.g., type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search).
 4. Multi-line {{HTMLElement("textarea")}}
 5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}
@@ -51,17 +52,19 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 #### Harder-to-style
 
 - Checkboxes and radio buttons
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)
 
 The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) shows how to style these.
 
 #### Having internals can't be styled in CSS alone
 
-- [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
-- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)
+- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+  > [!NOTE]
+  > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
 For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
@@ -195,7 +198,7 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
+1. [The postcard background](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — download this image and save it in the same directory as your working HTML file.
 2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
 3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 
@@ -353,7 +356,7 @@ button {
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 
@@ -375,15 +378,10 @@ And voilà! Your form should now look like this:
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics).
 
 ## Summary
 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. [In the next article](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), we will see how to handle form widgets which fall into the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

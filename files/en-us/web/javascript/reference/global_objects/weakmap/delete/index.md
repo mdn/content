@@ -1,11 +1,11 @@
 ---
 title: WeakMap.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specified element from this `WeakMap`.
 

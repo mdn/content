@@ -17,7 +17,6 @@ You can use this API to get a list of opened tabs, filtered by various criteria,
 You can use most of this API without any special permission. However:
 
 - To access `Tab.url`, `Tab.title`, and `Tab.favIconUrl` (or to filter by these properties via {{WebExtAPIRef("tabs.query()")}}), you need to have the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), or have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that match `Tab.url`.
-
   - Access to these properties by host permissions is supported since Firefox 86 and Chrome 50. In Firefox 85 and earlier, the "tabs" permission was required instead.
 
 - To use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}, you must have the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab
@@ -86,6 +85,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Go forward to the next page, if one is available.
 - {{WebExtAPIRef("tabs.goBack()")}}
   - : Go back to the previous page, if one is available.
+- {{WebExtAPIRef("tabs.group()")}}
+  - : Adds tabs to a tab group.
 - {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
   - : Hides one or more tabs.
 - {{WebExtAPIRef("tabs.highlight()")}}
@@ -122,6 +123,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Shows one or more tabs that have been {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - {{WebExtAPIRef("tabs.toggleReaderMode()")}}
   - : Toggles Reader mode for the specified tab.
+- {{WebExtAPIRef("tabs.ungroup()")}}
+  - : Removes tabs from tab groups.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
 - {{WebExtAPIRef("tabs.warmup()")}}

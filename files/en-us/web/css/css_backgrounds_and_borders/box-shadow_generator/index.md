@@ -2,9 +2,8 @@
 title: Box-shadow generator
 slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This tool lets you construct CSS {{cssxref("box-shadow")}} effects, to add box shadow effects to your CSS objects.
 
@@ -26,9 +25,9 @@ To add a box shadow, click the "+" button at the top-left. This adds a shadow, a
 
 To add another shadow, click "+" again. Now any values you set will apply to this new shadow. Change the order in which these two shadows are applied using the ↑ and ↓ buttons at the top-left. Select the first shadow again by clicking it in column on the left. To update the element's own styles, select it by clicking the button labelled "element" along the top.
 
-You can add {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements to the element, and give them box shadows as well. To switch between the element and its pseudo-elements, use the buttons along the top labeled "element", ":before", and ":after".
+You can add {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements to the element, and give them box shadows as well. To switch between the element and its pseudo-elements, use the buttons along the top labeled "element", "::before", and "::after".
 
-The box at the bottom-right contains the CSS for the element and any `before::` or `::after` pseudo-elements.
+The box at the bottom-right contains the CSS for the element and any `::before` or `::after` pseudo-elements.
 
 ## See also
 

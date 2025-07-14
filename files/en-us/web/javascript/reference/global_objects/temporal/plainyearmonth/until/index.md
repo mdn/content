@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.until()
+short-title: until()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/until
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.until
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`until()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this year-month to another year-month (in a form convertible by {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}). The duration is positive if the other month is after this month, and negative if before.
 

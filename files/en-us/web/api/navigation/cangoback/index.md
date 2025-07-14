@@ -13,7 +13,7 @@ browser-compat: api.Navigation.canGoBack
 The **`canGoBack`** read-only property of the
 {{domxref("Navigation")}} interface returns `true`
 if it is possible to navigate backwards in the navigation history
-(i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is
+(i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is
 not the first one in the history entry list),
 and `false` if it is not.
 
@@ -57,4 +57,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -31,9 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `themeName`
       - : `string`. Name of the new theme: this will be one of the permitted values for [`devtools.panels.themeName`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName).
 

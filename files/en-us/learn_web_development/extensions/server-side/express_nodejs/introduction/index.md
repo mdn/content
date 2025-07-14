@@ -2,11 +2,16 @@
 title: Express/Node introduction
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).
+
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation in the second half of 2025.
 
 <table>
   <tbody>
@@ -28,13 +33,13 @@ In this first Express article we answer the questions "What is Node?" and "What 
 ## Introducing Node
 
 [Node](https://nodejs.org/) (or more formally _Node.js_) is an open-source, cross-platform runtime environment that allows developers to create all kinds of server-side tools and applications in [JavaScript](/en-US/docs/Glossary/JavaScript).
-The runtime is intended for use outside of a browser context (i.e. running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.
+The runtime is intended for use outside of a browser context (i.e., running directly on a computer or server OS). As such, the environment omits browser-specific JavaScript APIs and adds support for more traditional OS APIs including HTTP and file system libraries.
 
 From a web server development perspective Node has a number of benefits:
 
-- Great performance! Node was designed to optimize throughput and scalability in web applications and is a good solution for many common web-development problems (e.g. real-time web applications).
+- Great performance! Node was designed to optimize throughput and scalability in web applications and is a good solution for many common web-development problems (e.g., real-time web applications).
 - Code is written in "plain old JavaScript", which means that less time is spent dealing with "context shift" between languages when you're writing both client-side and server-side code.
-- JavaScript is a relatively new programming language and benefits from improvements in language design when compared to other traditional web-server languages (e.g. Python, PHP, etc.) Many other new and popular languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
+- JavaScript is a relatively new programming language and benefits from improvements in language design when compared to other traditional web-server languages (e.g., Python, PHP, etc.) Many other new and popular languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - The node package manager (npm) provides access to hundreds of thousands of reusable packages. It also has best-in-class dependency resolution and can also be used to automate most of the build toolchain.
 - Node.js is portable. It is available on Microsoft Windows, macOS, Linux, Solaris, FreeBSD, OpenBSD, WebOS, and NonStop OS. Furthermore, it is well-supported by many web hosting providers, that often provide specific infrastructure and documentation for hosting Node sites.
 - It has a very active third party ecosystem and developer community, with lots of people who are willing to help.
@@ -62,7 +67,7 @@ The following example creates a web server that listens for any kind of HTTP req
    const port = 8000;
 
    // Create HTTP server
-   const server = http.createServer(function (req, res) {
+   const server = http.createServer((req, res) => {
      // Set the response HTTP header with HTTP status and Content type
      res.writeHead(200, { "Content-Type": "text/plain" });
 
@@ -71,7 +76,7 @@ The following example creates a web server that listens for any kind of HTTP req
    });
 
    // Prints a log once the server starts listening
-   server.listen(port, hostname, function () {
+   server.listen(port, hostname, () => {
      console.log(`Server running at http://${hostname}:${port}/`);
    });
    ```
@@ -85,9 +90,12 @@ The following example creates a web server that listens for any kind of HTTP req
 
 Finally, navigate to `http://localhost:8000` in your web browser; you should see the text "**Hello World**" in the upper left of an otherwise empty web page.
 
+> [!NOTE]
+> If you want to play with some Node.js code without having to do any local setup, Scrimba's [Aside: The HTTP module](https://scrimba.com/learn-nodejs-c00ho9qqh6/~07du?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides an interactive walkthrough of setting up a basic server with the Node HTTP package.
+
 ## Web Frameworks
 
-Other common web-development tasks are not directly supported by Node itself. If you want to add specific handling for different HTTP verbs (e.g. `GET`, `POST`, `DELETE`, etc.), separately handle requests at different URL paths ("routes"), serve static files, or use templates to dynamically create the response, Node won't be of much use on its own. You will either need to write the code yourself, or you can avoid reinventing the wheel and use a web framework!
+Other common web-development tasks are not directly supported by Node itself. If you want to add specific handling for different HTTP verbs (e.g., `GET`, `POST`, `DELETE`, etc.), separately handle requests at different URL paths ("routes"), serve static files, or use templates to dynamically create the response, Node won't be of much use on its own. You will either need to write the code yourself, or you can avoid reinventing the wheel and use a web framework!
 
 ## Introducing Express
 
@@ -107,7 +115,7 @@ While _Express_ itself is fairly minimalist, developers have created compatible 
 
 Node was initially released, for Linux only, in 2009. The npm package manager was released in 2010, and native Windows support was added in 2012. Delve into [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History) if you want to know more.
 
-Express was initially released in November 2010 and is currently on major version 4 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/4x.html) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
+Express was initially released in November 2010 and is currently on major version 5 of the API. You can check out the [changelog](https://expressjs.com/en/changelog/#5.x) for information about changes in the current release, and [GitHub](https://github.com/expressjs/express/blob/master/History.md) for more detailed historical release notes.
 
 ## How popular are Node and Express?
 
@@ -146,19 +154,20 @@ First lets consider the standard Express [Hello World](https://expressjs.com/en/
 
 ```js
 const express = require("express");
+
 const app = express();
 const port = 3000;
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
 ```
 
-The first two lines `require()` (import) the express module and create an [Express application](https://expressjs.com/en/4x/api.html#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/4x/api.html#app.settings.table) that control how the application behaves (e.g. the environment mode, whether route definitions are case sensitive, etc.)
+The first two lines `require()` (import) the express module and create an [Express application](https://expressjs.com/en/4x/api.html#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/4x/api.html#app.settings.table) that control how the application behaves (e.g., the environment mode, whether route definitions are case sensitive, etc.)
 
 The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "Hello World!"
 
@@ -172,6 +181,7 @@ The code below shows how we import a module by name, using the _Express_ framewo
 
 ```js
 const express = require("express");
+
 const app = express();
 ```
 
@@ -195,6 +205,7 @@ We can import this module using `require()`, and then call the exported method(s
 
 ```js
 const square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+
 console.log(`The area of a square with a width of 4 is ${square.area(4)}`);
 ```
 
@@ -232,7 +243,7 @@ console.log("Second");
 By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though `setTimeout()` method is called first, and returns immediately, the operation doesn't complete for several seconds.
 
 ```js
-setTimeout(function () {
+setTimeout(() => {
   console.log("First");
 }, 3000);
 console.log("Second");
@@ -253,7 +264,7 @@ There are a number of ways for an asynchronous API to notify your application th
 In our _Hello World_ Express example (see above), we defined a (callback) route handler function for HTTP `GET` requests to the site root (`'/'`).
 
 ```js
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 ```
@@ -270,7 +281,7 @@ The _Express application_ object also provides methods to define route handlers 
 There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/docs/latest/api/http.html#httpmethods)).
 
 ```js
-app.all("/secret", function (req, res, next) {
+app.all("/secret", (req, res, next) => {
   console.log("Accessing the secret section…");
   next(); // pass control to the next handler
 });
@@ -278,21 +289,22 @@ app.all("/secret", function (req, res, next) {
 
 Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).
 
-Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
+Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g., a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
 
 ```js
 // wiki.js - Wiki route module
 
 const express = require("express");
+
 const router = express.Router();
 
 // Home page route
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
   res.send("Wiki home page");
 });
 
 // About page route
-router.get("/about", function (req, res) {
+router.get("/about", (req, res) => {
   res.send("About this wiki");
 });
 
@@ -306,6 +318,7 @@ To use the router in our main app file we would then `require()` the route modul
 
 ```js
 const wiki = require("./wiki.js");
+
 // …
 app.use("/wiki", wiki);
 ```
@@ -333,6 +346,7 @@ You could then call `use()` on the _Express application object_ to add the middl
 ```js
 const express = require("express");
 const logger = require("morgan");
+
 const app = express();
 app.use(logger("dev"));
 // …
@@ -349,22 +363,23 @@ The example below shows how you can add the middleware function using both appro
 
 ```js
 const express = require("express");
+
 const app = express();
 
 // An example middleware function
-const a_middleware_function = function (req, res, next) {
+function aMiddlewareFunction(req, res, next) {
   // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
-};
+}
 
 // Function added with use() for all routes and verbs
-app.use(a_middleware_function);
+app.use(aMiddlewareFunction);
 
 // Function added with use() for a specific route
-app.use("/some-route", a_middleware_function);
+app.use("/some-route", aMiddlewareFunction);
 
 // A middleware function added for a specific HTTP verb and route
-app.get("/", a_middleware_function);
+app.get("/", aMiddlewareFunction);
 
 app.listen(3000);
 ```
@@ -420,7 +435,7 @@ http://localhost:3000/media/cry.mp3
 Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: `(err, req, res, next)`. For example:
 
 ```js
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
 });
@@ -453,7 +468,7 @@ The database itself can be installed locally or on a cloud server. In your Expre
 This works with older versions of MongoDB version ~ 2.2.33:
 
 ```js
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
 MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
   if (err) throw err;
@@ -471,7 +486,7 @@ MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
 For MongoDB version 3.0 and up:
 
 ```js
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
 MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
   if (err) throw err;
@@ -503,6 +518,7 @@ In your application settings code you set the template engine to use and the loc
 ```js
 const express = require("express");
 const path = require("path");
+
 const app = express();
 
 // Set directory to contain the templates ('views')
@@ -515,7 +531,7 @@ app.set("view engine", "some_template_engine_name");
 The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](https://expressjs.com/en/4x/api.html#res.render) in a route handler function to create and send the HTML response:
 
 ```js
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("index", { title: "About dogs", message: "Dogs rock!" });
 });
 ```
@@ -524,7 +540,7 @@ For more information see [Using template engines with Express](https://expressjs
 
 ### File structure
 
-Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an [MVC architecture](/en-US/docs/Glossary/MVC)).
+Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g., account management, blogs, discussion boards) and architectural problem domain (e.g., model, view or controller if you happen to be using an [MVC architecture](/en-US/docs/Glossary/MVC)).
 
 In a later topic we'll use the _Express Application Generator_, which creates a modular app skeleton that we can easily extend for creating web applications.
 
@@ -536,6 +552,8 @@ Of course Express is deliberately a very lightweight web application framework, 
 
 ## See also
 
+- [Learn Node.js](https://scrimba.com/learn-nodejs-c00ho9qqh6?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a fun, interactive introduction to Node.js.
+- [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> builds on top of the previous link, showing how to start using the Express framework to build server-side websites.
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)

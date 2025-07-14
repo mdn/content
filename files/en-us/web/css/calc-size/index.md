@@ -5,11 +5,12 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.calc-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
-The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
+The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
 `calc-size()` return values can also be [interpolated](/en-US/docs/Glossary/Interpolation), enabling size keyword values to be used in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, including `calc-size()` in a property value automatically applies [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/interpolate-size) to the selection.
 
@@ -41,11 +42,9 @@ calc-size(<calc-size-basis>, <calc-sum>)
 The parameters are:
 
 - `<calc-size-basis>`
-
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
-
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value
@@ -123,7 +122,7 @@ In this expression:
 `calc-size()` return values can be interpolated, enabling animations between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and a `calc-size()` intrinsic size return value.
 
 > [!NOTE]
-> You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Critical_rendering_path#layout)).
+> You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Guides/Critical_rendering_path#layout)).
 
 For example, you could use a [transition](/en-US/docs/Web/CSS/CSS_transitions) to animate a container `width` between `0` and `auto` like so:
 
@@ -221,7 +220,7 @@ p {
 }
 ```
 
-In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the`width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
+In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
 
 ```css
 section {
@@ -249,7 +248,7 @@ This example demonstrates how to use `calc-size()` to animate between a specific
 
 #### HTML
 
-The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
+The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
 
 ```html
 <section tabindex="0">
@@ -472,7 +471,7 @@ As mentioned earlier, it is possible to use another function inside `calc-size()
 
 #### HTML
 
-The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
+The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
 
 ```html
 <form>

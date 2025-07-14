@@ -1,11 +1,11 @@
 ---
 title: Intl.DisplayNames.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DisplayNames.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in display names without having to fall back to the runtime's default locale.
 

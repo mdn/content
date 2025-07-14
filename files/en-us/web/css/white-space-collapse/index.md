@@ -3,9 +3,8 @@ title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 page-type: css-property
 browser-compat: css.properties.white-space-collapse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
@@ -48,7 +47,8 @@ The `white-space-collapse` property is specified as a single keyword chosen from
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
     - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
-> **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
+> [!NOTE]
+> _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
 > [!NOTE]
 > The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
@@ -64,7 +64,7 @@ User agents handle white space collapsing as follows:
 - If spaces are to be collapsed:
   - Spaces or tabs before or after segment breaks are removed.
   - Sequences of spaces are converted, or "collapsed", to a single space.
-- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e. the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
+- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e., the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
 
 ## Formal definition
 

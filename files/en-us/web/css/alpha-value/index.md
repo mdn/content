@@ -3,9 +3,8 @@ title: <alpha-value>
 slug: Web/CSS/alpha-value
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-color/#typedef-color-alpha-value
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 

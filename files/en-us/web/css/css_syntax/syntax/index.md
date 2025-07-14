@@ -1,10 +1,10 @@
 ---
-title: Syntax
+title: "Introduction to CSS syntax: declarations, rulesets, and statements"
+short-title: Introduction
 slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The basic goal of the Cascading Stylesheet ([CSS](/en-US/docs/Web/CSS)) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The _CSS syntax_ reflects this goal and its basic building blocks are:
 
@@ -34,7 +34,7 @@ A CSS declaration block is visualized in the diagram below.
 ![Within a CSS block, encompassed in braces, semicolons separate declarations, with the final semicolon being optional but recommended as good practice.](declaration-block.png)
 
 > [!NOTE]
-> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 ## CSS rulesets
 
@@ -59,7 +59,7 @@ Rulesets are the main building blocks of a style sheet, which often consists of 
 
 A **statement** is a building block that begins with any non-space characters and ends at the first closing brace or semicolon (outside a string, non-escaped and not included into another {}, () or \[] pair).
 
-![A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anthing that is not an at-rule or nested is invalid.](css_syntax_-_statements_venn_diag.png)
+![A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anything that is not an at-rule or nested is invalid.](css_syntax_-_statements_venn_diag.png)
 
 There are two kinds of statements:
 
@@ -81,10 +81,10 @@ There is another group of statements – the **nested statements**. These are st
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - Values
-  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)

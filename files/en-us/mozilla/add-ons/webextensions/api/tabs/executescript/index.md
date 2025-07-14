@@ -46,19 +46,15 @@ let executing = browser.tabs.executeScript(
 ### Parameters
 
 - `tabId` {{optional_inline}}
-
   - : `integer`. The ID of the tab in which to run the script.
 
     Defaults to the active tab of the current window.
 
 - `details`
-
   - : An object describing the script to run.
 
     It contains the following properties:
-
     - `allFrames` {{optional_inline}}
-
       - : `boolean`. If `true`, the code will be injected into all frames of the current page.
 
         If `true` and `frameId` is set, then it will raise an error. (`frameId` and `allFrames` are mutually exclusive.)
@@ -68,35 +64,29 @@ let executing = browser.tabs.executeScript(
         Defaults to `false`.
 
     - `code` {{optional_inline}}
-
       - : `string`. Code to inject, as a text string.
 
         > [!WARNING]
         > Don't use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
 
     - `file` {{optional_inline}}
-
       - : `string`. Path to a file containing the code to inject.
-
         - In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.
         - In Chrome, these URLs are resolved relative to the extension's base URL.
 
         To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: `"/path/to/script.js"`.
 
     - `frameId` {{optional_inline}}
-
       - : `integer`. The frame where the code should be injected.
 
         Defaults to `0` (the top-level frame).
 
     - `matchAboutBlank` {{optional_inline}}
-
       - : `boolean`. If `true`, the code will be injected into embedded `about:blank` and `about:srcdoc` frames if your extension has access to their parent document. The code cannot be inserted in top-level `about:` frames.
 
         Defaults to `false`.
 
     - `runAt` {{optional_inline}}
-
       - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab.
 
         Defaults to `"document_idle"`.
@@ -112,7 +102,7 @@ let foo = "my result";
 foo;
 ```
 
-Here the results array will contain the string "`my result`" as an element.
+Here the results array will contain the string `"my result"` as an element.
 
 The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 

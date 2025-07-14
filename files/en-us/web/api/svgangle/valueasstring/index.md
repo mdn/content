@@ -46,5 +46,5 @@ console.log(Math.round(angle.value)); // Output: 90 (since 1.57 radians is appro
 
 ## See also
 
-- [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle)
+- [`<angle>`](/en-US/docs/Web/SVG/Guides/Content_type#angle)
 - {{domxref("SVGAnimatedAngle")}}

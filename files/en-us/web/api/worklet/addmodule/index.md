@@ -25,12 +25,10 @@ addModule(moduleURL, options)
   - : A {{jsxref("String")}} containing the URL of a JavaScript file with the module to
     add.
 - `options` {{optional_inline}}
-
   - : An object with any of the following options:
-
     - `credentials`
       - : A {{domxref("Request.credentials")}} value that
-        indicates whether to send credentials (e.g. cookies and HTTP authentication)
+        indicates whether to send credentials (e.g., cookies and HTTP authentication)
         when loading the module. Can be one of `"omit"`,
         `"same-origin"`, or `"include"`. Defaults to
         `"same-origin"`. See also {{domxref("Request.credentials")}}.

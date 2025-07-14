@@ -1,12 +1,12 @@
 ---
 title: Shapes from box values
+short-title: Box-value shapes
 slug: Web/CSS/CSS_shapes/From_box_values
 page-type: guide
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-A straightforward way to create a shape is to use a value from the [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) module. This article explains how to do this.
+A straightforward way to create a shape is to use a value from the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module. This article explains how to do this.
 
 The {{cssxref("box-edge")}} box values allowable as a shape value are:
 
@@ -192,7 +192,7 @@ body {
 
 ## When to use box values
 
-Using box values is a simple way to create shapes; however, this is by nature only going to work with very simple shapes that can be defined using the well-supported `border-radius` property. The examples shown above show one such use case. You can create a circular shape using `border-radius` and then curve text around it.
+Using box values is a way to create shapes; however, this naturally works only with very basic shapes that can be defined using the `border-radius` property. The examples shown above show one such use case. You can create a circular shape using `border-radius` and then curve text around it.
 
 With just this basic technique, you can create some interesting effects. In my final example of this section, I have floated two elements left and right, giving each a border radius of 100% in the direction closest to the text.
 

@@ -16,7 +16,13 @@ There are three broad categories of page types on MDN, though some page types fa
 
 ## Creating a new page
 
-To create new pages on MDN, you need to use GitHub — have a look at our [content repo](https://github.com/mdn/content) section about [adding a new document](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document) for more instructions.
+Adding a new document is relatively straightforward, especially if you can start by copying an `index.md` file from a similar topic.
+There are a few things to keep in mind:
+
+- Documents are written in Markdown in an `index.md` file.
+- For example, if you're creating a new document for a HTTP header called `foo`, create a new folder at `files/en-us/web/http/reference/headers/foo` and put the Markdown file in this folder (`files/en-us/web/http/reference/headers/foo/index.md`).
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
+  You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ## How to use the templates
 
@@ -24,7 +30,7 @@ When creating a new page you can ensure that you've used the right page structur
 You can find the exact source code of each template (if you want to copy it) by following the "Source on **GitHub**" link at the bottom of each one.
 These page templates don't make much sense as published pages, but if you view their source code you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.
 
-At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article).
+At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g., information that doesn't actually appear in the body of the article).
 You need to delete this section after you've followed the instructions in it, before the page can be considered finished.
 
 ## Old-style page layouts
@@ -57,11 +63,13 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [API landing pages](#api_landing_page)
 - [API reference page](#api_reference_page)
 - [API reference subpage](#api_reference_subpage)
+- [ARIA reference](#aria_reference_page)
 - [Conceptual pages](#conceptual_page)
 - [CSS feature reference](#css_feature_reference_page)
 - [CSS module landing page](#css_module_landing_page)
 - [Glossary entry](#glossary_page)
 - [HTML element](#html_element_reference_page)
+- [HTML attribute](#html_attribute_reference_page)
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
@@ -76,7 +84,7 @@ It does not link directly to specific methods or properties within the API's cla
 It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
 
 There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
-For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc.
+For example, the [Generic Sensor API](https://w3c.github.io/sensors/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
 In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
@@ -130,11 +138,26 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 #### Example
 
-- [`<video>` element](/en-US/docs/Web/HTML/Element/video)
+- [`<video>` element](/en-US/docs/Web/HTML/Reference/Elements/video)
 
 #### Templates
 
 - [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
+
+### HTML attribute reference page
+
+An HTML attribute page lists all the values that exist on an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+
+> [!NOTE]
+> Element-specific attributes (e.g., `placeholder` for `<input>`) don't require a separate page if the attributes can be sufficiently covered within the parent element's reference page (e.g., the `placeholder` attribute should be covered on the `<input>` element's page, not as a standalone page).
+
+#### Example
+
+- [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
+
+#### Templates
+
+- [HTML attribute page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template)
 
 ### SVG element reference page
 
@@ -142,7 +165,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 #### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
 #### Templates
 
@@ -192,17 +215,30 @@ It also provides examples, browser compatibility information, and other importan
 
 #### Example
 
-- [Cache-Control header](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 #### Templates
 
 - [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
 
+### ARIA reference page
+
+An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that defines ways to make web content and web applications more accessible to people with disabilities.
+
+#### Examples
+
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### Templates
+
+- [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
+
 ### Conceptual page
 
 A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
-An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) and [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macros.
 
 #### Examples
 
@@ -233,7 +269,7 @@ A **landing page** serves as a menu, of sorts, for its subpages, and is therefor
 A landing page layout is typically used for the root page of a tree of pages about a particular topic.
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
+The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
 
 ### Learn web development pages
 
@@ -260,4 +296,4 @@ There are only a few types of page inside Learn web development:
 ## See also
 
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)

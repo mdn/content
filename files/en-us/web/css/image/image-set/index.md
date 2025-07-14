@@ -3,11 +3,10 @@ title: image-set()
 slug: Web/CSS/image/image-set
 page-type: css-function
 browser-compat: css.types.image.image-set
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
+The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 
 Resolution and bandwidth differ by device and network access. The `image-set()` function delivers the most appropriate image resolution for a user's device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.
 
@@ -59,7 +58,7 @@ image-set(
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Examples

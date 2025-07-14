@@ -1,17 +1,17 @@
 ---
 title: Array.prototype.shift()
+short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.shift
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`shift()`** method of {{jsxref("Array")}} instances removes the **first**
 element from an array and returns that removed element. This method changes the length
 of the array.
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.shift()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];
@@ -41,9 +41,7 @@ The removed element from the array; {{jsxref("undefined")}} if the array is empt
 
 ## Description
 
-The `shift()` method removes the element at the zeroth index and shifts the
-values at consecutive indexes down, then returns the removed value. If the
-{{jsxref("Array/length", "length")}} property is 0, {{jsxref("undefined")}} is returned.
+The `shift()` method shifts all values to the left by 1 and decrements the length by 1, resulting in the first element being removed. If the {{jsxref("Array/length", "length")}} property is 0, {{jsxref("undefined")}} is returned.
 
 The {{jsxref("Array/pop", "pop()")}} method has similar behavior to `shift()`, but applied to the last element in an array.
 
@@ -89,7 +87,7 @@ while (typeof (i = names.shift()) !== "undefined") {
 
 ### Calling shift() on non-array objects
 
-The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The `length` property is decremented by one.
+The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The property at `length - 1` is [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete), and the `length` property is decremented by one.
 
 ```js
 const arrayLike = {

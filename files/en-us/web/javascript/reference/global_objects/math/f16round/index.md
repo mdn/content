@@ -1,11 +1,11 @@
 ---
 title: Math.f16round()
+short-title: f16round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/f16round
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.f16round
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.f16round()`** static method returns the nearest [16-bit half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of a number.
 
@@ -81,5 +81,6 @@ Math.f16round(100000); // Infinity
 ## See also
 
 - [Polyfill of `Math.f16round` in `core-js`](https://github.com/zloirock/core-js#float16-methods)
+- [es-shims polyfill of `Math.f16round`](https://www.npmjs.com/package/math.f16round)
 - {{jsxref("Math.fround()")}}
 - {{jsxref("Math.round()")}}

@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.blockedURL
 
 {{APIRef("Reporting API")}}
 
-The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string value that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string value that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 ## Value
 
@@ -18,18 +18,18 @@ If the value is not the URL of a resource, it must be one of the following strin
 
 - `inline`
   - : An inline resource.
-    For example, an inline script that was used when [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-inline) was not specified in the CSP.
+    For example, an inline script that was used when [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline) was not specified in the CSP.
 - `eval`
   - : An `eval()`.
-    For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
+    For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
 - `wasm-eval`
   - : An Wasm evaluation.
-    For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
+    For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
-  - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.
+  - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) CSP directive.
     For example, a {{domxref("TrustedTypePolicy")}} was created using {{domxref("TrustedTypePolicyFactory/createPolicy", "window.trustedTypes.createPolicy()")}} with a name that wasn't listed in the CSP `trusted-types` directive.
 - `trusted-types-sink`
-  - : A resource that violated the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.
+  - : A resource that violated the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types) CSP directive.
     For example, the directive was set to `script` but the document did not use a {{domxref("TrustedTypePolicy")}} to sanitize data before passing it to a sink such as {{domxref("Element.innerHTML")}}.
 
 ## Examples
@@ -126,10 +126,8 @@ The policy also uses the `trusted-types` directive to specify that a {{domxref("
 
   <script>
     const policy = trustedTypes.createPolicy("somePolicy", {
-      createHTML: (string) => {
-        // Some (insufficient) sanitization code
-        return string.replace(/</g, "&lt;");
-      },
+      // Some (insufficient) sanitization code
+      createHTML: (string) => string.replace(/</g, "&lt;"),
     });
   </script>
 </html>
@@ -167,7 +165,7 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
   </head>
   <body>
     <input type="text" id="userInput" />
-    <button onclick="updateContent()">Update Content</button>
+    <button>Update Content</button>
     <div id="content"></div>
   </body>
 
@@ -178,6 +176,8 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
       // Passing unsanitized content - a violation of the policy
       document.getElementById("content").innerHTML = userInput;
     }
+
+    document.querySelector("button").addEventListener("click", updateContent);
   </script>
 </html>
 ```
@@ -193,10 +193,8 @@ In order to avoid the violation we would need to update the script to define a t
 
 ```js
 const policy = trustedTypes.createPolicy("myPolicy", {
-  createHTML: (string) => {
-    // Some (insufficient) sanitization code
-    return string.replace(/</g, "&lt;");
-  },
+  // Some (insufficient) sanitization code
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 function updateContent() {

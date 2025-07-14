@@ -2,15 +2,14 @@
 title: Core learning modules
 slug: Learn_web_development/Core
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Our **Core modules** cover topics that we feel every web developer should have a good grounding in. This includes all the information they need to design and build a basic, accessible web app that follows modern best practices, and manage and deploy their code using appropriate tools.
 
 ## Prerequisites
 
-While there is no prerequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have no already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
+While there is no prerequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have not already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
 
 In particular, if you've never done any coding before, we'd recommend the [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module, which introduces you web technologies very gently and takes you through the process of building a simple website.
 
@@ -37,5 +36,5 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
 
 ## See also
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

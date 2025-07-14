@@ -3,17 +3,43 @@ title: :nth-last-child()
 slug: Web/CSS/:nth-last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:nth-last-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings, counting from the end.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-last-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:nth-last-child(-n + 3) {
+  border: 2px solid orange;
+  margin-top: 1px;
+}
+
+li:nth-last-child(even) {
+  background-color: lightyellow;
+}
+```
+
+```html interactive-example
+<p>Eight deadliest wildfires:</p>
+<ol reversed>
+  <li>Matheson Fire</li>
+  <li>Miramichi Fire</li>
+  <li>1997 Indonesian fires</li>
+  <li>Thumb Fire</li>
+  <li>Great Hinckley Fire</li>
+  <li>Cloquet Fire</li>
+  <li>Kursha-2 Fire</li>
+  <li>Peshtigo Fire</li>
+</ol>
+```
 
 ## Syntax
-
-The `nth-last-child` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
 
 ```css-nolint
 :nth-last-child(<nth> [of <complex-selector-list>]?) {
@@ -21,26 +47,28 @@ The `nth-last-child` pseudo-class is specified with a single argument, which rep
 }
 ```
 
-### Keyword values
+### Parameters
+
+The `:nth-last-child()` pseudo-class is specified with a single argument, which represents the pattern for matching elements, counting from the end.
+
+#### Keyword values
 
 - `odd`
   - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc., counting from the end.
 - `even`
   - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc., counting from the end.
 
-### Functional notation
+#### Functional notation
 
 - `<An+B>`
-
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
-
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The index of the first element, counting from the end, is `1`. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
-### The `of <selector>` syntax
+#### The `of <selector>` syntax
 
 By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
 
@@ -53,7 +81,8 @@ By passing a selector argument, we can select the **nth-last** element that matc
 > This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-last-child(-n + 3);
+li.important:nth-last-child(-n + 3) {
+}
 ```
 
 This selector applies a style to list items if they are also within the last three children.

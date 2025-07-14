@@ -1,12 +1,12 @@
 ---
 title: Relationship of flexbox to other layout methods
+short-title: Flexbox and other layouts
 slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 page-type: guide
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-In this article we will take a look at how flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
+In this article, we will take a look at how flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
 
 ## The box alignment module
 
@@ -57,7 +57,7 @@ The writing modes specification defines the following values of the {{cssxref("w
 
 The `sideways-rl` and `sideways-lr` have support only in Firefox currently.
 
-Note that you would not normally use CSS and the `writing-mode` property to change an entire document to another writing mode. This would be done via HTML, by adding a [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute to the {{htmlelement("html")}} element to indicate the document language and default text direction. This would mean that the document would display correctly even if CSS did not load.
+Note that you would not normally use CSS and the `writing-mode` property to change an entire document to another writing mode. This would be done via HTML, by adding a [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute to the {{htmlelement("html")}} element to indicate the document language and default text direction. This would mean that the document would display correctly even if CSS did not load.
 
 ## Flexbox and other layout methods
 

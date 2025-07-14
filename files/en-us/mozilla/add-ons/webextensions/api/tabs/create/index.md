@@ -22,9 +22,7 @@ let creating = browser.tabs.create(
 ### Parameters
 
 - `createProperties`
-
   - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
-
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. If `false`, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
@@ -42,7 +40,6 @@ let creating = browser.tabs.create(
     - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
     - `selected` {{optional_inline}}
-
       - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
 
         > [!WARNING]
@@ -51,16 +48,14 @@ let creating = browser.tabs.create(
     - `title` {{optional_inline}}
       - : `string`. The title of the tab. Allowed only if the tab is created with `discarded` set to `true`.
     - `url` {{optional_inline}}
-
       - : `string`. The URL to navigate the tab to initially. Defaults to the New Tab Page.
 
         Fully-qualified URLs must include a scheme (for example, 'http\://www\.google.com' not 'www\.google.com').
 
         For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:
-
         - chrome: URLs
-        - [javascript: URLs](/en-US/docs/Web/URI/Schemes/javascript)
-        - [data: URLs](/en-US/docs/Web/URI/Schemes/data)
+        - [javascript: URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
+        - [data: URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`). Non-privileged URLs (e.g., `about:blank`) are allowed.
         - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
