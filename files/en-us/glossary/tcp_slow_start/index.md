@@ -6,7 +6,7 @@ sidebar: glossarysidebar
 ---
 
 {{glossary('TCP')}} slow start is an algorithm that detects the available network bandwidth for packet transmission and balances transmission speed according to the network's capabilities.
-The slow start mechanism prevents congestion when a network's capabilities are initially unknown, and slowly increases the volume of information diffused until the network's maximum capacity is found.
+The slow start mechanism prevents congestion when a network's capabilities are initially unknown, and slowly increases the volume of information sent and received until the network's maximum capacity is found.
 
 To implement TCP slow start, the congestion window (_cwnd_) sets an upper limit on the amount of data a source can transmit over the network before receiving an acknowledgment (ACK). The slow start threshold (_ssthresh_) determines the (de)activation of slow start. When a new connection is made, cwnd is initialized to one TCP data or acknowledgment packet, and waits for an ACK. When that ACK is received, the congestion window is incremented until the _cwnd_ is greater than _ssthresh_. Slow start also terminates when congestion is experienced.
 
