@@ -56,7 +56,7 @@ Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}
 
 The default allowlist for `captured-surface-control` is `self`, which lets any content within the same origin use Captured Surface Control.
 
-In addition, if permission is granted by the policy, the user must also grant permission. This can either be explicit permission, granted by responding to a prompt, or implicit permission granted by interacting with a control that calls one of the methods ([transient activation](/en-US/docs/Glossary/Transient_activation)) when user permission has not been explicitly denied.
+If permission is allowed by the website policy, the user may then grant (or deny) permission to access the controlled APIs. This can either be explicit permission, granted by responding to a prompt, or implicit permission granted by interacting with a control that calls one of the methods ([transient activation](/en-US/docs/Glossary/Transient_activation)) when user permission has not been explicitly denied.
 
 See also [Screen Capture API > Security considerations](/en-US/docs/Web/API/Screen_Capture_API#security_considerations).
 
