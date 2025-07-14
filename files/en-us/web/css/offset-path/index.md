@@ -411,7 +411,6 @@ This example involves different {{cssxref("&lt;basic-shape&gt;")}} values: {{css
   left: 50%;
   transform: translateX(-50%);
   transform-origin: center center;
-  geometry-box: 50px 0 100px;
 }
 .mover-path {
   top: 50px;

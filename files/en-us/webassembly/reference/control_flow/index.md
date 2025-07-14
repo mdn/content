@@ -10,7 +10,7 @@ WebAssembly control flow instructions.
 - [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block)
   - : Creates a label that can later be branched out of with a [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br).
 - [`br`](/en-US/docs/WebAssembly/Reference/Control_flow/br)
-- : Branches to a `loop`, `block`, or `if`.
+  - : Branches to a `loop`, `block`, or `if`.
 - [`br_if`](/en-US/docs/WebAssembly/Reference/Control_flow/br_if)
   - : Branches to a `loop`, `block`, or `if`, based on a boolean condition.
 - [`br_table`](/en-US/docs/WebAssembly/Reference/Control_flow/br_table)
