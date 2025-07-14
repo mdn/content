@@ -200,6 +200,23 @@ Promise.all(
 ).then((modules) => modules.forEach((module) => module.load()));
 ```
 
+### Importing a module with forced re-evaluation
+
+Another way to re-import and re-evaluate a module without restarting the entire JavaScript environment is to use a [`Blob`](/en-US/docs/Web/API/Blob) with [`URL.createObjectUrl`](/en-US/docs/Web/API/URL/createObjectURL_static):
+
+```js
+fetch("/my-module.js")
+  .then((r) => r.text())
+  .then((code) => {
+    const url = URL.createObjectURL(
+      new Blob([code], { type: "text/javascript" }),
+    );
+    return import(url).finally(() => {
+      URL.revokeObjectURL(url);
+    });
+  });
+```
+
 ## Specifications
 
 {{Specifications}}
