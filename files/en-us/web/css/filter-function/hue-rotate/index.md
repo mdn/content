@@ -157,7 +157,7 @@ These values produce the same results:
 
 ```css
 filter: hue-rotate(90deg); /* 90deg rotation */
-filter: url("#hue-rotate)"; /* with embedded SVG */
+filter: url("#hue-rotate"); /* with embedded SVG */
 filter: url("folder/fileName.svg#hue-rotate"); /* external svg filter definition */
 ```
 
