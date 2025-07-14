@@ -847,10 +847,6 @@ The result looks like this:
 
 As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as [Validate.js](https://rickharrison.github.io/validate.js/).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation).
-
 ## Summary
 
 Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages, but it _always_ requires you to think carefully about the user.
