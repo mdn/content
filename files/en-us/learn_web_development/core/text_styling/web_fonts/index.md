@@ -111,7 +111,7 @@ Now you'll need to generate the required code (and font formats). For each font,
 4. Click _Convert_.
 5. Click _Download_.
 
-After the ZIP file is downloaded. Unzip it and move it in the same directory as your HTML and CSS.
+After the ZIP file is downloaded. Unzip it and move it into the same directory as your HTML and CSS.
 
 ### Implementing the code in your demo
 
