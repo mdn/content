@@ -4,9 +4,8 @@ short-title: upgrade-insecure-requests
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.upgrade-insecure-requests
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`upgrade-insecure-requests`** directive instructs user

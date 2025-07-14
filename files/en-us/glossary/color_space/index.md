@@ -2,9 +2,8 @@
 title: Color space
 slug: Glossary/Color_space
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Color spaces** are named organizations of colors for underlying color models of coordinate-based color arrangements. A color model defines how the components of a color (for example, the `h`, `w`, and `b` channels of an [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb) color) relate to a color space. Most color spaces are three- or four- dimensional grids that represent colors. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, and can be transformed from one color space to another, while still looking the same.
 

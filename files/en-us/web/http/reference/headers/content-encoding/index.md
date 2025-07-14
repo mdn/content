@@ -4,9 +4,8 @@ short-title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
 page-type: http-header
 browser-compat: http.headers.Content-Encoding
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Encoding`** {{Glossary("representation header")}} lists the encodings and the order in which they have been applied to a resource.
 This lets the recipient know how to decode the data in order to obtain the original content format described in the {{HTTPHeader("Content-Type")}} header.

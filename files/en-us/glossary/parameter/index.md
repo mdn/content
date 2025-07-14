@@ -2,9 +2,8 @@
 title: Parameter
 slug: Glossary/Parameter
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Parameters** are named variables declared as part of a {{Glossary("function")}}. They are used to reference the {{Glossary("argument", "arguments")}} passed into the function.
 

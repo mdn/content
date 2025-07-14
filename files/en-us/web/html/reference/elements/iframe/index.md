@@ -3,9 +3,8 @@ title: "<iframe>: The Inline Frame element"
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element
 browser-compat: html.elements.iframe
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 

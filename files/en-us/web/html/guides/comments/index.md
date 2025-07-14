@@ -4,9 +4,8 @@ short-title: Comments
 slug: Web/HTML/Guides/Comments
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/syntax.html#comments
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 An HTML **comment** is used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
 

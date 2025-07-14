@@ -4,9 +4,8 @@ short-title: Float16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float16Array/Float16Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Float16Array.Float16Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Float16Array()`** constructor creates {{jsxref("Float16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 

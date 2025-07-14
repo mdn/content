@@ -4,9 +4,8 @@ short-title: getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be

@@ -26,7 +26,7 @@ Highlights:
 ### CSS
 
 - Support for {{cssxref("ruby-position")}} and {{cssxref("ruby-align")}} have been added and is available by default ([Firefox bug 1055676](https://bugzil.la/1055676) [Firefox bug 1123917](https://bugzil.la/1123917) and [Firefox bug 1039006](https://bugzil.la/1039006)).
-- The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
+- The `:unresolved` pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ([Firefox bug 1120721](https://bugzil.la/1120721)).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ([Firefox bug 1110277](https://bugzil.la/1110277)).
 - The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):

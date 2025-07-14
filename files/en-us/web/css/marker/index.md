@@ -99,4 +99,4 @@ polyline#test {
 
 - {{cssxref("marker-start")}}
 - {{cssxref("marker-end")}}
-- SVG {{SVGAttr("marker")}} attribute
+- SVG {{SVGElement("marker")}} element

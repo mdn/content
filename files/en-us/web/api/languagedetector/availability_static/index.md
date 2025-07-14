@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("LanguageDetector")}} interface returns an enumerated value that indicates whether the browser AI model supports a given `LanguageDetector` configuration.
 

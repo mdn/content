@@ -4,9 +4,8 @@ short-title: byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.byteLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteLength`** accessor property of {{jsxref("DataView")}} instances returns the length (in bytes) of this view.
 

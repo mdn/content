@@ -4,9 +4,8 @@ short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
 

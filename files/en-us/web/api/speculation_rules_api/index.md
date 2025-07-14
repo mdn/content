@@ -442,7 +442,7 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## Examples
 
-You can find a [complete prerender demo here](https://prerender-demos.glitch.me/).
+For code examples, see [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2025)
 
 ## Specifications
 
@@ -454,5 +454,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 
 ## See also
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

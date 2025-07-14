@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.total
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`total()`** method of {{jsxref("Temporal.Duration")}} instances returns a number representing the total duration in the given unit.
 

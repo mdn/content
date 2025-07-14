@@ -3,9 +3,8 @@ title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.205
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`205 Reset Content`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code indicates that the request has been successfully processed and the client should reset the document view.
 

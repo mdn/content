@@ -3,9 +3,8 @@ title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_tel
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url), the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
 

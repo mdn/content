@@ -23,7 +23,7 @@ A boolean.
 
 ### Using `hasRegExpGroups`
 
-In the following example, a {{domxref("URLPattern")}} object is used with a group delimiter containing named capturing groups called "id" and "title". The `hasRegExpGroups` property returns `true`in this case.
+In the following example, a {{domxref("URLPattern")}} object is used with a group delimiter containing named capturing groups called "id" and "title". The `hasRegExpGroups` property returns `true` in this case.
 
 ```js
 const pattern = new URLPattern({ pathname: "/blog/:id(\\d+){-:title}?" });

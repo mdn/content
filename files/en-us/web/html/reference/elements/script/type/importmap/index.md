@@ -4,9 +4,8 @@ short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 page-type: html-attribute-value
 browser-compat: html.elements.script.type.importmap
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`importmap`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains an import map.
 

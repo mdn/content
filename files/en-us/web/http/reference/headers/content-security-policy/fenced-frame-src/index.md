@@ -6,9 +6,10 @@ page-type: http-csp-directive
 status:
   - experimental
 browser-compat: http.headers.Content-Security-Policy.fenced-frame-src
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`fenced-frame-src`** directive specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.

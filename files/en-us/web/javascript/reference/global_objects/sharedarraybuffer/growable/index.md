@@ -4,9 +4,8 @@ short-title: growable
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.growable
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`growable`** accessor property of {{jsxref("SharedArrayBuffer")}} instances returns whether this `SharedArrayBuffer` can be grow or not.
 

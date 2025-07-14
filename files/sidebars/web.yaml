@@ -1,0 +1,7 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    title: Web documentation
+  - type: listSubPages
+    path: /Web

@@ -4,6 +4,7 @@ slug: Web/API/WebUSB_API
 page-type: web-api-overview
 status:
   - experimental
+browser-compat: api.USB
 spec-urls: https://wicg.github.io/webusb/
 ---
 
@@ -84,6 +85,10 @@ navigator.usb.getDevices().then((devices) => {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

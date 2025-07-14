@@ -2,9 +2,8 @@
 title: Tiles and tilemaps overview
 slug: Games/Techniques/Tilemaps
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called **tiles**. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using [JavaScript](/en-US/docs/Web/JavaScript) and [Canvas](/en-US/docs/Web/API/Canvas_API) (although the same high level techniques could be used in any programming language.)
 

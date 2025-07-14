@@ -46,7 +46,7 @@ word-spacing: -0.4ch;
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 

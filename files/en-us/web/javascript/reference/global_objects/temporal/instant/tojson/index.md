@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.toJSON
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toJSON()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}. It is intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 

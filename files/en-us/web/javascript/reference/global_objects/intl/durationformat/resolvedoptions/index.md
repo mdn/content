@@ -4,9 +4,8 @@ short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `DurationFormat` object.
 

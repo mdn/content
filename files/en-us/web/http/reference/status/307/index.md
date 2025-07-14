@@ -3,9 +3,8 @@ title: 307 Temporary Redirect
 slug: Web/HTTP/Reference/Status/307
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.307
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`307 Temporary Redirect`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the resource requested has been temporarily moved to the URL in the {{HTTPHeader("Location")}} header.
 

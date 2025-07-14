@@ -4,9 +4,8 @@ short-title: resizable
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.resizable
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances returns whether this array buffer can be resized or not.
 

@@ -211,7 +211,7 @@ This function uses `getSettings()` to obtain the track's currently in-use values
 
 In this example, we create an exerciser which lets you experiment with media constraints by editing the source code describing the constraint sets for audio and video tracks. You can then apply those changes and see the result, including both what the stream looks like and what the actual media settings are set to after applying the new constraints.
 
-The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete example by {{LiveSampleLink("Example_Constraint_exerciser", "clicking here")}}.
+The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete code by clicking "Play" to view it in the playground.
 
 ```html hidden
 <p>

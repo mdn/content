@@ -4,9 +4,8 @@ short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Segmenter.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in segmentation without having to fall back to the runtime's default locale.
 

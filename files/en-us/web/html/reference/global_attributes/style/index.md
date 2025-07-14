@@ -4,9 +4,8 @@ short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
 page-type: html-attribute
 browser-compat: html.global_attributes.style
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`style`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
 

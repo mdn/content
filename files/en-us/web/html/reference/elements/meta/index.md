@@ -3,9 +3,8 @@ title: "<meta>: The metadata element"
 slug: Web/HTML/Reference/Elements/meta
 page-type: html-element
 browser-compat: html.elements.meta
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<meta>`** [HTML](/en-US/docs/Web/HTML) element represents {{Glossary("Metadata","metadata")}} that cannot be represented by other meta-related elements, such as {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, or {{HTMLElement("title")}}.
 

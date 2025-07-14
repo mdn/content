@@ -4,9 +4,8 @@ short-title: split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.split
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 

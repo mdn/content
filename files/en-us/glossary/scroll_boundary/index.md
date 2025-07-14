@@ -2,9 +2,8 @@
 title: Scroll boundary
 slug: Glossary/Scroll_boundary
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **scroll boundary** is the point at which a scrollable element cannot be scrolled any further in a particular direction, either at the top or bottom (or left/right for horizontal scrolling). This typically is the edge of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport).
 

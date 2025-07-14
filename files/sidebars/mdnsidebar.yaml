@@ -71,11 +71,11 @@ l10n:
     how_to_guides: How-to guides
     page_structures: Page structures
   ja:
-    community_resources: Community resources
-    writing_guide: Writing guidelines
-    learning_guidelines: Learning content guidelines
-    how_to_guides: How-to guides
-    page_structures: Page structures
+    community_resources: コミュニティリソース
+    writing_guide: 執筆ガイドライン
+    learning_guidelines: 学習コンテンツのガイドライン
+    how_to_guides: 手引き
+    page_structures: ページ構成
   ko:
     community_resources: 커뮤니티 지침
     writing_guide: Writing guidelines

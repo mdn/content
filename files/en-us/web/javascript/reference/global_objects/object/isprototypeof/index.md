@@ -4,9 +4,8 @@ short-title: isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.isPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isPrototypeOf()`** method of {{jsxref("Object")}} instances checks if this object exists in another object's prototype chain.
 

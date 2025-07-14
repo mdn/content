@@ -4,9 +4,8 @@ short-title: source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.source
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`source`** accessor property of {{jsxref("RegExp")}} instances returns a string containing the source text of this regular expression, without the two forward slashes on both sides or any flags.
 

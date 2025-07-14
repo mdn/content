@@ -3,9 +3,8 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.ArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic raw binary data buffer.
 

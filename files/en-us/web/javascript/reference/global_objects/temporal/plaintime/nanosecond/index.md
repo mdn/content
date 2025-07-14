@@ -6,9 +6,10 @@ page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.nanosecond
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`nanosecond`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
 

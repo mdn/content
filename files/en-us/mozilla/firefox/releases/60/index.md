@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 60 that will affe
 
 ### HTML
 
-Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
+Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()` ([Firefox bug 1430551](https://bugzil.la/1430551)).
 
 ### CSS
 
@@ -54,10 +54,10 @@ _No changes._
 - The {{domxref("Document.body","body")}} property is now implemented on the {{domxref("Document")}} interface, rather than the {{domxref("HTMLDocument")}} interface ([Firefox bug 1276438](https://bugzil.la/1276438)).
 - {{domxref("PerformanceResourceTiming")}} is now available in workers ([Firefox bug 1425458](https://bugzil.la/1425458)).
 - The {{domxref("PerformanceObserver.takeRecords()")}} method has been implemented ([Firefox bug 1436692](https://bugzil.la/1436692)).
-- The {{domxref("KeyboardEvent.keyCode")}} attribute of punctuation key becomes non-zero even if the active keyboard layout doesn't produce ASCII characters. See [these notes for more detail](/en-US/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout). Please do **not** use `KeyboardEvent.keyCode` in new applications — use {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} instead.
+- The {{domxref("KeyboardEvent.keyCode")}} attribute of punctuation key becomes non-zero even if the active keyboard layout doesn't produce ASCII characters. See [these notes for more detail](/en-US/docs/Web/API/KeyboardEvent/keyCode#printable_keys_in_standard_position). Please do **not** use `KeyboardEvent.keyCode` in new applications — use {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} instead.
 - The {{domxref("Animation.updatePlaybackRate()")}} method has been implemented ([Firefox bug 1436659](https://bugzil.la/1436659)).
-- New rules have been included for determining [keyCode values of punctuation keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout) ([Firefox bug 1036008](https://bugzil.la/1036008)).
-- The Gecko-only options object `storage` option of the {{domxref("IDBFactory.open()")}} method (see [Experimental Gecko options object](/en-US/docs/Web/API/IDBFactory/open#experimental_gecko_options_object)) has been deprecated ([Firefox bug 1442560](https://bugzil.la/1442560)).
+- New rules have been included for determining [keyCode values of punctuation keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#printable_keys_in_standard_position) ([Firefox bug 1036008](https://bugzil.la/1036008)).
+- The Gecko-only options object `storage` option of the {{domxref("IDBFactory.open()")}} method has been deprecated ([Firefox bug 1442560](https://bugzil.la/1442560)).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) can now be used within [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) code ([Firefox bug 1193394](https://bugzil.la/1193394)).
 
 #### DOM events

@@ -23,7 +23,7 @@ The Element Capture API captures the element itself (and its descendants), where
 There are legitimate use cases for both:
 
 - If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, you don't want private content such as a set of message notifications or a speaker notes UI showing up in the capture.
-- However, if you really do want to capture a region of the browser tab, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) (see the [source code](https://glitch.com/edit/#!/region-capture-demo)) shows a useful possibility — zooming in on a particular area of the tab as you show multiple users an interactive walkthrough of some kind.
+- However, if you really do want to capture a region of the browser tab, regardless of what is shown in it, the Region Capture API will serve you well.
 
 In the next section we'll start with a basic Screen Capture API demo to illustrate the issues that the Element Capture and Region Capture APIs were created to solve.
 
@@ -291,5 +291,3 @@ However, there are still restrictions on the elements that can be used as crop t
 
 - [Capture a video stream from any element](https://developer.chrome.com/docs/web-platform/element-capture) on developer.chrome.com (2025)
 - [Better tab sharing with Region Capture](https://developer.chrome.com/docs/web-platform/region-capture) on developer.chrome.com (2023)
-- [Element Capture Demo](https://element-capture-demo.glitch.me/)
-- [Region Capture Demo](https://region-capture-demo.glitch.me/)

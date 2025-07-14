@@ -3,9 +3,8 @@ title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 page-type: javascript-language-feature
 browser-compat: javascript.classes.extends
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to create a class that is a child of another class.
 

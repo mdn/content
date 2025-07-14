@@ -2,9 +2,8 @@
 title: Domain name
 slug: Glossary/Domain_name
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain names are used in {{Glossary("URL","URLs")}} to identify which server a specific webpage belongs to. The domain name consists of a hierarchical sequence of names (labels) separated by periods (dots) and ending with an {{glossary("TLD","extension")}}.
 

@@ -4,9 +4,8 @@ short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 page-type: html-attribute
 browser-compat: html.global_attributes.hidden
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an {{Glossary("enumerated")}} attribute indicating that the browser should not render the contents of the element. For example, it can be used to hide elements of the page that can't be used until the login process has been completed.
 

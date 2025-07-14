@@ -2,9 +2,8 @@
 title: Accessible description
 slug: Glossary/Accessible_description
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **accessible description** is the description of a user interface element that provides additional information to help users of assistive technology understand the UI element and its context. It's associated with an HTML or SVG element and gives users additional context about its purpose beyond what is provided by the element's {{glossary("accessible name")}}. This is particularly important for users who rely on assistive technologies like {{glossary("Screen_reader", "screen readers")}}. An element's accessible description is part of the {{glossary("accessibility tree")}}.
 

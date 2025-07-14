@@ -48,6 +48,9 @@ The specification also defines the {{CSSxRef("image/image", "image()")}} functio
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
 
+- [Styling replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - : Introduces the properties that only apply to _replaced elements_.
+
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 

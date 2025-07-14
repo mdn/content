@@ -413,7 +413,7 @@ p {
 ```css hidden
 body,
 input {
-  font: 14px arial;
+  font: 14px Arial;
   overflow: hidden;
 }
 

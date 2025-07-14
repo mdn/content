@@ -3,9 +3,8 @@ title: "<col>: The Table Column element"
 slug: Web/HTML/Reference/Elements/col
 page-type: html-element
 browser-compat: html.elements.col
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns in a column group represented by its parent {{HTMLElement("colgroup")}} element. The `<col>` element is only valid as a child of a {{HTMLElement("colgroup")}} element that has no [`span`](/en-US/docs/Web/HTML/Reference/Elements/colgroup#span) attribute defined.
 

@@ -3,9 +3,8 @@ title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 

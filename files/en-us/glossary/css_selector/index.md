@@ -2,9 +2,8 @@
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **CSS selector** is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.
 

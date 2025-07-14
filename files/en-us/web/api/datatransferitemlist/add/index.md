@@ -139,8 +139,6 @@ target.addEventListener("dragover", (ev) => {
 
 {{EmbedLiveSample('Examples', 400, 300)}}
 
-{{LiveSampleLink('Examples', 'Result link')}}
-
 ## Specifications
 
 {{Specifications}}

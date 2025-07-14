@@ -3,9 +3,8 @@ title: HTTP Client hints
 short-title: Client hints
 slug: Web/HTTP/Guides/Client_hints
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Client hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Reference/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.

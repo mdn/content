@@ -85,15 +85,8 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
-
-- {{CSSxRef("caret")}}, shorthand for:
-  - {{CSSxRef("caret-color")}}
-  - {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret-color")}}
 - {{CSSxRef("cursor")}}
-- {{CSSxRef("nav-down")}}
-- {{CSSxRef("nav-left")}}
-- {{CSSxRef("nav-right")}}
-- {{CSSxRef("nav-up")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}
@@ -102,6 +95,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
+
+> [!NOTE]
+> The spec also defines the properties: `caret`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up`. These properties have not been implemented in any browser yet.
 
 ## Guides
 

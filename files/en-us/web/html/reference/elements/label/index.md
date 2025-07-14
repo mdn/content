@@ -3,9 +3,8 @@ title: "<label>: The Label element"
 slug: Web/HTML/Reference/Elements/label
 page-type: html-element
 browser-compat: html.elements.label
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for an item in a user interface.
 

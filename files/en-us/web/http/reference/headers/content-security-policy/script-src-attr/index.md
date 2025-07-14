@@ -4,9 +4,8 @@ short-title: script-src-attr
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src-attr
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** directive specifies valid sources for JavaScript inline event handlers.
 

@@ -2,9 +2,8 @@
 title: Author fast-loading HTML pages
 slug: Web/HTML/How_to/Author_fast-loading_HTML_pages
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
 This article describes how to improve page load times based on common knowledge and experimentation.

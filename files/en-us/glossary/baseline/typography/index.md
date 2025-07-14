@@ -2,9 +2,8 @@
 title: Baseline (typography)
 slug: Glossary/Baseline/Typography
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **baseline** is an imaginary line along the inline axis of a line box along which individual glyphs of text are aligned. Baselines guide the design of glyphs in a font and the alignment of glyphs from different fonts or font sizes when typesetting.
 

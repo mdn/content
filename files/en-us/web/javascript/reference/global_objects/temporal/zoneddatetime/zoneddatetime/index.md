@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.ZonedDateTime()`** constructor creates {{jsxref("Temporal.ZonedDateTime")}} objects.
 

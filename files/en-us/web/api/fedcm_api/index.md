@@ -74,12 +74,10 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 ## Examples
 
-- [FedCM sign-in example](https://fedcm-rp-demo.glitch.me/)
-  - [RP source code](https://glitch.com/edit/#!/fedcm-rp-demo?path=server.js%3A1%3A0)
-  - [IdP source code](https://glitch.com/edit/#!/fedcm-idp-demo?path=server.js%3A1%3A0)
-- [FedCM `<iframe>` sign-in](https://fedcm-main-frame.glitch.me/)
-  - [RP `<iframe>` page source code](https://glitch.com/edit/#!/fedcm-main-frame?path=index.html%3A1%3A0)
-  - [IdP source code](https://glitch.com/edit/#!/webid-fcm-idp-single?path=server.js%3A1%3A0)
+For example code, see:
+
+- [Implement an identity solution with FedCM on the Identity Provider side](https://privacysandbox.google.com/cookies/fedcm/implement/identity-provider) on privacysandbox.google.com (2025).
+- [Implement an identity solution with FedCM on the Relying Party side](https://privacysandbox.google.com/cookies/fedcm/implement/relying-party) on privacysandbox.google.com (2025).
 
 ## Specifications
 

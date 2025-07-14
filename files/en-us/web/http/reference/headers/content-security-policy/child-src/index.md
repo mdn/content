@@ -4,9 +4,8 @@ short-title: child-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.child-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`child-src`** directive defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing

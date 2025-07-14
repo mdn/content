@@ -3,9 +3,8 @@ title: "<meter>: The HTML Meter element"
 slug: Web/HTML/Reference/Elements/meter
 page-type: html-element
 browser-compat: html.elements.meter
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 

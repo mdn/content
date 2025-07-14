@@ -4,9 +4,8 @@ short-title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
 page-type: http-header
 browser-compat: http.headers.X-Frame-Options
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 > [!NOTE]
 > For more comprehensive options than offered by this header, see the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.

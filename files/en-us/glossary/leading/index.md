@@ -2,9 +2,8 @@
 title: Leading
 slug: Glossary/Leading
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In typography, **leading** is an amount of space included above and below text to provide spacing between lines. Historically, in physical typesetting, pieces of actual [lead](https://en.wikipedia.org/wiki/Lead) were used to implement this spacing, which is where the name comes from.
 

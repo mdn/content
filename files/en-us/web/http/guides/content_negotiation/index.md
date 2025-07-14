@@ -2,9 +2,8 @@
 title: Content negotiation
 slug: Web/HTTP/Guides/Content_negotiation
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 

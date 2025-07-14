@@ -3,9 +3,8 @@ title: Global attributes
 slug: Web/HTML/Reference/Global_attributes
 page-type: landing-page
 browser-compat: html.global_attributes
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **Global attributes** are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.
 

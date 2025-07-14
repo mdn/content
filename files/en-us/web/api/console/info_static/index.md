@@ -44,6 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.info()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/console/api#info)
+- [Microsoft Edge's documentation for `console.info()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#info)
 - [Node.js documentation for `console.info()`](https://nodejs.org/docs/latest/api/console.html#consoleinfodata-args)
 - [Google Chrome's documentation for `console.info()`](https://developer.chrome.com/docs/devtools/console/api/#info)

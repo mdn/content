@@ -4,9 +4,8 @@ short-title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`TRACE`** HTTP method performs a message loop-back test along the path to the target resource.
 

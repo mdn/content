@@ -45,7 +45,7 @@ font-variation-settings: "wdth" 75;
 
 p {
   font-size: 1.5rem;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 

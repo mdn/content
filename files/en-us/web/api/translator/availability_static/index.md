@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("Translator")}} interface returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 

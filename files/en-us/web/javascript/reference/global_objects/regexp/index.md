@@ -3,9 +3,8 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
 

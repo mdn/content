@@ -25,7 +25,7 @@ No notable changes.
 
 #### Removals
 
-- The non-standard {{httpheader("Large-Allocation")}} HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
+- The non-standard `Large-Allocation` HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
 
 ### APIs
 

@@ -74,10 +74,10 @@ p {
   margin: 0.7rem 3rem;
 }
 .swash-off {
-  font-family: MonteCarlo;
+  font-family: MonteCarlo, cursive;
 }
 .swash-on {
-  font-family: MonteCarlo2;
+  font-family: MonteCarlo2, cursive;
 }
 ```
 

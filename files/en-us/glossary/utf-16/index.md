@@ -2,9 +2,8 @@
 title: UTF-16
 slug: Glossary/UTF-16
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 UTF-16 is a {{glossary("character encoding")}} standard for {{glossary("Unicode")}}. It encodes each Unicode {{glossary("code point")}} using either one or two {{glossary("code unit", "code units")}}. Each code unit is a 16-bit value.
 

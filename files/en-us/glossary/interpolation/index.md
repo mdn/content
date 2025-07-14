@@ -2,9 +2,8 @@
 title: Interpolation
 slug: Glossary/Interpolation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Interpolation is a method for estimating new data points based on a set of known data points.
 

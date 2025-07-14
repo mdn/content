@@ -152,7 +152,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 
 .ordinal {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   font-variant-numeric: ordinal;
 }

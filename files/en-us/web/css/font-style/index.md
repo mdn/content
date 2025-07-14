@@ -48,7 +48,7 @@ font-style: oblique 40deg;
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 

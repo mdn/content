@@ -2,9 +2,8 @@
 title: Accessibility tree
 slug: Glossary/Accessibility_tree
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **accessibility tree** contains {{Glossary("accessibility")}}-related information for most HTML elements.
 

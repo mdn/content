@@ -3,9 +3,8 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 page-type: javascript-class
 browser-compat: javascript.builtins.ReferenceError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ReferenceError`** object represents an error when a variable that doesn't exist (or hasn't yet been initialized) in the current scope is referenced.
 

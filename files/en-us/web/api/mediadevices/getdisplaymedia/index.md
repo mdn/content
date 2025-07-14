@@ -28,7 +28,7 @@ getDisplayMedia(options)
 - `options` {{optional_inline}}
   - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}. The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified. The list of possible option properties for `getDisplayMedia()` is as follows:
     - `video` {{optional_inline}}
-      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the stream will contain a video track A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
+      - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{Experimental_Inline}} {{optional_inline}}
@@ -142,7 +142,7 @@ perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack(
 add the video track from the stream.
 
 > [!NOTE]
-> The [Screen sharing controls](https://screen-sharing-controls.glitch.me/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
+> The [Screen sharing controls](https://chrome.dev/screen-sharing-controls/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
 
 ## Specifications
 

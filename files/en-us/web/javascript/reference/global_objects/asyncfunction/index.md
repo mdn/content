@@ -3,9 +3,8 @@ title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncFunction`** object provides methods for [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). In JavaScript, every async function is actually an `AsyncFunction` object.
 

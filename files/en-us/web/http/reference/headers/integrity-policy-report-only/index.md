@@ -4,9 +4,8 @@ short-title: Integrity-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Integrity-Policy-Report-Only
 page-type: http-header
 browser-compat: http.headers.Integrity-Policy-Report-Only
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Integrity-Policy-Report-Only`** response header allows website administrators to report on resources that the user agent loads that would violate [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees if the integrity policy was enforced (using the {{HTTPHeader("Integrity-Policy")}} header).
 

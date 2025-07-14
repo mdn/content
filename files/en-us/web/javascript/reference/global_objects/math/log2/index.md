@@ -4,9 +4,8 @@ short-title: log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.log2
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.log2()`** static method returns the base 2 logarithm of a number. That is
 

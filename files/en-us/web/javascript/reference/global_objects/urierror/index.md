@@ -3,9 +3,8 @@ title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 page-type: javascript-class
 browser-compat: javascript.builtins.URIError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`URIError`** object represents an error when a global URI handling function was used in a wrong way.
 

@@ -2,9 +2,8 @@
 title: Game promotion
 slug: Games/Publishing_games/Game_promotion
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Developing and publishing your game is not enough. You have to let the world know that you have something interesting available that people will enjoy playing. There are many ways to promote your game — most of them being free, so even if you're struggling to make a living as an indie dev with zero budget you can still do a lot to let people know about your great new game. Promoting the game helps a lot when [monetizing](/en-US/docs/Games/Publishing_games/Game_monetization) it later on too, so it's important to do it correctly.
 

@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.fromEpochNanoseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Instant.fromEpochNanoseconds()`** static method creates a new `Temporal.Instant` object from the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 

@@ -3,9 +3,8 @@ title: HTTP headers
 short-title: Headers
 slug: Web/HTTP/Reference/Headers
 page-type: landing-page
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with a message in a request or response.
 In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).

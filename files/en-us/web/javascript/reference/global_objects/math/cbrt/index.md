@@ -4,9 +4,8 @@ short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cbrt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cbrt()`** static method returns the cube root of a number. That is
 

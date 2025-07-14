@@ -3,9 +3,8 @@ title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 page-type: javascript-global-property
 browser-compat: javascript.builtins.NaN
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`NaN`** global property is a value representing Not-A-Number.
 

@@ -6,9 +6,10 @@ page-type: http-csp-directive
 status:
   - deprecated
 browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > This directive is marked as obsolete in the specification.

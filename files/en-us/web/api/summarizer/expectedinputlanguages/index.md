@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.expectedInputLanguages
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`expectedInputLanguages`** read-only property of the {{domxref("Summarizer")}} interface returns the languages the `Summarizer` should support.
 

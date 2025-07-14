@@ -7,7 +7,7 @@ status:
 browser-compat: api.CreateMonitor
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`CreateMonitor`** interface provides information on the progress of an AI model download or some fine-tuning data for the model.
 

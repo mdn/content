@@ -262,20 +262,20 @@ function inchesToMeters(num) {
 
    ```js
    function inchesToMeters(num) {
-     if (typeof num === "number" && !isNaN(num)) {
-       const mVal = (num * 2.54) / 100;
-       const m2dp = mVal.toFixed(2);
-       return m2dp;
-     } else {
+     if (typeof num !== "number" || Number.isNaN(num)) {
        console.log("A number was not provided. Please correct the input.");
+       return undefined;
      }
+     const mVal = (num * 2.54) / 100;
+     const m2dp = mVal.toFixed(2);
+     return m2dp;
    }
    ```
 
 7. Now if you try the first two scenarios again, you'll see our slightly more useful message returned, to give you an idea of what needs to be done to fix the problem. You could put anything in there that you like, including trying to run code to correct the value of `num`, but this is not advised — this function has one simple purpose, and you should handle correcting the value somewhere else in the system.
 
    > [!NOTE]
-   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("isNaN()", "!isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, as weirdly, `typeof NaN` returns `"number"`!
+   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("Number.isNaN", "Number.isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, because `typeof NaN` still returns `"number"`!
 
 8. However, if you try the third scenario again, you will still get the "Uncaught ReferenceError: height is not defined" error thrown at you. You can't fix the fact that a value is not available from inside a function that is trying to use the value.
 

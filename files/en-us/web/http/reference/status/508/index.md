@@ -3,9 +3,8 @@ title: 508 Loop Detected
 slug: Web/HTTP/Reference/Status/508
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc5842#section-7.2
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`508 Loop Detected`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that the entire operation failed because it encountered an infinite loop while processing a request with `Depth: infinity`.
 

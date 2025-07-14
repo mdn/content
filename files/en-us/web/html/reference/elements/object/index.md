@@ -3,9 +3,8 @@ title: "<object>: The External Object element"
 slug: Web/HTML/Reference/Elements/object
 page-type: html-element
 browser-compat: html.elements.object
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
 

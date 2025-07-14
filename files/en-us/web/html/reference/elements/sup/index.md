@@ -3,9 +3,8 @@ title: "<sup>: The Superscript element"
 slug: Web/HTML/Reference/Elements/sup
 page-type: html-element
 browser-compat: html.elements.sup
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 

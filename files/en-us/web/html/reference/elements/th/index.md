@@ -3,9 +3,8 @@ title: "<th>: The Table Header element"
 slug: Web/HTML/Reference/Elements/th
 page-type: html-element
 browser-compat: html.elements.th
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header of a group of table cells and may be used as a child of the {{HTMLElement("tr")}} element. The exact nature of this group is defined by the [`scope`](#scope) and [`headers`](#headers) attributes.
 

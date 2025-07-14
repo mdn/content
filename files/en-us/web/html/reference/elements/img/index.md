@@ -3,9 +3,8 @@ title: "<img>: The Image Embed element"
 slug: Web/HTML/Reference/Elements/img
 page-type: html-element
 browser-compat: html.elements.img
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 

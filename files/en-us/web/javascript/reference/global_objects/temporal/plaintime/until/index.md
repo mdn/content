@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.until
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`until()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this time to another time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}). The duration is positive if the other time is after this time, and negative if before.
 

@@ -83,26 +83,23 @@ svg {
   border: 1px solid #d9d9d9;
   position: absolute;
   margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
 
 #box {
   transform-origin: 50% 50%; /* anything other than `0 0` to see the effect */
   transform-box: fill-box;
-  animation: rotateBox 3s linear infinite;
+  animation: rotate-box 3s linear infinite;
 }
 
-@keyframes rotateBox {
+@keyframes rotate-box {
   to {
     transform: rotate(360deg);
   }
 }
 ```
 
-Full credit for this example goes to [Pogany](https://codepen.io/giaco); see [this codepen](https://codepen.io/giaco/pen/OwowJQ) for a live version.
+{{EmbedLiveSample("SVG transform-origin scoping", "", 400)}}
 
 ## Specifications
 

@@ -3,9 +3,8 @@ title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakRef
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`WeakRef`** object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected.
 

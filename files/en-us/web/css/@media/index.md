@@ -84,7 +84,7 @@ Except when using the `only` logical operator, the media type is optional and th
   - : Intended primarily for screens.
 
 > [!NOTE]
-> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
+> CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and {{cssxref("@media/aural", "aural")}}), but they were deprecated in [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) and shouldn't be used.
 
 ### Media features
 

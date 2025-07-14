@@ -6,9 +6,10 @@ page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.compare
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainYearMonth.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. It is equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
 

@@ -4,9 +4,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
 spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 

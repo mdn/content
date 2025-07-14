@@ -4,9 +4,8 @@ short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 page-type: html-attribute
 browser-compat: html.global_attributes.popover
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`popover`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to designate an element as a popover element.
 

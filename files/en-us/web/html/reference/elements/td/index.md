@@ -3,9 +3,8 @@ title: "<td>: The Table Data Cell element"
 slug: Web/HTML/Reference/Elements/td
 page-type: html-element
 browser-compat: html.elements.td
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table that contains data and may be used as a child of the {{HTMLElement("tr")}} element.
 

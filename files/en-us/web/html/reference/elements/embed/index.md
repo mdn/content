@@ -3,9 +3,8 @@ title: "<embed>: The Embed External Content element"
 slug: Web/HTML/Reference/Elements/embed
 page-type: html-element
 browser-compat: html.elements.embed
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
 

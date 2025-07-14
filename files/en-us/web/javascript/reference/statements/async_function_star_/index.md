@@ -3,9 +3,8 @@ title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 page-type: javascript-statement
 browser-compat: javascript.statements.async_generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`async function*`** declaration creates a {{Glossary("binding")}} of a new async generator function to a given name.
 

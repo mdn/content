@@ -4,9 +4,8 @@ short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-2
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Digest`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} provides a {{Glossary("hash function", "digest")}} calculated using a hashing algorithm applied to the message content.
 A recipient can use the `Content-Digest` to validate the HTTP message content for integrity purposes.

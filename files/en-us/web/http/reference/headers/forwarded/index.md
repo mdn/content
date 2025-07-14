@@ -4,9 +4,8 @@ short-title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc7239
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Forwarded`** {{Glossary("request header")}} contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling) (load balancers, CDNs, etc.) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
 

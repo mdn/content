@@ -4,9 +4,8 @@ short-title: max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.max
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.max()`** static method returns the largest of the numbers given as input parameters, or -{{jsxref("Infinity")}} if there are no parameters.
 

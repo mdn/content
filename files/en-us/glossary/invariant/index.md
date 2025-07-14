@@ -2,9 +2,8 @@
 title: Invariant
 slug: Glossary/Invariant
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In program semantics, an **invariant** of a piece of code is a condition that is provably true throughout the execution of that code. Defining invariants helps to reason about the code's correctness and behavior.
 

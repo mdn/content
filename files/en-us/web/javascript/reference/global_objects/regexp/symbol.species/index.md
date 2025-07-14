@@ -4,9 +4,8 @@ short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp[Symbol.species]`** static accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
 

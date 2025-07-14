@@ -4,9 +4,8 @@ short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 

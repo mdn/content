@@ -4,9 +4,8 @@ short-title: itemtype
 slug: Web/HTML/Reference/Global_attributes/itemtype
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemtype
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) **`itemtype`** specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure.
 

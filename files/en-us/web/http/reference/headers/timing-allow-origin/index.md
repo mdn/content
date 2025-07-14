@@ -4,9 +4,8 @@ short-title: Timing-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
 page-type: http-header
 browser-compat: http.headers.Timing-Allow-Origin
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Timing-Allow-Origin`** {{Glossary("response header")}} specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing), which would otherwise be reported as zero due to cross-origin restrictions.
 

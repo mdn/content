@@ -4,9 +4,8 @@ short-title: RangeError()
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.RangeError.RangeError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RangeError()`** constructor creates {{jsxref("RangeError")}} objects.
 

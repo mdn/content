@@ -20329,7 +20329,7 @@
     "modified": "2020-10-15T22:21:03.220Z",
     "contributors": ["1valdis"]
   },
-  "Web/API/AudioWorkletProcessor/parameterDescriptors": {
+  "Web/API/AudioWorkletProcessor/parameterDescriptors_static": {
     "modified": "2020-10-15T22:21:04.116Z",
     "contributors": ["Sheppy", "chrisdavidmills", "1valdis"]
   },
@@ -71833,32 +71833,6 @@
       "ebidel"
     ]
   },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2020-10-15T21:15:11.459Z",
-    "contributors": [
-      "wbamberg",
-      "ddbeck",
-      "chrisdavidmills",
-      "ExE-Boss",
-      "teoli",
-      "Loirooriol",
-      "Sebastianz",
-      "wjsskanyo",
-      "GKFX",
-      "kscarfone",
-      "bsmedberg",
-      "Sheppy",
-      "ethertank",
-      "Lukas Skywalker",
-      "BijuGC",
-      "Nickolay",
-      "Fredchat",
-      "KaiRo",
-      "Mgjbot",
-      "DBaron",
-      "Cananian"
-    ]
-  },
   "Web/CSS/-moz-orient": {
     "modified": "2020-10-15T21:12:04.633Z",
     "contributors": [
@@ -121985,20 +121959,6 @@
       "sebmozilla"
     ]
   },
-  "Web/SVG/Reference/Attribute/from": {
-    "modified": "2020-10-15T21:13:01.508Z",
-    "contributors": ["Sebastianz", "SueSmith", "Jeremie", "sebmozilla"]
-  },
-  "Web/SVG/Reference/Attribute/to": {
-    "modified": "2019-07-04T18:01:27.376Z",
-    "contributors": [
-      "Sebastianz",
-      "HTMLValidator",
-      "SueSmith",
-      "Jeremie",
-      "sebmozilla"
-    ]
-  },
   "Web/SVG/Reference/Attribute/accumulate": {
     "modified": "2019-04-20T11:26:46.650Z",
     "contributors": ["Sebastianz", "Jeremie"]
@@ -122437,6 +122397,10 @@
   "Web/SVG/Reference/Attribute/fr": {
     "modified": "2020-10-15T21:54:40.575Z",
     "contributors": ["Sebastianz", "chrisdavidmills"]
+  },
+  "Web/SVG/Reference/Attribute/from": {
+    "modified": "2020-10-15T21:13:01.508Z",
+    "contributors": ["Sebastianz", "SueSmith", "Jeremie", "sebmozilla"]
   },
   "Web/SVG/Reference/Attribute/fx": {
     "modified": "2020-10-15T21:32:47.074Z",
@@ -123113,6 +123077,16 @@
       "Sheppy",
       "rolfedh",
       "Tigt"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/to": {
+    "modified": "2019-07-04T18:01:27.376Z",
+    "contributors": [
+      "Sebastianz",
+      "HTMLValidator",
+      "SueSmith",
+      "Jeremie",
+      "sebmozilla"
     ]
   },
   "Web/SVG/Reference/Attribute/transform": {

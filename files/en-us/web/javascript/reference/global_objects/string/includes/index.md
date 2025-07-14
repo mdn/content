@@ -4,9 +4,8 @@ short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.includes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`includes()`** method of {{jsxref("String")}} values performs a case-sensitive search to determine whether a given string may be found within this string, returning `true` or `false` as appropriate.
 

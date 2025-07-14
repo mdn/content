@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.compute-pressure
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `compute-pressure` directive controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 

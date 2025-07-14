@@ -2,9 +2,8 @@
 title: Reading order
 slug: Glossary/Reading_order
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Reading order** refers to the order in which content is accessed, for example when read out by a {{glossary("screen reader")}}, or navigated to using sequential navigation methods such as tabbing through links or buttons. By default, the reading order of a webpage is defined by the document source order.
 

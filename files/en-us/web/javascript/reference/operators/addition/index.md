@@ -3,9 +3,8 @@ title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 page-type: javascript-operator
 browser-compat: javascript.operators.addition
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **addition (`+`)** operator produces the sum of numeric operands or string concatenation.
 

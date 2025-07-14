@@ -206,4 +206,4 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 
 ### Web APIs
 
-- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#doing_some_basic_dom_manipulation)

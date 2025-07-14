@@ -4,9 +4,8 @@ short-title: Referer
 slug: Web/HTTP/Reference/Headers/Referer
 page-type: http-header
 browser-compat: http.headers.Referer
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Referer`** {{Glossary("request header")}} contains the absolute or partial address from which a resource has been requested.
 The `Referer` header allows a server to identify referring pages that people are visiting from or where requested resources are being used.

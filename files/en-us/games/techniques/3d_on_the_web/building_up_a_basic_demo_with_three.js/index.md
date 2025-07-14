@@ -2,9 +2,8 @@
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to view it, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three.js, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 

@@ -2,9 +2,8 @@
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 

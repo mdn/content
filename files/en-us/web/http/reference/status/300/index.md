@@ -3,9 +3,8 @@ title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`300 Multiple Choices`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the request has more than one possible response.
 The user-agent or the user should choose one of them.

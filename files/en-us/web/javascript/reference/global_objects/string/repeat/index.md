@@ -4,9 +4,8 @@ short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.repeat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
 which contains the specified number of copies of this string, concatenated together.

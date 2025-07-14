@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.select.size
   - html.elements.input.size
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`size`** attribute defines the width of the {{htmlelement('input')}} and the height of the {{htmlelement('select')}} element. For an `input` element, it defines the number of characters that the user agent allows the user to see when editing the value. For a `select` element, it defines the number of options that should be shown to the user. This must be a valid non-negative integer greater than zero.
 

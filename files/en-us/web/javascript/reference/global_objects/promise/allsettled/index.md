@@ -4,9 +4,8 @@ short-title: allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.allSettled
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.allSettled()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 

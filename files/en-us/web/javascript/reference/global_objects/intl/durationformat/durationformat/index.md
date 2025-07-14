@@ -4,9 +4,8 @@ short-title: Intl.DurationFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DurationFormat()`** constructor creates {{jsxref("Intl.DurationFormat")}} objects.
 

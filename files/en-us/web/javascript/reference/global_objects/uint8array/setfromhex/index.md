@@ -4,9 +4,8 @@ short-title: setFromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromHex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFromHex()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object indicating how many bytes were read and written.
 

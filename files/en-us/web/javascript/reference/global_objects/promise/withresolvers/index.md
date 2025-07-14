@@ -4,9 +4,8 @@ short-title: withResolvers()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/withResolvers
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.withResolvers
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.withResolvers()`** static method returns an object containing a new {{jsxref("Promise")}} object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 

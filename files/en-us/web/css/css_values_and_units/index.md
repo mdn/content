@@ -42,13 +42,15 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("sibling-index()")}}
 - {{cssxref("sign()")}}
 - {{cssxref("sin()")}}
 - {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
-- {{cssxref("url()")}}
+- {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
 
 ### Data types
 

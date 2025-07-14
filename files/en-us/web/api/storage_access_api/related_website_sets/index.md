@@ -143,8 +143,7 @@ RWS has been designed with security in mind. It would be disastrous if a bad act
 
 ## Examples
 
-- The [Related Website Sets demo](https://related-website-sets.glitch.me/) demonstrates how RWS is used.
-- Also see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using).
+For code examples, see [Related Website Sets: developer guide](https://privacysandbox.google.com/cookies/related-website-sets-integration) on privacysandbox.google.com (2024)
 
 ## Specifications
 
@@ -161,4 +160,3 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
 - [Related Website Sets](https://privacysandbox.google.com/cookies/related-website-sets) on privacysandbox.google.com (2023)
-- [Related Website Sets: developer guide](https://privacysandbox.google.com/cookies/related-website-sets-integration) on privacysandbox.google.com (2023)

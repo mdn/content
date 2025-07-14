@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.Instant
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Instant()`** constructor creates {{jsxref("Temporal.Instant")}} objects.
 

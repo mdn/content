@@ -3,9 +3,8 @@ title: "Character class escape: \\d, \\D, \\w, \\W, \\s, \\S"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class_escape
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_class_escape
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **character class escape** is an escape sequence that represents a set of characters.
 

@@ -3,9 +3,8 @@ title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 page-type: javascript-class
 browser-compat: javascript.builtins.TypedArray
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
 underlying [binary data buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).

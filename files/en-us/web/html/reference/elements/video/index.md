@@ -3,9 +3,8 @@ title: "<video>: The Video Embed element"
 slug: Web/HTML/Reference/Elements/video
 page-type: html-element
 browser-compat: html.elements.video
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player which supports video playback into the document. You can use `<video>` for audio content as well, but the {{HTMLElement("audio")}} element may provide a more appropriate user experience.
 

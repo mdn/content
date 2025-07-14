@@ -2,9 +2,8 @@
 title: JavaScript language overview
 slug: Web/JavaScript/Guide/Language_overview
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
 

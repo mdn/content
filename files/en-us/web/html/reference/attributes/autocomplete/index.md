@@ -8,9 +8,8 @@ browser-compat:
   - html.elements.input.autocomplete
   - html.elements.select.autocomplete
   - html.elements.textarea.autocomplete
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 

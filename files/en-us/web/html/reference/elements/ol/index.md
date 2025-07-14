@@ -3,9 +3,8 @@ title: "<ol>: The Ordered List element"
 slug: Web/HTML/Reference/Elements/ol
 page-type: html-element
 browser-compat: html.elements.ol
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list of items — typically rendered as a numbered list.
 

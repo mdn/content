@@ -98,7 +98,7 @@ The HTML creates a box containing a color picker control (with a label created u
     16px "Lucida Grande",
     "Helvetica",
     "Arial",
-    "sans-serif";
+    sans-serif;
 }
 ```
 

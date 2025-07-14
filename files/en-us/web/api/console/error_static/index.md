@@ -44,6 +44,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/console/api#error)
+- [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#error)
 - [Node.js documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
 - [Google Chrome's documentation for `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)

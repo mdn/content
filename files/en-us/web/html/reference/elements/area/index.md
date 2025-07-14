@@ -3,9 +3,8 @@ title: "<area>: The Image Map Area element"
 slug: Web/HTML/Reference/Elements/area
 page-type: html-element
 browser-compat: html.elements.area
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<area>`** [HTML](/en-US/docs/Web/HTML) element defines an area inside an image map that has predefined clickable areas. An _image map_ allows geometric areas on an image to be associated with {{Glossary("Hyperlink", "hypertext links")}}.
 

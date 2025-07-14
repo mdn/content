@@ -4,9 +4,8 @@ short-title: object-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the

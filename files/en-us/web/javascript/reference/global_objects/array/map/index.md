@@ -4,9 +4,8 @@ short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`map()`** method of {{jsxref("Array")}} instances creates
 a new array populated with the results of calling a provided function on

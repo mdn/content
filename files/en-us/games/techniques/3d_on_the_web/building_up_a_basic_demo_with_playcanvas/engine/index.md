@@ -2,9 +2,8 @@
 title: Building up a basic demo with the PlayCanvas engine
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Built for modern browsers, **PlayCanvas** is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with [ammo.js](https://github.com/kripken/ammo.js/)), audio, and facilities to handle control inputs from various devices (including gamepads).
 That's quite an impressive list of features — let's see some in action.

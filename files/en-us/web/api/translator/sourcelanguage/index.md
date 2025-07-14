@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.sourceLanguage
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`sourceLanguage`** read-only property of the {{domxref("Translator")}} interface returns the expected language of the input text to be translated.
 

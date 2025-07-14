@@ -3,9 +3,8 @@ title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 page-type: javascript-language-feature
 browser-compat: javascript.functions.method_definitions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 

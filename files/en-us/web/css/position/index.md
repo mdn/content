@@ -499,7 +499,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: verdana;
+  font-family: Verdana;
   border: 1px solid;
 }
 

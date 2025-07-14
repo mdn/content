@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Use-As-Dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 

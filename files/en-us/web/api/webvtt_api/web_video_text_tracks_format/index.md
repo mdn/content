@@ -514,7 +514,7 @@ STYLE
 To select a particular tag and class you must specify both in `::cue()`:
 
 ```css
-STYLE ::cue(b.myclass) {
+::cue(b.myclass) {
   color: yellow;
 }
 ```

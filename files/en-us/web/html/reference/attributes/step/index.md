@@ -4,9 +4,8 @@ short-title: step
 slug: Web/HTML/Reference/Attributes/step
 page-type: html-attribute
 browser-compat: html.elements.input.step
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`step`** attribute is a number that specifies the granularity that the value must adhere to or the keyword `any`. It is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types.
 

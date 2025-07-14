@@ -2,9 +2,8 @@
 title: Inline-level content
 slug: Glossary/Inline-level_content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, content that participates in inline layout is called **inline-level content**. Most text sequences, replaced elements, and generated content are inline-level by default.
 

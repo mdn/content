@@ -3,9 +3,8 @@ title: "<caption>: The Table Caption element"
 slug: Web/HTML/Reference/Elements/caption
 page-type: html-element
 browser-compat: html.elements.caption
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible description")}}.
 
@@ -77,14 +76,18 @@ tr:nth-child(odd) td {
 }
 
 .heman {
-  font: 1.4rem molot;
+  font:
+    1.4rem molot,
+    sans-serif;
   text-shadow:
     1px 1px 1px #fff,
     2px 2px 1px #000;
 }
 
 .skeletor {
-  font: 1.7rem rapscallion;
+  font:
+    1.7rem rapscallion,
+    fantasy;
   letter-spacing: 3px;
   text-shadow:
     1px 1px 0 #fff,

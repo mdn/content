@@ -8,7 +8,7 @@ browser-compat: api.Translator
 spec-urls: https://webmachinelearning.github.io/translation-api
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Translator and Language Detector APIs")}}
+{{DefaultAPISidebar("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **Translator and Language Detector APIs** provide functionality to detect the language that text is written in, and to translate text into different languages, via a browser's own internal AI model (which may differ between browsers).
 

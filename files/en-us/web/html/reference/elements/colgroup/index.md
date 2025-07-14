@@ -3,9 +3,8 @@ title: "<colgroup>: The Table Column Group element"
 slug: Web/HTML/Reference/Elements/colgroup
 page-type: html-element
 browser-compat: html.elements.colgroup
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of columns within a table.
 

@@ -4,9 +4,8 @@ short-title: Retry-After
 slug: Web/HTTP/Reference/Headers/Retry-After
 page-type: http-header
 browser-compat: http.headers.Retry-After
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Retry-After`** {{Glossary("response header")}} indicates how long the user agent should wait before making a follow-up request.
 There are three main cases this header is used:

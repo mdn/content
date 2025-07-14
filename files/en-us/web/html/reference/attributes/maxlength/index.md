@@ -6,9 +6,8 @@ page-type: html-attribute
 browser-compat:
   - html.elements.input.maxlength
   - html.elements.textarea.maxlength
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`maxlength`** attribute defines the maximum [string length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) that the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. The attribute must have an integer value of 0 or higher.
 

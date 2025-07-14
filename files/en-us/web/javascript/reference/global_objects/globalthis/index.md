@@ -3,9 +3,8 @@ title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 page-type: javascript-global-property
 browser-compat: javascript.builtins.globalThis
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 

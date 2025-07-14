@@ -4,9 +4,8 @@ short-title: Trailer
 slug: Web/HTTP/Reference/Headers/Trailer
 page-type: http-header
 browser-compat: http.headers.Trailer
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent.
 

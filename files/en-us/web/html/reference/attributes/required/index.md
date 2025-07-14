@@ -7,9 +7,8 @@ browser-compat:
   - html.elements.input.required
   - html.elements.select.required
   - html.elements.textarea.required
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The [Boolean](/en-US/docs/Glossary/Boolean/HTML) **`required`** attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
 

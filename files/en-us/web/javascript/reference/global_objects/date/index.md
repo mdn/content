@@ -3,9 +3,8 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
 browser-compat: javascript.builtins.Date
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 

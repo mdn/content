@@ -4,9 +4,8 @@ short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.viewport
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`viewport`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element gives hints about the initial size of the {{glossary("viewport")}}.
 If specified, you define viewport-related behaviors using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a comma-separated list of one or more values.

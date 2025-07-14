@@ -4,9 +4,8 @@ short-title: GeneratorFunction()
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction
 page-type: javascript-constructor
 browser-compat: javascript.builtins.GeneratorFunction.GeneratorFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`GeneratorFunction()`** constructor creates {{jsxref("GeneratorFunction")}} objects.
 

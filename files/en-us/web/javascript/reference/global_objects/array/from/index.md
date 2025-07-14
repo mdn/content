@@ -4,9 +4,8 @@ short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.from
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 

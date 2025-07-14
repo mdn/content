@@ -71,7 +71,7 @@ if (PublicKeyCredential.signalCurrentUserDetails) {
 }
 ```
 
-For a complete example, see [WebAuthn Signal API Demo](https://signal-api-demo.glitch.me/) (see [the source code](https://glitch.com/edit/#!/signal-api-demo?path=site.js)).
+For further code examples, see [Keep passkeys consistent with credentials on your server with the Signal API](https://developer.chrome.com/docs/identity/webauthn-signal-api) on developer.chrome.com (2024).
 
 ## Specifications
 

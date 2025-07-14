@@ -427,36 +427,92 @@ Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_eve
 > [!NOTE]
 > You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
-## Active learning: A simple calendar
+## Implementing a basic calendar
 
-In this example, you are going to help us finish a simple calendar application. In the code you've got:
+In this example, you are going to help us finish a basic calendar application. In the code you've got:
 
 - A {{htmlelement("select")}} element to allow the user to choose between different months.
-- An `onchange` event handler to detect when the value selected in the `<select>` menu is changed.
+- A `change` event handler to detect when the value selected in the `<select>` menu is changed.
 - A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("Heading_Elements", "h1")}} element.
 
-We need you to write a conditional statement inside the `createCalendar()` function, just below the `// ADD CONDITIONAL HERE` comment. It should:
+To complete the example:
 
-1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
-2. Assign the `days` variable to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Write a conditional statement inside the `createCalendar()` function, just below the `// ADD CONDITIONAL HERE` comment. It should:
+   1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example).
+   2. Assign the `days` variable to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
 
 Hints:
 
 - You are advised to use logical OR to group multiple months together into a single condition; many of them share the same number of days.
 - Think about which number of days is the most common, and use that as a default value.
 
-If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
-```html hidden
-<h2>Live output</h2>
-<iframe id="output" width="100%" height="600px"></iframe>
+```html hidden live-sample___conditionals-1
+<label for="month">Select month: </label>
+<select id="month">
+  <option value="January">January</option>
+  <option value="February">February</option>
+  <option value="March">March</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">September</option>
+  <option value="October">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
+</select>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
+<h1></h1>
 
-<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
+<ul></ul>
+```
+
+```css hidden live-sample___conditionals-1
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: block;
+  float: left;
+  width: 25%;
+  border: 2px solid white;
+  padding: 5px;
+  height: 40px;
+  background-color: #4a2db6;
+  color: white;
+}
+```
+
+```js live-sample___conditionals-1
 const select = document.querySelector("select");
 const list = document.querySelector("ul");
 const h1 = document.querySelector("h1");
@@ -482,45 +538,17 @@ function createCalendar(month) {
 
 select.value = "January";
 createCalendar("January");
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample("conditionals-1", "100%", 550) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished JavaScript should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const outputIFrame = document.querySelector("#output");
-const textarea = document.getElementById("code");
-const initialCode = textarea.value;
-let userCode = textarea.value;
-
-const solutionCode = `const select = document.querySelector("select");
+```js
+const select = document.querySelector("select");
 const list = document.querySelector("ul");
 const h1 = document.querySelector("h1");
 
@@ -553,177 +581,42 @@ function createCalendar(month) {
 }
 
 select.value = "January";
-createCalendar("January");`;
-
-function outputDocument(code) {
-  const outputBody = `
-<div class="output" style="height: 500px; overflow: auto">
-  <label for="month">Select month: </label>
-  <select id="month">
-    <option value="January">January</option>
-    <option value="February">February</option>
-    <option value="March">March</option>
-    <option value="April">April</option>
-    <option value="May">May</option>
-    <option value="June">June</option>
-    <option value="July">July</option>
-    <option value="August">August</option>
-    <option value="September">September</option>
-    <option value="October">October</option>
-    <option value="November">November</option>
-    <option value="December">December</option>
-  </select>
-
-  <h1></h1>
-
-  <ul></ul>
-</div>`;
-
-  const outputStyle = `
-.output * {
-  box-sizing: border-box;
-}
-
-.output ul {
-  padding-left: 0;
-}
-
-.output li {
-  display: block;
-  float: left;
-  width: 25%;
-  border: 2px solid white;
-  padding: 5px;
-  height: 40px;
-  background-color: #4a2db6;
-  color: white;
-}
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}`;
-  return `
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <style>${outputStyle}</style>
-  </head>
-  <body>
-    ${outputBody}
-    <script>${code}<${"/"}script>
-  </body>
-</html>`;
-}
-
-function update() {
-  output.setAttribute("srcdoc", outputDocument(textarea.value));
-}
-
-update();
-
-textarea.addEventListener("input", update);
-
-reset.addEventListener("click", () => {
-  textarea.value = initialCode;
-  userEntry = textarea.value;
-  solution.value = "Show solution";
-  update();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    // remember the state of the user's code
-    // so we can restore it
-    userCode = textarea.value;
-    textarea.value = solutionCode;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userCode;
-    solution.value = "Show solution";
-  }
-  update();
-});
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
+createCalendar("January");
 ```
 
-{{ EmbedLiveSample('Active_learning_A_simple_calendar', '100%', 1210) }}
+</details>
 
-## Active learning: More color choices
+## Adding more color choices
 
-In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
+In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five.
 
-- It should accept the `choice` variable as its input expression.
-- For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`. Note that the option values are lowercase, while the option _labels_, as displayed in the live output, are capitalized. You should use the lowercase values in your code.
-- For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
+To complete the example:
 
-If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
+   1. It should accept the `choice` variable as its input expression.
+   2. For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`. Note that the option values are lowercase, while the option _labels_, as displayed in the live output, are capitalized. You should use the lowercase values in your code.
+   3. For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
-```html hidden
-<h2>Live output</h2>
-<iframe id="output" width="100%" height="350px"></iframe>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
+```html hidden live-sample___conditionals-2
+<label for="theme">Select theme: </label>
+<select id="theme">
+  <option value="white">White</option>
+  <option value="black">Black</option>
+  <option value="purple">Purple</option>
+  <option value="yellow">Yellow</option>
+  <option value="psychedelic">Psychedelic</option>
+</select>
 
-<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
-const select = document.querySelector('select');
-const html = document.querySelector('.output');
-
-select.addEventListener('change', () => {
-  const choice = select.value;
-
-  // ADD SWITCH STATEMENT
-});
-
-function update(bgColor, textColor) {
-  html.style.backgroundColor = bgColor;
-  html.style.color = textColor;
-}
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+<h1>This is my website</h1>
 ```
 
-```css hidden
+```css hidden live-sample___conditionals-2
 html {
   font-family: sans-serif;
+  height: 95%;
 }
 
 h2 {
@@ -739,39 +632,55 @@ h2 {
 
 body {
   margin: 10px;
-  background: #f5f9fa;
+  height: inherit;
 }
 ```
 
-```js hidden
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const outputIFrame = document.querySelector("#output");
-const textarea = document.getElementById("code");
-const initialCode = textarea.value;
-let userCode = textarea.value;
+```js live-sample___conditionals-2
+const select = document.querySelector("select");
+const html = document.querySelector("html");
 
-const solutionCode = `const select = document.querySelector('select');
-const html = document.querySelector('.output');
-
-select.addEventListener('change', () => {
+select.addEventListener("change", () => {
   const choice = select.value;
 
-  switch(choice) {
-    case 'black':
-      update('black','white');
+  // ADD SWITCH STATEMENT
+});
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+```
+
+{{ EmbedLiveSample("conditionals-2", "100%", 200) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished JavaScript should look like this:
+
+```js
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+
+select.addEventListener("change", () => {
+  const choice = select.value;
+
+  switch (choice) {
+    case "black":
+      update("black", "white");
       break;
-    case 'white':
-      update('white','black');
+    case "white":
+      update("white", "black");
       break;
-    case 'purple':
-      update('purple','white');
+    case "purple":
+      update("purple", "white");
       break;
-    case 'yellow':
-      update('yellow','purple');
+    case "yellow":
+      update("yellow", "purple");
       break;
-    case 'psychedelic':
-      update('lime','purple');
+    case "psychedelic":
+      update("lime", "purple");
       break;
   }
 });
@@ -779,96 +688,10 @@ select.addEventListener('change', () => {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}`;
-
-function outputDocument(code) {
-  const outputBody = `
-<div class="output" style="height: 300px;">
-  <label for="theme">Select theme: </label>
-  <select id="theme">
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="purple">Purple</option>
-    <option value="yellow">Yellow</option>
-    <option value="psychedelic">Psychedelic</option>
-  </select>
-
-  <h1>This is my website</h1>
-</div>`;
-
-  return `
-<!doctype html>
-<html lang="en-US">
-  <head>
-  </head>
-  <body>
-    ${outputBody}
-    <script>${code}<${"/"}script>
-  </body>
-</html>`;
-}
-
-function update() {
-  output.setAttribute("srcdoc", outputDocument(textarea.value));
-}
-
-update();
-
-textarea.addEventListener("input", update);
-
-reset.addEventListener("click", () => {
-  textarea.value = initialCode;
-  userEntry = textarea.value;
-  solution.value = "Show solution";
-  update();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    // remember the state of the user's code
-    // so we can restore it
-    userCode = textarea.value;
-    textarea.value = solutionCode;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userCode;
-    solution.value = "Show solution";
-  }
-  update();
-});
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
 }
 ```
 
-{{ EmbedLiveSample('Active_learning_More_color_choices', '100%', 950) }}
+</details>
 
 ## Test your skills!
 

@@ -4,9 +4,8 @@ short-title: Sec-Fetch-User
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-User
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Fetch-User`** {{Glossary("fetch metadata request header")}} is sent for requests initiated by user activation, and its value is always `?1`.
 

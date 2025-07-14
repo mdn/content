@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.Duration
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Duration()`** constructor creates {{jsxref("Temporal.Duration")}} objects.
 

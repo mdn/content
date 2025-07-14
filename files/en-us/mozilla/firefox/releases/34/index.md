@@ -52,7 +52,7 @@ _No change._
   - When trying to convert a symbol to a number, a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) will be thrown now.
   - When using loose equality, `Object(sym) == sym` returns `true` now.
 
-- The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
+- The experimental `TypedArray.prototype.move()` method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
 - In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ([Firefox bug 1041128](https://bugzil.la/1041128)).
 - In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see [Firefox bug 369778](https://bugzil.la/369778) and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox-specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ([Firefox bug 1053944](https://bugzil.la/1053944)).
 - The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 933276](https://bugzil.la/933276)).
@@ -65,13 +65,13 @@ _No change._
 - The {{domxref("Performance.now()")}} method is now available to Web workers ([Firefox bug 908390](https://bugzil.la/908390)).
 - The non-standard interface `MozNamedAttrMap` has been renamed to the standard {{domxref("NamedNodeMap")}} and {{domxref("Element.attributes")}} has been adapted to use it ([Firefox bug 1055467](https://bugzil.la/1055467)).
 - The {{domxref("Path2D.addPath()")}} method has been added ([Firefox bug 985801](https://bugzil.la/985801)).
-- The non-standard [Device Storage API](/en-US/docs/Web/API/Device_Storage_API) is now also enabled for privileged apps installed on Android ([Firefox bug 886627](https://bugzil.la/886627)).
+- The non-standard Device Storage API is now also enabled for privileged apps installed on Android ([Firefox bug 886627](https://bugzil.la/886627)).
 - Web Crypto API has been enabled by default ([Firefox bug 1074001](https://bugzil.la/1074001)).
 - The {{domxref("MediaStreamTrack.stop()")}} method has been added ([Firefox bug 1057955](https://bugzil.la/1057955)).
 - Our experimental implementation of EME continues. The `MediaKeySession.getUsableKeyIds()` method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
 - Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
   - an experiment implementation of `RTPSender` and `RTPReceiver` working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
-  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
+  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and `MediaTrackConstraintSet` now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
   - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ([Firefox bug 1041493](https://bugzil.la/1041493)).
 
 - For Web Components, event retargeting is now implemented ([Firefox bug 887541](https://bugzil.la/887541)).
@@ -108,7 +108,7 @@ _No change._
 - New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
 - [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
 - `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
-- Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#attaching_stylesheets).
+- Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#manipulating_a_tabs_css).
 
 #### Details
 

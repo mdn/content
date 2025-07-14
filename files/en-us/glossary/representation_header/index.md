@@ -2,9 +2,8 @@
 title: Representation header
 slug: Glossary/Representation_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **representation header** (or 'representation metadata') is an {{glossary("HTTP_header", "HTTP header")}} that describes how to interpret the data contained in the message.
 

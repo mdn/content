@@ -2,9 +2,8 @@
 title: "RangeError: form must be one of 'NFC', 'NFD', 'NFKC', or 'NFKD'"
 slug: Web/JavaScript/Reference/Errors/Form_must_be_one_of
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "form must be one of 'NFC', 'NFD', 'NFKC', or 'NFKD'" occurs when an unrecognized string is passed to the {{jsxref("String.prototype.normalize()")}} method.
 

@@ -4,9 +4,8 @@ short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.sort
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`sort()`** method of {{jsxref("TypedArray")}} instances sorts the elements of a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, now sorted. This method has the same algorithm as {{jsxref("Array.prototype.sort()")}}, except that it sorts the values numerically instead of as strings by default.
 

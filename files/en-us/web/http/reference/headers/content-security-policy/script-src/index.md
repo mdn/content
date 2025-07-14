@@ -4,9 +4,8 @@ short-title: script-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into {{HTMLElement("script")}} elements, but also things like inline script event handlers (`onclick`) and [XSLT stylesheets](/en-US/docs/Web/XML/XSLT) which can trigger script execution.
 

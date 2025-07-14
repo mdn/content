@@ -2,9 +2,8 @@
 title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 

@@ -4,9 +4,8 @@ short-title: caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.caseFirst
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`caseFirst`** accessor property of {{jsxref("Intl.Locale")}} instances returns whether case is taken into account for this locale's collation rules.
 

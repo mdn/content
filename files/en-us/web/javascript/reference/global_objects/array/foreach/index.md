@@ -4,9 +4,8 @@ short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.

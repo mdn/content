@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/X-Robots-Tag
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`X-Robots-Tag`** {{Glossary("response header")}} defines how {{glossary("Crawler", "crawlers")}} should index URLs.
 While not part of any specification, it is a de-facto standard method for communicating with search bots, web crawlers, and similar user agents.

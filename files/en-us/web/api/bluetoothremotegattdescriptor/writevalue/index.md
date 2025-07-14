@@ -12,18 +12,18 @@ browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 
 The **`BluetoothRemoteGATTDescriptor.writeValue()`**
 method sets the value property to the bytes contained in
-an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
+an {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} and returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
 ```js-nolint
-writeValue(array)
+writeValue(buffer)
 ```
 
 ### Parameters
 
-- `array`
-  - : Sets the value with the bytes contained in the array.
+- `buffer`
+  - : Sets the value with the bytes contained in the buffer.
 
 ### Return value
 

@@ -59,10 +59,6 @@ input.addEventListener("keypress", (e) => {
   respects the letter case (in other words, `charCode` takes into account
   whether the <kbd>shift</kbd> key is held down). Otherwise, the code of the pressed key
   is stored in `keyCode`.
-
-- When one or more modifier keys are pressed, there are some complex rules for
-  `charCode`. See [Gecko Keypress Event](/en-US/docs/Gecko_Keypress_Event)
-  for details.
 - `charCode` is never set in the {{domxref("Element/keydown_event", "keydown")}} and
   {{domxref("Element/keyup_event", "keyup")}} events. In these cases, `keyCode` is set instead.
 - To get the code of the key regardless of whether it was stored in

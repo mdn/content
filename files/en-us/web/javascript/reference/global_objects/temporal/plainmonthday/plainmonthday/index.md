@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainMonthDay()`** constructor creates {{jsxref("Temporal.PlainMonthDay")}} objects.
 

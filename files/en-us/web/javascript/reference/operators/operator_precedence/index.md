@@ -2,9 +2,8 @@
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **Operator precedence** determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.
 

@@ -6,9 +6,8 @@ spec-urls:
   - https://www.rfc-editor.org/rfc/rfc6455
   - https://www.rfc-editor.org/rfc/rfc7230
   - https://www.rfc-editor.org/rfc/rfc7540
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The [HTTP/1.1 protocol](/en-US/docs/Web/HTTP) provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.
 

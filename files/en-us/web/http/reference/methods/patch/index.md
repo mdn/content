@@ -4,9 +4,8 @@ short-title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
 page-type: http-method
 spec-urls: https://www.rfc-editor.org/rfc/rfc5789
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`PATCH`** HTTP method applies partial modifications to a resource.
 

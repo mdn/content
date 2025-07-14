@@ -4,9 +4,8 @@ short-title: Intl.DisplayNames()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}} objects.
 

@@ -4,9 +4,8 @@ short-title: search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.search
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 

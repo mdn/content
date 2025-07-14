@@ -2,9 +2,8 @@
 title: Block-level content
 slug: Glossary/Block-level_content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, content that participates in block layout is called **block-level content**.
 

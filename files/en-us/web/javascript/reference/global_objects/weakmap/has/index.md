@@ -4,9 +4,8 @@ short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`has()`** method of {{jsxref("WeakMap")}} instances returns a boolean indicating whether an
 element with the specified key exists in this `WeakMap` or not.

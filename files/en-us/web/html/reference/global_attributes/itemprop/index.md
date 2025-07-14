@@ -4,9 +4,8 @@ short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
 

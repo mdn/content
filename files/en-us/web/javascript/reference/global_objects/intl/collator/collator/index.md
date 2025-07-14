@@ -4,9 +4,8 @@ short-title: Intl.Collator()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Collator.Collator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 

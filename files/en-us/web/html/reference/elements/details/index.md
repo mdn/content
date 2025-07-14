@@ -3,9 +3,8 @@ title: "<details>: The Details disclosure element"
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 

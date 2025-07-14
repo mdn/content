@@ -3,9 +3,8 @@ title: Crisp pixel art look with image-rendering
 short-title: Image rendering for pixel art
 slug: Games/Techniques/Crisp_pixel_art_look
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.
 

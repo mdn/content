@@ -4,9 +4,8 @@ short-title: default-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** directive serves as a fallback for the other CSP {{Glossary("fetch directive", "fetch directives")}}. For each of the following directives that are absent, the user agent looks for the `default-src` directive and uses this value for it:
 

@@ -3,9 +3,8 @@ title: rel=preload
 slug: Web/HTML/Reference/Attributes/rel/preload
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.preload
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute lets you declare fetch requests in the
 HTML's {{htmlelement("head")}}, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,

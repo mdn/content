@@ -3,9 +3,8 @@ title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_month
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
 The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.

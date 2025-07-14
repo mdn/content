@@ -3,9 +3,8 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 

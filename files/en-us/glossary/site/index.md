@@ -2,9 +2,8 @@
 title: Site
 slug: Glossary/Site
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Informally, a _site_ is a website, which is a collection of web pages, served from the same domain, and maintained by a single organization.
 
@@ -26,7 +25,7 @@ These are the same site because the registrable domain of `mozilla.org` is the s
 - `https://developer.mozilla.org/en-US/docs/`
 - `https://support.mozilla.org/en-US/`
 
-These are the same site because the port is not relevant:
+These are considered the same site because the port number is ignored when determining the site:
 
 - `https://example.com:8080`
 - `https://example.com`

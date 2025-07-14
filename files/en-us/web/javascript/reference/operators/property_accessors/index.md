@@ -3,9 +3,8 @@ title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_accessors
 page-type: javascript-operator
 browser-compat: javascript.operators.property_accessors
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **Property accessors** provide access to an object's properties by using the dot notation or the bracket notation.
 

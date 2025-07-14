@@ -3,9 +3,8 @@ title: Destructuring
 slug: Web/JavaScript/Reference/Operators/Destructuring
 page-type: javascript-language-feature
 browser-compat: javascript.operators.destructuring
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **destructuring** syntax is a JavaScript syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. It can be used in locations that receive data (such as the left-hand side of an assignment or anywhere that creates new identifier bindings).
 

@@ -3,9 +3,8 @@ title: 418 I'm a teapot
 slug: Web/HTTP/Reference/Status/418
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2324#section-2.3.2
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`418 I'm a teapot`** status response code indicates that the server refuses to brew coffee because it is, permanently, a teapot.
 A combined coffee/tea pot that is temporarily out of coffee should instead return {{HTTPStatus("503")}}.

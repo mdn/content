@@ -4,9 +4,8 @@ short-title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
 page-type: http-header
 browser-compat: http.headers.Content-Disposition
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Disposition`** header indicates whether content should be displayed _inline_ in the browser as a web page or part of a web page or downloaded as an _attachment_ locally.
 

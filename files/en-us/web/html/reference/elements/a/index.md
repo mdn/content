@@ -3,9 +3,8 @@ title: "<a>: The Anchor element"
 slug: Web/HTML/Reference/Elements/a
 page-type: html-element
 browser-compat: html.elements.a
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 

@@ -3,9 +3,8 @@ title: "<form>: The Form element"
 slug: Web/HTML/Reference/Elements/form
 page-type: html-element
 browser-compat: html.elements.form
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 

@@ -2,9 +2,8 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference").
 

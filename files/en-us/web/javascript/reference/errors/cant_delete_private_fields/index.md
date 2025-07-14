@@ -2,9 +2,8 @@
 title: "SyntaxError: private fields can't be deleted"
 slug: Web/JavaScript/Reference/Errors/Cant_delete_private_fields
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "SyntaxError: private fields can't be deleted" occurs when [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) is used on a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) of a class or an object.
 

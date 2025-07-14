@@ -2,9 +2,8 @@
 title: Descriptor (CSS)
 slug: Glossary/CSS_Descriptor
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **CSS descriptor** defines the characteristics of an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). At-rules may have one or multiple descriptors. Each descriptor has:
 

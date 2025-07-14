@@ -24,8 +24,6 @@ Both of these provide information about the same batch of packets being transmit
 
 The difference is that `remote-outbound-rtp` describes statistics about data sent by the remote peer from the perspective of the remote peer, while `inbound-rtp` offers statistics about the incoming data from the local peer's perspective.
 
-You can [examine, try out, and experiment](#try_it_and_fork_it) with this example on Glitch.
-
 ## Examples
 
 In this example, we have a pair of functions: the first, `networkTestStart()`, captures an initial report, and the second, `networkTestStop()`, captures a second report.
@@ -173,14 +171,6 @@ The output log, given the styles used by the example, looks like this:
 In the screenshot, we see a heading followed by the scrollable {{HTMLElement("div")}} we refer to as `statsBox`.
 The box contains a number of log entries, the last handful of which are visible.
 Each one represents approximately one second of time (since that's much time we're waiting between calling `networkTestStart()` and `networkTestStop()`).
-
-### Try it and fork it
-
-This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me/), examine, or remix.
-
-[Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
-
-[View Source](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=view_source&utm_medium=button&utm_campaign=glitchButton#!/websocket-webrtc-chat-with-stats)
 
 ## Specifications
 

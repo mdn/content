@@ -4,9 +4,8 @@ short-title: isError()
 slug: Web/JavaScript/Reference/Global_Objects/Error/isError
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Error.isError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Error.isError()`** static method determines whether the passed value is an {{jsxref("Error")}}.
 

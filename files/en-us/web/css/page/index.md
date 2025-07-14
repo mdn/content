@@ -198,7 +198,7 @@ The `break-after: page;` is used to split them up, which splits each chapter int
   }
   section {
     font-size: 2rem;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
   }
   .chapter {
     border: tomato 2px solid;

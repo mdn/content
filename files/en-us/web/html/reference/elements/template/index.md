@@ -3,9 +3,8 @@ title: "<template>: The Content Template element"
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 

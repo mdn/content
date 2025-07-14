@@ -130,7 +130,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("lighting-color")}}
 - {{SVGAttr("limitingConeAngle")}}
-- {{SVGAttr("local")}}
 
 ### M
 
@@ -189,7 +188,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("refX")}}
 - {{SVGAttr("refY")}}
 - {{SVGAttr("rel")}}
-- {{SVGAttr("rendering-intent")}}
 - {{SVGAttr("repeatCount")}}
 - {{SVGAttr("repeatDur")}}
 - {{SVGAttr("requiredExtensions")}}
@@ -210,7 +208,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("spacing")}}
 - {{SVGAttr("specularConstant")}}
 - {{SVGAttr("specularExponent")}}
-- {{SVGAttr("speed")}}
 - {{SVGAttr("spreadMethod")}}
 - {{SVGAttr("startOffset")}}
 - {{SVGAttr("stdDeviation")}}
@@ -382,14 +379,12 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
-- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
 - {{SVGAttr("unicode-bidi")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
-- {{SVGAttr("white-space")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
@@ -412,7 +407,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - Animation timing attributes
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
 - Animation value attributes
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
 - Animation addition attributes
   - : {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 

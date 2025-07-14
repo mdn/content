@@ -4,9 +4,8 @@ short-title: Want-Content-Digest
 slug: Web/HTTP/Reference/Headers/Want-Content-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-4
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Want-Content-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates a preference for the recipient to send a {{HTTPHeader("Content-Digest")}} integrity header in messages associated with the request URI and representation metadata.
 

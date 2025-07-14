@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.create_static
 ---
 
-{{APIRef("Summarizer API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`create()`** static method of the {{domxref("Summarizer")}} interface creates a new `Summarizer` instance from which to generate summaries.
 

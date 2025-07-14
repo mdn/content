@@ -3,9 +3,8 @@ title: "<base>: The Document Base URL element"
 slug: Web/HTML/Reference/Elements/base
 page-type: html-element
 browser-compat: html.elements.base
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 

@@ -4,9 +4,8 @@ short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.entries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`entries()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.entries()")}}.
 

@@ -39,6 +39,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - See {{domxref("console/timeLog_static", "console.timeLog()")}} and {{domxref("console/timeEnd_static", "console.timeEnd()")}} for examples
-- [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide/console/api#time)
+- [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#time)
 - [Node.js documentation for `console.time()`](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
 - [Google Chrome's documentation for `console.time()`](https://developer.chrome.com/docs/devtools/console/api/#time)

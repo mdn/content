@@ -8,9 +8,8 @@ browser-compat:
   - html.elements.a.rel
   - html.elements.area.rel
   - html.elements.form.rel
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`rel`** attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.
 

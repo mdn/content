@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.bluetooth
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `bluetooth` directive controls whether the current document is allowed to use the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API).
 

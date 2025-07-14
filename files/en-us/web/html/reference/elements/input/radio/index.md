@@ -3,9 +3,8 @@ title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_radio
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`radio`** are generally used in **radio groups**—collections of radio buttons describing a set of related options.
 

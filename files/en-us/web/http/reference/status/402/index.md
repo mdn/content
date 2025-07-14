@@ -3,9 +3,8 @@ title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`402 Payment Required`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code is a **nonstandard** response status code reserved for future use.
 

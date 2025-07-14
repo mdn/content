@@ -3,9 +3,8 @@ title: "<tbody>: The Table Body element"
 slug: Web/HTML/Reference/Elements/tbody
 page-type: html-element
 browser-compat: html.elements.tbody
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of a table's (main) data.
 

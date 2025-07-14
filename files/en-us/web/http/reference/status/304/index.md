@@ -3,9 +3,8 @@ title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.304
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that there is no need to retransmit the requested resources.
 

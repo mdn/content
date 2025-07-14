@@ -2,8 +2,6 @@
 title: Using the Popover API
 slug: Web/API/Popover_API/Using
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Popover API")}}

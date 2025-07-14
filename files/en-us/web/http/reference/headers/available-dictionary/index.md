@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Available-Dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Available-Dictionary`** request header allows the browser to specify the best matching dictionary it has to allow the server to use {{glossary("Compression Dictionary Transport")}} for a resource request.
 

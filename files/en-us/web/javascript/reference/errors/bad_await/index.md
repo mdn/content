@@ -2,9 +2,8 @@
 title: "SyntaxError: await is only valid in async functions, async generators and modules"
 slug: Web/JavaScript/Reference/Errors/Bad_await
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "await is only valid in async functions, async generators and modules" occurs when an {{jsxref("Operators/await", "await")}} expression is used outside of [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or [modules](/en-US/docs/Web/JavaScript/Guide/Modules) or other async contexts.
 

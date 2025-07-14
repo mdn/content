@@ -3,9 +3,8 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 page-type: javascript-function
 browser-compat: javascript.builtins.eval
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 > [!WARNING]
 > Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.

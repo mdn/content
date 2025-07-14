@@ -60,7 +60,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{cssxref("overflow-block")}} and {{cssxref("overflow-inline")}} properties have been implemented ([Firefox bug 1470695](https://bugzil.la/1470695)).
 - We added the ability to test for support of a selector when using CSS Feature Queries ({{cssxref("@supports")}}), with the `selector()` method ([Firefox bug 1513643](https://bugzil.la/1513643)).
 - The {{cssxref("user-select")}} property — which specifies whether or not the user is able to select text in the affected element — has been unprefixed ([Firefox bug 1492739](https://bugzil.la/1492739)).
-- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/text-transform#lowercase_lithuanian).
+- We implemented local-specific casing behavior for Lithuanian ([Firefox bug 1322992](https://bugzil.la/1322992)), [as seen in this example](/en-US/docs/Web/CSS/text-transform#example_using_lowercase_lithuanian).
 - We've implemented the {{cssxref("line-break")}} property of CSS Text ([Firefox bug 1011369](https://bugzil.la/1011369) and [Firefox bug 1531715](https://bugzil.la/1531715)).
 - The {{cssxref("contain")}} property — which allows developers to define that an element and its contents are mostly independent of the rest of the DOM tree — got implemented [Firefox bug 1487493](https://bugzil.la/1487493).
 
@@ -90,7 +90,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{domxref("DOMMatrix")}}, {{domxref("DOMPoint")}}, and related objects are now supported in workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
 - The `pageX` and `pageY` properties have been moved from {{domxref("UIEvent")}} to {{domxref("MouseEvent")}}, for better spec compliance ([Firefox bug 1178763](https://bugzil.la/1178763)). These properties are no longer exposed to the {{domxref("CompositionEvent")}}, {{domxref("FocusEvent")}}, {{domxref("InputEvent")}}, {{domxref("KeyboardEvent")}}, and {{domxref("TouchEvent")}} interfaces, which all inherit from `UIEvent`.
 - The {{domxref("Blob.text()")}}, {{domxref("Blob.arrayBuffer()")}}, and {{domxref("Blob.stream()")}} methods are now implemented ([Firefox bug 1557121](https://bugzil.la/1557121)).
-- {{domxref("DOMMatrixReadOnly.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
+- {{domxref("DOMMatrixReadOnly.fromMatrix_static", "DOMMatrixReadOnly.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
 - We now support the six-parameter version of the {{domxref("DOMMatrixReadOnly.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
 - The arguments for {{domxref("DOMMatrixReadOnly.translate()")}}, {{domxref("DOMMatrixReadOnly.skewX()")}}, and {{domxref("DOMMatrixReadOnly.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
 - The {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.platform")}}, and {{domxref("Navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.

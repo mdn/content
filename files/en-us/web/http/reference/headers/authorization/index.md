@@ -4,9 +4,8 @@ short-title: Authorization
 slug: Web/HTTP/Reference/Headers/Authorization
 page-type: http-header
 browser-compat: http.headers.Authorization
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Authorization`** {{Glossary("request header")}} can be used to provide credentials that authenticate a user agent with a server, allowing access to protected resources.
 

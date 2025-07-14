@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.translate
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`translate()`** method of the {{domxref("Translator")}} interface returns a translation of an input string.
 

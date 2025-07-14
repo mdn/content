@@ -57,7 +57,7 @@ This is fairly well documented already, but we thought we'd give a mention to th
 
 ```css
 label {
-  font-family: "NotoColorEmoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
   position: absolute;
   top: 2px;

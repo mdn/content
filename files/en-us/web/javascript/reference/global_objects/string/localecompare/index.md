@@ -4,9 +4,8 @@ short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.localeCompare
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`localeCompare()`** method of {{jsxref("String")}} values returns a number indicating whether this string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method delegates to `Intl.Collator`.
 

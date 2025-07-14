@@ -60,6 +60,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
 - [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`

@@ -574,7 +574,6 @@ Non-standard, or vendor-prefixed properties include the following:
 
 - {{CSSxRef("-moz-float-edge")}}
 - {{CSSxRef("-moz-force-broken-image-icon")}}
-- {{CSSxRef("-moz-image-region")}}
 - {{CSSxRef("-moz-orient")}}
 - {{CSSxRef("-moz-user-focus")}}
 - {{CSSxRef("-moz-user-input")}}

@@ -3,9 +3,8 @@ title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 page-type: javascript-operator
 browser-compat: javascript.operators.strict_equality
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **strict equality (`===`)** operator checks whether its two operands are
 equal, returning a Boolean result. Unlike the [equality](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator,

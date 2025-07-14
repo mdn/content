@@ -3,9 +3,8 @@ title: "<thead>: The Table Head element"
 slug: Web/HTML/Reference/Elements/thead
 page-type: html-element
 browser-compat: html.elements.thead
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<thead>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the head of a table with information about the table's columns. This is usually in the form of column headers ({{HTMLElement("th")}} elements).
 

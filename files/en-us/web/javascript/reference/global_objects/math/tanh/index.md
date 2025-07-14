@@ -4,9 +4,8 @@ short-title: tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.tanh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.tanh()`** static method returns the hyperbolic tangent of a number. That is,
 

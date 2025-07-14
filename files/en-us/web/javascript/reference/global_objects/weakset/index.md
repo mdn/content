@@ -3,9 +3,8 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakSet
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`WeakSet`** is a collection of garbage-collectable values, including objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). A value in the `WeakSet` may only occur once. It is unique in the `WeakSet`'s collection.
 

@@ -4,9 +4,8 @@ short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.then
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It stores the callbacks within the promise it is called on and immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 

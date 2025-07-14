@@ -7,9 +7,8 @@ browser-compat:
   - html.elements.input.max
   - html.elements.meter.max
   - html.elements.progress.max
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) attribute. If the `max` attribute is present but is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
@@ -140,7 +139,6 @@ Provide instructions to help users understand how to complete the form and use i
 
 - [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min)
-- other meter attributes: [`low`](/en-US/docs/Web/HTML/Reference/Attributes/low), [`high`](/en-US/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Reference/Attributes/optimum)
 - [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}

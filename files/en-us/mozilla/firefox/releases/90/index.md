@@ -63,7 +63,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 #### Removals
 
-- With the [removal of the FTP support in Firefox 90](#removals_http)
+- With the [removal of the FTP support in Firefox 90](#removals)
   the `ftpProxy` capability is no longer evaluated, and when used will
   throw an `invalid argument` error ([Firefox bug 1703805](https://bugzil.la/1703805)).
 

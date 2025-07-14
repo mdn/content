@@ -12,8 +12,6 @@ The **`hostname`** property of the {{domxref("URL")}} interface is a string cont
 
 This property can be set to change the hostname of the URL. If the URL's scheme is not [hierarchical](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3) (which the URL standard calls "[special schemes](https://url.spec.whatwg.org/#special-scheme)"), then it has no concept of a host and setting this property has no effect.
 
-The hostname is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when reading.
-
 ## Value
 
 A string.

@@ -3,9 +3,8 @@ title: "<dd>: The Description Details element"
 slug: Web/HTML/Reference/Elements/dd
 page-type: html-element
 browser-compat: html.elements.dd
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, definition, or value for the preceding term ({{HTMLElement("dt")}}) in a description list ({{HTMLElement("dl")}}).
 

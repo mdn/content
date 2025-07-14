@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The HTTP **`X-DNS-Prefetch-Control`** {{Glossary("response header")}} controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 

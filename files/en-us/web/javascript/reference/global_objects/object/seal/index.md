@@ -4,9 +4,8 @@ short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.seal
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.seal()`** static method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
 

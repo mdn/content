@@ -4,9 +4,8 @@ short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.

@@ -2,9 +2,8 @@
 title: Add a hitmap on top of an image
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 You can create a clickable image map in HTML using {{htmlelement('area')}} and {{htmlelement('map')}} elements.
 This article describes how to set up an image map, and some downsides to consider before you build one.

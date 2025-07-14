@@ -2,9 +2,8 @@
 title: Forbidden request header
 slug: Glossary/Forbidden_request_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **forbidden request header** is an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name-value pair that cannot be set or modified programmatically in a request. For headers forbidden to be modified in responses, see {{Glossary("forbidden response header name")}}.
 

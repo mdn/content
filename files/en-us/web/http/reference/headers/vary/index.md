@@ -4,9 +4,8 @@ short-title: Vary
 slug: Web/HTTP/Reference/Headers/Vary
 page-type: http-header
 browser-compat: http.headers.Vary
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Vary`** {{Glossary("response header")}} describes the parts of the request message (aside from the method and URL) that influenced the content of the response it occurs in.
 Including a `Vary` header ensures that responses are separately cached based on the headers listed in the `Vary` field.

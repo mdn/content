@@ -4,9 +4,8 @@ short-title: Sec-Purpose
 slug: Web/HTTP/Reference/Headers/Sec-Purpose
 page-type: http-header
 browser-compat: http.headers.Sec-Purpose
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Purpose`** {{Glossary("fetch metadata request header")}} indicates the purpose for which the requested resource will be used, when that purpose is something other than immediate use by the user-agent.
 

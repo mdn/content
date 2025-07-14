@@ -2,9 +2,8 @@
 title: Camel case
 slug: Glossary/Camel_case
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Camel case** is a way of writing phrases without spaces, where the first letter of each word is capitalized, except for the first letter of the entire compound word, which may be either upper or lower case. The name comes from the similarity of the capital letters to the humps of a camel's back. It's often stylized as "camelCase" to remind the reader of its appearance.
 

@@ -4,9 +4,8 @@ short-title: setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to universal time.
 

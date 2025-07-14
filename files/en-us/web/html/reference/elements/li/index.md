@@ -3,9 +3,8 @@ title: "<li>: The List Item element"
 slug: Web/HTML/Reference/Elements/li
 page-type: html-element
 browser-compat: html.elements.li
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item in a list. It must be contained in a parent element: an ordered list ({{HTMLElement("ol")}}), an unordered list ({{HTMLElement("ul")}}), or a menu ({{HTMLElement("menu")}}). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
 

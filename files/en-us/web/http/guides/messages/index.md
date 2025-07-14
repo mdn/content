@@ -2,9 +2,8 @@
 title: HTTP messages
 slug: Web/HTTP/Guides/Messages
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP messages** are the mechanism used to exchange data between a server and a client in the HTTP protocol.
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.

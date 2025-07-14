@@ -4,9 +4,8 @@ short-title: fromHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromHex
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromHex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Uint8Array.fromHex()`** static method creates a new {{jsxref("Uint8Array")}} object from a hexadecimal string.
 

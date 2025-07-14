@@ -5,9 +5,10 @@ page-type: javascript-namespace
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Now
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Now`** namespace object contains static methods for getting the current time in various formats.
 

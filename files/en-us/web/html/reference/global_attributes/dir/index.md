@@ -4,9 +4,8 @@ short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 page-type: html-attribute
 browser-compat: html.global_attributes.dir
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`dir`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the element's text.
 

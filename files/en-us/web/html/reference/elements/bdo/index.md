@@ -3,9 +3,8 @@ title: "<bdo>: The Bidirectional Text Override element"
 slug: Web/HTML/Reference/Elements/bdo
 page-type: html-element
 browser-compat: html.elements.bdo
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<bdo>`** [HTML](/en-US/docs/Web/HTML) element overrides the current directionality of text, so that the text within is rendered in a different direction.
 

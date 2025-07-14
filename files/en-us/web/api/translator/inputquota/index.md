@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.inputQuota
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`inputQuota`** read-only property of the {{domxref("Translator")}} interface returns the input quota available to the browser for generating translations.
 

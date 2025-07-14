@@ -4,9 +4,8 @@ short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.entries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.entries()`** static method returns an array of a given object's own enumerable string-keyed property key-value pairs.
 

@@ -4,9 +4,8 @@ short-title: matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`matchAll()`** method of {{jsxref("String")}} values returns an iterator of all results matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 

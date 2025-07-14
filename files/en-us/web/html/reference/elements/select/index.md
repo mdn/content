@@ -3,9 +3,8 @@ title: "<select>: The HTML Select element"
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
