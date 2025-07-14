@@ -721,13 +721,14 @@ const quotePara = document.querySelector("section p");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-  window.setInterval(showQuote, 5000);
-  btn.disabled = true;
-
   function showQuote() {
     let random = Math.floor(Math.random() * quotes.length);
     quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
   }
+
+  showQuote();
+  btn.disabled = true;
+  window.setInterval(showQuote, 5000);
 });
 ```
 

@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
+The aim of this skill test is to help you assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
@@ -223,7 +223,7 @@ In this task you are required to turn all the information links in the paragraph
 To complete the task:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the links appropriately, based on the earlier descriptions.
+2. Update the links appropriately, based on the above descriptions.
 
 > [!CALLOUT]
 >
@@ -270,7 +270,7 @@ In our final HTML accessibility task, you are given an image gallery, which has 
 To complete the task:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the code to fix the problems described earlier.
+2. Update the code to fix the problems described above.
 
 > [!CALLOUT]
 >
