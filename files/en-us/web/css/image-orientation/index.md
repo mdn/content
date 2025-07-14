@@ -3,9 +3,8 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 page-type: css-property
 browser-compat: css.properties.image-orientation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 

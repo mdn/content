@@ -3,9 +3,8 @@ title: negative
 slug: Web/CSS/@counter-style/negative
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.negative
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`negative`** descriptor of the {{cssxref("@counter-style")}} at-rule lets you define how negative counter values are represented when defining custom counter styles. The value of the `negative` descriptor defines the symbols to be added before and after the counter representation when the counter's value is negative.
 

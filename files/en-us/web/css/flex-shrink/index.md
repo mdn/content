@@ -3,9 +3,8 @@ title: flex-shrink
 slug: Web/CSS/flex-shrink
 page-type: css-property
 browser-compat: css.properties.flex-shrink
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, the [flex items can shrink](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#the_flex-shrink_property) to fit according to their `flex-shrink` value. Each flex line's [negative free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) is distributed between the line's flex items that have a `flex-shrink` value greater than `0`.
 

@@ -3,9 +3,8 @@ title: CSS pseudo-elements
 slug: Web/CSS/CSS_pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS pseudo-element** module defines abstract elements that are not directly present in the document tree. These abstract elements, called pseudo-elements, represent portions of the render tree that can be selected and styled. Pseudo-elements are used to create abstractions about the document tree beyond those provided by the document tree.
 

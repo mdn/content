@@ -3,9 +3,8 @@ title: CSS color values
 short-title: Color values
 slug: Web/CSS/CSS_colors/Color_values
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 To represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking the color down into components, such as amounts of different primary colors to mix together, or brightness and hue. Defined color models ensure that colors will appear the same no matter where they are rendered.
 

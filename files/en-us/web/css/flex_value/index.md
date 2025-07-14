@@ -3,9 +3,8 @@ title: <flex>
 slug: Web/CSS/flex_value
 page-type: css-type
 browser-compat: css.types.flex
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<flex>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.
 

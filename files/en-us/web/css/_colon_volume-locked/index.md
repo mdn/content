@@ -3,9 +3,8 @@ title: :volume-locked
 slug: Web/CSS/:volume-locked
 page-type: css-pseudo-class
 browser-compat: css.selectors.volume-locked
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:volume-locked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is capable of making sound, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, but the audio volume of the media element is currently "locked" by the user.
 

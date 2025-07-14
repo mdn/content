@@ -3,9 +3,8 @@ title: inline-size
 slug: Web/CSS/inline-size
 page-type: css-property
 browser-compat: css.properties.inline-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the size of an element's block along the [inline axis](/en-US/docs/Glossary/Grid_Axis). If the {{cssxref("writing-mode")}} is horizontal, it corresponds to the {{cssxref("width")}}; if the writing mode is vertical, it corresponds to the {{cssxref("height")}}. A related property is {{cssxref("block-size")}}, which defines the other dimension of the element.
 

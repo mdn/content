@@ -3,9 +3,8 @@ title: stroke-width
 slug: Web/CSS/stroke-width
 page-type: css-property
 browser-compat: css.properties.stroke-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of a stroke applied to the [SVG](/en-US/docs/Web/SVG) shape. If present, it overrides the element's {{SVGAttr("stroke-width")}} attribute.
 

@@ -3,9 +3,8 @@ title: clip-rule
 slug: Web/CSS/clip-rule
 page-type: css-property
 browser-compat: css.properties.clip-rule
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property determines, when parts of the path overlap other parts, which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path) and which are outside.
 

@@ -4,9 +4,8 @@ slug: Web/CSS/line-style
 page-type: css-type
 browser-compat: css.types.line-style
 spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/CSS_multicol_layout) properties:
 

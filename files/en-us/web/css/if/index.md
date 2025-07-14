@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.if
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or a [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 

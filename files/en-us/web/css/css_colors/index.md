@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-color-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS colors** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 

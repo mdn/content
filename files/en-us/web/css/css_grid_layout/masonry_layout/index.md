@@ -7,9 +7,10 @@ status:
 browser-compat:
   - css.properties.grid-template-columns.masonry
   - css.properties.grid-template-rows.masonry
+sidebar: cssref
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
 

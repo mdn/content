@@ -3,9 +3,8 @@ title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
 page-type: css-media-feature
 browser-compat: css.at-rules.media.overflow-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the inline axis.
 

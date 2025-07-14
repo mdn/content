@@ -3,9 +3,8 @@ title: Block formatting context
 slug: Web/CSS/CSS_display/Block_formatting_context
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A **block formatting context** (BFC) is a part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.
 

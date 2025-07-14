@@ -3,9 +3,8 @@ title: text-transform
 slug: Web/CSS/text-transform
 page-type: css-property
 browser-compat: css.properties.text-transform
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-transform`** [CSS](/en-US/docs/Web/CSS) property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
 

@@ -3,9 +3,8 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 page-type: css-function
 browser-compat: css.types.filter-function.brightness
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 

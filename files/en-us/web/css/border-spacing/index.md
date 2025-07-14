@@ -3,9 +3,8 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 page-type: css-property
 browser-compat: css.properties.border-spacing
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the distance between the borders of adjacent cells in a {{htmlelement("table")}}. This property applies only when {{cssxref("border-collapse")}} is `separate`.
 
