@@ -51,6 +51,13 @@ math {
   math-shift: compact;
   font-size: 64pt;
 }
+
+.normal-shift {
+  math-shift: normal;
+}
+.compact-shift {
+  math-shift: compact;
+}
 ```
 
 ### MathML
@@ -59,11 +66,11 @@ The following MathML displays two versions of "x squared" using a font with an O
 
 ```html
 <math>
-  <msup style="math-shift: normal">
+  <msup class="normal-shift">
     <mi>x</mi>
     <mn>2</mn>
   </msup>
-  <msup style="math-shift: compact">
+  <msup class="compact-shift">
     <mi>x</mi>
     <mn>2</mn>
   </msup>

@@ -157,8 +157,8 @@ These values produce the same results:
 
 ```css
 filter: hue-rotate(90deg); /* 90deg rotation */
-filter: url(#hue-rotate); /* with embedded SVG */
-filter: url(folder/fileName.svg#hue-rotate); /* external svg filter definition */
+filter: url("#hue-rotate)"; /* with embedded SVG */
+filter: url("folder/fileName.svg#hue-rotate"); /* external svg filter definition */
 ```
 
 This example shows three images: the image with a `hue-rotate()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
@@ -176,13 +176,13 @@ This example shows three images: the image with a `hue-rotate()` filter function
     <tr>
       <td>
         <img
-          style="filter: hue-rotate(90deg)"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag with rotated colors" />
       </td>
       <td>
         <img
-          style="filter: url(#hue-rotate)"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag with rotated colors" />
       </td>
@@ -194,6 +194,18 @@ This example shows three images: the image with a `hue-rotate()` filter function
     </tr>
   </tbody>
 </table>
+```
+
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: hue-rotate(90deg);
+}
+.svg-filter {
+  filter: url("#hue-rotate");
+}
+svg:not(:root) {
+  display: none;
+}
 ```
 
 {{EmbedLiveSample('svg_filter','100%','280')}}

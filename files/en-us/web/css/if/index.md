@@ -241,7 +241,7 @@ For example, the following returns an {{cssxref("color_value/lch()")}} color if 
 ```css-nolint
 color: if(
   supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: rgb(192, 192, 192);
+  else: rgb(192 192 192);
 )
 ```
 
@@ -391,7 +391,7 @@ section {
   display: flex;
   gap: 16px;
   flex-direction: if(
-    media(orientation:landscape): row;
+    media(orientation: landscape): row;
     else: column;
   )
 }
@@ -402,7 +402,7 @@ Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, set
 ```css-nolint live-sample___basic
 h2::before {
   content: if(
-    style(--show-apple:true): "🍎 ";
+    style(--show-apple: true): "🍎 ";
   );
 }
 ```
@@ -411,7 +411,7 @@ Finally, we target the `<h2>` element itself. We use a feature query `<if-test>`
 
 ```css-nolint live-sample___basic
 h2 {
-    color: if(
+  color: if(
     supports(color: lch(29.57% 43.25 344.44)): lch(29.57% 43.25 344.44);
     else: #792359;
   )

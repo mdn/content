@@ -114,13 +114,20 @@ As an example, we have two paragraphs below. The first uses the default `horizon
 
 ```html
 <div class="wrapper">
-  <p style="writing-mode: horizontal-tb">
+  <p class="horizontal-tb">
     I have writing mode set to the default <code>horizontal-tb</code>
   </p>
-  <p style="writing-mode: vertical-rl">
-    I have writing mode set to <code>vertical-rl</code>
-  </p>
+  <p class="vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
 </div>
+```
+
+```css
+.horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
 ```
 
 {{ EmbedLiveSample('writing-mode', '500', '420') }}

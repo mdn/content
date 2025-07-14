@@ -176,8 +176,8 @@ These values produce the same results:
 
 ```css
 filter: contrast(200%);
-filter: url(#contrast); /* with embedded SVG */
-filter: url(folder/fileName.svg#contrast); /* external svg filter definition */
+filter: url("#contrast"); /* with embedded SVG */
+filter: url("folder/fileName.svg#contrast"); /* external svg filter definition */
 ```
 
 This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
@@ -195,13 +195,13 @@ This example shows three images: the image with a `contrast()` filter function a
     <tr>
       <td>
         <img
-          style="filter: contrast(200%)"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
         <img
-          style="filter: url(#contrast)"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
@@ -213,6 +213,18 @@ This example shows three images: the image with a `contrast()` filter function a
     </tr>
   </tbody>
 </table>
+```
+
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: contrast(200%);
+}
+.svg-filter {
+  filter: url("#contrast");
+}
+svg:not(:root) {
+  display: none;
+}
 ```
 
 {{EmbedLiveSample('svg_filter','100%','280')}}
