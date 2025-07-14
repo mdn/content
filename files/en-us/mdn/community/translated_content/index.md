@@ -7,7 +7,7 @@ sidebar: mdnsidebar
 ---
 
 MDN Web Docs contains close to 14000 pages of documentation in the `en-US` locale.
-The English documentation is available in eight locales maintained by a dedicated and diverse community of contributors.
+MDN content is translated into eight locales maintained by a dedicated and diverse community of contributors.
 
 ## How to contribute
 
