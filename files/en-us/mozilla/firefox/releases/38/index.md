@@ -1,5 +1,6 @@
 ---
 title: Firefox 38 for developers
+short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
 sidebar: firefox
@@ -145,7 +146,3 @@ _No change._
 - `"@mozilla.org/network/atomic-file-output-stream;1"` and `"@mozilla.org/network/safe-file-output-stream;1"` now throw an exception if `PR_APPEND` is passed without `PR_TRUNCATE` ([Firefox bug 1117580](https://bugzil.la/1117580)).
 - `nsICompositionStringSynthesizer` and `nsIDOMWindowUtils.sendCompositionEvent()` have been removed. Instead, use `nsITextInputProcessor`. ([Firefox bug 917322](https://bugzil.la/917322))
 - `nsIDOMWindowUtils.sendKeyEvent()` is now deprecated. Instead, use `nsITextInputProcessor` ([Firefox bug 1119609](https://bugzil.la/1119609)).
-
-## Older versions
-
-{{Firefox_for_developers}}

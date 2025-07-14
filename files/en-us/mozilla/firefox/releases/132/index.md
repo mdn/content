@@ -1,5 +1,6 @@
 ---
 title: Firefox 132 for developers
+short-title: Firefox 132
 slug: Mozilla/Firefox/Releases/132
 page-type: firefox-release-notes
 sidebar: firefox
@@ -90,7 +91,3 @@ These features are newly shipped in Firefox 132 but are disabled by default. To 
   - The `JSON.parse()` [`reviver` parameter `context` argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): Provides access to the original JSON source text that was parsed.
   - [`JSON.isRawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): Tests whether a value is an object returned by `JSON.rawJSON()`.
   - [`JSON.rawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): Creates a "raw JSON" object containing a piece of JSON text, which can then be included in an object to preserve the specified value when that object is stringified.
-
-## Older versions
-
-{{Firefox_for_developers}}
