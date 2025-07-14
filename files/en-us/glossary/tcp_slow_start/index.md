@@ -10,7 +10,7 @@ The slow start mechanism prevents congestion when a network's capabilities are i
 
 To implement TCP slow start, the congestion window (_cwnd_) sets an upper limit on the amount of data a source can transmit over the network before receiving an acknowledgment (ACK). The slow start threshold (_ssthresh_) determines the (de)activation of slow start. When a new connection is made, cwnd is initialized to one TCP data or acknowledgment packet, and waits for an ACK. When that ACK is received, the congestion window is incremented until the _cwnd_ is greater than _ssthresh_. Slow start also terminates when congestion is experienced.
 
-## Congestion control
+## Congestion avoidance
 
 Network congestion occurs when more data is sent than the network is able to transfer between nodes at a particular time.
 When a network is congested, machines on the network experience degraded quality of service, including slow data transfers and dropped packets.
