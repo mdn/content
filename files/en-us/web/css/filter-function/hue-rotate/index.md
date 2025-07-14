@@ -42,8 +42,6 @@ filter: hue-rotate(3.142rad);
 
 ## Syntax
 
-The `hue-rotate()` function applies a color rotation to the elements on which it is applied.
-
 ```css
 hue-rotate(angle)
 ```

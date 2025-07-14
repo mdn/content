@@ -4,9 +4,8 @@ short-title: language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.language
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`language`** accessor property of {{jsxref("Intl.Locale")}} instances returns the language associated with this locale.
 

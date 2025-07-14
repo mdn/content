@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const paragraph = document.querySelector("p");
-const mediaQueryList = window.matchMedia("(max-width: 600px)");
+const mediaQueryList = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {

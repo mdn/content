@@ -129,15 +129,15 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_querie
 ```css example-good
 /* Default CSS layout for narrow screens */
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   /* CSS for medium width screens */
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   /* CSS for wide screens */
 }
 
-@media (min-width: 1100px) {
+@media (width >= 1100px) {
   /* CSS for really wide screens */
 }
 ```

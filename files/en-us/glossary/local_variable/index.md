@@ -2,9 +2,8 @@
 title: Local variable
 slug: Glossary/Local_variable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only within a {{Glossary("local scope")}}.
 

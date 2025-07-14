@@ -2,9 +2,8 @@
 title: Time to first byte
 slug: Glossary/Time_to_first_byte
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Time to First Byte** (TTFB) refers to the time between the browser requesting a page and when it receives the first byte of information from the server. This time includes {{Glossary("DNS")}} lookup and establishing the connection using a {{Glossary("TCP")}} handshake and {{Glossary("TLS")}} handshake if the request is made over {{Glossary("HTTPS")}}.
 

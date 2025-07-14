@@ -2,14 +2,12 @@
 title: Using the Topics API
 slug: Web/API/Topics_API/Using
 page-type: web-api-overview
-status:
-  - non-standard
 ---
 
 {{DefaultAPISidebar("Topics API")}}
 
 > [!WARNING]
-> This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
+> This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.
 
 > [!NOTE]
 > An [Enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](/en-US/docs/Web/API/Topics_API#enrollment) section for details of what sub-features are gated by enrollment.
@@ -68,6 +66,7 @@ The following features all serve a dual purpose — they return the user's top t
   ```html
   <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
   ```
+
   - Programmatically by setting the equivalent {{domxref("HTMLIFrameElement.browsingTopics")}} property to `true`:
 
   ```js
@@ -144,11 +143,6 @@ const creative = await response.json();
 ```html
 <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
 ```
-
-### Complete examples
-
-- [Topics API demo](https://topics-demo.glitch.me/): Demonstrates how `document.browsingTopics()` calls can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-demo)).
-- [Topics API header demo](https://topics-fetch-demo.glitch.me/): Demonstrates a `fetch()` request with a {{httpheader("Sec-Browsing-Topics")}} header can be used to observe and then access topics ([see source code](https://glitch.com/edit/#!/topics-fetch-demo)).
 
 ## Testing hints
 

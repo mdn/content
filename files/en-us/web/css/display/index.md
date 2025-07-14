@@ -87,7 +87,7 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* box generation */
+/* Box suppression */
 display: none;
 display: contents;
 

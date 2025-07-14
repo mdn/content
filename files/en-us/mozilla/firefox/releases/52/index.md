@@ -2,9 +2,8 @@
 title: Firefox 52 for developers
 slug: Mozilla/Firefox/Releases/52
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 52 was released on March 7, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -74,8 +73,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 - Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}} declaration, {{jsxref("Operators/async_function", "async function")}} expression, and the {{jsxref("Operators/await", "await")}} keyword ([Firefox bug 1185106](https://bugzil.la/1185106)).
 - Implemented ES2017 [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in functions ([Firefox bug 1303788](https://bugzil.la/1303788)).
-- Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ([Firefox bug 1243717](https://bugzil.la/1243717)).
-- The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ([Firefox bug 1291212](https://bugzil.la/1291212)).
+- Implemented [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1243717](https://bugzil.la/1243717)).
+- The [exponentiation operator (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) is now enabled by default ([Firefox bug 1291212](https://bugzil.la/1291212)).
 - You can now use [IANA time zone names](https://www.iana.org/time-zones) in the `timeZone` option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ([Firefox bug 837961](https://bugzil.la/837961)).
 
 #### Changes and removals
@@ -105,7 +104,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)
-- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel).
+- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#noopener) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/API/Web_components) has been implemented (see [Firefox bug 1275838](https://bugzil.la/1275838)).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see [Firefox bug 1304315](https://bugzil.la/1304315)).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see [Firefox bug 1284987](https://bugzil.la/1284987) for the exact details).
@@ -156,7 +155,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The [`'strict-dynamic'` source expression](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) is now supported for {{HTTPHeader("Content-Security-Policy")}} directives, such as {{CSP("script-src")}} ([Firefox bug 1299483](https://bugzil.la/1299483)).
 - Insecure sites (`http:`) can't [set cookies](/en-US/docs/Web/HTTP/Guides/Cookies) with the "secure" directive anymore as per the [Strict Secure Cookies specification](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01) ([Firefox bug 976073](https://bugzil.la/976073)).
 - The maximum table size format of the HTTP/2 header compression format [HPACK](https://datatracker.ietf.org/doc/html/rfc7541) has been increased from 4 KB to 64 KB ([Firefox bug 1296280](https://bugzil.la/1296280)).
-- The {{HTTPHeader("Large-Allocation")}} header has been added ([Firefox bug 1304140](https://bugzil.la/1304140)).
+- The `Large-Allocation` header has been added ([Firefox bug 1304140](https://bugzil.la/1304140)).
 
 ### SVG
 

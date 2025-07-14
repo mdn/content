@@ -2,9 +2,8 @@
 title: bfcache
 slug: Glossary/bfcache
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **back/forward** cache, or **bfcache**, is a performance-enhancing feature available in modern browsers that enables instant back and forward navigation between previously-visited pages. It does this by storing a complete snapshot of a page as the user navigates away from it; the browser can then quickly restore the snapshot if the user decides to return to it, rather than needing to repeat the network requests required to load the page.
 

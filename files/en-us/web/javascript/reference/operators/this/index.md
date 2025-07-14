@@ -3,9 +3,8 @@ title: this
 slug: Web/JavaScript/Reference/Operators/this
 page-type: javascript-language-feature
 browser-compat: javascript.operators.this
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`this`** keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where `this` refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
 
@@ -206,7 +205,7 @@ When a function is invoked in the `super.method()` form, the `this` inside the `
 
 ### Class context
 
-A [class](/en-US/docs/Web/JavaScript/Reference/Classes) can be split into two contexts: static and instance. [Constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor), methods, and instance field initializers ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)) belong to the instance context. [Static](/en-US/docs/Web/JavaScript/Reference/Classes/static) methods, static field initializers, and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) belong to the static context. The `this` value is different in each context.
+A [class](/en-US/docs/Web/JavaScript/Reference/Classes) can be split into two contexts: static and instance. [Constructors](/en-US/docs/Web/JavaScript/Reference/Classes/constructor), methods, and instance field initializers ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)) belong to the instance context. [Static](/en-US/docs/Web/JavaScript/Reference/Classes/static) methods, static field initializers, and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) belong to the static context. The `this` value is different in each context.
 
 Class constructors are always called with `new`, so their behavior is the same as [function constructors](#constructors): the `this` value is the new instance being created. Class methods behave like methods in object literals — the `this` value is the object that the method was accessed on. If the method is not transferred to another object, `this` is generally an instance of the class.
 

@@ -2,9 +2,8 @@
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Mozilla Firefox** is a free open-source {{Glossary("browser")}} whose development is overseen by the Mozilla Corporation. Firefox runs on Windows, macOS, Linux, and Android.
 

@@ -28,7 +28,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 - {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.

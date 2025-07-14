@@ -4,9 +4,8 @@ short-title: propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.propertyIsEnumerable
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) property.
 

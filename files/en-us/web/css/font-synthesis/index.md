@@ -111,12 +111,12 @@ font-synthesis: position;
 
 .english {
   font-size: 1.2em;
-  font-family: Oxygen;
+  font-family: Oxygen, sans-serif;
 }
 
 .chinese {
   font-size: 1.2em;
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 
 .bold {
@@ -261,7 +261,7 @@ This example shows the browser's default font-synthesis behavior and compares it
   font-family: "Montserrat", sans-serif;
 }
 .chinese {
-  font-family: "Ma Shan Zheng";
+  font-family: "Ma Shan Zheng", cursive;
 }
 .no-syn {
   font-synthesis: none;

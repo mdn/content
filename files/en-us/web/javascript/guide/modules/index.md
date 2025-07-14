@@ -2,9 +2,10 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Internationalization")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 

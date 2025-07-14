@@ -6,9 +6,10 @@ page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.microsecond
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`microsecond`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
 

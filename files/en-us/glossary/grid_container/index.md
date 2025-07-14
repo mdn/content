@@ -2,9 +2,8 @@
 title: Grid container
 slug: Glossary/Grid_Container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Using the value `grid` or `inline-grid` on an element turns it into a **grid container** using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), and any direct children of this element become grid items.
 

@@ -48,7 +48,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   text-align: left;
 }
@@ -61,8 +61,6 @@ See the {{cssxref("grid-template-columns")}} page for more information on the `m
 The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
 ## Syntax
-
-The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
 
 ```css
 /* <length> values */

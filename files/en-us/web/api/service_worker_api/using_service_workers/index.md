@@ -459,7 +459,7 @@ self.addEventListener("activate", (event) => {
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - The "Forget about this site" button, available in [Firefox's toolbar customization options](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars), can be used to clear service workers and their caches.
-- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/service-workers/)
 
 ## See also
 

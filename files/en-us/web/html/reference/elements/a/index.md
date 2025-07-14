@@ -3,9 +3,8 @@ title: "<a>: The Anchor element"
 slug: Web/HTML/Reference/Elements/a
 page-type: html-element
 browser-compat: html.elements.a
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
@@ -155,9 +154,9 @@ A sadly common mistake is to only link the words "click here" or "here":
 
 ##### Result
 
-{{EmbedLiveSample('Inaccessible, weak link text')}}
+{{EmbedLiveSample('Inaccessible, weak link text', '100%', '50')}}
 
-#### Strong link text
+#### Accessible, strong link text
 
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
@@ -167,7 +166,7 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 
 ##### Result
 
-{{EmbedLiveSample('Strong link text')}}
+{{EmbedLiveSample('Accessible, strong link text', '100%', '50')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 

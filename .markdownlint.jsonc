@@ -30,6 +30,8 @@
   "ol-prefix": {
     "style": "ordered",
   },
+  // Duplicate with with Prettier
+  "blanks-around-fences": false,
   "no-inline-html": {
     "allowed_elements": [
       "a",

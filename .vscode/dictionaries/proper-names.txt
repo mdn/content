@@ -165,7 +165,9 @@ Ehsan
 Eich
 Eichenwald
 Eisenberg
+Elaina
 Elchi
+Elly
 Emscripten
 Endtest
 Ensatina
@@ -462,6 +464,7 @@ Rocher
 Rohini
 Ronaldo
 Roselli
+Rosenburg
 Rossi
 Rossum
 Roushan

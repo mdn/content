@@ -2,9 +2,8 @@
 title: Google Chrome
 slug: Glossary/Google_Chrome
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Google Chrome is a free Web {{glossary("browser")}} developed by Google, based on the [Chromium](https://www.chromium.org/) open source project. Some key differences are described in BrowserStack's [Chrome vs Chromium: Core Differences](https://www.browserstack.com/guide/difference-between-chrome-and-chromium) guide.
 

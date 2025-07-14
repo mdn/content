@@ -131,6 +131,8 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 
 ### Advanced tutorials
 
+- [Compressed texture formats](/en-US/docs/Web/API/WebGL_API/Compressed_texture_formats)
+  - : How to enable and use compressed texture formats for better memory performance.
 - [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : A detailed explanation of the three core matrices that are typically used to represent a 3D object view: the model, view and projection matrices.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)

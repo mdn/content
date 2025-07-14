@@ -49,13 +49,13 @@ margin-right: 0;
 .col {
   width: 33.33%;
   border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
+  background-color: rgb(229 232 252 / 0.6);
   flex-shrink: 0;
 }
 
 #example-element {
   border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+  background-color: rgb(255 244 219 / 0.6);
 }
 ```
 

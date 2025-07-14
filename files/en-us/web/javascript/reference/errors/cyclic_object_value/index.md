@@ -2,9 +2,8 @@
 title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "cyclic object value" occurs when object references were found
 in [JSON](https://www.json.org/). {{jsxref("JSON.stringify()")}} doesn't try

@@ -3,9 +3,8 @@ title: "<ul>: The Unordered List element"
 slug: Web/HTML/Reference/Elements/ul
 page-type: html-element
 browser-compat: html.elements.ul
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list of items, typically rendered as a bulleted list.
 
@@ -39,11 +38,7 @@ li li {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact` {{Deprecated_inline}}
-  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
-
-    > [!WARNING]
-    > Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
-
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute is browser-specific. Use [CSS](/en-US/docs/Web/CSS) instead: to give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 - `type` {{Deprecated_inline}}
   - : This attribute sets the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:
     - `circle`

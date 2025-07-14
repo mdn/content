@@ -3,9 +3,8 @@ title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Uint16Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Uint16Array`** typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 

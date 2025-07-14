@@ -32,7 +32,7 @@ replaceElementWithChildren(element)
       - : A string containing the namespace of the element.
         The default namespace is `"http://www.w3.org/1999/xhtml"`.
 
-### Returns
+### Return value
 
 None (`undefined`).
 

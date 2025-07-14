@@ -4,9 +4,8 @@ short-title: endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.endsWith
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`endsWith()`** method of {{jsxref("String")}} values determines whether a string ends with the characters of this string, returning `true` or `false` as appropriate.
 

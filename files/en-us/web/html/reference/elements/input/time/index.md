@@ -3,9 +3,8 @@ title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_time
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 

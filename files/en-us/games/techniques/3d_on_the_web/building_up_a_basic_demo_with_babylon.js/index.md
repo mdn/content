@@ -2,9 +2,8 @@
 title: Building up a basic demo with Babylon.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 [Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
 
@@ -26,7 +25,7 @@ Alternatively, you can load Babylon.js from a CDN:
 <script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
 ```
 
-If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 With these editors, you can add `https://cdn.babylonjs.com/v7.34.1/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for Babylon.js
@@ -384,7 +383,7 @@ canvas {
   width: 100%;
   height: 100%;
   font-size: 0;
-  color: rgba(204, 204, 204, 1);
+  color: rgb(204 204 204);
 }
 ```
 

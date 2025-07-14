@@ -4,9 +4,8 @@ short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether an
 object exists in this `WeakSet` or not.

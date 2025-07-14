@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.nobr
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<nobr>`** [HTML](/en-US/docs/Web/HTML) element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.
 

@@ -2,9 +2,8 @@
 title: eTLD
 slug: Glossary/eTLD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The term **eTLD** stands for "effective top-level domain" and is a domain under which domains can be registered by a single organization.
 

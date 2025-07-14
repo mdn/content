@@ -2,11 +2,10 @@
 title: "TypeError: Initializing an object twice is an error with private fields/methods"
 slug: Web/JavaScript/Reference/Errors/Private_double_initialization
 page-type: javascript-error
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Errors")}}
-
-The JavaScript exception "Initializing an object twice is an error with private fields/methods" occurs when an object that was created via a class constructor goes through the class construction again, and the class contains a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties). This is usually caused by the [return override](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object) trick.
+The JavaScript exception "Initializing an object twice is an error with private fields/methods" occurs when an object that was created via a class constructor goes through the class construction again, and the class contains a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements). This is usually caused by the [return override](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object) trick.
 
 ## Message
 
@@ -26,7 +25,7 @@ TypeError: Cannot install same private methods on object more than once (evaluat
 
 ## What went wrong?
 
-For any object, if it already contains a private field or method, it would be an error to install the same field again. Private properties are installed on the value of `this` when the class constructor is called, so this error could happen if the `this` value is an already-constructed instance of this class.
+For any object, if it already contains a private field or method, it would be an error to install the same field again. Private elements are installed on the value of `this` when the class constructor is called, so this error could happen if the `this` value is an already-constructed instance of this class.
 
 Usually, `this` in a constructor is a newly created object which doesn't have any preexisting properties. However, it can be overridden by the return value of the base class. If the base class returns another object, that object would replace the current object as the value of `this`:
 
@@ -48,4 +47,4 @@ If you call `new Derived(anyObject)`, where `anyObject` is not an instance of `D
 ## See also
 
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)

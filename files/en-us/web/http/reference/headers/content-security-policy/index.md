@@ -4,9 +4,8 @@ short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.

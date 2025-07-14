@@ -6,9 +6,10 @@ page-type: html-attribute-value
 status:
   - experimental
 browser-compat: html.elements.script.type.speculationrules
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains speculation rules.
 
@@ -272,8 +273,6 @@ if (
   document.body.append(specScript);
 }
 ```
-
-You can see this in action in this [prerender demos](https://prerender-demos.glitch.me/) page.
 
 ### `where` syntax examples
 

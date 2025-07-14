@@ -3,9 +3,8 @@ title: 428 Precondition Required
 slug: Web/HTTP/Reference/Status/428
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-3
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`428 Precondition Required`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server requires the request to be [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 

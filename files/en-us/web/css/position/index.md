@@ -75,7 +75,7 @@ section {
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   float: left;
   width: 65px;
@@ -499,7 +499,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: verdana;
+  font-family: Verdana;
   border: 1px solid;
 }
 

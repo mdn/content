@@ -3,9 +3,8 @@ title: HTTP conditional requests
 short-title: Conditional requests
 slug: Web/HTTP/Guides/Conditional_requests
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be controlled by comparing the affected resources with a _validator_.
 These requests are useful for validating cached content, ensuring that it is only fetched if it differs from the copy that is already available to the browser.

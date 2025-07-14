@@ -4,9 +4,8 @@ short-title: setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCSeconds
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to universal time.
 

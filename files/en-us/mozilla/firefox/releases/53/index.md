@@ -2,9 +2,8 @@
 title: Firefox 53 for developers
 slug: Mozilla/Firefox/Releases/53
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers but also for Firefox and Gecko developers, as well as add-on developers.
 
@@ -98,7 +97,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 #### WebRTC
 
 - The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the `RTCSessionDescriptionInit` dictionary instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.
-- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary `RTCSessionDescriptionInit` dictionary. Existing code continues to work, but [can be simplified](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter).
+- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary `RTCSessionDescriptionInit` dictionary. Existing code continues to work, but can be simplified.
 - {{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialization object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ([Firefox bug 1263312](https://bugzil.la/1263312)).
 - {{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for more information on how this works.
 
@@ -111,7 +110,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
   - 3 — `no-referrer-when-downgrade` (the default)
 
 - Support for Next Protocol Negotiation (NPN) has been removed in favor of [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation) (ALPN) — see [Firefox bug 1248198](https://bugzil.la/1248198).
-- The {{httpheader("Large-Allocation")}} HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
+- The `Large-Allocation` HTTP header is now available by default, and no longer hidden behind a pref ([Firefox bug 1331083](https://bugzil.la/1331083)).
 
 ### SVG
 
@@ -163,7 +162,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
+- The asynchronous [AddonManager APIs](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
 
 ## Older versions
 

@@ -4,9 +4,8 @@ short-title: Range
 slug: Web/HTTP/Reference/Headers/Range
 page-type: http-header
 browser-compat: http.headers.Range
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Range`** {{Glossary("request header")}} indicates the part of a resource that the server should return.
 Several parts can be requested at the same time in one `Range` header, and the server may send back these ranges in a multipart document.
