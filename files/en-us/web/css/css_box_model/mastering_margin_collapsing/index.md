@@ -15,7 +15,7 @@ Margin collapsing occurs in three basic cases:
 - No content separating parent and descendants
   - : The vertical margins between a parent block and its descendants can collapse. This happens when there is no separating content between them.
   - : Specifically, this occurs in two main cases:
-  - The {{cssxref("margin-top")}} of a parent collapses with the {{cssxref("margin-top")}} of its first in-flow descendant unless the parent has a border-top, padding-top, contains any inline content (like text), or has  _[clearance](/en-US/docs/Web/CSS/clear) applied.
+  - The {{cssxref("margin-top")}} of a parent collapses with the {{cssxref("margin-top")}} of its first in-flow descendant unless the parent has a border-top, padding-top, contains any inline content (like text), or has \_[clearance](/en-US/docs/Web/CSS/clear) applied.
   - The {{cssxref("margin-bottom")}} of a parent collapses with the {{cssxref("margin-bottom")}} of its last in-flow descendant unless the parent has a defined {{cssxref("height")}} or {{cssxref("min-height")}}, a {{cssxref("border-bottom")}}, or {{cssxref("padding-bottom")}}.
   - : In both cases, creating a new  [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) on the parent will also prevent its margins from collapsing with its children.
 - Empty blocks
