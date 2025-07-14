@@ -406,7 +406,8 @@ This example involves different {{cssxref("&lt;basic-shape&gt;")}} values: {{css
     no-repeat;
   background-size: cover;
   color: white;
-  animation: move 3s linear infinite;
+  animation: move 10s linear infinite;
+  font-family: monospace;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
