@@ -221,8 +221,8 @@ In the images below, the first one has a `brightness()` filter function applied,
 .svg-filter {
   filter: url("#darken25");
 }
-svg {
-  position: absolute;
+svg:not(:root) {
+  display: none;
 }
 ```
 

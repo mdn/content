@@ -223,6 +223,9 @@ This example shows three images: the image with a `contrast()` filter function a
 .svg-filter {
   filter: url("#contrast");
 }
+svg:not(:root) {
+  display: none;
+}
 ```
 
 {{EmbedLiveSample('svg_filter','100%','280')}}

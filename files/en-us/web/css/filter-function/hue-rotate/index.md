@@ -204,6 +204,9 @@ This example shows three images: the image with a `hue-rotate()` filter function
 .svg-filter {
   filter: url("#hue-rotate");
 }
+svg:not(:root) {
+  display: none;
+}
 ```
 
 {{EmbedLiveSample('svg_filter','100%','280')}}
