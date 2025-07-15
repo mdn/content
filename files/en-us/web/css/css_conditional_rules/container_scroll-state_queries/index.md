@@ -14,7 +14,7 @@ This article explains how to use container scroll-state queries, walking through
 There are three `@container` descriptors you can use in a `scroll-state()` query:
 
 - `scrollable`: Queries whether a container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? This is useful for applying styling related to the scroll position of a scroll container. For example, you could display a hint that encourages people to scroll down and see more content when the scrollbar is up at the top, and hide it when the user has actually started scrolling.
-- `snapped`: Queries whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
+- `snapped`: Queries whether a container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
 - `stuck`: Queries whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. This is useful for styling `position: sticky` elements differently when stuck — for example, you could give them a different color scheme or layout.
 
 ## Syntax overview
@@ -327,7 +327,7 @@ Try scrolling the document down, and note how the "back-to-top" link appears as 
 
 ## Using `snapped` queries
 
-Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is, or will be, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is going to be snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
 
 The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
 
@@ -521,7 +521,7 @@ h2 {
 }
 ```
 
-We want to enable the `<section>` elements to be queried. Specifically, we want to test whether the `<section>` elements are snapping to their container, so we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+We want to enable the `<section>` elements to be queried. Specifically, we want to test whether the `<section>` elements are in the process of snapping to their container, so we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
 
 ```css live-sample___snapped
 section {
