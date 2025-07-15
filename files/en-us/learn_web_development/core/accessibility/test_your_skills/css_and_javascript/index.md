@@ -140,6 +140,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
   </p>
 </main>
 ```
+
 <!-- spellchecker: enable -->
 
 <!-- spellchecker: enable -->
