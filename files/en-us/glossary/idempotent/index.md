@@ -15,7 +15,7 @@ Idempotency, as defined by the HTTP specification, only considers the _intented_
 
 Also, the response returned by each request may differ: for example, the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a _delete last entry_ functionality using the `DELETE` method.
 
-While servers are very much encouraged to adhere to the semantics laid out by the HTTP specification, the spec does not mandate it. There is nothing preventing a server in the wild from exposing a non-idempotent endpoint under an idempotent HTTP method – although clients will be surprised.
+While servers are very much encouraged to adhere to the semantics laid out by the HTTP specification, the spec does not mandate it. There is nothing preventing a server in the wild from exposing a non-idempotent endpoint under an idempotent HTTP method – although clients will be surprised.
 
 A few examples:
 
