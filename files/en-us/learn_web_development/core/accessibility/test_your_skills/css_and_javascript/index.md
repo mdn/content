@@ -112,7 +112,7 @@ To complete the task:
 > You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
-
+<!-- spellchecker: disable -->
 ```html live-sample___css-js-ally-2
 <main>
   <h1>I am the eggman</h1>
