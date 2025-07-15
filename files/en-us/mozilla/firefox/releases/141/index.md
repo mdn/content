@@ -89,7 +89,7 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 - Implemented a new event `browsingContext.historyUpdated` which is emitted when using `history.pushState`, `history.replaceState` or `document.open`. ([Firefox bug 1906051](https://bugzil.la/1906051))
 - Improved the error message shown when attempting to permanently install an unpacked, unsigned web extension. ([Firefox bug 1958723](https://bugzil.la/1958723))
 - Updated the `browsingContext.navigate` and `browsingContext.reload` commands to wait for the `browsingContext.navigationCommitted` event when using the "wait" condition "none". ([Firefox bug 1967469](https://bugzil.la/1967469))
-- Updated the WebDriver BiDi cookie APIs to support "default" value in "sameSite" property to address recent changes in platform API which wouldn’t allow anymore to set a cookie with "sameSite=None" and "secure=false" on HTTP pages. ([Firefox bug 1971488](https://bugzil.la/1971488))
+- Updated the WebDriver BiDi cookie APIs to support "default" value in "sameSite" property to address recent changes in platform API which wouldn't allow anymore to set a cookie with "sameSite=None" and "secure=false" on HTTP pages. ([Firefox bug 1971488](https://bugzil.la/1971488))
 
 #### Marionette
 
