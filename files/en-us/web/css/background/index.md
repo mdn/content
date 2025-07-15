@@ -3,9 +3,8 @@ title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
 browser-compat: css.properties.background
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 

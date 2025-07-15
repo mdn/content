@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.color.contrast-color
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`contrast-color()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) takes a {{cssxref("color_value","color")}} value and returns a [guaranteed](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum) contrasting color.
 

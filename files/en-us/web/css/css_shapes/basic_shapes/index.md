@@ -3,9 +3,8 @@ title: Basic shapes with shape-outside
 short-title: Using shape-outside
 slug: Web/CSS/CSS_shapes/Basic_shapes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type. In this guide, we discuss creating rectangles, circles, ellipses, and polygons with the {{cssxref("shape-outside")}} property. These are features defined in the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes).
 

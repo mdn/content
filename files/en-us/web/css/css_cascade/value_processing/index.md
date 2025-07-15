@@ -3,9 +3,8 @@ title: CSS property value processing
 short-title: Property value processing
 slug: Web/CSS/CSS_cascade/Value_processing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 For every element in a document tree, the browser assigns a value to every CSS property that applies to that element. The rendered value of each CSS property for a given element or box is the result of a calculation based on stylesheet definitions, inheritance, the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade), dependencies, unit conversion, and the display environment. This guide provides an overview of the processing steps applied to define how each CSS value is ultimately rendered by exploring key concepts like specified, computed, used, and actual values.
 

@@ -3,9 +3,8 @@ title: dominant-baseline
 slug: Web/CSS/dominant-baseline
 page-type: css-property
 browser-compat: css.properties.dominant-baseline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`dominant-baseline`** [CSS](/en-US/docs/Web/CSS) property specifies the specific [baseline](/en-US/docs/Glossary/Baseline/Typography) used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context. If present, it overrides the shape's {{SVGAttr("dominant-baseline")}} attribute.
 

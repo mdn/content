@@ -3,9 +3,8 @@ title: cy
 slug: Web/CSS/cy
 page-type: css-property
 browser-compat: css.properties.cy
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`cy`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis center point of an SVG {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements. If present, it overrides the element's {{SVGAttr("cy")}} attribute.
 

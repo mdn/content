@@ -7,7 +7,7 @@ sidebar: firefox
 
 This page tries to give an overview of the changes between [Gecko](/en-US/Gecko) 1.8 and Gecko 1.9, that could possibly affect websites in their behavior or rendering.
 
-See also [Firefox 3 for developers](/en-US/Firefox_3_for_developers).
+See also [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3).
 
 ## Events
 

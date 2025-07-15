@@ -1,5 +1,6 @@
 ---
 title: Firefox 32 for developers
+short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes
 sidebar: firefox
@@ -102,7 +103,7 @@ _No change._
 
 Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects).
 
-A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to `Addon` instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
@@ -121,7 +122,3 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 ### XPCOM
 
 - The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
-
-### Older versions
-
-{{Firefox_for_developers}}

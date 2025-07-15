@@ -3,9 +3,8 @@ title: font-family
 slug: Web/CSS/font-family
 page-type: css-property
 browser-compat: css.properties.font-family
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 

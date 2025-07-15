@@ -3,9 +3,8 @@ title: transform-origin
 slug: Web/SVG/Reference/Attribute/transform-origin
 page-type: svg-attribute
 browser-compat: svg.global_attributes.transform-origin
+sidebar: svgref
 ---
-
-{{SVGRef()}}
 
 The **`transform-origin`** SVG attribute sets the origin for an item's transformations.
 

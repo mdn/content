@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-sizing-4/
   - https://drafts.csswg.org/css-sizing-3/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box sizing** module enables developers to specify how elements fit their content or fit into a particular layout context. It defines sizing, minimum sizing, and maximum sizing properties, and also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based [extrinsic](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) size.
 

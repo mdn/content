@@ -2,9 +2,8 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this recipe we will create a list group pattern with badges that indicate a count.
 

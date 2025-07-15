@@ -3,9 +3,8 @@ title: Handling overflow in multi-column layout
 short-title: Handling overflow
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we look at how to deal with overflow in a multi-column (_multicol_) layout, both inside the column boxes and in situations where there is more content than will fit into the container.
 

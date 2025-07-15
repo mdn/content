@@ -1,5 +1,6 @@
 ---
 title: Firefox 88 for developers
+short-title: Firefox 88
 slug: Mozilla/Firefox/Releases/88
 page-type: firefox-release-notes
 sidebar: firefox
@@ -62,7 +63,3 @@ _No changes._
 ## Changes for add-on developers
 
 - `url` can now be used to limit the properties for which the {{WebExtAPIRef("tabs.onUpdated")}} event is triggered ([Firefox bug 1680279](https://bugzil.la/1680279)).
-
-## Older versions
-
-{{Firefox_for_developers}}

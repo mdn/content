@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.if
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or a [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
@@ -240,7 +241,7 @@ For example, the following returns an {{cssxref("color_value/lch()")}} color if 
 ```css-nolint
 color: if(
   supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: rgb(192, 192, 192);
+  else: rgb(192 192 192);
 )
 ```
 
@@ -390,7 +391,7 @@ section {
   display: flex;
   gap: 16px;
   flex-direction: if(
-    media(orientation:landscape): row;
+    media(orientation: landscape): row;
     else: column;
   )
 }
@@ -401,7 +402,7 @@ Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, set
 ```css-nolint live-sample___basic
 h2::before {
   content: if(
-    style(--show-apple:true): "🍎 ";
+    style(--show-apple: true): "🍎 ";
   );
 }
 ```
@@ -410,7 +411,7 @@ Finally, we target the `<h2>` element itself. We use a feature query `<if-test>`
 
 ```css-nolint live-sample___basic
 h2 {
-    color: if(
+  color: if(
     supports(color: lch(29.57% 43.25 344.44)): lch(29.57% 43.25 344.44);
     else: #792359;
   )

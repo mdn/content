@@ -1,5 +1,6 @@
 ---
 title: Firefox 62 for developers
+short-title: Firefox 62
 slug: Mozilla/Firefox/Releases/62
 page-type: firefox-release-notes
 sidebar: firefox
@@ -162,7 +163,3 @@ _No changes._
 
 - Support for unpacked sideloaded extensions has been removed ([Firefox bug 1385057](https://bugzil.la/1385057)).
 - The warning about `browser_style` displayed when temporarily loading an extension for testing is no longer displayed ([Firefox bug 1404724](https://bugzil.la/1404724)).
-
-## Older versions
-
-{{Firefox_for_developers}}

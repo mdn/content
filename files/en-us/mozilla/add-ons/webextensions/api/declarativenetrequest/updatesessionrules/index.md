@@ -19,7 +19,7 @@ Modifies the set of session-scoped rules for the extension. The rules with IDs l
 ## Syntax
 
 ```js-nolint
-let updatedRuleset = browser.declarativeNetRequest.updateSessionRules(
+let rulesetUpdated = browser.declarativeNetRequest.updateSessionRules(
     options                // object
 );
 ```

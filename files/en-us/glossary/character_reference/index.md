@@ -2,9 +2,8 @@
 title: Character reference
 slug: Glossary/Character_reference
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An {{glossary("HTML")}} **character reference** is an {{glossary("escape character", "escape sequence")}} of {{glossary("character", "characters")}} that is used to represent another character in the rendered web page.
 

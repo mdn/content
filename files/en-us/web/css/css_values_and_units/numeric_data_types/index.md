@@ -3,9 +3,8 @@ title: Numeric data types
 slug: Web/CSS/CSS_Values_and_Units/Numeric_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can include various data types depending on the property, such as a single number, keyword, function, or a combination of different types; some values have units, while others do not. Numeric data types include {{cssxref("&lt;integer&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, and {{cssxref("&lt;percentage&gt;")}} values. This guide is an overview of numeric data types. Refer to the page for each value type for more detailed information.
 
