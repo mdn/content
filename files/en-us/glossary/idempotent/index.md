@@ -9,7 +9,7 @@ An HTTP method is **idempotent** if the intended effect on the server of making 
 
 The HTTP specification defines several HTTP methods and their semantics, which includes whether they are idempotent or not. All {{glossary("Safe/HTTP", "safe")}} methods are idempotent, as well as {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}. The {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} methods are not guaranteed to be idempotent.
 
-Idempotent methods are distinguished because the client can retry a request if its not sure whether the request reached the server. If both requests happen to reach the server, as long as the method is idempotent, no harm is done.
+A client can safely retry a request that uses an idempotent method, for example, in cases where there is doubt as to whether the request reached the server. If multiple identical requests happen to reach the server, as long as the method is idempotent, no harm is done.
 
 Idempotency, as defined by the HTTP specification, only considers the _intented_ effect of the client on the server: for example, a POST request intends to send data to the server, or a DELETE request intends to delete a resource on the server. A request with an idempotent method does not necessarily mean that the request does not have _any_ unique side effects: for example, the server may log every request with the time it was received.
 
