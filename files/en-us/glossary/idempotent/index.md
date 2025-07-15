@@ -9,7 +9,7 @@ An HTTP method is **idempotent** if the intended effect on the server of making 
 
 This does not necessarily mean that the request does not have _any_ unique side effects: for example, the server may log every request with the time it was received. Idempotency only applies to effects intended by the client: for example, a POST request intends to send data to the server, or a DELETE request intends to delete a resource on the server.
 
-All {{glossary("Safe/HTTP", "safe")}} methods are idempotent, as well as {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}. The {{HTTPMethod("POST")}} method is not idempotent.
+All {{glossary("Safe/HTTP", "safe")}} methods are idempotent, as well as {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}. The {{HTTPMethod("POST")}} and {{HTTPMethod("PATCH")}} methods are not idempotent.
 
 To be idempotent, only the state of the server is considered. The response returned by each request may differ: for example, the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a _delete last entry_ functionality using the `DELETE` method.
 
