@@ -9,7 +9,7 @@ sidebar: cssref
 An element can be established as a query container using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of container context used in a container query. The available container contexts are:
 
 - [Size](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): Enable selectively applying CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
-- [Scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is snapped to its scroll snap container.
+- [Scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
 
 > [!NOTE]
 > When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
@@ -83,7 +83,7 @@ The container size has to be set by context, such as block-level elements that s
 [Container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as:
 
 - Whether the container's contents are partially scrolled.
-- Whether the container is a snap target that is snapped to a scroll snap container.
+- Whether the container is a snap target that is going to be snapped to a scroll snap container.
 - Whether the container is positioned via [`position: sticky`](/en-US/docs/Web/CSS/display) and stuck to a boundary of a {{glossary("scroll container", "scrolling container")}}.
 
 In the first case, the queried container is the scroll container itself. In the other two cases the queried container is an element that is affected by the scroll position of an ancestor scroll container.
