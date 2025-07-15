@@ -384,10 +384,6 @@ Many of the elements used to define form controls have some of their own specifi
   </tbody>
 </table>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Basic controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls).
-
 ## Summary
 
 This article has covered the older input types — the original set introduced in the early days of HTML that is well-supported in all browsers. In the next section, we'll take a look at the more modern values of the `type` attribute.
