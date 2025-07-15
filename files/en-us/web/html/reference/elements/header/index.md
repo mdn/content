@@ -78,7 +78,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark **only when** it is a direct child of the {{HTMLElement('body')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
 When placed inside sectioning content such as {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, or {{HTMLElement('aside')}}:
 
