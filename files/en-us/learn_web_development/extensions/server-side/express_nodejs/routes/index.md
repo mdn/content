@@ -156,7 +156,7 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 > [!NOTE]
 > The URL _/book/create_ will be matched by a route like `/book/:bookId` (because `:bookId` is a placeholder for _any_ string, therefore `create` matches). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs specifically, their route handler must be defined before your `/book/:bookId` route.
 
-The names of route parameters can be any valid JavaScript identifier like `bookId` above, starting with a letter, `_` or `$`, digits after the first character, and no hyphens or spaces.
+Route parameter names (for example, `bookId`, above) can be any valid JavaScript identifier that starts with a letter, `_`, or `$`. You can include digits after the first character, but not hyphens and spaces.
 You can also use names that aren't valid JavaScript identifiers, including spaces, hyphens, emoticons, or any other character, but you need to define them with a quoted string and access them using bracket notation.
 For example:
 
@@ -186,7 +186,7 @@ app.get("/users/*example", (req, res) => {
 ### Optional parts
 
 Braces can be used to define parts of the path that are optional.
-For for example, below we match a filename with any extension (or none).
+For example, below we match a filename with any extension (or none).
 
 ```js
 app.get("/file/:filename{.:ext}", (req, res) => {
@@ -199,23 +199,22 @@ app.get("/file/:filename{.:ext}", (req, res) => {
 ### Reserved characters
 
 The following characters are reserved:`(()[]?+!)`.
-If you want to use them you will have to first escape them with the backslash (`\`).
+If you want to use them, you must escape them with a backslash (`\`).
 
 You also can't use the pipe character (`|`) in a regular expression.
 
 That's all you need to get started with routes.
-If needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+If needed, you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
 ### Handling errors and exceptions in the route functions
 
 The route functions shown earlier all have arguments `req` and `res`, which represent the request and response, respectively.
-Route functions are also called with a third argument `next`, which can be called to pass any errors or exceptions to the Express middleware chain, where they will eventually propagate to your global error handling code.
+Route functions are also passed a third argument, `next`, which contains a callback function that can be called to pass any errors or exceptions to the Express middleware chain, where they will eventually propagate to your global error handling code.
 
-From Express 5, `next` is called automatically with the rejection value if a route handler returns [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that subsequently rejects.
+From Express 5, `next` is called automatically with the rejection value if a route handler returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that subsequently rejects; therefore, no error handling code is required in route functions when using promises.
 This leads to very compact code when working with asynchronous promise-based APIs, in particular when using [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await).
 
 For example, the following code uses the `find()` method to query a database and then renders the result.
-No application code is required for error handling.
 
 ```js
 exports.get("/about", async (req, res, next) => {
@@ -225,7 +224,7 @@ exports.get("/about", async (req, res, next) => {
 ```
 
 The code below shows the same example using a promise chain.
-Note that if you wanted to, you could `catch` the error and implement your own custom handling.
+Note that if you wanted to, you could `catch()` the error and implement your own custom handling.
 
 ```js
 exports.get("/about", (req, res, next) => {
@@ -244,24 +243,26 @@ exports.get("/about", (req, res, next) => {
 ```
 
 > [!NOTE]
-> Most modern APIs use asynchronous Promised-based APIs, so error handling is often that straightforward.
+> Most modern APIs are asynchronous and promise-based, so error handling is often that straightforward.
 > Certainly that's all you really _need_ to know about error handling for this tutorial!
 
-Express 5 will automatically catch and forward exceptions that are thrown in synchronous code:
+Express 5 automatically catches and forwards exceptions that are thrown in synchronous code:
 
 ```js
 app.get("/", (req, res) => {
-  throw new Error("SynchronousException"); // Express will catch this.
+  // Express will catch this
+  throw new Error("SynchronousException");
 });
 ```
 
-But you must [`catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) exceptions that occur in asynchronous code invoked by route handlers or middleware, as these will not be caught by the default code:
+However, you must [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) exceptions occurring in asynchronous code invoked by route handlers or middleware. These will not be caught by the default code:
 
 ```js
 app.get("/", (req, res, next) => {
   setTimeout(() => {
     try {
-      throw new Error("AsynchronousException"); // You must catch and propagate yourself.
+      // You must catch and propagate this error yourself
+      throw new Error("AsynchronousException");
     } catch (err) {
       next(err);
     }
@@ -276,6 +277,7 @@ The following example shows how.
 router.get("/about", (req, res, next) => {
   About.find({}).exec((err, queryResults) => {
     if (err) {
+      // Propagate the error
       return next(err);
     }
     // Successful, so render

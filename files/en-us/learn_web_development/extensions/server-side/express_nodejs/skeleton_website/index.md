@@ -108,7 +108,7 @@ Generally speaking, you should select a templating engine that delivers all the 
 > [!NOTE]
 > There are many resources on the Internet to help you compare the different options!
 
-For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (this used to be called "Jade"), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
+For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (previously called "Jade"), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
 
 ### What CSS stylesheet engine should I use?
 
@@ -259,7 +259,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 }
 ```
 
-Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an npm script because npm knows all about the installed packages. Find the `scripts` section of your **package.json**. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
+Because the tool isn't installed globally, we can't launch it from the command line (unless we add it to the path). However, we can call it from an npm script because npm knows which packages are installed. Find the `scripts` section of your **package.json**. Initially, it will contain one line, which begins with `"start"`. Update it by putting a comma at the end of that line, and adding the `"devstart"` and `"serverstart"` lines:
 
 - On Linux and macOS, the scripts section will look like this:
 

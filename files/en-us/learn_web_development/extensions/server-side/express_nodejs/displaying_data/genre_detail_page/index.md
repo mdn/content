@@ -52,7 +52,7 @@ If the genre does not exist in the database (i.e., it may have been deleted) the
 In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 
 > [!NOTE]
-> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js) — for more information see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors) and [Handling errors and exceptions in the route functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_errors_and_exceptions_in_the_route_functions)).
+> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js). For more information, see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors) and [Handling errors and exceptions in the route functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_errors_and_exceptions_in_the_route_functions)).
 
 If the `genre` is found, then we call `render()` to display the view.
 The view template is **genre_detail** (.pug).

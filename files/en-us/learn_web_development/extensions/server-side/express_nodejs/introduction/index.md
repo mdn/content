@@ -245,9 +245,9 @@ setTimeout(() => {
 console.log("Second");
 ```
 
-Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ applications are often written as a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
+Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ applications are often written as a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources. However, it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not only the current request, but every other request being handled by your web application.
 
-There are a number of ways for an asynchronous API to notify your application that it has completed. Historically the approach used was to register a callback function when invoking the asynchronous API, that is then called back when the operation completes (this is the approach used above).
+There are multiple ways for an asynchronous API to notify your application that it has completed. Historically, the approach used was to register a callback function when invoking the asynchronous API, which is then called when the operation completes (this is the approach used above).
 
 > [!NOTE]
 > Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell".
@@ -256,7 +256,7 @@ There are a number of ways for an asynchronous API to notify your application th
 > A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
 
 Modern JavaScript code more commonly uses [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [async/await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to manage asynchronous program flow.
-You should use promises if you can. If working with code that uses callbacks, Node offers the [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to do the callback → Promise conversion ergonomically.
+You should use promises where possible. If working with code that uses callbacks, you can use the Node.js [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to handle the callback → Promise conversion ergonomically.
 
 ### Creating route handlers
 
