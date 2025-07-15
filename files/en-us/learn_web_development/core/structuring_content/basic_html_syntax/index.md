@@ -67,136 +67,35 @@ The anatomy of our element is:
 
 The element is the opening tag, followed by content, followed by the closing tag.
 
-### Active learning: creating your first HTML element
+> [!NOTE]
+> Head on over to our learning partner Scrimba's [HTML tags](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim for an interactive explanation of HTML tags.
 
-Edit the line below in the "Editable code" area by wrapping it with the tags `<em>` and `</em>.` To _open the element_, put the opening tag `<em>` at the start of the line. To _close the element_, put the closing tag `</em>` at the end of the line. Doing this should give the line italic text formatting! See your changes update live in the _Output_ area.
+### Creating your first HTML element
 
-If you make a mistake, you can clear your work using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
+Let's give you some practice at writing your own HTML elements:
 
-```html hidden
-<h2>Live output</h2>
-<div class="output" style="min-height: 50px;"></div>
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Wrap the line of text with the tags `<em>` and `</em>`. To _open the element_, put the opening tag `<em>` at the start of the line. To _close the element_, put the closing tag `</em>` at the end of the line. Doing this should give the rendered text in the output panel italic text formatting.
+3. If you are feeling adventurous, try looking up some more HTML elements and applying them to the text example.
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-<textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
-  This is my text.
-</textarea>
-
-<div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+```html live-sample___basic_html_1
+This is my text.
 ```
 
-```css hidden
-html {
-  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
-}
+{{ EmbedLiveSample('basic_html_1', "100%", 60) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished line of HTML should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<em>This is my text.</em>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution = "<em>This is my text.</em>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_creating_your_first_HTML_element', 700, 400, "", "") }}
+</details>
 
 ### Nesting elements
 
@@ -247,157 +146,41 @@ An attribute should have:
 - The attribute name, followed by an equal sign.
 - An attribute value, wrapped with opening and closing quote marks.
 
-### Active learning: Adding attributes to an element
+### Adding attributes to an element
 
-The `<img>` element can take a number of attributes, including:
+Now it's your turn again. In this section we are going to get you to add attributes to an `<img>` element to get an image displaying on the page. The `<img>` element can take several attributes, including:
 
-- `src`
-  - : The `src` attribute is a **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
-- `alt`
-  - : The `alt` attribute specifies a text description of the image. For example: `alt="The Firefox icon"`.
-- `width`
-  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`.
-- `height`
-  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`.
+- `src`: A **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
+- `alt`: A text description of the image. For example: `alt="The Firefox icon"`.
+- `width`: The width of the image in pixels. For example: `width="300"`.
+- `height`: The height of the image in pixels. For example: `height="300"`.
 
-Edit the line below in the _Input_ area to turn it into an image.
+Follow the steps below to complete the task:
 
-1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
-2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
-3. Set the `alt` attribute.
-4. Add the `width` and `height` attributes.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
+3. Back in the MDN Playground, add the `src` attribute to the `<img>` element and set its value to the link from Step 2.
+4. Set the `alt` attribute to a suitable description of the image.
+5. Set the `width` attribute to a value of say `300` so you can see the image a bit better inside the output panel. Adjust it if needed.
 
-You will be able to see your changes live in the _Output_ area.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
-
-```html hidden
-<h2>Live output</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="input" style="min-height: 100px;width: 95%">
-&lt;img alt="I should be an image" &gt;
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+```html live-sample___basic_html_2
+<img />
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('basic_html_2', "100%", 60) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished HTML element should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<img src="<URL-OF-IMAGE>" alt="A description of the image" width="300" />
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" width="100" height="100" />';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Adding_attributes_to_an_element', 700, 400, "", "") }}
+</details>
 
 ### Boolean attributes
 
@@ -511,166 +294,66 @@ Here we have:
 5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
 6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
-### Active learning: Adding some features to an HTML document
+### Adding some features to an HTML document
 
-If you want to experiment with writing some HTML on your local computer, you can:
+At this point, we want you to practice writing some slightly more substantial HTML content. To do this, you've got a couple of options — you can create the HTML on your local computer, or use the MDN Playground like in the previous examples.
 
-1. Copy the HTML page example listed above.
-2. Create a new file in your text editor.
-3. Paste the code into the new text file.
-4. Save the file as `index.html`.
+- To do it on your local machine:
+  1. Copy the HTML page example listed in the previous section and paste it into a new file in your code editor.
+  2. Make the changes to the page outlined in the instructions below.
+  3. Save the file as `index.html` then load it in a new browser tab to see the results.
 
-> [!NOTE]
-> You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+  > [!NOTE]
+  > You can also find this [basic HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) on our GitHub repo. You can make a copy of this file instead of creating it yourself.
 
-You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
+- To do it in the MDN Playground, click **"Play"** in the output panel below to edit the example, then follow the below instructions. If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground.
 
-![A simple HTML page that says This is my page](template-screenshot.png)
+```html hidden live-sample___basic_html_3
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
+</html>
+```
 
-In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the {{htmlelement("body")}} element, in this case). Sharpen your skills by implementing the following tasks:
+{{ EmbedLiveSample('basic_html_3', "100%", 60) }}
 
-- Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
-- Edit the paragraph content to include text about a topic that you find interesting.
-- Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
-- Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
+Here are the instructions to follow:
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
+1. Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
+2. Edit the paragraph content to include text about a topic that you find interesting.
+3. Make important words stand out in bold by wrapping them inside a {{htmlelement("strong")}} element.
+4. Add two links to your paragraph. This is achieved using the {{htmlelement("a")}} element.
+5. Add an image to your document, as [explained earlier in the article](#adding_attributes_to_an_element). Place it below the paragraph. If it is too big to see, add a `width` attribute to it, to shrink it down.
 
-```html hidden
-<h2>Live output</h2>
+If you get really stuck, you can view the solution here:
 
-<div class="output" style="min-height: 50px;"></div>
+<details>
+<summary>Click here to show the solution</summary>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+The contents of your finished HTML element body should look something like this:
+
+```html
+<h1>Some music</h1>
+<p>
+  I really enjoy <strong>playing the drums</strong>. One of my favorite drummers
+  is Neal Peart, who used to play in the band
+  <a href="https://en.wikipedia.org/wiki/Rush_%28band%29">Rush</a>. My favorite
+  Rush album is currently
+  <a href="https://www.deezer.com/album/942295">Moving Pictures</a>.
 </p>
-
-<textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;This is my page&lt;/p&gt;
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+<img
+  src="https://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg"
+  alt="Rush Moving Pictures album cover"
+  width="300" />
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h1 {
-  color: blue;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="https://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="https://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 500) }}
+</details>
 
 ### Whitespace in HTML
 

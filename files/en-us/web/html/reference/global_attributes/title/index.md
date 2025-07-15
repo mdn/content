@@ -1,11 +1,11 @@
 ---
-title: title
+title: HTML title global attribute
+short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 page-type: html-attribute
 browser-compat: html.global_attributes.title
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`title`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) contains text representing advisory information related to the element it belongs to.
 

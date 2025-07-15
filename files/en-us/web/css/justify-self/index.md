@@ -3,9 +3,8 @@ title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
@@ -48,7 +47,7 @@ justify-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -103,7 +102,6 @@ This property can take one of three different forms:
 - Basic keywords: one of the keyword values `normal`, `auto`, or `stretch`.
 - Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
 - Positional alignment:
-
   - one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`.
   - Plus optionally `safe` or `unsafe`.
 
@@ -112,9 +110,7 @@ This property can take one of three different forms:
 - `auto`
   - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In block-level layouts, the keyword is a synonym of `start`.
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.

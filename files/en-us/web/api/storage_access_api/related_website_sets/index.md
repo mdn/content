@@ -4,6 +4,7 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
+browser-compat: api.Document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
@@ -135,7 +136,7 @@ Once a set is active:
 
 RWS has been designed with security in mind. It would be disastrous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
 
-- **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (`i.e.` by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
+- **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (i.e., by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
 - **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e., if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
 - **`site1.example.com` and `site2.example.com` are intentionally in the same set, but `site1.example.com` gets hijacked by `evilsite.example.com`**: The impact of a site hijacking attack within a set isn't any worse than it would usually be, once the other sites are updated accordingly:
   - The regular [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) requires an active opt-in by the embedded site, so `site2.example.com` can stop calling `document.requestStorageAccess()` when it's embedded in `site1.example.com`, avoiding a {{glossary("CSRF")}} attack.
@@ -143,8 +144,7 @@ RWS has been designed with security in mind. It would be disastrous if a bad act
 
 ## Examples
 
-- The [Related Website Sets demo](https://related-website-sets.glitch.me/) demonstrates how RWS is used.
-- Also see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using).
+For code examples, see [Related Website Sets: developer guide](https://privacysandbox.google.com/cookies/related-website-sets-integration) on privacysandbox.google.com (2024)
 
 ## Specifications
 
@@ -157,8 +157,11 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 - Mozilla (Firefox): [Negative](https://mozilla.github.io/standards-positions/#first-party-sets)
 - Apple (Safari): [Negative](https://webkit.org/standards-positions/#position-93)
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
 - [Related Website Sets](https://privacysandbox.google.com/cookies/related-website-sets) on privacysandbox.google.com (2023)
-- [Related Website Sets: developer guide](https://privacysandbox.google.com/cookies/related-website-sets-integration) on privacysandbox.google.com (2023)

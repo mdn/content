@@ -32,16 +32,23 @@ The HTML content for this example is primarily a checkbox, shaped as an actual b
 
 ```html
 <div class="controls">
-    <input type="checkbox" id="playButton">
-    <label for="playButton">Activate: </label>
-    <label for="volumeControl">Volume: </label>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-           value="0.8" name="volume" id="volumeControl">
-  </div>
+  <input type="checkbox" id="playButton" />
+  <label for="playButton">Activate: </label>
+  <label for="volumeControl">Volume: </label>
+  <input
+    type="range"
+    min="0.0"
+    max="1.0"
+    step="0.01"
+    value="0.8"
+    name="volume"
+    id="volumeControl" />
 </div>
 
-<p>Toggle the checkbox above to start and stop the tones, and use the volume control to
-change the volume of the notes E and G in the chord.</p>
+<p>
+  Toggle the checkbox above to start and stop the tones, and use the volume
+  control to change the volume of the notes E and G in the chord.
+</p>
 ```
 
 ```css hidden
@@ -56,7 +63,7 @@ change the volume of the notes E and G in the chord.</p>
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after {
+#playButton:not(:checked) + label::after {
   content: "▶️";
 }
 
@@ -209,19 +216,19 @@ When the user clicks the play/pause toggle button while the oscillators aren't p
 function startOscillators() {
   oscNode1 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 261.625565300598634, // middle C$
+    frequency: 261.6255653005986, // middle C$
   });
   oscNode1.connect(gainNode1);
 
   oscNode2 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 329.627556912869929, // E
+    frequency: 329.6275569128699, // E
   });
   oscNode2.connect(gainNode2);
 
   oscNode3 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 391.995435981749294, // G
+    frequency: 391.99543598174927, // G
   });
   oscNode3.connect(gainNode3);
 

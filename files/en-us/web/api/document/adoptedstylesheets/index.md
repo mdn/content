@@ -48,7 +48,7 @@ const sheet = new CSSStyleSheet();
 sheet.replaceSync("a { color: red; }");
 
 // Apply the stylesheet to a document
-document.adoptedStyleSheets = [sheet];
+document.adoptedStyleSheets.push(sheet);
 ```
 
 We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insertRule()")}}.
@@ -56,19 +56,6 @@ We can append a new rule to the stylesheet using {{domxref("CSSStyleSheet.insert
 ```js
 sheet.insertRule("* { background-color: blue; }");
 // The document will now have blue background.
-```
-
-### Append a new stylesheet
-
-To append a whole new stylesheet to the `adoptedStyleSheets` property we have to create and assign a new combined array.
-This is demonstrated below using spread-syntax:
-
-```js
-const extraSheet = new CSSStyleSheet();
-extraSheet.replaceSync("p { color: green; }");
-
-// Combine the existing sheets and new one
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
 ```
 
 ## Sharing a stylesheet with a shadow DOM
@@ -80,7 +67,7 @@ We can share a stylesheet to a shadow root in a similar way.
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the same sheet into the shadow DOM
+// Adopt the same sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 

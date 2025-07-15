@@ -1,11 +1,11 @@
 ---
-title: POST
+title: POST request method
+short-title: POST
 slug: Web/HTTP/Reference/Methods/POST
 page-type: http-method
 browser-compat: http.methods.POST
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`POST`** HTTP method sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
 

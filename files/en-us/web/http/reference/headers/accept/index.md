@@ -1,11 +1,11 @@
 ---
-title: Accept
+title: Accept header
+short-title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
 page-type: http-header
 browser-compat: http.headers.Accept
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types), the sender is able to understand.
 In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header.

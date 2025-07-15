@@ -1,10 +1,10 @@
 ---
 title: Firefox 40 for developers
+short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -60,7 +60,7 @@ _No change._
 - Support for the non-standard JS1.7 destructuring for-in has been dropped ([Firefox bug 1083498](https://bugzil.la/1083498)).
 - [Non-standard initializer expressions](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops are now ignored and will present a warning in the console. ([Firefox bug 748550](https://bugzil.la/748550) and [Firefox bug 1164741](https://bugzil.la/1164741)).
 - [`\u{xxxxxx}`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) Unicode code point escapes have been added ([Firefox bug 320500](https://bugzil.la/320500)).
-- {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ([Firefox bug 1102219](https://bugzil.la/1102219)).
+- `String.prototype.contains` has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ([Firefox bug 1102219](https://bugzil.la/1102219)).
 - If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification.
 - An issue regressed in Firefox 21, where proxified arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ([Firefox bug 895223](https://bugzil.la/895223)).
 - `WeakMap.prototype` and `WeakSet.prototype` have been updated to be just ordinary objects, per ES2015 specification ([Firefox bug 1055473](https://bugzil.la/1055473)).
@@ -151,7 +151,6 @@ _No change._
 
 - The `nsIClassInfo.implementationLanguage` attribute has been removed, along with the `nsClassInfo::GetImplementationLanguage()` function.
 - The following XPCOM interfaces have been removed; you should use the standard HTML interfaces instead:
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`
@@ -163,7 +162,3 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ([Firefox bug 1140395](https://bugzil.la/1140395)).
 - The automated testing system now supports skipping individual test functions. See [running conditional tests](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) in XPCShell testing.
-
-## Older versions
-
-{{Firefox_for_developers}}

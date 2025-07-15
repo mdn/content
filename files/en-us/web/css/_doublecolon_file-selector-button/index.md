@@ -3,9 +3,8 @@ title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 page-type: css-pseudo-element
 browser-compat: css.selectors.file-selector-button
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file).
 
@@ -34,7 +33,9 @@ input::file-selector-button {
 ## Syntax
 
 ```css
-selector::file-selector-button
+::file-selector-button {
+  /* ... */
+}
 ```
 
 ## Examples

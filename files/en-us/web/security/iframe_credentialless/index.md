@@ -6,9 +6,10 @@ status:
   - experimental
 browser-compat: html.elements.iframe.credentialless
 spec-urls: https://wicg.github.io/anonymous-iframe/
+sidebar: security
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **IFrame credentialless** provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context. It doesn't have access to its regular origin's network, cookies, and storage data. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
@@ -67,10 +68,6 @@ The result of this is that documents loaded into credentialless `<iframe>`s are 
 ## Recursive credentialless inside child IFrames
 
 If `credentialless` is set on an `<iframe>` that has child `<iframe>`s embedded in the document loaded inside it, those child `<iframe>`s inherit the credentialless setting.
-
-## Live demo
-
-Use the [https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me/) demo to see IFrame credentialless in action.
 
 ## Specifications
 

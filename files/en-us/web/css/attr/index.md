@@ -3,9 +3,8 @@ title: attr()
 slug: Web/CSS/attr
 page-type: css-function
 browser-compat: css.types.attr
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
@@ -70,9 +69,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
-
     - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
@@ -132,11 +129,12 @@ The `attr()` function can reference attributes that were never intended by the p
 ```html
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
+```
+
+```css
+span[data-icon] {
+  background-image: url(attr(data-icon));
+}
 ```
 
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
@@ -439,7 +437,7 @@ The cards are laid out in a flex container:
   .warning {
     padding: 1em;
     border: 1px solid #ccc;
-    background: rgba(255 255 205 / 0.8);
+    background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;
     margin: 1em;

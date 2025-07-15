@@ -3,9 +3,8 @@ title: "<table>: The Table element"
 slug: Web/HTML/Reference/Elements/table
 page-type: html-element
 browser-compat: html.elements.table
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<table>`** [HTML](/en-US/docs/Web/HTML) element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 
@@ -106,39 +105,30 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of the table within its parent element. The possible {{Glossary("enumerated")}} values are `left`, `center`, and `right`. Use the {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} CSS properties instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `border` {{deprecated_inline}}
-
   - : Defines, as a non-negative integer value (in pixels), the size of the frame surrounding the table. If set to `0`, the [`frame`](#frame) attribute is set to void. Use the {{cssxref("border")}} CSS property instead, as this attribute is deprecated.
 
 - `cellpadding` {{deprecated_inline}}
-
   - : Defines the space between the content of a cell and its border. This attribute is obsolete: instead of using it, apply the {{cssxref("padding")}} CSS property to the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements.
 
 - `cellspacing` {{deprecated_inline}}
-
   - : Defines the size of the space between two cells. This attribute is obsolete: instead of using it, set the {{cssxref("border-spacing")}} CSS property on the `<table>` element. Note that this has no effect if the `<table>` element's {{cssxref("border-collapse")}} CSS property is set to `collapse`.
 
 - `frame` {{deprecated_inline}}
-
   - : Defines which side of the frame surrounding the table must be displayed. The possible {{Glossary("enumerated")}} values are `void`, `above`, `below`, `hsides`, `vsides`, `lhs`, `rhs`, `box` and `border`. Use the {{cssxref("border-style")}} and {{cssxref("border-width")}} CSS properties instead, as this attribute is deprecated.
 
 - `rules` {{deprecated_inline}}
-
   - : Defines where rules (borders) are displayed in the table. The possible {{Glossary("enumerated")}} values are `none` (default value), `groups` ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}} elements), `rows` (horizontal lines), `cols` (vertical lines), and `all` (border around every cell). Use the {{cssxref("border")}} CSS property on the appropriate table-related elements, as well as on the `<table>` itself, instead, as this attribute is deprecated.
 
 - `summary` {{deprecated_inline}}
-
   - : Defines an alternative text that summarizes the content of the table. Use the {{htmlelement("caption")}} element instead, as this attribute is deprecated.
 
 - `width` {{deprecated_inline}}
-
   - : Specifies the width of the table. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
     > [!NOTE]
@@ -793,174 +783,197 @@ This example provides one way to display tables in small spaces. We've hidden th
 <table>
   <thead>
     <tr>
-      <th>1<sup>3</sup> equals:
-      <th>2<sup>3</sup> equals:
-      <th>3<sup>3</sup> equals:
-      <th>4<sup>3</sup> equals:
-      <th>5<sup>3</sup> equals:
-      <th>6<sup>3</sup> equals:
-      <th>7<sup>3</sup> equals:
+      <th>1<sup>3</sup> equals:</th>
+      <th>2<sup>3</sup> equals:</th>
+      <th>3<sup>3</sup> equals:</th>
+      <th>4<sup>3</sup> equals:</th>
+      <th>5<sup>3</sup> equals:</th>
+      <th>6<sup>3</sup> equals:</th>
+      <th>7<sup>3</sup> equals:</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>row 1: 1
-      <td>row 1: 8
-      <td>row 1: 27
-      <td>row 1: 64
-      <td>row 1: 125
-      <td>row 1: 216
-      <td>row 1: 343
+      <td>row 1: 1</td>
+      <td>row 1: 8</td>
+      <td>row 1: 27</td>
+      <td>row 1: 64</td>
+      <td>row 1: 125</td>
+      <td>row 1: 216</td>
+      <td>row 1: 343</td>
+    </tr>
     <tr>
-      <td>row 2: 1
-      <td>row 2: 8
-      <td>row 2: 27
-      <td>row 2: 64
-      <td>row 2: 125
-      <td>row 2: 216
-      <td>row 2: 343
+      <td>row 2: 1</td>
+      <td>row 2: 8</td>
+      <td>row 2: 27</td>
+      <td>row 2: 64</td>
+      <td>row 2: 125</td>
+      <td>row 2: 216</td>
+      <td>row 2: 343</td>
+    </tr>
     <tr>
-      <td>row 3: 1
-      <td>row 3: 8
-      <td>row 3: 27
-      <td>row 3: 64
-      <td>row 3: 125
-      <td>row 3: 216
-      <td>row 3: 343
+      <td>row 3: 1</td>
+      <td>row 3: 8</td>
+      <td>row 3: 27</td>
+      <td>row 3: 64</td>
+      <td>row 3: 125</td>
+      <td>row 3: 216</td>
+      <td>row 3: 343</td>
+    </tr>
     <tr>
-      <td>row 4: 1
-      <td>row 4: 8
-      <td>row 4: 27
-      <td>row 4: 64
-      <td>row 4: 125
-      <td>row 4: 216
-      <td>row 4: 343
+      <td>row 4: 1</td>
+      <td>row 4: 8</td>
+      <td>row 4: 27</td>
+      <td>row 4: 64</td>
+      <td>row 4: 125</td>
+      <td>row 4: 216</td>
+      <td>row 4: 343</td>
+    </tr>
     <tr>
-      <td>row 5: 1
-      <td>row 5: 8
-      <td>row 5: 27
-      <td>row 5: 64
-      <td>row 5: 125
-      <td>row 5: 216
-      <td>row 5: 343
+      <td>row 5: 1</td>
+      <td>row 5: 8</td>
+      <td>row 5: 27</td>
+      <td>row 5: 64</td>
+      <td>row 5: 125</td>
+      <td>row 5: 216</td>
+      <td>row 5: 343</td>
+    </tr>
     <tr>
-      <td>row 6: 1
-      <td>row 6: 8
-      <td>row 6: 27
-      <td>row 6: 64
-      <td>row 6: 125
-      <td>row 6: 216
-      <td>row 6: 343
+      <td>row 6: 1</td>
+      <td>row 6: 8</td>
+      <td>row 6: 27</td>
+      <td>row 6: 64</td>
+      <td>row 6: 125</td>
+      <td>row 6: 216</td>
+      <td>row 6: 343</td>
+    </tr>
     <tr>
-      <td>row 7: 1
-      <td>row 7: 8
-      <td>row 7: 27
-      <td>row 7: 64
-      <td>row 7: 125
-      <td>row 7: 216
-      <td>row 7: 343
+      <td>row 7: 1</td>
+      <td>row 7: 8</td>
+      <td>row 7: 27</td>
+      <td>row 7: 64</td>
+      <td>row 7: 125</td>
+      <td>row 7: 216</td>
+      <td>row 7: 343</td>
+    </tr>
     <tr>
-      <td>row 8: 1
-      <td>row 8: 8
-      <td>row 8: 27
-      <td>row 8: 64
-      <td>row 8: 125
-      <td>row 8: 216
-      <td>row 8: 343
+      <td>row 8: 1</td>
+      <td>row 8: 8</td>
+      <td>row 8: 27</td>
+      <td>row 8: 64</td>
+      <td>row 8: 125</td>
+      <td>row 8: 216</td>
+      <td>row 8: 343</td>
+    </tr>
     <tr>
-      <td>row 9: 1
-      <td>row 9: 8
-      <td>row 9: 27
-      <td>row 9: 64
-      <td>row 9: 125
-      <td>row 9: 216
-      <td>row 9: 343
+      <td>row 9: 1</td>
+      <td>row 9: 8</td>
+      <td>row 9: 27</td>
+      <td>row 9: 64</td>
+      <td>row 9: 125</td>
+      <td>row 9: 216</td>
+      <td>row 9: 343</td>
+    </tr>
     <tr>
-      <td>row 10: 1
-      <td>row 10: 8
-      <td>row 10: 27
-      <td>row 10: 64
-      <td>row 10: 125
-      <td>row 10: 216
-      <td>row 10: 343
+      <td>row 10: 1</td>
+      <td>row 10: 8</td>
+      <td>row 10: 27</td>
+      <td>row 10: 64</td>
+      <td>row 10: 125</td>
+      <td>row 10: 216</td>
+      <td>row 10: 343</td>
+    </tr>
     <tr>
-      <td>row 11: 1
-      <td>row 11: 8
-      <td>row 11: 27
-      <td>row 11: 64
-      <td>row 11: 125
-      <td>row 11: 216
-      <td>row 11: 343
+      <td>row 11: 1</td>
+      <td>row 11: 8</td>
+      <td>row 11: 27</td>
+      <td>row 11: 64</td>
+      <td>row 11: 125</td>
+      <td>row 11: 216</td>
+      <td>row 11: 343</td>
+    </tr>
     <tr>
-      <td>row 12: 1
-      <td>row 12: 8
-      <td>row 12: 27
-      <td>row 12: 64
-      <td>row 12: 125
-      <td>row 12: 216
-      <td>row 12: 343
+      <td>row 12: 1</td>
+      <td>row 12: 8</td>
+      <td>row 12: 27</td>
+      <td>row 12: 64</td>
+      <td>row 12: 125</td>
+      <td>row 12: 216</td>
+      <td>row 12: 343</td>
+    </tr>
     <tr>
-      <td>row 13: 1
-      <td>row 13: 8
-      <td>row 13: 27
-      <td>row 13: 64
-      <td>row 13: 125
-      <td>row 13: 216
-      <td>row 13: 343
+      <td>row 13: 1</td>
+      <td>row 13: 8</td>
+      <td>row 13: 27</td>
+      <td>row 13: 64</td>
+      <td>row 13: 125</td>
+      <td>row 13: 216</td>
+      <td>row 13: 343</td>
+    </tr>
     <tr>
-      <td>row 14: 1
-      <td>row 14: 8
-      <td>row 14: 27
-      <td>row 14: 64
-      <td>row 14: 125
-      <td>row 14: 216
-      <td>row 14: 343
+      <td>row 14: 1</td>
+      <td>row 14: 8</td>
+      <td>row 14: 27</td>
+      <td>row 14: 64</td>
+      <td>row 14: 125</td>
+      <td>row 14: 216</td>
+      <td>row 14: 343</td>
+    </tr>
     <tr>
-      <td>row 15: 1
-      <td>row 15: 8
-      <td>row 15: 27
-      <td>row 15: 64
-      <td>row 15: 125
-      <td>row 15: 216
-      <td>row 15: 343
+      <td>row 15: 1</td>
+      <td>row 15: 8</td>
+      <td>row 15: 27</td>
+      <td>row 15: 64</td>
+      <td>row 15: 125</td>
+      <td>row 15: 216</td>
+      <td>row 15: 343</td>
+    </tr>
     <tr>
-      <td>row 16: 1
-      <td>row 16: 8
-      <td>row 16: 27
-      <td>row 16: 64
-      <td>row 16: 125
-      <td>row 16: 216
-      <td>row 16: 343
+      <td>row 16: 1</td>
+      <td>row 16: 8</td>
+      <td>row 16: 27</td>
+      <td>row 16: 64</td>
+      <td>row 16: 125</td>
+      <td>row 16: 216</td>
+      <td>row 16: 343</td>
+    </tr>
     <tr>
-      <td>row 17: 1
-      <td>row 17: 8
-      <td>row 17: 27
-      <td>row 17: 64
-      <td>row 17: 125
-      <td>row 17: 216
-      <td>row 17: 343
+      <td>row 17: 1</td>
+      <td>row 17: 8</td>
+      <td>row 17: 27</td>
+      <td>row 17: 64</td>
+      <td>row 17: 125</td>
+      <td>row 17: 216</td>
+      <td>row 17: 343</td>
+    </tr>
     <tr>
-      <td>row 18: 1
-      <td>row 18: 8
-      <td>row 18: 27
-      <td>row 18: 64
-      <td>row 18: 125
-      <td>row 18: 216
-      <td>row 18: 343
+      <td>row 18: 1</td>
+      <td>row 18: 8</td>
+      <td>row 18: 27</td>
+      <td>row 18: 64</td>
+      <td>row 18: 125</td>
+      <td>row 18: 216</td>
+      <td>row 18: 343</td>
+    </tr>
     <tr>
-      <td>row 19: 1
-      <td>row 19: 8
-      <td>row 19: 27
-      <td>row 19: 64
-      <td>row 19: 125
-      <td>row 19: 216
-      <td>row 19: 343
+      <td>row 19: 1</td>
+      <td>row 19: 8</td>
+      <td>row 19: 27</td>
+      <td>row 19: 64</td>
+      <td>row 19: 125</td>
+      <td>row 19: 216</td>
+      <td>row 19: 343</td>
+    </tr>
     <tr>
-      <td>row 20: 1
-      <td>row 20: 8
-      <td>row 20: 27
-      <td>row 20: 64
-      <td>row 20: 125
-      <td>row 20: 216
-      <td>row 20: 343
+      <td>row 20: 1</td>
+      <td>row 20: 8</td>
+      <td>row 20: 27</td>
+      <td>row 20: 64</td>
+      <td>row 20: 125</td>
+      <td>row 20: 216</td>
+      <td>row 20: 343</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

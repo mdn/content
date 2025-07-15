@@ -19,6 +19,14 @@ If several listeners are attached to the same element for the same event type, t
 stopImmediatePropagation()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Comparing event-stopping functions

@@ -5,9 +5,8 @@ page-type: guide
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
@@ -101,6 +100,51 @@ For subresource-integrity verification of a resource served from an origin other
 Access-Control-Allow-Origin: *
 ```
 
+## How browsers handle Subresource Integrity
+
+Browsers handle SRI by doing the following:
+
+1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
+
+   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+
+2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
+
+## Integrity policy
+
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers enable a document to enforce a policy regarding the integrity metadata requirements on loaded subresources of specified types (currently scripts only).
+
+When an `Integrity-Policy` header is specified, the browser blocks requests with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode or without an `integrity` attribute from being made, and will also report violations if a valid reporting endpoint is specified.
+When an `Integrity-Policy-Report-Only` header is specified the browser allows requests that violate the policy, but will report violations to the reporting endpoint (if a valid reporting endpoint is specified).
+
+Developers would typically use `Integrity-Policy-Report-Only` as a first deployment step in their Integrity Policy journey, to ensure that all the scripts loaded in their documents have appropriate integrity metadata. Once they'd see that no violation reports are being received, they'd know that they can enable blocking using the `Integrity-Policy` header without risking user-facing breakage.
+
+The header values are defined as structured field dictionaries with the following keys:
+
+- `blocked-destinations`
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
+- `sources` {{optional_inline}}
+  - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
+- `endpoints` {{optional_inline}}
+  - : Defines a list of [reporting endpoints](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint). The reporting endpoints need to be defined in a {{httpheader("Reporting-Endpoints")}} header.
+
+In cases where a request is blocked by an integrity policy, a [Reporting API](/en-US/docs/Web/API/Reporting_API) violation report is created with a type of `integrity-violation` and a body of type {{domxref("IntegrityViolationReportBody")}} that includes information such as the URL of the document and the blocked resource.
+
+A typical report might look like this
+
+```json
+{
+  "type": "integrity-violation",
+  "url": "https://example.com",
+  "body": {
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
+    "destination": "script",
+    "reportOnly": false
+  }
+}
+```
+
 ## Examples
 
 In the following examples, assume that `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is already known to be the expected SHA-384 hash (digest) of a particular script `example-framework.js`, and there's a copy of the script hosted at `https://example.com/example-framework.js`.
@@ -119,15 +163,20 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
 > [!NOTE]
 > For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin).
 
-## How browsers handle Subresource Integrity
+### Integrity enforcement with the `Integrity-Policy` header
 
-Browsers handle SRI by doing the following:
+You can add the {{httpheader("Integrity-Policy")}} header to your document in order to ensure that all the external scripts it loads are loaded with integrity (and aren't loaded with [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode)
 
-1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
+```http
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
+```
 
-   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+In case you're not sure all your the external scripts have integrity metadata, you can enable the report-only version of the feature and start getting reports of violations.
+You can do that with the {{httpheader("Integrity-Policy-Report-Only")}} header.
 
-2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
+```http
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
+```
 
 ## Specifications
 

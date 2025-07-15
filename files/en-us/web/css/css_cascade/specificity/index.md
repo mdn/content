@@ -3,9 +3,8 @@ title: Specificity
 slug: Web/CSS/CSS_cascade/Specificity
 page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
 
@@ -60,9 +59,15 @@ The specificity for a required input nested in an element with attribute `id="my
 If the password input type with `required` is nested in an element with `id="myApp"` set, the specificity weight will be `1-2-1`, based on one ID, two pseudo-classes, and one element type, whether or not it has focus. Why is the specificity weight `1-2-1` rather than `0-1-1` or `0-1-0` in this case? Because the specificity weight comes from the matching selector with the greatest specificity weight. The weight is determined by comparing the values in the three columns, from left to right.
 
 ```css
-[type="password"]             /* 0-1-0 */
-input:focus                   /* 0-1-1 */
-:root #myApp input:required   /* 1-2-1 */
+[type="password"] {
+  /* 0-1-0 */
+}
+input:focus {
+  /* 0-1-1 */
+}
+:root #myApp input:required {
+  /* 1-2-1 */
+}
 ```
 
 ### Three-column comparison
@@ -245,7 +250,8 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
 ```css
 @scope (.article-body) {
   /* img has a specificity of 0-0-1, as expected */
-  img { ... }
+  img {
+  }
 }
 ```
 
@@ -254,7 +260,8 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 ```css
 @scope (.article-body) {
   /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
-  :scope img { ... }
+  :scope img {
+  }
 }
 ```
 
@@ -262,7 +269,8 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 
 ```css
 @scope (figure, #primary) {
-  & img { ... }
+  & img {
+  }
 }
 ```
 
@@ -338,14 +346,12 @@ If styles are coming from a stylesheet you can't edit or don't understand and yo
 
 When two selectors from different layers match the same element, origin and importance take precedence; the specificity of the selector in the losing stylesheet is irrelevant.
 
-```html
-<style>
-  @import TW.css layer();
-  p,
-  p * {
-    font-size: 1rem;
-  }
-</style>
+```css
+@import "TW.css" layer();
+p,
+p * {
+  font-size: 1rem;
+}
 ```
 
 In the above example, all paragraph text, including the nested content, will be `1rem` no matter how many class names the paragraphs have that match the TW stylesheet.
@@ -369,10 +375,8 @@ If you're unable to remove `!important` flags from an authors style sheet, the o
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
 2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
 
-```html
-<style>
-  @import importantOverrides.css layer();
-</style>
+```css
+@import "importantOverrides.css" layer();
 ```
 
 #### Method 2

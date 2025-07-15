@@ -9,32 +9,27 @@ browser-compat: api.Element.outerHTML
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}
-DOM interface gets the serialized HTML fragment describing the element including its
-descendants. It can also be set to replace the element with nodes parsed from the given
-string.
+DOM interface gets the serialized HTML fragment describing the element including its descendants.
+It can also be set to replace the element with nodes parsed from the given string.
 
-To only obtain the HTML representation of the contents of an element, or to replace the
-contents of an element, use the {{domxref("Element.innerHTML", "innerHTML")}} property
-instead.
+To only obtain the HTML representation of the contents of an element, or to replace the contents of an element, use the {{domxref("Element.innerHTML", "innerHTML")}} property instead.
+
+Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
+This is to prevent a potential security vulnerability ([mutation XSS](https://research.securitum.com/dompurify-bypass-using-mxss/)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
 
 ## Value
 
-Reading the value of `outerHTML` returns a string
-containing an HTML serialization of the `element` and its descendants.
-Setting the value of `outerHTML` replaces the element and all of its
-descendants with a new DOM tree constructed by parsing the specified
-`htmlString`.
+Reading the value of `outerHTML` returns a string containing an HTML serialization of the `element` and its descendants.
+Setting the value of `outerHTML` replaces the element and all of its descendants with a new DOM tree constructed by parsing the specified `htmlString`.
 
 When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.outerHTML = ""`.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to set `outerHTML` using an HTML string which is not
-    valid.
+  - : Thrown if an attempt was made to set `outerHTML` using an HTML string which is not valid.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if an attempt was made to set `outerHTML` on an element which is a direct
-    child of a {{domxref("Document")}}, such as {{domxref("Document.documentElement")}}.
+  - : Thrown if an attempt was made to set `outerHTML` on an element which is a direct child of a {{domxref("Document")}}, such as {{domxref("Document.documentElement")}}.
 
 ## Examples
 

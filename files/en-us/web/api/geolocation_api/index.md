@@ -61,7 +61,7 @@ Permissions-Policy: geolocation=(self b.example.com)
 The `allow="geolocation"` attribute must then be added to the iframe element with sources from that origin:
 
 ```html
-<iframe src="https://b.example.com" allow="geolocation"/></iframe>
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
 ```
 
 Geolocation data may reveal information that the device owner does not want to share.
@@ -88,5 +88,4 @@ As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API
 ## See also
 
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

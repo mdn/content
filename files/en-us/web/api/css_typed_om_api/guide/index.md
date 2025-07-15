@@ -138,9 +138,9 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 
 ```html
 <p>
-   This is a paragraph with some content. Open up this example in CodePen or
-   JSFiddle, and change some features. Try adding some CSS, such as a width
-   for this paragraph, or adding a CSS property to the ofInterest array.
+  This is a paragraph with some content. Open up this example in CodePen or
+  JSFiddle, and change some features. Try adding some CSS, such as a width for
+  this paragraph, or adding a CSS property to the ofInterest array.
 </p>
 <table id="regurgitation">
   <thead>
@@ -149,6 +149,7 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
       <th>Value</th>
       <th>Unit</th>
     </tr>
+  </thead>
 </table>
 ```
 
@@ -279,46 +280,11 @@ Let's add the class to a button (a button which does nothing).
 <button>Styled Button</button>
 ```
 
-```js hidden
-// get the element
-const button = document.querySelector("button");
-
-// Retrieve all computed styles with computedStyleMap()
-const allComputedStyles = button.computedStyleMap();
-
-// CSSMathSum Example
-let btnWidth = allComputedStyles.get("width");
-
-console.log(btnWidth); // CSSMathSum
-console.log(btnWidth.values); // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log(btnWidth.operator); // 'sum'
-
-// CSSTransformValue
-let transform = allComputedStyles.get("transform");
-
-console.log(transform); // CSSTransformValue {0: CSSScale, 1: CSSTranslate, length: 2, is2D: true}
-console.log(transform.length); // 1
-console.log(transform[0]); // CSSScale {x: CSSUnitValue, y: CSSUnitValue, z: CSSUnitValue, is2D: true}
-console.log(transform[0].x); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].y); // CSSUnitValue {value: 0.95, unit: "number"}
-console.log(transform[0].z); // CSSUnitValue {value: 1, unit: "number"}
-console.log(transform.is2D); // true
-
-// CSSImageValue
-let bgImage = allComputedStyles.get("background-image");
-
-console.log(bgImage); // CSSImageValue
-console.log(bgImage.toString()); // url("magic-wand.png")
-
-// CSSUnparsedValue
-let unit = allComputedStyles.get("--unit");
-
-console.log(unit);
-
-let parsedUnit = CSSNumericValue.parse(unit);
-console.log(parsedUnit);
-console.log(parsedUnit.unit);
-console.log(parsedUnit.value);
+```html hidden
+<p>
+  There is nothing to see here. Please open your browser console to see the
+  output!
+</p>
 ```
 
 We grab our `StylePropertyMapReadOnly` with the following JavaScript:
@@ -403,7 +369,11 @@ When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is retu
 
 Notice that the value returned is the absolute path to the image — this is returned even if the original `url()` value was relative. Had the background image been a gradient or multiple background images, `.get('background-image')` would have returned a `CSSStyleValue`. The `CSSImageValue` is returned only if there is a single image, and only if that single image declaration is a URL.
 
-### Summary
+Finally, we put all this together in one live sample. Remember to use your browser's console to inspect the output.
+
+{{EmbedLiveSample("CSSStyleValue", 120, 300)}}
+
+## Summary
 
 This should get you started with understanding the CSS Typed OM. Take a look at all the [CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API) interfaces to learn more.
 

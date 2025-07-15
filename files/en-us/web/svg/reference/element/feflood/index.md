@@ -39,7 +39,7 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
     </filter>
   </defs>
 
-  <use style="filter: url(#floodFilter);" />
+  <use filter="url(#floodFilter)" />
 </svg>
 ```
 

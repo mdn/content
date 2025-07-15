@@ -2,9 +2,8 @@
 title: "SyntaxError: raw bracket is not allowed in regular expression with unicode flag"
 slug: Web/JavaScript/Reference/Errors/Regex_raw_bracket
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "raw bracket is not allowed in regular expression with unicode flag" occurs when a [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) regular expression pattern contains a raw bracket (`{`, `}`, `]`) that is not part of a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier) or [character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class).
 

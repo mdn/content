@@ -2,9 +2,8 @@
 title: Trigger installation from your PWA
 slug: Web/Progressive_web_apps/How_to/Trigger_install_prompt
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 > [!WARNING]
 > The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
@@ -50,6 +49,12 @@ The event handler here does three things:
 - Call {{domxref("Event.preventDefault()","preventDefault()")}} on the event. This prevents the browser from displaying its own install UI.
 - Take a reference to the event object that's passed into the handler. This is an instance of {{domxref("BeforeInstallPromptEvent")}}, and is what will enable us to prompt the user to install the app.
 - Reveal our in-app install UI by removing the `hidden` attribute on the button.
+
+Note that the event will not fire if:
+
+- The PWA is already installed.
+- The app does not pass the [PWA installation criteria](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability).
+- The PWA is not installable on the current device (for example, because of a lack of permissions).
 
 ## Triggering the install prompt
 
@@ -100,7 +105,7 @@ function disableInAppInstallPrompt() {
 
 ## Responding to platform-specific apps being installed
 
-One case not covered by the above examples is where you have a platform-specific version of the app as well as a web app, and you want to personalize the web app experience depending on whether the platform-specific app is already installed. You might not want to invite users to install the PWA if they already have the platform-specific app installed, and/or you might want to invite them to head over to the platform-specific app to view content.
+If you have a platform-specific version of the app as well as a web app, and you want to personalize the web app experience depending on whether the platform-specific app is already installed. You might not want to invite users to install the PWA if they already have the platform-specific app installed, and/or you might want to invite them to head over to the platform-specific app to view content.
 
 This can be handled with the {{domxref("Navigator.getInstalledRelatedApps()")}} method, which allows you to detect installed related platform-specific apps (or PWAs) and respond appropriately.
 
@@ -138,3 +143,4 @@ window.addEventListener("beforeinstallprompt", async (event) => {
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event
 - [How to provide your own in-app install experience](https://web.dev/articles/customize-install) on web.dev (2021)
+- [Installation prompt](https://web.dev/learn/pwa/installation-prompt) on web.dev (2022)

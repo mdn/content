@@ -28,7 +28,6 @@ The devtools page doesn't have any visible DOM, but can include JavaScript sourc
 - The normal DOM APIs accessible through the global [`window`](/en-US/docs/Web/API/Window) object
 - The same [WebExtension APIs as in Content Scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - The devtools APIs:
-
   - [`devtools.inspectedWindow`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
@@ -64,8 +63,8 @@ browser.devtools.panels
     "/devtools/panel/panel.html", // content
   )
   .then((newPanel) => {
-    newPanel.onShown.addListener(initialisePanel);
-    newPanel.onHidden.addListener(unInitialisePanel);
+    newPanel.onShown.addListener(initializePanel);
+    newPanel.onHidden.addListener(unInitializePanel);
   });
 ```
 

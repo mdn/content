@@ -1,5 +1,6 @@
 ---
 title: "ARIA: presentation role"
+short-title: presentation
 slug: Web/Accessibility/ARIA/Reference/Roles/presentation_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#presentation

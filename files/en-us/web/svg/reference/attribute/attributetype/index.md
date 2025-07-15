@@ -2,9 +2,7 @@
 title: attributeType
 slug: Web/SVG/Reference/Attribute/attributeType
 page-type: svg-attribute
-status:
-  - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
+browser-compat: svg.elements.animate.attributeType
 sidebar: svgref
 ---
 
@@ -73,6 +71,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

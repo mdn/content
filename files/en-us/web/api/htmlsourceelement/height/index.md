@@ -24,17 +24,17 @@ A non-negative number indicating the height of the image resource in CSS pixels.
 <picture id="img">
   <source
     srcset="landscape.png"
-    media="(min-width: 1000px)"
+    media="(width >= 1000px)"
     width="1000"
     height="400" />
   <source
     srcset="square.png"
-    media="(min-width: 800px)"
+    media="(width >= 800px)"
     width="800"
     height="800" />
   <source
     srcset="portrait.png"
-    media="(min-width: 600px)"
+    media="(width >= 600px)"
     width="600"
     height="800" />
   <img

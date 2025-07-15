@@ -12,7 +12,7 @@ If you have worked through this module then you will have already covered the ba
 
 ## Starting point
 
-You can download the HTML, CSS, and a set of six images [here](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension).
+You can download the HTML, CSS, and a set of six images [in our learning-area repo](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension).
 
 Save the HTML document and stylesheet into a directory on your computer, and add the images into a folder named `images`. Opening the `index.html` file in a browser should give you a page with basic styling but no layout, which should look something like the image below.
 
@@ -20,7 +20,7 @@ Save the HTML document and stylesheet into a directory on your computer, and add
 
 This starting point has all of the content of your layout as displayed by the browser in normal flow.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 If you use an online editor, you will need to upload the images and replace the values in the `src` attributes to point to the new image locations.
 
 > [!NOTE]

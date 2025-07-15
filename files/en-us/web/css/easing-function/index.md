@@ -3,9 +3,8 @@ title: <easing-function>
 slug: Web/CSS/easing-function
 page-type: css-type
 browser-compat: css.types.easing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function that describes the rate at which a value changes.
 
@@ -44,11 +43,8 @@ steps(10, jump-both)
 An `<easing-function>` can be one of the following types:
 
 - `<linear-easing-function>`
-
   - : Creates transitions that progress at a constant rate. This function can be specified using one of the following:
-
     - `linear`
-
       - : Specifies a constant rate of interpolation, with no change in the rate of progress throughout the duration (that is, no acceleration or deceleration).
         This keyword value is equivalent to `linear(0, 1)`.
         It can also be represented as `cubic-bezier(0, 0, 1, 1)`.
@@ -62,27 +58,21 @@ An `<easing-function>` can be one of the following types:
       - : Defines multiple points of progress using {{cssxref("&lt;number&gt;")}} values, with optional {{cssxref("&lt;percentage&gt;")}} values to control their timing.
 
 - `<cubic-bezier-easing-function>`
-
   - : Creates smooth transitions with variable rates of change. This function can be specified using one of the following:
-
     - `ease`
-
       - : Represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1)`.
         It indicates that the interpolation starts slowly, accelerates sharply, and then slows gradually towards the end.
         It is similar to the `ease-in-out` keyword, though it accelerates more sharply at the beginning.
 
     - `ease-in`
-
       - : Represents the easing function `cubic-bezier(0.42, 0, 1, 1)`.
         It indicates that the interpolation starts slowly, then progressively speeds up until the end, at which point it stops abruptly.
 
     - `ease-out`
-
       - : Represents the easing function `cubic-bezier(0, 0, 0.58, 1)`.
         It indicates that the interpolation starts abruptly and then progressively slows down towards the end.
 
     - `ease-in-out`
-
       - : Represents the easing function `cubic-bezier(0.42, 0, 0.58, 1)`.
         It indicates that the interpolation starts slowly, speeds up, and then slows down towards the end.
         At the beginning, it behaves like the `ease-in` keyword; at the end, it is like the `ease-out` keyword.
@@ -90,22 +80,17 @@ An `<easing-function>` can be one of the following types:
         ![Graphs of Input progress to Output progress, of which ease shows a curved line quickly rising from the origin to (1, 1); ease-in shows a shallow curved line from the origin that straightens out as it approaches (1, 1); ease-out shows a straight diagonal line that slightly curves as it gets close to (1, 1); and ease-in-out shows a symmetrical, S-shaped line curving from the origin to (1, 1).](ease.svg)
 
     - {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
-
       - : Defines a custom curve using four {{cssxref("&lt;number&gt;")}} values that specify the coordinates of two control points.
         The x-coordinates must be in the range `[0, 1]`.
 
 - `<step-easing-function>`
-
   - : Creates stepped transitions that divides the animation into a set number of equal-length intervals, causing the animation to jump from one step to the next rather than transitioning smoothly.
     This function can be specified using one of the following:
-
     - `step-start`
-
       - : Represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
         It indicates that the interpolation jumps immediately to its final state, where it stays until the end.
 
     - `step-end`
-
       - : Represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
         It indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state.
 

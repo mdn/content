@@ -1,11 +1,10 @@
 ---
-title: Alternate stylesheet
+title: rel="alternate stylesheet"
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.alternate_stylesheet
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`alternate stylesheet`** keyword pair, when used as a value for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element, indicates that the target resource is an _alternative style sheet_. Specifying **alternative style sheets** in a web page allows users to see multiple versions of a page based on their needs or preferences.
 

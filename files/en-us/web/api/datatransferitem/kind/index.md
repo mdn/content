@@ -28,19 +28,18 @@ This example shows the use of the `kind` property.
 function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = event.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.match("^image/")) {
       // Drag data item is an image file
-      const f = data[i].getAsFile();
+      const f = item.getAsFile();
       console.log("… Drop: File");
     }
   }
@@ -60,4 +59,3 @@ function dropHandler(ev) {
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

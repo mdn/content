@@ -3,9 +3,8 @@ title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-width`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
 
@@ -98,9 +97,7 @@ The `border-width` property may be specified using one, two, three, or four valu
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

@@ -2,7 +2,10 @@
 title: textLength
 slug: Web/SVG/Reference/Attribute/textLength
 page-type: svg-attribute
-browser-compat: svg.elements.text.textLength
+browser-compat:
+  - svg.elements.text.textLength
+  - svg.elements.textPath.textLength
+  - svg.elements.tspan.textLength
 sidebar: svgref
 ---
 
@@ -14,7 +17,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example

@@ -1,11 +1,11 @@
 ---
 title: Object.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyDescriptor()`** static method returns an
 object describing the configuration of a specific property on a given object (that is,

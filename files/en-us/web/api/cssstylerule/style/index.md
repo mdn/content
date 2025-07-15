@@ -19,7 +19,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 - declarations
   - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
 - parent CSS rule
-  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+  - : The context object, which is an alias for [`this`](https://heycam.github.io/webidl/#this).
 - owner node
   - : Null.
 

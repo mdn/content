@@ -3,9 +3,8 @@ title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
 browser-compat: css.types.hypot
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hypot()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of the sum of squares of its parameters.
 

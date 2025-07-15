@@ -2,9 +2,8 @@
 title: Game promotion
 slug: Games/Publishing_games/Game_promotion
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Developing and publishing your game is not enough. You have to let the world know that you have something interesting available that people will enjoy playing. There are many ways to promote your game — most of them being free, so even if you're struggling to make a living as an indie dev with zero budget you can still do a lot to let people know about your great new game. Promoting the game helps a lot when [monetizing](/en-US/docs/Games/Publishing_games/Game_monetization) it later on too, so it's important to do it correctly.
 
@@ -18,7 +17,7 @@ Many great games get started as a quick, sloppy demo submitted to a competition.
 
 You should definitely create your own website containing all the information about your games, so people can see what you've worked on. The more information you can include the better — you should include screenshots, description, trailer, press kit, requirements, available platforms, support details and more. You'll get bonus points for allowing your users to directly play your games online — at least in demo form. Also, you should do some work on SEO to allow people to find your games more easily.
 
-You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://end3r.com/blog/?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
+You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://end3r.com/blog?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
 
 While you can create your website from scratch, there are also tools that can help make the process easier. [ManaKeep](https://manakeep.com/) is a website builder made for indie game developers and provides a great starting point to create your website. [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
 
@@ -48,7 +47,7 @@ If you want to learn more about the etiquette of contacting the press you should
 
 It's good to share your knowledge with other devs — after all, you probably learned a thing or two from online articles, so you take the time to pay that knowledge forward. Talking or writing about something you achieved or problems you overcame is something people would be interested in. Also, you can use your own game as an example, especially in a tutorial when you're [showing how to do something you've implemented already](/en-US/docs/Games/Techniques/Controls_Gamepad_API). That way everyone benefits — people learn new skills, your game gets promoted, and if you're lucky you can even get paid for writing a tutorial if it's good enough.
 
-There are portals like [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) which will be more than happy if you write for them - they pay for the content, but not all topic ideas will be accepted. When writing a tutorial remember to focus on delivering something valuable to the reader. They want to learn something - offer your expertise and use your game as a case study. Focus on one aspect and try to explain it throughout and in detail. Also, remember to follow up on discussions in your comments if people have any questions.
+There are portals like [Tuts+ Game Development](https://code.tutsplus.com/c/game-development) which will be more than happy if you write for them - they pay for the content, but not all topic ideas will be accepted. When writing a tutorial remember to focus on delivering something valuable to the reader. They want to learn something - offer your expertise and use your game as a case study. Focus on one aspect and try to explain it throughout and in detail. Also, remember to follow up on discussions in your comments if people have any questions.
 
 If portals you contact are not interested in your content because you don't have any experience yet, try writing tutorials and then publish them on [your own blog](#website_and_blog) first. It's the easiest way to train your writing skills on your own.
 

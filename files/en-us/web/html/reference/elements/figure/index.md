@@ -3,9 +3,8 @@ title: "<figure>: The Figure with Optional Caption element"
 slug: Web/HTML/Reference/Elements/figure
 page-type: html-element
 browser-compat: html.elements.figure
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
@@ -82,13 +81,12 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
   <figcaption>Get browser details using <code>navigator</code>.</figcaption>
   <pre>
 function NavigatorExample() {
-  var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
+  let txt = `Browser CodeName: ${navigator.appCodeName};\n`;
+  txt += `Browser Name: ${navigator.appName};\n`;
+  txt += `Browser Version: ${navigator.appVersion};\n`;
+  txt += `Cookies Enabled: ${navigator.cookieEnabled};\n`;
+  txt += `Platform: ${navigator.platform};\n`;
+  txt += `User-agent header: ${navigator.userAgent};`;
   console.log("NavigatorExample", txt);
 }
   </pre>
@@ -119,11 +117,13 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+  <p>
+    Bid me discourse, I will enchant thine ear,<br />
+    Or like a fairy trip upon the green,<br />
+    Or, like a nymph, with long dishevelled hair,<br />
+    Dance on the sands, and yet no footing seen:<br />
+    Love is a spirit all compact of fire,<br />
+    Not gross to sink, but light, and will aspire.<br />
   </p>
   <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
@@ -187,9 +187,8 @@ function NavigatorExample() {
       <th scope="row">Permitted ARIA roles</th>
       <td>
         With no
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption </a
-        >descendant:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a> descendant:
+        <a href="https://w3c.github.io/html-aria/#dfn-any-role">any</a>,
         otherwise no permitted roles
       </td>
     </tr>

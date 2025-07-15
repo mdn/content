@@ -3,9 +3,8 @@ title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_datetime-local
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
 
@@ -286,7 +285,7 @@ The valid range included all times between the `min` and `max` values; the time 
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

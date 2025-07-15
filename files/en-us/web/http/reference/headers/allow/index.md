@@ -1,11 +1,11 @@
 ---
-title: Allow
+title: Allow header
+short-title: Allow
 slug: Web/HTTP/Reference/Headers/Allow
 page-type: http-header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Allow`** {{Glossary("response header")}} lists the set of [request methods](/en-US/docs/Web/HTTP/Reference/Methods) supported by a resource.
 This header must be sent if the server responds with a {{HTTPStatus("405", "405 Method Not Allowed")}} status code to indicate which request methods can be used instead.

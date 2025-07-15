@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.reduce()
+short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
 

@@ -1,14 +1,16 @@
 ---
-title: Content-DPR
+title: Content-DPR header
+short-title: Content-DPR
 slug: Web/HTTP/Reference/Headers/Content-DPR
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Content-DPR
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
 The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm the _image_ device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
 

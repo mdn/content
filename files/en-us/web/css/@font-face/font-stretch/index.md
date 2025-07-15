@@ -5,9 +5,10 @@ page-type: css-at-rule-descriptor
 status:
   - deprecated
 browser-compat: css.at-rules.font-face.font-stretch
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} at-rule.
 
@@ -122,7 +123,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax("font-width")}}
 
 ## Examples
 

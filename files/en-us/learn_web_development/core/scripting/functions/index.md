@@ -87,7 +87,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 **Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
 
-The built-in code we've made use of so far comes in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+The built-in code we've made use of so far comes in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
 You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
 
@@ -327,12 +327,12 @@ Let's talk a bit about {{glossary("scope")}} — a very important concept when d
 
 The top-level outside all your functions is called the **global scope**. Values defined in the global scope are accessible from everywhere in the code.
 
-JavaScript is set up like this for various reasons — but mainly because of security and organization. Sometimes you don't want variables to be accessible from everywhere in the code — external scripts that you call in from elsewhere could start to mess with your code and cause problems because they happen to be using the same variable names as other parts of the code, causing conflicts. This might be done maliciously, or just by accident.
+JavaScript is set up like this for various reasons — but mainly because of security and organization. Sometimes you don't want variables to be accessible from everywhere in the code. External scripts that you call in from elsewhere could start to mess with your code and cause problems because they happen to be using the same variable names as other parts of the code, causing conflicts. This might be done maliciously, or just by accident.
 
-For example, say you have an HTML file that is calling in two external JavaScript files, and both of them have a variable and a function defined that use the same name:
+For example, say you have an HTML file referencing two external JavaScript files, and both of them have a variable and a function defined that use the same name:
 
 ```html
-<!-- Excerpt from my HTML -->
+<!-- Excerpt from the HTML -->
 <script src="first.js"></script>
 <script src="second.js"></script>
 <script>
@@ -356,22 +356,23 @@ function greeting() {
 }
 ```
 
-You will see that the second script does not load and run at all, and an error is printed in the console: `Uncaught SyntaxError: Identifier 'name' has already been declared`. This is because the `name` constant is already declared in `first.js`, and you can't declare the same constant twice in the same scope. Because the second script did not load, the `greeting()` function from `second.js` is not available to be called. Therefore, you will see an alert box displaying `Hello Chris: welcome to our company.`.
+You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)). Load it in a separate browser tab before reading the explanation below.
 
-Try removing the second `const name = "Zaptec";` line from `second.js` and reloading the page. Now both scripts execute, and the alert box says `Our company is called Chris.`. Functions are allowed to be redeclared, and the last declaration gets used. The previous declarations are effectively overwritten.
+- When the example renders in a browser, you will first see an alert box displaying `Hello Chris: welcome to our company.`, meaning that the `greeting()` function defined inside the first script file has been called by the `greeting()` call inside the internal script.
 
-> [!NOTE]
-> You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
+- The second script, however, does not load and run at all, and an error is printed in the console: `Uncaught SyntaxError: Identifier 'name' has already been declared`. This is because the `name` constant is already declared in `first.js`, and you can't declare the same constant twice in the same scope. Because the second script did not load, the `greeting()` function from `second.js` is not available to be called.
 
-Keeping parts of your code locked away in functions avoids such problems, and is considered the best practice.
+- If we were to remove the `const name = "Zaptec";` line from `second.js` and reload the page, both scripts would execute. The alert box would now say `Our company is called Chris.` Functions _can_ be redeclared, and the last declaration in the source order is used. The previous declarations are effectively overwritten.
 
-It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures and only have access to the things inside their enclosures — in the same manner as the function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
+Keeping parts of your code locked away in functions avoids such problems, and is considered a best practice.
+
+It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures and only have access to the things inside — in the same manner as the function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
 
 ![Four different animals enclosed in their respective habitat in a Zoo](mdn-mozilla-zoo.png)
 
 The zoo keeper is like the global scope — they have the keys to access every enclosure, restock food, tend to sick animals, etc.
 
-### Active learning: Playing with scope
+### Playing with scope
 
 Let's look at a real example to demonstrate scoping.
 
@@ -392,7 +393,7 @@ Let's look at a real example to demonstrate scoping.
    output(z);
    ```
 
-   Both of these should throw an error into the console along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope, `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
+   Both of these should throw an error into the console along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope: `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
 5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
@@ -415,7 +416,7 @@ Let's look at a real example to demonstrate scoping.
    b();
    ```
 
-   You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
+   You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions, in the same scope as the variables it is printing are defined in. `output()` itself is available from anywhere, as it is defined in the global scope.
 
 6. Now try updating your code like this:
 
@@ -469,10 +470,6 @@ Let's look at a real example to demonstrate scoping.
 > [!NOTE]
 > The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying them.
-
 ## Summary
 
 This article has explored the fundamental concepts behind functions, paving the way for the next one in which we get practical and take you through the steps to building up your own custom function.
@@ -481,6 +478,6 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 - [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
 - [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN learning partner_</sup> - An interactive lesson providing a useful functions introduction.
+- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> - An interactive lesson providing a useful functions introduction.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

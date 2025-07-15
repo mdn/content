@@ -41,7 +41,7 @@ The Storage Access API is intended to solve this problem; embedded cross-site co
 
 It is important to note that the Storage Access API is only needed to provide access to _unpartitioned_ third-party cookies. This means cookies stored in the traditional way since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, thereby making tracking users across sites via these cookies impossible.
 
-Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies).
+Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies).
 
 When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
@@ -115,7 +115,6 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 ## Examples
 
 - See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an implementation guide with code examples.
-- See [Storage Access API Demo](https://storage-access-api-demo.glitch.me/) for a live demo.
 
 ## API methods
 

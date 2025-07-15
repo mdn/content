@@ -1,14 +1,16 @@
 ---
-title: Viewport-Width
+title: Viewport-Width header
+short-title: Viewport-Width
 slug: Web/HTTP/Reference/Headers/Viewport-Width
 page-type: http-header
 status:
   - deprecated
   - non-standard
 browser-compat: http.headers.Viewport-Width
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > The `Viewport-Width` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).

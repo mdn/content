@@ -1,10 +1,10 @@
 ---
 title: Firefox 17 for developers
+short-title: Firefox 17
 slug: Mozilla/Firefox/Releases/17
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 17 shipped on November 20, 2012. This article lists key changes that are useful for not only web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -36,7 +36,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 ### JavaScript
 
 - [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) object now offers Harmony [`startsWith`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith), [`endsWith`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith), and [`contains`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) methods ([Firefox bug 772733](https://bugzil.la/772733)).
-- The String methods [link](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) and [anchor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) now escape the `'"'` (quotation mark) ([Firefox bug 352437](https://bugzil.la/352437)).
+- The String methods [`link()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) and [`anchor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) now escape the `'"'` (quotation mark) ([Firefox bug 352437](https://bugzil.la/352437)).
 - Experimental support for strawman `ParallelArray` object has been implemented ([Firefox bug 778559](https://bugzil.la/778559)).
 - Support to iterate [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)/[`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) ([Firefox bug 725909](https://bugzil.la/725909)).
 - Disabled ECMAScript for XML (E4X), an abandoned JavaScript extension, for web content by default ([Firefox bug 778851](https://bugzil.la/778851)).
@@ -101,7 +101,3 @@ None removed.
 - [Firefox 17 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/17.0/releasenotes/)
 - [Aurora 17 is out, bringing better security and support for new standards](https://hacks.mozilla.org/2012/08/aurora-17-is-out/) (Mozilla Hacks)
 - [Add-on Compatibility for Firefox 17](https://blog.mozilla.org/addons/2012/11/08/compatibility-for-firefox-17/) (Add-ons Blog)
-
-### Older versions
-
-{{Firefox_for_developers}}

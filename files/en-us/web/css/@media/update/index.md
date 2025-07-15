@@ -3,21 +3,12 @@ title: update
 slug: Web/CSS/@media/update
 page-type: css-media-feature
 browser-compat: css.at-rules.media.update
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`update`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how frequently (if at all) the output device is able to modify the appearance of content once rendered.
 
-```css
-@media (update: < none | slow | fast >) {
-  /* styles to apply if the update frequency of the output device is a match */
-}
-```
-
 ## Syntax
-
-The `update` feature is specified as a single keyword value chosen from the list below.
 
 - `none`
   - : Once it has been rendered, the layout can no longer be updated. Example: documents printed on paper.

@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.minLength
 
 {{ApiRef("HTML DOM")}}
 
-The **`minLength`** property of the {{domxref("HTMLTextAreaElement")}} interface indicates the minimum number of characters (in UTF-16 code units) required for the value of the {{HTMLElement("textarea")}} element to be valid. It reflects the element's [`minlength`](/en-US/docs/Web/HTML/Reference/Elements/textarea#minlength) attribute. `-1` means there is no minimum length requirement.
+The **`minLength`** property of the {{domxref("HTMLTextAreaElement")}} interface indicates the minimum number of characters (in {{glossary("UTF-16", "UTF-16 code units")}}) required for the value of the {{HTMLElement("textarea")}} element to be valid. It reflects the element's [`minlength`](/en-US/docs/Web/HTML/Reference/Elements/textarea#minlength) attribute. `-1` means there is no minimum length requirement.
 
 > [!NOTE]
 > If the textarea has a value, and that value has fewer characters than the `minlength` attribute requires, the element is considered invalid and the {{domxref("ValidityState")}} object's {{domxref("ValidityState.tooShort", "tooShort")}} property will be `true`.
@@ -24,7 +24,7 @@ Given the following HTML:
 ```html
 <p>
   <label for="comment">Comment</label>
-  <textarea id="comment" minlength="10" maxlength="200" /></textarea>
+  <textarea id="comment" minlength="10" maxlength="200"></textarea>
 </p>
 ```
 

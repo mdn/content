@@ -37,7 +37,14 @@ A string with one of the following values:
 In this example the value of `ariaHasPopup` is set to "true".
 
 ```js
-this.internals_.ariaHasPopup = "true";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaHasPopup = "true";
+  }
+  // …
+}
 ```
 
 ## Specifications

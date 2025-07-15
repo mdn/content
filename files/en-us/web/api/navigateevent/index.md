@@ -40,6 +40,8 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
   - : Returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+- {{domxref("NavigateEvent.sourceElement", "sourceElement")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : When the navigation was initiated by an element (for example clicking a link), returns an {{domxref("Element")}} object representing the initiating element.
 - {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons), or `false` otherwise.
 
@@ -120,4 +122,4 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)
+- [Navigation API live demo](https://mdn.github.io/dom-examples/navigation-api/) ([view demo source](https://github.com/mdn/dom-examples/tree/main/navigation-api))

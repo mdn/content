@@ -354,28 +354,32 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
 ```js
-plugins: [
-  svelte({
-    dev: !production,
-    css: (css) => {
-      css.write("public/build/bundle.css");
-    },
-    // Warnings are normally passed straight to Rollup. You can
-    // optionally handle them here, for example to squelch
-    // warnings with a particular code
-    onwarn: (warning, handler) => {
-      // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === "a11y-missing-attribute") {
-        return;
-      }
-
-      // let Rollup handle all other warnings normally
-      handler(warning);
-    },
-  }),
-
+export default {
   // …
-];
+  plugins: [
+    svelte({
+      dev: !production,
+      css(css) {
+        css.write("public/build/bundle.css");
+      },
+      // Warnings are normally passed straight to Rollup. You can
+      // optionally handle them here, for example to squelch
+      // warnings with a particular code
+      onwarn(warning, handler) {
+        // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
+        if (warning.code === "a11y-missing-attribute") {
+          return;
+        }
+
+        // let Rollup handle all other warnings normally
+        handler(warning);
+      },
+    }),
+
+    // …
+  ],
+  // …
+};
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
@@ -455,7 +459,7 @@ body {
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -518,7 +522,6 @@ body {
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
@@ -532,7 +535,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -554,7 +557,7 @@ body {
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -597,14 +600,14 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
 }
 .filters {
   width: 100%;
-  margin: unset auto;
+  margin: unset;
 }
 /* Todo item styles */
 .todo {

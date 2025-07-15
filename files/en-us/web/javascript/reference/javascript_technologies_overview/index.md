@@ -2,9 +2,8 @@
 title: JavaScript technologies overview
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Introductory")}}
 
 Whereas [HTML](/en-US/docs/Web/HTML) defines a webpage's structure and content and [CSS](/en-US/docs/Web/CSS) sets the formatting and appearance, [JavaScript](/en-US/docs/Web/JavaScript) adds interactivity to a webpage and creates rich web applications.
 
@@ -65,11 +64,7 @@ The [WebIDL specification](https://webidl.spec.whatwg.org/) provides the glue be
 
 ### The Core of the DOM
 
-The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. The [W3C](/en-US/docs/Glossary/W3C) standardizes the Core Document Object Model, which defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. Among the things defined by the DOM, we can find:
-
-- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …
-- A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
-- Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
+The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. Nowadays, the [DOM core](https://dom.spec.whatwg.org/) spec is maintained by [WHATWG](/en-US/docs/Glossary/WHATWG) (superseding the [W3C](/en-US/docs/Glossary/W3C) version). It defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. This includes: {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, and more.
 
 From the ECMAScript point of view, objects defined in the DOM specification are called "host objects".
 

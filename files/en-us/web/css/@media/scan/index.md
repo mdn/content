@@ -3,9 +3,8 @@ title: scan
 slug: Web/CSS/@media/scan
 page-type: css-media-feature
 browser-compat: css.at-rules.media.scan
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scan`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on the scanning process of the output device.
 

@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-position-y
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-webkit-mask-position-y` CSS property sets the initial vertical position of a mask image.
 
@@ -58,10 +59,7 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 ## Formal syntax
 
-```plain
--webkit-mask-position-y =
-  [ <length-percentage> | top | center | bottom ]#
-```
+{{CSSSyntaxRaw(`-webkit-mask-position-y = [ <length-percentage> | top | center | bottom ]#`)}}
 
 ## Examples
 

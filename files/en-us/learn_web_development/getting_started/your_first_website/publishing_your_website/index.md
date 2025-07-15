@@ -77,9 +77,9 @@ There are a number of web apps that emulate a website development environment, a
 
 Try playing with some of these examples to find out which one works best for you:
 
+- [Scrimba](https://scrimba.com/new?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 - [JSFiddle](https://jsfiddle.net/)
-- [Glitch](https://glitch.com/)
-- [JS Bin](https://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ## Publishing via GitHub

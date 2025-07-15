@@ -1,11 +1,11 @@
 ---
 title: Int32Array() constructor
+short-title: Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Int32Array.Int32Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Int32Array()`** constructor creates {{jsxref("Int32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
@@ -22,7 +22,8 @@ new Int32Array(buffer, byteOffset)
 new Int32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

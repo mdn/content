@@ -133,7 +133,7 @@ The ability to create nested layers also removes the worry of having conflicting
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers."
 >
-> —[Cascading and Inheritance specification](https://www.w3.org/TR/css-cascade-5/#layering).
+> —[Cascading and Inheritance specification](https://drafts.csswg.org/css-cascade-5/#layering).
 
 ## Creating cascade layers
 
@@ -269,7 +269,7 @@ If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_
 ```
 
 ```css live-sample___media-order
-@media (min-width: 50em) {
+@media (width >= 50em) {
   @layer site;
 }
 

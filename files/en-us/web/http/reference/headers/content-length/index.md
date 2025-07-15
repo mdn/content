@@ -1,11 +1,11 @@
 ---
-title: Content-Length
+title: Content-Length header
+short-title: Content-Length
 slug: Web/HTTP/Reference/Headers/Content-Length
 page-type: http-header
 browser-compat: http.headers.Content-Length
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Length`** header indicates the size, in bytes, of the message body sent to the recipient.
 

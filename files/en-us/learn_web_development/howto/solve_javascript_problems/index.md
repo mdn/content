@@ -3,7 +3,7 @@ title: Solve common JavaScript problems
 short-title: Common JavaScript problems
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -202,8 +202,8 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [What are object prototypes?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
 - [How do you add methods to the constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#setting_a_prototype)
 - [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/CObject-oriented_programming#inheritance)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#inheritance)
 
 ### Web APIs
 
-- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#doing_some_basic_dom_manipulation)

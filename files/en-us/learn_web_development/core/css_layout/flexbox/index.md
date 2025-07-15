@@ -48,9 +48,12 @@ CSS flexible box layout enables you to:
 
 Flexbox features may be the perfect solution for your one dimensional layout needs. Let's dig in and find out!
 
+> [!NOTE]
+> Scrimba's introductory [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide covering how common flexbox is on the web and therefore why it is so important to learn, and walks you through a typical use case that demonstrates the power of flexbox.
+
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the HTML and CSS. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. Alternatively open the example in {{LiveSampleLink("flexbox_0", "open the playground")}}.
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the HTML and CSS. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. Alternatively click the "Play" button to open it in the playground.
 
 ```html live-sample___flexbox_0
 <header>

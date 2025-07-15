@@ -3,9 +3,8 @@ title: :indeterminate
 slug: Web/CSS/:indeterminate
 page-type: css-pseudo-class
 browser-compat: css.selectors.indeterminate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:indeterminate`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any form element whose state is indeterminate, such as checkboxes that have been set to an [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) state with JavaScript, radio buttons which are members of a group in which all radio buttons are unchecked, and {{HTMLElement("progress")}} elements with no `value` attribute.
 
@@ -18,14 +17,16 @@ input:indeterminate {
 
 Elements targeted by this selector are:
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements whose [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property is set to `true`
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) elements, when all radio buttons with the same `name` value in the form are unchecked
-- {{HTMLElement("progress")}} elements in an indeterminate state
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements with the [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property set to `true`.
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) elements with the same `name` value and none of them `checked`.
+- {{HTMLElement("progress")}} elements with no `value`, placing them in an indeterminate state.
 
 ## Syntax
 
-```plain
-:indeterminate
+```css
+:indeterminate {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -85,8 +86,8 @@ fieldset:not(:first-of-type) > div:not(:last-child) {
 ```js
 const inputs = document.getElementsByTagName("input");
 
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+for (const input of inputs) {
+  input.indeterminate = true;
 }
 ```
 

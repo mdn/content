@@ -16,10 +16,10 @@ This event is not cancelable and may bubble up to the {{domxref("Document")}} an
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dragleave", (event) => {});
+```js-nolint
+addEventListener("dragleave", (event) => { })
 
-ondragleave = (event) => {};
+ondragleave = (event) => { }
 ```
 
 ## Event type
@@ -114,7 +114,6 @@ target.addEventListener("dragleave", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

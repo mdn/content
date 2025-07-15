@@ -1,13 +1,15 @@
 ---
-title: Dictionary-ID
+title: Dictionary-ID header
+short-title: Dictionary-ID
 slug: Web/HTTP/Reference/Headers/Dictionary-ID
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Dictionary-ID
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Dictionary-ID`** request header references a dictionary that can be used in {{glossary("Compression Dictionary Transport")}} to compress the server's response.
 

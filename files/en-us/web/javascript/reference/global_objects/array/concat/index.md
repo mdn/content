@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.concat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.

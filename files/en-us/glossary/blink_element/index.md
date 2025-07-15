@@ -2,11 +2,16 @@
 title: blink element (<blink> tag)
 slug: Glossary/blink_element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
-
 The **`<blink>` element** (blink tag) is an obsolete HTML feature no longer supported by web browsers and no longer documented on MDN. It was used to make text content blink on and off (flash) continually.
+
+The `<blink>` element was used like this:
+
+```html example-bad
+<blink>In ancient browsers, I may have blinked</blink>
+```
 
 ## Brief history
 
@@ -18,15 +23,7 @@ While initially popular, `<blink>` became much maligned because of overuse; many
 
 `<blink>` was never properly specified and never achieved significant cross-browser support. It can be considered a piece of web history.
 
-## Syntax
-
-The `<blink>` element was used like this:
-
-```html example-bad
-<blink>In ancient browsers, I may have blinked</blink>
-```
-
-### Alternatives
+## Alternatives
 
 - The CSS {{cssxref("text-decoration-line")}} property has a `blink` value that should have the same effect, but most modern browsers ignore it.
 - The JavaScript {{jsxref("String.blink()")}} method wraps a text string in `<blink></blink>` tags but, as discussed earlier, this element is no longer supported anywhere.

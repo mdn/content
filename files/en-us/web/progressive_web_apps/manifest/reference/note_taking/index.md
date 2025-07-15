@@ -5,9 +5,10 @@ page-type: web-manifest-member
 status:
   - experimental
 browser-compat: manifests.webapp.note_taking
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `note_taking` member identifies a web app as a note-taking app and defines related information, for example a URL pointing to functionality for taking a new note. This enables operating systems to integrate the app's note taking functionality, for example including a "New note" option in the app's context menu, or providing the app as an option for taking a note in other apps.
 
@@ -16,7 +17,6 @@ The `note_taking` member identifies a web app as a note-taking app and defines r
 An object, which may contain the following values:
 
 - `new_note_url` {{experimental_inline}}
-
   - : A string representing the URL the developer would prefer the user agent to load when the user wants to take a new note via the web app. This value is a hint, and different implementations may choose to ignore it or provide it as a choice in appropriate places. The `new_note_url` is parsed with the app's manifest URL as its base URL and is ignored if not within the [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) of the manifest.
 
 ## Examples

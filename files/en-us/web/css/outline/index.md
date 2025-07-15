@@ -3,9 +3,8 @@ title: outline
 slug: Web/CSS/outline
 page-type: css-shorthand-property
 browser-compat: css.properties.outline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
@@ -28,7 +27,7 @@ outline: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
+outline: 8px ridge rgb(170 50 220 / 0.6);
 border-radius: 2rem;
 ```
 

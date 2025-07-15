@@ -1,11 +1,11 @@
 ---
 title: Number.MAX_SAFE_INTEGER
+short-title: MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.MAX_SAFE_INTEGER`** static data property represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).
 

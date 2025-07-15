@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.box-orient
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
@@ -55,10 +56,7 @@ HTML DOM elements lay out their contents along the inline-axis by default. This 
 
 ## Formal syntax
 
-```plain
-box-orient =
-  horizontal | vertical | inline-axis | block-axis | inherit
-```
+{{CSSSyntaxRaw(`box-orient = horizontal | vertical | inline-axis | block-axis`)}}
 
 ## Examples
 

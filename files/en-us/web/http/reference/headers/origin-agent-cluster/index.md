@@ -1,11 +1,11 @@
 ---
-title: Origin-Agent-Cluster
+title: Origin-Agent-Cluster header
+short-title: Origin-Agent-Cluster
 slug: Web/HTTP/Reference/Headers/Origin-Agent-Cluster
 page-type: http-header
 browser-compat: http.headers.Origin-Agent-Cluster
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
 This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.

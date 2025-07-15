@@ -147,6 +147,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the current window.
 - `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
+- Named properties
+  - : Some elements in the document are also exposed as window properties:
+    - For each {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, and {{HTMLElement("object")}} element, its `name` (if non-empty) is exposed.
+      For example, if the document contains `<form name="my_form">`, then `window["my_form"]` (and its equivalent `window.my_form`) returns a reference to that element.
+    - For each HTML element, its `id` (if non-empty) is exposed.
+
+    If a property corresponds to a single element, that element is directly returned. If the property corresponds to multiple elements, then an {{domxref("HTMLCollection")}} is returned containing all of them. If any of the elements is a navigable `<iframe>` or `<object>`, then the {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} of first such iframe is returned instead.
 
 ### Deprecated properties
 
@@ -189,7 +196,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Writes a message to the console.
 - {{domxref("Window.fetch()")}}
   - : Starts the process of fetching a resource from the network.
-- {{domxref("Window.fetchLater()")}}
+- {{domxref("Window.fetchLater()")}} {{experimental_inline}}
   - : Creates a deferred fetch, which is sent once the page is navigated away from (it is destroyed or enters the [bfcache](/en-US/docs/Glossary/bfcache)), or after a provided `activateAfter` timeout — whichever comes first.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
@@ -272,8 +279,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Executes a function after the browser has finished other heavy tasks.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
-- {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Displays a modal dialog.
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforms a {{domxref("WebKitPoint")}} from the node's coordinate system to the page's coordinate system.
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -291,18 +296,6 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window has been resized.
 - {{domxref("Window/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
-
-### Clipboard events
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/copy_event", "oncopy")}} property.
-- {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/cut_event", "oncut")}} property.
-- {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/paste_event", "onpaste")}} property.
 
 ### Connection events
 

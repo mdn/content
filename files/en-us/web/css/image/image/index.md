@@ -3,9 +3,8 @@ title: image()
 slug: Web/CSS/image/image
 page-type: css-function
 spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
 
@@ -30,7 +29,7 @@ image("image1.jpg", black);
 image("image1.jpg#xywh=40,0,20,20");
 
 /* Solid-color Images */
-image(rgba(0,0,255,.5)), url("bg-image.png");
+image(rgb(0 0 255 / 0.5)), url("bg-image.png");
 ```
 
 ### Values

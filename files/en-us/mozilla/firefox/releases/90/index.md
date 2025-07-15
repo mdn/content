@@ -1,10 +1,10 @@
 ---
 title: Firefox 90 for developers
+short-title: Firefox 90
 slug: Mozilla/Firefox/Releases/90
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 was released on July 13th, 2021.
 
@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### JavaScript
 
-- [Private class static and instance fields and methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are now supported by default ([Firefox bug 1708235](https://bugzil.la/1708235) and [Firefox bug 1708236](https://bugzil.la/1708236)).
+- [Private class static and instance fields and methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are now supported by default ([Firefox bug 1708235](https://bugzil.la/1708235) and [Firefox bug 1708236](https://bugzil.la/1708236)).
 - The [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator can now be used to [check if a class private method or field has been defined](/en-US/docs/Web/JavaScript/Reference/Operators/in#using_the_in_operator_to_implement_branded_checks). This offers a more compact approach for handling potentially undefined features, as oppose to wrapping code in `try/catch` blocks ([Firefox bug 1648090](https://bugzil.la/1648090)).
 - Custom date/time formats specified as options to the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) can now include `dayPeriod` — a value indicating that the approximate time of day (e.g., "in the morning", "at night", etc.) should be included as a `narrow`, `short`, or `long` string ([Firefox bug 1645115](https://bugzil.la/1645115)).
 - The relative indexing method `at()` has been added to the [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) and [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) global objects. ([Firefox bug 1681371](https://bugzil.la/1681371))
@@ -64,7 +64,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 #### Removals
 
-- With the [removal of the FTP support in Firefox 90](#removals_http)
+- With the [removal of the FTP support in Firefox 90](#removals)
   the `ftpProxy` capability is no longer evaluated, and when used will
   throw an `invalid argument` error ([Firefox bug 1703805](https://bugzil.la/1703805)).
 
@@ -72,7 +72,3 @@ This article provides information about the changes in Firefox 90 that will affe
 
 - The `matrix` URI scheme is now supported and can be defined as a protocol within the [`protocol_handlers`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) key in an extensions [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 - Starting with this version, the [Cache API](/en-US/docs/Web/API/Cache) can be used in the extension pages and worker globals. For more details, see ([Firefox bug 1575625](https://bugzil.la/1575625)).
-
-## Older versions
-
-{{Firefox_for_developers}}

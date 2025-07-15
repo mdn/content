@@ -1,11 +1,11 @@
 ---
-title: "CSP: object-src"
+title: "Content-Security-Policy: object-src directive"
+short-title: object-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.object-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the
@@ -50,9 +50,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`<host-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
@@ -70,7 +68,7 @@ Content-Security-Policy: object-src https://example.com/
 The following {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements are blocked and won't load:
 
 ```html
-<embed src="https://not-example.com/flash"></embed>
+<embed src="https://not-example.com/flash" />
 <object data="https://not-example.com/plugin"></object>
 ```
 

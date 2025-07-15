@@ -1,11 +1,11 @@
 ---
 title: Symbol.prototype[Symbol.toPrimitive]()
+short-title: "[Symbol.toPrimitive]()"
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Symbol.@@toPrimitive
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 

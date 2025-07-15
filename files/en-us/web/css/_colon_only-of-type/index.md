@@ -3,11 +3,10 @@ title: :only-of-type
 slug: Web/CSS/:only-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.only-of-type
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type.
+The **`:only-of-type`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has no siblings of the same type (tag name).
 
 {{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
 

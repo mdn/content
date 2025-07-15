@@ -1,10 +1,10 @@
 ---
 title: Grids, logical values, and writing modes
+short-title: Logical values and writing modes
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 One of the most important features of CSS grid layout is the support for different writing modes built into the specification. In this guide, we look at this feature of CSS grid layout and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
@@ -114,13 +114,20 @@ As an example, we have two paragraphs below. The first uses the default `horizon
 
 ```html
 <div class="wrapper">
-  <p style="writing-mode: horizontal-tb">
+  <p class="horizontal-tb">
     I have writing mode set to the default <code>horizontal-tb</code>
   </p>
-  <p style="writing-mode: vertical-rl">
-    I have writing mode set to <code>vertical-rl</code>
-  </p>
+  <p class="vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
 </div>
+```
+
+```css
+.horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
 ```
 
 {{ EmbedLiveSample('writing-mode', '500', '420') }}

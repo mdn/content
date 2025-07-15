@@ -2,9 +2,8 @@
 title: Using container scroll-state queries
 slug: Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendant elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
 

@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.numberingSystem
+short-title: numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 

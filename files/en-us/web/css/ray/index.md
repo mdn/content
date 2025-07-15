@@ -3,9 +3,8 @@ title: ray()
 slug: Web/CSS/ray
 page-type: css-function
 browser-compat: css.types.ray
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines the [`offset-path`](/en-US/docs/Web/CSS/offset-path) line segment that an animated element can follow. The line segment is referred to as "ray". The ray begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. The length of a ray can be constrained by specifying a size and using the `contain` keyword.
 
@@ -27,11 +26,9 @@ offset-path: ray(45deg);
 The parameters can be specified in any order.
 
 - [`<angle>`](/en-US/docs/Web/CSS/angle)
-
   - : Specifies the direction in which the line segment extends from the offset starting position. The angle `0deg` lies on the y-axis pointing up, and positive angles increase in the clockwise direction.
 
 - `<size>`
-
   - : Specifies the length of the line segment, which is the distance between {{cssxref("offset-distance")}} `0%` and `100%`, relative to the containing box. This is an optional parameter (`closest-side` is used if no `<size>` is specified). It accepts one of the following keyword values:
 
     `closest-side`: Distance between the ray's starting point and the closest side of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) of the element. If the ray's starting point lies on an edge of the containing block, the length of the line segment is zero. If the ray's starting point is outside the containing block, the edge of the containing block is considered to extend to infinity. This is the default value.
@@ -45,7 +42,6 @@ The parameters can be specified in any order.
     `sides`: Distance between the ray's starting point and the point where the line segment intersects the containing block's boundary. If the starting point is on or outside the containing block's boundary, the length of the line segment is zero.
 
 - `contain`
-
   - : Reduces the length of the line segment so that the element stays within the containing block even at `offset-distance: 100%`. Specifically, the segment's length is reduced by half the width or half the height of the element's border box, whichever is greater, and never less than zero. This is an optional parameter.
 
 - `at <position>`
@@ -277,7 +273,7 @@ body {
 ```html hidden
 <div>
   <div class="container">
-    <div class=" shape shape1">&mdash;</div>
+    <div class="shape shape1">&mdash;</div>
   </div>
 </div>
 
@@ -297,8 +293,10 @@ body {
   </div>
 </div>
 
-<pre>offset-path: ray(120deg sides contain);
-offset-rotate: 0deg;</pre>
+<pre>
+offset-path: ray(120deg sides contain);
+offset-rotate: 0deg;
+</pre>
 
 <div>
   <div class="container">
@@ -308,7 +306,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg closest-corner)</pre>
+  offset-path: ray(120deg closest-corner);
+</pre>
 
 <div>
   <div class="container">
@@ -318,8 +317,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg farthest-corner)</pre>
-</div>
+  offset-path: ray(120deg farthest-corner);
+</pre>
 ```
 
 #### Result

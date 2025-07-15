@@ -3,9 +3,8 @@ title: Browser detection using the user agent string (UA sniffing)
 short-title: Browser detection using the UA string
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 Along with every request to a server, browsers include a {{HTTPHeader("User-Agent")}} {{Glossary("HTTP")}} header with a value called a {{glossary("user agent")}} (UA) string.
 This string is intended to identify the browser, its version number, and its host operating system.
@@ -75,7 +74,7 @@ You can do this by checking for a `geolocation` property available on the global
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, such as the Google Maps API
   });
 } else {

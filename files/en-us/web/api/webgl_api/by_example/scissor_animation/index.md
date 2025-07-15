@@ -51,11 +51,6 @@ button {
 }
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
@@ -146,10 +141,6 @@ function getRenderingContext() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).

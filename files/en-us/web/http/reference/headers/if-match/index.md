@@ -1,11 +1,11 @@
 ---
-title: If-Match
+title: If-Match header
+short-title: If-Match
 slug: Web/HTTP/Reference/Headers/If-Match
 page-type: http-header
 browser-compat: http.headers.If-Match
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`If-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 A server will return resources for {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, or upload resource for {{HTTPMethod("PUT")}} and other non-safe methods, only if the resource matches one of the {{HTTPHeader("ETag")}} values in the `If-Match` request header.

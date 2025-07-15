@@ -3,9 +3,8 @@ title: suffix
 slug: Web/CSS/@counter-style/suffix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.suffix
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`suffix`** descriptor of the {{cssxref("@counter-style")}} rule specifies content that will be added to the end of the marker representation.
 

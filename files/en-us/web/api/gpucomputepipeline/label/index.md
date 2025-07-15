@@ -3,12 +3,10 @@ title: "GPUComputePipeline: label property"
 short-title: label
 slug: Web/API/GPUComputePipeline/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUComputePipeline.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUComputePipeline")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -24,7 +22,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUComputePipeline.label`:
 
 ```js
-// ...
+// …
 
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({
@@ -44,7 +42,7 @@ console.log(computePipeline.label); // "my_compute_pipeline"
 Setting a label via a {{domxref("GPUDevice.createComputePipeline()")}} call, and then getting it via `GPUComputePipeline.label`:
 
 ```js
-// ...
+// …
 
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({

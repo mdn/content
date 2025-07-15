@@ -22,9 +22,7 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the frame to retrieve information about.
-
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
     - `processId` {{optional_inline}} {{deprecated_inline}}
@@ -66,7 +64,7 @@ let gettingFrame = browser.webNavigation.getFrame({
 });
 
 // Edge specific - processId is required not optional, must be integer not null
-//let gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
+// let gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
 
 gettingFrame.then(onGot, onError);
 ```

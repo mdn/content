@@ -1,11 +1,11 @@
 ---
-title: SourceMap
+title: SourceMap header
+short-title: SourceMap
 slug: Web/HTTP/Reference/Headers/SourceMap
 page-type: http-header
 browser-compat: http.headers.SourceMap
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`SourceMap`** {{Glossary("response header")}} provides the location of a {{Glossary("source map")}} for the resource.
 
@@ -44,7 +44,7 @@ The following response contains an absolute path in the `SourceMap` header.
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 SourceMap: /path/to/file.js.map
 
 <optimized-javascript>

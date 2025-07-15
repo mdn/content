@@ -499,7 +499,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
    import Todo from "./Todo.svelte";
    import MoreActions from "./MoreActions.svelte";
    import NewTodo from "./NewTodo.svelte";
-   import TodosStatus from "./TodosStatus.svelte";
+   import type TodosStatus from "./TodosStatus.svelte";
    import { alert } from "../stores";
 
    import { Filter } from "../types/filter.enum";
@@ -784,7 +784,7 @@ import { localStore } from "./localStore";
 
      return {
        subscribe,
-       set: (value: JsonValue) => {
+       set(value: JsonValue) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },
@@ -971,7 +971,7 @@ export const localStore = <T extends JsonValue>(key: string, initial: T) => {
 
   return {
     subscribe,
-    set: (value: T) => {
+    set(value: T) {
       localStorage.setItem(key, toString(value)); // save also to local storage as a string
       return set(value);
     },

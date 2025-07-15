@@ -15,7 +15,7 @@ You currently need a polyfill to render IMSC on the web. imscJS is a good choice
 First you need to embed the imscJS library:
 
 ```html
-<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js">
+<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js"></script>
 ```
 
 Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the below sections.
@@ -165,7 +165,6 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 - Iterate over the array we get back from `getMediaEvents()`
 - For each time event:
-
   - Create a corresponding cue.
   - Use an `onenter` event to render the ISD.
   - Use an `onexit` event to remove the rendering layer again.

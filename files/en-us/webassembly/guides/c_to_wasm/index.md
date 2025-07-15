@@ -30,7 +30,7 @@ This is the simplest case we'll look at, whereby you get emscripten to generate 
 
 1. First we need an example to compile. Take a copy of the following simple C example, and save it in a file called `hello.c` in a new directory on your local drive:
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -71,7 +71,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 1. First of all, save the following C code in a file called `hello2.c`, in a new directory:
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -88,7 +88,6 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
    ```
 
    The options we've passed are slightly different this time:
-
    - We've specified `-o hello2.html`, meaning that the compiler will still output the JavaScript glue code and `.html`.
    - We've specified `-O3`, which is used to optimize the code. Emcc has optimization levels like any other C compiler, including: `-O0` (no optimization), `-O1`, `-O2`, `-Os`, `-Oz`, `-Og`, and `-O3`. `-O3` is a good setting for release builds.
    - We've also specified `--shell-file html_template/shell_minimal.html` — this provides the path to the HTML template you want to use to create the HTML you will run your example through.
@@ -106,7 +105,7 @@ If you want to call a function defined in your C code from JavaScript, you can u
 
 1. To start with, save the following code as `hello3.c` in a new directory:
 
-   ```cpp
+   ```c
    #include <stdio.h>
    #include <emscripten/emscripten.h>
 
@@ -140,7 +139,7 @@ If you want to call a function defined in your C code from JavaScript, you can u
 
 4. If you load the example in your browser again, you'll see the same thing as before!
 5. Now we need to run our new `myFunction()` function from JavaScript. First of all, open up your hello3.html file in a text editor.
-6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
+6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type="text/javascript">` tag.
 
    ```html
    <button id="my-button">Run myFunction</button>

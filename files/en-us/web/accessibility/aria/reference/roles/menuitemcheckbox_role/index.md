@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menuitemcheckbox role"
+short-title: menuitemcheckbox
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role
 page-type: aria-role
 spec-urls:
@@ -35,13 +36,15 @@ There are some types of user interface components that, when represented in a pl
 For example, consider the following `menuitemcheckbox` element, which contains a heading.
 
 ```html
-<div role="menuitemcheckbox"><h6>Name of my checkbox</h6></li>
+<div role="menuitemcheckbox"><h6>Name of my checkbox</h6></div>
 ```
 
 Because descendants of `menuitemcheckbox` are presentational, the following code is equivalent:
 
 ```html
-<div role="menuitemcheckbox"><h6 role="presentation">Name of my checkbox</h6></li>
+<div role="menuitemcheckbox">
+  <h6 role="presentation">Name of my checkbox</h6>
+</div>
 ```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):

@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale() constructor
+short-title: Intl.Locale()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
@@ -35,7 +35,8 @@ new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
 
-> **Note:** `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -29,10 +29,10 @@ For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Cor
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("connect", (event) => {});
+```js-nolint
+addEventListener("connect", (event) => { })
 
-onconnect = (event) => {};
+onconnect = (event) => { }
 ```
 
 ## Event type

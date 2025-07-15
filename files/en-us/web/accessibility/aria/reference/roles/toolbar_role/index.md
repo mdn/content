@@ -1,5 +1,6 @@
 ---
 title: "ARIA: toolbar role"
+short-title: toolbar
 slug: Web/Accessibility/ARIA/Reference/Roles/toolbar_role
 page-type: aria-role
 spec-urls:
@@ -25,7 +26,6 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
-
   - : Elements with the role toolbar have an implicit `aria-orientation` value of horizontal.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
@@ -36,14 +36,11 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 Implement focus management so the keyboard tab sequence includes one stop for the toolbar and arrow keys move focus among the controls in the toolbar.
 
 - <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>
-
   - : Move focus into and out of the toolbar. When focus moves into a toolbar:
-
     - If focus is moving into the toolbar for the first time, focus is set on the first control that is not disabled.
     - If the toolbar has previously contained focus, focus is optionally set on the control that last had focus. Otherwise, it is set on the first control that is not disabled.
 
 - <kbd>Home</kbd> (Optional)
-
   - : Moves focus to first element.
 
 - <kbd>End</kbd> (Optional)
@@ -54,7 +51,6 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 Elements with the role toolbar have an implicit `aria-orientation` value of horizontal. If the toolbar indeed has this orientation, the following keyboard interactions need to be implemented:
 
 - <kbd>Left Arrow</kbd> (For a horizontal toolbar (the default)
-
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
 - <kbd>Right Arrow</kbd> (For a horizontal toolbar (the default)
@@ -67,7 +63,6 @@ In toolbars with multiple rows of controls, allow the left and right arrows to w
 If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the following keyboard interactions are implemented:
 
 - <kbd>Down Arrow</kbd> (For a horizontal toolbar (the default)
-
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
 - <kbd>Up Arrow</kbd> (For a horizontal toolbar (the default)
@@ -85,7 +80,7 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 
 ## Examples
 
-[Toolbar example from <abbr>W3C</abbr>, the World Wide Web Consortium](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
+[Toolbar example from ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/)
 
 ## Accessibility concerns
 

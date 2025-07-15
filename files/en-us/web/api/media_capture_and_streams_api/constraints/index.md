@@ -103,7 +103,7 @@ Here, after ensuring that the constrainable properties for which matches must be
 
 ### Advanced constraints
 
-So-called advanced constraints are created by adding an `advanced` property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see [section 11 of the Media Capture and Streams specification](https://www.w3.org/TR/mediacapture-streams/#idl-def-Constraints), past example 2.
+So-called advanced constraints are created by adding an `advanced` property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see [section 11 of the Media Capture and Streams specification](https://w3c.github.io/mediacapture-main/#constrainable-interface), past example 2.
 
 ## Checking capabilities
 
@@ -211,7 +211,7 @@ This function uses `getSettings()` to obtain the track's currently in-use values
 
 In this example, we create an exerciser which lets you experiment with media constraints by editing the source code describing the constraint sets for audio and video tracks. You can then apply those changes and see the result, including both what the stream looks like and what the actual media settings are set to after applying the new constraints.
 
-The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete example by {{LiveSampleLink("Example_Constraint_exerciser", "clicking here")}}.
+The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete code by clicking "Play" to view it in the playground.
 
 ```html hidden
 <p>
@@ -439,11 +439,12 @@ function startVideo() {
         videoTrack = videoTracks[0];
       }
     })
-    .then(() => {
-      return new Promise((resolve) => {
-        videoElement.onloadedmetadata = resolve;
-      });
-    })
+    .then(
+      () =>
+        new Promise((resolve) => {
+          videoElement.onloadedmetadata = resolve;
+        }),
+    )
     .then(() => {
       getCurrentSettings();
     })

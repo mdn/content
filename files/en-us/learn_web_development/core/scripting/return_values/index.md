@@ -21,7 +21,7 @@ There's one last essential concept about functions for us to discuss — return 
         <ul>
           <li>What returns values are.</li>
           <li>How to use the return values of existing functions.</li>
-          <li>Adding return values to your own fuctions.</li>
+          <li>Adding return values to your own functions.</li>
         </ul>
       </td>
     </tr>
@@ -56,7 +56,7 @@ Some functions don't return any value. (In these cases, our reference pages list
 
 Generally, a return value is used where the function is an intermediate step in a calculation of some kind. You want to get to a final result, which involves some values that need to be calculated by a function. After the function calculates the value, it can return the result so it can be stored in a variable; and you can use this variable in the next stage of the calculation.
 
-## Using return values in your own functions
+## How to return a value
 
 To return a value from a custom function, you need to use the [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
 
@@ -72,7 +72,7 @@ function draw() {
 }
 ```
 
-Inside each loop iteration, three calls are made to the `random()` function, to generate a random value for the current circle's _x-coordinate_, _y-coordinate_, and _radius_, respectively. The `random()` function takes one parameter — a whole number — and returns a whole random number between `0` and that number. It looks like this:
+Inside each loop iteration, three calls are made to the `random()` function, to generate a random value for the current circle's _x-coordinate_, _y-coordinate_, and _radius_, respectively. The `random()` function takes one parameter — a whole number — and returns a random whole number between `0` and that number. It looks like this:
 
 ```js
 function random(number) {
@@ -99,7 +99,7 @@ So when you execute the following:
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ```
 
-If the three `random()` calls return the values `500`, `200`, and `35`, respectively, the line would actually be run as if it were this:
+If the three `random()` calls returned the values `500`, `200`, and `35`, respectively, the line would actually be run as if it were this:
 
 ```js
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
@@ -107,7 +107,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 The function calls on the line are run first, and their return values are substituted for the function calls, before the line itself is then executed.
 
-## Active learning: A return value function
+## Implementing function return values
 
 Let's have a go at writing some functions featuring return values.
 
@@ -155,16 +155,16 @@ Let's have a go at writing some functions featuring return values.
 
 4. Save your code, load it in a browser, and try it out.
 
-Here are some explanations for the `addEventListener` function in step 3 above:
+Here are some explanations for the `addEventListener()` function in step 3 above:
 
-- By adding a listener to the `change` event, this function runs whenever the `change` event fires on the text input — that is when a new value is entered into the text `input`, and submitted (e.g., enter a value, then un-focus the input by pressing <kbd>Tab</kbd> or <kbd>Return</kbd>). When this anonymous function runs, the value in the `input` is stored in the `num` constant.
-- The if statement prints an error message if the entered value is not a number. The condition checks if the expression `isNaN(num)` returns `true`. The [`isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function tests whether the `num` value is not a number — if so, it returns `true`, and if not, it returns `false`.
+- By adding a `change` event listener, this function runs whenever the `change` event fires on the text input — that is when a new value is entered into the text `input`, and submitted (enter a value, then un-focus the input by pressing <kbd>Tab</kbd> or <kbd>Return</kbd>). When this anonymous function runs, the value in the `input` is stored in the `num` constant.
+- The `if` statement prints an error message if the entered value is not a number. The condition checks if the expression `isNaN(num)` returns `true`. The [`isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function tests whether the `num` value is not a number — if so, it returns `true`, and if not, it returns `false`.
 - If the condition returns `false`, the `num` value is a number and the function prints out a sentence inside the paragraph element that states the square, cube, and factorial values of the number. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to calculate the required values.
 
 > [!NOTE]
-> If you have trouble getting the example to work, check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
+> If you have trouble getting the example to work, check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also).
 
-## Now it's your turn!
+### Add some functions of your own!
 
 At this point, we'd like you to have a go at writing out a couple of functions of your own and adding them to the library. How about the square or cube root of the number? Or the circumference of a circle with a given radius?
 
@@ -175,13 +175,15 @@ Some extra function-related tips:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions).
+You've reached the end of our set of functions articles, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions).
 
 ## Conclusion
 
 So there we have it — functions are fun, very useful, and although there's a lot to talk about in regards to their syntax and functionality, they are fairly understandable.
 
 If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/MDN/Community/Communication_channels) to ask for help.
+
+Next, we'll move on to look at events in more detail.
 
 ## See also
 

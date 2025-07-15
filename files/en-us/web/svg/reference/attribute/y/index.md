@@ -869,36 +869,6 @@ For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper l
 > [!NOTE]
 > The y-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
-### `<glyphRef>`
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('glyphRef')}}, `y` defines the y-axis coordinate of the glyph.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
 ### `<image>`
 
 For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corner of the image.
@@ -1143,44 +1113,6 @@ line {
 ```
 
 {{EmbedLiveSample('text', '100%', 100)}}
-
-### `<tref>`
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('tref')}}, if it contains a single value, `y` defines the y coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
-
-If it contains multiple values, `y` defines the y coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
 
 ### `<tspan>`
 

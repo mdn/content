@@ -173,12 +173,12 @@ Next, if supported connect the webcam source to the video element:
 if (navigator.mediaDevices) {
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
-    .then(function onSuccess(stream) {
+    .then((stream) => {
       const video = document.getElementById("webcam");
       video.autoplay = true;
       video.srcObject = stream;
     })
-    .catch(function onError() {
+    .catch(() => {
       alert(
         "There has been a problem retrieving the streams - are you running on file:/// or did you disallow access?",
       );
@@ -199,7 +199,7 @@ The main mechanism is outlined below:
 ```js
 navigator.mediaDevices
   .getUserMedia({ audio: true })
-  .then(function onSuccess(stream) {
+  .then((stream) => {
     const recorder = new MediaRecorder(stream);
 
     const data = [];
@@ -218,7 +218,7 @@ navigator.mediaDevices
       rec.stop();
     }, 5000);
   })
-  .catch(function onError(error) {
+  .catch((error) => {
     console.log(error.message);
   });
 ```
@@ -426,7 +426,7 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Audacity](https://sourceforge.net/projects/audacity/) — Free Audio Editor and Recorder
 - [Miro](https://www.getmiro.com/) — Free, open-source music and video player
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
-- [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
+- [Firefogg](https://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
@@ -479,7 +479,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://jwplayer.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
+- [JWPlayer](https://jwpconnatix.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
 - [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 

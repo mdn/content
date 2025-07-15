@@ -2,9 +2,8 @@
 title: Using filter effects
 slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations required image editing software, time, and additional HTTP requests.
 
@@ -118,7 +117,8 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain goldenrod;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain goldenrod;
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
@@ -141,9 +141,7 @@ p {
 ```
 
 ```html hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+<div class="container">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>

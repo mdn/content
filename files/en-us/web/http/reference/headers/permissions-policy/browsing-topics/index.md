@@ -1,14 +1,16 @@
 ---
-title: "Permissions-Policy: browsing-topics"
+title: "Permissions-Policy: browsing-topics directive"
+short-title: browsing-topics
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/browsing-topics
 page-type: http-permissions-policy-directive
 status:
   - experimental
   - non-standard
 browser-compat: http.headers.Permissions-Policy.browsing-topics
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `browsing-topics` directive controls access to the [Topics API](/en-US/docs/Web/API/Topics_API).
 

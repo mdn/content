@@ -36,13 +36,13 @@ In the previous articles, we covered the styling of various form controls in a g
 
 ## What pseudo-classes do we have available?
 
-The original pseudo-classes (from [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) that are relevant to forms are:
+You may already be familiar with the following pseudo-classes:
 
 - {{cssxref(":hover")}}: Selects an element only when it is being hovered over by a mouse pointer.
 - {{cssxref(":focus")}}: Selects an element only when it is focused (i.e., by being tabbed to via the keyboard).
 - {{cssxref(":active")}}: selects an element only when it is being activated (i.e., while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
 
-These basic pseudo-classes should be familiar to you now. [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
+[CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
@@ -473,8 +473,8 @@ function toggleBilling() {
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (let i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  for (const item of billingItems) {
+    item.disabled = !item.disabled;
   }
 }
 ```
@@ -522,7 +522,8 @@ The full example looks like this:
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note:** `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
+> [!NOTE]
+> `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
 
 ## Radio and checkbox states — checked, default, indeterminate
 
@@ -661,7 +662,7 @@ The following are also interesting, but as yet not well-supported in browsers:
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced styling](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling).
 
 ## Summary
 

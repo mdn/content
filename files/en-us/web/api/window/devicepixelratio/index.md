@@ -85,11 +85,11 @@ In this example, we'll set up a media query and watch it to see when the device 
 ```html
 <div id="container">
   <p>
-    This example demonstrates the effect of zooming the page in and out
-    (or moving it to a screen with a different scaling factor) on the
-    value of the <code>devicePixelRatio</code> property.</p>
-    <p>Try it and watch what happens!</p>
+    This example demonstrates the effect of zooming the page in and out (or
+    moving it to a screen with a different scaling factor) on the value of the
+    <code>devicePixelRatio</code> property.
   </p>
+  <p>Try it and watch what happens!</p>
 </div>
 <div id="output"></div>
 ```
@@ -124,9 +124,7 @@ let remove = null;
 const output = document.querySelector("#output");
 
 const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
-  }
+  remove?.();
   const mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
   const media = matchMedia(mqString);
   media.addEventListener("change", updatePixelRatio);

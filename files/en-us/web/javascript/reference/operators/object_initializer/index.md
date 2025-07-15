@@ -3,9 +3,8 @@ title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 page-type: javascript-language-feature
 browser-compat: javascript.operators.object_initializer
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or [by invoking a constructor function](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
 
@@ -110,7 +109,7 @@ Once you have created an object, you might want to read or change them. Object p
 object.foo; // "bar"
 object["age"]; // 42
 object.baz; // {myProp: 12}
-object.baz.myProp; //12
+object.baz.myProp; // 12
 ```
 
 ### Property definitions
@@ -152,7 +151,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), which must be unique in the class body.
+After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements), which must be unique in the class body.
 
 ### Method definitions
 
@@ -161,7 +160,9 @@ A property of an object can also refer to a [function](/en-US/docs/Web/JavaScrip
 ```js
 const o = {
   property: function (parameters) {},
-  get property() {},
+  get property() {
+    return 1;
+  },
   set property(value) {},
 };
 ```

@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.setTime()
+short-title: setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setTime
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setTime()`** method of {{jsxref("Date")}} instances changes the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) for this date, which is the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), defined as the midnight at the beginning of January 1, 1970, UTC.
 
@@ -19,8 +19,8 @@ futureDate.setTime(launchDate.getTime());
 console.log(futureDate);
 // Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
 
-const fiveMinutesInMillis = 5 * 60 * 1000;
-futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+const fiveMinutesInMs = 5 * 60 * 1000;
+futureDate.setTime(futureDate.getTime() + fiveMinutesInMs);
 
 console.log(futureDate);
 // Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"

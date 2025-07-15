@@ -2,9 +2,8 @@
 title: Wrapping and breaking text
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This guide explains the various ways in which overflowing text can be managed in CSS.
 

@@ -1,10 +1,9 @@
 ---
 title: "ARIA: alertdialog role"
+short-title: alertdialog
 slug: Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#alertdialog
-  - https://www.w3.org/TR/wai-aria-1.2/#alertdialog
+spec-urls: https://w3c.github.io/aria/#alertdialog
 sidebar: accessibilitysidebar
 ---
 
@@ -37,7 +36,6 @@ The `alertdialog` must have an accessible name, defined with [`aria-labelledby`]
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
@@ -78,19 +76,22 @@ The code snippet above shows how to mark up an alert dialog that only provides a
   </div>
   <ul>
     <li>
-      <button type="button" onclick="closeThis()">No</button>
+      <button id="close-btn" type="button">No</button>
     </li>
     <li>
-      <button
-        type="button"
-        aria-controls="form"
-        id="delete_file_confirm"
-        onclick="deleteFile()">
-        Yes
-      </button>
+      <button id="confirm-btn" type="button" aria-controls="form">Yes</button>
     </li>
   </ul>
 </div>
+```
+
+```js
+document.getElementById("close-btn").addEventListener("click", () => {
+  closeDialog();
+});
+document.getElementById("confirm-btn").addEventListener("click", (event) => {
+  deleteFile();
+});
 ```
 
 ## Specifications

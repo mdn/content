@@ -1,11 +1,11 @@
 ---
 title: Number.MIN_SAFE_INTEGER
+short-title: MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.MIN_SAFE_INTEGER`** static data property represents the minimum safe integer in JavaScript, or -(2<sup>53</sup> - 1).
 

@@ -56,13 +56,11 @@ Access to the API is subject to the following constraints:
 - All methods and properties may only be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} grants user permission for a selected device to be used as the audio output sink:
-
   - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
   - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
     The user has to interact with the page or a UI element for the method to be called.
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} sets a permitted ID as the audio output:
-
   - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
   - User permission is required to set a non-default device ID.
     - This can come from selection in the prompt launched by `MediaDevices.selectAudioOutput()`

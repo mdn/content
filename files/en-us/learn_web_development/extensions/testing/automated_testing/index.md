@@ -189,7 +189,8 @@ To use each plugin, you need to first install it via npm, then require any depen
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
+   > [!NOTE]
+   > `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
 
 2. Add the following dependency to `gulpfile.mjs`:
 
@@ -586,7 +587,6 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-
    - Stop the session
    - Give someone else a URL so they can observe the test remotely.
    - Copy text/notes to a remote clipboard.
@@ -667,7 +667,6 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the website running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
-
    - Stop the session
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
@@ -701,7 +700,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
      api_secret: "your-tb-secret",
    });
 
-   tb.getTests(function (err, tests) {
+   tb.getTests((err, tests) => {
      console.log(tests);
    });
    ```
