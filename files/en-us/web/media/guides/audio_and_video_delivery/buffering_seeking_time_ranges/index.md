@@ -82,18 +82,22 @@ context.strokeStyle = "white";
 
 const inc = canvas.width / audio.duration;
 
-// Display TimeRanges
+// Wait until audio.duration is available
+audio.addEventListener("loadedmetadata", () => {
+  const inc = canvas.width / audio.duration;
 
-audio.addEventListener("seeked", () => {
-  for (let i = 0; i < audio.buffered.length; i++) {
-    const startX = audio.buffered.start(i) * inc;
-    const endX = audio.buffered.end(i) * inc;
-    const width = endX - startX;
+  // Display TimeRanges
+  audio.addEventListener("seeked", () => {
+    for (let i = 0; i < audio.buffered.length; i++) {
+      const startX = audio.buffered.start(i) * inc;
+      const endX = audio.buffered.end(i) * inc;
+      const width = endX - startX;
 
-    context.fillRect(startX, 0, width, canvas.height);
-    context.rect(startX, 0, width, canvas.height);
-    context.stroke();
-  }
+      context.fillRect(startX, 0, width, canvas.height);
+      context.rect(startX, 0, width, canvas.height);
+      context.stroke();
+    }
+  });
 });
 ```
 
