@@ -344,8 +344,7 @@ The **package.json** file defines the application dependencies and other informa
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
-  }
-},
+  },
   "devDependencies": {
     "nodemon": "^3.1.10"
   }
