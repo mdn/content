@@ -3,9 +3,8 @@ title: extension.getExtensionTabs()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getExtensionTabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.

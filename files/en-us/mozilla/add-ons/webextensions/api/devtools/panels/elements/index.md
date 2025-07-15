@@ -3,9 +3,8 @@ title: devtools.panels.elements
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements
 page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.panels.elements
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object, which represents the browser's HTML/CSS inspector.
 

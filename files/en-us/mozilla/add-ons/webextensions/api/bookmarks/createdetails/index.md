@@ -3,9 +3,8 @@ title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 page-type: webextension-api-type
 browser-compat: webextensions.api.bookmarks.CreateDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `CreateDetails` type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.
 

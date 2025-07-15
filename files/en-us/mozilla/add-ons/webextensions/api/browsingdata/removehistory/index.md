@@ -3,9 +3,8 @@ title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeHistory
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the record of web pages that the user has visited (browsing history).
 

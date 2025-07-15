@@ -3,9 +3,8 @@ title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `Port` object represents one end of a connection between two specific contexts, which can be used to exchange messages.
 

@@ -3,9 +3,8 @@ title: tabs.ZoomSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Defines zoom settings for a tab: {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
 

@@ -3,9 +3,8 @@ title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onDisabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an add-on is disabled.
 

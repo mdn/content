@@ -3,9 +3,8 @@ title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnRestartRequiredReason
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The reason that the {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} event is being dispatched.
 

@@ -3,9 +3,8 @@ title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBackgroundPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension. If the background page is non-persistent (an event page) and it is not running, the background page is started.
 

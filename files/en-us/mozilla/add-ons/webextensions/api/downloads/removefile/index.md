@@ -3,9 +3,8 @@ title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.removeFile
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
 

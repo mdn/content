@@ -3,9 +3,8 @@ title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.clear
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears a notification, given its ID.
 

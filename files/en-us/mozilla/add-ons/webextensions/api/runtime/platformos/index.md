@@ -3,9 +3,8 @@ title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformOs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The operating system the browser is running on.
 

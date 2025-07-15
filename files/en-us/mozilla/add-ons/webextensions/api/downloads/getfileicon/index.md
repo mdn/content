@@ -3,9 +3,8 @@ title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 

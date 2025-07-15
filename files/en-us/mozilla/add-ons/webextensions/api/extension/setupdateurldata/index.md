@@ -3,9 +3,8 @@ title: extension.setUpdateUrlData()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.setUpdateUrlData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets parameters for the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.
 

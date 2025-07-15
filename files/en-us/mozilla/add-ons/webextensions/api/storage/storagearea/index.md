@@ -3,9 +3,8 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageArea
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 StorageArea is an object representing a storage area.
 

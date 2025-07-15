@@ -3,9 +3,8 @@ title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Ask to give up the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 

@@ -3,9 +3,8 @@ title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
 page-type: webextension-api
 browser-compat: webextensions.api.find
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Finds text in a web page, and highlights matches.
 

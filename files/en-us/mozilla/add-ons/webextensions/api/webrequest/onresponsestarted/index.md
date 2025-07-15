@@ -3,9 +3,8 @@ title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onResponseStarted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the first byte of the response body is received.
 

@@ -3,9 +3,8 @@ title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getCurrent
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the current browser window, passing its details into a callback.
 

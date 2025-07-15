@@ -3,9 +3,8 @@ title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 page-type: webextension-api-type
 browser-compat: webextensions.api.history.TransitionType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This describes how the browser navigated to a particular page. For example, "link" means that the browser navigated to the page because the user clicked a link.
 

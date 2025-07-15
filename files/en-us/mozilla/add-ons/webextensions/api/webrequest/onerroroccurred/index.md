@@ -3,9 +3,8 @@ title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onErrorOccurred
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a request could not be processed due to an error: for example, a lack of Internet connectivity.
 

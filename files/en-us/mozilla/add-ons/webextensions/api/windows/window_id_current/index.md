@@ -3,9 +3,8 @@ title: windows.WINDOW_ID_CURRENT
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
 page-type: webextension-api-property
 browser-compat: webextensions.api.windows.WINDOW_ID_CURRENT
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 `browser.windows.WINDOW_ID_CURRENT` is a value that can be used as a `windowId` parameter in some APIs to represent the current window.
 

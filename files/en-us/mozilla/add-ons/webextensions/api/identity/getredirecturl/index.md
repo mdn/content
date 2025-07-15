@@ -3,9 +3,8 @@ title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.identity.getRedirectURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Generates a URL that you can use as a redirect URL.
 

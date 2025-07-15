@@ -3,9 +3,8 @@ title: windows.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Closes a window and all the tabs inside it, given the window's ID.
 

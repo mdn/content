@@ -3,9 +3,8 @@ title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.network
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `privacy.network` property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 

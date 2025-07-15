@@ -3,9 +3,8 @@ title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
 

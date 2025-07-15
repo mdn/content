@@ -3,9 +3,8 @@ title: menus.OnClickData
 slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
 page-type: webextension-api-type
 browser-compat: webextensions.api.menus.OnClickData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.
 

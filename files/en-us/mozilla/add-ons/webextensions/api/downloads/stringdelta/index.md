@@ -3,9 +3,8 @@ title: downloads.StringDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.StringDelta
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `StringDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two strings.
 

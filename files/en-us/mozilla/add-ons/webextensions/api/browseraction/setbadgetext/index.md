@@ -3,9 +3,8 @@ title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 

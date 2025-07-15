@@ -3,9 +3,8 @@ title: pageAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 

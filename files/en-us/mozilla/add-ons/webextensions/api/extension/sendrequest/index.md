@@ -5,9 +5,10 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.extension.sendRequest
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("runtime.sendMessage")}} instead.

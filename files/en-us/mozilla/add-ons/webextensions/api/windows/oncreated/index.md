@@ -3,9 +3,8 @@ title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a window is created.
 

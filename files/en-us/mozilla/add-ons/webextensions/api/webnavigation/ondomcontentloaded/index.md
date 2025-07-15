@@ -3,9 +3,8 @@ title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onDOMContentLoaded
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event is fired in the page. At this point the document is loaded and parsed, and the DOM is fully constructed, but linked resources such as images, stylesheets and subframes may not yet be loaded.
 

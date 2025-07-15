@@ -3,9 +3,8 @@ title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new contextual identity. Once created, the user will be able to create new tabs belonging to this contextual identity, just as they can with the built-in identities.
 

@@ -3,9 +3,8 @@ title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
 page-type: webextension-api
 browser-compat: webextensions.api.history
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the `history` API to interact with the browser history.
 

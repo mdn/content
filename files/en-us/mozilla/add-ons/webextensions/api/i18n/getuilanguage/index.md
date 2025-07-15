@@ -3,9 +3,8 @@ title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getUILanguage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
 

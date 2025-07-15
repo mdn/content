@@ -3,9 +3,8 @@ title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onImportBegan
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser has started importing a set of bookmarks.
 

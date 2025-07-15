@@ -3,9 +3,8 @@ title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the devtools theme changes.
 

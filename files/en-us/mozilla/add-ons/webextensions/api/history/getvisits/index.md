@@ -3,9 +3,8 @@ title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.getVisits
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves information about all visits to the given URL.
 

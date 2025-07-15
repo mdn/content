@@ -3,9 +3,8 @@ title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 page-type: webextension-api
 browser-compat: webextensions.api.i18n
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header).
 

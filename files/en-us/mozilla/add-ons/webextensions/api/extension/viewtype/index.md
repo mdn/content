@@ -3,9 +3,8 @@ title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 page-type: webextension-api-type
 browser-compat: webextensions.api.extension.ViewType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type of extension view.
 

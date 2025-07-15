@@ -3,9 +3,8 @@ title: devtools.network.onNavigated
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onNavigated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user navigates the inspected window to a new page.
 

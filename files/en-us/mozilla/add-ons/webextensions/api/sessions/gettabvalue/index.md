@@ -3,9 +3,8 @@ title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getTabValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.
 

@@ -5,9 +5,8 @@ page-type: webextension-api-event
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.onHighlightChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.

@@ -2,9 +2,8 @@
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 page-type: webextension-api-function
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.
 

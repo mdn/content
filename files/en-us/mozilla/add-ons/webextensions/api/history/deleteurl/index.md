@@ -3,9 +3,8 @@ title: history.deleteUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.deleteUrl
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes all visits to the given URL from the browser history.
 

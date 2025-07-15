@@ -3,9 +3,8 @@ title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the browser action's badge text.
 

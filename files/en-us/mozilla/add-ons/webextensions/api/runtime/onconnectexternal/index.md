@@ -3,9 +3,8 @@ title: runtime.onConnectExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnectExternal
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an extension receives a connection request from a different extension.
 

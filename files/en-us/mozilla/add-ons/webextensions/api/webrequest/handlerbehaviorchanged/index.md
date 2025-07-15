@@ -3,9 +3,8 @@ title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.handlerBehaviorChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
 

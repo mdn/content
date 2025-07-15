@@ -3,9 +3,8 @@ title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputEntered
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list.
 

@@ -3,9 +3,8 @@ title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getLastFocused
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the window that was most recently focused — typically the window 'on top'.
 

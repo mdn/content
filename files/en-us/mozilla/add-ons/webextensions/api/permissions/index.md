@@ -3,9 +3,8 @@ title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
 page-type: webextension-api
 browser-compat: webextensions.api.permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to request extra permissions at runtime, after they have been installed.
 

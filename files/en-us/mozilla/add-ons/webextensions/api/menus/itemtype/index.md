@@ -3,9 +3,8 @@ title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ItemType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type of menu item.
 

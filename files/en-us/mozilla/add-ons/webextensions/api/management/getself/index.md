@@ -3,9 +3,8 @@ title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.getSelf
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object containing information about the calling add-on.
 

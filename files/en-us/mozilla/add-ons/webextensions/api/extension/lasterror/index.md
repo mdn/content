@@ -3,9 +3,8 @@ title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 page-type: webextension-api-property
 browser-compat: webextensions.api.extension.lastError
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This function is deprecated, use {{WebExtAPIRef("runtime.lastError")}} instead.

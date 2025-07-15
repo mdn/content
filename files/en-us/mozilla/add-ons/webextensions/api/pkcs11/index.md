@@ -3,9 +3,8 @@ title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
 page-type: webextension-api
 browser-compat: webextensions.api.pkcs11
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `pkcs11` API enables an extension to enumerate [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) security modules and to make them accessible to the browser as sources of keys and certificates.
 

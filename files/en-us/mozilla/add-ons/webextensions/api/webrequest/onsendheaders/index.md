@@ -3,9 +3,8 @@ title: webRequest.onSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onSendHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This event is fired just before sending headers. If your extension or some other extension modified headers in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, you'll see the modified version here.
 

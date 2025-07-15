@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the sidebar pane becomes visible as a result of the user switching to it.
 

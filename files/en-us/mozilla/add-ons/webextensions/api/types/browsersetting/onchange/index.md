@@ -3,9 +3,8 @@ title: BrowserSetting.onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
 page-type: webextension-api-event
 browser-compat: webextensions.api.types.BrowserSetting.onChange
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 

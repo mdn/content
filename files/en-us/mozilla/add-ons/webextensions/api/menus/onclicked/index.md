@@ -3,9 +3,8 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a menu item is clicked.
 

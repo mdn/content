@@ -3,9 +3,8 @@ title: extensionTypes.ImageFormat
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
 page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.ImageFormat
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The format of an image.
 

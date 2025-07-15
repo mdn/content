@@ -3,9 +3,8 @@ title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.management.ExtensionInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An `ExtensionInfo` object contains information about an add-on.
 

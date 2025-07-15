@@ -3,9 +3,8 @@ title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.network.getHAR
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
 

@@ -3,9 +3,8 @@ title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Uninstalls the calling add-on.
 

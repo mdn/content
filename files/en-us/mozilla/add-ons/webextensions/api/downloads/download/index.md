@@ -3,9 +3,8 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.download
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`download()`** function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.
 

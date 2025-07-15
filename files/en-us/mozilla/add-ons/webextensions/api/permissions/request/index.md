@@ -3,9 +3,8 @@ title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.request
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Asks the user for the permissions listed in the {{WebExtAPIRef("permissions.Permissions")}} object.
 

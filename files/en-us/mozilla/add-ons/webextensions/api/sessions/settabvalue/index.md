@@ -3,9 +3,8 @@ title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.setTabValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Stores a key/value pair to associate with a given tab. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getTabValue")}}.
 

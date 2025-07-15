@@ -3,9 +3,8 @@ title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 page-type: webextension-api-type
 browser-compat: webextensions.api.pageAction.ImageDataType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Pixel data for an image.
 

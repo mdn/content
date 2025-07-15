@@ -3,9 +3,8 @@ title: runtime.RequestUpdateCheckStatus
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/RequestUpdateCheckStatus
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.RequestUpdateCheckStatus
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 

@@ -3,9 +3,8 @@ title: captivePortal.canonicalURL
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 page-type: webextension-api-property
 browser-compat: webextensions.api.captivePortal.canonicalURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Return the canonical URL of the captive-portal detection page. Read-only.
 

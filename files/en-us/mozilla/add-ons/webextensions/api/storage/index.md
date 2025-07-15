@@ -3,9 +3,8 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 page-type: webextension-api
 browser-compat: webextensions.api.storage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to store and retrieve data, and listen for changes to stored items.
 

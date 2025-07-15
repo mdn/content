@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Displays a JSON object in the extension's sidebar pane.
 

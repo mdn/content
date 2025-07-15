@@ -3,9 +3,8 @@ title: runtime.id
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
 page-type: webextension-api-property
 browser-compat: webextensions.api.runtime.id
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The ID of the extension.
 

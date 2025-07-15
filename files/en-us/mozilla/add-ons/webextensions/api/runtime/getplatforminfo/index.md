@@ -3,9 +3,8 @@ title: runtime.getPlatformInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPlatformInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns information about the current platform.
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).

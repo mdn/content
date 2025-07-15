@@ -3,9 +3,8 @@ title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.goForward
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Navigate to the next page in tab's history, if available.
 

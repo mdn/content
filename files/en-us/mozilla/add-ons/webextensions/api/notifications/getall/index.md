@@ -3,9 +3,8 @@ title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets all currently active notifications created by the extension.
 

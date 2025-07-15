@@ -3,9 +3,8 @@ title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object containing information about the current platform.
 

@@ -3,9 +3,8 @@ title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 

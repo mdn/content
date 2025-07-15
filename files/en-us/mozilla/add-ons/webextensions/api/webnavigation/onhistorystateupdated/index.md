@@ -3,9 +3,8 @@ title: webNavigation.onHistoryStateUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the page used the [history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
 

@@ -3,9 +3,8 @@ title: history.deleteAll()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.deleteAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Deletes all visits from the browser's history.
 

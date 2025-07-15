@@ -3,9 +3,8 @@ title: scripting
 slug: Mozilla/Add-ons/WebExtensions/API/scripting
 page-type: webextension-api
 browser-compat: webextensions.api.scripting
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Inserts JavaScript and CSS into websites. This API offers two approaches to inserting content:
 

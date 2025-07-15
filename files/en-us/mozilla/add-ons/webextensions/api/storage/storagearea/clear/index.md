@@ -3,9 +3,8 @@ title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.clear
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes all items from the storage area.
 

@@ -3,9 +3,8 @@ title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.FilenameConflictAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `FilenameConflictAction` type of the {{WebExtAPIRef("downloads")}} API specifies what to do if the name of a downloaded file conflicts with an existing file.
 

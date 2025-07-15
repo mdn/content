@@ -3,9 +3,8 @@ title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.ResourceType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.
 

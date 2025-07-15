@@ -3,9 +3,8 @@ title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 page-type: webextension-api
 browser-compat: webextensions.api.webRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 

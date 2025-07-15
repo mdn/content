@@ -3,9 +3,8 @@ title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 page-type: webextension-api-event
 browser-compat: webextensions.api.extension.onRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.

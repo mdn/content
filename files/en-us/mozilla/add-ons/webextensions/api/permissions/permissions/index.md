@@ -3,9 +3,8 @@ title: Permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
 page-type: webextension-api-type
 browser-compat: webextensions.api.permissions.Permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `Permissions` object represents a collection of permissions.
 

@@ -3,9 +3,8 @@ title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 page-type: webextension-api
 browser-compat: webextensions.api.contextualIdentities
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Work with contextual identities: list, create, remove, and update contextual identities.
 

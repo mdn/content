@@ -3,9 +3,8 @@ title: sidebarAction.open()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.open
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Open the sidebar in the active window.
 

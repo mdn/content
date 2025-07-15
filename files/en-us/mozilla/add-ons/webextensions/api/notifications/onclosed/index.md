@@ -3,9 +3,8 @@ title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClosed
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a notification is closed, either by the system or by the user.
 

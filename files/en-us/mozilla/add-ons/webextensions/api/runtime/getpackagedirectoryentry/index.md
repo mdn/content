@@ -3,9 +3,8 @@ title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets a `DirectoryEntry` object representing the package directory.
 

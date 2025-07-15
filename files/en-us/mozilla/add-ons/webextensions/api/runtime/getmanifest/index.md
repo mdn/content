@@ -3,9 +3,8 @@ title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getManifest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, deserialized from JSON to an object.
 

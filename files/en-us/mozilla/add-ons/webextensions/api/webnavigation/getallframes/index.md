@@ -3,9 +3,8 @@ title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getAllFrames
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a tab ID, retrieves information about all the frames it contains.
 

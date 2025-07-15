@@ -3,9 +3,8 @@ title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.storage.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area, returning details of only changed keys. A callback is called only when there are changes to the underlying data.
 

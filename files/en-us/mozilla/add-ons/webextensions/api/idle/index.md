@@ -3,9 +3,8 @@ title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
 page-type: webextension-api
 browser-compat: webextensions.api.idle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Find out when the user's system is idle, locked, or active.
 

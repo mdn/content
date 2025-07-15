@@ -3,9 +3,8 @@ title: webNavigation.onReferenceFragmentUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onReferenceFragmentUpdated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed. For example, if a page implements a table of contents using fragments, and the user clicks an entry in the table of contents, this event fires. All future events for this frame will use the updated URL.
 

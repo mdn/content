@@ -3,9 +3,8 @@ title: contextualIdentities.get()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about a contextual identity, given its cookie store ID.
 

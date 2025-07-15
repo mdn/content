@@ -3,9 +3,8 @@ title: devtools.panels.ElementsPanel.setExpression()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 

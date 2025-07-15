@@ -3,9 +3,8 @@ title: windows.CreateType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 page-type: webextension-api-type
 browser-compat: webextensions.api.windows.CreateType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Specifies the type of browser window to create.
 

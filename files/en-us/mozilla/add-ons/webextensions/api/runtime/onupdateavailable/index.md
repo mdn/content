@@ -3,9 +3,8 @@ title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onUpdateAvailable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an update to the extension is available. This event enables an extension to delay an update: for example, because it is in the middle of some operation which should not be interrupted.
 

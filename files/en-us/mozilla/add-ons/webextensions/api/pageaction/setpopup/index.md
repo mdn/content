@@ -3,9 +3,8 @@ title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.
 

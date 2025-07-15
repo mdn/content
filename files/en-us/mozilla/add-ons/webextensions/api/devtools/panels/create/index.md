@@ -3,9 +3,8 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a new panel to the devtools.
 

@@ -3,9 +3,8 @@ title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about all open windows, passing them into a callback.
 

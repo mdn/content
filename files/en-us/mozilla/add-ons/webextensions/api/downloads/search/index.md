@@ -3,9 +3,8 @@ title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 

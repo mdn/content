@@ -3,9 +3,8 @@ title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onRequestFinished
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a network request has finished and its details are available to the extension.
 

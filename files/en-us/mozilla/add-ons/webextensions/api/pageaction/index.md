@@ -3,9 +3,8 @@ title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 page-type: webextension-api
 browser-compat: webextensions.api.pageAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Read and modify attributes of and listen to clicks on the address bar button defined with the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 

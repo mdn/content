@@ -3,9 +3,8 @@ title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Make a connection between different contexts inside the extension.
 

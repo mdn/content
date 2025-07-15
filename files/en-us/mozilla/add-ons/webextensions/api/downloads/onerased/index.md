@@ -3,9 +3,8 @@ title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onErased
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 

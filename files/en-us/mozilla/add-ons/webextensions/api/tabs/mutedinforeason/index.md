@@ -3,9 +3,8 @@ title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.MutedInfoReason
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Specifies the reason a tab was muted or unmuted.
 

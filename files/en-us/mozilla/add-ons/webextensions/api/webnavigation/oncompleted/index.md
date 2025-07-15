@@ -3,9 +3,8 @@ title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCompleted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the window [`load`](/en-US/docs/Web/API/Window/load_event) event.
 

@@ -3,9 +3,8 @@ title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.detectLanguage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 

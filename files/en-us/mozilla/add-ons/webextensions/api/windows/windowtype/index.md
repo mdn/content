@@ -3,9 +3,8 @@ title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type of browser window this is.
 

@@ -3,9 +3,8 @@ title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 page-type: webextension-api-type
 browser-compat: webextensions.api.webNavigation.TransitionQualifier
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Extra information about a transition. Note that many values here are not currently supported in Firefox: see the [browser compatibility table](#browser_compatibility) for details.
 

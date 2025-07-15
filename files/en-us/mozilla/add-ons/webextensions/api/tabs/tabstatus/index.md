@@ -3,9 +3,8 @@ title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.TabStatus
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Indicates whether the tab has finished loading.
 

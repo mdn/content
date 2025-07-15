@@ -3,9 +3,8 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onInstalled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
 

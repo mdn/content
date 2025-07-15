@@ -3,9 +3,8 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sends a single message to event listeners within your extension or a different extension.
 

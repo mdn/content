@@ -3,9 +3,8 @@ title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.sessions.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired whenever the list of closed tabs or windows changes.
 

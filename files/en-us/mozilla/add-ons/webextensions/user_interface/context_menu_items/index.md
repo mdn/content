@@ -2,9 +2,8 @@
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This user interface option adds one or more items to a browser context menu. This is the menu available when a user right-clicks on a web page. Tabs and bookmarks can also have context menus, available through the {{WebExtAPIRef("menus")}} API.
 

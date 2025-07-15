@@ -3,9 +3,8 @@ title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.setEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables or disables the given add-on.
 

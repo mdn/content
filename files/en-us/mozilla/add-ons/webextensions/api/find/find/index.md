@@ -3,9 +3,8 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Searches for text in a tab.
 

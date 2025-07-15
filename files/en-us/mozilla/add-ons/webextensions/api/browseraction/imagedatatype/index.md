@@ -3,9 +3,8 @@ title: browserAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
 page-type: webextension-api-type
 browser-compat: webextensions.api.browserAction.ImageDataType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData) object (for example, from a {{htmlelement("canvas")}} element).
 

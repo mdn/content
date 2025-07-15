@@ -3,9 +3,8 @@ title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a window is closed.
 

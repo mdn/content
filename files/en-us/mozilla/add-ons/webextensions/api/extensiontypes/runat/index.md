@@ -3,9 +3,8 @@ title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.RunAt
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The soonest that the JavaScript or CSS will be injected into the tab.
 

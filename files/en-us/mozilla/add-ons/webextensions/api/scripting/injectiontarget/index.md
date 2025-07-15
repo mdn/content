@@ -3,9 +3,8 @@ title: scripting.InjectionTarget
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/InjectionTarget
 page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.InjectionTarget
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This object contains details specifying the injection target for CSS and JavaScript. Its used in {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}}.
 

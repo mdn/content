@@ -3,9 +3,8 @@ title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DangerType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DangerType` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons that a downloadable file might be considered dangerous.
 

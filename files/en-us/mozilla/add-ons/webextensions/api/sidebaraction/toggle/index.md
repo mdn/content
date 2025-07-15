@@ -3,9 +3,8 @@ title: sidebarAction.toggle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.toggle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.
 

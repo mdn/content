@@ -3,9 +3,8 @@ title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onSuspendCanceled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't be unloaded after all.
 

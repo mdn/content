@@ -3,9 +3,8 @@ title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.search.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets an array of all installed search engines.
 

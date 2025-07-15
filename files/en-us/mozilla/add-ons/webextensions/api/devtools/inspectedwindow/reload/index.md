@@ -3,9 +3,8 @@ title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Reloads the window that the devtools are attached to.
 

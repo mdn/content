@@ -3,9 +3,8 @@ title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
 page-type: webextension-api-type
 browser-compat: webextensions.api.commands.Command
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Information about the settings for the commands specified in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 

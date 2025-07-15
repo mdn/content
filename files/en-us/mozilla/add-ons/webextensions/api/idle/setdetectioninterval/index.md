@@ -3,9 +3,8 @@ title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 page-type: webextension-api-function
 browser-compat: webextensions.api.idle.setDetectionInterval
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the interval, in seconds, used to determine when the system is in an idle state for {{WebExtAPIRef("idle.onStateChanged")}} events. The default interval is 60 seconds.
 

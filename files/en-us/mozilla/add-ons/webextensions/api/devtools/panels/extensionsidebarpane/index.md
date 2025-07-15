@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane
 page-type: webextension-api-type
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `ExtensionSidebarPane` object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.
 

@@ -3,9 +3,8 @@ title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnInstalledReason
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
 

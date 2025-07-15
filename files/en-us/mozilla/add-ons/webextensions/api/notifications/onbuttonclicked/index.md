@@ -3,9 +3,8 @@ title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onButtonClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user clicks one of the notification's buttons.
 
