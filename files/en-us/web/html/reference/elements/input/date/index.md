@@ -150,7 +150,7 @@ If you use [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`
 
 You can also use the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field.
 
-Let's look at an example of minimum and maximum dates, and also made a field required:
+Let's look at an example of minimum and maximum dates, and also make a field required:
 
 ```html
 <form>
