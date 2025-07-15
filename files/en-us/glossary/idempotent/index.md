@@ -17,7 +17,7 @@ Also, the response returned by each request may differ: for example, the first c
 
 While servers are very much encouraged to adhere to the semantics laid out by the HTTP specification, the spec does not mandate it. Nothing is preventing a server in the wild from exposing a non-idempotent endpoint under an idempotent HTTP method, although clients may well be surprised.
 
-A few examples:
+## Examples
 
 `GET /pageX HTTP/1.1` is idempotent, because it is a safe (read-only) method. Successive calls may return different data to the client, if the data on the server was updated in the meantime.
 
