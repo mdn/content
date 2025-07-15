@@ -200,7 +200,7 @@ As a result the label will only come from the elements with ids `label_1` and `l
 
 When using the [instance properties reflected from ARIA element references](/en-US/docs/Web/API/Element#instance_properties_reflected_from_aria_element_references), such as {{domxref("Element.ariaLabelledByElements")}} for `aria-labelledby`, the scoping rules are a little different.
 To be in scope a target element must be in the same DOM as the referencing element, or a parent DOM.
-Elements in nested DOMs are out of scope.
+Elements in other DOMs, including shadow DOMs that are children or peers of the referring DOM, are out of scope.
 
 The example below shows the case where an element in a parent DOM (`label_3`) is set as a target, along with the elements with ids `label_1` and `label_2` which are declared in the same shadow root.
 This works because all the target elements are in scope for the referencing element.
