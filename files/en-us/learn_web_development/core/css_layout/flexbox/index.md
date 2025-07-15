@@ -53,7 +53,7 @@ Flexbox features may be the perfect solution for your one dimensional layout nee
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the HTML and CSS. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. Alternatively open the example in {{LiveSampleLink("flexbox_0", "open the playground")}}.
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the HTML and CSS. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. Alternatively click the "Play" button to open it in the playground.
 
 ```html live-sample___flexbox_0
 <header>

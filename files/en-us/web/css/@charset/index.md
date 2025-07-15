@@ -3,9 +3,8 @@ title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
 browser-compat: css.at-rules.charset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@charset`** [CSS](/en-US/docs/Web/CSS) rule specifies the character encoding used in the style sheet. This syntax is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}. Although the first character in `@charset` is the `@` symbol, it is not an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). It is a specific byte sequence that can only be placed at the very beginning of a stylesheet. No other characters, except the Unicode byte-order mark, are allowed before it. It also does not follow normal CSS syntax rules such as use of quotes or whitespace.
 

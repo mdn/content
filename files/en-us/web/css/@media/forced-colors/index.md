@@ -3,9 +3,8 @@ title: forced-colors
 slug: Web/CSS/@media/forced-colors
 page-type: css-media-feature
 browser-compat: css.at-rules.media.forced-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`forced-colors`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.
 

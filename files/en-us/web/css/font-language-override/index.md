@@ -3,9 +3,8 @@ title: font-language-override
 slug: Web/CSS/font-language-override
 page-type: css-property
 browser-compat: css.properties.font-language-override
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-language-override`** [CSS](/en-US/docs/Web/CSS) property controls the use of language-specific glyphs in a typeface.
 

@@ -1,5 +1,6 @@
 ---
 title: Firefox 16 for developers
+short-title: Firefox 16
 slug: Mozilla/Firefox/Releases/16
 page-type: firefox-release-notes
 sidebar: firefox
@@ -81,9 +82,3 @@ _No change._
 ### Interface changes
 
 `nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ([Firefox bug 761613](https://bugzil.la/761613))
-
-#### New interfaces
-
-#### Removed interfaces
-
-The following interfaces have been removed.

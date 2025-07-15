@@ -3,9 +3,8 @@ title: fill
 slug: Web/CSS/fill
 page-type: css-property
 browser-compat: css.properties.fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill`** [CSS](/en-US/docs/Web/CSS) property defines how SVG text content and the interior canvas of SVG shapes are filled or painted. If present, it overrides the element's {{SVGAttr("fill")}} attribute.
 

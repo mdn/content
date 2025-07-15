@@ -3,9 +3,8 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`list-style-image`** [CSS](/en-US/docs/Web/CSS) property sets an image to be used as the list item marker.
 

@@ -3,9 +3,8 @@ title: column-rule-style
 slug: Web/CSS/column-rule-style
 page-type: css-property
 browser-compat: css.properties.column-rule-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-rule-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the line drawn between columns in a multi-column layout.
 

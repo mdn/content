@@ -3,9 +3,8 @@ title: Applying color to HTML elements using CSS
 short-title: Applying color to HTML elements
 slug: Web/CSS/CSS_colors/Applying_color
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Reference/Elements) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 

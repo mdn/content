@@ -3,9 +3,8 @@ title: line-clamp
 slug: Web/CSS/line-clamp
 page-type: css-property
 browser-compat: css.properties.line-clamp
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
 

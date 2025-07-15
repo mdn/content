@@ -3,9 +3,8 @@ title: rx
 slug: Web/CSS/rx
 page-type: css-property
 browser-compat: css.properties.rx
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis, or horizontal, radius of an SVG {{SVGElement("ellipse")}} and the horizontal curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("rx")}} attribute.
 

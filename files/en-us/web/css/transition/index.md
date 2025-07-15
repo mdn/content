@@ -3,9 +3,8 @@ title: transition
 slug: Web/CSS/transition
 page-type: css-shorthand-property
 browser-compat: css.properties.transition
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
 

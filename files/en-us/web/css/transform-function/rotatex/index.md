@@ -3,9 +3,8 @@ title: rotateX()
 slug: Web/CSS/transform-function/rotateX
 page-type: css-function
 browser-compat: css.types.transform-function.rotateX
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rotateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around the
 x-axis (horizontal) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.

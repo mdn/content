@@ -12,7 +12,7 @@ Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCon
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.isRegexSupported(
+let count = await browser.declarativeNetRequest.isRegexSupported(
     regexOptions                // object
 );
 ```
