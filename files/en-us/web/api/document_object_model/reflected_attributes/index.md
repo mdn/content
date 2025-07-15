@@ -216,15 +216,16 @@ This works because all the target elements are in scope for the referencing elem
     <span id="label_2">(Label 2 Text)</span>
   </template>
 </div>
-<script>
-  document
-    .getElementById("host")
-    .shadowRoot.getElementById("input").ariaLabelledByElements = [
-    host.shadowRoot.getElementById("label_1"),
-    host.shadowRoot.getElementById("label_2"),
-    document.getElementById("label_3"),
-  ];
-</script>
+```
+
+```js
+const host = document.getElementById("host");
+const input = host.shadowRoot.getElementById("input");
+input.ariaLabelledByElements = [
+  host.shadowRoot.getElementById("label_1"),
+  host.shadowRoot.getElementById("label_2"),
+  document.getElementById("label_3"),
+];
 ```
 
 The equivalent code with an element in the DOM referencing another in the shadow DOM would not work, because target elements that are in nested shadow DOMs are not in scope:
@@ -240,15 +241,16 @@ The equivalent code with an element in the DOM referencing another in the shadow
     <span id="label_3">(Label 3 Text)</span>
   </template>
 </div>
-<script>
-  const input = document.getElementById("input");
-  const host = document.getElementById("host");
-  input.ariaLabelledByElements = [
-    host.shadowRoot.getElementById("label_3"),
-    document.getElementById("label_1"),
-    document.getElementById("label_2"),
-  ];
-</script>
+```
+
+```js
+const host = document.getElementById("host");
+const input = document.getElementById("input");
+input.ariaLabelledByElements = [
+  host.shadowRoot.getElementById("label_3"),
+  document.getElementById("label_1"),
+  document.getElementById("label_2"),
+];
 ```
 
 Note that an element may initially be "in scope" and then moved out of scope into a nested shadow root.
