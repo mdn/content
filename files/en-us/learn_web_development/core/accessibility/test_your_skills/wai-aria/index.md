@@ -106,7 +106,7 @@ In our second WAI-ARIA task, we present a basic search form, and we want you to 
 To complete the task:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add an attribute to llow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable.
+2. Add an attribute to allow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable.
 3. Give the search input a suitable label, without explicitly adding a visible text label to the DOM.
 
 > [!CALLOUT]
