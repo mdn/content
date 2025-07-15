@@ -38,15 +38,13 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 Some basic CSS:
 
 ```css
-.holder {
-  width: 640px;
-  height: 360px;
-  margin: 0 auto;
-  margin-bottom: 14em;
+form {
+  font-family: monospace;
 }
 
-#pbr {
-  width: 100%;
+video {
+  width: 500px;
+  aspect-ratio: 16 / 9;
 }
 ```
 
