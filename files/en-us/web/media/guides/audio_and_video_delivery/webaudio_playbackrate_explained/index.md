@@ -24,7 +24,7 @@ Here we create an {{ htmlelement("audio") }} element, and set its `src` to a fil
 Let's create a {{ htmlelement("video") }} element first, and set up video and playback rate controls in HTML:
 
 ```html
-<video id="myVideo" controls>
+<video id="myVideo" controls loop>
   <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
   <source src="/shared-assets/videos/flower.webm" type="video/webm" />
 </video>
