@@ -348,6 +348,7 @@ The **package.json** file defines the application dependencies and other informa
   "devDependencies": {
     "nodemon": "^3.1.10"
   }
+}
 ```
 
 The scripts section first defines a "_start_" script, which is what we are invoking when we call `npm start` to start the server (this script was added by the _Express Application Generator_). From the script definition, you can see that this actually starts the JavaScript file **./bin/www** with _node_.
