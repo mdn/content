@@ -374,7 +374,7 @@ Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
 });
 ```
 
-If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise (but does not abort the other operations, which continue to run). This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
+If one of the promises in the array rejects, `Promise.all()` immediately rejects the returned promise. The other operations continue to run, but their outcomes are not available via the return value of `Promise.all()`. This may cause unexpected state or behavior. {{jsxref("Promise.allSettled()")}} is another composition tool that ensures all operations are complete before resolving.
 
 These methods all run promises concurrently — a sequence of promises are started simultaneously and do not wait for each other. Sequential composition is possible using some clever JavaScript:
 
