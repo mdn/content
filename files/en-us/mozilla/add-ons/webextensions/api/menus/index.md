@@ -166,9 +166,9 @@ browser.menus.create(
 - {{WebExtAPIRef("menus.onShown")}}
   - : Fired when the browser shows a menu.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 

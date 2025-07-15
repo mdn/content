@@ -24,11 +24,11 @@ A value of this type is an object containing these properties for the commands:
 
 `description` and `shortcut` reflect the values given in the `commands` manifest.json key unless they have been updated with {{WebExtAPIRef('commands.update()')}} or, in the case of the shortcut, customized by the user.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

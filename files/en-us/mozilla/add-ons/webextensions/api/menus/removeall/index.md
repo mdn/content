@@ -27,10 +27,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all items have been removed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example adds two menu items. When the user clicks the item labeled "Remove all!", the extension removes both items using `removeAll()`.
@@ -61,6 +57,10 @@ browser.menus.onClicked.addListener((info, tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#method-removeAll) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
