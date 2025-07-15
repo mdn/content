@@ -141,6 +141,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 ```
 <!-- spellchecker: enable -->
 
+<!-- spellchecker: enable -->
 
 ```css live-sample___css-js-ally-2
 /* Edit the CSS to fix the a11y problems */
