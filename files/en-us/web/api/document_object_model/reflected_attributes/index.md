@@ -110,7 +110,7 @@ console.log(inputElement.ariaLabelledByElements);
 ```
 
 The first thing to note from the code above is that the attribute and the property contain different numbers of elements — the property doesn't _directly_ reflect the attribute because the reference `label_3` does not have a corresponding element.
-It is also possible that a reference will not match because it is [out of scope for the element](#element_reference_scope).
+It is also possible that a reference will not match because the `id` is [out of scope for the element](#element_id_reference_scope).
 This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only only valid in the scope in which they are declared.
 
 We can iterate the elements in the property array, in this case to get the accessible name from their inner text (this is more natural than using the attribute, because we don't have to first get the element references and then use them to find the elements, and we only have to work with elements that we know to be available in the current scope):
@@ -174,11 +174,11 @@ console.log(inputElement.ariaLabelledByElements);
 The array returned by the property is static, so you can't modify the returned array to cause changes to the corresponding attribute.
 When an array is assigned to the property it is copied, so any changes to the attribute will not be reflected in a previously returned property array.
 
-### Element reference scope
+### Element id reference scope
 
 Attribute element references can only refer to other elements that are in the same DOM or [Shadow DOM](/en-US/docs/Web/API/Web_components#shadow_dom_2), because element ids are only valid in the scope in which they are declared.
 
-We can see this in the the following code.
+We can see this in the following code.
 The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute of the {{htmlelement("input")}} element references the elements with ids `label_1`, `label_2`, and `label_3`.
 However `label_3` is not a valid id in this case because it is not defined in the same scope as the {{htmlelement("input")}} element.
 As a result the label will only come from the elements with ids `label_1` and `label_2`.
@@ -259,7 +259,7 @@ Note however that if the element is moved back into scope, it will again be pres
 
 The relationship between attributes containing element references and their corresponding property is as follows:
 
-- Attribute element references are only [in-scope](#element_reference_scope) for `id` values declared in the same DOM or shadow DOM as the element.
+- Attribute element `id` references are only [in-scope](#element_id_reference_scope) for target elements declared in the same DOM or shadow DOM as the element.
 - Properties that reflect ARIA element references can target elements in the same scope or a parent scope. Elements in nested scopes are not accessible.
 - Setting the property clears the attribute and the property and attribute no longer reflect each other.
   If the attributes is read, with {{domxref("Element.getAttribute()")}}, the value is `""`.
