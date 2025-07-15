@@ -59,13 +59,20 @@ To try out and visualize buffered time ranges we can write a bit of HTML:
 <p>
   <audio id="my-audio" controls>
     <source
-      src="/shared-assets/audio/voices-around-a-fire.mp3"
+      src="https://cdn.freesound.org/previews/687/687928_13113654-lq.mp3"
       type="audio/mpeg" />
   </audio>
 </p>
 <p>
   <canvas id="my-canvas" width="300" height="20"> </canvas>
 </p>
+```
+
+```css hidden live-sample___timeranges
+#my-audio,
+#my-canvas {
+  width: 100%;
+}
 ```
 
 and a bit of JavaScript:
@@ -80,30 +87,22 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 context.fillStyle = "red";
 context.strokeStyle = "white";
 
-const inc = canvas.width / audio.duration;
-
-// Wait until audio.duration is available
-audio.addEventListener("loadedmetadata", () => {
+// Display TimeRanges
+audio.addEventListener("seeked", () => {
   const inc = canvas.width / audio.duration;
+  for (let i = 0; i < audio.buffered.length; i++) {
+    const startX = audio.buffered.start(i) * inc;
+    const endX = audio.buffered.end(i) * inc;
+    const width = endX - startX;
 
-  // Display TimeRanges
-  audio.addEventListener("seeked", () => {
-    for (let i = 0; i < audio.buffered.length; i++) {
-      const startX = audio.buffered.start(i) * inc;
-      const endX = audio.buffered.end(i) * inc;
-      const width = endX - startX;
-
-      context.fillRect(startX, 0, width, canvas.height);
-      context.rect(startX, 0, width, canvas.height);
-      context.stroke();
-    }
-  });
+    context.fillRect(startX, 0, width, canvas.height);
+    context.rect(startX, 0, width, canvas.height);
+    context.stroke();
+  }
 });
 ```
 
-This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should get something like this. Each red filled white rectangle represents a time range.
-
-![An audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
+This works better with longer pieces of audio or video, but press play and click about the player progress bar and you should see segments of red. Each red-filled white rectangle represents a time range.
 
 {{EmbedLiveSample("timeranges", "", 200)}}
 
@@ -134,7 +133,7 @@ So let's build this. The HTML for our player looks like this:
 ```html live-sample___buffered-progress
 <audio id="my-audio" preload controls>
   <source
-    src="/shared-assets/audio/voices-around-a-fire.mp3"
+    src="https://cdn.freesound.org/previews/687/687928_13113654-lq.mp3"
     type="audio/mpeg" />
 </audio>
 <div class="buffered">
@@ -212,9 +211,7 @@ The progress event is fired as data is downloaded, this is a good event to react
 
 The timeupdate event is fired 4 times a second as the media plays and that's where we increment our playing progress bar.
 
-This should give you results similar to the following, where the light grey bar represents the buffered progress and green bar shows the played progress:
-
-![An audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
+This time, you should see two kinds of segments. The light grey bar represents the buffered progress and green bar shows the played progress.
 
 {{EmbedLiveSample("buffered-progress", "", 200)}}
 
