@@ -1,5 +1,6 @@
 ---
 title: Firefox 42 for developers
+short-title: Firefox 42
 slug: Mozilla/Firefox/Releases/42
 page-type: firefox-release-notes
 sidebar: firefox
@@ -147,7 +148,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,5 +1,6 @@
 ---
 title: Firefox 40 for developers
+short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 page-type: firefox-release-notes
 sidebar: firefox
@@ -161,7 +162,3 @@ _No change._
 
 - Places Keywords API has been deprecated and will be removed soon ([Firefox bug 1140395](https://bugzil.la/1140395)).
 - The automated testing system now supports skipping individual test functions. See [running conditional tests](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) in XPCShell testing.
-
-## Older versions
-
-{{Firefox_for_developers}}
