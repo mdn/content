@@ -59,7 +59,7 @@ To try out and visualize buffered time ranges we can write a bit of HTML:
 <p>
   <audio id="my-audio" controls>
     <source
-      src="https://cdn.freesound.org/previews/687/687928_13113654-lq.mp3"
+      src="https://cdn.freesound.org/previews/155/155386_326032-lq.mp3"
       type="audio/mpeg" />
   </audio>
 </p>
@@ -133,7 +133,7 @@ So let's build this. The HTML for our player looks like this:
 ```html live-sample___buffered-progress
 <audio id="my-audio" preload controls>
   <source
-    src="https://cdn.freesound.org/previews/687/687928_13113654-lq.mp3"
+    src="https://cdn.freesound.org/previews/155/155386_326032-lq.mp3"
     type="audio/mpeg" />
 </audio>
 <div class="buffered">
