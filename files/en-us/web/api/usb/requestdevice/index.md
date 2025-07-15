@@ -22,6 +22,7 @@ requestDevice(options)
 ```
 
 ### Parameters
+
 - `options`
   - : An object that sets options for selecting an appropriate device.
     The available options are:
