@@ -20,7 +20,7 @@ In our first ARIA task, we present you with a section of non-semantic markup, wh
 To complete the task:
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add some WAI-ARIA semantics to make screenreaders recognize the `<div>` elements as an unordered list.
+2. Add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
 
 > [!CALLOUT]
 >

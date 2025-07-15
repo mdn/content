@@ -9,7 +9,9 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you've understood our [CSS and JavaScript accessibility best practices](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript) article.
 
 > [!NOTE]
-> If you get stuck with any of the tasks, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
+>
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## CSS accessibility 1
 
@@ -22,7 +24,7 @@ To complete the task:
 
 > [!CALLOUT]
 >
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
@@ -140,8 +142,6 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
   </p>
 </main>
 ```
-
-<!-- spellchecker: enable -->
 
 <!-- spellchecker: enable -->
 
