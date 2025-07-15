@@ -13,7 +13,7 @@ A client can safely retry a request that uses an idempotent method, for example,
 
 The HTTP specification only defines idempotency in terms of the _intented_ effect of the client on the server. For example, a `POST` request intends to send data to the server, whereas a `DELETE` request intends to delete a resource on the server. In practice, it falls to the server to make sure the routes it exposes adhere to these semantics. Also, a request with an idempotent method does not necessarily mean that the request has _no_ unique side effects: For example, the server may log the time each request is received.
 
-Also, the response returned by each request may differ: for example, the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a _delete last entry_ functionality using the `DELETE` method.
+Also, the response returned by each request may differ: for example, the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}.
 
 While servers are very much encouraged to adhere to the semantics laid out by the HTTP specification, the spec does not mandate it. Nothing is preventing a server in the wild from exposing a non-idempotent endpoint under an idempotent HTTP method, although clients may well be surprised.
 
