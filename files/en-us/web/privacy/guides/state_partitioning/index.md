@@ -129,19 +129,13 @@ These heuristics are intended to allow some third-party integrations that are co
 > Storage access heuristics are a transitional feature meant to prevent website breakage.
 > They should not be relied upon for current and future web development.
 
-#### Opener Heuristics
+#### Opener Heuristic
 
-- When a partitioned third-party opens a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document, the third-party is granted storage access to its embedder for 30 days.
-- When a first-party `a.example` opens a third-party pop-up `b.example`, `b.example` is granted third-party storage access to `a.example` for 30 days.
+When a partitioned third-party opens a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document and the user interacts with that popup, the third-party is granted storage access to its embedder for 30 days.
 
-> [!NOTE]
-> For third-parties which abuse these heuristic for tracking purposes, we may require user interaction with the popup before storage access is granted.
+#### Navigation Heuristic
 
-#### Redirect Heuristics
-
-- If a site `b.example` redirects to `a.example`, then `b.example` receives storage access to its embedder `a.example` if both `a.example` and `b.example` have been visited and interacted with within the last 10 minutes.
-  This storage access will be granted for 15 minutes.
-- If a tracker `tracker.example` (as classified by the Enhanced Tracking Protection) redirects to a non-tracker `a.example` and `tracker.example` received user interaction as a first-party within the last 45 days, `tracker.example` is granted storage access to `a.example` for 15 minutes.
+When a site `a.example` navigates a user to `b.example` in the same window, the user interacts with `b.example`, then the user is quickly navigated back to `a.example`, then `b.example` is granted storage access as a third party on `a.example` for 30 days.
 
 ## Storage Access API
 
