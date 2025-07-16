@@ -66,7 +66,7 @@ This code finds the first {{HTMLElement("input")}} element whose `type` is `date
 
 ## Additional attributes
 
-In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) and the [input attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) common to all {{HTMLElement("input")}} elements, the `date` input also supports the following attributes:
+In addition to [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and the [input attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) common to all {{HTMLElement("input")}} elements, the `date` input supports the following attributes:
 
 ### max
 
