@@ -1,0 +1,198 @@
+---
+title: "HighlightRegistry: highlightsFromPoint() method"
+short-title: highlightsFromPoint()
+slug: Web/API/HighlightRegistry/highlightsFromPoint
+page-type: web-api-instance-method
+browser-compat: api.HighlightRegistry.highlightsFromPoint
+---
+
+{{APIRef("CSS Custom Highlight API")}}
+
+The **`highlightsFromPoint()`** method of the {{domxref("HighlightRegistry")}} interface returns an array of objects representing the custom highlights applied at a specific point within the viewport.
+
+## Syntax
+
+```js-nolint
+highlightsFromPoint(x, y)
+highlightsFromPoint(x, y, options)
+```
+
+### Parameters
+
+- `x`
+  - : The x coordinate of the point within the viewport to return custom highlight information for.
+- `y`
+  - : The y coordinate of the point within the viewport to return custom highlight information for.
+- `options` {{optional_inline}}
+  - : An object containing options, which can include:
+    - `shadowRoots`
+      - : An array of {{domxref("ShadowRoot")}} objects. Any shadow roots included in this array will have custom highlights applied inside them that exist at the specified point included in the return value. By default, shadow root custom highlights are not included in the return value.
+
+### Return value
+
+An array of objects representing the custom highlights applied at the specified point. Each object contains the following properties:
+
+- `highlight`
+  - : A {{domxref("Highlight")}} object representing the applied custom highlight.
+- `ranges`
+  - : An array of {{domxref("AbstractRange")}} objects representing the ranges the applied custom highlight is applied to.
+
+If no custom highlights are applied at the specified point, an empty array is returned. This includes instances where the specified point is outside the viewport, that is, the coordinate values are negative or greater than the viewport dimensions.
+
+## Examples
+
+### Output custom highlights applied at the mouse pointer position
+
+In this example, we provide a paragraph of text that you can apply custom highlights to. You can then double-click a point in the paragraph to output the text that has custom highlights applied at that point.
+
+#### HTML
+
+The markup contains a {{htmlelement("p")}} element containing the text to apply custom highlights to, and a {{htmlelement("section")}} element that we will output the highlighted text fragments to.
+
+```html live-sample___highlights-from-point-example
+<h1>highlightsFromPoint() demo</h1>
+<p class="highlight-text">
+  Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside
+  cable strike colors. Bring a spring upon her cable holystone blow the man down
+  spanker Shiver me timbers to go on account lookout wherry doubloon chase.
+  Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom
+  heave to.
+</p>
+<h2>Highlighted text at point</h2>
+<section></section>
+```
+
+#### CSS
+
+We have hidden most of the CSS for brevity; the most relevant CSS defines styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`.
+
+```css hidden live-sample___highlights-from-point-example
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1em / 1.4 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  gap: 10px;
+}
+
+.highlight-text,
+article {
+  padding: 10px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.instructions {
+  font-size: 0.8rem;
+}
+```
+
+```css live-sample___highlights-from-point-example
+:root::highlight(highlight1) {
+  background-color: rgb(255 255 0 / 0.5);
+}
+
+:root::highlight(highlight2) {
+  background-color: rgb(255 0 0 / 0.5);
+}
+
+:root::highlight(highlight3) {
+  background-color: rgb(0 0 255 / 0.75);
+  color: white;
+}
+```
+
+#### JavaScript
+
+In our script, we start by grabbing references to the text node inside our `<p>` element, and our `<section>` element. We then create an array called `highlights` than contains our custom highlight names, and a variable called `curHighlight`, initially set to `0`, which will be used to specify which custom highlight to apply later on.
+
+```js live-sample___highlights-from-point-example
+const textNode = document.querySelector(".highlight-text").firstChild;
+const section = document.querySelector("section");
+const highlights = ["highlight1", "highlight2", "highlight3"];
+let curHighlight = 0;
+```
+
+Next, we define a keyboard control — <kbd>h</kbd> — that when pressed applies a custom highlight to any text selected at the time. This consists of a [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handler function that only runs its contents if the pressed key was <kbd>h</kbd>. If so, we grab the selected text using {{domxref("Window.getSelection()")}} and convert it to a {{domxref("Range")}} using {{domxref("Selection.getRangeAt()")}}.
+
+Next, we select the custom highlight we want to apply to the `range` using `highlights[curHighlight]`, then increment `curHighlight`; if it reaches `3`, we set it back to `0`. This has the effect of cycling through the available highlights in order as they are set.
+
+Finally for the `keydown` event handler, we create a new highlight object using the {{domxref("Highlight.Highlight", "Highlight()")}} constructor, passing it the `range` we created earlier. We then apply the chosen custom highlight style to the `highlight` using the {{domxref("HighlightRegistry.set()")}} method.
+
+```js live-sample___highlights-from-point-example
+window.addEventListener("keydown", (event) => {
+  if (event.key === "h") {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    const highlightStyle = highlights[curHighlight];
+    curHighlight++;
+    if (curHighlight === 3) {
+      curHighlight = 0;
+    }
+    const highlight = new Highlight(range);
+    CSS.highlights.set(highlightStyle, highlight);
+  }
+});
+```
+
+Next, we define a [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) event handler function to handle outputting the highlighted text at the mouse cursor position when the event fires. We first grab the current mouse coordinates from the event object ({{domxref("MouseEvent")}}). We then pass those coordinates into a `highlightsFromPoint()` call to return the custom highlights applied at that point.
+
+If the returned `highlights` array is empty (there are no highlights at that point), we don't want to run the rest of the code. We therefore check for `highlights.length !== 0` before continuing. Provided this test returns `true`, we clear the contents of the `<section>` element, then loop through each highlight in the `highlights` array.
+
+For each highlight, we grab the first range in the [`ranges`](#ranges) array (there is only ever one range in each highlight, in this case), then get a reference to the node that contains the highlight via the {{domxref("AbstractRange.startContainer")}} property. We then get the exact highlighted string by accessing this node's [`textContent`](/en-US/docs/Web/API/Node/textContent) and running {{jsxref("String.substring()")}} on it, with the offsets specified as the range's {{domxref("AbstractRange.startOffset")}} and {{domxref("AbstractRange.endOffset")}}.
+
+The final step is to add the highlighted text inside the `<section>` element's `innerHTML`, inside an `<article>` element.
+
+```js live-sample___highlights-from-point-example
+document.addEventListener("dblclick", (event) => {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+  const highlights = CSS.highlights.highlightsFromPoint(mouseX, mouseY);
+  if (highlights.length !== 0) {
+    section.innerHTML = "";
+    for (highlight of highlights) {
+      const range = highlight.ranges[0];
+      const highlightedContainer = range.startContainer;
+      const textSelection = highlightedContainer.textContent.substring(
+        range.startOffset,
+        range.endOffset,
+      );
+      section.innerHTML += `<article>${textSelection}</article>`;
+    }
+  }
+});
+```
+
+#### Result
+
+Try selecting some sections of text, pressing <kbd>h</kbd> after each one to apply a highlight. Then try double-clicking on a highlighted section of text to see that section outputted at the bottom of the UI. If multiple highlights overlap the section, you'll see multiple text fragments output.
+
+{{EmbedLiveSample("highlights-from-point-example", "100%", "600")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
