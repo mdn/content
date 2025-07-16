@@ -22,17 +22,19 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to **avoid too much overriding**. If you keep finding yourself writing styles and then cancelling them again a few rules down, you probably need to rethink your strategy.
 
-### Using modern CSS features
+### Use modern CSS features when supported
 
-You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them (a.k.a. {{glossary("Baseline")}}).
+
+This rule applies to CSS features unrelated to what's documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write full examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
 
 ### Follow common best practices
 
 There are some uniformly acknowledged principles that we don't need to exhaustively state here:
 
-- Don't write syntax errors that result in the property or declaration being ignored. Standard syntax that hasn't been implemented is acceptable.
-- Don't use non-standard, deprecated, or obsolete features. This extends to prefixed features: unless the standard feature is unavailable, you don't need to write the prefixed alternative. Readers who need compatibility can either add the prefixed fallback themselves or use a CSS postprocessor.
-- Don't write redundant and useless code that are common indications of bug or refactor artifacts. They include identical properties in a declaration, empty declarations, empty comments, selectors that never match anything, etc.
+- Ensure that your code doesn't have syntax errors, which can result in the [property or declaration being ignored](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). Standard syntax that hasn't been implemented is acceptable, if it fits our [general rule about modern CSS features](#use_modern_css_features_when_supported).
+- Don't use [non-standard, deprecated, or obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features. This guideline extends to [prefixed features](/en-US/docs/Glossary/Vendor_Prefix#css_prefixes): use the prefixed alternative _only if_ the standard feature is not available (see our [general rule about modern CSS features](#use_modern_css_features_when_supported)). If the reader needs broader compatibility, they can either add the prefixed fallback themselves or use a CSS postprocessor.
+- Don't write redundant or non-functional code, which is a common indicator of bugs or refactoring leftovers. This includes repeated properties in a declaration, empty declarations, empty comments, or selectors that don't match any elements.
 
 ### Don't use preprocessors
 
@@ -70,6 +72,8 @@ rgb(31 41 59 / 26%);
 
 When specifying keyframes, the `0%` and `100%` selectors can also be written as `from` and `to`. If a `@keyframes` rule _only contains_ these two selectors, use `from` and `to` instead of `0%` and `100%`. This makes your code more semantic.
 
+So avoid this:
+
 ```css example-bad
 @keyframes example {
   0% {
@@ -80,6 +84,8 @@ When specifying keyframes, the `0%` and `100%` selectors can also be written as 
   }
 }
 ```
+
+Use `from` and `to` instead:
 
 ```css example-good
 @keyframes example {
@@ -108,15 +114,15 @@ On the other hand, if your `@keyframes` rule contains more than just the start a
 }
 ```
 
-## Cascade, properties, and selectors
+## Cascade and specificity
 
 ### Controlling specificity
 
-If possible, avoid surprises for controlling specificity, such as using `:where()` or duplicating selectors. Consider:
+If possible, avoid surprises for increasing or decreasing specificity, such as overusing the [`:where()`](/en-US/docs/Web/CSS/:where) pseudo-class or duplicating selectors. Instead, consider the following techniques to manage specificity:
 
-- Changing the order of declarations
-- Rearranging properties such that they don't override each other
-- Using ID selectors
+- Changing the order of declarations to take advantage of the cascade
+- Rearranging properties in each declaration such that they don't override each other
+- Using ID selectors, in cases where the HTML [`id` itself is justified](#use_class_selectors)
 
 ### !important
 
@@ -142,17 +148,19 @@ button {
 }
 ```
 
-Within a declaration, prefer to have related properties (such as sizing, positioning, color, etc.) located together. Custom properties should be declared at the top, which makes the code more readable if the custom property is to be used within the same block.
+Within a declaration, prefer to have related properties (such as for sizing, positioning, and color) located together. Custom properties should be declared at the top of the declaration block, which allows quick identification of all available custom properties.
 
 ### Empty lines
 
 Empty lines between declaration blocks are recommended. You can remove them if consecutive declarations are highly related, such as variations of the same utility class.
 
-Empty lines between properties should be used sparingly. Only use them when each group of properties form a clear semantic block.
+Empty lines between properties should be used sparingly. Add them only when each group of properties forms a clear semantic block.
 
 ### Shorthand properties
 
-- If _every_ constituent property of a shorthand property is specified to a non-default value, use the shorthand property instead of the constituent properties. This makes your code shorter and easier to read. Replace this:
+- If _every_ constituent property of a shorthand property is assigned a non-default value, use the shorthand property instead of the constituent longhand properties. This makes your code shorter and easier to read. 
+	
+	Replace these longhand properties:
 
   ```css example-bad
   margin-top: 1em;
@@ -161,13 +169,13 @@ Empty lines between properties should be used sparingly. Only use them when each
   margin-left: 2em;
   ```
 
-  With this:
+  with their corresponding shorthand:
 
   ```css example-good
   margin: 1em 2em;
   ```
 
-- If _some_ constituent properties of a shorthand property are specified to a non-default value, the use of the shorthand property is optional. Both of these are acceptable:
+- If only _some_ constituent properties of a shorthand property are assigned a non-default value, the use of the shorthand property is optional. Both of these are acceptable:
 
   ```css example-good
   margin-top: 1em;
@@ -191,9 +199,10 @@ Empty lines between properties should be used sparingly. Only use them when each
   margin: 1em 1em 1em 1em;
   ```
 
-- Write shorthand properties in the canonical order. Write this:
+- Write shorthand properties in the [canonical order](/en-US/docs/Glossary/Canonical_order). Write this:
 
   ```css example-good
+  /* width style color */
   border: 1px solid red;
   ```
 
@@ -203,16 +212,19 @@ Empty lines between properties should be used sparingly. Only use them when each
   border: solid red 1px;
   ```
 
-- If you use the shorthand property, make sure none of its constituent properties are specified at the same time, because the longhand is ignored. Avoid this:
+- For every shorthand, either use it or its longhand constituents, and never a mix of both, because the overriding relationship is complex and bug-prone. Avoid these:
 
   ```css example-bad
   margin-top: 1em;
   margin: 2em; /* Oops, margin-top is ignored */
+
+  border: solid red 1px;
+  border-bottom-width: 5px; /* Overrides the width *only* */
   ```
 
 ### Use class selectors
 
-Generally, prefer class selectors (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
+Generally, prefer [class selectors](/en-US/docs/Web/CSS/Class_selectors) (and use `class` instead of `id` in your HTML). They can be composed: multiple elements can use the same class, and the same class can be used for multiple elements.
 
 ```css example-good
 .footnote {
@@ -226,15 +238,17 @@ Generally, prefer class selectors (and use `class` instead of `id` in your HTML)
 }
 ```
 
-ID selectors are acceptable if unique handles are required elsewhere; for example, form controls. They are also an acceptable device for controlling specificity.
+ID selectors are acceptable if unique handles are required elsewhere, for example, for form controls.
+	
+Use classes for styling, and reserve IDs for non-CSS purposes, such as for use in JavaScript or for linking to unique page anchors (`<a href="#section1">`). In the case where the use of ID is justified, you can take advantage of it for [controlling specificity](#controlling_specificity).
 
 ### Old pseudo-element selectors
 
-The `::before`, `::after`, `::first-letter`, and `::first-line` pseudo-elements can also be written with single colons. Avoid the single-colon syntax because they are conceptually pseudo-elements and not pseudo-classes.
+The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because the syntax is discouraged and they could be misidentified as [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
 
 ### Complex selector lists
 
-The `:is()`, `:where()`, and `:not()` pseudo-classes accept complex selector lists. Use them to shorten your selector.
+The `:is()`, `:where()`, and `:not()` pseudo-classes accept [complex selector lists](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector). Use them to shorten your selector.
 
 Write this:
 
@@ -254,9 +268,9 @@ input:not(:checked):not(:disabled) {
 
 ## Casing
 
-By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom identifiers should use kebab-case, such as `--custom-property` or `my-animation`.
+By default, all identifiers should be lowercase. This applies to selectors, functions, and keywords. Custom identifiers should use [kebab-case](/en-US/docs/Glossary/Kebab_case), such as `--custom-property` or `my-animation`. See the [HTML style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML#casing_convention_on_mdn) for casing conventions of HTML IDs and classes which are referenced as CSS selectors.
 
-The exceptions are the keyword values defined in SVG, which for historical reasons are camelCase, and should be written as such to enhance readability. They include: `currentColor`, {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
+Exceptions include keyword values defined in SVG, which for historical reasons are [camelCase](/en-US/docs/Glossary/Camel_case), and should be written as such to enhance readability. These keywords include: [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), {{cssxref("text-rendering")}} values, {{cssxref("shape-rendering")}} values, {{cssxref("pointer-events")}} values, and {{cssxref("color-interpolation-filters")}} values.
 
 ## Colors
 
@@ -266,19 +280,19 @@ Generally, if the specific color palette is not a concern, default to using comm
 
 If a specific color is needed, default to using the `rgb()` notation. `hsl()` and other functions should only be used where the particular representation has a meaning (for example, a color wheel or a gradient). Hexadecimal notation is terser but may be less readable; it is interchangeable with `rgb()` depending on which one is more convenient for you.
 
-Whatever color function you use, always use the modern syntax: `rgb(31 41 59 / 26%)` and not the legacy comma-separated syntax. Always use the function without the `a` suffix (`rgb` instead of `rgba`), because it's shorter and doesn't require changing the name if you later decide to add an alpha channel.
+Whatever color function you use, always use the modern syntax (`rgb(31 41 59 / 0.26)`), not the legacy comma-separated one. Always use the function without the `a` suffix (`rgb` instead of `rgba`), because it's shorter and doesn't require changing the name if you later decide to add an alpha channel.
 
 When using the hexadecimal notation, always use the six (or eight) digit version to avoid cognitive load: `#aabbcc` instead of `#abc`.
 
 ### Color parameters
 
-For consistency, all parameters should use numbers by default, instead of percentages or degrees. This includes the alpha channel too. However, if the specific representation is meaningful (for example, animations, gradients, or calculations), then use the suitable type.
+For consistency, all parameters should use numbers by default instead of percentages or degrees. This also applies to the alpha channel. However, if a specific representation is meaningful (for example, in animations, gradients, or calculations), use the suitable type in the context.
 
 If the alpha channel is `1`, omit it. Write `rgb(31 41 59)` instead of `rgb(31 41 59 / 1)`.
 
 ### Choosing colors
 
-In addition to the recommendation of using common named colors, your color palette should meet our [accessibility guidelines](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance). In particular, if the colors distinguish elements (such as a "red box" and a "blue box"), make sure that the colors are distinguishable by people with color vision deficiency.
+In addition to the recommendation of using common named colors, your color palette should meet our [accessibility guidelines](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance). In particular, if the colors distinguish elements (such as a "red box" and a "blue box"), ensure that the colors are distinguishable to people with color vision deficiency. Aim for at least 4.5:1 [contrast ratio](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) (WCAG AA) between text and background.
 
 ## Comments
 
@@ -303,7 +317,7 @@ h3 {
 
 ### Specifying font families
 
-When specifying a font family, always add a generic family name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable font than the default font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
+When specifying a font family, always add a [generic font family](/en-US/docs/Web/CSS/font-family#generic-name) name as the last fallback. This ensures that if the specified font is not available, the browser displays a more suitable fallback font. [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) are exempt from this rule.
 
 ```css example-bad
 body {
@@ -324,7 +338,7 @@ math {
 
 ### Specifying font weights
 
-Prefer keyword values such as `normal` and `bold`, and relative weights such as `bolder` and `lighter`. Only use number values where the specific weight is desired. You should always replace `400` with `normal` and `700` with `bold`, unless for consistency with other similar declarations.
+Prefer keyword values such as `normal` and `bold`, and relative weights such as `bolder` and `lighter`. Only use number values where the specific weight is desired. You should always replace `400` with `normal` and `700` with `bold`, except when declaring ranges with variable fonts, or for consistency with other similar declarations.
 
 ## Lengths
 
@@ -405,7 +419,7 @@ Wherever quotes are optional in the CSS syntax, use them, and use double quotes.
 }
 ```
 
-Don't do this, because the types of characters allowed are more limited and sometimes lead to subtle syntax errors:
+Don't do the following, because the types of characters allowed are more limited and sometimes lead to subtle syntax errors:
 
 ```css-nolint example-bad
 [data-vegetable=liquid] {
