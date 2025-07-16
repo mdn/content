@@ -1,10 +1,10 @@
 ---
 title: Firefox 43 for developers
+short-title: Firefox 43
 slug: Mozilla/Firefox/Releases/43
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -60,7 +60,7 @@ _No change._
 
 #### IndexedDB
 
-- A new feature called [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
+- A new feature called locale-aware sorting has been added allowing for the creation of indexes with a locale specified, which can then be used to sort data according to the rules of that locale ([Firefox bug 871846](https://bugzil.la/871846)). This is a non-standard Firefox-specific feature.
 
 #### Service Workers
 
@@ -137,7 +137,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

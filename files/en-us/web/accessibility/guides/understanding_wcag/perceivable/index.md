@@ -8,7 +8,7 @@ sidebar: accessibilitysidebar
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
 > [!NOTE]
-> To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://w3c.github.io/wcag/guidelines/22/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -83,8 +83,8 @@ The key here is that text can be converted to other forms that people with disab
         function of the button (e.g., <code
           >&#x3C;button>Upload image&#x3C;/button></code
         >). For more information on other UI controls, see
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >.
       </td>
     </tr>
@@ -116,7 +116,7 @@ The key here is that text can be converted to other forms that people with disab
 </table>
 
 > [!NOTE]
-> Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
+> Also see the [WCAG description for Guideline 1.1: Text alternatives](https://w3c.github.io/wcag/guidelines/22/#text-alternatives).
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -180,7 +180,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
 </table>
 
 > [!NOTE]
-> Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
+> Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://w3c.github.io/wcag/guidelines/22/#time-based-media).
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
@@ -232,8 +232,8 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#good_semantics"
             >Good semantics</a
           >,
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-            >UI controls</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+            >Use semantic UI controls where possible</a
           >, and
           <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
@@ -299,11 +299,6 @@ This guideline refers to the ability of content to be consumed by users in multi
     <tr>
       <td>
         1.3.4 Orientation (AA)
-        <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
       </td>
       <td>
         Content does not restrict its view and operation to a single display
@@ -320,16 +315,12 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td>
-        1.3.5 Identify Input Purpose (AA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.3.5 Identify Input Purpose (AA)
       </td>
       <td>
         <p>
           Follow the list of
-          <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
+          <a href="https://w3c.github.io/wcag/guidelines/22/#input-purposes"
             >53 input fields</a
           >
           to programmatically identify the purpose of a field.
@@ -344,11 +335,7 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td>
-        1.3.6 Identify Purpose (AAA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.3.6 Identify Purpose (AAA)
       </td>
       <td>
         In content implemented using markup languages, the purpose of user
@@ -366,7 +353,7 @@ This guideline refers to the ability of content to be consumed by users in multi
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
+> Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://w3c.github.io/wcag/guidelines/22/#adaptable)
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
@@ -540,11 +527,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.10 Reflow (AA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.4.10 Reflow (AA)
       </td>
       <td>
         <ul>
@@ -569,11 +552,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.11 Non-Text Contrast(AA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.4.11 Non-Text Contrast(AA)
       </td>
       <td>
         Minimum color contrast ratio of 3:1 for user interface components and
@@ -588,11 +567,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.12 Text Spacing (AA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.4.12 Text Spacing (AA)
       </td>
       <td>
         <p>
@@ -620,11 +595,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.13 Content on Hover or Focus (AA) <em
-          ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
-            >added in 2.1</a
-          ></em
-        >
+        1.4.13 Content on Hover or Focus (AA)
       </td>
       <td>
         <p>
@@ -655,12 +626,11 @@ This guideline relates to making sure core content is easy to discern from backg
 </table>
 
 > [!NOTE]
-> Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
+> Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://w3c.github.io/wcag/guidelines/22/#distinguishable)
 
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. Perceivable
   2. [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

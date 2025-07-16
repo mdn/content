@@ -3,9 +3,8 @@ title: list-style-type
 slug: Web/CSS/list-style-type
 page-type: css-property
 browser-compat: css.properties.list-style-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
 
@@ -248,7 +247,7 @@ Note that:
 - `disclosure-closed`
   - : Symbol indicating that a disclosure widget, like {{HTMLElement("details")}} is closed.
 
-Refer to the [All list style types](#all_list_style_types) example to see the above values in action. Details of all the available counter styles used by various cultures around the world can be found in [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/).
+Refer to the [All list style types](#all_list_style_types) example to see the above values in action. Details of all the available counter styles used by various cultures around the world can be found in [Ready-made Counter Styles](https://w3c.github.io/predefined-counter-styles/).
 
 ### Non-standard extensions
 

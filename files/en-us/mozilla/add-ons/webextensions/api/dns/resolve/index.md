@@ -25,9 +25,7 @@ let resolving = browser.dns.resolve(
 - `hostname`
   - : `string`. The hostname to resolve.
 - `flags` {{optional_inline}}
-
   - : `array` of `string`. Flags to modify the way the hostname is resolved. Any omitted flags default to `false`. You can pass zero or more of the following flags:
-
     - `"allow_name_collisions"`: Allow name collision results which are normally filtered out.
     - `"bypass_cache"`: Suppresses the internal DNS lookup cache.
     - `"canonical_name"`: The canonical name of the specified host will be queried.
@@ -49,10 +47,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
   - : `string`. The canonical name for this record. This is only included in the response if the `"canonical_name"` flag was passed to `resolve()`.
 - `isTRR`
   - : `boolean`: `true` if the record was retrieved using a Trusted Recursive Resolver (TRR).
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -86,3 +80,7 @@ resolving.then(resolved);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

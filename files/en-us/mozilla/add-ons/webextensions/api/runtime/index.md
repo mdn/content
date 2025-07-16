@@ -27,6 +27,8 @@ It also provides messaging APIs enabling you to:
   - : Identifies the browser's processor architecture.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
   - : Contains information about the platform the browser is running on.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}}
+  - : The native client architecture. This may be different from `PlatformArch` on some platforms.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
@@ -111,11 +113,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

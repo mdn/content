@@ -22,19 +22,13 @@ let getContext = browser.contextualIdentities.query(
 ### Parameters
 
 - `details`
-
   - : `object`. An object that can be used to filter the contextual identities returned. This may contain any of the following properties:
-
     - `name` {{optional_inline}}
       - : `string`. Return only contextual identities with this name.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} objects, each describing a single identity. If the contextual identities feature is not enabled, the promise is rejected.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -75,3 +69,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -1,19 +1,19 @@
 ---
-title: Sec-Purpose
+title: Sec-Purpose header
+short-title: Sec-Purpose
 slug: Web/HTTP/Reference/Headers/Sec-Purpose
 page-type: http-header
 browser-compat: http.headers.Sec-Purpose
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Purpose`** {{Glossary("fetch metadata request header")}} indicates the purpose for which the requested resource will be used, when that purpose is something other than immediate use by the user-agent.
 
 The only purpose that is currently defined is `prefetch`, which indicates that the resource is being requested in anticipation that it will be needed by a page that is likely to be navigated to in the near future, such as a page linked in search results or a link that a user has hovered over.
 The server can use this knowledge to: adjust the caching expiry for the request, disallow the request, or perhaps to treat it differently when counting page visits.
 
-The header is sent when a page is loaded that has a [`<link>`](/en-US/docs/Web/HTML/Element/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch).
-Note that if this header is set then a {{HTTPHeader("Sec-Fetch-Dest")}} header in the request must be set to `empty` (any value in the [`<link>`](/en-US/docs/Web/HTML/Element/link) attribute [`as`](/en-US/docs/Web/HTML/Element/link#as) is ignored) and the {{HTTPHeader("Accept")}} header should match the value used for normal navigation requests.
+The header is sent when a page is loaded that has a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch).
+Note that if this header is set then a {{HTTPHeader("Sec-Fetch-Dest")}} header in the request must be set to `empty` (any value in the [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) attribute [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) is ignored) and the {{HTTPHeader("Accept")}} header should match the value used for normal navigation requests.
 
 <table class="properties">
   <tbody>
@@ -51,7 +51,7 @@ The allowed tokens are:
 
 ### A prefetch request
 
-Consider the case where a browser loads a file with a [`<link>`](/en-US/docs/Web/HTML/Element/link) element that has the attribute `rel="prefetch"` and an `href` attribute containing the address of an image file.
+Consider the case where a browser loads a file with a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element that has the attribute `rel="prefetch"` and an `href` attribute containing the address of an image file.
 The resulting `fetch()` should result in an HTTP request where `Sec-Purpose: prefetch`, `Sec-Fetch-Dest: empty`, and an `Accept` value that is the same as the browser uses for page navigation.
 
 An example of such a header (on Firefox) is given below:
@@ -89,4 +89,4 @@ Cache-Control: no-cache
 
 - {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-Site")}}, {{HTTPHeader("Sec-Fetch-User")}} fetch metadata request headers
 - {{Glossary("Prefetch")}} (Glossary)
-- [`<link>`](/en-US/docs/Web/HTML/Element/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)
+- [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch)

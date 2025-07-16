@@ -1,5 +1,6 @@
 ---
-title: aria-readonly
+title: "ARIA: aria-readonly attribute"
+short-title: aria-readonly
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-readonly
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
@@ -70,5 +71,5 @@ Inherited into roles:
 
 ## See also
 
-- [HTML `readonly` attribute](/en-US/docs/Web/HTML/Attributes/readonly)
+- [HTML `readonly` attribute](/en-US/docs/Web/HTML/Reference/Attributes/readonly)
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)

@@ -6,7 +6,7 @@ browser-compat: mathml.elements.math
 sidebar: mathmlref
 ---
 
-The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Content_categories#flow_content) is permitted.
+The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Guides/Content_categories#flow_content) is permitted.
 
 > [!NOTE]
 > See the [Authoring MathML page](/en-US/docs/Web/MathML/Guides/Authoring#using_mathml) for tips to properly integrate MathML formulas in your web pages and the [Guides](/en-US/docs/Web/MathML/Guides) page for more demos.
@@ -16,9 +16,7 @@ The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathM
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) as well as the following attribute:
 
 - `display`
-
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
-
     - `block`, which means that this element will be displayed in its own block outside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `normal`.
     - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
 

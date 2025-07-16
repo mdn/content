@@ -1,10 +1,10 @@
 ---
 title: Firefox 36 for developers
+short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -32,7 +32,7 @@ Highlights:
 - The {{cssxref("text-decoration")}} property is turned into shorthand property ([Firefox bug 1039488](https://bugzil.la/1039488)).
 - The properties {{cssxref("object-fit")}} and {{cssxref("object-position")}} are now supported ([Firefox bug 624647](https://bugzil.la/624647))
 - The `contents` value of the {{cssxref("display")}} property has been experimentally implemented. It is preffed off by default ([Firefox bug 907396](https://bugzil.la/907396)).
-- In [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the [`:active` and `:hover` quiver quirk](/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
+- In [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), the [`:active` and `:hover` quiver quirk](/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
 - The {{cssxref("isolation")}} property has been implemented ([Firefox bug 1077872](https://bugzil.la/1077872)).
 - CSS {{cssxref("&lt;gradient&gt;")}} now applies on the premultiplied colors, matching the spec and other browsers, and getting rid of unexpected gray colors appearing in them ([Firefox bug 591600](https://bugzil.la/591600)).
 - Interpolation hint syntax has been added to {{cssxref("&lt;gradient&gt;")}} ([Firefox bug 1074056](https://bugzil.la/1074056)).
@@ -40,13 +40,12 @@ Highlights:
 
 ### HTML
 
-- Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Element/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
-- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
+- Support for [`<meta name="referrer">`](/en-US/docs/Web/HTML/Reference/Elements/meta) has been added ([Firefox bug 704320](https://bugzil.la/704320)).
+- In Firefox, {{HTMLElement("input")}} filters specified in the [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute will always be selected by default, unless there is an unknown value, that is an unknown mime type or badly formatted value in the [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute. Previously specified filters were only selected by default for `image/*`, `video/*` and `audio/*` values ([Firefox bug 826185](https://bugzil.la/826185)).
 
 ### JavaScript
 
 - The [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ([Firefox bug 1066322](https://bugzil.la/1066322)):
-
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
@@ -54,12 +53,10 @@ Highlights:
 
 - The old placeholder string `"@@iterator"` has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) interface property key ([Firefox bug 918828](https://bugzil.la/918828)).
 - The spec-internal abstract operation `ToNumber(string)` now supports binary (`0b`) and octal (`0o`) literals, this is a potentially breaking change from ES5 ([Firefox bug 1079120](https://bugzil.la/1079120)).
-
   - `Number("0b11")` now returns `3`, not `NaN`.
   - `"0o11" == 9` now returns `true`, not `false`.
 
 - The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also can not be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
-
   - `{const a=1}; a;` now throws a {{jsxref("ReferenceError")}} and does not return `1` anymore due to block-scoping.
   - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration"): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
@@ -74,7 +71,6 @@ Highlights:
 - The {{domxref("CanvasRenderingContext2D.resetTransform()")}} method of the Canvas API has been implemented ([Firefox bug 1099148](https://bugzil.la/1099148)).
 - ECDSA is now supported in the Web Crypto API ([Firefox bug 1034854](https://bugzil.la/1034854)).
 - Our experimental implementation of WebGL 2.0 is going forward!
-
   - The {{domxref("WebGLQuery")}} interface is available ([Firefox bug 1048719](https://bugzil.la/1048719)).
   - The {{domxref("WebGL2RenderingContext.invalidateFrameBuffer()")}} method has been implemented ([Firefox bug 1076456](https://bugzil.la/1076456)).
 
@@ -149,7 +145,7 @@ New constants have been added to `nsIContentPolicy` to allow Gecko internals and
 - `TYPE_FETCH`
   - : Indicates a content load request initiated by the {{domxref("Window/fetch", "fetch()")}} method.
 - `TYPE_IMAGESET`
-  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute or {{HTMLElement("picture")}} element.
+  - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute or {{HTMLElement("picture")}} element.
 
 ### XUL
 
@@ -158,7 +154,3 @@ _No change._
 ### Other
 
 - Firefox `-remote` [command line option](https://wiki.mozilla.org/Firefox/CommandLineOptions) has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
-
-## Older versions
-
-{{Firefox_for_developers}}

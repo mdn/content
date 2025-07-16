@@ -2,14 +2,13 @@
 title: Content negotiation
 slug: Web/HTTP/Guides/Content_negotiation
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 
 > [!NOTE]
-> You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
+> You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Reference/Elements/source).
 
 ## Principles of content negotiation
 

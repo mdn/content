@@ -1,10 +1,10 @@
 ---
 title: Firefox 108 for developers
+short-title: Firefox 108
 slug: Mozilla/Firefox/Releases/108
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 108 that will affect developers. Firefox 108 was released on December 13, 2022.
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Reference/Elements/source#height) & [`width`](/en-US/docs/Web/HTML/Reference/Elements/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ([Firefox bug 1795953](https://bugzil.la/1795953)).
 
 ### CSS
@@ -40,7 +40,7 @@ No notable changes
 
 ### APIs
 
-- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+- [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are now supported.
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ([Firefox bug 1795647](https://bugzil.la/1795647)).
 
@@ -68,7 +68,3 @@ No notable changes
 ## Changes for add-on developers
 
 - Firefox now issues a warning when an extension is installed if its [version number](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) doesn't follow the recommended format ([Firefox bug 1793925](https://bugzil.la/1793925)).
-
-## Older versions
-
-{{Firefox_for_developers}}

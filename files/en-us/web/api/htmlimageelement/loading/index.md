@@ -47,8 +47,8 @@ That means that when `load` fires, it's possible that any lazy-loaded images loc
 
 When an image whose loading has been delayed by the `loading` attribute being set to `lazy` is finally loaded, the browser will determine the final size of the {{HTMLElement("img")}} element based on the style and intrinsic size of the image, then reflow the document as needed to update the positions of elements based on any size change made to the element to fit the image.
 
-To prevent this reflow from occurring, you should explicitly specify the size of the image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Element/img#width) and
-[`height`](/en-US/docs/Web/HTML/Element/img#height) attributes.
+To prevent this reflow from occurring, you should explicitly specify the size of the image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Reference/Elements/img#width) and
+[`height`](/en-US/docs/Web/HTML/Reference/Elements/img#height) attributes.
 By establishing the intrinsic {{glossary("aspect ratio")}} in this manner, you prevent elements from shifting around while the document loads, which can be disconcerting or off-putting at best and can cause users to click the wrong thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples

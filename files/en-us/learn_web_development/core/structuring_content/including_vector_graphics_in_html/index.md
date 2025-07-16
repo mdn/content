@@ -3,9 +3,8 @@ title: Including vector graphics in HTML
 short-title: Vector graphics
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
@@ -121,7 +120,7 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ### Troubleshooting and cross-browser support
 
-For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
+For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
 <img
@@ -253,7 +252,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -261,7 +260,7 @@ reset.addEventListener("click", function () {
   updateCode();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
     solution.value = "Hide solution";
@@ -281,7 +280,7 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function (e) {
+textarea.onkeydown = (e) => {
   if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
@@ -311,7 +310,7 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function () {
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
   if (solution.value === "Show solution") {
@@ -334,6 +333,5 @@ This article has provided you with a quick tour of what vector graphics and SVG 
 
 - [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) on MDN
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)

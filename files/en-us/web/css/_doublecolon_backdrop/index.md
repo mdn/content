@@ -3,9 +3,8 @@ title: ::backdrop
 slug: Web/CSS/::backdrop
 page-type: css-pseudo-element
 browser-compat: css.selectors.backdrop
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}.
 
@@ -153,5 +152,5 @@ closeButton.addEventListener("click", () => {
 - {{cssxref(":fullscreen")}} pseudo-class
 - {{HTMLElement("dialog")}} HTML element
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

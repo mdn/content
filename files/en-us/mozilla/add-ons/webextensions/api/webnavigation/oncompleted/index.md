@@ -34,11 +34,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
-      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
+      - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 
 - `filter` {{optional_inline}}
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
@@ -58,10 +56,6 @@ Events have three functions:
 - `timeStamp`
   - : `number`. The time at which the page finished loading, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URLs for `onCompleted`, if the target URL's hostname contains "example.com" or starts with "developer".
@@ -79,6 +73,10 @@ browser.webNavigation.onCompleted.addListener(logOnCompleted, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

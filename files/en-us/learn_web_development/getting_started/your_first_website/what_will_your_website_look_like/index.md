@@ -3,9 +3,8 @@ title: What will your website look like?
 short-title: What will it look like?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -54,41 +53,49 @@ Next, grab pen and paper and sketch out roughly how you want your site to look. 
 > [!NOTE]
 > Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
 >
-> Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
+> Web teams often include both a [graphic designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#graphic_designer) and a [user experience (UX) designer](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes#user_experience_ux_designer). Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
 At this point, it's good to start putting together the content that will eventually appear on your webpage. You should still have your paragraphs and title from earlier. Keep these close by.
 
 ## Choosing a theme color
 
-To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
+Let's choose a background color for your page.
+
+1. Go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like.
+2. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
 ![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
 
 ## Choosing an image
 
-To choose an image, go to [Google Images](https://www.google.com/imghp) and search for something suitable.
+Now it's time to find an image to show on your site.
 
-1. When you find the image you want, click on the image to get an enlarged view of it.
-2. Right-click the image (Ctrl + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image.
+1. Go to [Google Images](https://www.google.com/imghp).
+2. Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
 
-![Search results for a search term on Google Images](updated-google-images.png)
+   ![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
 
-Note that most images on the web, including in Google Images, are copyrighted. To reduce your likelihood of violating copyright, you can use Google's license filter. Click on the _Tools_ button, then on the resulting _Usage rights_ option that appears below. You should choose the option _Creative Commons licenses_.
+3. Search for a suitable image.
+4. When you find the image you want, click on the image to get an enlarged view of it.
+5. Right-click the image (<kbd>Ctrl</kbd> + click on a Mac), choose _Save Image As…_, and choose a safe place to save your image.
 
-![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
+   ![Search results for a search term on Google Images](updated-google-images.png)
 
 ## Choosing a font
 
-As with images, many fonts are protected by licenses, meaning you cannot freely use them in your site. [Google Fonts](https://developers.google.com/fonts) is a web service owned by Google that provides access to many fonts.
+There is a set of fonts called the [web safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) — such as Arial, Times New Roman, or Courier New — that are generally available on most computer systems. If you use one of these fonts on your website, the browser will load the font file available on the user's computer.
 
-Once you have found a font, there are two main ways of using it:
+However, if you want to use other fonts not generally available on devices, you need to either include them along with your website files or reference the font files from a third-party font service so the browser can download them as needed. [Google Fonts](https://fonts.google.com/) is one such service that provides access to many fonts.
 
-1. Add a reference in your code to load the font from Google's servers.
-2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
+Let's use Google fonts to choose a font for your website:
+
+1. Go to [Google Fonts](https://fonts.google.com/).
+2. Scroll down the list of fonts until you find one you like. If you are having trouble finding one, you can use the filters available in the other column to narrow down your search.
+3. Click your font option, then on the next page click the "Get font" button.
+4. On the next page, click "Get embed code".
+5. Copy both of the provided code blocks, and save them somewhere safe for later use.
 
 > [!NOTE]
-> Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/) as the font service exposes the user's IP address. If this is a potential problem for you, then either choose the second option or choose a font provider that is GDPR compliant, such as [Bunny Fonts](https://fonts.bunny.net/about).
-
-Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
+> As with images, many fonts are protected by licenses, meaning you cannot necessarily use them freely on commercial websites. You will be fine for now while working on learning examples, but keep this in mind when choosing fonts for real websites.
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

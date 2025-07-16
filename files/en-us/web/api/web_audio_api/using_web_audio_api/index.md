@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
+[Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -156,7 +156,7 @@ This will make our audio graph look like this:
 
 The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
-Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
+Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Reference/Elements/input/range):
 
 ```html
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
@@ -235,7 +235,7 @@ Let's adjust our audio graph again, to connect all the nodes together:
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-The only thing left to do is give the app a try: [Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/).
+The only thing left to do is give the app a try: [Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/).
 
 ## Summary
 

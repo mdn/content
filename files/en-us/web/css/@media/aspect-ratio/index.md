@@ -3,9 +3,8 @@ title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 page-type: css-media-feature
 browser-compat: css.at-rules.media.aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the {{glossary("aspect ratio")}} of the {{glossary("viewport")}}.
 

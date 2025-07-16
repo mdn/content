@@ -3,9 +3,10 @@ title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The HTTP **`102 Processing`** [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code indicates to client that a full request has been received and the server is working on it.
 This status code is only sent if the server expects the request to take significant time.
@@ -16,7 +17,7 @@ This status code is only sent if the server expects the request to take signific
 
 ## Status
 
-```plain
+```http
 102 Processing
 ```
 
@@ -26,7 +27,7 @@ This status code is only sent if the server expects the request to take signific
 
 ## Browser compatibility
 
-This feature is deprecated and browsers will ignore this response header.
+This feature is deprecated and browsers will ignore this response status code.
 
 ## See also
 

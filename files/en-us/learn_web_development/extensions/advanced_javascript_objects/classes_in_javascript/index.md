@@ -2,9 +2,8 @@
 title: Classes in JavaScript
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
@@ -169,7 +168,7 @@ class Student extends Person {
 }
 ```
 
-In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
+In this class declaration, `#year` is a [private field](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
 
 ```js
 const summers = new Student("Summers", 2);
@@ -181,13 +180,13 @@ summers.#year; // SyntaxError
 ```
 
 > [!NOTE]
-> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> Code run in the Chrome console can access private elements outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
-Private data properties must be declared in the class declaration, and their names start with `#`.
+Private fields must be declared in the class declaration, and their names start with `#`.
 
 ### Private methods
 
-You can have private methods as well as private data properties. Just like private data properties, their names start with `#`, and they can only be called by the object's own methods:
+You can have private methods as well as private fields. Just like private fields, private methods' names start with `#`, and they can only be called by the object's own methods:
 
 ```js
 class Example {
@@ -209,7 +208,7 @@ myExample.#somePrivateMethod(); // SyntaxError
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript).
 
 ## Summary
 

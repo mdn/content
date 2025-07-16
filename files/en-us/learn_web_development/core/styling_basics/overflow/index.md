@@ -3,9 +3,8 @@ title: Overflowing content
 short-title: Overflow
 slug: Learn_web_development/Core/Styling_basics/Overflow
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
@@ -40,9 +39,9 @@ Everything in CSS is a box. You can constrain the size of these boxes by assigni
 
 ## CSS tries to avoid "data loss"
 
-Let's consider two examples that demonstrate the default behavior of CSS when there is overflow.
+Let's consider two examples that demonstrate the default behavior of CSS when overflow occurs.
 
-The first example is a box that has been restricted by setting a `height`. Then we add content that exceeds the allocated space. The content overflows the box and falls into the paragraph below.
+The first example features a box that has been restricted by setting a `height`. The box's content exceeds the available space, therefore it overflows the box and falls into the paragraph below.
 
 ```html live-sample___block-overflow
 <div class="box">
@@ -64,7 +63,7 @@ The first example is a box that has been restricted by setting a `height`. Then 
 
 {{EmbedLiveSample("block-overflow", "", "200px")}}
 
-The second example is a word in a box. The box has been made too small for the word and so it breaks out of the box.
+The second example features a word in a box. The box has been made too small for the word and so it breaks out of the box.
 
 ```html live-sample___inline-overflow
 <div class="word">Overflow</div>
@@ -82,13 +81,13 @@ The second example is a word in a box. The box has been made too small for the w
 
 You might wonder why CSS works in such a messy way, displaying content outside of its intended container. Why not hide overflowing content? Why not scale the size of the container to fit all the content?
 
-Wherever possible, CSS does not hide content. This would cause data loss. The problem with data loss is that you might not notice. Website visitors may not notice. If the submit button on a form disappears and no one can complete the form, this could be a big problem! Instead, CSS overflows in visible ways. You are more likely to see there is a problem. At worst, a site visitor will let you know that content is overlapping.
+Wherever possible, CSS does not hide content. This would cause data loss. The problem with data loss is that you, or visitors to your website, may not notice. If the submit button on a form disappears and no one can complete the form, this could be a big problem! Instead, CSS overflows in visible ways. You are more likely to see there is a problem. At worst, a site visitor will let you know that content is overlapping.
 
 If you restrict a box with a `width` or a `height`, CSS trusts you to know what you are doing. CSS assumes that you are managing the potential for overflow. In general, restricting the block dimension is problematic when the box contains text. There may be more text than you expected when designing the site, or the text may be larger (for example, if the user has increased their font size).
 
 ## The overflow property
 
-The {{cssxref("overflow")}} property helps you manage an element's content overflow. Using this property, you can convey to a browser how it should handle overflow content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
+The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the [`<overflow>`](/en-US/docs/Web/CSS/overflow_value) value type is `visible`. With this default setting, one can see content when it overflows.
 
 ### Hiding overflowing content
 
@@ -115,15 +114,13 @@ To hide content when it overflows, you can set `overflow: hidden`. This does exa
 
 {{EmbedLiveSample("hidden", "", "200px")}}
 
+Try editing the above example to set the `overflow` value to `visible`, then back to `hidden`, to see what the effect is.
+
 ### Scrolling overflowing content
 
-Instead, perhaps you would like to add scrollbars when content overflows? Using `overflow: scroll`, browsers with visible scrollbars will always display them—even if there is not enough content to overflow. This offers the advantage of keeping the layout consistent, instead of scrollbars appearing or disappearing, depending upon the amount of content in the container.
+Instead, perhaps you would like to allow your users to scroll the content to read it all? When you set `overflow: scroll` on overflowing content, browsers with visible scrollbars will always display them—even if there is not enough content to overflow. This offers the advantage of keeping the layout consistent, instead of scrollbars appearing or disappearing, depending upon the amount of content in the container.
 
-Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling:
-
-> [!NOTE]
-> Scrollbar visibility depends on the operating system.
-> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
+Let's see this in action. Edit the following example to remove some content from the `box` `<div>`. Notice how the scrollbars remain, even if there is no need for scrolling:
 
 ```html live-sample___scroll
 <div class="box">
@@ -146,30 +143,13 @@ Remove some content from the box below. Notice how the scrollbars remain, even i
 
 {{EmbedLiveSample("scroll", "", "200px")}}
 
-In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the {{cssxref("overflow-y")}} property, setting `overflow-y: scroll`.
+> [!NOTE]
+> Scrollbar visibility depends on the operating system.
+> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
 
-```html live-sample___scroll-y
-<div class="box">
-  This box has a height and a width. This means that if there is too much
-  content to be displayed within the assigned height, there will be an overflow
-  situation. If overflow is set to hidden then any overflow will not be visible.
-</div>
+In the example above, we only need to scroll on the `y` axis, however we get scrollbars on both axes. To just scroll on the `y` axis, you could use the {{cssxref("overflow-y")}} property, setting `overflow-y: scroll`. Try setting this property in the example above.
 
-<p>This content is outside of the box.</p>
-```
-
-```css live-sample___scroll-y
-.box {
-  border: 1px solid #333333;
-  width: 250px;
-  height: 100px;
-  overflow-y: scroll;
-}
-```
-
-{{EmbedLiveSample("scroll-y", "", "200px")}}
-
-You can also enable scrolling along the x-axis by using {{cssxref("overflow-x")}}, although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} property. In addition, some of the methods discussed in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing) may help you create boxes that scale better with varying amounts of content.
+You can also enable scrolling along the x-axis by using {{cssxref("overflow-x")}}, although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} properties. In addition, some of the methods discussed in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing) may help you create boxes that scale better with varying amounts of content.
 
 ```html live-sample___scroll-x
 <div class="word">Overflow</div>
@@ -222,13 +202,13 @@ In the example below, remove content until it fits into the box. You should see 
 
 Modern layout methods (which you'll meet later in the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
 
-This was not always the norm. In the past, some sites were built with fixed-height containers to align box bottoms. These boxes may otherwise have had no relationship to each other. This was fragile. If you encounter a box where content is overlaying other content on the page in legacy applications, you will now recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
+This was not always the norm. In the past, some sites were built with fixed-height containers to align box bottoms. These boxes may otherwise have had no relationship to each other. This was fragile. If you encounter a box where content is overlaying other content, you will now recognize that overflow may well be the cause of this. Ideally, you will refactor the layout to not rely on fixed-height containers.
 
 When developing a site, always keep overflow in mind. Test designs with large and small amounts of content. Increase and decrease font sizes by at least two increments. Ensure your CSS is robust. Changing overflow values to hide content or to add scrollbars is reserved for a few select use cases (for example, where you intend to have a scrolling box).
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow).
 
 ## Summary
 

@@ -2,9 +2,8 @@
 title: Object building practice
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
@@ -123,7 +122,6 @@ Using this function, we can tell the ball to draw itself onto the screen, by cal
 - First, we use [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) to state that we want to draw a shape on the paper.
 - Next, we use [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) to define what color we want the shape to be — we set it to our ball's `color` property.
 - Next, we use the [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) method to trace an arc shape on the paper. Its parameters are:
-
   - The `x` and `y` position of the arc's center — we are specifying the ball's `x` and `y` properties.
   - The radius of the arc — in this case, the ball's `size` property.
   - The last two parameters specify the start and end number of degrees around the circle that the arc is drawn between. Here we specify 0 degrees, and `2 * PI`, which is the equivalent of 360 degrees in radians (annoyingly, you have to specify this in radians). That gives us a complete circle. If you had specified only `1 * PI`, you'd get a semi-circle (180 degrees).

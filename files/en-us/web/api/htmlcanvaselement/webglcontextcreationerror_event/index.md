@@ -18,10 +18,10 @@ This event does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("webglcontextcreationerror", (event) => {});
+```js-nolint
+addEventListener("webglcontextcreationerror", (event) => { })
 
-onwebglcontextcreationerror = (event) => {};
+onwebglcontextcreationerror = (event) => { }
 ```
 
 ## Event type

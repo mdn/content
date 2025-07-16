@@ -6,14 +6,15 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.user-modify
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
 
 > [!WARNING]
-> This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+> This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute.
 
 ## Syntax
 
@@ -45,10 +46,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
 
 ## Formal syntax
 
-```plain
-user-modify =
-  read-only | read-write | read-write-plaintext-only | write-only
-```
+{{CSSSyntaxRaw(`user-modify = read-only | read-write | read-write-plaintext-only | write-only`)}}
 
 ## Examples
 

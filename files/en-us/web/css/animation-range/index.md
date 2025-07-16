@@ -2,12 +2,9 @@
 title: animation-range
 slug: Web/CSS/animation-range
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.animation-range
+sidebar: cssref
 ---
-
-{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 
@@ -60,9 +57,7 @@ One or two values representing the [`animation-range-start`](/en-US/docs/Web/CSS
 - `<length-percentage>`
   - : A length or percentage value measured from the beginning of the timeline.
 - `<timeline-range-name>`
-
   - : A specific named timeline range inside the overall timeline. Possible values are:
-
     - `cover`
       - : Represents the full range of a _named view progress timeline_ (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details), from the point where the subject element first starts to enter the scroll port's view progress visibility range (0% progress) to the point where it has completely left it (100% progress).
     - `contain`
@@ -204,7 +199,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

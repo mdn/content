@@ -3,9 +3,8 @@ title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
 browser-compat: css.at-rules.scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
@@ -19,7 +18,7 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
 
    ```css
    @scope (scope root) to (scope limit) {
-     rulesets
+     /* … */
    }
    ```
 
@@ -29,7 +28,7 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    <parent-element>
      <style>
        @scope {
-         rulesets
+         /* rulesets */
        }
      </style>
    </parent-element>
@@ -136,11 +135,17 @@ The three rules in the following block are all equivalent in what they select:
 
 ```css
 @scope (.feature) {
-  img { ... }
+  img {
+    /* … */
+  }
 
-  :scope img { ... }
+  :scope img {
+    /* … */
+  }
 
-  & img { ... }
+  & img {
+    /* … */
+  }
 }
 ```
 
@@ -150,14 +155,18 @@ The three rules in the following block are all equivalent in what they select:
 
   ```css
   /* figure is only a limit when it is a direct child of the :scope */
-  @scope (.article-body) to (:scope > figure) { ... }
+  @scope (.article-body) to (:scope > figure) {
+    /* … */
+  }
   ```
 
 - A scope limit can reference elements outside the scope root using `:scope`. For example:
 
   ```css
   /* figure is only a limit when the :scope is inside .feature */
-  @scope (.article-body) to (.feature :scope figure) { ... }
+  @scope (.article-body) to (.feature :scope figure) {
+    /* … */
+  }
   ```
 
 - Scoped style rules can't escape the subtree. Selections like `:scope + p` are invalid because that selection would be outside the subtree.
@@ -180,7 +189,9 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
 ```css
 @scope (.article-body) {
   /* img has a specificity of 0-0-1, as expected */
-  img { ... }
+  img {
+    /* … */
+  }
 }
 ```
 
@@ -189,7 +200,9 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 ```css
 @scope (.article-body) {
   /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
-  :scope img { ... }
+  :scope img {
+    /* … */
+  }
 }
 ```
 
@@ -197,7 +210,9 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 
 ```css
 @scope (figure, #primary) {
-  & img { ... }
+  & img {
+    /* … */
+  }
 }
 ```
 
@@ -210,10 +225,14 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
 ```css
 @scope (.feature) {
   /* Selects a .feature inside the matched root .feature */
-  & & { ... }
+  & & {
+    /* … */
+  }
 
   /* Doesn't work */
-  :scope :scope { ... }
+  :scope :scope {
+    /* … */
+  }
 }
 ```
 

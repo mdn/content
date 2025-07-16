@@ -11,6 +11,26 @@ The **`<style>`** [SVG](/en-US/docs/Web/SVG) element allows style sheets to be e
 > [!NOTE]
 > SVG's `style` element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("type")}}
+  - : This attribute defines type of the style sheet language to use as a media type string.
+    _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `text/css`; _Animatable_: **no**
+- {{SVGAttr("media")}}
+  - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
+    _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/@media#syntax); _Default value_: `all`; _Animatable_: **no**
+- {{SVGAttr("title")}}
+  - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
+    _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: _none_; _Animatable_: **no**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGStyleElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -36,22 +56,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-- {{SVGAttr("type")}}
-  - : This attribute defines type of the style sheet language to use as a media type string.
-    _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `text/css`; _Animatable_: **no**
-- {{SVGAttr("media")}}
-  - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
-    _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/@media#syntax); _Default value_: `all`; _Animatable_: **no**
-- {{SVGAttr("title")}}
-  - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
-    _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: _none_; _Animatable_: **no**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

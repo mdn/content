@@ -3,11 +3,13 @@ title: "Django Tutorial Part 11: Deploying Django to production"
 short-title: "11: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
-Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
+You've already created and tested example website using Django, so now, it's time to install it on a web server so it can be accessed by anyone over the public internet.
+This page describes how to host a Django project and what you need to prepare your site for a production deployment.
 
 <table>
   <tbody>
@@ -409,7 +411,6 @@ We are choosing to use PythonAnywhere for several reasons:
 - The skills and concepts you will learn when using PythonAnywhere are transferrable.
 - The service and plan limitations do not particularly impact us using PythonAnywhere for the tutorial.
   For example:
-
   - The beginner plan allows one web app at `<your-username>.pythonanywhere.com`, restricted outbound Internet access from your apps, low CPU/bandwidth, no IPython/Jupyter notebook support, no free Postgres database.
     But there is enough space for our basic site to run!
   - Custom domains are not supported (at time of writing).
@@ -995,7 +996,6 @@ The next step is to read our last few articles, and then complete the assessment
 ## See also
 
 - [Deploying Django](https://docs.djangoproject.com/en/5.0/howto/deployment/) (Django docs)
-
   - [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (Django docs)
   - [Deploying static files](https://docs.djangoproject.com/en/5.0/howto/static-files/deployment/) (Django docs)
   - [How to deploy with WSGI](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/) (Django docs)
@@ -1003,16 +1003,13 @@ The next step is to read our last few articles, and then complete the assessment
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Railway Docs
-
   - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
-
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Other DigitalOcean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 - Heroku Docs (similar setup concepts)
-
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)

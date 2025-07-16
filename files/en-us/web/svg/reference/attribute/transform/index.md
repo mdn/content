@@ -2,55 +2,26 @@
 title: transform
 slug: Web/SVG/Reference/Attribute/transform
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.csswg.org/css-transforms/#svg-transform
-  - https://drafts.csswg.org/css-transforms/#svg-transform
-  - https://svgwg.org/svg2-draft/coords.html#TransformProperty
+browser-compat: svg.global_attributes.transform
 sidebar: svgref
 ---
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
 
 > [!NOTE]
-> As a presentation attribute, `transform` also has a CSS property counterpart: {{cssxref("transform")}}. When both are specified, the CSS property takes priority. However, be aware that there are some differences in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.
+> As a presentation attribute, `transform` also has a CSS property counterpart: {{cssxref("transform")}}. When both are specified, the CSS property takes priority. Note that there are some differences in syntax between the CSS property and the attribute!
 
-You can use this attribute with any SVG element.
+## Elements
 
-## Example
+In SVG 2, you can use the `transform` attribute on any element, including the {{SVGElement('svg')}} root.
+Note that using `transform` on the `<svg>` root is a newer feature, and you should check [browser compatibility](#browser_compatibility) for support.
+Using `transform` on the `<svg>` root is convenient for applying transforms to an entire SVG image without the need for extra wrapper elements or CSS workarounds.
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+In SVG 1.1, only these 16 elements were allowed to have a `transform` applied: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
 
-```html
-<svg
-  viewBox="-40 0 150 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g
-    fill="grey"
-    transform="rotate(-10 50 100)
-               translate(-36 45.5)
-               skewX(40)
-               scale(1 0.5)">
-    <path
-      id="heart"
-      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
-  </g>
+Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which behave exactly like the `transform` attribute.
 
-  <use href="#heart" fill="none" stroke="red" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-In SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
-
-Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which act exactly like the `transform` attribute.
+## Value
 
 <table class="properties">
   <tbody>
@@ -75,9 +46,70 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
   </tbody>
 </table>
 
+## Examples
+
+### Apply a transform to a single SVG element
+
+In this example, we apply a `transform` to a single {{svgelement("g")}} element inside an SVG document:
+
+```css hidden live-sample___transform-single-element live-sample___transform-svg-document
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html live-sample___transform-single-element
+<svg
+  viewBox="-40 0 150 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g
+    fill="grey"
+    transform="rotate(-10 50 100)
+               translate(-36 45.5)
+               skewX(40)
+               scale(1 0.5)">
+    <path
+      id="heart"
+      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+  </g>
+
+  <use href="#heart" fill="none" stroke="red" />
+</svg>
+```
+
+{{EmbedLiveSample("transform-single-element", '100%', 200)}}
+
+### Apply a transform to an entire SVG document
+
+In this example, we apply a `transform` to the {{svgelement("svg")}} root element, meaning that the transform is applied to the entire SVG document:
+
+```html live-sample___transform-svg-document
+<svg
+  viewBox="-40 0 150 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  transform="rotate(-10 50 100)
+               translate(-36 15.5)
+               skewX(40)
+               scale(1 0.5)">
+  <g fill="grey">
+    <path
+      id="heart"
+      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+  </g>
+
+  <use href="#heart" fill="none" stroke="red" />
+</svg>
+```
+
+{{EmbedLiveSample("transform-svg-document", '100%', 200)}}
+
 ## Transform functions
 
-The following transform functions can be used by the `transform` attribute `<transform-list>`
+The following transform functions can be used by the `transform` attribute `<transform-list>`.
 
 > [!WARNING]
 > As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
@@ -324,6 +356,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

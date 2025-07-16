@@ -27,16 +27,12 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('i18n.LanguageCode')}} objects.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
 function onGot(languages) {
   console.log(languages);
-  //e.g. Array [ "en-US", "en" ]
+  // e.g. Array [ "en-US", "en" ]
 }
 
 let gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
@@ -44,6 +40,10 @@ gettingAcceptLanguages.then(onGot);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getAcceptLanguages) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.

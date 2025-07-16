@@ -3,9 +3,8 @@ title: cross-fade()
 slug: Web/CSS/cross-fade
 page-type: css-function
 browser-compat: css.types.image.cross-fade
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to blend two or more images at a defined transparency.
 It can be used for many basic image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.
@@ -110,13 +109,13 @@ When using background images, make sure the contrast in color is great enough th
 #### HTML
 
 ```html
-<div class="crossfade"></div>
+<div class="cross-fade"></div>
 ```
 
 #### CSS
 
 ```css
-.crossfade {
+.cross-fade {
   width: 300px;
   height: 300px;
   background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);

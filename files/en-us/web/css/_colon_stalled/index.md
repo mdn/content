@@ -3,9 +3,8 @@ title: :stalled
 slug: Web/CSS/:stalled
 page-type: css-pseudo-class
 browser-compat: css.selectors.stalled
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:stalled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when playback is stalled.
 A resource is considered to be stalled if the user has requested playback of a specific position in the media resource, but it has failed to receive any data for some amount of time.

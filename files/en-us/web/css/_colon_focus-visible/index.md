@@ -3,9 +3,8 @@ title: :focus-visible
 slug: Web/CSS/:focus-visible
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
 
@@ -81,7 +80,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ### Comparing :focus and :focus-visible
 
-This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Element/input/text) input and a button.
+This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) input and a button.
 
 - The first pair does not add any custom styles for focus states, and shows the default case.
 - The second pair adds styles using the `:focus` pseudo-class.
@@ -168,4 +167,3 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
-- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

@@ -101,7 +101,6 @@ Usually, when teaching the specifics of CSS syntax, it is clearer and more obvio
   ```
 
 - CSS shorthand comes with potential added pitfalls — default values are set for parts of the syntax that you don't explicitly set, which can produce unexpected resets of values you've set earlier in the cascade or other expected effects. The {{cssxref("grid")}} property, for example, sets all of the following default values for items that are not specified:
-
   - {{cssxref("grid-template-rows")}}: `none`
   - {{cssxref("grid-template-columns")}}: `none`
   - {{cssxref("grid-template-areas")}}: `none`
@@ -130,15 +129,15 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_querie
 ```css example-good
 /* Default CSS layout for narrow screens */
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   /* CSS for medium width screens */
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   /* CSS for wide screens */
 }
 
-@media (min-width: 1100px) {
+@media (width >= 1100px) {
   /* CSS for really wide screens */
 }
 ```
@@ -146,7 +145,6 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_querie
 ## Selectors
 
 - Don't use ID selectors because they are:
-
   - less flexible; you can't add more if you discover you need more than one.
   - harder to override because they have higher specificity than classes.
 

@@ -9,10 +9,6 @@ browser-compat: webextensions.api.webRequest.StreamFilter.error
 
 A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of `error`.
@@ -25,7 +21,7 @@ function listener(details) {
     console.log(`Error: ${filter.error}`);
   };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -36,3 +32,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

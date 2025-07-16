@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.image.element
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`element()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated from an arbitrary HTML element. This image is live, meaning that if the HTML element is changed, the CSS properties using the resulting value are automatically updated.
 
@@ -39,25 +40,45 @@ These examples work in builds of Firefox that support `-moz-element()`.
 This example uses a hidden {{HTMLElement("div")}} as a background. The background element uses a gradient, but also includes text that is rendered as part of the background.
 
 ```html
-<div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+<div id="target-box">
+  <p>This box uses the element with the #my-background ID as its background!</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
-  <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
-      This text is part of the background. Cool, huh?
-    </p>
+<div id="background-container">
+  <div id="my-background">
+    <p>This text is part of the background. Cool, huh?</p>
   </div>
 </div>
 ```
 
+```css
+#target-box {
+  width: 400px;
+  height: 400px;
+  background: -moz-element(#my-background) no-repeat;
+}
+
+#background-container {
+  overflow: hidden;
+  height: 0;
+}
+
+#my-background {
+  width: 1024px;
+  height: 1024px;
+  background-image: linear-gradient(to right, red, orange, yellow, white);
+}
+
+#my-background p {
+  transform-origin: 0 0;
+  rotate: 45deg;
+  color: white;
+}
+```
+
 {{EmbedLiveSample("A_somewhat_realistic_example")}}
 
-The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
+The {{HTMLElement("div")}} element with the ID "my-background" is used as the background for the content including the paragraph "This box uses the element with the #my-background ID as its background!".
 
 ### Page Preview
 

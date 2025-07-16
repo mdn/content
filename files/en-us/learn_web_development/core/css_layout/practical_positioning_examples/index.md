@@ -2,9 +2,8 @@
 title: Practical positioning examples
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 
@@ -231,7 +230,7 @@ The second rule we'll add here makes it so that a panel with a class of `is-hidd
 
 ### JavaScript
 
-The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Element/script) tag:
+The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) tag:
 
 ```html
 <script src="tabs-manual.js"></script>
@@ -243,7 +242,6 @@ This code does the following:
 - When a `TabsManual` object is created, in the constructor all the tab and panel references are collected in `tabs` and `tabpanels` variables, so we can easily do things to them later on.
 - The constructor also registers [`click`](/en-US/docs/Web/API/Element/click_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handlers on all the tabs. The event handlers include logic about what should happen when a tab is selected using a click or keypress.
 - In the `setSelectedTab(currentTab)` function, the following occurs:
-
   - A `for` loop is used to cycle through all the tabs and deselect them by setting `aria-selected` property to `false` and by setting `is-hidden` class on corresponding panels.
   - On the selected tab (`currentTab`) the `aria-selected` is set to `true` and `is-hidden` class is removed from the corresponding panel.
 
@@ -363,7 +361,7 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 </aside>
 ```
 
-To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Element/aside) info panel. In the below sections we'll explain how this all works.
+To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Reference/Elements/aside) info panel. In the below sections we'll explain how this all works.
 
 ### Styling the button
 

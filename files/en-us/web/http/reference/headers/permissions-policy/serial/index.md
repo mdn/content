@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: serial"
+title: "Permissions-Policy: serial directive"
+short-title: serial
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/serial
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.serial
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `serial` directive controls whether the current document is allowed to use the {{domxref("Web Serial API", "Web Serial API", "", "nocode")}} to communicate with serial devices, either directly connected via a serial port, or via USB or Bluetooth devices emulating a serial port.
 

@@ -3,9 +3,8 @@ title: text-wrap
 slug: Web/CSS/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-wrap`** CSS shorthand property controls how text inside an element is wrapped. The different values provide:
 
@@ -112,7 +111,7 @@ When the styled content will be limited to a short number of lines, such as head
 
 For longer sections of text, `text-wrap: pretty` can be used. Note that `pretty` has a negative effect on performance, so it should be only used for longer blocks of text when the layout is more important than speed.
 
-The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
+The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
 
 ## Formal definition
 
@@ -182,5 +181,6 @@ The text in the example is editable. Change the text, adding long words, to view
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)
-- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com
-- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com
+- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com (2023)
+- [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com (2023)
+- [Balancing Japanese and Korean typography](https://ryelle.codes/2025/04/typography-troubles-balancing-in-japanese-korean/) by Kelly Choyce-Dwan (2025)

@@ -3,9 +3,8 @@ title: "Challenge: Creating fancy letterheaded paper"
 short-title: "Challenge: Fancy letterhead"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
@@ -18,7 +17,7 @@ To start this challenge, you should:
 - Make local copies of the [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) — save them as `index.html` and `style.css` in a new directory.
 - Save local copies of the [top](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [bottom](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) and [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) images in the same directory as your code files.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 You could paste the HTML and fill in the CSS into one of these online editors.
 
 > [!NOTE]
@@ -32,7 +31,6 @@ You have been given the files needed to create a letterheaded paper template. Yo
 
 - Apply the CSS to the HTML.
 - Add a background declaration to the letter that:
-
   - Fixes the top image to the top of the letter
   - Fixes the bottom image to the bottom of the letter
   - Adds a semi-transparent gradient over the top of both of the previous backgrounds that gives the letter a bit of texture. Make it slightly dark right near the top and bottom, but completely transparent for a large part of the center.

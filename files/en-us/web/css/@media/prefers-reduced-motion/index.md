@@ -3,9 +3,8 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!WARNING]
 > An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
@@ -14,25 +13,18 @@ The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-
 
 Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
 
-```css
-@media (prefers-reduced-motion) {
-  /* styles to apply if a user's device settings are set to reduced motion */
-}
-```
-
 ## Syntax
 
 - `no-preference`
   - : Indicates that a user has made no preference known on the device. This keyword value evaluates as false.
 - `reduce`
-  - : Indicates that a user has enabled the setting on their device for reduced motion. This keyword value evaluates as true.
+  - : Indicates that a user has enabled the setting on their device for reduced motion. The `reduce` keyword value evaluates as true; therefore, `@media (prefers-reduced-motion)` is equivalent to `@media (prefers-reduced-motion: reduce)`.
 
 ## User preferences
 
 For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
-
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 
@@ -65,7 +57,7 @@ This example uses a scaling animation for the purpose of demonstrating `prefers-
 }
 
 /* Tone down the animation to avoid vestibular motion triggers. */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .animation {
     animation: dissolve 4s linear infinite both;
     background-color: green;

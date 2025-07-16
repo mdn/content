@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.calc-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
@@ -41,11 +42,9 @@ calc-size(<calc-size-basis>, <calc-sum>)
 The parameters are:
 
 - `<calc-size-basis>`
-
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
-
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value
@@ -249,7 +248,7 @@ This example demonstrates how to use `calc-size()` to animate between a specific
 
 #### HTML
 
-The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
+The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) set on it so it can receive keyboard focus. The `<section>` contains {{htmlelement("header")}} and {{htmlelement("main")}} elements, each with their own child content.
 
 ```html
 <section tabindex="0">
@@ -472,7 +471,7 @@ As mentioned earlier, it is possible to use another function inside `calc-size()
 
 #### HTML
 
-The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
+The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
 
 ```html
 <form>

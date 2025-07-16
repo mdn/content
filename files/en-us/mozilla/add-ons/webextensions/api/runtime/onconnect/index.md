@@ -31,15 +31,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -69,7 +63,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`
   - sends the content script a message using the port
   - starts listening to messages received on the port, and logs them
@@ -98,6 +91,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

@@ -25,7 +25,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example
@@ -66,7 +65,7 @@ text {
       <th scope="row">Value</th>
       <td>
         <code>auto</code>
-        <a href="https://www.w3.org/TR/css3-values/#comb-one">|</a>
+        <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar">|</a>
         <code>text-bottom</code> | <code>alphabetic</code> |
         <code>ideographic</code> | <code>middle</code> | <code>central</code> |
         <code>mathematical</code> | <code>hanging</code> | <code>text-top</code>
@@ -84,12 +83,11 @@ text {
 </table>
 
 - `auto`
-
   - : If this property occurs on a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 
     If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is `alphabetic`. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is `central`.
 
-    If this property occurs on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("textPath")}} element, then the dominant-baseline and the baseline-table components remain the same as those of the parent text content element.
+    If this property occurs on a {{SVGElement("tspan")}} or {{SVGElement("textPath")}} element, then the dominant-baseline and the baseline-table components remain the same as those of the parent text content element.
 
     If the computed {{SVGAttr("baseline-shift")}} value actually shifts the baseline, then the baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs, otherwise the baseline-table font-size remains the same as that of the element.
 

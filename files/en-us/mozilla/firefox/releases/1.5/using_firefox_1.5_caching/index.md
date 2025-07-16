@@ -2,9 +2,8 @@
 title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5) uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as **bfcache** (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.
 
@@ -13,7 +12,6 @@ There are instances in which Firefox doesn't cache pages. Below are some common 
 - the page uses an `unload` or `beforeunload` handler;
 - the page sets "cache-control: no-store".
 - the site is HTTPS and page sets at least one of:
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);
@@ -100,7 +98,7 @@ In this example:
       }
 
       function onPageShow() {
-        //calculate current time
+        // Calculate current time
         var currentTime = new Date();
         var year = currentTime.getFullYear();
         var month = currentTime.getMonth() + 1;
@@ -123,7 +121,7 @@ In this example:
           sec +
           ":" +
           mil;
-        document.getElementById("timefield").value = displayTime;
+        document.getElementById("time-field").value = displayTime;
       }
 
       function loadOnlyFirst() {
@@ -138,8 +136,8 @@ In this example:
       name="zipForm"
       action="http://www.example.com/formresult.html"
       method="get">
-      <label for="timefield">Date and time:</label>
-      <input type="text" id="timefield" /><br />
+      <label for="time-field">Date and time:</label>
+      <input type="text" id="time-field" /><br />
       <label for="name">Name:</label>
       <input type="text" id="name" /><br />
       <label for="address">Email address:</label>
@@ -155,31 +153,44 @@ In this example:
 In contrast, if the above page did not listen for the `pageshow` event and handled all calculations as part of the `load` event (and instead was coded as shown in the sample code fragment below), both the cursor position and date/time would be cached in Firefox 1.5 when the user navigated away from the page. When the user returned to the page, the cached date/time would display.
 
 ```html
-<script>
-function onLoad() {
-  loadOnlyFirst();
+<head>
+  <script>
+    function onLoad() {
+      loadOnlyFirst();
 
-//calculate current time
-  var currentTime= new Date();
-  var year = currentTime.getFullYear();
-  var month = currentTime.getMonth()+1;
-  var day = currentTime.getDate();
-  var hour=currentTime.getHours();
-  var min=currentTime.getMinutes();
-  var sec=currentTime.getSeconds();
-  var mil=currentTime.getMilliseconds();
-  var displayTime = (month + "/" + day + "/" + year + " " +
-    hour + ":" + min + ":" + sec + ":" + mil);
-  document.getElementById("timefield").value=displayTime;
-}
+      // Calculate current time
+      var currentTime = new Date();
+      var year = currentTime.getFullYear();
+      var month = currentTime.getMonth() + 1;
+      var day = currentTime.getDate();
+      var hour = currentTime.getHours();
+      var min = currentTime.getMinutes();
+      var sec = currentTime.getSeconds();
+      var mil = currentTime.getMilliseconds();
+      var displayTime =
+        month +
+        "/" +
+        day +
+        "/" +
+        year +
+        " " +
+        hour +
+        ":" +
+        min +
+        ":" +
+        sec +
+        ":" +
+        mil;
+      document.getElementById("time-field").value = displayTime;
+    }
 
-function loadOnlyFirst() {
-  document.zipForm.name.focus();
-}
-</script>
+    function loadOnlyFirst() {
+      document.zipForm.name.focus();
+    }
+  </script>
 </head>
 
-<body onload="onLoad();">
+<body onload="onLoad();"></body>
 ```
 
 ## Developing Firefox extensions

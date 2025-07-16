@@ -1,11 +1,11 @@
 ---
-title: Content-Location
+title: Content-Location header
+short-title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
 page-type: http-header
 browser-compat: http.headers.Content-Location
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Location`** {{Glossary("representation header")}} indicates an alternate location for the returned data.
 It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
@@ -67,7 +67,7 @@ as {{HTTPHeader("Accept-Language")}}.
 ### Indicating the URL of a transaction's result
 
 Say you have a
-[`<form>`](/en-US/docs/Web/HTML/Element/form) for sending
+[`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) for sending
 money to another user of a site.
 
 ```html

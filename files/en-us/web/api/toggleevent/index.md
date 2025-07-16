@@ -37,7 +37,7 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

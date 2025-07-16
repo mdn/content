@@ -2,9 +2,8 @@
 title: Legacy layout methods
 slug: Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g., 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
 
@@ -568,7 +567,8 @@ Include the skeleton and normalize CSS in the HTML page, by adding the following
 
 Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We'll leave these at the defaults for now, however — it's the grid we are really interested in here.
 
-> **Note:** [Normalize](https://necolas.github.io/normalize.css/) is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.
+> [!NOTE]
+> [Normalize](https://necolas.github.io/normalize.css/) is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.
 
 We will use similar HTML to our earlier example. Add the following into your HTML body:
 

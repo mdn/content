@@ -11,7 +11,7 @@ browser-compat: api.HTMLImageElement.attributionSrc
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The
-**`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
+**`attributionSrc`** property of the {{domxref("HTMLImageElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
 
 On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 

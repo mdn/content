@@ -14,10 +14,10 @@ The `loading` event fires when the document begins loading fonts.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("loading", (event) => {});
+```js-nolint
+addEventListener("loading", (event) => { })
 
-onloading = (event) => {};
+onloading = (event) => { }
 ```
 
 ## Example

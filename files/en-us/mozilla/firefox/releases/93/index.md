@@ -1,10 +1,10 @@
 ---
 title: Firefox 93 for developers
+short-title: Firefox 93
 slug: Mozilla/Firefox/Releases/93
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 93 that will affect developers. Firefox 93 was released on October 5, 2021.
 
@@ -16,7 +16,7 @@ This article provides information about the changes in Firefox 93 that will affe
 ### HTML
 
 - The ARIA [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role has been implemented ([Firefox bug 1727616](https://bugzil.la/1727616)).
-- The UI for [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) has been implemented. ([Firefox bug 1283388](https://bugzil.la/1283388)).
+- The UI for [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) has been implemented. ([Firefox bug 1283388](https://bugzil.la/1283388)).
 
 ### CSS
 
@@ -48,7 +48,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 #### Removals
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} has been moved behind the preference `dom.keyboardevent.init_key_event.enabled` and is disabled by default.
+- `KeyboardEvent.initKeyEvent()` has been moved behind the preference `dom.keyboardevent.init_key_event.enabled` and is disabled by default.
   The method is not present in any current specification or supported in other current browsers ([Firefox bug 1717760](https://bugzil.la/1717760)).
 
 ### WebDriver conformance (Marionette)
@@ -65,7 +65,3 @@ This article provides information about the changes in Firefox 93 that will affe
   This format has excellent compression and no patent restrictions (it was developed by the [Alliance for Open Media](https://aomedia.org/)).
   Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
   The preference [image.avif.compliance_strictness](/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) can be used to adjust the compliance strictness with the specification. Animated images are not supported.
-
-## Older versions
-
-{{Firefox_for_developers}}

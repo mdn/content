@@ -3,9 +3,8 @@ title: counter-reset
 slug: Web/CSS/counter-reset
 page-type: css-property
 browser-compat: css.properties.counter-reset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) and initializes them to a specific value. It supports creating counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
 
@@ -186,7 +185,7 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-Using `counter-reset`, we set the implicit `list-item` counter to start counting at `3` for every `ol`. Then, the first item would be numbered 4, second would be numbered 5, etc., similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
+Using `counter-reset`, we set the implicit `list-item` counter to start counting at `3` for every `ol`. Then, the first item would be numbered 4, second would be numbered 5, etc., similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) in HTML.
 
 ### Using a reverse counter
 

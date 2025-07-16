@@ -1,5 +1,6 @@
 ---
 title: "ARIA: menu role"
+short-title: menu
 slug: Web/Accessibility/ARIA/Reference/Roles/menu_role
 page-type: aria-role
 spec-urls:
@@ -39,10 +40,9 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) role
-
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
-- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute
+- [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute
   - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
   - : Set to the ID of the focused item, if there is one.
@@ -116,7 +116,7 @@ Below are two example menu implementations.
 
 To progressively enhance this navigation widget that is by default accessible, the class to hide the `menu` and the inclusion of `tabindex="-1"` on the interactive menuitem content should be added with JavaScript on load.
 
-When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html) for an explanation and additional examples.
+When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) for an explanation and additional examples.
 
 ### Example 2: menubar submenu option picker
 

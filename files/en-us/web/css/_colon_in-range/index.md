@@ -3,11 +3,10 @@ title: :in-range
 slug: Web/CSS/:in-range
 page-type: css-pseudo-class
 browser-compat: css.selectors.in-range
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes.
+The **`:in-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is within the range limits specified by the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes.
 
 {{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
 

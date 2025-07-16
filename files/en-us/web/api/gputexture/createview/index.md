@@ -3,12 +3,10 @@ title: "GPUTexture: createView() method"
 short-title: createView()
 slug: Web/API/GPUTexture/createView
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUTexture.createView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createView()`** method of the
 {{domxref("GPUTexture")}} interface creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
@@ -23,23 +21,17 @@ createView(descriptor)
 ### Parameters
 
 - `descriptor` {{optional_inline}}
-
   - : An object containing the following properties:
-
     - `arrayLayerCount` {{optional_inline}}
-
       - : A number defining how many array layers are accessible to the view, starting with the `baseArrayLayer` value.
 
         If `arrayLayerCount` is omitted, it is given a value as follows:
-
         - If `dimension` is `"1d"`, `"2d"`, or `"3d"`, `arrayLayerCount` is 1.
         - If `dimension` is `"cube"`, `arrayLayerCount` is 6.
         - If `dimension` is `"2d-array"`, or `"cube-array"`, `arrayLayerCount` is {{domxref("GPUTexture.depthOrArrayLayers")}} - `baseArrayLayer`.
 
     - `aspect` {{optional_inline}}
-
       - : An enumerated value specifying which aspect(s) of the texture are accessible to the texture view. Possible values are:
-
         - `"all"`
           - : All available aspects of the texture format will be accessible to the view, which can mean all or any of color, depth, and stencil, depending on what kind of format you are dealing with.
         - `"depth-only"`
@@ -54,9 +46,7 @@ createView(descriptor)
     - `baseMipLevel` {{optional_inline}}
       - : A number representing the first (most detailed) mipmap level accessible to the view. If omitted, `baseMipLevel` takes a value of 0.
     - `dimension` {{optional_inline}}
-
       - : An enumerated value specifying the format to view the texture as. Possible values are:
-
         - `"1d"`: The texture is viewed as a one-dimensional image.
         - `"2d"`: The texture is viewed as a single two-dimensional image.
         - `"2d-array"`: The texture is viewed as an array of two-dimensional images.
@@ -65,31 +55,26 @@ createView(descriptor)
         - `"3d"`: The texture is viewed as a three-dimensional image.
 
         If `dimension` is omitted, it is given a value as follows:
-
         - If {{domxref("GPUTexture.dimension")}} is `"1d"`, `dimension` is `"1d"`.
         - If {{domxref("GPUTexture.dimension")}} is `"2d"` and {{domxref("GPUTexture.depthOrArrayLayers")}} is 1, `dimension` is `"2d"`.
         - If {{domxref("GPUTexture.dimension")}} is `"2d"` and {{domxref("GPUTexture.depthOrArrayLayers")}} is more than 1, `dimension` is `"2d-array"`.
         - If {{domxref("GPUTexture.dimension")}} is `"3d"`, `dimension` is `"3d"`.
 
     - `format` {{optional_inline}}
-
       - : An enumerated value specifying the format of the texture view. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
 
         If `format` is omitted, it will be given a value as follows:
-
         - If `aspect` is `"depth-only"` or `"stencil-only"`, and {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format), `format` will be set equal to the appropriate [aspect-specific format](https://gpuweb.github.io/gpuweb/#aspect-specific-format).
         - Otherwise it will be set equal to {{domxref("GPUTexture.format")}}.
 
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `mipLevelCount` {{optional_inline}}
-
       - : A number defining how many mipmap levels are accessible to the view, starting with the `baseMipLevel` value.
 
         If `mipLevelCount` is omitted, it will be given a value of {{domxref("GPUTexture.mipLevelCount")}} - `baseMipLevel`.
 
     - `usage` {{optional_inline}}
-
       - : A set of {{glossary("bitwise flags")}} representing a subset of the source texture's usage flags (available in the {{domxref("GPUTexture.usage")}} property) that are compatible with the chosen view format. This can be used to restrict the allowed view usage in cases where the view format is incompatible with certain usages. The available usage flags are listed in the [`GPUTexture.usage` value table](/en-US/docs/Web/API/GPUTexture/usage#value).
 
         The default value is `0`, which represents the source texture's full set of usage flags. If the view's [`format`](#format) doesn't support all of the texture's usages, the default will fail, and the view's usage must be specified explicitly.
@@ -179,12 +164,12 @@ const renderPassDescriptor: GPURenderPassDescriptor = {
   },
 };
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-// ...
+// …
 ```
 
 ### `createView()` with usage restriction

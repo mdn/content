@@ -2,9 +2,10 @@
 title: Client-server overview
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Now that you know the purpose and potential benefits of server-side programming, we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
 
@@ -36,7 +37,6 @@ This request includes:
 
 - A URL identifying the target server and resource (e.g., an HTML file, a particular data point on the server, or a tool to run).
 - A method that defines the required action (for example, to get a file or to save or update some data). The different methods/verbs and their associated actions are listed below:
-
   - `GET`: Get a specific resource (e.g., an HTML file containing information about a product, or a list of products).
   - `POST`: Create a new resource (e.g., add a new article to a wiki, add a new contact to a database).
   - `HEAD`: Get the metadata information about a specific resource without getting the body like `GET` would. You might for example use a `HEAD` request to find out the last time a resource was updated, and then only use the (more "expensive") `GET` request to download the resource if it has changed.
@@ -45,7 +45,6 @@ This request includes:
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: These verbs are for less common/advanced tasks, so we won't cover them here.
 
 - Additional information can be encoded with the request (for example, HTML form data). Information can be encoded as:
-
   - URL parameters: `GET` requests encode data in the URL sent to the server by adding name/value pairs onto the end of it — for example `http://example.com?name=Fred&age=11`. You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
   - `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
   - Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their login status and permissions/accesses to resources.

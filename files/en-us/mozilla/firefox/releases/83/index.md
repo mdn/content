@@ -1,10 +1,10 @@
 ---
 title: Firefox 83 for developers
+short-title: Firefox 83
 slug: Mozilla/Firefox/Releases/83
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
@@ -43,12 +43,8 @@ _No changes._
 ### WebDriver conformance (Marionette)
 
 - We've removed preliminary support for `WebDriver:SwitchToShadowRoot`, which hasn't been added to the WebDriver specification yet ([Firefox bug 1662468](https://bugzil.la/1662468)).
-- We fixed a bug in `WebDriver:Back` and `WebDriver:Forward` that caused Marionette to hang when the navigation was triggered from within an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that gets removed ([Firefox bug 1672758](https://bugzil.la/1672758)).
+- We fixed a bug in `WebDriver:Back` and `WebDriver:Forward` that caused Marionette to hang when the navigation was triggered from within an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) that gets removed ([Firefox bug 1672758](https://bugzil.la/1672758)).
 
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,11 +1,11 @@
 ---
-title: Content-Encoding
+title: Content-Encoding header
+short-title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
 page-type: http-header
 browser-compat: http.headers.Content-Encoding
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Encoding`** {{Glossary("representation header")}} lists the encodings and the order in which they have been applied to a resource.
 This lets the recipient know how to decode the data in order to obtain the original content format described in the {{HTTPHeader("Content-Type")}} header.
@@ -63,7 +63,6 @@ Content-Encoding: deflate, gzip
 - `zstd`
   - : A format using the {{glossary("Zstandard compression","Zstandard")}} algorithm structure (defined in {{rfc(8878)}}).
 - `dcb` {{experimental_inline}}
-
   - : A format that uses the [Dictionary-Compressed Brotli algorithm](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 
 - `dcz` {{experimental_inline}}

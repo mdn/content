@@ -2,9 +2,8 @@
 title: Using relative colors
 slug: Web/CSS/CSS_colors/Relative_colors
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines **relative color syntax**, which allows a CSS {{cssxref("&lt;color&gt;")}} value to be defined relative to another color. This is a powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — enabling more effective color palette creation.
 
@@ -29,7 +28,7 @@ Relative colors are created using the same [color functions](/en-US/docs/Web/CSS
 2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
 3. In the case of the [`color()`](/en-US/docs/Web/CSS/color_value/color) function, include the _[`colorspace`](/en-US/docs/Web/CSS/color_value/color#colorspace)_ of the output color.
 4. Provide an output value for each individual channel. The output color is defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders. The channels defined here depend on the [color function](/en-US/docs/Web/CSS/CSS_colors#functions) you are using for your relative color. For example, if you are using [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), you would need to define the values for hue, saturation, and lightness. Each channel value can be a new value, the same as the original value, or a value relative to the channel value of the origin color.
-5. Optionally, an `alpha` channel value for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case for absolute color values).
+5. Optionally, an `alpha` channel value of type {{CSSXref("&lt;alpha-value&gt;")}} for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case for absolute color values).
 
 The browser converts the origin color to a syntax compatible with the color function then destructures it into component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, `b`, and `alpha` in the case of the `rgb()` function, `l`, `a`, `b`, and `alpha` in the case of the `lab()` function, `h`, `w`, `b`, and `alpha` in the case of `hwb()`, etc. — that can be used to calculate new output channel values.
 
@@ -62,7 +61,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 }
 
 #two {
-  background-color: rgb(from red 200 g b);
+  background-color: rgb(from red 150 g b / alpha);
 }
 ```
 
@@ -70,7 +69,7 @@ The output is as follows:
 
 {{ EmbedLiveSample("simple-relative-color", "100%", "200") }}
 
-The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both equal to `0`).
+The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green, blue and alpha channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both equal to `0`, and the `alpha` is `100%`).
 
 This results in an output of `rgb(200 0 0)` — a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value. The browser's final output color (the computed value) is an sRGB `color()` value equivalent to `rgb(200 0 0)` — `color(srgb 0.784314 0 0)`.
 
@@ -80,14 +79,28 @@ This results in an output of `rgb(200 0 0)` — a slightly darker red. If we had
 > - Older sRGB color functions cannot express the full spectrum of visible colors. The output colors of ([`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)) are serialized to `color(srgb)` to avoid these limitations. That means that querying the output color value via the {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 > - For more recent color functions (`lab()`, `oklab()`, `lch()`, and `oklch()`), relative color output values are expressed in the same syntax as the color function used. For example, if a [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color function is being used, the output color will be a `lab()` value.
 
-These five lines all produce an equivalent output color:
+All the following lines produce an equivalent output color:
 
 ```css
 red
 rgb(255 0 0)
-rgb(from red r g b)
-rgb(from red 255 g b)
 rgb(from red 255 0 0)
+rgb(from red 255 0 0 / 1)
+rgb(from red 255 0 0 / 100%)
+
+rgb(from red 255 g b)
+rgb(from red r 0 0)
+rgb(from red r g b / 1)
+rgb(from red r g b / 100%)
+
+rgb(from red r g b)
+rgb(from red r g b / alpha)
+
+/* With `red`, the g and b are the same, making them interchangeable */
+rgb(from red r g g)
+rgb(from red r b b)
+rgb(from red 255 g g)
+rgb(from red 255 b b)
 ```
 
 ## Syntax flexibility
@@ -279,6 +292,48 @@ The output is as follows:
 
 {{ EmbedLiveSample("Using math functions", "100%", "200") }}
 
+## Manipulating the alpha channel
+
+This example demonstrates changing the alpha channel of a named color. Here, we have an item wrapped in a container that both have a `teal` background. To distinguish between the backgrounds, we vary the alpha channel value using the relative color feature, the [`calc()` function](/en-US/docs/Web/CSS/calc), and a [custom property](/en-US/docs/Web/CSS/--*).
+
+```html
+<div class="container">
+  <div class="item"></div>
+</div>
+```
+
+```css hidden
+.container {
+  padding: 60px;
+}
+
+.item {
+  height: 60px;
+}
+```
+
+```css
+div {
+  background-color: rgb(
+    from teal r g b / calc(alpha * var(--alpha-multiplier))
+  );
+}
+
+.container {
+  --alpha-multiplier: 0.3;
+}
+
+.item {
+  --alpha-multiplier: 1;
+}
+```
+
+The alpha channel is referenced using the `alpha` keyword. In this case, the `calc(alpha * var(--alpha-multiplier))` expression modifies the alpha channel value by multiplying `alpha` with the `--alpha-multiplier` custom property value. The container gets a semitransparent background because of the multiplier of `0.3` is less than `1.0`.
+
+The output is as follows:
+
+{{ EmbedLiveSample("Manipulating alpha channel", "100%", "200") }}
+
 ## Channel values resolve to `<number>` values
 
 To make channel value calculations work in relative colors, all origin color channel values resolve to appropriate {{cssxref("&lt;number&gt;")}} values. For example, in the `lch()` examples above, we are calculating new lightness values by adding or subtracting numbers from the origin color's `l` channel value. If we tried to do `calc(l + 20%)`, that would result in an invalid color — `l` is a `<number>` and cannot have a {{cssxref("&lt;percentage&gt;")}} added to it.
@@ -318,9 +373,9 @@ This example allows you to choose a base color and a color palette type. The bro
 
 The full HTML is included below for reference. The most interesting parts are as follows:
 
-- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
-- The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
-- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g., `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
+- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
+- The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
+- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g., `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
 - The `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note that an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.
 
 ```html
@@ -374,7 +429,7 @@ The full HTML is included below for reference. The most interesting parts are as
       </fieldset>
     </div>
   </form>
-  <div id="container" class="comp" style="--base-color: #ff0000;">
+  <div id="container" class="comp">
     <div></div>
     <div></div>
     <div></div>
@@ -433,6 +488,9 @@ fieldset {
 /* Palette container styling */
 
 #container {
+  /* Default value */
+  --base-color: #ff0000;
+
   display: flex;
   width: 100vw;
   height: 250px;
@@ -601,11 +659,11 @@ function setBaseColor(e) {
 
 The output is as follows. This starts to show the power of relative CSS colors — we are defining multiple colors and generating palettes that are updated live by adjusting a single custom property.
 
-{{ EmbedLiveSample("Color palette generator", "100%", "470") }}
+{{ EmbedLiveSample("Color palette generator", "100%", "500") }}
 
 ### Live UI color scheme updater
 
-This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control. When its value is changed, JavaScript is used to set a `--hue` custom property value to the new slider value.
+This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)) control. When its value is changed, JavaScript is used to set a `--hue` custom property value to the new slider value.
 
 This in turn adjusts the color scheme for the entire UI:
 
@@ -617,8 +675,8 @@ This in turn adjusts the color scheme for the entire UI:
 The HTML for the example is shown below.
 
 - The {{htmlelement("main")}} element acts as an outer wrapper to contain the rest of the content, allowing the card and form to be centered vertically and horizontally inside `<main>` as one unit.
-- The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
-- The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control and its {{htmlelement("label")}}.
+- The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
+- The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)) control and its {{htmlelement("label")}}.
 
 ```html
 <main>
@@ -764,7 +822,7 @@ function setHue(e) {
 
 The output is shown below. Relative CSS colors are being used here to control the color scheme of an entire UI, which can be adjusted live as a single value is modified.
 
-{{ EmbedLiveSample("Live UI color scheme updater", "100%", "400") }}
+{{ EmbedLiveSample("Live UI color scheme updater", "100%", "450") }}
 
 ## See also
 

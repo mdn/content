@@ -3,9 +3,8 @@ title: ::details-content
 slug: Web/CSS/::details-content
 page-type: css-pseudo-element
 browser-compat: css.selectors.details-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
 
@@ -108,5 +107,5 @@ details[open]::details-content {
 
 ## See also
 
-- [`<details>`](/en-US/docs/Web/HTML/Element/details)
-- [`<summary>`](/en-US/docs/Web/HTML/Element/summary)
+- [`<details>`](/en-US/docs/Web/HTML/Reference/Elements/details)
+- [`<summary>`](/en-US/docs/Web/HTML/Reference/Elements/summary)

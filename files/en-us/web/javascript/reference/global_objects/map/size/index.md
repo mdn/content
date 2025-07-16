@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.size
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Map.size
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`size`** accessor property of {{jsxref("Map")}} instances returns the number of elements in this map.
 

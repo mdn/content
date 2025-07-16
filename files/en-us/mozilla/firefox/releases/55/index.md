@@ -1,10 +1,10 @@
 ---
 title: Firefox 55 for developers
+short-title: Firefox 55
 slug: Mozilla/Firefox/Releases/55
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 55 was released on August 8, 2017. This article lists key changes that are useful for web developers.
 
@@ -19,7 +19,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
+- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)).
 - Enable `dom.forms.datetime` by default on Nightly ([Firefox bug 1366188](https://bugzil.la/1366188)).
 
 ### CSS
@@ -75,7 +75,6 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 - The [Selection API](/en-US/docs/Web/API/Selection) has been updated so that it has parity with other browsers in terms of how editing hosts are given focus when the selection moves inside them ([Firefox bug 1318312](https://bugzil.la/1318312)). See [Behavior of Selection API in terms of editing host focus changes](/en-US/docs/Web/API/Selection#behavior_of_selection_api_in_terms_of_editing_host_focus_changes) for more details.
 - The {{domxref("Selection")}} API has been updated to match some recent spec changes ([Firefox bug 1359371](https://bugzil.la/1359371)):
-
   - The {{domxref("Selection.collapse", "collapse()")}} and {{domxref("Selection.extend", "extend()")}} methods' `offset` parameter is now optional.
   - The {{domxref("Selection.collapse", "collapse()")}} method's `node` parameter is now nullable.
   - The {{domxref("Selection.containsNode", "containsNode()")}} method's `partialContainment` parameter is now optional.
@@ -87,7 +86,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### Workers
 
 - Workers and shared workers can now be created with an identifying `name` property. See the {{domxref("Worker.Worker", "Worker()")}} and {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructors, and the {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} interfaces. ([Firefox bug 1364297](https://bugzil.la/1364297)).
-- {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see [Throttling of tracking timeout scripts](/en-US/docs/Web/API/Window/setTimeout#throttling_of_tracking_timeout_scripts) ([Firefox bug 1355311](https://bugzil.la/1355311)).
+- {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see [Throttling of tracking scripts](/en-US/docs/Web/API/Window/setTimeout#throttling_of_tracking_scripts) ([Firefox bug 1355311](https://bugzil.la/1355311)).
 
 #### Service Workers/Push
 
@@ -138,12 +137,12 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, for example —
+- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, for example —
 
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
-- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Element/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
-- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
+- The {{htmlelement("style")}} element's `scoped` attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
+- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute has been removed from Firefox. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
 
 ### CSS
 
@@ -172,7 +171,3 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - [chrome_settings_overrides key enables you to override the browser's homepage.](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)
 - browser_style property enables you to have browser-like styling for [browser action popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui).
 - [permissions API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -2,6 +2,7 @@
 title: Using the imscJS polyfill
 slug: Related/IMSC/Using_the_imscJS_polyfill
 page-type: guide
+sidebar: related
 ---
 
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
@@ -15,7 +16,7 @@ You currently need a polyfill to render IMSC on the web. imscJS is a good choice
 First you need to embed the imscJS library:
 
 ```html
-<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js">
+<script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js"></script>
 ```
 
 Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the below sections.
@@ -165,7 +166,6 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 - Iterate over the array we get back from `getMediaEvents()`
 - For each time event:
-
   - Create a corresponding cue.
   - Use an `onenter` event to render the ISD.
   - Use an `onexit` event to remove the rendering layer again.
@@ -274,25 +274,3 @@ This has the effect that pointer events are going "through" the overlay (see [re
 The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artifacts.
 
 the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) tutorial.
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>

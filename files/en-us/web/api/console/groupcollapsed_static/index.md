@@ -42,6 +42,6 @@ None ({{jsxref("undefined")}}).
 
 - {{domxref("console/group_static", "console.group()")}}
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
-- [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupcollapsed)
+- [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#groupcollapsed)
 - [Node.js documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
 - [Google Chrome's documentation for `console.groupCollapsed()`](https://developer.chrome.com/docs/devtools/console/api/#groupcollapsed)

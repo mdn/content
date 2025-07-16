@@ -1,10 +1,10 @@
 ---
 title: Firefox 136 for developers
+short-title: Firefox 136
 slug: Mozilla/Firefox/Releases/136
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
@@ -12,8 +12,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### HTML
 
-- The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
-- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
+- The [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
+- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
 
 ### CSS
 
@@ -35,22 +35,12 @@ This article provides information about the changes in Firefox 136 that affect d
 ### APIs
 
 - The maximum size of [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) has been increased from 32MB to 512MB, matching the limit for Chromium browsers ([Firefox bug 1911300](https://bugzil.la/1911300)).
-- The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{glossary("asynchronous")}} {{jsxref("Promise")}}-based method of managing cookies, which can be used in both the main thread and in [service workers](/en-US/docs/Web/API/Service_Worker_API).
-  A subset of the Cookie Store API has been implemented ([Firefox bug 1937477](https://bugzil.la/1937477)). This includes:
-
-  - The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, for getting, setting, and deleting cookies.
-  - The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) and [`ServiceWorkerGlobalScope.cookieStore`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) properties for getting `CookieStore` instances.
-  - The [`change` event](/en-US/docs/Web/API/CookieStore/change_event) (and its interface [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent)), which fires in main thread and service worker contexts when cookies are set or deleted.
-
-  Note that while any of the supported cookie properties can be [set](/en-US/docs/Web/API/CookieStore/set), the cookie objects returned by the [`get()`](/en-US/docs/Web/API/CookieStore/get) and [`getAll()`](/en-US/docs/Web/API/CookieStore/getAll) methods, and in the `change` event, omit all properties other than `name` and `value` (matching the information returned by the {{domxref("document.cookie")}}).
-  The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies), [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), and [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
 
 - Element properties are now reflected for the [Aria attributes that contain element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) ([Firefox bug 1919102](https://bugzil.la/1919102)).
 
   This includes:
-
-  - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements"," ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
-  - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements"," ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
+  - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
+  - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
 
 #### Media, WebRTC, and Web Audio
 
@@ -107,7 +97,3 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
 - **SVG path API methods**: `dom.svg.pathSegment.enabled`.
   The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
-
-## Older versions
-
-{{Firefox_for_developers}}

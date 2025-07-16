@@ -2,9 +2,8 @@
 title: Node.js server without a framework
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows a static file server built in [Node.js](https://nodejs.org/en/) without using any frameworks.
 The current state of Node.js is such that almost everything we need for the static file server is provided by built-in APIs and a few lines of code.
@@ -23,7 +22,7 @@ const PORT = 8000;
 const MIME_TYPES = {
   default: "application/octet-stream",
   html: "text/html; charset=UTF-8",
-  js: "application/javascript",
+  js: "text/javascript",
   css: "text/css",
   png: "image/png",
   jpg: "image/jpeg",
@@ -43,7 +42,7 @@ const prepareFile = async (url) => {
   const pathTraversal = !filePath.startsWith(STATIC_PATH);
   const exists = await fs.promises.access(filePath).then(...toBool);
   const found = !pathTraversal && exists;
-  const streamPath = found ? filePath : STATIC_PATH + "/404.html";
+  const streamPath = found ? filePath : `${STATIC_PATH}/404.html`;
   const ext = path.extname(streamPath).substring(1).toLowerCase();
   const stream = fs.createReadStream(streamPath);
   return { found, ext, stream };

@@ -3,9 +3,8 @@ title: "@import"
 slug: Web/CSS/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to import style rules from other valid stylesheets.
 An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/@charset) and [@layer](/en-US/docs/Web/CSS/@layer)) and style declarations, or it will be ignored.
@@ -31,7 +30,7 @@ where:
 - _list-of-media-queries_
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
-  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
+  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported. See [`layer()`](/en-US/docs/Web/CSS/@import/layer_function) for more information.
 - _supports-condition_
   - : Indicates the feature(s) that the browser must support in order for the stylesheet to be imported.
     If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
@@ -102,9 +101,9 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ### Importing CSS rules conditional on feature support
 
 ```css
-@import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports((not (display: grid)) and (display: flex))
-  screen and (max-width: 400px);
+@import url("grid.css") supports(display: grid) screen and (width <= 400px);
+@import url("flex.css") supports((not (display: grid)) and (display: flex))
+  screen and (width <= 400px);
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.

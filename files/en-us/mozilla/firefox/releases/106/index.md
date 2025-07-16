@@ -1,10 +1,10 @@
 ---
 title: Firefox 106 for developers
+short-title: Firefox 106
 slug: Mozilla/Firefox/Releases/106
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 106 that will affect developers. Firefox 106 was released on October 18, 2022.
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element now supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element now supports [`height`](/en-US/docs/Web/HTML/Reference/Elements/source#height) & [`width`](/en-US/docs/Web/HTML/Reference/Elements/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality is an experimental feature enabled using the `dom.picture_source_dimension_attributes.enabled` preference ([Firefox bug 1694741](https://bugzil.la/1694741)).
 
 ### MathML
@@ -59,7 +59,3 @@ No notable changes.
 
 - The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default.
 - The `object-src` directive in the `"content_security_policy"` manifest key is now optional ([Firefox bug 1766881](https://bugzil.la/1766881)). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content_security_policy"` manifest key page for more details.
-
-## Older versions
-
-{{Firefox_for_developers}}

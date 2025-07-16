@@ -1,10 +1,10 @@
 ---
 title: Firefox 81 for developers
+short-title: Firefox 81
 slug: Mozilla/Firefox/Releases/81
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.
 
@@ -19,11 +19,11 @@ This article provides information about the changes in Firefox 81 that will affe
 
 ### HTML
 
-- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
 
 #### Removals
 
-- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
+- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
 
 ### CSS
 
@@ -68,7 +68,3 @@ _No changes._
 
 - [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) is now supported on macOS ([Firefox bug 1653354](https://bugzil.la/1653354)).
 - The behavior of [`webNavigation.getFrame()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame) and [`webNavigation.getAllFrames()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames) has changed. Moving forward, when a tab is discarded the promise will fulfill with a `null` value ([Firefox bug 1654842](https://bugzil.la/1654842)).
-
-## Older versions
-
-{{Firefox_for_developers}}

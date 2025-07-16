@@ -1,5 +1,6 @@
 ---
 title: "ARIA: rowgroup role"
+short-title: rowgroup
 slug: Web/Accessibility/ARIA/Reference/Roles/rowgroup_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#rowgroup
@@ -153,7 +154,7 @@ none
 
 ## See also
 
-- [HTML table](/en-US/docs/Web/HTML/Element/table)
-- [HTML table body](/en-US/docs/Web/HTML/Element/tbody)
-- [HTML table footer](/en-US/docs/Web/HTML/Element/tfoot)
-- [HTML table header](/en-US/docs/Web/HTML/Element/thead)
+- [HTML table](/en-US/docs/Web/HTML/Reference/Elements/table)
+- [HTML table body](/en-US/docs/Web/HTML/Reference/Elements/tbody)
+- [HTML table footer](/en-US/docs/Web/HTML/Reference/Elements/tfoot)
+- [HTML table header](/en-US/docs/Web/HTML/Reference/Elements/thead)

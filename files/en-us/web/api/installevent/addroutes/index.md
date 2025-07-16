@@ -21,11 +21,8 @@ addRoutes(routerRules)
 ### Parameters
 
 - `routerRules`
-
   - : A single object, or an array of one or more objects, representing rules for how certain resources should be fetched. Each `routerRules` object contains the following properties:
-
     - `condition`
-
       - : An object defining one or more conditions that specify which resources should match this rule. The following properties can be included; if multiple properties are used, a resource must meet all specified conditions to match the rule.
         - `not` {{optional_inline}}
           - : A `condition` object defining conditions that must explicitly **not** be met to match the rule. Conditions defined inside a `not` condition are mutually exclusive with other conditions.
@@ -40,12 +37,10 @@ addRoutes(routerRules)
         - `runningStatus` {{optional_inline}}
           - : An enumerated value representing the required running status of the service worker for a request to match the rule. Values can be `"running"` or `"not-running"`.
         - `urlPattern` {{optional_inline}}
-          - : A {{domxref("URLPattern")}} instance, or a `URLPattern()` constructor [`input`](/en-US/docs/Web/API/URLPattern/URLPattern#input) pattern representing the URLs that match the rule.
+          - : A {{domxref("URLPattern")}} instance, or a `URLPattern()` constructor [`input`](/en-US/docs/Web/API/URLPattern/URLPattern#input) pattern representing the URLs that match the rule. Regular expression capturing groups are not allowed, so {{domxref("URLPattern.hasRegExpGroups")}} must be `false`.
 
     - `source`
-
       - : An enumerated value or an object specifying the source from which matching resources will be loaded. Possible enumerated values are:
-
         - `"cache"`
           - : Resources will be loaded from a browser {{domxref("Cache")}}.
         - `"fetch-event"`

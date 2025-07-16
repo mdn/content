@@ -1,10 +1,10 @@
 ---
 title: Firefox 128 for developers
+short-title: Firefox 128
 slug: Mozilla/Firefox/Releases/128
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 128 that affect developers. Firefox 128 was released on [July 9, 2024](https://whattrainisitnow.com/release/?version=128).
 
@@ -12,12 +12,12 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### HTML
 
-- The [`target`](/en-US/docs/Web/HTML/Element/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
+- The [`target`](/en-US/docs/Web/HTML/Reference/Elements/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
 
 ### CSS
 
 - [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) is now enabled by default. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) ([Firefox bug 1900251](https://bugzil.la/1900251)).
-- The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
+- The [`content`](/en-US/docs/Web/CSS/content) property now supports [alternative text](/en-US/docs/Web/CSS/content#alternative_text_string_counter) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
 - The [`syntax`](/en-US/docs/Web/CSS/@property/syntax) descriptor of the {{cssxref("@property")}} at-rule now supports the `<string>` syntax component name. (See [Firefox bug 1846635](https://bugzil.la/1846635)).
 
 #### Removals
@@ -28,7 +28,6 @@ This article provides information about the changes in Firefox 128 that affect d
 
 - Resizable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
   The relevant methods and properties are:
-
   - Grow {{jsxref("SharedArrayBuffer")}} using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
     The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
     The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can grow, and its maximum allowed size, respectively.
@@ -96,6 +95,7 @@ This article provides information about the changes in Firefox 128 that affect d
 - The [manifest key `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) now supports `match_origin_as_fallback` and {{WebExtAPIRef("contentScripts.register")}} `matchOriginAsFallback`, enabling scripts to be injected into `about:`, `data:`, and `blob:` pages when the document origin is opaque due to the use of CSP or iframe sandbox ([Firefox bug 1475831](https://bugzil.la/1475831) and [Firefox bug 1896669](https://bugzil.la/1896669)). In addition, scripts registered with the `content_scripts` manifest key can now only run in `blob:` pages when `match_origin_as_fallback` is `true` ([Firefox bug 1897113](https://bugzil.la/1897113)).
 - Support added for the {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}} property `domainType` ([Firefox bug 1797408](https://bugzil.la/1797408)).
 - Extensions containing an unrecognized property in [manifest key `browser_specific_settings.gecko`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) now load with a warning. Previously, these extensions errored on installation. This ensures that if a new `browser_specific_settings.gecko` property is added, extensions using that new property will load in versions of Firefox back to this release ([Firefox bug 1757293](https://bugzil.la/1757293)).
+- Context menus created with {{WebExtAPIRef("menus.create")}} in extensions using a non-persistent background script now persist more reliably across extension restarts. Previously, there were cases where the menu registration disappeared on restarts ([Firefox bug 1771328](https://bugzil.la/1771328)).
 
 ## Experimental web features
 
@@ -111,8 +111,4 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 
 - **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`.
 
-  [PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
-
-## Older versions
-
-{{Firefox_for_developers}}
+  [PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the original explainer](https://github.com/mozilla/explainers/tree/main/archive/ppa-experiment) and the [proposed spec](https://w3c.github.io/ppa/). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).

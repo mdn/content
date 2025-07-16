@@ -31,9 +31,7 @@ browser.find.find(
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
-
     - `caseSensitive`
       - : `boolean`. If `true` the, the search is case-sensitive. Defaults to `false`.
     - `entireWord`
@@ -57,13 +55,11 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `count`
   - : `integer`. The number of results found.
 - `rangeData` {{optional_inline}}
-
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. Each `RangeData` object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.
 
     The items correspond to the items given in `rectData`, so `rangeData[i]` describes the same match as `rectData[i]`.
 
     Each `RangeData` contains the following properties:
-
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
     - `endTextNodePos`
@@ -76,15 +72,11 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
       - : The ordinal position of the text node in which the match started.
 
 - `rectData` {{optional_inline}}
-
   - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
 
     Each `RectData` object contains rectangle data for a single match. It has two properties:
-
     - `rectsAndTexts`
-
       - : An object containing two properties, both arrays:
-
         - `rectList`: an array of objects which each have four integer properties: `top`, `left`, `bottom`, `right`. These describe a rectangle relative to the top-left of the viewport.
         - `textList`: an array of strings, corresponding to the `rectList` array. The entry at `textList[i]` contains the part of the match bounded by the rectangle at `rectList[i]`.
 
@@ -97,16 +89,11 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
         ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
 
         In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
-
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
 
     - `text`
       - : The complete text of the match, "You may" in the example above.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -289,3 +276,7 @@ browser.runtime.onMessage.addListener((message) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

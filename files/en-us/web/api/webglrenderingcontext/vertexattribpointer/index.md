@@ -29,10 +29,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of components per vertex attribute.
     Must be 1, 2, 3, or 4.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of each component in the array.
     Possible values:
-
     - `gl.BYTE`: signed 8-bit integer, with values in \[-128, 127]
     - `gl.SHORT`: signed 16-bit integer, with values in \[-32768, 32767]
     - `gl.UNSIGNED_BYTE`: unsigned 8-bit integer, with values in \[0, 255]
@@ -41,7 +39,6 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
     - `gl.INT`: 32-bit signed binary integer
     - `gl.UNSIGNED_INT`: 32-bit unsigned binary integer
@@ -49,10 +46,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_INT_2_10_10_10_REV`: 32-bit unsigned integer with values in \[0, 1023]
 
 - `normalized`
-
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether integer data values should be
     normalized into a certain range when being cast to a float.
-
     - For types `gl.BYTE` and `gl.SHORT`, normalizes the values
       to \[-1, 1] if true.
     - For types `gl.UNSIGNED_BYTE` and `gl.UNSIGNED_SHORT`,
@@ -248,7 +243,7 @@ const buffer = await response.arrayBuffer();
 First, we create a new Vertex Buffer Object (VBO) and supply it with our array buffer:
 
 ```js
-//Bind array buffer to a Vertex Buffer Object
+// Bind array buffer to a Vertex Buffer Object
 const vbo = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
 gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
@@ -258,23 +253,23 @@ Then, we specify the memory layout of the array buffer, either by setting the in
 ourselves:
 
 ```js
-//Describe the layout of the buffer:
-//1. position, not normalized
+// Describe the layout of the buffer:
+// 1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
-//2. normal vector, normalized to [-1, 1]
+// 2. normal vector, normalized to [-1, 1]
 gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(1);
-//3. texture coordinates, normalized to [0, 1]
+// 3. texture coordinates, normalized to [0, 1]
 gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
-//Set the attributes in the vertex shader to the same indices
+// Set the attributes in the vertex shader to the same indices
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "normal");
 gl.bindAttribLocation(shaderProgram, 2, "texUV");
-//Since the attribute indices have changed, we must re-link the shader
-//Note that this will reset all uniforms that were previously set.
+// Since the attribute indices have changed, we must re-link the shader
+// Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
 ```
 

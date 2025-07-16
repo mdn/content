@@ -3,9 +3,8 @@ title: contrast()
 slug: Web/CSS/filter-function/contrast
 page-type: css-function
 browser-compat: css.types.filter-function.contrast
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) adjusts the contrast of the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
@@ -77,7 +76,7 @@ This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat center / contain #339;
+  background: url(unity_for_the_people.jpg) no-repeat center / contain #339;
 }
 p {
   backdrop-filter: contrast(0.5);
@@ -100,7 +99,7 @@ p {
 ```
 
 ```html hidden
-<div class="container" style="background-image: url(unity_for_the_people.jpg);">
+<div class="container">
   <p>
     Always ensure there is enough contrast between text and all background
     colors. If you think your text may land on top of a background image,
@@ -152,35 +151,38 @@ p {
 
 ### With url() and the SVG contrast filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). The `<filter>`'s {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping. Given the following:
 
-```svg
+```html live-sample___svg_filter
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="svg"
+  viewBox="0 0 240 151"
+  height="0"
+  width="0"
+  overflow="visible"
+  color-interpolation-filters="sRGB">
   <filter id="contrast">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="2" intercept="-0.5"/>
-      <feFuncG type="linear" slope="2" intercept="-0.5"/>
-      <feFuncB type="linear" slope="2" intercept="-0.5"/>
+      <feFuncR type="linear" slope="2" intercept="-0.5" />
+      <feFuncG type="linear" slope="2" intercept="-0.5" />
+      <feFuncB type="linear" slope="2" intercept="-0.5" />
     </feComponentTransfer>
   </filter>
-```
-
-```css hidden
-.svgFilterLive {
-  filter: url(#contrast2);
-}
+</svg>
 ```
 
 These values produce the same results:
 
 ```css
 filter: contrast(200%);
-filter: url(#contrast); /* with embedded SVG */
-filter: url(folder/fileName.svg#contrast); /* external svg filter definition */
+filter: url("#contrast"); /* with embedded SVG */
+filter: url("folder/fileName.svg#contrast"); /* external svg filter definition */
 ```
 
 This example shows three images: the image with a `contrast()` filter function applied, the image with an equivalent `url()` filter applied, and the original images for comparison:
 
-```html hidden
+```html hidden live-sample___svg_filter
 <table cellpadding="5">
   <thead>
     <tr>
@@ -193,31 +195,15 @@ This example shows three images: the image with a `contrast()` filter function a
     <tr>
       <td>
         <img
-          style="filter: contrast(200%)"
+          class="css-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
         <img
-          class="svgFilterLive"
+          class="svg-filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="svg"
-          viewBox="0 0 240 151"
-          height="0"
-          width="0"
-          style="overflow: visible"
-          color-interpolation-filters="sRGB">
-          <filter id="contrast2">
-            <feComponentTransfer>
-              <feFuncR type="linear" slope="2" intercept="-0.5" />
-              <feFuncG type="linear" slope="2" intercept="-0.5" />
-              <feFuncB type="linear" slope="2" intercept="-0.5" />
-            </feComponentTransfer>
-          </filter>
-        </svg>
       </td>
       <td>
         <img
@@ -229,7 +215,19 @@ This example shows three images: the image with a `contrast()` filter function a
 </table>
 ```
 
-{{EmbedLiveSample('With_url()_and_the_SVG_contrast_filter','100%','280')}}
+```css hidden live-sample___svg_filter
+.css-filter {
+  filter: contrast(200%);
+}
+.svg-filter {
+  filter: url("#contrast");
+}
+svg:not(:root) {
+  display: none;
+}
+```
+
+{{EmbedLiveSample('svg_filter','100%','280')}}
 
 ## Specifications
 

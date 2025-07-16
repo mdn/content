@@ -3,9 +3,8 @@ title: CSS selectors
 slug: Web/CSS/CSS_selectors
 page-type: css-module
 spec-urls: https://drafts.csswg.org/selectors/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 
@@ -113,35 +112,27 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 ## Guides
 
 - [CSS selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-
   - : Overview of the different types of simple selectors and various combinators defined in the CSS selectors and the CSS pseudo modules.
 
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
-
   - : Explanation of the structure of CSS selectors and the terminologies introduced in the CSS selectors module, ranging from "simple selector" to "forgiving relative selector list".
 
 - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes)
-
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
-
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
 - [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
-
   - : Explores the style limitations set on the `:visited` class for user privacy.
 
 - [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Introduction to basic CSS selectors, including tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
 
 - [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
 ## Related concepts
@@ -150,22 +141,28 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
-
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
   - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
   - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 
-- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
 
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+  - {{cssxref("::column")}}
+
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
   - {{CSSXref(":left")}} pseudo-class
   - {{CSSXref(":right")}} pseudo-class
   - {{CSSXref(":first")}} pseudo-class
   - `:blank` pseudo-class
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
-
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
   - {{CSSXref("::file-selector-button")}}
@@ -179,15 +176,12 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
   - {{CSSXref("::target-text")}}
 
 - [CSS shadow parts module](/en-US/docs/Web/CSS/CSS_shadow_parts)
-
   - {{CSSXref("::part")}} pseudo-element
 
 - [CSS positioned layout module](/en-US/docs/Web/CSS/CSS_positioned_layout)
-
   - {{CSSxRef("::backdrop")}}
 
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
-
   - {{CSSxRef("::cue")}}
 
 - {{CSSXref("@namespace")}} at-rule

@@ -8,6 +8,32 @@ sidebar: svgref
 
 The **`<foreignObject>`** [SVG](/en-US/docs/Web/SVG) element includes elements from a different XML namespace. In the context of a browser, it is most likely (X)HTML.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("height")}}
+  - : The height of the foreignObject.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("width")}}
+  - : The width of the foreignObject.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("x")}}
+  - : The x coordinate of the foreignObject.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("y")}}
+  - : The y coordinate of the foreignObject.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
+
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGForeignObjectElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -48,32 +74,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-- {{SVGAttr("height")}}
-  - : The height of the foreignObject.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : The width of the foreignObject.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("x")}}
-  - : The x coordinate of the foreignObject.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : The y coordinate of the foreignObject.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
-
-> [!NOTE]
-> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
-
-## DOM Interface
-
-This element implements the {{domxref("SVGForeignObjectElement")}} interface.
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

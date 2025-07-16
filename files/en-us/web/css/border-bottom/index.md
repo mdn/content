@@ -3,9 +3,8 @@ title: border-bottom
 slug: Web/CSS/border-bottom
 page-type: css-shorthand-property
 browser-compat: css.properties.border-bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
 
@@ -28,7 +27,7 @@ border-bottom: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+border-bottom: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example

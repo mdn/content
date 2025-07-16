@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-cascade/
   - https://drafts.csswg.org/css-cascade-5/
   - https://drafts.csswg.org/css-cascade-6/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS cascading and inheritance** module defines the rules for assigning values to properties by way of cascading and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
 
@@ -67,24 +66,20 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ## Guides
 
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources.
 
 - [CSS inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-
   - : A guide to CSS inheritance.
 
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-
   - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ## Related concepts
 
-- [Element-attached styles](/en-US/docs/Web/HTML/Global_attributes/style)
+- [Element-attached styles](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 - [Inline styles and the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#inline_styles)
 - [Conditional rules for @imports](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

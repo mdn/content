@@ -3,9 +3,8 @@ title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`408 Request Timeout`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server would like to shut down this unused connection.
 A `408` is sent on an idle connection by some servers, _even without any previous request by the client_.
@@ -27,7 +26,7 @@ This response is used much more since some browsers, like Chrome and Firefox, us
 
 ### Timeout in form submission
 
-The following example shows what a client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+The following example shows what a client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element uses an image on form submission with `method="post"`:
 
 ```http
 POST /upload HTTP/1.1

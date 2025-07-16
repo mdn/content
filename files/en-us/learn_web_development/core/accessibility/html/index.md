@@ -3,9 +3,8 @@ title: "HTML: A good basis for accessibility"
 short-title: Accessible HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
@@ -142,11 +141,11 @@ The language you use can also affect accessibility. In general, you should use c
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.
-- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
+- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Reference/Elements/abbr) tag to describe them.
 
 ### Structure page sections logically
 
-You should use appropriate [sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) to structure your webpages, for example navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), and repeating content units ({{htmlelement("article")}}). These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating.
+You should use appropriate [sectioning elements](/en-US/docs/Web/HTML/Reference/Elements#content_sectioning) to structure your webpages, for example navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), and repeating content units ({{htmlelement("article")}}). These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating.
 
 For example, a modern content structure could look something like this:
 
@@ -270,7 +269,7 @@ Adding such advantages back in takes a bit of work (you can see an example in ou
 </div>
 ```
 
-Basically, the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
+Basically, the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
 
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
 - `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
@@ -383,7 +382,7 @@ But this has problems — there is no way for a screen reader user to associate 
 Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes its content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > [!NOTE]
 > See our [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) article for more details about accessible data tables.
@@ -432,7 +431,7 @@ Any personal knowledge or extra description shouldn't be included here, as it is
 One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for `alt` attribute (see [Empty alt attributes](#empty_alt_attributes)) or to just include them in the page as CSS background images.
 
 > [!NOTE]
-> Read [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/en-US/docs/Web/HTML/Responsive_images) for a lot more information about image implementation and best practices.
+> Read [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) for a lot more information about image implementation and best practices.
 > You can also check [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
@@ -449,7 +448,8 @@ Let's have another quick look at the fourth method:
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
 
-> **Note:** [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
+> [!NOTE]
+> [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://w3c.github.io/aria/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
 
 ### Figures and figure captions
 
@@ -488,7 +488,7 @@ The reason to use an empty `alt` instead of not including it is because many scr
 
 ## More on links
 
-Links (the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
+Links (the [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
 
 ### Link styling
 
@@ -524,7 +524,7 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Element/img#alt).
+If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Reference/Elements/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
@@ -552,7 +552,7 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
+You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) to verify that you've retained this information before you move on.
 
 ## Summary
 

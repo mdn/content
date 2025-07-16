@@ -17,7 +17,8 @@ Events initialized in this way must have been created with the {{domxref("Docume
 This method must be called to set the event before it is dispatched using {{ domxref("EventTarget.dispatchEvent()") }}.
 Once dispatched, it doesn't do anything anymore.
 
-> **Note:** **Do not use this method anymore, as it is deprecated.**
+> [!NOTE]
+> **Do not use this method anymore, as it is deprecated.**
 >
 > Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
 > The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use those.
@@ -39,6 +40,10 @@ initCustomEvent(type, canBubble, cancelable, detail)
   - : A boolean value indicating whether the event is cancelable.
 - `detail`
   - : Any data that will be available to the handler through the {{domxref("CustomEvent.detail")}} property.
+
+### Return value
+
+None (`undefined`).
 
 ## Specifications
 

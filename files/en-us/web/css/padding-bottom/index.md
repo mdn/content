@@ -3,9 +3,8 @@ title: padding-bottom
 slug: Web/CSS/padding-bottom
 page-type: css-property
 browser-compat: css.properties.padding-bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the bottom of an element.
 
@@ -124,5 +123,5 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 - {{cssxref("padding")}} shorthand
 - {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
 - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

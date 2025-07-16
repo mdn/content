@@ -2,9 +2,8 @@
 title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 
@@ -33,7 +32,7 @@ You can also configure a site to allow any site to access it by using the
 `*` wildcard. You should only use this for public APIs. Private APIs should
 never use `*`, and should instead have a specific domain or domains set. In
 addition, the wildcard only works for requests made with the
-[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute set to `anonymous`, and it prevents
+[`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute set to `anonymous`, and it prevents
 sending credentials like cookies in requests.
 
 ```http

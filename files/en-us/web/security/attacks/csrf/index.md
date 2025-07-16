@@ -2,6 +2,7 @@
 title: Cross-site request forgery (CSRF)
 slug: Web/Security/Attacks/CSRF
 page-type: guide
+sidebar: security
 ---
 
 In a cross-site request forgery (CSRF) attack, an attacker tricks the user or the browser into making an HTTP request to the target site from a malicious site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
@@ -16,7 +17,7 @@ In the example below, the user has previously signed into their bank, and the br
 
 In this guide, we'll call a request like this, that carries out some special action, a _state-changing request_.
 
-In a CSRF attack, the attacker creates a website containing a form. The form's [`action` attribute](/en-US/docs/Web/HTML/Element/form#action) is set to the bank's website, and the form contains hidden input fields mimicking the bank's fields:
+In a CSRF attack, the attacker creates a website containing a form. The form's [`action` attribute](/en-US/docs/Web/HTML/Reference/Elements/form#action) is set to the bank's website, and the form contains hidden input fields mimicking the bank's fields:
 
 ```html
 <form action="https://my-bank.example.org/transfer" method="POST">
@@ -102,7 +103,7 @@ See {{glossary("Fetch metadata request header")}} for the complete list of Fetch
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests) and other requests.
 
-Simple requests, which are the sort of request that result from a `<form>` element submission, can be made cross-origin without being blocked. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests. This is why we need to implement other strategies to defend forms against CRSF, such as using a CSRF token.
+Simple requests, which are the sort of request that result from a `<form>` element submission, can be made cross-origin without being blocked. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests. This is why we need to implement other strategies to defend forms against CSRF, such as using a CSRF token.
 
 However, other parts of the web platform, in particular JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}, can make different sorts of requests (for example, requests that set custom headers), and these requests are by default not allowed cross-origin, so a CSRF attack would not succeed.
 
@@ -187,7 +188,3 @@ We can summarize the defenses above as follows:
 ## See also
 
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

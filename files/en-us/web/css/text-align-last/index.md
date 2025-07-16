@@ -3,9 +3,8 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 page-type: css-property
 browser-compat: css.properties.text-align-last
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-align-last`** [CSS](/en-US/docs/Web/CSS) property sets how the last line of a block or a line, right before a forced line break, is aligned.
 
@@ -26,7 +25,7 @@ text-align-last: left;
 ```html interactive-example
 <section id="default-example">
   <div>
-    <p id="example-element" style="text-align: justify">
+    <p id="example-element">
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
       aliquip ex ea commodo consequat.
     </p>
@@ -41,6 +40,10 @@ section {
 
 #default-example > div {
   width: 250px;
+}
+
+#example-element {
+  text-align: justify;
 }
 ```
 

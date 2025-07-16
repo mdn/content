@@ -56,7 +56,7 @@ In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
     - `sql` - SeQueL commands
-    - `wasm` - WebAssembly
+    - `wat` - WebAssembly
     - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS
@@ -179,14 +179,6 @@ Writers can use the [GFM alerts syntax](https://docs.github.com/en/get-started/w
 - To add a callout, create a blockquote whose first line is `[!CALLOUT]`.
 
 Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
-
-> [!WARNING]
-> In the older MDN syntax, the type was localized and added to the first paragraph in bold text, i.e., `**Note:** Foo bar` instead of `[!NOTE] ⏎ Foo bar`.
->
-> The older syntax is still supported for migration purposes. Avoid using it in new documentation.
-
-> [!WARNING]
-> Currently, due to a [Prettier bug](https://github.com/prettier/prettier/issues/15479), the GFM alert syntax cannot be used if the first character of a note or warning is a formatting symbol, such as a backquote, asterisk, square bracket or curly bracket. In this case, use the old syntax `> **Note:**` instead. Writers are not required to rephrase the content to work around the formatter.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
@@ -335,7 +327,6 @@ For example, this is a `<dl>`:
 - term1
   - : My description of term1
 - `term2`
-
   - : My description of term2
 
     It can have multiple paragraphs, and code blocks too:

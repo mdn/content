@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.min
 
 {{ApiRef("HTML DOM")}}
 
-The **`min`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute, which generally defines the minimum valid value for a numeric or date-time input. If the attribute is not explicitly set, the `min` property is an empty string.
+The **`min`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) attribute, which generally defines the minimum valid value for a numeric or date-time input. If the attribute is not explicitly set, the `min` property is an empty string.
 
 ## Value
 

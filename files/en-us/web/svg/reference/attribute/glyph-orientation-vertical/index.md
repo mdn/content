@@ -23,7 +23,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Context notes
@@ -53,7 +52,6 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `auto`
-
   - : Fullwidth {{Glossary("ideographic")}} and fullwidth Latin text will be set with a glyph orientation of 0 degrees. Ideographic punctuation and other ideographic characters having alternate horizontal and vertical forms will use the vertical form of the glyph. Text which is not fullwidth will be set with a glyph orientation of 90 degrees.
 
     This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.

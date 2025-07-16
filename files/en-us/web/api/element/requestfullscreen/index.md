@@ -58,10 +58,8 @@ procedure announces error conditions by rejecting the `Promise` it has
 returned. The rejection handler receives one of the following exception values:_
 
 - {{jsxref("TypeError")}}
-
   - : The `TypeError` exception may be delivered in any of the following
     situations:
-
     - The document containing the element isn't fully active; that is, it's not the
       current active document.
     - The element is not contained by a document.
@@ -85,7 +83,7 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   attribute applied to it.
 
 Additionally, any set Permissions Policies must allow the use of this feature.
@@ -106,35 +104,67 @@ applications, causing your application to temporarily exit fullscreen mode.
 
 ### Requesting fullscreen mode
 
-This function toggles the first {{HTMLElement("video")}} element found in the document
-into and out of fullscreen mode.
+This example toggles the {{HTMLElement("video")}} element in and out of fullscreen mode when the <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>F</kbd> keys are pressed.
+The script checks whether the document is currently in fullscreen using {{domxref("document.fullscreenElement")}}.
+If the document is in fullscreen, it calls {{domxref("document.exitFullscreen()")}} to exit.
+Otherwise, it calls `requestFullscreen()` on the `<video>` element:
 
 ```js
-function toggleFullscreen() {
-  let elem = document.querySelector("video");
+const video = document.querySelector("video");
 
-  if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch((err) => {
-      alert(
-        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
-      );
+document.addEventListener("keydown", (event) => {
+  // Note that "F" is case-sensitive (uppercase):
+  if (event.key === "Enter" || event.key === "F") {
+    // Check if we're in fullscreen mode
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      return;
+    }
+    // Otherwise enter fullscreen mode
+    video.requestFullscreen().catch((err) => {
+      console.error(`Error enabling fullscreen: ${err.message}`);
     });
-  } else {
-    document.exitFullscreen();
   }
+});
+```
+
+```html
+<p>
+  The video element below shows a time-lapse of a flower blooming. You can
+  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift</kbd> +
+  <kbd>F</kbd> (uppercase "F"). The embedded document needs to have
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
+    focus
+  </a>
+  for the example to work.
+</p>
+
+<video controls loop src="/shared-assets/videos/flower.mp4" width="420"></video>
+```
+
+```css hidden
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+video::backdrop {
+  background-color: #448;
+}
+button {
+  display: block;
+}
+kbd {
+  border: 2px solid #cdcdcd;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 0 #cdcdcd;
+  font-size: 0.825rem;
+  padding: 0.25rem;
 }
 ```
 
-If the document isn't already in fullscreen mode—detected by looking to see if
-{{domxref("document.fullscreenElement")}} has a value—we call the video's
-`requestFullscreen()` method. We don't need to do anything special if
-successful, but if the request fails, our promise's `catch()` handler
-presents an alert with an appropriate error message.
-
-If, on the other hand, fullscreen mode is already in effect, we call
-{{domxref("document.exitFullscreen()")}} to disable fullscreen mode.
-
-You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
+{{embedlivesample("requesting_fullscreen_mode", , "400", "", "", "", "fullscreen")}}
 
 ### Using navigationUI
 
@@ -191,4 +221,4 @@ The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{do
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

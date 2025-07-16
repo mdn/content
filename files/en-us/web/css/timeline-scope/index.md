@@ -2,12 +2,9 @@
 title: timeline-scope
 slug: Web/CSS/timeline-scope
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.timeline-scope
+sidebar: cssref
 ---
-
-{{CSSRef}}{{seecompattable}}
 
 The **`timeline-scope`** [CSS](/en-US/docs/Web/CSS) property modifies the scope of a named animation timeline.
 
@@ -32,10 +29,10 @@ Allowed values for `timeline-scope` are:
 - `none`
   - : There is no change in timeline scope.
 - `<dashed-ident>`
-
   - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This causes the timeline scope to be increased to the element that `timeline-scope` is set on and any of its descendants.
 
-    > **Note:** [`<dashed-ident>`](/en-US/docs/Web/CSS/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
+    > [!NOTE]
+    > [`<dashed-ident>`](/en-US/docs/Web/CSS/custom-ident) values must start with `--`, which helps to avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

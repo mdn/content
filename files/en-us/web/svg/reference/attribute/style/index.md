@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.style
 sidebar: svgref
 ---
 
-The **`style`** attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to [the `style` attribute in HTML](/en-US/docs/Web/HTML/Global_attributes/style).
+The **`style`** attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to [the `style` attribute in HTML](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
 You can use this attribute with any SVG element.
 
@@ -53,7 +53,6 @@ svg {
 </table>
 
 - `<style>`
-
   - : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
 ## Specifications
@@ -67,4 +66,4 @@ svg {
 ## See also
 
 - {{SVGElement("style")}}
-- [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)
+- [HTML `style` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style)

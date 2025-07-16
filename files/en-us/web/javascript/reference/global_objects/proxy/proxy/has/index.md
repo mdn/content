@@ -1,11 +1,11 @@
 ---
 title: handler.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.has()`** method is a trap for the `[[HasProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/in", "in")}} operator.
 

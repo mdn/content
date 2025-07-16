@@ -3,9 +3,8 @@ title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 page-type: javascript-statement
 browser-compat: javascript.statements.for_in
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 

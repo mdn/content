@@ -2,9 +2,8 @@
 title: Template primer
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
@@ -31,7 +30,7 @@ If you look in the views directory you will see the .pug files for the project's
 These include the view for the home page (**index.pug**) and base template (**layout.pug**) that we will need to replace with our own content.
 
 ```plain
-/express-locallibrary-tutorial  //the project root
+/express-locallibrary-tutorial  # the project root
   /views
     error.pug
     index.pug

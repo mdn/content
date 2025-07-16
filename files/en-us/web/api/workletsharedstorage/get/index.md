@@ -88,6 +88,7 @@ class KFreqMeasurementOperation {
       (await this.sharedStorage.get(hasReportedContentKey)) === "true";
     const impressionCount = parseInt(
       (await this.sharedStorage.get(impressionCountKey)) || 0,
+      10,
     );
 
     // Do not report if a report has been sent already

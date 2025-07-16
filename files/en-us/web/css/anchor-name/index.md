@@ -2,12 +2,9 @@
 title: anchor-name
 slug: Web/CSS/anchor-name
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.anchor-name
+sidebar: cssref
 ---
-
-{{CSSRef}}{{seecompattable}}
 
 The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables defining an element as an **anchor element** by giving it one or more identifying **anchor names**. Each name can then be set as the value of a positioned element's {{cssxref("position-anchor")}} property to associate it with the anchor.
 
@@ -32,7 +29,6 @@ anchor-name: unset;
 ### Values
 
 - `none`
-
   - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.
 
 - {{cssxref("dashed-ident")}}
@@ -52,7 +48,7 @@ To tether and place a positioned element in a specific location relative to an a
 
 You cannot associate a positioned element with an anchor element if the anchor is hidden, such as with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if the anchor is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it.
 
-The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Element/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
+The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Reference/Elements/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
 
 For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -172,7 +168,7 @@ This example demonstrates how you can associate multiple positioned elements wit
 
 #### HTML
 
-The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s to identify them.
+The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s to identify them.
 
 ```html
 <p>
@@ -386,6 +382,6 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 ## See also
 
 - {{cssxref("position-anchor")}}
-- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
+- HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

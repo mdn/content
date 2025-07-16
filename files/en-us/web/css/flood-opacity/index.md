@@ -3,9 +3,8 @@ title: flood-opacity
 slug: Web/CSS/flood-opacity
 page-type: css-property
 browser-compat: css.properties.flood-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flood-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the current filter primitive subregion in {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements within a {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("flood-opacity")}} attribute.
 
@@ -34,11 +33,9 @@ flood-opacity: unset;
 The `<opacity-value>` is a {{cssxref("number")}} or {{cssxref("percentage")}} denoting the opacity of the SVG gradient `<flood>` element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%` set, the flood is fully transparent. With `1` or `100%` set, the element is the full opacity of the `flood-color` value, which may or may not be partially opaque.

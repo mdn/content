@@ -13,6 +13,26 @@ The **`<feDropShadow>`** [SVG](/en-US/docs/Web/SVG) filter primitive creates a d
 
 Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("dx")}}
+  - : This attribute defines the x offset of the drop shadow.
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("dy")}}
+  - : This attribute defines the y offset of the drop shadow.
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("stdDeviation")}}
+  - : This attribute defines the standard deviation for the blur operation in the drop shadow.
+    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGFEDropShadowElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -42,31 +62,13 @@ svg {
     </filter>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
-
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
-
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <circle cx="5" cy="50%" r="4" fill="pink" filter="url(#shadow)" />
+  <circle cx="15" cy="50%" r="4" fill="pink" filter="url(#shadow2)" />
+  <circle cx="25" cy="50%" r="4" fill="pink" filter="url(#shadow3)" />
 </svg>
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-- {{SVGAttr("dx")}}
-  - : This attribute defines the x offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : This attribute defines the y offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("stdDeviation")}}
-  - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

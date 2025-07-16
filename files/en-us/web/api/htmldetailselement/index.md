@@ -18,9 +18,9 @@ The **`HTMLDetailsElement`** interface provides special properties (beyond the r
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDetailsElement.name")}}
-  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Element/details#name) HTML attribute, which allows you to create a group of mutually-exclusive {{htmlelement("details")}} elements. Opening one of the named `<details>` elements of this group causes other elements of the group to close.
+  - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Reference/Elements/details#name) HTML attribute, which allows you to create a group of mutually-exclusive {{htmlelement("details")}} elements. Opening one of the named `<details>` elements of this group causes other elements of the group to close.
 - {{domxref("HTMLDetailsElement.open")}}
-  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/details#open) HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
+  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Reference/Elements/details#open) HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
 ## Instance methods
 

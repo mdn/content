@@ -2,9 +2,8 @@
 title: Advanced styling effects
 slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 

@@ -2,9 +2,8 @@
 title: Handling conflicts
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
@@ -41,15 +40,17 @@ While working through this lesson may seem less relevant immediately and a littl
 
 CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is incredibly important to understand — the way that the cascade behaves is key to understanding CSS.
 
-At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
+At some point, you will be working on a project and you will find that some CSS you think should be applying to an element is not working. Often, this problem occurs when you create two rules that apply different values of the same property to the same element.
 
-Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
+The [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade), and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity), are mechanisms that control which rule applies when such a conflict occurs. The declaration that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
-Let's start by taking a quick look at the key things we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These can seem like a tricky set of concepts to understand. As you get more practice writing CSS, the way it works will become more obvious to you.
+Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause unexpected behavior.
+
+Let's start by taking a quick look at the key concepts we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These concepts can seem tricky to understand, but they will become clearer as you get more practice writing CSS.
 
 ### Cascade
 
-Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) — at a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
+Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade). At a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
 In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
@@ -70,12 +71,13 @@ h1 {
 
 ### Specificity
 
-[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
-- An element selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
+- An type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
+- An ID selector is even more specific — it only selects a single element with a specific `id` value. It therefore has even more weight.
 
-Below, we again have two rules that could apply to the `<h1>` element. The `<h1>` content below ends up being colored red because the class selector `main-heading` gives its rule a higher specificity. So even though the rule with the `<h1>` element selector appears further down in the source order, the one with the higher specificity, defined using the class selector, will be applied.
+Below, we again have two rules that could apply to the `<h1>` element. The `<h1>` content below ends up being colored `red`, even though the `color: blue` declaration appears later in the source order, because the class selector `main-heading` gives its rule a higher specificity than the type selector `h1`. The declaration with the higher specificity, defined using the class selector, is applied.
 
 ```html live-sample___specificity-simple
 <h1 class="main-heading">This is my heading.</h1>
@@ -107,7 +109,8 @@ For example, if you set a `color` and `font-family` on an element, every element
   descendants.
 </p>
 <p>
-  We can change the color by targeting the element with a selector, such as this
+  We can change the color by specifically targeting an element with a different
+  style, such as this
   <span>span</span>.
 </p>
 ```
@@ -124,7 +127,7 @@ span {
 
 {{EmbedLiveSample("inheritance-simple")}}
 
-Some properties do not inherit — for example, if you set a {{cssxref("width")}} of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!
+Some properties do not inherit — for example {{cssxref("width")}} If you set a `width` of `50%` on an element, all of its descendants do not get a width of `50%` of their parent's `width`. If this was the case, CSS would be very frustrating to use!
 
 > [!NOTE]
 > On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the [color property Formal definition section](/en-US/docs/Web/CSS/color#formal_definition) as an example.
@@ -201,6 +204,8 @@ CSS provides five special universal property values for controlling inheritance.
 
 > [!NOTE]
 > See [Origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) for more information on each of these and how they work.
+
+### Playing with inheritance control properties
 
 We can look at a list of links and explore how universal values work. The live example below allows you to play with the CSS and see what happens when you make changes. Playing with code really is the best way to better understand HTML and CSS.
 
@@ -287,7 +292,7 @@ We will look at these to see how browsers figure out exactly what CSS should be 
 
 We have already seen how source order matters to the cascade. If you have more than one rule, all of which have exactly the same weight, then the one that comes last in the CSS will win. You can think of this as: the rule that is nearer the element itself overwrites the earlier ones until the last one wins and gets to style the element.
 
-Source order only matters when the specificity weight of the rules is the same, so let's look at specificity:
+Source order only matters when the specificity weight of the rules is the same, so let's look at specificity next.
 
 ### Specificity
 
@@ -323,18 +328,16 @@ h2 {
 
 {{EmbedLiveSample("mixing-rules", "", "240px")}}
 
-Let's now have a look at how the browser will calculate specificity. We already know that an element selector has low specificity and can be overwritten by a class. Essentially a value in points is awarded to different types of selectors, and adding these up gives you the weight of that particular selector, which can then be assessed against other potential matches.
+Let's now have a look at how the browser calculates specificity. We already know that an element selector has low specificity and can be overwritten by a class. Essentially a value in points is awarded to different types of selectors, and adding these up gives you the weight of that particular selector, which can then be assessed against other potential matches.
 
-The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns in the hundreds, tens, and ones place:
+The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns worth hundreds, tens, and ones, respectively:
 
-- **Identifiers**: Score one in this column for each ID selector contained inside the overall selector.
-- **Classes**: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
-- **Elements**: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
+- **IDs**: Score one in this column (100 points) for each ID selector contained inside the overall selector.
+- **Classes**: Score one in this column (10 points) for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
+- **Elements**: Score one in this column (1 point) for each element selector or pseudo-element contained inside the overall selector.
 
 > [!NOTE]
 > The universal selector ([`*`](/en-US/docs/Web/CSS/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/:where)) along with its parameters, have no effect on specificity.
-
-The negation ([`:not()`](/en-US/docs/Web/CSS/:not)), relational selector ([`:has()`](/en-US/docs/Web/CSS/:has)), the matches-any ([`:is()`](/en-US/docs/Web/CSS/:is)) pseudo-classes, and [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) themselves don't add to specificity, but their parameters or nested rules do. The specificity weight that each contributes to the specificity algorithm is the specificity weight of the selector in the parameter or nested rule with the greatest weight.
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN [selectors reference](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators).
 
@@ -344,9 +347,10 @@ The following table shows a few isolated examples to get you in the mood. Try go
 | `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |
 | `li > a[href*="en-US"] > .inline-warning` | 0           | 2       | 2        | 0-2-2             |
 | `#identifier`                             | 1           | 0       | 0        | 1-0-0             |
-| `button:not(#mainBtn, .cta`)              | 1           | 0       | 1        | 1-0-1             |
 
-Before we move on, let's look at an example in action.
+#### In-depth specificity example
+
+Before we move on, let's look at an example in action. You might want to open this in the MDN Playground in a separate tab so you can easily cross-reference it as you read the explanation.
 
 ```html live-sample___specificity-boxes
 <div class="container" id="outer">
@@ -414,13 +418,13 @@ li {
 }
 ```
 
-{{EmbedLiveSample("specificity-boxes")}}
+{{EmbedLiveSample("specificity-boxes", "100%", "170")}}
 
 So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.
 
-- The first two selectors are competing over the styling of the link's background color. The second one wins and makes the background color blue because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
-- Selectors 3 and 4 are competing over the styling of the link's text color. The second one wins and makes the text white because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than infinity element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
-- Selectors 5–7 are competing over the styling of the link's border when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selectors in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
+- The first two selectors are competing over the styling of the link's `background-color`. The second one wins and makes the background color `blue` because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
+- Selectors 3 and 4 are competing over the styling of the link's text `color`. The second one wins and makes the text `white` because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than an element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
+- Selectors 5–7 are competing over the styling of the link's `border` when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selectors in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
 
 > [!NOTE]
 > Each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a _million_ **class** selectors combined would not be able to overwrite the specificity of _one_ **id** selector.
@@ -435,11 +439,11 @@ If using the ID is the only way to target the element — perhaps because you do
 
 ### Inline styles
 
-Inline styles, that is, the style declaration inside a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, take precedence over all normal styles, no matter the specificity. Such declarations don't have selectors, but their specificity can be construed as 1-0-0-0; always more than any other specificity weight no matter how many IDs are in the selectors.
+Inline styles, that is, the style declaration inside a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, take precedence over all normal styles, no matter the specificity. Such declarations don't have selectors, but their specificity can be construed as 1-0-0-0; always more than any other specificity weight no matter how many IDs are in the selectors.
 
 ### !important
 
-There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the `!important` flag. However, you should be very careful while using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.
+There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the `!important` flag. However, you should be very careful when using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.
 
 > [!NOTE]
 > It is useful to know that the `!important` flag exists so that you know what it is when you come across it in other people's code. **However, we strongly recommend that you never use it unless you absolutely have to.** The `!important` flag changes the way the cascade normally works, so it can make debugging CSS problems really hard to work out, especially in a large stylesheet.
@@ -475,8 +479,8 @@ Let's walk through this to see what's happening — try removing some of the pro
 
 1. You'll see that the third rule's {{cssxref("color")}} and {{cssxref("padding")}} values have been applied, but the {{cssxref("background-color")}} hasn't. Why? Really, all three should surely apply because rules later in the source order generally override earlier rules.
 2. However, the rules above it win because class selectors have higher specificity than element selectors.
-3. Both elements have a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `better`, but the 2nd one has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `winning` too. Since IDs have an _even higher_ specificity than classes (you can only have one element with each unique ID on a page, but many elements with the same class — ID selectors are _very specific_ in what they target), the red background color and the 1px black border should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
-4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` flag in the second rule. Adding the `!important` flag after `border: none` means that this declaration will win over the `border` value in the previous rule, even though the ID selector has higher specificity.
+3. Both elements have a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) of `better`, but the 2nd one has an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `winning` too. Since IDs have an _even higher_ specificity than classes, the `red` `background-color` and the `1px black` `border` should both be applied to the 2nd element, with the first element getting the gray background color, and no border, as specified by the class.
+4. The 2nd element _does_ get the `red` `background-color`, but no `border`. Why? Because of the `!important` flag in the second rule. Adding the `!important` flag after `border: none` means that this declaration will win over the `border` value in the previous rule, even though the ID selector has higher specificity.
 
 > [!NOTE]
 > The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity.
@@ -505,7 +509,7 @@ Conflicting declarations will be applied in the following order, with later ones
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade).
 
 ## Summary
 

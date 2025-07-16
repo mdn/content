@@ -3,9 +3,8 @@ title: :empty
 slug: Web/CSS/:empty
 page-type: css-pseudo-class
 browser-compat: css.selectors.empty
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
 
@@ -42,7 +41,7 @@ div:empty {
 
 ## Accessibility
 
-Assistive technology such as screen readers cannot parse interactive content that is empty. All interactive content must have an accessible name, which is created by providing a text value for the interactive control's parent element ([anchors](/en-US/docs/Web/HTML/Element/a), [buttons](/en-US/docs/Web/HTML/Element/button), etc.). Accessible names expose the interactive control to the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis), an API that communicates information useful for assistive technologies.
+Assistive technology such as screen readers cannot parse interactive content that is empty. All interactive content must have an accessible name, which is created by providing a text value for the interactive control's parent element ([anchors](/en-US/docs/Web/HTML/Reference/Elements/a), [buttons](/en-US/docs/Web/HTML/Reference/Elements/button), etc.). Accessible names expose the interactive control to the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis), an API that communicates information useful for assistive technologies.
 
 The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parsable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
 

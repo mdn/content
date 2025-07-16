@@ -3,9 +3,8 @@ title: Basic CSS selectors
 short-title: Basic selectors
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
@@ -49,7 +48,7 @@ In earlier articles you may have met some different selectors, and learned that 
 
 A **type selector** is sometimes referred to as a _tag name selector_ or _element selector_ because it selects an HTML tag/element in your document. In the example below, we have used the `span`, `em` and `strong` selectors.
 
-Try adding a CSS rule to select the `<h1>` element and change its color to blue:
+Try editing the following example (click **"Play"** to open it in the MDN Playground) to add a CSS rule that selects the `<h1>` element and changes its color to blue:
 
 ```html live-sample___type
 <h1>Type selectors</h1>
@@ -122,6 +121,14 @@ body {
 ```
 
 {{EmbedLiveSample("class", "", "220px")}}
+
+### Playing with class selectors
+
+Try editing the above example (using MDN Playground) to make the following changes:
+
+1. Edit the HTML to change the content the `.highlight` styles are applied to. You could for example add some `<span>` elements to wrap different parts of the existing content and apply the `highlight` class to those, remove some existing `highlight` classes, or add some new content to apply the `highlight` class to.
+2. Edit the CSS to modify the declarations inside the `.highlight` rule, adding new ones if you feel like it, and note how this affects the styling of all elements that have the `highlight` class applied.
+3. Create a new class rule inside the CSS with different declarations inside it (for example, with a selector of `.highlight2`), then try applying that to some of your HTML.
 
 ### Targeting classes on particular elements
 
@@ -241,9 +248,16 @@ h1#heading {
 > [!WARNING]
 > Using the same ID multiple times in a document may appear to work for styling purposes, but don't do this. It results in invalid code, and will cause strange behavior in many places.
 
+### Playing with ID selectors
+
+Try editing the above example to make the following changes:
+
+1. Edit the HTML to apply the `#one` styles to the first paragraph rather than the second.
+2. Edit the CSS to modify the declarations inside the ID selectors, and note how this changes the look of the HTML.
+
 ## Selector lists
 
-If you have more than one thing which uses the same CSS then the individual selectors can be combined into a _selector list_ so that the rule is applied to all of the individual selectors. For example, if I have the same CSS for an `h1` and also a class of `.special`, I could write this as two separate rules.
+If you have more than one thing that uses the same CSS then the individual selectors can be combined into a _selector list_ so that the rule is applied to all of the individual selectors. For example, if I have the same CSS for an `h1` and also a class of `.special`, I could write this as two separate rules.
 
 ```css
 h1 {
@@ -272,7 +286,9 @@ h1,
 }
 ```
 
-In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
+### Playing with selector lists
+
+In the example below, try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
 
 ```html live-sample___selector-list
 <h1>Type selectors</h1>
@@ -313,6 +329,8 @@ em {
 ```
 
 {{EmbedLiveSample("selector-list", "", "280px")}}
+
+### Invalid selectors in selector lists
 
 When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.
 
@@ -402,7 +420,7 @@ In this article we've recapped CSS selectors, which enable you to target particu
 
 ## See also
 
-- [CSS classes](https://scrimba.com/the-frontend-developer-career-path-c0j/~01d?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [CSS classes](https://scrimba.com/the-frontend-developer-career-path-c0j/~01d?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : An interactive lesson that provides some guidance on CSS classes.
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

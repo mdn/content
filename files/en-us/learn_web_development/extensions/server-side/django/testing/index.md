@@ -3,9 +3,10 @@ title: "Django Tutorial Part 10: Testing a Django web application"
 short-title: "10: Testing"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 As websites grow they become harder to test manually. Not only is there more to test, but, as interactions between components become more complex, a small change in one area can impact other areas, so more changes will be required to ensure everything keeps working and errors are not introduced as more changes are made. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate _unit testing_ of your website using Django's test framework.
 
@@ -346,7 +347,7 @@ class AuthorModelTest(TestCase):
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
-        # This will also fail if the urlconf is not defined.
+        # This will also fail if the URLConf is not defined.
         self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -381,7 +382,7 @@ def test_object_name_is_last_name_comma_first_name(self):
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
+    # This will also fail if the URLConf is not defined.
     self.assertEqual(author.get_absolute_url(), '/catalog/author/1')
 ```
 
@@ -615,7 +616,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         test_user2.save()
 
         # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_author = Author.objects.create(first_name='Dominique', last_name='Rousseau')
         test_genre = Genre.objects.create(name='Fantasy')
         test_language = Language.objects.create(name='English')
         test_book = Book.objects.create(
@@ -796,7 +797,7 @@ class RenewBookInstancesViewTest(TestCase):
         test_user2.save()
 
         # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_author = Author.objects.create(first_name='Dominique', last_name='Rousseau')
         test_genre = Genre.objects.create(name='Fantasy')
         test_language = Language.objects.create(name='English')
         test_book = Book.objects.create(
@@ -992,6 +993,5 @@ The next and final tutorial shows how you can deploy your wonderful (and fully t
 - [Advanced testing topics](https://docs.djangoproject.com/en/5.0/topics/testing/advanced/) (Django docs)
 - [A Guide to Testing in Django](https://toastdriven.com/blog/2011/apr/09/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
 - [Workshop: Test-Driven Web Development with Django](https://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
-- [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

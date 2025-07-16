@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: attribution-reporting"
+title: "Permissions-Policy: attribution-reporting directive"
+short-title: attribution-reporting
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.attribution-reporting
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `attribution-reporting` directive controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 

@@ -3,9 +3,8 @@ title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`413 Content Too Large`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the request entity was larger than limits defined by server.
 The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
@@ -23,7 +22,7 @@ This message is still widely used.
 
 ### File upload limit exceeded
 
-The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element includes an image on form submission with `method="post"`:
+The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element includes an image on form submission with `method="post"`:
 
 ```http
 POST /upload HTTP/1.1

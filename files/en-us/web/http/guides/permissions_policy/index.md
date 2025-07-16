@@ -5,9 +5,10 @@ page-type: guide
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
 
@@ -42,7 +43,7 @@ Permissions Policy allows you to control which origins can use which features, b
 Permissions Policy provides two ways to specify policies:
 
 - The {{httpheader("Permissions-Policy")}} HTTP header, to control feature usage in received responses and any embedded content within the page (which includes {{htmlelement("iframe")}}s).
-- The {{htmlelement("iframe")}} [`allow`](/en-US/docs/Web/HTML/Element/iframe#attributes) attribute, to control feature usage only in specific {{htmlelement("iframe")}}s.
+- The {{htmlelement("iframe")}} [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#attributes) attribute, to control feature usage only in specific {{htmlelement("iframe")}}s.
 
 These are separate but related — see [Inheritance of policies for embedded content](#inheritance_of_policies_for_embedded_content) for details.
 
@@ -98,7 +99,8 @@ You can specify
 ("https://example.com" "https://*.example.com")
 ```
 
-> **Note:** `"https://*.example.com"` does not match `"https://example.com"`.
+> [!NOTE]
+> `"https://*.example.com"` does not match `"https://example.com"`.
 
 allowlist examples:
 
@@ -193,7 +195,7 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 
 {{htmlelement("fencedframe")}}s interact with permissions policies in the same way as `<iframe>`s, but in a much more restricted capacity. Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context.
 
-See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
+See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Reference/Elements/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
 ## Inheritance of policies for embedded content
 

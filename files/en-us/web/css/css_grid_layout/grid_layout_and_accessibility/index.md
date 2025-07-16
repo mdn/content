@@ -2,9 +2,8 @@
 title: Grid layout and accessibility
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 HTML is the content layer of a website where we create semantic, well-structured documents. CSS is the presentation layer; we apply CSS to create, among other things, the desired layout for our content. Two-dimensional grid structures are defined using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
@@ -16,7 +15,7 @@ We've already seen in these guides that CSS grid layout gives us the power to re
 
 The CSS grid layout specification includes a [Reordering and Accessibility](https://drafts.csswg.org/css-grid/#order-accessibility) section. The introduction to that section details what browsers should do when content is visually reordered using grid layout:
 
-> Grid layout gives authors great powers of rearrangement over the document. However, these are not a substitute for correct ordering of the document source. The `order` property and grid placement do not affect ordering in non-visual media (such as speech). Likewise, rearranging grid items visually does not affect the default traversal order of sequential navigation modes (such as cycling through links, see e.g., [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
+> Grid layout gives authors great powers of rearrangement over the document. However, these are not a substitute for correct ordering of the document source. The `order` property and grid placement do not affect ordering in non-visual media (such as speech). Likewise, rearranging grid items visually does not affect the default traversal order of sequential navigation modes (such as cycling through links, see e.g., [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 
 If you reorder things visually using grid layout, this will not change how the items are ordered if the content is being read out by a screen reader, or other text to speech user agent. In addition, the reordering will not change tab order. This means that someone navigating using the keyboard could be tabbing through links on your site and suddenly find themselves jumping from the top to the bottom of the document due to a reordered item being next in the tab order.
 

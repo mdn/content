@@ -14,7 +14,7 @@ Rules can be enabled and disabled while the ruleset containing them is disabled.
 ## Syntax
 
 ```js-nolint
-let updatedStaticRules = browser.declarativeNetRequest.updateStaticRules(
+let staticRulesUpdated = browser.declarativeNetRequest.updateStaticRules(
     options                // object
 );
 ```
@@ -22,7 +22,6 @@ let updatedStaticRules = browser.declarativeNetRequest.updateStaticRules(
 ### Parameters
 
 - `options`
-
   - : An object specifying a static ruleset and the rules to enable or disable in that ruleset.
     - `rulesetId` rulesetId
       - : `string` The ID of the static ruleset to modify.

@@ -3,9 +3,8 @@ title: HTML video and audio
 short-title: Video and audio
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
@@ -64,9 +63,9 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 
 The features to note are:
 
-- [`src`](/en-US/docs/Web/HTML/Element/video#src)
+- [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src)
   - : In the same way as for the {{htmlelement("img")}} element, the `src` (source) attribute contains a path to the video you want to embed. It works in exactly the same way.
-- [`controls`](/en-US/docs/Web/HTML/Element/video#controls)
+- [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls)
   - : Users must be able to control video and audio playback (it's especially critical for people who have [epilepsy](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology).) You must either use the `controls` attribute to include the browser's own control interface, or build your interface using the appropriate [JavaScript API](/en-US/docs/Web/API/HTMLMediaElement). At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.
 - The paragraph inside the `<video>` tags
   - : This is called **fallback content** — this will be displayed if the browser accessing the page doesn't support the `<video>` element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.
@@ -108,7 +107,7 @@ An audio player will tend to play an audio track directly, e.g., an MP3 or Ogg f
 > [!NOTE]
 > Several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.
 >
-> Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.
+> Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to provide a video experience to their entire audience.
 
 The codecs described in the previous section exist to compress video and audio into manageable files, since raw audio and video are both exceedingly large. Each web browser supports an assortment of **{{Glossary("Codec","codecs")}}**, like Vorbis or H.264, which are used to convert the compressed audio and video into binary data and back. Each codec offers its own advantages and drawbacks, and each container may also offer its own positive and negative features affecting your decisions about which to use.
 
@@ -133,7 +132,7 @@ So how do we do this? Take a look at the following [updated example](https://git
 
 Here we've taken the `src` attribute out of the actual {{HTMLElement("video")}} tag, and instead included separate {{htmlelement("source")}} elements that point to their own sources. In this case the browser will go through the {{HTMLElement("source")}} elements and play the first one that it has the codec to support. Including WebM and MP4 sources should be enough to play your video on most platforms and browsers these days.
 
-Each `<source>` element also has a [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute. This is optional, but it is advised that you include it. The `type` attribute contains the {{glossary("MIME type")}} of the file specified by the `<source>`, and browsers can use the `type` to immediately skip videos they don't understand. If `type` isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.
+Each `<source>` element also has a [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute. This is optional, but it is advised that you include it. The `type` attribute contains the {{glossary("MIME type")}} of the file specified by the `<source>`, and browsers can use the `type` to immediately skip videos they don't understand. If `type` isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.
 
 Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Guides/Formats) for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.
 
@@ -166,20 +165,18 @@ The resulting UI looks something like this:
 
 Features include:
 
-- [`width`](/en-US/docs/Web/HTML/Element/video#width) and [`height`](/en-US/docs/Web/HTML/Element/video#height)
+- [`width`](/en-US/docs/Web/HTML/Reference/Elements/video#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/video#height)
   - : You can control the video size either with these attributes or with {{Glossary("CSS")}}. In both cases, videos maintain their native width-height ratio — known as the **aspect ratio**. If the aspect ratio is not maintained by the sizes you set, the video will grow to fill the space horizontally, and the unfilled space will just be given a solid background color by default.
-- [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay)
+- [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay)
   - : Makes the audio or video start playing right away, while the rest of the page is loading. You are advised not to use autoplaying video (or audio) on your sites, because users can find it really annoying.
-- [`loop`](/en-US/docs/Web/HTML/Element/video#loop)
+- [`loop`](/en-US/docs/Web/HTML/Reference/Elements/video#loop)
   - : Makes the video (or audio) start playing again whenever it finishes. This can also be annoying, so only use if really necessary.
-- [`muted`](/en-US/docs/Web/HTML/Element/video#muted)
+- [`muted`](/en-US/docs/Web/HTML/Reference/Elements/video#muted)
   - : Causes the media to play with the sound turned off by default.
-- [`poster`](/en-US/docs/Web/HTML/Element/video#poster)
+- [`poster`](/en-US/docs/Web/HTML/Reference/Elements/video#poster)
   - : The URL of an image which will be displayed before the video is played. It is intended to be used for a splash screen or advertising screen.
-- [`preload`](/en-US/docs/Web/HTML/Element/video#preload)
-
+- [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload)
   - : Used for buffering large files; it can take one of three values:
-
     - `"none"` does not buffer the file
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
@@ -257,7 +254,7 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 1. Save it as a `.vtt` file somewhere the server can serve (see below), such as in the same directory as the HTML file.
-2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in. Finally, add [`label`](/en-US/docs/Web/HTML/Element/track#label) to help readers identify the language they are searching for.
+2. Link to the `.vtt` file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) attribute to specify whether the cues are `subtitles`, `captions`, or `descriptions`. Further, use [`srclang`](/en-US/docs/Web/HTML/Reference/Elements/track#srclang) to tell the browser what language you have written the subtitles in. Finally, add [`label`](/en-US/docs/Web/HTML/Reference/Elements/track#label) to help readers identify the language they are searching for.
 
 Here's an example:
 
@@ -278,25 +275,52 @@ For more details, including on how to add labels please read [Adding captions an
 > [!NOTE]
 > Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
-## Active learning: Embedding your own audio and video
+## Embedding your own audio and video
 
-For this active learning, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily and, provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
+For this task, why not go out into the world and record some of your own video and audio? If you have a phone, use that to record audio and video, transfer it to your computer, and try it out. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs and tools out there to allow you to do this without too much trouble, such as [CloudConvert](https://cloudconvert.com/mp4-converter) (online) and [Audacity](https://sourceforge.net/projects/audacity/) (desktop application). We'd like you to have a go!
 
-If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise. You can also use our sample code for reference.
+> [!NOTE]
+> If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise.
 
 We would like you to:
 
 1. Save your audio and video files in a new directory on your computer.
-2. Create a new HTML file in the same directory, called `index.html`.
+2. Create a new HTML file in the same directory, called `index.html`, based on our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 3. Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
-4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include [`type`](/en-US/docs/Web/HTML/Element/source#type) attributes.
-5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes.
+5. Give both of them a fallback `<p>` element inside the tags that provides a direct link to the media for non-supporting browsers.
+6. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
-For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like this:
+
+```html
+<video controls poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
+</video>
+
+<audio controls>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
+</audio>
+```
+
+</details>
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Audio and video](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video).
 
 ## Summary
 

@@ -8,6 +8,26 @@ sidebar: svgref
 
 The **`<stop>`** [SVG](/en-US/docs/Web/SVG) element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("offset")}}
+  - : This attribute defines where the gradient stop is placed along the gradient vector.
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("stop-color")}}
+  - : This attribute defines the color of the gradient stop. It can be used as a CSS property.
+    _Value type_: [**\<color>**](/en-US/docs/Web/SVG/Guides/Content_type#color); _Default value_: `black`; _Animatable_: **yes**
+- {{SVGAttr("stop-opacity")}}
+  - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
+    _Value type_: [**\<opacity-value>**](/en-US/docs/Web/SVG/Guides/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGStopElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -36,22 +56,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-- {{SVGAttr("offset")}}
-  - : This attribute defines where the gradient stop is placed along the gradient vector.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("stop-color")}}
-  - : This attribute defines the color of the gradient stop. It can be used as a CSS property.
-    _Value type_: [**\<color>**](/en-US/docs/Web/SVG/Guides/Content_type#color); _Default value_: `black`; _Animatable_: **yes**
-- {{SVGAttr("stop-opacity")}}
-  - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
-    _Value type_: [**\<opacity-value>**](/en-US/docs/Web/SVG/Guides/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

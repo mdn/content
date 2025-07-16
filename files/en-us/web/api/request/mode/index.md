@@ -22,19 +22,15 @@ Note that setting particular modes, especially `no-cors`, places restrictions on
 One of the following values:
 
 - `same-origin`
-
   - : Disallows cross-origin requests. If a request is made to another origin with this mode set, the result is an error.
 
 - `no-cors`
-
   - : Disables CORS for cross-origin requests. The response is _opaque_, meaning that its headers and body are not available to JavaScript.
 
 - `cors`
-
   - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism.
 
 - `navigate`
-
   - : A mode for supporting navigation. The `navigate` value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.
 
 ### Default mode
@@ -49,7 +45,7 @@ for that `Request` is set to `cors`.
 However, for requests created other than by the {{domxref("Request.Request", "Request()")}}
 constructor, `no-cors` is typically used as the mode; for example, for
 embedded resources where the request is initiated from markup, unless the
-[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+[`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 attribute is present, the request is in most cases made using the `no-cors`
 mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
 (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},

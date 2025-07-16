@@ -1,10 +1,10 @@
 ---
 title: Firefox 89 for developers
+short-title: Firefox 89
 slug: Mozilla/Firefox/Releases/89
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 was released on June 1, 2021.
 
@@ -42,12 +42,11 @@ _No changes._
 #### DOM
 
 - {{domxref("PerformanceEventTiming")}} is now enabled by default ([Firefox bug 1701029](https://bugzil.la/1701029)).
-- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
+- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
 
 #### Removals
 
 - The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
-
   - `DeviceProximityEvent` and its event handler `window.ondeviceproximity` ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `UserProximityEvent` and its event handler `window.onuserproximity`) ([Firefox bug 1699707](https://bugzil.la/1699707)).
   - `DeviceLightEvent` and its event handler `window.ondevicelight` ([Firefox bug 1701824](https://bugzil.la/1701824)).
@@ -65,7 +64,3 @@ _No changes._
 - Firefox's UI has been redesigned, which affects usage of the {{WebExtAPIRef("theme")}} API. The `tab_background_separator` and `toolbar_field_separator` properties are no longer supported. The `tab_line` and `toolbar_vertical_separator` will behave differently. For more information, see [Changes to themeable areas of Firefox in version 89](https://blog.mozilla.org/addons/2021/04/19/changes-to-themeable-areas-of-firefox-in-version-89/).
 - The {{WebExtAPIRef("pageAction")}} button can no longer be pinned or unpinned from the address bar, because the three-dot meatball menu is no longer visible by default ([Firefox bug 1691454](https://bugzil.la/1691454)). As a result, the `pinned` property of the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key no longer has any effect ([Firefox bug 1703537](https://bugzil.la/1703537)).
 - The "Remove from Address Bar" context menu item has been removed from the {{WebExtAPIRef("pageAction")}} button ([Firefox bug 1704474](https://bugzil.la/1704474)). For alternatives to this functionality, see [Firefox bug 1712556](https://bugzil.la/1712556).
-
-## Older versions
-
-{{Firefox_for_developers}}

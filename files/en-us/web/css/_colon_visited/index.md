@@ -3,9 +3,8 @@ title: :visited
 slug: Web/CSS/:visited
 page-type: css-pseudo-class
 browser-compat: css.selectors.visited
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only to {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 
@@ -53,7 +52,7 @@ For privacy reasons, browsers strictly limit which styles you can apply using th
 - Allowable SVG attributes are {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.
 - The alpha component of the allowed styles will be ignored. The alpha component of the element's non-`:visited` state will be used instead. In Firefox when the alpha component is `0`, the style set in `:visited` will be ignored entirely.
 - Although these styles can change the appearance of colors to the end user, the {{domxref("window.getComputedStyle")}} method will lie and always return the value of the non-`:visited` color.
-- The [`<link>`](/en-US/docs/Web/HTML/Element/link) element is never matched by `:visited`.
+- The [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element is never matched by `:visited`.
 - DOM methods that match elements via CSS selectors — such as [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) — will always return an "empty" result even if there are visited links in a document. For the aforementioned methods, this will be `null` or an empty [`NodeList`](/en-US/docs/Web/API/NodeList), respectively.
 
 > [!NOTE]

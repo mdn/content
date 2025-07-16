@@ -3,9 +3,8 @@ title: :target
 slug: Web/CSS/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the _target element of the document_. When the document is loaded, the target element is derived using the document's [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment).
 
@@ -16,7 +15,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 }
 ```
 
-For example, the following URL has a fragment identifier (denoted by the _#_ sign) that marks the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `setup` as the document's target element:
+For example, the following URL has a fragment identifier (denoted by the _#_ sign) that marks the element with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `setup` as the document's target element:
 
 ```url
 http://www.example.com/help/#setup

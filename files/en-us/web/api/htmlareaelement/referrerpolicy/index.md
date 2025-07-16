@@ -10,7 +10,7 @@ browser-compat: api.HTMLAreaElement.referrerPolicy
 
 The
 **`HTMLAreaElement.referrerPolicy`**
-property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/area#referrerpolicy) attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/area#referrerpolicy) attribute of the
 {{HTMLElement("area")}} element defining which referrer is sent when fetching the
 resource.
 
@@ -52,7 +52,7 @@ A string; one of the following:
 
 ```html
 <img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround" />>
+<map id="myMap" name="mapAround"></map>
 ```
 
 ```js

@@ -3,9 +3,8 @@ title: Solve common CSS problems
 short-title: Common CSS problems
 slug: Learn_web_development/Howto/Solve_CSS_problems
 page-type: landing-page
+sidebar: learn-how-to
 ---
-
-{{LearnSidebar}}
 
 This page rounds up questions and answers, and other material on the MDN site that can help you to solve common CSS problems.
 

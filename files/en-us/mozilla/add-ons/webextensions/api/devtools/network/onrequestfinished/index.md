@@ -35,15 +35,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `request`
       - : `object`. An object representing the request. This object is a single [HAR entry](http://www.softwareishard.com/blog/har-12-spec/#entries) object. It also defines an asynchronous `getContent()` method, which returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with an array of two elements. The first element is the HTTP response body as a string, while the second element is the [MIME type](/en-US/docs/Glossary/MIME_type) of the HTTP response also as a string.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,6 +56,10 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

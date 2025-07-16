@@ -2,6 +2,7 @@
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
 page-type: guide
+sidebar: related
 ---
 
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
@@ -130,26 +131,4 @@ By defining `xmlns:tts="http://www.w3.org/ns/ttml#styling` on the `<tt>` element
 Much more readable, isn't it?
 
 > [!NOTE]
-> The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>
+> The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html#namespaces) of the IMSC standard.

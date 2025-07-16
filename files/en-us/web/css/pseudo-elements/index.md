@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-position-4/
   - https://drafts.csswg.org/css-shadow-parts/
   - https://w3c.github.io/webvtt/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
@@ -74,10 +73,18 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
   - : Creates a pseudo-element that is the first child of the selected element.
 - {{CSSxRef("::after")}}
   - : Creates a pseudo-element that is the last child of the selected element.
+- {{CSSxRef("::column")}}
+  - : Each column fragment of a [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
 - {{CSSxRef("::marker")}}
   - : The automatically generated marker box of a list item.
 - {{CSSxRef("::backdrop")}}
   - : The backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
+- {{CSSxRef("::scroll-button()")}}
+  - : Creates a button that can control the scrolling of the {{glossary("scroll container")}} to which it is applied.
+- {{CSSxRef("::scroll-marker")}}
+  - : Creates a pseudo-element that is a scroll marker — a scroll target button for its originating element nested in a scroll-marker group.
+- {{CSSxRef("::scroll-marker-group")}}
+  - : Generates a container before or after a scroll container to contain the {{cssxref("::scroll-marker")}} pseudo-elements generated on the element or its descendants.
 
 ## Element-backed pseudo-elements
 
@@ -86,7 +93,7 @@ These pseudo-elements are real elements that are not otherwise selectable.
 - {{CSSxRef("::details-content")}}
   - : The expandable/collapsible contents of a {{HTMLElement("details")}} element.
 - {{CSSxRef("::part", "::part()")}}
-  - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+  - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 - {{CSSxRef("::slotted", "::slotted()")}}
   - : Any element placed into a slot inside an HTML template.
 
@@ -97,7 +104,7 @@ The pseudo-elements are related to form controls.
 - {{CSSxRef("::checkmark")}}
   - : Targets the checkmark placed inside the currently-selected `<option>` element of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) to provide a visual indication of which one is selected.
 - {{CSSxRef("::file-selector-button")}}
-  - : The button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
+  - : The button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file).
 - {{CSSxRef("::picker()")}}
   - : The picker part of an element, for example the drop-down picker of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 - {{CSSxRef("::picker-icon")}}
@@ -120,6 +127,7 @@ B
 
 C
 
+- {{CSSxRef("::column")}}
 - {{CSSxRef("::checkmark")}}
 - {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
 
@@ -154,6 +162,9 @@ P
 
 S
 
+- {{CSSxRef("::scroll-button()")}}
+- {{CSSxRef("::scroll-marker")}}
+- {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
 - {{CSSxRef("::spelling-error")}}

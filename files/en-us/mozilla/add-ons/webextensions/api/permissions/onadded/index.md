@@ -31,15 +31,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `permissions`
       - : {{WebExtAPIRef("permissions.Permissions")}} object containing the permissions that were granted.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -53,6 +47,10 @@ browser.permissions.onAdded.addListener(handleAdded);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

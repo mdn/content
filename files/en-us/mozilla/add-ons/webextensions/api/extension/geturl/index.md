@@ -31,10 +31,6 @@ browser.extension.getURL(
 
 `string`. The fully-qualified URL to the resource.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:
@@ -47,6 +43,10 @@ let fullURL = browser.extension.getURL("beasts/frog.html");
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-getURL) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

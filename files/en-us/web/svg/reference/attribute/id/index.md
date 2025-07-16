@@ -53,7 +53,6 @@ You can use this attribute with any SVG element.
 </table>
 
 - \<id>
-
   - : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
     > [!NOTE]
@@ -71,5 +70,5 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-- [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

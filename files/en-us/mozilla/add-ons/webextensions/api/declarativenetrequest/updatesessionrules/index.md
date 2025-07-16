@@ -19,7 +19,7 @@ Modifies the set of session-scoped rules for the extension. The rules with IDs l
 ## Syntax
 
 ```js-nolint
-let updatedRuleset = browser.declarativeNetRequest.updateSessionRules(
+let rulesetUpdated = browser.declarativeNetRequest.updateSessionRules(
     options                // object
 );
 ```
@@ -27,7 +27,6 @@ let updatedRuleset = browser.declarativeNetRequest.updateSessionRules(
 ### Parameters
 
 - `options`
-
   - : An object containing details of the rules to add or delete from the dynamic rules.
     - `addRules` {{optional_inline}}
       - : An array of {{WebExtAPIRef("declarativeNetRequest.Rule")}}. Details of the rules to add.

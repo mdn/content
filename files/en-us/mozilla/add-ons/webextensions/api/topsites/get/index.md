@@ -32,9 +32,7 @@ let gettingTopSites = browser.topSites.get(
 ### Parameters
 
 - `options`
-
   - : `object`. Options to modify the list of pages returned. This may include any of the following properties:
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Include pages that the user has removed from the "New Tab" page. Defaults to `false`.
     - `includeFavicon` {{optional_inline}}
@@ -55,10 +53,6 @@ let gettingTopSites = browser.topSites.get(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -100,6 +94,10 @@ browser.topSites
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.

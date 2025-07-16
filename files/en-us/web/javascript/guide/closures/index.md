@@ -2,9 +2,8 @@
 title: Closures
 slug: Web/JavaScript/Guide/Closures
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
 
@@ -26,7 +25,7 @@ init();
 
 `init()` creates a local variable called `name` and a function called `displayName()`. The `displayName()` function is an inner function that is defined inside `init()` and is available only within the body of the `init()` function. Note that the `displayName()` function has no local variables of its own. However, since inner functions have access to the variables of outer scopes, `displayName()` can access the variable `name` declared in the parent function, `init()`.
 
-Run the code using [this JSFiddle link](https://jsfiddle.net/3dxck52m/) and notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+If you run this code in your console, you can see that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
 
 ### Scoping with let and const
 
@@ -132,7 +131,7 @@ Here's the JavaScript:
 
 ```js
 function makeSizer(size) {
-  return function () {
+  return () => {
     document.body.style.fontSize = `${size}px`;
   };
 }
@@ -154,15 +153,16 @@ document.getElementById("size-16").onclick = size16;
 <button id="size-12">12</button>
 <button id="size-14">14</button>
 <button id="size-16">16</button>
+<p>This is some text that will change size when you click the buttons above.</p>
 ```
 
-Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
+{{EmbedLiveSample("practical closures", "", "200")}}
 
 ## Emulating private methods with closures
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
@@ -205,7 +205,7 @@ The shared lexical environment is created in the body of an anonymous function, 
 Those three public functions form closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
-const makeCounter = function () {
+function makeCounter() {
   let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -223,7 +223,7 @@ const makeCounter = function () {
       return privateCounter;
     },
   };
-};
+}
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();
@@ -359,14 +359,14 @@ console.log(getX()); // 2
 
 Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
-```html
+```html live-sample___closures_bad
 <p id="help">Helpful notes will appear here</p>
 <p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
-```js
+```js example-bad live-sample___closures_bad
 function showHelp(help) {
   document.getElementById("help").textContent = help;
 }
@@ -390,7 +390,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-Try running the code in [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
+{{EmbedLiveSample("closures_bad", "", "200")}}
 
 The `helpText` array defines three helpful hints, each associated with the ID of an input field in the document. The loop cycles through these definitions, hooking up an `onfocus` event to each one that shows the associated help method.
 
@@ -400,7 +400,14 @@ The reason for this is that the functions assigned to `onfocus` form closures; t
 
 One solution in this case is to use more closures: in particular, to use a function factory as described earlier:
 
-```js
+```html hidden live-sample___closures_factory
+<p id="help">Helpful notes will appear here</p>
+<p>Email: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
+```
+
+```js live-sample___closures_factory
 function showHelp(help) {
   document.getElementById("help").textContent = help;
 }
@@ -427,7 +434,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-Run the code using [this JSFiddle link](https://jsfiddle.net/v7gjv/9573/).
+{{EmbedLiveSample("closures_factory", "", "200")}}
 
 This works as expected. Rather than the callbacks all sharing a single lexical environment, the `makeHelpCallback` function creates _a new lexical environment_ for each callback, in which `help` refers to the corresponding string from the `helpText` array.
 
@@ -485,7 +492,7 @@ setupHelp();
 
 This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), as shown:
 
 ```js
 function showHelp(help) {

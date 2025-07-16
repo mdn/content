@@ -3,9 +3,10 @@ title: "Django Tutorial Part 9: Working with forms"
 short-title: "9: Forms"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
 
@@ -68,7 +69,6 @@ The form attributes define the HTTP `method` used to send the data and the desti
 
 - `action`: The resource/URL where data is to be sent for processing when the form is submitted. If this is not set (or set to an empty string), then the form will be submitted back to the current page URL.
 - `method`: The HTTP method used to send the data: _post_ or _get_.
-
   - The `POST` method should always be used if the data is going to result in a change to the server's database, because it can be made more resistant to cross-site forgery request attacks.
   - The `GET` method should only be used for forms that don't change user data (for example, a search form). It is recommended for when you want to be able to bookmark or share the URL.
 
@@ -87,16 +87,13 @@ A process flowchart of how Django handles form requests is shown below, starting
 Based on the diagram above, the main things that Django's form handling does are:
 
 1. Display the default form the first time it is requested by the user.
-
    - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
    - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
 
 2. Receive data from a submit request and bind it to the form.
-
    - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
 
 3. Clean and validate the data.
-
    - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
    - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
 
@@ -457,13 +454,13 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
 > [!NOTE]
 > It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <ul class="errorlist">
+    <ul class="error-list">
       <li>Invalid date - renewal in past</li>
     </ul>
     <input

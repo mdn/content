@@ -1,17 +1,23 @@
 ---
-title: Dictionary-ID
+title: Dictionary-ID header
+short-title: Dictionary-ID
 slug: Web/HTTP/Reference/Headers/Dictionary-ID
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Dictionary-ID
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Dictionary-ID`** request header references a dictionary that can be used in {{glossary("Compression Dictionary Transport")}} to compress the server's response.
 
-In Compression Dictionary Transport, a server can indicate that a resource can be used as a dictionary by sending the {{httpheader("Use-As-Dictionary")}} header with the response. The server may include an `id` directive in the `Use-As-Dictionary` header, thus assigning an ID value to the dictionary. If the server does this, then when the browser requests a resource that can be compressed using the dictionary, then the resource request must include the `Dictionary-ID` header, and its value must be the ID that was given in `Use-As-Dictionary`.
+A server can indicate that a resource can be used as a dictionary by sending the {{httpheader("Use-As-Dictionary")}} header with the response. The server may include an `id` directive in the `Use-As-Dictionary` header, thus assigning an ID value to the dictionary. If the server does this, then when the browser requests a resource that can be compressed using the dictionary, the resource request must include the `Dictionary-ID` header, and its value must match the ID that was given in `Use-As-Dictionary`.
+
+This allows the server to identify and find a dictionary that is referenced by some arbitrary key, rather than having to use the {{glossary("hash function","dictionary hash")}} as a key (if that approach is used, the server will have to hash every response that includes the `Use-As-Dictionary` header just in case the resource might eventually be used as a dictionary).
+
+Note that while the server can identify and locate the dictionary from its `Dictionary-ID`, it must still check the hash from the `Available-Dictionary` header to confirm that it is a correct match.
 
 See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 

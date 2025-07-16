@@ -3,9 +3,10 @@ title: Setting up your own test automation environment
 short-title: Automation environment setup
 slug: Learn_web_development/Extensions/Testing/Your_own_automation_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.
 
@@ -492,7 +493,8 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
-> **Note:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
 
 ## Running remote tests
 
@@ -582,7 +584,10 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
 3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
-   project: "DuckDuckGo test 2";
+   const capabilities = {
+     // …
+     project: "DuckDuckGo test 2",
+   };
    ```
 
 4. Next we'll retrieve the `sessionId` of the current session, and use it (along with your `userName` and `accessKey`) to assemble the URL to send requests to, to update the BrowserStack data. Include the following lines just below the block that creates the `driver` object (which starts with `const driver = new Builder()`) :
@@ -597,7 +602,7 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
    });
    ```
 
-5. Finally, update the `if ... else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
+5. Finally, update the `if...else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
 
    ```js
    if (title === "webdriver at DuckDuckGo") {
@@ -630,6 +635,7 @@ Let's look at an example that demonstrates getting Selenium tests to run remotel
 
    ```js
    const { Builder, By, Key } = require("selenium-webdriver");
+
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 

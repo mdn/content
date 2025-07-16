@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.sort()
+short-title: sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.sort
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`sort()`** method of {{jsxref("Array")}} instances sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code unit values.
 
@@ -38,16 +38,13 @@ sort(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
   - : A function that determines the order of the elements. The function is called with the following arguments:
-
     - `a`
       - : The first element for comparison. Will never be `undefined`.
     - `b`
       - : The second element for comparison. Will never be `undefined`.
 
     It should return a number where:
-
     - A negative value indicates that `a` should come before `b`.
     - A positive value indicates that `a` should come after `b`.
     - Zero or `NaN` indicates that `a` and `b` are considered equal.
@@ -223,9 +220,7 @@ temporary array to achieve the right order.
 const data = ["delta", "alpha", "charlie", "bravo"];
 
 // temporary array holds objects with position and sort-value
-const mapped = data.map((v, i) => {
-  return { i, value: someSlowOperation(v) };
-});
+const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
 // sorting the mapped array containing the reduced values
 mapped.sort((a, b) => {

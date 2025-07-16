@@ -2,17 +2,16 @@
 title: Learn web development
 slug: Learn_web_development
 page-type: landing-page
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-## The essential skillset for new front-end developers
+## The essential skill set for new front-end developers
 
 Welcome to MDN **Learning Web Development** (also known as **Learn**). This resource provides a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer, along with challenges and further recommended resources.
 
 ## About Learn web development
 
-- Defines the essential skills and knowledge every front-end developer needs for career success and industry relevance.
+- Teaches the essential skills and knowledge every front-end developer needs for career success and industry relevance, as defined in the [MDN Curriculum](/en-US/curriculum/).
 
 - Created by the MDN community and refined with insights from students, educators, and developers from the broader web community.
 
@@ -30,7 +29,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Beyond the basics?
   - : Our [Extension modules](/en-US/docs/Learn_web_development/Extensions) cover useful additional skills to learn as you start to expand your knowledge and develop specialisms. Go onto these after you finish our Core.
 - Working at a school?
-  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN learning partner_</sup>.
+  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>.
 
 ## Getting our code examples
 
@@ -47,11 +46,11 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
 - [Codecademy](https://www.codecademy.com/)
   - : A great interactive site for learning programming languages from scratch.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
-- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com/?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

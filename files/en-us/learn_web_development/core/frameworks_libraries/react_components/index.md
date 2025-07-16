@@ -3,9 +3,8 @@ title: Componentizing our React app
 short-title: React components
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -60,7 +59,7 @@ function Todo() {}
 export default Todo;
 ```
 
-This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Element/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
+This is OK so far, but our component should return something useful! Go back to `src/App.jsx`, copy the first [`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) from inside the unordered list, and paste it into `Todo.jsx` so that it reads like this:
 
 ```jsx
 function Todo() {
@@ -123,9 +122,14 @@ In order to track the names of tasks we want to complete, we should ensure that 
 In `App.jsx`, give each `<Todo />` a name prop. Let's use the names of our tasks that we had before:
 
 ```jsx
-<Todo name="Eat" />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 When your browser refreshes, you will see… the exact same thing as before. We gave our `<Todo />` some props, but we aren't using them yet. Let's go back to `Todo.jsx` and remedy that.
@@ -170,9 +174,14 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give your first `<Todo />` call a boolean prop of `completed`, and leave the other two as they are.
 
 ```jsx
-<Todo name="Eat" completed />
-<Todo name="Sleep" />
-<Todo name="Repeat" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" completed />
+  <Todo name="Sleep" />
+  <Todo name="Repeat" />
+</ul>
 ```
 
 As before, we must go back to `Todo.jsx` to actually use these props. Change the `defaultChecked` attribute on the `<input />` so that its value is equal to the `completed` prop. Once you're done, the Todo component's `<input />` element will read like this:
@@ -191,17 +200,22 @@ If you change each `<Todo />` component's `completed` prop, your browser will ch
 
 We have still _another_ problem: our `<Todo />` component gives every task an `id` attribute of `todo-0`. This is bad for a couple of reasons:
 
-- [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
-- When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Element/label) can break.
+- [`id` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
+- When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Reference/Elements/label) can break.
 
 The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.
 
 We had unique `id` attributes before we created the `<Todo />` component. Let's bring them back, following the format of `todo-i`, where `i` gets larger by one every time. Update the `Todo` component instances inside `App.jsx` to add in `id` props, as follows:
 
 ```jsx
-<Todo name="Eat" id="todo-0" completed />
-<Todo name="Sleep" id="todo-1" />
-<Todo name="Repeat" id="todo-2" />
+<ul
+  role="list"
+  className="todo-list stack-large stack-exception"
+  aria-labelledby="list-heading">
+  <Todo name="Eat" id="todo-0" completed />
+  <Todo name="Sleep" id="todo-1" />
+  <Todo name="Repeat" id="todo-2" />
+</ul>
 ```
 
 > [!NOTE]
@@ -251,7 +265,8 @@ Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. Update your `<Ap
 
 The `DATA` array is now available inside the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
 
-> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
+> [!NOTE]
+> `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
 
 ## Rendering with iteration
 

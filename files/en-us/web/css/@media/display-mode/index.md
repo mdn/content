@@ -3,9 +3,8 @@ title: display-mode
 slug: Web/CSS/@media/display-mode
 page-type: css-media-feature
 browser-compat: css.at-rules.media.display-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether a web app is being displayed in a normal browser tab or in some alternative way, such as a standalone app or fullscreen mode.
 
@@ -39,7 +38,7 @@ The `display-mode` feature is specified as a keyword value chosen from the list 
 ### Apply CSS if the application is in fullscreen mode
 
 ```css
-@media all and (display-mode: fullscreen) {
+@media (display-mode: fullscreen) {
   body {
     margin: 0;
     border: 5px solid black;

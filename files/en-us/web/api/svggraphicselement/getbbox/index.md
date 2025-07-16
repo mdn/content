@@ -13,11 +13,13 @@ the coordinates of the smallest rectangle in which the object fits. The coordina
 returned are with respect to the current SVG space (after the application of all
 geometry attributes on all the elements contained in the target element).
 
-> **Note:** `getBBox()` must return the actual bounding box at
+> [!NOTE]
+> `getBBox()` must return the actual bounding box at
 > the time the method was called—even in case the element has not yet been rendered. It
 > also does not account for any transformation applied to the element or its parents.
 
-> **Note:** `getBBox` returns different values than
+> [!NOTE]
+> `getBBox` returns different values than
 > {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}, as the
 > latter returns value relative to the viewport
 
@@ -31,10 +33,8 @@ getBBox(options)
 ### Parameters
 
 - `options` {{experimental_inline}} {{optional_inline}}
-
   - : An options dictionary used to control which parts of the element are included in the
     bounding box. The available options are:
-
     - `fill`
       - : A boolean value indicating that the fill should be included in the bounding box,
         defaults to `true`.

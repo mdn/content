@@ -1,13 +1,15 @@
 ---
-title: No-Vary-Search
+title: No-Vary-Search header
+short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.No-Vary-Search
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
@@ -63,7 +65,7 @@ The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) supports 
 > [!WARNING]
 > Additional care must be taken when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement, etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
 
-The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Element/script/type/speculationrules#expects_no_vary_search_example) for an explanation of how this can be used.
+The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules#expects_no_vary_search_example) for an explanation of how this can be used.
 
 ## Examples
 

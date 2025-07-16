@@ -3,9 +3,8 @@ title: :lang()
 slug: Web/CSS/:lang
 page-type: css-pseudo-class
 browser-compat: css.selectors.lang
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the language they are determined to be in.
 
@@ -30,14 +29,12 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 ```
 
 > [!NOTE]
-> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 
-### Formal syntax
-
 ```plain
-:lang(<language-code> [,<language-code> ]*)
+:lang(<language-code> [,<language-code> ]*) {
   /* ... */
 }
 ```
@@ -147,6 +144,6 @@ p {
 ## See also
 
 - The {{cssxref(":dir")}} pseudo-class that matches by directionality of text
-- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute
-- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) attribute
+- HTML [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Reference/Global_attributes/translate) attribute
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

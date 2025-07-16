@@ -24,13 +24,21 @@ non-cancelable event, such as one dispatched via
 If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
 
 > [!NOTE]
-> Look for better alternatives than using `preventDefault()` to block default actions. For example, you can use the `disabled` or `readonly` attribute on a form control to prevent it from being interacted with, use [HTML constraint validation](/en-US/docs/Web/HTML/Constraint_validation) to reject invalid input, or use the {{cssxref("overflow")}} property to prevent scrolling.
+> Look for better alternatives than using `preventDefault()` to block default actions. For example, you can use the `disabled` or `readonly` attribute on a form control to prevent it from being interacted with, use [HTML constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) to reject invalid input, or use the {{cssxref("overflow")}} property to prevent scrolling.
 
 ## Syntax
 
 ```js-nolint
 preventDefault()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

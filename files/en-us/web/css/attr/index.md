@@ -3,9 +3,8 @@ title: attr()
 slug: Web/CSS/attr
 page-type: css-function
 browser-compat: css.types.attr
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
@@ -70,9 +69,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
-
     - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
@@ -132,11 +129,12 @@ The `attr()` function can reference attributes that were never intended by the p
 ```html
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
+```
+
+```css
+span[data-icon] {
+  background-image: url(attr(data-icon));
+}
 ```
 
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
@@ -223,7 +221,7 @@ if (!CSS.supports("x: attr(x type(*))")) {
 
 ### content property
 
-In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
+In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
 
 #### HTML
 
@@ -247,7 +245,7 @@ In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/W
 
 {{SeeCompatTable}}
 
-In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
+In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
 
 #### HTML
 
@@ -273,7 +271,7 @@ p::after {
 
 {{SeeCompatTable}}
 
-In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) assigned to the {{HTMLElement("div")}} element.
+In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) assigned to the {{HTMLElement("div")}} element.
 
 #### HTML
 
@@ -439,7 +437,7 @@ The cards are laid out in a flex container:
   .warning {
     padding: 1em;
     border: 1px solid #ccc;
-    background: rgba(255 255 205 / 0.8);
+    background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;
     margin: 1em;
@@ -503,5 +501,5 @@ document.querySelector("button").addEventListener("click", (e) => {
 ## See also
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
+- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [SVG `data-*` attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*)

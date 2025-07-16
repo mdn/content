@@ -31,7 +31,7 @@ more information on that area." />
 </map>
 ```
 
-See the [`<area>` element reference page](/en-US/docs/Web/HTML/Element/area) for a live interactive example.
+See the [`<area>` element reference page](/en-US/docs/Web/HTML/Reference/Elements/area) for a live interactive example.
 
 ### See also
 
@@ -79,7 +79,6 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 - [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
 - [Dialog authoring practices](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 ## Documents must have a title
@@ -115,7 +114,7 @@ To help the user, you can update the page title value to reflect significant pag
 
 ## Embedded content must be labeled
 
-Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
+Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
 
 ## Figures with optional captions should be labeled
 
@@ -163,7 +162,7 @@ Users of assistive technology find this description helpful when trying to work 
 </form>
 ```
 
-You can see a live, interactive version of this example on the [`<fieldset>` reference page](/en-US/docs/Web/HTML/Element/fieldset).
+You can see a live, interactive version of this example on the [`<fieldset>` reference page](/en-US/docs/Web/HTML/Reference/Elements/fieldset).
 
 ### See also
 
@@ -215,7 +214,7 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 Make sure that your headings have non-empty text content, and are not hidden, such as with CSS `display:none` or `aria-hidden=true`. Users of screen readers rely on headings to understand the structure and content of a document.
 
-Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) only for actual section headings, and not as a shortcut way to make text stand out. Screen reader users typically "skim" a page's headings, much like sighted users; non-heading text that is marked-up with heading elements can cause confusion.
+Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) only for actual section headings, and not as a shortcut way to make text stand out. Screen reader users typically "skim" a page's headings, much like sighted users; non-heading text that is marked-up with heading elements can cause confusion.
 
 ## Headings should have visible text content
 
@@ -277,9 +276,9 @@ If you define more than one toolbar in a web application using the ARIA `toolbar
 
 ## Related WCAG success criteria
 
-- [1.1.1 Non-text Content (A)](https://www.w3.org/TR/WCAG21/#non-text-content)
+- [1.1.1 Non-text Content (A)](https://w3c.github.io/wcag/guidelines/22/#non-text-content)
   - : All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed in the above link.
-- [2.4.4 Link Purpose (In Context) (A)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)
+- [2.4.4 Link Purpose (In Context) (A)](https://w3c.github.io/wcag/guidelines/22/#link-purpose-in-context)
   - : The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
-- [2.4.9 Link Purpose (Link Only) (AAA)](https://www.w3.org/TR/WCAG21/#link-purpose-link-only)
+- [2.4.9 Link Purpose (Link Only) (AAA)](https://w3c.github.io/wcag/guidelines/22/#link-purpose-link-only)
   - : A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.

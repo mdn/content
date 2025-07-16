@@ -3,9 +3,8 @@ title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`300 Multiple Choices`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the request has more than one possible response.
 The user-agent or the user should choose one of them.
@@ -33,7 +32,7 @@ If the server has a preferred choice that the client should request, it can incl
 The following example demonstrates a Transparent Content Negotiation request-response exchange.
 An Apache server offers multiple variants of a resource defined in a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps); `index.html.en` for a resource in English, and `index.html.fr` for a French version:
 
-```plain
+```http
 URI: index.html.en
 Content-Language: en
 

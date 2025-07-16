@@ -3,9 +3,8 @@ title: screenshots
 slug: Web/Progressive_web_apps/Manifest/Reference/screenshots
 page-type: web-manifest-member
 spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
+sidebar: pwasidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 The `screenshots` manifest member lets you specify one or more images that showcase your web application.
 These images help users preview your web app's interface and features in app stores.
@@ -47,48 +46,39 @@ These images help users preview your web app's interface and features in app sto
 ### Values
 
 - `screenshots`
-
   - : An array of objects.
     Each object represents a screenshot of the web app in a common usage scenario.
 
     Each screenshot object can have one or more properties. Of these, only `src` is required. The possible properties include:
-
     - `src`
-
       - : A string that specifies the path to the image file.
         It has the same format as the `icons` member's [`src`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons#src) property.
 
     - `sizes` {{Optional_Inline}}
-
       - : A string that specifies one or more sizes of the image.
         It has the same format as the `icons` member's [`sizes`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons#sizes) property.
 
     - `type` {{Optional_Inline}}
-
       - : A string that specifies the {{glossary("MIME_type", "MIME type")}} of the image.
         It has the same format as the `icons` member's [`type`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons#type) property.
 
     - `label` {{Optional_Inline}}
-
       - : A string that represents the accessible name of the screenshot object.
         Keep it descriptive because it can serve as alternative text for the rendered screenshot.
         For accessibility, it is recommended to specify this property for every screenshot.
 
     - `form_factor` {{Optional_Inline}}
-
       - : A string that represents the screen shape of a broad class of devices to which the screenshot applies.
         Specify this property only when the screenshot applies to a specific screen layout.
         If `form_factor` is not specified, the screenshot is considered suitable for all screen types.
 
         Valid values include:
-
         - `narrow`
           - : Indicates that the screenshot is applicable only to narrow screens, such as mobile devices.
         - `wide`
           - : Indicates that the screenshot is applicable only to wide screens, such as desktop computers.
 
     - `platform`
-
       - : A string that represents the platform to which the screenshot applies.
         Specify this property only when the screenshot applies to a specific device or distribution platform.
         If `platform` is not specified, the screenshot is considered suitable for all platforms.

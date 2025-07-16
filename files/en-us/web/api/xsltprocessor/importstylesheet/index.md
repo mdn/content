@@ -19,7 +19,7 @@ importStylesheet(style)
 ### Parameters
 
 - `style`
-  - : The {{DOMxRef("Node")}} to import. It can be an XML document (that is a {{domxref("Document")}} with {{domxref("Document.doctype", "doctype")}} whose {{domxref("DocumentType.name", "name")}} of `"xml"`) containing an XSLT stylesheet or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet), or an {{domxref("Element")}} representing an `<xsl:stylesheet>` or `<xsl:transform>`.
+  - : The {{DOMxRef("Node")}} to import. It can be an XML document (that is a {{domxref("Document")}} with {{domxref("Document.doctype", "doctype")}} whose {{domxref("DocumentType.name", "name")}} of `"xml"`) containing an XSLT stylesheet or a [literal result element transform](https://www.w3.org/TR/xslt-30/#literal-result-element), or an {{domxref("Element")}} representing an `<xsl:stylesheet>` or `<xsl:transform>`.
 
 ### Return value
 

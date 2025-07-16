@@ -3,9 +3,8 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 page-type: javascript-class
 browser-compat: javascript.builtins.Error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Error`** objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
@@ -48,7 +47,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- {{jsxref("Error.captureStackTrace()")}} {{non-standard_inline}}
+- {{jsxref("Error.captureStackTrace()")}}
   - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
 - {{jsxref("Error.isError()")}}
   - : Returns `true` if the argument is an error, or `false` otherwise.

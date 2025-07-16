@@ -3,9 +3,8 @@ title: 208 Already Reported
 slug: Web/HTTP/Reference/Status/208
 page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc5842.html#section-7.1
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`208 Already Reported`** [successful response](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) status code is used in a {{HTTPStatus("207", "207 Multi-Status")}} response to save space and avoid conflicts.
 This response is used exclusively in the context of Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}).
@@ -19,7 +18,7 @@ Responses for all other bindings will report with this `208` status code, so no 
 
 ## Status
 
-```plain
+```http
 208 Already Reported
 ```
 

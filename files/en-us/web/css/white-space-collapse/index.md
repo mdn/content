@@ -3,9 +3,8 @@ title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 page-type: css-property
 browser-compat: css.properties.white-space-collapse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
@@ -48,7 +47,8 @@ The `white-space-collapse` property is specified as a single keyword chosen from
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
     - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
-> **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
+> [!NOTE]
+> _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
 > [!NOTE]
 > The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.

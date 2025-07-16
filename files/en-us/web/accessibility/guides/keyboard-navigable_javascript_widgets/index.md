@@ -9,7 +9,7 @@ Web applications often use JavaScript to mimic desktop widgets such as menus, tr
 
 ## Using tabindex
 
-By default, when people use the tab key to browse a webpage, only interactive elements (like links, form controls) get focused. With the `tabindex` [global attribute](/en-US/docs/Web/HTML/Global_attributes), authors can make other elements focusable, too. When set to `0`, the element becomes focusable by keyboard and script. When set to `-1`, the element becomes focusable by script, but it does not become part of the keyboard focus order.
+By default, when people use the tab key to browse a webpage, only interactive elements (like links, form controls) get focused. With the `tabindex` [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes), authors can make other elements focusable, too. When set to `0`, the element becomes focusable by keyboard and script. When set to `-1`, the element becomes focusable by script, but it does not become part of the keyboard focus order.
 
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
@@ -146,7 +146,11 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
+<span tabindex="-1">…</span>
+```
+
+```js
+span.onkeydown = handleKeyDown;
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

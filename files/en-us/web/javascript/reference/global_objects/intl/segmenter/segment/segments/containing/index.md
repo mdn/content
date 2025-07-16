@@ -1,11 +1,11 @@
 ---
 title: Segments.prototype.containing()
+short-title: containing()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segments.containing
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 

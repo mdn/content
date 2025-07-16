@@ -81,7 +81,6 @@ Alternatively, you can also just display a warning at the top of the page for br
 
 > [!NOTE]
 > These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
 
 #### Mathematical fonts
 
@@ -141,7 +140,7 @@ A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can
 </html>
 ```
 
-For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](https://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
+For authors unfamiliar with LaTeX, alternative input methods are available such as the [ASCIIMath](https://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
 
 ```html
 <!doctype html>
@@ -190,7 +189,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 </html>
 ```
 
-That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
+That page does not contain any [`script`](/en-US/docs/Web/HTML/Reference/Elements/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
 cat input.html | node TeXZilla.js streamfilter > output.html
@@ -258,9 +257,9 @@ A simple approach is to integrate [converters from a simple syntax](#conversion_
 > [!NOTE]
 > To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
-### WYSIYWG editors
+### WYSIWYG editors
 
-Other editors provide math editing features that are directly integrated into their WYSIYWG interface. The following screenshots are taken from [LyX](https://www.lyx.org/) and [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html), both of them supporting HTML export:
+Other editors provide math editing features that are directly integrated into their WYSIWYG interface. The following screenshots are taken from [LyX](https://www.lyx.org/) and [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html), both of them supporting HTML export:
 
 ![Lyx example](lyx.png)
 

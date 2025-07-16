@@ -1,11 +1,11 @@
 ---
 title: Object.getOwnPropertyNames()
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyNames
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyNames()`** static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
 

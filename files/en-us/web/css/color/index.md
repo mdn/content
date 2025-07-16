@@ -3,9 +3,8 @@ title: color
 slug: Web/CSS/color
 page-type: css-property
 browser-compat: css.properties.color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
@@ -20,7 +19,7 @@ color: #00a400;
 ```
 
 ```css interactive-example-choice
-color: rgb(214, 122, 127);
+color: rgb(214 122 127);
 ```
 
 ```css interactive-example-choice
@@ -28,7 +27,7 @@ color: hsl(30deg 82% 43%);
 ```
 
 ```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+color: hsl(237deg 74% 33% / 61%);
 ```
 
 ```css interactive-example-choice

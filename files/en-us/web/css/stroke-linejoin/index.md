@@ -3,9 +3,8 @@ title: stroke-linejoin
 slug: Web/CSS/stroke-linejoin
 page-type: css-property
 browser-compat: css.properties.stroke-linejoin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-linejoin`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the corners of an [SVG](/en-US/docs/Web/SVG) element's stroked paths. If present, it overrides the element's {{SVGAttr("stroke-linejoin")}} attribute.
 
@@ -30,29 +29,23 @@ stroke-linejoin: unset;
 ### Values
 
 - `bevel`
-
   - : Indicates that a bevelled corner is to be used to join path segments. The bevel is formed by truncating the corner by a line perpendicular to a line that bisects the difference in the subpath angles where they meet the join point.
 
 - `miter`
-
   - : Indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect. This is the default value.
 
 - `round`
-
   - : Indicates that a round corner is to be used to join path segments. This is accomplished by cropping the join as per `bevel`, and then appending a filled arc tangent in order to round the corner.
 
 The following values are defined, but not supported in any browser:
 
 - `arcs`
-
   - : _(Unsupported.)_ Indicates that an _arcs corner_ is to be used to join path segments. The arc's shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
 - `crop`
-
   - : _(Unsupported.)_ Indicates the corner should extend past the join point by the minimum amount necessary to form a convex corner. This is functionally equivalent to `miter` (see above) with a {{CSSxref('stroke-miterlimit')}} value of `1`.
 
 - `fallback`
-
   - : _(Unsupported; at risk.)_ behaves identically to `crop bevel` when the {{CSSxref('stroke-miterlimit')}} value is exceeded.
 
 ## Formal definition

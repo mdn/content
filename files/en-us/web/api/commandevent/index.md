@@ -2,12 +2,10 @@
 title: CommandEvent
 slug: Web/API/CommandEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CommandEvent
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
 The **`CommandEvent`** interface represents an event notifying the user when a {{domxref("HTMLButtonElement", "button")}} element with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} attributes is about to invoke an interactive element.
 
@@ -17,16 +15,16 @@ This is the event object for the `HTMLElement` {{domxref("HTMLElement.command_ev
 
 ## Constructor
 
-- {{domxref("CommandEvent.CommandEvent", "CommandEvent()")}} {{experimental_inline}}
+- {{domxref("CommandEvent.CommandEvent", "CommandEvent()")}}
   - : Creates an `CommandEvent` object.
 
 ## Instance properties
 
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("CommandEvent.source")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("CommandEvent.source")}} {{ReadOnlyInline}}
   - : An {{domxref("HTMLButtonElement")}} representing the button that caused this invocation.
-- {{domxref("CommandEvent.command")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("CommandEvent.command")}} {{ReadOnlyInline}}
   - : A string representing the {{domxref("HTMLButtonElement.command", "command")}} value of the source button.
 
 ## Examples
@@ -45,7 +43,7 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("command", (event) => {
   if (event.command === "show-popover") {
@@ -68,9 +66,9 @@ popover.addEventListener("command", (event) => {
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  if (event.command == "--rotate-left") {
+  if (event.command === "--rotate-left") {
     event.target.style.rotate = "-90deg";
-  } else if (event.command == "--rotate-right") {
+  } else if (event.command === "--rotate-right") {
     event.target.style.rotate = "90deg";
   }
 });

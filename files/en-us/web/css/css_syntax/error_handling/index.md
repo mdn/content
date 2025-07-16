@@ -1,10 +1,10 @@
 ---
 title: CSS error handling
+short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
@@ -78,13 +78,13 @@ When it comes to CSS properties and values within a declaration block, if either
 
 This example contains an error. The parser ignores the error (and the comments), seeks forward until it encounters a semi-colon, then restarts parsing:
 
-```css-nolint bad
+```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```
@@ -128,7 +128,7 @@ In this example, the last declaration in each block is valid in all browsers —
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
 > [!NOTE]
-> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframes` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 

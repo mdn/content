@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-color-5/#color-function
   - https://drafts.csswg.org/css-color-5/#relative-color-function
   - https://drafts.csswg.org/css-color/#color-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified {{glossary("color space")}} rather than the implicit sRGB color space that most of the other color functions operate in.
 
@@ -40,15 +39,12 @@ color(colorspace c1 c2 c3[ / A])
 The parameters are as follows:
 
 - `colorspace`
-
   - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
 
 - `c1`, `c2`, `c3`
-
   - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the colorspace. When using a `<number>` value, generally, `0` to `1` represents the bounds of the color space. Values outside of that range are permitted but will be out of {{glossary("gamut")}} for the given color space. When using a percentage value, `100%` represents `1` and `0%` represents `0`.
 
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
 > [!NOTE]
@@ -76,7 +72,6 @@ The parameters are as follows:
 When using relative color syntax inside a `color()` function, the browser converts the origin color into an equivalent color in the specified color space (if it is not already specified as such). The color is defined as three distinct color channel values plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The three color channel values of the origin color are resolved to a `<number>`. For predefined color spaces, depending on which is specified, these values will be one of the following:
-
   - `r`, `g`, and `b`: Color channel values for the RGB-based color spaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
   - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based color spaces `xyz`, `xyz-d50`, and `xyz-d65`.
 

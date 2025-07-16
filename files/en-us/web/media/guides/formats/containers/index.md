@@ -640,23 +640,26 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
     </tr>
     <tr>
       <th scope="row">Opus</th>
-      <td></td>
-      <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th scope="row">Vorbis</th>
       <td></td>
       <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 > [!WARNING]
 > Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit ([Firefox bug 1810378](https://bugzil.la/1810378)).
+
+> [!NOTE]
+> Safari 18.4+ (on macOS 15.4+, iOS 18.4+, iPadOS 18.4+, and visionOS 2.4+) added support for Opus and Vorbis codecs in Ogg containers.
 
 ### QuickTime
 
@@ -1147,7 +1150,7 @@ To optimize compatibility, it's worth considering providing more than one versio
 For example, you can offer an Ogg or WebM video as the first choice, with a fallback in MP4 format.
 You could even choose to offer a retro-like QuickTime or AVI fallback for good measure.
 
-To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute.
+To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute.
 Then add child {{HTMLElement("source")}} elements within the `<video>` element, one for each version of the video you offer.
 This can be used to offer various versions of a video that can be selected depending on bandwidth availability, but in our case, we'll use it to offer format options.
 
@@ -1167,7 +1170,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 </video>
 ```
 
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute set to `video/webm`).
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
 If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 
@@ -1309,7 +1312,7 @@ If neither of those can be played, the text "This browser does not support the H
         <code>.oga</code><br /><code>.ogg</code>
       </td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
+        Firefox, Safari
       </td>
       <td style="vertical-align: top"><code>video/ogg</code></td>
       <td style="vertical-align: top">

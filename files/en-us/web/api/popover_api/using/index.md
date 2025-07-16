@@ -2,8 +2,6 @@
 title: Using the Popover API
 slug: Web/API/Popover_API/Using
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -12,7 +10,7 @@ The **Popover API** provides developers with a standard, consistent, flexible me
 
 ## Creating declarative popovers
 
-In its simplest form, a popover is created by adding the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute to the element that you want to contain your popover content. An `id` is also needed to associate the popover with its controls.
+In its simplest form, a popover is created by adding the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute to the element that you want to contain your popover content. An `id` is also needed to associate the popover with its controls.
 
 ```html
 <div id="mypopover" popover>Popover content</div>
@@ -21,7 +19,7 @@ In its simplest form, a popover is created by adding the [`popover`](/en-US/docs
 > [!NOTE]
 > Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
 
-Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add at least one control button (also know as the popover **invoker**). You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
+Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add at least one control button (also know as the popover **invoker**). You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -30,7 +28,7 @@ Adding this attribute causes the element to be hidden on page load by having {{c
 
 The default behavior is for the button to be a toggle button — pressing it repeatedly will toggle the popover between showing and hidden.
 
-If you want to change that behavior, you can use the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) attribute — this takes a value of `"hide"`, `"show"`, or `"toggle"`. For example, to create separate show and hide buttons, you could do this:
+If you want to change that behavior, you can use the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) attribute — this takes a value of `"hide"`, `"show"`, or `"toggle"`. For example, to create separate show and hide buttons, you could do this:
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -57,7 +55,8 @@ When a popover element is set with `popover` or `popover="auto"` as shown above,
 - The popover can also be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
 - Usually, only one `auto` popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
 
-> **Note:** `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
+> [!NOTE]
+> `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
 
 Auto state is useful when you only want to show a single popover at once. Perhaps you have multiple teaching UI messages that you want to show, but don't want the display to start getting cluttered and confusing, or perhaps you are showing status messages where the new status overrides any previous status.
 
@@ -98,18 +97,18 @@ You can see this behavior in action in our [Multiple manual popovers example](ht
 
 You can also control popovers using a JavaScript API.
 
-The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute. This can be used to create a popover via JavaScript, and is also useful for feature detection. For example:
+The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute. This can be used to create a popover via JavaScript, and is also useful for feature detection. For example:
 
 ```js
 function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+  return Object.hasOwn(HTMLElement.prototype, "popover");
 }
 ```
 
 Similarly:
 
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}} provide an equivalent to the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, allowing you to set up the control button(s) for a popover, although the property value taken is a reference to the popover DOM element to control.
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}} provide an equivalent to the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) global HTML attribute, allowing you to specify the action taken by a control button.
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}} provide an equivalent to the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute, allowing you to set up the control button(s) for a popover, although the property value taken is a reference to the popover DOM element to control.
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}} provide an equivalent to the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) global HTML attribute, allowing you to specify the action taken by a control button.
 
 Putting these three together, you can programmatically set up a popover and its control button, like so:
 
@@ -442,7 +441,7 @@ Let's have a look at an example so you can see what this looks like:
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's display control:
+The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's display control:
 
 ```html
 <button popovertarget="mypopover">Show the popover</button>

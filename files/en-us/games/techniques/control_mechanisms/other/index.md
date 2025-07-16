@@ -2,9 +2,8 @@
 title: Unconventional controls
 slug: Games/Techniques/Control_mechanisms/Other
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
@@ -170,6 +169,7 @@ There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.c
 
 ```js
 const Cylon = require("cylon");
+
 Cylon.robot({
   connections: {
     arduino: { adaptor: "firmata", port: "/dev/ttyACM0" },

@@ -18,11 +18,9 @@ events.Event.addRules(rules, callback)
 ### Parameters
 
 - `rules`
-
   - : `array` of {{WebExtAPIRef("events.Rule")}}. Rules to register. These rules do not replace the registered rules.
 
 - `callback` {{optional_inline}}
-
   - : `function`. Called when the rules are registered. The parameter of the callback function is an array of the {{WebExtAPIRef("events.Rule")}} objects registered.
 
 ## Browser compatibility

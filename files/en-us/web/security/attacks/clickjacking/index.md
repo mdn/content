@@ -2,6 +2,7 @@
 title: Clickjacking
 slug: Web/Security/Attacks/Clickjacking
 page-type: guide
+sidebar: security
 ---
 
 In a **clickjacking** attack, an attacker tricks the user into interacting with a target site in a way that they didn't intend.
@@ -65,7 +66,3 @@ As an additional partial mitigation, sites should set the [`SameSite`](/en-US/do
 ## See also
 
 - [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`has()`** method of {{jsxref("Set")}} instances returns a boolean indicating whether an
 element with the specified value exists in this set or not.

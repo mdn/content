@@ -31,17 +31,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `notificationId`
       - : `string`. ID of the notification that closed.
     - `byUser`
       - : `boolean`. `true` if the notification was closed by the user, or `false` if it was closed by the system. This argument is not supported in Firefox.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -54,6 +48,10 @@ browser.notifications.onClosed.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

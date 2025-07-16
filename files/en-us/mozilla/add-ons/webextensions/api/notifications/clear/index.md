@@ -28,10 +28,6 @@ let clearing = browser.notifications.clear(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the notification was cleared, or `false` if it was not (for example, because the notification referenced by `id` did not exist).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:
@@ -61,6 +57,10 @@ browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

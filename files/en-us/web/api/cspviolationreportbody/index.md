@@ -54,7 +54,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
 _Also inherits methods from its parent interface, {{DOMxRef("ReportBody")}}._
 
-- {{DOMxRef("CSPViolationReportBody.toJSON()")}}
+- {{DOMxRef("CSPViolationReportBody.toJSON()")}} {{deprecated_inline}}
   - : A _serializer_ which returns a JSON representation of the `CSPViolationReportBody` object.
 
 ## Examples
@@ -70,7 +70,7 @@ First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the H
 Content-Security-Policy: default-src 'self';
 ```
 
-or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element:
+or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />

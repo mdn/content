@@ -3,9 +3,8 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 page-type: css-property
 browser-compat: css.properties.border-image-outset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-outset`** [CSS](/en-US/docs/Web/CSS) property sets the distance by which an element's [border image](/en-US/docs/Web/CSS/border-image) is set out from its border box.
 

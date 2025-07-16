@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: fullscreen"
+title: "Permissions-Policy: fullscreen directive"
+short-title: fullscreen
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.fullscreen
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `fullscreen` directive controls whether the current document is allowed to use {{domxref('Element.requestFullscreen()')}}.
 

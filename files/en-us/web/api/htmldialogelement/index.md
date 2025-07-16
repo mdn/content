@@ -18,8 +18,10 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLDialogElement.closedBy")}}
+  - : A string that sets or returns the [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute value of the `<dialog>` element, which indicates the types of user actions that can be used to close the dialog.
 - {{domxref("HTMLDialogElement.open")}}
-  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
+  - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Reference/Elements/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
 
@@ -45,7 +47,7 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : Fired when the dialog is requested to close, whether with the escape key, or via the `HTMLDialogElement.requestClose()` method.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#method).
+  - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/form#method).
 
 ## Examples
 
@@ -135,7 +137,7 @@ The handlers call {{domxref("HTMLDialogElement.close()")}} with the selection va
 // Confirm button closes dialog if there is a selection.
 confirmButton.addEventListener("click", () => {
   if (selectElement.value) {
-    //Set dialog.returnValue to selected value
+    // Set dialog.returnValue to selected value
     dialog.close(selectElement.value);
   }
 });
@@ -165,7 +167,7 @@ Here we just treat the cancel as a "close" operation, and reset the {{domxref("H
 ```js
 dialog.addEventListener("cancel", (event) => {
   log(`cancel_event: (dialog.returnValue: "${dialog.returnValue}")`);
-  dialog.returnValue = ""; //Reset value
+  dialog.returnValue = ""; // Reset value
 });
 ```
 
@@ -195,7 +197,7 @@ In this case we just log the old and new state.
 ```js
 dialog.addEventListener("beforetoggle", (event) => {
   log(
-    `beforetoggle event: oldstate: ${event.oldState}, newState: ${event.newState}`,
+    `beforetoggle event: oldState: ${event.oldState}, newState: ${event.newState}`,
   );
 
   // Call event.preventDefault() to prevent a dialog opening

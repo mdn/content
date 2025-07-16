@@ -31,19 +31,13 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed an object with these properties:
-
     - `id`
       - : `String`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
     - `url`
       - : `String`. URL of the page visited.
     - `title`
       - : `String`. Title of the page visited.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -60,6 +54,10 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

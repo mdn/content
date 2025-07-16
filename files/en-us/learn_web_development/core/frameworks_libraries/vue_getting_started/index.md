@@ -2,9 +2,8 @@
 title: Getting started with Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -59,7 +58,7 @@ As you work through this tutorial, you might want to keep the [Vue guide](https:
 
 ## Installation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/en-US/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like jQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+To use Vue in an existing site, you can drop one of the following [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like jQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
 - Development Script (not optimized, but includes console warnings which is great for development.)
 
@@ -143,7 +142,6 @@ If everything went successfully, the CLI should have created a series of files a
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
 - `index.html`: Your Vue app is run from this HTML page.
 - `src`: This directory contains the core of your Vue app.
-
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
   - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
   - `components`: this directory is where you keep your components. Currently, it just has one example component.
@@ -206,7 +204,7 @@ If you navigate to the "localhost" address in a new browser tab you should see y
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/en-US/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element from the template section:
 
 ```vue
 <img

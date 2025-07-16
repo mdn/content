@@ -1,10 +1,10 @@
 ---
 title: Firefox 68 for developers
+short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
 
@@ -55,12 +55,11 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Removals
 
-- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Reference/Elements/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 
 - [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
-
   - The `scroll-padding` property ([Firefox bug 1373832](https://bugzil.la/1373832))
   - The `scroll-margin` property ([Firefox bug 1373833](https://bugzil.la/1373833))
   - The {{CSSxRef("scroll-snap-align")}} property ([Firefox bug 1373835](https://bugzil.la/1373835))
@@ -109,7 +108,7 @@ _No changes._
 
 #### DOM events
 
-- [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
+- [Firefox for Android](https://firefox-source-docs.mozilla.org/mobile/android/index.html) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
 - The dispatching of events for non-primary mouse buttons has been made to more closely follow the specification; the {{domxref("Element.click_event", "click")}} event is no longer sent when non-primary buttons are clicked, instead using {{domxref("Element.auxclick_event", "auxclick")}}. In addition, {{domxref("Element.dblclick_event", "dblclick")}} no longer fires for non-primary buttons ([Firefox bug 1379466](https://bugzil.la/1379466)).
 - The proprietary `mozPressure` property has been deprecated, and will now trigger a warning in the console ([Firefox bug 1165211](https://bugzil.la/1165211)).
 
@@ -180,7 +179,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 68: BigInts, Contrast Checks, and the QuantumBar](https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/)
-
-## Older versions
-
-{{Firefox_for_developers}}

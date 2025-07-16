@@ -2,12 +2,9 @@
 title: Comments
 slug: Web/CSS/CSS_syntax/Comments
 page-type: guide
-spec-urls:
-  - https://www.w3.org/TR/CSS21/syndata.html#comments
-  - https://drafts.csswg.org/css-syntax-3/#consume-comment
+spec-urls: https://drafts.csswg.org/css-syntax-3/#consume-comment
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A CSS **comment** is used to add explanatory notes to the code or to prevent the browser from interpreting specific parts of the style sheet. By design, comments have no effect on the layout of a document.
 

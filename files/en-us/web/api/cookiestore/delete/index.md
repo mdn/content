@@ -30,9 +30,7 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `name`
       - : A string with the name of a cookie.
     - `domain` {{Optional_Inline}}
@@ -162,7 +160,7 @@ The method then lists the cookie names again.
 
 ```js
 async function cookieTest() {
-  //Create our test cookies
+  // Create our test cookies
   await setTestCookies();
 
   // Delete cookie1 specifying just the name

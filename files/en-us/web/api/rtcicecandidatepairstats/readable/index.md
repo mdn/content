@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 status:
   - deprecated
   - non-standard
-browser-compat: api.RTCIceCandidatePairStats.readable
+browser-compat: api.RTCStatsReport.type_candidate-pair.readable
 ---
 
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}

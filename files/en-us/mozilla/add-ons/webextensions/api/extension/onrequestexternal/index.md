@@ -38,9 +38,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `request`
       - : `any`. The request sent by the calling script.
     - `sender`
@@ -48,11 +46,11 @@ Events have three functions:
     - `sendResponse`
       - : `function`. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#event-onRequestExternal) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

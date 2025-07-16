@@ -3,11 +3,10 @@ title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
 page-type: css-property
 browser-compat: css.properties.text-emphasis-position
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Element/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Reference/Elements/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
 
 {{InteractiveExample("CSS Demo: text-emphasis-position")}}
 
@@ -186,8 +185,10 @@ Use the drop down menu to change the position of the emphasis marks. This will c
 #### HTML
 
 ```html hidden
-<p class="unsupported">The <code>auto</code> value is not supported in your browser.</p>
-<label for="position">Emphasis position:</position>
+<p class="unsupported">
+  The <code>auto</code> value is not supported in your browser.
+</p>
+<label for="position">Emphasis position:</label>
 <select id="position">
   <option value="auto">auto</option>
   <option value="over-right">over right</option>

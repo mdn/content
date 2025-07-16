@@ -2,9 +2,8 @@
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
@@ -22,20 +21,15 @@ function ballHitBrick(ball, brick) {
   score += 10;
   scoreText.setText(`Points: ${score}`);
 
-  let count_alive = 0;
-  for (let i = 0; i < bricks.children.length; i++) {
-    if (bricks.children[i].alive) {
-      count_alive++;
-    }
-  }
-  if (count_alive === 0) {
+  const countAlive = bricks.children.filter((b) => b.alive).length;
+  if (countAlive === 0) {
     alert("You won the game, congratulations!");
     location.reload();
   }
 }
 ```
 
-We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive()` method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
+We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive` property. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 

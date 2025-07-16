@@ -16,10 +16,10 @@ These events happen whether or not any pointer buttons are pressed. They can fir
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointermove", (event) => {});
+```js-nolint
+addEventListener("pointermove", (event) => { })
 
-onpointermove = (event) => {};
+onpointermove = (event) => { }
 ```
 
 ## Event type
@@ -96,7 +96,6 @@ para.onpointermove = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

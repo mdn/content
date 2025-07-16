@@ -3,9 +3,8 @@ title: Getting started with React
 short-title: React getting started
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -57,9 +56,9 @@ React utilizes features of modern JavaScript for many of its patterns. Its bigge
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) tag in our app.
+This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) tag in our app.
 
-Suppose we wanted to wrap our heading in a [`<header>`](/en-US/docs/Web/HTML/Element/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
+Suppose we wanted to wrap our heading in a [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
 
 ```jsx
 const header = (
@@ -78,7 +77,7 @@ const header = (
 > </header>;
 > ```
 >
-> However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
+> However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
 
 Of course, your browser can't read JSX without help. When compiled (using a tool like [Babel](https://babeljs.io/) or [Parcel](https://parceljs.org/)), our header expression would look like this:
 
@@ -100,7 +99,11 @@ To read more about JSX, check out the React team's [Writing Markup with JSX](htt
 
 There are many ways to create a new React application. We're going to use Vite to create a new application via the command line.
 
-It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Element/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
+It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
+
+> [!NOTE]
+> You can start writing React code without doing _any_ local setup by working through Scrimba's [First React Code](https://scrimba.com/learn-react-c0e/~03uo?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim.
+> Feel free to give it a try before continuing.
 
 ### Requirements
 
@@ -180,7 +183,7 @@ moz-todo-react
 └── vite.config.js
 ```
 
-**`index.html`** is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility.
+**`index.html`** is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Reference/Elements/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility.
 
 The **`public`** directory contains static files that will be served directly to your browser without being processed by Vite's build tooling. Right now, it only contains a Vite logo.
 
@@ -210,8 +213,8 @@ Let's open `src/App.jsx`, since our browser is prompting us to edit it. This fil
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
@@ -254,8 +257,8 @@ The `import` statements at the top of the file allow `App.jsx` to use code that 
 
 ```jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 ```
 
@@ -341,7 +344,8 @@ We then import our `App()` function and `index.css`, which holds global styles t
 
 We then call the `createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
-> **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
+> [!NOTE]
+> `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 
@@ -352,7 +356,7 @@ You can read up on these React APIs, if you'd like:
 
 Before we start building our app, we're going to delete some of the boilerplate code that Vite provided for us.
 
-First, as an experiment, change the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element in `App.jsx` so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Bear this in mind as you work on your app.
+First, as an experiment, change the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element in `App.jsx` so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Bear this in mind as you work on your app.
 
 We won't be using the rest of the code! Replace the contents of `App.jsx` with the following:
 
@@ -417,14 +421,14 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 
 ```jsx-nolint
 {/* Hello, React :)! */}
-<h1>Hello, {subject + ' :)'}!</h1>
+<h1>Hello, {`${subject} :)`}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
 {/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
-Even comments in JSX are written inside curly braces! This is because comments, too, are technically JavaScript expressions. The `/* block comment syntax */` is necessary for your program to know where the comment starts and ends.
+Even comments in JSX are written inside curly braces! This is because curly braces can contain a single JavaScript expression, and comments are valid as part of a JavaScript expression (and get ignored). You can use both `/* block comment syntax */` and `// line comment syntax` (with a trailing new line) inside curly braces.
 
 ### Component props
 
@@ -446,7 +450,11 @@ Back in `App.jsx`, let's revisit the `App()` function. Change the signature of `
 function App(props) {
   console.log(props);
   return (
-    // code omitted for brevity
+    <>
+      {
+        // code omitted for brevity
+      }
+    </>
   );
 }
 ```
@@ -500,7 +508,7 @@ In React:
 
 ## See also
 
-- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN learning partner_</sup>
+- [Learn React](https://scrimba.com/learn-react-c0e?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

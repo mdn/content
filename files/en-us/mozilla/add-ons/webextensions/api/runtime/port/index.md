@@ -71,7 +71,6 @@ Values of this type are objects. They contain the following properties:
 - `error`
   - : `object`. If the port was disconnected due to an error, this will be set to an object with a string property `message`, giving you more information about the error. See `onDisconnect`.
 - `onDisconnect`
-
   - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called `Port.disconnect()`. This event will only be fired once for each port. The listener function will be passed the `Port` object. If the port was disconnected due to an error, then the `Port` argument will contain an `error` property giving more information about the error:
 
     ```js
@@ -105,10 +104,6 @@ which holds in Chrome, is replaced by
 
 in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Connecting from content scripts
@@ -139,7 +134,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script.
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`.
   - sends the content script a message using the port.
   - starts listening to messages received on the port, and logs them.
@@ -217,6 +211,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

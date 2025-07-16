@@ -3,9 +3,10 @@ title: Setting up a Django development environment
 short-title: Dev environment setup
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.
 
@@ -143,7 +144,6 @@ This will either display the Python version number, which indicates that Python 
 You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/macos/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -163,7 +163,6 @@ pip3 list
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/windows/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -223,7 +222,7 @@ The libraries we'll use for creating our virtual environments are [virtualenvwra
 
 #### Ubuntu virtual environment setup
 
-After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). The official installation guide can be found [here](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
+After installing Python and pip you can install _virtualenvwrapper_ (which includes _virtualenv_). You can check [the official installation guide](https://virtualenvwrapper.readthedocs.io/en/latest/install.html), or follow the instructions below.
 
 Install the tool using _pip3_:
 
@@ -394,7 +393,7 @@ py -3 -m django --version
 >
 > In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation.
 > Try omitting the `-3` modifier if you encounter any problems with commands.
-> In Linux/macOS, the command is `python3.`
+> In Linux/macOS, the command is `python3`.
 
 > [!WARNING]
 > The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
@@ -436,7 +435,6 @@ The steps are:
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form.
    While these are not compulsory, they are strongly recommended.
-
    - Enter a repository name: "django_local_library".
    - Enter a new repository description: "Local Library website written in Django".
    - Select "Public" for the repository (the default).
@@ -462,7 +460,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
    In the "Clone" section, select the "HTTPS" tab, and copy the URL.
    If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
-2. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
 3. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash

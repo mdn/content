@@ -24,7 +24,7 @@ For text nodes this will be the **text rendering timestamp**. This is defined as
 
 ### Logging `renderTime`
 
-In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
+In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. Calling `entry.renderTime` returns the render time of the image element.
 
 ```html
 <img
@@ -64,7 +64,7 @@ Alternatively, you can use {{domxref("PerformanceEntry.startTime", "startTime")}
 If you use `startTime`, you can flag any inaccuracies by checking if `renderTime` was used:
 
 ```js
-const isRenderTime = entry.renderTime ? true : false;
+const isRenderTime = Boolean(entry.renderTime);
 ```
 
 ## Specifications

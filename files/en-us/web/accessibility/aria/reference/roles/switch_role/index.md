@@ -1,5 +1,6 @@
 ---
 title: "ARIA: switch role"
+short-title: switch
 slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
 page-type: aria-role
 spec-urls:
@@ -137,11 +138,10 @@ button.switch {
   border: 2px solid black;
   display: inline-block;
   margin-right: 0.25em;
-  line-height: 20px;
   vertical-align: middle;
   text-align: center;
   font:
-    12px "Open Sans",
+    12px / 20px "Open Sans",
     "Arial",
     serif;
 }
@@ -188,5 +188,5 @@ The result looks like this:
 ## See also
 
 - [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)

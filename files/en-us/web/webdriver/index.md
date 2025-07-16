@@ -28,7 +28,7 @@ with webdriver.Firefox() as driver:
 
     driver.get("https://google.com/ncr")
     wait = WebDriverWait(driver, 10)
-    driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
+    driver.find_element(By.NAME, "q").send_keys(f"cheese{Keys.RETURN}")
     wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
     results = driver.find_elements(By.XPATH, "//a[@href]")
 
@@ -43,6 +43,8 @@ This might produce output akin to this:
 ```
 
 ## Reference
+
+The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed information about the WebDriver API, including the available commands, capabilities, and errors.
 
 - [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 

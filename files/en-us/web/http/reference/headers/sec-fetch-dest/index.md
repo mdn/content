@@ -1,11 +1,11 @@
 ---
-title: Sec-Fetch-Dest
+title: Sec-Fetch-Dest header
+short-title: Sec-Fetch-Dest
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Dest
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Dest
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-Fetch-Dest`** {{Glossary("fetch metadata request header")}} indicates the request's _destination_.
 That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.
@@ -87,7 +87,7 @@ Servers should ignore this header if it contains any other value.
 - `image`
   - : The destination is an image. This might originate from an HTML {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
 - `manifest`
-  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Attributes/rel/manifest).
+  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Reference/Attributes/rel/manifest).
 - `object`
   - : The destination is an object. This might originate from an HTML {{HTMLElement("object")}} tag.
 - `paintworklet`

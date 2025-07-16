@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDate.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toString
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.toString
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toString()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a string representing this date in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format).
 
@@ -61,15 +63,15 @@ const date = Temporal.PlainDate.from({
   year: 2021,
   month: 8,
   day: 1,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 console.log(isoDate.toString({ calendarName: "auto" })); // '2021-08-01'
-console.log(date.toString({ calendarName: "auto" })); // '2582-12-18[u-ca=islamic]'
+console.log(date.toString({ calendarName: "auto" })); // '2582-12-17[u-ca=islamic-umalqura]'
 console.log(isoDate.toString({ calendarName: "always" })); // '2021-08-01[u-ca=iso8601]'
-console.log(date.toString({ calendarName: "always" })); // '2582-12-18[u-ca=islamic]'
-console.log(date.toString({ calendarName: "never" })); // '2582-12-18'
+console.log(date.toString({ calendarName: "always" })); // '2582-12-17[u-ca=islamic-umalqura]'
+console.log(date.toString({ calendarName: "never" })); // '2582-12-17'
 console.log(isoDate.toString({ calendarName: "critical" })); // '2021-08-01[!u-ca=iso8601]'
-console.log(date.toString({ calendarName: "critical" })); // '2582-12-18[!u-ca=islamic]'
+console.log(date.toString({ calendarName: "critical" })); // '2582-12-17[!u-ca=islamic-umalqura]'
 ```
 
 ## Specifications

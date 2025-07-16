@@ -14,24 +14,27 @@ sidebar: urlsidebar
 
 ## Syntax
 
-JavaScript URLs start with the `javascript:` scheme and are followed by JavaScript code. The code will be parsed as a script.
-
 ```url
 javascript:<script>
 ```
+
+- `javascript:`
+  - : The scheme of the URL.
+- `<script>`
+  - : The JavaScript code to execute. The code will be parsed as a script.
 
 ## Description
 
 `javascript:` URLs can be used anywhere a URL is a navigation target. This includes, but is not limited to:
 
-- The [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute of an `<a>` or `<area>` element.
-- The [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of a `<form>` element.
-- The [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of an `<iframe>` element.
+- The [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of an `<a>` or `<area>` element.
+- The [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) attribute of a `<form>` element.
+- The [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src) attribute of an `<iframe>` element.
 - The [`window.location`](/en-US/docs/Web/API/Window/location) JavaScript property.
 - The browser address bar itself.
 
 > [!NOTE]
-> Some other contexts that use URLs, such as the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of `<link>` elements, do not allow `javascript:` URLs, because they are resource locations, not navigation targets. For these cases, if you want to write JavaScript inline, use [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URLs with the `text/javascript` MIME type.
+> Some other contexts that use URLs, such as the [`href`](/en-US/docs/Web/HTML/Reference/Elements/link#href) attribute of `<link>` elements, do not allow `javascript:` URLs, because they are resource locations, not navigation targets. For these cases, if you want to write JavaScript inline, use [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URLs with the `text/javascript` MIME type.
 
 When a browser attempts to navigate to such a location, it parses and executes the script body. The script may have a _completion value_ (not a return value), which is the same value if the script were executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). If the last statement is an [expression](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), the completion value is the value of that expression. If this completion value is a string, that string is treated as an HTML document and the browser navigates to a new document with that content, using the same URL as the current page. No history entry is created. If the completion value is not a string, the browser only executes the code and does not navigate. Therefore, it's often recommended that if the script ends with a function call like `javascript:foo()`, you should prefix it with {{jsxref("Operators/void", "void")}} to prevent accidental navigation if the function happens to return a string.
 

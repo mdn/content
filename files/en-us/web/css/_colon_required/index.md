@@ -3,11 +3,10 @@ title: :required
 slug: Web/CSS/:required
 page-type: css-pseudo-class
 browser-compat: css.selectors.required
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute set on it.
+The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
 {{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
 
@@ -61,7 +60,7 @@ This pseudo-class is useful for highlighting fields that must have valid data be
 
 ## Accessibility
 
-Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
+Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
 
 If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 

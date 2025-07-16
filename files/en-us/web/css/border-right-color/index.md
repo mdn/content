@@ -3,9 +3,8 @@ title: border-right-color
 slug: Web/CSS/border-right-color
 page-type: css-property
 browser-compat: css.properties.border-right-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's right [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-right")}}.
 
@@ -20,11 +19,11 @@ border-right-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-right-color: rgb(170, 50, 220, 0.6);
+border-right-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-right-color: hsl(60, 90%, 50%, 0.8);
+border-right-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

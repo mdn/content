@@ -2,9 +2,8 @@
 title: Responsive web design
 slug: Glossary/Responsive_web_design
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 _Responsive Web Design_ (**RWD**) is a Web development concept focusing on making sites look and behave optimally on all personal computing devices, from desktop to mobile.
 

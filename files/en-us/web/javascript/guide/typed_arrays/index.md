@@ -2,9 +2,10 @@
 title: JavaScript typed arrays
 slug: Web/JavaScript/Guide/Typed_arrays
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
 
@@ -248,11 +249,11 @@ By combining a single buffer with multiple views of different types, starting at
 
 Consider this C structure:
 
-```cpp
+```c
 struct someStruct {
-  unsigned long id;
-  char username[16];
-  float amountDue;
+    unsigned long id;
+    char username[16];
+    float amountDue;
 };
 ```
 
@@ -261,7 +262,7 @@ You can access a buffer containing data in this format like this:
 ```js
 const buffer = new ArrayBuffer(24);
 
-// ... read the data into the buffer ...
+// … read the data into the buffer …
 
 const idView = new Uint32Array(buffer, 0, 1);
 const usernameView = new Uint8Array(buffer, 4, 16);

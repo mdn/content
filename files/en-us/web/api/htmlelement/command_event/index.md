@@ -2,12 +2,10 @@
 title: "HTMLElement: command event"
 slug: Web/API/HTMLElement/command_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.HTMLElement.command_event
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
 The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g., it is clicked).
 
@@ -15,10 +13,10 @@ The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("command", (event) => {});
+```js-nolint
+addEventListener("command", (event) => { })
 
-oncommand = (event) => {};
+oncommand = (event) => { }
 ```
 
 ## Event type
@@ -34,7 +32,7 @@ A {{domxref("CommandEvent")}}. Inherits from {{domxref("Event")}}.
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("command", (event) => {
   if (event.action === "show-popover") {

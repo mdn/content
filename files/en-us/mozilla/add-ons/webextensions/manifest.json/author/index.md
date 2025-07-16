@@ -28,9 +28,13 @@ browser-compat: webextensions.manifest.author
   </tbody>
 </table>
 
-The extension's author, intended for display in the browser's user interface. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is supplied and it contains the "name" property, it will override the author key. There's no way to specify multiple authors.
+The extension's author. It's intended for display in the browser's user interface. The string held by value is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+Firefox expects this key to represent the name of the person or entity that developed the extension. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is also specified as an object with a `name` property, the value of `name` overrides the `author` key.
+
+Using the `developer` key to identify the author in Firefox is recommended.
+
+As of May 2025, Chrome and the Chrome Web Store don't use this key.
 
 ## Example
 

@@ -2,9 +2,8 @@
 title: Viewport concepts
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
@@ -38,7 +37,7 @@ window.outerHeight; /* 900 */
 
 There are several DOM properties that can help you query viewport size, and other similar lengths:
 
-- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Viewport_meta_tag#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
+- The document element's {{DOMxRef("Element.clientWidth")}} is the inner width of a document in [CSS pixels](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#screen_density), including padding (but not borders, margins, or vertical scrollbars, if present). **This is the viewport width**.
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
@@ -108,7 +107,7 @@ If the iframe is set to 50vw, it will be 50% of the width of the `1200px` parent
 A width-based media query within the iframe document is relative to the iframe's viewport.
 
 ```css
-@media screen and (min-width: 500px) {
+@media screen and (width >= 500px) {
   p {
     color: red;
   }
@@ -132,7 +131,7 @@ SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coor
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
 ```css
-@media screen and (min-width: 400px) and (max-width: 500px) {
+@media screen and (400px <= width <= 500px) {
   /* CSS goes here */
 }
 ```
@@ -143,7 +142,7 @@ Generally, when you write the above media query, the styles are applied if the v
 
 The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
 
-## Mobile Viewports
+## Mobile viewports
 
 Mobile devices come in all shapes and sizes, with screens of differing {{glossary("device pixel")}} ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
 
@@ -158,4 +157,4 @@ The `width` property controls the size of the viewport. It should preferably be 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

@@ -3,9 +3,8 @@ title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
 page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 > [!NOTE]
 > Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
@@ -20,7 +19,7 @@ Strict mode makes several changes to normal JavaScript semantics:
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 
@@ -362,9 +361,9 @@ Similarly, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/a
 
 ```js
 "use strict";
-const f = function () {
+function f() {
   return arguments.callee;
-};
+}
 f(); // throws a TypeError
 ```
 

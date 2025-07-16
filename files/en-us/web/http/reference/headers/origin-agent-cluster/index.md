@@ -1,13 +1,14 @@
 ---
-title: Origin-Agent-Cluster
+title: Origin-Agent-Cluster header
+short-title: Origin-Agent-Cluster
 slug: Web/HTTP/Reference/Headers/Origin-Agent-Cluster
 page-type: http-header
 browser-compat: http.headers.Origin-Agent-Cluster
+sidebar: http
 ---
 
-{{HTTPSidebar}}
-
-The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an **origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)**. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
+The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
+This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
 
 The effect of this is that a resource-intensive document will be less likely to degrade the performance of documents from other origins.
 
@@ -83,4 +84,5 @@ Origin-Agent-Cluster: ?1
 ## See also
 
 - {{domxref("Window.originAgentCluster")}}
+- [Agent clusters and memory sharing](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing) in _JavaScript execution model_
 - [Requesting performance isolation with the Origin-Agent-Cluster header](https://web.dev/articles/origin-agent-cluster) on web.dev

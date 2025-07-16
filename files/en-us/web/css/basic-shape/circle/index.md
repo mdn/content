@@ -3,9 +3,8 @@ title: circle()
 slug: Web/CSS/basic-shape/circle
 page-type: css-function
 browser-compat: css.types.basic-shape.circle
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
@@ -59,9 +58,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### Values
 
 - `<shape-radius>`
-
   - : This may be a {{cssxref("length")}}, or a {{cssxref("percentage")}} or values `closest-side` and `farthest-side`.
-
     - `closest-side`
       - : Uses the length from the center of the shape to the closest side of the reference box. For circles, this is the closest side in any dimension.
     - `farthest-side`

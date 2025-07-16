@@ -1,10 +1,12 @@
 ---
 title: Firefox 31 for developers
+short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 31 was released on July 22, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -96,7 +98,7 @@ _No change._
 
 Highlights:
 
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/)
 - Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
 - Updated the default theme used for panels on Mac OS X.
 - Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
@@ -104,7 +106,3 @@ Highlights:
 [GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

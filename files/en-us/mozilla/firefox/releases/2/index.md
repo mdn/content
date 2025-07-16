@@ -1,10 +1,10 @@
 ---
 title: Firefox 2 for developers
+short-title: Firefox 2
 slug: Mozilla/Firefox/Releases/2
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## New developer features in Firefox 2
 
@@ -30,7 +30,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : Client-side session and persistent storage allows web applications to store structured data on the client side.
 - [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox)
   - : Firefox 2 improves Scalable Vector Graphics (SVG) support, implementing the `<textPath>` element and adding support for some attributes not previously supported.
-- [Controlling spell checking in HTML forms](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
+- [Controlling spell checking in HTML forms](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
   - : Firefox 2 includes support for inline spell checking in text areas and text fields. This article describes how to write your HTML to enable and disable spell checking on individual form elements.
 - [Security in Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2/Security_changes)
   - : Firefox 2 has changes to which security protocols are enabled by default.
@@ -77,7 +77,3 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 ### Security and privacy
 
 - **Phishing Protection** to warn users when the website you're looking at appears to be a forgery.
-
-## See also
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: ::slotted()
 slug: Web/CSS/::slotted
 page-type: css-pseudo-element
 browser-compat: css.selectors.slotted
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element that has been placed into a slot inside an HTML template (see [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots) for more information).
 
@@ -182,7 +181,7 @@ Our markup includes three custom elements, including a custom element with an in
 - {{cssxref(":host-context", ":host-context()")}}
 - {{cssxref(":has-slotted")}}
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
-- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+- HTML [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
 - HTML {{HTMLElement("slot")}} element
 - HTML {{HTMLElement("template")}} element
 - [Web components](/en-US/docs/Web/API/Web_components)

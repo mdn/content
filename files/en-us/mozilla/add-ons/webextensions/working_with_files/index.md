@@ -42,7 +42,7 @@ If you want to work with a file from the user's computer one option is to let th
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/main/imagify)
 Guide: [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
-API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
+API references: [HTML input element](/en-US/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
 > [!NOTE]
 > If you want to access or process all the files in a selected folder, you can do so using `<input type="file" webkitdirectory="true"/>` to select the folder and return all the files it contains.
@@ -64,9 +64,7 @@ The key features of the library are:
 - [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)
   - : Returns an `IDBFileStorage` instance, creating the named storage if it does not exist.
 - [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html)
-
   - : Provides the methods to save and retrieve files, such as:
-
     - list to obtain an optionally filtered list of file in the database.
     - put to add a file or blob to the database.
     - get to retrieve a file or blob from the database.

@@ -3,9 +3,8 @@ title: text-wrap-style
 slug: Web/CSS/text-wrap-style
 page-type: css-property
 browser-compat: css.properties.text-wrap-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-wrap-style`** [CSS](/en-US/docs/Web/CSS) property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
 
@@ -98,7 +97,7 @@ When the styled content will be limited to a short number of lines, such as head
 
 For longer sections of text, `text-wrap-style: pretty` can be used. Note that `pretty` has a negative effect on performance, so it should be only used for longer blocks of text when the layout is more important than speed.
 
-The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
+The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
 
 ## Formal definition
 

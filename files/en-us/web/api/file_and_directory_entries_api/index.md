@@ -46,7 +46,7 @@ The File and Directory Entries API includes the following interfaces:
 - {{domxref("File.webkitRelativePath")}}
   - : Returns the path the URL of the `File` is relative to.
 - {{domxref("HTMLInputElement.webkitdirectory")}}
-  - : A boolean that represents the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
+  - : A boolean that represents the [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
 - {{domxref("HTMLInputElement.webkitEntries")}}
   - : Describes the currently selected files or directories.
 
