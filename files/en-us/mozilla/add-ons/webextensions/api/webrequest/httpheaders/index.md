@@ -20,11 +20,11 @@ An `array` of `object`s. Each object has the following properties:
 - `binaryValue` {{optional_inline}}
   - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-HttpHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

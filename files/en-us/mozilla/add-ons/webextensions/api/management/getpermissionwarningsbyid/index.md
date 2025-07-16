@@ -32,10 +32,6 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of strings, each of which contains the text of a permission warning.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the permission warnings for the add-on whose ID is "my-add-on":
@@ -53,6 +49,10 @@ browser.management.getPermissionWarningsById(id).then(gotWarnings);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-getPermissionWarningsById) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

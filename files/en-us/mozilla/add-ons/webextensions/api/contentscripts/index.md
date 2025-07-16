@@ -30,8 +30,8 @@ There is no `contentScripts` API permission, but an extension must have the appr
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : Registers the given content scripts.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

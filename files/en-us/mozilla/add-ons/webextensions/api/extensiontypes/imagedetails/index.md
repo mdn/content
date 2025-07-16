@@ -29,11 +29,11 @@ Values of this type are objects. They contain the following properties:
 - `scale` {{optional_inline}}
   - : `number`. The scale to render at, defaults to [`devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio). This option was introduced in Firefox 82.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.

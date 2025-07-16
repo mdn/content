@@ -1,8 +1,10 @@
 ---
 title: Event reference
+short-title: Events
 slug: Web/Events
 page-type: landing-page
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
+sidebar: events
 ---
 
 [Events](/en-US/docs/Learn_web_development/Core/Scripting/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g., low battery or media events from the operating system), and other causes.
@@ -828,12 +830,3 @@ This topic provides an index to the main _sorts_ of events you might be interest
 
 - [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
 - [Event handlers overview](/en-US/docs/Web/Events/Event_handlers)
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
-    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
-  </ol>
-</section>

@@ -36,10 +36,6 @@ browser.commands.update(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the shortcut has been updated. The promise will be rejected with an error if the command could not be found.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Updates the command named "my-command" with the given shortcut value, when the user clicks "update":
@@ -58,3 +54,7 @@ document.querySelector("#update").addEventListener("click", updateShortcut);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

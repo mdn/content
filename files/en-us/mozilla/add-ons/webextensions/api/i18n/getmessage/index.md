@@ -36,10 +36,6 @@ browser.i18n.getMessage(
 
 `string`. Message localized for current locale.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the localized string for `"messageContent"`, with `target.url` substituted:
@@ -73,6 +69,10 @@ If `target.url` is "https\://developer.mozilla.org", then the value of message, 
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.

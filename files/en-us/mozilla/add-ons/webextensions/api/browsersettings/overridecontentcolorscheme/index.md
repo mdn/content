@@ -17,10 +17,6 @@ This object takes these values:
 - "dark": Applies a dark theme to webpages.
 - "auto": Automatically applies a light or dark theme to webpages based on the browser's theme.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example overrides the setting to use the dark theme for webpages:
@@ -36,3 +32,7 @@ browser.browserSettings.overrideContentColorScheme
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

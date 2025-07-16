@@ -13,10 +13,6 @@ Its underlying value is a string that may be either "mouseup" or "mousedown".
 
 The default value is "mouseup" on Windows, and "mousedown" on macOS and Linux. Assigning to it on Windows has no effect - the setting is only designed to allow the context menu to be opened on mouseup instead of mousedown, not the inverse.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to "mouseup":
@@ -32,3 +28,7 @@ browser.browserSettings.contextMenuShowEvent
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

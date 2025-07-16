@@ -26,10 +26,6 @@ let searching = browser.downloads.search(query);
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of {{WebExtAPIRef('downloads.DownloadItem')}} objects that match the given criteria.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In general, you restrict the items retrieved using the `query` parameter.
@@ -122,6 +118,10 @@ browser.downloads
 You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/main/latest-download/popup/latest_download.js) example.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-search) API.

@@ -24,10 +24,6 @@ Values of this type are strings. Possible values are:
 - `overwrite`
   - : A call to {{WebExtAPIRef("cookies.set()")}} overwrote this cookie with a different one.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a `changeInfo` object that contains a `cause` property, whose value is the `OnChangeCaused` string:
@@ -44,6 +40,10 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
