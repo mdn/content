@@ -158,9 +158,9 @@ Empty lines between properties should be used sparingly. Add them only when each
 
 ### Shorthand properties
 
-- If _every_ constituent property of a shorthand property is assigned a non-default value, use the shorthand property instead of the constituent longhand properties. This makes your code shorter and easier to read. 
-	
-	Replace these longhand properties:
+- If _every_ constituent property of a shorthand property is assigned a non-default value, use the shorthand property instead of the constituent longhand properties. This makes your code shorter and easier to read.
+
+  Replace these longhand properties:
 
   ```css example-bad
   margin-top: 1em;
@@ -239,7 +239,7 @@ Generally, prefer [class selectors](/en-US/docs/Web/CSS/Class_selectors) (and us
 ```
 
 ID selectors are acceptable if unique handles are required elsewhere, for example, for form controls.
-	
+
 Use classes for styling, and reserve IDs for non-CSS purposes, such as for use in JavaScript or for linking to unique page anchors (`<a href="#section1">`). In the case where the use of ID is justified, you can take advantage of it for [controlling specificity](#controlling_specificity).
 
 ### Old pseudo-element selectors
