@@ -109,3 +109,7 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 These features are shipping in Firefox 141 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`:active-view-transition`** (Nightly):
+
+  The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while an single-page-app (SPA) [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place. ([Firefox bug 1950759](https://bugzil.la/1950759)).
