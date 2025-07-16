@@ -18,11 +18,11 @@ Common types used by APIs that dispatch events.
 - {{WebExtAPIRef("events.UrlFilter")}}
   - : Filters URLs for various criteria. If any of the given criteria match, then the whole filter matches.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.

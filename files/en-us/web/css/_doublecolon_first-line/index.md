@@ -3,9 +3,8 @@ title: ::first-line
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
 browser-compat: css.selectors.first-line
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block container](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers).
 

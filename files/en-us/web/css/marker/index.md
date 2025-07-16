@@ -3,9 +3,8 @@ title: marker
 slug: Web/CSS/marker
 page-type: css-property
 browser-compat: css.properties.marker
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`marker`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the first, middle, and last vertices of the element's path; that is, at all of its vertices. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref("url_value", "&lt;url&gt;")}} value. The value of the CSS property overrides any values of the `marker-start`, `marker`, and `marker-end` attributes in the SVG.
 
@@ -99,4 +98,4 @@ polyline#test {
 
 - {{cssxref("marker-start")}}
 - {{cssxref("marker-end")}}
-- SVG {{SVGAttr("marker")}} attribute
+- SVG {{SVGElement("marker")}} element

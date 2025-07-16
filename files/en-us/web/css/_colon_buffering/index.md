@@ -3,9 +3,8 @@ title: :buffering
 slug: Web/CSS/:buffering
 page-type: css-pseudo-class
 browser-compat: css.selectors.buffering
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:buffering`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is playable, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, when the playable element is buffering a media resource.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.inputQuota
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`inputQuota`** read-only property of the {{domxref("LanguageDetector")}} interface returns the input quota available to the browser for detecting languages.
 

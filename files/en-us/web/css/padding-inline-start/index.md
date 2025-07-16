@@ -3,9 +3,8 @@ title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 page-type: css-property
 browser-compat: css.properties.padding-inline-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 

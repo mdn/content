@@ -4,9 +4,8 @@ short-title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
 page-type: html-attribute
 spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemref
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 Properties that are not descendants of an element with the [`itemscope`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope) attribute can be associated with an item using the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) **`itemref`**.
 

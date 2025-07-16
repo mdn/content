@@ -56,11 +56,11 @@ Most of these operations require the "management" [API permission](/en-US/docs/M
 - {{WebExtAPIRef("management.onDisabled")}}
   - : Fired when an add-on is disabled.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

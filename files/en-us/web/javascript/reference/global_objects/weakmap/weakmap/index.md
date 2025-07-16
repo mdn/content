@@ -4,9 +4,8 @@ short-title: WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`WeakMap()`** constructor creates {{jsxref("WeakMap")}} objects.
 

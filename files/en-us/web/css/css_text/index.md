@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-text/
   - https://drafts.csswg.org/css-text-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS text** module defines how to perform text manipulation, like line breaking, justification and alignment, white space handling, and text transformation.
 

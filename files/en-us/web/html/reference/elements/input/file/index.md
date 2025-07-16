@@ -3,9 +3,8 @@ title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_file
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn_web_development/Extensions/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 

@@ -39,7 +39,7 @@ For example:
 
 ### Basic `screenPixelRatio` usage
 
-In this example, the application defines a constant `RESOLUTION_LIMIT`, which represents the scaling factor beyond which which the sending application should send video at the logical resolution rather than the physical resolution.
+In this example, the application defines a constant `RESOLUTION_LIMIT`, which represents the scaling factor beyond which the sending application should send video at the logical resolution rather than the physical resolution.
 
 When `screenPixelRatio` exceeds this limit, the application uses the `screenPixelRatio` value to calculate the logical resolution from the physical resolution, and then constrains the captured {{domxref("MediaStreamTrack")}} to the logical resolution.
 

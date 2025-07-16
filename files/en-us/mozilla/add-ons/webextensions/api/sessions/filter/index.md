@@ -16,13 +16,13 @@ Values of this type are objects. They contain the following properties:
 - `maxResults` {{optional_inline}}
   - : `number`. The maximum number of results to return.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

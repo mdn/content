@@ -3,9 +3,8 @@ title: stroke-linecap
 slug: Web/CSS/stroke-linecap
 page-type: css-property
 browser-compat: css.properties.stroke-linecap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-linecap`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the end of open subpaths of [SVG](/en-US/docs/Web/SVG) elements' unclosed strokes. If present, it overrides the element's {{SVGAttr("stroke-linecap")}} attribute.
 

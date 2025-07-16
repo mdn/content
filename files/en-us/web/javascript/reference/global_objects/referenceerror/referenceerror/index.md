@@ -4,9 +4,8 @@ short-title: ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ReferenceError()`** constructor creates {{jsxref("ReferenceError")}} objects.
 

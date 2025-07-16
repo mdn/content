@@ -48,11 +48,11 @@ To use this API, you need to have the "notifications" [permission](/en-US/docs/M
 - {{WebExtAPIRef("notifications.onShown")}}
   - : Fired immediately after a notification has been shown.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

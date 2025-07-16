@@ -3,9 +3,8 @@ title: text-shadow
 slug: Web/CSS/text-shadow
 page-type: css-property
 browser-compat: css.properties.text-shadow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
 

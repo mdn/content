@@ -2,10 +2,13 @@
 title: IdentityCredentialRequestOptions
 slug: Web/API/IdentityCredentialRequestOptions
 page-type: web-api-interface
+status:
+  - experimental
+browser-compat: api.CredentialsContainer.get.identity_option
 spec-urls: https://w3c-fedid.github.io/FedCM/#dictdef-identitycredentialrequestoptions
 ---
 
-{{APIRef("FedCM API")}}{{SecureContext_Header}}
+{{APIRef("FedCM API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`IdentityCredentialRequestOptions`** dictionary represents the object passed to {{domxref("CredentialsContainer.get()")}} as the value of the `identity` option.
 
@@ -54,3 +57,7 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

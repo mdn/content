@@ -4,9 +4,8 @@ short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findIndex()`** method of {{jsxref("Array")}} instances returns the index of the first element in an array that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.

@@ -39,10 +39,6 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which resolves to a {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for all HTTPS requests to "mozilla.org" or its subdomains, and logs the subject name in the server certificate:
@@ -98,3 +94,7 @@ browser.webRequest.onHeadersReceived.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

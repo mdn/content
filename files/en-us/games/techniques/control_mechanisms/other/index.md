@@ -2,9 +2,8 @@
 title: Unconventional controls
 slug: Games/Techniques/Control_mechanisms/Other
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenu("Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
