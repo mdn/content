@@ -68,7 +68,9 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 <!-- #### Marionette -->
 
-<!-- ## Changes for add-on developers -->
+## Changes for add-on developers
+
+- Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
 
 <!-- ### Removals -->
 

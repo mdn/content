@@ -34,10 +34,6 @@ Events have three functions:
     - `themeName`
       - : `string`. Name of the new theme: this will be one of the permitted values for [`devtools.panels.themeName`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -47,6 +43,10 @@ browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

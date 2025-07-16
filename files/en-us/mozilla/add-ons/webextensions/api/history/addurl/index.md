@@ -35,10 +35,6 @@ let addingUrl = browser.history.addUrl(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the item has been added.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Add a record of a visit to "https\://example.org/", then check that the new visit was recorded by searching history for the most recent item and logging it:
@@ -94,6 +90,10 @@ browser.history
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

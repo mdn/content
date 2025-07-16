@@ -103,10 +103,6 @@ which holds in Chrome, is replaced by
 
 in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Connecting from content scripts
@@ -214,6 +210,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

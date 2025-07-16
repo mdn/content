@@ -44,10 +44,6 @@ Events have three functions:
         - `temporary`
           - : `boolean`. True if the add-on was installed temporarily. For example, using the "about:debugging" page in Firefox or using [web-ext run](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). False otherwise.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 When the extension is installed, log the install reason and open <https://example.com>:
@@ -64,6 +60,10 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onInstalled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

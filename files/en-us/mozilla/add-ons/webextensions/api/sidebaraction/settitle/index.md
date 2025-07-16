@@ -50,10 +50,6 @@ browser.sidebarAction.setTitle(
 - If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
 - If `windowId` and `tabId` are both omitted, the global title is set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
@@ -69,6 +65,10 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

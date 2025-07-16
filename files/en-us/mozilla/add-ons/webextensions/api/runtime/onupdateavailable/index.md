@@ -40,10 +40,6 @@ Events have three functions:
     - `details`
       - : `object`. Contains a single property, a string named `version`, which represents the version number of the update.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for `UpdateAvailable` events:
@@ -59,6 +55,10 @@ browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onUpdateAvailable) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

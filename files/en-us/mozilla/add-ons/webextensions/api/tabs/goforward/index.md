@@ -30,10 +30,6 @@ let goingForward = browser.tabs.goForward(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the page navigation finishes.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Go forward to the next page in the current tab:
@@ -52,6 +48,10 @@ goingForward.then(onGoForward, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

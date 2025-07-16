@@ -19,10 +19,6 @@ The object has these properties:
 - `useWebRenderCompositor`
   - : A boolean representing whether or not the WebRender compositor is used.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set color mode to "full":
@@ -48,3 +44,7 @@ browser.browserSettings.colorManagement.useNativeSRGB.get({}).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

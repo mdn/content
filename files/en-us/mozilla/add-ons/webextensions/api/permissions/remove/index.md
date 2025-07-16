@@ -29,10 +29,6 @@ let removing = browser.permissions.remove(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the permissions listed in the `permissions` argument are now not granted to the extension, or `false` otherwise.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code adds a click handler that removes a given permission.
@@ -52,6 +48,10 @@ document.querySelector("#remove").addEventListener("click", remove);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

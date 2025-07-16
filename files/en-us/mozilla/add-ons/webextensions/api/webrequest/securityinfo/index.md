@@ -82,8 +82,8 @@ Values of this type are objects. They contain the following properties:
 - `weaknessReasons` {{optional_inline}}
   - : `String`. If `state` is "weak", this indicates the reason. Currently this may contain only a single value "cipher", indicating that the negotiated cipher suite is considered weak.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

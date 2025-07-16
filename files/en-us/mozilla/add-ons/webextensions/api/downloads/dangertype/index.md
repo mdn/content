@@ -34,11 +34,11 @@ Values of this type are strings. Possible values are:
 - `accepted`
   - : The user has accepted the dangerous download.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DangerType) API.

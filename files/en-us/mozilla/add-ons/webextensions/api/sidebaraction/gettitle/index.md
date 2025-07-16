@@ -38,10 +38,6 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the sidebar's title.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code switches the title between "this" and "that" each time the user clicks the browser action
@@ -62,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

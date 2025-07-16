@@ -12,10 +12,6 @@ After this event is fired, the {{WebExtAPIRef("webRequest.StreamFilter.error")}}
 
 Note that this event is **not** triggered for network errors.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example adds an `onerror` listener which logs the value of {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
@@ -56,3 +52,7 @@ browser.webRequest.onBeforeRequest.addListener(listener, {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

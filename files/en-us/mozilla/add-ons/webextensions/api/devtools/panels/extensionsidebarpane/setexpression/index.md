@@ -34,10 +34,6 @@ let evaluating = browser.devtools.panels.setExpression(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, once the expression has been evaluated.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code creates a sidebar pane that displays the [`tagName`](/en-US/docs/Web/API/Element/tagName) of the currently selected element:
@@ -55,6 +51,10 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

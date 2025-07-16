@@ -39,11 +39,11 @@ In Firefox, `<storageType>` can't be {{WebExtAPIRef("storage.local")}}, because 
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects specified in `keys`. If the operation fails, the promise is rejected with an error message.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

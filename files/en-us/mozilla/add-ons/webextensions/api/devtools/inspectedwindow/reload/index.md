@@ -27,10 +27,6 @@ browser.devtools.inspectedWindow.reload(
     - `injectedScript` {{optional_inline}}
       - : `string`. Inject the given JavaScript expression into all frames in the page, before any other scripts.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Reload the inspected window, setting the user agent and injecting a script:
@@ -47,6 +43,10 @@ reloadButton.addEventListener("click", () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

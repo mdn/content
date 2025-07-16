@@ -21,11 +21,11 @@ Some common types used in other WebExtension APIs.
 - `extensionTypes.CSSOrigin`
   - : Indicates whether a CSS stylesheet injected by [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) should be treated as an "author" or "user" stylesheet.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.

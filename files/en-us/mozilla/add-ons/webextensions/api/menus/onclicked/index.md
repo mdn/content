@@ -38,10 +38,6 @@ Events have three functions:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for clicks on a menu item, then log the item's ID and the tab ID:
@@ -59,6 +55,10 @@ browser.menus.onClicked.addListener((info, tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.

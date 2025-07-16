@@ -23,10 +23,6 @@ browser.idle.setDetectionInterval(
 - `intervalInSeconds`
   - : `integer`. Threshold, in seconds, used to determine when the system is in an idle state. The minimum value you can supply here is 15.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -34,6 +30,10 @@ browser.idle.setDetectionInterval(15);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#method-setDetectionInterval) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.

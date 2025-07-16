@@ -36,10 +36,6 @@ let settingEnabled = browser.management.setEnabled(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the add-on has been disabled or enabled.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggle enable/disable for the add-on whose ID is "my-add-on":
@@ -58,6 +54,10 @@ toggleEnabled(id);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-setEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

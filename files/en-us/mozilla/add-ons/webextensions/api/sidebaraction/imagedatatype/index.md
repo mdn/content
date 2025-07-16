@@ -12,11 +12,11 @@ Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData)
 
 An [`ImageData`](/en-US/docs/Web/API/ImageData) object.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

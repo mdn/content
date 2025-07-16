@@ -40,10 +40,6 @@ Events have three functions:
         - If this event is firing because all history was cleared, `allHistory` will be `true` and `urls` will be an empty array.
         - Otherwise, `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -59,6 +55,10 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisitRemoved) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

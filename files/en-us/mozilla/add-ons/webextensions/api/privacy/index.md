@@ -19,11 +19,11 @@ To use the privacy API, you must have the "privacy" [API permission](/en-US/docs
 - {{WebExtAPIRef("privacy.websites")}}
   - : Access and modify privacy settings relating to the behavior of websites.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API.

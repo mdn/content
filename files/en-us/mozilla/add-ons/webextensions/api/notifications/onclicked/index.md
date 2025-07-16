@@ -34,10 +34,6 @@ Events have three functions:
     - `notificationId`
       - : `string`. ID of the notification that the user clicked.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In this simple example we add a listener to the `notifications.onClicked` event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
@@ -49,6 +45,10 @@ browser.notifications.onClicked.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

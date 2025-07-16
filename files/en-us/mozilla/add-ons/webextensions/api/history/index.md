@@ -60,11 +60,11 @@ To use this API, an extension must request the "history" [permission](/en-US/doc
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : Fired when a URL is removed completely from the browser history.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

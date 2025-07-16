@@ -39,11 +39,11 @@ Values of this type are objects. They contain the following properties:
 - `upgradeToSecure` {{optional_inline}}
   - : `boolean`. If set to `true` and the original request is an HTTP request, this will prevent the original request from being sent and instead make a secure (HTTPS) request. If any extension returns `redirectUrl` in `onBeforeRequest`, then `upgradeToSecure` will be ignored for that request. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-BlockingResponse) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

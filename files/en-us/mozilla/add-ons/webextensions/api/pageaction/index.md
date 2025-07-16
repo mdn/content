@@ -51,11 +51,11 @@ Page actions are for actions that are only relevant to particular pages (such as
 - {{WebExtAPIRef("pageAction.onClicked")}}
   - : Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

@@ -28,10 +28,6 @@ None.
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example will replace the page content with "replacement text":
@@ -56,3 +52,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

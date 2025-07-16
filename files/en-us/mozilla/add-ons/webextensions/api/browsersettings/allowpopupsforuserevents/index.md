@@ -22,10 +22,6 @@ window.addEventListener("click", (e) => {
 
 By default, this will open a popup window. If your extension sets `allowPopupsForUserEvents` to `false`, then it will not open a popup, and the user will be informed that the popup was blocked.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggle the setting:
@@ -48,3 +44,7 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -12,11 +12,11 @@ A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10)
 
 Values of this type are strings.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#type-LanguageCode) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.

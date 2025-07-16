@@ -22,11 +22,11 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 - {{WebExtAPIRef("topSites.get()")}}
   - : Gets an array containing all the sites listed in the browser's "New Tab" page. Note that the number of sites returned here is browser-specific, and the particular sites returned will probably be specific to the user, based on their browsing history.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.

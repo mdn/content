@@ -26,10 +26,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 Note that you can define an ID for a notification explicitly by passing it into {{WebExtAPIRef("notifications.create()")}}. If you don't do this, the browser will generate one. Explicitly-specified IDs are strings, but generated IDs are numbers.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:
@@ -73,6 +69,10 @@ browser.notifications.getAll().then(logNotifications);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

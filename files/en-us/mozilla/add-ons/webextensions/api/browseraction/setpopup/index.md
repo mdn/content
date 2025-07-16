@@ -41,10 +41,6 @@ browser.browserAction.setPopup(
 - If `windowId` and `tabId` are both supplied, the function fails and the popup is not set.
 - If `windowId` and `tabId` are both omitted, the global popup is set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code adds a pair of context menu items that you can use to switch between two popups. Note that you'll need the "contextMenus" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) set in the extension's manifest to create context menu items.
@@ -90,6 +86,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

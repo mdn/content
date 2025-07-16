@@ -36,10 +36,6 @@ let gettingPopup = browser.browserAction.getPopup(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the popup's document. This will be a fully qualified URL, such as `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the popup's URL:
@@ -54,6 +50,10 @@ gettingPopup.then(gotPopup);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

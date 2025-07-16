@@ -22,12 +22,12 @@ None.
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
 browser.find.removeHighlighting();
 ```
+
+## Browser compatibility
+
+{{Compat}}

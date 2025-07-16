@@ -65,11 +65,11 @@ Extensions cannot create, modify, or delete bookmarks in the root node of the bo
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
   - : Fired when a bookmark import session has finished.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.

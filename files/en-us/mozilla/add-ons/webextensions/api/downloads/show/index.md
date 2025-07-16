@@ -27,10 +27,6 @@ let showing = browser.downloads.show(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request succeeds, the promise will be fulfilled with a boolean about whether the request was successful. If the request fails, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows the most recently downloaded item:
@@ -61,6 +57,10 @@ searching.then(openDownload, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-show) API.

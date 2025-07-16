@@ -64,10 +64,6 @@ Note that before Firefox 55, the rules were different in the 2-argument case. Un
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the receiver sent a response, this will be fulfilled with the response. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the extension, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Here's a content script that sends a message to the background script when the user clicks the content window. The message payload is `{greeting: "Greeting from the content script"}`, and the sender also expects to get a response, which is handled in the `handleResponse` function:
@@ -110,6 +106,10 @@ browser.runtime.onMessage.addListener(handleMessage);
 > Examples using a Promise are available in the [examples section](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) of the {{WebExtAPIRef('runtime.onMessage')}} listener.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

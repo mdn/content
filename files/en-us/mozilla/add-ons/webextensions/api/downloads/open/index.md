@@ -29,10 +29,6 @@ let opening = browser.downloads.open(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request is successful, the promise is fulfilled with no arguments. If the request failed, the promise is rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example opens the most recently downloaded item:
@@ -62,6 +58,10 @@ searching.then(openDownload, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-open) API.

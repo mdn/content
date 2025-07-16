@@ -92,10 +92,6 @@ let settingIcon = browser.sidebarAction.setIcon(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 The code below toggles the sidebar icon for the active tab when the user clicks a browser action:
@@ -123,6 +119,10 @@ browser.browserAction.onClicked.addListener(toggle);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

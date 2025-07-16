@@ -42,10 +42,6 @@ Events have three functions:
         - `oldShortcut`
           - : `string`. The shortcut that was active for this command, or blank if no shortcut was active.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 You could log changes to command shortcuts like this:
@@ -61,3 +57,7 @@ browser.commands.onChanged.addListener(handleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

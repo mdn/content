@@ -158,11 +158,11 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onZoomChange")}}
   - : Fired when a tab is zoomed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

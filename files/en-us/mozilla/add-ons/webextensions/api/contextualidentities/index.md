@@ -55,8 +55,8 @@ To use this API you need to include the "contextualIdentities" and "cookies" [pe
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}
   - : Fired when one or more properties of a contextual identity is updated.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

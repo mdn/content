@@ -39,10 +39,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, when the operation has completed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`, and report this action by logging an appropriate message to the console.
@@ -61,6 +57,10 @@ flushingCache.then(onFlushed, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

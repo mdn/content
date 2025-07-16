@@ -19,13 +19,13 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : `String`. The page's URL.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.

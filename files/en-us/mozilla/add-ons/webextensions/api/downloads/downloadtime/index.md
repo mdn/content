@@ -19,11 +19,11 @@ A `DownloadTime` can be one of three different types:
 
 - a number: this is interpreted as the number of milliseconds since the UNIX epoch.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadTime) API.

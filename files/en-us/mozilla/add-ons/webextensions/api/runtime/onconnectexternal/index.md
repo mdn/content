@@ -38,10 +38,6 @@ Events have three functions:
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In this example the extension Hansel connects to the extension Gretel:
@@ -81,6 +77,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnectExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

@@ -29,10 +29,6 @@ let getContext = browser.contextualIdentities.query(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} objects, each describing a single identity. If the contextual identities feature is not enabled, the promise is rejected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Retrieve all contextual identities, and log their names:
@@ -72,3 +68,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

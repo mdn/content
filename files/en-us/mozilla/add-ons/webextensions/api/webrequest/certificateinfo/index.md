@@ -49,8 +49,8 @@ Values of this type are objects. They contain the following properties:
     - `end`
       - : `Number`. The end of the certificate's validity period, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

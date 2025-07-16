@@ -22,11 +22,11 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 - [`devtools.network.onRequestFinished`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished)
   - : Fired when the network request has finished and its details are available to the extension.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/api/devtools/network) API.

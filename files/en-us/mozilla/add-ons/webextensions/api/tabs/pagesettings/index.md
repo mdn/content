@@ -69,8 +69,8 @@ Values of this type are objects. They contain the following properties:
 - `toFileName` {{optional_inline}}
   - : `string`. The name of the file the PDF is saved in, with or without the `.pdf` extension.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

@@ -71,11 +71,11 @@ To use this API you need to have the "downloads" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("downloads.onChanged")}}
   - : When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except `bytesReceived` changes, this event fires with the `downloadId` and an object containing the properties that changed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API.

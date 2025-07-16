@@ -38,10 +38,6 @@ Events have three functions:
     - `title`
       - : `String`. Title of the page visited.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for title change events, and log the ID, URL, and title of the visited pages.
@@ -57,6 +53,10 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

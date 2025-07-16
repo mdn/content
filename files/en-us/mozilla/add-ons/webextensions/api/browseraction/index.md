@@ -68,11 +68,11 @@ With the `browserAction` API, you can:
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

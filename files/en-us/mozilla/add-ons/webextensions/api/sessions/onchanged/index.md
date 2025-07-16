@@ -32,10 +32,6 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. It's passed no parameters.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This very annoying extension listens for `onChanged`, then immediately restores the most recently closed session, thus making it impossible to close windows or tabs:
@@ -69,6 +65,10 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

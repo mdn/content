@@ -27,10 +27,6 @@ let port = browser.runtime.connectNative(
 
 A {{WebExtAPIRef('runtime.Port')}} object. The port which the caller can use to exchange messages with the native application.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:
@@ -58,6 +54,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

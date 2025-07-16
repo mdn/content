@@ -19,8 +19,8 @@ To use this API you need to have the "find" [permission](/en-US/docs/Mozilla/Add
 - {{WebExtAPIRef("find.removeHighlighting()")}}
   - : Remove any highlighting.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}

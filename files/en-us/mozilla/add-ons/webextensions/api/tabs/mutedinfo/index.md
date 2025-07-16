@@ -19,11 +19,11 @@ Values of this type are objects. They contain the following properties:
 - `reason` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. The reason the tab was muted or unmuted. Not set if the tab's muted state has never been changed.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

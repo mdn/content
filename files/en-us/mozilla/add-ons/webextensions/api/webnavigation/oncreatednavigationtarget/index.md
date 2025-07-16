@@ -66,10 +66,6 @@ Events have three functions:
 - `windowId`
   - : `number`. The ID of the window in which the new tab is created.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URL, source Tab ID, and source frame ID for `onCreatedNavigationTarget`, if the target's hostname contains "example.com" or starts with "developer".
@@ -92,6 +88,10 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

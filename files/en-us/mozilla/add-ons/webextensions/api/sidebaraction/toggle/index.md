@@ -26,10 +26,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggles the sidebar when the user selects an item from the context menu:
@@ -47,3 +43,7 @@ browser.menus.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

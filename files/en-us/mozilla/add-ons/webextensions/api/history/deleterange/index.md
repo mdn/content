@@ -31,10 +31,6 @@ let deletingRange = browser.history.deleteRange(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the range has been deleted.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Delete all visits made in the last minute:
@@ -53,6 +49,10 @@ browser.history.deleteRange({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

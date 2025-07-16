@@ -17,11 +17,11 @@ Values of this type are objects. They contain the following properties:
 - `previous` {{optional_inline}}
   - : A `number` representing the previous double value.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DoubleDelta) API.

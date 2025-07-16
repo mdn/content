@@ -29,10 +29,6 @@ let deletingUrl = browser.history.deleteUrl(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the visits have been removed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Remove all visits to "https\://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:
@@ -90,6 +86,10 @@ searching.then(onGot);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

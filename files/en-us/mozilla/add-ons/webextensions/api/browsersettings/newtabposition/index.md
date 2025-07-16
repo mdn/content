@@ -14,10 +14,6 @@ The underlying value is a string that can take one of three values:
 - "relatedAfterCurrent": The default. Open new tabs next to the current tab if they are related to the current tab (for example, if they were opened via a link in the current tab). Otherwise, open new tabs at the end of the tabstrip.
 - "atEnd": Open all tabs at the end of the tabstrip.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code sets the value to "afterCurrent" and then logs the new value:
@@ -34,3 +30,7 @@ async function setAfterCurrent() {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

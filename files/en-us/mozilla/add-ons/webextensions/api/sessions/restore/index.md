@@ -27,10 +27,6 @@ let restoringSession = browser.sessions.restore(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with a {{WebExtAPIRef("sessions.Session", "Session")}} object representing the session that was restored.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This restores the single most recently-closed session, whether it's a window or tab:
@@ -62,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

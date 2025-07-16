@@ -29,11 +29,11 @@ To use this API you need to have the "captivePortal" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("captivePortal.onStateChanged")}}
   - : Fires when the captive portal state changes.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -27,10 +27,6 @@ browser.omnibox.setDefaultSuggestion(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -40,6 +36,10 @@ browser.omnibox.setDefaultSuggestion({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [chrome.omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

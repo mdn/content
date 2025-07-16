@@ -14,10 +14,6 @@ The underlying value is a string that can take one of three values:
 - "none": don't animate images at all.
 - "once": play the animation once.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Disable animated images:
@@ -27,3 +23,7 @@ browser.browserSettings.imageAnimationBehavior.set({ value: "none" });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

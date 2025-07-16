@@ -8,11 +8,11 @@ sidebar: addonsidebar
 
 `browser.windows.WINDOW_ID_CURRENT` is a value that can be used as a `windowId` parameter in some APIs to represent the current window.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#property-WINDOW_ID_CURRENT) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

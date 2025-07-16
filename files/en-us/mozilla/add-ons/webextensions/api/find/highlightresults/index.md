@@ -35,10 +35,6 @@ browser.find.highlightResults(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Search the active tab for "banana", log the number of matches, and highlight them:
@@ -53,3 +49,7 @@ function found(results) {
 
 browser.find.find("banana").then(found);
 ```
+
+## Browser compatibility
+
+{{Compat}}

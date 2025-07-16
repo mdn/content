@@ -26,10 +26,6 @@ None.
 
 A string containing a redirect URL value.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the redirect URL:
@@ -39,6 +35,10 @@ let redirectURL = browser.identity.getRedirectURL();
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

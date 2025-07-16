@@ -8,10 +8,6 @@ sidebar: addonsidebar
 
 A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of `error`.
@@ -35,3 +31,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

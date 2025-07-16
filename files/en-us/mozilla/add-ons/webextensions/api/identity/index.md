@@ -56,11 +56,11 @@ This will tend to be specific to the service provider, but in general it means c
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : Launches WAF.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

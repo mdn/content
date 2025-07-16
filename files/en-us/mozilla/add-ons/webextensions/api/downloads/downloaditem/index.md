@@ -55,11 +55,11 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : A `string` representing the absolute URL from which the file was downloaded.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem) API.

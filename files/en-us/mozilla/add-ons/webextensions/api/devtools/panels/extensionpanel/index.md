@@ -15,10 +15,6 @@ Values of this type are objects. The define two events, `onShown` and `onHidden`
 - `onShown` is emitted when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).
 - `onHidden` is emitted when the panel is hidden (for example, because the user switched to a different tab in the devtools window).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code creates a new panel, then adds handlers for its `onShown` and `onHidden` events.
@@ -47,6 +43,10 @@ browser.devtools.panels
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

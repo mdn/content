@@ -53,10 +53,6 @@ let gettingTopSites = browser.topSites.get(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code logs the title and URL for all pages in the "New Tab" page:
@@ -97,6 +93,10 @@ browser.topSites
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.

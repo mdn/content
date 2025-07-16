@@ -32,10 +32,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This
 
 If an error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code forgets the single most recently-closed session, whether it's a tab or a window:
@@ -67,3 +63,7 @@ browser.sessions
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -46,11 +46,11 @@ Alternatively, you can get permission temporarily in the active tab and only in 
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
   - : Unregisters one or more content scripts.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting) API.

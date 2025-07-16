@@ -53,10 +53,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
       </tbody>
     </table>
 
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
-
 ## Example
 
 Log the value and level of control for the `networkPredictionEnabled` property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.
@@ -71,6 +67,10 @@ getting.then((got) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
