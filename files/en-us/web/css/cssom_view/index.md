@@ -3,9 +3,8 @@ title: CSSOM view
 slug: Web/CSS/CSSOM_view
 page-type: css-module
 spec-urls: https://drafts.csswg.org/cssom-view/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSSOM view** module lets you manipulate the visual view of a document, including getting the position of element layout boxes, obtaining the width or height of the viewport through script, and also scrolling an element.
 

@@ -1,5 +1,6 @@
 ---
 title: Firefox 36 for developers
+short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 page-type: firefox-release-notes
 sidebar: firefox
@@ -153,7 +154,3 @@ _No change._
 ### Other
 
 - Firefox `-remote` [command line option](https://wiki.mozilla.org/Firefox/CommandLineOptions) has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
-
-## Older versions
-
-{{Firefox_for_developers}}

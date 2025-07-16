@@ -2,9 +2,8 @@
 title: XInclude
 slug: Glossary/XInclude
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 XInclude is a W3C Recommendation defining inclusion tags that enable documents to include other documents or parts of other documents. Content can be included from other XML files or from text files.
 

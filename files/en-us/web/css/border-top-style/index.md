@@ -3,9 +3,8 @@ title: border-top-style
 slug: Web/CSS/border-top-style
 page-type: css-property
 browser-compat: css.properties.border-top-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's top {{CSSxRef("border")}}.
 

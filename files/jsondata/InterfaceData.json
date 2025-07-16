@@ -3156,10 +3156,6 @@
       "inh": "",
       "impl": []
     },
-    "SpeechRecognitionPhraseList": {
-      "inh": "",
-      "impl": []
-    },
     "SpeechRecognitionResult": {
       "inh": "",
       "impl": []

@@ -3,9 +3,8 @@ title: system
 slug: Web/CSS/@counter-style/system
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.system
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`system`** descriptor specifies the algorithm to be used for converting the integer value of a counter to a string representation. It is used in a {{cssxref("@counter-style")}} to define the behavior of the defined style.
 

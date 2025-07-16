@@ -2,9 +2,8 @@
 title: Cacheable
 slug: Glossary/Cacheable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **cacheable** response is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached; these are the constraints for an HTTP response to be cacheable:
 

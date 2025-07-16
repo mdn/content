@@ -3,9 +3,8 @@ title: initial-value
 slug: Web/CSS/@property/initial-value
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.initial-value
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`initial-value`** descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) specifies the initial value for the registered [CSS custom property](/en-US/docs/Web/CSS/--*).
 It is a required descriptor unless the {{cssxref("@property/syntax", "syntax")}} descriptor value is the universal syntax (`*`).

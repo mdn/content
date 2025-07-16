@@ -3,9 +3,8 @@ title: attr()
 slug: Web/CSS/attr
 page-type: css-function
 browser-compat: css.types.attr
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.

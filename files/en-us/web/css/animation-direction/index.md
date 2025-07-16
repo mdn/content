@@ -3,9 +3,8 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 page-type: css-property
 browser-compat: css.properties.animation-direction
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-direction`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
 

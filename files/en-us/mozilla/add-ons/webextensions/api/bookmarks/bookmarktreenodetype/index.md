@@ -17,8 +17,8 @@ The **`bookmarks.BookmarkTreeNodeType`** type is used to describe whether a node
 - `"folder"`: the node is a folder.
 - `"separator"`: the node is a separator.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

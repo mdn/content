@@ -41,8 +41,8 @@ Values of this type are objects. They contain the following properties:
 - `connectionIsolationKey` {{optional_inline}}
   - : `string`. An optional key used for additional isolation of this proxy connection.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

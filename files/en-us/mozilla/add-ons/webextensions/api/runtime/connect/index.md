@@ -42,10 +42,6 @@ let port = browser.runtime.connect(
 
 {{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's `onDisconnect` event is fired if the extension does not exist.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This content script:
@@ -102,6 +98,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

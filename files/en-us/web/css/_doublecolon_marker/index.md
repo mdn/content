@@ -3,9 +3,8 @@ title: ::marker
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
 browser-compat: css.selectors.marker
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to [`display: list-item`](/en-US/docs/Web/CSS/display), such as the {{HTMLElement("li")}} and {{HTMLElement("summary")}} elements.
 

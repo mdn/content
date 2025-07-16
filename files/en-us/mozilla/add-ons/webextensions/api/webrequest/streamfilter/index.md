@@ -69,10 +69,6 @@ The filter also provides functions to {{WebEXTAPIRef("webRequest.StreamFilter.su
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Describes the current status of the stream.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code listens for `onstart`, `ondata`, and `onstop`. It logs those events, and the response data as an {{jsxref("ArrayBuffer")}} itself:
@@ -106,3 +102,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

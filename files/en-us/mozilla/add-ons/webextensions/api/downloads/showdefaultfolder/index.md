@@ -19,10 +19,6 @@ browser.downloads.showDefaultFolder();
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
@@ -36,6 +32,10 @@ showBtn.onclick = () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-showDefaultFolder) API.

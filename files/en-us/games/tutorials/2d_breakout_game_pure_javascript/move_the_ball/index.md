@@ -2,9 +2,8 @@
 title: Move the ball
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 

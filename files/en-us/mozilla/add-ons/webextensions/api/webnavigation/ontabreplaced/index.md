@@ -49,10 +49,6 @@ Events have three functions:
 - `timeStamp`
   - : `number`. The time when the replacement happened, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -64,6 +60,10 @@ browser.webNavigation.onTabReplaced.addListener(logOnTabReplaced);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onTabReplaced) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
