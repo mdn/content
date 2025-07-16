@@ -21,10 +21,12 @@ Our HTML interface has two main operational sections: the stream and capture pan
 ```
 
 ```html hidden live-sample___photo-capture live-sample___photo-capture-with-filters
-<h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
+<h1>Still photo capture demo</h1>
 <p>
-  This example demonstrates how to set up a media stream using your built-in
-  webcam, fetch an image from that stream, and create a PNG using that image.
+  This example demonstrates how to use
+  <code>navigator.mediaDevices.getUserMedia()</code> to set up a media stream
+  using your built-in webcam, fetch an image from that stream, and create a PNG
+  using that image.
 </p>
 ```
 
@@ -275,15 +277,14 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 .content-area {
   font:
-    1.2rem "Lucida Grande",
+    1rem "Lucida Grande",
     "Arial",
     sans-serif;
-  width: 760px;
-  padding: 2rem;
+  padding: 0.8rem;
 }
 ```
 
-{{EmbedLiveSample('photo-capture', '100%', '30', , , , , 'allow-popups')}}
+{{EmbedLiveSample('photo-capture', '', '600', , , , , 'camera', 'allow-popups')}}
 
 ## Fun with filters
 
@@ -317,7 +318,7 @@ function takePicture() {
 }
 ```
 
-{{EmbedLiveSample('photo-capture-with-filters', '100%', '30', , , , , 'allow-popups')}}
+{{EmbedLiveSample('photo-capture-with-filters', , '600', , , , 'camera', 'allow-popups')}}
 
 You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
