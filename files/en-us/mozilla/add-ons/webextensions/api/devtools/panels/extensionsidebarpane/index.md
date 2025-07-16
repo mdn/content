@@ -29,11 +29,11 @@ To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements
 - [`devtools.panels.ExtensionSidebarPane.onHidden`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden)
   - : Fired when the sidebar pane is hidden.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

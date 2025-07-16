@@ -24,10 +24,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('runtime.PlatformInfo')}} value representing the current platform.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get and log the platform OS:
@@ -42,6 +38,10 @@ gettingInfo.then(gotPlatformInfo);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getPlatformInfo) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
