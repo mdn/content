@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.line-height-step
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`line-height-step`** [CSS](/en-US/docs/Web/CSS) property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
 

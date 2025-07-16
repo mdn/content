@@ -22,19 +22,13 @@ let gettingTitle = browser.pageAction.getTitle(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. The ID of the tab containing the page action whose title you want to get.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the page action's title.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -54,6 +48,10 @@ browser.pageAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-getTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

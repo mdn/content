@@ -1,11 +1,11 @@
 ---
 title: Reflect.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
 

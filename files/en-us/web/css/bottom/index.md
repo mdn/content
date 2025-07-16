@@ -3,9 +3,8 @@ title: bottom
 slug: Web/CSS/bottom
 page-type: css-property
 browser-compat: css.properties.bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
@@ -96,9 +95,7 @@ bottom: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
-
     - for _absolutely positioned elements_, it represents the distance to the bottom edge of the containing block.
     - for _relatively positioned elements_, it represents the distance that the element is moved above its normal position.
     - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
@@ -106,9 +103,7 @@ bottom: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
 - `auto`
-
   - : Specifies that:
-
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("top")}} property, while `height: auto` is treated as a height based on the content; or if `top` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("top")}} property; or if `top` is also `auto`, the element is not moved vertically at all.
 

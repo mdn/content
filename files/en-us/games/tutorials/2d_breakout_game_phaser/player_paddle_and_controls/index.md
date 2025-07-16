@@ -2,9 +2,8 @@
 title: Player paddle and controls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
 

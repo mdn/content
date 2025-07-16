@@ -31,19 +31,17 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `notificationId`
       - : `string`. ID of the notification whose button was clicked.
     - `buttonIndex`
       - : `integer`. The [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) index of the button that was clicked.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

@@ -18,7 +18,7 @@ The [XPath guides](/en-US/docs/Web/XML/XPath/Guides) cover practical snippets an
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Describes a non-XSLT use of XPath.
 - [XPath snippets](/en-US/docs/Web/XML/XPath/Guides/Snippets)
-  - : These are JavaScript utility functions, that can be used in your own code, based on [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
+  - : These are JavaScript utility functions, that can be used in your own code, based on XPath APIs.
 
 ## Reference
 

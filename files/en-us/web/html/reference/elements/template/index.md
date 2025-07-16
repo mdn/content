@@ -3,9 +3,8 @@ title: "<template>: The Content Template element"
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
@@ -14,16 +13,12 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `shadowrootmode`
-
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
     It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
-
     - `open`
-
       - : Exposes the internal shadow root DOM for JavaScript (recommended for most use cases).
 
     - `closed`
-
       - : Hides the internal shadow root DOM from JavaScript.
 
     > [!NOTE]
@@ -35,18 +30,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
 - `shadowrootclonable`
-
   - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 
 - `shadowrootdelegatesfocus`
-
   - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
 - `shadowrootserializable` {{experimental_inline}}
-
   - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
@@ -354,7 +346,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

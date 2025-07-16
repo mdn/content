@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.exec()
+short-title: exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.exec
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
@@ -47,7 +47,6 @@ If the match succeeds, the `exec()` method returns an array and updates the [`la
 - `groups`
   - : A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of named capturing groups, whose keys are the names, and values are the capturing groups, or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) for more information.
 - `indices` {{optional_inline}}
-
   - : This property is only present when the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag is set. It is an array where each entry represents the bounds of a substring match. The index of each element in this array corresponds to the index of the respective substring match in the array returned by `exec()`. In other words, the first `indices` entry represents the entire match, the second `indices` entry represents the first capturing group, etc. Each entry itself is a two-element array, where the first number represents the match's start index, and the second number, its end index.
 
     The `indices` array additionally has a `groups` property, which holds a [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) of all named capturing groups. The keys are the names of the capturing groups, and each value is a two-element array, with the first number being the start index, and the second number being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.

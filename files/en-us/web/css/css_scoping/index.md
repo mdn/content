@@ -3,9 +3,8 @@ title: CSS scoping
 slug: Web/CSS/CSS_scoping
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scoping/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scoping** module defines the CSS scoping and encapsulation mechanisms, focusing on the [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) [scoping](https://css.oddbird.net/scope/) mechanism.
 
@@ -30,19 +29,15 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 ## Guides
 
 - [Web components](/en-US/docs/Web/API/Web_components)
-
   - : An introduction to the different technologies used to create reusable web components — custom elements whose functionality is encapsulated away from the rest of your code.
 
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-
   - : Shadow DOM fundamentals, including attaching a shadow DOM to an element, adding to the shadow DOM tree, and styling.
 
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-
   - : Defining reusable HTML structure using {{htmlelement("template")}} and {{htmlelement("slot")}} elements, and using that structure inside web components.
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-
   - : Introduction to the Custom Elements API, the JavaScript API used to create custom elements that encapsulate functionality.
 
 ## Related concepts

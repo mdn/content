@@ -26,9 +26,7 @@ browser.browserAction.getBadgeTextColor(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge text color from.
     - `windowId` {{optional_inline}}
@@ -42,10 +40,6 @@ browser.browserAction.getBadgeTextColor(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as a {{WebExtAPIRef('browserAction.ColorArray')}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -64,6 +58,10 @@ browser.browserAction.getBadgeTextColor({}).then(onGot, onFailure);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

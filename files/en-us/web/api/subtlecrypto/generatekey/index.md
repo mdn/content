@@ -19,9 +19,7 @@ generateKey(algorithm, extractable, keyUsages)
 ### Parameters
 
 - `algorithm`
-
   - : An object defining the type of key to generate and providing extra algorithm-specific parameters.
-
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
       or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
       pass an [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams) object.
@@ -37,10 +35,8 @@ generateKey(algorithm, extractable, keyUsages)
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
-
   - : An {{jsxref("Array")}} of strings indicating what can be done with the newly generated key.
     Possible values for array elements are:
-
     - `encrypt`
       - : The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt", "", "nocode")}} messages.
     - `decrypt`

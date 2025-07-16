@@ -3,9 +3,8 @@ title: "<legend>: The Field Set Legend element"
 slug: Web/HTML/Reference/Elements/legend
 page-type: html-element
 browser-compat: html.elements.legend
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 
@@ -85,7 +84,7 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

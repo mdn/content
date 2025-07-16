@@ -3,9 +3,8 @@ title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-variation-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variation-settings`** CSS descriptor allows authors to specify low-level OpenType or TrueType font variations in the {{cssxref("@font-face")}} at-rule. The values for this descriptor are the same as the {{cssxref("font-variation-settings")}} property, except for the global keyword values.
 

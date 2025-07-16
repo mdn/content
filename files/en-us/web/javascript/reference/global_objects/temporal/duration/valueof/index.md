@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/valueOf
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.valueOf
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`valueOf()`** method of {{jsxref("Temporal.Duration")}} instances throws a {{jsxref("TypeError")}}, which prevents `Temporal.Duration` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 

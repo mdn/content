@@ -193,9 +193,7 @@ They're also commonly used for the animated portions of web browsers' user inter
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://wiki.mozilla.org/APNG_Specification"
-          >wiki.mozilla.org/APNG_Specification</a
-        >
+        <a href="https://w3c.github.io/png/#apng-frame-based-animation">W3C PNG Specification</a>
       </td>
     </tr>
     <tr>
@@ -970,7 +968,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://www.w3.org/TR/SVG2">w3.org/TR/SVG2</a></td>
+      <td><a href="https://svgwg.org/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>

@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.anchor-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) enables setting anchor-positioned element's [size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size), [position](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size), and [margins](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values).
 
@@ -49,34 +50,26 @@ anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 The parameters are:
 
 - `<anchor-name>` {{optional_inline}}
-
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to set the element's size, position, or margins relative to. This is a `<dashed-ident>` value. If omitted, the element's default anchor is used.
 
     > [!NOTE]
     > Specifying an `<anchor-name>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only defines which anchor the element's property values should be set relative to.
 
 - `<anchor-size>` {{optional_inline}}
-
   - : Specifies the dimension of the anchor element that the positioned element's property values will be set relative to. Valid values include:
-
     - `width`
-
       - : The width of the anchor element.
 
     - `height`
-
       - : The height of the anchor element.
 
     - `block`
-
       - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) in the block direction.
 
     - `inline`
-
       - : The length of the anchor element's containing block in the inline direction.
 
     - `self-block`
-
       - : The length of the anchor element in the block direction.
 
     - `self-inline`
@@ -86,7 +79,6 @@ The parameters are:
     > If this parameter is omitted, the dimension defaults to the `<anchor-size>` keyterm that matches the axis of the property in which the function is included. For example, `width: anchor-size();` is equivalent to `width: anchor-size(width);`.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
-
   - : Specifies the size to use as a fallback value if the element is not absolutely or fixed positioned, or the anchor element doesn't exist. If this parameter is omitted in a case when the fallback would otherwise be used, the declaration is invalid.
 
 > [!NOTE]

@@ -3,9 +3,8 @@ title: place-items
 slug: Web/CSS/place-items
 page-type: css-shorthand-property
 browser-compat: css.properties.place-items
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) aligns items along both the block and inline directions at once. It sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties. If the second value is not set, the first value is also used for it.
 
@@ -50,7 +49,7 @@ place-items: end center;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

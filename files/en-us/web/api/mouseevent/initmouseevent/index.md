@@ -62,22 +62,18 @@ initMouseEvent(type, canBubble, cancelable, view,
   - : the event's client y coordinate. Sets the value of
     {{domxref("MouseEvent.clientY")}}.
 - `ctrlKey`
-
   - : whether or not <kbd>control</kbd> key was pressed during the Event. Sets the value
     of {{domxref("MouseEvent.ctrlKey")}}.
 
 - `altKey`
-
   - : whether or not <kbd>alt</kbd> key was pressed during the Event. Sets the value of
     {{domxref("MouseEvent.altKey")}}.
 
 - `shiftKey`
-
   - : whether or not <kbd>shift</kbd> key was pressed during the Event. Sets the value
     of {{domxref("MouseEvent.shiftKey")}}.
 
 - `metaKey`
-
   - : whether or not <kbd>meta</kbd> key was pressed during the Event. Sets the value of
     {{domxref("MouseEvent.metaKey")}}.
 
@@ -94,51 +90,27 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### HTML
-
-```html
-<div style="background:red; width:180px; padding:10px;">
-  <div id="out"></div>
-  <input type="text" />
-</div>
-```
-
-### JavaScript
-
 ```js
-document.body.onclick = (event) => {
-  const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").textContent = elementTag;
-};
-
-const simulateClick = () => {
-  const event = document.createEvent("MouseEvents");
-  event.initMouseEvent(
-    "click",
-    true,
-    true,
-    window,
-    0,
-    0,
-    0,
-    80,
-    20,
-    false,
-    false,
-    false,
-    false,
-    0,
-    null,
-  );
-  document.body.dispatchEvent(event);
-};
-
-simulateClick();
+const event = document.createEvent("MouseEvents");
+event.initMouseEvent(
+  "click",
+  true,
+  true,
+  window,
+  0,
+  0,
+  0,
+  80,
+  20,
+  false,
+  false,
+  false,
+  false,
+  0,
+  null,
+);
+document.body.dispatchEvent(event);
 ```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

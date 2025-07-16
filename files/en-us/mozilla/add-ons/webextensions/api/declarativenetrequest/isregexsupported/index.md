@@ -12,7 +12,7 @@ Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCon
 ## Syntax
 
 ```js-nolint
-let count = browser.declarativeNetRequest.isRegexSupported(
+let count = await browser.declarativeNetRequest.isRegexSupported(
     regexOptions                // object
 );
 ```
@@ -20,7 +20,6 @@ let count = browser.declarativeNetRequest.isRegexSupported(
 ### Parameters
 
 - `regexOptions`
-
   - : An object containing the regular expression to check.
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean` Whether the regex specified is case sensitive. Default is `true`.

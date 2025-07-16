@@ -3,9 +3,8 @@ title: Experimental features in Firefox
 short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially-implemented features, including evolving or proposed web platform standards.
 Each entry below includes information about the builds in which a feature is included (Nightly, Beta, Developer Edition, or Release), whether it is activated by default or not, and the name of the **preference** you can use to activate or configure the feature.
@@ -232,24 +231,6 @@ Specifically, this preference will disable the following prefixed properties:
 - `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
-### UA styles for `<h1>` nested in sectioning elements
-
-The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
-
-> [!NOTE]
-> The preference for this feature works in reverse: when set to `false`, it removes the UA styling for headings nested in sectioning elements.
-> When set to `true`, it retains the existing UA styling for the nested headings.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 125           | No                  |
-| Developer Edition | 125           | Yes                 |
-| Beta              | 125           | Yes                 |
-| Release           | 125           | Yes                 |
-
-- `layout.css.h1-in-section-ua-styles.enabled`
-  - : Set to `true` to keep existing UA styles for nested headings.
-
 ### `shape()` function
 
 The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
@@ -373,12 +354,12 @@ For example, on Android you can close a dialog using the back button.
 The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
 ([Firefox bug 1888729](https://bugzil.la/1888729)).
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 132           | No                  |
-| Developer Edition | 132           | Yes                 |
-| Beta              | 132           | Yes                 |
-| Release           | 132           | No                  |
+| Release channel   | Version added | Enabled by default?          |
+| ----------------- | ------------- | ---------------------------- |
+| Nightly           | 140           | Yes (Desktop). No (Android). |
+| Developer Edition | 132           | No                           |
+| Beta              | 132           | No                           |
+| Release           | 132           | No                           |
 
 - `dom.closewatcher.enabled`
   - : Set to `true` to enable.
@@ -423,37 +404,6 @@ The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developer
 | Release           | 138           | No                  |
 
 - `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
-### `closedBy` attribute for `<dialog>`
-
-The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
-These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
-([Firefox bug 1964077](https://bugzil.la/1964077)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | Yes                 |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
-
-- `dom.dialog.light-dismiss.enabled`
-  - : Set to `true` to enable.
-
-### Removal of MutationEvent
-
-{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
-([Firefox bug 1951772](https://bugzil.la/1951772)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | Yes                 |
-| Beta              | 138           | Yes                 |
-| Release           | 138           | Yes                 |
-
-- `dom.mutation_events.enabled`
   - : Set to `true` to enable.
 
 ### Removal of `beforescriptexecute` and `afterscriptexecute` events

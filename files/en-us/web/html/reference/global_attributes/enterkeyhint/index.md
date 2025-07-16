@@ -4,9 +4,8 @@ short-title: enterkeyhint
 slug: Web/HTML/Reference/Global_attributes/enterkeyhint
 page-type: html-attribute
 browser-compat: html.global_attributes.enterkeyhint
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`enterkeyhint`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes)
 is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
@@ -35,7 +34,7 @@ If no `enterkeyhint` attribute is provided, the user agent might use contextual 
 or [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern)
 attributes to display a suitable enter key label (or icon).
 
-### Values
+## Value
 
 The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute and only accepts the following values:
 

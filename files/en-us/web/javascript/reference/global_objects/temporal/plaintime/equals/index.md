@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainTime.prototype.equals()
+short-title: equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/equals
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.equals
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`equals()`** method of {{jsxref("Temporal.PlainTime")}} instances returns `true` if this time is equivalent in value to another time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}), and `false` otherwise. They are compared by their time values. It is equivalent to `Temporal.PlainTime.compare(this, other) === 0`.
 

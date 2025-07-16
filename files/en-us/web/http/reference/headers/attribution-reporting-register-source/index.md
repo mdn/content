@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Attribution-Reporting-Register-Source
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{seecompattable}}
+{{seecompattable}}
 
 The HTTP **`Attribution-Reporting-Register-Source`** {{Glossary("response header")}} registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when a user interacts with the attribution source. The information you include in this header also determines the types of reports the browser can generate.
 
@@ -45,9 +46,7 @@ Attribution-Reporting-Register-Source: <json-string>
 ## Directives
 
 - `<json-string>`
-
   - : A JSON string providing the information that the browser should store when the attribution source is interacted with. Available fields are as follows:
-
     - `"source_event_id"` {{optional_inline}}
       - : A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint. The string must consist solely of a base-10-formatted 64-bit unsigned integer.
     - `"destination"`
@@ -81,16 +80,13 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"priority"` {{optional_inline}}
       - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritize specific sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
     - `"trigger_data"` {{optional_inline}}
-
       - : An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place. If omitted, `"trigger_data"` defaults to `[0, 1, 2, 3, 4, 5, 6, 7]` for navigation-based sources and `[0, 1]` for event-based (image- or script-based) sources.
 
         > [!NOTE]
         > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
 
     - `"trigger_data_matching"` {{optional_inline}}
-
       - : A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. Possible values are:
-
         - `"exact"`: The `"trigger_data"` from the trigger must exactly match a value contained in the source's `"trigger_data"`; if there is no such match, no event-level attribution takes place.
         - `"modulus"`: In this case, the following calculation is performed — `d % allowedValues.size` — where `d` is the `"trigger_data"` from the trigger, and `allowedValues` is the sequence of values in the source's `"trigger_data"` array. If the result of this calculation matches a value in the source's `"trigger_data"` array, the match is a success. In such a case, the value will always match, unless `allowedValues` is empty.
 

@@ -33,23 +33,15 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tab`
       - : A {{WebExtAPIRef('tabs.Tab')}} object representing the tab whose page action was clicked.
     - `OnClickData`
-
       - : An object containing information about the click.
-
         - `modifiers`
           - : An `array`. The keyboard modifiers active at the time of the click, being one or more of `Shift`, `Alt`, `Command`, `Ctrl`, or `MacCtrl`.
         - `button`
           - : An `integer`. Indicates the button used to click the page action icon: `0` for a left-click or a click not associated with a mouse, such as one from the keyboard and `1` for a middle button or wheel click. Note that the right-click is not supported because Firefox consumes that click to display the context menu before this event is triggered.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -67,6 +59,10 @@ browser.pageAction.onClicked.addListener(() => {});
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

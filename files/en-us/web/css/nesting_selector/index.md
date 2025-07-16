@@ -3,13 +3,13 @@ title: "& nesting selector"
 slug: Web/CSS/Nesting_selector
 page-type: css-selector
 browser-compat: css.selectors.nesting
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
 
-> **Note:** _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
+> [!NOTE]
+> _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
 
 If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/:scope).
 

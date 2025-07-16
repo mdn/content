@@ -1,11 +1,11 @@
 ---
 title: Object.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for custom [type coercion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) logic.
 

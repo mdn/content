@@ -22,10 +22,6 @@ browser.browserAction.disable(
 - `tabId` {{optional_inline}}
   - : `integer`. The id of the tab for which you want to disable the browser action.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Disable the browser action when clicked, and re-enable it every time a new tab is opened:
@@ -49,6 +45,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-disable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

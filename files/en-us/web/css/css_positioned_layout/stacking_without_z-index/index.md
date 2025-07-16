@@ -1,10 +1,10 @@
 ---
 title: Stacking without the z-index property
+short-title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):
 

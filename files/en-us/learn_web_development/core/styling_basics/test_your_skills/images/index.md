@@ -10,7 +10,7 @@ The aim of this skill test is to assess whether you understand how special eleme
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -76,7 +76,7 @@ Your final result should look like the image below:
 
 Try to update the code below to recreate the finished example:
 
-```html live-sample___form
+```html live-sample___forms-1
 <form action="" class="my-form" method="post">
   <div>
     <label for="fldSearch">Keywords</label>
@@ -86,7 +86,7 @@ Try to update the code below to recreate the finished example:
 </form>
 ```
 
-```css live-sample___form
+```css live-sample___forms-1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -96,7 +96,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("form")}}
+{{EmbedLiveSample("forms-1")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -126,6 +126,144 @@ Here's an example solution for the task:
 
 </details>
 
-## See also
+## Task 3
 
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+Our second form styling assessment is fairly free-form, and you have a lot of flexibility over what you end up doing here. Your CSS needs to fulfill the requirements described below.
+
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior)
+3. On top of that, add in some nice, consistent styling for the inputs and button.
+4. Use some kind of layout technique to make the inputs and labels line up neatly.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+
+```html hidden live-sample___forms-2
+<form>
+  <h2>Edit your preferences</h2>
+  <ul>
+    <li>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+    </li>
+    <li>
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" />
+    </li>
+    <li>
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" name="phone" />
+    </li>
+    <li>
+      <label for="food">Favorite food:</label>
+      <select name="food" id="food">
+        <option>Salad</option>
+        <option>Curry</option>
+        <option>Pizza</option>
+        <option>Fajitas</option>
+      </select>
+    </li>
+    <li>
+      <button>Update preferences</button>
+    </li>
+  </ul>
+</form>
+```
+
+```css live-sample___forms-2
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1em / 1.4 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0;
+  width: 500px;
+}
+
+/* Don't edit the code above here! */
+
+/* Add your code here */
+```
+
+{{ EmbedLiveSample("forms-2", "100%", 250) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished CSS could look something like this:
+
+```css
+/* ... */
+/* Don't edit the code above here! */
+
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li:last-of-type {
+  margin-top: 30px;
+}
+
+label {
+  flex: 0 40%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+input,
+select {
+  flex: auto;
+  height: 2em;
+}
+
+input,
+select,
+button {
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  padding: 5px;
+}
+
+button {
+  margin: 0 auto;
+  padding: 5px 20px;
+  line-height: 1.5;
+  background: #eee;
+}
+
+button:hover,
+button:focus {
+  background: #ddd;
+}
+```
+
+</details>

@@ -2,9 +2,8 @@
 title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "Invalid array length" occurs when specifying an array length that is either negative, a floating number or exceeds the maximum supported by the platform (i.e., when creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}}, or when setting the {{jsxref("Array/length", "length")}} property).
 
@@ -13,7 +12,8 @@ For {{jsxref("Array")}} the maximum length is 2<sup>32</sup>-1.
 For {{jsxref("ArrayBuffer")}} the maximum is 2<sup>31</sup>-1 (2GiB-1) on 32-bit systems.
 From Firefox version 89 the maximum value of {{jsxref("ArrayBuffer")}} is 2<sup>33</sup> (8GiB) on 64-bit systems.
 
-> **Note:** `Array` and `ArrayBuffer` are independent data structures (the implementation of one does not affect the other).
+> [!NOTE]
+> `Array` and `ArrayBuffer` are independent data structures (the implementation of one does not affect the other).
 
 ## Message
 

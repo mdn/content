@@ -35,15 +35,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `newState`
       - : {{WebExtAPIRef('idle.IdleState')}}. The new idle state.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -56,6 +50,10 @@ browser.idle.onStateChanged.addListener(newState);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#event-onStateChanged) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.

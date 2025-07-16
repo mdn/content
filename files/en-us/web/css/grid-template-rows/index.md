@@ -3,9 +3,8 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-rows`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid_row", "grid rows")}}.
 
@@ -51,7 +50,7 @@ grid-template-rows: 3ch auto minmax(10px, 60px);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -118,14 +117,14 @@ This property may be specified as:
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
-
   - : As a maximum represents the largest {{cssxref("max-content")}} size of the items in that track.
 
     As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.
 
     If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
 
-    > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
+    > [!NOTE]
+    > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
 - {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e., `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.

@@ -22,9 +22,7 @@ let gettingWindow = browser.windows.getLastFocused(
 ### Parameters
 
 - `getInfo` {{optional_inline}}
-
   - : `object`.
-
     - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) matching the tab's URL.
     - `windowTypes` {{optional_inline}}
@@ -36,10 +34,6 @@ let gettingWindow = browser.windows.getLastFocused(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the last focused window. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,6 +56,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-getLastFocused) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

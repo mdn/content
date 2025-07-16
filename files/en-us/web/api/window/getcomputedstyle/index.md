@@ -50,7 +50,6 @@ The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the o
 ### Exceptions
 
 - {{JSxRef("TypeError")}}
-
   - : If the passed object is not an {{DOMxRef("Element")}} or the
     `pseudoElt` is not a valid pseudo-element selector or is
     {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.
@@ -58,8 +57,7 @@ The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the o
     > [!NOTE]
     > Valid pseudo-element selector refers to syntactic
     > validity, e.g., `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
+    > pseudo-element itself is not supported.
 
 ## Examples
 
@@ -107,25 +105,23 @@ para.textContent =
 
 ### Use with pseudo-elements
 
-`getComputedStyle` can pull style info from pseudo-elements (such as
-`::after`, `::before`, `::marker`,
-`::line-marker` — see [the pseudo-element spec](https://www.w3.org/TR/css-pseudo-4/)).
+`getComputedStyle` can pull style info from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), such as `::after`, `::before`, `::marker`, or `::line-marker`.
 
 ```html
-<style>
-  h3::after {
-    content: " rocks!";
-  }
-</style>
-
 <h3>Generated content</h3>
+```
 
-<script>
-  const h3 = document.querySelector("h3");
-  const result = getComputedStyle(h3, ":after").content;
+```css
+h3::after {
+  content: " rocks!";
+}
+```
 
-  console.log("the generated content is: ", result); // returns ' rocks!'
-</script>
+```js
+const h3 = document.querySelector("h3");
+const result = getComputedStyle(h3, "::after").content;
+
+console.log("the generated content is: ", result); // returns ' rocks!'
 ```
 
 ## Specifications

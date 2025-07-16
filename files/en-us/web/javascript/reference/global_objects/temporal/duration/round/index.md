@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.round()
+short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.round
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`round()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the duration rounded to the given smallest unit and/or [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing) to the given largest unit.
 

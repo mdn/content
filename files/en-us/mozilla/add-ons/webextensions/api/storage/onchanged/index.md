@@ -34,17 +34,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `changes`
       - : `object`. Object describing the change. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
       - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -70,6 +64,10 @@ browser.storage.onChanged.addListener(logStorageChange);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

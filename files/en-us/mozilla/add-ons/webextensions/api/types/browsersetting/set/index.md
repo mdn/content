@@ -35,19 +35,13 @@ let setting = setting.set(
 ### Parameters
 
 - `details`
-
   - : An object that must contain the following property:
-
     - `value`
       - : `any`. The value you want to change the setting to. Its type depends on the particular setting.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was modified, `false` otherwise (for example, because the extension did not control the setting).
-
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Example
 
@@ -71,6 +65,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.

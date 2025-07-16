@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.setUTCMinutes()
+short-title: setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMinutes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to universal time.
 

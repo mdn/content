@@ -3,9 +3,8 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 page-type: css-property
 browser-compat: css.properties.border-image-source
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/border-image).
 

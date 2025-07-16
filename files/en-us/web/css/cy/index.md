@@ -3,9 +3,8 @@ title: cy
 slug: Web/CSS/cy
 page-type: css-property
 browser-compat: css.properties.cy
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`cy`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis center point of an SVG {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements. If present, it overrides the element's {{SVGAttr("cy")}} attribute.
 
@@ -32,11 +31,9 @@ cy: unset;
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the vertical center of the circle or ellipse.
 
 - {{cssxref("length")}}
-
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the height of the current SVG viewport.
 
 ## Formal definition

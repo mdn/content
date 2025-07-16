@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: pushDebugGroup() method"
 short-title: pushDebugGroup()
 slug: Web/API/GPUCommandEncoder/pushDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.

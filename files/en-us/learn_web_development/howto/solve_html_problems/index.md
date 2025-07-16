@@ -34,7 +34,7 @@ HTML specializes in providing semantic information for a document, so HTML answe
 One of the main reasons for HTML is making navigation easy with {{Glossary("hyperlink", "hyperlinks")}}, which can be used in many different ways:
 
 - [How to create a link](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- [How to create a table of contents with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu)
+- [How to create a table of contents with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#creating_a_navigation_menu)
 
 ### Images & multimedia
 

@@ -2,9 +2,8 @@
 title: Border-image generator
 slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This tool can be used to generate CSS {{cssxref("border-image")}} values.
 

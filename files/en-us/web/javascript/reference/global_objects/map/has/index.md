@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.has
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`has()`** method of {{jsxref("Map")}} instances returns a boolean indicating whether an element with the
 specified key exists in this map or not.

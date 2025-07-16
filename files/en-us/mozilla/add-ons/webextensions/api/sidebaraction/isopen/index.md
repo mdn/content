@@ -27,19 +27,13 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
 ### Parameters
 
 - `details`
-
   - : `object`. An object optionally containing the `windowId` to check.
-
     - `windowId` {{optional_inline}}
       - : `integer`. ID of a browser window to check. If omitted defaults to {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, which refers to the topmost browser window.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's sidebar is open in the given window, or `false` otherwise.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -67,3 +61,7 @@ browser.windows.getAll().then((all) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

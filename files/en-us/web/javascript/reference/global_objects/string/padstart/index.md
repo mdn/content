@@ -1,11 +1,11 @@
 ---
 title: String.prototype.padStart()
+short-title: padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.padStart
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`padStart()`** method of {{jsxref("String")}} values pads this string with a given string (repeated and/or truncated, if needed) so that the resulting string has a given length. The padding is applied from the start of this string.
 

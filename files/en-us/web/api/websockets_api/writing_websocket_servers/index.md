@@ -51,7 +51,8 @@ If any header is not understood or has an incorrect value, the server should sen
 
 The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's look at that next.
 
-> **Note:** [Regular HTTP status codes](/en-US/docs/Web/HTTP/Reference/Status) can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
+> [!NOTE]
+> [Regular HTTP status codes](/en-US/docs/Web/HTTP/Reference/Status) can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
 ### Server handshake response
 

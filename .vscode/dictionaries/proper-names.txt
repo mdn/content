@@ -80,6 +80,7 @@ Carakan
 Cardano
 carinaanand
 Carle
+carolinensis
 Cassini
 Caterina
 caugner
@@ -164,7 +165,9 @@ Ehsan
 Eich
 Eichenwald
 Eisenberg
+Elaina
 Elchi
+Elly
 Emscripten
 Endtest
 Ensatina
@@ -240,6 +243,7 @@ Hyperaudio
 Hönigswald
 Icecast
 idb-keyval
+Igalia
 Imagify
 Iniesta
 Inkscape
@@ -460,6 +464,7 @@ Rocher
 Rohini
 Ronaldo
 Roselli
+Rosenburg
 Rossi
 Rossum
 Roushan
@@ -477,6 +482,7 @@ Schirra
 Schmarsow
 Schola
 Schwarz
+Sciurus
 Scooby
 scottohara
 Scribie
@@ -565,6 +571,7 @@ Visio
 Voikko
 Volkman
 Vorbis
+vulgaris
 wabt
 Wakamai
 Waldron

@@ -3,11 +3,19 @@ title: -webkit-text-stroke
 slug: Web/CSS/-webkit-text-stroke
 page-type: css-shorthand-property
 browser-compat: css.properties.-webkit-text-stroke
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the [width](/en-US/docs/Web/CSS/length) and [color](/en-US/docs/Web/CSS/color_value) of strokes for text characters. This is a shorthand property for the longhand properties {{cssxref("-webkit-text-stroke-width")}} and {{cssxref("-webkit-text-stroke-color")}}.
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- [`-webkit-text-stroke-color`](/en-US/docs/Web/CSS/-webkit-text-stroke-color)
+- [`-webkit-text-stroke-width`](/en-US/docs/Web/CSS/-webkit-text-stroke-width)
+
+## Syntax
 
 ```css
 /* Width and color values */
@@ -20,15 +28,6 @@ The **`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS) property specifies the 
 -webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
 ```
-
-## Constituent properties
-
-This property is a shorthand for the following CSS properties:
-
-- [`-webkit-text-stroke-color`](/en-US/docs/Web/CSS/-webkit-text-stroke-color)
-- [`-webkit-text-stroke-width`](/en-US/docs/Web/CSS/-webkit-text-stroke-width)
-
-## Syntax
 
 ### Values
 

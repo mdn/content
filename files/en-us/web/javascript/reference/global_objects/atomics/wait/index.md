@@ -1,11 +1,11 @@
 ---
 title: Atomics.wait()
+short-title: wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.wait
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.wait()`** static method verifies that a shared memory location contains a given value and if so sleeps, awaiting a wake-up notification or a time out. It returns a string which is `"not-equal"` if the memory location does not match the given value, `"ok"` if woken by {{jsxref("Atomics.notify()")}}, or `"timed-out"` if the timeout expires.
 

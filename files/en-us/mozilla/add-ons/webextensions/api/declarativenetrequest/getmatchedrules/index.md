@@ -12,7 +12,7 @@ Returns all the rules matched for the extension. Callers can filter the list of 
 ## Syntax
 
 ```js-nolint
-let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
+let gettingMatchedRules = await browser.declarativeNetRequest.getMatchedRules(
     filter                // object
 );
 ```
@@ -20,7 +20,6 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 ### Parameters
 
 - `filter` {{optional_inline}}
-
   - : An object to filter the list of matched rules.
     - `minTimeStamp` {{optional_inline}}
       - : A `number`. If specified, only matches rules after the specified timestamp.

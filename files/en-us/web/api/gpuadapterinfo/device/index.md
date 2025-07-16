@@ -3,12 +3,10 @@ title: "GPUAdapterInfo: device property"
 short-title: device
 slug: Web/API/GPUAdapterInfo/device
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUAdapterInfo.device
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`device`** read-only property of the
 {{domxref("GPUAdapterInfo")}} interface returns a vendor-specific identifier for the adapter, or an empty string if it is not available.

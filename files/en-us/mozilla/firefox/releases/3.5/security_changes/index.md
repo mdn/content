@@ -2,9 +2,9 @@
 title: Security changes in Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Security_changes
 page-type: guide
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
 This article covers security-related changes in Firefox 3.5.
 
 ## Changes to chrome registration

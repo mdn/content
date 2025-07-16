@@ -611,8 +611,6 @@ function getDevicePixelSize(elem) {
 }
 ```
 
-Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.
-
 ## Use `WEBGL_provoking_vertex` when it's available
 
 When assembling vertices into primitives such as triangles and lines, in OpenGL's convention, the last vertex of the primitive is considered the "provoking vertex". This is relevant when using `flat` vertex attribute interpolation in ESSL300 (WebGL 2); the attribute value from the provoking vertex is used for all of the vertices of the primitive.

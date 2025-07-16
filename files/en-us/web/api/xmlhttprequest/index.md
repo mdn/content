@@ -39,7 +39,6 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-
   - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message (`"OK"`, for example).
 
     > [!NOTE]

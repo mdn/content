@@ -3,9 +3,8 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-display
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-display`** descriptor for the [`@font-face`](/en-US/docs/Web/CSS/@font-face) at-rule determines how a font face is displayed based on whether and when it is downloaded and ready to use.
 

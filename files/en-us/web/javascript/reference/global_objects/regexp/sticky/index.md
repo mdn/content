@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.sticky
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `y` flag is used with this regular expression.
 

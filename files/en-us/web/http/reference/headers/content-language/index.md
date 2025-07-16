@@ -4,9 +4,8 @@ short-title: Content-Language
 slug: Web/HTTP/Reference/Headers/Content-Language
 page-type: http-header
 browser-compat: http.headers.Content-Language
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Language`** {{Glossary("representation header")}} is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language.
 

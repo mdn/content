@@ -54,6 +54,10 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
       - : The width of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
     - `displayHeight` {{Optional_Inline}}
       - : The height of the `VideoFrame` when displayed after applying aspect-ratio adjustments.
+    - `flip` {{optional_inline}}
+      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
+    - `rotation` {{optional_inline}}
+      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
@@ -113,6 +117,10 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
           - : A Boolean. If `true`, indicates that full-range color values are used.
     - `transfer`
       - : An array of {{jsxref("ArrayBuffer")}}s that `VideoFrame` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `VideoFrame` will use that buffer directly instead of copying from it.
+    - `flip` {{optional_inline}}
+      - : A boolean. If `true`, horizontal mirroring is applied. Defaults to `false`.
+    - `rotation` {{optional_inline}}
+      - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 ## Examples
 

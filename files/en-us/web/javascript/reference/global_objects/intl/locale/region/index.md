@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.region
+short-title: region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.region
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 
@@ -48,4 +48,4 @@ console.log(locale.region); // Prints "FR"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode region chart](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_containment_un_m_49.html)
+- [Unicode region chart](https://www.unicode.org/cldr/charts/47/supplemental/territory_containment_un_m_49.html)

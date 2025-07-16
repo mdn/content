@@ -22,9 +22,7 @@ let gettingText = browser.browserAction.getBadgeText(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
     - `windowId` {{optional_inline}}
@@ -38,10 +36,6 @@ let gettingText = browser.browserAction.getBadgeText(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the badge text.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,6 +51,10 @@ gettingBadgeText.then(gotBadgeText);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

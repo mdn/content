@@ -22,9 +22,7 @@ let deletingRange = browser.history.deleteRange(
 ### Parameters
 
 - `range`
-
   - : `object`. Specification of the time range for which to delete visits.
-
     - `startTime`
       - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the start time for the range.
     - `endTime`
@@ -33,10 +31,6 @@ let deletingRange = browser.history.deleteRange(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the range has been deleted.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -56,6 +50,10 @@ browser.history.deleteRange({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

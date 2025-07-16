@@ -1,10 +1,10 @@
 ---
 title: Using CSS gradients
+short-title: Using gradients
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS gradients** are represented by the {{cssxref("&lt;gradient&gt;")}} data type, a special type of {{cssxref("&lt;image&gt;")}} made of a progressive transition between two or more colors. You can choose between three types of gradients: _linear_ (created with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function), _radial_ (created with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function), and _conic_ (created with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function). You can also create repeating gradients with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} functions.
 

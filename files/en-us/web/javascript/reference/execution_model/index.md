@@ -6,9 +6,8 @@ spec-urls:
   - https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html
   - https://tc39.es/ecma262/multipage/memory-model.html
   - https://html.spec.whatwg.org/multipage/webappapis.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page introduces the basic infrastructure of the JavaScript runtime environment. The model is largely theoretical and abstract, without any platform-specific or implementation-specific details. Modern JavaScript engines heavily optimize the described semantics.
 

@@ -3,9 +3,8 @@ title: fill
 slug: Web/CSS/fill
 page-type: css-property
 browser-compat: css.properties.fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill`** [CSS](/en-US/docs/Web/CSS) property defines how SVG text content and the interior canvas of SVG shapes are filled or painted. If present, it overrides the element's {{SVGAttr("fill")}} attribute.
 
@@ -47,23 +46,18 @@ fill: unset;
 ### Values
 
 - `none`
-
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.
 
 - `context-fill`
-
   - : Uses the paint value of `fill` from a context element.
 
 - `context-stroke`
-
   - : Uses the paint value of `stroke` from a context element.
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The color of the fill as any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 - `<url>`
-
   - : A URL reference to an SVG paint server element, such as a {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, or {{SVGElement("pattern")}}. The resource reference can optionally be followed by a `<color>` or `none`, which will be used as a fallback if the referenced paint server doesn't resolve.
 
 ## Formal definition

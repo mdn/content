@@ -1,10 +1,10 @@
 ---
 title: Firefox 50 for developers
+short-title: Firefox 50
 slug: Mozilla/Firefox/Releases/50
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 50 was released on November 15, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -128,10 +128,8 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Files and directories
 
 - A subset of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been implemented, to improve compatibility with sites that were previously only compatible with Google Chrome ([Firefox bug 1265767](https://bugzil.la/1265767)).
-
   - The asynchronous API interfaces have been implemented, with the caveat that only reading of files is supported; for example, the {{domxref("FileSystemFileEntry.createWriter()")}} method is a no-op.
   - These interfaces have been implemented:
-
     - {{domxref("FileSystem")}}
     - {{domxref("FileSystemEntry")}} (properties only; the methods have not been implemented)
     - {{domxref("FileSystemFileEntry")}} (except for {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}})
@@ -145,7 +143,3 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 - We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ([Firefox bug 1289255](https://bugzil.la/1289255)). This is enabled by default.
 - The `HTMLInputElement.directory` property, part of the [Directory Upload API](https://wicg.github.io/directory-upload/proposal.html) proposal, has been renamed to `allowdirs` ([Firefox bug 1288681](https://bugzil.la/1288681)). This property is hidden behind a preference.
-
-## Older versions
-
-{{Firefox_for_developers}}

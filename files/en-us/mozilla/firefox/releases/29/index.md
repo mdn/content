@@ -1,10 +1,10 @@
 ---
 title: Firefox 29 for developers
+short-title: Firefox 29
 slug: Mozilla/Firefox/Releases/29
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 29 was released on April 29, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -46,15 +46,12 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Intl/Collator", "Intl.Collator")}}
     - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -102,7 +99,3 @@ _No change._
 
 - Major Firefox theme changes affect most extensions that interact with the Firefox user interface.
 - `nsISecurityCheckedComponent` has been removed ([Firefox bug 794943](https://bugzil.la/794943)). Most consumers can remove `nsISecurityCheckedComponent` from their interface definition and they will continue to work.
-
-### Older versions
-
-{{Firefox_for_developers}}

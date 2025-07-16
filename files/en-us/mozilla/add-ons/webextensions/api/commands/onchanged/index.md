@@ -33,23 +33,15 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when a command's shortcut changes. The function is passed these arguments:
-
     - `changeInfo`
-
       - : `object`. An object containing the name of the command, its new active shortcut, and its old shortcut.
-
         - `name`
           - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
         - `newShortcut`
           - : `string`. The new active shortcut for this command, or blank if no shortcut is active.
         - `oldShortcut`
           - : `string`. The shortcut that was active for this command, or blank if no shortcut was active.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -66,3 +58,7 @@ browser.commands.onChanged.addListener(handleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

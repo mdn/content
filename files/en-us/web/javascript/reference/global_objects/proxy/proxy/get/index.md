@@ -1,11 +1,11 @@
 ---
 title: handler.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.get
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.get()`** method is a trap for the `[[Get]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
 

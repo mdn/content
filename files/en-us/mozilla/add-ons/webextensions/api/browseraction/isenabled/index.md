@@ -22,9 +22,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### Parameters
 
 - `details`
-
   - : `object`. An object optionally containing the `tabId` or `windowId` to check.
-
     - `tabId` {{optional_inline}}
       - : `integer`. ID of a tab to check.
     - `windowId` {{optional_inline}}
@@ -38,10 +36,6 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's browser action is enabled, and `false` otherwise.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -69,3 +63,7 @@ async function enabledInActiveTab() {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

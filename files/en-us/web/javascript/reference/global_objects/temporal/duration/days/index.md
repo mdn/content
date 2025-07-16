@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.days
+short-title: days
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/days
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.days
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`days`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of days in the duration.
 

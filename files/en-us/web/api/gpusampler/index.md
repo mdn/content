@@ -2,12 +2,10 @@
 title: GPUSampler
 slug: Web/API/GPUSampler
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUSampler
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUSampler`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an object that can control how shaders transform and filter texture resource data.
 
@@ -17,7 +15,7 @@ A `GPUSampler` object instance is created using the {{domxref("GPUDevice.createS
 
 ## Instance properties
 
-- {{domxref("GPUSampler.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUSampler.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

@@ -31,15 +31,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `changeInfo`
       - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object representing the identity whose properties were updated.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -52,6 +46,10 @@ browser.contextualIdentities.onUpdated.addListener(handleUpdated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

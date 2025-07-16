@@ -64,13 +64,14 @@ const setCookie = browser.cookies.set({
 setCookie.then(logCookie, logError);
 ```
 
-> **Note:** `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
+> [!NOTE]
+> `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#property-lastError) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

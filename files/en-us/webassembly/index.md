@@ -29,7 +29,7 @@ WebAssembly is designed to complement and run alongside JavaScript — using the
 
 WebAssembly has big implications for the web platform, not only because it provides a way for code written in multiple languages to run on the web at near-native speed, but also because it enables client apps to run on the web that previously could not.
 
-And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
+And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
 
 ## Guides
 

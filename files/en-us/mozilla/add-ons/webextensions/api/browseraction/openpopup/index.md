@@ -22,19 +22,13 @@ browser.browserAction.openPopup(
 ### Parameters
 
 - `details` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `windowId` {{optional_inline}}
       - : `integer`. Window to open the popup for. Defaults to the current window.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -53,3 +47,7 @@ browser.menus.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

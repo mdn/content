@@ -2,9 +2,8 @@
 title: JavaScript language overview
 slug: Web/JavaScript/Guide/Language_overview
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
 
@@ -734,7 +733,7 @@ class Admin extends withAuthentication(Person) {
 }
 ```
 
-Static properties are created by prepending `static`. Private properties are created by prepending a hash `#` (not `private`). The hash is an integral part of the property name. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private property outside the class body — not even in derived classes.
+Static properties are created by prepending `static`. Private fields and methods are created by prepending a hash `#` (not `private`). The hash is an integral part of the element's name, and distinguishes it from a regular string-keyed property. (Think about `#` as `_` in Python.) Unlike most other languages, there's absolutely no way to read a private element outside the class body — not even in derived classes.
 
 For a detailed guide on various class features, you can read the [guide page](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 

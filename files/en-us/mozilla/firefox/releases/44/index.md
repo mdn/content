@@ -1,10 +1,10 @@
 ---
 title: Firefox 44 for developers
+short-title: Firefox 44
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -30,16 +30,14 @@ Highlights:
 - `position: fixed;` now always creates a new stacking context ([Firefox bug 1179288](https://bugzil.la/1179288)).
 - The support of {{cssxref('@font-face/unicode-range', 'unicode-range')}} has been enabled by default ([Firefox bug 1119062](https://bugzil.la/1119062)).
 - Our experimental implementation of CSS Writing Modes has been updated to reflect the latest specification:
-
   - The value `sideways` of the {{cssxref("text-orientation")}} property has been implemented and `sideways-right` has been made an alias of it ([Firefox bug 1193488](https://bugzil.la/1193488)).
   - The value `sideways-rl` and `sideways-lr` of the {{cssxref("writing-mode")}} property ([Firefox bug 1193488](https://bugzil.la/1193488) and [Firefox bug 1193519](https://bugzil.la/1193519)).
 
 - The non-standard properties `-moz-math-display` and `-moz-window-shadow` are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
 - The {{cssxref("font-style")}} property now distinguishes between `oblique` and `italic` when both variants are available ([Firefox bug 543715](https://bugzil.la/543715)).
-- Though not supported, the properties {{cssxref("@page/marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
+- Though not supported, the properties {{cssxref("@page/marks", "marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("@page/size", "size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
 - The internal value `-moz-mac-unified-toolbar` has been removed from the possible values for the {{cssxref("appearance")}} property ([Firefox bug 1206468](https://bugzil.la/1206468)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 837211](https://bugzil.la/837211)):
-
   - `-webkit-animation`
   - `-webkit-animation-delay`
   - `-webkit-animation-direction`
@@ -99,7 +97,7 @@ Highlights:
 #### DOM & HTML DOM
 
 - For compatibility with specific existing sites, the property `Document.charset` has been implemented as an alias of {{domxref("Document.characterSet")}} ([Firefox bug 647621](https://bugzil.la/647621)).
-- Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/XML/Guides/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
+- Support for the `window.sidebar.addSearchEngine()` method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
 - To fight unwanted pop-ups, prompts requested in {{domxref("Window/beforeunload_event", "beforeunload")}} events of pages that have not been interacted with are no more displayed ([Firefox bug 636905](https://bugzil.la/636905)).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ([Firefox bug 949376](https://bugzil.la/949376)).
 - The obsolete property `DocumentType.internalSubset` has been removed ([Firefox bug 801545](https://bugzil.la/801545)).
@@ -113,10 +111,9 @@ Highlights:
 #### Canvas
 
 - A new experimental {{domxref("OffscreenCanvas")}} API that allows rendering contexts (such as [WebGL](/en-US/docs/Web/API/WebGL_API)) to run in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) has been implemented. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 709490](https://bugzil.la/709490)). This API includes:
-
   - The {{domxref("OffscreenCanvas")}} interface,
   - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}, and
-  - {{domxref("WebGLRenderingContext.commit()")}}.
+  - `WebGLRenderingContext.commit()`.
   - Several WebGL interfaces are now also available in a worker context when this API is enabled.
 
 #### WebGL
@@ -144,7 +141,6 @@ Highlights:
 #### WebRTC
 
 - WebRTC interfaces have been _unprefixed_ ([Firefox bug 1155923](https://bugzil.la/1155923)). In particular:
-
   - `mozRTCPeerConnection` is now {{domxref("RTCPeerConnection")}}.
   - `mozRTCIceCandidate` is now {{domxref("RTCIceCandidate")}}.
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
@@ -216,7 +212,3 @@ _No change._
 ### Other
 
 - Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
-
-## Older versions
-
-{{Firefox_for_developers}}

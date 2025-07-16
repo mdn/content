@@ -31,15 +31,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `notificationId`
       - : `string`. ID of the notification that the user clicked.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -52,6 +46,10 @@ browser.notifications.onClicked.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

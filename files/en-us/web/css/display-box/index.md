@@ -3,9 +3,8 @@ title: <display-box>
 slug: Web/CSS/display-box
 page-type: css-type
 browser-compat: css.properties.display.contents
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.
 
@@ -14,7 +13,6 @@ These keywords define whether an element generates display boxes at all.
 Valid `<display-box>` values:
 
 - `contents`
-
   - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
     _Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility](#accessibility) section below for more details._
@@ -100,7 +98,6 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
 ## See also
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

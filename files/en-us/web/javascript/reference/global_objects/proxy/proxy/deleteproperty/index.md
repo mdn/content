@@ -1,11 +1,11 @@
 ---
 title: handler.deleteProperty()
+short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
 

@@ -20,7 +20,6 @@ console.table(data, columns)
 ### Parameters
 
 - `data`
-
   - : The data to display. This must be either an array or an object. Each item in the array, or property in the object, is represented by a row in the table. The first column in the table is labeled `(index)` and its values are the array indices or the property names.
 
     If the elements in the array, or properties in the object, are themselves arrays or objects, then their items or properties are enumerated in the row, one per column.
@@ -167,6 +166,6 @@ console.table([tyrone, janet, maria], ["firstName"]);
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.table()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#table)
+- [Microsoft Edge's documentation for `console.table()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#table)
 - [Node.js documentation for `console.table()`](https://nodejs.org/docs/latest/api/console.html#consoletabletabulardata-properties)
 - [Google Chrome's documentation for `console.table()`](https://developer.chrome.com/docs/devtools/console/api/#table)

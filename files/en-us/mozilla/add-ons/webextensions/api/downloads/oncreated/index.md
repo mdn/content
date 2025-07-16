@@ -33,15 +33,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. This function is passed this argument:
-
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -56,6 +50,10 @@ browser.downloads.onCreated.addListener(handleCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onCreated) API.

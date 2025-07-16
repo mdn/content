@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
 

@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/toLocaleString
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.toLocaleString
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a string with a language-sensitive representation of this year-month. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 
@@ -30,9 +32,7 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. The `calendar` option must be provided with the same value as this year-month's calendar. Regarding the [date-time component options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) and the style shortcuts (`dateStyle` and `timeStyle`), the options should follow one of these forms:
-
     - Provide none of them: `year` and `month` will default to `"numeric"`.
     - Provide `dateStyle` only: it expands to `era`, `year`, and `month` formats.
     - Provide some date-time component options, where at least one of them is `year` or `month`. Only the specified date components will be included in the output.

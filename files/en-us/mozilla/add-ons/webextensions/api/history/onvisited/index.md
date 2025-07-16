@@ -31,18 +31,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `result`
-
       - : {{WebExtAPIRef('history.HistoryItem')}}. An object representing the item in the browser's history.
 
         At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -58,6 +51,10 @@ browser.history.onVisited.addListener(onVisited);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

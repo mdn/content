@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("TypedArray")}} instances executes a provided function once for each typed array element. This method has the same algorithm as {{jsxref("Array.prototype.forEach()")}}.
 

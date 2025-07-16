@@ -31,10 +31,6 @@ let updating = browser.notifications.update(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the notification was updated, or `false` if it was not (for example, because the notification referenced by `id` did not exist).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example uses `update()` to update a progress notification. Clicking the browser action shows the notification and starts an {{WebExtAPIRef("alarms", "alarm")}}, which we use to update the notification's progress indicator.
@@ -89,6 +85,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.setHours()
+short-title: setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setHours
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setHours()`** method of {{jsxref("Date")}} instances changes the hours, minutes, seconds, and/or milliseconds for this date according to local time.
 
