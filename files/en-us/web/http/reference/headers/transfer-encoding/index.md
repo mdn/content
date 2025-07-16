@@ -105,5 +105,4 @@ Developer Network\r\n
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Content-Length")}}
-- Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and {{HTTPHeader("Trailer")}} (responses).
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
