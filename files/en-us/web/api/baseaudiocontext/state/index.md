@@ -48,9 +48,9 @@ Interruptions that may trigger the `interrupted` state can include:
 
 Note also the potential for transitions between the `interrupted` and `suspended` states:
 
-- If `suspend()` is called on an audio context during an interruption (`state = "interrupted"`), the state will transition to `suspended` immediately.
-- If `resume()` is called on a suspended audio context (`state = "suspended"`) during an interruption, the state will transition to `interrupted` immediately.
-- If an interruption happens while the audio context is suspended (`state = "suspended"`), the context will not transition to `interrupted`. This transition won't happen unless `resume()` is called on the context (as outlined by the previous point). This choice was made to avoid exposing too much device information to web pages - for example, logging every time the laptop is closed could be a privacy issue.
+- If `suspend()` is called on an audio context during an interruption (`state === "interrupted"`), the state will transition to `suspended` immediately.
+- If `resume()` is called on a `suspended` audio context during an interruption, the state will transition to `interrupted` immediately.
+- If an interruption happens while the audio context is `suspended`, the context will not transition to `interrupted`. This transition won't happen unless `resume()` is called on the context (as outlined by the previous point). This choice was made to avoid exposing too much device information to web pages - for example, logging every time the laptop is closed could be a privacy issue.
 
 ## Examples
 
