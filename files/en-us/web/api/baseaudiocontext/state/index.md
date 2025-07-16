@@ -30,7 +30,7 @@ A string. Possible values are:
 
 The `state` property of an audio context is used to expose its current operational state. This is normally done by querying the `state` inside a {{domxref("BaseAudioContext.statechange_event", "statechange")}} event handler so that changes in state can be responded to appropriately.
 
-The `running` and `closed` values are self-explanatory — they indicate that the audio context is either running normally (created and connected to an output destination), or closed (via the {{domxref("AudioContext.close()")}} method).
+The `running` and `closed` values are self-explanatory — they indicate that the audio context is either running normally, or closed (via the {{domxref("AudioContext.close()")}} method).
 
 The `interrupted` and `suspended` states both represent a "paused" state that can later be resumed, but they differ in terms of what they signify:
 
@@ -41,11 +41,16 @@ Interruptions that may trigger the `interrupted` state can include:
 
 - A conferencing or phone app on the same system requiring exclusive access to the device's audio hardware.
 - The user closing their laptop.
+- API features designed to initiate or respond to audio interruptions.
+
+> [!NOTE]
+> There are currently no browser implementations that make use of the `interrupted` state.
 
 Note also the potential for transitions between the `interrupted` and `suspended` states:
 
 - If `suspend()` is called on an audio context during an interruption (`state = "interrupted"`), the state will transition to `suspended` immediately.
 - If `resume()` is called on a suspended audio context (`state = "suspended"`) during an interruption, the state will transition to `interrupted` immediately.
+- If an interruption happens while the audio context is suspended (`state = "suspended"`), the context will not transition to `interrupted`. This transition won't happen unless `resume()` is called on the context (as outlined by the previous point). This choice was made to avoid exposing too much device information to web pages - for example, logging every time the laptop is closed could be a privacy issue.
 
 ## Examples
 
