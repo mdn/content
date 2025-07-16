@@ -3,9 +3,8 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 page-type: css-property
 browser-compat: css.properties.border-bottom-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
 

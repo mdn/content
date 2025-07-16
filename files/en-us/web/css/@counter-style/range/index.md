@@ -3,9 +3,8 @@ title: range
 slug: Web/CSS/@counter-style/range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.range
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`range`** descriptor lets the author specify one or more ranges of counter values for which the style is applied when defining custom counter styles with the {{cssxref("@counter-style")}} at-rule. When the `range` descriptor is included, the defined counter will only be used for values in the set ranges. If the counter value is outside the specified range, the fallback style will be used to construct the representation of that marker.
 

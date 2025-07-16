@@ -1,7 +1,8 @@
 ---
-title: Event handling (overview)
+title: Working with events and event handlers
 slug: Web/Events/Event_handlers
 page-type: guide
+sidebar: events
 ---
 
 Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
@@ -85,12 +86,3 @@ Then the event handler created by the code above can be removed like this:
 ```js
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
-    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
-  </ol>
-</section>

@@ -3,9 +3,8 @@ title: ::highlight()
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
 browser-compat: css.selectors.highlight
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to a custom highlight.
 

@@ -2,9 +2,8 @@
 title: HTTP/3
 slug: Glossary/HTTP_3
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **HTTP/3** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP), succeeding {{glossary("HTTP 2", "HTTP/2")}}.
 

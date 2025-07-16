@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-overflow/
   - https://drafts.csswg.org/css-overflow-4/
   - https://drafts.csswg.org/css-overflow-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS overflow** module properties enable you to handle scrollable overflow in visual media.
 

@@ -171,4 +171,3 @@ function getElementByIdWrapper(xmlDoc, id) {
 
 - {{domxref("Document.createExpression()")}}
 - {{domxref("XPathResult")}}
-- [Check for browser support](https://codepen.io/johan/full/DJoqaX)

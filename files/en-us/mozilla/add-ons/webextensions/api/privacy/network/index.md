@@ -36,10 +36,6 @@ Default values for these properties tend to vary across browsers.
   - : this setting allows your extension to determine if a user has enabled
     [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the `webRTCIPHandlingPolicy` property:
@@ -73,6 +69,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.

@@ -3,9 +3,8 @@ title: padding-block-start
 slug: Web/CSS/padding-block-start
 page-type: css-property
 browser-compat: css.properties.padding-block-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 

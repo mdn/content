@@ -19,10 +19,6 @@ It defines a single function {{WebExtAPIRef("contentScripts.RegisteredContentScr
 - {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}
   - : Unregisters the content scripts represented by this object.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code toggles a registered content script on a browser action click:
@@ -55,3 +51,7 @@ browser.browserAction.onClicked.addListener(toggle);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

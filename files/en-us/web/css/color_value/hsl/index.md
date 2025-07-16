@@ -6,9 +6,8 @@ browser-compat: css.types.color.hsl
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HSL
   - https://drafts.csswg.org/css-color/#the-hsl-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `hsla()` functional notation is an alias for `hsl()`. They are exactly equivalent. It is recommended to use `hsl()`.

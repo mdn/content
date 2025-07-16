@@ -2,9 +2,8 @@
 title: Cross-site scripting (XSS)
 slug: Glossary/Cross-site_scripting
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **cross-site scripting** (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website. The code can then do anything that the site's own code can do. For example, the attacker could:
 

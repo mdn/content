@@ -14,10 +14,6 @@ The underlying value is a boolean.
 > [!NOTE]
 > From Firefox version 88 this setting is read-only.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggle the setting:
@@ -38,3 +34,7 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

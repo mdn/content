@@ -3,9 +3,8 @@ title: inherits
 slug: Web/CSS/@property/inherits
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.inherits
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) controls whether or not the registered [CSS custom property](/en-US/docs/Web/CSS/--*) inherits by default.
 It is a required descriptor; if missing or invalid, the entire `@property` rule is invalid and ignored.

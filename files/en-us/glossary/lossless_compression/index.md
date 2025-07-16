@@ -2,9 +2,8 @@
 title: Lossless compression
 slug: Glossary/Lossless_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Lossless compression** is a class of data compression algorithms that allows the original data to be perfectly reconstructed from the compressed data. Lossless compression methods are reversible. Examples of lossless compression include {{glossary("GZip_compression", "gzip")}}, {{glossary("Brotli_compression", "brotli")}}, {{glossary("Zstandard compression", "Zstandard")}}, {{glossary("WebP")}}, and {{glossary("PNG")}}.
 

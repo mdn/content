@@ -27,10 +27,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object, containing information about the add-on.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the add-on's name:
@@ -45,6 +41,10 @@ gettingSelf.then(gotSelf);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-getSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

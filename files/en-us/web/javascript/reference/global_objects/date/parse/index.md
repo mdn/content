@@ -4,9 +4,8 @@ short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.parse
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date.parse()`** static method parses a string representation of a date, and returns the date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 

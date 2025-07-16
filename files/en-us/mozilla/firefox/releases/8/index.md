@@ -1,5 +1,6 @@
 ---
 title: Firefox 8 for developers
+short-title: Firefox 8
 slug: Mozilla/Firefox/Releases/8
 page-type: firefox-release-notes
 sidebar: firefox
@@ -158,15 +159,3 @@ The `nsIWorkerFactory` interface has been removed as well. Workers can still be 
 - You can now specify a filter when opening `about:config`; for example, `about:config?filter=sessionstore` will show only session storage related preferences.
 
 <!-- cSpell:ignore sessionstore -->
-
-## See also
-
-- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/en-US/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/en-US/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/1.5)

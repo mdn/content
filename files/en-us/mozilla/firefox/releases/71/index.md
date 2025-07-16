@@ -1,5 +1,6 @@
 ---
 title: Firefox 71 for Developers
+short-title: Firefox 71
 slug: Mozilla/Firefox/Releases/71
 page-type: firefox-release-notes
 sidebar: firefox
@@ -116,7 +117,3 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ## See also
 
 - Hacks release post: [Firefox 71: A year-end arrival](https://hacks.mozilla.org/2019/12/firefox-71-a-year-end-arrival/)
-
-## Older versions
-
-{{Firefox_for_developers}}

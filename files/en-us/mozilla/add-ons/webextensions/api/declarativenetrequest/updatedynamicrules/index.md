@@ -23,7 +23,7 @@ Modifies the set of dynamic rules for the extension. The rules with IDs listed i
 ## Syntax
 
 ```js-nolint
-let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
+let rulesUpdated = browser.declarativeNetRequest.updateDynamicRules(
     options                // object
 );
 ```

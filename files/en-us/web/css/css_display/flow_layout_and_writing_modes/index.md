@@ -2,9 +2,8 @@
 title: Flow layout and writing modes
 slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS 2.1 specification, which details how normal flow behaves, assumes a horizontal writing mode. [Layout](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow) properties should work in the same way in vertical writing modes. In this guide, we look at how flow layout behaves when used with different document writing modes.
 

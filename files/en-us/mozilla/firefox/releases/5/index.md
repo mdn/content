@@ -1,5 +1,6 @@
 ---
 title: Firefox 5 for developers
+short-title: Firefox 5
 slug: Mozilla/Firefox/Releases/5
 page-type: firefox-release-notes
 sidebar: firefox
@@ -60,11 +61,11 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### SVG
 
 - The {{ SVGAttr("class") }} SVG attribute can now be animated.
-- The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a `length` property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, and {{ domxref("SVGPointList") }}.
+- The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a `length` property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, `SVGPathSegList`, and {{ domxref("SVGPointList") }}.
 
 ### HTTP
 
-- Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.
+- Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or `Proxy-Connection` header with the value "keep-alive" anyway.
 - The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a [FIFO](https://en.wikipedia.org/wiki/FIFO) queue, Necko now attempts to sort the pool with connections with the largest [congestion window](https://en.wikipedia.org/wiki/Congestion_window) (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
 - Firefox now handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See [Firefox bug 588781](https://bugzil.la/588781).
 
@@ -78,7 +79,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ## Changes for Mozilla and add-on developers
 
-For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Updating_add-ons).
+For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Releases/5/Updating_add-ons).
 
 > [!NOTE]
 > Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
@@ -126,7 +127,3 @@ The following interfaces were implementation details that are no longer needed:
 ### Build system changes
 
 - You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html#choose_an_application) now defaults to "browser". After pulling or downloading the code, you can `configure && make` (or `make -f client.mk`) to build Firefox.
-
-## See also
-
-{{Firefox_for_developers}}

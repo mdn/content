@@ -38,10 +38,6 @@ Events have three functions:
     - `windowId`
       - : `integer`. ID of the newly focused window.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log focus changes:
@@ -53,6 +49,10 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#event-onFocusChanged) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

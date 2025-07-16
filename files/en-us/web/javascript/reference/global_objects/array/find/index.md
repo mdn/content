@@ -4,9 +4,8 @@ short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.find
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`find()`** method of {{jsxref("Array")}} instances returns the first element in the provided array that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.

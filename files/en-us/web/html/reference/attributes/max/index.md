@@ -139,7 +139,6 @@ Provide instructions to help users understand how to complete the form and use i
 
 - [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min)
-- other meter attributes: [`low`](/en-US/docs/Web/HTML/Reference/Attributes/low), [`high`](/en-US/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Reference/Attributes/optimum)
 - [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}

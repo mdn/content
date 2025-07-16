@@ -2,9 +2,8 @@
 title: Microsoft Edge
 slug: Glossary/Microsoft_Edge
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Microsoft Edge** is a proprietary cross-platform {{glossary("World Wide Web", "Web")}} {{Glossary("browser")}} developed by Microsoft since 2014. Initially known as Spartan, Edge replaced the longstanding browser {{glossary("Microsoft Internet Explorer", "Internet Explorer")}}.
 

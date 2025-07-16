@@ -3,9 +3,8 @@ title: animation-range-start
 slug: Web/CSS/animation-range-start
 page-type: css-property
 browser-compat: css.properties.animation-range-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start.
 

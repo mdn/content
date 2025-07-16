@@ -310,11 +310,11 @@ let total = 0;
 list.textContent = "";
 totalBox.textContent = "";
 // Part 1
-// ("Underpants:6.99");
-// ("Socks:5.99");
-// ("T-shirt:14.99");
-// ("Trousers:31.99");
-// ("Shoes:23.99");
+// "Underpants:6.99",
+// "Socks:5.99",
+// "T-shirt:14.99",
+// "Trousers:31.99",
+// "Shoes:23.99",
 
 // Part 2
 
@@ -331,7 +331,7 @@ list.appendChild(listItem);
 
 // Part 6
 
-totalBox.textContent = "Total: $" + total.toFixed(2);
+totalBox.textContent = `Total: $${total.toFixed(2)}`;
 ```
 
 {{ EmbedLiveSample("arrays-1", "100%", 200) }}

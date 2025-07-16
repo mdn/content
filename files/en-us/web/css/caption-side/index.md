@@ -3,9 +3,8 @@ title: caption-side
 slug: Web/CSS/caption-side
 page-type: css-property
 browser-compat: css.properties.caption-side
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref("writing-mode")}} of the table.
 

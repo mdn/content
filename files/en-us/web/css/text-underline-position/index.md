@@ -3,9 +3,8 @@ title: text-underline-position
 slug: Web/CSS/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-underline-position`** [CSS](/en-US/docs/Web/CSS) property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
 

@@ -3,9 +3,8 @@ title: marker-end
 slug: Web/CSS/marker-end
 page-type: css-property
 browser-compat: css.properties.marker-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`marker-end`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the last vertex of the element's path; that is, at its ending vertex. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref("url_value", "&lt;url&gt;")}} value. The value of the CSS property overrides any values of the `marker-end` attribute in the SVG.
 

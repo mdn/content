@@ -4,9 +4,8 @@ short-title: calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.calendar
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`calendar`** accessor property of {{jsxref("Intl.Locale")}} instances returns the calendar type for this locale.
 

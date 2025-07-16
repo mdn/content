@@ -1,5 +1,6 @@
 ---
 title: Firefox 12 for developers
+short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
 page-type: firefox-release-notes
 sidebar: firefox
@@ -118,7 +119,3 @@ Mozilla has been working on integrating its own Web developer tools that complem
 ### Other changes
 
 - The editor component (known as Midas) now only accepts events from privileged code.
-
-## See also
-
-{{Firefox_for_developers}}

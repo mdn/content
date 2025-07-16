@@ -3,9 +3,8 @@ title: background-size
 slug: Web/CSS/background-size
 page-type: css-property
 browser-compat: css.properties.background-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.
 The image can be left to its natural size, stretched, or constrained to fit the available space.

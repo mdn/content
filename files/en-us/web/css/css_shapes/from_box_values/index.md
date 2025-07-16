@@ -3,9 +3,8 @@ title: Shapes from box values
 short-title: Box-value shapes
 slug: Web/CSS/CSS_shapes/From_box_values
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A straightforward way to create a shape is to use a value from the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module. This article explains how to do this.
 

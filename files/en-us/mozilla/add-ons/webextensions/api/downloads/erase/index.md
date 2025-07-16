@@ -33,10 +33,6 @@ let erasing = browser.downloads.erase(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the promise will be fulfilled with an array of integers representing the ids of the erased {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}. If no items matching the query parameter could be found, the array will be empty. If the call failed, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Erase the most recent download:
@@ -74,6 +70,10 @@ erasing.then(onErased, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-erase) API.

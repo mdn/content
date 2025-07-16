@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transitions/
   - https://drafts.csswg.org/css-transitions-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS transitions** module lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their easing function, duration, and other attributes.
 
