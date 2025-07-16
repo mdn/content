@@ -281,7 +281,7 @@ To complete the exercise, follow the steps below, and make sure that the list be
 2. Wrap the div that contains the input and button in a form element.
 3. Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.
 4. Create a [function](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that will run in response to the button being clicked.
-5. Inside the function body, start off by calling [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). When combined with the form element, the user can now use the 'enter' key to submit list items. Prevent default keeps the form from refreshing the page in this situation.
+5. Inside the function body, start off by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault). When combined with the form element, the user can now use the 'enter' key to submit list items. Prevent default keeps the form from refreshing the page in this situation.
 6. Next, continue by storing the current [value](/en-US/docs/Web/API/HTMLInputElement/value) of the input element in a variable.
 7. Next, empty the input element by setting its value to an empty string — `''`.
 8. Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.
