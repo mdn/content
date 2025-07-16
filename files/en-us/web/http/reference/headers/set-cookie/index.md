@@ -119,9 +119,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Path=<path-value>` {{optional_inline}}
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
 
-    If omitted, this attribute defaults to the "directory" of the request URI's path component. As per [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.2.4), if the server omits the Path attribute, the user agent will use the "directory" of the request-uri's path component as the default value. For example, if a cookie is set by a request to `/docs/Web/HTTP/index.html`, the default path would be `/docs/Web/HTTP/`.
-
-    The user agent will include the cookie in an HTTP request only if the path portion of the request-uri matches (or is a subdirectory of) the cookie's Path attribute, where the forward slash (`/`) character is interpreted as a directory separator.
+    If omitted, this attribute defaults to the path component of the request URL. For example, if a cookie is set by a request to `https://example.com/docs/Web/HTTP/index.html`, the default path would be `/docs/Web/HTTP/`.
 
     The forward slash (`/`) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for `Path=/docs`,
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
@@ -129,7 +127,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     > [!NOTE]
     > The `path` attribute lets you control what cookies the browser sends based on the different parts of a site.
-    > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path. Although seemingly useful for isolating cookies between different paths within a given host, the Path attribute cannot be relied upon for security (see [RFC 6265 Section 8](https://www.rfc-editor.org/rfc/rfc6265#section-8)).
+    > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
 
 - `SameSite=<samesite-value>` {{optional_inline}}
   - : Controls whether or not a cookie is sent with cross-site requests: that is, requests originating from a different {{glossary("site")}}, including the scheme, from the site that set the cookie. This provides some protection against certain cross-site attacks, including {{Glossary("CSRF", "cross-site request forgery (CSRF)")}} attacks.
