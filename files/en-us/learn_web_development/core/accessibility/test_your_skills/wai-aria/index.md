@@ -214,9 +214,9 @@ const listItems = document.querySelectorAll("li");
 const descHeading = document.querySelector(".animal-description h2");
 const descPara = document.querySelector(".animal-description p");
 
-listItems.forEach(function (item) {
+listItems.forEach((item) => {
   item.addEventListener("mouseup", handleSelection);
-  item.addEventListener("keyup", function (e) {
+  item.addEventListener("keyup", (e) => {
     if (e.key === "Enter") {
       handleSelection(e);
     }
