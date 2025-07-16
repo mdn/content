@@ -86,13 +86,13 @@ Your finished CSS could look something like this:
 
 li a {
   text-decoration: underline;
-  color: rgb(150, 0, 0);
+  color: rgb(150 0 0);
 }
 
 li a:hover,
 li a:focus {
   text-decoration: none;
-  color: rgb(255, 0, 0);
+  color: rgb(255 0 0);
 }
 ```
 
@@ -178,8 +178,8 @@ p {
 <summary>Click here to show the solution</summary>
 
 1. The problems are:
-   - The color contrast is not acceptable, as per WCAG criteria [1.4.3 (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum) and [1.4.6 (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
-   - The text is sized using `vw` units, which means that it is not zoomable in most browsers. [WCAG 1.4.4 (AA)](https://www.w3.org/TR/WCAG21/#resize-text) states that text should be resizable.
+   - The color contrast is not acceptable, as per WCAG criteria [1.4.3 (AA)](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum) and [1.4.6 (AAA)](https://w3c.github.io/wcag/guidelines/22/#contrast-enhanced).
+   - The text is sized using `vw` units, which means that it is not zoomable in most browsers. [WCAG 1.4.4 (AA)](https://w3c.github.io/wcag/guidelines/22/#resize-text) states that text should be resizable.
 2. To fix the code, you need to
    - Choose a better contrasting set of background and foreground colors.
    - Use some different units to size the text (such as `rem` or even `px`), or even implement something that uses a combination of `vw` and other units, if you want it resizable but still relative to the viewport size.
@@ -300,7 +300,7 @@ const listItems = document.querySelectorAll("li");
 const descHeading = document.querySelector(".animal-description h2");
 const descPara = document.querySelector(".animal-description p");
 
-listItems.forEach(function (item) {
+listItems.forEach((item) => {
   item.addEventListener("mouseup", handleSelection);
 });
 
@@ -321,7 +321,7 @@ function handleSelection(e) {
 2. Then you'll need to add in another event listener inside the `forEach()` loop, to make the code respond to keys being pressed while the list items are selected. It is probably a good idea to make it respond to a specific key, such as "Enter", in which case something like the following is probably acceptable:
 
 ```js
-item.addEventListener("keyup", function (e) {
+item.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     handleSelection(e);
   }
