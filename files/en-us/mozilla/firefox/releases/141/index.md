@@ -86,7 +86,7 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 #### WebDriver BiDi
 
 - Added support for the "proxy" argument of the `browser.createUserContext` command. This allows clients to setup either a "direct" or "manual" proxy when creating a user context (ie Firefox Container). Support for additional proxy types will be added later on. ([Firefox bug 1967653](https://bugzil.la/1967653))
-- Implemented a new event `browsingContext.historyUpdated` which is emitted when using `history.pushState`, `history.replaceState` or `document.open`. ([Firefox bug 1906051](https://bugzil.la/1906051))
+- Implemented the new `browsingContext.historyUpdated` event which is emitted when `history.pushState()`, `history.replaceState()` or `document.open()` is called within the context of a web page. ([Firefox bug 1906051](https://bugzil.la/1906051))
 - Improved the error message shown when attempting to permanently install an unpacked, unsigned web extension. ([Firefox bug 1958723](https://bugzil.la/1958723))
 - Updated the `browsingContext.navigate` and `browsingContext.reload` commands to wait for the `browsingContext.navigationCommitted` event when using the "wait" condition "none". ([Firefox bug 1967469](https://bugzil.la/1967469))
 - Updated the WebDriver BiDi cookie APIs to support "default" value in "sameSite" property to address recent changes in platform API which wouldn't allow anymore to set a cookie with "sameSite=None" and "secure=false" on HTTP pages. ([Firefox bug 1971488](https://bugzil.la/1971488))
