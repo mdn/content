@@ -44,7 +44,7 @@ Interruptions that may trigger the `interrupted` state can include:
 
 Note also the potential for transitions between the `interrupted` and `suspended` states:
 
-- If `suspend()` is called on an audio context during an interruption (`state = "interrupted"`), the state will transition to `suspended` once the interruption ends.
+- If `suspend()` is called on an audio context during an interruption (`state = "interrupted"`), the state will transition to `suspended` immediately.
 - If `resume()` is called on a suspended audio context (`state = "suspended"`) during an interruption, the state will transition to `interrupted` immediately.
 
 ## Examples
