@@ -7,18 +7,22 @@ sidebar: games
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
 
-This is the **4th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson04.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html).
+This is the **4th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson04.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson04.html).
 
 We have our blue ball printed on screen, but it's doing nothing — It would be cool to make it move somehow. This article covers how to do just that.
 
 ## Updating the ball's position on each frame
 
-Remember the `update()` function and its definition? The code inside it is executed on every frame, so it's a perfect place to put the code that will update the ball's position on screen. Add the following new lines of the code inside `update()`, as shown:
+Remember the `update()` method and its definition? The code inside it is executed on every frame, so it's a perfect place to put the code that will update the ball's position on screen. Add the following new lines of the code inside `update()`, as shown:
 
 ```js
-function update() {
-  ball.x += 1;
-  ball.y += 1;
+class Example extends Phaser.Scene {
+  // ...
+
+  update() {
+    ball.x += 1;
+    ball.y += 1;
+  }
 }
 ```
 
