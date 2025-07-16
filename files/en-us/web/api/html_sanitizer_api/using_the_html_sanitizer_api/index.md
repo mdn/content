@@ -18,7 +18,7 @@ For example, the following code will remove all XSS-unsafe elements and attribut
 
 ```js
 const untrustedString = "abc <script>alert(1)<" + "/script> def";
-const someTargetElement = document.getElementById("target");
+const someElement = document.getElementById("target");
 
 // someElement.innerHTML = untrustedString;
 someElement.setHTML(untrustedString);
