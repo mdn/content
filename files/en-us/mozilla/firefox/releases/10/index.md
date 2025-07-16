@@ -1,5 +1,6 @@
 ---
 title: Firefox 10 for developers
+short-title: Firefox 10
 slug: Mozilla/Firefox/Releases/10
 page-type: firefox-release-notes
 sidebar: firefox
@@ -148,17 +149,3 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 - The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See [Firefox bug 559505](https://bugzil.la/559505) for progress on removing the last vestiges of RDF being required.
 - The `--disable-smil` build option has been removed.
-
-### See also
-
-- [Firefox 9 for developers](/en-US/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/en-US/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/en-US/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/1.5)

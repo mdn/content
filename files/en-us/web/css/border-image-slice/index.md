@@ -3,9 +3,8 @@ title: border-image-slice
 slug: Web/CSS/border-image-slice
 page-type: css-property
 browser-compat: css.properties.border-image-slice
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
 

@@ -2,9 +2,8 @@
 title: Prefetch
 slug: Glossary/Prefetch
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Prefetching refers to the practice of speculatively fetching documents or subresources in the background for pages that the user is _likely_ to navigate to in the near future.
 This can significantly reduce the load time for the prefetched page if the user does choose to navigate to it.

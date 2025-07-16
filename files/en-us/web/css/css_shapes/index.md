@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-shapes-1/
   - https://drafts.csswg.org/css-shapes-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS shapes** module describes geometric shapes. It also defines CSS properties that can use the shapes to control the geometry of an element's float area; this area can then be applied to exclusions, or specify an element's content area.
 

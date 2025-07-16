@@ -3,9 +3,8 @@ title: Child combinator
 slug: Web/CSS/Child_combinator
 page-type: css-combinator
 browser-compat: css.selectors.child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
 

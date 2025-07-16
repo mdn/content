@@ -3,9 +3,8 @@ title: padding-right
 slug: Web/CSS/padding-right
 page-type: css-property
 browser-compat: css.properties.padding-right
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-right`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the right of an element.
 

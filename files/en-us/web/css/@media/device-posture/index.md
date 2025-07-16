@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - experimental
 browser-compat: css.at-rules.media.device-posture
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`device-posture`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to detect the device's [current posture](/en-US/docs/Web/API/Device_Posture_API), that is, whether the viewport is in a flat (`continuous`) or folded state (`folded`).
 

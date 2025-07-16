@@ -164,7 +164,7 @@ For this array task, we provide you with a starting array, and you will work in 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```js live-sample___arrays-3
-let myArray = [
+const myArray = [
   "Ryu",
   "Ken",
   "Chun-Li",
@@ -180,7 +180,7 @@ let myArray = [
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
-let para1 = document.createElement("p");
+const para1 = document.createElement("p");
 para1.textContent = myString;
 section.appendChild(para1);
 ```
@@ -193,7 +193,7 @@ section.appendChild(para1);
 Your finished JavaScript should look something like this:
 
 ```js
-let myArray = [
+const myArray = [
   "Ryu",
   "Ken",
   "Chun-Li",
@@ -209,12 +209,12 @@ myArray.pop();
 myArray.push("Zangief");
 myArray.push("Ibuki");
 
-myArray.forEach(function (element, index) {
-  let newElement = `${element} (${index})`;
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
   myArray[index] = newElement;
 });
 
-let myString = myArray.join(" - ");
+const myString = myArray.join(" - ");
 
 // Don't edit the code below here!
 // ...

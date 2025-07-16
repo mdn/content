@@ -1,5 +1,6 @@
 ---
 title: Firefox 45 for developers
+short-title: Firefox 45
 slug: Mozilla/Firefox/Releases/45
 page-type: firefox-release-notes
 sidebar: firefox
@@ -142,7 +143,3 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 ### Other
 
 - WebIDL constructors could be called without the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator in chrome context. Now such code will raise a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) as in Web content since Firefox 30. For example, `var req = XMLHttpRequest();` needs to be `var req = new XMLHttpRequest();`.
-
-## Older versions
-
-{{Firefox_for_developers}}

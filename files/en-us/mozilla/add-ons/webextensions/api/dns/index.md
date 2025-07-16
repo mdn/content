@@ -19,8 +19,8 @@ To use this API, an extension must request the "dns" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("dns.resolve()")}}
   - : Resolves the given hostname to a DNS record.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

@@ -3,9 +3,8 @@ title: CSS box model
 slug: Web/CSS/CSS_box_model
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-box-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box model** module defines the `margin` and `padding` properties, which along with the [height](/en-US/docs/Web/CSS/CSS_box_sizing), [width](/en-US/docs/Web/CSS/CSS_box_sizing) and [border properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders), make up the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model).
 

@@ -42,10 +42,6 @@ The listener function is passed two parameters: a string `text`, and the functio
 - `suggest`
   - : `Function`. A function that the event listener can call to supply suggestions for the address bar's drop-down list. The function expects to receive an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `description` property of `SuggestResult` is the full name of the property, and the `content` is the MDN page for that property.
@@ -124,6 +120,10 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

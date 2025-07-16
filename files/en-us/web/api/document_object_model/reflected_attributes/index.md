@@ -110,7 +110,8 @@ console.log(inputElement.ariaLabelledByElements);
 ```
 
 The first thing to note from the code above is that the attribute and the property contain different numbers of elements — the property doesn't _directly_ reflect the attribute because the reference `label_3` does not have a corresponding element.
-It is also possible that a reference will not match because it is [out of scope](#element_reference_scope) for the element, as discussed in a following section.
+It is also possible that a reference will not match because the `id` is [out of scope for the element](#element_id_reference_scope).
+This can happen if the referenced element is not in the same DOM or shadow DOM as the element, since ids are only only valid in the scope in which they are declared.
 
 We can iterate the elements in the property array, in this case to get the accessible name from their inner text (this is more natural than using the attribute, because we don't have to first get the element references and then use them to find the elements, and we only have to work with elements that we know to be available in the current scope):
 
@@ -173,34 +174,14 @@ console.log(inputElement.ariaLabelledByElements);
 The array returned by the property is static, so you can't modify the returned array to cause changes to the corresponding attribute.
 When an array is assigned to the property it is copied, so any changes to the attribute will not be reflected in a previously returned property array.
 
-### Element reference scope
+### Element id reference scope
 
-Element references can only match to elements that are "in scope" with the referencing element.
+Attribute element references can only refer to other elements that are in the same DOM or [Shadow DOM](/en-US/docs/Web/API/Web_components#shadow_dom_2), because element ids are only valid in the scope in which they are declared.
 
-An HTML document is represented to JavaScript as a hierarchical tree of objects referred to as the [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model).
-Elements within the model may contain and encapsulate "child" DOMs, referred to as [Shadow DOMs](/en-US/docs/Web/API/Web_components#shadow_dom_2) within a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), which can in turn nest their own Shadow DOMs.
-
-The scope of a referencing element is the DOM in which it is defined, and any parent DOMs in which that DOM is nested.
-Shadow DOMS that are nested children of the DOM in which the referencing element is defined are out of scope.
-
-What this means is that an element in the DOM can reference other elements in the DOM as they are in-scope, but not in a shadow DOM.
-For example, in the HTML below the element with the `id` of `label 3` would not be in scope for the {{htmlelement("input")}} element in the DOM, and would not be reflected in the corresponding property.
-
-```html
-<div id="in_dom">
-  <span id="label_1">(Label 1 Text)</span>
-  <input aria-labelledby="label_1 label_2 label_3" />
-  <span id="label_2">(Label 2 Text)</span>
-</div>
-<div id="host">
-  <template shadowrootmode="open">
-    <span id="label_3">(Label 3 Text)</span>
-  </template>
-</div>
-```
-
-However an element in a shadow root can reference elements in both the shadow root or in the DOM.
-For the HTML below, `label 3` would be present in the reflected property.
+We can see this in the following code.
+The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute of the {{htmlelement("input")}} element references the elements with ids `label_1`, `label_2`, and `label_3`.
+However `label_3` is not a valid id in this case because it is not defined in the same scope as the {{htmlelement("input")}} element.
+As a result the label will only come from the elements with ids `label_1` and `label_2`.
 
 ```html
 <div id="in_dom">
@@ -215,7 +196,64 @@ For the HTML below, `label 3` would be present in the reflected property.
 </div>
 ```
 
-Note that a referenced element may initially be "in scope" and then moved out of scope into a nested shadow root.
+### Reflected element reference scope
+
+When using the [instance properties reflected from ARIA element references](/en-US/docs/Web/API/Element#instance_properties_reflected_from_aria_element_references), such as {{domxref("Element.ariaLabelledByElements")}} for `aria-labelledby`, the scoping rules are a little different.
+To be in scope a target element must be in the same DOM as the referencing element, or a parent DOM.
+Elements in other DOMs, including shadow DOMs that are children or peers of the referring DOM, are out of scope.
+
+The example below shows the case where an element in a parent DOM (`label_3`) is set as a target, along with the elements with ids `label_1` and `label_2` which are declared in the same shadow root.
+This works because all the target elements are in scope for the referencing element.
+
+```html
+<div id="in_dom">
+  <span id="label_3">(Label 3 Text)</span>
+</div>
+<div id="host">
+  <template shadowrootmode="open">
+    <span id="label_1">(Label 1 Text)</span>
+    <input id="input" />
+    <span id="label_2">(Label 2 Text)</span>
+  </template>
+</div>
+```
+
+```js
+const host = document.getElementById("host");
+const input = host.shadowRoot.getElementById("input");
+input.ariaLabelledByElements = [
+  host.shadowRoot.getElementById("label_1"),
+  host.shadowRoot.getElementById("label_2"),
+  document.getElementById("label_3"),
+];
+```
+
+The equivalent code with an element in the DOM referencing another in the shadow DOM would not work, because target elements that are in nested shadow DOMs are not in scope:
+
+```html
+<div id="in_dom">
+  <span id="label_1">(Label 1 Text)</span>
+  <input id="input" />
+  <span id="label_2">(Label 2 Text)</span>
+</div>
+<div id="host">
+  <template shadowrootmode="open">
+    <span id="label_3">(Label 3 Text)</span>
+  </template>
+</div>
+```
+
+```js
+const host = document.getElementById("host");
+const input = document.getElementById("input");
+input.ariaLabelledByElements = [
+  host.shadowRoot.getElementById("label_3"),
+  document.getElementById("label_1"),
+  document.getElementById("label_2"),
+];
+```
+
+Note that an element may initially be "in scope" and then moved out of scope into a nested shadow root.
 In this case the referenced element will still be listed in the attribute, but will not be returned in the property.
 Note however that if the element is moved back into scope, it will again be present in the reflected property.
 
@@ -223,7 +261,8 @@ Note however that if the element is moved back into scope, it will again be pres
 
 The relationship between attributes containing element references and their corresponding property is as follows:
 
-- Only attribute `id` values that match [in-scope elements](#element_reference_scope) are reflected in the property.
+- Attribute element `id` references are only [in-scope](#element_id_reference_scope) for target elements declared in the same DOM or shadow DOM as the element.
+- Properties that reflect ARIA element references can target elements in the same scope or a parent scope. Elements in nested scopes are not accessible.
 - Setting the property clears the attribute and the property and attribute no longer reflect each other.
   If the attributes is read, with {{domxref("Element.getAttribute()")}}, the value is `""`.
 - Setting the attribute, with {{domxref("Element.setAttribute()")}}, also sets the property and restores the "reflection relationship".

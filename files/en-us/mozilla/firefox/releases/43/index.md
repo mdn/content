@@ -1,5 +1,6 @@
 ---
 title: Firefox 43 for developers
+short-title: Firefox 43
 slug: Mozilla/Firefox/Releases/43
 page-type: firefox-release-notes
 sidebar: firefox
@@ -136,7 +137,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

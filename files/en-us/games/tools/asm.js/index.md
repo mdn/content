@@ -4,9 +4,8 @@ slug: Games/Tools/asm.js
 page-type: guide
 status:
   - deprecated
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 > [!WARNING]
 > The [asm.js](http://asmjs.org/) specification is considered **deprecated**.

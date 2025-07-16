@@ -36,10 +36,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `favIconUrl` {{optional_inline}}
   - : `string`. The search engine's icon, as a data: URL.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get all installed search engines:
@@ -58,3 +54,7 @@ browser.search.get().then(retrieved);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
