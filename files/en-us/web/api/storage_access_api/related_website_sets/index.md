@@ -7,7 +7,7 @@ status:
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
-{{DefaultAPISidebar("Storage Access API")}}
+{{DefaultAPISidebar("Storage Access API")}}{{Non-standard_Header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.

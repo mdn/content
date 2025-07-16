@@ -1,5 +1,6 @@
 ---
 title: Firefox 57 (Quantum) for developers
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
 sidebar: firefox
@@ -217,7 +218,3 @@ The following APIs have been added or extended:
 
 - [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
   - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
-
-## Older versions
-
-{{Firefox_for_developers}}

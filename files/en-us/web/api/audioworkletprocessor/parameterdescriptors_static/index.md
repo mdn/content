@@ -1,14 +1,12 @@
 ---
-title: "AudioWorkletProcessor: parameterDescriptors property"
+title: "AudioWorkletProcessor: parameterDescriptors static property"
 short-title: parameterDescriptors
-slug: Web/API/AudioWorkletProcessor/parameterDescriptors
-page-type: web-api-instance-property
-status:
-  - experimental
+slug: Web/API/AudioWorkletProcessor/parameterDescriptors_static
+page-type: web-api-static-property
 spec-urls: https://webaudio.github.io/web-audio-api/#audioworkletprocess-callback-parameters
 ---
 
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+{{APIRef("Web Audio API")}}
 
 The read-only **`parameterDescriptors`** property of an {{domxref("AudioWorkletProcessor")}}-derived class is a _static getter_,
 which returns an iterable of {{domxref("AudioParamDescriptor")}}-based objects.

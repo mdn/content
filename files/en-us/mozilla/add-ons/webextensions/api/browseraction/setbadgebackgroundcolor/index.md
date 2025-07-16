@@ -31,6 +31,8 @@ browser.browserAction.setBadgeBackgroundColor(
         - a {{WebExtAPIRef('browserAction.ColorArray')}} object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.
 
+        The default color in Firefox is: `[217, 0, 0, 255]`.
+
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the badge background color only for the given tab. The color is reset when the user navigates this tab to a new page.
     - `windowId` {{optional_inline}}
@@ -40,12 +42,6 @@ browser.browserAction.setBadgeBackgroundColor(
 
 - If `windowId` and `tabId` are both supplied, the function fails and the color is not set.
 - If `windowId` and `tabId` are both omitted, the global badge background color is set instead.
-
-## Browser compatibility
-
-{{Compat}}
-
-The default color in Firefox is: `[217, 0, 0, 255]`.
 
 ## Examples
 
@@ -75,6 +71,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

@@ -3,9 +3,8 @@ title: CSS fonts
 slug: Web/CSS/CSS_fonts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS fonts** module defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, and the glyph variants to use when multiple are available for a single character.
 

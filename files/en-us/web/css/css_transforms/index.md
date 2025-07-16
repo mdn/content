@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transforms/
   - https://drafts.csswg.org/css-transforms-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS transforms** module defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
 

@@ -3,9 +3,8 @@ title: place-content
 slug: Web/CSS/place-content
 page-type: css-shorthand-property
 browser-compat: css.properties.place-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e., the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 

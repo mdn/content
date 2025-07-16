@@ -3,9 +3,8 @@ title: border-start-start-radius
 slug: Web/CSS/border-start-start-radius
 page-type: css-property
 browser-compat: css.properties.border-start-start-radius
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
 

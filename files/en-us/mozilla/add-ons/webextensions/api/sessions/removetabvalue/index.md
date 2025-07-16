@@ -31,10 +31,6 @@ let removing = browser.sessions.removeTabValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved no arguments if the item was successfully removed. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code adds two context menu items: one stores a value associated with the current tab, the other one removes it:
@@ -80,3 +76,7 @@ browser.menus.onClicked.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

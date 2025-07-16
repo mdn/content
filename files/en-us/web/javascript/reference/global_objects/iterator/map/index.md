@@ -4,9 +4,8 @@ short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`map()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields elements of the iterator, each transformed by a mapping function.
 

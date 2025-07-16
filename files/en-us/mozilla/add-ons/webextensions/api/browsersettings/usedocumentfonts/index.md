@@ -16,10 +16,6 @@ Its underlying value is a boolean:
 - `true`: use the fonts specified by the web page. This is the default.
 - `false`: use the system fonts.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to `false`:
@@ -33,3 +29,7 @@ browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

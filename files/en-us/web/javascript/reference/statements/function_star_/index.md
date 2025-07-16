@@ -70,8 +70,7 @@ function execution, replacing the `yield` expression where an execution was
 paused with the argument from `next()`.
 
 Generators in JavaScript — especially when combined with Promises — are a very
-powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
-\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
+powerful tool for asynchronous programming as they mitigate — if not entirely eliminate — the problems with callbacks, such as [Callback Hell](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1) and
 [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.

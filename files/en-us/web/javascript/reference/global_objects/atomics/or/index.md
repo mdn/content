@@ -4,9 +4,8 @@ short-title: or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.or
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.or()`** static
 method computes a bitwise OR with a given value at a given position in the array, and

@@ -4,9 +4,8 @@ short-title: match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 

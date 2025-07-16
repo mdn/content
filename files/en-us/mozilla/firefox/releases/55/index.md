@@ -1,5 +1,6 @@
 ---
 title: Firefox 55 for developers
+short-title: Firefox 55
 slug: Mozilla/Firefox/Releases/55
 page-type: firefox-release-notes
 sidebar: firefox
@@ -140,7 +141,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
-- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
+- The {{htmlelement("style")}} element's `scoped` attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
 - Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute has been removed from Firefox. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
 
 ### CSS
@@ -170,7 +171,3 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 - [chrome_settings_overrides key enables you to override the browser's homepage.](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)
 - browser_style property enables you to have browser-like styling for [browser action popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui).
 - [permissions API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
-
-## Older versions
-
-{{Firefox_for_developers}}

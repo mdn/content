@@ -6,9 +6,10 @@ page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.nanoseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`nanoseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of nanoseconds in the duration.
 

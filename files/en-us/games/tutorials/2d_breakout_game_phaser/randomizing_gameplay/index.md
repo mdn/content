@@ -2,9 +2,8 @@
 title: Randomizing gameplay
 slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 

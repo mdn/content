@@ -3,9 +3,8 @@ title: min-content
 slug: Web/CSS/min-content
 page-type: css-keyword
 browser-compat: css.properties.width.min-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `min-content` sizing keyword represents the minimum {{glossary("intrinsic size")}} of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
 

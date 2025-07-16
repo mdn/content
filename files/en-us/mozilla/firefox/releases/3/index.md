@@ -1,5 +1,6 @@
 ---
 title: Firefox 3 for developers
+short-title: Firefox 3
 slug: Mozilla/Firefox/Releases/3
 page-type: firefox-release-notes
 sidebar: firefox
@@ -146,7 +147,3 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Reliability.** Firefox 3 now stores bookmarks, history, cookies, and preferences in a transactionally secure database format. This means your data is protected against loss even if your system crashes.
 - **Speed.** Firefox 3 has gotten a performance boost by completely replacing the part of the software that handles drawing to your screen, as well as to how page layout work is handled.
 - **Memory use reduced.** Firefox 3 is more memory efficient than ever, with over 300 memory "leak" bugs fixed and new features to help automatically locate and dispose of leaked memory blocks.
-
-## See also
-
-{{Firefox_for_developers}}

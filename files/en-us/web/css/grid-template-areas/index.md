@@ -3,9 +3,8 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 

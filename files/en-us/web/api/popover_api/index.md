@@ -10,7 +10,7 @@ browser-compat:
 
 {{DefaultAPISidebar("Popover API")}}
 
-The **Popover API** provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via JavaScript.
+The **Popover API** provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either using HTML attributes, or via JavaScript.
 
 ## Concepts and usage
 
@@ -19,13 +19,13 @@ A very common pattern on the web is to show content over the top of other conten
 - **modal**, meaning that while a popover is being shown, the rest of the page is rendered non-interactive until the popover is actioned in some way (for example an important choice is made).
 - **non-modal**, meaning that the rest of the page can be interacted with while the popover is being shown.
 
-Popovers created using the Popover API are always non-modal. If you want to create a modal popover, a {{htmlelement("dialog")}} element is the right way to go. There is significant overlap between the two — you might for example want to create a popover that persists, but control it using declarative HTML. You can turn a `<dialog>` element into a popover (`<dialog popover>` is perfectly valid) if you want to combine popover control with dialog semantics.
+Popovers created using the Popover API are always non-modal. If you want to create a modal popover, a {{htmlelement("dialog")}} element is the right way to go. There is significant overlap between the two — you might for example want to create a popover that persists, but control it using HTML. You can turn a `<dialog>` element into a popover (`<dialog popover>` is perfectly valid) if you want to combine popover control with dialog semantics.
 
 Typical use cases for the popover API include user-interactive elements like action menus, custom "toast" notifications, form element suggestions, content pickers, or teaching UI.
 
 You can create popovers in two different ways:
 
-- Declaratively, via a set of new HTML attributes. A simple popover with a toggle button can be created using the following code:
+- Via a set of new HTML attributes. A simple popover with a toggle button can be created using the following code:
 
   ```html
   <button popovertarget="mypopover">Toggle the popover</button>

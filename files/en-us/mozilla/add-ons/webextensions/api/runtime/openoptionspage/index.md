@@ -25,10 +25,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the options page has been created successfully, or rejected with an error message if the operation failed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Open the options page when the user clicks a browser action's icon:
@@ -47,6 +43,10 @@ opening.then(onOpened, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

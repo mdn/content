@@ -95,10 +95,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
     - `text`
       - : The complete text of the match, "You may" in the example above.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Basic examples
@@ -280,3 +276,7 @@ browser.runtime.onMessage.addListener((message) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -3,9 +3,8 @@ title: rel=prefetch
 slug: Web/HTML/Reference/Attributes/rel/prefetch
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.prefetch
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`prefetch`** keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element provides a hint to browsers that the user is likely to need the target resource for future navigations, and therefore the browser can likely improve the user experience by preemptively fetching and caching the resource. `<link rel="prefetch">` is used for same-site navigation resources, or for subresources used by same-site pages.
 

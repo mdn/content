@@ -1,5 +1,6 @@
 ---
 title: Firefox 106 for developers
+short-title: Firefox 106
 slug: Mozilla/Firefox/Releases/106
 page-type: firefox-release-notes
 sidebar: firefox
@@ -58,7 +59,3 @@ No notable changes.
 
 - The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default.
 - The `object-src` directive in the `"content_security_policy"` manifest key is now optional ([Firefox bug 1766881](https://bugzil.la/1766881)). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content_security_policy"` manifest key page for more details.
-
-## Older versions
-
-{{Firefox_for_developers}}

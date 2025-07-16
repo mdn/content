@@ -1,5 +1,6 @@
 ---
 title: Firefox 42 for developers
+short-title: Firefox 42
 slug: Mozilla/Firefox/Releases/42
 page-type: firefox-release-notes
 sidebar: firefox
@@ -49,7 +50,7 @@ Highlights:
   - `HTMLInputElement.getFilesAndDirectories()`
   - `HTMLInputElement.chooseDirectory()`
 
-- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and {{domxref("Directory.getContents")}} can be exposed by setting the `dom.input.dirpicker` preference to `true`.
+- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and `Directory.getContents` can be exposed by setting the `dom.input.dirpicker` preference to `true`.
 - The `HTMLMediaElement.mozSrcObject` has been renamed in {{domxref('HTMLMediaElement.srcObject')}} ([Firefox bug 1175523](https://bugzil.la/1175523)).
 
 #### Service Workers
@@ -147,7 +148,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

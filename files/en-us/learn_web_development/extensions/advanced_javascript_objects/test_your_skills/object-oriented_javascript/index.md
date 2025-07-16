@@ -18,33 +18,145 @@ The aim of this skill test is to assess whether you've understood our [Classes i
 
 In this task we provide you with the start of a definition for a `Shape` class. It has three properties: `name`, `sides`, and `sideLength`. This class only models shapes for which all sides are the same length, like a square or an equilateral triangle.
 
-We'd like you to:
+To complete the task:
 
-- Add a constructor to this class. The constructor takes arguments for the `name`, `sides`, and `sideLength` properties, and initializes them.
-- Add a new method `calcPerimeter()` method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
-- Create a new instance of the `Shape` class called `square`. Give it a `name` of `square`, `4` `sides`, and a `sideLength` of `5`.
-- Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser's console as expected.
-- Create a new instance of `Shape` called `triangle`, with a `name` of `triangle`, `3` `sides` and a `sideLength` of `3`.
-- Call `triangle.calcPerimeter()` to check that it works OK.
-
-Try updating the live code below to recreate the finished example:
-
-{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Add a constructor to this class. The constructor takes arguments for the `name`, `sides`, and `sideLength` properties, and initializes them.
+3. Add a new method `calcPerimeter()` method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
+4. Create a new instance of the `Shape` class called `square`. Give it a `name` of `square`, `4` `sides`, and a `sideLength` of `5`.
+5. Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser's console as expected.
+6. Create a new instance of `Shape` called `triangle`, with a `name` of `triangle`, `3` `sides` and a `sideLength` of `3`.
+7. Call `triangle.calcPerimeter()` to check that it works OK.
 
 > [!CALLOUT]
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+
+<!-- Code shared across examples -->
+
+```css hidden live-sample___oojs-1 live-sample___oojs-2
+p {
+  color: purple;
+  margin: 0.5em 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+```
+
+<!-- Example-specific code -->
+
+```js live-sample___oojs-1
+class Shape {
+  name;
+  sides;
+  sideLength;
+}
+```
+
+{{ EmbedLiveSample("oojs-1", "100%", 60) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished JS could look something like this:
+
+```js
+class Shape {
+  name;
+  sides;
+  sideLength;
+
+  constructor(name, sides, sideLength) {
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
+
+  calcPerimeter() {
+    console.log(
+      `The ${this.name}'s perimeter length is ${this.sides * this.sideLength}.`,
+    );
+  }
+}
+
+const square = new Shape("square", 4, 5);
+square.calcPerimeter();
+
+const triangle = new Shape("triangle", 3, 3);
+triangle.calcPerimeter();
+```
+
+</details>
 
 ## OOJS 2
 
-Next we'd like you to create a `Square` class that inherits from `Shape`, and adds a `calcArea()` method that calculates the square's area. Also set up the constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
+Now it's time to add some inheritance into the mix.
 
-Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works OK.
+To complete the task:
 
-Try updating the live code below to recreate the finished example:
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Create a `Square` class that inherits from `Shape`.
+3. Add a `calcArea()` method to `Square` that calculates its area.
+4. Set up the `Square` constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
+5. Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works OK.
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
+```js live-sample___oojs-2
+class Shape {
+  name;
+  sides;
+  sideLength;
+
+  constructor(name, sides, sideLength) {
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
+
+  calcPerimeter() {
+    console.log(
+      `The ${this.name}'s perimeter length is ${this.sides * this.sideLength}.`,
+    );
+  }
+}
+
+// Don't edit the code above here!
+
+// Add your code here
+```
+
+{{ EmbedLiveSample("oojs-2", "100%", 60) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished JS could look something like this:
+
+```js
+// ...
+// Don't edit the code above here!
+
+class Square extends Shape {
+  constructor(sideLength) {
+    super("square", 4, sideLength);
+  }
+
+  calcArea() {
+    console.log(
+      `The ${this.name}'s area is ${this.sideLength * this.sideLength} squared.`,
+    );
+  }
+}
+
+const square = new Square(4);
+
+square.calcPerimeter();
+square.calcArea();
+```
+
+</details>

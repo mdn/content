@@ -3,9 +3,8 @@ title: offset
 slug: Web/CSS/offset
 page-type: css-shorthand-property
 browser-compat: css.properties.offset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the properties required for animating an element along a defined path. The offset properties together help to define an _offset transform_, a [transform](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) that aligns a point in an element ([offset-anchor](/en-US/docs/Web/CSS/offset-anchor)) to an _offset position_ ([offset-position](/en-US/docs/Web/CSS/offset-position)) on a path ([offset-path](/en-US/docs/Web/CSS/offset-path)) at various points along the path ([offset-distance](/en-US/docs/Web/CSS/offset-distance)) and optionally rotates the element ([offset-rotate](/en-US/docs/Web/CSS/offset-rotate)) to follow the direction of the path.
 

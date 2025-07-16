@@ -3,9 +3,8 @@ title: column-rule
 slug: Web/CSS/column-rule
 page-type: css-shorthand-property
 browser-compat: css.properties.column-rule
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between columns in a multi-column layout.
 

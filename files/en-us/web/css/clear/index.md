@@ -3,9 +3,8 @@ title: clear
 slug: Web/CSS/clear
 page-type: css-property
 browser-compat: css.properties.clear
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must be moved below (cleared) [floating](/en-US/docs/Web/CSS/float) elements that precede it. The `clear` property applies to floating and non-floating elements.
 

@@ -1,5 +1,6 @@
 ---
 title: Firefox 52 for developers
+short-title: Firefox 52
 slug: Mozilla/Firefox/Releases/52
 page-type: firefox-release-notes
 sidebar: firefox
@@ -155,7 +156,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The [`'strict-dynamic'` source expression](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) is now supported for {{HTTPHeader("Content-Security-Policy")}} directives, such as {{CSP("script-src")}} ([Firefox bug 1299483](https://bugzil.la/1299483)).
 - Insecure sites (`http:`) can't [set cookies](/en-US/docs/Web/HTTP/Guides/Cookies) with the "secure" directive anymore as per the [Strict Secure Cookies specification](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-alone-01) ([Firefox bug 976073](https://bugzil.la/976073)).
 - The maximum table size format of the HTTP/2 header compression format [HPACK](https://datatracker.ietf.org/doc/html/rfc7541) has been increased from 4 KB to 64 KB ([Firefox bug 1296280](https://bugzil.la/1296280)).
-- The {{HTTPHeader("Large-Allocation")}} header has been added ([Firefox bug 1304140](https://bugzil.la/1304140)).
+- The `Large-Allocation` header has been added ([Firefox bug 1304140](https://bugzil.la/1304140)).
 
 ### SVG
 
@@ -193,7 +194,3 @@ New APIs:
 
 - `tabbrowser.loadTabs(uris, params)` method overload has been added ([Firefox bug 92737](https://bugzil.la/92737)).
 - `browser.droppedLinkHandler` function signature has been changed ([Firefox bug 92737](https://bugzil.la/92737)).
-
-## Older versions
-
-{{Firefox_for_developers}}

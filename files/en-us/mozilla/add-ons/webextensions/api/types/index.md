@@ -14,11 +14,11 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
 - {{WebExtAPIRef("types.BrowserSetting")}}
   - : Represents a browser setting.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.

@@ -22,9 +22,9 @@ To use this API you need the `"clipboardWrite"` extension [permission](/en-US/do
 - {{WebExtAPIRef("clipboard.setImageData()")}}
   - : Copy an image to the clipboard.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 

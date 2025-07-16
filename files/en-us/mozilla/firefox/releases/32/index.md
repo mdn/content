@@ -1,5 +1,6 @@
 ---
 title: Firefox 32 for developers
+short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes
 sidebar: firefox
@@ -71,7 +72,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("Navigator.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```js
   const constraints = {
@@ -102,7 +103,7 @@ _No change._
 
 Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects).
 
-A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to `Addon` instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
@@ -110,7 +111,7 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 
 - Added [`exclude`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) option to `PageMod`.
 - Added [`anonymous`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) option to `Request`.
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/) now includes a Console and a Scratchpad.
 
 #### Details
 
@@ -121,7 +122,3 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 ### XPCOM
 
 - The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
-
-### Older versions
-
-{{Firefox_for_developers}}

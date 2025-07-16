@@ -9,10 +9,6 @@ browser-compat: webextensions.api.webRequest.StreamFilter.onstop
 
 An event handler that will be called when the stream has no more data to deliver. In the event handler you can still call filter functions such as {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example will append "extra stuff" to the response:
@@ -69,3 +65,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

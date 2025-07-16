@@ -3,9 +3,8 @@ title: flex
 slug: Web/CSS/flex
 page-type: css-shorthand-property
 browser-compat: css.properties.flex
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 

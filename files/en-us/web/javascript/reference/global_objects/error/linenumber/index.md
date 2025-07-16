@@ -6,9 +6,10 @@ page-type: javascript-instance-data-property
 status:
   - non-standard
 browser-compat: javascript.builtins.Error.lineNumber
+sidebar: jsref
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`lineNumber`** data property of an {{jsxref("Error")}} instance contains the line number in the file that raised this error.
 
