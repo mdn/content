@@ -382,5 +382,4 @@ See the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` 
 - The {{cssxref("page")}} property
 - The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/) on pagedjs.org
 - [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) Bugzilla for tracking progress on the subject (page-based counters, etc.)

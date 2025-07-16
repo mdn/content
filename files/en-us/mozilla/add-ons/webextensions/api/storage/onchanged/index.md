@@ -40,10 +40,6 @@ Events have three functions:
     - `areaName`
       - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -68,6 +64,10 @@ browser.storage.onChanged.addListener(logStorageChange);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

@@ -11,10 +11,6 @@ A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be 
 
 The underlying value is a boolean.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Getting the current value of this setting:
@@ -39,3 +35,7 @@ browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

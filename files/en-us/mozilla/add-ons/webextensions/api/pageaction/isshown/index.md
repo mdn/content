@@ -30,10 +30,6 @@ let gettingIsShown = browser.pageAction.isShown(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Check the state of the currently active tab:
@@ -52,3 +48,7 @@ async function shownInActiveTab() {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

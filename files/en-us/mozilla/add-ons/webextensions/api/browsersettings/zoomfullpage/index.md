@@ -16,10 +16,6 @@ The settings are:
 - `true`: zoom applies to all the content of a web page (default).
 - `false`: zoom applies to web page text only.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the setting to `false`:
@@ -33,3 +29,7 @@ browser.browserSettings.zoomFullPage.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

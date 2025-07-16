@@ -60,10 +60,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example registers the `defaultCode` content script for all `.org` URLs:
@@ -96,3 +92,7 @@ const scriptObj = await browser.contentScripts.register({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
