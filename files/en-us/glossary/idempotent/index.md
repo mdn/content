@@ -18,7 +18,7 @@ The HTTP specification only defines idempotency in terms of the _intented_ effec
 
 Also, bear in mind:
 
-- A request with an idempotent method does not necessarily mean that the request has _no_ unique side effects: For example, the server may log the time each request is received.
+- A request with an idempotent method does not necessarily mean that the request has _no_ side effects on the server, only that the client intended none: For example, the server may log the time each request is received.
 - The response returned by each request may differ: for example, the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}.
 
 ## Examples
