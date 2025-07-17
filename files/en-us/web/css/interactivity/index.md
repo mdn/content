@@ -31,11 +31,9 @@ interactivity: unset;
 ### Values
 
 - `auto`
-
   - : Selected elements are not inert, and can be interacted with normally.
 
 - `inert`
-
   - : Selected elements are inert.
 
 ## Formal definition
