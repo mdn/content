@@ -26,8 +26,6 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
 
 ## See also
 
-- [Build New Games](http://buildnewgames.com/)
-  - : A collaborative site featuring a large number of open web game development tutorials. Has not been very active recently, but still holds some nice resources.
 - [Creative JS](http://creativejs.com/)
   - : A collection of impressive JavaScript techniques and experiments, not specific to games, but helpful nonetheless. Has not been very active recently, but still holds some nice resources.
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
