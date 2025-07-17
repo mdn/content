@@ -10,6 +10,9 @@ sidebar: learnsidebar
 
 This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 
+> [!WARNING]
+> The CSS and HTML features demonstrated in this article have limited browser support and may not work reliably in production. Most JavaScript frameworks either block these features or cause hydration failures when Server-Side Rendering (SSR) is enabled.
+
 ## Background
 
 Traditionally it has been difficult to customize the look and feel of `<select>` elements because they contain internals that are styled at the operating system level, which can't be targeted using CSS. This includes the drop-down picker, arrow icon, and so on.
