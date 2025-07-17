@@ -69,12 +69,8 @@ section {
 #### JavaScript
 
 ```js
-const colors = [
-  "darkred",
-  "darkslateblue",
-  "darkgreen"
-]
-const colBlock = document.querySelector("section")
+const colors = ["darkred", "darkslateblue", "darkgreen"];
+const colBlock = document.querySelector("section");
 let count = 0;
 const updateColour = () => {
   colBlock.style = `--bg: ${colors[count]}`
