@@ -154,7 +154,7 @@ p {
 
 Shadows are painted above any background colors or images and below any borders. While shadows overlay each other, they don't overlay text. There is no equivalent to the {{cssxref("box-shadow")}} property's `inset` keyword. Unlike box-shadow, text shadows are not clipped to the shadowed shape and may show through if the text is partially-transparent.
 
-These examples have the same shadows applied to content with different {{cssxref("color")}} property values:
+These examples have the same shadows applied to content with different {{cssxref("color")}} property values. The semi-transparent examples are difficult to read, but are included to demonstrate how shadows render:
 
 ```css live-sample___opaque
 p {
@@ -205,4 +205,4 @@ p {
 
 {{EmbedLiveSample('opaque','auto','400')}}
 
-In the "transparent" example, the text is transparent, but is fully legible because the top shadow is not blurred. Note how, the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the semi-opaque white example. This is different from non-inset box shadows which are clipped at the border's outer edge.
+In the "transparent" example, the text is transparent, but is fully legible because the top shadow is not blurred. Note how the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the semi-opaque white example. This is different from non-inset box shadows which are clipped at the border's outer edge.
