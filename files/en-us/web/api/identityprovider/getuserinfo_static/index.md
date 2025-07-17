@@ -16,7 +16,7 @@ This pattern is already common on sites that use identity federation for sign-in
 
 ## Usage notes
 
-When `getUserInfo()` is called, the browser will make a request to the IdP [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) for the user information only when both the conditions below are true:
+When `getUserInfo()` is called, the browser will make a request to the specified IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) for the user information only when both the following conditions below are true:
 
 - The user has previously signed in to the RP with the IdP via FedCM on the same browser instance, and the data hasn't been cleared.
 - The user is signed in to the IdP on the same browser instance.

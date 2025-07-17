@@ -40,19 +40,27 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
 
     The default value is `"signin"`.
 
+- `mode` {{optional_inline}}
+  - : A string specifying the UI mode to use for the sign-in flow, which browsers can use to specify different behaviors if wished. Possible values are:
+    - `active`
+      - : The sign-in flow must be initiated via a user action such as clicking a button. If `mode` is set to `active`, `providers` can only have a length of `1`, otherwise the `get()` promise will reject.
+    - `passive`
+      - : The sign-in flow can be initiated without direct user interaction. This is the default value.
+
 - `providers`
-  - : An array containing a single object specifying details of an IdP to be used to sign in. This object can contain the following properties:
+  - : An array of objects specifying details of the IdPs the user should be presented with as options for signing in. These objects can contain the following properties:
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
       - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
+    - `fields` {{optional_inline}}
+      - : An array of strings specifying user information that the RP wishes to obtain from the IdP for use in the sign-in process. The exact strings will vary by IdP, but tend to be similar to `"name"`, `"email"`, or `"profile-picture-url"`.
     - `loginHint` {{optional_inline}}
       - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
-
-    > [!NOTE]
-    > Currently FedCM only allows the API to be invoked with a single IdP, i.e., the `providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls.
+    - `params` {{optional_inline}}
+      - : A custom object used to specify any additional key-value parameters that RP needs to send to the IdP. This will vary by IdP and could include, for example, additional permission requests such as `admin: true`, or `calendar: "readonly"`.
 
 ## Specifications
 

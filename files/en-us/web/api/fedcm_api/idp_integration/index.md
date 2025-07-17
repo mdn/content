@@ -48,6 +48,7 @@ The config file (hosted at `https://accounts.idp.example/config.json` in our exa
 {
   "accounts_endpoint": "/accounts.php",
   "client_metadata_endpoint": "/client_metadata.php",
+  "disconnect_endpoint": "/disconnect.php",
   "id_assertion_endpoint": "/assertion.php",
   "login_url": "/login",
   "branding": {
@@ -69,6 +70,8 @@ The properties are as follows:
   - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the browser-provided FedCM UI.
 - `client_metadata_endpoint` {{optional_inline}}
   - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
+- `disconnect_endpoint` {{optional_inline}}
+  - : The URL for the disconnect endpoint, which is used by the RP to disconnect from the IdP, via the {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}} method.
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `login_url`
@@ -83,6 +86,7 @@ The following table summarizes the different requests made by the FedCM API:
 | `well-known`/`config.json` | `GET`  | No                          | No                                |
 | `accounts_endpoint`        | `GET`  | Yes                         | No                                |
 | `client_metadata_endpoint` | `GET`  | No                          | Yes                               |
+| `disconnect_endpoint`      | `POST` | Yes                         | Yes                               |
 | `id_assertion_endpoint`    | `POST` | Yes                         | Yes                               |
 
 > [!NOTE]
@@ -174,6 +178,46 @@ The response to a successful request includes URLs pointing to the RP's metadata
   "terms_of_service_url": "https://rp.example/terms_of_service.html"
 }
 ```
+
+### The disconnect endpoint
+
+By invoking {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}}, the browser sends a cross-origin {{httpmethod("POST")}} request with cookies and a {{httpheader("Content-Type")}} of `application/x-www-form-urlencoded` to the disconnect endpoint with the following information:
+
+- `account_hint`
+  - : A string specifying an account hint that the IdP uses the identify the account to disconnect.
+- `client_id`
+  - : A string specifying the RP's client identifier.
+
+For example:
+
+```http
+POST /disconnect HTTP/1.1
+Host: idp.example
+Origin: rp.example
+Content-Type: application/x-www-form-urlencoded
+Cookie: 0x123
+Sec-Fetch-Dest: webidentity
+
+account_hint=account456&client_id=rp123
+```
+
+Upon receiving the request, the IdP server should:
+
+1. Respond to the request with [CORS (Cross-Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS).
+2. Verify that the request contains a {{httpheader("Sec-Fetch-Dest")}} HTTP header with a directive of `webidentity`.
+3. Match the {{httpheader("Origin")}} header against the RP origin determined by the `client_id`. Reject the promise if they don't match.
+4. Find the account that matches the `account_hint`.
+5. Disconnect the user account from the list of RP's connected accounts.
+6. Respond with the identified user's `account_id` in JSON format:
+
+   ```json
+   {
+     "account_id": "account456"
+   }
+   ```
+
+> [!NOTE]
+> If the IdP wishes to disconnect all accounts associated with the RP, it can pass a string that does not match any `account_id`, for example `"account_id": "*"`.
 
 ### The ID assertion endpoint
 
@@ -289,17 +333,17 @@ The IdP should update its login status when a user signs into or out of the IdP.
 
 When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
-- If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
-- If the login status is `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
-- If the login status is `"unknown"`, a request is made to the IdP's accounts list endpoint and the login status is updated depending on the response:
+- If an IdP's login status is `"logged-in"`, a request is made to the [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
+- If all IdPs' login statuses are `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case, it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
+- If an IdP's login status is `"unknown"`, a request is made to the accounts list endpoint and the login status is updated depending on the response:
   - If the endpoint returns a list of available accounts for sign-in, update the status to `"logged-in"` and display the sign-in options to the user in the browser-provided FedCM dialog.
-  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request then rejects.
+  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request will reject in no other `logged-in` IdPs are available.
 
 ### What if the browser and the IdP login status become out of sync?
 
-Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
+Despite the Login Status API informing the browser of IdP login status, it is possible for the browser and an IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-When this occurs, the browser can dynamically let a user sign into the IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url` ). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+When this occurs, the browser can dynamically let a user sign into an IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url`). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://privacysandbox.google.com/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 
