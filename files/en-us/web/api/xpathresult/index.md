@@ -144,4 +144,3 @@ Since XPath expressions can result in a variety of result types, this interface 
 
 - {{domxref("Document.evaluate()")}}
 - {{domxref("XPathExpression")}}
-- [Dottoro Web Reference - XPathResult object](http://help.dottoro.com/ljagksjc.php)
