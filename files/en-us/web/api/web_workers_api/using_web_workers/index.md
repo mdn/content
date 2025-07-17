@@ -243,51 +243,9 @@ The exception to this is if the worker script's origin is a globally unique iden
 
 ## Transferring data to and from workers: further details
 
-Data passed between the main page and workers is **copied**, not shared. Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker **do not share the same instance**, so the end result is that **a duplicate** is created on each end. Most browsers implement this feature as [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+Data passed between the main page and workers is _copied_, not shared (except for certain objects that can be explicitly [shared](#sharing_data)). Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker **do not share the same instance**, so the end result is that **a duplicate** is created on each end. Most browsers implement this feature as [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-To illustrate this, let's create a function named `emulateMessage()`, which will simulate the behavior of a value that is _cloned and not shared_ during the passage from a `worker` to the main page or vice versa:
-
-```js
-function emulateMessage(vVal) {
-  return eval(`(${JSON.stringify(vVal)})`);
-}
-
-// Tests
-
-// test #1
-const example1 = new Number(3);
-console.log(typeof example1); // object
-console.log(typeof emulateMessage(example1)); // number
-
-// test #2
-const example2 = true;
-console.log(typeof example2); // boolean
-console.log(typeof emulateMessage(example2)); // boolean
-
-// test #3
-const example3 = new String("Hello World");
-console.log(typeof example3); // object
-console.log(typeof emulateMessage(example3)); // string
-
-// test #4
-const example4 = {
-  name: "Carina Anand",
-  age: 43,
-};
-console.log(typeof example4); // object
-console.log(typeof emulateMessage(example4)); // object
-
-// test #5
-function Animal(type, age) {
-  this.type = type;
-  this.age = age;
-}
-const example5 = new Animal("Cat", 3);
-alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object
-```
-
-A value that is cloned and not shared is called _message_. As you will probably know by now, _messages_ can be sent to and from the main thread by using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
+As will probably know by now, data is exchanged between the two threads via messages using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
 
 **example.html**: (the main page):
 
@@ -295,19 +253,17 @@ A value that is cloned and not shared is called _message_. As you will probably 
 const myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = (event) => {
-  console.log(`Worker said : ${event.data}`);
+  console.log(`Worker said : "${event.data}"`);
 };
 
-myWorker.postMessage("ali");
+myWorker.postMessage({ lastUpdate: new Date() });
 ```
 
 **my_task.js** (the worker):
 
 ```js
-postMessage("I'm working before postMessage('ali').");
-
-onmessage = (event) => {
-  postMessage(`Hi, ${event.data}`);
+self.onmessage = (event) => {
+  postMessage(`Last updated: ${event.data.lastUpdate.toDateString()}`);
 };
 ```
 
@@ -617,6 +573,10 @@ For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app t
 const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
+
+### Sharing data
+
+The {{jsxref("SharedArrayBuffer")}} object allows two threads, such as the worker and the main thread, to simultaneously operate on the same memory span and exchange data without going through the messaging mechanism. Using shared memory does come with significant determinism, security, and performance concerns, some of which are outlined in the [JavaScript execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing) article.
 
 ## Embedded workers
 
