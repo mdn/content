@@ -725,20 +725,6 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 
 ## Security and privacy
 
-### Block plain text requests from Flash on encrypted pages
-
-In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 59            | No                  |
-| Developer Edition | 59            | No                  |
-| Beta              | 59            | No                  |
-| Release           | 59            | No                  |
-
-- `security.mixed_content.block_object_subrequest`
-  - : Set to `true` to enable.
-
 ### Insecure page labeling
 
 The two `security.insecure_connection_text_*` preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). The `browser.urlbar.trimHttps` preference trims the `https:` prefix from address bar URLs. See [Firefox bug 1853418](https://bugzil.la/1853418) for more details.
