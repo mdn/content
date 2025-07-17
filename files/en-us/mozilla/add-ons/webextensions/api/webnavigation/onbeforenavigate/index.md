@@ -3,9 +3,8 @@ title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser is about to start a navigation event.
 

@@ -3,9 +3,8 @@ title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).
 

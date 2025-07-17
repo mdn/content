@@ -3,9 +3,8 @@ title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
 page-type: webextension-api-type
 browser-compat: webextensions.api.events.Event
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object which allows the addition and removal of listeners for a browser event.
 

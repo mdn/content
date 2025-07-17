@@ -3,9 +3,8 @@ title: sidebarAction.close()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.close
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Closes the sidebar in the active window, if it is the extension's own sidebar.
 

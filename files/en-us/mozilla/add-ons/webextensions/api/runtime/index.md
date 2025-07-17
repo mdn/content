@@ -3,9 +3,8 @@ title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
 page-type: webextension-api
 browser-compat: webextensions.api.runtime
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This module provides information about your extension and the environment it's running in.
 

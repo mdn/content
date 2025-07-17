@@ -3,9 +3,8 @@ title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removePluginData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears data stored by browser plugins.
 

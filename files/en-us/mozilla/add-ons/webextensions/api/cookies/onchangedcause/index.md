@@ -3,9 +3,8 @@ title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.OnChangedCause
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.
 

@@ -3,9 +3,8 @@ title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRedirect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a server-initiated redirect is about to occur.
 

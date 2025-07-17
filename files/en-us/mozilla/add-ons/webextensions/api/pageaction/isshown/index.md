@@ -3,9 +3,8 @@ title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.isShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns `true` if the page action is being shown for the given tab.
 

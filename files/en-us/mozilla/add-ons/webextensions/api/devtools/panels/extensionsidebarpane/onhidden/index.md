@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Called when the sidebar pane becomes hidden, as a result of the user switching away from it.
 

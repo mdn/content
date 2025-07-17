@@ -3,9 +3,8 @@ title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieve a {{WebExtAPIRef("permissions.Permissions")}} object containing all the permissions currently granted to the extension.
 

@@ -3,9 +3,8 @@ title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisitRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a page is removed completely from the browser history.
 

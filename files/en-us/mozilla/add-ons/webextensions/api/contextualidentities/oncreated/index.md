@@ -3,9 +3,8 @@ title: contextualIdentities.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a new contextual identity is created. Contextual identities may be created by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 

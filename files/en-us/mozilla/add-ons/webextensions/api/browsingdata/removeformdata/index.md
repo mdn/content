@@ -3,9 +3,8 @@ title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeFormData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears data that the browser has saved for autofilling forms.
 

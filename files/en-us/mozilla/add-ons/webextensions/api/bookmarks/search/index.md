@@ -3,9 +3,8 @@ title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
 

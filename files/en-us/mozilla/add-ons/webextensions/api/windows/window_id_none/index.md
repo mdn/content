@@ -3,9 +3,8 @@ title: windows.WINDOW_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 page-type: webextension-api-property
 browser-compat: webextensions.api.windows.WINDOW_ID_NONE
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `windowId` value that represents the absence of a browser window.
 

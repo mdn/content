@@ -3,9 +3,8 @@ title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.getTargetElement
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the element for a given `targetElementId`
 

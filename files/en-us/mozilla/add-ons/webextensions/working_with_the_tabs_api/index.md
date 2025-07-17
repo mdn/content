@@ -2,9 +2,8 @@
 title: Work with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Tabs let a user open several web pages in their browser window and then switch between those web pages. With the Tabs API, you can work with and manipulate these tabs to create utilities that provide users with new ways to work with tabs or to deliver the features of your extension.
 
