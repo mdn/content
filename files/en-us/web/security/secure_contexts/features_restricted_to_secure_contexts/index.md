@@ -1,10 +1,10 @@
 ---
 title: Features restricted to secure contexts
+short-title: Restricted features
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 
@@ -47,6 +47,7 @@ This section lists APIs that specifications make available only in secure contex
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - {{domxref("Shared Storage API", "", "", "nocode")}}
 - [Storage API](/en-US/docs/Web/API/Storage_API)
+- [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs)
 - {{domxref("VirtualKeyboard API", "", "", "nocode")}}
 - [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
 - [Web Bluetooth](/en-US/docs/Web/API/Web_Bluetooth_API)

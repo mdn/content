@@ -40,13 +40,13 @@ otherwise, it's drawn at 300px.
 ```html
 <p>Image height: <span class="size">?</span>px (resize to update)</p>
 <img
-  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
   alt="Clock"
   srcset="
-    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 400w
   "
-  sizes="(max-width: 400px) 200px, 300px" />
+  sizes="(width <= 400px) 200px, 300px" />
 ```
 
 ### JavaScript

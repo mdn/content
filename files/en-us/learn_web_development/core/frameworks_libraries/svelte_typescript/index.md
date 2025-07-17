@@ -2,9 +2,9 @@
 title: TypeScript support in Svelte
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_stores","Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In the last article we learned about Svelte stores and even implemented our own custom store to persist the app's information to Web Storage. We also had a look at using the transition directive to implement animations on DOM elements in Svelte.
@@ -499,7 +499,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
    import Todo from "./Todo.svelte";
    import MoreActions from "./MoreActions.svelte";
    import NewTodo from "./NewTodo.svelte";
-   import TodosStatus from "./TodosStatus.svelte";
+   import type TodosStatus from "./TodosStatus.svelte";
    import { alert } from "../stores";
 
    import { Filter } from "../types/filter.enum";
@@ -784,7 +784,7 @@ import { localStore } from "./localStore";
 
      return {
        subscribe,
-       set: (value: JsonValue) => {
+       set(value: JsonValue) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },
@@ -971,7 +971,7 @@ export const localStore = <T extends JsonValue>(key: string, initial: T) => {
 
   return {
     subscribe,
-    set: (value: T) => {
+    set(value: T) {
       localStorage.setItem(key, toString(value)); // save also to local storage as a string
       return set(value);
     },

@@ -2,9 +2,8 @@
 title: Third-party APIs
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -112,8 +111,8 @@ Let's add some more functionality to the Mapquest example to show how to use som
 
 There are a number of different types of map that can be shown with the Mapquest API. To do this, find the following line:
 
-```js
-layers: L.mapquest.tileLayer("map");
+```js-nolint
+layers: L.mapquest.tileLayer("map"),
 ```
 
 Try changing `'map'` to `'hybrid'` to show a hybrid-style map. Try some other values too. The [`tileLayer` reference page](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) shows the different available options, plus a lot more information.
@@ -331,7 +330,6 @@ There's a lot of code here; let's explain it step by step:
 - The first [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
 - The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
-
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
   - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
 

@@ -2,9 +2,10 @@
 title: Creating an item component
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
@@ -287,7 +288,7 @@ In this example, we've defined the selector as `app-item`:
 ```ts
 @Component({
   selector: "app-item",
-  // ...
+  // …
 })
 export class ItemComponent {
   // …
@@ -433,8 +434,8 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 }
 
 /* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -446,8 +447,8 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 }
 
 /* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
   content: "\2713\0020";
   position: absolute;
   top: 0.15em;
@@ -459,18 +460,18 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label::after {
   opacity: 0;
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
 
 /* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
+[type="checkbox"]:checked:focus + label::before,
+[type="checkbox"]:not(:checked):focus + label::before {
   border: 2px dotted blue;
 }
 ```

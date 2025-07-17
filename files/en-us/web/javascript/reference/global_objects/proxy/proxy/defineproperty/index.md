@@ -1,11 +1,11 @@
 ---
 title: handler.defineProperty()
+short-title: defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.defineProperty()`** method is a trap for the `[[DefineOwnProperty]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.defineProperty()")}}.
 

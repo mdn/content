@@ -2,9 +2,8 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 You've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! This article covers all you need to know about the ways in which you can distribute your newly created game into the wild. This includes hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
 
@@ -50,7 +49,7 @@ If you are a front-end developer, you may already know what to do. An HTML game 
 
 If you want to make money out of game dev, you should secure your source code one way or another against people who could easily take it and sell it as their own. You can concatenate and minify the code to make it smaller and uglify it so it's a lot harder to reverse engineer your game. Another good measure to take is to provide an online demo if you're planning on packaging it and selling it in a closed store like iTunes or Steam.
 
-If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://end3r.com/blog/2014/02/host-your-html5-games-on-github-pages/). You'll get free hosting, version control and possible contributors if your project is interesting enough.
+If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to [host games on GitHub Pages](https://end3r.com/blog/host-your-html5-games-on-github-pages). You'll get free hosting, version control and possible contributors if your project is interesting enough.
 
 ### Publishers and portals
 

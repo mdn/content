@@ -3,9 +3,8 @@ title: column-gap
 slug: Web/CSS/column-gap
 page-type: css-property
 browser-compat: css.properties.column-gap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns.
 
@@ -54,7 +53,7 @@ column-gap: 20px;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

@@ -2,9 +2,8 @@
 title: Advanced JavaScript objects
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions")}}
 
@@ -17,7 +16,7 @@ Having a deeper knowledge of how JavaScript objects work is useful as you build 
 Before starting this module, You should really have learnt the fundamentals of [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), especially [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics). It would also be helpful to have some familiarity with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other devices where you are not able to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 

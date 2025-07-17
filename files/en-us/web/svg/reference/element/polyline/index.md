@@ -8,6 +8,23 @@ sidebar: svgref
 
 The **`<polyline>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape that creates straight lines connecting several points. Typically a `polyline` is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the {{SVGElement("polygon")}} element.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr('points')}}
+  - : This attribute defines the list of points (pairs of x,y absolute coordinates) required to draw the polyline
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)+; _Default value_: `""`; _Animatable_: **yes**
+- {{SVGAttr("pathLength")}}
+  - : This attribute lets specify the total length for the path, in user units.
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGPolylineElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -29,19 +46,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 100, 100)}}
-
-## Attributes
-
-- {{SVGAttr('points')}}
-  - : This attribute defines the list of points (pairs of x,y absolute coordinates) required to draw the polyline
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)+ ; _Default value_: `""`; _Animatable_: **yes**
-- {{SVGAttr("pathLength")}}
-  - : This attribute lets specify the total length for the path, in user units.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

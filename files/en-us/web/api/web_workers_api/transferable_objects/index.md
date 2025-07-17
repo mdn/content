@@ -42,7 +42,8 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
+> [!NOTE]
+> [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -91,6 +92,7 @@ Some of the items that various specifications indicate can be _transferred_ are 
 - {{domxref("RTCDataChannel")}}
 - {{domxref("MediaSourceHandle")}}
 - {{domxref("MIDIAccess")}}
+- {{domxref("MediaStreamTrack")}}
 
 > [!NOTE]
 > Transferable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferable]`.

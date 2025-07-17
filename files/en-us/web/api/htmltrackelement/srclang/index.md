@@ -11,8 +11,7 @@ browser-compat: api.HTMLTrackElement.srclang
 The **`srclang`** property of the {{domxref("HTMLTrackElement")}} interface reflects the value of
 the {{HTMLElement("track")}} element's [`srclang`](/en-US/docs/Web/HTML/Reference/Elements/track#srclang) attribute or the empty string if not defined.
 
-The `srclang` attribute is a [BCP 47 language tag](/en-US/docs/Web/HTML/Reference/Global_attributes/lang#language_tag_syntax)
-indicating the language of the text track's data.
+The `srclang` attribute is a {{glossary("BCP 47 language tag")}} indicating the language of the text track's data.
 
 ## Value
 
@@ -38,4 +37,3 @@ trackElement.srclang = "en-US";
 
 - {{domxref("HTMLTrackElement")}}
 - {{HTMLElement("track")}}
-- [`lang` syntax](/en-US/docs/Web/HTML/Reference/Global_attributes/lang#language_tag_syntax)

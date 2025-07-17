@@ -3,7 +3,7 @@ title: "RTCIceCandidatePairStats: selected property"
 short-title: selected
 slug: Web/API/RTCIceCandidatePairStats/selected
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.selected
+browser-compat: api.RTCStatsReport.type_candidate-pair.selected
 ---
 
 {{APIRef("WebRTC")}}{{non-standard_header}}
@@ -11,7 +11,7 @@ browser-compat: api.RTCIceCandidatePairStats.selected
 The **`selected`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.
 
 This property is non-standard and is only supported by Firefox.
-The standard way to determine the selected candidate pair is to look at the [`selectedCandidatePairId`](/en-US/docs/Web/API/RTCTransportStats#selectedcandidatepairid) property of the stats object of type `transport`.
+The standard way to determine the selected candidate pair is to look at the [`selectedCandidatePairId`](/en-US/docs/Web/API/RTCTransportStats/selectedCandidatePairId) property of the stats object of type `transport`.
 
 ## Value
 

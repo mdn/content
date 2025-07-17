@@ -2,12 +2,9 @@
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 page-type: webextension-manifest-key
-status:
-  - deprecated
 browser-compat: webextensions.manifest.options_page
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

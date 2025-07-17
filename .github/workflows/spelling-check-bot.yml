@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+    timeout-minutes: 5
 
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +24,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
 
       - name: Install all yarn packages
         run: yarn --frozen-lockfile

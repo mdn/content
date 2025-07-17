@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transforms/
   - https://drafts.csswg.org/css-transforms-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS transforms** module defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
 
@@ -607,25 +606,25 @@ const resetInput = (inputEl) => {
 };
 
 const updateOutputs = () => {
-  translateXOutput.value = `${parseInt(translateXRange.value)}px`;
-  translateYOutput.value = `${parseInt(translateYRange.value)}px`;
-  translateZOutput.value = `${parseInt(translateZRange.value)}px`;
+  translateXOutput.value = `${translateXRange.value}px`;
+  translateYOutput.value = `${translateYRange.value}px`;
+  translateZOutput.value = `${translateZRange.value}px`;
 
-  rotateXOutput.value = `${parseInt(rotateXRange.value)}°`;
-  rotateYOutput.value = `${parseInt(rotateYRange.value)}°`;
-  rotateZOutput.value = `${parseInt(rotateZRange.value)}°`;
+  rotateXOutput.value = `${rotateXRange.value}°`;
+  rotateYOutput.value = `${rotateYRange.value}°`;
+  rotateZOutput.value = `${rotateZRange.value}°`;
 
-  scaleXOutput.value = `${parseFloat(scaleXRange.value)}x`;
-  scaleYOutput.value = `${parseFloat(scaleYRange.value)}x`;
-  scaleZOutput.value = `${parseFloat(scaleZRange.value)}x`;
+  scaleXOutput.value = `${scaleXRange.value}x`;
+  scaleYOutput.value = `${scaleYRange.value}x`;
+  scaleZOutput.value = `${scaleZRange.value}x`;
 
-  skewXOutput.value = `${parseFloat(skewXRange.value)}°`;
-  skewYOutput.value = `${parseFloat(skewYRange.value)}°`;
+  skewXOutput.value = `${skewXRange.value}°`;
+  skewYOutput.value = `${skewYRange.value}°`;
 
-  perspectiveOutput.value = `${parseInt(perspectiveRange.value)}px`;
+  perspectiveOutput.value = `${perspectiveRange.value}px`;
 
-  perspectiveOriginXOutput.value = `${parseInt(perspectiveOriginXRange.value)}%`;
-  perspectiveOriginYOutput.value = `${parseInt(perspectiveOriginYRange.value)}%`;
+  perspectiveOriginXOutput.value = `${perspectiveOriginXRange.value}%`;
+  perspectiveOriginYOutput.value = `${perspectiveOriginYRange.value}%`;
 };
 
 const updateTransform = () => {

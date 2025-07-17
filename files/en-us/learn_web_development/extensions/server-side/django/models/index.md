@@ -3,9 +3,10 @@ title: "Django Tutorial Part 3: Using models"
 short-title: "3: Models"
 slug: Learn_web_development/Extensions/Server-side/Django/Models
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 This article shows how to define models for the LocalLibrary website. It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
 
@@ -277,7 +278,7 @@ books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 
 > [!NOTE]
 > You can use underscores (`__`) to navigate as many levels of relationships (`ForeignKey`/`ManyToManyField`) as you like.
-> For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'.`
+> For example, a `Book` that had different types, defined using a further "cover" relationship might have a parameter name: `type__cover__name__exact='hard'`.
 
 There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values, etc. For more information, see [Making queries](https://docs.djangoproject.com/en/5.0/topics/db/queries/) (Django Docs).
 
@@ -489,7 +490,7 @@ Some things to consider:
 - Should "language" be associated with a `Book`, `BookInstance`, or some other object?
 - Should the different languages be represented using model, a free text field, or a hard-coded selection list?
 
-After you've decided, add the field. You can see what we decided on GitHub [here](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/models.py).
+After you've decided, add the field. You can see what we decided [for our project on GitHub](https://github.com/mdn/django-locallibrary-tutorial/blob/main/catalog/models.py).
 
 Don't forget that after a change to your model, you should again re-run your database migrations to add the changes.
 

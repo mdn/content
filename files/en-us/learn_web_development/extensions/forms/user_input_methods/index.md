@@ -2,9 +2,8 @@
 title: User input methods and controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 
@@ -113,11 +112,13 @@ The [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) API enables users 
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.
-</div>
+<div draggable="true">This text <strong>may</strong> be dragged.</div>
+```
+
+```js
+document.querySelector("div").addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "This text may be dragged.");
+});
 ```
 
 in which we:

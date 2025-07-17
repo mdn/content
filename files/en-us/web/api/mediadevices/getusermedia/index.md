@@ -27,7 +27,6 @@ getUserMedia(constraints)
 ### Parameters
 
 - `constraints`
-
   - : An object specifying the types of media to
     request, along with any requirements for each type.
 
@@ -38,7 +37,6 @@ getUserMedia(constraints)
     `NotFoundError` {{domxref("DOMException")}}.
 
     For both `video` and `audio`, its value is either a boolean or an object. The default value is `false`.
-
     - If `true` is specified for a media type, the resulting stream is _required_ to have that type of track in it. If one cannot be included for any reason, the returned promise will reject.
     - If `false` is specified for a media type, the resulting stream _must not_ have that type of track, or the returned promise will reject. Because both `video` and `audio` default to `false`, if the `constraints` object contains neither property or if it's not present at all, the returned promise will always reject.
     - If an object is specified for a media type, the object is read as a {{domxref("MediaTrackConstraints")}} dictionary.
@@ -51,17 +49,14 @@ object when the requested media has successfully been obtained.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-
   - : Although the user and operating system both granted access to the hardware device,
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : Thrown if current document is not fully active.
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
     happen if the browsing context is insecure (that is, the page was loaded using HTTP
     rather than HTTPS). It also happens if the user has specified that the current
@@ -81,7 +76,6 @@ object when the requested media has successfully been obtained.
     occurred at the operating system, browser, or Web page level which prevented access to
     the device.
 - `OverconstrainedError` {{domxref("DOMException")}}
-
   - : Thrown if the specified constraints resulted in no candidate devices which met the criteria
     requested. The error is an object of type `OverconstrainedError`, and has a
     `constraint` property whose string value is the name of a constraint which

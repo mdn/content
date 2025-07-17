@@ -3,9 +3,10 @@ title: JavaScript performance optimization
 short-title: Performant JavaScript
 slug: Learn_web_development/Extensions/Performance/JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
 
 It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it might be causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, rendering performance, and CPU and battery usage. This article introduces tips and techniques for optimizing JavaScript to enhance the performance of your website.
 
@@ -291,7 +292,6 @@ There are several general best practices that will make your code run more effic
 - **Batch DOM changes**: For essential DOM changes, you should batch them into groups that get done together, rather than just firing off each individual change as it occurs. This can reduce the amount of work the browser is doing in real terms, but also improve perceived performance. It can make the UI look smoother to get several updates out of the way in one go, rather than constantly making small updates. A useful tip here is — when you have a large chunk of HTML to add to the page, build the entire fragment first (typically inside a {{domxref("DocumentFragment")}}) and then append it all to the DOM in one go, rather than appending each item separately.
 - **Simplify your HTML**: The simpler your DOM tree is, the faster it can be accessed and manipulated with JavaScript. Think carefully about what your UI needs, and remove unnecessary cruft.
 - **Reduce the amount of looped code**: Loops are expensive, so reduce the amount of loop usage in your code wherever possible. In cases where loops are unavoidable:
-
   - Avoid running the full loop when it is unnecessary, using {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statements as appropriate. For example, if you are searching arrays for a specific name, you should break out of the loop once the name is found; there is no need to run further loop iterations:
 
     ```js
@@ -319,7 +319,6 @@ There are several general best practices that will make your code run more effic
     ```
 
 - **Run computation off the main thread**: Earlier on we talked about how JavaScript generally runs tasks on the main thread, and how long operations can block the main thread, potentially leading to bad UI performance. We also showed how to break long tasks up into smaller tasks, mitigating this problem. Another way to handle such problems is to move tasks off the main thread altogether. There are a few ways to achieve this:
-
   - Use asynchronous code: [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) is basically JavaScript that does not block the main thread. Asynchronous APIs tend to handle operations such as fetching resources from the network, accessing a file on the local file system, or opening a stream to a user's web cam. Because those operations could take a long time, it would be bad to just block the main thread while we wait for them to complete. Instead, the browser executes those functions, keeps the main thread running subsequent code, and those functions will return results once they are available _at some point in the future_. Modern asynchronous APIs are {{jsxref("Promise")}}-based, which is a JavaScript language feature designed for handling asynchronous operations. It is possible to [write your own Promise-based functions](/en-US/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API) if you have functionality that would benefit from being run asynchronously.
   - Run computation in web workers: [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) are a mechanism allowing you to open a separate thread to run a chunk of JavaScript in, so that it won't block the main thread. Workers do have some major restrictions, the biggest being that you can't do any DOM scripting inside a worker. You can do most other things, and workers can send and receive messages to and from the main thread. The main use case for workers is if you have a lot of computation to do, and you don't want it to block the main thread. Do that computation in a worker, wait for the result, and send it back to the main thread when it is ready.
   - **Use WebGPU**: [WebGPU](/en-US/docs/Web/API/WebGPU_API) is a browser API that allows web developers to use the underlying system's GPU (Graphics Processing Unit) to carry out high-performance computations and draw complex images that can be rendered in the browser. It is fairly complex, but it can provide even better performance benefits than web workers.

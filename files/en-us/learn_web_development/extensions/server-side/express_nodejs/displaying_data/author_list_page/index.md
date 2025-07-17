@@ -2,9 +2,8 @@
 title: Author list page and Genre list page challenge
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.
 
@@ -72,7 +71,6 @@ The genre list controller function needs to get a list of all `Genre` instances,
 
 1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
 2. The implementation is almost exactly the same as the `author_list()` controller.
-
    - Sort the results by name, in ascending order.
 
 3. The template to be rendered should be named **genre_list.pug**.

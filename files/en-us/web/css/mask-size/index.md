@@ -3,40 +3,37 @@ title: mask-size
 slug: Web/CSS/mask-size
 page-type: css-property
 browser-compat: css.properties.mask-size
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
-
-> [!NOTE]
-> If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of specified mask images. Mask image sizes can be fully or partially constrained to preserve their {{glossary("aspect ratio", "intrinsic aspect ratios")}}.
 
 ## Syntax
 
 ```css
-/* Keywords syntax */
+/* Keyword syntax */
 mask-size: cover;
 mask-size: contain;
+mask-size: auto;
 
 /* One-value syntax */
-/* the width of the image (height set to 'auto') */
+/* Mask width. Sets height to 'auto'. */
 mask-size: 50%;
 mask-size: 3em;
 mask-size: 12px;
-mask-size: auto;
 
 /* Two-value syntax */
-/* first value: width of the image, second value: height */
-mask-size: 50% auto;
+/* First value: mask width. Second value: mask height */
 mask-size: 3em 25%;
 mask-size: auto 6px;
-mask-size: auto auto;
+mask-size: auto 50%;
 
 /* Multiple values */
-/* Do not confuse this with mask-size: auto auto */
-mask-size: auto, auto;
-mask-size: 50%, 25%, 25%;
+mask-size: auto, contain;
+mask-size:
+  50%,
+  50% 25%,
+  auto 25%;
 mask-size: 6px, auto, contain;
 
 /* Global values */
@@ -47,46 +44,54 @@ mask-size: revert-layer;
 mask-size: unset;
 ```
 
-One or more `<bg-size>` values, separated by commas.
-
-A `<bg-size>` can be specified in one of three ways:
-
-- using the keyword `contain`
-- using the keyword `cover`
-- using width and height values
-
-To specify a size using width and height, you can supply one or two values:
-
-- If only one value is given it sets the width, with the height set to `auto`.
-- If two values are given, the first sets width and the second sets height.
-
-Each value can be a `<length>`, a `<percentage>`, or `auto`.
-
 ### Values
 
-- `<length>`
-  - : A {{cssxref("&lt;length&gt;")}} value scales the mask image to the specified length in the corresponding dimension. Negative lengths are not allowed.
-- `<percentage>`
-  - : A {{cssxref("&lt;percentage&gt;")}} value scales the mask image in the corresponding dimension to the specified percentage of the mask positioning area, which is determined by the value of {{cssxref("mask-origin")}}. The mask positioning area is, by default, the area containing the content of the box and its padding; the area may also be changed to just the content or to the area containing borders, padding and content. Negative percentages are not allowed.
-- `auto`
-  - : A keyword that scales the mask image in the corresponding directions in order to maintain its intrinsic proportion.
+The `mask-size` property accepts a comma-separated list of `<bg-size>` values. A `<bg-size>` value is either `cover`, `contain`, a pair of values specifying the width and height (in that order), or a single value specifying the width (in which case, the height is set to `auto`). Values include:
+
 - `contain`
-  - : A keyword that scales the image as large as possible and maintains the image's {{glossary("aspect ratio")}} (the image doesn't get squished). The image is _letterboxed_ within the container. The image is automatically centered unless overridden by another property such as {{cssxref("mask-position")}}.
+  - : Scales the mask image up or down, while preserving its aspect-ratio, making the mask as large as possible within its container without cropping or stretching it.
+    If the mask image is smaller than the container, the mask will tile, or repeat, unless the {{cssxref("mask-repeat")}} property is set to `no-repeat`.
+
 - `cover`
-  - : A keyword that is the inverse of `contain`. Scales the image as large as possible and maintains image aspect ratio (image doesn't get squished). The image "covers" the entire width or height of the container. When the image and container have different dimensions, _the image is clipped_ either on left/right or at top/bottom.
+  - : Scales the mask image to the smallest possible size to fill the container while preserving its aspect ratio. If the aspect ratio of the mask image differs from the element, it will be cropped vertically or horizontally.
 
-The interpretation of possible values depends on the image's intrinsic dimensions (width and height) and intrinsic proportion (ratio of width and height). A bitmap image always has intrinsic dimensions and an intrinsic proportion. A vector image may have both intrinsic dimensions and thus it has an intrinsic proportion too. It also may have one or no intrinsic dimensions and in either case it might or might not have an intrinsic proportion. Gradients are treated as images with no intrinsic dimensions or intrinsic proportion.
+- `auto`
+  - : Maintains the original aspect ratio of the mask source. When set for both the width and height, the origin size of the mask resource is used. Otherwise, `auto` scales the mask image in the corresponding direction such that its original aspect ratio is maintained.
 
-The rendered size of the mask image is then computed as follows:
+- {{cssxref("&lt;length&gt;")}}
+  - : Renders the mask image at the specified length in the corresponding dimension (width if set as the first or only value, height if set as the second value). Negative values are not allowed.
 
-- If both components of `mask-size` are specified and are not `auto`:
-  - : The mask image renders at the specified size.
-- If the `mask-size` is `contain` or `cover`:
-  - : The image is rendered by preserving its intrinsic proportion at the largest size contained within or covering the mask positioning area. If the image has no intrinsic proportion, then it is rendered at the size of the mask positioning area.
-- If the `mask-size` is `auto` or `auto auto`:
-  - : If the image has both intrinsic dimensions, it is rendered at that size. If it has no intrinsic dimensions and no intrinsic proportion, it is rendered at the size of the mask positioning area. If it has no dimensions but has a proportion, it's rendered as if `contain` had been specified instead. If the image has one intrinsic dimension and a proportion, it's rendered at the size determined by that one dimension and the proportion. If the image has one intrinsic dimension but no proportion, it's rendered using the intrinsic dimension and the corresponding dimension of the mask positioning area.
-- If `mask-size` has one `auto` component and one non-`auto` component:
-  - : If the image has an intrinsic proportion, then render it using the specified dimension and compute the other dimension from the specified dimension and the intrinsic proportion. If the image has no intrinsic proportion, use the specified dimension for that dimension. For the other dimension, use the image's corresponding intrinsic dimension if there is one. If there is no such intrinsic dimension, use the corresponding dimension of the mask positioning area.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Renders the mask image in the corresponding dimension to the specified percentage of the box origin area as defined by the {{cssxref("mask-origin")}} property, which defaults to `padding-box`. Negative values are not allowed.
+
+## Description
+
+The `mask-size` property is used to size mask layers.
+
+An element can have multiple mask layers applied. The number of mask layers is determined by the number of comma-separated values in the {{cssxref("mask-image")}} property value (a value creates a mask layer, even if it is `none`).
+
+Each `mask-size` value in the comma-separated list of values is matched up with an associated mask layer as defined by the list of `mask-image` values, in order. If the number of values in the two properties differs:
+
+- If `mask-size` has more values than `mask-image`, the excess values of `mask-size` are not used.
+- If `mask-size` has fewer values than `mask-image`, the `mask-size` values are repeated.
+
+Each `mask-size` value is a `<bg-size>` value. There are three ways to declare each `<bg-size>`: one keyword, two lengths, percentages or the keyword `auto`, or one length, percentage, or `auto`:
+
+- The available keywords are `cover` and `contain`.
+- When two values are specified, the first defines the mask width and the second defines its height.
+- When one value is specified, it defines only the mask width, with the height set to `auto`.
+
+The width and height values are a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword, which is the default. Setting one or both values to `auto` maintains the mask image's original aspect ratio.
+
+The rendered size of the mask image is computed as follows:
+
+- If both components of `mask-size` are specified and are not `auto`, the mask image renders at the specified size.
+- If the `mask-size` is `contain` or `cover`, the image is rendered by preserving its aspect ratio at the largest size contained within or covering the mask positioning area. If the image has no intrinsic proportion, such as with gradients, then it is rendered at the size of the mask positioning area.
+- If the `mask-size` is `auto` (which resolves to `auto auto`), it is rendered at the size at which the mask would be displayed if no CSS were applied to change the rendering; this is its {{glossary("intrinsic size")}}. If it has no intrinsic dimensions and no intrinsic proportion, as is the case with [CSS gradients](/en-US/docs/Web/CSS/gradient), it is rendered at the size of the mask positioning area, defined by the {{cssxref("mask-origin")}} (which defaults to `border-box`).
+  If the mask source has no dimensions but has a proportion (aspect-ratio), a value of `auto` will render it as if `contain` had been specified instead. If the image has one intrinsic dimension and a proportion, it is rendered at the size determined by that one dimension and the proportion. If the image has one intrinsic dimension but no proportion, it's rendered using the intrinsic dimension and the corresponding dimension of the mask positioning area.
+- If `mask-size` has one `auto` component and one non-`auto` component, which applies to all single-value values, the aspect ratio is maintained if the mask source has an intrinsic proportion. If there are no intrinsic proportions, the `auto` value is assumed to be the dimension of the mask positioning area.
+
+Like with all longhand components of shorthand property, if the {{cssxref("mask")}} shorthand property is set and the value of the `mask-size` property is not defined within any mask layer, the `mask-size` value is reset to its initial value of `auto` for those mask layers.
 
 ## Formal definition
 
@@ -100,23 +105,196 @@ The rendered size of the mask image is then computed as follows:
 
 ### Setting mask size as a percentage
 
-```html live-sample___mask-size-example
-<div class="masked"></div>
+This example demonstrates basic usage, while also demonstrating percentage values for `mask-size`.
+
+#### HTML
+
+We include two {{htmlelement("div")}} elements:
+
+```html
+<div class="width"></div>
+<div class="height"></div>
 ```
 
-```css live-sample___mask-size-example
-.masked {
-  width: 200px;
-  height: 200px;
-  background: blue linear-gradient(red, blue);
-  margin-bottom: 10px;
+#### CSS
 
+The `<div>` elements are defined to be twice as tall as they are wide, with a gradient background and mask:
+
+```css
+div {
+  width: 200px;
+  height: 400px;
+  background: blue linear-gradient(red, blue);
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
-  mask-size: 50%;
 }
 ```
 
-{{EmbedLiveSample("mask-size-example", "", "250px")}}
+The width of one `<div>` element's mask is set to `50%`, with the height defaulting to `auto`. The mask's height for the second `<div>` element is set to `50%` with the width set to `auto`:
+
+```css
+.width {
+  mask-size: 50%;
+}
+
+.height {
+  mask-size: auto 50%;
+}
+```
+
+In the `width` case, the mask is rendered `100px` wide (`50%` of the `200px`-wide element). The height defaults to `auto`, maintaining the mask's aspect ratio.
+In the `height` case, the mask is rendered `200px` tall (`50%` of the `400px`-high container). The width is explicitly set to `auto`, maintaining the mask's aspect ratio.
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Setting mask size as a percentage", "", "430px")}}
+
+### Cover and contain
+
+This example demonstrates the keyword values for `mask-size`.
+
+#### HTML
+
+Three {{htmlelement("section")}} elements are defined, each with a different class name, and each containing a `<div>`.
+
+```html
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
+```
+
+#### CSS
+
+The `<div>` elements are defined to be twice as tall as they are wide, with a gradient background and mask:
+
+```css
+div {
+  width: 200px;
+  height: 400px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+```
+
+The `mask-size` of two of the `<div>` elements is set to one of the property's keyword values. The third `<div>` has a `mask-size` of `auto` set demonstrating the original intrinsic dimensions of the mask:
+
+```css
+.auto div {
+  mask-size: auto;
+}
+
+.cover div {
+  mask-size: cover;
+}
+
+.contain div {
+  mask-size: contain;
+}
+```
+
+The property values is displayed using [generated content](/en-US/docs/Web/CSS/CSS_generated_content).
+
+```css
+section::before {
+  content: "mask-size: " attr(class) ";";
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+```
+
+```css hidden
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+section {
+  border: 1px solid;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Cover and contain", "", "430px")}}
+
+With `auto`, the star is displayed at its intrinsic `100px` by `100px` size. With `cover`, the star grows to be `400px` tall, covering the entire origin box. With `contain`, the star grows until one dimension equals the same dimension of the [origin box](/en-US/docs/Web/CSS/mask-origin), meaning that the star is as large as it can be (`200px` wide) but still contained by it.
+
+### When the mask is larger than the container
+
+Using the same HTML and CSS as above, with just a different origin box size, this example explores what happens when the origin box is smaller than the intrinsic dimensions of the mask.
+
+```html hidden
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
+```
+
+```css hidden
+div {
+  background: blue linear-gradient(red, blue);
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+}
+
+.auto div {
+  mask-size: auto;
+}
+
+.cover div {
+  mask-size: cover;
+}
+
+.contain div {
+  mask-size: contain;
+}
+
+section::before {
+  content: attr(class);
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+section {
+  border: 1px solid;
+}
+```
+
+The only difference is the size of the containing box (and the generated content):
+
+```css
+div {
+  width: 70px;
+  height: 70px;
+}
+```
+
+{{EmbedLiveSample("When the mask is larger than the container", "", "120px")}}
+
+The `contain` value contains the mask within the origin box. The `cover` value covers it. In both cases, the mask shrinks while maintaining the original aspect ratio. With `auto`, the mask is clipped because the intrinsic dimensions are larger than the box dimensions.
 
 ## Specifications
 
@@ -128,4 +306,17 @@ The rendered size of the mask image is then computed as follows:
 
 ## See also
 
-- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- {{cssxref("background-size")}}
+- {{cssxref("mask")}} shorthand
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("background-size")}}
+- {{cssxref("mask-border-width")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

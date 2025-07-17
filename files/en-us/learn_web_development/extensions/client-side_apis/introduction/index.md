@@ -3,9 +3,8 @@ title: Introduction to web APIs
 short-title: Introduction
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 

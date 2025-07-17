@@ -3,9 +3,8 @@ title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getAllFrames
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a tab ID, retrieves information about all the frames it contains.
 
@@ -22,9 +21,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the tab to retrieve all frames from.
-
     - `tabId`
       - : `integer`. The ID of the tab.
 
@@ -44,10 +41,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
   - : `string`. The URL currently associated with this frame.
 
 If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab could not be found, or some other error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -83,6 +76,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

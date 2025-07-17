@@ -3,9 +3,8 @@ title: border-right
 slug: Web/CSS/border-right
 page-type: css-shorthand-property
 browser-compat: css.properties.border-right
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/border).
 
@@ -28,7 +27,7 @@ border-right: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+border-right: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example

@@ -3,9 +3,8 @@ title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`forced-color-adjust`** [CSS](/en-US/docs/Web/CSS) property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
 
@@ -29,7 +28,7 @@ The `forced-color-adjust` property's value must be one of the following keywords
 ### Values
 
 - `auto`
-  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
+  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
 - `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 - `preserve-parent-color`

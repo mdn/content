@@ -3,9 +3,8 @@ title: "<div>: The Content Division element"
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element
 browser-compat: html.elements.div
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g., styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is applied to its parent element).
 
@@ -54,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Accessibility
 
-The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+The `<div>` element has [an implicit role of `generic`](https://w3c.github.io/aria/#generic), and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
 
 ## Examples
 

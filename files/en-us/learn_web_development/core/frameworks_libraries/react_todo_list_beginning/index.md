@@ -3,9 +3,8 @@ title: Beginning our React ToDo app
 short-title: React ToDo app
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -228,10 +227,12 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
 ```jsx
-<input id="todo-0" type="checkbox" defaultChecked />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<div className="c-cb">
+  <input id="todo-0" type="checkbox" defaultChecked />
+  <label className="todo-label" htmlFor="todo-0">
+    Eat
+  </label>
+</div>
 ```
 
 The `defaultChecked` attribute in the `<input />` tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.
@@ -319,7 +320,7 @@ body {
   max-width: 68rem;
   width: 100%;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -373,7 +374,6 @@ body {
   text-align: center;
 }
 .visually-hidden {
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -391,7 +391,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -413,7 +413,7 @@ body {
   padding: 1rem;
   position: relative;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -456,7 +456,7 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }

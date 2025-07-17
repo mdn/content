@@ -22,7 +22,14 @@ A string.
 In this example the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) attribute is set to "3".
 
 ```js
-this.internals_.ariaColCount = "3";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaColCount = "3";
+  }
+  // …
+}
 ```
 
 ## Specifications

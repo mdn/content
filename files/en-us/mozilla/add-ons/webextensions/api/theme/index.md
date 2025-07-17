@@ -3,9 +3,8 @@ title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
 page-type: webextension-api
 browser-compat: webextensions.api.theme
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables browser extensions to get details of the browser's theme and update the theme.
 

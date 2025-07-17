@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("bufferedamountlow", (event) => {});
+```js-nolint
+addEventListener("bufferedamountlow", (event) => { })
 
-onbufferedamountlow = (event) => {};
+onbufferedamountlow = (event) => { }
 ```
 
 ## Event type

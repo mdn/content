@@ -3,9 +3,8 @@ title: "<header>: The Header element"
 slug: Web/HTML/Reference/Elements/header
 page-type: html-element
 browser-compat: html.elements.header
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 
@@ -169,7 +168,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
         <code><a href="/en-US/docs/Web/HTML/Reference/Elements/section">section</a></code>
         element, or an element with
         <code
-          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
             >article</a
           ></code
         >,
@@ -193,7 +192,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
-        >
+        > role
       </td>
     </tr>
     <tr>

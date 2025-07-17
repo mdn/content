@@ -60,6 +60,8 @@ The resulting drawing looks like this:
 
 ### Context
 
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
+  - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
@@ -128,6 +130,8 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
+- {{domxref("CanvasRenderingContext2D.lang")}} {{experimental_inline}}
+  - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles
 

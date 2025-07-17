@@ -113,7 +113,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">Divide out leading coefficient.</mtext>
+            <mtext class="explanation">Divide out leading coefficient.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -199,7 +199,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">Complete the square.</mtext>
+            <mtext class="explanation">Complete the square.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -263,7 +263,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">Discriminant revealed.</mtext>
+            <mtext class="explanation">Discriminant revealed.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -319,7 +319,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller"></mtext>
+            <mtext class="explanation"></mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -372,7 +372,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller"></mtext>
+            <mtext class="explanation"></mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -425,7 +425,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">There's the vertex formula.</mtext>
+            <mtext class="explanation">There's the vertex formula.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -467,7 +467,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller"></mtext>
+            <mtext class="explanation"></mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -490,3 +490,10 @@ We take a quadratic equation in its general form, and solve for x.
 </math>
 ```
 <!-- prettier-ignore-end -->
+
+```css
+.explanation {
+  color: red;
+  font-size: smaller;
+}
+```

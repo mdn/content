@@ -3,9 +3,8 @@ title: HTML video and audio
 short-title: Video and audio
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
@@ -108,7 +107,7 @@ An audio player will tend to play an audio track directly, e.g., an MP3 or Ogg f
 > [!NOTE]
 > Several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.
 >
-> Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.
+> Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to provide a video experience to their entire audience.
 
 The codecs described in the previous section exist to compress video and audio into manageable files, since raw audio and video are both exceedingly large. Each web browser supports an assortment of **{{Glossary("Codec","codecs")}}**, like Vorbis or H.264, which are used to convert the compressed audio and video into binary data and back. Each codec offers its own advantages and drawbacks, and each container may also offer its own positive and negative features affecting your decisions about which to use.
 
@@ -177,9 +176,7 @@ Features include:
 - [`poster`](/en-US/docs/Web/HTML/Reference/Elements/video#poster)
   - : The URL of an image which will be displayed before the video is played. It is intended to be used for a splash screen or advertising screen.
 - [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : Used for buffering large files; it can take one of three values:
-
     - `"none"` does not buffer the file
     - `"auto"` buffers the media file
     - `"metadata"` buffers only the metadata for the file
@@ -278,25 +275,52 @@ For more details, including on how to add labels please read [Adding captions an
 > [!NOTE]
 > Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
-## Active learning: Embedding your own audio and video
+## Embedding your own audio and video
 
-For this active learning, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily and, provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
+For this task, why not go out into the world and record some of your own video and audio? If you have a phone, use that to record audio and video, transfer it to your computer, and try it out. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs and tools out there to allow you to do this without too much trouble, such as [CloudConvert](https://cloudconvert.com/mp4-converter) (online) and [Audacity](https://sourceforge.net/projects/audacity/) (desktop application). We'd like you to have a go!
 
-If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise. You can also use our sample code for reference.
+> [!NOTE]
+> If you are unable to source any video or audio, then you can feel free to use our [sample audio and video files](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) to carry out this exercise.
 
 We would like you to:
 
 1. Save your audio and video files in a new directory on your computer.
-2. Create a new HTML file in the same directory, called `index.html`.
+2. Create a new HTML file in the same directory, called `index.html`, based on our [getting started template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 3. Add {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements to the page; make them display the default browser controls.
 4. Give both of them {{HTMLElement("source")}} elements so that browsers will find the audio format they support best and load it. These should include [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes.
-5. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
+5. Give both of them a fallback `<p>` element inside the tags that provides a direct link to the media for non-supporting browsers.
+6. Give the `<video>` element a poster that will be displayed before the video starts to be played. Have fun creating your own poster graphic.
 
-For an added bonus, you could try researching text tracks, and work out how to add some captions to your video.
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like this:
+
+```html
+<video controls poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
+</video>
+
+<audio controls>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
+</audio>
+```
+
+</details>
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Audio and video](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video).
 
 ## Summary
 

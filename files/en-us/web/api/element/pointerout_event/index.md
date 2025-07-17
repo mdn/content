@@ -16,10 +16,10 @@ The `pointerout` event is fired for several reasons including: pointing device i
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerout", (event) => {});
+```js-nolint
+addEventListener("pointerout", (event) => { })
 
-onpointerout = (event) => {};
+onpointerout = (event) => { }
 ```
 
 ## Event type
@@ -92,7 +92,6 @@ para.onpointerout = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

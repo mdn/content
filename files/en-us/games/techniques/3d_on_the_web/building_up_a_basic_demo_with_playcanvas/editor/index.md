@@ -2,9 +2,8 @@
 title: Building up a basic demo with PlayCanvas editor
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
@@ -110,7 +109,7 @@ Animating 3D models might be considered an [advanced](https://developer.playcanv
 If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:
 
 ```js
-pc.script.create("boxAnimation", function (app) {
+pc.script.create("boxAnimation", (app) => {
   class BoxAnimation {
     constructor(entity) {
       this.entity = entity;

@@ -26,7 +26,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
 
 ### E
 
@@ -119,9 +118,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("view")}}
 
-> [!NOTE]
-> The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
-
 ## SVG elements by category
 
 ### Animation elements
@@ -134,7 +130,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Container elements
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
 
 ### Descriptive elements
 
@@ -143,10 +139,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 ### Filter primitive elements
 
 {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
-
-### Font elements
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
 
 ### Gradient elements
 
@@ -176,9 +168,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 {{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
 
-> [!NOTE]
-> The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
-
 ### Shape elements
 
 {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
@@ -189,48 +178,15 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Text content elements
 
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tspan")}}
 
 ### Text content child elements
 
-{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("tspan")}}
 
 ### Uncategorized elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
-
-## Obsolete and deprecated elements
-
-> [!WARNING]
-> These are old SVG elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for informational purposes only.
-
-### C
-
-{{SVGElement("cursor")}}
-
-### F
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}
-
-### G
-
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}
-
-### H
-
-{{SVGElement("hkern")}}
-
-### M
-
-{{SVGElement("missing-glyph")}}
-
-### T
-
-{{SVGElement("tref")}}
-
-### V
-
-{{SVGElement("vkern")}}
+{{SVGElement("clipPath")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## See also
 

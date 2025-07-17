@@ -3,9 +3,8 @@ title: "Challenge: Structuring a page of content"
 short-title: "Challenge: Bird watching site"
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}
 
@@ -21,7 +20,7 @@ The zip file contains:
 - CSS to style your markup.
 - Images that are used on the page.
 
-Create the example on your local computer, or alternatively use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Create the example on your local computer, or alternatively use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 > [!NOTE]
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).

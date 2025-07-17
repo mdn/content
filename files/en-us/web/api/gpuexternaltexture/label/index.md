@@ -3,12 +3,10 @@ title: "GPUExternalTexture: label property"
 short-title: label
 slug: Web/API/GPUExternalTexture/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUExternalTexture.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUExternalTexture")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -24,7 +22,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUExternalTexture.label`:
 
 ```js
-// ...
+// …
 
 const externalTexture = device.importExternalTexture({
   source: video,
@@ -38,7 +36,7 @@ console.log(externalTexture.label); // "my_ext_texture"
 Setting a label via the originating {{domxref("GPUDevice.importExternalTexture()")}} call, and then getting it via `GPUExternalTexture.label`:
 
 ```js
-// ...
+// …
 
 const externalTexture = device.importExternalTexture({
   source: video,

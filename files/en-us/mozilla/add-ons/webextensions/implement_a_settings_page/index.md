@@ -2,9 +2,8 @@
 title: Implement a settings page
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
 
@@ -197,5 +196,4 @@ Now:
 - [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API reference documentation
 - open the settings page directly from your extension using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
 - Settings page example:
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

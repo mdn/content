@@ -14,9 +14,10 @@ browser-compat:
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
 spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 
@@ -76,7 +77,14 @@ Compression Dictionary Transport can achieve an order of magnitude more compress
 
 ## Dictionary format
 
-A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+A compression dictionary does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used in the compression of other files with similar content.
+
+Previous versions of files typically have lots of similar content, which is why they make excellent dictionaries.
+Using a previous version of a file as a dictionary allows the compression algorithm to efficiently reference all the unchanged content, and just capture the relatively small differences in the new version. This approach is referred to as delta compression.
+
+Another approach is to list common strings (for example your HTML templates) together in a new `dictionary.txt` file so it can be used to compress HTML pages on the website. You can optimize this further by using specialized tooling, for example [Brotli's dictionary generator](https://github.com/google/brotli/blob/master/research/dictionary_generator.cc), which reduces dictionaries down to their minimum size with minimal overlap.
+
+Dictionaries can also be used to effectively compress binary formats. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
@@ -107,7 +115,7 @@ If the response is cacheable, it must include a {{HTTPHeader("Vary")}} header to
 Vary: accept-encoding, available-dictionary
 ```
 
-An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the diction by the hash:
+An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the dictionary by the hash:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
@@ -195,7 +203,7 @@ Additionally, dictionaries could themselves become tracking vectors so browsers 
 - Glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
+- [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
 - {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}

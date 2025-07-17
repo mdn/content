@@ -64,10 +64,9 @@ const faceColors = [
 
 // Convert the array of colors into a table for all the vertices.
 
-const colors = [];
+let colors = [];
 
-for (let j = 0; j < faceColors.length; ++j) {
-  const c = faceColors[j];
+for (const c of faceColors) {
   // Repeat each color four times for the four vertices of the face
   colors = colors.concat(c, c, c, c);
 }

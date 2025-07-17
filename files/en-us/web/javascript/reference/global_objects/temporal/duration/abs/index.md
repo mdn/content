@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.abs()
+short-title: abs()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/abs
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.abs
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`abs()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the absolute value of this duration (all fields have the same magnitude, but sign becomes positive).
 

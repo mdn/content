@@ -1,10 +1,12 @@
 ---
 title: Firefox 22 for developers
+short-title: Firefox 22
 slug: Mozilla/Firefox/Releases/22
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 22 was released on June 25, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -54,7 +56,7 @@ page-type: firefox-release-notes
 
 - The `properties` parameter has been removed from the `nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names ([Firefox bug 407956](https://bugzil.la/407956)).
 - The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
-- See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
+- See [the Mozilla blog](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools
 
@@ -68,7 +70,3 @@ page-type: firefox-release-notes
 
 - [Firefox 22 Beta Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/22.0beta/releasenotes/)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
-
-### Versions
-
-{{Firefox_for_developers}}

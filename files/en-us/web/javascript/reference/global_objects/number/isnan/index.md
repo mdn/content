@@ -1,11 +1,11 @@
 ---
 title: Number.isNaN()
+short-title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isNaN
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.isNaN()`** static method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
 

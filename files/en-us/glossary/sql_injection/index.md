@@ -2,9 +2,8 @@
 title: SQL Injection
 slug: Glossary/SQL_Injection
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 SQL injection takes advantage of Web apps that fail to validate user input. Hackers can maliciously pass SQL commands through the Web app for execution by a backend database.
 
@@ -56,10 +55,10 @@ The password is not 'anything', hence password=anything results in FALSE, but '1
 
 Before executing the queries for the user credentials, make some changes like the following:
 
-```sql
-$id = $_GET['id']
+```php
+$id = $_GET["id"]
 
-(1) $id = Stripslashes($id)
+(1) $id = stripslashes($id)
 
 (2) $id = mysql_real_escape_String($id)
 ```

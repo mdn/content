@@ -3,9 +3,8 @@ title: "<select>: The HTML Select element"
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
@@ -61,7 +60,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
-
   - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
@@ -73,7 +71,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-
   - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
     > [!NOTE]
@@ -254,8 +251,8 @@ You'll see that:
           >submittable</a
         >
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content"
-          >form-associated </a
-        >element
+          >form-associated</a
+        > element
       </td>
     </tr>
     <tr>

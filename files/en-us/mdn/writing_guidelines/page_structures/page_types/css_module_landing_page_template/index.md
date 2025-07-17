@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remember to remove this note block before publishing._
+> [!NOTE]
+> _Remember to remove this note block before publishing._
 >
 > ---
 >
@@ -22,6 +23,7 @@ sidebar: mdnsidebar
 > spec-urls:
 >   - url1
 >   - url2
+> sidebar: cssref
 > ---
 > ```
 >
@@ -36,7 +38,6 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->
 >   - : The `spec-urls` value is a URL of the specification. In case there is more than one version of the specification that is relevant, present them in a bulleted list. For example, the value for `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module landing page is:
 >
 >     ```plain
@@ -44,13 +45,9 @@ sidebar: mdnsidebar
 >     - https://drafts.fxtf.org/filter-effects-1/
 >     ```
 >
-> ---
->
-> **Top-of-page macros**
->
-> The `\{{CSSRef}}` macro call appears at the top of the content section (immediately after the page front matter).
-> This macro must be present on every CSS module landing page. It generates a suitable CSS sidebar, depending on the tags included on the page.
-> Remove the `\{{MDNSidebar}}` macro when you use this template.
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >

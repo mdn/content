@@ -3,9 +3,10 @@ title: "Django Tutorial Part 4: Django admin site"
 short-title: "4: Django admin site"
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Now that we've created models for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.
 
@@ -130,13 +131,11 @@ Django does a pretty good job of creating a basic admin site using the informati
 You can further customize the interface to make it even easier to use. Some of the things you can do are:
 
 - List views:
-
   - Add additional fields/information displayed for each record.
   - Add filters to select which records are listed, based on date or some other selection value (e.g., Book loan status).
   - Add additional options to the actions menu in list views and choose where this menu is displayed on the form.
 
 - Detail views
-
   - Choose which fields to display (or exclude), along with their order, grouping, whether they are editable, the widget used, orientation etc.
   - Add related fields to a record to allow inline editing (e.g., add the ability to add and edit book records while you're creating their author record).
 

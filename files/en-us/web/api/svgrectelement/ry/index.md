@@ -22,8 +22,8 @@ Given the following SVG:
 
 ```html
 <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="60" height="60" ry="15" ry="15" />
-  <rect x="60" y="0" width="60" height="60" ry="15%" ry="15%" />
+  <rect x="0" y="0" width="60" height="60" rx="15" ry="15" />
+  <rect x="60" y="0" width="60" height="60" rx="15%" ry="15%" />
 </svg>
 ```
 

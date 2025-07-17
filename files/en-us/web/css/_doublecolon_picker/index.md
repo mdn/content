@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.picker
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`::picker()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the picker part of an element, for example the drop-down picker of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
@@ -56,7 +57,7 @@ A further side-effect of the implicit invoker/popover relationship mentioned abo
   position-area: block-end span-inline-end;
   ```
 
-- The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position-try fallbacks are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding). For reference, the related default fallback styles are as follows:
+- The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position-try fallbacks are explained in the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide. For reference, the related default fallback styles are as follows:
 
   ```css
   position-try-order: most-block-size;

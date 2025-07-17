@@ -3,9 +3,8 @@ title: "<mark>: The Mark Text element"
 slug: Web/HTML/Reference/Elements/mark
 page-type: html-element
 browser-compat: html.elements.mark
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes due to the marked passage's relevance in the enclosing context.
 
@@ -165,7 +164,7 @@ To help distinguish the use of `<mark>` for search results from other potential 
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

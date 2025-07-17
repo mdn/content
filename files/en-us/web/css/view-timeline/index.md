@@ -2,12 +2,9 @@
 title: view-timeline
 slug: Web/CSS/view-timeline
 page-type: css-shorthand-property
-status:
-  - experimental
 browser-compat: css.properties.view-timeline
+sidebar: cssref
 ---
-
-{{CSSRef}}{{SeeCompatTable}}
 
 The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
 
@@ -51,7 +48,8 @@ view-timeline: --custom_name_for_timeline;
 
 The `view-timeline` shorthand property can be applied to a container element as a combination of the `<view-timeline-name>`, `<view-timeline-inset>` and `<view-timeline-axis>` values. At least one of the values must be specified. If both the values are specified, the order followed must be the `<view-timeline-name>` value followed by the `<view-timeline-axis>` value and/or the `<view-timeline-inset>` value.
 
-> **Note:** `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
+> [!NOTE]
+> `<view-timeline-name>`s must be [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values, which means they must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ### Values
 

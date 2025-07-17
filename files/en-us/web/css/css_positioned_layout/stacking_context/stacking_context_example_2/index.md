@@ -2,9 +2,8 @@
 title: Stacking context example 2
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 ## Description
 
@@ -17,10 +16,8 @@ What can be considered strange is that DIV #2 (`z-index`: 2) is above DIV #4 (`z
 To better understand the situation, this is the stacking context hierarchy:
 
 - Root stacking context
-
   - DIV #2 (`z-index`: 2)
   - DIV #3 (`z-index`: 1)
-
     - DIV #4 (`z-index`: 10)
 
 > [!NOTE]

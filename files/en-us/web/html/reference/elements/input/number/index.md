@@ -3,9 +3,8 @@ title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
 
@@ -323,7 +322,7 @@ The HTML looks like this:
       required />
     <span class="validity"></span>
   </div>
-  <div class="feetInputGroup" style="display: none;">
+  <div class="feetInputGroup">
     <span>Enter your height — </span>
     <label for="feet">feet:</label>
     <input id="feet" type="number" name="feet" min="0" step="1" />
@@ -386,6 +385,8 @@ const metersInput = document.querySelector("#meters");
 const feetInput = document.querySelector("#feet");
 const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
+
+feetInputGroup.style.display = "none"; // Hide feet/inches inputs initially
 
 switchBtn.addEventListener("click", () => {
   if (switchBtn.getAttribute("class") === "meters") {

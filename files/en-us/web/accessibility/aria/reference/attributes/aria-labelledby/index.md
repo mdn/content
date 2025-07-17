@@ -1,5 +1,6 @@
 ---
-title: aria-labelledby
+title: "ARIA: aria-labelledby attribute"
+short-title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
@@ -88,6 +89,15 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 - ID reference list
   - : Space separated list of one or more ID values referencing the elements that label the current element.
+
+## Associated interfaces
+
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : The `ariaLabelledByElements` property is part of each element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-labelledby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
+- {{domxref("ElementInternals.ariaLabelledByElements")}}
+  - : The `ariaLabelledByElements` property is part of each custom element's interface.
+    Its value is an array of subclasses of {{domxref("Element")}} that reflect the `id` references in the `aria-labelledby` attribute ([with some caveats](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)).
 
 ## Associated roles
 

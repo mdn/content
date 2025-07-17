@@ -38,7 +38,6 @@ The Screen Wake Lock API should be used to keep the screen on to benefit usabili
 ### Extensions to other interfaces
 
 - {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
-
   - : Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.
 
 - [`Permissions-Policy: screen-wake-lock`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/screen-wake-lock)
@@ -138,7 +137,7 @@ Permissions-Policy: screen-wake-lock=(self b.example.com)
 Then the `allow="screen-wake-lock"` attribute must be added the frame container element for sources from that origin:
 
 ```html
-<iframe src="https://b.example.com" allow="screen-wake-lock"/></iframe>
+<iframe src="https://b.example.com" allow="screen-wake-lock"></iframe>
 ```
 
 Browsers may also block the screen lock in a particular document for an implementation specific reason, such as a user or platform setting.
@@ -156,5 +155,4 @@ The [Permissions API](/en-US/docs/Web/API/Permissions_API) `screen-wake-lock` pe
 
 ## See also
 
-- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
-- [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/) on developer.chrome.com

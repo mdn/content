@@ -3,9 +3,10 @@ title: CSS performance optimization
 short-title: Performant CSS
 slug: Learn_web_development/Extensions/Performance/CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 When developing a website, you need to consider how the browser is handling the CSS on your site. To mitigate any performance issues that CSS might be causing, you should optimize it. For example, you should optimize the CSS to mitigate [render-blocking](/en-US/docs/Glossary/Render_blocking) and minimize the number of required reflows. This article walks you through key CSS performance optimization techniques.
 
@@ -62,7 +63,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
   <link
     rel="stylesheet"
     href="mobile.css"
-    media="screen and (max-width: 480px)" />
+    media="screen and (width <= 480px)" />
   ```
 
   The above example provides three sets of styles — default styles that will always load, styles that will only be loaded when the document is being printed, and styles that will be loaded only by devices with narrow screens. By default, the browser assumes that each specified style sheet is render-blocking. You can tell the browser when a style sheet should be applied by adding a `media` attribute containing a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet that it only needs to apply in a specific scenario, it still downloads the stylesheet, but doesn't render-block. By separating the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time for which rendering is blocked.
@@ -115,7 +116,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
     rel="preload"
     href="bg-image-wide.png"
     as="image"
-    media="(min-width: 601px)" />
+    media="(width > 600px)" />
   ```
 
   With `preload`, the browser will fetch the referenced resources as soon as possible and make them available in the browser cache so that they will be ready for use sooner when they are referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible. Note how you can also use `media` attributes to create responsive preloaders.
@@ -162,7 +163,8 @@ Animation on the GPU can result in improved performance, especially on mobile. H
 
 Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before it is required. The CSS [`will-change`](/en-US/docs/Web/CSS/will-change) property hints to browsers how an element is expected to change.
 
-> **Note:** `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
+> [!NOTE]
+> `will-change` is intended to be used as a last resort to try to deal with existing performance problems. It should not be used to anticipate performance problems.
 
 ```css
 .element {
@@ -182,10 +184,7 @@ CSS can scope styles to particular conditions with media queries. Media queries 
 <link rel="stylesheet" href="print.css" media="print" />
 
 <!-- Loading and parsing mobile.css is not render-blocking on large screens -->
-<link
-  rel="stylesheet"
-  href="mobile.css"
-  media="screen and (max-width: 480px)" />
+<link rel="stylesheet" href="mobile.css" media="screen and (width <= 480px)" />
 ```
 
 By default, the browser assumes that each specified style sheet is render blocking. Tell the browser when the style sheet should be applied by adding a `media` attribute with the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). When the browser sees a style sheet it knows that it only needs to apply it for a specific scenario, it still downloads the stylesheet, but doesn't render block. By separating out the CSS into multiple files, the main render-blocking file, in this case `styles.css`, is much smaller, reducing the time that rendering is blocked.
@@ -211,7 +210,7 @@ h1,
 h2,
 h3 {
   /* It is actually loaded here */
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 ```
 

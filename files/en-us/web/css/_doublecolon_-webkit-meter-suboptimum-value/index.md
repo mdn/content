@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-meter-suboptimum-value
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-webkit-meter-suboptimum-value`** [pseudo-element](/en-US/docs/Glossary/Pseudo-element) styles the {{htmlelement("meter")}} element when the value attribute falls outside of the low-high range and is not equivalent to the optimum value.
 

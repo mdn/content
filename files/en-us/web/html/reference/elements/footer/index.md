@@ -3,9 +3,8 @@ title: "<footer>: The Footer element"
 slug: Web/HTML/Reference/Elements/footer
 page-type: html-element
 browser-compat: html.elements.footer
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#labeling_section_content) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
@@ -132,12 +131,12 @@ footer {
         <a href="/en-US/docs/Web/HTML/Reference/Elements/nav">nav</a> or
         <a href="/en-US/docs/Web/HTML/Reference/Elements/section">section</a> element, or
         an element with
-        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code>
         or
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> role
       </td>
     </tr>
     <tr>

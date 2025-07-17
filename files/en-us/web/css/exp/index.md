@@ -3,9 +3,8 @@ title: exp()
 slug: Web/CSS/exp
 page-type: css-function
 browser-compat: css.types.exp
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that takes an number as an argument and returns the mathematical constant `e` raised to the power of the given number.
 
@@ -77,19 +76,19 @@ div.box {
   background: linear-gradient(orange, red);
 }
 div.box-1 {
-  transform: rotate(calc(1turn * exp(-1))); // 0.3678794411714423turn
+  transform: rotate(calc(1turn * exp(-1))); /* 0.3678794411714423turn */
 }
 div.box-2 {
-  transform: rotate(calc(1turn * exp(-0.75))); // 0.4723665527410147turn
+  transform: rotate(calc(1turn * exp(-0.75))); /* 0.4723665527410147turn */
 }
 div.box-3 {
-  transform: rotate(calc(1turn * exp(-0.5))); // 0.6065306597126334turn
+  transform: rotate(calc(1turn * exp(-0.5))); /* 0.6065306597126334turn */
 }
 div.box-4 {
-  transform: rotate(calc(1turn * exp(-0.25))); // 0.7788007830714049turn
+  transform: rotate(calc(1turn * exp(-0.25))); /* 0.7788007830714049turn */
 }
 div.box-5 {
-  transform: rotate(calc(1turn * exp(0))); // 1turn
+  transform: rotate(calc(1turn * exp(0))); /* 1turn */
 }
 ```
 
@@ -116,22 +115,22 @@ The `exp()` function can be useful for strategies like CSS modular scale, which 
 
 ```css
 h1 {
-  font-size: calc(1rem * exp(1.25)); // 3.4903429574618414rem
+  font-size: calc(1rem * exp(1.25)); /* 3.4903429574618414rem */
 }
 h2 {
-  font-size: calc(1rem * exp(1)); // 2.718281828459045rem
+  font-size: calc(1rem * exp(1)); /* 2.718281828459045rem */
 }
 h3 {
-  font-size: calc(1rem * exp(0.75)); // 2.117000016612675rem
+  font-size: calc(1rem * exp(0.75)); /* 2.117000016612675rem */
 }
 h4 {
-  font-size: calc(1rem * exp(0.5)); // 1.6487212707001282rem
+  font-size: calc(1rem * exp(0.5)); /* 1.6487212707001282rem */
 }
 h5 {
-  font-size: calc(1rem * exp(0.25)); // 1.2840254166877414rem
+  font-size: calc(1rem * exp(0.25)); /* 1.2840254166877414rem */
 }
 h6 {
-  font-size: calc(1rem * exp(0)); // 1rem
+  font-size: calc(1rem * exp(0)); /* 1rem */
 }
 ```
 

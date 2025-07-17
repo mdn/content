@@ -3,9 +3,10 @@ title: Setting up a Node development environment
 short-title: Dev environment setup
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Now that you know what [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
 
@@ -141,20 +142,21 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 1. Copy the following text into a file named **hellonode.js**. This uses pure Node features (nothing from Express):
 
    ```js
-   //Load HTTP module
+   // Load HTTP module
    const http = require("http");
+
    const hostname = "127.0.0.1";
    const port = 3000;
 
-   //Create HTTP server and listen on port 3000 for requests
+   // Create HTTP server and listen on port 3000 for requests
    const server = http.createServer((req, res) => {
-     //Set the response HTTP header with HTTP status and Content type
+     // Set the response HTTP header with HTTP status and Content type
      res.statusCode = 200;
      res.setHeader("Content-Type", "text/plain");
      res.end("Hello World\n");
    });
 
-   //listen for request on port 3000, and as a callback function have the port listened on logged
+   // Listen for request on port 3000, and as a callback function have the port listened on logged
    server.listen(port, hostname, () => {
      console.log(`Server running at http://${hostname}:${port}/`);
    });
@@ -228,7 +230,7 @@ The following steps show how you can use npm to download a package, save it into
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
-   npm install express @4
+   npm install express@^4.21.2
    ```
 
    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
@@ -255,6 +257,7 @@ The following steps show how you can use npm to download a package, save it into
 
    ```js
    const express = require("express");
+
    const app = express();
    const port = 3000;
 

@@ -1,10 +1,10 @@
 ---
 title: Firefox 27 for developers
+short-title: Firefox 27
 slug: Mozilla/Firefox/Releases/27
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 27 was released on February 4, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -88,7 +88,3 @@ _No change._
 ## See also
 
 - [List of changes](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) in [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/index.html) for Firefox 27.
-
-### Older versions
-
-{{Firefox_for_developers}}

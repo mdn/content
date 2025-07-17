@@ -1,11 +1,11 @@
 ---
-title: Access-Control-Max-Age
+title: Access-Control-Max-Age header
+short-title: Access-Control-Max-Age
 slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
 page-type: http-header
 browser-compat: http.headers.Access-Control-Max-Age
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Max-Age`** {{Glossary("response header")}} indicates how long the results of a {{glossary("preflight request")}} (that is, the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.
 

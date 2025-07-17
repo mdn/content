@@ -1,16 +1,16 @@
 ---
 title: CSS at-rule functions
+short-title: At-rule functions
 slug: Web/CSS/CSS_syntax/At-rule_functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **[CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) functions** are at-rule statements that represent complex rules or can invoke special data processing or calculations.
 
 ## Syntax
 
-```css
+```plain
 @identifier function([argument]? [, argument]!) {
 }
 ```
@@ -27,7 +27,7 @@ The {{CSSxRef("@import")}} at-rule is used to import styles from other styleshee
   - : Imports a stylesheet file from the specified URL.
 - {{CSSxRef("@import", "@import supports()")}}
   - : Imports a stylesheet file based on browser support.
-- {{CSSxRef("@import", "@import layer()")}}
+- [`@import layer()`](/en-US/docs/Web/CSS/@import/layer_function)
   - : Imports a stylesheet file into the specified cascade layer.
 
 ## @supports functions

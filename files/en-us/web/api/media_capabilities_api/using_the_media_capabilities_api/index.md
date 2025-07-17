@@ -190,7 +190,7 @@ li {
 
 ```js
 let mc = {
-  videoConfiguration: new Object(),
+  videoConfiguration: {},
 
   tryIt() {
     mc.createConfiguration();

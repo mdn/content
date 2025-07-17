@@ -2,10 +2,13 @@
 title: ::scroll-button()
 slug: Web/CSS/::scroll-button
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.scroll-button
+sidebar: cssref
 ---
 
-{{CSSRef}}
+{{SeeCompatTable}}
 
 The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a button for controlling the scrolling of a {{glossary("scroll container")}}. They are generated on scroll containers when their {{cssxref("content")}} value is not `none`. The direction of the scrolling is determined by the parameter value.
 
@@ -20,9 +23,7 @@ The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/d
 ### Parameters
 
 - `<scroll-button-direction>`
-
   - : A value representing which direction of scroll button you want to select. The following values are available:
-
     - `*`
       - : Selects all the originating element's scroll buttons, allowing styles to be applied to each of them in a single rule.
     - `down`

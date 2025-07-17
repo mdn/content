@@ -1,11 +1,11 @@
 ---
 title: ArrayBuffer.prototype.detached
+short-title: detached
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.ArrayBuffer.detached
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`detached`** accessor property of {{jsxref("ArrayBuffer")}} instances returns a boolean indicating whether or not this buffer has been detached (transferred).
 

@@ -2,9 +2,8 @@
 title: Sending forms through JavaScript
 slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 When a user submits an HTML form, for example by clicking the {{glossary("Submit_button", "submit button")}}, the browser makes an [HTTP](/en-US/docs/Web/HTTP) request to send the data in the form. But instead of this declarative approach, web apps sometimes use JavaScript APIs such as {{domxref("Window/fetch", "fetch()")}} to send data programmatically to an endpoint that expects a form submission. This article explains why this is an important use case and how to do it.
 

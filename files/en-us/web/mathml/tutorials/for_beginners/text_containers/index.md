@@ -27,9 +27,17 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
-    <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
+    <p>∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
   </body>
 </html>
+```
+
+```css
+p {
+  font-family:
+    Latin Modern Math,
+    math;
+}
 ```
 
 {{ EmbedLiveSample('Unicode_characters_for_mathematics', 700, 100, "", "") }}
@@ -156,7 +164,8 @@ One typographic convention in mathematics is to use italic letters for variables
 
 {{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
 
-> **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
+> [!NOTE]
+> [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
 
 ## Reverting automatic italicization of \<mi>
 
@@ -233,7 +242,7 @@ Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let'
       href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
-    <p style="font-family: Latin Modern Math">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
+    <p class="text">∀A∊𝔰𝔩(n,𝔽),TrA=0</p>
     <p>
       <math>
         <mo>∀</mo>
@@ -271,6 +280,12 @@ Now that you are a bit familiar with special features of `<mi>` and `<mo>`, let'
 ```css hidden
 div {
   padding: 0.5em;
+}
+
+.text {
+  font-family:
+    Latin Modern Math,
+    math;
 }
 ```
 

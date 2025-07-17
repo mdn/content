@@ -3,9 +3,8 @@ title: "@starting-style"
 slug: Web/CSS/@starting-style
 page-type: css-at-rule
 browser-compat: css.at-rules.starting-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e., when an element is first displayed on a previously loaded page.
 
@@ -17,18 +16,19 @@ The `@starting-style` at rule can be used in two ways:
 
    ```css
    @starting-style {
-     rulesets
+     /* rulesets */
    }
    ```
 
 2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting property values for the elements already selected by that ruleset:
 
    ```css
-   selector { /* existing ruleset */
+   selector {
+     /* existing ruleset */
      /* ... */
 
      @starting-style {
-       declarations
+       /* declarations */
      }
    }
    ```
@@ -39,7 +39,8 @@ To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the {{glossary("top layer")}} (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
-> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+> [!NOTE]
+> `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
 
 There are two ways to use `@starting-style`: as a standalone rule or nested within a ruleset.
 
@@ -88,7 +89,7 @@ In effect, there are three style states to manage in these situations — starti
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## Examples
 

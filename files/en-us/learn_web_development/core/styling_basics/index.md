@@ -2,9 +2,8 @@
 title: CSS styling basics
 slug: Learn_web_development/Core/Styling_basics
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core")}}
 
@@ -15,7 +14,7 @@ CSS (Cascading Style Sheets) is used to style and layout web pages — for examp
 Before starting this module, you should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)). You should also be familiar with HTML (work through our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) module if not).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
@@ -63,7 +62,7 @@ Before starting this module, you should have a basic work environment set up (as
 These tutorials are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 
 - [Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
-  - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
+  - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 - [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
   - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
@@ -73,9 +72,9 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 ## See also
 
-- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
-- [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Write your first lines of CSS!](https://scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
   - : This interactive lesson provides a useful introduction to CSS syntax.
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core")}}

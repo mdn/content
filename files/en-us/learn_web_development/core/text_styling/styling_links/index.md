@@ -2,9 +2,8 @@
 title: Styling links
 slug: Learn_web_development/Core/Text_styling/Styling_links
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
@@ -44,7 +43,7 @@ The first thing to understand is the concept of link states — different states
 - **Visited**: A link that has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.
 - **Hover**: A link that is hovered over by a user's mouse pointer, styled using the {{cssxref(":hover")}} pseudo class.
 - **Focus**: A link that is focused (e.g., moved to by a keyboard user using the <kbd>Tab</kbd> key or something similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.
-- **Active**: A link that is activated (e.g., clicked on), styled using the {{cssxref(":active")}} pseudo class.
+- **Active**: A link that is activated (for example, clicked on), styled using the {{cssxref(":active")}} pseudo class.
 
 ## Default styles
 
@@ -55,7 +54,6 @@ The example below illustrates what a link will look and behave like by default; 
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
 - Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key.
-
 - Active links are red. Try holding down the mouse button on the link as you click it.
 
 ```html
@@ -179,144 +177,82 @@ So what did we do here? This certainly looks different to the default styling, b
 - The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have no underline and different background colors.
 - Finally, `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
 
-## Active learning: Style your own links
+## Style your own links
 
-In this active learning session, we'd like you to take our empty set of rules and add your own declarations to make the links look really cool. Use your imagination, go wild. We are sure you can come up with something cooler and just as functional as our example above.
+For this task, we'd like you to take our empty set of rules and add your own declarations to make the links look really cool. Use your imagination, go wild. We are sure you can come up with something cooler and just as functional as our example above.
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to insert the example we showed above.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Give the links some default styling that will be applied to them all the time. You don't just have to stick to text color, but make sure the links are still recognizable as links.
+3. Give _visited_ links a slightly different color to the default links styles you set.
+4. Give the link _focus_ and _hover_ states a distinct style that highlights them over other links. Also remove the default underline when links are being focused/hovered.
+5. Give the _active_ state a different style again.
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>There are several browsers available, such as <a href="#">Mozilla
- Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p>
-  </textarea>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view an example solution below the example output.
 
-  <h2>CSS Input</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-a {
-
-}
-
-a:link {
-
-}
-
-a:visited {
-
-}
-
-a:focus {
-
-}
-
-a:hover {
-
-}
-
-a:active {
-
-}
-  </textarea>
-
-  <h2>Output</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="Show solution"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
+```html-nolint live-sample___link_styling
+<p>
+  There are several browsers available, such as
+  <a href="https://www.mozilla.org/firefox/new/" target="_blank">Mozilla Firefox</a>,
+  <a href="https://www.google.co.uk/chrome/" target="_blank">Google Chrome</a>, and
+  <a href="https://www.microsoft.com/edge" target="_blank">Microsoft Edge</a>.
+</p>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
-
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
-
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
-
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
-
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `p {
+```css-nolint hidden live-sample___link_styling
+p {
   font-size: 1.2rem;
   font-family: sans-serif;
   line-height: 1.4;
 }
 
+```
+
+```css live-sample___link_styling
 a {
-  outline-color: transparent;
-  text-decoration: none;
-  padding: 2px 1px 0;
 }
 
-a:link {
+a:visited {
+}
+
+a:focus,
+a:hover {
+}
+
+a:active {
+}
+```
+
+{{ EmbedLiveSample('link_styling', "100%", 100) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished CSS could look like this:
+
+```css
+a {
+  outline-color: transparent;
+  padding: 2px 1px 0;
   color: #265301;
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
+a:hover,
 a:focus {
-  border-bottom: 1px solid;
-  background: #BAE498;
-}
-
-a:hover {
-  border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #bae498;
+  text-decoration: none;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+  color: #cdfeaa;
+}
 ```
 
-{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}
+</details>
 
 ## Including icons on links
 
@@ -363,7 +299,7 @@ We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basi
 
 A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute with a value that begins with "http".
 
-So that's it. Try revisiting the active learning section above and trying this new technique out!
+So that's it. Try revisiting the task section above and trying this new technique out!
 
 > [!NOTE]
 > Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) and [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) yet; these are explained in other places.

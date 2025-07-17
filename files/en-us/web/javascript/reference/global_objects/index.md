@@ -2,9 +2,8 @@
 title: Standard built-in objects
 slug: Web/JavaScript/Reference/Global_Objects
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties.
 
@@ -88,6 +87,7 @@ These objects represent strings and support manipulating them.
 These objects represent collections of data which are ordered by an index value. This includes (typed) arrays and array-like constructs.
 
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray")}}
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8ClampedArray")}}

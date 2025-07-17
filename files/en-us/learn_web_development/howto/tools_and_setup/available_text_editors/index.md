@@ -2,9 +2,8 @@
 title: What text editors are available?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 
@@ -81,7 +80,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -261,7 +260,7 @@ Here are some popular editors:
       <td>Mac</td>
       <td>
         <a href="https://x.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>
@@ -439,7 +438,6 @@ When you install a new text editor, your OS will probably continue to open text 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)

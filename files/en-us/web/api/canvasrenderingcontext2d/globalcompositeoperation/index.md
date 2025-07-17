@@ -193,7 +193,6 @@ window.onload = () => {
   lightMix();
   colorSphere();
   runComposite();
-  return;
 };
 ```
 
@@ -387,7 +386,7 @@ Color.HSV_RGB = (o) => {
       case 5:
         R = V;
         G = A;
-        B = B;
+        // B remains unchanged
         break;
     }
   }

@@ -3,9 +3,8 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
@@ -55,19 +54,19 @@ grid-template-areas:
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   grid-area: a;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-area: b;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-area: c;
 }
@@ -99,8 +98,7 @@ grid-template-areas: unset;
 
 - `none`
   - : The grid container doesn't define any named grid areas.
-- `{{cssxref("&lt;string&gt;")}}+`
-
+- {{cssxref("&lt;string&gt;")}}
   - : A row is created for every separate string listed, and a column is created for each cell in the string. Multiple cell tokens with the same name within and between rows create a single named grid area that spans the corresponding grid cells. Unless those cells form a rectangle, the declaration is invalid.
 
     All the remaining unnamed areas in a grid can be referred using _null cell tokens_. A null cell token is a sequence of one or more `.` (U+002E FULL STOP) characters, e.g., `.`, `...`, or `.....` etc. A null cell token can be used to create empty spaces in the grid.

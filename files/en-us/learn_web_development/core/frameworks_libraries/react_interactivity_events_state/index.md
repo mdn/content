@@ -3,9 +3,8 @@ title: "React interactivity: Events and state"
 short-title: React events and state
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_components","Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -80,7 +79,7 @@ function handleSubmit(event) {
 To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) element, and set its value to the `handleSubmit` function:
 
 ```jsx
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>{/* … */}</form>
 ```
 
 Now if you head back to your browser and click on the "Add" button, your browser will show you an alert dialog with the words "Hello, world!" — or whatever you chose to write there.
@@ -111,7 +110,7 @@ To use this prop, we must change the signature of the `Form()` function in `Form
 
 ```jsx
 function Form(props) {
-  // ...
+  // …
 }
 ```
 
@@ -163,7 +162,8 @@ This is where **state** comes in. If we think of props as a way to communicate b
 
 React provides a special function for introducing state to a component, aptly named `useState()`.
 
-> **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
+> [!NOTE]
+> `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
 
 To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
 

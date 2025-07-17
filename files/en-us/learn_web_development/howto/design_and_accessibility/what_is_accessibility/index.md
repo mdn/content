@@ -2,9 +2,8 @@
 title: What is accessibility?
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article introduces the basic concepts behind web accessibility.
 
@@ -44,7 +43,6 @@ In the specific context of the web, accessibility means that anyone can benefit 
 Let's consider video:
 
 - Hearing impairment
-
   - : How does a hearing-impaired person benefit from a video? You have to provide subtitles — or even better, a full text transcript.
 
     Also, make sure people can adjust the volume to accommodate their unique needs.

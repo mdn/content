@@ -3,9 +3,8 @@ title: exportFunction()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction
 page-type: webextension-api-function
 browser-compat: webextensions.api.contentScriptGlobalScope.exportFunction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This function provides a safe way to expose a function from a privileged scope to a less-privileged scope. This enables privileged code, such as an extension, to share code with less-privileged code, such as a standard web page script. A function exported from privileged to less-privileged code can be called from the less privileged code's context.
 
@@ -32,9 +31,7 @@ let exportedFunction = exportFunction(
 - `targetScope`
   - : `object`. The object to attach the function to. This doesn't have to be the global window object; it could be an object in the target window or created by the caller.
 - `options` {{optional_inline}}
-
   - : `object`. Options for the function.
-
     - `defineAs` {{optional_inline}}
       - : `string`. The name of the function in `targetScope`. If omitted, you need to assign the return value of `exportFunction()` to an object in the target scope.
     - `allowCrossOriginArguments` {{optional_inline}}

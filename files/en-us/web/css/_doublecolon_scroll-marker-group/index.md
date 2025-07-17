@@ -2,10 +2,13 @@
 title: ::scroll-marker-group
 slug: Web/CSS/::scroll-marker-group
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.scroll-marker-group
+sidebar: cssref
 ---
 
-{{CSSRef}}
+{{SeeCompatTable}}
 
 The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is generated inside a {{glossary("scroll container")}} and contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on descendants of the scroll container.
 
@@ -104,7 +107,7 @@ ul {
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is laid out using flexbox, with a {{cssxref("justify-content")}} value of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___carousel-example live-sample___carousel-example_final
 ul::scroll-marker-group {

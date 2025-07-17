@@ -1,10 +1,10 @@
 ---
 title: Firefox 16 for developers
+short-title: Firefox 16
 slug: Mozilla/Firefox/Releases/16
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -82,9 +82,3 @@ _No change._
 ### Interface changes
 
 `nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ([Firefox bug 761613](https://bugzil.la/761613))
-
-#### New interfaces
-
-#### Removed interfaces
-
-The following interfaces have been removed.

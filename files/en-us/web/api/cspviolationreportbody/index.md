@@ -54,7 +54,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
 _Also inherits methods from its parent interface, {{DOMxRef("ReportBody")}}._
 
-- {{DOMxRef("CSPViolationReportBody.toJSON()")}}
+- {{DOMxRef("CSPViolationReportBody.toJSON()")}} {{deprecated_inline}}
   - : A _serializer_ which returns a JSON representation of the `CSPViolationReportBody` object.
 
 ## Examples

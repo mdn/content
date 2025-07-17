@@ -3,9 +3,8 @@ title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
 browser-compat: css.types.clamp
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
@@ -52,11 +51,9 @@ width: clamp(100px, calc(30% / 2rem + 10px), 900px);
 The `clamp(min, val, max)` function accepts three comma-separated expressions as its parameters.
 
 - `min`
-
   - : The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
 
 - `val`
-
   - : The preferred value is the expression whose value will be used as long as the result is between the minimum and maximum values.
 
 - `max`
@@ -75,7 +72,7 @@ Keep the following aspects in mind while working with the function:
 
 ### Return value
 
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`.
+`clamp(MIN, VAL, MAX)` is resolved as `max(MIN, min(VAL, MAX))`.
 
 Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 

@@ -1,5 +1,6 @@
 ---
 title: "ARIA: scrollbar role"
+short-title: scrollbar
 slug: Web/Accessibility/ARIA/Reference/Roles/scrollbar_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#scrollbar
@@ -117,9 +118,9 @@ From the assistive technology user's perspective, the heading does not exist sin
 The following is an example of a word likely being too long for a parent container.
 
 ```html
-<span id="pi-label">Pi</div>
+<div id="pi-label">Pi</div>
 <div id="pi">
-3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 </div>
 <div
   role="scrollbar"

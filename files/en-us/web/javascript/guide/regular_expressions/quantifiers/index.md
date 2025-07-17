@@ -2,9 +2,8 @@
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Quantifiers indicate numbers of characters or expressions to match.
 
@@ -187,6 +186,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 ### Optional character
 
 In this example, we match words that either end with "our" or "or".
+
+<!-- cSpell:ignore neighbour -->
 
 ```js
 const britishText = "He asked his neighbour a favour.";

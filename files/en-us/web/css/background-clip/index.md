@@ -3,9 +3,8 @@ title: background-clip
 slug: Web/CSS/background-clip
 page-type: css-property
 browser-compat: css.properties.background-clip
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.
 
@@ -26,6 +25,7 @@ background-clip: content-box;
 ```css interactive-example-choice
 background-clip: text;
 color: transparent;
+text-shadow: none;
 ```
 
 ```html interactive-example
@@ -37,7 +37,7 @@ color: transparent;
 ```css interactive-example
 #example-element {
   background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
+  color: white;
   text-shadow: 2px 2px black;
   padding: 20px;
   border: 10px dashed #333;

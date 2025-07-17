@@ -3,9 +3,8 @@ title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
 page-type: css-property
 browser-compat: css.properties.overflow-clip-margin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped. The bound defined by this property is called the _overflow clip edge_ of the box.
 

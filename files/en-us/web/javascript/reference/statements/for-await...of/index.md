@@ -3,9 +3,8 @@ title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 page-type: javascript-statement
 browser-compat: javascript.statements.for_await_of
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for await...of`** statement creates a loop iterating over [async iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) as well as [sync iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). This statement can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
@@ -17,7 +16,7 @@ async function* foo() {
   yield 2;
 }
 
-(async function () {
+(async () => {
   for await (const num of foo()) {
     console.log(num);
     // Expected output: 1
@@ -198,9 +197,9 @@ function* generatorWithRejectedPromises() {
     yield 0;
     yield 1;
     yield Promise.resolve(2);
-    yield Promise.reject(3);
+    yield Promise.reject(new Error("failed"));
     yield 4;
-    throw 5;
+    throw new Error("throws");
   } finally {
     console.log("called finally");
   }
@@ -218,7 +217,7 @@ function* generatorWithRejectedPromises() {
 // 0
 // 1
 // 2
-// caught 3
+// caught Error: failed
 
 // compare with for-of loop:
 
@@ -232,9 +231,9 @@ try {
 // 0
 // 1
 // Promise { 2 }
-// Promise { <rejected> 3 }
+// Promise { <rejected> Error: failed }
 // 4
-// caught 5
+// caught Error: throws
 // called finally
 ```
 
@@ -253,7 +252,7 @@ To make `finally` blocks of a sync generator always called, use the appropriate 
 // 0
 // 1
 // 2
-// caught 3
+// caught Error: failed
 // called finally
 ```
 

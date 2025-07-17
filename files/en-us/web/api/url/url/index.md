@@ -26,7 +26,6 @@ new URL(url, base)
     If `url` is a relative reference, `base` is required, and is used to resolve the final URL.
     If `url` is an absolute URL, a given `base` will not be used to create the resulting URL.
 - `base` {{optional_inline}}
-
   - : A string representing the base URL to use in cases where `url` is a relative reference.
     If not specified, it defaults to `undefined`.
 
@@ -48,7 +47,8 @@ new URL(url, base)
 
 Here are some examples of using the constructor.
 
-> **Note:** [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
+> [!NOTE]
+> [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) provides additional examples demonstrating how different `url` and `base` values are resolved to a final absolute URL.
 
 ```js
 // Base URLs:

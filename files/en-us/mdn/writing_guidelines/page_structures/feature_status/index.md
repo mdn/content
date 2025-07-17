@@ -5,16 +5,17 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> [!WARNING]
-> Do not manually update the feature statuses in `mdn/content` repository.
-> The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository
-
 A feature status broadly indicates the cross-browser implementation and standardization state of a particular web platform feature, such as a Web API method or CSS property.
+
 It is one of the following:
 
 - [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
+
+> [!WARNING]
+> Do not manually update the feature statuses in the `mdn/content` repository.
+> The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository.
 
 If none of the above statuses apply, the feature is considered _stable and standard feature_.
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
@@ -54,17 +55,14 @@ browser-compat: api.feature
 The following macros are used to render the status banners in page headers:
 
 - `\{{Deprecated_Header}}`
-
   - : For `deprecated` status. It generates a **Deprecated status** banner:
     {{deprecated_header}}
 
 - `\{{SeeCompatTable}}`
-
   - : For `experimental` status. It generates an **Experimental status** banner:
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
-
   - : For `non-standard` status. It generates a **Non-Standard status** banner:
     {{Non-standard_Header}}
 

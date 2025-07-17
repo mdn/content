@@ -2,7 +2,9 @@
 title: lengthAdjust
 slug: Web/SVG/Reference/Attribute/lengthAdjust
 page-type: svg-attribute
-browser-compat: svg.elements.text.lengthAdjust
+browser-compat:
+  - svg.elements.text.lengthAdjust
+  - svg.elements.tspan.lengthAdjust
 sidebar: svgref
 ---
 
@@ -12,7 +14,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example

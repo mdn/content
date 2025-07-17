@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDateTime.prototype.toPlainTime()
+short-title: toPlainTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/toPlainTime
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.toPlainTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toPlainTime()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new {{jsxref("Temporal.PlainTime")}} object representing the time part (hour, minute, second, and subsecond components) of this date-time.
 

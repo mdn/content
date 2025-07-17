@@ -3,9 +3,8 @@ title: Making network requests with JavaScript
 short-title: Network requests
 slug: Learn_web_development/Core/Scripting/Network_requests
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
@@ -58,7 +57,9 @@ To speed things up even further, some sites also store assets and data on the us
 
 ## The Fetch API
 
-Let's walk through a couple of examples of the Fetch API.
+In this section we'll walk through a couple of examples of the Fetch API.
+
+The examples below are of a certain level of complexity, and show how to use the Fetch API in some real world contexts. If you have never used fetch before, you might want to start by working through Scrimba's [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provides a very simple intro walkthrough.
 
 ### Fetching text content
 

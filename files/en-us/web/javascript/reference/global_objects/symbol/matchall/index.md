@@ -1,11 +1,11 @@
 ---
 title: Symbol.matchAll
+short-title: matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
 
@@ -14,7 +14,7 @@ For more information, see [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/We
 {{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
 
 ```js interactive-example
-const re = /[0-9]+/g;
+const re = /\d+/g;
 const str = "2016-01-02|2019-03-07";
 const result = re[Symbol.matchAll](str);
 
@@ -37,7 +37,7 @@ const str = "2016-01-02|2019-03-07";
 
 const numbers = {
   *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+    for (const n of str.matchAll(/\d+/g)) yield n[0];
   },
 };
 

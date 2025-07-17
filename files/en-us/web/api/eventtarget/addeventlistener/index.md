@@ -60,10 +60,8 @@ addEventListener(type, listener, useCapture)
     [function](/en-US/docs/Web/JavaScript/Guide/Functions). See
     [The event listener callback](#the_event_listener_callback) for details on the callback itself.
 - `options` {{optional_inline}}
-
   - : An object that specifies characteristics about the event listener. The available
     options are:
-
     - `capture` {{optional_inline}}
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
@@ -73,7 +71,6 @@ addEventListener(type, listener, useCapture)
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
-
       - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
 
         If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
@@ -82,7 +79,6 @@ addEventListener(type, listener, useCapture)
       - : An {{domxref("AbortSignal")}}. The listener will be removed when the {{domxref("AbortController/abort()", "abort()")}} method of the {{domxref("AbortController")}} which owns the `AbortSignal` is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
-
   - : A boolean value indicating whether events of this type will be dispatched to
     the registered `listener` _before_ being dispatched to
     any `EventTarget` beneath it in the DOM tree. Events that are bubbling
@@ -90,7 +86,7 @@ addEventListener(type, listener, useCapture)
     bubbling and capturing are two ways of propagating events that occur in an element
     that is nested within another element, when both elements have registered a handle for
     that event. The event propagation mode determines the order in which elements receive
-    the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
+    the event. See [the DOM spec](https://dom.spec.whatwg.org/#introduction-to-dom-events) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
     If not specified, `useCapture` defaults to `false`.
 
     > [!NOTE]
@@ -301,11 +297,11 @@ Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_sc
 ### Memory issues
 
 ```js
-const elts = document.getElementsByTagName("*");
+const elems = document.getElementsByTagName("*");
 
 // Case 1
-for (const elt of elts) {
-  elt.addEventListener(
+for (const elem of elems) {
+  elem.addEventListener(
     "click",
     (e) => {
       // Do something
@@ -319,8 +315,8 @@ function processEvent(e) {
   // Do something
 }
 
-for (const elt of elts) {
-  elt.addEventListener("click", processEvent, false);
+for (const elem of elems) {
+  elem.addEventListener("click", processEvent, false);
 }
 ```
 
@@ -460,9 +456,9 @@ event listener.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Function to add event listener to table
@@ -506,9 +502,9 @@ notation.
 
 ```js
 // Function to change the content of t2
-function modifyText(new_text) {
+function modifyText(newText) {
   const t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
+  t2.firstChild.nodeValue = newText;
 }
 
 // Add event listener to table with an arrow function
@@ -650,7 +646,7 @@ function noneOnceHandler(event) {
   log("outer, none-once, default\n");
 }
 function captureHandler(event) {
-  //event.stopImmediatePropagation();
+  // event.stopImmediatePropagation();
   log("middle, capture");
 }
 function noneCaptureHandler(event) {
@@ -663,7 +659,7 @@ function passiveHandler(event) {
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
-  //event.stopPropagation();
+  // event.stopPropagation();
   log("inner2, none-passive, default, not open new page");
 }
 ```

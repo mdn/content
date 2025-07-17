@@ -21,10 +21,8 @@ copyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 

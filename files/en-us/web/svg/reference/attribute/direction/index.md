@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.direction
 sidebar: svgref
 ---
 
-The **`direction`** attribute specifies the inline-base direction of a {{SVGElement("text")}} or {{SVGElement("tspan")}} element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{SVGAttr("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either `embed` or `bidi-override`.
+The **`direction`** attribute specifies the inline-base direction of a {{SVGElement("text")}} or {{SVGElement("tspan")}} element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{cssxref("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either `embed` or `bidi-override`.
 
 It applies only to glyphs oriented perpendicular to the inline-base direction, which includes the usual case of horizontally-oriented Latin or Arabic text and the case of narrow-cell Latin or Arabic characters rotated 90 degrees clockwise relative to a top-to-bottom inline-base direction.
 
@@ -19,7 +19,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## Example

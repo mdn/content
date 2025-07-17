@@ -2,9 +2,8 @@
 title: How browsers load websites
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 
@@ -45,7 +44,7 @@ To summarize the [overview of web technologies](/en-US/docs/Learn_web_developmen
 
 When the user navigates to a new web page (by clicking a link, or entering a web address in the browser address bar), several HTTP requests are sent, and several files are sent back in HTTP responses. The files received in these responses are processed by the browser and put together into a web page that the user can interact with. This process of assembling the pieces into a web page is called **rendering**.
 
-The below sections provide a high-level explanation of how a browser renders a web page. Bear in mind that this is a very simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of the basics behind how things work.
+The following sections provide a high-level explanation of how a browser renders a web page. Keep in mind that this is a simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of how things work.
 
 ## Handling HTML
 
@@ -60,7 +59,7 @@ To start with, the HTML file that contains the web page content and defines its 
 </p>
 ```
 
-Each element, attribute, and piece of text in the HTML becomes a **DOM node** in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings. The browser would parse the above HTML and create the following DOM tree from it:
+Each element, attribute, and piece of text in the HTML becomes a **DOM node** in the tree structure. The nodes are defined by their relationship to other DOM nodes. Some elements are parents of child nodes, and child nodes have siblings. The browser will parse this HTML and create the following DOM tree from it:
 
 ```plain
 P
@@ -73,7 +72,7 @@ P
     └─ "JavaScript"
 ```
 
-In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children. When the browser renders the above DOM tree, it will look like so:
+In this DOM tree, the node corresponding to our `<p>` element is a parent. Its children include a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children. When the browser renders this DOM tree, it will look like so:
 
 {{EmbedLiveSample('Handling the HTML', '100%', 55)}}
 
@@ -91,7 +90,7 @@ Certain HTML elements, when parsed, will trigger more HTTP requests:
 
 ## Parsing CSS and rendering the page
 
-Next, let's look at how the CSS is handled.
+Next, the CSS is handled.
 
 1. The browser parses the CSS found on the page (either included in the HTML file, or fetched from external stylesheets), and sorts the different CSS styling rules into different "buckets" based on which HTML elements (represented in the DOM as items called **nodes**) they will be applied to. The browser then attaches styles to different elements as required (this intermediate step is called a render tree).
 2. The render tree is laid out in the structure it should appear in after the rules have been applied. This includes any images and other media files that are to be embedded in the page.
@@ -127,7 +126,7 @@ The updated output is as follows:
 
 ## Handling JavaScript
 
-Any JavaScript found on the page (either included in the HTML file, or fetched from external script files) is parsed, interpreted, compiled, and executed. This happens at some point before the final page rendering is completed — after all, some JavaScript may affect the rendering, for example by adding nodes to the DOM or modifying existing ones.
+After the CSS has been handled, any JavaScript found on the page (either included in the HTML file, or fetched from external script files) is parsed, interpreted, compiled, and executed. This happens at some point before the final page rendering is completed — after all, some JavaScript may affect the rendering, for example by adding nodes to the DOM or modifying existing ones.
 
 Returning to our example, let's say the following JavaScript is found in the HTML file:
 

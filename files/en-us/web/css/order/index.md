@@ -3,9 +3,8 @@ title: order
 slug: Web/CSS/order
 page-type: css-property
 browser-compat: css.properties.order
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order. Items not given an explicit `order` value are assigned the default value of `0`.
 
@@ -45,7 +44,7 @@ order: 2;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -53,7 +52,7 @@ order: 2;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 
@@ -83,7 +82,7 @@ order: revert-layer;
 order: unset;
 ```
 
-Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](/en-US/docs/Web/CSS/@media#speech).
+Since `order` is only meant to affect the _visual order_ of elements and not their logical or tab order, it must not be used on non-visual media such as [speech](https://drafts.csswg.org/css-speech/).
 
 Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this property impacts only grid and flex items. When `order` is set on an element whose parent's {{cssxref("display")}} property is not creating a flex or grid container, it has no effect.
 
@@ -174,3 +173,4 @@ The `<article>` appears first in the source order but visually rendered in the c
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- {{glossary("Reading order")}}

@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainTime.prototype.second
+short-title: second
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/second
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.second
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`second`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 59 representing the second component of this time.
 

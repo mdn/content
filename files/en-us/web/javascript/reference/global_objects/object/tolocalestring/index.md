@@ -1,11 +1,11 @@
 ---
 title: Object.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for locale-specific purposes.
 

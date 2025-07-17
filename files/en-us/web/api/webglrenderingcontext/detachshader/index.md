@@ -8,7 +8,7 @@ browser-compat: api.WebGLRenderingContext.detachShader
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-The **WebGLRenderingContext.detachShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) detaches a previously
+The **`WebGLRenderingContext.detachShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) detaches a previously
 attached {{domxref("WebGLShader")}} from a {{domxref("WebGLProgram")}}.
 
 ## Syntax
@@ -23,6 +23,10 @@ detachShader(program, shader)
   - : A {{domxref("WebGLProgram")}}.
 - `shader`
   - : A fragment or vertex {{domxref("WebGLShader")}}.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

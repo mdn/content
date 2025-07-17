@@ -5,8 +5,8 @@ Assemblée
 Aéro
 bezje
 canadien
-Català
 Ceci
+Clima
 communiqué
 Congrès
 contenido
@@ -45,12 +45,14 @@ indomable
 İstanbul
 JOURS
 lepiej
+Mago
 Mais
 Majestatis
 minuto
 minutos
 Moin
 Montag
+Muertos
 Musée
 napisem
 narysowaną
@@ -62,7 +64,6 @@ oscuro
 partes
 partout
 pasado
-Português
 présenté
 puede
 quand
@@ -71,7 +72,6 @@ quinto
 Repetitio
 resh
 réservé
-résumé
 s'écrase
 schon
 Schonheit

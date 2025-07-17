@@ -2,9 +2,8 @@
 title: Introducing workers
 slug: Learn_web_development/Extensions/Async_JS/Introducing_workers
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
@@ -180,7 +179,6 @@ document.querySelector("#reload").addEventListener("click", () => {
 - First, we're creating the worker using the {{domxref("Worker/Worker", "Worker()")}} constructor. We pass it a URL pointing to the worker script. As soon as the worker is created, the worker script is executed.
 
 - Next, as in the synchronous version, we add a `click` event handler to the "Generate primes" button. But now, rather than calling a `generatePrimes()` function, we send a message to the worker using {{domxref("Worker/postMessage", "worker.postMessage()")}}. This message can take an argument, and in this case, we're passing a JSON object containing two properties:
-
   - `command`: a string identifying the thing we want the worker to do (in case our worker could do more than one thing)
   - `quota`: the number of primes to generate.
 

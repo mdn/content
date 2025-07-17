@@ -3,12 +3,10 @@ title: "GPUDevice: importExternalTexture() method"
 short-title: importExternalTexture()
 slug: Web/API/GPUDevice/importExternalTexture
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.importExternalTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`importExternalTexture()`** method of the
 {{domxref("GPUDevice")}} interface takes an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}} object as an input and returns a {{domxref("GPUExternalTexture")}} wrapper object containing a snapshot of the video that can be used as a frame in GPU rendering operations.
@@ -55,7 +53,7 @@ The following criteria must be met when calling **`importExternalTexture()`**, o
 In the WebGPU samples [Video Uploading sample](https://webgpu.github.io/webgpu-samples/samples/videoUploading/), an `importExternalTexture()` call is used as the value of a bind group entry `resource`, specified when creating a {{domxref("GPUBindGroup")}} via a {{domxref("GPUDevice.createBindGroup()")}} call:
 
 ```js
-//...
+// …
 
 const uniformBindGroup = device.createBindGroup({
   layout: pipeline.getBindGroupLayout(0),
@@ -73,7 +71,7 @@ const uniformBindGroup = device.createBindGroup({
   ],
 });
 
-//...
+// …
 ```
 
 ## Specifications

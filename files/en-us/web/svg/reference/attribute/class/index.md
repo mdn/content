@@ -35,14 +35,6 @@ You can use this class to style SVG content using CSS.
       <th scope="row">Animatable</th>
       <td>Yes</td>
     </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a href="https://www.w3.org/TR/SVG/styling.html#ClassAttribute"
-          >SVG 1.1 (2nd Edition): The class attribute</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -59,14 +51,14 @@ You can use this class to style SVG content using CSS.
       xmlns="http://www.w3.org/2000/svg">
       <style>
         <![CDATA[
-            rect.rectClass {
-                stroke: #000066;
-                fill:   #00cc00;
-            }
-            circle.circleClass {
-                stroke: #006600;
-                fill:   #cc0000;
-            }
+          rect.rectClass {
+            stroke: #000066;
+            fill: #00cc00;
+          }
+          circle.circleClass {
+            stroke: #006600;
+            fill: #cc0000;
+          }
         ]]>
       </style>
 
@@ -104,17 +96,13 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
 - {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("g") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("glyphRef") }}
 - {{ SVGElement("image") }}
 - {{ SVGElement("line") }}
 - {{ SVGElement("linearGradient") }}
 - {{ SVGElement("marker") }}
 - {{ SVGElement("mask") }}
-- {{ SVGElement("missing-glyph") }}
 - {{ SVGElement("path") }}
 - {{ SVGElement("pattern") }}
 - {{ SVGElement("polygon") }}
@@ -128,7 +116,6 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("text") }}
 - {{ SVGElement("textPath") }}
 - {{ SVGElement("title") }}
-- {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
 

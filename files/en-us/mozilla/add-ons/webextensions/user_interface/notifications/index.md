@@ -2,9 +2,8 @@
 title: Notifications
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.
 

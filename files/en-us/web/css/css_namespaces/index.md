@@ -2,10 +2,9 @@
 title: CSS namespaces
 slug: Web/CSS/CSS_namespaces
 page-type: css-module
-browser-compat: css.at-rules.namespace
+spec-urls: https://drafts.csswg.org/css-namespaces/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS namespaces** module defines the syntax for using {{glossary("namespace", "namespaces")}} in CSS.
 
@@ -24,7 +23,6 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## Guides
 
 - [Namespaces crash course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course)
-
   - : Deep dive into what a namespace is and how they are used in XML and XML-based markup languages.
 
 ## Related concepts
@@ -54,10 +52,6 @@ The `@namespace` rule is used for declaring a default namespace and for binding 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

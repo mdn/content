@@ -1,11 +1,11 @@
 ---
-title: inert
+title: HTML inert global attribute
+short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 page-type: html-attribute
 browser-compat: html.global_attributes.inert
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`inert`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a boolean attribute specifying that the element and all of its flat tree descendants are {{glossary("inert")}}.
 

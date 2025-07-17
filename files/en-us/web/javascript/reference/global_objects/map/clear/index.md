@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.clear()
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.clear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`clear()`** method of {{jsxref("Map")}} instances removes all elements from this map.
 

@@ -22,10 +22,10 @@ A number.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({ presentationArea: canvas });
+  const presenter = await ink.requestPresenter({ presentationArea: canvas });
   console.log(presenter.expectedImprovement);
 
-  //...
+  // …
 }
 ```
 
@@ -36,7 +36,3 @@ The feature is no longer a part of the specification.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

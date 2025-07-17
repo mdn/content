@@ -3,9 +3,8 @@ title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -127,6 +126,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `search`
 - `sessions`
 - `storage`
+- `tabGroups`
 - `tabHide`
 - `tabs`
 - `theme`
@@ -143,7 +143,6 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 In most cases the permission just grants access to the API, with the following exceptions:
 
 - `tabs` gives you access to [privileged parts of the `tabs` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
-
   - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
   - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 

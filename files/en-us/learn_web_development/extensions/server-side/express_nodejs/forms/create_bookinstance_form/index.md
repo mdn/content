@@ -2,9 +2,8 @@
 title: Create BookInstance form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This subarticle shows how to define a page/form to create `BookInstance` objects.
 This is very much like the form we used to [create `Book` objects](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form).
@@ -88,11 +87,10 @@ exports.bookinstance_create_post = [
         bookinstance: bookInstance,
       });
       return;
-    } else {
-      // Data from form is valid
-      await bookInstance.save();
-      res.redirect(bookInstance.url);
     }
+    // Data from form is valid
+    await bookInstance.save();
+    res.redirect(bookInstance.url);
   }),
 ];
 ```

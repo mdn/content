@@ -2,9 +2,8 @@
 title: Using media queries
 slug: Web/CSS/CSS_media_queries/Using_media_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, {{glossary("aspect ratio")}}, browser {{glossary("viewport")}} width or height, user preferences such as preferring reduced motion, data usage, or transparency.
 
@@ -27,7 +26,6 @@ Media queries are case-insensitive.
   The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -206,7 +204,7 @@ The `and` keyword combines a media feature with a media type _or_ other media fe
 This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) {
+@media (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -214,7 +212,7 @@ This example combines two media features to restrict styles to landscape-oriente
 To limit the styles to devices with a screen, you can chain the media features to the `screen` media type:
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) {
+@media screen and (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -226,7 +224,7 @@ You can use a comma-separated list of media queries to apply styles when the use
 The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) {
+@media (height >= 680px), screen and (orientation: portrait) {
   /* … */
 }
 ```
@@ -246,7 +244,7 @@ The `not` keyword inverts the meaning of a single media query. For example, the 
 }
 ```
 
-The `not` negates only the media query it is applied to. The `not`, without parenthesis, negates all the features within the media query in which it is contained. This means, in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to _all_ the features within that single query. In this example, the `not` applies to the first media query, which concludes at the first comma:
+The `not` negates only the media query it is applied to. The `not`, without parenthesis, negates all the features within the media query in which it is contained. This means, in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to _all_ the features within that single query. In this example, the `not` applies to the first media query `screen and (color)`, which concludes at the first comma:
 
 ```css
 @media not screen and (color), print and (color) {
@@ -254,53 +252,31 @@ The `not` negates only the media query it is applied to. The `not`, without pare
 }
 ```
 
-The above query is evaluated like this:
+Because the query starts with a media type `screen`, you _cannot_ wrap `screen and (color)` with parentheses. On the other hand, if your media query consists of features only, then you _must_ parenthesize the query:
 
 ```css
-@media (not (screen and (color))), print and (color) {
+@media not ((width > 1000px) and (color)), print and (color) {
   /* … */
 }
 ```
 
-Both examples are valid. Media conditions can be grouped by wrapping them in parentheses (`()`). These groups can then be nested within a condition the same as a single media query.
-
-The `not` is evaluated last in a media query, meaning it applies to the entire media query, not to a single feature within a query, as if an open parenthesis was added immediately after the `not` and closed at the end of the media query.
-
-The following query:
+Parentheses limit the components of the query that get negated. For example, to negate the `(width > 1000px)` query only:
 
 ```css
-@media not all and (monochrome) {
+@media (not (width > 1000px)) and (color), print and (color) {
   /* … */
 }
 ```
 
-is evaluated like this:
+`not` only negates the query to its right. In this example, we negate the `hover` media feature but not the `screen` media type:
 
 ```css
-@media not (all and (monochrome)) {
+@media screen and not (hover) {
   /* … */
 }
 ```
 
-It is not evaluated like this:
-
-```css example-bad
-@media (not all) and (monochrome) {
-  /* … */
-}
-```
-
-To negate a single feature within a media query, use parenthesis. Encompassing a `not` and a media feature in parentheses limits the components of the query that get negated.
-
-In this example, we negate the `hover` media feature but not the `all` media type:
-
-```css
-@media all and (not(hover)) {
-  /* … */
-}
-```
-
-The `not(hover)` matches if the device has no hover capability. In this case, because of the parentheses, the `not` applies to `hover` but not to `all`.
+The `not (hover)` matches if the device has no hover capability. In this case, because of its ordering, the `not` applies to `hover` but not to `screen`.
 
 ### Improving compatibility with older browsers
 

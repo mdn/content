@@ -3,9 +3,8 @@ title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_date
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date. The appearance of the date picker input UI varies based on the browser and operating system. The value is normalized to the format `yyyy-mm-dd`.
 
@@ -67,7 +66,7 @@ This code finds the first {{HTMLElement("input")}} element whose `type` is `date
 
 ## Additional attributes
 
-The attributes common to all {{HTMLElement("input")}} elements apply to the `date` inputs as well, but might not influence its presentation. For example `size` and `placeholder` might not work. `date` inputs have the following additional attributes.
+In addition to [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and the [input attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) common to all {{HTMLElement("input")}} elements, the `date` input supports the following attributes:
 
 ### max
 
@@ -151,7 +150,7 @@ If you use [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`
 
 You can also use the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field.
 
-Let's look at an example of minimum and maximum dates, and also made a field required:
+Let's look at an example of minimum and maximum dates, and also make a field required:
 
 ```html
 <form>
@@ -266,9 +265,9 @@ input:valid + span::after {
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
-        <code>valueAsDate</code>,
-        <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/API/HTMLInputElement/value"><code>value</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsDate"><code>valueAsDate</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>
@@ -285,7 +284,7 @@ input:valid + span::after {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

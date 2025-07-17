@@ -2,9 +2,8 @@
 title: Emphasis and importance
 slug: Learn_web_development/Core/Structuring_content/Emphasis_and_importance
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content")}}
 
@@ -78,142 +77,60 @@ You can nest strong and emphasis inside one another if desired:
 
 {{EmbedLiveSample('Strong importance')}}
 
-## Active learning: Let's be important
+## Let's play with emphasis and importance
 
-In this active learning section, we've provided an editable example. Inside it, we'd like you to try adding emphasis and strong importance to the words you think need them, just to have some practice.
+In this section, we want you to play with emphasis and importance:
 
-```html hidden
-<h2>Live output</h2>
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. In the main heading give the word "Emphasis" emphasis, and the word "importance" strong importance.
+3. In the first paragraph, give the coffee machine name strong importance, and emphasize the adjectives used to describe the coffee.
+4. In the second paragraph, give the temperature description ("cold") and the action you should take ("wrap up warm to avoid falling ill") strong importance. Give "falling ill" some extra markup so it is both emphasized and important.
 
-<div class="output" style="min-height: 50px;"></div>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+```css hidden live-sample___emphasis_importance
+h1 {
+  font-weight: normal;
+}
+```
+
+```html live-sample___emphasis_importance
+<h1>Emphasis and importance</h1>
+
+<p>
+  My new coffee machine is called The Percolator 2000. It produces the most
+  sublime and wonderful brew.
 </p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">
-<h1>Important notice</h1>
-<p>On Sunday January 9th 2010, a gang of goths were
-  spotted stealing several garden gnomes from a
-  shopping center in downtown Milwaukee. They were
-  all wearing green jumpsuits and silly hats, and
-  seemed to be having a whale of a time. If anyone
-   has any information about this incident, please
-    contact the police now.</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+<p>
+  In the dead of winter, it will be cold. You should wrap up warm to avoid
+  falling ill.
+</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('emphasis_importance', "100%", 160) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished HTML should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<h1><em>Emphasis</em> and <strong>importance</strong></h1>
+
+<p>
+  My new coffee machine is called <strong>The Percolator 2000</strong>. It
+  produces the most <em>sublime</em> and <em>wonderful</em> brew.
+</p>
+
+<p>
+  In the dead of winter, it will be <strong>cold</strong>. You should
+  <strong>wrap up warm to avoid <em>falling ill</em></strong
+  >.
+</p>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
+</details>
 
 ## Italic, bold, underline…
 

@@ -3,9 +3,8 @@ title: "<a>: The Anchor element"
 slug: Web/HTML/Reference/Elements/a
 page-type: html-element
 browser-compat: html.elements.a
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
@@ -34,13 +33,11 @@ li {
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `attributionsrc` {{experimental_inline}}
-
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register a [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
     The browser stores the source data associated with the navigation-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the user clicks the link. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
     There are two versions of this attribute that you can set:
-
     - Boolean, i.e., just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
     - Value containing one or more URLs, for example:
 
@@ -57,11 +54,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     `<a>` elements cannot be used as attribution triggers, only sources.
 
 - `download`
-
   - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
-
     - Without a value, the browser will suggest a filename/extension, generated from various sources:
-
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
       - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
@@ -73,14 +67,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
-    >
     >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
     >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
 - `href`
-
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
-
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
     - SMS text messages with `sms:` URLs
@@ -88,7 +79,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
     Moreover other URL features can locate specific parts of the resource, including:
-
     - Sections of a page with document fragments
     - Specific text portions with [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
     - Pieces of media files with media fragments
@@ -98,9 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `ping`
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
 - `referrerpolicy`
-
   - : How much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link.
-
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
@@ -113,9 +101,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
   - : The relationship of the linked URL as space-separated link types.
 - `target`
-
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
-
     - `_self`: The current browsing context. (Default)
     - `_blank`: Usually a new tab, but users can configure browsers to open a new window instead.
     - `_parent`: The parent browsing context of the current one. If no parent, behaves as `_self`.
@@ -131,7 +117,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 ### Deprecated attributes
 
 - `charset` {{Deprecated_Inline}}
-
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
     > [!NOTE]
@@ -140,7 +125,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
 - `name` {{Deprecated_Inline}}
-
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > [!NOTE]
@@ -149,7 +133,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
 - `shape` {{Deprecated_Inline}}
-
   - : The shape of the hyperlink's region in an image map.
 
     > [!NOTE]
@@ -171,9 +154,9 @@ A sadly common mistake is to only link the words "click here" or "here":
 
 ##### Result
 
-{{EmbedLiveSample('Inaccessible, weak link text')}}
+{{EmbedLiveSample('Inaccessible, weak link text', '100%', '50')}}
 
-#### Strong link text
+#### Accessible, strong link text
 
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
@@ -183,7 +166,7 @@ Luckily, this is an easy fix, and it's actually shorter than the inaccessible ve
 
 ##### Result
 
-{{EmbedLiveSample('Strong link text')}}
+{{EmbedLiveSample('Accessible, strong link text', '100%', '50')}}
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.
 
@@ -294,7 +277,7 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 #### Size
 
-Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Interactive elements, like links, should provide an area large enough that it is easy to activate them. This helps a variety of people, including those with motor control issues and those using imprecise inputs such as a touchscreen. A minimum size of 44×44 [CSS pixels](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels) is recommended.
 
 Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 

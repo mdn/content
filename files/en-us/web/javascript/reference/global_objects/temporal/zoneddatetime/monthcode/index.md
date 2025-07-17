@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.monthCode
+short-title: monthCode
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/monthCode
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.monthCode
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`monthCode`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a calendar-specific string representing the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

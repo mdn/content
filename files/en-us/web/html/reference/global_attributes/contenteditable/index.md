@@ -1,11 +1,11 @@
 ---
-title: contenteditable
+title: HTML contenteditable global attribute
+short-title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 page-type: html-attribute
 browser-compat: html.global_attributes.contenteditable
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing.
 
@@ -131,7 +131,7 @@ h2 {
   width: 100%;
   .wrapper {
     flex: 1 1;
-    margin: 0
+    margin: 0;
     padding: 0;
   }
   h3 {

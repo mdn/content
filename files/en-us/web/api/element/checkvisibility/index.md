@@ -27,10 +27,8 @@ checkVisibility(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object indicating additional checks to run.
     The possible options are:
-
     - `contentVisibilityAuto`
       - : `true` to check if the element {{cssxref("content-visibility")}} property has (or inherits) the value [`auto`](/en-US/docs/Web/CSS/content-visibility#auto), and it is currently skipping its rendering.
         `false` by default.
@@ -38,7 +36,6 @@ checkVisibility(options)
       - : `true` to check if the element {{cssxref("opacity")}} property has (or inherits) a value of `0`.
         `false` by default.
     - `visibilityProperty`
-
       - : `true` to check if the element is invisible due to the value of its {{cssxref("visibility")}} property.
         `false` by default.
 
@@ -173,7 +170,7 @@ function updateCSS() {
 The results are shown below.
 If you change the selection the results will be applied to the test element (blue outline) and the results of the `checkVisibility()` for each setting should be displayed.
 So for example, if you set the `opacity: 0` that test (only) should indicate `false`.
-However if you set `display: none` then all tests should return `false.
+However if you set `display: none` then all tests should return `false`.
 
 {{ EmbedLiveSample('Test checkVisibility() with varied CSS', "100%", "200" ) }}
 

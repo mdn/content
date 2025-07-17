@@ -3,9 +3,8 @@ title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 page-type: javascript-class
 browser-compat: javascript.builtins.Promise
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise`** object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
@@ -261,7 +260,7 @@ function tetheredGetNumber(resolve, reject) {
     if (value < THRESHOLD_A) {
       resolve(value);
     } else {
-      reject(`Too large: ${value}`);
+      reject(new RangeError(`Too large: ${value}`));
     }
   }, 500);
 }
@@ -281,7 +280,7 @@ function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
-      reject(`Still too large: ${value}`);
+      reject(new RangeError(`Still too large: ${value}`));
     } else {
       parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);
@@ -447,7 +446,8 @@ To better picture this, we can take a closer look at how the realm might be an i
 To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) embedded in a document communicates with its host. Since all web APIs are aware of the incumbent settings object, the following will work in all browsers:
 
 ```html
-<!doctype html> <iframe></iframe>
+<!doctype html>
+<iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well
@@ -463,7 +463,8 @@ To illustrate this a bit further we can take a look at how an [`<iframe>`](/en-U
 The same concept applies to promises. If we modify the above example a little bit, we get this:
 
 ```html
-<!doctype html> <iframe></iframe>
+<!doctype html>
+<iframe></iframe>
 <!-- we have a realm here -->
 <script>
   // we have a realm here as well

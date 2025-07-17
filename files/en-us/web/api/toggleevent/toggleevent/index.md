@@ -36,7 +36,7 @@ For example:
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+// …
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

@@ -1,11 +1,11 @@
 ---
 title: Using CSS transitions
+short-title: Using transitions
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-transitions/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
 
@@ -39,10 +39,8 @@ You can control the individual components of the transition with the following s
 
 The `transition` shorthand CSS syntax is written as follows:
 
-```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
-}
+```plain
+transition: <property> <duration> <timing-function> <delay>;
 ```
 
 ## Examples
@@ -303,19 +301,19 @@ Transitions are a great tool to make things look much smoother without having to
 ```html live-sample___js-transitions
 <p>Click anywhere to move the ball</p>
 <div id="foo" class="ball"></div>
+```
 
-<script>
-  // Make the ball move to a certain position:
-  const f = document.getElementById("foo");
-  document.addEventListener(
-    "click",
-    (ev) => {
-      f.style.transform = `translateY(${ev.clientY - 25}px)`;
-      f.style.transform += `translateX(${ev.clientX - 25}px)`;
-    },
-    false,
-  );
-</script>
+```js live-sample___js-transitions
+// Make the ball move to a certain position:
+const f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  (ev) => {
+    f.style.transform = `translateY(${ev.clientY - 25}px)`;
+    f.style.transform += `translateX(${ev.clientX - 25}px)`;
+  },
+  false,
+);
 ```
 
 With CSS, you can smooth the styles applied through JavaScript. Add a transition to the element and any change will happen smoothly:

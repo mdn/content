@@ -3,9 +3,8 @@ title: border-bottom-width
 slug: Web/CSS/border-bottom-width
 page-type: css-property
 browser-compat: css.properties.border-bottom-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the bottom border of an element.
 
@@ -74,9 +73,7 @@ border-bottom-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

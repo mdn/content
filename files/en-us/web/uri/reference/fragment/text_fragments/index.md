@@ -16,7 +16,7 @@ sidebar: urlsidebar
 Historically, one of the web's key features has always been its ability to provide links between different documents — it is what makes _the web_, a web:
 
 - You can link to the top of a document by linking to its URL, for example:
-  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a](/en-US/docs/Web/HTML/Reference/Elements/a).
+  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a](/en-US/docs/Web/HTML/Reference/Elements/a).
 - You can link to a specific section of a document by linking to its URL plus the _document fragment_ (ID) of that section, for example:
   - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility](/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility).
 
@@ -34,13 +34,11 @@ If the ID is changed or removed, the document fragment is ignored, and the link 
 
 ## Syntax
 
-In a similar manner to document fragments, text fragments are appended onto a URL after a hash symbol (`#`). The syntax however is a bit different:
-
 ```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ```
 
-The key parts to understand are as follows:
+Text fragments are a kind of URL fragment, and is written after the `#`. The key parts to understand are as follows:
 
 - `:~:`
   - : Otherwise known as _the fragment directive_, this sequence of characters tells the browser that what comes next is one or more user-agent instructions, which are stripped from the URL during loading so that author scripts cannot directly interact with them. User-agent instructions are also called directives.
@@ -62,7 +60,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 - Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). In addition, [the standard](https://wicg.github.io/scroll-to-text-fragment/#syntax) requires the URL-safe dash character `'-'` to be similarly percent-encoded.
 - Matches are case-insensitive.
 - Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Glossary/Block-level_content), but complete matches can span across multiple element boundaries.
-- For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
+- For security reasons, when linking to a cross-origin page using this feature, you should open the link in a `noopener` context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
 - Text fragments are invoked only on user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.
 - For sites that wish to opt-out, Chromium-based browsers support a [Document Policy](https://wicg.github.io/document-policy/) header value that they can send so user agents will not process Text Fragments:

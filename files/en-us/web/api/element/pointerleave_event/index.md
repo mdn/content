@@ -14,10 +14,10 @@ The `pointerleave` event is fired when a pointing device is moved out of the hit
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerleave", (event) => {});
+```js-nolint
+addEventListener("pointerleave", (event) => { })
 
-onpointerleave = (event) => {};
+onpointerleave = (event) => { }
 ```
 
 ## Event type
@@ -90,7 +90,6 @@ para.onpointerleave = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

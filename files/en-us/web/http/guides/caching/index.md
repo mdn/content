@@ -2,9 +2,8 @@
 title: HTTP caching
 slug: Web/HTTP/Guides/Caching
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP cache stores a response associated with a request and reuses the stored response for subsequent requests.
 
@@ -608,7 +607,7 @@ The combined result is shown below.
 ```http
 # bundle.v123.js
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT

@@ -2,13 +2,12 @@
 title: Structuring documents
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
-In addition to defining individual parts of your page (such as "a paragraph" or "an image"), {{glossary("HTML")}} also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
+In addition to defining individual parts of your page (such as "a paragraph" or "an image"), {{glossary("HTML")}} also boasts a number of block level elements used to define areas of your website such as "the header", "the navigation menu", or "the main content column". This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
 
 <table>
   <tbody>
@@ -65,7 +64,8 @@ The example shown above isn't pretty, but it is perfectly fine for illustrating 
 
 This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?
 
-> **Note:** [Roughly 8% of men and 0.5% of women](https://www.color-blindness.com/) are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2015 there were [940 million people with some degree of vision loss](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7.5 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
+> [!NOTE]
+> [Roughly 8% of men and 0.5% of women](https://www.color-blindness.com/) are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2015 there were [940 million people with some degree of vision loss](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7.5 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
 In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screen readers can recognize those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure).
 
@@ -77,9 +77,9 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 - **sidebar:** {{htmlelement("aside")}}; often placed inside {{htmlelement("main")}}.
 - **footer:** {{htmlelement("footer")}}.
 
-### Active learning: exploring the code for our example
+### Exploring the code for our example
 
-Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
+The example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the listing below to see what parts make up each section of the visual output.
 
 ```html
 <!doctype html>
@@ -110,7 +110,8 @@ Our example seen above is represented by the following code (you can also [find 
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <!-- A Search form: another common non-linear way to navigate through a site. -->
+      <!-- A Search form: another common non-linear
+           way to navigate through a site. -->
 
       <form>
         <input type="search" name="q" placeholder="Search query" />
@@ -199,8 +200,8 @@ Take some time to look over the code and understand it — the comments inside t
 It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/en-US/docs/Web/HTML/Reference/Elements). For now, these are the main definitions that you should try to understand:
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
-- {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a [heading](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
+- {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (for example, a single blog post).
+- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (like a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a [heading](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
 - {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
 - {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title)).
 - {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
@@ -249,6 +250,9 @@ This isn't really an `<aside>`, as it doesn't necessarily relate to the main con
 > [!WARNING]
 > Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.
 
+> [!NOTE]
+> Scrimba's [Semantic HTML](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial provides a useful recap of semantic markup and why you should use it, plus a challenge that tests your ability to improve an HTML codebase with semantic elements.
+
 ### Line breaks and horizontal rules
 
 Two elements that you'll use occasionally and will want to know about are {{htmlelement("br")}} and {{htmlelement("hr")}}.
@@ -293,22 +297,59 @@ Would render like this:
 
 {{EmbedLiveSample('hr_the_thematic_break_element', '100%', '185px')}}
 
-## Planning a simple website
+## Structuring a basic website
 
-Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!
+The next stage after planning out the structure of a single webpage is to plan out the structure of a whole multi-page website, including how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}.
 
-1. Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+In a large, complex website, a lot of planning can go into this process, but for a basic website with a few pages, it can be a quick and fun exercise.
+
+The process might look like this:
+
+1. You'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page. For example:
+   - Header:
+     - Title and logo
+     - Site language chooser
+   - Navigation menu
+   - Footer:
+     - Copyright notice
+     - Link to terms and conditions, contact details, and accessibility policy
+
 2. Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
-3. Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
-4. Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
-5. Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
+3. Now, brainstorm all the other (not common to every page) content you want to have on your website. For example:
+   - Flights
+   - Accommodation
+   - Transport
+   - Things to do
+   - Special offers
+   - Popular holiday packages, for example winter sun, skiing
+   - Search results
+   - Reviews
+   - Visa/entry requirements
+   - Currency
+   - Languages and culture
+   - Buy holidays
 
-### Active learning: create your own sitemap
+4. Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.
+   - Search
+     - Flights
+     - Accommodation
+     - Transport
+     - Things to do
+   - Special offers
+     - Popular holidays
+     - Winter sun
+     - Skiing
+   - Search results
+     - Reviews
+     - Country-specific info
+       - Visa/entry requirements
+       - Currency
+       - Languages and culture
+   - Buy holidays
 
-Try carrying out the above exercise for a website of your own creation. What would you like to make a site about?
+5. Now try to sketch a rough sitemap — have a box for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the top or at the center, and link to most if not all of the others. Most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, and checkout and purchase flow](site-map.png)
 
-> [!NOTE]
-> Save your work somewhere; you might need it later on.
+Try carrying out the above exercise for a website of your own creation. What would you like to make a site about? As a stretch goal, use the HTML knowledge you've gained so far to create a few of the pages on the site. You could use our [basic HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) as a starting point.
 
 ## Summary
 

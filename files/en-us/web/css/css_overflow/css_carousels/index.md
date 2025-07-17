@@ -1,10 +1,10 @@
 ---
 title: Creating CSS carousels
+short-title: Creating carousels
 slug: Web/CSS/CSS_overflow/CSS_carousels
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
@@ -256,7 +256,7 @@ ul {
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll button's, except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll button's, except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___first-example
 ul::scroll-marker-group {
@@ -312,7 +312,7 @@ You can also navigate between pages by swiping left and right, dragging the scro
 
 The second demo is a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. This demo is also responsive — different numbers of items appear on each page depending on the viewport width.
 
-This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitary columns that span the full width of the carousel and may contain multiple items.
+This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitrary columns that span the full width of the carousel and may contain multiple items.
 
 Using this approach, we can be sure that if the viewport grows or shrinks, while the item size remains constant, we'll never have a partial item displayed off the edge of the scrollport. In this case, the scroll markers are created on scroll container fragments, per-column, rather than on children, per-item.
 

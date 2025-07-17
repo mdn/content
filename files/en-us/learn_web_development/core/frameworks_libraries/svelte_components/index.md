@@ -2,9 +2,9 @@
 title: Componentizing our Svelte app
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_components
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In the last article we started developing our to-do list app. The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.
@@ -283,6 +283,7 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
    ```js
    import { createEventDispatcher } from "svelte";
+
    const dispatch = createEventDispatcher();
    ```
 
@@ -322,7 +323,6 @@ We still have to implement functionality to allow us to edit existing to-dos. We
    ```
 
 2. We have to decide what events our `Todo` component will emit:
-
    - We could emit different events for the status toggle and editing of the name (for example, `updateTodoStatus` and `updateTodoName`).
    - Or we could take a more generic approach and emit a single `update` event for both operations.
 

@@ -2,9 +2,8 @@
 title: Define your app icons
 slug: Web/Progressive_web_apps/How_to/Define_app_icons
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps) can be installed on devices just like other apps. Once a PWA is installed, its app icon appears on the device's home screen, dock, taskbar, or any other place where operating system native apps normally appear.
 
@@ -85,7 +84,7 @@ Various operating systems use different icon sizes in different places and for d
 
 For example, Windows can display your app icon as a 44x44 pixels image in the taskbar, or as a 150x150 pixels image in the start menu. Use the links below for more information about the icon sizes used by different operating systems and tips for creating effective icons:
 
-- For Windows, see [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on learn.microsoft.com.
+- For Windows, see [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) on learn.microsoft.com.
 - For Android, see [Google Play icon design specifications](https://developer.android.com/distribute/google-play/resources/icon-design-specifications) on developer.android.com.
 - For iOS and macOS, see [App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes) on developer.apple.com.
 
@@ -162,5 +161,5 @@ You can also use tools like [Maskable.app](https://maskable.app/) to preview how
 - [`icons` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 - [App design](https://web.dev/learn/pwa/app-design#the_icon) on web.dev
 - [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
-- [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
+- [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/icon-theme-color) on microsoft.com
 - [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) on pwabuilder.com

@@ -23,7 +23,6 @@ _This interface doesn't inherit any property._
   - : Returns a {{domxref("Node")}} representing the root node, as specified when the
     `NodeIterator` was created.
 - {{domxref("NodeIterator.whatToShow")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` bitmask that describes the types of {{domxref("Node")}}
     to be matched. Non-matching nodes are skipped, but relevant child nodes may be included.
 

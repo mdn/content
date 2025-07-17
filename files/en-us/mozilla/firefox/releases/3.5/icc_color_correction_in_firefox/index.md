@@ -2,9 +2,8 @@
 title: ICC color correction in Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it. Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
 

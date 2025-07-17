@@ -3,12 +3,10 @@ title: "CSSPositionTryRule: style property"
 short-title: style
 slug: Web/API/CSSPositionTryRule/style
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSPositionTryRule.style
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`style`** read-only property of the {{domxref("CSSPositionTryRule")}} interface returns a {{domxref("CSSPositionTryDescriptors")}} object representing the declarations set in the body of the `@position-try` at-rule.
 

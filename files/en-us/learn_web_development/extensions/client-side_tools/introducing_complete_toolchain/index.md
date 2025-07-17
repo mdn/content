@@ -3,9 +3,10 @@ title: Introducing a complete toolchain
 short-title: Sample toolchain
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
@@ -195,7 +196,7 @@ You can also replace `./index.html` with any other file or folder to format them
 
 ```json
 "scripts": {
-  // ...
+  // …
   "format": "prettier --write ."
 },
 ```
@@ -230,7 +231,8 @@ ESLint is installed via npm, so as per discussions in Chapter 2, you have the ch
 npm install --save-dev eslint@8 @eslint/js globals
 ```
 
-> **Note:** `eslint@8` installs the version 8 of ESLint, while the latest is v9. This is because `eslint-plugin-react`, which we will use later, [does not support v9 yet](https://github.com/jsx-eslint/eslint-plugin-react/issues/3699).
+> [!NOTE]
+> `eslint@8` installs the version 8 of ESLint, while the latest is v9. This is because `eslint-plugin-react`, which we will use later, [does not support v9 yet](https://github.com/jsx-eslint/eslint-plugin-react/issues/3699).
 
 The `@eslint/js` package provides predefined ESLint configuration, while the `globals` package provides a list of known global names in each environment. We will use them later in the configuration. Out of the box, ESLint is going to complain that it can't find the configuration file if you run it with `npx eslint`:
 

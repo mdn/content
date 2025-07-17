@@ -3,9 +3,8 @@ title: Client-side tooling overview
 short-title: Overview
 slug: Learn_web_development/Extensions/Client-side_tools/Overview
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}
 
@@ -110,18 +109,15 @@ This stage of your web app lifecycle typically allows you to code in either "fut
 Generally, web development is thought of as three languages: [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and there are transformation tools for all of these languages. Transformation offers three main benefits (amongst others):
 
 1. The ability to write code using the latest language features and have that transformed into code that works on everyday devices. For example, you might want to write JavaScript using cutting-edge new language features, but still have your final production code work on older browsers that don't support those features. Good examples here include:
-
    - [Babel](https://babeljs.io/): A JavaScript compiler that allows developers to write their code using cutting-edge JavaScript, which Babel then takes and converts into old-fashioned JavaScript that more browsers can understand. Developers can also write and publish [plugins for Babel](https://babeljs.io/docs/plugins).
    - [PostCSS](https://postcss.org/): Does the same kind of thing as Babel, but for cutting-edge CSS features. If there isn't an equivalent way to do something using older CSS features, PostCSS will install a JavaScript polyfill to emulate the CSS effect you want.
 
 2. The option to write your code in an entirely different language and have it transformed into a web-compatible language. For example:
-
    - [Sass/SCSS](https://sass-lang.com/): This CSS extension allows you to use variables, nested rules, mixins, functions, and many other features, some of which are available in native CSS (such as variables), and some of which aren't.
    - [TypeScript](https://www.typescriptlang.org/): TypeScript is a superset of JavaScript that offers a bunch of additional features. The TypeScript compiler converts TypeScript code to JavaScript when building for production.
    - Frameworks such as [React](https://react.dev/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
 
 3. Optimization. This is provided by _bundlers_, which are tools that get your code ready for production, for example by "[tree-shaking](/en-US/docs/Glossary/Tree_shaking)" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "[minifying](/en-US/docs/Glossary/Minification)" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server. For example:
-
    - [Webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
    - [Vite](https://vite.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
 
@@ -164,7 +160,6 @@ You'll probably need a combination of the following things:
 
 - Experienced teachers, mentors, fellow students, or colleagues that have some experience, have solved such problems before, and can give advice.
 - A useful specific place to search. General web searches for front-end developer tools are generally useless unless you already know the name of the tool you are searching for.
-
   - If you are using the npm package manager to manage your dependencies for example, it is a good idea to go to the [npm homepage](https://www.npmjs.com/) and search for the type of tool you are looking for, for example try searching for "date" if you want a date formatting utility, or "formatter" if you are searching for a general code formatter. Pay attention to the popularity, quality, and maintenance scores, and how recently the package was last updated. Also click through to the tool pages to find out how many monthly downloads a package has, and whether it has good documentation that you can use to figure out whether it does what you need it to do. Based on these criteria, the [date-fns library](https://www.npmjs.com/package/date-fns) looks like a good date formatting tool to use. You'll see this tool in action and learn more about package managers in general in Chapter 3 of this module.
   - If you are looking for a plugin to integrate tool functionality into your code editor, look at the code editor's plugins/extensions page — see [VS Code extensions](https://marketplace.visualstudio.com/vscode), for example. Have a look at the featured extensions on the front page, and again, try searching for the kind of extension you want (or the tool name, for example search for "ESLint" on the VS Code extensions page). When you get results, have a look at information such as how many stars or downloads the extension has, as an indicator of its quality.
 

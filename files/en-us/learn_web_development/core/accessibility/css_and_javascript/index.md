@@ -3,9 +3,8 @@ title: CSS and JavaScript accessibility best practices
 short-title: Accessible CSS and JS
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
@@ -213,7 +212,8 @@ Screen reader users don't care about any of this — they are happy with the con
 
 On the other hand, you shouldn't use {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
-> **Note:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
+> [!NOTE]
+> [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
 
 ### Accept that users can override styles
 
@@ -275,8 +275,7 @@ form.onsubmit = validate;
 
 function validate(e) {
   errorList.textContent = "";
-  for (let i = 0; i < formItems.length; i++) {
-    const testItem = formItems[i];
+  for (const testItem of formItems) {
     if (testItem.input.value === "") {
       errorField.style.left = "360px";
       createLink(testItem);
@@ -359,7 +358,7 @@ The [click](/en-US/docs/Web/API/Element/click_event) event is interesting — it
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: CSS and JavaScript accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: CSS and JavaScript accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript).
 
 ## Summary
 

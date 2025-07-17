@@ -19,13 +19,13 @@ A DOM {{domxref('Element')}}.
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // return the original host element some time later
-let hostElem = shadow.host;
+const hostElem = shadow.host;
 ```
 
 ## Specifications

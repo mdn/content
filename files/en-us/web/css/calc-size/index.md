@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.calc-size
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows you to perform calculations on [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) values such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
@@ -41,11 +42,9 @@ calc-size(<calc-size-basis>, <calc-sum>)
 The parameters are:
 
 - `<calc-size-basis>`
-
   - : The value (most commonly an intrinsic size) that you want to perform a calculation on.
 
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
-
   - : An expression that defines the calculation to be performed on the `<calc-size-basis>`.
 
 ### Return value

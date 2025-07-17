@@ -2,9 +2,8 @@
 title: Mobile accessibility
 slug: Learn_web_development/Core/Accessibility/Mobile
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
@@ -105,7 +104,6 @@ For example, with TalkBack turned on:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
    - Once you've finished, find the Enter key and press it.
@@ -148,7 +146,6 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
-
    - Release your fingers to select it.
    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
@@ -161,7 +158,6 @@ Let's have a go at web browsing with VoiceOver:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
    - Once you've finished, find the Enter key and press it.
@@ -169,7 +165,6 @@ Let's have a go at web browsing with VoiceOver:
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
-
    - _Speaking Rate_: Change the speaking rate.
    - _Containers_: Move between different semantic containers on the page.
    - _Headings_: Move between headings on the page.

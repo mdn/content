@@ -60,7 +60,6 @@ _In addition to the properties below, `Node` inherits properties from its parent
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
@@ -144,6 +143,11 @@ _In addition to the methods below, `Node` inherits methods from its parent, {{DO
 - {{DOMxRef("Node.replaceChild()")}}
   - : Replaces one child `Node` of the current one with the second one given
     in parameter.
+
+## Events
+
+- {{domxref("Node/selectstart_event", "selectstart")}}
+  - : Fires when the user starts a new selection in this node.
 
 ## Examples
 

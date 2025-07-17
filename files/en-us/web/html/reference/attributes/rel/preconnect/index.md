@@ -1,11 +1,10 @@
 ---
-title: rel=preconnect
+title: rel="preconnect"
 slug: Web/HTML/Reference/Attributes/rel/preconnect
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.preconnect
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`preconnect`** keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element is a hint to browsers that the user is likely to need resources from the target resource's origin, and therefore the browser can likely improve the user experience by preemptively initiating a connection to that origin. Preconnecting speeds up future loads from a given origin by preemptively performing part or all of the handshake (DNS+TCP for HTTP, and DNS+TCP+TLS for HTTPS origins).
 
@@ -19,7 +18,7 @@ If a page needs to make connections to many third-party domains, preconnecting t
 <link rel="preconnect" href="https://example.com" />
 ```
 
-You can also implement preconnect as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
+You can also implement preconnect as an HTTP [`Link`](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://example.com>; rel="preconnect"

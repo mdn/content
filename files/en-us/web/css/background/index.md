@@ -3,9 +3,8 @@ title: background
 slug: Web/CSS/background
 page-type: css-shorthand-property
 browser-compat: css.properties.background
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
@@ -71,7 +70,7 @@ background: green;
 /* Using a <bg-image> and <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* Using a <box> and <background-color> */
+/* Using a <visual-box> and <'background-color'> */
 background: border-box red;
 
 /* A single image, centered and scaled */
@@ -90,28 +89,27 @@ The `background` property is specified as one or more background layers, separat
 The syntax of each layer is as follows:
 
 - Each layer may include zero or one occurrences of any of the following values:
-
   - `<attachment>`
   - `<bg-image>`
-  - `<position>`
+  - `<bg-position>`
   - `<bg-size>`
   - `<repeat-style>`
 
-- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: `center/80%`.
-- The `<box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
-- The `<background-color>` value may only be included in the last layer specified.
+- The `<bg-size>` value may only be included immediately after `<bg-position>`, separated with the '/' character, like this: `center/80%`.
+- The `<visual-box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
+- The `<'background-color'>` value may only be included in the last layer specified.
 
 ### Values
 
 - `<attachment>`
   - : See {{cssxref("background-attachment")}}. Default: `scroll`.
-- `<box>`
+- `<visual-box>`
   - : See {{cssxref("background-clip")}} and {{cssxref("background-origin")}}. Default: `border-box` and `padding-box` respectively.
-- `<background-color>`
+- `<'background-color'>`
   - : See {{cssxref("background-color")}}. Default: `transparent`.
 - `<bg-image>`
   - : See {{Cssxref("background-image")}}. Default: `none`.
-- `<position>`
+- `<bg-position>`
   - : See {{cssxref("background-position")}}. Default: 0% 0%.
 - `<repeat-style>`
   - : See {{cssxref("background-repeat")}}. Default: `repeat`.

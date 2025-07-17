@@ -1,5 +1,6 @@
 ---
-title: aria-modal
+title: "ARIA: aria-modal attribute"
+short-title: aria-modal
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-modal
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
@@ -46,14 +47,20 @@ If a dialog is not modal — there is no inert background and focus isn't confin
     <div id="dialog_desc">
       <p>Are you sure you want to delete this file?</p>
     </div>
-    <button type="button" onclick="closeDialog(this)">
-      No. Close this popup.
-    </button>
-    <button type="button" onclick="deleteFile(this)">
-      Yes. Delete the file.
-    </button>
+    <button id="close-btn" type="button">No. Close this popup.</button>
+    <button id="confirm-btn" type="button">Yes. Delete the file.</button>
   </div>
 </div>
+```
+
+```js
+document.getElementById("close-btn").addEventListener("click", () => {
+  closeDialog();
+});
+
+document.getElementById("confirm-btn").addEventListener("click", (event) => {
+  deleteFile();
+});
 ```
 
 This partial example includes an `alertdialog` nested in a full-screen, non-scrollable backdrop.

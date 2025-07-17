@@ -2,9 +2,8 @@
 title: Deployment and next steps
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -132,7 +131,7 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      css: (css) => {
+      css(css) {
         css.write("public/build/bundle.css");
       },
     }),

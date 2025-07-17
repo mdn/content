@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this map in insertion order.
 

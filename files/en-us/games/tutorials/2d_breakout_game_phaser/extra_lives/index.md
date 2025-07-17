@@ -2,9 +2,8 @@
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
 

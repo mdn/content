@@ -3,9 +3,8 @@ title: border-image-width
 slug: Web/CSS/border-image-width
 page-type: css-property
 browser-compat: css.properties.border-image-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element's [border image](/en-US/docs/Web/CSS/border-image).
 

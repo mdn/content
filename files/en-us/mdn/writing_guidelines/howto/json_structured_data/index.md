@@ -83,11 +83,9 @@ There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the s
 
 ### Update process for GroupData
 
-This file should be updated in the same PR where changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
+This file, located at [`files/jsondata/GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json), should be updated in the same PR where changes affecting the sidebar happens. That way, the sidebar is always up-to-date. Reviewers shouldn't merge PRs that don't adopt it.
 
 To test your changes, check that the sidebar in the files in your PR displays all entries correctly.
-
-The `GroupData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) on GitHub.
 
 ## InterfaceData: recording interface inheritance
 
@@ -116,17 +114,15 @@ The value of `"Name_of_the_parent_interface"` is not a list but a single entry, 
 
 ### Update process for InterfaceData
 
-The same PR adding a new interface that inherits from another one must update this file. Reviewers shouldn't merge PRs that don't do so.
+The same PR adding a new interface that inherits from another one must update this file, located at [`files/jsondata/InterfaceData.json`](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json). Reviewers shouldn't merge PRs that don't do so.
 
 To test your changes, check that the sidebars of each interface you edited in your PR display inheritance correctly.
-
-The `InterfaceData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json) on GitHub.
 
 ## SpecData: Specification information
 
 > [!WARNING]
-> The `SpecData.json` file is no longer maintained. Canonical specification information is stored at w3c/browser-spec and in the `spec_url` key of features at mdn/browser-compat-data.
+> The [`SpecData.json`](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) file is no longer maintained.
+> Canonical specification information is stored at [w3c/browser-specs](https://github.com/w3c/browser-specs) and in the `spec_url` key of features defined at [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data).
 
-The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contributions to the `SpecData.json` file; instead, either try to insert a specification table, using the `\{{Specifications}}` macro, or try to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
-
-The `SpecData.json` file is located [here](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json) on GitHub.
+We do not accept any further contributions to the `SpecData.json` file; instead, insert a specification table using the `\{{Specifications}}` macro, or link to the specification in prose.
+Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.

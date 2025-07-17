@@ -20,10 +20,10 @@ The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mousewheel", (event) => {});
+```js-nolint
+addEventListener("mousewheel", (event) => { })
 
-onmousewheel = (event) => {};
+onmousewheel = (event) => { }
 ```
 
 ## Event type
@@ -43,7 +43,6 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the scroll amount for the z-axis.
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
     | Constant                     | Value  | Description                                                                                                                                                  |

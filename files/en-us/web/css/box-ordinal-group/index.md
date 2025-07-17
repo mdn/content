@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.box-ordinal-group
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
@@ -38,10 +39,7 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ## Formal syntax
 
-```plain
-box-ordinal-group =
-  <integer>
-```
+{{CSSSyntaxRaw(`box-ordinal-group = <integer>`)}}
 
 ## Examples
 

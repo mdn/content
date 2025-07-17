@@ -3,9 +3,8 @@ title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_security_policy
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -167,7 +166,7 @@ Allow remote scripts from any subdomain of "jquery.com":
 
 - Manifest V3 does not allow remote URLs in `script-src` of `extension_pages`.
 
-Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends):
+Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_and_friends):
 
 - Manifest V2
 

@@ -3,9 +3,8 @@ title: pad
 slug: Web/CSS/@counter-style/pad
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.pad
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`pad`** descriptor of the {{cssxref("@counter-style")}} at-rule is used to set a minimum length for marker representations.
 
@@ -21,7 +20,6 @@ pad: "+" 5;
 The descriptor accepts the following two values, which are separated by a space and can be specified in any order:
 
 - {{cssxref("integer")}}
-
   - : Specifies the minimum length that all marker representations must reach. The value must be non-negative. In the case of the `pad` descriptor, this value is also known as the _pad length_.
 
 - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#symbol)

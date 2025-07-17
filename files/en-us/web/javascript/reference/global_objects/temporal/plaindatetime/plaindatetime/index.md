@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.PlainDateTime
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainDateTime()`** constructor creates {{jsxref("Temporal.PlainDateTime")}} objects.
 
@@ -26,7 +27,8 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, microsecond, nanosecond, calendar)
 ```
 
-> **Note:** `Temporal.PlainDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -49,7 +51,7 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 - `nanosecond` {{optional_inline}}
   - : A number, truncated to an integer, representing the nanosecond component.
 - `calendar` {{optional_inline}}
-  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
+  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types. Defaults to `"iso8601"`. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system.
 
 ### Return value
 

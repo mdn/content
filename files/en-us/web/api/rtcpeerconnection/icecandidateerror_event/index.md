@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("icecandidateerror", (event) => {});
+```js-nolint
+addEventListener("icecandidateerror", (event) => { })
 
-onicecandidateerror = (event) => {};
+onicecandidateerror = (event) => { }
 ```
 
 ## Event type

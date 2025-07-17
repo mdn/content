@@ -1,5 +1,6 @@
 ---
 title: "ARIA: checkbox role"
+short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 page-type: aria-role
 sidebar: accessibilitysidebar
@@ -57,9 +58,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
-
     - `true`
       - : The checkbox is checked.
     - `false`
@@ -83,7 +82,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 - `onclick`
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 - `onKeyDown`
-
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
 ## Examples
@@ -97,16 +95,9 @@ The following example creates an otherwise non-semantic checkbox element using C
   role="checkbox"
   id="chkPref"
   aria-checked="false"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
   tabindex="0"
   aria-labelledby="chk1-label"></span>
-<label
-  id="chk1-label"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
-  >Remember my preferences</label
->
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 ### CSS
@@ -132,18 +123,32 @@ The following example creates an otherwise non-semantic checkbox element using C
 ### JavaScript
 
 ```js
+const item = document.getElementById("chkPref");
+const label = document.getElementById("chk1-label");
+
 function changeCheckbox(code) {
-  const item = document.getElementById("chkPref");
   const checked = item.getAttribute("aria-checked");
 
   if (code && code !== "Space") {
     return;
-  } else if (checked === "true") {
+  }
+  if (checked === "true") {
     item.setAttribute("aria-checked", "false");
   } else {
     item.setAttribute("aria-checked", "true");
   }
 }
+
+item.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+label.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+item.addEventListener("click", changeCheckbox);
+label.addEventListener("click", changeCheckbox);
 ```
 
 {{EmbedLiveSample("Examples", 230, 250)}}

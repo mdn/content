@@ -2,9 +2,8 @@
 title: Cascade layers
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
@@ -134,7 +133,7 @@ The ability to create nested layers also removes the worry of having conflicting
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers."
 >
-> —[Cascading and Inheritance specification](https://www.w3.org/TR/css-cascade-5/#layering).
+> —[Cascading and Inheritance specification](https://drafts.csswg.org/css-cascade-5/#layering).
 
 ## Creating cascade layers
 
@@ -270,7 +269,7 @@ If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_
 ```
 
 ```css live-sample___media-order
-@media (min-width: 50em) {
+@media (width >= 50em) {
   @layer site;
 }
 
@@ -544,7 +543,7 @@ Here's a summary of the properties that are used and why each declaration is app
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#task_2).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#task_2).
 
 ## Summary
 

@@ -1,11 +1,11 @@
 ---
 title: Object.isSealed()
+short-title: isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isSealed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.isSealed()`** static method determines if an object is [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 

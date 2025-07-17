@@ -3,12 +3,10 @@ title: "GPUTexture: label property"
 short-title: label
 slug: Web/API/GPUTexture/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUTexture")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -24,7 +22,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUTexture.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],
@@ -40,7 +38,7 @@ console.log(depthTexture.label); // "my_texture"
 Setting a label via the originating {{domxref("GPUDevice.createTexture()")}} call, and then getting it via `GPUTexture.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

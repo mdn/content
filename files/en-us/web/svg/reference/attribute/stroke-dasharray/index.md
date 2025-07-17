@@ -22,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## Example
@@ -84,7 +83,6 @@ svg {
 </table>
 
 - \<dasharray>
-
   - : A list of comma and/or white space separated [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length)s and [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage)s that specify the lengths of alternating dashes and gaps.
 
     If an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, `5,3,2` is equivalent to `5,3,2,5,3,2`.

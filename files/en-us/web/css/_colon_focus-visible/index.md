@@ -3,9 +3,8 @@ title: :focus-visible
 slug: Web/CSS/:focus-visible
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
 
@@ -168,4 +167,3 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
-- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

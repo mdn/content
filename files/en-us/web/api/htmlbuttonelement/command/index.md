@@ -3,12 +3,10 @@ title: "HTMLButtonElement: command property"
 short-title: command
 slug: Web/API/HTMLButtonElement/command
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLButtonElement.command
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
 The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by this button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) must be set.
 
@@ -53,9 +51,9 @@ toggleBtn.command = "show-popover";
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-  if (event.command == "--rotate-left") {
+  if (event.command === "--rotate-left") {
     event.target.style.rotate = "-90deg";
-  } else if (event.command == "--rotate-right") {
+  } else if (event.command === "--rotate-right") {
     event.target.style.rotate = "90deg";
   }
 });

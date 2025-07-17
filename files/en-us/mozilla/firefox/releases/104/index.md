@@ -1,10 +1,10 @@
 ---
 title: Firefox 104 for developers
+short-title: Firefox 104
 slug: Mozilla/Firefox/Releases/104
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2022.
 
@@ -68,7 +68,3 @@ No notable changes.
 ## Changes for add-on developers
 
 - The `emailtracking` and `emailtracking_content` flags have been added to the tracking classifications available in `urlClassification` for the {{WebExtAPIRef("webRequest")}} events ([Firefox bug 1773695](https://bugzil.la/1773695))
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -23,31 +23,42 @@ SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG
 
 - {{SVGAttr("x")}}
   - : Positions the image horizontally from the origin.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : Positions the image vertically from the origin.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("height")}}
   - : The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : Points at a URL for the image file.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("preserveAspectRatio")}}
   - : Controls how the image is scaled.
-    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("crossorigin")}}
   - : Defines the value of the credentials flag for CORS requests.
-    _Value type_: [ anonymous | use-credentials ]? ; _Default value_: None; _Animatable_: **yes**
+    _Value type_: [ `anonymous` | `use-credentials` ]?; _Default value_: None; _Animatable_: **yes**
 - {{SVGAttr("decoding")}}
   - : Provides a hint to the browser as to whether it should perform image decoding synchronously or asynchronously.
-    _Value type_: `async | sync | auto` ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: `async | sync | auto`; _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Provides a hint of the relative priority to use when fetching an external image.
+    Allowed values:
+    - `high`
+      - : Fetches the external image at a high priority relative to other external resources.
+    - `low`
+      - : Fetches the external image at a low priority relative to other external resources.
+    - `auto`
+      - : Doesn't set a preference for the fetch priority.
+        It is used if no value or an invalid value is set.
+        This is the default.
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : Points at a URL for the image file.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **no**
 
 ## DOM Interface
 
@@ -76,3 +87,7 @@ Basic rendering of a PNG image in SVG:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("fetchpriority")}} attribute

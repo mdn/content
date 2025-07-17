@@ -1,11 +1,11 @@
 ---
 title: Symbol.isConcatSpreadable
+short-title: isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.isConcatSpreadable`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.isConcatSpreadable`. The {{jsxref("Array.prototype.concat()")}} method looks up this symbol on each object being concatenated to determine if it should be treated as an array-like object and flattened to its array elements.
 

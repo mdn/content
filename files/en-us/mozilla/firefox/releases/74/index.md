@@ -1,10 +1,10 @@
 ---
 title: Firefox 74 for developers
+short-title: Firefox 74
 slug: Mozilla/Firefox/Releases/74
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
 
@@ -99,7 +99,3 @@ _No changes._
 ## See also
 
 - Hacks blog post: [Security means more with Firefox 74](https://hacks.mozilla.org/2020/03/security-means-more-with-firefox-74-2/)
-
-## Older versions
-
-{{Firefox_for_developers}}

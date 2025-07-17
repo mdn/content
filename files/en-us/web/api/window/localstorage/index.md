@@ -19,9 +19,7 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 ### Exceptions
 
 - `SecurityError`
-
   - : Thrown in one of the following cases:
-
     - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
     - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
 
@@ -29,7 +27,7 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 
 ## Description
 
-The keys and the values stored with `localStorage` are _always_ in the UTF-16 string format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
+The keys and the values stored with `localStorage` are in the {{glossary("UTF-16")}} string format. As with objects, integer keys are automatically converted to strings.
 
 `localStorage` data **is specific to the protocol of the document**. In particular, for a site loaded over HTTP (e.g., `http://example.com`), `localStorage` returns a different object than `localStorage` for the corresponding site loaded over HTTPS (e.g., `https://example.com`).
 

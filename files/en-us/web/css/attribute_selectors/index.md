@@ -3,11 +3,12 @@ title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
 page-type: css-selector
 browser-compat: css.selectors.attribute
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The CSS **attribute selector** matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.
+
+## Syntax
 
 ```css
 /* <a> elements with a title attribute */
@@ -37,8 +38,6 @@ a[class~="logo"] {
 }
 ```
 
-## Syntax
-
 - `[attr]`
   - : Represents elements with an attribute name of _attr_.
 - `[attr=value]`
@@ -61,7 +60,7 @@ a[class~="logo"] {
 ### Values
 
 - `<attr>`
-  - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute. This can be any valid language-specific attribute (SVG, HTML, XML, etc), a [`data-*` attribute](/en-US/docs/Web/HTML/Global_attributes/data-*), or an author-created attribute.
+  - : An {{cssxref("ident")}}, that is, the unquoted name of the attribute. This can be any valid language-specific attribute (SVG, HTML, XML, etc), a [`data-*` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*), or an author-created attribute.
 - `<value>`
   - : An {{cssxref("ident")}} or {{cssxref("string")}}, representing the attribute value. The value must be quoted if it contains spaces or special characters.
 - `s` or `i`
@@ -71,7 +70,7 @@ a[class~="logo"] {
 
 The case sensitivity of attribute names and values depends on the document language. In HTML, attribute names are case-insensitive, as are spec-defined {{glossary("enumerated")}} values. The [case-insensitive HTML attribute values](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors) are listed in the HTML spec. For these attributes, the attribute value in the selector is case-insensitive, regardless of whether the value is invalid or the attribute for the element on which it is set is invalid.
 
-If the attribute value is case-sensitive, like [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class), [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id), and [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attributes, the attribute selector value match is case-sensitive. Attributes defined outside of the HTML specification, like [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) and [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) attributes, are also case-sensitive. Case-sensitive attribute selectors can be made case-insensitive with the inclusion of the case-insensitive modifier (`i`).
+If the attribute value is case-sensitive, like [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class), [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id), and [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes, the attribute selector value match is case-sensitive. Attributes defined outside of the HTML specification, like [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) and [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) attributes, are also case-sensitive. Case-sensitive attribute selectors can be made case-insensitive with the inclusion of the case-insensitive modifier (`i`).
 
 ## Examples
 

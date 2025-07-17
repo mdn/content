@@ -3,9 +3,8 @@ title: outline-color
 slug: Web/CSS/outline-color
 page-type: css-property
 browser-compat: css.properties.outline-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
@@ -20,11 +19,11 @@ outline-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline-color: rgba(170, 50, 220, 0.6);
+outline-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-outline-color: hsla(60, 90%, 50%, 0.8);
+outline-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

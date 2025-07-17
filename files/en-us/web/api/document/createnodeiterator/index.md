@@ -21,14 +21,11 @@ createNodeIterator(root, whatToShow, filter)
 ### Parameters
 
 - `root`
-
   - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
 
 - `whatToShow` {{optional_inline}}
-
   - : An optional `unsigned long` representing a bitmask created by
-    combining the constant properties of
-    [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
+    combining the constant properties of `NodeFilter`.
     It is a convenient way of filtering for certain types of node. It defaults to
     `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 
@@ -49,7 +46,6 @@ createNodeIterator(root, whatToShow, filter)
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                              |
 
 - `filter` {{optional_inline}}
-
   - : A callback function or an object with an `acceptNode()` method. The function or method will be called for each node in the subtree based at root which is accepted as included by the whatToShow flag to determine whether or not to include it in the list of iterable nodes. The method should return one of `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the [Example](#examples).
 
     For `createNodeIterator`, the values `NodeFilter.FILTER_REJECT` and `NodeFilter.FILTER_SKIP` are equivalent. This node will not be included in the list of iterable nodes, but its children will continue to be iterated over.

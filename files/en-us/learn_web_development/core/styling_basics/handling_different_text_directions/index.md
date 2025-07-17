@@ -3,9 +3,8 @@ title: Handling different text directions
 short-title: Multiple text directions
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Many of the properties and values that we have encountered so far in our CSS learning have been tied to the physical dimensions of our screen. We create borders on the top, right, bottom, and left of a box, for example. These physical dimensions map very neatly to content that is viewed horizontally, and by default the web tends to support left-to-right languages (e.g., English or French) better than right-to-left languages (such as Arabic).
 
@@ -340,10 +339,6 @@ Here we are also using logical margin values to ensure the margin is in the corr
 ### Should you use physical or logical properties?
 
 The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes, then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you also start dealing with layout methods such as flexbox and grid.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Writing modes and logical properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks).
 
 ## Summary
 

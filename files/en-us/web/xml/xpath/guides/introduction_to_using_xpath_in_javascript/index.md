@@ -29,7 +29,6 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 - `xpathExpression`: A string containing the XPath expression to be evaluated.
 - `contextNode`: A node in the document against which the `xpathExpression` should be evaluated, including any and all of its child nodes. The [document](/en-US/docs/Web/API/Document) node is the most commonly used.
 - `namespaceResolver`: A function that will be passed any namespace prefixes contained within `xpathExpression` which returns a string representing the namespace URI associated with that prefix. This enables conversion between the prefixes used in the XPath expressions and the possibly different prefixes used in the document. The function can be either:
-
   - A {{domxref("Node")}}, which provides a {{domxref("Node.lookupNamespaceURI")}} method that resolves the namespace prefix.
   - `null`, which can be used for HTML documents or when no namespace prefixes are used. Note that, if the `xpathExpression` contains a namespace prefix, this will result in a `DOMException` being thrown with the code `NAMESPACE_ERR`.
   - A custom user-defined function. See the [Using a User Defined Namespace Resolver](#implementing_a_user_defined_namespace_resolver) section in the appendix for details.
@@ -37,9 +36,9 @@ The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total o
 - `resultType`: A [constant](#xpathresult_defined_constants) that specifies the desired result type to be returned as a result of the evaluation. The most commonly passed constant is `XPathResult.ANY_TYPE` which will return the results of the XPath expression as the most natural type. There is a section in the appendix which contains a full list of the [available constants](#xpathresult_defined_constants). They are explained below in the section "[Specifying the Return Type](#specifying_the_return_type)."
 - `result`: If an existing `XPathResult` object is specified, it will be reused to return the results. Specifying `null` will create a new `XPathResult` object.
 
-### Return Value
+### Return value
 
-Returns `xpathResult`, which is an `XPathResult` object of the type [specified](#specifying_the_return_type) in the `resultType` parameter. The `XPathResult` Interface is defined [here](/en-US/docs/Web/API/XPathResult).
+Returns an {{domxref("XPathResult")}} object of the type [specified](#specifying_the_return_type) in the `resultType` parameter.
 
 ### Implementing a Default Namespace Resolver
 

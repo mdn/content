@@ -21,7 +21,6 @@ requestSubmit(submitter)
 ### Parameters
 
 - `submitter` {{optional_inline}}
-
   - : A {{Glossary("submit button")}} that is a member of the form.
 
     If the `submitter` specifies `form*` attributes, they [will override](/en-US/docs/Glossary/Submit_button#overriding_the_forms_behavior) the form's submission behavior (e.g., `formmethod="POST"`).

@@ -3,9 +3,8 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Moves one or more tabs to a new position in the same window or to a different window.
 
@@ -27,13 +26,10 @@ let moving = browser.tabs.move(
 - `tabIds`
   - : `integer` or `array` of `integer`. ID of the {{WebExtAPIRef('tabs.Tab', 'tab')}} to move, or an array of tab IDs.
 - `moveProperties`
-
   - : `object`. An object that specifies where to move the tab(s).
-
     - `windowId` {{optional_inline}}
       - : `integer`. The ID of the window to which you want to move the tab(s). If you omit this, then each tab in `tabIds` will be moved to `index` in its current window. If you include this, and `tabIds` contains more than one tab, then the first tab in `tabIds` will be moved to `index`, and the other tabs will follow it in the order given in `tabIds`.
     - `index`
-
       - : `integer`. The index position to move the tab to, starting at 0. A value of -1 will place the tab at the end of the window.
 
         If you pass a value less than -1, the function will throw an error.
