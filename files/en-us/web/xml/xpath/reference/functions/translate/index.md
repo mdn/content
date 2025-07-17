@@ -38,11 +38,7 @@ Example
 <xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
 ```
 
-Output
-
-```plain
-THE QUICK BROWN FOX.
-```
+{{EmbedLiveSample("Description")}}
 
 - If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
 
