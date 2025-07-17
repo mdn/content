@@ -87,7 +87,7 @@ const changeColor = () => {
   const transition = document.startViewTransition(() => {
     updateColour();
   });
-}
+};
 const changeColorButton = document.querySelector("#change-color");
 changeColorButton.addEventListener("click", changeColor)
 changeColorButton.addEventListener("keypress", changeColor)
