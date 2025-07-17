@@ -245,7 +245,7 @@ The exception to this is if the worker script's origin is a globally unique iden
 
 Data passed between the main page and workers is _copied_, not shared (except for certain objects that can be explicitly [shared](#sharing_data)). Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker **do not share the same instance**, so the end result is that **a duplicate** is created on each end. Most browsers implement this feature as [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-As will probably know by now, data is exchanged between the two threads via messages using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
+As you probably know by now, data is exchanged between the two threads via messages using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
 
 **example.html**: (the main page):
 
