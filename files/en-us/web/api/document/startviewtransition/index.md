@@ -38,8 +38,7 @@ In this Color Change SPA View Transition, the `changeColor()` function handles b
 
 ```html
 <main>
-  <section>
-  </section>
+  <section></section>
   <button id="change-color">Change Color</button>
 </main>
 ```
