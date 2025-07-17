@@ -117,31 +117,34 @@ p {
 
 The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, `text-decoration-trim`, and `text-emphasis-skip` properties, which are not yet supported by any browser.
 
-### Values
-
-spelling-error
-grammar-error
-
 ## Guides
+
+- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+  - : Overview of the components of the {{cssxref("text-shadow")}} property and creating multiple text shadows
 
 ## Related concepts
 
-- {{shadow}}
-- line-stype
-  inline box
-  inline formatting context
-  letter spacing
-  word spacing
-  ruby annotation
-  ruby base
-  ruby container
-  first-letter
-  first-line
-  box fragment
-  box-decoration-break
-  ont-size
-  font-variant-position
-  ruby
+- {{cssxref("::spelling-error")}}
+- {{cssxref("::grammar-error")}}
+- {{cssxref("::first-letter")}}
+- {{cssxref("::first-line")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("line-style")}}
+- {{cssxref("letter-spacing")}}
+- {{cssxref("word-spacing")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("ruby-overhang")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("sup")}}
+- {{HTMLElement("sub")}}
+- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts#inline_formatting_contexts)
 
 ## Specifications
 
@@ -154,3 +157,5 @@ grammar-error
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS text](/en-US/docs/Web/CSS/CSS_text) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
