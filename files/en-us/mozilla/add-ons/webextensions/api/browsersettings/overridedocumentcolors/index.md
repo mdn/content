@@ -3,9 +3,8 @@ title: browserSettings.overrideDocumentColors
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.overrideDocumentColors
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.
 

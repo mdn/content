@@ -3,9 +3,8 @@ title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the browser action's title.
 

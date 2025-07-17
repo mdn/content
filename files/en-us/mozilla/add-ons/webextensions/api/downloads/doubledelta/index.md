@@ -3,9 +3,8 @@ title: downloads.DoubleDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DoubleDelta
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DoubleDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two doubles.
 

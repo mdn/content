@@ -3,9 +3,8 @@ title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.background
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

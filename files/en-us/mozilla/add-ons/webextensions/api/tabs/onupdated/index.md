@@ -3,6 +3,7 @@ title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onUpdated
+sidebar: addonsidebar
 ---
 
 Fired when a tab is updated.
@@ -252,5 +253,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

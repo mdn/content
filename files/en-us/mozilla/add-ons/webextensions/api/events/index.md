@@ -3,9 +3,8 @@ title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
 page-type: webextension-api
 browser-compat: webextensions.api.events
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Common types used by APIs that dispatch events.
 

@@ -3,9 +3,8 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Executes JavaScript in the window that the devtools are attached to.
 

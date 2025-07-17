@@ -3,9 +3,8 @@ title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when some permissions are removed from the extension.
 

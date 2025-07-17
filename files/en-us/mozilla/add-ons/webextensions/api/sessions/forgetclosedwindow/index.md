@@ -3,9 +3,8 @@ title: sessions.forgetClosedWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.forgetClosedWindow
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a closed window from the browser's list of recently closed windows. Note that the sites visited by that window are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 

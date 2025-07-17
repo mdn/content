@@ -3,9 +3,8 @@ title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 page-type: webextension-api
 browser-compat: webextensions.api.sidebarAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets and sets properties of an extension's sidebar.
 

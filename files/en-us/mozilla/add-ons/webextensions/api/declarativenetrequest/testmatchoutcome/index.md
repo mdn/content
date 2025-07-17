@@ -3,9 +3,8 @@ title: declarativeNetRequest.testMatchOutcome
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/testMatchOutcome
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.testMatchOutcome
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks if any of the extension's `declarativeNetRequest` rules would match a hypothetical request. Only available while testing, as this is intended to be used during extension development. See [Testing](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#testing) for details on how testing is enabled in each browser.
 

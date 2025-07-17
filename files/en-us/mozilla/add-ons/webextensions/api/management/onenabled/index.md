@@ -3,9 +3,8 @@ title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The event listener called when the `enabled` event is fired, indicating that an add-on is now enabled.
 

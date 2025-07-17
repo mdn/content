@@ -3,9 +3,8 @@ title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.StreamFilter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.
 

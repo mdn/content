@@ -3,9 +3,8 @@ title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 page-type: webextension-api
 browser-compat: webextensions.api.management
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get information about installed add-ons.
 

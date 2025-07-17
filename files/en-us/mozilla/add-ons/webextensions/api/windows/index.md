@@ -3,9 +3,8 @@ title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
 page-type: webextension-api
 browser-compat: webextensions.api.windows
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.
 
