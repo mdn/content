@@ -3,9 +3,8 @@ title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.resume
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`resume()`** function of the {{WebExtAPIRef("downloads")}} API resumes a paused download. If the request was successful, the download will be unpaused and progress will resume. The `resume()` call will fail if the download is not active: for example, because it has finished downloading.
 

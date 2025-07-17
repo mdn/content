@@ -3,9 +3,8 @@ title: sidebarAction.isOpen()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.isOpen
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns `true` if the extension's sidebar is open in a given window.
 

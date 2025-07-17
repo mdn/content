@@ -3,9 +3,8 @@ title: storage.StorageChange
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageChange
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 `StorageChange` is an object representing a change to a storage area.
 

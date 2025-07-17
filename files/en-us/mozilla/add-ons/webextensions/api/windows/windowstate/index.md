@@ -3,9 +3,8 @@ title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowState
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The state of this browser window.
 

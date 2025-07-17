@@ -3,9 +3,8 @@ title: i18n.getAcceptLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getAcceptLanguages
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the [accept-languages](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
 

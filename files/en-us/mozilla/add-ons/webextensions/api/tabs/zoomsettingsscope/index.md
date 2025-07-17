@@ -3,9 +3,8 @@ title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettingsScope
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to `per-origin` when {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic", and is always `per-tab` otherwise.
 

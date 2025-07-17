@@ -3,9 +3,8 @@ title: devtools.panels.ElementsPanel.createSidebarPane()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
 

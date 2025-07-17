@@ -3,9 +3,8 @@ title: pkcs11.isModuleInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.isModuleInstalled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks whether the named PKCS #11 module is currently installed in Firefox.
 

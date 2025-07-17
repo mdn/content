@@ -3,9 +3,8 @@ title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getRecentlyClosed
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
 

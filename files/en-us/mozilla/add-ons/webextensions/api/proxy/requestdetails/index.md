@@ -3,9 +3,8 @@ title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 page-type: webextension-api-type
 browser-compat: webextensions.api.proxy.RequestDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.
 

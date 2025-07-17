@@ -3,9 +3,8 @@ title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
 page-type: webextension-api
 browser-compat: webextensions.api.extension
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Utilities related to your extension. Get URLs to resources packages with your extension. Get the [`Window`](/en-US/docs/Web/API/Window) object for your extension's pages. Get the values for various settings.
 

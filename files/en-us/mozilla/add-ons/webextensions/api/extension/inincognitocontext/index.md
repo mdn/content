@@ -3,9 +3,8 @@ title: extension.inIncognitoContext
 slug: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 page-type: webextension-api-property
 browser-compat: webextensions.api.extension.inIncognitoContext
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Boolean value, `true` for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.
 

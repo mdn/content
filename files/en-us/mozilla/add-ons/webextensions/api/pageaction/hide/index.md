@@ -3,9 +3,8 @@ title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.hide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Hides the page action for a given tab.
 

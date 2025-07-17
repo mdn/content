@@ -3,9 +3,8 @@ title: tabs.highlight()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.highlight
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 

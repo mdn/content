@@ -3,9 +3,8 @@ title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadQuery
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 

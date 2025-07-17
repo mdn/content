@@ -3,9 +3,8 @@ title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformNaclArch
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The native client architecture. This may be different from arch on some platforms.
 

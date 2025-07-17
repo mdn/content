@@ -3,9 +3,8 @@ title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 page-type: webextension-api-type
 browser-compat: webextensions.api.history.HistoryItem
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `HistoryItem` object provides information about a page in the browser history.
 

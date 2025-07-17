@@ -3,9 +3,8 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the localized string for the specified message.
 
