@@ -274,22 +274,6 @@ context.listener.setPosition(0, 0, 0);
 > [!NOTE]
 > You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
-### JavaScript codecs
-
-It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
-
-Libraries currently exist for the following formats:
-
-- AAC: [AAC.js](https://github.com/audiocogs/aac.js)
-- ALAC: [alac.js](https://github.com/audiocogs/alac.js)
-- FLAC: [flac.js](https://github.com/audiocogs/flac.js)
-- MP3: [mp3.js](https://github.com/audiocogs/mp3.js)
-- Opus: [Opus.js](https://github.com/audiocogs/opus.js)
-- Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
-
-> [!NOTE]
-> At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
-
 ## Examples
 
 - [Various Web Audio API (and other) examples](https://github.com/mdn/webaudio-examples)

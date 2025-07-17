@@ -48,8 +48,6 @@ For your shape to use a different reference box, include a different {{cssxref("
 
 Shapes created that extend past the margin box will have the shape clipped to the margin box. The following basic shapes demonstrate this.
 
-For a more extensive explanation of reference boxes as they apply to CSS Shapes, see [Understanding reference boxes for CSS shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
-
 ## inset()
 
 The [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the wrapping text around the reduced-size rectangle, over parts of the floated element.
