@@ -109,4 +109,5 @@ Clicking the button will transition the color from one to another over 2 seconds
 
 ## See also
 
+- {{CSSXRef(":active-view-transition")}} pseudo-class
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

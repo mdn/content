@@ -69,6 +69,13 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - {{cssxref("view-transition-class")}}
   - : Provides an additional method of styling selected elements that have a `view-transition-name`.
 
+### Pseudo-classes
+
+- {{cssxref(":active-view-transition")}}
+  - : Enabled when a view transition is happening.
+- {{cssxref(":active-view-transition-type()")}}
+  - : Enabled when a specific view transition is happening.
+
 ### Pseudo-elements
 
 - {{cssxref("::view-transition")}}
