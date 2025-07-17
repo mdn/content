@@ -3,9 +3,8 @@ title: :active-view-transition
 slug: Web/CSS/:active-view-transition
 page-type: css-pseudo-class
 browser-compat: css.selectors.active-view-transition
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when a view transition is actually taking place and ceases to match once the transition has completed.
 
