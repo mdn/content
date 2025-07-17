@@ -10,15 +10,13 @@ sidebar: cssref
 
 {{CSSRef}}
 
-The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks. text decoration features can provide visual cue for spelling errors, grammar issues, and links. These module's features can help improve the usability, accessibility, functionality, and aesthetics of your text. Text decoration features are especially useful for writing in languages like Japanese or Korean, where underline placement may differ from Latin-based text.
+The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks. Text decoration features can provide visual cue for spelling errors, grammar issues, and links. This module's features can help improve the usability, accessibility, functionality, and aesthetics of your text.
 
-Varying text decoration colors, styles, and thicknesses based on pseudo-classes and pseudo-elements can help differentiate emphasis without relying on color alone.
+Varying text decoration colors, styles, and thicknesses based on pseudo-classes and pseudo-elements can help differentiate emphasis without relying on color alone. Features like {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders, {{cssxref("text-underline-offset")}} enables fine-tuning underline placement to match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts), while {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make text visually pop when placed on a background with insufficient contrast. These features all help improve legibility and therefore accessibility; reducing visual noise and improving text clarity is especially helpful for users with dyslexia or low vision.
 
-Features enable mimicing editorial and localization standards inherited from print media. Overlines or double underlines are commonly used for academic and editorial annotations. In the writing systems of some languages, overlines or underlines carry semantic meaning. CSS lets you adapt styling to cultural norms.
+In the writing systems of some languages, overlines or underlines carry semantic meaning. CSS lets you adapt styling to cultural norms. Text decoration features are especially useful for writing in languages where underline placement may differ from Latin-based text, such as Japanese and Korean.
 
-A line-through can be used to indicate content status; informing users that content has been removed, or prices have been halved, enabling you to present both the original and updated content.
-
-Features like {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders, {{cssxref("text-underline-offset")}} enables fine-tuning underline placement to match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts), while {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make text visually pop when placed on a background with insufficient contrast. These features all help improve legibility and therefore accessibility; reducing visual noise and improving text clarity is especially helpful for users with dyslexia or low vision.
+Features enable mimicing editorial and localization standards inherited from print media. A line-through can be used to indicate content status; informing users that content has been removed, or prices have been halved, enabling you to present both the original and updated content. Overlines or double underlines are commonly used for academic and editorial annotations.
 
 ## Text decoration in action
 
