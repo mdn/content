@@ -16,9 +16,9 @@ You can also jump straight to the [Demo](#demo) if you like.
 
 Our HTML interface has two main operational sections: the stream and capture panel and the presentation panel.
 Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
-There's a {{HTMLElement("button")}} element (`permissions-button`) that we can use later in JavaScript so the user can allow or block camera permissions per device using `getUserMedia()`.
+There's a {{HTMLElement("button")}} element (`permissions-button`) that we can use later in JavaScript to let the user allow or block camera permissions per device using `getUserMedia()`.
 
-The box on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from `navigator.mediaDevices.getUserMedia()`, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
+The box on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from `navigator.mediaDevices.getUserMedia()`, and a {{HTMLElement("button")}} to start video capture.
 This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
 
 ```css hidden live-sample___photo-capture live-sample___photo-capture-with-filters
@@ -139,12 +139,9 @@ Those variables are:
 - `allowButton`
   - : A reference to the {{HTMLElement("button")}} element that's used to control whether the page can access devices or not.
 
-As part of the initial setup, we initialize the output {{HTMLElement("img")}} to a default state, and establish the event listeners needed to request camera access and react when the button is clicked to capture an image.
-
 #### Get the media stream
 
-The next task is to get the media stream, we have an event listener that calls `getUserMedia()` when the user clicks on the "Allow camera" button.
-We're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio).
+The next task is to get the media stream: we define an event listener that calls {{domxref("MediaDevices.getUserMedia()")}} and requests a video stream (without audio) when the user clicks on the "Allow camera" button.
 It returns a promise which we attach success and failure callbacks to:
 
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
@@ -161,8 +158,7 @@ allowButton.addEventListener("click", () => {
 });
 ```
 
-The success callback receives a `stream` object as input.
-It is the {{HTMLElement("video")}} element's source to our new stream.
+The success callback receives a `stream` object as input, which is set as our {{HTMLElement("video")}} element's source.
 Once the stream is linked to the `<video>` element, we start it playing by calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play_event).
 
 The error callback is called if opening the stream doesn't work.
@@ -211,7 +207,7 @@ startButton.addEventListener(
 );
 ```
 
-This method is simple enough: it just calls our `takePicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
+This method is straightforward: it calls the `takePicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
 
 ### Clearing the photo box
 
