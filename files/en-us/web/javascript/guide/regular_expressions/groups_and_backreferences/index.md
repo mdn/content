@@ -2,13 +2,27 @@
 title: Groups and backreferences
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-backreferences.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+
+```js interactive-example
+// Groups
+const imageDescription = "This image has a resolution of 1440×900 pixels.";
+const regexpSize = /(\d+)×(\d+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// Expected output: "Width: 1440 / Height: 900."
+
+// Backreferences
+const findDuplicates = "foo foo bar";
+const regex = /\b(\w+)\s+\1\b/g;
+console.log(findDuplicates.match(regex));
+// Expected output: Array ["foo foo"]
+```
 
 ## Types
 
@@ -169,9 +183,9 @@ const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 const regexpNames =
-  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/g;
+  /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/g;
 for (const match of personList.matchAll(regexpNames)) {
-  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
+  console.log(`Hello ${match.groups.firstName} ${match.groups.lastName}`);
 }
 ```
 
@@ -200,7 +214,7 @@ const code = `function add(x, y) {
   return x + y;
 }`;
 const functionRegexp =
-  /(function\s+)(?<name>[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*)/du;
+  /(function\s+)(?<name>[$_\p{ID_Start}][$\p{ID_Continue}]*)/du;
 const match = functionRegexp.exec(code);
 const lines = code.split("\n");
 lines.splice(

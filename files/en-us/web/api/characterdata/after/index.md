@@ -25,6 +25,10 @@ after(...nodes)
 - `nodes`
   - : A set of {{domxref("Node")}} objects or strings to insert.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
@@ -66,6 +70,8 @@ h1TextNode.data;
 
 - {{domxref("CharacterData.appendData()")}}
 - {{domxref("CharacterData.before()")}}
+- {{domxref("DocumentType.after()")}}
+- {{domxref("Element.after()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}

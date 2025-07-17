@@ -62,7 +62,7 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 
 ## Examples
 
-See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) for a full working demo (see the full [source code](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture) also).
+See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) for a full working demo (see the full [source code](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) also).
 
 ## Specifications
 

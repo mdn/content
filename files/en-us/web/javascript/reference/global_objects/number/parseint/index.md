@@ -1,16 +1,32 @@
 ---
 title: Number.parseInt()
+short-title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseInt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.parseInt()`** static method parses a string argument and
 returns an integer of the specified radix or base.
 
-{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+
+```js interactive-example
+function roughScale(x, base) {
+  const parsed = Number.parseInt(x, base);
+  if (Number.isNaN(parsed)) {
+    return 0;
+  }
+  return parsed * 100;
+}
+
+console.log(roughScale(" 0xF", 16));
+// Expected output: 1500
+
+console.log(roughScale("321", 2));
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -24,7 +40,6 @@ Number.parseInt(string, radix)
 - `string`
   - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading whitespace in this argument is ignored.
 - `radix` {{optional_inline}}
-
   - : An integer between `2` and `36` that represents the
     _radix_ (the base in mathematical numeral systems) of the
     `string`.
@@ -63,5 +78,6 @@ Its purpose is modularization of globals. Please see
 ## See also
 
 - [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.parseInt`](https://www.npmjs.com/package/number.parseInt)
 - {{jsxref("Number")}}
 - {{jsxref("parseInt()")}}

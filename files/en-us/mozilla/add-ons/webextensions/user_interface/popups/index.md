@@ -2,9 +2,8 @@
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.
 
@@ -12,7 +11,7 @@ A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozill
 
 When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript; it can be opened only in response to a user action.
 
-You can define a keyboard shortcut that opens the popup using the `"_execute_browser_action"` and `"_execute_page_action"` shortcuts in Manifest V2 and `"_execute_action"`and, where supported, `"_execute_page_action"` shortcuts in Manifest V3. See the documentation for the special shortcuts in manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts).
+You can define a keyboard shortcut that opens the popup using the `"_execute_browser_action"` and `"_execute_page_action"` shortcuts in Manifest V2 and `"_execute_action"` and, where supported, `"_execute_page_action"` shortcuts in Manifest V3. See the documentation for the special shortcuts in manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts).
 
 ## Specifying a popup
 
@@ -40,9 +39,9 @@ You can debug a popup's markup and JavaScript using the Add-on Debugger, but you
 
 Popups resize automatically to fit their content. The algorithm for this may differ from one browser to another.
 
-In Firefox, the size is calculated just before the popup is shown, and at most 10 times per second after DOM mutations. For strict mode documents, the size is calculated based on the layout size of the [`<body>`](/en-US/docs/Web/HTML/Element/body) element. For quirks mode, it's the [`<html>`](/en-US/docs/Web/HTML/Element/html) element. Firefox calculates the preferred width of the contents of that element, reflows it to that width, and then resizes so there's no vertical scrolling. It will grow to a size of **800x600 pixels** at most if that fits on the user's screen. (Prior to Firefox 60 [it was only 680px](https://bugzil.la/1434177).) If the user [moves the extension's button to the menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) or it appears in the toolbar overflow, then the popup appears inside the menu's panel and is given a fixed width.
+In Firefox, the size is calculated just before the popup is shown, and at most 10 times per second after DOM mutations. For strict mode documents, the size is calculated based on the layout size of the [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) element. For quirks mode, it's the [`<html>`](/en-US/docs/Web/HTML/Reference/Elements/html) element. Firefox calculates the preferred width of the contents of that element, reflows it to that width, and then resizes so there's no vertical scrolling. It will grow to a size of **800x600 pixels** at most if that fits on the user's screen. (Prior to Firefox 60 [it was only 680px](https://bugzil.la/1434177).) If the user [moves the extension's button to the menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) or it appears in the toolbar overflow, then the popup appears inside the menu's panel and is given a fixed width.
 
-When setting the popup `width` in CSS, you should set the it in the [`<body>`](/en-US/docs/Web/HTML/Element/body) and not in the `:root`.
+When setting the popup `width` in CSS, you should set it in the [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) and not in the `:root`.
 
 In Firefox Android 57, the popup is shown as a normal page in a new tab.
 

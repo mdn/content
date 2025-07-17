@@ -2,12 +2,10 @@
 title: GPURenderPassEncoder
 slug: Web/API/GPURenderPassEncoder
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPURenderPassEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} encodes commands related to controlling the vertex and fragment shader stages, as issued by a {{domxref("GPURenderPipeline")}}. It forms part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 
@@ -23,56 +21,52 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
 
 ## Instance properties
 
-- {{domxref("GPURenderPassEncoder.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}
   - : Begins an occlusion query at the specified index of the relevant {{domxref("GPUQuerySet")}} (provided as the value of the `occlusionQuerySet` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run the render pass).
-- {{domxref("GPURenderPassEncoder.draw", "draw()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.draw", "draw()")}}
   - : Draw primitives based on the vertex buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}.
-- {{domxref("GPURenderPassEncoder.drawIndexed", "drawIndexed()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.drawIndexed", "drawIndexed()")}}
   - : Draw indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}
-- {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}}
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
-- {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}} {{Experimental_Inline}}
-
+- {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}}
   - : Draw indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
-- {{domxref("GPURenderPassEncoder.end", "end()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.end", "end()")}}
   - : Completes recording of the current render pass command sequence.
-- {{domxref("GPURenderPassEncoder.endOcclusionQuery", "endOcclusionQuery()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.endOcclusionQuery", "endOcclusionQuery()")}}
   - : Ends an active occlusion query previously started with {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}.
-- {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.executeBundles", "executeBundles()")}}
   - : Executes commands previously recorded into the referenced {{domxref("GPURenderBundle")}}s, as part of this render pass.
-- {{domxref("GPURenderPassEncoder.insertDebugMarker", "insertDebugMarker()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.insertDebugMarker", "insertDebugMarker()")}}
   - : Marks a specific point in a series of encoded commands with a label.
-- {{domxref("GPURenderPassEncoder.popDebugGroup", "popDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.popDebugGroup", "popDebugGroup()")}}
   - : Ends a debug group, which is begun with a {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
-- {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderPassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
-- {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
-- {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}} {{Experimental_Inline}}
-
+- {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}}
   - : Sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
 
-- {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}} {{Experimental_Inline}}
-
+- {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}
   - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
-- {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}}
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render pass.
-- {{domxref("GPURenderPassEncoder.setScissorRect", "setScissorRect()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setScissorRect", "setScissorRect()")}}
   - : Sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
-- {{domxref("GPURenderPassEncoder.setStencilReference", "setStencilReference()")}} {{Experimental_Inline}}
-
+- {{domxref("GPURenderPassEncoder.setStencilReference", "setStencilReference()")}}
   - : Sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
 
-- {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}
   - : Sets or unsets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
-- {{domxref("GPURenderPassEncoder.setViewport", "setViewport()")}} {{Experimental_Inline}}
+- {{domxref("GPURenderPassEncoder.setViewport", "setViewport()")}}
   - : Sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
 
 ## Examples
@@ -80,7 +74,7 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}.
 
 ```js
-// ...
+// …
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
@@ -113,7 +107,7 @@ passEncoder.end();
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

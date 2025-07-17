@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.invalidateFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.invalidateFramebuffer()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) invalidates the contents
@@ -21,9 +21,7 @@ invalidateFramebuffer(target, attachments)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
@@ -33,10 +31,8 @@ invalidateFramebuffer(target, attachments)
       - : Used as a source for reading operations.
 
 - `attachments`
-
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment points to
     invalidate. Possible values:
-
     - `gl.COLOR_ATTACHMENT{0-15}`
       - : Invalidates one of the framebuffer's
         color buffers.

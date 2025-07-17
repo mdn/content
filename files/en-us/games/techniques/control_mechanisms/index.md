@@ -2,9 +2,8 @@
 title: Implementing game control mechanisms
 slug: Games/Techniques/Control_mechanisms
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.
 
@@ -31,9 +30,15 @@ Every state has its own default methods: `preload()`, `create()`, and `update()`
 For example, you can define a button in the `create()` function:
 
 ```js
-create() {
+function create() {
   // …
-  const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+  const buttonEnclave = this.add.button(
+    10,
+    10,
+    "logo-enclave",
+    this.clickEnclave,
+    this,
+  );
   // …
 }
 ```
@@ -41,10 +46,10 @@ create() {
 It will be created once at the start of the game, and will execute `this.clickEnclave()` action assigned to it when clicked, but you can also use the mouse's pointer value in the `update()` function to make an action:
 
 ```js
-update() {
+function update() {
   // …
   if (this.game.input.mousePointer.isDown) {
-      // do something
+    // do something
   }
   // …
 }

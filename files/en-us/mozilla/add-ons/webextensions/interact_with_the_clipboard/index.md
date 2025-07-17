@@ -5,9 +5,8 @@ page-type: guide
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 
@@ -108,7 +107,8 @@ Depending on the browser, this may not work. On Firefox, it will not work, and y
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
-> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
+> [!NOTE]
+> {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
 
 ### Browser-specific considerations
 
@@ -165,7 +165,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
 
 ## Browser compatibility
 
@@ -175,4 +175,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Make content editable](/en-US/docs/Web/HTML/Global_attributes#contenteditable)
+- [Make content editable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)

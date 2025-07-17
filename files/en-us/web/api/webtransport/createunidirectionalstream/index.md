@@ -31,9 +31,7 @@ createUnidirectionalStream(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object that may have the following properties:
-
     - `sendOrder` {{optional_inline}}
       - : A integer value specifying the send priority of this stream relative to other streams for which the value has been set.
         Queued bytes are sent first for streams that have a higher value.
@@ -59,7 +57,7 @@ async function writeData() {
   const stream = await transport.createUnidirectionalStream({
     sendOrder: "596996858",
   });
-  const writer = stream.writable.getWriter();
+  const writer = stream.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
   writer.write(data1);
@@ -77,15 +75,15 @@ async function writeData() {
 You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly terminate the stream. When using `abort()`, the browser may discard any pending data that hasn't yet been sent.
 
 ```js
-// ...
+// …
 
 const stream = await transport.createUnidirectionalStream();
-const writer = ws.getWriter();
+const writer = stream.getWriter();
 
-// ...
+// …
 
-writer.write(...);
-writer.write(...);
+writer.write(data1);
+writer.write(data2);
 await writer.abort();
 // Not all the data may have been written.
 ```

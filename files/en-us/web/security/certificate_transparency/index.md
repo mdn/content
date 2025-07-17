@@ -2,11 +2,10 @@
 title: Certificate Transparency
 slug: Web/Security/Certificate_Transparency
 page-type: guide
+sidebar: security
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
-
-**Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. It's defined in [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162). With certificate transparency, newly-issued certificates are 'logged' to publicly-run, often independent _CT logs_ — which maintain an append-only, cryptographically-assured record of issued TLS certificates.
+**Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. With certificate transparency, newly-issued certificates are 'logged' to publicly-run, often independent _CT logs_ — which maintain an append-only, cryptographically-assured record of issued TLS certificates.
 
 In this way, certificate authorities (CAs) can be subject to much greater public scrutiny and oversight. Potentially malicious certificates, such as those that violate the CA/B Forum _Baseline Requirements_, can be detected and revoked much more quickly. Browser vendors and root store maintainers are also empowered to make more informed decisions regarding problematic CAs that they may decide to distrust.
 
@@ -34,8 +33,20 @@ With the latter methods, servers will need to be updated to send the required da
 
 ## Browser Requirements
 
-Google Chrome requires CT log inclusion for all certificates issues with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates. Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
+Google Chrome 107 and later requires CT log inclusion for all certificates issued with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates.
+Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
 
 Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
-Firefox [does not](https://bugzil.la/1281469) currently check or require the use of CT logs for sites that users visit.
+Firefox desktop from version 135 requires CT log inclusion for all certificates issued by certificate authorities in Mozilla's Root CA Program.
+Firefox for Android does not currently require CT log inclusion.
+
+## Specifications
+
+Browser implementations are based on the obsoleted specification {{rfc("6962","Certificate Transparency")}} (January 2025).
+The current specification is {{rfc("9162","Certificate Transparency Version 2.0")}}.
+
+## See also
+
+- [Apple's Certificate Transparency log program](https://support.apple.com/en-us/103703)
+- [Chrome's Certificate Transparency Log Policy](https://googlechrome.github.io/CertificateTransparency/log_policy.html)

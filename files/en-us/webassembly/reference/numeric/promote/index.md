@@ -2,17 +2,37 @@
 title: Promote
 slug: WebAssembly/Reference/Numeric/Promote
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`promote`** instruction, is used to convert (promote) numbers of type `f32` to type `f64`.
 
-{{EmbedInteractiveExample("pages/wat/promote.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: promote", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f64)))
+  (func $main
+
+    f32.const 10.5 ;; push an f32 onto the stack
+
+    f64.promote_f32 ;; promote from f32 to f64
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; push an f32 onto the stack
 f32.const 10.5
 

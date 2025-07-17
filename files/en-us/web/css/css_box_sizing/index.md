@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-sizing-4/
   - https://drafts.csswg.org/css-sizing-3/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box sizing** module enables developers to specify how elements fit their content or fit into a particular layout context. It defines sizing, minimum sizing, and maximum sizing properties, and also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based [extrinsic](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) size.
 
@@ -62,23 +61,18 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 ## Guides
 
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-
   - : Explains one of the fundamental concepts of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
 
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
-
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - : Explains the visual formatting model.
 
 - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-
   - : Explains intrinsic sizing as a precursor to understanding how to control the size and flexibility of flex items along the main axis using {{CSSxRef("flex-grow")}}, {{CSSxRef("flex-shrink")}}, and {{CSSxRef("flex-basis")}}.
 
 ## Related concepts

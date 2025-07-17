@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setStencilReference() method"
 short-title: setStencilReference()
 slug: Web/API/GPURenderPassEncoder/setStencilReference
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setStencilReference
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setStencilReference()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
@@ -34,7 +32,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
@@ -45,7 +43,7 @@ passEncoder.draw(3);
 
 passEncoder.end();
 
-// ...
+// …
 ```
 
 ## Specifications

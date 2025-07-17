@@ -14,10 +14,10 @@ The **`progress`** event is fired periodically when a request receives more data
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("progress", (event) => {});
+```js-nolint
+addEventListener("progress", (event) => { })
 
-onprogress = (event) => {};
+onprogress = (event) => { }
 ```
 
 ## Event type
@@ -39,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-## Using the `progress` event
+### Using the `progress` event
 
 You can use the `progress` event to get info about the progress of a lengthy upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 

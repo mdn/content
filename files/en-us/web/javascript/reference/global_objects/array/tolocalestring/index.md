@@ -1,18 +1,27 @@
 ---
 title: Array.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Array")}} instances returns a string representing
 the elements of the array. The elements are converted to strings using their
 `toLocaleString` methods and these strings are separated by a locale-specific
 string (such as a comma ",").
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.toLocaleString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## Syntax
 
@@ -27,7 +36,7 @@ toLocaleString(locales, options)
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-  - : An object with configuration properties. For numbers, see {{jsxref("Number.prototype.toLocaleString()")}}; for dates, see {{jsxref("Date.prototype.toLocaleString()")}}.
+  - : An object with configuration properties. What you can pass here depends on what elements are being converted. For example, for numbers, see {{jsxref("Number.prototype.toLocaleString()")}}.
 
 ### Return value
 
@@ -35,7 +44,10 @@ A string representing the elements of the array.
 
 ## Description
 
-The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ","). Note that the method itself does not consume the two parameters — it only passes them to the `toLocaleString()` of each element. The choice of the separator string depends on the host's current locale, not the `locales` parameter.
+The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with an implementation-defined separator (such as a comma ",").
+
+> [!NOTE]
+> The `locales` or `options` arguments do not control the separator used between array elements; they are simply passed to the `toLocaleString()` method of each element. The actual separator (usually a comma) depends solely on the host's current locale. If you expect localized list formatting, consider using {{jsxref("Intl.ListFormat")}} instead.
 
 If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
 
@@ -47,15 +59,7 @@ The `toLocaleString()` method is [generic](/en-US/docs/Web/JavaScript/Reference/
 
 ### Using locales and options
 
-The elements of the array are converted to strings using their
-`toLocaleString` methods.
-
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
-
-Always display the currency for the strings and numbers in the `prices`
-array:
+The elements of the array are converted to strings using their `toLocaleString` methods. For example, this snippet implicitly calls the {{jsxref("Number.prototype.toLocaleString()")}} method to display the currency for the strings and numbers in the `prices` array:
 
 ```js
 const prices = ["￥7", 500, 8123, 12];
@@ -64,7 +68,21 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥7,￥500,￥8,123,￥12"
 ```
 
-For more examples, see also the [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) and [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) pages.
+### List separators
+
+The list separator is not affected by the `locales` parameter. To configure it, use {{jsxref("Intl.ListFormat")}} instead.
+
+```js
+const nums = [8888, 9999];
+console.log(nums.toLocaleString("zh")); // "8,888,9,999"
+
+const formatter = new Intl.ListFormat("zh", {
+  type: "conjunction",
+  style: "narrow",
+});
+console.log(formatter.format(nums.map((x) => x.toLocaleString("zh"))));
+// "8,888、9,999"
+```
 
 ### Using toLocaleString() on sparse arrays
 
@@ -108,4 +126,4 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}

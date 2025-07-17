@@ -3,11 +3,10 @@ title: asin()
 slug: Web/CSS/asin
 page-type: css-function
 browser-compat: css.types.asin
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`asin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse sine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The **`asin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the inverse sine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 ## Syntax
 
@@ -35,7 +34,7 @@ The inverse sine of an `number` will always return an {{cssxref("&lt;angle&gt;")
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is `0⁻`, the result is `0⁻`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

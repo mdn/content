@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindBuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
 {{domxref("WebGLBuffer")}} to a target.
@@ -20,9 +20,7 @@ bindBuffer(target, buffer)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.ARRAY_BUFFER`
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
@@ -30,7 +28,6 @@ bindBuffer(target, buffer)
       - : Buffer used for element indices.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
     - `gl.COPY_READ_BUFFER`
       - : Buffer for copying from one buffer object to another.
     - `gl.COPY_WRITE_BUFFER`

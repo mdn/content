@@ -36,8 +36,8 @@ None.
 ## Examples
 
 ```js
-let myhead = mytable.createTHead();
-// Now this should be true: myhead === mytable.tHead
+let myHead = myTable.createTHead();
+// Now this should be true: myHead === myTable.tHead
 ```
 
 ## Specifications

@@ -1,10 +1,12 @@
 ---
 title: Firefox 24 for developers
+short-title: Firefox 24
 slug: Mozilla/Firefox/Releases/24
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 24 was released on September 17, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -39,15 +41,15 @@ page-type: firefox-release-notes
 ### Developer Tools
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The Devtools options panel to the left lets you disable/enable JavaScript temporarily.
+- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
 - Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### MathML
 
-- The `dir` attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
-- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#stretchy).
-- The "`updiagonalarrow`" value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
+- The `dir` attribute for controlling directionality of formulas on e.g., {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
+- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Reference/Element/mo#stretchy).
+- The `"updiagonalarrow"` value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
 
 ## Changes for add-on and Mozilla developers
 
@@ -57,7 +59,3 @@ page-type: firefox-release-notes
 ## See also
 
 - [Firefox 24 Aurora Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/24.0a2/auroranotes/)
-
-## Older versions
-
-{{Firefox_for_developers}}

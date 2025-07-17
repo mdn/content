@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.depthMask
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.depthMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets whether writing into the depth
 buffer is enabled or disabled.

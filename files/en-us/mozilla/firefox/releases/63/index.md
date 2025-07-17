@@ -1,10 +1,10 @@
 ---
 title: Firefox 63 for developers
+short-title: Firefox 63
 slug: Mozilla/Firefox/Releases/63
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
 
@@ -36,7 +36,7 @@ This article provides information about the changes in Firefox 63 that will affe
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ([Firefox bug 1444139](https://bugzil.la/1444139)).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ([Firefox bug 1472843](https://bugzil.la/1472843)).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ([Firefox bug 1429298](https://bugzil.la/1429298)).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4) ([Firefox bug 1422225](https://bugzil.la/1422225)).
+- Implemented syntax improvements from the Media Queries Level 4 specification, notably [nested boolean expressions](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#creating_complex_media_queries) and the [range syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) ([Firefox bug 1422225](https://bugzil.la/1422225)).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ([Firefox bug 1464782](https://bugzil.la/1464782)).
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ([Firefox bug 1365045](https://bugzil.la/1365045), [Firefox bug 1475462](https://bugzil.la/1475462)).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ([Firefox bug 1464786](https://bugzil.la/1464786)).
@@ -73,14 +73,13 @@ _No changes._
 #### DOM
 
 - The following portions of the {{domxref("Web_Animations_API", "Web Animations API", "", "1")}} have been enabled by default (see [Firefox bug 1476158](https://bugzil.la/1476158)):
-
   - The {{DOMxRef("Animation")}} properties {{DOMxRef("Animation.ready", "ready")}} and {{DOMxRef("Animation.finished", "finished")}}, specifying the `Animation` object's `ready` and `finished` {{JSxRef("Promise")}}s.
   - The {{DOMxRef("Animation")}} object's {{DOMxRef("Animation.effect", "effect")}} property.
   - The interfaces {{DOMxRef("KeyframeEffect")}} and {{DOMxRef("AnimationEffect")}}.
 
 - The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ([Firefox bug 1469592](https://bugzil.la/1469592)).
 - The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ([Firefox bug 1452569](https://bugzil.la/1452569)).
-- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g. [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
+- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g., [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
 - To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns `"Win32"` even when running on 64-bit Windows ([Firefox bug 1472618](https://bugzil.la/1472618)).
 - Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ([Firefox bug 1419960](https://bugzil.la/1419960)).
 
@@ -99,8 +98,8 @@ _No changes._
 - The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ([Firefox bug 1421091](https://bugzil.la/1421091)).
 - {{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper `TypeError` when a non-finite value is found in the `values` array ([Firefox bug 1472095](https://bugzil.la/1472095)).
 - In addition, `setValueCurveAtTime()` has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ([Firefox bug 1308436](https://bugzil.la/1308436)).
-- The `RTCRTPStreamStats` dictionary has been renamed to {{DOMxRef("RTCRtpStreamStats")}} for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
-- Support for the `RTCRtpStreamStats` dictionary's {{DOMxRef("RTCRtpStreamStats.kind", "kind")}} property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
+- The `RTCRTPStreamStats` dictionary has been renamed to `RTCRtpStreamStats` for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
+- Support for the `RTCRtpStreamStats` dictionary's `kind` property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
 - The `RTCRtpStreamStats` dictionary's `isRemote` property is deprecated and will be removed in Firefox 65. A warning is now output to console when this property is accessed. See [this blog post on the Advancing WebRTC blog](https://blog.mozilla.org/webrtc/getstats-isremote-65/) for details ([Firefox bug 1393306](https://bugzil.la/1393306)).
 
 #### Canvas and WebGL
@@ -109,7 +108,7 @@ _No changes._
 
 #### Removals
 
-- The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
+- The obsolete and non-standard Firefox-only methods `Window.back()` and `Window.forward()` have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
 - The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
 - Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
@@ -123,7 +122,7 @@ _No changes._
 
 ### Security
 
-- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
+- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
 - CSP `script-src` directive's `'report-sample'` expression now recognized when generating violation reports. This directive indicates that a short sample of where the violation occurred should be included in the report. Previously, Firefox always included this sample ([Firefox bug 1473218](https://bugzil.la/1473218)).
 - Firefox now uses NSS 3.39 ([Firefox bug 1470914](https://bugzil.la/1470914)).
 
@@ -135,7 +134,7 @@ _No changes._
 
 #### New features
 
-- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g., is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
 - Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 
@@ -158,7 +157,7 @@ _No changes._
 ### Other
 
 - Corrected the behavior of {{DOMxRef("PerformanceObserver.observe()")}} to do nothing if no valid entry types are found in the specified array of entry types to observe, or if the array is empty or missing. Previously, Firefox was incorrectly throwing a `TypeError` ([Firefox bug 1403027](https://bugzil.la/1403027)).
-- In [OpenSearch](/en-US/docs/Web/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
+- In [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
 
 ## Changes for add-on developers
 
@@ -171,7 +170,6 @@ _No changes._
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} and {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} enable you to get and set the text color of browser action badges ([Firefox bug 1424620](https://bugzil.la/1424620)).
 - The theme `colors` key in `manifest.json` now supports the `ntp_text` property to set the text color in a new tab, and the `ntp_background` property to set the color of a new tab ([Firefox bug 1347204](https://bugzil.la/1347204)).
 - Themes can now define the colors for sidebars, such as the bookmarks sidebar ([Firefox bug 1418602](https://bugzil.la/1418602)). The relevant properties include:
-
   - `sidebar`: The background color for sidebars.
   - `sidebar_text`: The text color for sidebars.
   - `sidebar_highlight`: The background color of a selected item in a sidebar.
@@ -182,7 +180,7 @@ _No changes._
 
 #### Search
 
-- The new {{WebExtAPIRef("search")}} AP[I](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search) enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
+- The new {{WebExtAPIRef("search")}} API enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
 - {{WebExtAPIRef("topSites.get()")}} now takes an `options` parameter enabling you to set various options for the list of sites returned ([Firefox bug 1445836](https://bugzil.la/1445836)).
 
 #### Tabs
@@ -211,7 +209,3 @@ _No changes._
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} adds two new properties, `keaGroupName`, and `signatureSchemeName`. This change was uplifted to Firefox 62 ([Firefox bug 1471959](https://bugzil.la/1471959)).
 - {{WebExtAPIRef("cookies.Cookie")}} now includes a property indicating the SameSite state of the cookie. The {{WebExtAPIRef("cookies.SameSiteStatus")}} enumeration defines SameSite state values ([Firefox bug 1351663](https://bugzil.la/1351663)).
 - Match patterns for URLs now explicitly match the "data" URL scheme ([Firefox bug 1280370](https://bugzil.la/1280370)).
-
-## Older versions
-
-{{Firefox_for_developers}}

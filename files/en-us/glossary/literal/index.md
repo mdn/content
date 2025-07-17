@@ -2,9 +2,8 @@
 title: Literal
 slug: Glossary/Literal
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
 
@@ -36,7 +35,7 @@ The following are examples of string literals:
 
 An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
-The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Toyota`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `carTypes('Honda')`; the third element, the `special` property, uses an existing variable (`sales`).
+The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, `"Toyota"`; the second element, the `getCar` property, is immediately assigned the result of invoking the function `carTypes('Honda')`; the third element, the `special` property, uses an existing variable (`sales`).
 
 ```js
 const sales = "BMW";

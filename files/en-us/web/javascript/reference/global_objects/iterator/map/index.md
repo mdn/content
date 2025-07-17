@@ -1,13 +1,13 @@
 ---
 title: Iterator.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.map
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`map()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that yields elements of the iterator, each transformed by a mapping function.
+The **`map()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields elements of the iterator, each transformed by a mapping function.
 
 ## Syntax
 
@@ -26,11 +26,11 @@ map(callbackFn)
 
 ### Return value
 
-A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers). Each time the iterator helper's `next()` method is called, it gets the next element from the underlying iterator, applies `callbackFn`, and yields the return value. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). Each time the iterator helper's `next()` method is called, it gets the next element from the underlying iterator, applies `callbackFn`, and yields the return value. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
 
 ## Description
 
-The main advantage of iterator helpers over array methods is their ability to work with infinite iterators. With infinite iterators, `map()` allows you to create a new iterator that, when iterated, produces transformed elements.
+The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators. The `map()` method allows you to create a new iterator that, when iterated, produces transformed elements.
 
 ## Examples
 
@@ -98,3 +98,7 @@ for (const n of fibonacci()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.map` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.map`](https://www.npmjs.com/package/es-iterator-helpers)
+- {{jsxref("Iterator")}}
+- {{jsxref("Iterator.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.reduce()")}}

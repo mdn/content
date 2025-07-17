@@ -1,11 +1,11 @@
 ---
 title: FinalizationRegistry.prototype.register()
+short-title: register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.register
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`register()`** method of {{jsxref("FinalizationRegistry")}} instances registers an value with this `FinalizationRegistry` so that if the value is garbage-collected, the registry's callback may get called.
 
@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("TypeError")}}
   - : Thrown in one of the following cases:
     - `target` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) (object as opposed to primitives; functions are objects as well)
-    - `target` is the same as `heldvalue` (`target === heldValue`)
+    - `target` is the same as `heldValue` (`target === heldValue`)
     - `unregisterToken` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)
 
 ## Description

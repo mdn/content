@@ -1,15 +1,29 @@
 ---
 title: Set.prototype.add()
+short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.add
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with a specified value in to this set, if there isn't an element with the same value already in this set
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## Syntax
 

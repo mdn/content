@@ -2,16 +2,14 @@
 title: PageRevealEvent
 slug: Web/API/PageRevealEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.PageRevealEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageRevealEvent`** event object is made available inside handler functions for the {{domxref("Window.pagereveal_event", "pagereveal")}} event.
 
-During a cross-document navigation, it allows you to manipulate a related [view transition](/en-US/docs/Web/API/View_Transitions_API) (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
+During a cross-document navigation, it allows you to manipulate a related [view transition](/en-US/docs/Web/API/View_Transition_API) (providing access to the relevant {{domxref("ViewTransition")}} object) from the document being navigated _to_, if a view transition was triggered by the navigation.
 
 Outside view transitions, this event is also useful for cases such as triggering a startup animation, or reporting a page view. It's equivalent to the first {{domxref("Window.requestAnimationFrame()")}} run after a cross-document navigation, if you were to trigger `requestAnimationFrame()` in the {{htmlelement("head")}} of the document. For example, if you ran the following `reveal()` function in the `<head>`:
 
@@ -28,12 +26,12 @@ window.onpagehide = () => requestAnimationFrame(() => reveal());
 
 ## Constructor
 
-- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}} {{experimental_inline}}
+- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}}
   - : Creates a new `PageRevealEvent` object instance.
 
 ## Instance properties
 
-- {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 
 ## Examples
@@ -90,7 +88,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 
@@ -102,4 +100,4 @@ window.addEventListener("pagereveal", async (e) => {
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

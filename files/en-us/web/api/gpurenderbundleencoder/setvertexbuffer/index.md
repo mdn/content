@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: setVertexBuffer() method"
 short-title: setVertexBuffer()
 slug: Web/API/GPURenderBundleEncoder/setVertexBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.setVertexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setVertexBuffer()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets or unsets the current {{domxref("GPUBuffer")}} for the given slot that will provide vertex data for subsequent drawing commands.

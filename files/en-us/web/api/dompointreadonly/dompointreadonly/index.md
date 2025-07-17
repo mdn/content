@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly()`**
 constructor returns a new {{domxref("DOMPointReadOnly")}} object representing a point

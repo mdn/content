@@ -3,9 +3,8 @@ title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.TabStatus
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Indicates whether the tab has finished loading.
 
@@ -13,11 +12,11 @@ Indicates whether the tab has finished loading.
 
 Values of this type are strings. Possible values are: `"loading"` and `"complete"`.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-TabStatus) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

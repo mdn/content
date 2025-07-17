@@ -1,12 +1,13 @@
 ---
-title: How to create, move, delete, and edit pages
+title: How to create, edit, move, or delete pages
+short-title: Create, edit, move, or delete pages
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-This article describes how to create, move, delete, or edit a page. In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) before proceeding.
+This article describes how to create, move, delete, or edit a page.
+In all these instances, it's a good idea to check our guidelines for [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write) to confirm if any of these actions should be taken and discuss it with the team in one of the MDN Web Docs [communication channels](/en-US/docs/MDN/Community/Communication_channels) before proceeding.
 
 ## Creating pages
 
@@ -55,8 +56,8 @@ yarn content move <from-slug> <to-slug> [locale]
 ```
 
 You just have to specify the slug of the existing document that you'd like
-to move (e.g., `Learn/Accessibility`), as well as the slug of its new
-location (e.g., `Learn/A11y`), optionally followed by the locale of the
+to move (e.g., `Web/HTTP/Guides/Authentication`), as well as the slug of its new
+location (e.g., `Web/HTTP/Guides/Auth`), optionally followed by the locale of the
 existing document (defaults to `en-US`).
 
 If the existing document that you'd like to move has child documents (i.e.,
@@ -64,7 +65,7 @@ it represents a document tree), the `yarn content move` command will move
 the entire tree.
 
 For example, let's say you want to move the entire
-`/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`, you'd perform the following steps:
+`/en-US/Web/HTTP/Guides/Authentication` tree to `/en-US/Web/HTTP/Guides/Auth`, you'd perform the following steps:
 
 1. You'll start a fresh branch to work in.
 
@@ -81,7 +82,7 @@ For example, let's say you want to move the entire
 2. Perform the move (which will delete and modify existing files as well as create new files).
 
    ```bash
-   yarn content move Learn/Accessibility Learn/A11y
+   yarn content move Web/HTTP/Guides/Authentication Web/HTTP/Guides/Auth
    ```
 
 3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
@@ -94,13 +95,14 @@ For example, let's say you want to move the entire
 
    ```bash
    git add .
-   git commit -m "Move Learn/Accessibility to Learn/A11y"
+   git commit -m "Move Web/HTTP/Guides/Authentication to Web/HTTP/Guides/Auth"
    git push -u origin my-move
    ```
 
 5. Create your pull request.
 
-> **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) about it.
+> [!NOTE]
+> The `yarn content move` command adds required redirects in the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs Communication channels](/en-US/docs/MDN/Community/Communication_channels) about it.
 
 ## Deleting pages
 
@@ -117,7 +119,7 @@ yarn content delete <document-slug> [locale]
 > You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 You just have to specify the slug of the existing document that you'd like
-to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
+to delete (e.g., `Web/HTTP/Guides/Authentication`), optionally followed by the locale
 of the existing document (defaults to `en-US`).
 
 If the existing document that you'd like to delete has child documents (i.e., it represents a
@@ -125,7 +127,7 @@ document tree), you must also specify the `-r, --recursive` option, otherwise
 the command will fail.
 
 For example, if you want to delete the
-entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
+entire `/en-US/Web/HTTP/Guides/Authentication` tree, you'd perform the following steps:
 
 1. You'll start a fresh branch to work in.
 
@@ -142,7 +144,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 2. Perform the delete.
 
    ```bash
-   yarn content delete Learn/Accessibility --recursive
+   yarn content delete Web/HTTP/Guides/Authentication --recursive
    ```
 
 3. Add a redirect. The target page can be an external URL or another page on MDN Web Docs.

@@ -3,9 +3,8 @@ title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_settings_overrides
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -24,7 +23,7 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
 
   <tr>
       <th scope="row">Example</th>
-      <td><pre class="brush:json">
+      <td><pre class="brush: json">
 "chrome_settings_overrides" : {
   "homepage": "https://developer.mozilla.org/"
  },
@@ -89,7 +88,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           The search provider has a name and a primary search URL. Alternative
           URLs may be provided, including URLs for more specialized searches
           like image search. In the URL you supply, use
-          "<code>{searchTerms}</code>" to interpolate the search term into the
+          <code>{searchTerms}</code> to interpolate the search term into the
           URL, like:
           <code>https://www.discogs.com/search/?q={searchTerms}</code>. You can
           also provide POST parameters to be sent along with the search.
@@ -157,12 +156,16 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           <dd>String: Address bar keyword for the search engine.</dd>
           <dt><code>prepopulated_id</code> {{optional_inline}}</dt>
           <dd>The ID of a built-in search engine to use.</dd>
+          <dt><code>search_url_get_params</code> {{optional_inline}}</dt>
+          <dd>String: GET parameters to send to <code>search_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>search_url</code> instead.</dd>
           <dt><code>search_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>search_url</code>.</dd>
           <dt><code>suggest_url</code> {{optional_inline}}</dt>
           <dd>
             String: URL used for search suggestions. This must be an HTTPS URL.
           </dd>
+          <dt><code>suggest_url_get_params</code> {{optional_inline}}</dt>
+          <dd>String: GET parameters to send to <code>suggest_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>suggest_url</code> instead.</dd>
           <dt><code>suggest_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>suggest_url</code>.</dd>
         </dl>

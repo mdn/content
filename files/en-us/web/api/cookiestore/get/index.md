@@ -8,7 +8,7 @@ browser-compat: api.CookieStore.get
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves to a single cookie matching the given `name` or `options` object. The method will return the first cookie that matches.
 
 ## Syntax
 
@@ -27,9 +27,7 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `name`
       - : A string with the name of a cookie.
     - `url`
@@ -40,41 +38,29 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`. This object contains the following properties:
+A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`, or `null` if there is no matching cookie.
+
+The object returned for a match contains the following properties:
 
 - `domain`
-
   - : A string containing the domain of the cookie.
 
 - `expires`
-
   - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 
 - `name`
-
   - : A string containing the name of the cookie.
 
 - `partitioned`
-
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
 
 - `path`
-
   - : A string containing the path of the cookie.
 
 - `sameSite`
-
-  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
-
-    - `"strict"`
-      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
-    - `"lax"`
-      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
-    - `"none"`
-      - : Cookies will be sent in all contexts.
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values: [`"strict"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#strict), [`"lax"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#lax), or [`"none"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none).
 
 - `secure`
-
   - : A boolean value indicating whether the cookie is to be used in secure contexts only (`true`) or not (`false`).
 
 - `value`
@@ -87,22 +73,42 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The `options` parameter is an empty object.
-    - The `url` option is present and is not equal with the creation URL, if in main thread.
-    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - The method is called in the main thread, and the `url` option is specified but does not match the URL of the current window.
+    - The method is called in a worker and the `url` option is specified, but does not match the origin of the worker.
     - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
-In this example, we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
+<!-- The examples don't work as live examples in MDN environment (due to unknown errors) -->
+
+### Getting a cookie by name
+
+This example shows how to get a particular cookie by name.
+
+The code first creates a cookie named "cookie1" using {{domxref("CookieStore.set()")}}, logging any errors to the console.
+It then waits on `get()` to retrieve information about that same cookie.
+If the returned promise resolves with an object we log the cookie: otherwise we log that no matching cookie was found.
 
 ```js
-const cookie = await cookieStore.get("cookie1");
+async function cookieTest() {
+  // Set test cookie
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    console.log(`Error setting cookie1: ${error}`);
+  }
 
-if (cookie) {
-  console.log(cookie);
-} else {
-  console.log("Cookie not found");
+  // Get cookie, specifying name
+  const cookie = await cookieStore.get("cookie1");
+
+  if (cookie) {
+    console.log(cookie);
+  } else {
+    console.log("cookie1: Cookie not found");
+  }
 }
+
+cookieTest();
 ```
 
 ## Specifications

@@ -3,9 +3,8 @@ title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 page-type: css-property
 browser-compat: css.properties.mask-border-slice
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image set by {{cssxref("mask-border-source")}} into regions. These regions are used to form the components of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 
@@ -79,7 +78,7 @@ The {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}}, and {{c
 
 ### Basic usage
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the size of the slices taken from the source image, and used to create the border mask.
+`mask-border-slice` serves to define the size of the slices taken from the source image, and is used to create the border mask.
 
 ```css
 mask-border-slice: 30 fill;
@@ -113,4 +112,4 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)

@@ -3,9 +3,8 @@ title: stroke-miterlimit
 slug: Web/CSS/stroke-miterlimit
 page-type: css-property
 browser-compat: css.properties.stroke-miterlimit
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-miterlimit`** [CSS](/en-US/docs/Web/CSS) property defines a limit on the ratio of the miter length to the {{CSSxref("stroke-width") }} when the shape to be used at the corners of an [SVG](/en-US/docs/Web/SVG) element's stroked path is a mitered join. If the limit defined by this property is exceeded, the join is converted from `miter` to `bevel`, thus making the corner appear truncated.
 
@@ -43,7 +42,6 @@ stroke-miterlimit: unset;
 ### Values
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : Any real positive number equal to or greater than `1`; values below that are invalid. The initial value is `4`.
 
 ## Formal definition

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.copyBufferSubData()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) copies part of the data of a
@@ -21,10 +21,8 @@ copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 ### Parameters
 
 - `readTarget`, `writeTarget`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) from whose data store
     should be read or written. Possible values:
-
     - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
       vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.

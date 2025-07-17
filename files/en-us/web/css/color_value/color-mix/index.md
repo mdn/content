@@ -3,11 +3,17 @@ title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
 browser-compat: css.types.color.color-mix
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
+
+Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
+
+- If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
+- If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
+- If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
+- Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
 
 ## Syntax
 
@@ -31,9 +37,7 @@ color-mix(in --swop5c, red, blue)
 Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])`
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
-
     - `<rectangular-color-space>`: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
     - `<polar-color-space>`: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
     - custom-color-space: [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile)
@@ -42,24 +46,22 @@ Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentag
     > When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
 
 - `<color>`
-
   - : A {{CSSXref("&lt;color&gt;")}} value to mix.
 
 - `<percentage>` {{optional_inline}}
-
   - : A {{CSSXref("&lt;percentage&gt;")}} value between `0%` and `100%`, specifying the amount of the corresponding color to mix.
 
     The two color percentages (we'll refer to them as `p1` and `p2`) are normalized as follows:
-
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
     - If `p1` is omitted, then `p1 = 100% - p2`.
     - If `p2` is omitted, then `p2 = 100% - p1`.
     - If `p1 = p2 = 0%`, the function is invalid.
     - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
+      - If `p1 + p2 < 100%`, then an alpha multiplier of `p1 + p2` is applied to the resulting color. This is similar to mixing in [`transparent`](/en-US/docs/Web/CSS/named-color#transparent), with percentage `pt = 100% - p1 - p2`.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -71,7 +73,7 @@ The following live demo mixes two colors, `color-one` and `color-two`, using the
 
 ### Mixing two colors
 
-This example demonstrates mixing two colors, blue `#a71e14` at different percentages and white with no percentage given. The higher the percentage of `#a71e14` is mixed, the more blue and less white the output color is.
+This example demonstrates mixing two colors, red `#a71e14` at different percentages and white with no percentage given. The higher the percentage of `#a71e14` is mixed, the more red and less white the output color is.
 
 #### HTML
 
@@ -88,7 +90,7 @@ This example demonstrates mixing two colors, blue `#a71e14` at different percent
 
 #### CSS
 
-The `color-mix()` function is used to add increasing percentages of blue, up to 100%. The 6th {{htmlelement("li")}} doesn't include a percentage for either color.
+The `color-mix()` function is used to add increasing percentages of red, up to 100%. The 6th {{htmlelement("li")}} doesn't include a percentage for either color.
 
 ```css hidden
 ul {

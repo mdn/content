@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.text-spacing-trim
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`text-spacing-trim`** [CSS](/en-US/docs/Web/CSS) property controls the internal spacing set on Chinese/Japanese/Korean (CJK) punctuation characters between adjacent characters (kerning) and at the start or end of text lines.
 
@@ -31,9 +32,7 @@ text-spacing-trim: unset;
 ### Values
 
 - `<spacing-trim>`
-
   - : Defines the different spacing trim options. Available values are:
-
     - `normal`
       - : Sets CJK full-width opening punctuation characters to be full-width at the start of each line. Sets CJK full-width closing punctuation characters to be full-width at the end of each line, or half-width if they do not fit on the line before justification. [Collapses spacing](#full-width_punctuation_collapsing) between punctuation characters.
     - `space-all`
@@ -41,11 +40,10 @@ text-spacing-trim: unset;
     - `space-first`
       - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be full-width at the start of the first line of the text's block container, and the start of every subsequent line coming after an explicit line break such as a newline character.
     - `trim-start`
-
       - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be half-width at the start of each line.
 
     > [!NOTE]
-    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both,` `trim-all,` and `auto` values. However, these are not currently implemented in any browser.
+    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both`, `trim-all`, and `auto` values. However, these are not currently implemented in any browser.
 
 ## Description
 
@@ -121,7 +119,8 @@ This example compares the effect of four different `text-spacing-trim` propertie
 
 ```css
 main {
-  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
+  font-family:
+    "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", sans-serif;
   display: grid;
   gap: 0.5em;
@@ -174,5 +173,5 @@ p {
 
 ## See also
 
-- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units#root_font-relative_lengths) units
+- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/CSS_text) module

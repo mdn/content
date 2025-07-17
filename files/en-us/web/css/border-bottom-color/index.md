@@ -3,13 +3,51 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 page-type: css-property
 browser-compat: css.properties.border-bottom-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's bottom [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-bottom")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-color")}}
+
+```css interactive-example-choice
+border-bottom-color: red;
+```
+
+```css interactive-example-choice
+border-bottom-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom-color: rgb(170 50 220 / 0.6);
+```
+
+```css interactive-example-choice
+border-bottom-color: hsl(60 90% 50% / 0.8);
+```
+
+```css interactive-example-choice
+border-bottom-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -47,15 +85,15 @@ The `border-bottom-color` property is specified as a single value.
 
 ## Examples
 
-### A simple div with a border
+### A div with a border
 
 #### HTML
 
 ```html
-<div class="mybox">
+<div class="my-box">
   <p>
     This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    <span class="red-text">red</span>.
   </p>
 </div>
 ```
@@ -63,20 +101,20 @@ The `border-bottom-color` property is specified as a single value.
 #### CSS
 
 ```css
-.mybox {
+.my-box {
   border: solid 0.3em gold;
   border-bottom-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('A_div_with_a_border')}}
 
 ## Specifications
 

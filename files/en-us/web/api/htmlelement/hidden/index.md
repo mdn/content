@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.hidden
 
 {{ APIRef("HTML DOM") }}
 
-The {{domxref("HTMLElement")}} property **`hidden`** reflects the value of the element's [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
+The {{domxref("HTMLElement")}} property **`hidden`** reflects the value of the element's [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute.
 
 ## Value
 
@@ -21,7 +21,7 @@ This attribute may have one of three values:
 - `"until-found"`
   - : The element is _hidden until found_, meaning that it is hidden but will be revealed if found through in page search or reached through fragment navigation.
 
-For details on the usage of this attribute, see the page for the [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) HTML attribute that this property reflects.
+For details on the usage of this attribute, see the page for the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) HTML attribute that this property reflects.
 
 ## Examples
 
@@ -106,5 +106,5 @@ document.getElementById("okButton").addEventListener(
 
 ## See also
 
-- [hidden](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
+- [hidden](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute
 - {{cssxref("display")}}

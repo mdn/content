@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: label property"
 short-title: label
 slug: Web/API/GPUCommandEncoder/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUCommandEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -25,18 +23,18 @@ Setting and getting a label via `GPUCommandEncoder.label`:
 
 ```js
 const commandEncoder = device.createCommandEncoder();
-commandEncoder.label = "mycommandencoder";
-console.log(commandEncoder.label); // "mycommandencoder";
+commandEncoder.label = "my_command_encoder";
+console.log(commandEncoder.label); // "my_command_encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createCommandEncoder()")}} call, and then getting it via `GPUCommandEncoder.label`:
 
 ```js
 const commandEncoder = device.createCommandEncoder({
-  label: "mycommandencoder",
+  label: "my_command_encoder",
 });
 
-console.log(commandEncoder.label); // "mycommandencoder";
+console.log(commandEncoder.label); // "my_command_encoder"
 ```
 
 ## Specifications

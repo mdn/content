@@ -10,16 +10,16 @@ browser-compat: api.Element.compositionupdate_event
 
 The **`compositionupdate`** event is fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
 
-For example, this event could be fired while a user enters a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) {{glossary("IME")}}.
+For example, this event could be fired while a user enters a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) {{glossary("Input method editor")}}.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("compositionupdate", (event) => {});
+```js-nolint
+addEventListener("compositionupdate", (event) => { })
 
-oncompositionupdate = (event) => {};
+oncompositionupdate = (event) => { }
 ```
 
 ## Event type

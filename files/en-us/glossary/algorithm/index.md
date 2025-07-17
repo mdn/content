@@ -2,9 +2,8 @@
 title: Algorithm
 slug: Glossary/Algorithm
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **algorithm** is a self-contained series of instructions to perform a function.
 
@@ -12,7 +11,7 @@ In other words, an algorithm is a means of describing a way to solve a problem s
 
 For example:
 
-- A cooking recipe is a simple algorithm for humans.
+- A cooking recipe is an algorithm for humans.
 - A sorting algorithm is often used in computer programming to explain to a machine how to sort data.
 
 Common algorithms are Pathfinding algorithms such as the optimization [Traveling Salesman Problem](https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem), [Tree Traversal algorithms](https://brilliant.org/wiki/traversals/), and so on.

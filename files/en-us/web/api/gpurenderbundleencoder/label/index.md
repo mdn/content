@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: label property"
 short-title: label
 slug: Web/API/GPURenderBundleEncoder/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPURenderBundleEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -31,8 +29,8 @@ const renderBundleEncoder = device.createRenderBundleEncoder({
   colorFormats: [presentationFormat],
 });
 
-renderBundleEncoder.label = "myrenderbundleencoder";
-console.log(renderBundleEncoder.label); // "myrenderbundleencoder"
+renderBundleEncoder.label = "my_render_bundle_encoder";
+console.log(renderBundleEncoder.label); // "my_render_bundle_encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createRenderBundleEncoder()")}} call, and then getting it via `GPURenderBundleEncoder.label`:
@@ -40,10 +38,10 @@ Setting a label via the originating {{domxref("GPUDevice.createRenderBundleEncod
 ```js
 const renderBundleEncoder = device.createRenderBundleEncoder({
   colorFormats: [presentationFormat],
-  label: "myrenderbundleencoder",
+  label: "my_render_bundle_encoder",
 });
 
-console.log(renderBundleEncoder.label); // "myrenderbundleencoder"
+console.log(renderBundleEncoder.label); // "my_render_bundle_encoder"
 ```
 
 ## Specifications

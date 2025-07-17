@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.TaskSignal.prioritychange_event
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) is changed.
 
@@ -14,10 +14,10 @@ The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [pr
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("prioritychange", (event) => {});
+```js-nolint
+addEventListener("prioritychange", (event) => { })
 
-onprioritychange = (event) => {};
+onprioritychange = (event) => { }
 ```
 
 ## Event type
@@ -37,12 +37,19 @@ A {{domxref("TaskPriorityChangeEvent")}}. Inherits from {{domxref("Event")}}.
 The example below shows how to listen for the `prioritychange` event on a {{domxref("TaskSignal")}}.
 
 ```html hidden
-<textarea id="log" style="min-height: 70px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 70px;
+  width: 95%;
+}
 ```
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -61,14 +68,14 @@ if ("scheduler" in this) {
   controller.signal.addEventListener("prioritychange", (event) => {
     const previousPriority = event.previousPriority;
     const newPriority = event.target.priority;
-    mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
+    myLog(`Priority changed from ${previousPriority} to ${newPriority}.`);
   });
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
   scheduler.postTask(
     () => {
-      mylog("Task 1");
+      myLog("Task 1");
     },
     { signal: controller.signal },
   );
@@ -79,7 +86,7 @@ if ("scheduler" in this) {
 ```
 
 > [!NOTE]
-> The code above uses a custom logging function `mylog()` to log to the text area below.
+> The code above uses a custom logging function `myLog()` to log to the text area below.
 > This is hidden as it isn't relevant to the example.
 
 The output below demonstrates shows that the [task's priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) changed from `user-blocking` to `background`.

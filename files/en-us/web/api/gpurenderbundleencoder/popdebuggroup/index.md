@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: popDebugGroup() method"
 short-title: popDebugGroup()
 slug: Web/API/GPURenderBundleEncoder/popDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface ends a render bundle debug group, which is begun with a {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -36,16 +34,16 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
-- The render bundle encoder's debug stack is not empty (i.e. at least one render bundle debug group was previously started with {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The render bundle encoder's debug stack is not empty (i.e., at least one render bundle debug group was previously started with {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
-bundleEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+bundleEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 bundleEncoder.setPipeline(renderPipeline);
 bundleEncoder.setVertexBuffer(0, vertexBuffer);
@@ -53,7 +51,7 @@ bundleEncoder.draw(3);
 
 bundleEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

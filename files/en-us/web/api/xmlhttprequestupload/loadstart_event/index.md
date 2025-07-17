@@ -14,10 +14,10 @@ The **`loadstart`** event is fired when a request has started to load data.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("loadstart", (event) => {});
+```js-nolint
+addEventListener("loadstart", (event) => { })
 
-onloadstart = (event) => {};
+onloadstart = (event) => { }
 ```
 
 ## Event type
@@ -39,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-## Using the `loadstart` event
+### Using the `loadstart` event
 
 You can use the `loadstart` event to detect the beginning of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 

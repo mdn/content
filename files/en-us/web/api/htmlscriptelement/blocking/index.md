@@ -3,12 +3,10 @@ title: "HTMLScriptElement: blocking property"
 short-title: blocking
 slug: Web/API/HTMLScriptElement/blocking
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLScriptElement.blocking
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`blocking`** property of the {{domxref("HTMLScriptElement")}} interface is a string indicating that certain operations should be blocked on the fetching of the script.
 

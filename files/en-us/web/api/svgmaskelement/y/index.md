@@ -1,6 +1,6 @@
 ---
 title: "SVGMaskElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGMaskElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.y
@@ -8,7 +8,7 @@ browser-compat: api.SVGMaskElement.y
 
 {{APIRef("SVG")}}
 
-The read-only **`y`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("y")}} attribute of the {{SVGElement("marker")}}. It represents the y-axis coordinate of the _top-left_ corner of the masking area.
+The read-only **`y`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("y")}} attribute of the {{SVGElement("mask")}}. It represents the y-axis coordinate of the _top-left_ corner of the masking area.
 
 > [!NOTE]
 > Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} and {{domxref("SVGAnimatedLength.animVal", "animVal")}}.

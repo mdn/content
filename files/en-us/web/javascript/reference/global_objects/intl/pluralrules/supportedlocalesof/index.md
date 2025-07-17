@@ -1,15 +1,23 @@
 ---
 title: Intl.PluralRules.supportedLocalesOf()
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.PluralRules.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in plural rules without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.supportedLocalesOf()", "shorter")}}
+
+```js interactive-example
+const locales = ["en-US", "ban", "ar-OM", "de-DE"];
+const options = { localeMatcher: "lookup" };
+
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
+// Expected output: Array ["en-US", "ar-OM", "de-DE"]
+```
 
 ## Syntax
 

@@ -1,17 +1,40 @@
 ---
 title: Promise.prototype.finally()
+short-title: finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.finally
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`finally()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is settled (either fulfilled or rejected). It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## Syntax
 
@@ -97,6 +120,7 @@ fetch(myRequest)
 ## See also
 
 - [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.prototype.finally`](https://www.npmjs.com/package/promise.prototype.finally)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

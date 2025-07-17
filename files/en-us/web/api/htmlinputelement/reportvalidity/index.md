@@ -72,7 +72,7 @@ reportButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Basic usage", "100%", 120)}}
 
-When `false`, if the value is missing, is below 21, is above 65, or is othewise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
+When `false`, if the value is missing, is below 21, is above 65, or is otherwise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
 
 ### Custom error message
 
@@ -91,17 +91,9 @@ We add a "Fix me" button to the HTML from the previous example.
   <p>
     <button type="submit">Submit</button>
     <button type="button" id="report">reportValidity()</button>
+    <button type="button" id="fix">Fix issues</button>
   </p>
-</form>
-```
-
-```html
-<button type="button" id="fix">Fix issues</button>
-```
-
-```html hidden
-   </p>
-<p id="log"></p>
+  <p id="log"></p>
 </form>
 ```
 
@@ -109,7 +101,7 @@ We add a "Fix me" button to the HTML from the previous example.
 
 We expand on the JavaScript from the basic example above, adding a function that used the {{domxref("HTMLInputElement.setCustomValidity()")}} method to provide custom error messages. The `validateAge()` function only sets the error message to an empty string if the input is valid AND the `enableValidation` variable is `true`, with `enableValidation` being `false` until the "fix issues" button has been activated.
 
-```javascript
+```js
 const output = document.querySelector("#log");
 const reportButton = document.querySelector("#report");
 const ageInput = document.querySelector("#age");
@@ -165,6 +157,6 @@ If you activate the "reportValidity()" button before entering an age, the `repor
 - {{domxref("HTMLInputElement.checkValidity()")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

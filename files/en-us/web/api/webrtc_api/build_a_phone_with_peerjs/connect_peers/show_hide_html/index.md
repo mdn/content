@@ -14,11 +14,10 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 
    ```js
    peer.on("open", () => {
-     window.caststatus.textContent = `Your device ID is: ${peer.id}`;
+     document.getElementById("cast-status").textContent =
+       `Your device ID is: ${peer.id}`;
    });
    ```
-
-   Here you're replacing the text in the HTML element with the ID `caststatus`.
 
 2. Try reloading the app in your browser. Instead of `connecting...`, you should see `Your device ID is: <peer ID>`.
 
@@ -31,14 +30,15 @@ Alright, so you've got the microphone permissions set up. The next step is to ma
 
    // Displays the call button and peer ID
    function showCallContent() {
-     window.caststatus.textContent = `Your device ID is: ${peer.id}`;
+     document.getElementById("cast-status").textContent =
+       `Your device ID is: ${peer.id}`;
      callBtn.hidden = false;
      audioContainer.hidden = true;
    }
 
    // Displays the audio controls and correct copy
    function showConnectedContent() {
-     window.caststatus.textContent = "You're connected";
+     document.getElementById("cast-status").textContent = "You're connected";
      callBtn.hidden = true;
      audioContainer.hidden = false;
    }

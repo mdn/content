@@ -41,7 +41,13 @@ The following example tests if the browser supports accelerated and un-accelerat
 versions of several video codecs.
 
 ```js
-const codecs = ["avc1.42001E", "vp8", "vp09.00.10.08", "av01.0.04M.08"];
+const codecs = [
+  "avc1.42001E",
+  "hvc1.1.6.L123.00",
+  "vp8",
+  "vp09.00.10.08",
+  "av01.0.04M.08",
+];
 const accelerations = ["prefer-hardware", "prefer-software"];
 
 const configs = [];

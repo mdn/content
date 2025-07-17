@@ -1,10 +1,10 @@
 ---
 title: Firefox 100 for developers
+short-title: Firefox 100
 slug: Mozilla/Firefox/Releases/100
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 100 that will affect developers. Firefox 100 was released on May 3, 2022.
 
@@ -26,7 +26,7 @@ No notable changes.
 
 #### Removals
 
-- The non-standard {{httpheader("Large-Allocation")}} HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
+- The non-standard `Large-Allocation` HTTP header has been removed ([Firefox bug 1598759](https://bugzil.la/1598759)).
 
 ### APIs
 
@@ -40,18 +40,14 @@ No notable changes.
 ### WebAssembly
 
 - WebAssembly now supports exceptions that can be thrown and caught in either WebAssembly or JavaScript (or some other runtime), crossing between the environment boundaries if not handled.
-  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
+  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
 
 ### WebDriver conformance (Marionette)
 
-- Added support for user prompts (e.g. `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
+- Added support for user prompts (e.g., `alert`) on Android ([Firefox bug 1708105](https://bugzil.la/1708105)).
 
 ## Changes for add-on developers
 
 - The `color_scheme` and `content_color_scheme` properties are added to [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key and available in the {{WebExtAPIRef("theme")}} API. These properties enable a theme to override whether a light or dark color scheme is automatically applied to the chrome or content ([Firefox bug 1708105](https://bugzil.la/1708105)).
 - You can now create a muted tab using {{WebExtAPIRef("tabs.create()")}} with the new `muted` property in the `createProperties` object ([Firefox bug 1372100](https://bugzil.la/1372100)).
 - Support added for {{WebExtAPIRef("runtime.onSuspend")}} and {{WebExtAPIRef("runtime.onSuspendCanceled")}} improving support for event page features ([Firefox bug 1753850](https://bugzil.la/1753850)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -2,9 +2,8 @@
 title: User actions
 slug: Mozilla/Add-ons/WebExtensions/User_actions
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Some WebExtension APIs perform functions that are generally performed as a result of a user action. For example:
 

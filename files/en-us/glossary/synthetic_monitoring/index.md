@@ -2,9 +2,8 @@
 title: Synthetic monitoring
 slug: Glossary/Synthetic_monitoring
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Synthetic monitoring** involves monitoring the performance of a page in a 'laboratory' environment, typically with automation tooling in an environment that is as consistent as possible.
 
@@ -19,4 +18,4 @@ Unlike {{Glossary("Real User Monitoring", "RUM")}}, synthetic monitoring provide
 - Related glossary terms:
   - {{Glossary("Real User Monitoring")}} (RUM)
   - {{Glossary("Beacon")}}
-- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Rum-vs-Synthetic)
+- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)

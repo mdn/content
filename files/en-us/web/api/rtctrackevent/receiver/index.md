@@ -15,7 +15,7 @@ of the {{domxref("RTCTrackEvent")}} interface indicates the
 
 ## Value
 
-The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
+The {{domxref("RTCRtpReceiver")}} which pairs the `receiver` with a
 sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}
 stream for use by the {{domxref("RTCTrackEvent.track", "track")}} associated with the
 `RTCTrackEvent`.

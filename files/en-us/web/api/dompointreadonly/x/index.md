@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.x
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface's
 **`x`** property holds the horizontal coordinate, x, for a

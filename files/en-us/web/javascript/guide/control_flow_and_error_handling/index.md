@@ -2,9 +2,9 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript supports a compact set of statements, specifically
@@ -46,7 +46,8 @@ while (x < 10) {
 
 Here, `{ x++; }` is the block statement.
 
-> **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
+> [!NOTE]
+> [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
 >
 > ```js
 > var x = 1;
@@ -87,9 +88,9 @@ Here, the `condition` can be any expression that evaluates to
 for an explanation of what evaluates to `true` and `false`.)
 
 If `condition` evaluates to `true`,
-`statement_1` is executed. Otherwise,
-`statement_2` is executed. `statement_1` and
-`statement_2` can be any statement, including further nested
+`statement1` is executed. Otherwise,
+`statement2` is executed. `statement1` and
+`statement2` can be any statement, including further nested
 `if` statements.
 
 You can also compound the statements using `else if` to have multiple
@@ -177,12 +178,11 @@ displays an alert and returns `false`.
 function checkData() {
   if (document.form1.threeChar.value.length === 3) {
     return true;
-  } else {
-    alert(
-      `Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`,
-    );
-    return false;
   }
+  alert(
+    `Enter exactly three characters. ${document.form1.threeChar.value} is not valid.`,
+  );
+  return false;
 }
 ```
 
@@ -215,7 +215,6 @@ JavaScript evaluates the above switch statement as follows:
   associated statements.
 - If no matching label is found, the program looks for the optional
   `default` clause:
-
   - If a `default` clause is found, the program transfers control to that
     clause, executing the associated statements.
   - If no `default` clause is found, the program resumes execution at the
@@ -234,11 +233,11 @@ If `break` is omitted, the program continues execution inside the
 ##### Example
 
 In the following example, if `fruitType` evaluates to
-`'Bananas'`, the program matches the value with case `'Bananas'`
+`"Bananas"`, the program matches the value with `case "Bananas"`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
 following `switch`. If `break` were omitted, the statement for
-`case 'Cherries'` would also be executed.
+`case "Cherries"` would also be executed.
 
 ```js
 switch (fruitType) {
@@ -258,7 +257,7 @@ switch (fruitType) {
     console.log("Mangoes are $0.56 a pound.");
     break;
   case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
+    console.log("Papayas are $2.79 a pound.");
     break;
   default:
     console.log(`Sorry, we are out of ${fruitType}.`);
@@ -307,7 +306,7 @@ throw {
 };
 ```
 
-### `try...catch` statement
+### try...catch statement
 
 The `try...catch` statement marks a block of statements to try, and
 specifies one or more responses should an exception be thrown. If an exception is
@@ -333,18 +332,18 @@ function. If the value does not correspond to a month number
 `'InvalidMonthNo'` and the statements in the `catch` block set the
 `monthName` variable to `'unknown'`.
 
-```js-nolint
+```js
 function getMonthName(mo) {
   mo--; // Adjust month number for array index (so that 0 = Jan, 11 = Dec)
+  // prettier-ignore
   const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
   ];
-  if (months[mo]) {
-    return months[mo];
-  } else {
-    throw new Error("InvalidMonthNo"); // throw keyword is used here
+  if (!months[mo]) {
+    throw new Error("Invalid month code"); // throw keyword is used here
   }
+  return months[mo];
 }
 
 try {
@@ -520,9 +519,8 @@ For example:
 function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw new Error("The message");
-  } else {
-    doSomethingToGetAJavaScriptError();
   }
+  doSomethingToGetAJavaScriptError();
 }
 
 try {

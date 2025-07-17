@@ -2,9 +2,8 @@
 title: Function
 slug: Glossary/Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **function** is a code snippet that can be called by other code or by itself, or a {{Glossary("variable")}} that refers to the function. When a function is called, {{Glossary("Argument", "arguments")}} are passed to the function as input, and the function can optionally return a value. A function in {{glossary("JavaScript")}} is also an {{glossary("object")}}.
 
@@ -65,7 +64,7 @@ function loop(x) {
 // Arrow function
 const loop2 = (x) => {
   if (x >= 10) return;
-  loop(x + 1);
+  loop2(x + 1);
 };
 ```
 
@@ -87,9 +86,9 @@ Function expressions, named or anonymous, can be called immediately.
 
 Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
-  console.log('Hello Foo');
+  console.log("Hello Foo");
 }();
 ```
 

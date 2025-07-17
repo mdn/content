@@ -3,12 +3,10 @@ title: "WebGLRenderingContext: unpackColorSpace property"
 short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebGLRenderingContext.unpackColorSpace
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.unpackColorSpace`** property specifies the color space to convert to when importing textures. Along with the default (`srgb`), the `display-p3` color space can be used.
 
@@ -22,7 +20,7 @@ Texture image sources can be the following:
 - [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas)
 - [`VideoFrame`](/en-US/docs/Web/API/VideoFrame)
 
-Textures are imported using the [`WebGLRenderingContext.texImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texImage2D) and [`WebGLRenderingContext.texSubImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D) methods and conversion to the specified `unpackColorSpace` color space happens during import.
+Textures are imported using the [`WebGL2RenderingContext.texImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texImage2D) and [`WebGL2RenderingContext.texSubImage2D()`](/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D) methods and conversion to the specified `unpackColorSpace` color space happens during import.
 
 Note that this doesn't apply to [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement) when the `UNPACK_COLORSPACE_CONVERSION_WEBGL` pixel storage parameter is set to `NONE`.
 

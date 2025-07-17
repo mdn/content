@@ -3,13 +3,57 @@ title: repeat()
 slug: Web/CSS/repeat
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.repeat
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+{{InteractiveExample("CSS Demo: repeat()")}}
 
-{{EmbedInteractiveExample("pages/css/function-repeat.html")}}
+```css interactive-example-choice
+grid-template-columns: repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 20px 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(auto-fill, 40px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 This function can be used in the CSS grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
 
@@ -106,7 +150,6 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `auto-fill`
   - : If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
 - `auto-fit`
-
   - : Behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
 
     A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
@@ -117,6 +160,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
 - `min-content`
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
+
+## Formal syntax
+
+{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
 
 ## Examples
 

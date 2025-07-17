@@ -3,9 +3,8 @@ title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
 page-type: webextension-api
 browser-compat: webextensions.api.browserSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables an extension to modify certain global browser settings. Each property of this API is a {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object, providing the ability to modify a particular setting.
 
@@ -54,10 +53,10 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.zoomFullPage")}}
   - : Controls whether zoom is applied to the entire page or to text only.
 - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
-  - : Controls whether page zoom is applied on a per-site or per-tab basis. If {{WebExtAPIRef("privacy.websites")}}`.resistFingerprinting` is true, this setting has no effect and zoom is applied on a per-tab basis.
+  - : Controls whether page zoom is applied on a per-site or per-tab basis. If [`privacy.websites.resistFingerprinting`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#resistfingerprinting) is true, this setting has no effect and zoom is applied on a per-tab basis.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

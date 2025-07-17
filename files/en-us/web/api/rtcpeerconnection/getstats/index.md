@@ -53,7 +53,7 @@ This method does not throw exceptions; instead, it rejects the returned promise 
 ## Examples
 
 This example creates a periodic function using
-{{domxref("setInterval()")}} that collects
+{{domxref("Window.setInterval", "setInterval()")}} that collects
 statistics for an {{domxref("RTCPeerConnection")}} every second, generating an
 HTML-formatted report and inserting it into a specific element in the DOM.
 

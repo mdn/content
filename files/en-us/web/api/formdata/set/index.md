@@ -44,7 +44,7 @@ formData.set("username", "Chris");
 When the value is a {{domxref("Blob")}} (or a {{domxref("File")}}), you can specify its name with the `filename` parameter:
 
 ```js
-formData.set("userpic", myFileInput.files[0], "chris.jpg");
+formData.set("user-pic", myFileInput.files[0], "chris.jpg");
 ```
 
 If the value is not a string or a `Blob`, `set()` will convert it to a string automatically:

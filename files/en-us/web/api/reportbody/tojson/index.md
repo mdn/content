@@ -3,10 +3,12 @@ title: "ReportBody: toJSON() method"
 short-title: toJSON()
 slug: Web/API/ReportBody/toJSON
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.ReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 

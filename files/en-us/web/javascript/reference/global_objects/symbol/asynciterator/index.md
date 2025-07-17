@@ -1,15 +1,44 @@
 ---
 title: Symbol.asyncIterator
+short-title: asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.asyncIterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.asyncIterator`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.asyncIterator`. The [async iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) looks up this symbol for the method that returns the async iterator for an object. In order for an object to be async iterable, it must have an `[Symbol.asyncIterator]` key.
 
-{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.asyncIterator", "taller")}}
+
+```js interactive-example
+const delayedResponses = {
+  delays: [500, 1300, 3500],
+
+  wait(delay) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, delay);
+    });
+  },
+
+  async *[Symbol.asyncIterator]() {
+    for (const delay of this.delays) {
+      await this.wait(delay);
+      yield `Delayed response for ${delay} milliseconds`;
+    }
+  },
+};
+
+(async () => {
+  for await (const response of delayedResponses) {
+    console.log(response);
+  }
+})();
+
+// Expected output: "Delayed response for 500 milliseconds"
+// Expected output: "Delayed response for 1300 milliseconds"
+// Expected output: "Delayed response for 3500 milliseconds"
+```
 
 ## Value
 

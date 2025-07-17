@@ -63,7 +63,7 @@ console.log(styleMap.get("width").values[1].value); // -20
 
 {{EmbedLiveSample("Examples", 120, 300)}}
 
-The `CSSMathValue.operator` returns '`sum`' because `styleMap.get('width').values[1].value );` is `-20`: adding a negative number.
+The `CSSMathValue.operator` returns `"sum"` because `styleMap.get("width").values[1].value );` is `-20`: adding a negative number.
 
 ## Specifications
 

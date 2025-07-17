@@ -3,9 +3,8 @@ title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
 page-type: javascript-language-feature
 browser-compat: javascript.grammar.template_literals
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 **Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
@@ -60,7 +59,7 @@ Any newline characters inserted in the source are part of the template literal.
 Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -84,7 +83,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -287,7 +286,7 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
-`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e., escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
 const identity = (strings, ...values) =>
@@ -322,11 +321,12 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 - `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
 - `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
-> **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
+> [!NOTE]
+> `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for a simple example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for an example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
 const node = document.getElementById("formula");
@@ -366,7 +366,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

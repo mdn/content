@@ -1,10 +1,10 @@
 ---
 title: Firefox 64 for developers
+short-title: Firefox 64
 slug: Mozilla/Firefox/Releases/64
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 64 that will affect developers. Firefox 64 was released on December 11, 2018.
 
@@ -14,15 +14,13 @@ This article provides information about the changes in Firefox 64 that will affe
 
 - The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ([Firefox bug 1473037](https://bugzil.la/1473037)).
 - [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ([Firefox bug 1248619](https://bugzil.la/1248619)).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
 - The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
-
   - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ([Firefox bug 672733](https://bugzil.la/672733)).
   - You can now step through the [Console expression history](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command-history) with bash-like reverse search ([Firefox bug 1024913](https://bugzil.la/1024913)).
   - [Evaluated code](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) in the Console is now syntax-highlighted in both the input and output ([Firefox bug 1463669](https://bugzil.la/1463669)).
 
 - Stepping in the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) also had some improvements:
-
   - [Stepping out](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) of a function in the Debugger now skips the return value ([Firefox bug 923975](https://bugzil.la/923975)).
 
 #### Removals
@@ -38,13 +36,13 @@ _No changes._
 - [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
 - The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
-- CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g. `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
+- CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g., `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
 - The {{cssxref("text-transform")}} property now accepts the `full-size-kana` value ([Firefox bug 1498148](https://bugzil.la/1498148)).
 - Support added for {{cssxref("appearance", "-webkit-appearance")}} to alleviate associated web compat issues ([Firefox bug 1368555](https://bugzil.la/1368555)).
 - Closely associated with the above update, we've also removed most of the Firefox-specific `-moz-appearance` values ([Firefox bug 1496720](https://bugzil.la/1496720)).
 - {{cssxref("display")}}: `list-item` is now supported on {{htmlelement("legend")}} elements ([Firefox bug 1486602](https://bugzil.la/1486602)).
 - SVG `path()`s, as usable in {{cssxref("offset-path")}}, are now animatable ([Firefox bug 1486094](https://bugzil.la/1486094)).
-- If a selector chain or group includes a `-webkit-`prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
+- If a selector chain or group includes a `-webkit-`-prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
 
 #### Removals
 
@@ -60,15 +58,14 @@ _No changes._
 ### JavaScript
 
 - The TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) proposal has been implemented, to prevent {{jsxref("JSON.stringify")}} from returning ill-formed Unicode strings ([Firefox bug 1469021](https://bugzil.la/1469021)).
-- Proxied functions can now be passed to {{jsxref("Function.prototype.toString")}}`.call()` ([Firefox bug 1440468](https://bugzil.la/1440468)).
-- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
+- Proxied functions can now be used with {{jsxref("Function.prototype.toString")}} ([Firefox bug 1440468](https://bugzil.la/1440468)).
+- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
 
 ### APIs
 
 #### DOM
 
 - A number of changes related to the {{domxref("Fullscreen_API", "Fullscreen API", "", "1")}} have been implemented:
-
   - The API has been unprefixed ([Firefox bug 1269276](https://bugzil.la/1269276)).
   - The {{domxref("Element.requestFullscreen()")}} and {{domxref("Document.exitFullscreen()")}} methods both now return a {{jsxref("Promise")}}, which is resolved when the mode change is complete ([Firefox bug 1188256](https://bugzil.la/1188256) and [Firefox bug 1491212](https://bugzil.la/1491212)).
   - Previously, {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} and {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} events were dispatched to the {{domxref("Document")}} first, then the {{domxref("Element")}}. This has been reversed so that the element gets the event first. This matches the latest specification as well as the behavior of Google Chrome ([Firefox bug 1375319](https://bugzil.la/1375319)).
@@ -79,7 +76,6 @@ _No changes._
 - The legacy `HTMLAllCollection` interface has been updated as per recent [spec updates](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection) ([Firefox bug 1398354](https://bugzil.la/1398354)).
 - {{domxref("Navigator.buildID")}} now returns a fixed timestamp as a privacy measure ([Firefox bug 583181](https://bugzil.la/583181)).
 - The following {{domxref("Document.execCommand()")}} UI feature commands have been disabled by default ([Firefox bug 1490641](https://bugzil.la/1490641):
-
   - `enableObjectResizing`
   - `enableInlineTableEditing`
   - `enableAbsolutePositionEditor`
@@ -104,7 +100,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 
@@ -129,11 +125,10 @@ _No changes._
 
 #### Menus
 
-- A new API, `{{WebExtAPIRef("menus.overrideContext()")}}`, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
-
-  - `{{WebExtAPIRef("menus.overrideContext()")}}` was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
+- A new API, {{WebExtAPIRef("menus.overrideContext()")}}, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
+  - {{WebExtAPIRef("menus.overrideContext()")}} was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
   - The `showDefaults: false` option, which can be used to hide the default context menu options, was implemented in ([Firefox bug 1367160](https://bugzil.la/1367160)).
-  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if `{{WebExtAPIRef("menus.overrideContext()")}}` is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
+  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if {{WebExtAPIRef("menus.overrideContext()")}} is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
 
 - You can now restrict where context menus can appear in an add-on using the new `viewTypes` property in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} ([Firefox bug 1416839](https://bugzil.la/1416839)).
 - {{WebExtAPIRef("menus.update()")}} can now be used to update the icon of an existing menu item ([Firefox bug 1414566](https://bugzil.la/1414566)).
@@ -160,7 +155,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 64 Released](https://hacks.mozilla.org/2018/12/firefox-64-released/)
-
-## Older versions
-
-{{Firefox_for_developers}}

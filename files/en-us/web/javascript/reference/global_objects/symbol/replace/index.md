@@ -1,17 +1,31 @@
 ---
 title: Symbol.replace
+short-title: replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.replace`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.replace`. The {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods look up this symbol on their first argument for the method that replaces substrings matched by the current object.
 
 For more information, see [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), {{jsxref("String.prototype.replace()")}}, and {{jsxref("String.prototype.replaceAll()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
 
 ## Value
 
@@ -22,6 +36,8 @@ The well-known symbol `Symbol.replace`.
 ## Examples
 
 ### Using Symbol.replace
+
+<!-- cSpell:ignore tball -->
 
 ```js
 class CustomReplacer {

@@ -3,9 +3,8 @@ title: symbols()
 slug: Web/CSS/symbols
 page-type: css-function
 browser-compat: css.properties.list-style-type.symbols
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`symbols()`** CSS function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
 
@@ -24,6 +23,10 @@ symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
 - `alphabetic`: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without `0`.
 - `symbolic`: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).
 - `fixed`: The system cycles through the given values once, then falls back to Arabic numerals.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

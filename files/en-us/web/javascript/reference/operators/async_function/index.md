@@ -3,9 +3,8 @@ title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 page-type: javascript-operator
 browser-compat: javascript.operators.async_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`async function`** keywords can be used to define an async function inside an expression.
 
@@ -83,6 +82,23 @@ add(10).then((v) => {
 })(10).then((v) => {
   console.log(v); // prints 60 after 2 seconds.
 });
+```
+
+### Async IIFE
+
+An `async` [IIFE](/en-US/docs/Glossary/IIFE) allows you to use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) and [`for...await`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) in contexts where [top-level await](/en-US/docs/Web/JavaScript/Reference/Operators/await#top_level_await) is not available. Here we use an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to define the IIFE, but `async function` expressions can also be used.
+
+```js
+const getFileStream = async (url) => {
+  // implementation
+};
+
+(async () => {
+  const stream = await getFileStream("https://domain.name/path/file.ext");
+  for await (const chunk of stream) {
+    console.log({ chunk });
+  }
+})();
 ```
 
 ## Specifications

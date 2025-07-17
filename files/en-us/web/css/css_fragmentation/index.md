@@ -3,9 +3,8 @@ title: CSS fragmentation
 slug: Web/CSS/CSS_fragmentation
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-break/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS fragmentation** module defines how content is displayed when it is broken (fragmented) across multiple [pages](/en-US/docs/Web/CSS/CSS_paged_media), regions, or [columns](/en-US/docs/Web/CSS/CSS_multicol_layout).
 

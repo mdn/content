@@ -3,11 +3,10 @@ title: page
 slug: Web/CSS/page
 page-type: css-property
 browser-compat: css.properties.page
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`page`** [CSS](/en-US/docs/Web/CSS) property is used to specify the named page, a specific type of page defined by the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 If there are multiple selectors that are using a named page consecutively then a forced page break using [`break-after`](/en-US/docs/Web/CSS/break-after) may be needed.
 
@@ -48,33 +47,28 @@ page: unset;
 
 ### Named page example
 
-#### HTML
-
-There are two parts to this HTML:
-
-- The print controls
-- The content to be printed
-
+In this example, there are two parts to this HTML; print controls and the content to be printed.
 The print controls allow the user to select how the `section`s in the `article` will be printed.
 
-```html
-<!-- print options -->
+```html live-sample___page-property
+<!-- print options in a fieldset -->
 <fieldset id="printStyle">
   <legend>How would you like to print</legend>
-  <label for="single"
-    ><input type="radio" id="single" name="type" value="single" checked />No
-    Pages</label
-  >
-  <label for="double"
-    ><input type="radio" id="grouped" name="type" value="grouped" />Pages with
-    Grouped Chapters</label
-  >
-  <label for="double"
-    ><input type="radio" id="paged" name="type" value="paged" />Chapters
-    Paged</label
-  >
+  <label for="single">
+    <input type="radio" id="single" name="type" value="single" checked />
+    No Pages
+  </label>
+  <label for="grouped">
+    <input type="radio" id="grouped" name="type" value="grouped" />Pages with
+    Grouped Chapters
+  </label>
+  <label for="paged">
+    <input type="radio" id="paged" name="type" value="paged" />
+    Chapters Paged
+  </label>
   <button id="print">Print</button>
 </fieldset>
+
 <!-- Content to be printed -->
 <article id="print-area" data-print="single">
   <section id="toc">
@@ -140,21 +134,9 @@ The print controls allow the user to select how the `section`s in the `article` 
 </article>
 ```
 
-#### CSS
-
-```css hidden
-fieldset {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-  width: fit-content;
-}
-```
-
 The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-center` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
 
-```css
+```css live-sample___page-property
 @page toc {
   size: a4 portrait;
   @top-center {
@@ -191,18 +173,31 @@ The first part of the CSS sets up the **named** pages, these include the size an
 }
 ```
 
+```css hidden live-sample___page-property
+fieldset {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: fit-content;
+}
+body {
+  font: 1.1em sans-serif;
+}
+```
+
 The next part of the CSS uses [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to apply the print dimensions, orientation, and margins defined in the named `@page` rules defined in the previous CSS section to elements using the `page` property.
+The sections with `class="chapter"` are concurrent and appear as one page.
+The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
 
-The sections with `class="chapter"` are concurrent and appear as one page. The `break-after: page;` is used to split them up, which splits each chapter into a separately printed page.
-
-```css
+```css live-sample___page-property
 @media print {
   fieldset {
     display: none;
   }
   section {
     font-size: 2rem;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
   }
   .chapter {
     border: tomato 2px solid;
@@ -241,14 +236,13 @@ The sections with `class="chapter"` are concurrent and appear as one page. The `
 }
 ```
 
-#### JavaScript
-
 The JavaScript updates the value of the `data-print` attribute, which is the attribute on which the named page is applied, when you select a different printing option:
 
-```js
+```js live-sample___page-property
 const printArea = document.querySelector("#print-area");
 const printButton = document.querySelector("#print");
 const printOption = document.querySelector("#printStyle");
+
 printOption.addEventListener("change", (event) => {
   if (event.target.value === "single") {
     printArea.dataset.print = "single";
@@ -258,16 +252,15 @@ printOption.addEventListener("change", (event) => {
     printArea.dataset.print = "paged";
   }
 });
+
 printButton.addEventListener("click", () => {
   window.print();
 });
 ```
 
-#### Result
+What is printed, and what is shown in the print preview dialog, will change depending on which print style radio button is selected:
 
-What is printed, and what is shown in the print preview dialog, will change depending on which print style radio button is selected.
-
-{{ EmbedLiveSample('Named page example', '100%', 520) }}
+{{EmbedLiveSample('page-property', '100%', '540', , , , , "allow-modals")}}
 
 ## Specifications
 

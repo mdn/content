@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSSkewX.CSSSkewX
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed OM")}}{{AvailableInWorkers}}
 
 The **`CSSSkewX()`** constructor creates a new
 {{domxref("CSSSkewX")}} object which represents the

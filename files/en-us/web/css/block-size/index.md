@@ -3,15 +3,50 @@ title: block-size
 slug: Web/CSS/block-size
 page-type: css-property
 browser-compat: css.properties.block-size
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`block-size`** [CSS](/en-US/docs/Web/CSS) property defines the size of an element's block along the [block axis](/en-US/docs/Glossary/Grid_Axis). If the {{cssxref("writing-mode")}} is horizontal, it corresponds to the {{cssxref("height")}}; if the writing mode is vertical, it corresponds to the {{cssxref("width")}}. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
 
-The **`block-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("width")}} or the {{cssxref("height")}} property, depending on the value of {{cssxref("writing-mode")}}.
+{{InteractiveExample("CSS Demo: block-size")}}
 
-If the writing mode is vertically oriented, the value of `block-size` relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: horizontal-tb;
+```
 
-{{EmbedInteractiveExample("pages/css/block-size.html")}}
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the block-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 

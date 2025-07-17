@@ -2,9 +2,8 @@
 title: Resizing background images with background-size
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **{{cssxref("background-size")}}** [CSS](/en-US/docs/Web/CSS) property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
 
@@ -135,4 +134,4 @@ The `cover` value specifies that the background image should be sized so that it
 
 - {{cssxref("background-size")}}
 - {{cssxref("background")}}
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) guide

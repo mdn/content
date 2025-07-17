@@ -1,10 +1,10 @@
 ---
 title: Firefox 42 for developers
+short-title: Firefox 42
 slug: Mozilla/Firefox/Releases/42
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -30,7 +30,7 @@ Highlights:
 
 ### HTML
 
-- Experimental support for the [`referrer`](/en-US/docs/Web/HTML/Element/input#referrer) attribute of the {{HTMLElement("img")}} ([Firefox bug 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([Firefox bug 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} and {{HTMLElement("area")}} ([Firefox bug 1174913](https://bugzil.la/1174913)) has been added. There is no effect by default, the `network.http.enablePerElementReferrer` being `false` by default.
+- Experimental support for the `referrer` attribute of the {{HTMLElement("img")}} ([Firefox bug 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([Firefox bug 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} and {{HTMLElement("area")}} ([Firefox bug 1174913](https://bugzil.la/1174913)) has been added. There is no effect by default, the `network.http.enablePerElementReferrer` being `false` by default.
 
 ### JavaScript
 
@@ -42,16 +42,15 @@ Highlights:
 
 #### DOM & HTML DOM
 
-- Images with an [`id`](/en-US/docs/Web/HTML/Element/img#id) are no more listed as property of the {{domxref("Window")}} interface: `<img id="login">` isn't accessible as `window.login` anymore. This behavior was introduced in Firefox 26 and has been removed to match a later change in the spec. ([Firefox bug 959992](https://bugzil.la/959992))
+- Images with an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) are no more listed as property of the {{domxref("Window")}} interface: `<img id="login">` isn't accessible as `window.login` anymore. This behavior was introduced in Firefox 26 and has been removed to match a later change in the spec. ([Firefox bug 959992](https://bugzil.la/959992))
 - {{domxref('MouseEvent.offsetX')}} and {{domxref('MouseEvent.offsetY')}} have been added ([Firefox bug 69787](https://bugzil.la/69787)).
 - The {{domxref("HTMLInputElement")}} interface has been experimentally extended to handle the upload of directories ([Firefox bug 1164310](https://bugzil.la/1164310)). These four members can be exposed by setting the `dom.input.dirpicker` preference to `true`:
+  - `HTMLInputElement.directory`
+  - `HTMLInputElement.isFilesAndDirectoriesSupported`
+  - `HTMLInputElement.getFilesAndDirectories()`
+  - `HTMLInputElement.chooseDirectory()`
 
-  - {{domxref("HTMLInputElement.directory")}}
-  - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
-  - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
-  - {{domxref("HTMLInputElement.chooseDirectory()")}}
-
-- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and {{domxref("Directory.getContents")}} can be exposed by setting the `dom.input.dirpicker` preference to `true`.
+- The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and `Directory.getContents` can be exposed by setting the `dom.input.dirpicker` preference to `true`.
 - The `HTMLMediaElement.mozSrcObject` has been renamed in {{domxref('HTMLMediaElement.srcObject')}} ([Firefox bug 1175523](https://bugzil.la/1175523)).
 
 #### Service Workers
@@ -91,7 +90,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/API/Web_comp
 
 #### New APIs
 
-- The {{domxref("ImageBitmap")}} interface and the {{domxref("createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
+- The {{domxref("ImageBitmap")}} interface, the {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
 
 #### Miscellaneous
 
@@ -119,7 +118,7 @@ _No change._
 
 ## Networking
 
-- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
+- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
 
 ## Security
 
@@ -149,7 +148,3 @@ _No change._
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

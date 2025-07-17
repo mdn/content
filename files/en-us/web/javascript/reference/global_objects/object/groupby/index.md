@@ -1,11 +1,11 @@
 ---
 title: Object.groupBy()
+short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.groupBy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > In some versions of some browsers, this method was implemented as the method `Array.prototype.group()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
@@ -14,7 +14,23 @@ The **`Object.groupBy()`** static method groups the elements of a given iterable
 
 This method should be used when group names can be represented by strings. If you need to group elements using a key that is some arbitrary value, use {{jsxref("Map.groupBy()")}} instead.
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Syntax
 
@@ -39,7 +55,7 @@ A [`null`-prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ## Description
 
-`Object.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the object returned by `Map.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
+`Object.groupBy()` calls a provided `callbackFn` function once for each element in an iterable. The callback function should return a string or symbol (values that are neither type are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)) indicating the group of the associated element. The values returned by `callbackFn` are used as keys for the object returned by `Object.groupBy()`. Each key has an associated array containing all the elements for which the callback returned the same value.
 
 The elements in the returned object and the original iterable are the same (not {{Glossary("deep copy", "deep copies")}}). Changing the internal structure of the elements will be reflected in both the original iterable and the returned object.
 
@@ -81,7 +97,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-The arrow function just returns the `type` of each array element each time it is called. Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
+The arrow function just returns the `type` of each array element each time it is called. Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
 This is a very succinct way to access the relevant values of elements within a function.
 
 We can also create groups inferred from values in one or more properties of the elements. Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
@@ -119,6 +135,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## See also
 
 - [Polyfill of `Object.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [es-shims polyfill of `Object.groupBy`](https://www.npmjs.com/package/object.groupby)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}

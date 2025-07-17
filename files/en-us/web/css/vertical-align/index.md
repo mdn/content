@@ -3,15 +3,56 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 page-type: css-property
 browser-compat: css.properties.vertical-align
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
 
-The vertical-align property can be used in two contexts:
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
+
+The `vertical-align` property can be used in two contexts:
 
 - To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
 - To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
@@ -55,7 +96,7 @@ The `vertical-align` property is specified as one of the values listed below.
 These values vertically align the element relative to its parent element:
 
 - `baseline`
-  - : Aligns the baseline of the element with the baseline of its parent. The baseline of some [replaced elements](/en-US/docs/Web/CSS/Replaced_element), like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.
+  - : Aligns the baseline of the element with the baseline of its parent. The baseline of some {{ glossary("replaced elements")}}, like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.
 - `sub`
   - : Aligns the baseline of the element with the subscript-baseline of its parent.
 - `super`

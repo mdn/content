@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.MediaCapabilities
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{DefaultAPISidebar("Media Capabilities API")}}
 
 The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
 
@@ -38,9 +38,9 @@ Taking video as an example, to obtain information about video decoding abilities
 
 The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter a media decoding configuration.
 
-In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
+In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g., a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
-- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
+- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
 - The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the {{glossary("aspect ratio")}}.
 - The `bitrate` is the number of bits used to encode one second of video.
 - The `framerate` is the number of frames which are played per second of time when playing the video.
@@ -73,7 +73,7 @@ const audioConfiguration = {
 ```
 
 Had we been testing encoding capabilities, we would have created a slightly different configuration.
-In this case the type of media being tested is either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
+In this case the type of media being tested is either `record` (for recording media, i.e., a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
 
 ### Querying the browser about decoding abilities
 
@@ -190,7 +190,7 @@ li {
 
 ```js
 let mc = {
-  videoConfiguration: new Object(),
+  videoConfiguration: {},
 
   tryIt() {
     mc.createConfiguration();

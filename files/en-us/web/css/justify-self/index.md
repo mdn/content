@@ -3,13 +3,54 @@ title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}
+{{InteractiveExample("CSS Demo: justify-self")}}
+
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 The effect of this property is dependent of the layout mode we are in:
 
@@ -61,7 +102,6 @@ This property can take one of three different forms:
 - Basic keywords: one of the keyword values `normal`, `auto`, or `stretch`.
 - Baseline alignment: the `baseline` keyword, plus optionally one of `first` or `last`.
 - Positional alignment:
-
   - one of: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left`, or `right`.
   - Plus optionally `safe` or `unsafe`.
 
@@ -70,14 +110,12 @@ This property can take one of three different forms:
 - `auto`
   - : The value used is the value of the `justify-items` property of the parents box, unless the box has no parent, or is absolutely positioned, in these cases, `auto` represents `normal`.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In block-level layouts, the keyword is a synonym of `start`.
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.
     - In flexbox layouts, this keyword has no meaning as this property is _ignored._
-    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic size where it behaves like `start`.
 
 - `start`
   - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
@@ -119,9 +157,9 @@ This property can take one of three different forms:
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
+In the following example we have a 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
 
 The second, third, and fourth grid items are then given different values of `justify-self`, to show how these override the `justify-items` value. These values cause the grid items to span only as wide as their content width, and align in different positions across their cells.
 
@@ -183,7 +221,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 200)}}
 
 ## Specifications
 
@@ -195,6 +233,8 @@ span {
 
 ## See also
 
-- {{CSSxRef("justify-items")}}
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- {{CSSxRef("justify-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("place-self")}}

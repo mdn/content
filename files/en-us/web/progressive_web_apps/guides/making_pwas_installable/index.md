@@ -2,9 +2,8 @@
 title: Making PWAs installable
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 One of the defining aspects of a PWA is that it can be promoted by the browser for installation on the device. Once installed, a PWA appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
@@ -63,13 +62,13 @@ The manifest contains a single JSON object containing a collection of members, e
 
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
-- [`name`](/en-US/docs/Web/Manifest/name) or [`short_name`](/en-US/docs/Web/Manifest/short_name)
-- [`icons`](/en-US/docs/Web/Manifest/icons) must contain a 192px and a 512px icon
-- [`start_url`](/en-US/docs/Web/Manifest/start_url)
-- [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
-- [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
+- [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) or [`short_name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/short_name)
+- [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) must contain a 192px and a 512px icon
+- [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
+- [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) and/or [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override)
+- [`prefer_related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) must be `false` or not present
 
-For a full description of every member, see the [Web app manifest](/en-US/docs/Web/Manifest) reference documentation.
+For a full description of every member, see the [Web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) reference documentation.
 
 ### HTTPS, localhost, or loopback are required
 
@@ -84,8 +83,8 @@ Users expect to find apps in the app store for their platform, like the Google P
 If your app meets the installability prerequisites, you can package it and distribute it through app stores. The process is specific to each app store:
 
 - [How to publish a PWA to the Google Play Store](https://chromeos.dev/en/publish/pwa-in-play)
-- [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
-- [How to publish a PWA to the Meta Quest Store](https://developer.oculus.com/documentation/web/pwa-submit-app/)
+- [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/microsoft-store)
+- [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/resources/publish-submit/)
 
 The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to simplify the process of packaging and publishing a PWA for various app stores. It supports the Google Play Store, Microsoft Store, Meta Quest Store, and iOS App Store.
 
@@ -103,7 +102,7 @@ The UI for installing a PWA from the web varies from one browser to another, and
 
 When the user selects the icon, the browser displays a prompt asking if they want to install the PWA, and if they accept, the PWA is installed.
 
-The prompt displays the name and icon for the PWA, taken from the [`name`](/en-US/docs/Web/Manifest/name) and [`icons`](/en-US/docs/Web/Manifest/icons) manifest members.
+The prompt displays the name and icon for the PWA, taken from the [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) and [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest members.
 
 ### Browser support
 
@@ -112,7 +111,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 On desktop:
 
 - Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
-- Firefox and Safari do not support installing PWAs using a manifest file.
+- Safari supports Add to Dock (_File_ > _Add to Dock..._) on macOS Sonoma (Safari 17) and later for any web app with or without a manifest file.
+- Firefox does not support installing PWAs using a manifest file.
 
 On mobile:
 
@@ -140,7 +140,7 @@ This is not supported on iOS.
 
 ### Customizing the installation prompt
 
-By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Manifest/description) and [`screenshots`](/en-US/docs/Web/Manifest/screenshots) manifest members, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
+By default, the install prompt contains the name and icon for the PWA. If you provide values for the [`description`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/description) and [`screenshots`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/screenshots) manifest members, then, on Android only, these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
 
 The screenshot below shows what the install prompt for the [PWAmp demo](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) looks like on Google Chrome, running on Android:
 
@@ -150,9 +150,9 @@ The screenshot below shows what the install prompt for the [PWAmp demo](https://
 
 Once the PWA is installed, its icon is shown on the device alongside any other apps that the user has installed, and clicking the icon launches the app.
 
-You can use the [`display`](/en-US/docs/Web/Manifest/display) manifest member to control the _display mode_: that is, how the PWA appears when it is launched. In particular:
+You can use the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) manifest member to control the _display mode_: that is, how the PWA appears when it is launched. In particular:
 
 - `"standalone"` indicates that the PWA should look and feel like a platform-specific application, with no browser UI elements
 - `"browser"` indicates that the PWA should be opened as a new browser tab or window, just like a normal website.
 
-If the browser does not support a given display mode, `display` will fall back to a supported display mode according to a predefined sequence. The [`display_override`](/en-US/docs/Web/Manifest/display_override) enables you to redefine the fallback sequence.
+If the browser does not support a given display mode, `display` will fall back to a supported display mode according to a predefined sequence. The [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) enables you to redefine the fallback sequence.

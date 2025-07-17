@@ -3,12 +3,10 @@ title: "GPUTexture: usage property"
 short-title: usage
 slug: Web/API/GPUTexture/usage
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.usage
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`usage`** read-only property of the
 {{domxref("GPUTexture")}} interface is the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.
@@ -30,7 +28,7 @@ The bitwise flags representing the original usages set when the `GPUTexture` was
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

@@ -3,9 +3,8 @@ title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstall
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Uninstalls an add-on, given its ID.
 
@@ -32,34 +31,36 @@ let uninstalling = browser.management.uninstall(
 <!---->
 
 - If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
-- If `id` is a the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
+- If `id` is the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled the uninstallation.
+
+## Examples
+
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation or if the operation succeeded.
+
+```js
+let id = "addon-id";
+
+function onCanceled(error) {
+  console.log(`Canceled: ${error}`);
+}
+
+function onUninstalled() {
+  console.log("Uninstalled");
+}
+
+let uninstalling = browser.management.uninstall(id);
+uninstalling.then(onUninstalled, onCanceled);
+```
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-## Examples
-
-Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
-
-Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
-
-```js
-let id = "my-addon-id";
-
-function onCanceled(error) {
-  console.log(`Uninstall canceled: ${error}`);
-}
-
-let uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);
-```
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

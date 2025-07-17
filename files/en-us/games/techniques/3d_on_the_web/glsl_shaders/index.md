@@ -1,10 +1,9 @@
 ---
-title: GLSL Shaders
+title: GLSL shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
 
@@ -50,14 +49,14 @@ Here's the HTML structure we will use.
     <meta charset="utf-8" />
     <title>MDN Games: Shaders demo</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-        font-size: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
     <script src="three.min.js"></script>

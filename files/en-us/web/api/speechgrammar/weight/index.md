@@ -4,11 +4,12 @@ short-title: weight
 slug: Web/API/SpeechGrammar/weight
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechGrammar.weight
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
 The optional **`weight`** property of the
 {{domxref("SpeechGrammar")}} interface sets and returns the weight of the

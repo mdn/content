@@ -3,13 +3,45 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
 browser-compat: css.properties.mix-blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
 
-{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+
+```css interactive-example-choice
+mix-blend-mode: normal;
+```
+
+```css interactive-example-choice
+mix-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+mix-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+mix-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: sandybrown;
+}
+```
 
 ## Syntax
 
@@ -613,7 +645,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;

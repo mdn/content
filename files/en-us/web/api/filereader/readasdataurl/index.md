@@ -12,7 +12,7 @@ The **`readAsDataURL()`** method of the {{domxref("FileReader")}} interface is u
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} property becomes `DONE`, and the
 {{domxref("FileReader/loadend_event", "loadend")}} event is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/URI/Schemes/data) representing the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/URI/Reference/Schemes/data) representing the
 file's data as a base64 encoded string.
 
 > [!NOTE]
@@ -43,16 +43,20 @@ None ({{jsxref("undefined")}}).
 #### HTML
 
 ```html
-<input type="file" onchange="previewFile()" /><br />
+<input type="file" /><br />
 <img src="" height="200" alt="Image preview" />
 ```
 
 #### JavaScript
 
 ```js
+const preview = document.querySelector("img");
+const fileInput = document.querySelector("input[type=file]");
+
+fileInput.addEventListener("change", previewFile);
+
 function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
+  const file = fileInput.files[0];
   const reader = new FileReader();
 
   reader.addEventListener(
@@ -92,7 +96,7 @@ function previewFiles() {
 
   function readAndPreview(file) {
     // Make sure `file.name` matches our extensions criteria
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+    if (/\.(?:jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
       reader.addEventListener(

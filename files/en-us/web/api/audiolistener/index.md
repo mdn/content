@@ -45,7 +45,7 @@ It is important to note that there is only one listener per context and that it 
   - : Sets the position of the listener.
 
 > [!NOTE]
-> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox (see [Firefox bug 1283029](https://bugzilla.mozilla.org/show_bug.cgi?id=1283029)).
+> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox (see [Firefox bug 1283029](https://bugzil.la/1283029)).
 
 ## Deprecated features
 

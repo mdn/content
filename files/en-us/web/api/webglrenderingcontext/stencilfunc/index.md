@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilFunc
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and back function
 and reference value for stencil testing.
@@ -23,10 +23,8 @@ stencilFunc(func, ref, mask)
 ### Parameters
 
 - `func`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
     `gl.ALWAYS`. The possible values are:
-
     - `gl.NEVER`: Never pass.
     - `gl.LESS`: Pass if
       `(ref & mask) < (stencil & mask)`.

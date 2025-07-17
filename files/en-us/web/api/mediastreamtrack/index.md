@@ -20,7 +20,6 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : A string that may be used by the web application to provide a hint as to what type of content the track contains to guide how it should be treated by API consumers. Allowable values depend on the value of the {{domxref("MediaStreamTrack.kind")}} property.
 - {{domxref("MediaStreamTrack.enabled")}}
-
   - : A Boolean whose value of `true` if the track is enabled, that is allowed to render the media source stream; or `false` if it is disabled, that is not rendering the media source stream but silence and blackness. If the track has been disconnected, this value can be changed but has no more effect.
 
     > [!NOTE]
@@ -33,16 +32,13 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.label")}} {{ReadOnlyInline}}
   - : Returns a string containing a user agent-assigned label that identifies the track source, as in `"internal microphone"`. The string may be left empty and is empty as long as no source has been connected. When the track is disassociated from its source, the label is not changed.
 - {{domxref("MediaStreamTrack.muted")}} {{ReadOnlyInline}}
-
   - : Returns a Boolean value indicating whether the track is unable to provide media data due to a technical issue.
 
     > [!NOTE]
     > You can implement standard "mute" functionality by setting `enabled` to `false`, and unmute the media by setting it back to `true` again.
 
 - {{domxref("MediaStreamTrack.readyState")}} {{ReadOnlyInline}}
-
   - : Returns an enumerated string giving the status of the track. This will be one of the following values:
-
     - `"live"` which indicates that an input is connected and does its best-effort in providing real-time data. In that case, the output of data can be switched on or off using the {{domxref("MediaStreamTrack.enabled", "enabled")}} attribute.
     - `"ended"` which indicates that the input is not giving any more data and will never provide new data.
 
@@ -53,7 +49,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.clone()")}}
   - : Returns a duplicate of the `MediaStreamTrack`.
 - {{domxref("MediaStreamTrack.getCapabilities()")}}
-  - : Returns the a list of constrainable properties available for the `MediaStreamTrack`.
+  - : Returns an object detailing the accepted values or value range for each constrainable property of the associated `MediaStreamTrack`.
 - {{domxref("MediaStreamTrack.getConstraints()")}}
   - : Returns a {{domxref('MediaTrackConstraints')}} object containing the currently set constraints for the track; the returned value matches the constraints last set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}.
 - {{domxref("MediaStreamTrack.getSettings()")}}

@@ -12,7 +12,7 @@ The Web Animations API fills the gap between declarative CSS animations and tran
 
 ## History
 
-Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the [CSS Animations](https://drafts.csswg.org/css-animations/) and [CSS Transitions](https://drafts.csswg.org/css-transitions/) specs.
+Over a decade ago, [Synchronized Multimedia Integration Language, or SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL) (pronounced "smile"), brought animation to SVG. Back then it was the only animation engine browsers had to worry about. While four out of five browsers supported SMIL, it only animated SVG elements, could not be used from CSS, and was very complex — often leading to inconsistent implementations. Ten years later, the Safari team introduced the [CSS Animations](https://drafts.csswg.org/css-animations/) and [CSS Transitions](https://drafts.csswg.org/css-transitions/) specs.
 
 The Internet Explorer team requested an animations API to consolidate and normalize animation functionality across all browsers, and thus efforts began in earnest among Mozilla Firefox and Google Chrome developers to create the one animation spec to rule them all: the Web Animations API. Now we've got the WAAPI for future animation specifications to piggyback on, allowing them to remain consistent and play well together. It also provides a point of reference all browsers can adhere to with the currently available specs.
 
@@ -52,7 +52,7 @@ Timeline objects provide the useful property [`currentTime`](/en-US/docs/Web/API
 
 If Animation objects are DVD players, we can think of Animation Effects, or Keyframe Effects, as DVDs. Keyframe Effects are a bundle of information including at the bare minimum a set of keys and the duration they need to be animated over. The Animation Object takes this information and, using the Timeline Object, assembles a playable animation we can view and reference.
 
-We currently have only one animation effect type available: [`KeyframeEffect`](/en-US/docs/Web/API/KeyframeEffect). Potentially we could have all kinds of Animation Effects in the future—e.g. effects for grouping and sequencing, not unlike features we had in Flash. In fact, Group Effects and Sequence Effects have already been outlined in the currently-in-progress level 2 spec of the Web Animations API.
+We currently have only one animation effect type available: [`KeyframeEffect`](/en-US/docs/Web/API/KeyframeEffect). Potentially we could have all kinds of Animation Effects in the future—e.g., effects for grouping and sequencing, not unlike features we had in Flash. In fact, Group Effects and Sequence Effects have already been outlined in the currently-in-progress level 2 spec of the Web Animations API.
 
 ### Assembling the Animation from disparate pieces
 

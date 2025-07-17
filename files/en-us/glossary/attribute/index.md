@@ -2,9 +2,8 @@
 title: Attribute
 slug: Glossary/Attribute
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossary("element")}}, changing its behavior or providing metadata.
 
@@ -15,35 +14,18 @@ A number of HTML attributes are {{Glossary("Boolean/HTML", "boolean attributes")
 ## Reflection of an attribute
 
 Attributes may be _reflected_ into a particular property of the specific interface.
-It means that the value of the attribute can be read by accessing the property,
-and can be modified by setting the property to a different value.
 
-For example, the `placeholder` below is reflected into {{domxref("HTMLInputElement.placeholder")}}.
+This means that the value of the attribute can be read or written directly in JavaScript through a property on the corresponding interface, and vice versa.
+The reflected properties offer a more natural programming approach than getting and setting attributes using the {{domxref("Element.getAttribute()","getAttribute()")}} and {{domxref("Element.setAttribute()","setAttribute()")}} methods of the {{domxref("Element")}} interface.
 
-Considering the following HTML:
-
-```html
-<input placeholder="Original placeholder" />
-```
-
-We can check the reflection between {{domxref("HTMLInputElement.placeholder")}} and the attribute using:
-
-```js
-const input = document.querySelector("input");
-const attr = input.getAttributeNode("placeholder");
-console.log(attr.value);
-console.log(input.placeholder); // Prints the same value as `attr.value`
-
-// Changing placeholder value will also change the value of the reflected attribute.
-input.placeholder = "Modified placeholder";
-console.log(attr.value); // Prints `Modified placeholder`
-```
+For more information see [Attribute reflection](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes).
 
 ## See also
 
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
-- Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
+- [Attribute reflection](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes)
+- Information about HTML's [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
+- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml/#sec-starttags)
 - Related glossary terms:
   - {{Glossary("Element")}}
   - {{Glossary("Tag")}}

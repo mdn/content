@@ -2,132 +2,187 @@
 title: 2D collision detection
 slug: Games/Techniques/2D_collision_detection
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
+Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g., Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
 
-Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g. Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
+## Engine code
 
-## Axis-Aligned Bounding Box
+The demos in this page don't rely on any external library, so we implement all the orchestration ourselves, which includes rendering, handling user input, and invoking behaviors of each entity. The code is shown below (it won't be repeated for each example):
 
-One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.
-
-```html hidden
-<div id="cr-stage"></div>
-<p>
-  Move the rectangle with arrow keys. Green means collision, blue means no
-  collision.
-</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+```html live-sample___box_collision_ex live-sample___circle_collision_ex
+<div id="container"></div>
 ```
 
-```js
-Crafty.init(200, 200);
+```css live-sample___box_collision_ex live-sample___circle_collision_ex
+.entity {
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
 
-const dim1 = { x: 5, y: 5, w: 50, h: 50 };
-const dim2 = { x: 20, y: 10, w: 60, h: 40 };
+.movable {
+  left: 50px;
+  top: 50px;
+  background-color: red;
+}
 
-const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
-
-const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .color("blue");
-
-rect2.bind("EnterFrame", function () {
-  if (
-    rect1.x < rect2.x + rect2.w &&
-    rect1.x + rect1.w > rect2.x &&
-    rect1.y < rect2.y + rect2.h &&
-    rect1.y + rect1.h > rect2.y
-  ) {
-    // Collision detected!
-    this.color("green");
-  } else {
-    // No collision
-    this.color("blue");
-  }
-});
-```
-
-{{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
-
-> **Note:** [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
-
-## Circle Collision
-
-Another simple shape for collision detection is between two circles. This algorithm works by taking the center points of the two circles and ensuring the distance between the center points are less than the two radii added together.
-
-```html hidden
-<div id="cr-stage"></div>
-<p>
-  Move the circle with arrow keys. Green means collision, blue means no
-  collision.
-</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
-```
-
-```css hidden
-#cr-stage {
-  position: static !important;
-  height: 200px !important;
+.collision-state {
+  background-color: green !important;
 }
 ```
 
-```js
-Crafty.init(200, 200);
-
-const dim1 = { x: 5, y: 5 };
-const dim2 = { x: 20, y: 20 };
-
-Crafty.c("Circle", {
-  circle(radius, color) {
-    this.radius = radius;
-    this.w = this.h = radius * 2;
-    this.color = color || "#000000";
-
-    this.bind("Move", Crafty.DrawManager.drawAll);
-    return this;
-  },
-
-  draw() {
-    const ctx = Crafty.canvas.context;
-    ctx.save();
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(
-      this.x + this.radius,
-      this.y + this.radius,
-      this.radius,
-      0,
-      Math.PI * 2,
+```js live-sample___box_collision_ex live-sample___circle_collision_ex
+const collider = {
+  moveableEntity: null,
+  staticEntities: [],
+  checkCollision() {
+    // Important: the isCollidingWith method is what we are implementing
+    const isColliding = this.staticEntities.some((staticEntity) =>
+      this.moveableEntity.isCollidingWith(staticEntity),
     );
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
+    this.moveableEntity.setCollisionState(isColliding);
   },
-});
+};
 
-const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
+const container = document.getElementById("container");
 
-const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
-  .fourway(2)
-  .attr(dim2)
-  .circle(20, "blue");
+class BaseEntity {
+  ref;
+  position;
+  constructor(position) {
+    this.position = position;
+    this.ref = document.createElement("div");
+    this.ref.classList.add("entity");
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+    container.appendChild(this.ref);
+  }
+  shiftPosition(dx, dy) {
+    this.position.x += dx;
+    this.position.y += dy;
+    this.redraw();
+  }
+  redraw() {
+    this.ref.style.left = `${this.position.x}px`;
+    this.ref.style.top = `${this.position.y}px`;
+  }
+  setCollisionState(isColliding) {
+    if (isColliding && !this.ref.classList.contains("collision-state")) {
+      this.ref.classList.add("collision-state");
+    } else if (!isColliding) {
+      this.ref.classList.remove("collision-state");
+    }
+  }
+  isCollidingWith(other) {
+    throw new Error("isCollidingWith must be implemented in subclasses");
+  }
+}
 
-circle2.bind("EnterFrame", function () {
-  const dx = circle1.x - circle2.x;
-  const dy = circle1.y - circle2.y;
-  const distance = Math.sqrt(dx * dx + dy * dy);
-
-  const colliding = distance < circle1.radius + circle2.radius;
-  this.color = colliding ? "green" : "blue";
+document.addEventListener("keydown", (e) => {
+  e.preventDefault();
+  switch (e.key) {
+    case "ArrowLeft":
+      collider.moveableEntity.shiftPosition(-5, 0);
+      break;
+    case "ArrowUp":
+      collider.moveableEntity.shiftPosition(0, -5);
+      break;
+    case "ArrowRight":
+      collider.moveableEntity.shiftPosition(5, 0);
+      break;
+    case "ArrowDown":
+      collider.moveableEntity.shiftPosition(0, 5);
+      break;
+  }
+  collider.checkCollision();
 });
 ```
 
-{{ EmbedLiveSample('Circle_Collision', '700', '300') }}
+## Axis-aligned bounding box
 
-> **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.
+
+```js live-sample___box_collision_ex
+class BoxEntity extends BaseEntity {
+  width = 20;
+  height = 20;
+
+  isCollidingWith(other) {
+    return (
+      this.position.x < other.position.x + other.width &&
+      this.position.x + this.width > other.position.x &&
+      this.position.y < other.position.y + other.height &&
+      this.position.y + this.height > other.position.y
+    );
+  }
+}
+```
+
+```js hidden live-sample___box_collision_ex
+for (let i = 0; i < 100; i++) {
+  collider.staticEntities.push(
+    new BoxEntity({
+      x: Math.floor(Math.random() * 500),
+      y: Math.floor(Math.random() * 500),
+    }),
+  );
+}
+
+const moveableEntity = new BoxEntity({ x: 500, y: 500 });
+moveableEntity.ref.classList.add("movable");
+collider.moveableEntity = moveableEntity;
+```
+
+{{EmbedLiveSample("box_collision_ex", "", 550)}}
+
+## Circle collision
+
+Another simple shape for collision detection is between two circles. This algorithm works by taking the center points of the two circles and ensuring the distance between the center points are less than the two radii added together.
+
+```css live-sample___circle_collision_ex
+.entity {
+  border-radius: 50%;
+}
+```
+
+```js live-sample___circle_collision_ex
+class CircleEntity extends BaseEntity {
+  radius = 10;
+
+  isCollidingWith(other) {
+    const dx =
+      this.position.x + this.radius - (other.position.x + other.radius);
+    const dy =
+      this.position.y + this.radius - (other.position.y + other.radius);
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    return distance < this.radius + other.radius;
+  }
+}
+```
+
+```js hidden live-sample___circle_collision_ex
+for (let i = 0; i < 100; i++) {
+  collider.staticEntities.push(
+    new CircleEntity({
+      x: Math.floor(Math.random() * 500),
+      y: Math.floor(Math.random() * 500),
+    }),
+  );
+}
+
+const moveableEntity = new CircleEntity({ x: 500, y: 500 });
+moveableEntity.ref.classList.add("movable");
+collider.moveableEntity = moveableEntity;
+```
+
+> [!NOTE]
+> The circles' `x` and `y` coordinates refer to their top left corners, so we need to add the radius to compare their centers.
+
+{{EmbedLiveSample("circle_collision_ex", "", 550)}}
 
 ## Separating Axis Theorem
 
@@ -141,14 +196,14 @@ Implementing SAT is out of scope for this page so see the recommended tutorials 
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
 5. [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
 
-## Collision Performance
+## Collision performance
 
 While some of these algorithms for collision detection are simple enough to calculate, it can be a waste of cycles to test _every_ entity with every other entity. Usually games will split collision into two phases, broad and narrow.
 
-### Broad Phase
+### Broad phase
 
-Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spacial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spacial data structures are Quad Trees, R-Trees or a Spacial Hashmap.
+Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spatial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spatial data structures are Quad Trees, R-Trees or a Spatial Hashmap.
 
-### Narrow Phase
+### Narrow phase
 
 When you have a small list of entities to check you will want to use a narrow phase algorithm (like the ones listed above) to provide a certain answer as to whether there is a collision or not.

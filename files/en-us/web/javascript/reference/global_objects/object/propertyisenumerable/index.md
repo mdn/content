@@ -1,15 +1,31 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
+short-title: propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.propertyIsEnumerable
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) property.
 
-The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) property.
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -92,7 +108,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### Testing symbol properties
 
-{{jsxref("Symbol")}} properties are also supported by `propertyIsEnumerable()`. Note that most enumeration methods only visit string properties; enumerability of symbol properties is only useful when using {{jsxref("Object.assign()")}} or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+{{jsxref("Symbol")}} properties are also supported by `propertyIsEnumerable()`. Note that most enumeration methods only visit string properties; enumerability of symbol properties is only useful when using {{jsxref("Object.assign()")}} or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ```js
 const sym = Symbol("enumerable");
@@ -145,7 +161,7 @@ Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 
 ## See also
 
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

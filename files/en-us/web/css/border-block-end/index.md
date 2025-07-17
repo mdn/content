@@ -3,13 +3,51 @@ title: border-block-end
 slug: Web/CSS/border-block-end
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-end
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
 
-The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
+{{InteractiveExample("CSS Demo: border-block-end")}}
 
-{{EmbedInteractiveExample("pages/css/border-block-end.html")}}
+```css interactive-example-choice
+border-block-end: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end: 1rem solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: thick double #32a1ce;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Constituent properties
 

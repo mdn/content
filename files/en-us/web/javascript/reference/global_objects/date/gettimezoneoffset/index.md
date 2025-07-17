@@ -1,15 +1,27 @@
 ---
 title: Date.prototype.getTimezoneOffset()
+short-title: getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTimezoneOffset
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the difference, in minutes, between this date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
 
-{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getTimezoneOffset()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+
+console.log(date1.getTimezoneOffset());
+// Expected output: your local timezone offset in minutes
+// (e.g., -120). NOT the timezone offset of the date object.
+
+console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
+// Expected output: true
+```
 
 ## Syntax
 
@@ -43,9 +55,11 @@ The number of minutes returned by `getTimezoneOffset()` is positive if the local
 
 In a region that annually shifts in and out of Daylight Saving Time (DST), as `date` varies, the number of minutes returned by calling `getTimezoneOffset()` can be non-uniform.
 
-> **Note:** `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
+> [!NOTE]
+> `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
 
-> **Note:** [Many countries have experimented with not changing the time twice a year](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country#Past_observance) and this has meant that DST has continued over the winter too. For example in the UK DST lasted from 2:00AM 18 February 1968 to 3:00AM 31 October 1971, so during the winter the clocks were not set back.
+> [!NOTE]
+> [Many countries have experimented with not changing the time twice a year](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country#Past_observance) and this has meant that DST has continued over the winter too. For example in the UK DST lasted from 2:00AM 18 February 1968 to 3:00AM 31 October 1971, so during the winter the clocks were not set back.
 
 In most implementations, the [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) is used to precisely determine the offset of the local timezone at the moment of the `date`. However, if such information is unavailable, an implementation may return zero.
 

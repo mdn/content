@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PerformanceServerTiming
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}} {{securecontext_header}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`PerformanceServerTiming`** interface surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 

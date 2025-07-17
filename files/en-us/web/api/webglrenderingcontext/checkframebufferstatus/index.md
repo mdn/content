@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.checkFramebufferStatus()`** method
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the completeness
@@ -21,17 +21,13 @@ checkFramebufferStatus(target)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`
-
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.DRAW_FRAMEBUFFER`
       - : Equivalent to `gl.FRAMEBUFFER`.
         Used as a destination for drawing, rendering, clearing, and writing operations.
@@ -54,14 +50,12 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the completeness status of
   supported or if depth and stencil attachments are not the same renderbuffer.
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
   following values can be returned additionally:
-
   - `gl.FRAMEBUFFER_INCOMPLETE_MULTISAMPLE`: The values of
     `gl.RENDERBUFFER_SAMPLES` are different among attached renderbuffers,
     or are non-zero if the attached images are a mix of renderbuffers and textures.
 
 - When using the {{domxref("OVR_multiview2")}} extension, the following value can be
   returned additionally:
-
   - `ext.FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR`: If
     `baseViewIndex` is not the same for all framebuffer attachment points
     where the value of `FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE` is not

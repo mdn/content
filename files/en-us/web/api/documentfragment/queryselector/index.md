@@ -41,7 +41,7 @@ that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_select
 ### Basic example
 
 In this basic example, the first element in the {{domxref("DocumentFragment")}} with
-the class "`myclass`" is returned:
+the class `myclass` is returned:
 
 ```js
 const el = documentfragment.querySelector(".myclass");
@@ -57,13 +57,13 @@ double back slash:
 ```html
 <div id="foo\bar"></div>
 <div id="foo:bar"></div>
+```
 
-<script>
-  document.querySelector("#foo\bar"); // Does not match anything
-  document.querySelector("#foo\\\\bar"); // Match the first div
-  document.querySelector("#foo:bar"); // Does not match anything
-  document.querySelector("#foo\\:bar"); // Match the second div
-</script>
+```js
+document.querySelector("#foo\bar"); // Does not match anything
+document.querySelector("#foo\\\\bar"); // Match the first div
+document.querySelector("#foo:bar"); // Does not match anything
+document.querySelector("#foo\\:bar"); // Match the second div
 ```
 
 ## Specifications

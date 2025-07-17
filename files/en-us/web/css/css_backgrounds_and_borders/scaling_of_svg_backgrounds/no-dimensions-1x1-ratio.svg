@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1 1" preserveAspectRatio="none"  xmlns="http://www.w3.org/2000/svg">
+  <title>Intrinsic ratio</title>
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop style="stop-color: navy;" offset="0" />
+      <stop style="stop-color: maroon;" offset="1" />
+    </linearGradient>
+  </defs>
+  <rect style="fill: url(#g);" width="100%" height="100%" />
+</svg>

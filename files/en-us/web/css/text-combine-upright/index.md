@@ -3,15 +3,40 @@ title: text-combine-upright
 slug: Web/CSS/text-combine-upright
 page-type: css-property
 browser-compat: css.properties.text-combine-upright
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
 
 This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">縦中横</q> in Japanese, or as <q lang="zh-Hant">橫向文字</q> in Chinese.
 
-{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+{{InteractiveExample("CSS Demo: text-combine-upright")}}
+
+```css interactive-example-choice
+text-combine-upright: none;
+```
+
+```css interactive-example-choice
+text-combine-upright: all;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>
+      <span class="transition-all" id="example-element"
+        >2022<span>年</span>12<span>月</span>8</span
+      >日から楽しい
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+p {
+  writing-mode: vertical-rl;
+}
+```
 
 ## Syntax
 

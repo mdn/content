@@ -2,9 +2,8 @@
 title: JavaScript reference
 slug: Web/JavaScript/Reference
 page-type: landing-page
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference").
 
@@ -62,6 +61,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 
@@ -206,8 +206,8 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
 - {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("Operators/new.target", "new.target")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
 
@@ -294,7 +294,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield operators
 
@@ -327,7 +327,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 - {{jsxref("Classes/Constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
-- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Classes/static", "static")}}
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
@@ -357,8 +357,10 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 ## Additional reference pages
 
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
+- [Execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model)
 - {{jsxref("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)

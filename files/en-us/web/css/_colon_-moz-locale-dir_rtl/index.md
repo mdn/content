@@ -1,12 +1,13 @@
 ---
-title: ":-moz-locale-dir(rtl)"
+title: :-moz-locale-dir(rtl)
 slug: Web/CSS/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
 status:
   - non-standard
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`:-moz-locale-dir(rtl)`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches an element if the user interface is being displayed right-to-left. This is determined by the preference `intl.uidirection.locale` (where `locale` is the current locale) being set to "rtl".
 

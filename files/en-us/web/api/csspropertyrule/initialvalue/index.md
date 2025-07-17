@@ -12,8 +12,7 @@ The read-only **`initialValue`** nullable property of the {{domxref("CSSProperty
 
 ## Value
 
-A string which is a {{CSSXref("&lt;declaration-value&gt;")}} as
-defined in [CSS Syntax 3](https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value).
+A string which is a [`<declaration-value>`](https://drafts.csswg.org/css-syntax/#typedef-declaration-value).
 
 ## Examples
 
@@ -28,8 +27,8 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].initialValue); //the string "#c0ffee"
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].initialValue); // "#c0ffee"
 ```
 
 ## Specifications

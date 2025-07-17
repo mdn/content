@@ -1,14 +1,15 @@
 ---
-title: "-webkit-transition"
+title: -webkit-transition
 slug: Web/CSS/@media/-webkit-transition
 page-type: css-media-feature
 status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.media.-webkit-transition
+sidebar: cssref
 ---
 
-{{CSSRef}} {{deprecated_header}} {{ Non-standard_header }}
+{{deprecated_header}} {{ Non-standard_header }}
 
 > [!NOTE]
 > All browsers support the [`transition`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers support the `-webkit-transition` media feature. No browsers support `transition` without the prefix as a media query (though some browsers do support - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
@@ -32,7 +33,7 @@ Apple has [a description in Safari CSS Reference](https://developer.apple.com/li
 
 ### Use @supports instead
 
-Do not use the `-webkit-transition` media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule), like this:
+Do not use the `-webkit-transition` media feature. Instead, test for transition support using the CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like this:
 
 ```css
 @supports (transition: initial) {

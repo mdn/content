@@ -3,9 +3,8 @@ title: externally_connectable
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.externally_connectable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -24,7 +23,7 @@ browser-compat: webextensions.manifest.externally_connectable
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre>
+        <pre class="brush: json">
 "externally_connectable": {
   "ids": [
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",

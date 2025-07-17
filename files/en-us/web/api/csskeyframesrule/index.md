@@ -7,7 +7,7 @@ browser-compat: api.CSSKeyframesRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -41,7 +41,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a `CSSKeyframesRule` object.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

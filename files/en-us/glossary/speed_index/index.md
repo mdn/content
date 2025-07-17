@@ -2,9 +2,8 @@
 title: Speed index
 slug: Glossary/Speed_index
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Speed Index** (SI) is a page load performance metric measuring how quickly the contents of a page are visibly populated. Speed Index is dependent on size of the viewport and expressed in milliseconds: the lower amount of time the better the score.
 
@@ -17,4 +16,4 @@ _Diagram showing how above the fold content can load before the page load event 
 
 ## See also
 
-- [Learn web performance](/en-US/docs/Learn/Performance)
+- [Learn: Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

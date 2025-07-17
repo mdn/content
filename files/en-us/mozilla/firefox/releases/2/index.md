@@ -1,10 +1,10 @@
 ---
 title: Firefox 2 for developers
+short-title: Firefox 2
 slug: Mozilla/Firefox/Releases/2
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## New developer features in Firefox 2
 
@@ -18,7 +18,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : A tutorial on creating a microsummary generator.
 - [Microsummary XML grammar reference](/en-US/docs/Microsummary_XML_grammar_reference)
   - : A reference guide to the XML grammar used for creating microsummary generators.
-- [Creating OpenSearch plugins for Firefox](/en-US/docs/Web/OpenSearch)
+- [Creating OpenSearch plugins for Firefox](/en-US/docs/Web/XML/Guides/OpenSearch)
   - : Firefox 2 supports the OpenSearch search engine format.
 - [Creating MozSearch plugins](/en-US/docs/Creating_MozSearch_plugins)
   - : Firefox 2 supports MozSearch, a search plugin format based on OpenSearch, but intended only for internal use.
@@ -30,7 +30,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : Client-side session and persistent storage allows web applications to store structured data on the client side.
 - [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox)
   - : Firefox 2 improves Scalable Vector Graphics (SVG) support, implementing the `<textPath>` element and adding support for some attributes not previously supported.
-- [Controlling spell checking in HTML forms](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
+- [Controlling spell checking in HTML forms](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
   - : Firefox 2 includes support for inline spell checking in text areas and text fields. This article describes how to write your HTML to enable and disable spell checking on individual form elements.
 - [Security in Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2/Security_changes)
   - : Firefox 2 has changes to which security protocols are enabled by default.
@@ -45,7 +45,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : API that lets developers access and parse RSS and Atom feeds.
 - [SAX support](/en-US/docs/SAX)
   - : Event-based XML parser API.
-- [Adding search engines from web pages](/en-US/docs/Web/OpenSearch)
+- [Adding search engines from web pages](/en-US/docs/Web/XML/Guides/OpenSearch)
   - : JavaScript code can instruct Firefox to install a new search engine plugin, which can be written using either OpenSearch or Sherlock format.
 - [Using spell checking in XUL](/en-US/docs/Using_spell_checking_in_XUL)
   - : How to check the spelling of words or get a list of suggested spellings from code.
@@ -58,7 +58,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
 - [Theme changes in Firefox 2](/en-US/docs/Theme_changes_in_Firefox_2)
   - : Discusses the changes needed to update existing themes to work in Firefox 2.
 - Textbox Improvements (Firefox 2.0.0.1 and higher only)
-  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ([Firefox bug 312867](https://bugzil.la/312867)). Supports an `editor` property to get the internal `nsIEditor` for the text field ([Webkit bug 312867](https://bugzil.la/312867)).
+  - : The `<textbox>` now has a `reset()` method to reset the value of the textbox to the default value. The `defaultValue` property may be used to retrieve and modify the default value of the textbox ([Firefox bug 312867](https://bugzil.la/312867)). Supports an `editor` property to get the internal `nsIEditor` for the text field ([WebKit bug 312867](https://bugzil.la/312867)).
 
 ## New features for end users
 
@@ -77,7 +77,3 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 ### Security and privacy
 
 - **Phishing Protection** to warn users when the website you're looking at appears to be a forgery.
-
-## See also
-
-{{Firefox_for_developers}}

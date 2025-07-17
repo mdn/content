@@ -3,13 +3,56 @@ title: padding-block-end
 slug: Web/CSS/padding-block-end
 page-type: css-property
 browser-compat: css.properties.padding-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/padding-block-end.html")}}
+{{InteractiveExample("CSS Demo: padding-block-end")}}
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-end: 5em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntax
 
@@ -34,13 +77,13 @@ padding-block-end: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). Must be nonnegative.
 
 ## Description
 
-The `padding-block-end` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, the physical property it maps to depends on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. Therefore, it could map to {{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, or {{cssxref("padding-left")}}.
+The `padding-block-end` property takes the same values as physical padding properties such as {{cssxref("padding-top")}}. However, it can be equivalent to {{cssxref("padding-bottom")}}, `padding-top`, {{cssxref("padding-left")}}, or {{cssxref("padding-right")}} depending on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}, which define the other padding values of the element.
 
 ## Formal definition
 

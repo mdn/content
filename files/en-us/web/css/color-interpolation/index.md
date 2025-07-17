@@ -3,9 +3,8 @@ title: color-interpolation
 slug: Web/CSS/color-interpolation
 page-type: css-property
 browser-compat: css.properties.color-interpolation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `color-interpolation` CSS property is used in SVG to specify which color space to use for {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements.
 
@@ -128,4 +127,4 @@ svg {
 
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
-- {{SVGAttr("color-interpolation")}}
+- SVG {{SVGAttr("color-interpolation")}} attribute

@@ -1,13 +1,14 @@
 ---
-title: "::-moz-range-thumb"
+title: ::-moz-range-thumb
 slug: Web/CSS/::-moz-range-thumb
 page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-range-thumb
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _thumb_ (i.e., virtual knob) of an {{HTMLElement("input")}} of `type="range"`. The user can move the thumb along the input's track to alter its numerical value.
 
@@ -57,12 +58,10 @@ Not part of any standard.
 ## See also
 
 - The pseudo-elements used by Gecko to style other parts of a range input:
-
   - {{cssxref("::-moz-range-track")}} represents the groove in which the thumb slides.
   - {{cssxref("::-moz-range-progress")}} represents the lower portion of the track.
 
 - Similar pseudo-elements used by other browsers:
-
   - {{cssxref("::-webkit-slider-thumb")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

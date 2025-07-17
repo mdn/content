@@ -87,7 +87,7 @@ exampleButton.addEventListener("invalid", () => {
 
 exampleButton.addEventListener("click", (e) => {
   e.preventDefault();
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     breakOrFixButton("fixed");
   } else {
     breakOrFixButton("error");
@@ -97,7 +97,7 @@ exampleButton.addEventListener("click", (e) => {
 
 const breakOrFixButton = () => {
   const state = toggleButton();
-  if (state == "error") {
+  if (state === "error") {
     exampleButton.setCustomValidity("This is a custom error message");
   } else {
     exampleButton.setCustomValidity("");
@@ -105,7 +105,7 @@ const breakOrFixButton = () => {
 };
 
 const toggleButton = () => {
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     exampleButton.value = "fixed";
     exampleButton.innerHTML = "No error";
   } else {
@@ -135,6 +135,6 @@ The button is by default valid. Activate "THIS BUTTON" to change the value, cont
 - {{domxref("HTMLButtonElement.checkValidity()")}}
 - {{HTMLElement("button")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

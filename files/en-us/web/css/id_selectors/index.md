@@ -3,11 +3,10 @@ title: ID selectors
 slug: Web/CSS/ID_selectors
 page-type: css-selector
 browser-compat: css.selectors.id
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The CSS **ID selector** matches an element based on the value of the element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.
+The CSS **ID selector** matches an element based on the value of the element's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.
 
 ```css
 /* The element with id="demo" */
@@ -19,13 +18,17 @@ The CSS **ID selector** matches an element based on the value of the element's [
 ## Syntax
 
 ```css
-#id_value { style properties }
+#id_value {
+  /* … */
+}
 ```
 
 Note that syntactically (but not specificity-wise), this is equivalent to the following [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors):
 
 ```css
-[id=id_value] { style properties }
+[id="id_value"] {
+  /* … */
+}
 ```
 
 The `id_value` value must be a valid [CSS identifier](/en-US/docs/Web/CSS/ident). HTML `id` attributes which are not valid CSS identifiers must be [escaped](/en-US/docs/Web/CSS/ident#escaping_characters) before they can be used in ID selectors.
@@ -98,4 +101,4 @@ The ID selectors in the following rules are not valid CSS identifiers, and will 
 ## See also
 
 - [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
-- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

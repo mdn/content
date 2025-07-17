@@ -4,7 +4,7 @@ slug: Web/API/Document_Picture-in-Picture_API/Using
 page-type: guide
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
@@ -36,7 +36,7 @@ The following HTML sets up a basic video player.
       </a>
     </div>
 
-    <div id="controlbar">
+    <div id="control-bar">
       <p class="no-picture-in-picture">
         Document Picture-in-Picture API not available
       </p>
@@ -59,7 +59,7 @@ if ("documentPictureInPicture" in window) {
   togglePipButton.textContent = "Toggle Picture-in-Picture";
   togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
-  document.getElementById("controlbar").appendChild(togglePipButton);
+  document.getElementById("control-bar").appendChild(togglePipButton);
 }
 ```
 
@@ -84,7 +84,7 @@ async function togglePictureInPicture() {
     height: videoPlayer.clientHeight,
   });
 
-  // ...
+  // …
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(videoPlayer);
@@ -99,7 +99,7 @@ async function togglePictureInPicture() {
 To copy all CSS style sheets from the originating window, loop through all style sheets explicitly linked into or embedded in the document (via {{domxref("Document.styleSheets")}}) and append them to the Picture-in-Picture window. Note that this is a one-time copy.
 
 ```js
-// ...
+// …
 
 // Copy style sheets over from the initial document
 // so that the player looks the same.
@@ -123,7 +123,7 @@ To copy all CSS style sheets from the originating window, loop through all style
   }
 });
 
-// ...
+// …
 ```
 
 ## Target styles when in Picture-in-Picture mode
@@ -172,7 +172,7 @@ window.documentPictureInPicture.window.close();
 
 Here we reverse the DOM changes — hiding the message and putting the video player back in the player container in the main app window. We also close the Picture-in-Picture window programmatically using the {{domxref("Window.close()")}} method.
 
-However, you also need to consider the case where the user closes the Picture-in-Picture window by pressing the browser supplied close (X) button on the window itself. You can handle this by detecting when the window closes using the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event:
+However, you also need to consider the case where the user closes the Picture-in-Picture window by pressing the browser-supplied UI close control on the window itself. You can handle this by detecting when the window closes using the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event:
 
 ```js
 pipWindow.addEventListener("pagehide", (event) => {
@@ -180,6 +180,9 @@ pipWindow.addEventListener("pagehide", (event) => {
   playerContainer.append(videoPlayer);
 });
 ```
+
+> [!NOTE]
+> The browser-supplied UI close control can be hidden by setting the [`disallowReturnToOpener`](/en-US/docs/Web/API/DocumentPictureInPicture/requestWindow#disallowreturntoopener) hint to `true` in the options object when calling `DocumentPictureInPicture.requestWindow()` to open the Picture-in-Picture window in the first place.
 
 ## Listen to when the website enters Picture-in-Picture
 

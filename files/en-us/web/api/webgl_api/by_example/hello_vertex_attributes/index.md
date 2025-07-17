@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}
 
 This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.
 
@@ -67,11 +67,6 @@ button {
     gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
   }
 </script>
-```
-
-```js hidden
-;(() => {
-  "use strict";
 ```
 
 ```js
@@ -170,10 +165,6 @@ function getRenderingContext() {
 }
 ```
 
-```js hidden
-})();
-```
-
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes).
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Hello_GLSL","Web/API/WebGL_API/By_example/Textures_from_code")}}

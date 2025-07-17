@@ -13,7 +13,7 @@ Now that our sample program has a rotating 3D cube, let's map a texture onto it 
 The first thing to do is add code to load the textures. In our case, we'll be using a single texture, mapped onto all six sides of our rotating cube, but the same technique can be used for any number of textures.
 
 > [!NOTE]
-> It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](#cross-domain_textures) for details.
+> It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/Guides/CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](#cross-domain_textures) for details.
 
 > [!NOTE]
 > Add these two functions to your "webgl-demo.js" script:
@@ -221,7 +221,7 @@ const vsSource = `
   `;
 ```
 
-The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the vertex shader; this will indicate the location within the texture corresponding to the vertex.
+The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the fragment shader; this will indicate the location within the texture corresponding to the vertex.
 
 ### The fragment shader
 
@@ -235,10 +235,9 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
-    out vec4 fragColor;
 
     void main(void) {
-      fragColor = texture(uSampler, vTextureCoord);
+      gl_FragColor = texture2D(uSampler, vTextureCoord);
     }
   `;
 ```
@@ -322,15 +321,15 @@ WebGL provides a minimum of 8 texture units; the first of these is `gl.TEXTURE0`
 
 Lastly, add `texture` as a parameter to the `drawScene()` function, both where it is defined and where it is called.
 
-> [!NOTE]
-> Update the declaration of your `drawScene()` function to add the new parameter:
+Update the declaration of your `drawScene()` function to add the new parameter:
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+  // …
+}
 ```
 
-> [!NOTE]
-> Update the place in your `main()` function where you call `drawScene()`:
+Update the place in your `main()` function where you call `drawScene()`:
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
@@ -344,9 +343,9 @@ At this point, the rotating cube should be good to go.
 
 ## Cross-domain textures
 
-Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/CORS) for details on CORS.
+Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/Guides/CORS) for details on CORS.
 
-Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
+Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 

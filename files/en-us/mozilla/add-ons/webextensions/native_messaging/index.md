@@ -2,9 +2,8 @@
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
@@ -25,7 +24,7 @@ Support for native messaging in extensions is mostly compatible with Chrome, wit
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
 - The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
-There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
+There's a complete example in the [`native-messaging` directory](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) of the `webextensions-examples` repository on GitHub. Most example code in this article is taken from that example.
 
 ## Setup
 
@@ -266,11 +265,10 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
 }
 
 async function sendMessage(message) {
-  const header = new Uint32Array([message.length]);
-  const stdout = await fs.open(`/proc/${process.pid}/fd/1`, "w");
+  const header = Buffer.from(new Uint32Array([message.length]).buffer);
+  const stdout = process.stdout;
   await stdout.write(header);
   await stdout.write(message);
-  await stdout.close();
 }
 
 while (true) {
@@ -397,7 +395,7 @@ If you haven't managed to run the application, you should see an error message g
 
 - Check that the name passed to `runtime.connectNative()` matches the name in the app manifest
 - macOS/Linux: check that name of the app manifest is `<name>.json`.
-- macOS/Linux: check the native application's manifest file location as mentioned [here](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x).
+- macOS/Linux: check the native application's manifest file location as mentioned [in the native manifests reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
 - Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
 - Windows: check that the path given in the registry key points to the app manifest.
 

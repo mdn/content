@@ -1,15 +1,30 @@
 ---
 title: Array.prototype.fill()
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.fill
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`fill()`** method of {{jsxref("Array")}} instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.fill()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
 
 ## Syntax
 
@@ -32,7 +47,7 @@ fill(value, start, end)
   - : Zero-based index at which to end filling, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `fill()` fills up to but not including `end`.
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
-    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all indices until the end to be filled.
+    - If `end >= array.length` or `end` is omitted or `undefined`, `array.length` is used, causing all indices until the end to be filled.
     - If `end` implies a position before or at the position that `start` implies, nothing is filled.
 
 ### Return value

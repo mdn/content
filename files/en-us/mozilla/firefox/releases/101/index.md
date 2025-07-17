@@ -1,10 +1,10 @@
 ---
 title: Firefox 101 for developers
+short-title: Firefox 101
 slug: Mozilla/Firefox/Releases/101
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 101 that will affect developers. Firefox 101 was released on May 31, 2022.
 
@@ -35,7 +35,7 @@ No notable changes.
 
 - [`HTMLInputElement.showPicker()`](/en-US/docs/Web/API/HTMLInputElement/showPicker) is now supported, allowing the picker for an input element to be displayed when a user interacts with some other element, such as a button ([Firefox bug 1745005](https://bugzil.la/1745005)).
 
-- [`DOMException`](/en-US/docs/Web/API/DOMException) is now a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}} ([Firefox bug 1561357](https://bugzil.la/1561357)).
+- [`DOMException`](/en-US/docs/Web/API/DOMException) is now a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}} ([Firefox bug 1561357](https://bugzil.la/1561357)).
 
 - _Constructable stylesheets_ are now supported, making it much easier to create reusable stylesheets for use with [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
   The update includes the addition of a [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) for creating new stylesheets, the {{domxref("CSSStyleSheet.replace()")}} and {{domxref("CSSStyleSheet.replaceSync()")}} methods that can be used to add/replace CSS rules in the sheet, and the [`Document.adoptedStyleSheets`](/en-US/docs/Web/API/Document/adoptedStyleSheets) and [`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets) properties that are used to share sheets to a document and its shadow DOM subtrees.
@@ -43,7 +43,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- [AV1 codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter#av1) are now properly parsed in media support queries.
+- [AV1 codec parameters](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#av1) are now properly parsed in media support queries.
   This means that [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo), [`HTMLMediaElement.canPlayType()`](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), and [`MediaSource.isTypeSupported()`](/en-US/docs/Web/API/MediaSource/isTypeSupported_static) will now accurately report support for playback for AV1 sources based on the provided codec parameters.
   [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) will also use the information to accurately report on "efficient decoding" of AV1 videos.
   For more information, see [Firefox bug 1757861](https://bugzil.la/1757861).
@@ -59,7 +59,7 @@ No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
+Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
 
 The following commands and events are available:
 
@@ -80,9 +80,5 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` can be set to `false` under the control of preferences: for Manifest V2, the <code>extensions.eventPages.enabled</code> preference, and in Manifest V3, the <code>extensions.manifestV3.enabled</code> preference.
   - Addition of the [`"host_permissions"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key, which is available for Manifest V3 extensions.
   - The content script execution environment has changed for Manifest V3 extensions:
-    - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
+    - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
     - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
-
-## Older versions
-
-{{Firefox_for_developers}}

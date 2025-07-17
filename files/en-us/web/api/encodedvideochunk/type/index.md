@@ -30,9 +30,9 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedVideoChunk(init);
+const chunk = new EncodedVideoChunk(init);
 
-console.log(chunk.type); //"key"
+console.log(chunk.type); // "key"
 ```
 
 ## Specifications

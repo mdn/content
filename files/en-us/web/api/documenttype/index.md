@@ -18,9 +18,9 @@ _Inherits properties from its parent, {{domxref("Node")}}._
 - {{domxref("DocumentType.name")}} {{ReadOnlyInline}}
   - : The type of the document. It is always `"html"` for HTML documents, but will vary for XML documents.
 - {{domxref("DocumentType.publicId")}} {{ReadOnlyInline}}
-  - : A string with an identifier of the type of document. Always empty (`""`) for HTML, it will be, for example, `"-//W3C//DTD SVG 1.1//EN"` for SVG documents.
+  - : A string with an identifier of the type of document. Empty if the doctype given specifies no public ID.
 - {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}
-  - : A string containing the URL to the associated DTD. Always empty (`""`) for HTML, it will be, for example, `"http://www.w3.org/2000/svg"` for SVG documents.
+  - : A string containing the URL to the associated DTD. Empty if the doctype given specifies no system ID.
 
 ## Instance methods
 

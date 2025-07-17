@@ -2,9 +2,8 @@
 title: Information contained in a WebIDL file
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
 
@@ -16,7 +15,6 @@ WebIDL can be found in multiple locations:
 
 - Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).
 - Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
-
   - For Gecko, all WebIDL files are grouped in a single directory: <https://searchfox.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
   - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
   - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
@@ -225,7 +223,6 @@ The property value is an object of type `MediaError`. The question mark (`'?'`) 
 The type of the property may be prefixed with an _extended attribute_, a string enclosed in square brackets (like `[LegacyNullToEmptyString]`). Such extended attributes indicate special behaviors that must be described in the prose. Here is a list of standard extended attributes of types, and the addition that must be made:
 
 - `[LegacyNullToEmptyString]`
-
   - : The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
 
     Add the following sentence to the end of the _Value_ section of the article:
@@ -271,7 +268,7 @@ partial interface Blob {
 
 ### Not throwing exceptions
 
-When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
+When the semantics of WebIDL is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
@@ -359,13 +356,13 @@ The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaEl
 
 ### Parameters
 
-```js
+```webidl
 TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString label = "",
                        optional DOMString language = "");
 ```
 
-The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
+The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g., a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{optional_inline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
 
 Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
 
@@ -495,7 +492,7 @@ The value pairs to iterate over can be defined in one of the following ways:
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach()`, and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```webidl
 setlike<valueType>

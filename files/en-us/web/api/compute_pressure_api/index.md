@@ -28,7 +28,7 @@ Fast and delightful web applications should balance workloads when the system's 
 
 ### Pressure source types
 
-In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized proccessing units). The current version of the Compute Pressure API specification defines two main source types that can be queried to gather pressure information:
+In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized processing units). The current version of the Compute Pressure API specification defines two main source types that can be queried to gather pressure information:
 
 - `"thermals"` represents the global thermal state of the entire system.
 - `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This state can be affected by other apps and sites than the observing site.
@@ -40,7 +40,7 @@ The Compute Pressure API is available in the following contexts:
 - {{domxref("Window")}} (main thread)
 - {{domxref("Worker")}}
 - {{domxref("SharedWorker")}}
-- {{HTMLElement("iFrame")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/compute-pressure) is provided)
+- {{HTMLElement("iframe")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure) is provided)
 
 ### Pressure states
 
@@ -55,7 +55,7 @@ The contributing factors (that is, the underlying system metrics) for the pressu
 
 ### Security and privacy considerations
 
-The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions_Policy) by the `"compute-pressure"` directive. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
+The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) by the `"compute-pressure"` directive. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
 
 ## Reference
 
@@ -64,11 +64,11 @@ The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions
 The following interfaces are present in the Compute Pressure API and the API surface is similar to other observers, such as {{domxref("IntersectionObserver")}}, {{domxref("MutationObserver")}}, or {{domxref("PerformanceObserver")}}.
 
 - {{domxref("PressureObserver")}} {{experimental_inline}}
-  - : Notifies when the system's pressure changes for a specfied number of sources (e.g. the CPU) at a predefined sample interval.
+  - : Notifies when the system's pressure changes for a specified number of sources (e.g., the CPU) at a predefined sample interval.
 - {{domxref("PressureRecord")}}
   - : Describes the pressure trend at a specific moment of transition.
 
-### Permission-Policy directive
+### Permissions-Policy directive
 
 - {{httpheader("Permissions-Policy")}}; the {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} directive
   - : Controls access to the Compute Pressure API.
@@ -112,4 +112,4 @@ try {
 
 ## See also
 
-- [Compute Pressure demo](https://w3c.github.io/compute-pressure/demo/), which uses Mandelbrot sets and workers to create artifical pressure for test purposes.
+- [Compute Pressure demo](https://w3c.github.io/compute-pressure/demo/), which uses Mandelbrot sets and workers to create artificial pressure for test purposes.

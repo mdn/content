@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.renderbufferStorage
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.renderbufferStorage()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
@@ -21,17 +21,13 @@ renderbufferStorage(target, internalFormat, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a renderable internal format.
 
 - `internalFormat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
     values:
-
     - `gl.RGBA4`: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.
     - `gl.RGB565`: 5 red bits, 6 green bits, 5 blue bits.
     - `gl.RGB5_A1`: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
@@ -41,7 +37,6 @@ renderbufferStorage(target, internalFormat, width, height)
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.R8`
     - `gl.R8UI`
     - `gl.R8I`
@@ -73,17 +68,14 @@ renderbufferStorage(target, internalFormat, width, height)
     - `gl.DEPTH32F_STENCIL8`
 
     When using the {{domxref("WEBGL_color_buffer_float")}} extension:
-
     - `ext.RGBA32F_EXT`: RGBA 32-bit floating-point type.
     - `ext.RGB32F_EXT`: RGB 32-bit floating-point type.
 
     When using the {{domxref("EXT_sRGB")}} extension:
-
     - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
     the {{domxref("EXT_color_buffer_float")}} extension:
-
     - `gl.R16F`
     - `gl.RG16F`
     - `gl.RGBA16F`

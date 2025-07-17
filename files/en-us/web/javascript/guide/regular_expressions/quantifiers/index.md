@@ -2,13 +2,28 @@
 title: Quantifiers
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Quantifiers indicate numbers of characters or expressions to match.
 
-{{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}
+
+```js interactive-example
+const ghostSpeak = "booh boooooooh";
+const regexpSpooky = /bo{3,}h/;
+console.log(ghostSpeak.match(regexpSpooky));
+// Expected output: Array ["boooooooh"]
+
+const modifiedQuote = "[He] ha[s] to go read this novel [Alice in Wonderland].";
+const regexpModifications = /\[.*?\]/g;
+console.log(modifiedQuote.match(regexpModifications));
+// Expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+
+const regexpTooGreedy = /\[.*\]/g;
+console.log(modifiedQuote.match(regexpTooGreedy));
+// Expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+```
 
 ## Types
 
@@ -97,6 +112,7 @@ Quantifiers indicate numbers of characters or expressions to match.
         <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
+        <!-- cSpell:ignore cndy -->
         <p>
           Where "n" and "m" are non-negative integers and <code>m >= n</code>,
           matches at least "n" and at most "m" occurrences of the preceding
@@ -170,6 +186,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 ### Optional character
 
 In this example, we match words that either end with "our" or "or".
+
+<!-- cSpell:ignore neighbour -->
 
 ```js
 const britishText = "He asked his neighbour a favour.";

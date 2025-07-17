@@ -14,7 +14,7 @@ The URL API is a component of the URL standard, which defines what constitutes a
 
 ## Concepts and usage
 
-The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
+The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
 
 ### Accessing URL components
 
@@ -33,19 +33,19 @@ The snippet above creates a `URL` object for the article you're reading right no
 Most of the properties of `URL` are settable; you can write new values to them to alter the URL represented by the object. For example, to create a URL and set its username:
 
 ```js
-let myUsername = "someguy";
+let myUsername = "some-guy";
 let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "href")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
+Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "href")}} is `https://some-guy@example.com/login`. This is true for any of the writable properties.
 
 ### Queries
 
-The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
+The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=some-guy&page=news`, then the value of the `search` property is `?user=some-guy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
 
 ```js
-let addr = new URL("https://example.com/login?user=someguy&page=news");
+let addr = new URL("https://example.com/login?user=some-guy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
@@ -69,31 +69,33 @@ The URL API is a simple one, with only a couple of interfaces to its name:
 
 ## Examples
 
-If you want to process the parameters included in a URL, you could do it manually, but it's much easier to create a `URL` object to do it for you. The `fillTableWithParameters()` function below takes as input a {{domxref("HTMLTableElement")}} object representing a {{HTMLElement("table")}}. Rows are added to the table, one for each key found in the parameters, with the first column containing the key's name, and the second column having the value.
+### Parsing URL parameters using the URL API
 
-Note the call to {{domxref("URLSearchParams.sort()")}} to sort the parameter list before generating the table.
+You could process URL parameters by parsing a URL as a string, splitting it on certain characters or using regular expressions, but it's much easier to create a new `URL` object for this. The example below gets the document URL from [`document.location.href`](/en-US/docs/Web/API/Document/location), sorts the parameters using {{domxref("URLSearchParams.sort()")}}, then extracts the keys using `URLSearchParams.keys`.
+
+For each key in the document URL, we add rows to a {{HTMLElement("table")}} element, one for each key found in the parameters, with the first column containing the key's name, and the second column containing the value:
 
 ```js
-function fillTableWithParameters(tbl) {
-  const url = new URL(document.location.href);
-  url.searchParams.sort();
-  const keys = url.searchParams.keys();
+const table = document.querySelector(".param-table");
 
-  for (const key of keys) {
-    const val = url.searchParams.get(key);
-    const row = document.createElement("tr");
-    const cell1 = document.createElement("td");
-    cell1.innerText = key;
-    row.appendChild(cell1);
-    const cell2 = document.createElement("td");
-    cell2.innerText = val;
-    row.appendChild(cell2);
-    tbl.appendChild(row);
-  }
+const url = new URL(document.location.href);
+url.searchParams.sort();
+const keys = url.searchParams.keys();
+
+for (let key of keys) {
+  let val = url.searchParams.get(key);
+  let row = document.createElement("tr");
+  let cell = document.createElement("td");
+  cell.innerText = key;
+  row.appendChild(cell);
+  cell = document.createElement("td");
+  cell.innerText = val;
+  row.appendChild(cell);
+  table.appendChild(row);
 }
 ```
 
-A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
+You can try a [live version of this example](https://mdn.github.io/dom-examples/url-params/) and [view the full source code on GitHub](https://github.com/mdn/dom-examples/tree/main/url-params).
 
 ## Specifications
 
@@ -106,6 +108,6 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 ## See also
 
 - {{domxref("Fetch API", "", "", "nocode")}}
-- CSS {{cssxref("&lt;url&gt;")}} type
+- CSS {{cssxref("url_value", "&lt;url&gt;")}} type
 - {{jsxref("encodeURI", "encodeURI()")}}
 - {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

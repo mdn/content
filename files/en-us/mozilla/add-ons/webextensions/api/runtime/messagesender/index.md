@@ -3,9 +3,8 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.MessageSender
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object containing information about the sender of a message or connection request that is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
 
@@ -30,12 +29,14 @@ Values of this type are objects. They contain the following properties:
 - `tlsChannelId` {{optional_inline}}
   - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension and available.
 - `url` {{optional_inline}}
-
   - : `string`. The URL of the page or frame hosting the script that sent the message.
 
-    If the sender is a script running in an extension page (such as a [background page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popup), the URL is in the form `"moz-extension://<extension-internal-id>/path/to/page.html"`. If the sender is a background script and you haven't included a background page, it is `"moz-extension://<extension-internal-id>/_generated_background_page.html"`.
+    If the sender is a script running in an extension page (such as a [background page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts), an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popup), the URL is in the form `"moz-extension://<extension-internal-id>/path/to/page.html"`. If the sender is a background script and you haven't included a background page, it is `"moz-extension://<extension-internal-id>/_generated_background_page.html"`.
 
     If the sender is a script running in a web page (including content and normal page scripts), then `url` is the web page URL. If the script is running in an iframe, `url` is the iframe's URL.
+
+- `userScriptWorldId` {{optional_inline}}
+  - : `string`. The `worldId` of the `USER_SCRIPT` world that sent the message. Only present in {{WebExtAPIRef("runtime.onUserScriptMessage")}} and in [`port.sender`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port#sender) for {{WebExtAPIRef("runtime.onUserScriptConnect")}}.
 
 {{WebExtExamples}}
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.scissor
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.scissor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets a scissor box, which limits
 the drawing to a specified rectangle.

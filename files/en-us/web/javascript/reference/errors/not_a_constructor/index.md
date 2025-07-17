@@ -2,9 +2,8 @@
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a constructor" occurs when there was an attempt to use
 an object or a variable as a constructor, but that object or variable is not a
@@ -69,10 +68,10 @@ function Car(make, model, year) {
 }
 ```
 
-Now you can create an object called `mycar` as follows:
+Now you can create an object called `myCar` as follows:
 
 ```js
-const mycar = new Car("Eagle", "Talon TSi", 1993);
+const myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### In Promises
@@ -82,31 +81,31 @@ When returning an immediately-resolved or immediately-rejected Promise, you do n
 This is not legal (the [`Promise` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) is not being called correctly) and will throw a `TypeError: this is not a constructor` exception:
 
 ```js example-bad
-const fn = () => {
+function fn() {
   return new Promise.resolve(true);
-};
+}
 ```
 
 This is legal, but unnecessarily long:
 
 ```js
-const fn = () => {
+function fn() {
   return new Promise((resolve, reject) => {
     resolve(true);
   });
-};
+}
 ```
 
 Instead, return the static method:
 
 ```js example-good
-const resolveAlways = () => {
+function resolveAlways() {
   return Promise.resolve(true);
-};
+}
 
-const rejectAlways = () => {
-  return Promise.reject(false);
-};
+function rejectAlways() {
+  return Promise.reject(new Error());
+}
 ```
 
 ## See also

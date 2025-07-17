@@ -3,9 +3,8 @@ title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.getVisits
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves information about all visits to the given URL.
 
@@ -22,19 +21,13 @@ let getting = browser.history.getVisits(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `url`
       - : `string`. The URL for which to retrieve visit information.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of `{{WebExtAPIRef('history.VisitItem')}}` objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
-
-## Browser compatibility
-
-{{Compat}}
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of {{WebExtAPIRef('history.VisitItem')}} objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
 
 ## Examples
 
@@ -68,6 +61,10 @@ searching.then(listVisits);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

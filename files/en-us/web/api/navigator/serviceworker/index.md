@@ -12,6 +12,8 @@ The **`serviceWorker`** read-only property of the {{domxref("Navigator")}} inter
 
 The feature may not be available in private mode.
 
+Note that a worker can similarly access the {{domxref("ServiceWorkerContainer")}} for a document using {{domxref("WorkerNavigator.serviceWorker")}}.
+
 ## Value
 
 {{domxref("ServiceWorkerContainer")}}.

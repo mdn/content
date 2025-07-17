@@ -1,18 +1,29 @@
 ---
 title: Map.prototype.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.get
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`get()`** method of {{jsxref("Map")}} instances returns a specified element from this map. If the
 value that is associated to the provided key is an object, then you will get a
 reference to that object and any change made to that object will effectively
 modify it inside the `Map` object.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Syntax
 

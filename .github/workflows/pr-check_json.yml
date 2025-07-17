@@ -10,6 +10,9 @@ on:
       - "**/*.jsonc"
       - .github/workflows/pr-check_json.yml
 
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
 jobs:
   lint-json:
     runs-on: ubuntu-latest

@@ -3,16 +3,28 @@ title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 page-type: javascript-language-feature
 browser-compat: javascript.classes.constructor
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`constructor`** method is a special method of a [class](/en-US/docs/Web/JavaScript/Reference/Classes) for creating and initializing an object instance of that class.
 
 > [!NOTE]
 > This page introduces the `constructor` syntax. For the `constructor` property present on all objects, see {{jsxref("Object.prototype.constructor")}}.
 
-{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Class constructor")}}
+
+```js interactive-example
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// Expected output: "Polygon"
+```
 
 ## Syntax
 
@@ -127,7 +139,7 @@ Using [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) on a class goe
 3. The current class's [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) are initialized.
 4. The `constructor` body after the `super()` call (or the entire body, if it's a base class) is evaluated.
 
-Within the `constructor` body, you can access the object being created through [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) and access the class that is called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) through [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Note that methods (including [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set)) and the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) are already initialized on `this` before the `constructor` is executed, so you can even access methods of the subclass from the constructor of the superclass. However, if those methods use `this`, the `this` will not have been fully initialized yet. This means reading public fields of the derived class will result in `undefined`, while reading private fields will result in a `TypeError`.
+Within the `constructor` body, you can access the object being created through [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) and access the class that is called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) through [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Note that methods (including [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set)) and the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) are already initialized on `this` before the `constructor` is executed, so you can even access methods of the subclass from the constructor of the superclass. However, if those methods use `this`, the `this` will not have been fully initialized yet. This means reading public fields of the derived class will result in `undefined`, while reading private fields will result in a `TypeError`.
 
 ```js example-bad
 new (class C extends class B {
@@ -167,7 +179,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) ones) to be defined on unrelated objects.
 
 The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 

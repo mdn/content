@@ -15,7 +15,8 @@ You can access `CacheStorage` through the {{domxref("Window.caches")}} property 
 
 `Cache` objects are searched in creation order.
 
-> **Note:** `caches.match()` is a convenience method.
+> [!NOTE]
+> `caches.match()` is a convenience method.
 > Equivalent functionality is to call {{domxref("cache.match()")}} on each cache (in the order returned by {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is returned.
 
 ## Syntax
@@ -31,10 +32,8 @@ match(request, options)
   - : The {{domxref("Request")}} you want to match. This can be a {{domxref("Request")}}
     object or a URL string.
 - `options` {{optional_inline}}
-
   - : An object whose properties control how matching is done in the `match`
     operation. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. For example, if set
@@ -48,7 +47,7 @@ match(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header or not. It defaults to `false`.
@@ -84,21 +83,20 @@ self.addEventListener("fetch", (event) => {
       // but in case of success response will have value
       if (response !== undefined) {
         return response;
-      } else {
-        return fetch(event.request)
-          .then((response) => {
-            // response may be used only once
-            // we need to save clone to put one copy in cache
-            // and serve second one
-            let responseClone = response.clone();
-
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-            return response;
-          })
-          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
+      return fetch(event.request)
+        .then((response) => {
+          // response may be used only once
+          // we need to save clone to put one copy in cache
+          // and serve second one
+          let responseClone = response.clone();
+
+          caches
+            .open("v1")
+            .then((cache) => cache.put(event.request, responseClone));
+          return response;
+        })
+        .catch(() => caches.match("/gallery/myLittleVader.jpg"));
     }),
   );
 });

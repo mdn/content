@@ -3,9 +3,8 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
 
@@ -115,6 +114,11 @@ Note that several of the `RegExp` properties have both long and short (Perl-like
 - [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
+## Static methods
+
+- {{jsxref("RegExp.escape()")}}
+  - : [Escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) any potential regex syntax characters in a string, and returns a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor.
+
 ## Instance properties
 
 These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
@@ -179,8 +183,8 @@ In the replacement text, the script uses `$1` and `$2` to indicate the results o
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr);
 ```
 
 This displays `"Cruz, Maria"`.
@@ -190,8 +194,8 @@ This displays `"Cruz, Maria"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
@@ -199,13 +203,15 @@ Note that the order of the patterns in the regular expression matters.
 
 ### Using regular expression on multiple lines
 
+By default, the `.` character does not match newlines. To make it match newlines, use the `s` flag (`dotAll` mode).
+
 ```js
 const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
 
-s.match(/yes[^]*day/);
+s.match(/yes.*day/s);
 // Returns ["yes\nmake my day"]
 ```
 
@@ -247,13 +253,13 @@ With the global flag `g`, all 6 digits would be matched, not just 3.
 
 `\w` and `\W` only matches ASCII based characters; for example, `a` to `z`, `A` to `Z`, `0` to `9`, and `_`.
 
-To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh`, where `hhhh` is the character's Unicode value in hexadecimal.
+To match characters from other languages such as Cyrillic or Hebrew, use `\uHHHH`, where `HHHH` is the character's Unicode value in hexadecimal.
 
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
 const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+const regex = /[\u0400-\u04ff]+/g;
 
 const match = regex.exec(text);
 console.log(match[0]); // 'Образец'

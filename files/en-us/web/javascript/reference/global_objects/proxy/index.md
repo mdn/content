@@ -3,9 +3,8 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
@@ -57,7 +56,7 @@ const proxy2 = new Proxy(target, handler2);
 
 Here we've provided an implementation of the {{jsxref("Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.
 
-Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The very simple trap in `handler2` above redefines all property accessors:
+Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The trap in `handler2` above redefines all property accessors:
 
 ```js
 console.log(proxy2.message1); // world
@@ -96,17 +95,17 @@ The following terms are used when talking about the functionality of proxies.
 - [handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy#handler_functions)
   - : The object passed as the second argument to the `Proxy` constructor. It contains the traps which define the behavior of the proxy.
 - trap
-  - : The function that define the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
+  - : The function that defines the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
 - target
   - : Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
-- invariants
+- {{Glossary("invariant", "invariants")}}
   - : Semantics that remain unchanged when implementing custom operations. If your trap implementation violates the invariants of a handler, a {{jsxref("TypeError")}} will be thrown.
 
 ### Object internal methods
 
-[Objects](/en-US/docs/Web/JavaScript/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
+[Objects](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
 
-- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) until it is found.
+- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) until it is found.
 - If `x` is a data property, the property descriptor's `value` attribute is returned.
 - If `x` is an accessor property, the getter is invoked, and the return value of the getter is returned.
 
@@ -160,7 +159,7 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ### Basic example
 
-In this simple example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
+In this example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
 
 ```js
 const handler = {
@@ -191,11 +190,11 @@ p.a = 37; // Operation forwarded to the target
 console.log(target.a); // 37 (The operation has been properly forwarded!)
 ```
 
-Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
+Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private field forwarding](#no_private_field_forwarding) for more information.
 
-### No private property forwarding
+### No private field forwarding
 
-A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ```js
 class Secret {
@@ -308,20 +307,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // The default behavior to store the value
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // Indicate success
       return true;

@@ -1,10 +1,10 @@
 ---
 title: Firefox 117 for developers
+short-title: Firefox 117
 slug: Mozilla/Firefox/Releases/117
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 was released on August 29, 2023.
 
@@ -34,7 +34,7 @@ No notable changes.
 
 ### HTTP
 
-- Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
+- Fixed a bug where the [Content-Security-Policy](/en-US/docs/Web/HTTP/Guides/CSP) `'strict-dynamic'` source expression was not being enforced in `default-src` directives.
   The behavior now matches the specification where `default-src` directive values are used as a fallback when `script-src` is not provided ([Firefox bug 1313937](https://bugzil.la/1313937)).
 
 - The `Range` header is now a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safelisted_request_header) when the value is a single byte range (e.g., `bytes=100-200`).
@@ -70,7 +70,3 @@ No notable changes.
   Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
 
 - Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
-
-## Older versions
-
-{{Firefox_for_developers}}

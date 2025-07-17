@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 
 Comment nodes are valid before doctype declarations but not advisable
 given they trigger quirks mode in IE. A
-[conditional comment](https://en.wikipedia.org/wiki/Conditional_comment)
+[conditional comment](https://www.sitepoint.com/internet-explorer-conditional-comments/)
 works for IE as well, though:
 
 ```js
@@ -67,3 +67,5 @@ myDoc.childNodes;
 ## See also
 
 - {{domxref("DocumentType.after()")}}
+- {{domxref("CharacterData.before()")}}
+- {{domxref("Element.before()")}}

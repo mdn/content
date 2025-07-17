@@ -3,12 +3,10 @@ title: "GPUDevice: createPipelineLayout() method"
 short-title: createPipelineLayout()
 slug: Web/API/GPUDevice/createPipelineLayout
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createPipelineLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createPipelineLayout()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUPipelineLayout")}} that defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
@@ -52,7 +50,7 @@ The following snippet:
 - Creates a {{domxref("GPUPipelineLayout")}} based on the {{domxref("GPUBindGroupLayout")}}.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -78,7 +76,7 @@ const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -6,7 +6,7 @@ page-type: web-api-static-property
 browser-compat: api.PerformanceObserver.supportedEntryTypes_static
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The static **`supportedEntryTypes`** read-only property of the {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
@@ -25,7 +25,8 @@ To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a
 ```js
 PerformanceObserver.supportedEntryTypes;
 
-// returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "longtask", "mark", "measure", "navigation", "paint", "resource"] in Chrome 89
+// returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "long-animation-frame", "longtask", "mark", "measure", "navigation", "paint", "resource", "visibility-state"] in the main thread in Chrome 129
+// returns ["mark", "measure", "resource"] in a worker thread in Chrome 129
 ```
 
 ### Checking for unsupported types

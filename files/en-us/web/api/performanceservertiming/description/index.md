@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceServerTiming.description
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`description`** read-only property returns a
 string value of the server-specified metric description, or an empty

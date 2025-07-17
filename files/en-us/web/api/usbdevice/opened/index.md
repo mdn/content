@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.opened
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`opened`** read only property of the
 {{domxref("USBDevice")}} interface indicates whether a session has been started with a

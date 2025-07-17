@@ -2,17 +2,34 @@
 title: Const
 slug: WebAssembly/Reference/Numeric/Const
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`const`** instructions, are used to declare numbers.
 
-{{EmbedInteractiveExample("pages/wat/const.html", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: const", "tabbed-standard")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+
+    i32.const 10 ;; load a number onto the stack
+    call $log ;; log the number
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; push `5` onto the stack
 i32.const 5
 ```

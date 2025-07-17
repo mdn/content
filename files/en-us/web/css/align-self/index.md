@@ -3,13 +3,54 @@ title: align-self
 slug: Web/CSS/align-self
 page-type: css-property
 browser-compat: css.properties.align-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In flexbox, it aligns the item on the {{glossary("cross axis")}}.
 
-{{EmbedInteractiveExample("pages/css/align-self.html")}}
+{{InteractiveExample("CSS Demo: align-self")}}
+
+```css interactive-example-choice
+align-self: stretch;
+```
+
+```css interactive-example-choice
+align-self: center;
+```
+
+```css interactive-example-choice
+align-self: start;
+```
+
+```css interactive-example-choice
+align-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 The property doesn't apply to block-level boxes, or to table cells. If a flexbox item's cross-axis margin is `auto`, then `align-self` is ignored.
 
@@ -54,13 +95,11 @@ align-self: unset;
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
-
   - : The effect of this keyword is dependent of the layout mode we are in:
-
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic sizes where it behaves like `start`.
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic size where it behaves like `start`.
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `self-start`
@@ -143,6 +182,8 @@ div:nth-child(3) {
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
-- The {{cssxref("align-items")}} property
+- {{cssxref("align-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("place-self")}}

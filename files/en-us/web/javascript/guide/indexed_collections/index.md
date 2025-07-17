@@ -2,9 +2,10 @@
 title: Indexed collections
 slug: Web/JavaScript/Guide/Indexed_collections
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
 This chapter introduces collections of data which are ordered by an index value. This includes arrays and array-like constructs such as {{jsxref("Array")}} objects and {{jsxref("TypedArray")}} objects.
 
@@ -36,7 +37,7 @@ To create an array with non-zero length, but without any items, either of the fo
 // This...
 const arr1 = new Array(arrayLength);
 
-// ...results in the same array as this
+// … results in the same array as this
 const arr2 = Array(arrayLength);
 
 // This has exactly the same effect
@@ -90,7 +91,7 @@ If your code needs to create arrays with single elements of an arbitrary data ty
 You can also use the {{jsxref("Array.of")}} static method to create arrays with single element.
 
 ```js
-const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
+const arr = Array.of(9.3); // arr contains only one element 9.3
 ```
 
 ## Referring to array elements
@@ -175,7 +176,7 @@ console.log(cats); // [ <3 empty items> ]
 
 ### Iterating over arrays
 
-A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
+A common operation is to iterate over the values of an array, processing each one in some way, as follows:
 
 ```js
 const colors = ["red", "green", "blue"];
@@ -509,7 +510,7 @@ You can transform back and forth between arrays and other data structures.
 
 The {{jsxref("Object.groupBy()")}} method can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
-Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+Here we have an inventory array that contains "food" objects that have a `name` and a `type`.
 
 ```js
 const inventory = [
@@ -523,7 +524,7 @@ const inventory = [
 
 To use `Object.groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
 
-The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
+The code below uses an arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object). The result is an object that has properties named after the unique strings returned by the callback. Each property is assigned an array containing the elements in the group.
 
 ```js
 const result = Object.groupBy(inventory, ({ type }) => type);

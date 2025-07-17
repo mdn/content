@@ -3,9 +3,8 @@ title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a command is executed using its associated keyboard shortcut.
 
@@ -33,9 +32,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when a user enters the command's shortcut. The function is passed these arguments:
-
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
     - `tab`

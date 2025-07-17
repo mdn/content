@@ -75,7 +75,7 @@ Several options can be passed when requesting a lock:
 
 ### Monitoring
 
-The {{domxref("LockManager.query", "navigator.locks.query()")}} method can be used by scripts to introspect the state of the lock manager for the origin. This can be useful when debugging, for example, identifying why a lock could not be acquired. The results are a snapshot of the lock manager state, which identifies held and requested locks and some additional data (e.g. mode) about each, at the time the snapshot was taken.
+The {{domxref("LockManager.query", "navigator.locks.query()")}} method can be used by scripts to introspect the state of the lock manager for the origin. This can be useful when debugging, for example, identifying why a lock could not be acquired. The results are a snapshot of the lock manager state, which identifies held and requested locks and some additional data (e.g., mode) about each, at the time the snapshot was taken.
 
 ### Advanced use
 
@@ -83,17 +83,13 @@ For more complicated cases, such as holding the lock for an arbitrary amount of 
 
 ```js
 // Capture promise control functions:
-let resolve, reject;
-const p = new Promise((res, rej) => {
-  resolve = res;
-  reject = rej;
-});
+const { promise, resolve, reject } = Promise.withResolvers();
 
 // Request the lock:
 navigator.locks.request(
   "my_resource",
   // Lock is acquired.
-  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+  (lock) => promise, // Now lock will be held until either resolve() or reject() is called.
 );
 ```
 

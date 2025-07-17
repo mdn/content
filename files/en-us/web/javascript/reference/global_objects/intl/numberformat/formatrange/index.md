@@ -1,11 +1,11 @@
 ---
 title: Intl.NumberFormat.prototype.formatRange()
+short-title: formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatRange()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a range of numbers according to the locale and formatting options of this `Intl.NumberFormat` object.
 
@@ -18,18 +18,18 @@ formatRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRange()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
 
 ### Return value
 
-A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object. If the start and end values are formatted to the same string, the output will only contain a single value, possibly prefixed with an "approximately equals" symbol (e.g., "~$3"). The insertion of this symbol only depends on the locale settings, and is inserted even when `startRange === endRange`.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+  - : Thrown if either `startRange` or `endRange` is `NaN` or an inconvertible string.
 - {{jsxref("TypeError")}}
   - : Thrown if either `startRange` or `endRange` is undefined.
 

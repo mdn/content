@@ -1,16 +1,29 @@
 ---
 title: Atomics.store()
+short-title: store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.store
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.store()`** static
 method stores a given value at the given position in the array and returns that value.
 
-{{EmbedInteractiveExample("pages/js/atomics-store.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.store(uint8, 0, 2));
+// Expected output: 2
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntax
 

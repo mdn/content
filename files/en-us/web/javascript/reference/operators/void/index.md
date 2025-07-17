@@ -3,14 +3,37 @@ title: void operator
 slug: Web/JavaScript/Reference/Operators/void
 page-type: javascript-operator
 browser-compat: javascript.operators.void
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: void operator", "taller")}}
+
+```js interactive-example
+const output = void 1;
+console.log(output);
+// Expected output: undefined
+
+void console.log("expression evaluated");
+// Expected output: "expression evaluated"
+
+void (function iife() {
+  console.log("iife is executed");
+})();
+// Expected output: "iife is executed"
+
+void function test() {
+  console.log("test function executed");
+};
+try {
+  test();
+} catch (e) {
+  console.log("test function is not defined");
+  // Expected output: "test function is not defined"
+}
+```
 
 ## Syntax
 
@@ -82,7 +105,7 @@ void () => { console.log("iife!"); }(); // SyntaxError: Malformed arrow function
 
 ### JavaScript URIs
 
-When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Schemes/javascript), it evaluates the code in the URI
+When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Reference/Schemes/javascript), it evaluates the code in the URI
 and then replaces the contents of the page with the returned value, unless the returned
 value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:
@@ -95,7 +118,8 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 </a>
 ```
 
-> **Note:** `javascript:` pseudo protocol is discouraged over
+> [!NOTE]
+> `javascript:` pseudo protocol is discouraged over
 > other alternatives, such as unobtrusive event handlers.
 
 ### Non-leaking Arrow Functions
@@ -109,7 +133,7 @@ For example, if `doSomething()` returns `false` in the code below, the checkbox 
 checkbox.onclick = () => doSomething();
 ```
 
-This is unlikely to be desired behaviour!
+This is unlikely to be desired behavior!
 To be safe, when the return value of a function is not intended to be used, it can be passed to the `void` operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.
 
 ```js example-good

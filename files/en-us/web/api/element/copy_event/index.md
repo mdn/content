@@ -18,16 +18,16 @@ However, the handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `copy` event, but this will not affect the system clipboard.
 
-This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("copy", (event) => {});
+```js-nolint
+addEventListener("copy", (event) => { })
 
-oncopy = (event) => {};
+oncopy = (event) => { }
 ```
 
 ## Event type
@@ -84,6 +84,5 @@ source.addEventListener("copy", (event) => {
 
 ## See also
 
-- Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/copy_event", "copy")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "copy")}}
+- {{domxref("Element/cut_event", "cut")}} event
+- {{domxref("Element/paste_event", "paste")}} event

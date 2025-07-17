@@ -7,14 +7,14 @@ browser-compat:
   - api.WebSocketStream
 ---
 
-{{DefaultAPISidebar("WebSockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}{{AvailableInWorkers}}
 
 The **WebSocket API** makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive responses without having to poll the server for a reply.
 
 The WebSocket API provides two alternative mechanisms for creating and using web socket connections: the {{domxref("WebSocket")}} interface and the {{domxref("WebSocketStream")}} interface.
 
 - The `WebSocket` interface is stable and has good browser and server support. However it doesn't support [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure). As a result, when messages arrive faster than the application can process them it will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both.
-- The `WebSocketStream` is a {{jsxref("Promise")}}-based alternative to `WebSocket`. It uses the [Streams API](/en-US/docs/Web/API/Streams_API) to handle receiving and sending messages, meaning that socket connections can take advantage of stream backpressure automatically, regulating the speed of reading or writing to avoid bottlenecks in the application. However, `WebSocketSteam` is non-standard and currently only supported in one rendering engine.
+- The `WebSocketStream` interface is a {{jsxref("Promise")}}-based alternative to `WebSocket`. It uses the [Streams API](/en-US/docs/Web/API/Streams_API) to handle receiving and sending messages, meaning that socket connections can take advantage of stream backpressure automatically, regulating the speed of reading or writing to avoid bottlenecks in the application. However, `WebSocketStream` is non-standard and currently only supported in one rendering engine.
 
 Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is expected to replace the WebSocket API for many applications. WebTransport is a versatile, low-level API that provides backpressure and many other features not supported by either `WebSocket` or `WebSocketStream`, such as unidirectional streams, out-of-order delivery, and unreliable data transmission via datagrams. WebTransport is more complex to use than WebSockets and its cross-browser support is not as wide, but it enables the implementation of sophisticated solutions. If standard WebSocket connections are a good fit for your use case and you need wide browser compatibility, you should employ the WebSockets API to get up and running quickly. However, if your application requires a non-standard custom solution, then you should use the WebTransport API.
 
@@ -48,7 +48,7 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
     In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
   - : An HTTP header that in requests indicates the sub-protocols supported by the client in preferred order.
-    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+    In responses, it indicates the sub-protocol selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
   - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
     In responses, it indicates the extension selected by the server from the client's preferences.

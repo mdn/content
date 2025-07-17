@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CryptoKey.type
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The read-only **`type`** property of the {{DOMxRef("CryptoKey")}} interface indicates which kind of key is represented by the object. It can have the following values:
 

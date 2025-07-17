@@ -3,13 +3,60 @@ title: gap
 slug: Web/CSS/gap
 page-type: css-shorthand-property
 browser-compat: css.properties.gap
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
+{{InteractiveExample("CSS Demo: gap")}}
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Constituent properties
 
@@ -74,7 +121,7 @@ With flex containers, whether the first value is the gap between flex items or b
 
 In multi-column containers, the first value defines the gap between columns. A dividing line can be added to the otherwise "empty space" by using the {{cssxref("column-rule-style")}} property or {{cssxref("column-rule")}} shorthand.
 
-Percentage gap values are always calculated against the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) size of the container element. The behavior is well-defined and consistent across layout modes when the container size is definite. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` also does so. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents. Two examples below demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) in the examples section.
+Percentage gap values are always calculated against the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) size of the container element. The behavior is well-defined and consistent across layout modes when the container size is definite. As these three layout modes (multi-column, flex, and grid) treat cyclic percentage sizes differently, `gap` also does so. In grid layout, cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents. Two examples below demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) in the examples section.
 
 Early versions of the specification called this property `grid-gap`, and to maintain compatibility with legacy websites, browsers still accept `grid-gap` as an alias for `gap`.
 

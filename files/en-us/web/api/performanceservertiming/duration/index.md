@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceServerTiming.duration
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`duration`** read-only property returns a double that contains the server-specified metric duration, or the value `0.0`.
 

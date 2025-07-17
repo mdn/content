@@ -6,36 +6,32 @@ page-type: web-api-instance-property
 browser-compat: api.Request.mode
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`mode`** read-only property of the {{domxref("Request")}}
 interface contains the mode of the request (e.g., `cors`,
-`no-cors`, `same-origin`, `navigate` or `websocket`.) This is used
+`no-cors`, `same-origin`, or `navigate`.) This is used
 to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.
+
+To construct a request with a specific mode, pass the desired value as the {{domxref("RequestInit", "", "mode")}} option to the {{domxref("Request.Request()")}} constructor.
+
+Note that setting particular modes, especially `no-cors`, places restrictions on the request methods and headers that may be used, and prevents JavaScript from accessing the response headers or body. See the documentation for {{domxref("RequestInit", "", "mode")}} for more details.
 
 ## Value
 
-- A `RequestMode` value.
+One of the following values:
 
-  - : The associated _mode_, available values of which are:
+- `same-origin`
+  - : Disallows cross-origin requests. If a request is made to another origin with this mode set, the result is an error.
 
-    - `same-origin`
-      - : If a request is made to another origin with this mode
-        set, the result is an error. You could use this to ensure that a request is always
-        being made to your origin.
-    - `no-cors`
-      - : Prevents the method from being anything other than `HEAD`, `GET` or `POST`, and the headers from being anything other than {{Glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
-        If any ServiceWorkers intercept these requests, they may not add or override any headers except for those that are {{Glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
-        In addition, JavaScript may not access any properties of the resulting {{domxref("Response")}}.
-        This ensures that ServiceWorkers do not affect the semantics of the Web and prevents security and privacy issues arising from leaking data across domains.
-    - `cors`
-      - : Allows cross-origin requests, for example to access various
-        APIs offered by 3rd party vendors. These are expected to adhere to the [CORS protocol](/en-US/docs/Web/HTTP/CORS). Only a [limited set](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) of headers are exposed in the {{domxref("Response")}}, but the body is
-        readable.
-    - `navigate`
-      - : A mode for supporting navigation. The `navigate` value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.
-    - `websocket`
-      - : A special mode used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
+- `no-cors`
+  - : Disables CORS for cross-origin requests. The response is _opaque_, meaning that its headers and body are not available to JavaScript.
+
+- `cors`
+  - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism.
+
+- `navigate`
+  - : A mode for supporting navigation. The `navigate` value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.
 
 ### Default mode
 
@@ -49,7 +45,7 @@ for that `Request` is set to `cors`.
 However, for requests created other than by the {{domxref("Request.Request", "Request()")}}
 constructor, `no-cors` is typically used as the mode; for example, for
 embedded resources where the request is initiated from markup, unless the
-[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+[`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 attribute is present, the request is in most cases made using the `no-cors`
 mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
 (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},
@@ -78,5 +74,5 @@ const myMode = myRequest.mode; // returns "cors" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

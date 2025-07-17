@@ -3,13 +3,38 @@ title: column-fill
 slug: Web/CSS/column-fill
 page-type: css-property
 browser-compat: css.properties.column-fill
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
 
-{{EmbedInteractiveExample("pages/css/column-fill.html")}}
+{{InteractiveExample("CSS Demo: column-fill")}}
+
+```css interactive-example-choice
+column-fill: auto;
+```
+
+```css interactive-example-choice
+column-fill: balance;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  height: 90%;
+  columns: 3;
+  text-align: left;
+}
+```
 
 ## Syntax
 
@@ -34,6 +59,8 @@ The `column-fill` property is specified as one of the keyword values listed belo
   - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
 - `balance`
   - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
+
+The specification defines a `balance-all` value, in which content is equally divided between columns in fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media). This value is not yet supported in any browser.
 
 ## Formal definition
 
@@ -98,6 +125,6 @@ p.fill-balance {
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-count")}}
 - {{CSSXref("column-width")}}

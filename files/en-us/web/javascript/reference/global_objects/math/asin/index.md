@@ -1,11 +1,11 @@
 ---
 title: Math.asin()
+short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asin
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.asin()`** static method returns the inverse sine (in radians) of a number. That is,
 
@@ -15,7 +15,20 @@ The **`Math.asin()`** static method returns the inverse sine (in radians) of a n
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-asin.html")}}
+{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(opposite, hypotenuse) {
+  return Math.asin(opposite / hypotenuse);
+}
+
+console.log(calcAngle(6, 10));
+// Expected output: 0.6435011087932844
+
+console.log(calcAngle(5, 3));
+// Expected output: NaN
+```
 
 ## Syntax
 

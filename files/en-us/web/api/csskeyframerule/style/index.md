@@ -8,7 +8,7 @@ browser-compat: api.CSSKeyframeRule.style
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ domxref("CSSKeyframeRule") }}.
+The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the declaration block of the {{ domxref("CSSKeyframeRule") }}.
 
 ## Value
 
@@ -19,7 +19,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 - declarations
   - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
 - parent CSS rule
-  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+  - : The context object, which is an alias for [`this`](https://heycam.github.io/webidl/#this).
 - owner node
   - : Null.
 
@@ -29,7 +29,7 @@ The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{d
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrameRule")}} objects for each keyframe.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

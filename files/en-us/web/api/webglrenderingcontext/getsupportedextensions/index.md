@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getSupportedExtensions()`** method
 returns a list of all the supported [WebGL](/en-US/docs/Web/API/WebGL_API)
@@ -41,7 +41,7 @@ specific extension object.
 
 ## WebGL extensions
 
-Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
+Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also listed in our [WebGL API reference](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
 

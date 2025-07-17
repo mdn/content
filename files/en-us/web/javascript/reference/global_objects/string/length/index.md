@@ -1,15 +1,22 @@
 ---
 title: "String: length"
+short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.String.length
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`length`** data property of a {{jsxref("String")}} value contains the length of the string in UTF-16 code units.
 
-{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String: length", "shorter")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
+```
 
 ## Value
 

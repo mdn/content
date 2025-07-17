@@ -2,14 +2,38 @@
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.repeating-conic-gradient
+browser-compat: css.types.gradient.repeating-conic-gradient
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
-The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
+{{InteractiveExample("CSS Demo: repeating-conic-gradient()")}}
 
-{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
+```css interactive-example-choice
+background: repeating-conic-gradient(red 0%, yellow 15%, red 33%);
+```
+
+```css interactive-example-choice
+background: repeating-conic-gradient(
+  from 45deg at 10% 50%,
+  brown 0deg 10deg,
+  darkgoldenrod 10deg 20deg,
+  chocolate 20deg 30deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 
@@ -41,7 +65,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > [!NOTE]
-> Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> Rendering of color stops in repeating conic gradients follows the same rules as [color stops in linear gradients](/en-US/docs/Web/CSS/gradient/linear-gradient#composition_of_a_linear_gradient).
 
 ## Description
 
@@ -99,16 +123,16 @@ If two or more color stops are at the same location, the transition will be a ha
 
 While you can mix and match different angle units, don't. It makes CSS hard to read.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Examples
 

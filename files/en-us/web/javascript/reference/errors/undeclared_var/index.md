@@ -2,9 +2,8 @@
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "Assignment to undeclared variable" occurs when the value has been assigned to an undeclared variable.
 
@@ -33,7 +32,7 @@ Three things to note about declared and undeclared variables:
 - Declared variables are created before any code is executed.
   Undeclared variables do not exist until the code assigning to them is executed.
 - Declared variables are a non-configurable property of their execution context (function or global).
-  Undeclared variables are configurable (e.g. can be deleted).
+  Undeclared variables are configurable (e.g., can be deleted).
 
 For more details and examples, see the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) reference page.
 

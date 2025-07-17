@@ -3,9 +3,8 @@ title: CSS color adjustment
 slug: Web/CSS/CSS_color_adjustment
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-color-adjust-1/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS color adjustment** module provides a model and controls automatic color adjustment by the user agent to handle user preferences, such as "Dark Mode", contrast adjustment, and other color scheme preferences.
 
@@ -36,13 +35,14 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
-  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
+  - {{cssxref("fill")}}
+  - {{cssxref("flood-color")}}
+  - {{cssxref("flood-opacity")}}
+  - {{cssxref("lighting-color")}}
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
+  - {{cssxref("stop-color")}}
+  - {{cssxref("stroke")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}

@@ -8,38 +8,32 @@ browser-compat: api.Window.devicePixelRatio
 
 {{APIRef}}
 
-The **`devicePixelRatio`** of
-{{domxref("Window")}} interface returns the ratio of the resolution in _physical
-pixels_ to the resolution in _CSS pixels_ for the current display
-device.
+The **`devicePixelRatio`** of {{domxref("Window")}} interface returns the ratio of the resolution in _physical pixels_ to the resolution in _CSS pixels_ for the current display device.
 
-This value could also be interpreted as the ratio of pixel sizes: the
-size of one _CSS pixel_ to the size of one _physical pixel_. In simpler
-terms, this tells the browser how many of the screen's actual pixels should be used to
-draw a single CSS pixel.
+This value could also be interpreted as the ratio of pixel sizes: the size of one _CSS pixel_ to the size of one _physical pixel_.
+In simpler terms, this tells the browser how many of the screen's actual pixels should be used to draw a single CSS pixel.
 
-This is useful when dealing with the difference between rendering on a standard display
-versus a HiDPI or Retina display, which use more screen pixels to draw the same objects,
-resulting in a sharper image.
+Page zooming affects the value of `devicePixelRatio`. When a page is zoomed in (made larger), the size of a CSS pixel increases, and so the `devicePixelRatio` value increases.
+Pinch-zooming does not affect `devicePixelRatio`, because this magnifies the page without changing the size of a CSS pixel.
 
-You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
-value of `devicePixelRatio` changes (which can happen, for example, if the
-user drags the window to a display with a different pixel density). See
-[the example below](#monitoring_screen_resolution_or_zoom_level_changes).
+This is useful when dealing with the difference between rendering on a standard display versus a HiDPI or Retina display, which use more screen pixels to draw the same objects, resulting in a sharper image.
+
+You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the value of `devicePixelRatio` changes (which can happen, for example, if the user drags the window to a display with a different pixel density).
+See [the example below](#monitoring_screen_resolution_or_zoom_level_changes).
 
 ## Value
 
 A double-precision floating-point value indicating the ratio of the display's resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a classic 96 DPI display, while a value of 2 is expected for HiDPI/Retina displays.
 
-Other values may be returned in the case of unusually low resolution displays or, more often, when a screen has a higher pixel density than double the standard resolution of 96 DPI. Modern mobile device screens - which offer high display resolutions at small physical sizes - often yield a `devicePixelRatio` value greater than 2.
+Other values may be returned in the case of unusually low resolution displays or, more often, when a screen has a higher pixel density than double the standard resolution of 96 DPI.
+Modern mobile device screens - which offer high display resolutions at small physical sizes - often yield a `devicePixelRatio` value greater than 2.
 
 ## Examples
 
 ### Correcting resolution in a `<canvas>`
 
 A {{htmlelement("canvas")}} can appear too blurry on retina screens.
-Use `window.devicePixelRatio` to determine how much extra pixel density
-should be added to allow for a sharper image.
+Use `window.devicePixelRatio` to determine how much extra pixel density should be added to allow for a sharper image.
 
 #### HTML
 
@@ -91,11 +85,11 @@ In this example, we'll set up a media query and watch it to see when the device 
 ```html
 <div id="container">
   <p>
-    This example demonstrates the effect of zooming the page in and out
-    (or moving it to a screen with a different scaling factor) on the
-    value of the <code>devicePixelRatio</code> property.</p>
-    <p>Try it and watch what happens!</p>
+    This example demonstrates the effect of zooming the page in and out (or
+    moving it to a screen with a different scaling factor) on the value of the
+    <code>devicePixelRatio</code> property.
   </p>
+  <p>Try it and watch what happens!</p>
 </div>
 <div id="output"></div>
 ```
@@ -130,9 +124,7 @@ let remove = null;
 const output = document.querySelector("#output");
 
 const updatePixelRatio = () => {
-  if (remove != null) {
-    remove();
-  }
+  remove?.();
   const mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
   const media = matchMedia(mqString);
   media.addEventListener("change", updatePixelRatio);

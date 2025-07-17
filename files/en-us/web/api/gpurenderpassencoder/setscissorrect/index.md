@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setScissorRect() method"
 short-title: setScissorRect()
 slug: Web/API/GPURenderPassEncoder/setScissorRect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setScissorRect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setScissorRect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.

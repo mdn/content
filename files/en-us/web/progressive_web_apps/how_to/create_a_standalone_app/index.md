@@ -2,19 +2,18 @@
 title: Create a standalone app
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser, just like websites, or have their own dedicated windows similar to how OS-native applications work.
 
 Users tend to have specific expectations of how installed applications behave on their devices. One of these expectations is that applications have their own dedicated windows.
 
-By using the [web app manifest](/en-US/docs/Web/Manifest)'s [`display`](/en-US/docs/Web/Manifest/display) member, you can define whether the installed PWA is displayed in a browser or has its own dedicated window when the PWA is launched from the user's device.
+By using the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest)'s [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member, you can define whether the installed PWA is displayed in a browser or has its own dedicated window when the PWA is launched from the user's device.
 
 ## Use the standalone display mode
 
-To use a standalone display mode and give your PWA its own dedicated window, add the [`display`](/en-US/docs/Web/Manifest/display) member to your [web app manifest](/en-US/docs/Web/Manifest) and set its value to `standalone`:
+To use a standalone display mode and give your PWA its own dedicated window, add the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member to your [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) and set its value to `standalone`:
 
 ```json
 {
@@ -31,7 +30,7 @@ To use a standalone display mode and give your PWA its own dedicated window, add
 }
 ```
 
-Note that there are other display modes available, such as `browser`, `minimal-ui`, and `fullscreen`. The display mode you choose changes how much of the browser user interface is shown to the user, from showing all of it, to having your own dedicated window. To learn more about all the available display mode and about how they fallback when one is not supported, see the documentation about the [`display`](/en-US/docs/Web/Manifest/display) member.
+Note that there are other display modes available, such as `browser`, `minimal-ui`, and `fullscreen`. The display mode you choose changes how much of the browser user interface is shown to the user, from showing all of it, to having your own dedicated window. To learn more about all the available display mode and about how they fallback when one is not supported, see the documentation about the [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display) member.
 
 ## Best practices
 
@@ -73,6 +72,6 @@ function isStandaloneApp() {
 
 ## See also
 
-- [Web App Manifests](/en-US/docs/Web/Manifest).
+- [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
 - [Display modes](https://web.dev/learn/pwa/app-design/#display_modes).
 - Customize your app's title bar on desktop operating systems by using the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).

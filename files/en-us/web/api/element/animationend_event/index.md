@@ -14,10 +14,10 @@ The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationend", (event) => {});
+```js-nolint
+addEventListener("animationend", (event) => { })
 
-onanimationend = (event) => {};
+onanimationend = (event) => { }
 ```
 
 ## Event type
@@ -90,11 +90,11 @@ animated.onanimationend = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(100%) scaleX(3);
   }

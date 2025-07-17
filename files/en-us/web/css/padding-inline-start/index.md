@@ -3,13 +3,52 @@ title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 page-type: css-property
 browser-compat: css.properties.padding-inline-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/padding-inline-start.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-start")}}
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-start: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntax
 
@@ -34,13 +73,13 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). Must be nonnegative.
 
 ## Description
 
-In English, a left-to-right top-to-bottom language, the `padding-inline-start` property for this paragraph of text corresponds to the {{cssxref("padding-top")}} property. However, whether this logical property corresponds to the `padding-top`, {{cssxref("padding-right")}}, or {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The `padding-inline-start` property takes the same values as physical properties such as {{cssxref("padding-top")}}. However, it can be equivalent to {{cssxref("padding-left")}}, {{cssxref("padding-right")}}, `padding-top`, or {{cssxref("padding-bottom")}} depending on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other padding values of the element.
 
 ## Formal definition
 

@@ -2,9 +2,8 @@
 title: Locale-specific message reference
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Each internationalized extension has at least one file named `messages.json` that provides locale-specific strings. This page describes the format of `messages.json` files.
 
@@ -105,7 +104,7 @@ Each placeholder substring definition has a number of values of its own:
 
 #### placeholder name
 
-The placeholder name is used to represent the placeholder in the substitution string (e.g. `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string [name](#name).
+The placeholder name is used to represent the placeholder in the substitution string (e.g., `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string [name](#name).
 
 #### content
 

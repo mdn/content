@@ -2,7 +2,7 @@
 title: "console: time() static method"
 short-title: time()
 slug: Web/API/console/time_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.time_static
 ---
 
@@ -15,8 +15,8 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the {{domxref("console")}} d
 ## Syntax
 
 ```js-nolint
-time()
-time(label)
+console.time()
+console.time(label)
 ```
 
 ### Parameters
@@ -39,6 +39,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - See {{domxref("console/timeLog_static", "console.timeLog()")}} and {{domxref("console/timeEnd_static", "console.timeEnd()")}} for examples
-- [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#time)
-- [Node.JS documentation for `console.time()`](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
+- [Microsoft Edge's documentation for `console.time()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#time)
+- [Node.js documentation for `console.time()`](https://nodejs.org/docs/latest/api/console.html#consoletimelabel)
 - [Google Chrome's documentation for `console.time()`](https://developer.chrome.com/docs/devtools/console/api/#time)

@@ -3,11 +3,10 @@ title: <absolute-size>
 slug: Web/CSS/absolute-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the absolute size keywords. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
+The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the absolute size keywords. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
 The font size keywords are mapped to the deprecated HTML `size` attribute. See the [HTML size attribute](#html_size_attribute) section below).
 
@@ -22,31 +21,24 @@ The font size keywords are mapped to the deprecated HTML `size` attribute. See t
 The `<absolute-size>` data type is defined using a keyword value chosen from the list below.
 
 - `xx-small`
-
   - : An absolute size 60% the size of `medium`. Mapped to the deprecated `size="1"`.
 
 - `x-small`
-
   - : An absolute size 75% the size of `medium`.
 
 - `small`
-
   - : An absolute size 89% the size of `medium`. Mapped to the deprecated `size="2"`.
 
 - `medium`
-
   - : A user's preferred font size. This value is used as the reference middle value. Mapped to `size="3"`.
 
 - `large`
-
   - : An absolute size 20% larger than `medium`. Mapped to the deprecated `size="4"`.
 
 - `x-large`
-
   - : An absolute size 50% larger than `medium`. Mapped to the deprecated `size="5"`.
 
 - `xx-large`
-
   - : An absolute size twice the size of `medium`. Mapped to the deprecated `size="6"`.
 
 - `xxx-large`
@@ -58,7 +50,7 @@ Each `<absolute-size>` keyword value is sized relative to the `medium` size and 
 
 In CSS1 (1996), the scaling factor between adjacent keyword value indexes was 1.5, which was too large. In CSS2 (1998), the scaling factor between adjacent keyword value indexes was 1.2, which created issues for the small values. As a single fixed ratio between adjacent absolute-size keywords was found to be problematic, there is no longer a fixed ratio recommendation. The only recommendation to preserve readability is that the smallest font size should not be less than `9px`.
 
-For each `<absolute-size>` keyword value, the following table lists the scaling factor, mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) headings, and mapping to the deprecated [HTML `size` attribute](#html_size_attribute).
+For each `<absolute-size>` keyword value, the following table lists the scaling factor, mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) headings, and mapping to the deprecated [HTML `size` attribute](#html_size_attribute).
 
 | `<absolute-size>`     | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
 | --------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |

@@ -1,13 +1,14 @@
 ---
-title: "-webkit-box-reflect"
+title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-box-reflect
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
 
@@ -49,10 +50,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Formal syntax
 
-```plain
--webkit-box-reflect =
-  [ above | below | right | left ]? <length>? <image>?
-```
+{{CSSSyntaxRaw(`-webkit-box-reflect = [ above | below | right | left ]? <length>? <image>?`)}}
 
 ## Specifications
 
@@ -65,4 +63,4 @@ Not part of any standard. The standard way to do reflection in CSS is to use the
 ## See also
 
 - The Apple [documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html).
-- The Webkit [specification](https://webkit.org/blog/182/css-reflections/).
+- The WebKit [specification](https://webkit.org/blog/182/css-reflections/).

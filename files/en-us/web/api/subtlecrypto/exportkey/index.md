@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.exportKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
 interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object

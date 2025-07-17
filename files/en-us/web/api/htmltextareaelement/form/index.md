@@ -27,5 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLTextAreaElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("textarea")}}
-- HTML [`form`](/en-US/docs/Web/HTML/Element/textarea#form) attribute
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- HTML [`form`](/en-US/docs/Web/HTML/Reference/Elements/textarea#form) attribute
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

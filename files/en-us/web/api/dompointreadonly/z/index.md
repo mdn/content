@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.z
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface's
 **`z`** property holds the depth coordinate, z, for a

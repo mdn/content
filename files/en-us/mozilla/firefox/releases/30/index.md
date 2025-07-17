@@ -1,10 +1,10 @@
 ---
 title: Firefox 30 for developers
+short-title: Firefox 30
 slug: Mozilla/Firefox/Releases/30
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changes for Web developers
 
@@ -31,7 +31,7 @@ _No change._
 
 - New ES2015-compatible [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `[for (item of iterable) item]` and [generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` have been implemented ([Firefox bug 979865](https://bugzil.la/979865)).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) are now extensible and support new named properties ([Firefox bug 695438](https://bugzil.la/695438)).
-- The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Firefox bug 762556](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_evaled_code). This can help you to better debug minified or generated JavaScript code.
+- The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Firefox bug 762556](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#description). This can help you to better debug minified or generated JavaScript code.
 - The `Promise.cast()` method has been renamed to {{jsxref("Promise.resolve()")}} ([Firefox bug 966348](https://bugzil.la/966348)).
 
 ### Interfaces/APIs/DOM
@@ -59,7 +59,7 @@ _No change._
 
 ### Audio/Video
 
-- On Linux, Gstreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
+- On Linux, GStreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
 
 ## Security
 
@@ -68,7 +68,3 @@ _No change._
 ## Changes for add-on and Mozilla developers
 
 - The interface `nsIDOMWindowUtils` now supports the Boolean attribute `audioMuted` and `audioVolume`, a float in the range `[0.0 , 1.0]`, allowing to control the sound produced by a window (that is any tab or iframe). There is no UI for this, but is available to add-ons. ([Firefox bug 923247](https://bugzil.la/923247))
-
-### Older versions
-
-{{Firefox_for_developers}}

@@ -1,10 +1,10 @@
 ---
 title: Using CSS containment
+short-title: Using containment
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS containment improves the performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent from the rest of the content, rendering can be optimized and performance improved.
 
@@ -46,7 +46,7 @@ It tells the browser that the internal layout of the element is completely separ
 
 By setting `contain: content` on each `<article>` we have indicated this; we have told the browser that each article is independent. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
 
-When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
+When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g., with `height: auto`), then the browser will need to account for its size changing.
 
 ## Key concepts and terminology
 
@@ -62,14 +62,14 @@ article {
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts).
 
 In addition:
 
 - {{cssxref("float")}} layout will be performed independently inside the specified element.
 - Margins won't collapse across a layout containment boundary.
-- The layout container is a [containing block](/en-US/docs/Web/CSS/Containing_block) for `absolute`- and `fixed`-positioned descendants.
-- The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), therefore {{cssxref("z-index")}} can be used.
+- The layout container is a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for `absolute`- and `fixed`-positioned descendants.
+- The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
 > [!NOTE]
 > The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
@@ -82,7 +82,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 
@@ -101,7 +101,7 @@ If you set `contain: size` on an element, you need to specify the size of the el
 ```css
 article {
   contain: size;
-  contain-intrinsic-size: 100vw auto;
+  contain-intrinsic-size: 100vw auto none;
 }
 ```
 
@@ -136,7 +136,7 @@ To remove this risk, always set a size when using `strict`:
 ```css
 article {
   contain: strict;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
@@ -145,7 +145,7 @@ The above is the same as:
 ```css
 article {
   contain: size layout paint style;
-  contain-intrinsic-size: 80vw auto;
+  contain-intrinsic-size: 80vw auto none;
 }
 ```
 
@@ -192,7 +192,7 @@ This happens in both the cases mentioned above, but with `content-visibility: au
 ## See also
 
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Learn: CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
+- [Learn: CSS performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event

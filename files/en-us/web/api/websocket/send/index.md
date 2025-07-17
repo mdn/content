@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebSocket.send
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.send()`** method enqueues the specified data
 to be transmitted to the server over the WebSocket connection, increasing the value of
@@ -24,9 +24,7 @@ send(data)
 ### Parameters
 
 - `data`
-
   - : The data to send to the server. It may be one of the following types:
-
     - `string`
       - : A text string. The string is added to the buffer in UTF-8 format, and the value
         of `bufferedAmount` is increased by the number of bytes required to

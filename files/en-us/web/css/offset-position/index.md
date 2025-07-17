@@ -3,9 +3,8 @@ title: offset-position
 slug: Web/CSS/offset-position
 page-type: css-property
 browser-compat: css.properties.offset-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset-position`** [CSS](/en-US/docs/Web/CSS) property defines the initial position of an element along a path. This property is typically used in combination with the {{cssxref("offset-path")}} property to create a motion effect. The value of `offset-position` determines where the element gets placed initially for moving along an offset path if an `offset-path` function such as {{cssxref("basic-shape/path", "path()")}} does not specify its own starting position.
 
@@ -66,7 +65,7 @@ offset-position: unset;
 
 ### Setting initial offset-position for an offset-path
 
-In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("basic-shape/path", "path()")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
+In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("basic-shape/path", "path()")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Reference/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
 
 #### HTML
 

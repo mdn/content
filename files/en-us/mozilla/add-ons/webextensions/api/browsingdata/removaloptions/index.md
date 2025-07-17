@@ -3,9 +3,8 @@ title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.RemovalOptions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
 
@@ -14,24 +13,26 @@ The **`browsingData.RemovalOptions`** type contains options to control certain a
 Values of this type are objects. They contain the following properties:
 
 - `cookieStoreId` {{optional_inline}}
-
   - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 
     > [!NOTE]
     > On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
-- `hostnames` {{optional_inline}}
+- `excludeOrigin` {{optional_inline}}
+  - : `array` of `string`. List of origins to exclude from the removal process. Can't be used together with `origins`. Only supported for cookies, storage, and cache. Cookies are excluded for the entire registrable domain.
 
-  - : `Array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.
+- `hostnames` {{optional_inline}}
+  - : `array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.
 
     You must pass in just a hostname here, without protocol (for example, `"google.com"` not `"https://google.com"`). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
 
-- `originTypes` {{optional_inline}}
+- `origin` {{optional_inline}}
+  - : `array` of `string`. List of origins to remove data for. Can't be used together with `excludeOrigins`. Only supported for cookies, storage, and cache. Cookies are cleared for the entire registrable domain.
 
-  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages ("`unprotectedWeb`") is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
+- `originTypes` {{optional_inline}}
+  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages (`unprotectedWeb`) is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
 
     This object may contain any of the following properties:
-
     - `unprotectedWeb` {{optional_inline}}
       - : `boolean`. If present and `true`, remove data from normal web pages.
     - `protectedWeb` {{optional_inline}}

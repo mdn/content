@@ -3,11 +3,10 @@ title: <dashed-ident>
 slug: Web/CSS/dashed-ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<dashed-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
 
 ## Syntax
 
@@ -21,7 +20,7 @@ Just like [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) `<dashed-ident>`s
 
 ### Using with CSS custom properties
 
-When `<dashed-ident>` is used with [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), the property is declared first and then used within a [CSS var() function](/en-US/docs/Web/CSS/var).
+When `<dashed-ident>` is used with [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), the property is declared first and then used within a [CSS var() function](/en-US/docs/Web/CSS/var).
 
 ```css
 html {

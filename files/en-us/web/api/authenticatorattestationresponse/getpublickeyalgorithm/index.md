@@ -28,7 +28,7 @@ A number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/ass
 
 ## Examples
 
-See [Creating a public key credential using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential_using_the_webauthn_api) for a detailed example.
+See [Creating a public key credential](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setVertexBuffer() method"
 short-title: setVertexBuffer()
 slug: Web/API/GPURenderPassEncoder/setVertexBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setVertexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setVertexBuffer()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets or unsets the current {{domxref("GPUBuffer")}} for the given slot that will provide vertex data for subsequent drawing commands.
@@ -50,7 +48,7 @@ The following criteria must be met when calling **`setVertexBuffer()`**, otherwi
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `setVertexBuffer()` is used as appropriate to set the source of vertex data.
 
 ```js
-// ...
+// …
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
@@ -83,7 +81,7 @@ passEncoder.end();
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ### Unset vertex buffer

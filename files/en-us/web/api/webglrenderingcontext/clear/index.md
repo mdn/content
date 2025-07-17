@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.clear
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.clear()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) clears buffers to preset values.
 
@@ -24,10 +24,8 @@ clear(mask)
 ### Parameters
 
 - `mask`
-
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} bitwise OR mask that indicates the buffers to be
     cleared. Possible values are:
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

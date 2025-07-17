@@ -32,13 +32,13 @@ In this guide we'll introduce the different credential types and explain at a hi
 ## Passwords
 
 > [!NOTE]
-> Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in a password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Element/input/password).
+> Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in a password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Reference/Elements/input/password).
 
 Modern browsers provide users with a password manager, which enables users to store the passwords they enter on websites, and later retrieve them when they need to log in again. Password managers can help with password security by remembering passwords for users and autofilling them, which allows users to choose stronger passwords.
 
 In the Credential Management API, a password is represented by the {{domxref("PasswordCredential")}} interface. When a user successfully registers for or signs into your site, you can call the {{domxref("PasswordCredential.PasswordCredential()", "PasswordCredential()")}} constructor or {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} to create a `PasswordCredential` object from the credentials the user entered. You can then pass this into {{domxref("CredentialsContainer.store", "navigator.credentials.store()")}}, and the browser will ask the user if they want to store the password in the password manager.
 
-![Sequence diagram showing creation and storage of a pasword credential.](password-create.svg)
+![Sequence diagram showing creation and storage of a password credential.](password-create.svg)
 
 When a user visits your site, you can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to retrieve a stored password for your site, and use it to log the user in. Depending on the situation, you can log the user in silently or use the returned password to auto-fill a form field.
 
@@ -61,7 +61,7 @@ If, in the course of this exchange, the user can be authenticated with the IdP, 
 Note that {{domxref("CredentialsContainer.create", "create()")}} and {{domxref("CredentialsContainer.store", "store()")}} are not used when working with the Federated Credential Management API.
 
 > [!NOTE]
-> Support for federated identity in the Credential Management API was originally provided through the {{domxref("FederatedCredential")}} interface. However, this mechanism depends on technologies such as [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies), which are intrinsically privacy-invasive. These technologies were [deprecated in browsers](/en-US/blog/goodbye-third-party-cookies/), therefore a new approach was needed.
+> Support for federated identity in the Credential Management API was originally provided through the {{domxref("FederatedCredential")}} interface. However, this mechanism depends on technologies such as [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies), which are intrinsically privacy-invasive. These technologies were [deprecated in browsers](/en-US/blog/goodbye-third-party-cookies/), therefore a new approach was needed.
 
 ## One-time passwords
 
@@ -81,11 +81,11 @@ Note that {{domxref("CredentialsContainer.create", "create()")}} and {{domxref("
 
 The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) (WebAuthn) enables users to log into websites by asking an _authenticator_ to generate digitally signed assertions about a user's identity.
 
-An authenticator is an entity that is inside or attached to the user's device, and that can perform the cryptographic operations needed to register and authenticate users, and securely store the cryptographic keys used in these operations. An authenticator might be integrated into the device, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system, or it might be a removable module like a [Yubikey](https://en.wikipedia.org/wiki/YubiKey).
+An authenticator is an entity that is inside or attached to the user's device, and that can perform the cryptographic operations needed to register and authenticate users, and securely store the cryptographic keys used in these operations. An authenticator might be integrated into the device, like the [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) system in Apple devices or the [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) system, or it might be a removable module like a [YubiKey](https://en.wikipedia.org/wiki/YubiKey).
 
 Instead of passwords, WebAuthn uses {{glossary("public-key cryptography")}} to authenticate users.
 
-To register a user on a website using WebAuthn, call {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}}, providing all the information needed to create a key pair. The authenticator may first ask the user to authenticate themselves, for example using a biometric reader. It will then generate a key pair and return the public key. This key pair is specific to the user and the website. The authenticator may also generate and return a signed _attestation_: this is a statement that the authenticator itself is (for example) a genuine Yubikey.
+To register a user on a website using WebAuthn, call {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}}, providing all the information needed to create a key pair. The authenticator may first ask the user to authenticate themselves, for example using a biometric reader. It will then generate a key pair and return the public key. This key pair is specific to the user and the website. The authenticator may also generate and return a signed _attestation_: this is a statement that the authenticator itself is (for example) a genuine YubiKey.
 
 The website front end sends the public key and attestation to the server, which verifies the attestation and stores the public key with the rest of the new user's account information.
 

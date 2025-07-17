@@ -3,15 +3,29 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: function* declaration")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## Syntax
 
@@ -30,7 +44,8 @@ function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > Generator functions do not have arrow function counterparts.
 
-> **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
 
 ### Parameters
 
@@ -55,14 +70,13 @@ function execution, replacing the `yield` expression where an execution was
 paused with the argument from `next()`.
 
 Generators in JavaScript — especially when combined with Promises — are a very
-powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
-\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
+powerful tool for asynchronous programming as they mitigate — if not entirely eliminate — the problems with callbacks, such as [Callback Hell](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1) and
 [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
 A `return` statement in a generator, when executed, will make the generator
-finish (i.e. the `done` property of the object returned by it will be set to
+finish (i.e., the `done` property of the object returned by it will be set to
 `true`). If a value is returned, it will be set as the `value`
 property of the object returned by the generator.
 Much like a `return` statement, an error thrown inside the generator will
@@ -75,7 +89,7 @@ of that generator's code, they will just return an object of this form:
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```js
 function* idMaker() {
@@ -218,30 +232,18 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### Generator defined in an expression
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
-```
-
 ### Generator example
 
 ```js
 function* powers(n) {
-  //endless loop to generate
+  // Endless loop to generate
   for (let current = n; ; current *= n) {
     yield current;
   }
 }
 
 for (const power of powers(2)) {
-  // controlling generator
+  // Controlling generator
   if (power > 32) {
     break;
   }

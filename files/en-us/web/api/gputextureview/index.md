@@ -2,12 +2,10 @@
 title: GPUTextureView
 slug: Web/API/GPUTextureView
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUTextureView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUTextureView`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a view into a subset of the texture resources defined by a particular {{domxref("GPUTexture")}}.
 
@@ -17,7 +15,7 @@ A `GPUTextureView` object instance is created using the {{domxref("GPUTexture.cr
 
 ## Instance properties
 
-- {{domxref("GPUTextureView.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUTextureView.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples
@@ -65,12 +63,12 @@ const renderPassDescriptor: GPURenderPassDescriptor = {
   },
 };
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -1,10 +1,10 @@
 ---
 title: Firefox 95 for developers
+short-title: Firefox 95
 slug: Mozilla/Firefox/Releases/95
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 95 that will affect developers.
 Firefox 95 was released on December 7, 2021.
@@ -13,7 +13,7 @@ Firefox 95 was released on December 7, 2021.
 
 ### HTML
 
-- The [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute is now supported on all platforms, instead of just Android.
+- The [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) global attribute is now supported on all platforms, instead of just Android.
   This provides a hint to browsers about the type of virtual keyboard that would be best suited to editing a particular element ([Firefox bug 1205133](https://bugzil.la/1205133)).
 
 ### CSS
@@ -45,7 +45,3 @@ No notable changes
 - Added `globalPrivacyControl` in {{WebExtAPIRef("privacy.network")}} to provide visibility into whether the user has enabled Global Privacy Control inside the browser. ([Firefox bug 1670058](https://bugzil.la/1670058)).
 
 - Added the `"webRequestFilterResponse.serviceWorkerScript"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}} for requests originated for service worker scripts. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using these permissions ([Firefox bug 1636629](https://bugzil.la/1636629)).
-
-## Older versions
-
-{{Firefox_for_developers}}

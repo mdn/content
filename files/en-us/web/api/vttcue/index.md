@@ -32,7 +32,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.line")}}
   - : Represents the line positioning of the cue. This can be the string `auto` or a number whose interpretation depends on the value of {{domxref("VTTCue.snapToLines")}}.
 - {{domxref("VTTCue.lineAlign")}}
-  - : An enum representing the alignment of the {{domxref("VTTCue.line")}}.
+  - : An enum representing the alignment of the VTT cue.
 - {{domxref("VTTCue.position")}}
   - : Represents the indentation of the cue within the line.
     This can be the string `auto`, a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
@@ -59,9 +59,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 ### CSS

@@ -8,7 +8,7 @@ status:
 browser-compat: api.InterventionReportBody.sourceFile
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`sourceFile`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the path to the source file where the intervention occurred.
 

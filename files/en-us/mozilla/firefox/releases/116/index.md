@@ -1,10 +1,10 @@
 ---
 title: Firefox 116 for developers
+short-title: Firefox 116
 slug: Mozilla/Firefox/Releases/116
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 116 that affect developers. Firefox 116 was released on August 01, 2023.
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
-- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+- The [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) elements.
   This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
 
 ### CSS
@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### Accessibility (ARIA)
 
-- The [`image`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) role is now supported as a synonym for `img`.
+- The [`image`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) role is now supported as a synonym for `img`.
   This maintains consistency with most role names which are complete words or concatenations of complete words ([Firefox bug 1829269](https://bugzil.la/1829269)).
 
 ### JavaScript
@@ -34,11 +34,11 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### SVG
 
-- The `q` [length unit](/en-US/docs/Web/SVG/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
+- The `q` [length unit](/en-US/docs/Web/SVG/Guides/Content_type#length) (`1q = 1/40th of 1cm`) is now supported ([Firefox bug 1836995](https://bugzil.la/1836995)).
 
 ### HTTP
 
-- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
+- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/Guides/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
 
 ### APIs
 
@@ -51,14 +51,14 @@ This article provides information about the changes in Firefox 116 that affect d
 
 - The [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) is now supported on all platforms except for Android.
   This API allows web applications to redirect audio output to a permitted Bluetooth headset, speakerphone, or other device, instead of having to use the browser or underlying OS default.
-  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
+  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
 
 - Added support for the `session.end` command that allows users to terminate the automation session. This was previously only possible for sessions using both WebDriver Classic and WebDriver BiDi. It is now possible also for WebDriver BiDi-only sessions ([Firefox bug 1829337](https://bugzil.la/1829337)).
-- Added support for [capability matching](/en-US/docs/Web/WebDriver/Capabilities) for the `session.new` command. It allows to define expectations about the target browser, such as browser name, platform name, etc. It can also be used to configure the session, for example, to specify if insecure certificates should be accepted ([Firefox bug 1731730](https://bugzil.la/1731730)).
+- Added support for [capability matching](/en-US/docs/Web/WebDriver/Reference/Capabilities) for the `session.new` command. It allows to define expectations about the target browser, such as browser name, platform name, etc. It can also be used to configure the session, for example, to specify if insecure certificates should be accepted ([Firefox bug 1731730](https://bugzil.la/1731730)).
 - Shadow roots are now correctly serialized when they are the root of a returned value ([Firefox bug 1836514](https://bugzil.la/1836514)).
 - The `network` event time origin information was renamed from `originTime` to `timeOrigin` ([Firefox bug 1836926](https://bugzil.la/1836926)).
 - The `network` event `network.responseCompleted` is now correctly emitted for navigation requests involving a redirect ([Firefox bug 1838238](https://bugzil.la/1838238)).
@@ -82,7 +82,3 @@ This article provides information about the changes in Firefox 116 that affect d
 - Fixed an issue in the Inspector where CSS custom properties set on the Custom Element Root were not displayed ([Firefox bug 1836755](https://bugzil.la/1836755)).
 - Show if request was resolved with DNS over HTTPS in Network Monitor ([Firefox bug 1810195](https://bugzil.la/1810195)).
 - Removed `Proxy-Authorization` header in Network Monitor ([Firefox bug 1816115](https://bugzil.la/1816115)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.intersection()
+short-title: intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.intersection
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`intersection()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements in both this set and the given set.
 
@@ -69,6 +69,7 @@ console.log(odds.intersection(squares)); // Set(2) { 1, 9 }
 ## See also
 
 - [Polyfill of `Set.prototype.intersection` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.intersection`](https://www.npmjs.com/package/set.prototype.intersection)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
 - {{jsxref("Set.prototype.isSubsetOf()")}}

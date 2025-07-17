@@ -3,9 +3,8 @@ title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBrowserInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns information about the browser in which the extension is installed.
 
@@ -52,6 +51,3 @@ gettingInfo.then(gotBrowserInfo);
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

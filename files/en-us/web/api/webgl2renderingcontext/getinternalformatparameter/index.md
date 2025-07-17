@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getInternalformatParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getInternalformatParameter()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns
@@ -21,9 +21,7 @@ getInternalformatParameter(target, internalformat, pname)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a
         renderable internal format.
@@ -33,10 +31,8 @@ getInternalformatParameter(target, internalformat, pname)
     information (must be a color-renderable, depth-renderable or stencil-renderable
     format).
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of information to query. Possible
     values:
-
     - `gl.SAMPLES`
       - : Returns a {{jsxref("Int32Array")}} containing sample
         counts supported for `internalformat` in descending order.

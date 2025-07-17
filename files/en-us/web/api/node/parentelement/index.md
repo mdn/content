@@ -35,7 +35,7 @@ if (node.parentElement) {
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <body>
     <script>
       const html = document.querySelector("html");

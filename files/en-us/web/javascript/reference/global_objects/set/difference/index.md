@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.difference()
+short-title: difference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/difference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.difference
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`difference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements in this set but not in the given set.
 
@@ -69,6 +69,7 @@ console.log(odds.difference(squares)); // Set(3) { 3, 5, 7 }
 ## See also
 
 - [Polyfill of `Set.prototype.difference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.difference`](https://www.npmjs.com/package/set.prototype.difference)
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
 - {{jsxref("Set.prototype.isSubsetOf()")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PromiseRejectionEvent.reason
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The {{domxref("PromiseRejectionEvent")}} **`reason`** read-only
 property is any JavaScript value or {{jsxref("Object")}} which provides the reason

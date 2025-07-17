@@ -3,9 +3,8 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 page-type: javascript-class
 browser-compat: javascript.builtins.DataView
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).
 
@@ -13,7 +12,7 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 
 ### Endianness
 
-Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness. For example, [WebAssembly](/en-US/docs/WebAssembly) memory is always little-endian, so you should use `DataView` instead of typed arrays to read and write multi-byte values. See [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) for an example.
+Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness. For example, [WebAssembly](/en-US/docs/WebAssembly) memory is always little-endian, so you should use `DataView` instead of typed arrays to read and write multi-byte values. See [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) for an example.
 
 ```js
 const littleEndian = (() => {
@@ -25,7 +24,8 @@ const littleEndian = (() => {
 console.log(littleEndian); // true or false
 ```
 
-> **Note:** `DataView` defaults to big-endian read and write, but most platforms use little-endian.
+> [!NOTE]
+> `DataView` defaults to big-endian read and write, but most platforms use little-endian.
 
 ## Constructor
 

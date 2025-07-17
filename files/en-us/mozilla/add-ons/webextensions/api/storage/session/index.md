@@ -3,9 +3,8 @@ title: storage.session
 slug: Mozilla/Add-ons/WebExtensions/API/storage/session
 page-type: webextension-api-property
 browser-compat: webextensions.api.storage.session
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Represents the `session` storage area. Items in `session` storage are stored in memory for the duration of the browser session and are not persisted to disk.
 By default, it's not exposed to content scripts, but this behavior can be changed through {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}.
@@ -13,6 +12,11 @@ By default, it's not exposed to content scripts, but this behavior can be change
 The amount of data that an extension can store in the session storage area is limited to 10 MB, unless stated otherwise in the [browser compatibility table](#browser_compatibility).
 
 When the browser stops, all session storage is cleared. When the extension is uninstalled, its associated session storage is cleared.
+
+## Properties
+
+- {{WebExtAPIRef("storage.session.QUOTA_BYTES")}}
+  - : The maximum amount of data (in bytes) that can be stored in session storage.
 
 ## Methods
 

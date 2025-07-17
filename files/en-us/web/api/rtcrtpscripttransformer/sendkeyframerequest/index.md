@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: sendKeyFrameRequest()"
+title: "RTCRtpScriptTransformer: sendKeyFrameRequest() method"
 short-title: sendKeyFrameRequest()
 slug: Web/API/RTCRtpScriptTransformer/sendKeyFrameRequest
 page-type: web-api-instance-method
@@ -71,8 +71,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to decrypt frames (not shown)
 
   // Request sender to emit a key frame.
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.sendKeyFrameRequest();
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.sendKeyFrameRequest();
 };
 ```
 

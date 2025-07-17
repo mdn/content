@@ -2,9 +2,8 @@
 title: CSS preprocessor
 slug: Glossary/CSS_preprocessor
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **CSS preprocessor** is a program that lets you generate {{Glossary("CSS")}} from the preprocessor's own unique {{Glossary("syntax")}}.
 
@@ -15,11 +14,9 @@ To use a CSS preprocessor, you must install a CSS compiler on your web {{Glossar
 ## See also
 
 - A few of most popular CSS preprocessors:
-
   - [Sass](https://sass-lang.com/)
   - [LESS](https://lesscss.org/)
   - [Stylus](https://stylus-lang.com/)
-  - [PostCSS](https://postcss.org/)
 
 - Related glossary terms:
   - {{Glossary("CSS")}}

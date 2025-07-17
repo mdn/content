@@ -3,11 +3,10 @@ title: marker-end
 slug: Web/CSS/marker-end
 page-type: css-property
 browser-compat: css.properties.marker-end
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`marker-end`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the last vertex of the element's path; that is, at its ending vertex. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref('url()')}} value. The value of the CSS property overrides any values of the `marker-end` attribute in the SVG.
+The **`marker-end`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the last vertex of the element's path; that is, at its ending vertex. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref("url_value", "&lt;url&gt;")}} value. The value of the CSS property overrides any values of the `marker-end` attribute in the SVG.
 
 For many marker-supporting shapes, the first and last vertices are the same point: for example, the top left corner of a {{SVGElement('rect')}}. In such shapes, if both the first and last markers are defined, two markers will be drawn at that point, though they may not face the same direction.
 
@@ -31,11 +30,9 @@ marker-end: unset;
 ### Values
 
 - `none`
-
   - : This means no marker will be drawn at the last vertex of the element's path.
 
 - `<marker-ref>`
-
   - : A {{cssxref("url_value", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the last vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's last vertex.
 
 ## Formal definition

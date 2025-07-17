@@ -3,9 +3,8 @@ title: d
 slug: Web/CSS/d
 page-type: css-property
 browser-compat: css.properties.d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`d`** [CSS](/en-US/docs/Web/CSS) property defines a path to be drawn by the SVG {{SVGElement("path")}} element. If present, it overrides the element's {{SVGAttr("d")}} attribute.
 
@@ -38,7 +37,7 @@ The value is either a {{cssxref("basic-shape/path", "path()")}} function with a 
 - `none`
   - : No path is drawn.
 - `path(<string>)`
-  - : A `path()` function with a quoted [data string](/en-US/docs/Web/SVG/Attribute/d) parameter. The data string defines an [SVG path](/en-US/docs/Web/SVG/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
+  - : A `path()` function with a quoted [data string](/en-US/docs/Web/SVG/Reference/Attribute/d) parameter. The data string defines an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
 
 ## Formal definition
 

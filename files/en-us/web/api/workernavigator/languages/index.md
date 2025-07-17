@@ -22,7 +22,7 @@ When its value changes, as the user's preferred languages are changed a
 
 The `Accept-Language` HTTP header in every HTTP request from the user's
 browser uses the same value for the `navigator.languages` property except for
-the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
+the extra `qvalues` (quality values) field (e.g., `en-US;q=0.8`).
 
 ## Value
 
@@ -33,8 +33,8 @@ An array or strings.
 You can run this insert a web worker:
 
 ```js
-navigator.language; //"en-US"
-navigator.languages; //["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "en-US"
+navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

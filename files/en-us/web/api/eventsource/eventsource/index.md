@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EventSource.EventSource
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`EventSource()`**
 constructor returns a newly-created {{domxref("EventSource")}}, which represents a
@@ -25,9 +25,7 @@ new EventSource(url, options)
   - : A string that represents the location of the remote resource
     serving the events/messages.
 - `options` {{optional_inline}}
-
   - : Provides options to configure the new connection. The possible entries are:
-
     - `withCredentials` {{optional_inline}}
       - : A boolean value, defaulting to `false`, indicating
         if CORS should be set to `include` credentials.

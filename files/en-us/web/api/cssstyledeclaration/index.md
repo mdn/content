@@ -44,7 +44,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 - {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
   - : Modifies an existing CSS property or creates a new CSS property in the declaration block.
 - {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
-  - : **Only supported via getComputedStyle in Firefox.** Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or `null` for [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties).
+  - : **Only supported via getComputedStyle in Firefox.** Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or `null` for [shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 ## Example
 

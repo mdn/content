@@ -1,17 +1,52 @@
 ---
-title: ":default"
+title: :default
 slug: Web/CSS/:default
 page-type: css-pseudo-class
 browser-compat: css.selectors.default
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:default`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects form elements that are the default in a group of related elements.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-default.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :default", "tabbed-shorter")}}
 
-What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) — it may match the {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), and {{htmlelement("option")}} elements:
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+input:default {
+  border: none;
+  outline: 2px solid deeppink;
+}
+```
+
+```html interactive-example
+<form>
+  <p>How did you find out about us?</p>
+  <label
+    ><input name="origin" type="radio" value="google" checked /> Google</label
+  >
+  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
+  <p>Please agree to our terms:</p>
+
+  <label
+    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
+    a personalized newsletter.</label
+  >
+
+  <label
+    ><input name="privacy" type="checkbox" /> I have read and I agree to the
+    Privacy Policy.</label
+  >
+
+  <input type="submit" value="Submit form" />
+</form>
+```
+
+What this selector matches is defined in [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) — it may match the {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), and {{htmlelement("option")}} elements:
 
 - A default option element is the first one with the `selected` attribute, or the first enabled option in DOM order. `multiple` {{htmlelement("select")}}s can have more than one `selected` option, so all will match `:default`.
 - `<input type="checkbox">` and `<input type="radio">` match if they have the `checked` attribute.
@@ -73,6 +108,6 @@ input:default + label {
 
 ## See also
 
-- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- Related HTML elements: {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), and {{htmlelement("option")}}
+- [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
+- [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- Related HTML elements: {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), and {{htmlelement("option")}}

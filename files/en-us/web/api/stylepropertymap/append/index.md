@@ -21,7 +21,7 @@ append(property, value)
 ### Parameters
 
 - `property`
-  - : An identifier indicating the stylistic feature (e.g. font, width, background
+  - : An identifier indicating the stylistic feature (e.g., font, width, background
     color) to add.
 - `value`
   - : The value the given property should have.

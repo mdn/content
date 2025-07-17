@@ -6,10 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.Report.type
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the {{domxref("Report")}}
-interface returns the type of report generated, e.g. `deprecation` or
+interface returns the type of report generated, e.g., `deprecation` or
 `intervention`.
 
 ## Value

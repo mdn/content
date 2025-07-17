@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.message_event
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The `message` event is fired when data is received through a `WebSocket`.
 
@@ -14,10 +14,10 @@ The `message` event is fired when data is received through a `WebSocket`.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("message", (event) => {});
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => {};
+onmessage = (event) => { }
 ```
 
 ## Event type

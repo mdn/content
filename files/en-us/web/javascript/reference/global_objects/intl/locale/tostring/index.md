@@ -1,15 +1,32 @@
 ---
 title: Intl.Locale.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Intl.Locale")}} instances returns this Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()", "taller")}}
+
+```js interactive-example
+const french = new Intl.Locale("fr-Latn-FR", {
+  calendar: "gregory",
+  hourCycle: "h12",
+});
+const korean = new Intl.Locale("ko-Kore-KR", {
+  numeric: true,
+  caseFirst: "upper",
+});
+
+console.log(french.toString());
+// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+
+console.log(korean.toString());
+// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+```
 
 ## Syntax
 

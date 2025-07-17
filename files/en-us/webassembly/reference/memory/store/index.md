@@ -3,11 +3,12 @@ title: "store: Wasm text instruction"
 short-title: store
 slug: WebAssembly/Reference/Memory/Store
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.api.Memory
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`store`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), are used to store a number on the stack in a memory.
 
@@ -17,13 +18,46 @@ For example, you can store a 32-bit number into an 8-bit slot in memory using `i
 If the number doesn't fit in the narrower number type it will wrap.
 All the variants are [listed below](#instructions_and_opcodes).
 
-{{EmbedInteractiveExample("pages/wat/store.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: store", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (func (export "store_in_mem") (param $num i32)
+    i32.const 0
+    local.get $num
+
+    ;; store $num at position 0
+    i32.store
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+const result = await WebAssembly.instantiateStreaming(fetch(url));
+
+const store_in_mem = result.instance.exports.store_in_mem;
+const memory = result.instance.exports.memory;
+
+store_in_mem(100);
+
+const dataView = new DataView(memory.buffer);
+const first_number_in_mem = dataView.getUint32(0, true);
+
+console.log(first_number_in_mem);
+// Expected output: 100
+```
 
 ## Syntax
 
 Store in default memory
 
-```wasm
+```wat
 ;; Store value in default memory at particular offset
 i32.const 0 ;; stack variable with offset in memory to store the number
 i32.const 20 ;; stack variable with the number to store
@@ -35,7 +69,7 @@ i32.store ;; store in default memory
 
 Store to specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Store in memory referenced by its index
 i32.const 0 ;; offset in memory to store the number
 i32.const 20 ;; the number to store
@@ -70,8 +104,7 @@ i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `store` can be used with a specified memory.

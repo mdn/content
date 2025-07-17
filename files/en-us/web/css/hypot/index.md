@@ -3,13 +3,12 @@ title: hypot()
 slug: Web/CSS/hypot
 page-type: css-function
 browser-compat: css.types.hypot
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`hypot()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of the sum of squares of its parameters.
 
-The **`hypot()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of the sum of squares of its parameters.
-
-While {{CSSxRef("pow")}} and {{CSSxRef("sqrt")}} only work on unitless numbers, `hypot()` accepts values with units, but they all must have the same [type](/en-US/docs/Web/CSS/CSS_Types).
+While {{CSSxRef("pow")}} and {{CSSxRef("sqrt")}} only work on unitless numbers, `hypot()` accepts values with units, but they all must have the same [type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
 
 ## Syntax
 
@@ -36,7 +35,7 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
 - If any of the inputs is `infinite`, the result is `+∞`.
 - If a single parameter is provided, the result is the absolute value of its input. `hypot(2em)` and `hypot(-2em)` both resolve to `2em`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -59,7 +58,7 @@ This example shows how you can use the `hypot()` function to calculate sizes.
 
 #### CSS
 
-Here we are using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
+Here we are using [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) to define the sizes to be used. First we declare the first size (`--size-0`) which is then used to calculate the other sizes.
 
 - `--size-1` is calculated with the hypotenuse of `--size-0` (100px). This takes the square value and, as there is no other value, returns the square root of the value, which results in 100px.
 - `--size-2` is calculated with the hypotenuse of `--size-0` (100px), twice. This takes the square of the value (100px \* 100px = 10000px<sup>2</sup>) and adds it to the square of `--size-0` again (10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>) and returns the square root of the sum (√(20000px<sup>2</sup>)), which results in 141.42px.

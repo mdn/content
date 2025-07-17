@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntriesByType()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline for a given _type_.
 
@@ -35,7 +35,7 @@ getEntriesByType(type)
 ### Parameters
 
 - `type`
-  - : The type of entry to retrieve such as "`mark`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
+  - : The type of entry to retrieve such as `"mark"`. The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ### Return value
 
@@ -45,7 +45,7 @@ An {{jsxref("Array")}} of {{domxref("PerformanceEntry")}} objects that have the 
 
 ### Logging resource entries
 
-The following example logs all entries with the type "`resource`".
+The following example logs all entries with the type `"resource"`.
 
 ```js
 const resources = performance.getEntriesByType("resource");

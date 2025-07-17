@@ -2,9 +2,8 @@
 title: Explaining basic 3D theory
 slug: Games/Techniques/3D_on_the_web/Basic_theory
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article explains all of the basic theory that's useful to know when you are getting started working with 3D.
 
@@ -55,7 +54,7 @@ There are four stages to this processing: the first one involves arranging the o
 
 ![Camera](mdn-games-3d-camera.png)
 
-**Projection transformation** (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes _field of view_, _aspect ratio_ and optional _near_ and _far planes_. read the [Camera paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) in the Three.js article to learn about those.
+**Projection transformation** (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes _field of view_, _aspect ratio_ and optional _near_ and _far planes_. Read the [Camera paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) in the Three.js article to learn about those.
 
 ![Camera settings](mdn-games-3d-camera-settings.png)
 

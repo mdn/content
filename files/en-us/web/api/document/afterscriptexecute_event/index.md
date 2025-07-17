@@ -4,11 +4,12 @@ short-title: afterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
 page-type: web-api-event
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Document.afterscriptexecute_event
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{APIRef}}{{non-standard_header}}{{deprecated_header}}
 
 The `afterscriptexecute` event fires when a static {{HTMLElement("script")}} element finishes executing its script. It does not fire if the element is added dynamically, such as with {{domxref("Node.appendChild()", "appendChild()")}}.
 
@@ -16,10 +17,10 @@ The `afterscriptexecute` event fires when a static {{HTMLElement("script")}} ele
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("afterscriptexecute", (event) => {});
+```js-nolint
+addEventListener("afterscriptexecute", (event) => { })
 
-onafterscriptexecute = (event) => {};
+onafterscriptexecute = (event) => { }
 ```
 
 ## Event type

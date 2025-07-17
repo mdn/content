@@ -5,12 +5,13 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.clip
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
-> Where possible, authors are encouraged to use the newer {{cssxref("clip-path")}} property instead.
+> Authors are encouraged to use the {{cssxref("clip-path")}} property instead.
 
 The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of an element. The `clip` property applies only to absolutely positioned elements — that is, elements with {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 
@@ -33,11 +34,13 @@ clip: unset;
 
 ### Values
 
-- {{cssxref("shape")}}
-
-  - : A rectangular {{cssxref("shape")}} of the form `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values are offsets from the _inside top border edge_ of the box, while `<right>` and `<left>` are offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.
+- `rect()`
+  - : A rectangle defined using a `rect()` function of the form `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values are offsets from the _inside top border edge_ of the box, while `<right>` and `<left>` are offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.
 
     The `<top>`, `<right>`, `<bottom>`, and `<left>` values may be either a {{cssxref("&lt;length&gt;")}} or `auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
+
+> [!NOTE]
+> The `rect()` {{cssxref("shape")}} function used in the deprecated `clip` property is different from the CSS {{cssxref("basic-shape/rect","rect()")}} function used to define a CSS {{cssxref("basic-shape")}}.
 
 - `auto`
   - : The element does not clip (default). This is different from `rect(auto, auto, auto, auto)`, which clips to the element's inside border edges.
@@ -109,12 +112,8 @@ clip: unset;
 
 ## See also
 
-- This property is deprecated. Use {{cssxref("clip-path")}} instead.
-- Related CSS properties:
-  - {{cssxref("text-overflow")}}
-  - {{cssxref("white-space")}}
-  - {{cssxref("overflow-x")}}
-  - {{cssxref("overflow-y")}}
-  - {{cssxref("overflow")}}
-  - {{cssxref("display")}}
-  - {{cssxref("position")}}
+- {{cssxref("clip-path")}}
+- {{cssxref("position")}}
+- {{cssxref("mask")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("shape-outside")}}

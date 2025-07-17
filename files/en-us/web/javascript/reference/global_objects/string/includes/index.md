@@ -1,15 +1,28 @@
 ---
 title: String.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.includes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`includes()`** method of {{jsxref("String")}} values performs a case-sensitive search to determine whether a given string may be found within this string, returning `true` or `false` as appropriate.
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## Syntax
 
@@ -78,6 +91,7 @@ console.log(str.includes("")); // true
 ## See also
 
 - [Polyfill of `String.prototype.includes` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.includes`](https://www.npmjs.com/package/string.prototype.includes)
 - {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

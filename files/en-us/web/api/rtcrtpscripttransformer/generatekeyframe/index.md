@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: generateKeyFrame()"
+title: "RTCRtpScriptTransformer: generateKeyFrame() method"
 short-title: generateKeyFrame()
 slug: Web/API/RTCRtpScriptTransformer/generateKeyFrame
 page-type: web-api-instance-method
@@ -20,7 +20,6 @@ generateKeyFrame(rid)
 ### Parameters
 
 - `rid` {{optional_inline}}
-
   - : A string containing the "restriction identifier" ("RID") of the stream/encoder that must generate the new key frame.
 
     The value must have between 1 and 255 characters (inclusive), and contain only the alphanumeric characters, underscore, and hyphen (`A-Z`, `a-z`, `0-9`, `-`, `_`).
@@ -58,7 +57,7 @@ The promise returned by the method will resolve just before enqueuing the corres
 
 > [!NOTE]
 > Sending multiple streams (RID) at a time is called "simulcast".
-> This feature provides a [middlebox](https://en.wikipedia.org/wiki/Middlebox) with the same stream in multiple levels of video quality, allowing it to manage bandwidth by selectively transmitting appropriate levels to participants and switch resolution rapidly on the fly (i.e. switching to forward low-quality video for everyone except the active speaker).
+> This feature provides a [middlebox](https://en.wikipedia.org/wiki/Middlebox) with the same stream in multiple levels of video quality, allowing it to manage bandwidth by selectively transmitting appropriate levels to participants and switch resolution rapidly on the fly (i.e., switching to forward low-quality video for everyone except the active speaker).
 > The recipient only ever gets one stream, which is why the comparable receiver method {{domxref("RTCRtpScriptTransformer.sendKeyFrameRequest()")}} does not require that an RID is specified.
 
 ## Examples
@@ -98,8 +97,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to encrypt frames (not shown)
 
   // Get codec to generate a new key frame using the rid
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.generateKeyFrame(rid);
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.generateKeyFrame(rid);
 };
 ```
 

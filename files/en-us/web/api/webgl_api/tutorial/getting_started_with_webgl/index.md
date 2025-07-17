@@ -35,7 +35,7 @@ The "index.html" file should contain the following:
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -53,7 +53,7 @@ main();
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glcanvas");
+  const canvas = document.querySelector("#gl-canvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 

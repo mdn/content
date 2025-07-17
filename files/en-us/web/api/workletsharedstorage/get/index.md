@@ -34,7 +34,7 @@ A {{jsxref("Promise")}} that fulfills with either a string equal to the value of
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
     - `key` exceeds the browser-defined maximum length.
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 
@@ -49,10 +49,12 @@ The main page script:
 
 async function injectContent() {
   // Load the Shared Storage worklet
-  await window.sharedStorage.worklet.addModule('k-freq-measurement-worklet.js');
+  await window.sharedStorage.worklet.addModule("k-freq-measurement-worklet.js");
 
   // Run the K-frequency measurement operation
-  await window.sharedStorage.run('k-freq-measurement', { data: { kFreq: 3, contentId: 123 });
+  await window.sharedStorage.run("k-freq-measurement", {
+    data: { kFreq: 3, contentId: 123 },
+  });
 }
 
 injectContent();
@@ -86,6 +88,7 @@ class KFreqMeasurementOperation {
       (await this.sharedStorage.get(hasReportedContentKey)) === "true";
     const impressionCount = parseInt(
       (await this.sharedStorage.get(impressionCountKey)) || 0,
+      10,
     );
 
     // Do not report if a report has been sent already
@@ -115,7 +118,7 @@ class KFreqMeasurementOperation {
 register("k-freq-measurement", KFreqMeasurementOperation);
 ```
 
-For more details about this example, see [K+ frequency measurement](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/k-freq-reach). See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for links to other examples.
+For more details about this example, see [K+ frequency measurement](https://privacysandbox.google.com/private-advertising/private-aggregation/k-freq-reach). See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for links to other examples.
 
 ## Specifications
 
@@ -128,4 +131,4 @@ For more details about this example, see [K+ frequency measurement](https://deve
 ## See also
 
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
-- [Noise and scaling](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/fundamentals#noise_and_scaling) on developers.google.com (2023)
+- [Noise and scaling](https://privacysandbox.google.com/private-advertising/private-aggregation/fundamentals#noise_and_scaling) on privacysandbox.google.com (2023)

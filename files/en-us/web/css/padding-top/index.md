@@ -3,13 +3,55 @@ title: padding-top
 slug: Web/CSS/padding-top
 page-type: css-property
 browser-compat: css.properties.padding-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-top`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the top of an element.
 
-{{EmbedInteractiveExample("pages/css/padding-top.html")}}
+{{InteractiveExample("CSS Demo: padding-top")}}
+
+```css interactive-example-choice
+padding-top: 1em;
+```
+
+```css interactive-example-choice
+padding-top: 10%;
+```
+
+```css interactive-example-choice
+padding-top: 20px;
+```
+
+```css interactive-example-choice
+padding-top: 1ch;
+```
+
+```css interactive-example-choice
+padding-top: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 An element's padding area is the space between its content and its border.
 
@@ -44,7 +86,7 @@ The `padding-top` property is specified as a single value chosen from the list b
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block). Must be nonnegative.
 
 ## Formal definition
 
@@ -62,7 +104,7 @@ The `padding-top` property is specified as a single value chosen from the list b
 .content {
   padding-top: 5%;
 }
-.sidebox {
+.side-box {
   padding-top: 10px;
 }
 ```
@@ -77,6 +119,9 @@ The `padding-top` property is specified as a single value chosen from the list b
 
 ## See also
 
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} and the {{cssxref("padding")}} shorthand
-- The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}
+- {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
+- {{cssxref("padding")}} shorthand
+- {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
+- {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
+- [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) guide
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

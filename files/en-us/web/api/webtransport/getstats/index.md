@@ -53,10 +53,8 @@ The returned object may have the following properties/statistics:
 - `minRtt`
   - : A {{domxref("DOMHighResTimeStamp")}} containing the minimum round-trip time observed on the entire connection.
 - `datagrams`
-
   - : An object containing statistics for datagram transmission over the connection.
     The object has the following properties:
-
     - `timestamp`
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the timestamp at which the statistics were gathered, relative to Jan 1, 1970, UTC.
     - `expiredOutgoing`

@@ -1,10 +1,10 @@
 ---
 title: Firefox 12 for developers
+short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
@@ -29,7 +29,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 - {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
 - {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
-- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 - When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
 - Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
 - While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.
@@ -53,7 +53,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### MathML
 
-- To control the directionality of MathML formulas, the `dir` attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on [MathML Token Elements](/en-US/docs/Web/MathML/Element#token_elements). This is particularly important for some [Arabic mathematical notations](https://www.w3.org/TR/arabic-math/).
+- To control the directionality of MathML formulas, the `dir` attribute is now supported on the {{MathMLElement("math")}}, {{MathMLElement("mrow")}}, and {{MathMLElement("mstyle")}} elements as well as on [MathML Token Elements](/en-US/docs/Web/MathML/Reference/Element#token_elements). This is particularly important for some [Arabic mathematical notations](https://www.w3.org/TR/arabic-math/).
 - The alignment attribute `align` defined in MathML3 has been implemented for {{MathMLElement("munder")}}, {{MathMLElement("mover")}}, and {{MathMLElement("munderover")}}.
 
 ### Networking
@@ -119,7 +119,3 @@ Mozilla has been working on integrating its own Web developer tools that complem
 ### Other changes
 
 - The editor component (known as Midas) now only accepts events from privileged code.
-
-## See also
-
-{{Firefox_for_developers}}

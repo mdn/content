@@ -1,14 +1,15 @@
 ---
-title: "-moz-device-pixel-ratio"
+title: -moz-device-pixel-ratio
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 page-type: css-media-feature
 status:
   - deprecated
   - non-standard
 browser-compat: css.at-rules.media.-moz-device-pixel-ratio
+sidebar: cssref
 ---
 
-{{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
+{{Non-standard_header}} {{Deprecated_header}}
 
 The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to apply styles based on the number of device pixels per CSS pixel.
 
@@ -16,7 +17,7 @@ The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media f
 > Do not use this feature. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
 
 > [!NOTE]
-> This media feature is also implemented by WebKit as `-webkit-device-pixel-ratio`. The min and max prefixes as implemented by Gecko are named `min--moz-device-pixel-ratio` and `max--moz-device-pixel-ratio`; but the same prefixes as implemented by Webkit are named `-webkit-min-device-pixel-ratio` and `-webkit-max-device-pixel-ratio`.
+> This media feature is also implemented by WebKit as `-webkit-device-pixel-ratio`. The min and max prefixes as implemented by Gecko are named `min--moz-device-pixel-ratio` and `max--moz-device-pixel-ratio`; but the same prefixes as implemented by WebKit are named `-webkit-min-device-pixel-ratio` and `-webkit-max-device-pixel-ratio`.
 
 ## Syntax
 
@@ -35,7 +36,7 @@ The **`-moz-device-pixel-ratio`** Gecko-only [CSS](/en-US/docs/Web/CSS) [media f
 Example:
 
 ```css
-/* First, set for Webkit-based browsers */
+/* First, set for WebKit-based browsers */
 @media (-webkit-min-device-pixel-ratio: 2),
   (min--moz-device-pixel-ratio: 2) /* Older Firefox browsers (prior to firefox 16) */,
   (min-resolution: 2dppx) /* The standard way */,

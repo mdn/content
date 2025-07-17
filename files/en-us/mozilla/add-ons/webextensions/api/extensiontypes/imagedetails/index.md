@@ -3,9 +3,8 @@ title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.ImageDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details about the format, quality, area and scale of a captured image.
 
@@ -18,9 +17,7 @@ Values of this type are objects. They contain the following properties:
 - `quality` {{optional_inline}}
   - : `integer`. When format is `"jpeg"`, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the `encoderOptions` argument to [`HTMLCanvasElement.toDataURL()`](/en-US/docs/Web/API/HTMLCanvasElement/toDataURL). If it is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.
 - `rect` {{optional_inline}}
-
   - : An `object` specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to `0`. The properties are:
-
     - `x`: The coordinate of the left side of the rectangle.
     - `y`: The coordinate of the top side of the rectangle.
     - `width`: The width of the rectangle.
@@ -31,11 +28,11 @@ Values of this type are objects. They contain the following properties:
 - `scale` {{optional_inline}}
   - : `number`. The scale to render at, defaults to [`devicePixelRatio`](/en-US/docs/Web/API/Window/devicePixelRatio). This option was introduced in Firefox 82.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-ImageDetails) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.

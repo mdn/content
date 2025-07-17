@@ -1,15 +1,32 @@
 ---
 title: Function.prototype.bind()
+short-title: bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.bind
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX() {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -85,13 +102,13 @@ The bound function has the following properties:
 - [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : The `name` of the target function plus a `"bound "` prefix.
 
-The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
+The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
 
 ## Examples
 
 ### Creating a bound function
 
-The simplest use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
+The most common use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
 
 A common mistake for new JavaScript programmers is to extract a method from an object, then to later call that function and expect it to use the original object as its `this` (e.g., by using the method in callback-based code).
 
@@ -130,7 +147,7 @@ In fact, some built-in "methods" are also getters that return bound functions �
 
 ### Partially applied functions
 
-The next simplest use of `bind()` is to make a function with pre-specified initial arguments.
+Another use of `bind()` is to make a function with pre-specified initial arguments.
 
 These arguments (if any) follow the provided `this` value and are then inserted at the start of the arguments passed to the target function, followed by whatever arguments are passed to the bound function at the time it is called.
 
@@ -162,7 +179,7 @@ console.log(addThirtySeven(5, 10)); // 42
 
 ### With setTimeout()
 
-By default, within {{domxref("setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
+By default, within {{domxref("Window.setTimeout", "setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
 
 ```js
 class LateBloomer {
@@ -213,7 +230,7 @@ p.toString();
 // '1,2'
 
 // The thisArg's value doesn't matter because it's ignored
-const YAxisPoint = Point.bind(null, 0 /*x*/);
+const YAxisPoint = Point.bind(null, 0 /* x */);
 
 const axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -229,7 +246,7 @@ The corollary is that you need not do anything special to create a bound functio
 
 ```js
 const emptyObj = {};
-const YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
+const YAxisPoint = Point.bind(emptyObj, 0 /* x */);
 
 // Can still be called as a normal function
 // (although usually this is undesirable)
@@ -269,7 +286,7 @@ Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use f
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -281,7 +298,7 @@ Note that you can't save `slice.call` and call it as a plain function, because t
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```

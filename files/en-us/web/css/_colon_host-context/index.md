@@ -1,22 +1,71 @@
 ---
-title: ":host-context()"
+title: :host-context()
 slug: Web/CSS/:host-context
 page-type: css-pseudo-class
 browser-compat: css.selectors.host-context
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+Normally, elements within a shadow DOM are isolated from the DOM outside of it. The `:host-context()` allows you to "peek outside" of this Shadow DOM and check if any of the element's ancestor elements match a certain CSS selector. For example, applying a different text color to elements within a shadow root when a `.dark-theme` class is applied to `<body>`.
 
-In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
+Think of it like this: Imagine you have a `<greenhouse>` custom element, that has a `<chameleon>` living inside. Here, the `<greenhouse>` is the Shadow DOM host and the `<chameleon>` element is within the Shadow DOM. The `:host-context()` lets the `<chameleon>` change its appearance based on the `<greenhouse>`'s environment. If the `<greenhouse>` is in a sunny location (has a "sunny-theme" class), the `<chameleon>` turns yellow. If the `<greenhouse>` is in a shady spot (a "shady-theme" class applied instead), the `<chameleon>` turns blue.
 
-One typical use of this is with a descendant selector expression — for example `h1` — to select only instances of the custom element that are inside an `<h1>`. Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a `.dark-theme` class is applied to `<body>`.
+This selector pierces through all shadow boundaries. It will look for the sunny or shady theme applied directly to the `<greenhouse>` or on any of the host's ancestors and ancestor DOMs all the way up until it reaches the document root.
+
+To limit the selector to only the `<greenhouse>` host directly or limit the selection to host's DOM, use the {{cssxref(":host")}} or {{cssxref(":host_function", ":host()")}} pseudo-class instead.
 
 > [!NOTE]
 > This has no effect when used outside a shadow DOM.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+The [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of `:host-context()` is that of a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), plus the specificity of the selector passed as the function's argument.
+
+{{InteractiveExample("CSS Demo: :host-context()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Following CSS is being applied inside the shadow DOM. */
+
+:host-context(.container) {
+  border: 5px dashed green;
+}
+
+:host-context(h1) {
+  color: red;
+}
+```
+
+```html interactive-example
+<!-- elements outside shadow dom -->
+<div class="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* Selects a shadow root host, only if it is
@@ -50,7 +99,7 @@ p {
 
 The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
+In this example we have a basic custom element — `<context-span>` — that you can wrap around text:
 
 ```html
 <h1>
@@ -72,12 +121,12 @@ shadowRoot.appendChild(span);
 style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ':host-context(h1)::after { content: " - no links in headers!" }' +
   ":host(.footer) { color : red; }" +
   ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
 ```
 
-The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
+The `:host-context(h1) { font-style: italic; }` and `:host-context(h1)::after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
 
 ## Specifications
 

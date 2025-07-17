@@ -1,15 +1,23 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
+short-title: BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypedArray.BYTES_PER_ELEMENT`** static data property represents the size in bytes of each element in a typed array.
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
+
+```js interactive-example
+console.log(Float64Array.BYTES_PER_ELEMENT);
+// Expected output: 8
+
+console.log(Int8Array.BYTES_PER_ELEMENT);
+// Expected output: 1
+```
 
 ## Value
 

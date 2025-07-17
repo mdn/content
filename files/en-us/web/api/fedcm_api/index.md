@@ -9,7 +9,7 @@ browser-compat: api.IdentityCredential
 
 {{SeeCompatTable}}{{DefaultAPISidebar("FedCM API")}}
 
-The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to make identity federation services available on the web in a privacy-preserving way, without the need for [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and redirects. This includes a JavaScript API that enables the use of federated authentication for activities such as signing in or signing up on a website.
+The **Federated Credential Management API** (or _FedCM API_) provides a standard mechanism for identity providers (IdPs) to make identity federation services available on the web in a privacy-preserving way, without the need for [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and redirects. This includes a JavaScript API that enables the use of federated authentication for activities such as signing in or signing up on a website.
 
 ## FedCM concepts
 
@@ -33,11 +33,12 @@ There are two parts to using the FedCM API, which are covered in the linked guid
 1. [IdP integration with FedCM](/en-US/docs/Web/API/FedCM_API/IDP_integration) — what an identity provider needs to provide so that an RP can integrate with it.
 2. [RP federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in) — the FedCM functionality an RP needs to use to sign a user in using their IdP account. A FedCM sign-in request is initiated using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
 
-> **Note:** [Google Sign In](https://developers.google.com/identity/gsi/web/guides/overview) is an example of an IdP that already supports FedCM. [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) provides instructions for RPs wishing to migrate existing apps using Google Sign In to federated sign-in.
+> [!NOTE]
+> [Google Sign In](https://developers.google.com/identity/gsi/web/guides/overview) is an example of an IdP that already supports FedCM. [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) provides instructions for RPs wishing to migrate existing apps using Google Sign In to federated sign-in.
 
 ## Permissions Policy integration and `<iframe>` support
 
-The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
+The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
 
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use FedCM via the `allow` attribute:
 
@@ -73,12 +74,10 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 ## Examples
 
-- [FedCM sign-in example](https://fedcm-rp-demo.glitch.me/)
-  - [RP source code](https://glitch.com/edit/#!/fedcm-rp-demo?path=server.js%3A1%3A0)
-  - [IdP source code](https://glitch.com/edit/#!/fedcm-idp-demo?path=server.js%3A1%3A0)
-- [FedCM `<iframe>` sign-in](https://fedcm-main-frame.glitch.me/)
-  - [RP `<iframe>` page source code](https://glitch.com/edit/#!/fedcm-main-frame?path=index.html%3A1%3A0)
-  - [IdP source code](https://glitch.com/edit/#!/webid-fcm-idp-single?path=server.js%3A1%3A0)
+For example code, see:
+
+- [Implement an identity solution with FedCM on the Identity Provider side](https://privacysandbox.google.com/cookies/fedcm/implement/identity-provider) on privacysandbox.google.com (2025).
+- [Implement an identity solution with FedCM on the Relying Party side](https://privacysandbox.google.com/cookies/fedcm/implement/relying-party) on privacysandbox.google.com (2025).
 
 ## Specifications
 
@@ -90,4 +89,4 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)
+- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm)

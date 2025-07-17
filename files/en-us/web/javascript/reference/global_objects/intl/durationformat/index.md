@@ -3,9 +3,8 @@ title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DurationFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
 
@@ -73,4 +72,6 @@ new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 
 ## See also
 
+- [Polyfill of `Intl.DurationFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-durationformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

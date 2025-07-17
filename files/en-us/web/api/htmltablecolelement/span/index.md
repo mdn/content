@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableColElement.span
 
 {{ APIRef("HTML DOM") }}
 
-The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Element/col#span) attribute.
+The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Reference/Elements/col#span) attribute.
 
 ## Value
 
@@ -86,14 +86,14 @@ const increaseButton = document.getElementById("increase");
 const decreaseButton = document.getElementById("decrease");
 
 increaseButton.addEventListener("click", () => {
-  col.span = col.span + 1;
+  col.span += 1;
 
   // Update the display
   output.textContent = col.span;
 });
 
 decreaseButton.addEventListener("click", () => {
-  col.span = col.span - 1;
+  col.span -= 1;
 
   // Update the display
   output.textContent = col.span;

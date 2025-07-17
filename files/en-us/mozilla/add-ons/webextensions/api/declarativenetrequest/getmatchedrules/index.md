@@ -3,16 +3,15 @@ title: declarativeNetRequest.getMatchedRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getMatchedRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are not returned.
 
 ## Syntax
 
 ```js-nolint
-let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
+let gettingMatchedRules = await browser.declarativeNetRequest.getMatchedRules(
     filter                // object
 );
 ```
@@ -20,7 +19,6 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 ### Parameters
 
 - `filter` {{optional_inline}}
-
   - : An object to filter the list of matched rules.
     - `minTimeStamp` {{optional_inline}}
       - : A `number`. If specified, only matches rules after the specified timestamp.
@@ -36,7 +34,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `tabId`
   - : `number` The `tabId` of the tab the request originated from if the tab is still active. Otherwise, `-1`.
 - `timeStamp`
-  - : `number` The time the rule was matched. Timestamps correspond to the JavaScript convention for times, i.e. the number of milliseconds since the epoch.
+  - : `number` The time the rule was matched. Timestamps correspond to the JavaScript convention for times, i.e., the number of milliseconds since the epoch.
 
 If no rules are matched, the object is empty. If the request fail, the promise is rejected with an error message
 

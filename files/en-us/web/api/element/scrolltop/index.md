@@ -8,7 +8,7 @@ browser-compat: api.Element.scrollTop
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollTop`** property gets or sets the number of pixels by which an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
+The **`scrollTop`** property of the {{domxref("Element")}} interface gets or sets the number of pixels by which an element's content is scrolled from its top edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
 
 ## Value
 
@@ -83,5 +83,11 @@ container.addEventListener("scroll", (event) => {
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetTop")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollWidth")}}
 - {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - {{domxref("Element.scrollTo()")}}

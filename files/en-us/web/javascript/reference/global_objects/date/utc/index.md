@@ -1,15 +1,26 @@
 ---
 title: Date.UTC()
+short-title: UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.UTC
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date.UTC()`** static method accepts parameters representing the date and time components similar to the {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
 
-{{EmbedInteractiveExample("pages/js/date-utc.html")}}
+{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+
+```js interactive-example
+const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+
+console.log(utcDate1.toUTCString());
+// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+
+console.log(utcDate2.toUTCString());
+// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+```
 
 ## Syntax
 
@@ -17,10 +28,10 @@ The **`Date.UTC()`** static method accepts parameters representing the date and 
 Date.UTC(year)
 Date.UTC(year, monthIndex)
 Date.UTC(year, monthIndex, day)
-Date.UTC(year, monthIndex, day, hour)
-Date.UTC(year, monthIndex, day, hour, minute)
-Date.UTC(year, monthIndex, day, hour, minute, second)
-Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
+Date.UTC(year, monthIndex, day, hours)
+Date.UTC(year, monthIndex, day, hours, minutes)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ### Parameters

@@ -27,7 +27,7 @@ The Clipboard API allows users to programmatically read and write text and other
 
 Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} operations modifying the clipboard.
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
-The default action can be overriden by the event handler — see each of the events for more information.
+The default action can be overridden by the event handler — see each of the events for more information.
 
 ## Interfaces
 
@@ -71,9 +71,9 @@ Chromium browsers:
 
 - Reading requires the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission be granted.
   Transient activation is not required.
-- Writing requires either the `clipboard-read` permission or transient activation.
+- Writing requires either the `clipboard-write` permission or transient activation.
   If the permission is granted, it persists, and further transient activation is not required.
-- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
+- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
 - No persistent paste-prompt is displayed when a read operation is caused by a browser or OS "paste element".
 
 Firefox & Safari:
@@ -96,7 +96,7 @@ Firefox [Web Extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with
 The system clipboard is accessed through the {{domxref("Navigator.clipboard")}} global.
 
 This snippet fetches the text from the clipboard and appends it to the first element found with the class `editor`.
-Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.
+Since {{domxref("Clipboard.readText", "readText()")}} returns an empty string if the clipboard isn't text, this code is safe.
 
 ```js
 navigator.clipboard

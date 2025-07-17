@@ -25,17 +25,17 @@ const ndefReader = new NDEFReader();
 
 function read() {
   return new Promise((resolve, reject) => {
-    const ctlr = new AbortController();
-    ctlr.signal.onabort = reject;
+    const controller = new AbortController();
+    controller.signal.onabort = reject;
     ndefReader.addEventListener(
       "reading",
       (event) => {
-        ctlr.abort();
+        controller.abort();
         resolve(event);
       },
       { once: true },
     );
-    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
+    ndefReader.scan({ signal: controller.signal }).catch((err) => reject(err));
   });
 }
 

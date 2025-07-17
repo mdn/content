@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Crypto.getRandomValues
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto.getRandomValues()`** method lets you get cryptographically strong random values.
 The array given as the parameter is filled with random numbers (random in its cryptographic meaning).
@@ -28,7 +28,7 @@ getRandomValues(typedArray)
   - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
     {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
     {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
-    {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
+    {{jsxref("BigUint64Array")}} (but **not** `Float16Array`, `Float32Array` nor `Float64Array`).
     All elements in the array will be overwritten with random numbers.
 
 ### Return value

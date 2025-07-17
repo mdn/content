@@ -7,9 +7,9 @@ browser-compat: api.SVGRect
 
 {{APIRef("SVG")}}
 
-The **`SVGRect`** represents a rectangle. Rectangles consist of an `x` and `y` coordinate pair identifying a minimum `x` value, a minimum `y` value, and a `width` and `height`, which are constrained to be non-negative.
+The **`SVGRect`**, an alias for {{DOMXref("DOMRect")}}, represents a rectangle. Rectangles consist of an `x` and `y` coordinate pair identifying a minimum `x` value, a minimum `y` value, and a `width` and `height`, which are constrained to be non-negative.
 
-An **`SVGRect`** object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
+An `SVGRect` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
 ## Instance properties
 
@@ -33,3 +33,9 @@ None.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{DOMXref("DOMRect")}}
+- {{DOMXref("DOMPoint")}} alias {{DOMXref("SVGPoint")}}
+- {{DOMXref("DOMMatrix")}} alias {{DOMXref("SVGMatrix")}}

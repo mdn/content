@@ -11,14 +11,14 @@ browser-compat: api.LaunchParams
 
 The **`LaunchParams`** interface of the {{domxref("Launch Handler API", "Launch Handler API", "", "nocode")}} is used when implementing custom launch navigation handling in a PWA. When {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}} is invoked to set up the launch navigation handling functionality, the callback function inside `setConsumer()` is passed a `LaunchParams` object instance.
 
-Such custom navigation handling is initiated via {{domxref("Window.launchQueue")}} when a PWA has been launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`.
+Such custom navigation handling is initiated via {{domxref("Window.launchQueue")}} when a PWA has been launched with a [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
 - {{domxref("LaunchParams.files")}} {{ReadOnlyInline}}{{Experimental_Inline}}
-  - : Returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+  - : Returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method.
 - {{domxref("LaunchParams.targetURL")}} {{ReadOnlyInline}}{{Experimental_Inline}}
   - : Returns the target URL of the launch.
 
@@ -54,4 +54,4 @@ if ("launchQueue" in window) {
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app
+- [Musicr 2.0](https://mdn.github.io/dom-examples/launch-handler/) demo app

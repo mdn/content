@@ -2,9 +2,8 @@
 title: Notifications
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.
 
@@ -45,7 +44,7 @@ If you are issuing calls to action through notifications, you will also want to 
 
 ## Icons
 
-For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

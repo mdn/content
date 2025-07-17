@@ -2,9 +2,8 @@
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Toolbar buttons are one of the main UI components available to extensions. Toolbar buttons live in the main browser toolbar and contain an icon. When the user clicks the icon, one of two things can happen:
 
@@ -203,7 +202,6 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
 - [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
@@ -212,5 +210,4 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

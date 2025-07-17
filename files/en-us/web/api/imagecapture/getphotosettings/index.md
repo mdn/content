@@ -3,12 +3,10 @@ title: "ImageCapture: getPhotoSettings() method"
 short-title: getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
 
-{{APIRef("Image Capture API")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}
 
 The **`getPhotoSettings()`** method of
 the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}} that

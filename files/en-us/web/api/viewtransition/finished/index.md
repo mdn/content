@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ViewTransition.finished
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`finished`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
@@ -43,7 +43,8 @@ async function handleTransition() {
 }
 ```
 
-> **Note:** `isBackNavigation` isn't a built-in feature; it's a theoretical function that could be implemented using the [Navigation API](/en-US/docs/Web/API/Navigation_API) or similar.
+> [!NOTE]
+> `isBackNavigation` isn't a built-in feature; it's a theoretical function that could be implemented using the [Navigation API](/en-US/docs/Web/API/Navigation_API) or similar.
 
 ## Specifications
 
@@ -55,4 +56,4 @@ async function handleTransition() {
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

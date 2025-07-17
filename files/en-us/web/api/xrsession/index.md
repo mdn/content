@@ -25,6 +25,8 @@ _In addition to the properties listed below, `XRSession` inherits properties fro
   - : Returns the depth-sensing usage with which the session was configured.
 - {{DOMxRef("XRSession.domOverlayState", "domOverlayState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Provides information about the DOM overlay, if the feature is enabled.
+- {{DOMxRef("XRSession.enabledFeatures", "enabledFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns an array of granted [session features](/en-US/docs/Web/API/XRSystem/requestSession#session_features).
 - {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's blend mode which denotes how much of the real-world environment is visible through the XR device and how the device will blend the device imagery with it.
 - {{DOMxRef("XRSession.inputSources", "inputSources")}} {{Experimental_Inline}} {{ReadOnlyInline}}

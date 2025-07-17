@@ -1,10 +1,10 @@
 ---
 title: Firefox 59 for developers
+short-title: Firefox 59
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.
 
@@ -20,13 +20,13 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### HTML
 
-- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
+- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
 
 ### CSS
 
 - The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ([Firefox bug 951793](https://bugzil.la/951793)), and it has been enabled by default on all releases ([Firefox bug 1428879](https://bugzil.la/1428879)).
 - The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ([Firefox bug 1427292](https://bugzil.la/1427292)). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
-- {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
+- {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) parts (e.g., {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
 - {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ([Firefox bug 984021](https://bugzil.la/984021)).
 - {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/CSS_media_queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
 - The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ([Firefox bug 1035091](https://bugzil.la/1035091)).
@@ -108,7 +108,7 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Element/script#type) attribute (e.g. `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute (e.g., `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
 
 ### CSS
 
@@ -117,13 +117,13 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 
 ### JavaScript
 
-- Non-standard [conditional catch clauses](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
+- Non-standard conditional catch clauses have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
 
 ### APIs
 
 - The non-standard method `Event.getPreventDefault()` has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.
-- The proprietary [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
-- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.sidebar")}} for more details.
+- The proprietary `Navigator.mozNotification` property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
+- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.external")}} for more details.
 - The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` has been removed.
 
 ### SVG
@@ -139,19 +139,16 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 ### WebExtensions
 
 - [Theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) updates:
-
   - new properties: `colors.background_tab_text`, `colors.toolbar_field_border`
   - all color properties now support both Chrome-style arrays and CSS color values.
 
 - New [browser settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
-
   - [`contextMenuShowEvent`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
   - [`openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
   - [`openSearchResultsInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
   - [`proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
 
 - New [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) APIs:
-
   - [`tabs.captureTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab)
   - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
@@ -159,13 +156,11 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - The [`contextMenus`](/en-US/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 - New [`contentScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API enables runtime registration of content scripts.
 - New [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) APIs:
-
   - `browserAction/pageAction/sidebarAction.set*` functions now accept `null` to undo changes.
   - [`browserAction.isEnabled()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown), [`sidebarAction.isOpen()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) functions.
 
 - New option in [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) to show page actions by default.
 - New values for `protocol_handlers`:
-
   - "ssb" for Secure Scuttlebutt communications
   - "dat" for DATproject
   - "ipfs", "ipns", "dweb" for IPFS
@@ -173,7 +168,3 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - New [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) setting "cookieConfig".
 - Support in [`cookies`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API for [first-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - New option `upgradeToSecure` in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
-
-## Older versions
-
-{{Firefox_for_developers}}

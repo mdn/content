@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Performance.resourcetimingbufferfull_event
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The `resourcetimingbufferfull` event is fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
 
@@ -14,10 +14,10 @@ The `resourcetimingbufferfull` event is fired when the browser's [resource timin
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("resourcetimingbufferfull", (event) => {});
+```js-nolint
+addEventListener("resourcetimingbufferfull", (event) => { })
 
-onresourcetimingbufferfull = (event) => {};
+onresourcetimingbufferfull = (event) => { }
 ```
 
 ## Event type

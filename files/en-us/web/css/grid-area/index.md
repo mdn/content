@@ -3,13 +3,61 @@ title: grid-area
 slug: Web/CSS/grid-area
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-area
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`grid-area`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid", "grid")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
 
-The **`grid-area`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid", "grid")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
+{{InteractiveExample("CSS Demo: grid-area")}}
 
-{{EmbedInteractiveExample("pages/css/grid-area.html")}}
+```css interactive-example-choice
+grid-area: a;
+```
+
+```css interactive-example-choice
+grid-area: b;
+```
+
+```css interactive-example-choice
+grid-area: c;
+```
+
+```css interactive-example-choice
+grid-area: 2 / 1 / 2 / 4;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "b c c";
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 If four `<grid-line>` values are specified, `grid-row-start` is set to the first value, `grid-column-start` is set to the second value, `grid-row-end` is set to the third value, and `grid-column-end` is set to the fourth value.
 
@@ -19,7 +67,7 @@ When `grid-row-end` is omitted, if `grid-row-start` is a `<custom-ident>`, `grid
 
 When `grid-column-start` is omitted, if `grid-row-start` is a `<custom-ident>`, all four longhands are set to that value. Otherwise, it is set to `auto`.
 
-The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
+The `grid-area` property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
 
 ## Constituent properties
 
@@ -65,8 +113,7 @@ grid-area: unset;
 - `auto`
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement or a default span of `1`.
 - `<custom-ident>`
-
-  - : If there is a named line with the name '`<custom-ident>-start`'/'`<custom-ident>-end`', it contributes the first such line to the grid item's placement.
+  - : If there is a named line with the name `<custom-ident>-start` or `<custom-ident>-end`, it contributes the first such line to the grid item's placement.
 
     > [!NOTE]
     > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-area: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
@@ -74,7 +121,6 @@ grid-area: unset;
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
 - `<integer> && <custom-ident>?`
-
   - : Contributes the n-th grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
@@ -82,7 +128,6 @@ grid-area: unset;
     An {{cssxref("&lt;integer&gt;")}} value of `0` is invalid.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Contributes a grid span to the grid item's placement such that the corresponding edge of the grid item's grid area is _n_ lines from the opposite edge.
 
     If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.

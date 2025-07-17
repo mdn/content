@@ -2,9 +2,8 @@
 title: Advance measure
 slug: Glossary/Advance_measure
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **advance measure** is the total space the glyph takes, either horizontally or vertically, depending on the current writing direction. It is equal to the distance traveled by the cursor, placed directly in front of and then shifted behind the character.
 
@@ -14,5 +13,5 @@ The _advance measure_ of unit `ch` is either the width or height of character "0
 ## See also
 
 - {{cssxref("&lt;length&gt;")}}
-- [Learn: CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [TextMetrics API](/en-US/docs/Web/API/TextMetrics)

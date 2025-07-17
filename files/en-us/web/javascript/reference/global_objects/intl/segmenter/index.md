@@ -3,13 +3,25 @@ title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Segmenter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enabling you to get meaningful items (graphemes, words or sentences) from a string.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## Constructor
 
@@ -68,3 +80,8 @@ console.table(Array.from(segments));
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `Intl.Segmenter` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-segmenter/)
+- {{jsxref("Intl")}}

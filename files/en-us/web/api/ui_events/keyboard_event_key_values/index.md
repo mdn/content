@@ -312,7 +312,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 \[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
-\[3] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
+\[3] Firefox generates the key value `"OS"` for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
 \[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
@@ -1089,7 +1089,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 ## IME and composition keys
 
-Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
+Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple key presses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
@@ -1225,7 +1225,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
           >ISO/IEC 9995 keyboard</a
         >. Each key may have multiple groups of characters, each in its own
-        column. Pressing this key instructs the device to interpret keypresses
+        column. Pressing this key instructs the device to interpret key presses
         as coming from the first column on subsequent keystrokes.
       </td>
       <td></td>
@@ -1360,6 +1360,8 @@ Some keys are common across multiple languages, while others exist only on keybo
 </table>
 
 \[1] On the _X Window System_, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.
+
+<!-- cSpell:ignore Nonconvert -->
 
 \[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Firefox versions 36 and earlier.
 
@@ -1577,7 +1579,7 @@ These keys are only available on Japanese keyboards.
       <td></td>
     </tr>
     <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+      <td><code>"ZenkakuHankaku"</code> [6]</td>
       <td>
         The <kbd>Zenkaku/Hankaku</kbd> (full width/half width) toggle key.
       </td>
@@ -2269,7 +2271,7 @@ These keys represent buttons which commonly exist on modern smartphones.
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_APP_SWITCH</code> (181)</td>
+      <td><code>KEYCODE_APP_SWITCH</code> (187)</td>
     </tr>
     <tr>
       <td><code>"Call"</code></td>
@@ -3055,7 +3057,7 @@ The values below are derived in part from a number of consumer electronics techn
 
 - [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)
-- [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](https://shop.cta.tech/products/cta-2014): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
 > [!NOTE]
@@ -3414,7 +3416,7 @@ The values below are derived in part from a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"Lock"</code></td>
-      <td>Locks or unlocks the currently selected content or pgoram.</td>
+      <td>Locks or unlocks the currently selected content or program.</td>
       <td><code>VK_LOCK</code></td>
       <td></td>
       <td></td>
@@ -4375,7 +4377,7 @@ Some keyboards offer special keys for launching or switching to certain common a
 
 \[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
+\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of `"LaunchWebBrowser"` for the Web browser key.
 
 \[5] Firefox introduced support for this key in Firefox 37. Prior to that, this key was reported as `"Unidentified"`.
 

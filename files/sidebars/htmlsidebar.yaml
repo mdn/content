@@ -1,0 +1,143 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/HTML
+  - type: section
+    link: /Web/HTML/Guides
+    title: Guides
+  - /Web/HTML/Guides/Content_categories
+  - /Web/HTML/Guides/Comments
+  - /Web/HTML/Guides/Date_and_time_formats
+  - /Web/HTML/Guides/Constraint_validation
+  - /Web/HTML/Guides/Viewport_meta_element
+  - /Web/HTML/Guides/Responsive_images
+  - /Web/HTML/Guides/Microdata
+  - /Web/HTML/Guides/Microformats
+  - /Web/HTML/Guides/Quirks_mode_and_standards_mode
+  - /Web/HTML/Guides/Cheatsheet
+  - type: section
+    link: /Web/HTML/How_to
+  - /Web/HTML/How_to/Define_terms_with_HTML
+  - /Web/HTML/How_to/Use_data_attributes
+  - /Web/HTML/How_to/CORS_enabled_image
+  - /Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+  - /Web/HTML/How_to/Author_fast-loading_HTML_pages
+  - /Web/HTML/How_to/Add_JavaScript_to_your_web_page
+  - type: section
+    link: /Web/HTML/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/HTML/Reference/Elements
+    link: /Web/HTML/Reference/Elements
+    title: HTML_Elements
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTML/Reference/Attributes
+    link: /Web/HTML/Reference/Attributes
+    title: Attributes
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTML/Reference/Global_attributes
+    link: /Web/HTML/Reference/Global_attributes
+    title: Global_attributes
+    details: closed
+    code: true
+  - title: Attributes_element
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/input
+        tags: html-attribute-value
+        title: Input_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/script/type
+        tags: html-attribute-value
+        link: /Web/HTML/Reference/Elements/script/type
+        title: Script_types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTML/Reference/Elements/meta/name
+        depth: 2
+        link: /Web/HTML/Reference/Elements/meta/name
+        details: closed
+        code: true
+      - link: /Web/HTML/Reference/Elements/meta/http-equiv
+  - title: Attribute_values
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Web/HTML/Reference/Attributes/rel
+        title: Rel_keywords
+        details: closed
+        code: true
+l10n:
+  de:
+    Reference: Referenzen
+    HTML_Elements: Elemente
+    Global_attributes: Globale Attribute
+    Attributes: Attribute
+    Input_types: <code>&lt;input&gt;</code>-Typen
+    Guides: Anleitungen
+  en-US:
+    Reference: Reference
+    HTML_Elements: Elements
+    Global_attributes: Global attributes
+    Attributes: Attributes
+    Attributes_element: Attributes by element
+    Attribute_values: Attribute values
+    Input_types: <code>&lt;input&gt;</code> type
+    Script_types: <code>&lt;script&gt;</code> type
+    Rel_keywords: <code>rel</code> keywords
+    Guides: Guides
+  fr:
+    Reference: Références
+    HTML_Elements: Éléments
+    Global_attributes: Attributs universels
+    Attributes: Attributs
+    Input_types: Types <code>&lt;input&gt;</code>
+    Guides: Guides
+  ja:
+    Reference: リファレンス
+    HTML_Elements: 要素
+    Global_attributes: グローバル属性
+    Attributes: 属性
+    Attributes_element: 要素別の属性
+    Attribute_values: 属性値
+    Input_types: <code>&lt;input&gt;</code> 型
+    Script_types: <code>&lt;script&gt;</code> 型
+    Rel_keywords: <code>rel</code> キーワード
+    Guides: ガイド
+  ko:
+    Reference: "참고서:"
+    HTML_Elements: 요소
+    Global_attributes: 전역 속성
+    Attributes: 속성
+    Input_types: <code>&lt;input&gt;</code> types
+    Guides: "안내서:"
+  pt-BR:
+    Reference: Referências
+    HTML_Elements: Elementos
+    Global_attributes: Atributos globais
+    Attributes: Atributos
+    Input_types: Tipos de <code>&lt;input&gt;</code>
+    Guides: Guides
+  ru:
+    Reference: Справочники
+    HTML_Elements: элементы
+    Global_attributes: Глобальные атрибуты
+    Attributes: Aтрибуты
+    Input_types: Типы <code>&lt;input&gt;</code>
+    Guides: Путеводитель
+  zh-CN:
+    Reference: 参考
+    HTML_Elements: HTML 元素
+    Global_attributes: 全局属性
+    Attributes: 属性
+    Input_types: <code>&lt;input&gt;</code> 类型
+    Guides: 指南

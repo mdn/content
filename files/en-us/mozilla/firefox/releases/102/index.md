@@ -1,10 +1,10 @@
 ---
 title: Firefox 102 for developers
+short-title: Firefox 102
 slug: Mozilla/Firefox/Releases/102
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 102 that will affect developers. Firefox 102 was released on June 28, 2022.
 
@@ -34,12 +34,12 @@ No notable changes.
 
 ### Security
 
-- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
+- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
   A document with a CSP that restricts scripts will no longer load and execute WebAssembly unless the CSP uses `'wasm-unsafe-eval'` or the existing `'unsafe-eval'` keyword ([Firefox bug 1740263](https://bugzil.la/1740263)).
 
 #### DOM
 
-- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
+- The Firefox-only property {{domxref("Window.external", "Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
 
 ### WebDriver conformance
 
@@ -62,7 +62,3 @@ No notable changes.
 - The `nonPersistentCookies` option of the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property has been deprecated ([Firefox bug 1754924](https://bugzil.la/1754924)).
 - Manifest V3 [preview](https://blog.mozilla.org/addons/2022/06/08/manifest-v3-firefox-developer-preview-how-to-get-involved/) features:
   - With the introduction of support for the 'wasm-unsafe-eval' CSP keyword in Firefox ([Firefox bug 1740263](https://bugzil.la/1740263)), Manifest V3 extensions are now required to specify this keyword in the [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest key to use [WebAssembly](/en-US/docs/WebAssembly). For backwards-compatibility, Manifest V2 extensions can still use WebAssembly without the keyword ([Firefox bug 1766027](https://bugzil.la/1766027)).
-
-## Older versions
-
-{{Firefox_for_developers}}

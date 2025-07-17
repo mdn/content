@@ -62,8 +62,8 @@ The states can be used within the custom element but are not directly accessible
 ### Interaction with CSS
 
 You can select a custom element that is in a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
-The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is the state as defined in the element.
-The custom state pseudo-class matches the custom element only if the state is `true` (i.e., if `mystatename` is present in the `CustomStateSet`).
+The format of this pseudo-class is `:state(my-state-name)`, where `my-state-name` is the state as defined in the element.
+The custom state pseudo-class matches the custom element only if the state is `true` (i.e., if `my-state-name` is present in the `CustomStateSet`).
 
 For example, the following CSS matches a `labeled-checkbox` custom element when the element's `CustomStateSet` contains the `checked` state, and applies a `solid` border to the checkbox:
 
@@ -79,7 +79,7 @@ Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en
 
 > [!WARNING]
 > Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
-> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
+> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compatibility_with_dashed-ident_syntax) section below.
 
 ## Examples
 
@@ -302,7 +302,7 @@ class QuestionBox extends HTMLElement {
 The content of the shadow root is set using [`innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 This defines a {{HTMLElement("slot")}} element that contains the default prompt text "Question" for the element.
 We then define a `<labeled-checkbox>` custom element with the default text `"Yes"`.
-This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 
 Note that the code and styling for the `<labeled-checkbox>` element are exactly the same as in the [previous example](#matching_the_custom_state_of_a_custom_checkbox_element), and are therefore not repeated here.
 
@@ -485,11 +485,11 @@ Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
-## Compability with `<dashed-ident>` syntax
+## Compatibility with `<dashed-ident>` syntax
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector.
+If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--my-state` and `:state(--my-state)` CSS selector.
 
 ### Using a try...catch block
 

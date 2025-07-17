@@ -11,13 +11,14 @@ on:
     branches:
       - main
 
+permissions:
+  # Compare two commits.
+  contents: read
+
 jobs:
   tests:
     if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
-    # Set the permissions to `read-all`, preventing the workflow from
-    # any accidental write access to the repository.
-    permissions: read-all
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -31,6 +32,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Get changed files
+        id: check
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
@@ -39,23 +41,23 @@ jobs:
 
           # filter out files that are not markdown files
           GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
-          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> "$GITHUB_OUTPUT"
 
           # filter out files that are not attachments
           GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
-          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js environment
-        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -63,8 +65,14 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         env:
+          GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
+
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
           CONTENT_ROOT: ${{ github.workspace }}/files
 
           # This is so that if there's a single 'unsafe_html' flaw, it
@@ -92,12 +100,18 @@ jobs:
           # Playground
           REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
+          # rari
+          LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          INTERACTIVE_EXAMPLES_BASE_URL: https://interactive-examples.mdn.allizom.net
+
         run: |
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          yarn build $GIT_DIFF_CONTENT
+          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
+          yarn rari build --no-basic --json-issues --data-issues $ARGS
+          yarn yari-render-html
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
@@ -112,7 +126,7 @@ jobs:
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
       - name: Merge static assets with built documents
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
@@ -120,13 +134,15 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: ${{ env.GIT_DIFF_FILES }}
+        if: steps.check.outputs.GIT_DIFF_FILES
+        env:
+          GIT_DIFF_FILES: ${{ steps.check.outputs.GIT_DIFF_FILES }}
         run: |
           echo $GIT_DIFF_FILES
 

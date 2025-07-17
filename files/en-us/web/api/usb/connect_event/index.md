@@ -8,7 +8,7 @@ status:
 browser-compat: api.USB.connect_event
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a paired device is connected.
 
@@ -16,10 +16,10 @@ The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("connect", (event) => {});
+```js-nolint
+addEventListener("connect", (event) => { })
 
-onconnect = (event) => {};
+onconnect = (event) => { }
 ```
 
 ## Event type

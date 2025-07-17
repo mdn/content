@@ -12,8 +12,6 @@ The **`createOffer()`** method of the {{domxref("RTCPeerConnection")}} interface
 
 The SDP offer includes information about any {{domxref("MediaStreamTrack")}} objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
 
-The return value is a {{jsxref("Promise")}} which, when the offer has been created, is resolved with a [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options) dictionary containing the newly-created offer.
-
 ## Syntax
 
 ```js-nolint
@@ -27,15 +25,13 @@ createOffer(successCallback, failureCallback, options) // deprecated
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object providing the following options requested for the offer:
-
     - `iceRestart` {{optional_inline}}
       - : To restart ICE on an active connection, set this to `true`.
         This will cause the returned offer to have different credentials than those already in place.
         If you then apply the returned offer, ICE will restart.
         Specify `false` to keep the same credentials and therefore not restart ICE.
-        **The default is `false`**.
+        **The default is `false`**. Instead of using this option, consider calling {{domxref("RTCPeerConnection.restartIce()")}}, which will automatically set this flag the next time `createOffer()` is called.
     - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}
       - : Provides additional control over the directionality of audio. For example, it can be used to ensure that audio can be received, regardless if audio is sent or not.
     - `offerToReceiveVideo` {{optional_inline}} {{deprecated_inline}}
@@ -57,8 +53,12 @@ The parameters for the older form of `createOffer()` are described below, to aid
 
 ### Return value
 
-A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to the [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options) dictionary which contains the SDP describing the generated offer.
-That received offer should be delivered through the signaling server to a remote peer.
+A {{jsxref("Promise")}} that fulfills with an object containing the same properties as an {{domxref("RTCSessionDescription")}} objects:
+
+- `type`
+  - : A string whose value is `"offer"`.
+- `sdp`
+  - : A string containing the SDP describing the generated offer, to be delivered to the remote peer.
 
 ### Exceptions
 
@@ -99,7 +99,7 @@ myPeerConnection
   });
 ```
 
-In this code, the offer is created, and once successful, the local end of the {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is represented using an object conforming to [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options)) into {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
+In this code, the offer is created, and once successful, the local end of the {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is represented using an object in the same shape as {{domxref("RTCSessionDescription")}}) into {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
 Once that's done, the offer is sent to the remote system over the signaling channel; in this case, by using a custom function called `sendToServer()`.
 The implementation of the signaling server is independent from the WebRTC specification, so it doesn't matter how the offer is sent as long as both the caller and potential receiver are using the same one.
 

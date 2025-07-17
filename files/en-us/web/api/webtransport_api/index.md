@@ -15,7 +15,7 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 These include:
 
-- **Head-of-line blocking**
+- **{{glossary("head of line blocking", "Head-of-line blocking")}}**
   - : HTTP/2 allows multiplexing, so a single connection can stream multiple resources simultaneously. However, if a single resource fails, all other resources on that connection are held up until any missing packets are retransmitted. With QUIC, only the failing resource is affected.
 - **Faster performance**
   - : QUIC is more performant than TCP in many ways. QUIC can handle security features by itself, rather than handing responsibility off to other protocols like TLS — meaning fewer round trips. And streams provide better transport efficiency than the older packet mechanism. That can make a significant difference, especially on high-latency networks.
@@ -42,10 +42,10 @@ async function initTransport(url) {
   // The connection can be used once ready fulfills
   await transport.ready;
 
-  // ...
+  // …
 }
 
-// ...
+// …
 
 async function closeTransport(transport) {
   // Respond to connection closing
@@ -160,7 +160,8 @@ async function receiveUnidirectional() {
 To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}.
 This contains `readable` and `writable` properties returning references to `WebTransportReceiveStream` and `WebTransportSendStream` instances that can be used to read from and write to the server.
 
-> **Note:** `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
+> [!NOTE]
+> `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
 
 ```js
 async function setUpBidirectional() {
@@ -171,7 +172,7 @@ async function setUpBidirectional() {
   // stream.writable is a WebTransportSendStream
   const writable = stream.writable;
 
-  ...
+  // …
 }
 ```
 

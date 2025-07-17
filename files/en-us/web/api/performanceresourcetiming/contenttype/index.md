@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceResourceTiming.contentType
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`contentType`** read-only property of the {{domxref("PerformanceResourceTiming")}} interface is a string indicating the content type of the fetched resource, formatted as a {{glossary("MIME type")}} and subtype separated by a forward slash.
 
@@ -32,7 +32,7 @@ This may be one of the following values:
 - MIME type/subtype
   - : Any other MIME type/subtype supported by the user agent.
 - `""` (empty string)
-  - : Returned for MIME types that are not supported by the browser, or if the resource fetch failed due to [CORS](/en-US/docs/Web/HTTP/CORS) checks.
+  - : Returned for MIME types that are not supported by the browser, or if the resource fetch failed due to [CORS](/en-US/docs/Web/HTTP/Guides/CORS) checks.
 
 ## Examples
 
@@ -45,9 +45,9 @@ The `buffered` option is used for accessing entries from before the observer cre
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const javascriptResources = list.getEntries().filter((entry) => {
-    return entry.contentType === "text/javascript";
-  });
+  const javascriptResources = list
+    .getEntries()
+    .filter((entry) => entry.contentType === "text/javascript");
   console.log(javascriptResources);
 });
 
@@ -57,9 +57,9 @@ observer.observe({ type: "resource", buffered: true });
 The following example uses {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call the method.
 
 ```js
-const scripts = performance.getEntriesByType("resource").filter((entry) => {
-  return entry.contentType === "text/javascript";
-});
+const scripts = performance
+  .getEntriesByType("resource")
+  .filter((entry) => entry.contentType === "text/javascript");
 console.log(scripts);
 ```
 

@@ -3,9 +3,8 @@ title: stroke
 slug: Web/CSS/stroke
 page-type: css-property
 browser-compat: css.properties.stroke
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke`** [CSS](/en-US/docs/Web/CSS) property defines the color or SVG paint server used to draw an element's stroke. As such, `stroke` only has an effect on elements that can be given a stroke (for example, {{SVGElement('rect')}} or {{SVGElement('ellipse')}}); see the page on the SVG {{SVGAttr('stroke')}} attribute for a complete list. When declared, the CSS value overrides any value of the element's {{SVGAttr("stroke")}} SVG attribute.
 
@@ -34,15 +33,12 @@ stroke: unset;
 ### Values
 
 - {{cssxref("&lt;color&gt;")}}
-
   - : Sets the painting of the stroke with any valid CSS color value.
 
 - `<image>`
-
-  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://www.w3.org/TR/SVG2/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
+  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://svgwg.org/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
 
 - `context-stroke`
-
   - : Causes an element to "inherit" its stroke definition from its [_context element_](https://svgwg.org/svg2-draft/painting.html#TermContextElement). If there is no valid context element, then this value will result in no paint being used for the stroke.
 
 ## Formal definition

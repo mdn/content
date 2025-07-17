@@ -3,13 +3,48 @@ title: text-decoration
 slug: Web/CSS/text-decoration
 page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
 
-The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
+{{InteractiveExample("CSS Demo: text-decoration")}}
 
-{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
+```css interactive-example-choice
+text-decoration: underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted red;
+```
+
+```css interactive-example-choice
+text-decoration: green wavy underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline overline #ff3028;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 Text decorations are drawn across descendant text elements. This means that if an element specifies a text decoration, then a child element can't remove the decoration. For example, in the markup `<p>This text has <em>some emphasized words</em> in it.</p>`, the style rule `p { text-decoration: underline; }` would cause the entire paragraph to be underlined. The style rule `em { text-decoration: none; }` would not cause any change; the entire paragraph would still be underlined. However, the rule `em { text-decoration: overline; }` would cause a second decoration to appear on "some emphasized words".
 
@@ -126,4 +161,5 @@ The `text-decoration` property is specified as one or more space-separated value
 
 - The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-thickness")}}.
 - The {{cssxref("text-decoration-skip-ink")}}, {{cssxref("text-underline-offset")}}, and {{cssxref("text-underline-position")}} properties also affect text-decoration, but are not included in the shorthand.
-- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- The {{cssxref("list-style")}} property controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- SVG {{SVGAttr("text-decoration")}} attribute

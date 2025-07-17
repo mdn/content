@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: pushDebugGroup() method"
 short-title: pushDebugGroup()
 slug: Web/API/GPUComputePassEncoder/pushDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface begins a compute pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
@@ -33,11 +31,11 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-// ...
+// …
 
 const passEncoder = commandEncoder.beginComputePass();
 
-passEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+passEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
@@ -45,7 +43,7 @@ passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
 
 passEncoder.popDebugGroup();
 
-// ...
+// …
 ```
 
 ## Specifications

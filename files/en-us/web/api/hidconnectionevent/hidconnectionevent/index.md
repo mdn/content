@@ -8,7 +8,7 @@ status:
 browser-compat: api.HIDConnectionEvent.HIDConnectionEvent
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when a device's connection state changes.
 

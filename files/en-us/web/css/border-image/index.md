@@ -3,13 +3,58 @@ title: border-image
 slug: Web/CSS/border-image
 page-type: css-shorthand-property
 browser-compat: css.properties.border-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 > [!NOTE]
 > You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
@@ -50,7 +95,7 @@ border-image: unset;
 The `border-image` property may be specified with anywhere from one to five of the values listed below.
 
 > [!NOTE]
-> If the [computed value](/en-US/docs/Web/CSS/computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
+> If the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
 
 ### Values
 
@@ -69,8 +114,8 @@ The `border-image` property may be specified with anywhere from one to five of t
 
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Formal definition
 
@@ -86,7 +131,7 @@ Assistive technology cannot parse border images. If the image contains informati
 
 In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:
 
-![an example borderimage](border.png)
+![Eight diamonds: four red diamonds, one in each corner, and four orange diamonds, one on each side. The middle is empty.](border.png)
 
 #### HTML
 
@@ -163,8 +208,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   border: 10px solid transparent;
   padding: 20px;
   border-radius: 20px;
-  background-image: linear-gradient(white, white),
-    linear-gradient(to right, cyan, lime);
+  background-image:
+    linear-gradient(white, white), linear-gradient(to right, cyan, lime);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }

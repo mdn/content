@@ -2,7 +2,7 @@
 title: "console: timeEnd() static method"
 short-title: timeEnd()
 slug: Web/API/console/timeEnd_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.timeEnd_static
 ---
 
@@ -15,8 +15,8 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for detail
 ## Syntax
 
 ```js-nolint
-timeEnd()
-timeEnd(label)
+console.timeEnd()
+console.timeEnd(label)
 ```
 
 ### Parameters
@@ -57,6 +57,6 @@ longer tracking time.
 
 - See {{domxref("console/timeLog_static", "console.timeLog()")}} for additional examples
 - {{domxref("console/time_static", "console.time()")}}
-- [Microsoft Edge's documentation for `console.timeEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#timeend)
-- [Node.JS documentation for `console.timeEnd()`](https://nodejs.org/docs/latest/api/console.html#consoletimeendlabel)
+- [Microsoft Edge's documentation for `console.timeEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#timeend)
+- [Node.js documentation for `console.timeEnd()`](https://nodejs.org/docs/latest/api/console.html#consoletimeendlabel)
 - [Google Chrome's documentation for `console.timeEnd()`](https://developer.chrome.com/docs/devtools/console/api/#timeend)

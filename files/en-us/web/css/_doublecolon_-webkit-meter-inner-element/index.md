@@ -1,13 +1,14 @@
 ---
-title: "::-webkit-meter-inner-element"
+title: ::-webkit-meter-inner-element
 slug: Web/CSS/::-webkit-meter-inner-element
 page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-meter-inner-element
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`::-webkit-meter-inner-element`** is a proprietary WebKit CSS pseudo-element for selecting and applying styles to the outer containing element of a {{htmlelement("meter")}} element. Additional markup to render the meter element as read-only.
 

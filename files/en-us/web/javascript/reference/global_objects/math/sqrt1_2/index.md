@@ -1,15 +1,24 @@
 ---
 title: Math.SQRT1_2
+short-title: SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.SQRT1_2
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.SQRT1_2`** static data property represents the square root of 1/2, which is approximately 0.707.
 
-{{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.SQRT1_2", "shorter")}}
+
+```js interactive-example
+function getRoot1Over2() {
+  return Math.SQRT1_2;
+}
+
+console.log(getRoot1Over2());
+// Expected output: 0.7071067811865476
+```
 
 ## Value
 

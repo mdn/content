@@ -11,7 +11,7 @@ browser-compat: api.Event.bubbles
 The **`bubbles`** read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM tree or not.
 
 > [!NOTE]
-> See [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) for more information on bubbling.
+> See [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) for more information on bubbling.
 
 ## Value
 

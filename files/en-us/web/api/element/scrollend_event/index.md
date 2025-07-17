@@ -21,10 +21,10 @@ For detecting when scrolling inside a Document is complete, see the {{domxref("D
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollend", (event) => {});
+```js-nolint
+addEventListener("scrollend", (event) => { })
 
-onscrollend = (event) => {};
+onscrollend = (event) => { }
 ```
 
 ## Event type
@@ -77,11 +77,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.textContent = "Scroll event fired, waiting for scrollend...";
+  output.textContent = "scroll event fired, waiting for scrollend...";
 });
 
 element.addEventListener("scrollend", (event) => {
-  output.textContent = "Scrollend event fired!";
+  output.textContent = "scrollend event fired!";
 });
 ```
 

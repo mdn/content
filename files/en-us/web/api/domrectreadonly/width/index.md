@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.width
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`width`** read-only property of the **`DOMRectReadOnly`** interface represents the width of the `DOMRect`.
 

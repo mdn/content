@@ -2,9 +2,8 @@
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
@@ -19,7 +18,7 @@ Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
 - [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
 - [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
-- [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
+- [What's next](/en-US/docs/Web/JavaScript/Guide/Introduction#whats_next)
 
 ## Grammar and types
 
@@ -59,8 +58,7 @@ Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
 - [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
 - [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
-- [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
-- [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+- [Function scopes and closures](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures)
 - [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
 - [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
@@ -71,26 +69,35 @@ Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressio
 - [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
 - [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
+- [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_ternary_operator)
 
-## Numbers and dates
+## Numbers and strings
 
-Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+Overview: [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
-- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+- [Numbers](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [Strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#strings)
+- [`String` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#string_object)
+- [Template literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#template_literals)
 
-## Text formatting
+## Representing dates & times
 
-Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+Overview: [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-- [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-- [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
-- [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#date_object)
+
+## Regular expressions
+
+Overview: [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+- [Creating a regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression)
+- [Writing a regular expression pattern](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#writing_a_regular_expression_pattern)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ## Indexed collections
 
@@ -145,14 +152,13 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
 - [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
 
-## Meta programming
+## Internationalization
 
-Overview: [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization)
 
-- [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
-- [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
-- [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
-- [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
+- [Date and time formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#date_and_time_formatting)
+- [Number formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#number_formatting)
+- [Collation](/en-US/docs/Web/JavaScript/Guide/Internationalization#collation)
 
 ## JavaScript modules
 
@@ -164,5 +170,18 @@ Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 - [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
 - [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
 - [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+
+## Advanced topics
+
+After you have learned all fundamental features of JavaScript, you can explore some more niche features, or dive deeper into the language's mechanisms and concepts.
+
+- [Language overview](/en-US/docs/Web/JavaScript/Guide/Language_overview)
+- [Data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
+- [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+- [Memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

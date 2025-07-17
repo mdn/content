@@ -2,9 +2,8 @@
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
@@ -19,7 +18,7 @@ Regardless of the type of camera, we would always need information regarding its
 
 - `x` and `y`: The current position of the camera. In this implementation, we are assuming that `(x,y)` points to the top left corner of visible portion of the map.
 - `width` and `height`: The size of the camera's viewport.
-- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be (0,0), and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
+- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be `(0,0)`, and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
 
 ## Rendering the map
 

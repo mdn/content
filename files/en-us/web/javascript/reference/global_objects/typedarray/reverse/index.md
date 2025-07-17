@@ -1,15 +1,23 @@
 ---
 title: TypedArray.prototype.reverse()
+short-title: reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.reverse
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reverse()`** method of {{jsxref("TypedArray")}} instances reverses a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, the first typed array element now becoming the last, and the last typed array element becoming the first. In other words, elements order in the typed array will be turned towards the direction opposite to that previously stated. This method has the same algorithm as {{jsxref("Array.prototype.reverse()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-reverse.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.reverse()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([1, 2, 3]);
+uint8.reverse();
+
+console.log(uint8);
+// Expected output: Uint8Array [3, 2, 1]
+```
 
 ## Syntax
 

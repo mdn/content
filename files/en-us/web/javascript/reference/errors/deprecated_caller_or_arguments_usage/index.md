@@ -1,10 +1,9 @@
 ---
-title: "ReferenceError: deprecated caller or arguments usage"
+title: "TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception
 "'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them" occurs when the
@@ -43,9 +42,8 @@ are deprecated (see the reference articles for more information).
 function myFunc() {
   if (myFunc.caller === null) {
     return "The function was called from the top!";
-  } else {
-    return `This function's caller was ${myFunc.caller}`;
   }
+  return `This function's caller was ${myFunc.caller}`;
 }
 
 myFunc();

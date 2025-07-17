@@ -3,13 +3,41 @@ title: text-underline-position
 slug: Web/CSS/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-underline-position`** [CSS](/en-US/docs/Web/CSS) property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
 
-{{EmbedInteractiveExample("pages/css/text-underline-position.html")}}
+{{InteractiveExample("CSS Demo: text-underline-position")}}
+
+```css interactive-example-choice
+text-underline-position: auto;
+```
+
+```css interactive-example-choice
+text-underline-position: under;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element"
+      >C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></span
+    >
+    is the chemical formula for caffeine.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 ## Syntax
 
@@ -35,7 +63,7 @@ text-underline-position: unset;
 ### Values
 
 - `auto`
-  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the alphabetic baseline.
+  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("/Baseline/Typography", "alphabetic baseline")}}.
 - `from-font`
   - : If the font file includes information about a preferred position, use that value. If the font file doesn't include this information, behave as if `auto` was set, with the browser choosing an appropriate position.
 - `under`
@@ -55,9 +83,9 @@ text-underline-position: unset;
 
 ## Examples
 
-### A simple example
+### A basic example
 
-Let's take a couple of simple example paragraphs:
+We create two example paragraphs:
 
 ```html
 <p class="horizontal">
@@ -99,7 +127,7 @@ In the text with a vertical [`writing-mode`](/en-US/docs/Web/CSS/writing-mode) s
 
 The live example looks like this:
 
-{{EmbedLiveSample('A_simple_example', '100%', 600)}}
+{{EmbedLiveSample('A_basic_example', '100%', 600)}}
 
 ### Setting text-underline-position globally
 

@@ -27,9 +27,9 @@ A boolean value.
 self.addEventListener("fetch", (event) => {
   event.respondWith(async () => {
     if (event.isReload) {
-      //Return something
+      // Return something
     } else {
-      //Return something else
+      // Return something else
     }
   })();
 });

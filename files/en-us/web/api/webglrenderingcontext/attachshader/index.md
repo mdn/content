@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.attachShader
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLRenderingContext.attachShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches either a fragment or
 vertex {{domxref("WebGLShader")}} to a {{domxref("WebGLProgram")}}.
@@ -24,6 +24,10 @@ attachShader(program, shader)
 - `shader`
   - : A fragment or vertex {{domxref("WebGLShader")}}.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 The following code attaches pre-existing shaders to a {{domxref("WebGLProgram")}}.
@@ -39,7 +43,7 @@ gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw `Could not compile WebGL program. \n\n${info}`;
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 ```
 

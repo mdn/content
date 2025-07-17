@@ -84,7 +84,7 @@ self.onmessage = (e) => {
   }
 
   try {
-    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /* 1MB */);
 
     getAllEntries(fs.root.createReader());
 
@@ -136,4 +136,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

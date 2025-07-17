@@ -3,13 +3,31 @@ title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 A **labeled statement** is any [statement](/en-US/docs/Web/JavaScript/Reference/Statements) that is prefixed with an identifier. You can jump to this label using a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement nested within the labeled statement.
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Labeled statement", "taller")}}
+
+```js interactive-example
+let i, j;
+
+loop1: for (i = 0; i < 3; i++) {
+  loop2: for (j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
+}
+
+// Expected output:
+// "i = 0, j = 0"
+// "i = 0, j = 1"
+// "i = 0, j = 2"
+// "i = 1, j = 0"
+```
 
 ## Syntax
 

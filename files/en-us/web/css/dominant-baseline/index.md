@@ -3,9 +3,8 @@ title: dominant-baseline
 slug: Web/CSS/dominant-baseline
 page-type: css-property
 browser-compat: css.properties.dominant-baseline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`dominant-baseline`** [CSS](/en-US/docs/Web/CSS) property specifies the specific [baseline](/en-US/docs/Glossary/Baseline/Typography) used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context. If present, it overrides the shape's {{SVGAttr("dominant-baseline")}} attribute.
 
@@ -20,7 +19,7 @@ The `dominant-baseline` property is used to determine or re-determine a _scaled-
 Some values of `dominant-baseline` re-determine all three values. Others only re-establish the baseline-table font-size. When the initial value, `auto`, would give an undesired result, this property can be used to explicitly set the desired scaled-baseline-table.
 
 > [!NOTE]
-> The `dominant-baseline` property only has an effect on the {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}} SVG elements.
+> The `dominant-baseline` property only has an effect on the {{SVGElement("text")}}, {{SVGElement("textPath")}}, and {{SVGElement("tspan")}} SVG elements.
 
 ## Syntax
 
@@ -49,19 +48,18 @@ dominant-baseline: unset;
 ### Values
 
 - `auto`
-
   - : If this property is applied to a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 
     If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is `alphabetic`. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is `central`.
 
-    If this property is applied to a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("textPath")}} element, then the dominant-baseline and the baseline-table components remain the same as those of the parent text content element.
+    If this property is applied to a {{SVGElement("tspan")}}, or {{SVGElement("textPath")}} element, then the dominant-baseline and the baseline-table components remain the same as those of the parent text content element.
 
     If the computed {{SVGAttr("baseline-shift")}} value actually shifts the baseline, then the baseline-table font-size component is set to the value of the {{SVGAttr("font-size")}} attribute on the element on which the `dominant-baseline` attribute occurs, otherwise the baseline-table font-size remains the same as that of the element.
 
     If there is no parent text content element, the scaled-baseline-table value is constructed as for {{SVGElement("text")}} elements.
 
 - `alphabetic`
-  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set..
+  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set.
 - `central`
   - : The baseline-identifier for the dominant-baseline is set to be `central`. The derived baseline-table is constructed from the defined baselines in the font's baseline-table. That font baseline-table is chosen using the following priority order of baseline-table names: `ideographic`, `alphabetic`, `hanging`, `mathematical`. The baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set.
 - `hanging`
@@ -155,4 +153,4 @@ text:nth-of-type(8) {
 - {{cssxref('alignment-baseline')}}
 - {{cssxref('text-anchor')}}
 - {{cssxref('vertical-align')}}
-- {{SVGAttr('dominant-baseline')}} SVG attribute
+- SVG {{SVGAttr('dominant-baseline')}} attribute

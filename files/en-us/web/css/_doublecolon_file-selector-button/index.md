@@ -1,20 +1,41 @@
 ---
-title: "::file-selector-button"
+title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 page-type: css-pseudo-element
 browser-compat: css.selectors.file-selector-button
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file).
 
-The **`::file-selector-button`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
+{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-file-selector-button.html", "tabbed-shorter")}}
+```css interactive-example
+input {
+  margin-top: 1rem;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+```
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label><br />
+
+<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+```
 
 ## Syntax
 
 ```css
-selector::file-selector-button
+::file-selector-button {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -123,5 +144,4 @@ input[type="file"]::file-selector-button:hover {
 
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/WebKit_Extensions)
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
-- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)

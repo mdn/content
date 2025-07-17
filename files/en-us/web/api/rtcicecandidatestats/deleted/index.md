@@ -3,7 +3,7 @@ title: "RTCIceCandidateStats: deleted property"
 short-title: deleted
 slug: Web/API/RTCIceCandidateStats/deleted
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidateStats.deleted
+browser-compat: api.RTCStatsReport.type_local-candidate.deleted
 ---
 
 {{APIRef("WebRTC")}}
@@ -35,7 +35,7 @@ value is `true`.
 
 ## Examples
 
-In this example, {{domxref("setInterval()")}}
+In this example, {{domxref("Window.setInterval", "setInterval()")}}
 is used to set up a function that runs periodically to display the latest statistics for
 candidates. Only candidates which have not been deleted are included in the output.
 

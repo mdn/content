@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getQueryParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getQueryParameter()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns parameter
@@ -23,9 +23,7 @@ getQueryParameter(query, pname)
 - `query`
   - : A {{domxref("WebGLQuery")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
-
     - `gl.QUERY_RESULT`
       - : Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
         query result.

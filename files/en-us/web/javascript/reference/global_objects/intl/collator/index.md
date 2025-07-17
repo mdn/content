@@ -3,13 +3,27 @@ title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Collator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Collator`** object enables language-sensitive string comparison.
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## Constructor
 
@@ -90,3 +104,4 @@ console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"))
 ## See also
 
 - {{jsxref("Intl")}}
+- {{jsxref("String.prototype.localeCompare()")}}

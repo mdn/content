@@ -2,6 +2,7 @@
 title: IMSC basics
 slug: Related/IMSC/Basics
 page-type: guide
+sidebar: related
 ---
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
@@ -15,8 +16,8 @@ IMSC is a markup language you can use to define timed text for adding subtitles 
 
 If you are not already familiar with XML or HTML, read up on them first and then come back here:
 
-- [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
-- [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [XML Introduction](/en-US/docs/Web/XML/Guides/XML_introduction)
+- [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
 > [!NOTE]
 > If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
@@ -236,25 +237,3 @@ The more expanded example below gives you an idea what you can do with IMSC afte
 ## Summary
 
 That's it for your crash course in IMSC code basics! We've only really scratched the surface here, and you'll go much deeper into the above topics in subsequent articles.
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>

@@ -1,15 +1,25 @@
 ---
 title: DataView.prototype.byteOffset
+short-title: byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.DataView.byteOffset
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteOffset`** accessor property of {{jsxref("DataView")}} instances returns the offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.byteOffset")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view.byteOffset);
+// Expected output: 12
+```
 
 ## Description
 

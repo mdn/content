@@ -1,15 +1,22 @@
 ---
 title: Date.prototype.getHours()
+short-title: getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getHours
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getHours()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## Syntax
 

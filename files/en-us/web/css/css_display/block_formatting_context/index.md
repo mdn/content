@@ -3,9 +3,8 @@ title: Block formatting context
 slug: Web/CSS/CSS_display/Block_formatting_context
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A **block formatting context** (BFC) is a part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.
 
@@ -41,7 +40,7 @@ Let's have a look at a couple of these in order to see the effect creating a new
 
 ### Contain internal floats
 
-In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
+In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in flow and out of flow elements](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
 
 **using `overflow: auto`**
 
@@ -63,19 +62,19 @@ This is the default rendering for {{htmlelement("button")}} elements and button 
 
 ```html
 <section>
-  <div class="box">
+  <div class="box1">
     <div class="float">I am a floated box!</div>
     <p>I am content inside the container.</p>
   </div>
 </section>
 <section>
-  <div class="box" style="overflow:auto">
+  <div class="box2">
     <div class="float">I am a floated box!</div>
     <p>I am content inside the <code>overflow:auto</code> container.</p>
   </div>
 </section>
 <section>
-  <div class="box" style="display:flow-root">
+  <div class="box3">
     <div class="float">I am a floated box!</div>
     <p>I am content inside the <code>display:flow-root</code> container.</p>
   </div>
@@ -88,13 +87,20 @@ This is the default rendering for {{htmlelement("button")}} elements and button 
 section {
   height: 150px;
 }
-.box {
+.box1 {
   background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
-.box[style] {
+.box2,
+.box3 {
   background-color: aliceblue;
   border: 5px solid steelblue;
+}
+.box2 {
+  overflow: auto;
+}
+.box3 {
+  display: flow-root;
 }
 .float {
   float: left;
@@ -110,7 +116,7 @@ section {
 
 ### Exclude external floats
 
-In the following example, we are using `display:flow-root` and floats, creating two side-by-side boxes demonstrating that an element in the normal flow establishes a new BFC and does not overlap the margin box of any floats in the same block formatting context as the element itself.
+In the following example, we are using `display: flow-root` and floats, creating two side-by-side boxes demonstrating that an element in the normal flow establishes a new BFC and does not overlap the margin box of any floats in the same block formatting context as the element itself.
 
 #### HTML
 
@@ -121,7 +127,7 @@ In the following example, we are using `display:flow-root` and floats, creating 
 </section>
 <section>
   <div class="float">Try to resize this outer float</div>
-  <div class="box" style="display:flow-root">
+  <div class="box2">
     <p><code>display:flow-root</code></p>
   </div>
 </section>
@@ -137,9 +143,10 @@ section {
   background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
-.box[style] {
+.box2 {
   background-color: aliceblue;
   border: 5px solid steelblue;
+  display: flow-root;
 }
 .float {
   float: left;
@@ -227,13 +234,13 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Layout modes](/en-US/docs/Glossary/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used values](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- {{glossary("Replaced elements")}}

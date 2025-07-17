@@ -30,8 +30,6 @@ Long tasks refer to "culprit browsing context container", or "the container" for
 
 For tasks that don't occur within the top-level page and for figuring out which container is responsible for the long task, the {{domxref("TaskAttributionTiming")}} interface provides the `containerId`, `containerName` and `containerSrc` properties, which may provide more information about the source of the task.
 
-## Inheritance
-
 `PerformanceLongTaskTiming` inherits from {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}

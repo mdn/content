@@ -5,9 +5,10 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.extension.sendRequest
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("runtime.sendMessage")}} instead.
@@ -24,7 +25,7 @@ chrome.extension.sendRequest(
 )
 ```
 
-This API is also available as `browser.extension.sendRequest()` in a [version that returns a promise](/en-US/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
+This API is also available as `browser.extension.sendRequest()` in a version that returns a promise.
 
 ### Parameters
 
@@ -33,17 +34,15 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
 - `request`
   - : `any`.
 - `responseCallback` {{optional_inline}}
-
   - : `function`. The function is passed these arguments:
-
     - `response`
       - : `any`. The JSON response object sent by the handler of the request. If an error occurs while connecting to the extension, the callback will be called with no arguments and {{WebExtAPIRef('runtime.lastError')}} will be set to the error message.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-sendRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

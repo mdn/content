@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.DOMPointReadOnly.fromPoint_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The static **{{domxref("DOMPointReadOnly")}}**
 method `fromPoint()` creates and returns a new
@@ -24,10 +24,8 @@ DOMPointReadOnly.fromPoint(sourcePoint)
 ### Parameters
 
 - `sourcePoint`
-
   - : A {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing the following properties, from which to take the
     values of the new point's properties:
-
     - `x`
       - : An unrestricted floating-point value indicating the `x`-coordinate of the point in space. This is generally the horizontal coordinate, with positive values being to the right and negative values to the left. The default value is `0`.
     - `y`

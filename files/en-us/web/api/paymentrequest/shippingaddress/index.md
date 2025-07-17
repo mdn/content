@@ -17,6 +17,8 @@ user. It is `null` by default.
 
 ## Value
 
+A {{domxref('PaymentAddress')}} object or `null`.
+
 ## Examples
 
 Generally, the user agent will fill the `shippingAddress` property value.

@@ -3,9 +3,8 @@ title: chrome_url_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_url_overrides
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -91,7 +90,7 @@ The `chrome_url_overrides` key is an object that may have the following properti
         </p>
         <p>
           It's very good practice to include a
-          <a href="/en-US/docs/Web/HTML/Element/title">&#x3C;title></a> for the
+          <a href="/en-US/docs/Web/HTML/Reference/Elements/title">&#x3C;title></a> for the
           page, or the tab's title will be the "moz-extension://..." URL.
         </p>
         <p>

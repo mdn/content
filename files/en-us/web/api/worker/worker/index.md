@@ -23,11 +23,10 @@ new Worker(url, options)
 ### Parameters
 
 - `url`
-
   - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy. The URL is resolved relative to the current HTML page's location.
 
     > [!NOTE]
-    > Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vitejs.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+    > Bundlers, including [webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
     >
     > ```js
     > const myWorker = new Worker(new URL("worker.js", import.meta.url));
@@ -36,9 +35,7 @@ new Worker(url, options)
     > This way, the path is relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
 
 - `options` {{optional_inline}}
-
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
-
     - `type`
       - : A string specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
     - `credentials`
@@ -49,10 +46,10 @@ new Worker(url, options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
+  - : Thrown if the document is not allowed to start workers, e.g., if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript`
-    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types) may be accepted).
+    (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#legacy_javascript_mime_types) may be accepted).
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if _aURL_ cannot be parsed.
 

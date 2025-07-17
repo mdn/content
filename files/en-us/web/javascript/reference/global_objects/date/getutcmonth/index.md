@@ -1,15 +1,28 @@
 ---
 title: Date.prototype.getUTCMonth()
+short-title: getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCMonth()`** method of {{jsxref("Date")}} instances returns the month for this date according to universal time, as a zero-based value (where zero indicates the first month of the year).
 
-{{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCMonth()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+// December
+console.log(date1.getUTCMonth());
+// Expected output: 11
+
+// January
+console.log(date2.getUTCMonth());
+// Expected output: 0
+```
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.isVertexArray
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.isVertexArray()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the

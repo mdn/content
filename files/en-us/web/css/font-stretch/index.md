@@ -2,10 +2,13 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 page-type: css-property
+status:
+  - deprecated
 browser-compat: css.properties.font-stretch
+sidebar: cssref
 ---
 
-{{CSSRef}}
+{{deprecated_header}}
 
 > [!NOTE]
 > The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
@@ -13,7 +16,58 @@ browser-compat: css.properties.font-stretch
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
-{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
+{{InteractiveExample("CSS Demo: font-stretch")}}
+
+```css interactive-example-choice
+font-stretch: condensed;
+```
+
+```css interactive-example-choice
+font-stretch: expanded;
+```
+
+```css interactive-example-choice
+font-stretch: ultra-expanded;
+```
+
+```css interactive-example-choice
+font-stretch: 50%;
+```
+
+```css interactive-example-choice
+font-stretch: 100%;
+```
+
+```css interactive-example-choice
+font-stretch: 150%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
+  font-family: League;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+}
+
+section {
+  font-size: 1.2em;
+  font-family: League, sans-serif;
+}
+```
 
 ## Syntax
 
@@ -53,7 +107,6 @@ This property may be specified as a single `<font-stretch-css3>` keyword value o
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Specifies a more expanded font face than normal, with `ultra-expanded` as the most expanded.
 - `<percentage>`
-
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
 ### Keyword to numeric mapping
@@ -110,7 +163,9 @@ td {
     sans-serif;
 }
 #anek-malayalam td {
-  font: 90px "Anek Malayalam";
+  font:
+    90px "Anek Malayalam",
+    sans-serif;
 }
 #inconsolata td:nth-child(2),
 #anek-malayalam td:nth-child(2) {
@@ -259,5 +314,6 @@ p {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- SVG {{SVGAttr("font-stretch")}} attribute
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

@@ -3,9 +3,8 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new window.
 
@@ -30,13 +29,9 @@ let creating = browser.windows.create(
 ### Parameters
 
 - `createData` {{optional_inline}}
-
   - : `object`.
-
     - `allowScriptsToClose` {{optional_inline}}
-
       - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close). If you include `allowScriptsToClose` and set it to `true`, then this default behavior is changed, so scripts can close their tabs. Note that:
-
         - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
         - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 
@@ -49,7 +44,7 @@ let creating = browser.windows.create(
     - `incognito` {{optional_inline}}
       - : `boolean`. Whether the new window should be an incognito (private) window. Note that if you specify `incognito` and `tabId`, the ID must refer to a private tab — that is, you can't move a non-private tab to a private window.
     - `left` {{optional_inline}}
-      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
+      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. (Ignored in Firefox 108 or earlier for `panel` or `popup` window types; positioning the window using {{WebExtAPIRef("windows.update()")}} could be used as a workaround.)
     - `state` {{optional_inline}}
       - : A {{WebExtAPIRef('windows.WindowState')}} value. The initial state of the window. The `minimized`, `maximized` and, `fullscreen` states cannot be combined with `left`, `top`, `width`, or `height`.
     - `tabId` {{optional_inline}}
@@ -57,11 +52,11 @@ let creating = browser.windows.create(
     - `titlePreface` {{optional_inline}}
       - : `string`. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).
     - `top` {{optional_inline}}
-      - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
+      - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. (Ignored in Firefox 108 or earlier for `panel` or `popup` window types; positioning the window using {{WebExtAPIRef("windows.update()")}} could be used as a workaround.)
     - `type` {{optional_inline}}
       - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc.).
     - `url` {{optional_inline}}
-      - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
+      - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e., `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
     - `width` {{optional_inline}}
       - : `integer`. The width in pixels of the new window, including the frame. If not specified defaults to a natural width.
 

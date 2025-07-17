@@ -1,15 +1,30 @@
 ---
 title: Date.now()
+short-title: now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.now
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date.now()`** static method returns the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+{{InteractiveExample("JavaScript Demo: Date.now()")}}
+
+```js interactive-example
+// This example takes 2 seconds to run
+const start = Date.now();
+
+console.log("starting timer...");
+// Expected output: "starting timer..."
+
+setTimeout(() => {
+  const ms = Date.now() - start;
+
+  console.log(`seconds elapsed = ${Math.floor(ms / 1000)}`);
+  // Expected output: "seconds elapsed = 2"
+}, 2000);
+```
 
 ## Syntax
 

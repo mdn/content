@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setViewport() method"
 short-title: setViewport()
 slug: Web/API/GPURenderPassEncoder/setViewport
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setViewport
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setViewport()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
@@ -71,7 +69,7 @@ In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-sample
 For example:
 
 ```js
-// ...
+// …
 
 colorPass.setViewport(
   (canvas.width * m) / 2,
@@ -82,7 +80,7 @@ colorPass.setViewport(
   1,
 );
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -1,12 +1,13 @@
 ---
-title: ":-moz-suppressed"
+title: :-moz-suppressed
 slug: Web/CSS/:-moz-suppressed
 page-type: css-pseudo-class
 status:
   - non-standard
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing images that were suppressed because loading images from the specified site has been blocked.
 

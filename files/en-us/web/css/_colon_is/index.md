@@ -1,28 +1,71 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 page-type: css-pseudo-class
 browser-compat: css.selectors.is
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
 > [!NOTE]
 > Originally named `:matches()` (and `:any()`), this selector was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntax
-
-The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ```css-nolint
 :is(<forgiving-selector-list>) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ### Difference between :is() and :where()
 
@@ -122,7 +165,7 @@ You can replace it with:
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
 For example, without `:is()`, styling all the {{HTMLElement("Heading_Elements", "h1")}} elements at different depths could be very complicated:
 
@@ -225,6 +268,6 @@ some-element::after {
 
 ## See also
 
-- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)

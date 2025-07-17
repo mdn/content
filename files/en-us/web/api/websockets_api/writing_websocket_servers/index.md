@@ -8,7 +8,7 @@ page-type: guide
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. Creating a custom server can seem overwhelming if you have never done it before. It can actually be quite straightforward to implement a basic WebSocket server on your platform of choice, though.
 
-A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
+A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
 
 This article assumes you're already familiar with how {{Glossary("HTTP")}} works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.
 
@@ -45,13 +45,14 @@ Sec-WebSocket-Version: 13
 The client can solicit extensions and/or subprotocols here; see [Miscellaneous](#miscellaneous) for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.
 
 > [!NOTE]
-> All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status/403) if you don't like what you see. This is effective against [Cross Site WebSocket Hijacking (CSWH)](https://cwe.mitre.org/data/definitions/1385.html). However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
+> All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/Guides/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Reference/Status/403) if you don't like what you see. This is effective against [Cross Site WebSocket Hijacking (CSWH)](https://cwe.mitre.org/data/definitions/1385.html). However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
 
 If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request") response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
 
 The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's look at that next.
 
-> **Note:** [Regular HTTP status codes](/en-US/docs/Web/HTTP/Status) can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
+> [!NOTE]
+> [Regular HTTP status codes](/en-US/docs/Web/HTTP/Reference/Status) can be used only before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
 ### Server handshake response
 
@@ -64,12 +65,12 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
+Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string `"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"` together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
 
 > [!NOTE]
 > This seemingly overcomplicated process exists so that it's obvious to the client whether the server supports WebSockets. This is important because security issues might arise if the server accepts a WebSockets connection but interprets the data as a HTTP request.
 
-So if the Key was "`dGhlIHNhbXBsZSBub25jZQ==`", the `Sec-WebSocket-Accept` header's value is "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Once the server sends these headers, the handshake is complete and you can start swapping data!
+So if the Key was `"dGhlIHNhbXBsZSBub25jZQ=="`, the `Sec-WebSocket-Accept` header's value is `"s3pPLMBiTxaQ9kYGzzhZRbK+xOo="`. Once the server sends these headers, the handshake is complete and you can start swapping data!
 
 > [!NOTE]
 > The server can send other headers like {{HTTPHeader("Set-Cookie")}}, or ask for authentication or redirects via other status codes, before sending the reply handshake.
@@ -88,46 +89,72 @@ Either the client or the server can choose to send a message at any time — tha
 
 Each data frame (from the client to the server or vice versa) follows this same format:
 
-```bash
-Frame format:
+```plain
+Data frame from the client to server (message length 0–125):
 
-      0                   1                   2                   3
-      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-     +-+-+-+-+-------+-+-------------+-------------------------------+
-     |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-     |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-     |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-     | |1|2|3|       |K|             |                               |
-     +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     |     Extended payload length continued, if payload len == 127  |
-     + - - - - - - - - - - - - - - - +-------------------------------+
-     |                               |Masking-key, if MASK set to 1  |
-     +-------------------------------+-------------------------------+
-     | Masking-key (continued)       |          Payload Data         |
-     +-------------------------------- - - - - - - - - - - - - - - - +
-     :                     Payload Data continued ...                :
-     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-     |                     Payload Data continued ...                |
-     +---------------------------------------------------------------+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |          Masking-key          |
+|I|S|S|S|  (4)  |A|     (7)     |             (32)              |
+|N|V|V|V|       |S|             |                               |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+-------------------------------+
+|    Masking-key (continued)    |          Payload Data         |
++-------------------------------- - - - - - - - - - - - - - - - +
+:                     Payload Data continued ...                :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
+
+Data frame from the client to server (16-bit message length):
+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+|I|S|S|S|  (4)  |A|     (7)     |             (16)              |
+|N|V|V|V|       |S|   (== 126)  |                               |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+-------------------------------+
+|                          Masking-key                          |
++---------------------------------------------------------------+
+:                          Payload Data                         :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
+
+Data frame from the server to client (64-bit payload length):
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-------+-+-------------+-------------------------------+
+|F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+|I|S|S|S|  (4)  |A|     (7)     |             (64)              |
+|N|V|V|V|       |S|   (== 127)  |                               |
+| |1|2|3|       |K|             |                               |
++-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+|               Extended payload length continued               |
++ - - - - - - - - - - - - - - - +-------------------------------+
+|                               |          Masking-key          |
++-------------------------------+-------------------------------+
+|    Masking-key (continued)    |          Payload Data         |
++-------------------------------- - - - - - - - - - - - - - - - +
+:                     Payload Data continued ...                :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                     Payload Data continued ...                |
++---------------------------------------------------------------+
 ```
 
 This means that a frame contains the following bytes:
 
 - First byte:
-  - bit 0: FIN
-  - bit 1: RSV1
-  - bit 2: RSV2
-  - bit 3: RSV3
-  - bits 4-7 OPCODE
-- Bytes 2-10: payload length (see [Decoding Payload Length](#decoding_payload_length))
-- If masking is used, the next 4 bytes contain the masking key (see [Reading and unmasking the data](#reading_and_unmasking_the_data))
-- All subsequent bytes are payload
-
-The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
-
-The opcode field defines how to interpret the payload data: `0x0` for continuation, `0x1` for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
-
-The FIN bit tells whether this is the last message in a series. If it's 0, then the server keeps listening for more parts of the message; otherwise, the server should consider the message delivered. More on this later.
+  - Bit 0 FIN: tells whether this is the last message in a series. If it's 0, then the server keeps listening for more parts of the message; otherwise, the server should consider the message delivered. More on this later.
+  - Bit 1–3 RSV1, RSV2, RSV3: can be ignored, they are for extensions.
+  - Bits 4-7 OPCODE: defines how to interpret the payload data: `0x0` for continuation, `0x1` for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
+- Bit 8 MASK: tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) Server-to-client message are not masked and have this bit set to 0. We'll explain masking later, in [reading and unmasking the data](#reading_and_unmasking_the_data). _Note: You must mask messages even when using a secure socket._
+- Bits 9–15: payload length. May also include the following 2 bytes or 8 bytes; see [Decoding Payload Length](#decoding_payload_length).
+- If masking is used (always true for client-to-server messages), the next 4 bytes contain the masking key; see [Reading and unmasking the data](#reading_and_unmasking_the_data).
+- All subsequent bytes are payload.
 
 ### Decoding Payload Length
 
@@ -139,23 +166,51 @@ To read the payload data, you must know when to stop reading. That's why the pay
 
 ### Reading and unmasking the data
 
-If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `ENCODED` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudocode (that happens to be valid JavaScript):
+If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets of `ENCODED` and XOR the octet with the (i modulo 4)th octet of `MASK`. Using JavaScript as an example:
 
 ```js
-const MASK = [1, 2, 3, 4]; // 4-byte mask
-const ENCODED = [105, 103, 111, 104, 110]; // encoded string "hello"
+// The function receives the frame as a Uint8Array.
+// firstIndexAfterPayloadLength is the index of the first byte
+// after the payload length, so it can be 2, 4, or 10.
+function getPayloadDecoded(frame, firstIndexAfterPayloadLength) {
+  const mask = frame.slice(
+    firstIndexAfterPayloadLength,
+    firstIndexAfterPayloadLength + 4,
+  );
+  const encodedPayload = frame.slice(firstIndexAfterPayloadLength + 4);
+  // XOR each 4-byte sequence in the payload with the bitmask
+  const decodedPayload = encodedPayload.map((byte, i) => byte ^ mask[i % 4]);
+  return decodedPayload;
+}
 
-// Create the byte Array of decoded payload
-const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ MASK[i % 4]); // Perform an XOR on the mask
+const frame = Uint8Array.from([
+  // FIN=1, RSV1-3=0, opcode=0x1 (text)
+  0b10000001,
+  // MASK=1, payload length=5
+  0b10000101,
+  // 4-byte mask
+  1, 2, 3, 4,
+  // 5-byte payload
+  105, 103, 111, 104, 110,
+]);
+
+// Assume you got the number 2 from properly decoding the payload length
+const decoded = getPayloadDecoded(frame, 2);
 ```
 
-Now you can figure out what **DECODED** means depending on your application.
+Now you can figure out what `decoded` means depending on your application. For example, you can [decode](/en-US/docs/Web/API/TextDecoder) it as UTF-8 if it's a text message.
+
+```js
+console.log(new TextDecoder().decode(decoded)); // "hello"
+```
+
+Masking is a security measure to avoid malicious parties from predicting the data that is sent to the server. The client will generate a cryptographically random masking key for each message.
 
 ### Message Fragmentation
 
 The FIN and opcode fields work together to send a message split up into separate frames. This is called message fragmentation. Fragmentation is only available on opcodes `0x0` to `0x2`.
 
-Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
+Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0`, the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
 ```plain
 Client: FIN=1, opcode=0x1, msg="hello"
@@ -227,7 +282,7 @@ Sec-WebSocket-Protocol: soap
 ```
 
 > [!WARNING]
-> The server can't send more than one `Sec-Websocket-Protocol` header.
+> The server can't send more than one `Sec-WebSocket-Protocol` header.
 > If the server doesn't want to use any subprotocol, **_it shouldn't send any `Sec-WebSocket-Protocol` header_**. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.
 
 If you want your server to obey certain subprotocols, then naturally you'll need extra code on the server. Let's imagine we're using a subprotocol `json`. In this subprotocol, all data is passed as [JSON](https://en.wikipedia.org/wiki/JSON). If the client solicits this protocol and the server wants to use it, the server needs to have a JSON parser. Practically speaking, this will be part of a library, but the server needs to pass the data around.
@@ -238,5 +293,5 @@ If you want your server to obey certain subprotocols, then naturally you'll need
 ## Related
 
 - [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Tutorial: Websocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Tutorial: Websocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [Tutorial: WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Tutorial: WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
