@@ -3,9 +3,8 @@ title: Event.getRules()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/getRules
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.getRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves all the rules registered for a declarative event.
 

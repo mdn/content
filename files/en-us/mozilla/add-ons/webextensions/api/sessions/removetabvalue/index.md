@@ -3,9 +3,8 @@ title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeTabValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.
 

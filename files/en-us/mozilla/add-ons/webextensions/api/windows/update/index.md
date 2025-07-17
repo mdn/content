@@ -3,9 +3,8 @@ title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
 

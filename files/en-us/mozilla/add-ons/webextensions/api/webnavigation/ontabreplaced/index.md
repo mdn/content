@@ -3,9 +3,8 @@ title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onTabReplaced
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 

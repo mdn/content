@@ -3,9 +3,8 @@ title: host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.host_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

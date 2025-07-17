@@ -3,9 +3,8 @@ title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
 page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.RegisteredContentScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This object contains details of a script to be registered or that is registered.
 

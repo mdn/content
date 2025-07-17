@@ -3,9 +3,8 @@ title: runtime.onUserScriptMessage
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUserScriptMessage
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onUserScriptMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this event to listen for messages sent from one of the extension's [`USER_SCRIPT` worlds](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/ExecutionWorld).
 

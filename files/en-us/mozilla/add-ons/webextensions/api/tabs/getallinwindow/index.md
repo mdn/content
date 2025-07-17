@@ -5,9 +5,8 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.getAllInWindow
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} instead.

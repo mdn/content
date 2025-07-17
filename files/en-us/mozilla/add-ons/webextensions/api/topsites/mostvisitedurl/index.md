@@ -3,9 +3,8 @@ title: topSites.MostVisitedURL
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
 page-type: webextension-api-type
 browser-compat: webextensions.api.topSites.MostVisitedURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `MostVisitedURL` type contains two properties: the title of a page and its URL.
 

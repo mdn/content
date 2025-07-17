@@ -3,9 +3,8 @@ title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onZoomChange
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is zoomed.
 

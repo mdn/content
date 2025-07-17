@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.status
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A string that describes the current status of the request. It will be one of the following values:
 

@@ -3,9 +3,8 @@ title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onFocusChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} if all browser windows have lost focus.
 

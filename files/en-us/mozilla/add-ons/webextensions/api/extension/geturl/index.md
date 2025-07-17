@@ -5,9 +5,8 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.extension.getURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This function is deprecated. Please use [`runtime.getURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).

@@ -3,9 +3,8 @@ title: onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the keyboard shortcut for a command is changed.
 
