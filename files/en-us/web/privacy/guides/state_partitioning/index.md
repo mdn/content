@@ -189,8 +189,8 @@ Features disabled by the pref include:
 
 The following preferences can be used to disable individual storage access heuristics via the [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
-- Enable / disable the [redirect heuristics](#redirect_heuristics): `privacy.restrict3rdpartystorage.heuristic.recently_visited`, `privacy.restrict3rdpartystorage.heuristic.redirect`
-- Enable / disable the [window open heuristics](#opener_heuristics): `privacy.restrict3rdpartystorage.heuristic.window_open`, `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
+- Enable / disable the [navigation heuristic](#navigation_heuristic): `privacy.restrict3rdpartystorage.heuristic.navigation`
+- Enable / disable the [opener heuristic](#opener_heuristic): `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 
 #### Disable Network Partitioning
 
