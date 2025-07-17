@@ -203,6 +203,6 @@ p {
 }
 ```
 
-{{EmbedLiveSample('opaque','auto','500')}}
+{{EmbedLiveSample('opaque','auto','540')}}
 
 In the "transparent" example, the text is transparent, but is fully legible because the top shadow is not blurred. Note how the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the semi-opaque white example. This is different from non-inset box shadows which are clipped at the border's outer edge.
