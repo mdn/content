@@ -89,8 +89,8 @@ const changeColor = () => {
   });
 };
 const changeColorButton = document.querySelector("#change-color");
-changeColorButton.addEventListener("click", changeColor)
-changeColorButton.addEventListener("keypress", changeColor)
+changeColorButton.addEventListener("click", changeColor);
+changeColorButton.addEventListener("keypress", changeColor);
 ```
 
 #### Result
