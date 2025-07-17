@@ -3,9 +3,8 @@ title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ContextType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The different contexts a menu item can appear in.
 

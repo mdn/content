@@ -3,9 +3,8 @@ title: exportFunction()
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction
 page-type: webextension-api-function
 browser-compat: webextensions.api.contentScriptGlobalScope.exportFunction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This function provides a safe way to expose a function from a privileged scope to a less-privileged scope. This enables privileged code, such as an extension, to share code with less-privileged code, such as a standard web page script. A function exported from privileged to less-privileged code can be called from the less privileged code's context.
 

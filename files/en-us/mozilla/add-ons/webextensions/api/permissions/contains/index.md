@@ -3,9 +3,8 @@ title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.contains
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 

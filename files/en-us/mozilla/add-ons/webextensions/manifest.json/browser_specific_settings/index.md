@@ -3,9 +3,8 @@ title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

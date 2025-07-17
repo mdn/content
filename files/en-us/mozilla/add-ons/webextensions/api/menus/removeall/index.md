@@ -3,9 +3,8 @@ title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.removeAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes all menu items added by the extension.
 

@@ -3,9 +3,8 @@ title: runtime.setUninstallURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.setUninstallURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. The URL can be up to 1023 characters. This limit used to be 255, see [Browser compatibility](#browser_compatibility) for more details.
 

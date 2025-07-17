@@ -3,9 +3,8 @@ title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onInstalled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an add-on is installed.
 

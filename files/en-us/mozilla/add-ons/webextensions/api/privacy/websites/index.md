@@ -3,9 +3,8 @@ title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.websites
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `privacy.websites` property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 

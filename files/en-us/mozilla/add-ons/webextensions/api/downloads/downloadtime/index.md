@@ -3,9 +3,8 @@ title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadTime
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadTime` type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.
 

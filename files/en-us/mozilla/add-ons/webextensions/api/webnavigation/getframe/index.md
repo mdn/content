@@ -3,9 +3,8 @@ title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getFrame
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), and is uniquely identified by a tab ID and a frame ID.
 

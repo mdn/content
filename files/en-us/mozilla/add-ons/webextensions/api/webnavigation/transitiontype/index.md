@@ -3,9 +3,8 @@ title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 page-type: webextension-api-type
 browser-compat: webextensions.api.webNavigation.TransitionType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 

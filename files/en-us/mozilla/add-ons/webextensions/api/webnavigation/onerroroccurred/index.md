@@ -3,9 +3,8 @@ title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 

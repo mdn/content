@@ -3,9 +3,8 @@ title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 page-type: webextension-api
 browser-compat: webextensions.api.bookmarks
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) `bookmarks` API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
 

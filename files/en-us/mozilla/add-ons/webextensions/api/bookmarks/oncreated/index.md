@@ -3,9 +3,8 @@ title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a bookmark item (a bookmark or a folder) is created.
 

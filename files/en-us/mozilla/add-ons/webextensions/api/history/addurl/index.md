@@ -3,9 +3,8 @@ title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
 

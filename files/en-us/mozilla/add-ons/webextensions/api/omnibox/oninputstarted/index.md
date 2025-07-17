@@ -3,9 +3,8 @@ title: omnibox.onInputStarted
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputStarted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user starts interacting with your extension by entering its keyword in the address bar and then pressing the space key.
 

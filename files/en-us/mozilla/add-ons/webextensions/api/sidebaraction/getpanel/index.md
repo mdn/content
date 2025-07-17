@@ -3,9 +3,8 @@ title: sidebarAction.getPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
 
