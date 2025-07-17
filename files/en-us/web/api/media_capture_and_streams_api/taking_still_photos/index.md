@@ -67,6 +67,10 @@ button {
 .output {
   vertical-align: top;
 }
+
+code {
+  background-color: lightgrey;
+}
 ```
 
 ```html hidden live-sample___photo-capture live-sample___photo-capture-with-filters
@@ -74,10 +78,20 @@ button {
 <p>
   This example demonstrates how to use
   <code>navigator.mediaDevices.getUserMedia()</code> to set up a media stream
-  using your built-in webcam, fetch an image from that stream, and create a PNG
-  using that image.
+  using your webcam or other video device, fetch an image from that stream, and
+  create a PNG using that image.
 </p>
 <button id="permissions-button">Allow camera</button>
+```
+
+```html hidden live-sample___photo-capture-with-filters
+<p>
+  &#9432; This example uses the same code as before, but this time, we're adding
+  a filter effect to the <code>&lt;video&gt;</code> element using a CSS
+  <code>filter: grayscale(100%)</code> declaration. We can then check if the
+  video element has any CSS <code>filter</code> applied, and use the same filter
+  when drawing to the canvas:
+</p>
 ```
 
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
