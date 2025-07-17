@@ -73,9 +73,9 @@ const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector("section");
 let count = 0;
 const updateColour = () => {
-  colBlock.style = `--bg: ${colors[count]}`
-  count = count !== colors.length-1 ? ++count : 0
-}
+  colBlock.style = `--bg: ${colors[count]}`;
+  count = count !== colors.length - 1 ? ++count : 0;
+};
 const changeColor = () => {
   // Fallback for browsers that don't support View Transitions:
   if (!document.startViewTransition) {
