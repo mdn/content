@@ -18,14 +18,13 @@ select a directory.
 
 ```js-nolint
 showDirectoryPicker()
+showDirectoryPicker(options)
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing options, which are as follows:
-
     - `id` {{optional_inline}}
       - : By specifying an ID, the browser can remember different directories for different
         IDs. If the same ID is used for another picker, the picker opens in the same
@@ -34,7 +33,7 @@ showDirectoryPicker()
       - : A string that defaults to `"read"` for read-only access or `"readwrite"` for read
         and write access to the directory.
     - `startIn` {{optional_inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+      - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
 
 ### Return value

@@ -9,7 +9,7 @@ browser-compat: api.PerformanceElementTiming
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`PerformanceElementTiming`** interface contains render timing information for image and text node elements the developer annotated with an [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute for observation.
+The **`PerformanceElementTiming`** interface contains render timing information for image and text node elements the developer annotated with an [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute for observation.
 
 ## Description
 
@@ -19,11 +19,11 @@ The API supports timing information on the following elements:
 
 - {{htmlelement("img")}} elements,
 - {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
-- [poster](/en-US/docs/Web/HTML/Element/video#poster) images of {{htmlelement("video")}} elements,
-- elements which have a {{cssxref("background-image")}}, and
+- [poster](/en-US/docs/Web/HTML/Reference/Elements/video#poster) images of {{htmlelement("video")}} elements,
+- elements which have a contentful {{cssxref("background-image")}} property with a URL value for a resource that is actually available, and
 - groups of text nodes, such as a {{htmlelement("p")}}.
 
-The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
+The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute on the element.
 
 `PerformanceElementTiming` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -47,9 +47,9 @@ This interface also supports the following properties:
 - {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An {{domxref("Element")}} representing the element we are returning information about.
 - {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element.
+  - : A string which is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the element.
 - {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
+  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute on the element.
 - {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
 - {{domxref("PerformanceElementTiming.loadTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -72,7 +72,7 @@ This interface also supports the following properties:
 
 ### Observing render time of specific elements
 
-In this example two elements are being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation.
+In this example two elements are being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation.
 
 ```html
 <img src="image.jpg" elementtiming="big-image" />
@@ -100,4 +100,4 @@ Two entries will be output to the console. The first containing details of the i
 
 ## See also
 
-- [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) HTML attribute
+- [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) HTML attribute

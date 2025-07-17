@@ -3,13 +3,67 @@ title: margin-block-end
 slug: Web/CSS/margin-block-end
 page-type: css-property
 browser-compat: css.properties.margin-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/margin-block-end.html")}}
+{{InteractiveExample("CSS Demo: margin-block-end")}}
+
+```css interactive-example-choice
+margin-block-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block-end: 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-end: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Syntax
 
@@ -18,6 +72,8 @@ The **`margin-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logic
 margin-block-end: 10px; /* An absolute length */
 margin-block-end: 1em; /* relative to the text size */
 margin-block-end: 5%; /* relative to the nearest block container's width */
+margin-block-end: anchor-size(inline);
+margin-block-end: calc(anchor-size(--myAnchor block, 20px) / 4);
 
 /* Keyword values */
 margin-block-end: auto;

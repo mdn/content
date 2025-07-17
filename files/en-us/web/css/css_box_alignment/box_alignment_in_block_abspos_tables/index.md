@@ -2,9 +2,10 @@
 title: Box alignment for block, absolutely positioned, and table layouts
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 page-type: guide
+sidebar: cssref
 ---
 
-The [box alignment specification](/en-US/docs/Web/CSS/CSS_box_alignment) details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page, which details the common features of box alignment across layout methods.
+The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this guide aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## align-content and justify-content
 
@@ -44,21 +45,40 @@ In table layout, you have access to the {{cssxref("vertical-align")}} property t
 
 For many use cases, turning the block container into a flex item will give you the alignment capability that you are looking for. In the example below, a container with a single item inside has been turned into a flex container for the purpose of being able to use the alignment properties.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+```html live-sample___intro
+<div class="box">
+  <div></div>
+</div>
+```
 
-## Reference
+```css live-sample___intro
+.box {
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+}
 
-### CSS Properties
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("justify-self")}}
-- {{cssxref("align-self")}}
+.box div {
+  width: 100px;
+  height: 100px;
+}
+```
 
-### Glossary Entries
+{{EmbedLiveSample("intro", "", "320px")}}
 
-- [Alignment subject](/en-US/docs/Glossary/Alignment_Subject)
-- [Alignment container](/en-US/docs/Glossary/Alignment_Container)
-- [Fallback alignment](/en-US/docs/Glossary/Fallback_Alignment)
+## See also
 
-{{CSSRef}}
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)

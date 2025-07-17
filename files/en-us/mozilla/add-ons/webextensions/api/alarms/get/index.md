@@ -3,9 +3,8 @@ title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets an alarm, given its name.
 
@@ -26,7 +25,7 @@ let getAlarm = browser.alarms.get(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `{{WebExtAPIRef('alarms.Alarm', "Alarm")}}` object. This represents the alarm whose name matches `name`. If no alarms match, this will be `undefined`.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef('alarms.Alarm', "Alarm")}} object. This represents the alarm whose name matches `name`. If no alarms match, this will be `undefined`.
 
 ## Examples
 

@@ -3,9 +3,8 @@ title: CSS counter styles
 slug: Web/CSS/CSS_counter_styles
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-counter-styles/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS counter styles** module lets you define your own counter styles to manage the appearance of [markers](/en-US/docs/Web/CSS/::marker) in lists and counters in [generated content](/en-US/docs/Web/CSS/CSS_generated_content). It also enables you to extend native browser list styles with your own customizations.
 
@@ -30,7 +29,6 @@ No properties are defined in this module
 ### At-rules and descriptors
 
 - {{cssxref("@counter-style")}}
-
   - {{cssxref("@counter-style/system","system")}}
   - {{cssxref("@counter-style/symbols", "symbols")}}
   - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
@@ -42,9 +40,8 @@ No properties are defined in this module
   - {{cssxref("@counter-style/speak-as", "speak-as")}}
   - {{cssxref("@counter-style/fallback", "fallback")}}
 
-### Interfaces and APIs
+### Interfaces
 
-- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
 - {{domxref("CSSCounterStyleRule")}} interface
 
 ## Guides
@@ -70,7 +67,7 @@ No properties are defined in this module
 - {{cssxref("::before")}} pseudo-element
 - {{cssxref("::marker")}} pseudo-element
 
-[CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
+[CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module:
 
 - {{cssxref("content")}} property
 
@@ -80,7 +77,6 @@ No properties are defined in this module
 
 ## See also
 
-- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module

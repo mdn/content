@@ -45,3 +45,5 @@ document.doctype; // null
 ## See also
 
 - {{domxref("Document.doctype")}}
+- {{domxref("CharacterData.remove()")}}
+- {{domxref("Element.remove()")}}

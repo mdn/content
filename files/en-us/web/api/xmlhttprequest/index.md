@@ -37,10 +37,9 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} containing the response to the request, or `null` if the request was unsuccessful, has not yet been sent, or cannot be parsed as XML or HTML. Not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
-  - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Status) of the request.
+  - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-
-  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
+  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message (`"OK"`, for example).
 
     > [!NOTE]
     > According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
@@ -54,14 +53,10 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ### Non-standard properties
 
-- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
-  - : The channel used by the object when performing the request.
-- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
+- `XMLHttpRequest.mozAnon` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A boolean. If true, the request will be sent without cookie and authentication headers.
-- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
+- `XMLHttpRequest.mozSystem` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A boolean. If true, the same origin policy will not be enforced on the request.
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : A boolean. It indicates whether or not the object represents a background service request.
 
 ## Instance methods
 

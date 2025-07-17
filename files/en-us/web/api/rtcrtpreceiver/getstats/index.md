@@ -35,7 +35,7 @@ This simple example obtains the statistics for an `RTCRtpReceiver` and updates a
 
 ```js
 receiver.getStats().then((stats) => {
-  document.getElementById("lostpackets").innerText = stats.packetsLost;
+  document.getElementById("lost-packets").innerText = stats.packetsLost;
 });
 ```
 

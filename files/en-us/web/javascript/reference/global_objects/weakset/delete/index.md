@@ -1,15 +1,30 @@
 ---
 title: WeakSet.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.delete
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specified element from this `WeakSet`.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+weakset1.delete(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: false
+```
 
 ## Syntax
 

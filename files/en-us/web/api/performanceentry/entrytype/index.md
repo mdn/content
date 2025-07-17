@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.entryType
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`entryType`** property returns a string representing the type of performance metric that this entry represents.
 
@@ -17,85 +17,71 @@ All supported `entryTypes` are available using the static property {{domxref("Pe
 A string. The return value depends on the subtype of the `PerformanceEntry` object. Some subtypes have more than one `entryType`.
 
 - `element`
-
   - : Reports load time of elements.
 
     The entry instance will be a {{domxref("PerformanceElementTiming")}} object.
 
 - `event`
-
   - : Reports event latencies.
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
 
 - `first-input`
-
-  - : Reports the {{Glossary("first input delay")}} (FID).
+  - : Reports the {{Glossary("First Input Delay")}} (FID).
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
 
 - `largest-contentful-paint`
-
   - : Reports the largest paint an element triggered on screen.
 
     The entry instance will be a {{domxref("LargestContentfulPaint")}} object.
 
 - `layout-shift`
-
   - : Reports layout stability of web pages based on movements of the elements on the page.
 
     The entry instance will be a {{domxref("LayoutShift")}} object.
 
 - `long-animation-frame`
-
   - : Reports instances of [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
 
     The entry instance will be a {{domxref("PerformanceLongAnimationFrameTiming")}} object.
 
 - `longtask`
-
   - : Reports instances of long tasks.
 
     The entry instance will be a {{domxref("PerformanceLongTaskTiming")}} object.
 
 - `mark`
-
   - : Reports your own custom performance markers.
 
     The entry instance will be a {{domxref("PerformanceMark")}} object.
 
 - `measure`
-
   - : Reports your own custom performance measures.
 
     The entry instance will be a {{domxref("PerformanceMeasure")}} object.
 
 - `navigation`
-
   - : Reports document navigation timing.
 
     The entry instance will be a {{domxref("PerformanceNavigationTiming")}} object.
 
 - `paint`
-
   - : Reports key moments of document rendering (first paint, first contentful paint) during page load.
 
     The entry instance will be a {{domxref("PerformancePaintTiming")}} object.
 
 - `resource`
-
   - : Reports timing information for resources in a document.
 
     The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
 
 - `taskattribution`
-
   - : Reports the type of work that contributed significantly to the long task.
 
     The entry instance will be a {{domxref("TaskAttributionTiming")}} object.
 
 - `visibility-state`
-
   - : Reports the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
     The entry instance will be a {{domxref("VisibilityStateEntry")}} object.

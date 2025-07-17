@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.weight
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`weight`** property of the {{domxref("FontFace")}} interface retrieves or sets the weight of the font.
 

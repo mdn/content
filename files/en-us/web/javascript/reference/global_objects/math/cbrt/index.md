@@ -1,11 +1,11 @@
 ---
 title: Math.cbrt()
+short-title: cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cbrt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cbrt()`** static method returns the cube root of a number. That is
 
@@ -15,7 +15,21 @@ The **`Math.cbrt()`** static method returns the cube root of a number. That is
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+
+```js interactive-example
+console.log(Math.cbrt(-1));
+// Expected output: -1
+
+console.log(Math.cbrt(1));
+// Expected output: 1
+
+console.log(Math.cbrt(Infinity));
+// Expected output: Infinity
+
+console.log(Math.cbrt(64));
+// Expected output: 4
+```
 
 ## Syntax
 
@@ -61,5 +75,6 @@ Math.cbrt(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.cbrt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.cbrt`](https://www.npmjs.com/package/math.cbrt)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

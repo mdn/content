@@ -1,15 +1,27 @@
 ---
 title: Object.prototype.toLocaleString()
+short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.toLocaleString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toLocaleString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for locale-specific purposes.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toLocaleString()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date1.toLocaleString("ar-EG"));
+// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number1 = 123456.789;
+
+console.log(number1.toLocaleString("de-DE"));
+// Expected output: "123.456,789"
+```
 
 ## Syntax
 
@@ -19,7 +31,7 @@ toLocaleString()
 
 ### Parameters
 
-None. However, all objects that override this method are expected to accept at most two parameters, corresponding to `locales` and `options`, such as {{jsxref("Date.prototype.toLocaleString")}}. The parameter positions should not be used for any other purpose.
+None. However, all objects that override this method are expected to accept at most two parameters, corresponding to `locales` and `options`, such as {{jsxref("Number.prototype.toLocaleString")}}. The parameter positions should not be used for any other purpose.
 
 ### Return value
 
@@ -83,7 +95,7 @@ const frDate = testDate.toLocaleString("fr");
 
 ### Number toLocaleString() override
 
-{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific locales, e.g. with the correct separators. For example:
+{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific locales, e.g., with the correct separators. For example:
 
 ```js
 const testNumber = 2901234564;

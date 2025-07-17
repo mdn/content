@@ -1,10 +1,10 @@
 ---
 title: Firefox 74 for developers
+short-title: Firefox 74
 slug: Mozilla/Firefox/Releases/74
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
 
@@ -30,7 +30,7 @@ _No changes._
 
 #### Removals
 
-- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
+- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
 
 ### SVG
 
@@ -68,12 +68,12 @@ _No changes._
 
 ### HTTP
 
-- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
+- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
 
 ### Security
 
 - TLS 1.0 and 1.1 support has been removed from Firefox; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From now on, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
-- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user [Firefox bug 1483631](https://bugzil.la/1483631).
+- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user [Firefox bug 1483631](https://bugzil.la/1483631).
 
 ### Plugins
 
@@ -90,7 +90,7 @@ _No changes._
 ### API changes
 
 - Shortcut keys can now be unassigned in {{WebExtAPIRef("Commands.update")}} by passing an empty value of `shortcut` [Firefox bug 1475043](https://bugzil.la/1475043).
-- `urlclassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webrequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
+- `urlClassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webRequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
 
 ### Manifest changes
 
@@ -99,7 +99,3 @@ _No changes._
 ## See also
 
 - Hacks blog post: [Security means more with Firefox 74](https://hacks.mozilla.org/2020/03/security-means-more-with-firefox-74-2/)
-
-## Older versions
-
-{{Firefox_for_developers}}

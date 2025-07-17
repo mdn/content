@@ -31,6 +31,11 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 
+## HTTP headers
+
+- {{httpheader("Permissions-Policy")}} {{httpheader('Permissions-Policy/serial','serial')}} directive
+  - : Controls whether the current document is allowed to use the Web Serial API to communicate with serial devices, either directly connected via a serial port, or via USB or Bluetooth devices emulating a serial port.
+
 ## Examples
 
 The following examples demonstrate some of the functionality provided by the Web Serial API.

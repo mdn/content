@@ -3,9 +3,8 @@ title: fill-opacity
 slug: Web/CSS/fill-opacity
 page-type: css-property
 browser-compat: css.properties.fill-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the painting operation (color, gradient, pattern, etc.) applied to SVG shapes or text content elements to fill the element. The property defines the opacity of the element's `fill` only; it does not affect the stroke. If present, it overrides the element's {{SVGAttr("fill-opacity")}} attribute.
 
@@ -32,11 +31,9 @@ fill-opacity: unset;
 The {{cssxref("number")}} and {{cssxref("percentage")}} values denote the opacity of the `fill` of the element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%`, the element is fully transparent. With `1` or `100%`, the element is fully opaque. With values in between, the element is semi-transparent, with content behind the element being visible.
@@ -60,7 +57,7 @@ This example demonstrates the basic use case of `fill-opacity`, and how the CSS 
 We include several different SVG graphic elements and set the `fill-opacity` attribute of each one to `1` (except `line`), meaning the fill of each element is opaque. The `fill-opacity` SVG attribute does not apply to {{SVGElement("line")}}.
 
 ```html
-<svg viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="30" height="30" fill-opacity="1" />
   <rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill-opacity="1" />
   <circle cx="25" cy="75" r="20" fill-opacity="1" />

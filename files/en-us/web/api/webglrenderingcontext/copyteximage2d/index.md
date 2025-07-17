@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
@@ -21,10 +21,8 @@ copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
       texture.
@@ -43,10 +41,8 @@ copyTexImage2D(target, level, internalformat, x, y, width, height, border)
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
     level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture. Possible
     values:
-
     - `gl.ALPHA`: Discards the red, green and blue components and reads the
       alpha component.
     - `gl.RGB`: Discards the alpha components and reads the red, green and

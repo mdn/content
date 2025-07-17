@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.deviceVersionMajor
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`deviceVersionMajor`** read only property of the
 {{domxref("USBDevice")}} interface he major version number of the device in a semantic

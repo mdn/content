@@ -1,17 +1,15 @@
 ---
 title: WebAssembly instruction reference
+short-title: Reference
 slug: WebAssembly/Reference
-page-type: landing-page
+page-type: listing-page
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
+This page lists instruction references for [WebAssembly](/en-US/docs/WebAssembly) usage on the web.
 
-- [Numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric)
-- [Variable instructions](/en-US/docs/WebAssembly/Reference/Variables)
-- [Memory instructions](/en-US/docs/WebAssembly/Reference/Memory)
-- [Control flow instructions](/en-US/docs/WebAssembly/Reference/Control_flow)
-<!-- These pages are not written yet
-- [Vector/SIMD instructions](/en-US/docs/WebAssembly/Reference/Vector)
-- [Reference instructions](/en-US/docs/WebAssembly/Reference/Reference)
-- [Table instructions](/en-US/docs/WebAssembly/Reference/Table)
-  -->
+{{SubPagesWithSummaries}}
+
+## See also
+
+- [WebAssembly](/en-US/docs/WebAssembly)

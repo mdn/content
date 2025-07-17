@@ -38,21 +38,24 @@ requestAnimationFrame(callback)
 ### Parameters
 
 - `callback`
-
   - : The function to call when it's time to update your animation for the next repaint. This callback function is passed a single argument:
-
     - `timestamp`
-
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's rendering (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/Performance/timeOrigin)). The timestamp is a decimal number, in milliseconds, but with a minimal precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared between all windows that run on the same agent (all same-origin windows and, more importantly, same-origin iframes) — which allows synchronizing animations across multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to calling {{domxref('performance.now()')}} at the start of the callback function, but it is never the same value.
 
         When multiple callbacks queued by `requestAnimationFrame()` begin to fire in a single frame, each receives the same timestamp even though time has passed during the computation of every previous callback's workload.
 
 ### Return value
 
-A `long` integer value, the request ID, that uniquely identifies the entry
-in the callback list. This is a non-zero value, but you may not make any other
-assumptions about its value. You can pass this value to
+An `unsigned long` integer value, the request ID, that uniquely identifies the entry
+in the callback list. You should not make any assumptions about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
+
+> [!WARNING]
+> The request ID is typically implemented as a per-window incrementing counter. Therefore, even when it starts counting at 1, it may overflow and end up reaching 0.
+> While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
+> The spec doesn't specify the overflowing behavior, so browsers have divergent behaviors. When overflowing, the value would either wrap around to 0, to a negative value, or fail with an error.
+> Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
+> Note that it would however take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
 
 ## Examples
 
@@ -160,3 +163,4 @@ function animate() {
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- [Firefox switching to uint32_t for the requestAnimationFrame request ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)

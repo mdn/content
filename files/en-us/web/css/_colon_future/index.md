@@ -1,11 +1,10 @@
 ---
-title: ":future"
+title: :future
 slug: Web/CSS/:future
 page-type: css-pseudo-class
 browser-compat: css.selectors.future
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:future`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that will match for any element which appears entirely after an element that matches {{cssxref(":current")}}. For example in a video with captions which are being displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 

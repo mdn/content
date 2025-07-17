@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.referrerPolicy
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`referrerPolicy`** read-only property of the
 {{domxref("Request")}} interface returns the referrer policy, which governs what
@@ -41,5 +41,5 @@ const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
 The **`encodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfills with the tested media configuration's capabilities for encoding media.
 This contains the three boolean properties `supported`, `smooth`, and `powerefficient`, which describe how compatible the device is with the type of media.
@@ -20,27 +20,21 @@ encodingInfo(configuration)
 ### Parameters
 
 - `configuration`
-
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
-
     - `type`
-
       - : The type of media being tested. This takes one of two values:
-
         - `record`
-          - : Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
+          - : Represents a configuration for recording of media, e.g., using {{domxref("MediaRecorder")}}.
         - `webrtc`
-          - : Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
+          - : Represents a configuration meant to be transmitted over electronic means (e.g., using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
         - `transmission` {{non-standard_inline}}
           - : The synonym of `webrtc` to be used in Firefox.
 
     - `video`
-
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
-
         - `contentType`
-          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
           - : The width of the video.
         - `height`
@@ -51,12 +45,10 @@ encodingInfo(configuration)
           - : The number of frames making up one second of video playback.
 
     - `audio`
-
       - : Configuration object for an audio media source.
         This has the following properties: <!-- AudioConfiguration in the spec -->
-
         - `contentType`
-          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
           - : The number of channels used by the audio track.
         - `bitrate`
@@ -89,7 +81,7 @@ All supported audio codecs are reported to be power efficient.
 ## Examples
 
 ```js
-//Create media configuration to be tested
+// Create media configuration to be tested
 const mediaConfig = {
   type: "record", // or 'transmission'
   video: {

@@ -23,10 +23,8 @@ createPattern(image, repetition)
 ### Parameters
 
 - `image`
-
   - : An image to be used as the pattern's image.
     It can be any of the following:
-
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
     - {{domxref("SVGImageElement")}} ({{SVGElement("image")}})
     - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}, by using the capture of the video)
@@ -36,10 +34,8 @@ createPattern(image, repetition)
     - {{domxref("VideoFrame")}}
 
 - `repetition`
-
   - : A string indicating how to repeat the pattern's image.
     Possible values are:
-
     - `"repeat"` (both directions)
     - `"repeat-x"` (horizontal only)
     - `"repeat-y"` (vertical only)
@@ -63,7 +59,7 @@ Once created, the pattern is assigned to the canvas context's fill style and app
 
 The original image looks like this:
 
-![A flowery pattern](canvas_createpattern.png)
+![A flowery pattern](canvas_create_pattern.png)
 
 #### HTML
 
@@ -78,7 +74,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "canvas_createpattern.png";
+img.src = "canvas_create_pattern.png";
 // Only use the image after it's loaded
 img.onload = () => {
   const pattern = ctx.createPattern(img, "repeat");

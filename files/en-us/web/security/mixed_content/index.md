@@ -3,9 +3,8 @@ title: Mixed content
 slug: Web/Security/Mixed_content
 page-type: guide
 browser-compat: http.mixed-content
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 When a web page is loaded from a secure origin, over a secure channel such as {{Glossary("HTTPS")}}, the connection with the web server is encrypted, and is therefore protected from eavesdropping and modification by man-in-the-middle attacks.
 If the securely loaded web page only includes images, scripts, and other resources that are also hosted on secure origins, users can be confident that the whole page is safe from these kinds of attacks.
@@ -16,7 +15,7 @@ Scripts are particularly dangerous because they can modify any aspect of the pag
 For example, images can be modified to give the user false or misleading information, or to change the apparent function of a button.
 
 "Mixed downloads" refer to resource downloads initiated from a secure context, but fetched over an insecure connection.
-These are share the same risks as mixed content: downloads appears to come from a secure origin, but could have been modified or viewed en-route.
+These share the same risks as mixed content: downloads appear to come from a secure origin, but could have been modified or viewed en-route.
 
 You should avoid using mixed content and mixed downloads in your websites!
 Browsers mitigate the risks of mixed content by auto-upgrading image, video, and audio mixed content requests from HTTP to HTTPS, and block insecure requests for all other resource types.
@@ -67,7 +66,7 @@ This includes HTTP requests resulting from the following elements (this list is 
 - {{HTMLElement("iframe")}} where origin is set via `src` attribute
 - {{domxref("Window/fetch", "fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
-- All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
+- All cases in CSS where a {{CSSXref("url_value", "&lt;url&gt;")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
 - {{domxref("Navigator.sendBeacon")}} (`url` attribute)
 - {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
@@ -107,7 +106,7 @@ Support for loading local content can be checked in the [Browser compatibility](
 A mixed download is a resource download from a secure context over an insecure connection.
 They are problematic for the same reasons as mixed content — content may be intercepted and/or modified by an attacker, and it is not obvious to users that this might happen on a secure site.
 
-For example, the following code defines an [`<a>`](/en-US/docs/Web/HTML/Element/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
+For example, the following code defines an [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
 If this code is in a page that is served over HTTPS, saving the link results in a mixed download.
 
 ```html
@@ -129,7 +128,7 @@ The screenshot below shows the console warning when an image is upgraded on Fire
 ![Screen shot of the web console displaying upgrade warning for mixed content image.](mixed_content_console_upgradable.png)
 
 On browser versions that still display "optionally blockable" content, an icon is used to indicate that there is mixed content in the displayed content, along with a console warning.
-The screenshot below shows the icon and console warning for Firebox starting supporting upgradable mixed-content.
+The screenshot below shows the icon and console warning for Firefox starting supporting upgradable mixed-content.
 
 ![Screen shot of the web console displaying display warning for mixed content image.](mixed_content_console_displayed.png)
 
@@ -142,7 +141,7 @@ The best strategy to avoid issues with mixed content is to serve all the content
 - If using resource on other sites use HTTPS versions, if available.
 
   Most sites provide HTTPS versions of shared resources.
-  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [LinkChecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
 
 There are a number of ways to verify that your site is free of mixed content including:
 
@@ -162,4 +161,4 @@ There are a number of ways to verify that your site is free of mixed content inc
 
 ## See also
 
-- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content
+- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content

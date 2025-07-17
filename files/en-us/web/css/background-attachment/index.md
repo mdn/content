@@ -3,13 +3,76 @@ title: background-attachment
 slug: Web/CSS/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-attachment`** [CSS](/en-US/docs/Web/CSS) property sets whether a background image's position is fixed within the {{glossary("viewport")}}, or scrolls with its containing block.
 
-{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
+{{InteractiveExample("CSS Demo: background-attachment")}}
+
+```css interactive-example-choice
+background-attachment: scroll;
+```
+
+```css interactive-example-choice
+background-attachment: fixed;
+```
+
+```css interactive-example-choice
+background-attachment: local;
+```
+
+```css interactive-example-choice
+background-attachment: local, scroll;
+```
+
+```css interactive-example-choice
+background-attachment: scroll, local;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
+    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
+    Implacable November weather. As much mud in the streets as if the waters had
+    but newly retired from the face of the earth, and it would not be wonderful
+    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
+    lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+body {
+  overflow: scroll;
+}
+
+#default-example {
+  height: 600px;
+}
+
+#example-element {
+  max-width: 20rem;
+  height: 100%;
+  background:
+    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
+      no-repeat,
+    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: auto;
+  padding: 20px;
+  text-shadow:
+    0 0 0.6rem #000,
+    0 0 0.6rem #000;
+}
+```
 
 ## Syntax
 
@@ -48,7 +111,7 @@ The `background-attachment` property is specified as one of the keyword values f
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -64,14 +127,14 @@ The `background-attachment` property is specified as one of the keyword values f
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Basic_example")}}
 
 ### Multiple background images
 
@@ -99,7 +162,7 @@ This property supports multiple background images. You can specify a different `
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

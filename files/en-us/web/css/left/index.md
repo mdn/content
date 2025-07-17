@@ -3,13 +3,62 @@ title: left
 slug: Web/CSS/left
 page-type: css-property
 browser-compat: css.properties.left
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/left.html")}}
+{{InteractiveExample("CSS Demo: left")}}
+
+```css interactive-example-choice
+left: 0;
+```
+
+```css interactive-example-choice
+left: 4em;
+```
+
+```css interactive-example-choice
+left: 10%;
+```
+
+```css interactive-example-choice
+left: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 ## Syntax
 
@@ -17,8 +66,8 @@ The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying th
 /* <length> values */
 left: 3px;
 left: 2.4em;
-left: calc(anchor(right) + 20px);
 left: anchor(--myAnchor 50%);
+left: calc(anchor-size(--myAnchor inline, 100px) * 2);
 
 /* <percentage>s of the width of the containing block */
 left: 10%;
@@ -37,24 +86,17 @@ left: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
-  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
-
-    - for _absolutely positioned elements_, the distance to the left edge of the containing block.
-    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge.
-    - for _relatively positioned elements_, the distance that the element is moved to the right of its normal position.
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
+    - for _absolutely positioned elements_, it represents the distance to the left edge of the containing block.
+    - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
+    - for _relatively positioned elements_, it represents the distance that the element is moved to the right of its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
 - `auto`
-
   - : Specifies that:
-
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("right")}} property, while `width: auto` is treated as a width based on the content; or if `right` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("right")}} property; or if `right` is also `auto`, the element is not moved horizontally at all.
-
-- `inherit`
-  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
 
 ## Description
 
@@ -145,8 +187,6 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
 }
 
 pre {
-  white-space: pre;
-  white-space: pre-wrap;
   white-space: pre-line;
   word-wrap: break-word;
 }
@@ -208,6 +248,9 @@ pre {
 
 ## See also
 
-- {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

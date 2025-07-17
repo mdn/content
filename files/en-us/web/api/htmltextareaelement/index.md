@@ -7,7 +7,7 @@ browser-compat: api.HTMLTextAreaElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
+The **`HTMLTextAreaElement`** interface provides properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
 
 {{InheritanceDiagram}}
 
@@ -16,33 +16,33 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
-  - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
+  - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
-  - : A number that represents the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
+  - : A number that represents the element's [`cols`](/en-US/docs/Web/HTML/Reference/Elements/textarea#cols) attribute, indicating the visible width of the text area.
 - {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
   - : A string that represents the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
   - : A string that represents the directionality of the element.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
-  - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
+  - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
+  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
-  - : A number that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A number that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.minLength", "minLength")}}
-  - : A number that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A number that represents the element's [`minlength`](/en-US/docs/Web/HTML/Reference/Elements/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.name", "name")}}
-  - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
+  - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/textarea#name) attribute, containing the name of the control.
 - {{domxref("HTMLTextAreaElement.placeholder", "placeholder")}}
-  - : A string that represents the element's [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute, containing a hint to the user about what to enter in the control.
+  - : A string that represents the element's [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/textarea#placeholder) attribute, containing a hint to the user about what to enter in the control.
 - {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}}
-  - : A boolean that represents the element's [`readonly`](/en-US/docs/Web/HTML/Element/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.
+  - : A boolean that represents the element's [`readonly`](/en-US/docs/Web/HTML/Reference/Elements/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.
 - {{domxref("HTMLTextAreaElement.required", "required")}}
-  - : A boolean that represents the element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
+  - : A boolean that represents the element's [`required`](/en-US/docs/Web/HTML/Reference/Elements/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
 - {{domxref("HTMLTextAreaElement.rows", "rows")}}
-  - : A number that represents the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
+  - : A number that represents the element's [`rows`](/en-US/docs/Web/HTML/Reference/Elements/textarea#rows) attribute, indicating the number of visible text lines for the control.
 - {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}}
   - : A string that represents the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
 - {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
@@ -62,7 +62,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
   - : Returns whether the element is a candidate for constraint validation. `false` if any conditions bar it from constraint validation, including its `readOnly` or `disabled` property is `true`.
 - {{domxref("HTMLTextAreaElement.wrap", "wrap")}}
-  - : A string that represents the element's [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) attribute, indicating how the control wraps text.
+  - : A string that represents the element's [`wrap`](/en-US/docs/Web/HTML/Reference/Elements/textarea#wrap) attribute, indicating how the control wraps text.
 
 ## Instance methods
 
@@ -89,7 +89,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 
 - {{domxref("HTMLTextAreaElement/select_event", "select")}} event
   - : Fires when some text has been selected.
-- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 
 ## Examples
@@ -106,12 +106,16 @@ function autoGrow(field) {
     field.style.height = `${field.scrollHeight}px`;
   }
 }
+
+document.querySelector("textarea").addEventListener("keyup", (e) => {
+  autoGrow(e.target);
+});
 ```
 
 #### CSS
 
 ```css
-textarea.noscrollbars {
+textarea.no-scrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
@@ -124,7 +128,7 @@ textarea.noscrollbars {
 <form>
   <fieldset>
     <legend>Your comments</legend>
-    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><textarea class="no-scrollbars"></textarea></p>
     <p><input type="submit" value="Send" /></p>
   </fieldset>
 </form>
@@ -134,27 +138,25 @@ textarea.noscrollbars {
 
 ### Insert HTML tags example
 
-Insert some HTML tags in a textarea.
+Insert some HTML tags in a textarea:
 
-#### JavaScript
-
-```js
+```js live-sample___insert-html
 function insert(startTag, endTag) {
-  const textArea = document.myForm.myTxtArea;
-  const selectionStart = textArea.selectionStart;
-  const selectionEnd = textArea.selectionEnd;
+  const textArea = document.myForm.myTextArea;
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
   const oldText = textArea.value;
 
-  const prefix = oldText.substring(0, selectionStart);
-  const inserted =
-    startTag + oldText.substring(selectionStart, selectionEnd) + endTag;
-  const suffix = oldText.substring(selectionEnd);
+  const prefix = oldText.substring(0, start);
+  const inserted = startTag + oldText.substring(start, end) + endTag;
+  const suffix = oldText.substring(end);
+
   textArea.value = `${prefix}${inserted}${suffix}`;
 
-  const newSelectionStart = selectionStart + startTag.length;
-  const newSelectionEnd = selectionEnd + startTag.length;
-  textArea.setSelectionRange(newSelectionStart, newSelectionEnd);
+  const newStart = start + startTag.length;
+  const newEnd = end + startTag.length;
 
+  textArea.setSelectionRange(newStart, newEnd);
   textArea.focus();
 }
 
@@ -163,7 +165,7 @@ function insertURL() {
   if (newURL) {
     insert(`<a href="${newURL}">`, "</a>");
   } else {
-    document.myForm.myTxtArea.focus();
+    document.myForm.myTextArea.focus();
   }
 }
 
@@ -175,14 +177,12 @@ const code = document.querySelector("#format-code");
 strong.addEventListener("click", (e) => insert("<strong>", "</strong>"));
 em.addEventListener("click", (e) => insert("<em>", "</em>"));
 link.addEventListener("click", (e) => insertURL());
-code.addEventListener("click", (e) => insert("\n<code>\n", "\n</code>\n"));
+code.addEventListener("click", (e) => insert("<code>", "</code>"));
 ```
 
-#### CSS
+Decorate the span to behave like a link:
 
-CSS to decorate the internal span to behave like a link:
-
-```css
+```css live-sample___insert-html
 .intLink {
   cursor: pointer;
   text-decoration: underline;
@@ -190,27 +190,25 @@ CSS to decorate the internal span to behave like a link:
 }
 ```
 
-HTML:
-
-```html
+```html live-sample___insert-html
 <form name="myForm">
   <p>
-    [&nbsp;
+    [
     <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
     <span class="intLink" id="format-em"><em>Italic</em></span> |
     <span class="intLink" id="format-link">URL</span> |
-    <span class="intLink" id="format-code">code</span> &nbsp;]
+    <span class="intLink" id="format-code">code</span> ]
   </p>
 
   <p>
-    <textarea name="myTxtArea" rows="10" cols="50">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem.
+    <textarea name="myTextArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. 
     </textarea>
   </p>
 </form>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
+{{EmbedLiveSample('insert-html', , '300', , , , , 'allow-modals')}}
 
 ## Specifications
 

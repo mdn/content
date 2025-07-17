@@ -24,10 +24,8 @@ focus(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object for controlling aspects of the focusing process.
     This object may contain the following properties:
-
     - `preventScroll` {{optional_inline}}
       - : A boolean value indicating whether or not the browser should scroll the document to bring the newly-focused element into view.
         A value of `false` for `preventScroll` (the default) means that the browser will scroll the element into view after focusing it.
@@ -78,7 +76,7 @@ This example demonstrates how you can set the focus on a button element.
 
 First we define three buttons.
 Both the middle and right button will set focus on the left-most button.
-The right right-most button will also specify `focusVisible`.
+The right-most button will also specify `focusVisible`.
 
 ```html
 <button id="myButton">Button</button>
@@ -128,8 +126,14 @@ The HTML defines two buttons that will be used to set the focus of a third butto
 </button>
 
 <div id="container">
-  <button id="myButton" style="margin-top: 500px;">Button</button>
+  <button id="myButton">Button</button>
 </div>
+```
+
+```css hidden
+#myButton {
+  margin-top: 500px; /* Push the button off-screen */
+}
 ```
 
 #### JavaScript
@@ -161,7 +165,7 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Notes
 
 - If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
   See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility

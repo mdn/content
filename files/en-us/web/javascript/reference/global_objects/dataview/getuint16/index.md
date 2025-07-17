@@ -1,15 +1,26 @@
 ---
 title: DataView.prototype.getUint16()
+short-title: getUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint16
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUint16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit unsigned integer. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getUint16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint16(1, 65535); // Max unsigned 16-bit integer
+
+console.log(view.getUint16(1));
+// Expected output: 65535
+```
 
 ## Syntax
 

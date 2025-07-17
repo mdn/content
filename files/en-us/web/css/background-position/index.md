@@ -3,13 +3,51 @@ title: background-position
 slug: Web/CSS/background-position
 page-type: css-property
 browser-compat: css.properties.background-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
-{{EmbedInteractiveExample("pages/css/background-position.html")}}
+{{InteractiveExample("CSS Demo: background-position")}}
+
+```css interactive-example-choice
+background-position: top;
+```
+
+```css interactive-example-choice
+background-position: left;
+```
+
+```css interactive-example-choice
+background-position: center;
+```
+
+```css interactive-example-choice
+background-position: 25% 75%;
+```
+
+```css interactive-example-choice
+background-position: bottom 50px right 100px;
+```
+
+```css interactive-example-choice
+background-position: right 35% bottom 45%;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -53,17 +91,14 @@ The `background-position` property is specified as one or more `<position>` valu
 ### Values
 
 - `<position>`
-
   - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).
 
     **1-value syntax:** The value may be:
-
     - The keyword value `center`, which centers the image.
     - One of the keyword values `top`, `left`, `bottom`, or `right`. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.
     - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.
 
     **2-value syntax:** One value defines X and the other defines Y. Each value may be:
-
     - One of the keyword values `top`, `left`, `bottom`, or `right`. If `left` or `right` is given, then this defines X and the other given value defines Y. If `top` or `bottom` is given, then this defines Y and the other value defines X.
     - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is `left` or `right`, then this value defines Y, relative to the top edge. If the other value is `top` or `bottom`, then this value defines X, relative to the left edge. If both values are `<length>` or `<percentage>` values, then the first defines X and the second Y.
     - Note that: If one value is `top` or `bottom`, then the other value may not be `top` or `bottom`. If one value is `left` or `right`, then the other value may not be `left` or `right`. This means, e.g., that `top top` and `left right` are not valid.
@@ -71,13 +106,11 @@ The `background-position` property is specified as one or more `<position>` valu
     - The default value is `left top` or `0% 0%`.
 
     **3-value syntax:** Two values are keyword values, and the third is the offset for the preceding value:
-
     - The first value is one of the keyword values `top`, `left`, `bottom`, `right`, or `center`. If `left` or `right` are given here, then this defines X. If `top` or `bottom` are given, then this defines Y and the other keyword value defines X.
     - The {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, if it is the second value, is the offset for the first value. If it is the third value, it is the offset for the second value.
     - The single length or percentage value is an offset for the keyword value that precedes it. The combination of one keyword with two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values is not valid.
 
     **4-value syntax:** The first and third values are keyword values defining X and Y. The second and fourth values are offsets for the preceding X and Y keyword values:
-
     - The first and third values are equal to one of the keyword values `top`, `left`, `bottom`, or `right`. If `left` or `right` is given for the first value, then this defines X and the other value defines Y. If `top` or `bottom` is given for the first value, then this defines Y and the other keyword value defines X.
     - The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.
 
@@ -135,9 +168,9 @@ Each of these three examples uses the {{cssxref("background")}} property to crea
 #### HTML
 
 ```html
-<div class="exampleone">Example One</div>
-<div class="exampletwo">Example Two</div>
-<div class="examplethree">Example Three</div>
+<div class="example-one">Example One</div>
+<div class="example-two">Example Two</div>
+<div class="example-three">Example Three</div>
 ```
 
 #### CSS
@@ -153,17 +186,17 @@ div {
 }
 
 /* These examples use the `background` shorthand property */
-.exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+.example-one {
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
-.exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+.example-two {
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
-.examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+.example-three {
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

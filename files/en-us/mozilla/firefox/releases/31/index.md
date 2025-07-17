@@ -1,10 +1,12 @@
 ---
 title: Firefox 31 for developers
+short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 31 was released on July 22, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -64,7 +66,7 @@ New ECMAScript 2015 features implemented:
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
+- Partial implementation of the [OpenType MATH table](https://learn.microsoft.com/en-us/typography/opentype/spec/math), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
 - The `::-moz-math-stretchy` pseudo-element has been removed ([Firefox bug 1000879](https://bugzil.la/1000879)).
 - When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ([Firefox bug 930504](https://bugzil.la/930504)).
 
@@ -82,7 +84,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+- The `align` attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to `center` since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
   ```css
   #urlbar-wrapper {
@@ -96,7 +98,7 @@ _No change._
 
 Highlights:
 
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/)
 - Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
 - Updated the default theme used for panels on Mac OS X.
 - Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
@@ -104,7 +106,3 @@ Highlights:
 [GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

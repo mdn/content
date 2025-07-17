@@ -1,0 +1,159 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/HTTP
+  - type: section
+    link: /Web/HTTP/Guides
+    title: Guides
+  - /Web/HTTP/Guides/Overview
+  - /Web/HTTP/Guides/Evolution_of_HTTP
+  - /Web/HTTP/Guides/Session
+  - /Web/HTTP/Guides/Messages
+  - type: listSubPages
+    path: /Web/HTTP/Guides/MIME_types
+    link: /Web/HTTP/Guides/MIME_types
+  - /Web/HTTP/Guides/Compression
+  - /Web/HTTP/Guides/Caching
+  - /Web/HTTP/Guides/Authentication
+  - /Web/HTTP/Guides/Cookies
+  - /Web/HTTP/Guides/Redirections
+  - /Web/HTTP/Guides/Conditional_requests
+  - /Web/HTTP/Guides/Range_requests
+  - /Web/HTTP/Guides/Client_hints
+  - /Web/HTTP/Guides/Compression_dictionary_transport
+  - /Web/HTTP/Guides/Network_Error_Logging
+  - type: listSubPages
+    path: /Web/HTTP/Guides/Content_negotiation
+    link: /Web/HTTP/Guides/Content_negotiation
+  - /Web/HTTP/Guides/Browser_detection_using_the_user_agent
+  - /Web/HTTP/Guides/Connection_management_in_HTTP_1.x
+  - /Web/HTTP/Guides/Protocol_upgrade_mechanism
+  - type: listSubPages
+    path: /Web/HTTP/Guides/Proxy_servers_and_tunneling
+    link: /Web/HTTP/Guides/Proxy_servers_and_tunneling
+  - title: Security
+    details: closed
+    children:
+      - link: /en-US/observatory
+        title: HTTP Observatory
+      - /Web/Security/Practical_implementation_guides
+      - /Web/HTTP/Guides/Permissions_Policy
+      - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
+      - /Web/HTTP/Guides/CORS
+      - type: listSubPages
+        path: /Web/HTTP/Guides/CORS/Errors
+        link: /Web/HTTP/Guides/CORS/Errors
+        title: CORS_errors
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Web/HTTP/Guides/CSP
+        link: /Web/HTTP/Guides/CSP
+        details: closed
+  - type: section
+    link: /Web/HTTP/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/HTTP/Reference/Headers
+    link: /Web/HTTP/Reference/Headers
+    title: Headers
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTTP/Reference/Methods
+    link: /Web/HTTP/Reference/Methods
+    title: Methods
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTTP/Reference/Status
+    link: /Web/HTTP/Reference/Status
+    title: Status
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTTP/Reference/Headers/Content-Security-Policy
+    link: /Web/HTTP/Reference/Headers/Content-Security-Policy#directives
+    title: CSPDirectives
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTTP/Reference/Headers/Permissions-Policy
+    link: /Web/HTTP/Reference/Headers/Permissions-Policy#directives
+    title: PermissionsPolicyDirectives
+    details: closed
+    code: true
+  - /Web/HTTP/Reference/Resources_and_specifications
+l10n:
+  de:
+    Guides: Anleitungen
+    Security: HTTP-Sicherheit
+    Reference: Referenzen
+    Headers: HTTP-Header
+    Methods: HTTP-Anfragemethoden
+    Status: HTTP-Antwortstatuscodes
+    CSPDirectives: CSP-Direktiven
+    CORS_errors: CORS-Fehler
+    PermissionsPolicyDirectives: Permissions-Policy Direktiven
+  en-US:
+    Guides: Guides
+    Security: Security and privacy
+    Reference: Reference
+    Headers: HTTP headers
+    Methods: HTTP request methods
+    Status: HTTP response status codes
+    CSPDirectives: CSP directives
+    CORS_errors: CORS errors
+    PermissionsPolicyDirectives: Permissions-Policy directives
+  fr:
+    Guides: Guides
+    Security: Sécurité HTTP
+    Reference: Références
+    Headers: En-têtes HTTP
+    Methods: Méthodes de requête HTTP
+    Status: Codes de statut de réponse HTTP
+    CSPDirectives: Directives CSP
+    CORS_errors: Erreurs CORS
+    PermissionsPolicyDirectives: Directives Permissions-Policy
+  ja:
+    Guides: ガイド
+    Security: HTTP セキュリティ
+    Reference: リファレンス
+    Headers: HTTP ヘッダー
+    Methods: HTTP リクエストメソッド
+    Status: HTTP レスポンスステータスコード
+    CSPDirectives: CSP ディレクティブ
+    CORS_errors: CORS エラー
+    PermissionsPolicyDirectives: 機能ポリシーディレクティブ
+  ko:
+    Guides: 가이드
+    Security: HTTP 보안
+    Reference: 레퍼런스
+    Headers: HTTP 헤더
+    Methods: HTTP 요청 메소드
+    Status: HTTP 응답 상태 코드
+    CSPDirectives: CSP 지시문
+    CORS_errors: CORS 에러
+    PermissionsPolicyDirectives: Permissions-Policy 지시문
+  pt-BR: {}
+  ru:
+    Guides: Учебники
+    Security: Безопасность в HTTP
+    Reference: Справочники
+    Headers: Заголовки HTTP
+    Methods: Методы HTTP запроса
+    Status: Коды ответа HTTP
+    CSPDirectives: Директивы CSP
+    CORS_errors: Ошибки CORS
+    PermissionsPolicyDirectives: Директивы Permissions-Policy
+  zh-CN:
+    Guides: 指南
+    Security: 安全与隐私
+    Reference: 参考
+    Headers: HTTP 标头
+    Methods: HTTP 请求方法
+    Status: HTTP 响应状态码
+    CSPDirectives: CSP 指令
+    CORS_errors: CORS 错误
+    PermissionsPolicyDirectives: 权限策略指令

@@ -1,10 +1,10 @@
 ---
 title: Firefox 66 for developers
+short-title: Firefox 66
 slug: Mozilla/Firefox/Releases/66
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
 
@@ -22,14 +22,13 @@ This article provides information about the changes in Firefox 66 that will affe
 
 #### Removals
 
-- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) API to implement custom validation messages instead.
+- The `x-moz-errormessage` attribute has been removed from the {{HTMLElement("input")}} element ([Firefox bug 1513890](https://bugzil.la/1513890)). You should use the [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation) API to implement custom validation messages instead.
 
 ### CSS
 
 - [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ([Firefox bug 1305957](https://bugzil.la/1305957)).
 - We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ([Firefox bug 1512386](https://bugzil.la/1512386)).
 - Several [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) shorthands have landed, along with the flow-relative border radius properties:
-
   - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ([Firefox bug 1519847](https://bugzil.la/1519847)).
   - {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} ([Firefox bug 1519944](https://bugzil.la/1519944)).
   - {{cssxref("inset")}}, {{cssxref("inset-block")}}, and {{cssxref("inset-inline")}} ([Firefox bug 1520229](https://bugzil.la/1520229)).
@@ -41,7 +40,6 @@ This article provides information about the changes in Firefox 66 that will affe
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ([Firefox bug 1348519](https://bugzil.la/1348519)).
 - We now support {{cssxref("calc", "calc()")}} with percentages for table cells and column widths ([Firefox bug 957915](https://bugzil.la/957915)).
 - The `min-content` and `max-content` keywords are now available unprefixed ([Firefox bug 1322780](https://bugzil.la/1322780)). These can be set on:
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("flex-basis")}}
@@ -87,10 +85,10 @@ No changes.
 
 #### Media, Web Audio, and WebRTC
 
-- The new [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ([Firefox bug 1521181](https://bugzil.la/1521181), [Firefox bug 1452146](https://bugzil.la/1452146), and [Firefox bug 1534814](https://bugzil.la/1534814)).
+- The new [AV1 video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) is now enabled by default on both macOS and Windows (for Intel processors). Linux support will come in Firefox 67 ([Firefox bug 1521181](https://bugzil.la/1521181), [Firefox bug 1452146](https://bugzil.la/1452146), and [Firefox bug 1534814](https://bugzil.la/1534814)).
 - The {{domxref("MediaDevices")}} method {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, available as `navigator.mediaDevices.getDisplayMedia()`, has been added and synchronized with the specification. This method lets you capture a screen or part of a screen as a {{domxref("MediaStream")}} for manipulation or sharing ([Firefox bug 1321221](https://bugzil.la/1321221)).
 - As a step toward eventually deprecating the Firefox-specific {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}-based method for capturing screen and window contents, the non-standard `mediaSource` constraint now treats the values `screen` and `window` identically. Both now present a list of both screens and windows for the user to choose from ([Firefox bug 1474376](https://bugzil.la/1474376)).
-- {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} has been added to local outbound {{domxref("RTCRTPStreamStats")}} objects. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ([Firefox bug 1347070](https://bugzil.la/1347070)).
+- `RTCOutboundRtpStreamStats.qpSum` has been added. This measures the total of the Quantization Parameter values for every frame sent or received on the video track. The higher this number, the more compressed the stream probably is ([Firefox bug 1347070](https://bugzil.la/1347070)).
 - In a step along the road toward implementing support for Feature Policy in a future Firefox update, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} can no longer be used in situations in which there is no proper origin for the content, such as when called from a sandboxed {{HTMLElement("iframe")}} or from a `data` URL entered into the address bar by the user. For more details, see the [Security](/en-US/docs/Web/API/MediaDevices/getUserMedia#security) section on the MediaDevices.getUserMedia() page ([Firefox bug 1371741](https://bugzil.la/1371741)).
 
 #### Removals
@@ -116,7 +114,6 @@ _No changes._
 - `WebDriver:NewWindow` has been added to support opening of a new browsing context, which can be one of either window or tab ([Firefox bug 1504756](https://bugzil.la/1504756)).
 - `WebDriver:SwitchToFrame` now raises a `no such element` error if the specified element isn't part of the current browsing context ([Firefox bug 1517196](https://bugzil.la/1517196)).
 - `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` no longer support the non-spec compliant `scriptTimeout` parameter. Instead, use `WebDriver:SetTimeout` or the `timeouts` capability to define this value ([Firefox bug 1510929](https://bugzil.la/1510929)).
-
   - In addition, indefinite script timeouts are now supported ([Firefox bug 1128997](https://bugzil.la/1128997)).
 
 - `WebDriver:SetWindowRect` no longer returns the window state in its response ([Firefox bug 1517587](https://bugzil.la/1517587)).
@@ -141,7 +138,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 66: The Sound of Silence](https://hacks.mozilla.org/2019/03/firefox-66-the-sound-of-silence/)
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -10,10 +10,10 @@ browser-compat: api.CSSContainerRule.containerQuery
 
 The read-only **`containerQuery`** property of the {{domxref("CSSContainerRule")}} interface returns a string representing the container conditions that are evaluated when the container changes size in order to determine if the styles in the associated {{cssxref("@container")}} are applied.
 
-For example, the value of `containerQuery` for the {{cssxref("@container")}} below is `(min-width: 700px)`:
+For example, the value of `containerQuery` for the {{cssxref("@container")}} below is `(width >= 700px)`:
 
 ```css
-@container sidebar (min-width: 700px) {
+@container sidebar (width >= 700px) {
   .card {
     font-size: 2em;
   }
@@ -65,7 +65,7 @@ The CSS for the container element specifies the type of the container.
 The {{cssxref("@container")}} then applies a new width, font-size and background color to the contained element "card" if the width is less than 650px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* A container context based on inline size */
   .post {
     container-type: inline-size;
@@ -88,7 +88,7 @@ Since we added the `@container` as the second rule above, we can access the asso
 Last of all, we log the container name and query properties.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);

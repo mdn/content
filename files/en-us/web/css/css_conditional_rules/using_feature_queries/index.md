@@ -2,9 +2,8 @@
 title: Using feature queries
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Feature queries** are conditional group rules that test whether the user agent supports or doesn't support one or more CSS features, such as CSS properties and property values. Feature queries give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide, you will learn how to implement progressive enhancement using feature queries.
 
@@ -16,10 +15,10 @@ CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/
 
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
-```css
+```plain
 /* `@supports` at-rule */
 @supports <support-condition> {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
@@ -31,16 +30,40 @@ For example, we can apply a set of styles or import an entire stylesheet if the 
 ```css
 /* `@supports` at-rule */
 @supports (color: red) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
-@import `/css/styles.css` supports(color: red);
+@import "/css/styles.css" supports(color: red);
 ```
 
 As another example, if you want to check if a browser supports the `row-gap` property you would write the following feature query. It doesn't matter which value you use in a lot of cases: if all you want is to check that the browser supports this property, then any valid value will do.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
+```html live-sample___simple
+<div class="box">
+  If your browser supports the row-gap property, the border will be dashed and
+  text will be red.
+</div>
+```
+
+```css live-sample___simple
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: red;
+  }
+}
+```
+
+{{EmbedLiveSample("simple")}}
 
 The value part of the property-value pair matters more if you are testing for new values of a particular property. All browsers support `color: red`: this dates back to CSS1. However, there are often additional values added to properties in CSS, like [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which may not be supported. Feature queries enable testing property and value pairs, meaning we can detect support for values.
 
@@ -49,11 +72,11 @@ Expanding on the `color` property example above, here we check if the browser su
 ```css
 /* `@supports` at-rule */
 @supports (color: AccentColor) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 
 /* `supports()` function */
-@import `/css/styles.css` supports(color: AccentColor);
+@import "/css/styles.css" supports(color: AccentColor);
 ```
 
 In these examples, we've used feature queries to check if the user-agent supports a specific value of a CSS property, listing the single declaration within parenthesis. You can test for multiple property values or the lack of support.
@@ -65,13 +88,37 @@ In addition to asking the browser if it supports a feature, you can test for the
 ```css
 /* `@supports` at-rule with `not` */
 @supports not (property: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 
 The CSS inside the following example feature query will run if the browser does not support `row-gap`.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/not.html", '100%', 600)}}
+```html live-sample___not
+<div class="box">
+  If your browser does not support row-gap, the content will be darkgreen with a
+  dashed border.
+</div>
+```
+
+```css live-sample___not
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports not (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("not")}}
 
 ## Testing for more than one feature
 
@@ -80,13 +127,38 @@ You may need to test support for more than one property in your feature query. T
 ```css
 /* multiple feature `@supports` at-rule */
 @supports (property1: value) and (property2: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 
 For example, if the CSS you want to run requires that the browser supports CSS Shapes and CSS grid, you could create a rule that tests browser support for both of these features. The following rule will only return true if `shape-outside: circle()` and `display: grid` are both supported by the browser.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
+```html live-sample___and
+<div class="box">
+  If your browser supports <code>display: grid</code> and
+  <code>shape-outside: circle()</code>, the content will be darkgreen with a
+  dashed border.
+</div>
+```
+
+```css live-sample___and
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (display: grid) and (shape-outside: circle()) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("and")}}
 
 ## Testing for at least one of multiple features
 
@@ -95,13 +167,36 @@ You can also use `or` to apply CSS only if one or more declarations are supporte
 ```css
 /* any feature `@supports` at-rule */
 @supports (property1: value) or (property2: value) {
-  CSS rules to apply
+  /* CSS rules to apply */
 }
 ```
 
 This can be particularly useful if a feature is vendor prefixed, as you can test for the standard property plus any vendor prefixes.
 
-{{EmbedGHLiveSample("css-examples/feature-queries/or.html", '100%', 600)}}
+```html live-sample___or
+<div class="box">
+  The text and border will be green if your browser supports font smoothing.
+</div>
+```
+
+```css live-sample___or
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (font-smooth: always) or (-webkit-font-smoothing: antialiased) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("or")}}
 
 ## Additional feature query options
 
@@ -111,7 +206,7 @@ For example, the `selector()` function can be used to import a stylesheet for br
 
 ```css
 /* A `selector()` query within a `supports()` function */
-@import `/css/webkitShadowStyles.css`
+@import "/css/webkitShadowStyles.css"
   supports(selector(::-webkit-inner-spin-button));
 ```
 
@@ -133,6 +228,12 @@ In this example, we check if the browser supports the `AccentColor` {{cssxref("s
 #### CSS
 
 ```css
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+p {
+  padding: 1em;
+}
 @supports (color: AccentColor) {
   p {
     color: green;
@@ -149,9 +250,9 @@ In this example, we check if the browser supports the `AccentColor` {{cssxref("s
 }
 ```
 
-#### Results
+#### Result
 
-{{EmbedLiveSample("Browser support test", "600", "50")}}
+{{EmbedLiveSample("Browser support test")}}
 
 ## Limitations of feature queries
 
@@ -163,9 +264,9 @@ Feature queries are a useful tool for progressively enhancing a site. They enabl
 
 You don't need to use feature queries to start using new CSS features; CSS error handling means the browser simply ignores CSS it does not yet recognize. However, feature queries are a useful alternative to fallback declarations, and enable writing code once that can eventually be supported everywhere.
 
-### See also
+## See also
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Supporting older browsers: feature queries](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
-- [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
+- [Supporting older browsers: feature queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
+- [Browser feature detection: CSS `@supports`](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

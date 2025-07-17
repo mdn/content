@@ -3,9 +3,8 @@ title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 page-type: webextension-api-type
 browser-compat: webextensions.api.proxy.RequestDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.
 
@@ -26,7 +25,7 @@ Values of this type are objects. They contain the following properties:
 - `method`
   - : `string`. Standard HTTP method: for example, "GET" or "POST".
 - `originUrl`
-  - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Element/a#target), or a CSS document includes an image using the [`url()` functional notation](/en-US/docs/Web/CSS/url_function), then this is the URL of the original document or of the CSS document, respectively.
+  - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Reference/Elements/a#target), or a CSS document includes an image using the [`url()` functional notation](/en-US/docs/Web/CSS/url_function), then this is the URL of the original document or of the CSS document, respectively.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
 - `requestId`
@@ -44,8 +43,8 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : `string`. Target of the request.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

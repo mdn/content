@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Crypto
 ---
 
-{{APIRef("Web Crypto API")}} {{AvailableInWorkers}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto`** interface represents basic cryptography features available in the current context.
 It allows access to a cryptographically strong random number generator and to cryptographic primitives.
@@ -42,4 +42,4 @@ _This interface implements methods defined on {{domxref("Crypto/getRandomValues"
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
 - [Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security)
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)

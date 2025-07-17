@@ -1,10 +1,10 @@
 ---
 title: Firefox 35 for developers
+short-title: Firefox 35
 slug: Mozilla/Firefox/Releases/35
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 35 was released on January 13th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -37,17 +37,14 @@ Highlights:
 ### JavaScript
 
 - The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
-
   - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
   - Using a variable declared using `let` in function bodies before the declaration is reached and evaluated is now a runtime error.
 
 - ES2015 {{jsxref("Global_Objects/Symbol", "Symbols")}} (only available in the Nightly channel) have been updated to conform with recent specification changes:
-
   - `String(Symbol("1"))` now no longer throws a {{jsxref("TypeError")}}; instead a string (`"Symbol(1)"`) gets returned ([Firefox bug 1058396](https://bugzil.la/1058396)).
 
 - The various [_TypedArray_ constructors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES2015 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) and [`Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) and [Firefox bug 896116](https://bugzil.la/896116) for more information.
 - ES2015 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) have been implemented ([Firefox bug 1061853](https://bugzil.la/1061853)).
-
   - Now only a single member notated as `__proto__:value` will mutate the `[[Prototype]]` in the object literal syntax.
   - Method members like `__proto__() {}` will not overwrite the `[[Prototype]]` anymore.
 
@@ -68,15 +65,14 @@ Highlights:
 - The constructor of {{domxref("File")}} has been extended to match the specification ([Firefox bug 1047483](https://bugzil.la/1047483)).
 - An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([Firefox bug 1035060](https://bugzil.la/1035060)).
 - The non-standard `Navigator.mozIsLocallyAvailable` property has been removed ([Firefox bug 1066826](https://bugzil.la/1066826)).
-- The preference `network.websocket.enabled`, `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ([Firefox bug 1091016](https://bugzil.la/1091016)).
+- The preference `network.websocket.enabled`, `true` by default, has been removed; [WebSocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ([Firefox bug 1091016](https://bugzil.la/1091016)).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ([Firefox bug 1030963](https://bugzil.la/1030963)). Only methods and properties defined in the standard WebCrypto API are left.
 - Our experimental implementation of WebGL 2.0 is going forward!
-
   - The {{domxref("WebGL2RenderingContext.copyBufferSubData()")}} method has been implemented ([Firefox bug 1048668](https://bugzil.la/1048668)).
 
 ### MathML
 
-- The `dtls` OpenType feature (via the CSS {{cssxref("font-feature-settings")}} on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g. dotless i with mathematical hat).
+- The `dtls` OpenType feature (via the CSS {{cssxref("font-feature-settings")}} on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g., dotless i with mathematical hat).
 
 ### SVG
 
@@ -91,8 +87,8 @@ _No change._
 - HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720) and [Firefox bug 1047594](https://bugzil.la/1047594)).
 - The HTTP/2 `alt-svc` header is now supported ([Firefox bug 1003448](https://bugzil.la/1003448)).
 - The Public Key Pinning Extension for HTTP (HPKP) has been implemented ([Firefox bug 787133](https://bugzil.la/787133)).
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
-- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
+- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/Guides/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
 
 ## Changes for add-on and Mozilla developers
 
@@ -114,7 +110,3 @@ _No change._
 [GitHub commits made between Firefox 34 and Firefox 35](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 34 and Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). This will not include any uplifts made after this release entered Aurora.
-
-## Older versions
-
-{{Firefox_for_developers}}

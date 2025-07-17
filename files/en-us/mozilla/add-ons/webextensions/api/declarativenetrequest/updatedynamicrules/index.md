@@ -3,9 +3,8 @@ title: declarativeNetRequest.updateDynamicRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateDynamicRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateDynamicRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the set of dynamic rules for the extension. The rules with IDs listed in `options.removeRuleIds` are first removed, and then the rules given in `options.addRules` are added. Note that:
 
@@ -17,10 +16,13 @@ Modifies the set of dynamic rules for the extension. The rules with IDs listed i
   - Up to Firefox 127 to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
   - From Chrome 120 and Firefox 128, to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}}.
 
+> [!NOTE]
+> In Firefox 132 and earlier, dynamic rules are sometimes not applied after a browser restart, and calls to this API are rejected with an error ([Firefox bug 1921353](https://bugzil.la/1921353)). A workaround is to specify an enabled static ruleset in the [`declarative_net_request`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key. The ruleset file can be an empty list.
+
 ## Syntax
 
 ```js-nolint
-let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
+let rulesUpdated = browser.declarativeNetRequest.updateDynamicRules(
     options                // object
 );
 ```
@@ -28,7 +30,6 @@ let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
 ### Parameters
 
 - `options`
-
   - : An object containing details of the rules to add or delete from the dynamic rules.
     - `addRules` {{optional_inline}}
       - : An array of {{WebExtAPIRef("declarativeNetRequest.Rule")}}. Details of the rules to add.

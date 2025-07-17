@@ -3,13 +3,67 @@ title: margin-block-start
 slug: Web/CSS/margin-block-start
 page-type: css-property
 browser-compat: css.properties.margin-block-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
+{{InteractiveExample("CSS Demo: margin-block-start")}}
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block-start: 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Syntax
 
@@ -18,6 +72,8 @@ The **`margin-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the log
 margin-block-start: 10px; /* An absolute length */
 margin-block-start: 1em; /* relative to the text size */
 margin-block-start: 5%; /* relative to the nearest block container's width */
+margin-block-start: anchor-size(width);
+margin-block-start: calc(anchor-size(--myAnchor block, 20px) / 3);
 
 /* Keyword values */
 margin-block-start: auto;

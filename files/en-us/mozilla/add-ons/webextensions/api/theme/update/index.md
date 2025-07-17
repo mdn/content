@@ -3,9 +3,8 @@ title: theme.update()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.theme.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates the browser theme according to the content of the {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 
@@ -32,7 +31,7 @@ browser.theme.update(
 Sets the browser theme to use a sun graphic with a complementary background color:
 
 ```js
-const suntheme = {
+const sunTheme = {
   images: {
     theme_frame: "sun.jpg",
   },
@@ -42,7 +41,7 @@ const suntheme = {
   },
 };
 
-browser.theme.update(suntheme);
+browser.theme.update(sunTheme);
 ```
 
 Set the theme for the focused window only:

@@ -3,9 +3,8 @@ title: ry
 slug: Web/CSS/ry
 page-type: css-property
 browser-compat: css.properties.ry
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ry`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis, or vertical, radius of an SVG {{SVGElement("ellipse")}} and the vertical curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("ry")}} attribute.
 
@@ -35,15 +34,12 @@ ry: unset;
 The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value denotes the vertical radius of ellipses and the vertical border-radius of rectangles.
 
 - {{cssxref("length")}}
-
   - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the height of the current SVG viewport. The used value for a `<rect>` is never more than 50% of the height of the rectangle.
 
 - `auto`
-
   - : When set or defaulting to `auto`, the `ry` value equals the absolute length value used for {{cssxref("rx")}}. If both `ry` and `rx` have a computed value of `auto`, the used value is `0`.
 
 ## Formal definition
@@ -201,3 +197,4 @@ When using percentage values for `ry`, the values are relative to the height of 
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
+- SVG {{SVGAttr("ry")}} attribute

@@ -1,15 +1,28 @@
 ---
 title: TypedArray.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.join
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`join()`** method of {{jsxref("TypedArray")}} instances creates and returns a new string by concatenating all of the elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, then that item will be returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.join()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.join());
+// Expected output: "10,20,30,40,50"
+
+console.log(uint8.join(""));
+// Expected output: "1020304050"
+
+console.log(uint8.join("-"));
+// Expected output: "10-20-30-40-50"
+```
 
 ## Syntax
 

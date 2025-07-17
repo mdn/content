@@ -6,13 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.TextDecoder.fatal
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`fatal`** read-only property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 
 If the property is `true`, then a decoder will throw a {{jsxref("TypeError")}} if it encounters malformed data while decoding.
 If `false`, the decoder will substitute the invalid data with the replacement character `U+FFFD` (�).
-The value of the property is set in the [`TextDecoder()` constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder).
+The value of the property is set in the [`fatal`](/en-US/docs/Web/API/TextDecoder/TextDecoder#fatal) argument to the decoder's constructor.
 
 ## Value
 

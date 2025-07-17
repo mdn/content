@@ -21,10 +21,6 @@ and microphone.
 A string which uniquely identifies the group of related devices to
 which this device belongs.
 
-## Specifications
-
-{{Specifications}}
-
 ## Examples
 
 In this example, we assemble a list of the devices which are part of the same group as
@@ -87,6 +83,10 @@ const getDeviceGroup = (mainDevInfo) => {
   return devList;
 };
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

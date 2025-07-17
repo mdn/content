@@ -3,9 +3,8 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
 browser-compat: javascript.builtins.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
 
@@ -17,7 +16,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Performance
 
@@ -67,7 +66,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -83,7 +82,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diragram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -143,8 +142,8 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`[Symbol.iterator]()`](#set.prototypesymbol.iterator).
-- Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
+- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- Writeable `Set`-like objects additionally have the methods: {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, and {{jsxref("Set/add", "add()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
 
@@ -419,6 +418,7 @@ console.assert(set.size === array.length);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

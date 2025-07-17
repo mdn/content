@@ -15,13 +15,14 @@ browser-compat: api.Document.browsingTopics
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
 
 > [!NOTE]
-> An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
+> An [Enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
 The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. These topics could then be returned to the ad tech platform in a subsequent fetch request. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
 
 See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
-> **Note:** `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other [Topics API enabling features](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api), but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
+> [!NOTE]
+> `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other [Topics API enabling features](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api), but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
 
 ## Syntax
 
@@ -54,13 +55,13 @@ A {{jsxref("Promise")}} that fulfills with an array of up to three objects repre
 
 The exact property values may vary by browser implementation. An example object from Chrome might look as follows:
 
-```js
+```json
 {
-  configVersion: "chrome.1",
-  modelVersion: "1",
-  taxonomyVersion: "1",
-  topic: 43,
-  version: "chrome.1:1:1"
+  "configVersion": "chrome.1",
+  "modelVersion": "1",
+  "taxonomyVersion": "1",
+  "topic": 43,
+  "version": "chrome.1:1:1"
 }
 ```
 
@@ -68,8 +69,8 @@ The exact property values may vary by browser implementation. An example object 
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-    - The calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+    - Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+    - The calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 

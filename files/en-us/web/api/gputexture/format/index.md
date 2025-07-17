@@ -3,12 +3,10 @@ title: "GPUTexture: format property"
 short-title: format
 slug: Web/API/GPUTexture/format
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.format
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`format`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the format of the `GPUTexture`.
@@ -22,7 +20,7 @@ An enumerated value. See the [Texture formats](https://gpuweb.github.io/gpuweb/#
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

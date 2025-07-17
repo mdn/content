@@ -25,9 +25,7 @@ createSyncAccessHandle(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : A string specifying the locking mode for the access handle. The default value is `"readwrite"`.
         Possible values are:
@@ -79,7 +77,7 @@ onmessage = async (e) => {
 
 ### Complete example with `mode` option
 
-Our [`createSyncAccessHandle()` mode test](https://createsyncaccesshandle-mode-test.glitch.me/) example provides an {{htmlelement("input")}} field to enter text into, and two buttons — one to write entered text to the end of a file in the origin private file system, and one to empty the file when it becomes too full.
+Our [`createSyncAccessHandle()` mode test](https://mdn.github.io/dom-examples/file-system-api/createsyncaccesshandle-mode/) example (see the [source code](https://github.com/mdn/dom-examples/tree/main/file-system-api/createsyncaccesshandle-mode)) provides an {{htmlelement("input")}} field to enter text into, and two buttons — one to write entered text to the end of a file in the origin private file system, and one to empty the file when it becomes too full.
 
 Try exploring the demo above, with the browser developer console open so you can see what is happening. If you try opening the demo in multiple browser tabs, you will find that multiple handles can be opened at once to write to the file at the same time. This is because `mode: "readwrite-unsafe"` is set on the `createSyncAccessHandle()` calls.
 
@@ -92,8 +90,8 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 ```html
 <ol>
   <li>
-    <label for="filetext">Enter text to write to the file:</label>
-    <input type="text" id="filetext" name="filetext" />
+    <label for="file-text">Enter text to write to the file:</label>
+    <input type="text" id="file-text" name="file-text" />
   </li>
   <li>
     Write your text to the file: <button class="write">Write text</button>
@@ -115,7 +113,7 @@ The main thread JavaScript inside the HTML file is shown below. We grab referenc
 ```js
 const writeBtn = document.querySelector(".write");
 const emptyBtn = document.querySelector(".empty");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 const opfsWorker = new Worker("worker.js");
 
@@ -199,14 +197,14 @@ onmessage = function (e) {
     accessHandle.read(dataView, { at: 0 });
 
     // Log the current file contents to the console
-    console.log("File contents: " + textDecoder.decode(dataView));
+    console.log(`File contents: ${textDecoder.decode(dataView)}`);
 
     // Flush the changes
     accessHandle.flush();
   }
 
   // Log the size of the file to the console
-  console.log("Size: " + size);
+  console.log(`Size: ${size}`);
 };
 ```
 

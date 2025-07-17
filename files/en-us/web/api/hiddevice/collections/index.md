@@ -8,7 +8,7 @@ status:
 browser-compat: api.HIDDevice.collections
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats
 
@@ -17,17 +17,14 @@ The **`collections`** read-only property of the {{domxref("HIDDevice")}} interfa
 An array of report formats. Each entry contains the following:
 
 - `usagePage`
-
   - : An integer representing the usage page component of the HID usage associated with this collection. The usage for a top level collection is used to identify the device type.
 
-    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-15) document
+    Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-16) document
 
 - `usage`
   - : An integer representing the usage ID component of the HID usage associated with this collection.
 - `type`
-
   - : An 8-bit value representing the collection type, which describes a different relationship between the grouped items. One of:
-
     - `0x00`
       - : Physical (group of axes)
     - `0x01`

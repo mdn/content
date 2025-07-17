@@ -3,11 +3,10 @@ title: acos()
 slug: Web/CSS/acos
 page-type: css-function
 browser-compat: css.types.acos
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`acos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse cosine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
+The **`acos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the inverse cosine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
 
 ## Syntax
 
@@ -35,7 +34,7 @@ The inverse cosine of an `number` will always return an {{cssxref("&lt;angle&gt;
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is exactly `1`, the result is `0`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

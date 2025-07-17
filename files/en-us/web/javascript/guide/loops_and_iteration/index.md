@@ -2,9 +2,9 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Loops offer a quick and easy way to do something repeatedly. This
@@ -63,7 +63,7 @@ When a `for` loop executes, the following occurs:
 ### Example
 
 In the example below, the function contains a `for` statement that counts
-the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Reference/Elements/select)
 element that allows multiple selections).
 
 #### HTML
@@ -331,30 +331,30 @@ If you comment out the `continue;`, the loop would run till the end and you woul
 
 ### Example 2
 
-A statement labeled `checkiandj` contains a statement labeled
-`checkj`. If `continue` is encountered, the program
-terminates the current iteration of `checkj` and begins the next
-iteration. Each time `continue` is encountered, `checkj`
+A statement labeled `checkIandJ` contains a statement labeled
+`checkJ`. If `continue` is encountered, the program
+terminates the current iteration of `checkJ` and begins the next
+iteration. Each time `continue` is encountered, `checkJ`
 reiterates until its condition returns `false`. When `false` is
-returned, the remainder of the `checkiandj` statement is completed,
-and `checkiandj` reiterates until its condition returns
+returned, the remainder of the `checkIandJ` statement is completed,
+and `checkIandJ` reiterates until its condition returns
 `false`. When `false` is returned, the program continues at the
-statement following `checkiandj`.
+statement following `checkIandJ`.
 
-If `continue` had a label of `checkiandj`, the program
-would continue at the top of the `checkiandj` statement.
+If `continue` had a label of `checkIandJ`, the program
+would continue at the top of the `checkIandJ` statement.
 
 ```js
 let i = 0;
 let j = 10;
-checkiandj: while (i < 4) {
+checkIandJ: while (i < 4) {
   console.log(i);
   i += 1;
-  checkj: while (j > 4) {
+  checkJ: while (j > 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkj;
+      continue;
     }
     console.log(j, "is odd.");
   }
@@ -442,7 +442,7 @@ for (const i of arr) {
 // Logs: 3 5 7
 ```
 
-The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
+The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
 
 ```js
 const obj = { foo: 1, bar: 2 };

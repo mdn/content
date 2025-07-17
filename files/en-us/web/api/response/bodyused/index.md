@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Response.bodyUsed
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`bodyUsed`** read-only property of the {{domxref("Response")}} interface is a boolean value that indicates whether the body has been read yet.
 
@@ -29,10 +29,8 @@ When the user clicks "Use response", we check whether the response has been used
 #### HTML
 
 ```html
-<button id="use">Use response</button>
-<button id="reset">Reset</button>
-<br />
-<img id="my-image" src="" />
+<p><button id="use">Use response</button> <button id="reset">Reset</button></p>
+<p><img id="my-image" src="" width="150" /></p>
 <pre id="log"></pre>
 ```
 
@@ -45,7 +43,7 @@ const myImage = document.querySelector("#my-image");
 const log = document.querySelector("#log");
 
 const responsePromise = fetch(
-  "https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg",
+  "/shared-assets/images/examples/firefox-logo.svg",
 );
 
 useResponse.addEventListener("click", async () => {
@@ -83,5 +81,5 @@ Click "Reset" to reload the example, so you can try again.
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

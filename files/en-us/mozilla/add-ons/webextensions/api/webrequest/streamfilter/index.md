@@ -3,9 +3,8 @@ title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.StreamFilter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.
 
@@ -69,10 +68,6 @@ The filter also provides functions to {{WebEXTAPIRef("webRequest.StreamFilter.su
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Describes the current status of the stream.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code listens for `onstart`, `ondata`, and `onstop`. It logs those events, and the response data as an {{jsxref("ArrayBuffer")}} itself:
@@ -95,7 +90,7 @@ function listener(details) {
     filter.disconnect();
   };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
@@ -106,3 +101,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

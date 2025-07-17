@@ -3,12 +3,10 @@ title: "GPUCompilationMessage: message property"
 short-title: message
 slug: Web/API/GPUCompilationMessage/message
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCompilationMessage.message
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`message`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a string representing human-readable message text.
@@ -20,16 +18,13 @@ A string.
 ## Examples
 
 ```js
-  // ...
-  const shaderModule = device.createShaderModule({
-    code: shaders,
-  });
+const shaderModule = device.createShaderModule({
+  code: shaders,
+});
 
-  const shaderInfo = await shaderModule.getCompilationInfo();
-  const firstMessage = shaderInfo.messages[0];
-  console.log(firstMessage.message);
-  // ...
-}
+const shaderInfo = await shaderModule.getCompilationInfo();
+const firstMessage = shaderInfo.messages[0];
+console.log(firstMessage.message);
 ```
 
 See the main [`GPUCompilationInfo` page](/en-US/docs/Web/API/GPUCompilationInfo#examples) for a more detailed example.

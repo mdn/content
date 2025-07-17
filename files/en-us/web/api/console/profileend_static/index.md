@@ -2,7 +2,7 @@
 title: "console: profileEnd() static method"
 short-title: profileEnd()
 slug: Web/API/console/profileEnd_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 status:
   - non-standard
 browser-compat: api.console.profileEnd_static
@@ -21,7 +21,7 @@ You can optionally supply an argument to name the profile. Doing so enables you 
 ## Syntax
 
 ```js-nolint
-profileEnd(profileName)
+console.profileEnd(profileName)
 ```
 
 ### Parameters

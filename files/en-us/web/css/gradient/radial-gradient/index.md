@@ -2,18 +2,50 @@
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.radial-gradient
+browser-compat: css.types.gradient.radial-gradient
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
-The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
+{{InteractiveExample("CSS Demo: radial-gradient()")}}
 
-{{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
+```css interactive-example-choice
+background: radial-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  radial-gradient(ellipse at top, #e66465, transparent),
+  radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 
 ```css
+/* A gradient with a single color of red */
+radial-gradient(red)
+
 /* A gradient at the center of its container,
    starting red, changing to blue, and finishing green */
 radial-gradient(circle at center, red 0, blue, green 100%)
@@ -31,7 +63,6 @@ A radial gradient is specified by indicating the center of the gradient (where t
 - `<ending-shape>`
   - : The gradient's ending-shape. The value can be `circle` (meaning that the gradient's shape is a circle with a constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
 - `<size>`
-
   - : Determines the size of the gradient's ending shape. If omitted it defaults to farthest-corner. It can be given explicitly or by keyword. For the purpose of the keyword definitions, consider the gradient box edges as extending infinitely in both directions, rather than being finite line segments.
 
     Both circle and ellipse gradients accept the following keywords for their `<size>`:
@@ -64,7 +95,7 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 
 ### Composition of a radial gradient
 
-![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same {{glossary("aspect ratio")}} as the box upon which it is declared.](radial_gradient.png)
+![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same aspect ratio as the box upon which it is declared.](radial_gradient.png)
 
 A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
 
@@ -78,7 +109,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ## Examples
 
-### Simple gradient
+### Basic gradient
 
 ```html hidden
 <div class="radial-gradient"></div>
@@ -97,7 +128,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('Basic_gradient', 120, 120)}}
 
 ### Non-centered gradient
 

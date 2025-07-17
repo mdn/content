@@ -6,7 +6,7 @@ page-type: web-api-static-property
 browser-compat: api.MediaSource.canConstructInDedicatedWorker_static
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`canConstructInDedicatedWorker`** static property of the {{domxref("MediaSource")}} interface returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 

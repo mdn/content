@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CloseEvent.code
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
 The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the connection was closed.
 
@@ -70,7 +70,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1005</code></td>
-      <td>No Status Rcvd</td>
+      <td>No Status Received</td>
       <td>
         <strong>Reserved.</strong> Indicates that no status code was provided even though one was expected.
       </td>
@@ -137,7 +137,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
       <td><a href="https://mailarchive.ietf.org/arch/msg/hybi/P_1vbD9uyHl63nbIIbFxKMfSwcM/">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
-        e.g. it is overloaded and is casting off some of its clients.
+        e.g., it is overloaded and is casting off some of its clients.
       </td>
     </tr>
     <tr>

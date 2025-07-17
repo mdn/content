@@ -1,15 +1,30 @@
 ---
 title: Number.NEGATIVE_INFINITY
+short-title: NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.NEGATIVE_INFINITY`** static data property represents the negative Infinity value.
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
 
 ## Value
 

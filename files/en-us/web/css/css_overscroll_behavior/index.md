@@ -3,9 +3,8 @@ title: CSS overscroll behavior
 slug: Web/CSS/CSS_overscroll_behavior
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-overscroll/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS overscroll behavior** module provides properties to control the behavior of a {{Glossary("Scroll_container", "scroll container")}} when its scroll position reaches the {{Glossary("Scroll_boundary", "scroll boundary")}}. Controlling this aspect is particularly useful in scenarios where embedded scrollable areas should not trigger scrolling of the parent container.
 
@@ -34,13 +33,13 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## Guides
 
-- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Learn what overflow is and how to manage it.
 
 ## Related concepts
 
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
-- [Containing block](/en-US/docs/Web/CSS/Containing_block) concept
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
+- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) concept
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
   - {{cssxref("overflow")}} shorthand property
     - {{Cssxref("overflow-x")}}
@@ -53,7 +52,6 @@ This module defines the overscroll behavior, enabling you to specify the actions
 - {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module:
-
   - {{cssxref("scroll-padding")}} shorthand property
   - {{cssxref("scroll-snap-type")}} property
   - {{cssxref("scroll-margin")}} shorthand property
@@ -74,7 +72,7 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## See also
 
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

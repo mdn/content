@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.drawingBufferHeight
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLRenderingContext.drawingBufferHeight`**
 property represents the actual height of the current drawing buffer. It should match the

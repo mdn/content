@@ -1,15 +1,27 @@
 ---
 title: Date.prototype.setMilliseconds()
+short-title: setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMilliseconds
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setMilliseconds()`** method of {{jsxref("Date")}} instances changes the milliseconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setMilliseconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.getMilliseconds());
+// Expected output: 0
+
+event.setMilliseconds(456);
+
+console.log(event.getMilliseconds());
+// Expected output: 456
+```
 
 ## Syntax
 

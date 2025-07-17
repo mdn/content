@@ -18,13 +18,13 @@ The server-sent event API is contained in the {{domxref("EventSource")}} interfa
 To open a connection to the server to begin receiving events from it, create a new `EventSource` object with the URL of a script that generates the events. For example:
 
 ```js
-const evtSource = new EventSource("ssedemo.php");
+const evtSource = new EventSource("sse-demo.php");
 ```
 
 If the event generator script is hosted on a different origin, a new `EventSource` object should be created with both the URL and an options dictionary. For example, assuming the client script is on `example.com`:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+const evtSource = new EventSource("//api.example.com/sse-demo.php", {
   withCredentials: true,
 });
 ```
@@ -62,7 +62,7 @@ evtSource.addEventListener("ping", (event) => {
 This code will be called whenever the server sends a message with the `event` field set to `ping`; it then parses the JSON in the `data` field and outputs that information.
 
 > [!WARNING]
-> When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://crbug.com/275955) and [Firefox](https://bugzil.la/906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
+> When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://crbug.com/275955) and [Firefox](https://bugzil.la/906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stack Overflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## Sending events from the server
 
@@ -109,14 +109,14 @@ while (true) {
 
 The code above generates an event every second, with the event type "ping". Each event's data is a JSON object containing the ISO 8601 timestamp corresponding to the time at which the event was generated. At random intervals, a simple message (with no event type) is sent.
 The loop will keep running independent of the connection status, so a check is included
-to break the loop if the connection has been closed (e.g. client closes the page).
+to break the loop if the connection has been closed (e.g., client closes the page).
 
 > [!NOTE]
 > You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Error handling
 
-When problems occur (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
+If the server responds with an `error` key (e.g., `JSON.parse(event.data.error)` or another problem occurs (such as a network timeout or issues pertaining to [access control](/en-US/docs/Web/HTTP/Guides/CORS)), an error event is generated. You can take action on this programmatically by implementing the `onerror` callback on the `EventSource` object:
 
 ```js
 evtSource.onerror = (err) => {

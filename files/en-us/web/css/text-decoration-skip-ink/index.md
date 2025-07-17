@@ -3,13 +3,37 @@ title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
 page-type: css-property
 browser-compat: css.properties.text-decoration-skip-ink
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
+
+```css interactive-example-choice
+text-decoration-skip-ink: auto;
+```
+
+```css interactive-example-choice
+text-decoration-skip-ink: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element">parapsychologists</span>
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.9em Georgia,
+    serif;
+  text-decoration: underline;
+}
+```
 
 `text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
 
@@ -36,7 +60,6 @@ text-decoration-skip-ink: unset;
 - `auto`
   - : The default — the browser _may_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. That is, they are interrupted where they would otherwise cross over a glyph.
 - `all`
-
   - : The browser _must_ interrupt underlines and overlines so that they do not touch or closely approach a glyph. This can be helpful with certain Chinese, Japanese, or Korean (CJK) fonts, where the `auto` behavior might not create interruptions.
 
     ![An example of "text-decoration-skip-ink".](decoration-skip-ink.png)

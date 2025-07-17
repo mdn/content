@@ -13,12 +13,6 @@ The **`label`** read-only property of the {{domxref("MediaStreamTrack")}} interf
 The string may be left empty and is empty as long as no source has been connected.
 When the track is disassociated from its source, the label is not changed.
 
-## Syntax
-
-```js-nolint
-const label = track.label
-```
-
 ## Specifications
 
 {{Specifications}}

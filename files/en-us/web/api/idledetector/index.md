@@ -7,7 +7,7 @@ status:
 browser-compat: api.IdleDetector
 ---
 
-{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`IdleDetector`** interface of the {{domxref('idle_detection_api','Idle Detection API','','true')}} provides methods and events for detecting user activity on a device or screen.
 
@@ -34,7 +34,7 @@ This interface requires a secure context.
 
 ## Static methods
 
-- [`IdleDetector.requestPermission()`](/en-US/docs/Web/API/IdleDetector/requestPermission_static) {{Experimental_Inline}}
+- {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves when the user has chosen
     whether to grant the origin access to their idle state. Resolves with
     `"granted"` on acceptance and `"denied"` on refusal.

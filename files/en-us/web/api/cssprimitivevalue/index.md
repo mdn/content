@@ -31,7 +31,6 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 - {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : An `unsigned short` representing the type of the value. Possible values are:
 
     | Constant         | Description                                                                                                                                                                  |
@@ -61,7 +60,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
     | `CSS_S`          | The value is a {{CSSxRef("&lt;time&gt;")}} in seconds. The value can be obtained by using the `getFloatValue()` method.                                                      |
     | `CSS_STRING`     | The value is a {{CSSxRef("&lt;string&gt;")}}. The value can be obtained by using the `getStringValue()` method.                                                              |
     | `CSS_UNKNOWN`    | The value is not a recognized CSS2 value. The value can only be obtained by using the {{DOMxRef("CSSValue.cssText", "cssText")}} attribute.                                  |
-    | `CSS_URI`        | The value is a {{CSSxRef("url", "url()")}}. The value can be obtained by using the `getStringValue()` method.                                                                |
+    | `CSS_URI`        | The value is a {{cssxref("url_value", "&lt;url&gt;")}}. The value can be obtained by using the `getStringValue()` method.                                                    |
 
 ## Instance methods
 

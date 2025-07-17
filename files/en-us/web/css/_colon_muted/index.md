@@ -1,11 +1,10 @@
 ---
-title: ":muted"
+title: :muted
 slug: Web/CSS/:muted
 page-type: css-pseudo-class
 browser-compat: css.selectors.muted
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:muted`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that is capable of making sound, such as {{htmlelement("audio")}} or {{htmlelement("video")}}, but is muted (forced silent).
 

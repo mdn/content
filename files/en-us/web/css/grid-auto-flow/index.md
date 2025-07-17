@@ -3,13 +3,62 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 page-type: css-property
 browser-compat: css.properties.grid-auto-flow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-auto-flow`** [CSS](/en-US/docs/Web/CSS) property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
 
-{{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+
+```css interactive-example-choice
+grid-auto-flow: row;
+```
+
+```css interactive-example-choice
+grid-auto-flow: column;
+```
+
+```css interactive-example-choice
+grid-auto-flow: row dense;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+
+#example-element > div:nth-child(1) {
+  grid-column: auto / span 2;
+}
+
+#example-element > div:nth-child(2) {
+  grid-column: auto / span 2;
+}
+```
 
 > [!NOTE]
 > The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
@@ -45,7 +94,6 @@ This property may take one of two forms:
 - `column`
   - : Items are placed by filling each column in turn, adding new columns as necessary.
 - `dense`
-
   - : "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
 
     If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.

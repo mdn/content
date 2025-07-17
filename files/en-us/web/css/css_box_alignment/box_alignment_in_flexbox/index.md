@@ -2,17 +2,49 @@
 title: Box alignment in flexbox
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 page-type: guide
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) Specification details how alignment works in various layout methods; on this page, we explore how box alignment works in the context of flexbox. As this page aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page which details the common features of box alignment across layout methods.
+The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox). As this guide aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## Basic example
 
-In this example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the `align-items` values set on the group by setting {{cssxref("align-self")}} to `center`.
+In this flexbox example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the `align-items` values set on the group by setting {{cssxref("align-self")}} to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
+```css hidden live-sample___gap live-sample___flex-align-items live-sample___auto-margins
+body {
+  font-family: sans-serif;
+}
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```html live-sample___flex-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___flex-align-items
+.box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("flex-align-items")}}
 
 ## The axes and flex-direction
 
@@ -21,7 +53,7 @@ Flexbox respects the writing mode of the document, therefore if you are working 
 However, in flexbox you can change the main axis by setting `flex-direction` to `column`. In this case, `justify-content` will align items in the block direction. Therefore it is easiest to think about the main and cross axis when working in flexbox like so:
 
 - The main axis = direction set by `flex-direction` = alignment via `justify-content`
-- The cross axis = runs across the main axis = alignment via `align-content`, `align-self`/`align-items`
+- The cross axis = runs across the main axis = alignment via {{cssxref("align-content")}}, {{cssxref("align-self")}}/{{cssxref("align-items")}}
 
 ### Main Axis Alignment
 
@@ -35,7 +67,7 @@ However, in flexbox you can change the main axis by setting `flex-direction` to 
 
 ### There is no justify-self in flexbox
 
-On the main axis, Flexbox deals with our content as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The `justify-content` property controls how that leftover space is used. Set `justify-content: flex-end` and the extra space is placed before the items, `justify-content: space-around` and it is placed either side of the item in that dimension, etc.
+On the main axis, Flexbox deals with the flex items as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The `justify-content` property controls how that leftover space is used. Set `justify-content: flex-end` and the extra space is placed before the items, `justify-content: space-around` and it is placed either side of the item in that dimension, etc.
 
 This means that a `justify-self` property does not make sense in flexbox as we are always dealing with moving the entire group of items around.
 
@@ -47,7 +79,27 @@ There is a specific use case in flexbox where we might think that a `justify-sel
 
 By setting a {{cssxref("margin")}} of `auto` on one item in a set of flex items all aligned to start, we can create a split navigation. This works well with flexbox and the alignment properties. As soon as there is no space available for the auto margin, the item behaves in the same way as all the other flex items and shrinks to try to fit into space.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}
+```html live-sample___auto-margins
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div class="push">Four</div>
+  <div>Five</div>
+</div>
+```
+
+```css live-sample___auto-margins
+.box {
+  display: flex;
+  border: 2px dotted rgb(96 139 168);
+}
+.push {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("auto-margins")}}
 
 ## The `gap` properties
 
@@ -59,30 +111,42 @@ By setting a {{cssxref("margin")}} of `auto` on one item in a set of flex items 
 
 On the main axis, the `column-gap` property creates fixed size gaps between adjacent items.
 
-On the cross axis the `row-gap` property creates spacing between adjacent flex lines, therefore `flex-wrap` must also be set to `wrap` for this to have any effect.
+On the cross axis the `row-gap` property creates spacing between adjacent flex lines, therefore {{cssxref("flex-wrap")}} must also be set to `wrap` for this to have any effect.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
+```html live-sample___gap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
 
-## Reference
+```css live-sample___gap
+.box {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 2em;
+  border: 2px dotted rgb(96 139 168);
+}
 
-### CSS Properties
+.box > * {
+  flex: 1;
+}
+```
 
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("place-content")}}
-- {{cssxref("justify-items")}}
-- {{cssxref("align-items")}}
-- {{cssxref("place-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+{{EmbedLiveSample("gap")}}
 
-### Glossary Entries
+## See also
 
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
+- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}
-
-## Guides
-
-- [Alignment in flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

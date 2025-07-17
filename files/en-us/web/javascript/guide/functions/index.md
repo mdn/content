@@ -2,9 +2,10 @@
 title: Functions
 slug: Web/JavaScript/Guide/Functions
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
 
@@ -20,7 +21,7 @@ A **function definition** (also called a **function declaration**, or **function
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
 - The JavaScript statements that define the function, enclosed in curly braces, `{ /* … */ }`.
 
-For example, the following code defines a simple function named `square`:
+For example, the following code defines a function named `square`:
 
 ```js
 function square(number) {
@@ -39,15 +40,15 @@ function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-const mycar = {
+const myCar = {
   make: "Honda",
   model: "Accord",
   year: 1998,
 };
 
-console.log(mycar.make); // "Honda"
-myFunc(mycar);
-console.log(mycar.make); // "Toyota"
+console.log(myCar.make); // "Honda"
+myFunc(myCar);
+console.log(myCar.make); // "Toyota"
 ```
 
 When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
@@ -63,6 +64,19 @@ console.log(arr[0]); // 45
 myFunc(arr);
 console.log(arr[0]); // 30
 ```
+
+Function declarations and expressions can be nested, which forms a _scope chain_. For example:
+
+```js
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+```
+
+See [function scopes and closures](#function_scopes_and_closures) for more information.
 
 ### Function expressions
 
@@ -88,7 +102,7 @@ const factorial = function fac(n) {
 console.log(factorial(3)); // 6
 ```
 
-Function expressions are convenient when passing a function as an argument to another function. The following example shows a `map` function that should receive a function as first argument and an array as second argument:
+Function expressions are convenient when passing a function as an argument to another function. The following example defines a `map` function that should receive a function as first argument and an array as second argument. Then, it is called with a function defined by a function expression:
 
 ```js
 function map(f, a) {
@@ -98,25 +112,12 @@ function map(f, a) {
   }
   return result;
 }
-```
-
-In the following code, the function receives a function defined by a function expression and executes it for every element of the array received as a second argument:
-
-```js
-function map(f, a) {
-  const result = new Array(a.length);
-  for (let i = 0; i < a.length; i++) {
-    result[i] = f(a[i]);
-  }
-  return result;
-}
-
-const cube = function (x) {
-  return x * x * x;
-};
 
 const numbers = [0, 1, 2, 5, 10];
-console.log(map(cube, numbers)); // [0, 1, 8, 125, 1000]
+const cubedNumbers = map(function (x) {
+  return x * x * x;
+}, numbers);
+console.log(cubedNumbers); // [0, 1, 8, 125, 1000]
 ```
 
 In JavaScript, a function can be defined based on a condition. For example, the following function definition defines `myFunc` only if `num` equals `0`:
@@ -156,9 +157,8 @@ A function can call itself. For example, here is a function that computes factor
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
-  } else {
-    return n * factorial(n - 1);
   }
+  return n * factorial(n - 1);
 }
 ```
 
@@ -208,51 +208,9 @@ const square = function (n) {
 };
 ```
 
-## Function scope
-
-Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined.
-
-In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access.
-
-```js
-// The following variables are defined in the global scope
-const num1 = 20;
-const num2 = 3;
-const name = "Chamakh";
-
-// This function is defined in the global scope
-function multiply() {
-  return num1 * num2;
-}
-
-console.log(multiply()); // 60
-
-// A nested function example
-function getScore() {
-  const num1 = 2;
-  const num2 = 3;
-
-  function add() {
-    return `${name} scored ${num1 + num2}`;
-  }
-
-  return add();
-}
-
-console.log(getScore()); // "Chamakh scored 5"
-```
-
-## Scope and the function stack
-
 ### Recursion
 
-A function can refer to and call itself. There are three ways for a function to refer to itself:
-
-1. The function's name
-2. [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3. An in-scope variable that refers to the function
-
-For example, consider the following function definition:
+A function can refer to and call itself. It can be referred to either by the function expression or declaration's name, or via any in-scope variable that refers to the function object. For example, consider the following function definition:
 
 ```js
 const foo = function bar() {
@@ -260,11 +218,7 @@ const foo = function bar() {
 };
 ```
 
-Within the function body, the following are all equivalent:
-
-1. `bar()`
-2. `arguments.callee()`
-3. `foo()`
+Within the function body, you can refer to the function itself either as `bar` or `foo`, and call itself using `bar()` or `foo()`.
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
 
@@ -301,8 +255,8 @@ function walkTree(node) {
     return;
   }
   // do something with node
-  for (let i = 0; i < node.childNodes.length; i++) {
-    walkTree(node.childNodes[i]);
+  for (const child of node.childNodes) {
+    walkTree(child);
   }
 }
 ```
@@ -335,115 +289,72 @@ foo(3);
 // end: 3
 ```
 
-### Nested functions and closures
+### Immediately Invoked Function Expressions (IIFE)
 
-You may nest a function within another function. The nested (inner) function is private to its containing (outer) function.
-
-It also forms a _closure_. A closure is an expression (most commonly, a function) that can have free variables together with an environment that binds those variables (that "closes" the expression).
-
-Since a nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its containing function. In other words, the inner function contains the scope of the outer function.
-
-To summarize:
-
-- The inner function can be accessed only from statements in the outer function.
-- The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.
-
-The following example shows nested functions:
+An [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE) is a code pattern that directly calls a function defined as an expression. It looks like this:
 
 ```js
-function addSquares(a, b) {
-  function square(x) {
-    return x * x;
-  }
-  return square(a) + square(b);
-}
+(function () {
+  // Do something
+})();
 
-console.log(addSquares(2, 3)); // 13
-console.log(addSquares(3, 4)); // 25
-console.log(addSquares(4, 5)); // 41
+const value = (function () {
+  // Do something
+  return someValue;
+})();
 ```
 
-Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
+Instead of saving the function in a variable, the function is immediately invoked. This is almost equivalent to just writing the function body, but there are a few unique benefits:
+
+- It creates an extra [scope](#function_scopes_and_closures) of variables, which helps to confine variables to the place where they are useful.
+- It is now an _expression_ instead of a sequence of _statements_. This allows you to write complex computation logic when initializing variables.
+
+For more information, see the [IIFE](/en-US/docs/Glossary/IIFE) glossary entry.
+
+## Function scopes and closures
+
+Functions form a [scope](/en-US/docs/Glossary/Scope) for variables—this means variables defined inside a function cannot be accessed from anywhere outside the function. The function scope inherits from all the upper scopes. For example, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in its parent function, and any other variables to which the parent function has access. On the other hand, the parent function (and any other parent scope) does _not_ have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables in the inner function.
 
 ```js
-function outside(x) {
-  function inside(y) {
-    return x + y;
-  }
-  return inside;
+// The following variables are defined in the global scope
+const num1 = 20;
+const num2 = 3;
+const name = "Chamakh";
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
 }
 
-const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
-console.log(fnInside(5)); // 8
-console.log(outside(3)(5)); // 8
-```
+console.log(multiply()); // 60
 
-### Preservation of variables
+// A nested function example
+function getScore() {
+  const num1 = 2;
+  const num2 = 3;
 
-Notice how `x` is preserved when `inside` is returned. A closure must preserve the arguments and variables in all scopes it references. Since each call provides potentially different arguments, a new closure is created for each call to `outside`. The memory can be freed only when the returned `inside` is no longer accessible.
-
-This is not different from storing references in other objects, but is often less obvious because one does not set the references directly and cannot inspect them.
-
-### Multiply-nested functions
-
-Functions can be multiply-nested. For example:
-
-- A function (`A`) contains a function (`B`), which itself contains a function (`C`).
-- Both functions `B` and `C` form closures here. So, `B` can access `A`, and `C` can access `B`.
-- In addition, since `C` can access `B` which can access `A`, `C` can also access `A`.
-
-Thus, the closures can contain multiple scopes; they recursively contain the scope of the functions containing it. This is called _scope chaining_. (The reason it is called "chaining" is explained later.)
-
-Consider the following example:
-
-```js
-function A(x) {
-  function B(y) {
-    function C(z) {
-      console.log(x + y + z);
-    }
-    C(3);
+  function add() {
+    return `${name} scored ${num1 + num2}`;
   }
-  B(2);
-}
-A(1); // Logs 6 (which is 1 + 2 + 3)
-```
 
-In this example, `C` accesses `B`'s `y` and `A`'s `x`.
-
-This can be done because:
-
-1. `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
-2. `C` forms a closure including `B`.
-3. Because `C`'s closure includes `B` and `B`'s closure includes `A`, then `C`'s closure also includes `A`. This means `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
-
-The reverse, however, is not true. `A` cannot access `C`, because `A` cannot access any argument or variable of `B`, which `C` is a variable of. Thus, `C` remains private to only `B`.
-
-### Name conflicts
-
-When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the innermost scope takes the highest precedence, while the outermost scope takes the lowest. This is the scope chain. The first on the chain is the innermost scope, and the last is the outermost scope. Consider the following:
-
-```js
-function outside() {
-  const x = 5;
-  function inside(x) {
-    return x * 2;
-  }
-  return inside;
+  return add();
 }
 
-console.log(outside()(10)); // 20 (instead of 10)
+console.log(getScore()); // "Chamakh scored 5"
 ```
 
-The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is `inside` => `outside` => global object. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
+### Closures
 
-## Closures
+We also refer to the function body as a _closure_. A closure is any piece of source code (most commonly, a function) that refers to some variables, and the closure "remembers" these variables even when the scope in which these variables were declared has exited.
 
-Closures are one of the most powerful features of JavaScript. JavaScript allows for the nesting of functions and grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to).
+Closures are usually illustrated with nested functions to show that they remember variables beyond the lifetime of its parent scope; but in fact, nested functions are unnecessary. Technically speaking, all functions in JavaScript form closures—some just don't capture anything, and closures don't even have to be functions. The key ingredients for a _useful_ closure are the following:
 
-However, the outer function does _not_ have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.
+- A parent scope that defines some variables or functions. It should have a clear lifetime, which means it should finish execution at some point. Any scope that's not the global scope satisfies this requirement; this includes blocks, functions, modules, and more.
+- An inner scope defined within the parent scope, which refers to some variables or functions defined in the parent scope.
+- The inner scope manages to survive beyond the lifetime of the parent scope. For example, it is saved to a variable that's defined outside the parent scope, or it's returned from the parent scope (if the parent scope is a function).
+- Then, when you call the function outside of the parent scope, you can still access the variables or functions that were defined in the parent scope, even though the parent scope has finished execution.
 
-Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.
+The following is a typical example of a closure:
 
 ```js
 // The outer function defines a variable called "name"
@@ -516,22 +427,56 @@ const getCode = (function () {
 console.log(getCode()); // "0]Eal(eh&2"
 ```
 
-> [!NOTE]
-> There are a number of pitfalls to watch out for when using closures!
->
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
->
-> ```js example-bad
-> const createPet = function (name) {
->   // The outer function defines a variable called "name".
->   return {
->     setName(name) {
->       // The enclosed function also defines a variable called "name".
->       name = name; // How do we access the "name" defined by the outer function?
->     },
->   };
-> };
-> ```
+In the code above, we use the [IIFE](#immediately_invoked_function_expressions_iife) pattern. Within this IIFE scope, two values exist: a variable `apiCode` and an unnamed function that gets returned and gets assigned to the variable `getCode`. `apiCode` is in the scope of the returned unnamed function but not in the scope of any other part of the program, so there is no way for reading the value of `apiCode` apart from via the `getCode` function.
+
+### Multiply-nested functions
+
+Functions can be multiply-nested. For example:
+
+- A function (`A`) contains a function (`B`), which itself contains a function (`C`).
+- Both functions `B` and `C` form closures here. So, `B` can access `A`, and `C` can access `B`.
+- In addition, since `C` can access `B` which can access `A`, `C` can also access `A`.
+
+Thus, the closures can contain multiple scopes; they recursively contain the scope of the functions containing it. This is called _scope chaining_. Consider the following example:
+
+```js
+function A(x) {
+  function B(y) {
+    function C(z) {
+      console.log(x + y + z);
+    }
+    C(3);
+  }
+  B(2);
+}
+A(1); // Logs 6 (which is 1 + 2 + 3)
+```
+
+In this example, `C` accesses `B`'s `y` and `A`'s `x`. This can be done because:
+
+1. `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
+2. `C` forms a closure including `B`.
+3. Because `C`'s closure includes `B` and `B`'s closure includes `A`, then `C`'s closure also includes `A`. This means `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
+
+The reverse, however, is not true. `A` cannot access `C`, because `A` cannot access any argument or variable of `B`, which `C` is a variable of. Thus, `C` remains private to only `B`.
+
+### Name conflicts
+
+When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the innermost scope takes the highest precedence, while the outermost scope takes the lowest. This is the scope chain. The first on the chain is the innermost scope, and the last is the outermost scope. Consider the following:
+
+```js
+function outside() {
+  const x = 5;
+  function inside(x) {
+    return x * 2;
+  }
+  return inside;
+}
+
+console.log(outside()(10)); // 20 (instead of 10)
+```
+
+The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is `inside` => `outside` => global object. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
 
 ## Using the arguments object
 

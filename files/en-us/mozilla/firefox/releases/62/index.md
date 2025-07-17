@@ -1,10 +1,10 @@
 ---
 title: Firefox 62 for developers
+short-title: Firefox 62
 slug: Mozilla/Firefox/Releases/62
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.
 
@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 62 that will affe
 - If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ([Firefox bug 1456069](https://bugzil.la/1456069)).
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cookies) now shows the cookie `samesite` attribute ([Firefox bug 1452715](https://bugzil.la/1452715)).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) now works inside container tabs ([Firefox bug 1306975](https://bugzil.la/1306975)).
-- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
+- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/Guides/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
 - Create a screenshot of the current page (with an optional filename) from the Console tab ([Firefox bug 1464461](https://bugzil.la/1464461)) using the following command:
 
   ```bash
@@ -45,7 +45,7 @@ _No changes._
 
 #### Removals
 
-- All [XUL `display` values](/en-US/docs/Web/CSS/display#xul_values) with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
+- All XUL `display` values with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in [Firefox bug 1288572](https://bugzil.la/1288572).
 
 ### SVG
 
@@ -53,7 +53,7 @@ _No changes._
 
 ### JavaScript
 
-- The [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor is now supported, along with global variables in WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
+- The [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) constructor is now supported, along with global variables in WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ([Firefox bug 1435813](https://bugzil.la/1435813)).
 - The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see [Firefox bug 1435828](https://bugzil.la/1435828) and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
@@ -75,7 +75,7 @@ _No changes._
 - The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint_static", "DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with `DOMPointInit`, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ([Firefox bug 1186265](https://bugzil.la/1186265)).
 - For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ([Firefox bug 453968](https://bugzil.la/453968)).
 - {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ([Firefox bug 1460506](https://bugzil.la/1460506)).
-- The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).
+- The `Navigator.registerContentHandler()` method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).
 - The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ([Firefox bug 1351193](https://bugzil.la/1351193)).
 - {{domxref("Document.domain")}} can no longer return `null` ([Firefox bug 819475](https://bugzil.la/819475)). If the domain cannot be identified, then `domain` returns an empty string instead of `null`.
 - Added the {{domxref("console/timeLog_static", "console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ([Firefox bug 1458466](https://bugzil.la/1458466)).
@@ -98,7 +98,7 @@ _No changes._
 
 - The `userproximity` and `deviceproximity` events, as well as the `UserProximityEvent` and `DeviceProximityEvent` interfaces, have been disabled by default behind the `device.sensors.proximity.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
 - The `devicelight` event of type `DeviceLightEvent` has been disabled by default behind the `device.sensors.ambientLight.enabled` preference ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
+- The `DOMSubtreeModified` and `DOMAttrModified` [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute is changed via the CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295).
 - Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ([Firefox bug 1408301](https://bugzil.la/1408301)).
 - Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - {{domxref("window.getComputedStyle()")}} no longer returns `null` when called on a `Window` which has no presentation ([Firefox bug 1467722](https://bugzil.la/1467722)).
@@ -107,7 +107,7 @@ _No changes._
 
 #### Removals
 
-- The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ([Firefox bug 1302449](https://bugzil.la/1302449)).
+- The deprecated CSP `referrer` directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ([Firefox bug 1302449](https://bugzil.la/1302449)).
 
 ### Security
 
@@ -132,7 +132,7 @@ _No changes._
 
 #### Bug fixes
 
-- `WebDriver:ExecuteScript` caused cyclic reference error for [WebElement](/en-US/docs/Web/WebDriver/WebElement) collections ([Firefox bug 1447977](https://bugzil.la/1447977)).
+- `WebDriver:ExecuteScript` caused cyclic reference error for [WebElement](/en-US/docs/Web/WebDriver/Reference/WebElement) collections ([Firefox bug 1447977](https://bugzil.la/1447977)).
 - Dispatching a `pointerMove` or `pause` action primitive could cause a hang, and the command to never send a reply ([Firefox bug 1467743](https://bugzil.la/1467743), [Firefox bug 1447449](https://bugzil.la/1447449)).
 
 ### Other
@@ -152,7 +152,6 @@ _No changes._
 
 - New `open_at_install` property of the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key enables extensions to control whether their sidebars should open automatically on install or not ([Firefox bug 1460910](https://bugzil.la/1460910)).
 - Changes to the `browser_style` property of various manifest keys:
-
   - In [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) and [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) it defaults to `false`.
   - In [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) and [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) it defaults to `true`.
 
@@ -164,7 +163,3 @@ _No changes._
 
 - Support for unpacked sideloaded extensions has been removed ([Firefox bug 1385057](https://bugzil.la/1385057)).
 - The warning about `browser_style` displayed when temporarily loading an extension for testing is no longer displayed ([Firefox bug 1404724](https://bugzil.la/1404724)).
-
-## Older versions
-
-{{Firefox_for_developers}}

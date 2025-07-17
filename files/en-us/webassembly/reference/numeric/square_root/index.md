@@ -2,17 +2,35 @@
 title: Square root
 slug: WebAssembly/Reference/Numeric/Square_root
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`sqrt`** instructions, short for _square root_, are used to get the square root of a number.
 
-{{EmbedInteractiveExample("pages/wat/sqrt.html", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: sqrt", "tabbed-standard")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    f32.const 2 ;; load a number onto the stack
+    f32.sqrt ;; calculate the square root
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; load a number onto the stack
 f32.const 289
 

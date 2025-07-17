@@ -2,9 +2,8 @@
 title: TCP
 slug: Glossary/TCP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **TCP (Transmission Control Protocol)** is an important network {{Glossary("protocol")}} that lets two hosts connect and exchange data streams. TCP guarantees the delivery of data and packets in the same order as they were sent. Vint Cerf and Bob Kahn, who were DARPA scientists at the time, designed TCP in the 1970s.
 
@@ -13,8 +12,8 @@ TCP's role is to ensure the packets are reliably delivered, and error-free. TCP 
 ## See also
 
 - [Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Wikipedia)
-- [HTTP Overview](/en-US/docs/Web/HTTP/Overview)
-- [How browsers work](/en-US/docs/Web/Performance/How_browsers_work)
+- [HTTP Overview](/en-US/docs/Web/HTTP/Guides/Overview)
+- [How browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)
 - Related glossary terms:
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}

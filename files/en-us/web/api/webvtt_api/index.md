@@ -82,9 +82,7 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using {{domxref("TextTrack.addCue()")}} method calls, with constructed `VTTCue` objects as arguments.
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -181,9 +179,7 @@ video {
 ```
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -250,9 +246,7 @@ video {
 ```
 
 ```html hidden
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### Styling by tag type
@@ -282,7 +276,7 @@ video::cue {
 }
 ```
 
-Then we style each of the tags above with a different colour.
+Then we style each of the tags above with a different color.
 
 ```css
 video::cue(u) {
@@ -298,7 +292,7 @@ video::cue(i) {
 }
 
 video::cue(c) {
-  color: lightpurple;
+  color: lavender;
 }
 ```
 
@@ -371,7 +365,7 @@ video::cue(v[voice="Bob"]) {
 
 #### Result
 
-The example should the cues with colour coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
+The example should the cues with color coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
 
 {{EmbedLiveSample('More cue styling examples','400','330')}}
 

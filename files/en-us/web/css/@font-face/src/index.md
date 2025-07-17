@@ -3,9 +3,8 @@ title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.src
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
@@ -46,8 +45,7 @@ src:
 ### Values
 
 - `url()`
-
-  - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
+  - : Specifies an external reference consisting of a {{cssxref("url_value", "&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
@@ -59,7 +57,6 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
-
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 
@@ -95,7 +92,7 @@ If the last `src` descriptor can load a resource and doesn't include a `local()`
 > This may affect design of fallbacks.
 > See [Browser compatibility](#browser_compatibility) for more information.
 
-As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a simple 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
+As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
 
 If the font file is a container for multiple fonts, a fragment identifier is included to indicate the sub-font that should be used, as shown below:
 
@@ -123,7 +120,7 @@ To check if a font format is supported by a browser within CSS, use the {{cssxre
 
 > [!NOTE]
 >
-> - `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
+> - `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
 > - The `opentype` and `truetype` values are equivalent whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
 
 Older non-normalized `format()` values have the following equivalent syntax; provided as a string enclosed in quotes for backward-compatibility reasons:
@@ -160,18 +157,9 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```plain
-<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
-local( <family-name> )
+{{CSSSyntax}}
 
-<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
-
-<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
-
-<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
-
-<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
-```
+{{CSSSyntaxRaw(`<font-src>`)}}
 
 ## Examples
 
@@ -203,7 +191,7 @@ The example below shows how to define two font faces with the same font family. 
 
 /* Using the regular font face */
 p {
-  font-family: MainText;
+  font-family: MainText, sans-serif;
 }
 
 /* Font-family is inherited, but bold fonts are used */
@@ -228,7 +216,7 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 
 /* Using the font face */
 p {
-  font-family: "Trickster";
+  font-family: "Trickster", fantasy;
 }
 ```
 
@@ -279,7 +267,7 @@ The block of CSS inside `@supports` will be applied if the user agent supports `
   }
 
   .colored_text {
-    font-family: "Trickster";
+    font-family: "Trickster", fantasy;
   }
 }
 ```

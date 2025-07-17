@@ -2,9 +2,8 @@
 title: Script-supporting element
 slug: Glossary/Script-supporting_element
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In an {{Glossary("HTML")}} document, **script-supporting elements** are those elements that don't directly contribute to the appearance or layout of the page; instead, they're either scripts or contain information that's only used by scripts.
 
@@ -14,4 +13,4 @@ There are only two script-supporting elements: {{HTMLElement("script")}} and {{H
 
 ## See also
 
-[Script-supporting elements](/en-US/docs/Web/HTML/Content_categories#script-supporting_elements)
+[Script-supporting elements](/en-US/docs/Web/HTML/Guides/Content_categories#script-supporting_elements)

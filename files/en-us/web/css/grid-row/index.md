@@ -3,13 +3,59 @@ title: grid-row
 slug: Web/CSS/grid-row
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-row
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
-The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+{{InteractiveExample("CSS Demo: grid-row")}}
 
-{{EmbedInteractiveExample("pages/css/grid-row.html")}}
+```css interactive-example-choice
+grid-row: 1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / 3;
+```
+
+```css interactive-example-choice
+grid-row: 2 / -1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgb(255 0 200 / 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Constituent properties
 
@@ -26,20 +72,20 @@ grid-row: auto;
 grid-row: auto / auto;
 
 /* <custom-ident> values */
-grid-row: somegridarea;
-grid-row: somegridarea / someothergridarea;
+grid-row: some-grid-area;
+grid-row: some-grid-area / some-other-grid-area;
 
 /* <integer> + <custom-ident> values */
-grid-row: somegridarea 4;
-grid-row: 4 somegridarea / 6;
+grid-row: some-grid-area 4;
+grid-row: 4 some-grid-area / 6;
 
 /* span + <integer> + <custom-ident> values */
 grid-row: span 3;
-grid-row: span somegridarea;
-grid-row: 5 somegridarea span;
+grid-row: span some-grid-area;
+grid-row: 5 some-grid-area span;
 grid-row: span 3 / 6;
-grid-row: span somegridarea / span someothergridarea;
-grid-row: 5 somegridarea span / 2 span;
+grid-row: span some-grid-area / span some-other-grid-area;
+grid-row: 5 some-grid-area span / 2 span;
 
 /* Global values */
 grid-row: inherit;
@@ -66,7 +112,6 @@ Each `<grid-line>` value can be specified as:
 - `auto`
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
-
   - : If there is a named line with the name `<custom-ident>-start`/`<custom-ident>-end`, it contributes the first such line to the grid item's placement.
 
     > [!NOTE]
@@ -75,7 +120,6 @@ Each `<grid-line>` value can be specified as:
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
 - `<integer> && <custom-ident>?`
-
   - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
@@ -83,7 +127,6 @@ Each `<grid-line>` value can be specified as:
     An {{cssxref("integer")}} value of `0` is invalid.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Contributes a grid span to the grid item's placement such that the corresponding edge of the grid item's grid area is n lines from the opposite edge.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.

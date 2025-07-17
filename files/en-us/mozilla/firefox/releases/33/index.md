@@ -1,10 +1,10 @@
 ---
 title: Firefox 33 for developers
+short-title: Firefox 33
 slug: Mozilla/Firefox/Releases/33
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -35,19 +35,18 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Fixed CSS animations with empty keyframes rule so they also dispatch events ([Firefox bug 1004377](https://bugzil.la/1004377)).
 - Added support for `rebeccapurple`, a new {{cssxref("&lt;color&gt;")}} name defined in CSS Colors level 4 ([Firefox bug 1024642](https://bugzil.la/1024642)).
 - Our experimental implementation of CSS Fonts Level 3 is progressing. Its activation is governed by the `layout.css.font-features.enabled` preference, enabled by default in Nightly. Newly implemented features are:
-
   - The fallback algorithm of {{cssxref("font-variant-caps")}}, creating synthetic alternates for missing glyphs ([Firefox bug 961558](https://bugzil.la/961558)).
   - The {{cssxref("font-synthesis")}} CSS property has been implemented ([Firefox bug 871453](https://bugzil.la/871453)).
 
 ### HTML
 
 - Added the experimental support for {{htmlelement("picture")}} element ([Firefox bug 870022](https://bugzil.la/870022)), behind the `dom.image.picture.enabled` preference (off by default).
-- The {{HTMLElement("label")}}, especially without a [`for`](/en-US/docs/Web/HTML/Element/label#for) attribute, doesn't apply anymore to a `<input type=hidden>` field ([Firefox bug 597650](https://bugzil.la/597650)). The previous behavior wasn't spec-compliant.
+- The {{HTMLElement("label")}}, especially without a [`for`](/en-US/docs/Web/HTML/Reference/Elements/label#for) attribute, doesn't apply anymore to a `<input type=hidden>` field ([Firefox bug 597650](https://bugzil.la/597650)). The previous behavior wasn't spec-compliant.
 - The link annotation `noreferrer` has been implemented on {{HTMLElement("a")}} elements. `<a rel="noreferrer">` will not include the URL of the referrer in the HTTP request sent to fetch it ([Firefox bug 530396](https://bugzil.la/530396)). Note that this works only for in-page links, not for links clicked via the UI, like via contextual menus.
-- On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Element/meta#name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
+- On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
 
   ```html
-  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
+  <meta name="msapplication-TileImage" content="images/my-img-144.png" />
   <meta name="msapplication-TileColor" content="#d83434" />
   ```
 
@@ -95,7 +94,7 @@ _No change._
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
 
 ## Changes for add-on and Mozilla developers
 
@@ -115,7 +114,3 @@ _No change._
 [GitHub commits made between Firefox 32 and Firefox 33](https://github.com/mozilla/addon-sdk/compare/firefox32...firefox33). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 32 and Firefox 33](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-07-21&chfield=resolution&query_format=advanced&chfieldfrom=2014-06-09&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

@@ -3,13 +3,51 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 page-type: css-property
 browser-compat: css.properties.box-decoration-break
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
-{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
+{{InteractiveExample("CSS Demo: box-decoration-break")}}
+
+```css interactive-example-choice
+-webkit-box-decoration-break: slice;
+box-decoration-break: slice;
+```
+
+```css interactive-example-choice
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <span id="example-element">This text breaks across multiple lines.</span>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-container {
+  width: 14rem;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #6f6f6f, #000);
+  color: white;
+  box-shadow:
+    8px 8px 10px 0 #ff1492,
+    -5px -5px 5px 0 #00f,
+    5px 5px 15px 0 #ff0;
+  padding: 0 1em;
+  border-radius: 16px;
+  border-style: solid;
+  margin-left: 10px;
+  font: 24px sans-serif;
+  line-height: 2;
+}
+```
 
 The specified value will impact the appearance of the following properties:
 
@@ -105,7 +143,7 @@ span {
 
 ### Block box fragments
 
-The following example shows how block elements with box decoration look when they contain line breaks in a [multi-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout).
+The following example shows how block elements with box decoration look when they contain line breaks in a [multi-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout).
 Notice how the result of `box-decoration-break: slice` would be the equivalent of the first {{htmlelement("div")}} if stacked vertically.
 
 ```css hidden

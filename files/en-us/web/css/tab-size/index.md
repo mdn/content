@@ -3,13 +3,40 @@ title: tab-size
 slug: Web/CSS/tab-size
 page-type: css-property
 browser-compat: css.properties.tab-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`tab-size`** [CSS](/en-US/docs/Web/CSS) property is used to customize the width of tab characters (U+0009).
 
-{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+{{InteractiveExample("CSS Demo: tab-size")}}
+
+```css interactive-example-choice
+tab-size: 10px;
+```
+
+```css interactive-example-choice
+tab-size: 16px;
+```
+
+```css interactive-example-choice
+tab-size: 24px;
+```
+
+```css interactive-example-choice
+tab-size: 4;
+```
+
+```html interactive-example
+<section id="default-example">
+  <pre id="example-element">&#9;123</pre>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid;
+}
+```
 
 ## Syntax
 

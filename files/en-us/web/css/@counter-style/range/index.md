@@ -3,9 +3,8 @@ title: range
 slug: Web/CSS/@counter-style/range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.range
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`range`** descriptor lets the author specify one or more ranges of counter values for which the style is applied when defining custom counter styles with the {{cssxref("@counter-style")}} at-rule. When the `range` descriptor is included, the defined counter will only be used for values in the set ranges. If the counter value is outside the specified range, the fallback style will be used to construct the representation of that marker.
 
@@ -35,9 +34,7 @@ range:
 The value is a comma-separated list of ranges each including a lower and upper limit or the keyword `auto`.
 
 - `auto`
-
   - : The entire set of numbers representable by the counter {{cssxref("@counter-style/system","system")}}. Those range values depends on the counter system:
-
     - For `cyclic`, `numeric`, and `fixed` systems, the range is negative `infinity` to positive `infinity`.
     - For `alphabetic` and `symbolic` systems, the range is `1` to positive `infinity`.
     - For `additive` systems, the range is `0` to `positive` infinity.
@@ -54,7 +51,7 @@ The value of the `range` descriptor can be either `auto` or a comma separated li
 
 When the value is set to `auto`, the range is the default range for the counter system. If the `system` is `cyclic`, `numeric`, or `fixed`, the range will be from negative infinity to positive infinity. If the `system` is `alphabetic` or `symbolic`, the range will be from `1` to positive `infinity`. For `system: additive`, `auto` results in the range `0` to positive `infinity`.
 
-When extending a counter, if `range` is set to `auto`, the range value will be the range of the `system` of the counter that is being extended, not the `range` value, if any, of that counter. For example, if counter "B" has the `system: extends A` set, with counter being an `alphabetic` counter, setting `range: auto` on "B" sets the range of "B" from `1` to `infinity`. This is the range of the `alphabetic` system, not necessarily the range set in the "A" counter style definiton. With `range: auto` set on "B", the `range` is set to the default range of the `alphabetic` system, not the `range` value set in counter A's descriptor list.
+When extending a counter, if `range` is set to `auto`, the range value will be the range of the `system` of the counter that is being extended, not the `range` value, if any, of that counter. For example, if counter "B" has the `system: extends A` set, with counter being an `alphabetic` counter, setting `range: auto` on "B" sets the range of "B" from `1` to `infinity`. This is the range of the `alphabetic` system, not necessarily the range set in the "A" counter style definition. With `range: auto` set on "B", the `range` is set to the default range of the `alphabetic` system, not the `range` value set in counter A's descriptor list.
 
 ### `infinite` explained
 

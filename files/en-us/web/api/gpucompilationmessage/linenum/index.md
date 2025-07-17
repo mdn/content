@@ -3,12 +3,10 @@ title: "GPUCompilationMessage: lineNum property"
 short-title: lineNum
 slug: Web/API/GPUCompilationMessage/lineNum
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUCompilationMessage.lineNum
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`lineNum`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a number representing the line number in the shader code that the message corresponds to.
@@ -27,16 +25,13 @@ Note that:
 ## Examples
 
 ```js
-  // ...
-  const shaderModule = device.createShaderModule({
-    code: shaders,
-  });
+const shaderModule = device.createShaderModule({
+  code: shaders,
+});
 
-  const shaderInfo = await shaderModule.getCompilationInfo();
-  const firstMessage = shaderInfo.messages[0];
-  console.log(firstMessage.lineNum);
-  // ...
-}
+const shaderInfo = await shaderModule.getCompilationInfo();
+const firstMessage = shaderInfo.messages[0];
+console.log(firstMessage.lineNum);
 ```
 
 See the main [`GPUCompilationInfo` page](/en-US/docs/Web/API/GPUCompilationInfo#examples) for a more detailed example.

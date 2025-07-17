@@ -3,9 +3,8 @@ title: CSS custom properties for cascading variables
 slug: Web/CSS/CSS_cascading_variables
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-variables/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables along with the mechanisms to use custom properties as the values for other CSS properties.
 
@@ -109,8 +108,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 
 ## Guides
 
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
   - : Explains how to use custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 
 - [Invalid custom properties](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#invalid_custom_properties)
@@ -128,7 +126,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 
 ## See also
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS `env()`](/en-US/docs/Web/CSS/env) function
 - [CSS `calc()`](/en-US/docs/Web/CSS/calc) function
 - [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method

@@ -50,7 +50,7 @@ fetch("./tortoise.png")
   });
 ```
 
-Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g. by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.
+Invoking this method creates a reader and locks it to the stream — no other reader may read this stream until this reader is released, e.g., by invoking {{domxref("ReadableStreamDefaultReader.releaseLock()")}}.
 
 Also note that the previous example can be reduced by one step, as `response.body` is synchronous and so doesn't need the promise:
 
@@ -125,7 +125,8 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
+> [!NOTE]
+> `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
 If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 
@@ -140,7 +141,7 @@ This is the standard pattern you'll see when using stream readers:
 1. You write a function that starts off by reading the stream.
 2. If there is no more stream to read, you return out of the function.
 3. If there is more stream to read, you process the current chunk then run the function again.
-4. You keep chaining the `pipe` function until there is no more stream to read, in which case step 2 is followed.
+4. You keep chaining the `pump()` function until there is no more stream to read, in which case step 2 is followed.
 
 Removing all the code to actually perform a "pump", the code might be generalized to something like this:
 
@@ -274,9 +275,7 @@ class MockPushSource {
   }
 
   // Dummy close function
-  close() {
-    return;
-  }
+  close() {}
 
   // Return random character string
   static #randomChars(length = 8) {
@@ -356,7 +355,7 @@ function makePushSourceStream() {
       readRepeatedly().catch((e) => controller.error(e));
       function readRepeatedly() {
         return pushSource.dataRequest().then((result) => {
-          if (result.data.length == 0) {
+          if (result.data.length === 0) {
             logSource(`No data from source: closing`);
             controller.close();
             return;
@@ -379,9 +378,7 @@ function makePushSourceStream() {
 
 ```js hidden
 // Monkey patch fetch() so it returns a response that is a mocked stream
-window.fetch = async (...args) => {
-  return { body: stream };
-};
+window.fetch = async (...args) => ({ body: stream });
 ```
 
 The code below shows a more complete example.
@@ -456,9 +453,9 @@ The constructor takes two objects as parameters. The first object is required, a
 
 The first object can contain up to five members, only the first of which is required:
 
-1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. beginning generation of data or otherwise getting access to the source.
+1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g., beginning generation of data or otherwise getting access to the source.
 2. `pull(controller)` — A method that, when included, is called repeatedly until the stream's internal queue is full. This can be used to control the stream as more chunks are enqueued.
-3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
+3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
 4. `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream.
    Bytestreams are covered separately in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), as they are somewhat different in purpose and use case to regular (default) streams.
 
@@ -516,7 +513,7 @@ But a custom stream is still a `ReadableStream` instance, meaning you can attach
 > [!NOTE]
 > In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.
 
-The custom stream constructor has a `start()` method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
+The custom stream constructor has a `start()` method that uses a {{domxref("Window.setInterval", "setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
 
 ```js
 let interval;
@@ -608,7 +605,7 @@ function teeStream() {
 
 Another feature of streams is the ability to pipe streams into one another (called a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains)). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.
 
-We do have a simple example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
+We do have an example called [Unpack Chunks of a PNG](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) ([see it live also](https://mdn.github.io/dom-examples/streams/png-transform-stream/)) that fetches an image as a stream, then pipes it through to a custom PNG transform stream that retrieves PNG chunks out of a binary data stream.
 
 ```js
 // Fetch the original image

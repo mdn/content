@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMException.DOMException
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException()`** constructor returns a
 {{domxref("DOMException")}} object with a specified message and name.
@@ -22,10 +22,9 @@ new DOMException(message, name)
 ### Parameters
 
 - `message` {{optional_inline}}
-  - : A description of the exception. If not present, the empty string `''` is
-    used.
+  - : A description of the exception. If not present, the empty string `''` is used.
 - `name` {{optional_inline}}
-  - : A string. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name.
+  - : A string. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name. If not present, the string `'Error'` is used.
 
 ### Return value
 

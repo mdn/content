@@ -3,24 +3,75 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
+The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
+{{InteractiveExample("CSS Demo: matrix3d()")}}
+
+```css interactive-example-choice
+transform: matrix3d(
+  -0.6,
+  1.34788,
+  0,
+  0,
+  -2.34788,
+  -0.6,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  10,
+  1
+);
+```
+
+```css interactive-example-choice
+transform: matrix3d(
+  0.5,
+  0,
+  -0.866025,
+  0,
+  0.595877,
+  1.2,
+  -1.03209,
+  0,
+  0.866025,
+  0,
+  0.5,
+  0,
+  25.9808,
+  0,
+  15,
+  1
+);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
-
-The `matrix3d()` function is specified with 16 values. They are described in the column-major order.
 
 ```css
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 ```
 
 ### Values
+
+The `matrix3d()` function is specified with 16 values. They are described in the column-major order.
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
   _a3_ _b3_ _c3_ _d3_
@@ -53,6 +104,10 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

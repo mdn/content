@@ -28,11 +28,8 @@ getStatusForPolicy(policy)
 ### Parameters
 
 - `policy` {{optional_inline}}
-
   - : An object with the following optional properties:
-
     - `minHdcpVersion` {{optional_inline}}
-
       - : A string indicating the semantic version of the minimum HDCP version to check for usability, such as `1.0`, `1.4`, `2.2`, `2.3`.
 
 > [!NOTE]
@@ -72,11 +69,9 @@ The string can have one of the following values:
 ### Exceptions
 
 - `TypeError`
-
   - : The `policy` has no defined properties (policy restrictions), or a property key is not valid.
 
 - `NotSupportedError`
-
   - : The CDM cannot determine the status for any or all of the policy restrictions.
 
 ## Examples
@@ -142,7 +137,7 @@ async function getMediaStatus(config) {
     log(mediaStatus);
 
     // Get the content or fallback to an alternative if the
-    // keys are not usuable
+    // keys are not usable
     if (mediaStatus === "usable") {
       console.log("HDCP 2.2 can be enforced.");
       // Fetch the high resolution protected content

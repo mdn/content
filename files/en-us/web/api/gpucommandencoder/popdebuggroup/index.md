@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: popDebugGroup() method"
 short-title: popDebugGroup()
 slug: Web/API/GPUCommandEncoder/popDebugGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -33,14 +31,14 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUCommandEncoder")}} becomes invalid:
 
-- The command encoder's debug stack is not empty (i.e. at least one debug group was previously started with {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The command encoder's debug stack is not empty (i.e., at least one debug group was previously started with {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 
 ```js
-// ...
+// …
 
-commandEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+commandEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
@@ -52,7 +50,7 @@ passEncoder.end();
 
 commandEncoder.popDebugGroup(); // End labeled debug group
 
-// ...
+// …
 ```
 
 ## Specifications

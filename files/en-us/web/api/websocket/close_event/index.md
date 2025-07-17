@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.close_event
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The `close` event is fired when a connection with a `WebSocket` is closed.
 
@@ -14,10 +14,10 @@ The `close` event is fired when a connection with a `WebSocket` is closed.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("close", (event) => {});
+```js-nolint
+addEventListener("close", (event) => { })
 
-onclose = (event) => {};
+onclose = (event) => { }
 ```
 
 ## Event type

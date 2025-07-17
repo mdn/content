@@ -1,15 +1,46 @@
 ---
-title: ":visited"
+title: :visited
 slug: Web/CSS/:visited
 page-type: css-pseudo-class
 browser-compat: css.selectors.visited
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only to {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+a:visited {
+  color: forestgreen;
+  text-decoration-color: hotpink;
+}
+```
+
+```html interactive-example
+<p>Pages that you might have visited:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org">MDN Web Docs</a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/">YouTube</a>
+  </li>
+</ul>
+<p>Pages unlikely to be in your history:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/missing-1">Random MDN page</a>
+  </li>
+  <li>
+    <a href="https://example.com/missing-1">Random Example page</a>
+  </li>
+</ul>
+```
 
 Styles defined by the `:visited` and unvisited [`:link`](/en-US/docs/Web/CSS/:link) pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:visited` rule after the `:link` rule but before the `:hover` and `:active` rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
 
@@ -21,11 +52,11 @@ For privacy reasons, browsers strictly limit which styles you can apply using th
 - Allowable SVG attributes are {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.
 - The alpha component of the allowed styles will be ignored. The alpha component of the element's non-`:visited` state will be used instead. In Firefox when the alpha component is `0`, the style set in `:visited` will be ignored entirely.
 - Although these styles can change the appearance of colors to the end user, the {{domxref("window.getComputedStyle")}} method will lie and always return the value of the non-`:visited` color.
-- The [`<link>`](/en-US/docs/Web/HTML/Element/link) element is never matched by `:visited`.
+- The [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element is never matched by `:visited`.
 - DOM methods that match elements via CSS selectors — such as [`querySelector()`](/en-US/docs/Web/API/Document/querySelector) and [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) — will always return an "empty" result even if there are visited links in a document. For the aforementioned methods, this will be `null` or an empty [`NodeList`](/en-US/docs/Web/API/NodeList), respectively.
 
 > [!NOTE]
-> For more information on these limitations and the reasons behind them, see [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector).
+> For more information on these limitations and the reasons behind them, see [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector).
 
 ## Syntax
 
@@ -77,5 +108,5 @@ a:visited {
 
 ## See also
 
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
 - Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

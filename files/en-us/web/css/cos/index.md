@@ -3,11 +3,10 @@ title: cos()
 slug: Web/CSS/cos
 page-type: css-function
 browser-compat: css.types.cos
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
+The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
 ## Syntax
 
@@ -39,7 +38,7 @@ The cosine of an `angle` will always return a number between `−1` and `1`.
 
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

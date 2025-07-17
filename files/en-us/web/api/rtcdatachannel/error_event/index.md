@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -89,10 +89,10 @@ dc.addEventListener(
         break;
       case "dtls-failure":
         if (err.receivedAlert) {
-          console.error("    Received DLTS failure alert: ", err.receivedAlert);
+          console.error("    Received DTLS failure alert: ", err.receivedAlert);
         }
         if (err.sentAlert) {
-          console.error("    Sent DLTS failure alert: ", err.receivedAlert);
+          console.error("    Sent DTLS failure alert: ", err.receivedAlert);
         }
         break;
     }

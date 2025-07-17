@@ -46,7 +46,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
+Using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
 
 ### Using other canvas elements
 
@@ -77,7 +77,7 @@ img.addEventListener("load", () => {
 img.src = "myImage.png";
 ```
 
-If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
+If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Guides/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
 The examples below that deal with multiple images use an async function and [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`:
 
 ```js
@@ -98,7 +98,7 @@ draw();
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Reference/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 const img = new Image(); // Create new img element
@@ -235,7 +235,7 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 
 ```html
 <canvas id="canvas" width="150" height="150"></canvas>
-<div style="display: none;">
+<div class="hidden">
   <img
     id="source"
     src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
@@ -243,6 +243,12 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
     height="227" />
   <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 ```js

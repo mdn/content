@@ -108,7 +108,7 @@ In production code, avoid such entry points, especially on the browser main thre
 - `get*Parameter()` in general: possible flush + round-trip. In some cases, these will be cached to avoid the round-trip, but try to avoid relying on this.
 - `checkFramebufferStatus()`: possible flush + round-trip.
 - `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#use_non-blocking_async_data_readback) below.)
-- `readPixels()` to the CPU (i.e. without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
+- `readPixels()` to the CPU (i.e., without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
 
 ## Always enable vertex attrib 0 as an array
 
@@ -120,7 +120,7 @@ WebGL doesn't offer APIs to query the maximum amount of video memory on the syst
 
 One technique pioneered by the Google Maps team is the notion of a _per-pixel VRAM budget_:
 
-1\) For one system (e.g. a particular desktop / laptop), decide the maximum amount of VRAM your application should use. 2) Compute the number of pixels covered by a maximized browser window. E.g. `(window.innerWidth * devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)` 3) The per-pixel VRAM budget is (1) divided by (2), and is a constant.
+1\) For one system (e.g., a particular desktop / laptop), decide the maximum amount of VRAM your application should use. 2) Compute the number of pixels covered by a maximized browser window. E.g. `(window.innerWidth * devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)` 3) The per-pixel VRAM budget is (1) divided by (2), and is a constant.
 
 This constant should _generally_ be portable among systems. Mobile devices typically have smaller screens than powerful desktop machines with large monitors. Re-compute this constant on a few target systems to get a reliable estimate.
 
@@ -389,7 +389,7 @@ It may work on your system, but on many others it won't. Avoid it if you can. Ch
 
 Float16-blending is always supported.
 
-## Some formats (e.g. RGB) may be emulated
+## Some formats (e.g., RGB) may be emulated
 
 A number of formats (particularly three-channel formats) are emulated. For example, RGB32F is often actually RGBA32F, and Luminance8 may actually be RGBA8. RGB8 in particular is often surprisingly slow, as masking out the alpha channel and/or patching blend functions has fairly high overhead. Prefer to use RGBA8 and ignore the alpha yourself for better performance.
 
@@ -401,7 +401,7 @@ Most applications, even those requiring alpha blending, can be structured to pro
 
 ## Consider compressed texture formats
 
-While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g. normals or coordinates).
+While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g., normals or coordinates).
 
 Unfortunately, there's no single universally supported format. Every system has at least one of the following though:
 
@@ -428,7 +428,7 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://registry.khronos.org/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://docs.vulkan.org/spec/latest/chapters/pipelines.html) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
@@ -528,7 +528,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
       if (res === gl.WAIT_FAILED) {
-        reject();
+        reject(new Error("clientWaitSync failed"));
         return;
       }
       if (res === gl.TIMEOUT_EXPIRED) {
@@ -587,38 +587,29 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 
 ## ResizeObserver and 'device-pixel-content-box'
 
-On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
+On [supporting browsers](/en-US/docs/Web/API/ResizeObserverEntry/devicePixelContentBoxSize#browser_compatibility), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize =
-  window.getDevicePixelSize ||
-  (async (elem) => {
-    await new Promise((fn_resolve) => {
-      const observer = new ResizeObserver((entries) => {
-        for (const cur of entries) {
-          const dev_size = cur.devicePixelContentBoxSize;
-          const ret = {
-            width: dev_size[0].inlineSize,
-            height: dev_size[0].blockSize,
-          };
-          fn_resolve(ret);
-          observer.disconnect();
-          return;
-        }
-        throw `device-pixel-content-box not observed for elem ${elem}`;
-      });
-      observer.observe(elem, { box: "device-pixel-content-box" });
+function getDevicePixelSize(elem) {
+  return new Promise((resolve) => {
+    const observer = new ResizeObserver(([cur]) => {
+      if (!cur) {
+        throw new Error(
+          `device-pixel-content-box not observed for elem ${elem}`,
+        );
+      }
+      const devSize = cur.devicePixelContentBoxSize;
+      const ret = {
+        width: devSize[0].inlineSize,
+        height: devSize[0].blockSize,
+      };
+      resolve(ret);
+      observer.disconnect();
     });
+    observer.observe(elem, { box: "device-pixel-content-box" });
   });
+}
 ```
-
-Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.
-
-## ImageBitmap creation
-
-Using the [ImageBitmapOptions dictionary](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions) is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.
-
-[This JSFiddle](https://jsfiddle.net/ptkyewhx/) illustrates how to determine which dictionary members a given browser supports.
 
 ## Use `WEBGL_provoking_vertex` when it's available
 

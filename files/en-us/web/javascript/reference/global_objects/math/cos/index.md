@@ -1,15 +1,30 @@
 ---
 title: Math.cos()
+short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cos
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cos()`** static method returns the cosine of a number in radians.
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 ## Syntax
 

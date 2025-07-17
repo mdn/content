@@ -3,11 +3,10 @@ title: <image>
 slug: Web/CSS/image
 page-type: css-type
 browser-compat: css.types.image
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a two-dimensional image.
+The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a two-dimensional image.
 
 ## Syntax
 
@@ -57,8 +56,8 @@ The concrete object size is calculated using the following algorithm:
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Formal syntax
 
@@ -71,8 +70,8 @@ Browsers do not provide any special information on background images to assistiv
 ```css example-good
 url(test.jpg)               /* A <url>, as long as test.jpg is an actual image */
 linear-gradient(blue, red)  /* A <gradient> */
-element(#realid)            /* A part of the webpage, referenced with the element() function,
-                               if "realid" is an existing ID on the page */
+element(#real-id)            /* A part of the webpage, referenced with the element() function,
+                               if "real-id" is an existing ID on the page */
 image(ltr 'arrow.png#xywh=0,0,16,16', red)
                             /* A section 16x16 section of <url>, starting from the top, left of the original
                                image as long as arrow.png is a supported image, otherwise a solid
@@ -87,7 +86,7 @@ image-set('test.jpg' 1x, 'test-2x.jpg' 2x)
 ### Invalid images
 
 ```css example-bad
-nourl.jpg            /* An image file must be defined using the url() function. */
+no-url.jpg           /* An image file must be defined using the url() function. */
 url(report.pdf)      /* A file pointed to by the url() function must be an image. */
 element(#fakeid)     /* An element ID must be an existing ID on the page. */
 image(z.jpg#xy=0,0)  /* The spatial fragment must be written in the format of xywh=#,#,#,# */

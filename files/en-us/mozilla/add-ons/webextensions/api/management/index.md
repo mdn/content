@@ -3,9 +3,8 @@ title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
 page-type: webextension-api
 browser-compat: webextensions.api.management
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get information about installed add-ons.
 
@@ -33,7 +32,7 @@ Most of these operations require the "management" [API permission](/en-US/docs/M
 - {{WebExtAPIRef("management.getSelf()")}}
   - : Returns information about the calling add-on.
 - {{WebExtAPIRef("management.install()")}}
-  - : Installs a particular theme, given its URL at [addons.mozilla.org](https://addons.mozilla.org).
+  - : Installs a particular theme, given its URL at [addons.mozilla.org](https://addons.mozilla.org/).
 - {{WebExtAPIRef("management.uninstall()")}}
   - : Uninstalls a particular add-on, given its ID.
 - {{WebExtAPIRef("management.uninstallSelf()")}}
@@ -56,11 +55,11 @@ Most of these operations require the "management" [API permission](/en-US/docs/M
 - {{WebExtAPIRef("management.onDisabled")}}
   - : Fired when an add-on is disabled.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

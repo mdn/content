@@ -3,13 +3,49 @@ title: outline-style
 slug: Web/CSS/outline-style
 page-type: css-property
 browser-compat: css.properties.outline-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`outline-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 
-{{EmbedInteractiveExample("pages/css/outline-style.html")}}
+{{InteractiveExample("CSS Demo: outline-style")}}
+
+```css interactive-example-choice
+outline-style: none;
+```
+
+```css interactive-example-choice
+outline-style: dotted;
+```
+
+```css interactive-example-choice
+outline-style: solid;
+```
+
+```css interactive-example-choice
+outline-style: groove;
+```
+
+```css interactive-example-choice
+outline-style: inset;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
@@ -73,7 +109,7 @@ The `outline-style` property is specified as any one of the values listed below.
 
 ### Setting outline style to auto
 
-The `auto` value indicates a custom outline style, described in [the specification](https://www.w3.org/TR/css-ui-3/#outline-style) as "typically a style \[that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g. a rounded edge outline with semi-translucent outer pixels that appears to glow".
+The `auto` value indicates a custom outline style, described in [the specification](https://drafts.csswg.org/css-ui/#outline-style) as "typically a style \[that] is either a user interface default for the platform, or perhaps a style that is richer than can be described in detail in CSS, e.g., a rounded edge outline with semi-translucent outer pixels that appears to glow".
 
 #### HTML
 

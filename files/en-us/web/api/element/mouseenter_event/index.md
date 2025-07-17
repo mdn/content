@@ -16,10 +16,10 @@ Note that "moving into an element" refers to the element's position in the DOM t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseenter", (event) => {});
+```js-nolint
+addEventListener("mouseenter", (event) => { })
 
-onmouseenter = (event) => {};
+onmouseenter = (event) => { }
 ```
 
 ## Event type
@@ -82,10 +82,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Usage notes
 
-Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.
+Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space. Other than that, enter and over events for the same situation are dispatched at the same time, if appropriate.
 
 ### Behavior of `mouseenter` events
 
+This describes the mouseenter events received by each of four concentric divs with no padding or margin, so the events all happen at the same time:
 ![Mouseenter behavior diagram](mouseenter.png)
 One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
@@ -177,7 +178,7 @@ function addListItem(text) {
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
@@ -187,3 +188,4 @@ function addListItem(text) {
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerenter_event", "pointerenter")}}

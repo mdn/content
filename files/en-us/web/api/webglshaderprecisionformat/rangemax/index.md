@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLShaderPrecisionFormat.rangeMax
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLShaderPrecisionFormat.rangeMax`** property returns the base 2 log of the absolute value of the maximum value that can be represented.
 

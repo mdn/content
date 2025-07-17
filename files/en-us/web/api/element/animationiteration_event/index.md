@@ -14,10 +14,10 @@ The **`animationiteration`** event is fired when an iteration of a [CSS Animatio
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationiteration", (event) => {});
+```js-nolint
+addEventListener("animationiteration", (event) => { })
 
-onanimationiteration = (event) => {};
+onanimationiteration = (event) => { }
 ```
 
 ## Event type
@@ -96,11 +96,11 @@ animated.onanimationiteration = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(100%) scaleX(3);
   }

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.samplerParameteri
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.samplerParameter[if]()`** methods
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
@@ -24,9 +24,7 @@ samplerParameterf(sampler, pname, param)
 - `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. Possible values:
-
     - `gl.TEXTURE_COMPARE_FUNC`
       - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
         texture comparison function.

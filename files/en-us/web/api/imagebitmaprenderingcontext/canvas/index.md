@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ImageBitmapRenderingContext.canvas
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageBitmapRenderingContext.canvas`** property, part of the
 [Canvas API](/en-US/docs/Web/API/Canvas_API), is a read-only reference to the

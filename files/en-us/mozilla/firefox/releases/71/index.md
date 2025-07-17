@@ -1,10 +1,10 @@
 ---
 title: Firefox 71 for Developers
+short-title: Firefox 71
 slug: Mozilla/Firefox/Releases/71
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
 
@@ -43,7 +43,7 @@ This article provides information about the changes in Firefox 71 that will affe
 - Added the [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
 - Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1426010](https://bugzil.la/1426010))
 - Added support for the `path()` value of {{cssxref("clip-path")}} ([Firefox bug 1488530](https://bugzil.la/1488530))
-- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
+- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
 #### Removals
 
@@ -59,7 +59,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 ### MathML
 
-- [MathML elements](/en-US/docs/Web/MathML/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
+- [MathML elements](/en-US/docs/Web/MathML/Reference/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
 
 ### APIs
 
@@ -103,7 +103,6 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ### API changes
 
 - {{WebExtAPIRef("downloads.download")}} now identifies and reports as errors the following HTTP response codes:
-
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`
@@ -118,7 +117,3 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ## See also
 
 - Hacks release post: [Firefox 71: A year-end arrival](https://hacks.mozilla.org/2019/12/firefox-71-a-year-end-arrival/)
-
-## Older versions
-
-{{Firefox_for_developers}}

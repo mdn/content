@@ -8,9 +8,9 @@ browser-compat: api.HTMLAnchorElement.hash
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLAnchorElement.hash`** property returns a string containing a `'#'` followed by the fragment identifier of the URL.
+The **`hash`** property of the {{domxref("HTMLAnchorElement")}} interface is a string containing a `"#"` followed by the fragment identifier of the `<a>` element's `href`. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 
-The fragment is [percent-encoded](/en-US/docs/Glossary/Percent-encoding). If the URL does not have a fragment identifier, this property contains an empty string, `""`.
+See {{domxref("URL.hash")}} for more information.
 
 ## Value
 

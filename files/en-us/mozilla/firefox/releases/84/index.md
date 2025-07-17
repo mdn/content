@@ -1,10 +1,10 @@
 ---
 title: Firefox 84 for developers
+short-title: Firefox 84
 slug: Mozilla/Firefox/Releases/84
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
 
@@ -39,7 +39,7 @@ _No changes._
 
 ### Security
 
-- Firefox now ensures that `localhost` URLs — such as `http://localhost/` and `http://dev.localhost/` — refer to the local host's loopback interface (e.g. `http://127.0.0.1`). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ([Firefox bug 1220810](https://bugzil.la/1220810), [Firefox bug 1488740](https://bugzil.la/1488740)).
+- Firefox now ensures that `localhost` URLs — such as `http://localhost/` and `http://dev.localhost/` — refer to the local host's loopback interface (e.g., `http://127.0.0.1`). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ([Firefox bug 1220810](https://bugzil.la/1220810), [Firefox bug 1488740](https://bugzil.la/1488740)).
 
 ### APIs
 
@@ -64,7 +64,7 @@ _No changes._
 - The new Fission-compatible API has been enabled by default now. To revert to the former API the `marionette.actors.enabled` preference has to be set to `false` ([Firefox bug 1669169](https://bugzil.la/1669169)).
 - Fixed `WebDriver:SwitchToWindow` to always switch back to the top-level browsing context ([Firefox bug 1305822](https://bugzil.la/1305822)).
 - Improved browsing context checks for `WebDriver:SwitchToParentFrame` ([Firefox bug 1671622](https://bugzil.la/1671622)).
-- Fixed a hang for `WebDriver:Back` encountered when the currently-selected [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) gets unloaded ([Firefox bug 1672758](https://bugzil.la/1672758)).
+- Fixed a hang for `WebDriver:Back` encountered when the currently-selected [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) gets unloaded ([Firefox bug 1672758](https://bugzil.la/1672758)).
 
 #### Known bugs
 
@@ -73,7 +73,3 @@ _No changes._
 ## Changes for add-on developers
 
 - The [`browsingData.remove()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove) API now supports removing a subset of data types by `cookieStoreId`.
-
-## Older versions
-
-{{Firefox_for_developers}}

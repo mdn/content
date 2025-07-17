@@ -14,15 +14,15 @@ removes the {{domxref("Attr")}} corresponding to the given namespace and local n
 ## Syntax
 
 ```js-nolint
-removeNamedItem(namespace, localName)
+removeNamedItemNS(namespace, localName)
 ```
 
 ### Parameters
 
 - `namespace`
-
   - : The namespace of the attribute to remove from the map
-    > **Warning:** `namespace` is the URI of the namespace, not the prefix.
+    > [!WARNING]
+    > `namespace` is the URI of the namespace, not the prefix.
 
 - `localName`
   - : The local name of the attribute to remove from the map.

@@ -21,27 +21,20 @@ setParameters(parameters)
 ### Parameters
 
 - `parameters`
-
   - : A parameters object previously obtained by calling the same sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with the desired changes to the sender's configuration parameters.
     These parameters include potential codecs that could be use for encoding the sender's {{domxref("RTCRtpSender.track", "track")}}.
     The available parameters are:
-
     - `encodings`
-
       - : An array of objects, each specifying the parameters for a single codec that could be used to encode the track's media.
         The properties of the objects include:
-
         - `active`
-
           - : Setting this value `true` (the default) causes this encoding to be sent, while `false` stops it from being sent and used (but does not cause the SSRC to be removed).
 
         - `dtx` {{Deprecated_Inline}} {{Non-standard_Inline}}
-
           - : Only used for an {{domxref("RTCRtpSender")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio`, this property indicates whether or not to use discontinuous transmission (a feature by which a phone is turned off or the microphone muted automatically in the absence of voice activity).
             The value is taken either `enabled` or `disabled`.
 
         - `maxBitrate`
-
           - : A positive integer indicating the maximum number of bits per second that the user agent is allowed to grant to tracks encoded with this encoding.
             Other parameters may further constrain the bit rate, such as the value of `maxFramerate`, or the bandwidth available for the transport or physical network.
 
@@ -56,7 +49,6 @@ setParameters(parameters)
           - : A string indicating the priority of the {{domxref("RTCRtpSender")}}, which may determine how the user agent allocates bandwidth between senders.
             Allowed values are `very-low`, `low` (default), `medium`, `high`.
         - `rid`
-
           - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension.
             This parameter cannot be modified using `setParameters()`.
             Its value can only be set when the transceiver is first created.
@@ -72,33 +64,27 @@ setParameters(parameters)
         This ID is set in the previous {{domxref("RTCRtpSender.getParameters", "getParameters()")}} call, and ensures that the parameters originated from a previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
         <!-- spec defines following in RTCRtpParameters -->
     - `codecs`
-
-      - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) from which the sender will choose.
+      - : An array of objects describing the [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) from which the sender will choose.
         This parameter cannot be changed once initially set.
 
         Each codec object in the array may have the following properties: <!-- RTCRtpCodecParameters -->
-
         - `channels` {{optional_inline}}
-
           - : A positive integer indicating the number of channels supported by the codec.
             For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
         - `clockRate`
-
           - : A positive integer specifying the codec's clock rate in Hertz (Hz).
             The clock rate is the rate at which the codec's RTP timestamp advances.
             Most codecs have specific values or ranges of values they permit.
             The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 
         - `mimeType`
-
           - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
             The MIME type strings used by RTP differ from those used elsewhere.
             IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
-            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
         - `payloadType`
-
           - : The [RTP payload type](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1) used to identify this codec.
 
         - `sdpFmtpLine` {{optional_inline}}
@@ -190,11 +176,7 @@ async function setVideoParams(sender, height, bitrate) {
   const params = sender.getParameters();
 
   // If encodings is null, create it
-
-  if (!params.encodings) {
-    params.encodings = [{}];
-  }
-
+  params.encodings ??= [{}];
   params.encodings[0].scaleResolutionDownBy = Math.max(scaleRatio, 1);
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
@@ -228,5 +210,5 @@ This code will cleanly fall back and work the normal way if the browser fully im
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Web media technologies](/en-US/docs/Web/Media)

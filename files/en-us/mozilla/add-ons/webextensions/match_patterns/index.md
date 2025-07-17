@@ -3,9 +3,8 @@ title: Match patterns
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 page-type: guide
 browser-compat: webextensions.match_patterns.scheme
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are used in WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) listeners to.
 
@@ -360,11 +359,11 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     </tr>
     <tr>
       <td><code>*://*</code></td>
-      <td>Empty path: this should be "<code>*://*/*</code>".</td>
+      <td>Empty path: this should be <code>*://*/*</code>.</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
-      <td>Empty path: this should be "<code>file:///*</code>".</td>
+      <td>Empty path: this should be <code>file:///*</code>.</td>
     </tr>
   </tbody>
 </table>

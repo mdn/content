@@ -1,10 +1,10 @@
 ---
 title: Firefox 115 for developers
+short-title: Firefox 115
 slug: Mozilla/Firefox/Releases/115
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 115 that affect developers. Firefox 115 was released on July 04, 2023.
 
@@ -12,13 +12,13 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTML
 
-- The [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
+- The [`modulepreload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) keyword for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element is now supported.
   This allows early (and asynchronous) fetching of [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) and their dependencies in parallel, which are then stored in the document's module map ([Firefox bug 1425310](https://bugzil.la/1425310)).
 
 ### CSS
 
 - The CSS {{cssxref("animation-composition")}} property is now supported by default. You can use this property to specify the composite operation to use when multiple animations affect the same property simultaneously. ([Firefox bug 1823862](https://bugzil.la/1823862)).
-- The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
+- The `supports-conditions` in the CSS {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) `supports()` function is now supported by default. This feature allows stylesheets to be imported only if the specified feature is supported in the user's browser. ([Firefox bug 1830779](https://bugzil.la/1830779)).
 
 ### JavaScript
 
@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 115 that affect d
 
 ### HTTP
 
-- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
+- The [`Sec-Purpose`](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is now included in requests to {{Glossary("Prefetch")}} resources.
   This allows servers to provide any special handling that might be needed, such as adjusting the caching expiry for the request ([Firefox bug 1836328](https://bugzil.la/1836328)).
 
 ### APIs
@@ -62,14 +62,10 @@ This article provides information about the changes in Firefox 115 that affect d
 #### Marionette
 
 - Both the commands `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` now correctly wait for the requested accessibility object for an element to exist if it just got inserted into the DOM ([Firefox bug 1828816](https://bugzil.la/1828816)).
-- All instances of `window.setTimeout()` in our privileged code running in content processes now use a variant timer that is not affected by the throttling of the timers in case the given tab for automation is in the background.
+- All instances of {{domxref("Window.setTimeout()")}} in our privileged code running in content processes now use a variant timer that is not affected by the throttling of the timers in case the given tab for automation is in the background.
 
 ## Changes for add-on developers
 
 - To support its deprecation from Manifest V3 extensions, manifest key property [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) defaults to `false` in [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) for Manifest V3 extensions ([Firefox bug 1830710](https://bugzil.la/1830710)). See [Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
 - The {{WebExtAPIRef("commands.onChanged")}} event, which enables web extensions to listen for changes to command shortcuts, has been added ([Firefox bug 1801531](https://bugzil.la/1801531)).
 - Support has been added for {{WebExtAPIRef("storage.session")}}, which provides the ability to store data in memory for the duration of the browser session ([Firefox bug 18237131](https://bugzil.la/1823713)).
-
-## Older versions
-
-{{Firefox_for_developers}}

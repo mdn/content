@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.numberingSystem
+short-title: numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.numberingSystem
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instances returns the [numeral system](https://en.wikipedia.org/wiki/Numeral_system) for this locale.
 
@@ -13,7 +13,7 @@ The **`numberingSystem`** accessor property of {{jsxref("Intl.Locale")}} instanc
 
 A numeral system is a system for expressing numbers. The `numberingSystem` property's value is set at construction time, either through the `nu` key of the locale identifier or through the `numberingSystem` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
+For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
 
 ## Examples
 

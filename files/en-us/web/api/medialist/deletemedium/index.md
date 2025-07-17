@@ -37,7 +37,7 @@ The following removes the media query `print` from the
 
 ```js
 const stylesheet = document.styleSheets[0];
-stylesheet.media.removeMedium("print");
+stylesheet.media.deleteMedium("print");
 ```
 
 ## Specifications

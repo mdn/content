@@ -1,10 +1,10 @@
 ---
 title: Firefox 110 for developers
+short-title: Firefox 110
 slug: Mozilla/Firefox/Releases/110
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 110 that will affect developers. Firefox 110 was released on February 14, 2023.
 
@@ -19,12 +19,12 @@ No notable changes.
 - Container queries and container query length units are now supported by default.
   For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) documentation ([Firefox bug 1809720](https://bugzil.la/1809720)).
 - The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ([Firefox bug 1422237](https://bugzil.la/1422237)).
-- The [`list`](/en-US/docs/Web/HTML/Element/datalist#color_type) attribute is supported in `<input>` elements with `type="color"` on Windows and Linux ([Firefox bug 960984](https://bugzil.la/960984)).
+- The [`list`](/en-US/docs/Web/HTML/Reference/Elements/datalist#color_type) attribute is supported in `<input>` elements with `type="color"` on Windows and Linux ([Firefox bug 960984](https://bugzil.la/960984)).
 - The [`@page`](/en-US/docs/Web/CSS/@page) at-rule now supports named pages, which allows a user to create page breaks for specific selectors using the [`page`](/en-US/docs/Web/CSS/page) property ([Firefox bug 1787947](https://bugzil.la/1787947))
 
 ### JavaScript
 
-- Serialization of [native Error types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) now includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property in workers when using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage) and [`structuredClone()`](/en-US/docs/Web/API/structuredClone).
+- Serialization of [native Error types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) now includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property in workers when using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage) and {{DOMxRef("Window.structuredClone", "structuredClone()")}}.
   With this addition, cloning native error stacks now works for all methods that use the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), in both the main thread and workers.
   (See [Firefox bug 1774866](https://bugzil.la/1774866) for more details.)
 
@@ -72,9 +72,5 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- Added the `"webRequestFilterResponse"`[API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}}. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using this permission ([Firefox bug 1809235](https://bugzil.la/1809235)).
+- Added the `"webRequestFilterResponse"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}}. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using this permission ([Firefox bug 1809235](https://bugzil.la/1809235)).
 - The `defaultZoomFactor` property of {{WebExtAPIRef("tabs.ZoomSettings")}} now returns the value of the default zoom factor setting ([Firefox bug 1772166](https://bugzil.la/1772166))
-
-## Older versions
-
-{{Firefox_for_developers}}

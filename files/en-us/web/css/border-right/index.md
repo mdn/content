@@ -3,13 +3,50 @@ title: border-right
 slug: Web/CSS/border-right
 page-type: css-shorthand-property
 browser-compat: css.properties.border-right
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-right`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/border).
 
-The **`border-right`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/border).
+{{InteractiveExample("CSS Demo: border-right")}}
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgb(211 220 50 / 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 As with all shorthand properties, `border-right` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 

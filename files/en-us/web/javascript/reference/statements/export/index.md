@@ -3,9 +3,8 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
 browser-compat: javascript.statements.export
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
 
@@ -130,6 +129,7 @@ export default k;
 ```js
 // some other file
 import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+
 console.log(m); // 12
 ```
 
@@ -159,6 +159,7 @@ Which is comparable to a combination of import and export, except that `function
 
 ```js
 import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -185,6 +186,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -264,14 +266,14 @@ console.log(foo); // 4.555806215962888
 It is important to note the following:
 
 - You need to include this script in your HTML with a {{HTMLElement("script")}} element of `type="module"`, so that it gets recognized as a module and dealt with appropriately.
-- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/CORS) errors. You need to run it via an HTTP server.
+- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/Guides/CORS) errors. You need to run it via an HTTP server.
 
 ### Using the default export
 
-If we want to export a single value or to have a fallback value for your module, you could use a default export:
+If we want to export a single value representing an entire module, we could use a default export:
 
 ```js
-// module "my-module.js"
+// module "cube.js"
 
 export default function cube(x) {
   return x * x * x;
@@ -281,7 +283,8 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from "./my-module.js";
+import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 

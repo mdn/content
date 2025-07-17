@@ -17,14 +17,14 @@ spec-urls:
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 
-The Speculation Rules API provides an alternative to the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) feature and is designed to supersede the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
+The Speculation Rules API provides an alternative to the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) feature and is designed to supersede the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender) feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
 
 > [!NOTE]
 > The Speculation Rules API doesn't handle subresource prefetches; for that you'll need to use `<link rel="prefetch">`.
 
 ## Concepts and usage
 
-Speculation rules can be specified inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
+Speculation rules can be specified inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
 
 A script example:
 
@@ -55,7 +55,7 @@ A script example:
 </script>
 ```
 
-Speculation rules using a `<script>` element need to be explicitly allowed in the {{httpheader("Content-Security-Policy")}} [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `'inline-speculation-rules'` source along with a hash- or nonce-source.
+Speculation rules using a `<script>` element need to be explicitly allowed in the {{httpheader("Content-Security-Policy")}} [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source.
 
 An HTTP header example:
 
@@ -70,7 +70,7 @@ The text resource containing the speculation rules JSON can have any valid name 
 
 You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit {{httpheader("Referrer-Policy")}} setting for each rule. Note that prerendered URLs are also prefetched.
 
-See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) for a full explanation of the available syntax.
+See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) for a full explanation of the available syntax.
 
 ### Using prefetching
 
@@ -85,7 +85,7 @@ Same-site and cross-site prefetches will work, but cross-site prefetches are lim
 > [!NOTE]
 > In the future an opt-in for cross-site prefetches will be provided via the {{httpheader("Supports-Loading-Mode")}} header, but this was not implemented at the time of writing (only cross-origin, same-site [prerendering](#using_prerendering) opt-in was available).
 
-For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
+For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
 
 - It can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
 - It doesn't get blocked by {{httpheader("Cache-Control")}} headers, whereas `<link rel="prefetch">` often does.
@@ -112,7 +112,7 @@ Prerendering uses memory and network bandwidth. If you prerender something the u
 
 Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation target to opt-in using the {{httpheader("Supports-Loading-Mode")}} header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
 
-For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
+For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender):
 
 - `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it.
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.
@@ -260,9 +260,12 @@ It is also potentially risky to prefetch a document whose server-rendered conten
 > [!NOTE]
 > Browsers will cache prefetched pages for a short time (Chrome for example caches them for 5 minutes) before discarding them, so in any case, your users might see content that is up to 5 minutes out of date.
 
+Stale prefetches can be cleared using the {{httpheader("Clear-Site-Data#prefetchCache", "prefetchCache")}} value of the {{httpheader("Clear-Site-Data")}} response header.
+This might be used, for example, when for state changing requests mean that the cached data is no longer valid, such as when logging out of a site.
+
 Prefetching is safe if all side effects of fetching the page result from JavaScript execution, since the JavaScript will not run until activation.
 
-One final tip is to audit the URLs listed as disallowed in your {{glossary("robots.txt")}} file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e. they exhibit the conditions described above).
+One final tip is to audit the URLs listed as disallowed in your {{glossary("robots.txt")}} file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e., they exhibit the conditions described above).
 
 ### Unsafe prerendering
 
@@ -306,6 +309,10 @@ User-specific state problems can occur for other user settings, for example lang
 
 The best mitigation for these cases, and indeed any time when content can get out of sync with the server, is for pages to refresh themselves as needed. For example, a server might use the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("Window/fetch", "fetch()")}} or a {{domxref("WebSocket")}}. Pages can then update themselves appropriately, including speculatively loaded pages that have not yet been activated.
 
+Where refreshes are not possible, speculations can be cleared using the {{httpheader("Clear-Site-Data")}} response header with the {{httpheader("Clear-Site-Data#prefetchCache", `prefetchCache`)}} or {{httpheader("Clear-Site-Data#prerenderCache", `prerenderCache`)}} values (or both) as appropriate.
+
+The header can be returned on any same-site HTTP request (such as an `/api/add-to-cart` API call).
+
 ## Session history behavior for prerendered documents
 
 Activating a prerendering/prerendered document behaves like any conventional navigation, from the end-user perspective. The activated document is displayed in the tab and appended to session history, and any existing forward history entries are pruned. Any navigations taking place within the prerendering browsing context _before_ activation do not affect the session history.
@@ -314,7 +321,7 @@ From the developer's perspective, a prerendering document can be thought of as h
 
 While API features that operate on session history (for example {{domxref("History")}} and {{domxref("Navigation")}}) can be called within prerendering documents, they only operate on the context's trivial session history. Consequently, prerendering documents do not take part in their referring page's joint session history. For example, they cannot navigate their referrer via {{domxref("History.back()")}}.
 
-This design ensures that users get the expected experience when using the back button — i.e. that they are taken back to the last thing they saw. Once a prerendering document is activated, only a single session history entry gets appended to the joint session history, ignoring any previous navigations that happened within the prerendering browsing context. Going back one step in the joint session history — for example, by pressing the back button — takes the user back to the referrer page.
+This design ensures that users get the expected experience when using the back button — i.e., that they are taken back to the last thing they saw. Once a prerendering document is activated, only a single session history entry gets appended to the joint session history, ignoring any previous navigations that happened within the prerendering browsing context. Going back one step in the joint session history — for example, by pressing the back button — takes the user back to the referrer page.
 
 ## Platform features deferred or restricted during prerender
 
@@ -381,16 +388,16 @@ APIs that require the containing document to be focused:
 
 APIs that require the containing document's {{domxref("Document.visibilityState")}} to be `"visible"`:
 
-- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible", _or_ {{glossary("transient activation")}})
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible"`, _or_ {{glossary("transient activation")}})
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
 
 ### Other restricted features
 
-- Download links, i.e. {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
+- Download links, i.e., {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
 - No cross-site navigations: Any prerendering document that navigates to a different site will be immediately discarded before a request to that other site is sent.
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
-  - [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
-  - [`data:` URLs](/en-US/docs/Web/URI/Schemes/data)
+  - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
+  - [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
   - `blob:` URLs
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
@@ -411,7 +418,7 @@ The Speculation Rules API does not define any interfaces of its own.
 - {{domxref("Document.prerendering")}} {{experimental_inline}}
   - : A boolean property that returns `true` if the document is currently in the process of prerendering.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event {{experimental_inline}}
-  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
+  - : Fired on a prerendered document when it is activated (i.e., the user views the page).
 - {{domxref("PerformanceNavigationTiming.activationStart")}} {{experimental_inline}}
   - : A number representing the time between when a document starts prerendering and when it is activated.
 - {{domxref("PerformanceResourceTiming.deliveryType")}} `"navigational-prefetch"` value {{experimental_inline}}
@@ -421,6 +428,8 @@ The Speculation Rules API does not define any interfaces of its own.
 
 - {{httpheader("Content-Security-Policy")}} `'inline-speculation-rules'` value {{experimental_inline}}
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
+- {{httpheader("Clear-Site-Data")}} `'prefetchCache'` and `'prerenderCache'` values {{experimental_inline}}
+  - : Use to clear speculations. For example, when state changes that renders the speculations stale.
 - {{httpheader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{httpheader("Supports-Loading-Mode")}} {{experimental_inline}}
@@ -428,12 +437,12 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## HTML features
 
-- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
   - : Used to define a set of prefetch and/or prerender speculation rules inside the current document, which are added to the document's speculation rule set.
 
 ## Examples
 
-You can find a [complete prerender demo here](https://prerender-demos.glitch.me/).
+For code examples, see [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2025)
 
 ## Specifications
 
@@ -445,5 +454,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 
 ## See also
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

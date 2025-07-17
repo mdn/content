@@ -10,7 +10,7 @@ browser-compat: api.Window.requestIdleCallback
 
 The **`window.requestIdleCallback()`** method queues a function
 to be called during a browser's idle periods. This enables developers to perform
-background and low priority work on the main event loop, without impacting
+background and low priority work on the main thread, without impacting
 latency-critical events such as animation and input response. Functions are generally
 called in first-in-first-out order; however, callbacks which have a `timeout`
 specified may be called out-of-order if necessary in order to run them before the
@@ -39,9 +39,7 @@ requestIdleCallback(callback, options)
     describing the amount of time available and whether or not the callback has been run
     because the timeout period expired.
 - `options` {{optional_inline}}
-
   - : Contains optional configuration parameters. Currently only one property is defined:
-
     - `timeout`
       - : If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
@@ -65,8 +63,8 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 
 ## See also
 
-- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

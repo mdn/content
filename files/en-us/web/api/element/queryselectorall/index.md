@@ -22,12 +22,11 @@ querySelectorAll(selectors)
 ### Parameters
 
 - `selectors`
-
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
     The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
 
@@ -68,14 +67,14 @@ const refs = [
 ### Obtaining a list of matches
 
 To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements
-contained within the element `"myBox"`:
+contained within the element `myBox`:
 
 ```js
 const matches = myBox.querySelectorAll("p");
 ```
 
 This example returns a list of all {{HTMLElement("div")}} elements within
-`"myBox"` with a class of either "`note`" or "`alert`":
+`myBox` with a class of either `note` or `alert`:
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");
@@ -98,11 +97,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `"userlist"` which have a `"data-active"`
+a list whose ID is `"user-list"` which have a `"data-active"`
 attribute whose value is `"1"`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 
@@ -123,7 +122,8 @@ highlightedItems.forEach((userItem) => {
 });
 ```
 
-> **Note:** `NodeList` is not a genuine array, that is to say it doesn't
+> [!NOTE]
+> `NodeList` is not a genuine array, that is to say it doesn't
 > have array methods like `slice`, `some`, `map`, etc. To convert it into an array, try
 > `Array.from(nodeList)`.
 
@@ -204,7 +204,7 @@ When we press "Select with :scope", the `:scope` pseudo-class restricts the sele
 
 ### Escaping attribute values
 
-This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
+This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
 
 #### HTML
 
@@ -295,7 +295,7 @@ Clicking the first button gives an error, while the second and third buttons wor
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} and
   {{domxref("Document.querySelectorAll()")}}

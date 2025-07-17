@@ -41,7 +41,8 @@ There are two different ways to format keyframes:
    );
    ```
 
-   > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
+   > [!NOTE]
+   > `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
 
    It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
 
@@ -103,7 +104,7 @@ There are two different ways to format keyframes:
 
 ### Implicit to/from keyframes
 
-In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+In newer browser versions, you are able to set a beginning or end state for an animation only (i.e., a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js
 let rotate360 = [{ transform: "rotate(360deg)" }];

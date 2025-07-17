@@ -1,10 +1,10 @@
 ---
 title: Using CSS gradients
+short-title: Using gradients
 slug: Web/CSS/CSS_images/Using_CSS_gradients
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS gradients** are represented by the {{cssxref("&lt;gradient&gt;")}} data type, a special type of {{cssxref("&lt;image&gt;")}} made of a progressive transition between two or more colors. You can choose between three types of gradients: _linear_ (created with the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} function), _radial_ (created with the {{cssxref("gradient/radial-gradient", "radial-gradient()")}} function), and _conic_ (created with the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function). You can also create repeating gradients with the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, and {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} functions.
 
@@ -285,7 +285,7 @@ In both examples, the gradient is written twice: the first is the CSS Images Lev
 By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
 
 ```html hidden
-<div class="colorhint-gradient"></div>
+<div class="color-hint-gradient"></div>
 <div class="regular-progression"></div>
 ```
 
@@ -300,7 +300,7 @@ div {
 ```
 
 ```css
-.colorhint-gradient {
+.color-hint-gradient {
   background: linear-gradient(to top, lime, 20%, cyan);
 }
 .regular-progression {
@@ -327,8 +327,8 @@ div {
 
 ```css
 .layered-image {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -351,11 +351,8 @@ div {
 
 ```css
 .stacked-linear {
-  background: linear-gradient(
-      217deg,
-      rgb(255 0 0 / 80%),
-      rgb(255 0 0 / 0%) 70.71%
-    ),
+  background:
+    linear-gradient(217deg, rgb(255 0 0 / 80%), rgb(255 0 0 / 0%) 70.71%),
     linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
     linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
 }
@@ -386,7 +383,8 @@ div {
 
 ```css
 div {
-  background: linear-gradient(to top, red, blue),
+  background:
+    linear-gradient(to top, red, blue),
     linear-gradient(to right, #5500ff, #00ff55);
 }
 
@@ -792,7 +790,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgb(255 0 0 / 50%) 40px,
       rgb(255 153 0 / 50%) 80px,
@@ -847,7 +846,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -892,7 +892,8 @@ div {
       rgb(143 77 63 / 25%) 10px
     );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgb(255 127 0 / 25%) 50px 56px,
@@ -1037,7 +1038,8 @@ div {
 
 ```css
 .multi-repeating-conic {
-  background: repeating-conic-gradient(
+  background:
+    repeating-conic-gradient(
       from 0deg at 80% 50%,
       #5691f580 0% 8.25%,
       #b338ff80 8.25% 16.5%,

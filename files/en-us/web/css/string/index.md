@@ -3,11 +3,10 @@ title: <string>
 slug: Web/CSS/string
 page-type: css-type
 browser-compat: css.types.string
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<string>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a sequence of characters. Strings are used in numerous CSS properties, such as {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, and {{CSSxRef("quotes")}}.
+The **`<string>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a sequence of characters. Strings are used in numerous CSS properties, such as {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, and {{CSSxRef("quotes")}}.
 
 ## Syntax
 
@@ -21,14 +20,15 @@ To output new lines, you must escape them with a line feed character such as `\A
 
 However, to get new lines, you must also set the {{cssxref("white-space")}} property to appropriate value.
 
-> **Note:** {{glossary("character reference", "Character references")}} (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
+> [!NOTE]
+> {{glossary("character reference", "Character references")}} (such as `&nbsp;` or `&#8212;`) cannot be used in a CSS `<string>`.
 
 ## Examples
 
 ### Examples of valid strings
 
 ```css
-/* Simple strings */
+/* Basic strings */
 "This string is demarcated by double quotes."
 'This string is demarcated by single quotes.'
 
@@ -58,6 +58,6 @@ awesome string"
 
 ## See also
 
-- [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS basic data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Introduction to CSS: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -7,7 +7,7 @@ browser-compat: api.XSLTProcessor
 
 {{APIRef("XSLT")}}
 
-An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to
+An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XML/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to
 manipulate `<xsl:param>` parameter values, and to apply the
 transformation to documents.
@@ -21,7 +21,7 @@ transformation to documents.
 
 - {{domxref("XSLTProcessor.importStylesheet()")}}
   - : Imports the XSLT stylesheet.
-    If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt/#result-element-stylesheet);
+    If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt-30/#literal-result-element);
     otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
 - {{domxref("XSLTProcessor.transformToFragment()")}}
   - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
@@ -61,7 +61,7 @@ async function init() {
   xsltProcessor.importStylesheet(xslStylesheet);
 
   // process the file
-  // ...
+  // …
 }
 ```
 
@@ -103,7 +103,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### Basic Example
 
-The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/XSLTProcessor/Generating_HTML) example. The XML file describes an article and the XSL file formats the information for display.
+The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
 
 #### XML
 
@@ -220,7 +220,7 @@ init();
 
 ### Advanced example
 
-This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslloaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
+This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslLoaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
 
 The XSLT file has a parameter called `myOrder` that JavaScript sets to change the sorting method. The `xsl:sort` element's order attribute can access the value of the parameter using `$myOrder`. However, the value needs to be an XPATH expression and not a string, so `{$myOrder}` is used. Using {} evaluates the content as an XPath expression.
 
@@ -247,7 +247,7 @@ Once the transformation is complete, the result is appended to the document, as 
 
 ```js
 let xslRef;
-let xslloaded = false;
+let xslLoaded = false;
 const parser = new DOMParser();
 const xsltProcessor = new XSLTProcessor();
 let myDOM;
@@ -255,12 +255,12 @@ let myDOM;
 let xmlRef = document.implementation.createDocument("", "", null);
 
 async function sort() {
-  if (!xslloaded) {
+  if (!xslLoaded) {
     const response = await fetch("example2.xsl");
     const xslText = await response.text();
     xslRef = parser.parseFromString(xslText, "application/xml");
     xsltProcessor.importStylesheet(xslRef);
-    xslloaded = true;
+    xslLoaded = true;
   }
 
   // Create a new XML document in memory
@@ -328,7 +328,8 @@ async function sort() {
 
 ## See also
 
-- [XSLT](/en-US/docs/Web/XSLT)
-- [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
+- [XSLT](/en-US/docs/Web/XML/XSLT)
+- [Transforming with XSLT](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)
+- [Chapter 15 of the XML 1.1 Bible: XSL Transformations](https://www.ibiblio.org/xml/books/bible3/chapters/ch15.html)
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)

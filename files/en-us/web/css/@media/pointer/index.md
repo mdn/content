@@ -3,9 +3,8 @@ title: pointer
 slug: Web/CSS/@media/pointer
 page-type: css-media-feature
 browser-compat: css.at-rules.media.pointer
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`pointer`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) tests whether the user has a pointing device (such as a mouse), and if so, how accurate the _primary_ pointing device is.
 

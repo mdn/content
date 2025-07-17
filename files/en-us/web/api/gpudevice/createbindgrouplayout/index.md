@@ -3,12 +3,10 @@ title: "GPUDevice: createBindGroupLayout() method"
 short-title: createBindGroupLayout()
 slug: Web/API/GPUDevice/createBindGroupLayout
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.createBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroupLayout()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroupLayout")}} that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
@@ -35,18 +33,12 @@ An entry object includes the following properties:
 - `binding`
   - : A number representing a unique identifier for this particular entry, which matches the `binding` value of a corresponding {{domxref("GPUBindGroup")}} entry. In addition, it matches the `n` index value of the corresponding [`@binding(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-binding) attribute in the shader ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `visibility`
-
   - : One or more {{glossary("Bitwise_flags", "bitwise flags")}} defining the shader stages that a {{domxref("GPUBindGroup")}} entry corresponding to this entry will be visible to. Possible values are:
-
     - `GPUShaderStage.COMPUTE`: The bind group entry will be accessible to compute shaders.
     - `GPUShaderStage.FRAGMENT`: The bind group entry will be accessible to fragment shaders.
     - `GPUShaderStage.VERTEX`: The bind group entry will be accessible to vertex shaders.
 
-    Note that multiple stages can be specified by separating values with pipe symbols, for example:
-
-    ```js
-    visibility: GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX;
-    ```
+    Note that multiple stages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX`.
 
 - "Resource layout object"
   - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `externalTexture`, `sampler`, `storageTexture`, or `texture`, the object structures of which are described in the next section.
@@ -56,19 +48,14 @@ An entry object includes the following properties:
 The resource layout object can be one of the following (see also {{domxref("GPUDevice.createBindGroup()")}} for details of how the required resources for each entry are structured):
 
 - `buffer`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a `GPUBufferBinding` object, which contains a {{domxref("GPUBuffer")}} plus `offset` and `size` values. A `buffer` resource layout object can contain the following properties:
-
   - `hasDynamicOffset` {{optional_inline}}
-
     - : A boolean. If set to `true`, it indicates that this binding requires a dynamic offset, for example as set during a {{domxref("GPURenderPassEncoder.setBindGroup()")}} call. If omitted, `hasDynamicOffset` defaults to `false`.
 
   - `minBindingSize` {{optional_inline}}
-
     - : A number indicating the minimum allowed size, in bytes, of bound buffers. If omitted, `minBindingSize` defaults to 0. If the value is 0, minimum buffer size is ignored during pipeline creation and is instead validated by issued draw/dispatch commands.
 
   - `type` {{optional_inline}}
-
     - : An enumerated value specifying the required type for {{domxref("GPUBuffer")}}s bound to this binding (see {{domxref("GPUDevice.createBuffer()")}} for more information on buffer types). Possible values are:
-
       - `"read-only-storage"`: A read-only buffer created with a `usage` of `GPUBufferUsage.STORAGE`.
       - `"storage"`: A writable buffer created with a `usage` of `GPUBufferUsage.STORAGE`.
       - `"uniform"`: A buffer created with a `usage` of `GPUBufferUsage.UNIFORM`.
@@ -78,11 +65,8 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
 - `externalTexture`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUExternalTexture")}} object. An `externalTexture` resource layout object is empty — `{}`.
 
 - `sampler`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUSampler")}} object. A `sampler` resource layout object can contain the following properties:
-
   - `type` {{optional_inline}}
-
     - : An enumerated value specifying the required type for {{domxref("GPUSampler")}}s bound to this binding (see {{domxref("GPUDevice.createSampler()")}} for more information on sampler types). Possible values are:
-
       - `"comparison"`: A comparison sampler.
       - `"filtering"`: A filtering sampler.
       - `"non-filtering"`: A non-filtering sampler.
@@ -90,15 +74,18 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
       If omitted, `type` defaults to `"filtering"`.
 
 - `storageTexture`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUTextureView")}} object. A `storageTexture` resource layout object can contain the following properties:
-
   - `access` {{optional_inline}}
-    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are currently `"write-only"` and `undefined`, with the intention to add more access modes in the future. If omitted, the default value is `"write-only"`.
+    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are:
+      - `"read-only"`: Enables WGSL code to read storage textures.
+      - `"read-write"`: Enables WGSL code to read and write to storage textures.
+      - `"write-only"`: The default value; Enables WGSL code to write to storage textures.
+
+      The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}. If this is not the case, a {{domxref("GPUValidationError")}} is generated.
+
   - `format`
     - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
   - `viewDimension` {{optional_inline}}
-
     - : An enumerated value specifying the required dimension for texture views bound to this binding. Possible values are:
-
       - `"1d"`: The texture is viewed as a one-dimensional image.
       - `"2d"`: The texture is viewed as a single two-dimensional image.
       - `"2d-array"`: The texture is viewed as an array of two-dimensional images.
@@ -109,15 +96,11 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
       If omitted, `viewDimension` defaults to `"2d"`.
 
 - `texture`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUTextureView")}} object. A `texture` resource layout object can contain the following properties:
-
   - `multisampled` {{optional_inline}}
-
     - : A boolean. A value of `true` indicates that texture views bound to this binding must be multi-sampled. If omitted, `multisampled` defaults to `false`.
 
   - `sampleType` {{optional_inline}}
-
     - : An enumerated value specifying the sample type required for texture views bound to this binding (see {{domxref("GPUDevice.createTexture()")}} for more information on texture view types). Possible values are:
-
       - `"depth"`
       - `"float"`
       - `"sint"`
@@ -161,7 +144,7 @@ The following criteria must be met when calling **`createBindGroupLayout()`**, o
 Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/) shows an example of creating a bind group layout and then using that as a template when creating a bind group.
 
 ```js
-// ...
+// …
 
 const bindGroupLayout = device.createBindGroupLayout({
   entries: [
@@ -187,7 +170,7 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-// ...
+// …
 ```
 
 ## Specifications

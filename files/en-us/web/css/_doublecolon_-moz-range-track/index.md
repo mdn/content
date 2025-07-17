@@ -1,13 +1,14 @@
 ---
-title: "::-moz-range-track"
+title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
 page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-range-track
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _track_ (i.e., groove) in which the indicator slides in an {{HTMLElement("input")}} of `type="range"`.
 
@@ -57,12 +58,10 @@ Not part of any standard.
 ## See also
 
 - The pseudo-elements used by Gecko to style other parts of a range input:
-
   - {{cssxref("::-moz-range-thumb")}} represents the indicator that slides in the groove.
   - {{cssxref("::-moz-range-progress")}} represents the lower portion of the track.
 
 - Similar pseudo-elements used by other browsers:
-
   - {{cssxref("::-webkit-slider-runnable-track")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

@@ -1,11 +1,11 @@
 ---
 title: Generator.prototype.next()
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.next
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`next()`** method of {{jsxref("Generator")}} instances returns an
 object with two properties `done` and `value`. You can also
@@ -22,7 +22,6 @@ next(value)
 ### Parameters
 
 - `value` {{optional_inline}}
-
   - : The value to send to the generator.
 
     The value will be assigned as a result of a `yield` expression. For
@@ -41,11 +40,16 @@ An {{jsxref("Object")}} with two properties:
 - `value`
   - : Any JavaScript value yielded or returned by the generator.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
 ## Examples
 
 ### Using next()
 
-The following example shows a simple generator and the object that the
+The following example shows a generator and the object that the
 `next` method returns:
 
 ```js

@@ -2,17 +2,36 @@
 title: Remainder
 slug: WebAssembly/Reference/Numeric/Remainder
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`rem`** instructions, short for _remainder_, are used to calculate the remainder left over when one integer is divided by another integer, similar to the **`%`** operator in other languages. The **`rem`** instructions are only available for the integer types and not for the floating point types.
 
-{{EmbedInteractiveExample("pages/wat/rem.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: rem", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    ;; load `10` and `3` onto the stack
+    i32.const 10
+    i32.const 3
+
+    i32.rem_u ;; calculate the remainder
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; load two numbers onto the stack
 i32.const 10
 i32.const 3

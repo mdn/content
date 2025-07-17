@@ -3,11 +3,10 @@ title: <ident>
 slug: Web/CSS/ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-ident
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
+The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes an arbitrary string used as an {{glossary("identifier")}}.
 
 ## Syntax
 
@@ -26,9 +25,9 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers because th
 
 ### Escaping characters
 
-Escaping a character means representing it in a way that changes how it is interpreted by a software system. In CSS, you can escape a character by adding a backslash (`\`) in front of the character. Any character, except the hexadecimal digits `0-9`, `a-f`, and `A-F`, can be escaped in this way. For example, `&` can be escaped as `\&`.
+{{glossary("Escape character", "Escaping a character")}} means representing it in a way that changes how it is interpreted by a software system. In CSS, you can escape a character by adding a backslash (`\`) in front of the character. Any character, except the hexadecimal digits `0-9`, `a-f`, and `A-F`, can be escaped in this way. For example, `&` can be escaped as `\&`.
 
-You can also escape any character with a backslash followed by the character's Unicode {{glossary("code point")}} represented by one to six hexadecimal digits. For example, `&` can be escaped as `\26`. In this usage, if the escaped character is followed by a hexadecimal digit, do one of the following:
+You can also escape any character with a backslash followed by the character's {{glossary("Unicode")}} {{glossary("code point")}} represented by one to six hexadecimal digits. For example, `&` can be escaped as `\26`. In this usage, if the escaped character is followed by a hexadecimal digit, do one of the following:
 
 - Place a space or other whitespace character after the Unicode code point.
 - Provide the full six-digit Unicode code point of the character being escaped.
@@ -47,7 +46,7 @@ ground-level  /* A mix of alphanumeric characters and a dash */
 _internal     /* An underscore followed by alphanumeric characters */
 \22 toto      /* An escaped character followed by alphanumeric characters */
 \000022toto   /* Same as the previous example */
-bili\.bob     /* A correctly escaped period */
+scooby\.doo   /* A correctly escaped period */
 🔥123         /* A non-ASCII character followed by numbers */
 ```
 
@@ -56,9 +55,9 @@ bili\.bob     /* A correctly escaped period */
 ```plain example-bad
 34rem     /* Must not start with a decimal digit */
 -12rad    /* Must not start with a dash followed by a decimal digit */
-bili.bob  /* ASCII characters apart from alphanumerics must be escaped */
-'bilibob' /* Treated as a string */
-"bilibob" /* Treated as a string */
+scooby.doo  /* ASCII characters apart from alphanumerics must be escaped */
+'scoobyDoo' /* Treated as a string */
+"scoobyDoo" /* Treated as a string */
 ```
 
 ## Specifications

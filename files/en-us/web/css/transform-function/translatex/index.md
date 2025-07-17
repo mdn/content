@@ -3,16 +3,58 @@ title: translateX()
 slug: Web/CSS/transform-function/translateX
 page-type: css-function
 browser-compat: css.types.transform-function.translateX
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element horizontally on the 2D plane. Its
+The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-translateX.html")}}
+{{InteractiveExample("CSS Demo: translateX()")}}
 
-> **Note:** `translateX(tx)` is equivalent to
+```css interactive-example-choice
+transform: translateX(0);
+```
+
+```css interactive-example-choice
+transform: translateX(42px);
+```
+
+```css interactive-example-choice
+transform: translateX(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateX(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
+
+> [!NOTE]
+> `translateX(tx)` is equivalent to
 > `translate(tx, 0)` or
 > `translate3d(tx, 0, 0)`.
 
@@ -69,11 +111,9 @@ transform: translateX(50%);
   </tbody>
 </table>
 
-### Formal syntax
+## Formal syntax
 
-```plain
-translateX({{cssxref("&lt;length-percentage&gt;")}})
-```
+{{CSSSyntax}}
 
 ## Examples
 

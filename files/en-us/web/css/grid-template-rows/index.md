@@ -3,13 +3,57 @@ title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-rows`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid_row", "grid rows")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-template-rows")}}
+
+```css interactive-example-choice
+grid-template-rows: auto;
+```
+
+```css interactive-example-choice
+grid-template-rows: 40px 4em 40px;
+```
+
+```css interactive-example-choice
+grid-template-rows: 1fr 2fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-rows: 3ch auto minmax(10px, 60px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Syntax
 
@@ -19,8 +63,8 @@ grid-template-rows: none;
 
 /* <track-list> values */
 grid-template-rows: 100px 1fr;
-grid-template-rows: [linename] 100px;
-grid-template-rows: [linename1] 100px [linename2 linename3];
+grid-template-rows: [line-name] 100px;
+grid-template-rows: [line-name1] 100px [line-name2 line-name3];
 grid-template-rows: minmax(100px, 1fr);
 grid-template-rows: fit-content(40%);
 grid-template-rows: repeat(3, 200px);
@@ -33,12 +77,12 @@ grid-template-rows:
   minmax(100px, max-content)
   repeat(auto-fill, 200px) 20%;
 grid-template-rows:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+  [line-name1] 100px [line-name2]
+  repeat(auto-fit, [line-name3 line-name4] 300px)
   100px;
 grid-template-rows:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+  [line-name1 line-name2] 100px
+  repeat(auto-fit, [line-name1] 300px) [line-name3];
 
 /* Global values */
 grid-template-rows: inherit;
@@ -58,14 +102,14 @@ This property may be specified as:
 
 - `none`
   - : Is a keyword meaning that there is no explicit grid. Any rows will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-rows")}} property.
-- `[linename]`
+- `[line-name]`
   - : A [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : Is a non-negative length.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto` for the purpose of calculating the intrinsic size of the grid container. It must then be resolved against the resulting grid container size for the purpose of laying out the grid and its items. The intrinsic size contributions of the track may be adjusted to the size of the grid container and may increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
-  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
+  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e., `minmax(auto, <flex>)`).
 - {{cssxref("max-content")}}
   - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
 - {{cssxref("min-content")}}
@@ -73,17 +117,17 @@ This property may be specified as:
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
-
   - : As a maximum represents the largest {{cssxref("max-content")}} size of the items in that track.
 
     As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.
 
     If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
 
-    > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
+    > [!NOTE]
+    > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
 - {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e., `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.
 - [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)

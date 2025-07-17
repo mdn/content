@@ -1,10 +1,10 @@
 ---
 title: Firefox 75 for developers
+short-title: Firefox 75
 slug: Mozilla/Firefox/Releases/75
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
 
@@ -15,13 +15,13 @@ This article provides information about the changes in Firefox 75 that will affe
 ### Developer tools
 
 - It is now possible to resize the rectangle of the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) ([Firefox bug 1152321](https://bugzil.la/1152321)).
-- In the [inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ([Firefox bug 963933](https://bugzil.la/963933)).
+- In the [inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you can now use [XPath](/en-US/docs/Web/XML/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ([Firefox bug 963933](https://bugzil.la/963933)).
 - You can now filter [WebSocket](/en-US/docs/Web/API/WebSockets_API) messages using [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), in addition to plain text search, by writing the regular expression in slashes ([Firefox bug 1593837](https://bugzil.la/1593837)).
 
 ### HTML
 
-- The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
-- The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
+- The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Guides/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
+- The value of the [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
 
 ### CSS
 
@@ -33,8 +33,8 @@ This article provides information about the changes in Firefox 75 that will affe
 New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
 
 - `aria-description` ([Firefox bug 1608961](https://bugzil.la/1608961)).
-- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
-- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
+- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
+- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
 - Multiple IDs on `aria-details` ([Firefox bug 1608883](https://bugzil.la/1608883)).
 
 > [!NOTE]
@@ -59,7 +59,6 @@ New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now expo
 Firefox 75 sees numerous additions to the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API):
 
 - [Implicit to/from keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ([Firefox bug 1618773](https://bugzil.la/1618773)). This includes enabling of support for:
-
   - [`Animation.commitStyles()`](/en-US/docs/Web/API/Animation/commitStyles)
   - [`Animation.onremove`](/en-US/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/en-US/docs/Web/API/Animation/persist)
@@ -78,7 +77,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
 
 ### Plugins
 
@@ -99,7 +98,6 @@ _No changes._
 ### API changes
 
 - We've added some new settings in {{WebExtAPIRef("browserSettings")}} ([Firefox bug 1286953](https://bugzil.la/1286953)):
-
   - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}} to control whether zooming is on a per-site or per-tab basis
   - {{WebExtAPIRef("browserSettings.zoomFullPage")}} to control whether zoom is applied to the entire page or to text only.
 
@@ -108,7 +106,3 @@ _No changes._
 ### Manifest changes
 
 - The "privacy" permission is now optional. ([Firefox bug 1618399](https://bugzil.la/1618399))
-
-## Older versions
-
-{{Firefox_for_developers}}

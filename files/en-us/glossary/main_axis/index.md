@@ -2,9 +2,8 @@
 title: Main Axis
 slug: Glossary/Main_Axis
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for `flex-direction`. These are:
 
@@ -19,7 +18,7 @@ Should you choose `row` or `row-reverse` then your main axis will run along the 
 
 Choose `column` or `column-reverse` and your main axis will run top to bottom of the page in the block direction.
 
-![Three flex items taking up the full width of the container, displayed one below the other in code order. Flex-direction is set to column. The main axis is vertical i.e. from top to bottom](basics2.png)
+![Three flex items taking up the full width of the container, displayed one below the other in code order. Flex-direction is set to column. The main axis is vertical i.e., from top to bottom](basics2.png)
 
 On the main axis you can control the sizing of flex items by adding any available space to the items themselves, by way of `flex` properties on the items. Or, you can control the space between and around items by using the `justify-content` property.
 

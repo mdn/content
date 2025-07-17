@@ -1,13 +1,14 @@
 ---
-title: "-webkit-mask-repeat-y"
+title: -webkit-mask-repeat-y
 slug: Web/CSS/-webkit-mask-repeat-y
 page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-y
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
 
@@ -50,22 +51,19 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 
 ## Formal syntax
 
-```plain
--webkit-mask-repeat-y =
-  repeat | no-repeat | space | round
-```
+{{CSSSyntaxRaw(`-webkit-mask-repeat-y = [ repeat | no-repeat | space | round ]#`)}}
 
 ## Examples
 
 ### Using a repeating or non-repeating mask image
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
-.exampletwo {
+.example-two {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
@@ -76,7 +74,7 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 You can specify a different `<repeat-style>` for each mask image, separated by commas:
 
 ```css
-.examplethree {
+.example-three {
   -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }

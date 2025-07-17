@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The {{domxref("DOMPointReadOnly")}} method
 `toJSON()` returns an object giving the

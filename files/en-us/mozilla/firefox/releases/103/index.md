@@ -1,10 +1,10 @@
 ---
 title: Firefox 103 for developers
+short-title: Firefox 103
 slug: Mozilla/Firefox/Releases/103
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
 
@@ -40,7 +40,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### APIs
 
-- [`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using [`structuredClone()`](/en-US/docs/Web/API/structuredClone) to copy an object.
+- [`ReadableStream`](/en-US/docs/Web/API/ReadableStream), [`WritableStream`](/en-US/docs/Web/API/WritableStream), [`TransformStream`](/en-US/docs/Web/API/TransformStream) are now [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), which means that ownership can be transferred when sharing the objects between a window and workers using `postMessage`, or when using {{DOMxRef("Window.structuredClone", "structuredClone()")}} to copy an object.
   After transferring, the original object cannot be used.
   See [Firefox bug 1659025](https://bugzil.la/1659025) for more details.
 
@@ -67,7 +67,3 @@ This article provides information about the changes in Firefox 103 that will aff
 ### Removals
 
 - Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns `false` when run inside an extension) ([Firefox bug 1593931](https://bugzil.la/1593931)).
-
-## Older versions
-
-{{Firefox_for_developers}}

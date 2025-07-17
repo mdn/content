@@ -2,12 +2,10 @@
 title: GPUCommandBuffer
 slug: Web/API/GPUCommandBuffer
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUCommandBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUCommandBuffer`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pre-recorded list of GPU commands that can be submitted to a {{domxref("GPUQueue")}} for execution.
 
@@ -20,13 +18,13 @@ A `GPUCommandBuffer` is created via the {{domxref("GPUCommandEncoder.finish()")}
 
 ## Instance properties
 
-- {{domxref("GPUCommandBuffer.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUCommandBuffer.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples
 
 ```js
-// ...
+// …
 
 const commandBuffer = commandEncoder.finish();
 device.queue.submit([commandBuffer]);

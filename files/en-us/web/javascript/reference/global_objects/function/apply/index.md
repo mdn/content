@@ -1,15 +1,29 @@
 ---
 title: Function.prototype.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`apply()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -98,16 +112,16 @@ let max = Math.max.apply(null, numbers);
 
 let min = Math.min.apply(null, numbers);
 
-// vs. simple loop based algorithm
+// vs. loop based algorithm
 max = -Infinity;
-min = +Infinity;
+min = Infinity;
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > max) {
-    max = numbers[i];
+for (const n of numbers) {
+  if (n > max) {
+    max = n;
   }
-  if (numbers[i] < min) {
-    min = numbers[i];
+  if (n < min) {
+    min = n;
   }
 }
 ```
@@ -124,11 +138,11 @@ function minOfArray(arr) {
   const QUANTUM = 32768;
 
   for (let i = 0; i < arr.length; i += QUANTUM) {
-    const submin = Math.min.apply(
+    const subMin = Math.min.apply(
       null,
       arr.slice(i, Math.min(i + QUANTUM, arr.length)),
     );
-    min = Math.min(submin, min);
+    min = Math.min(subMin, min);
   }
 
   return min;

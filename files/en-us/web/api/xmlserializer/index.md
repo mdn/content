@@ -72,5 +72,5 @@ Once that's done, `insertAdjacentHTML()` is used to insert the `<input>` element
 
 ## See also
 
-- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("DOMParser")}}

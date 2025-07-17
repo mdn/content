@@ -3,13 +3,104 @@ title: rotate
 slug: Web/CSS/rotate
 page-type: css-property
 browser-compat: css.properties.rotate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rotate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify rotation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` property.
 
-{{EmbedInteractiveExample("pages/css/rotate.html")}}
+{{InteractiveExample("CSS Demo: rotate")}}
+
+```css interactive-example-choice
+rotate: none;
+```
+
+```css interactive-example-choice
+rotate: -45deg;
+```
+
+```css interactive-example-choice
+rotate: z 45deg;
+```
+
+```css interactive-example-choice
+rotate: x 45deg;
+```
+
+```css interactive-example-choice
+rotate: y 45deg;
+```
+
+```css interactive-example-choice
+rotate: 3 0.5 2 45deg;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## Syntax
 
@@ -43,7 +134,7 @@ rotate: unset;
 - angle value
   - : An {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
 - x, y, or z axis name plus angle value
-  - : The name of the axis you want to rotate the affected element around (`"x"`, "`y`", or "`z"`), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
+  - : The name of the axis you want to rotate the affected element around (`x`, `y`, or `z`), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
 - vector plus angle value
   - : Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
 - `none`

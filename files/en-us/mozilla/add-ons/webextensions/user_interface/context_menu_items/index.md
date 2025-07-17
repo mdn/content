@@ -2,9 +2,8 @@
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This user interface option adds one or more items to a browser context menu. This is the menu available when a user right-clicks on a web page. Tabs and bookmarks can also have context menus, available through the {{WebExtAPIRef("menus")}} API.
 
@@ -56,7 +55,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
 ## Icons
 
-For details on how to create icons to use with your context menu, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your context menu, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

@@ -1,18 +1,32 @@
 ---
 title: Atomics.xor()
+short-title: xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.xor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.xor()`** static
 method computes a bitwise XOR with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
 
-{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## Syntax
 

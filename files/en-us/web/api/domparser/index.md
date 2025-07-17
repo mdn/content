@@ -52,7 +52,7 @@ The documentation for {{domxref("DOMParser.parseFromString()")}}, this interface
 
 ## See also
 
-- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

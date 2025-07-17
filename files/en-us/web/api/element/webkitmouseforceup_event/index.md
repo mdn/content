@@ -18,10 +18,10 @@ The non-standard **`webkitmouseforceup`** event is fired by Safari at an {{domxr
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("webkitmouseforceup", (event) => {});
+```js-nolint
+addEventListener("webkitmouseforceup", (event) => { })
 
-onwebkitmouseforceup = (event) => {};
+onwebkitmouseforceup = (event) => { }
 ```
 
 ## Event type
@@ -92,7 +92,7 @@ _Not part of any specification._ Apple has [a description at the Mac Developer L
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}

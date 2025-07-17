@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.takeRecords
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`takeRecords()`** method of the
 {{domxref("ReportingObserver")}} interface returns the current list of reports contained

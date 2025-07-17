@@ -8,7 +8,7 @@ browser-compat: api.SVGPointList.replaceItem
 
 {{APIRef("SVG")}}
 
-The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("SVGPoint","point")}} in the list.
+The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("DOMPoint")}} in the list.
 
 ## Syntax
 
@@ -19,13 +19,13 @@ replaceItem(obj, index)
 ### Parameters
 
 - `obj`
-  - : An {{domxref("SVGPoint","point")}} object containing the coordinates of the point to be inserted.
+  - : A {{domxref("DOMPoint")}} object containing the coordinates of the point to be inserted.
 - `index`
   - : The index of the item to replace.
 
 ### Return value
 
-The new {{domxref("SVGPoint")}} object.
+The new {{domxref("DOMPoint")}} object.
 
 ### Exceptions
 
@@ -36,7 +36,7 @@ The new {{domxref("SVGPoint")}} object.
 
 ## Examples
 
-The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, then replaces the point at index `1` (the second item in the list).
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("DOMPoint")}} is created, then replaces the point at index `1` (the second item in the list).
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -49,11 +49,11 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-let svgpoint = document.getElementById("svg").createSVGPoint();
-svgpoint.y = 10;
-svgpoint.x = 10;
-console.log(example.points.replaceItem(svgpoint, 1));
+const example = document.getElementById("example");
+const point = document.getElementById("svg").createSVGPoint();
+point.y = 10;
+point.x = 10;
+console.log(example.points.replaceItem(point, 1));
 ```
 
 ## Specifications

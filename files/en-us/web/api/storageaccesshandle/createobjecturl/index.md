@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: createObjectURL() property"
+title: "StorageAccessHandle: createObjectURL() method"
 short-title: createObjectURL()
 slug: Web/API/StorageAccessHandle/createObjectURL
 page-type: web-api-instance-method
@@ -14,7 +14,7 @@ browser-compat: api.StorageAccessHandle.createObjectURL
 ## Syntax
 
 ```js-nolint
-handle.createObjectURL(object)
+createObjectURL(object)
 ```
 
 ### Parameters

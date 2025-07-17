@@ -1,18 +1,28 @@
 ---
 title: TypedArray.prototype.subarray()
+short-title: subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.subarray
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`subarray()`** method of {{jsxref("TypedArray")}} instances returns a new typed array
 on the same {{jsxref("ArrayBuffer")}} store and with the same element types as for this
 typed array. The begin offset is **inclusive** and the end
 offset is **exclusive**.
 
-{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.subarray()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.subarray(1, 3));
+// Expected output: Uint8Array [20, 30]
+
+console.log(uint8.subarray(1));
+// Expected output: Uint8Array [20, 30, 40, 50]
+```
 
 ## Syntax
 

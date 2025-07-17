@@ -14,10 +14,10 @@ The **`select`** event fires when some text has been selected.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("select", (event) => {});
+```js-nolint
+addEventListener("select", (event) => { })
 
-onselect = (event) => {};
+onselect = (event) => { }
 ```
 
 ## Event type
@@ -64,3 +64,7 @@ textarea.onselect = logSelection;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTextAreaElement.select()")}}

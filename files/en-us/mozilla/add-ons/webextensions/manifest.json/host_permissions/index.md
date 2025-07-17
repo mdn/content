@@ -3,9 +3,8 @@ title: host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.host_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -24,7 +23,7 @@ browser-compat: webextensions.manifest.host_permissions
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "host_permissions": [
   "*://developer.mozilla.org/*",
   "*://*.example.org/*"
@@ -62,7 +61,7 @@ The extra privileges include:
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (though not for requests from content scripts, as was the case in Manifest V2).
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects.
 - the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins.
-- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts.
+- the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts.
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards.
 

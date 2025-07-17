@@ -10,7 +10,7 @@ browser-compat: api.HTMLAreaElement.referrerPolicy
 
 The
 **`HTMLAreaElement.referrerPolicy`**
-property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/area#referrerpolicy) attribute of the
+property reflect the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/area#referrerpolicy) attribute of the
 {{HTMLElement("area")}} element defining which referrer is sent when fetching the
 resource.
 
@@ -24,7 +24,7 @@ A string; one of the following:
 - `no-referrer-when-downgrade`
   - : The URL is sent
     as a referrer when the protocol security level stays the same (e.g.HTTP→HTTP,
-    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).
+    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g., HTTPS→HTTP).
 - `origin`
   - : Only send the origin of the document as the referrer in all cases.
     The document `https://example.com/page.html` will send the referrer
@@ -37,12 +37,12 @@ A string; one of the following:
     cross-origin requests will contain no referrer information.
 - `strict-origin`
   - : Only send the origin of the document as the referrer when the protocol security
-    level stays the same (e.g. HTTPS→HTTPS), but don't send it to a less secure
-    destination (e.g. HTTPS→HTTP).
+    level stays the same (e.g., HTTPS→HTTPS), but don't send it to a less secure
+    destination (e.g., HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (default)
   - : This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
-    protocol security level stays the same (e.g. HTTPS→HTTPS), and send no header to a
-    less secure destination (e.g. HTTPS→HTTP).
+    protocol security level stays the same (e.g., HTTPS→HTTPS), and send no header to a
+    less secure destination (e.g., HTTPS→HTTP).
 - `unsafe-url`
   - : Send a full URL when performing a same-origin or cross-origin request. This policy
     will leak origins and paths from TLS-protected resources to insecure origins.
@@ -52,7 +52,7 @@ A string; one of the following:
 
 ```html
 <img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround" />>
+<map id="myMap" name="mapAround"></map>
 ```
 
 ```js

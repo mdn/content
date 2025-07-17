@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getQuery
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the currently active
 {{domxref("WebGLQuery")}} for the `target`, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
@@ -20,9 +20,7 @@ getQuery(target, pname)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
-
     - `gl.ANY_SAMPLES_PASSED`
       - : Specifies an occlusion query: these queries
         detect whether an object is visible (whether the scoped drawing commands pass the

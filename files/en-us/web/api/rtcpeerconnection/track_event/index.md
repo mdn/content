@@ -18,10 +18,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("track", (event) => {});
+```js-nolint
+addEventListener("track", (event) => { })
 
-ontrack = (event) => {};
+ontrack = (event) => { }
 ```
 
 ## Event type
@@ -51,9 +51,9 @@ This example shows code that creates a new {{domxref("RTCPeerConnection")}}, the
 pc = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:fake.turnserver.url",
-      username: "someusername",
-      credential: "somepassword",
+      urls: "turn:fake.turn-server.url",
+      username: "some username",
+      credential: "some-password",
     },
   ],
 });

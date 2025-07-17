@@ -1,10 +1,10 @@
 ---
 title: Firefox 98 for developers
+short-title: Firefox 98
 slug: Mozilla/Firefox/Releases/98
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 98 that affect developers. Firefox 98 was released on March 8, 2022.
 
@@ -29,7 +29,10 @@ No notable changes
 #### DOM
 
 - {{domxref("HTMLElement.outerText")}} is now supported ([Firefox bug 1709790](https://bugzil.la/1709790)).
-- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
+- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
+- {{domxref("ElementInternals")}} now has new form-associated custom element methods and properties that allow custom elements to interact with a form.
+  These include the {{domxref("ElementInternals.form","form")}}, {{domxref("ElementInternals.labels","labels")}} and {{domxref("ElementInternals.willValidate", "willValidate")}} properties, and the {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method.
+  ([Firefox bug 1556362](https://bugzil.la/1556362), [Firefox bug 1556373](https://bugzil.la/1556373), [Firefox bug 1556365](https://bugzil.la/1556365), [Firefox bug 1556449](https://bugzil.la/1556449)).
 
 #### Removals
 
@@ -44,7 +47,3 @@ No notable changes
 
 - Web extensions using {{WebExtAPIRef("webRequest")}} were started early during Firefox startup. This has changed to only trigger early start-up for extensions using {{WebExtAPIRef("webRequest")}} blocking calls. Non-blocking calls no longer cause the early startup of an extension. ([Firefox bug 1749871](https://bugzil.la/1749871))
 - `cookieStoreId` added to {{WebExtAPIRef("userScripts.register")}}. This enables extensions to register container-specific user scripts ([Firefox bug 1738567](https://bugzil.la/1738567)).
-
-## Older versions
-
-{{Firefox_for_developers}}

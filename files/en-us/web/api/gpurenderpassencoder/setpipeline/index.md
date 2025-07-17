@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setPipeline() method"
 short-title: setPipeline()
 slug: Web/API/GPURenderPassEncoder/setPipeline
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPURenderPipeline")}} to use for subsequent render pass commands.
@@ -40,7 +38,7 @@ The following criteria must be met when calling **`setPipeline()`**, otherwise a
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `setPipeline()` is called in an appropriate place to set the render pipeline.
 
 ```js
-// ...
+// …
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
@@ -73,7 +71,7 @@ passEncoder.end();
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -3,38 +3,61 @@ title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
+The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
 The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+
+```css interactive-example
+.flex-container > * {
+  padding: 0.3em;
+  list-style-type: none;
+  text-shadow: 0 0 2px red;
+  float: left;
+}
+
+@supports (display: flex) {
+  .flex-container > * {
+    text-shadow: 0 0 2px blue;
+    float: none;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+}
+```
+
+```html interactive-example
+<ul class="flex-container">
+  <li><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+```
 
 In JavaScript, `@supports` can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.
 
 ## Syntax
 
-The `@supports` at-rule consists of a block of statements with a _supports condition._
-The supports condition is a set of one or more name-value pairs (e.g., `<property>: <value>`).
-
 ```css
 @supports (<supports-condition>) {
   /* If the condition is true, use the CSS in this block. */
 }
-```
 
-The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
-
-```css
 @supports (<supports-condition>) and (<supports-condition>) {
   /* If both conditions are true, use the CSS in this block. */
 }
 ```
 
+The `@supports` at-rule consists of a block of statements with a _supports condition._
+The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
 The precedence of operators can be defined with parentheses.
+
 Supports conditions can use either a `<property>: <value>` declaration syntax or a `<function()>` syntax.
 The following sections describe the use of each type of supports condition.
 
@@ -172,9 +195,16 @@ The `or` operator creates a new expression from the disjunction of two shorter e
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+  (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (-webkit-transform-style: preserve-3d)
+  ) {
+}
 ```
 
 > [!NOTE]
@@ -251,7 +281,9 @@ The following example applies the CSS style if the browser supports the `COLRv1`
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
 
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  p {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
@@ -274,8 +306,10 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ```css
 @supports font-format(woff2) {
-  font-family: "Open Sans";
-  src: url("open-sans.woff2") format("woff2");
+  p {
+    font-family: "Open Sans", sans-serif;
+    src: url("open-sans.woff2") format("woff2");
+  }
 }
 ```
 
@@ -290,4 +324,6 @@ The following example applies the CSS style if the browser supports the `woff2` 
 ## See also
 
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxref("CSS.supports_static", "CSS.supports()")}} method that allows the same check to be performed via JavaScript.
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- {{DOMxRef("CSSSupportsRule")}}
+- {{DOMxref("CSS.supports_static", "CSS.supports()")}} method

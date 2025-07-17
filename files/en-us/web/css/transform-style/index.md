@@ -3,13 +3,47 @@ title: transform-style
 slug: Web/CSS/transform-style
 page-type: css-property
 browser-compat: css.properties.transform-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
 
-{{EmbedInteractiveExample("pages/css/transform-style.html")}}
+{{InteractiveExample("CSS Demo: transform-style")}}
+
+```css interactive-example-choice
+transform-style: flat;
+```
+
+```css interactive-example-choice
+transform-style: preserve-3d;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all layer" id="example-element">
+    <p>Parent</p>
+    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.layer {
+  background: #623e3f;
+  border-radius: 0.75rem;
+  color: white;
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.numeral {
+  background-color: #ffba08;
+  border-radius: 0.2rem;
+  color: #000;
+  margin: 1rem;
+  padding: 0.2rem;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+```
 
 If flattened, the element's children will not exist on their own in the 3D-space.
 
@@ -40,7 +74,7 @@ transform-style: unset;
 ## Description
 
 The spec lists some [grouping property values](https://drafts.csswg.org/css-transforms-2/#grouping-property-values), which
-require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
+require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
 
 - {{cssxref("overflow")}}: any value other than `visible` or `clip`.
 - {{cssxref("opacity")}}: any value less than `1`.

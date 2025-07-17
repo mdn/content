@@ -8,7 +8,7 @@ browser-compat: api.CSSStyleRule.style
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ DOMXref("CSSStyleRule") }}.
+The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the declaration block of the {{ DOMXref("CSSStyleRule") }}.
 
 ## Value
 
@@ -19,7 +19,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 - declarations
   - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
 - parent CSS rule
-  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+  - : The context object, which is an alias for [`this`](https://heycam.github.io/webidl/#this).
 - owner node
   - : Null.
 

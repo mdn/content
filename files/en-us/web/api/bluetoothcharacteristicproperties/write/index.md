@@ -26,5 +26,3 @@ A boolean value.
 ## Browser compatibility
 
 {{Compat}}
-
-null

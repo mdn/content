@@ -2,13 +2,26 @@
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **Operator precedence** determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## Precedence and associativity
 
@@ -609,10 +622,10 @@ Notes:
 1. The operand can be any expression.
 2. The "right-hand side" must be an identifier.
 3. The "right-hand side" can be any expression.
-4. The "right-hand side" is a comma-separated list of any expression with precedence > 1 (i.e. not comma expressions). The constructor of a `new` expression cannot be an optional chain.
+4. The "right-hand side" is a comma-separated list of any expression with precedence > 1 (i.e., not comma expressions). The constructor of a `new` expression cannot be an optional chain.
 5. The operand must be a valid assignment target (identifier or property access). Its precedence means `new Foo++` is `(new Foo)++` (a syntax error) and not `new (Foo++)` (a TypeError: (Foo++) is not a constructor).
 6. The operand must be a valid assignment target (identifier or property access).
-7. The operand cannot be an identifier or a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) access.
+7. The operand cannot be an identifier or a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) access.
 8. The left-hand side cannot have precedence 14.
 9. The operands cannot be a logical OR `||` or logical AND `&&` operator without grouping.
 10. The "left-hand side" must be a valid assignment target (identifier or property access).

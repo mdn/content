@@ -18,7 +18,8 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 ## Example
 
-> **Note:** {{domxref("CharacterData")}} is an abstract interface.
+> [!NOTE]
+> {{domxref("CharacterData")}} is an abstract interface.
 > The examples below use two concrete interfaces implementing it, {{domxref("Text")}} and {{domxref("Comment")}}.
 
 ### Reading a comment using data
@@ -45,9 +46,9 @@ output.value = comment.data;
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.data = "This text has been set using 'textnode.data'.";
+textNode.data = "This text has been set using 'textNode.data'.";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

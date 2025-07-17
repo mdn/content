@@ -2,7 +2,7 @@
 title: "console: countReset() static method"
 short-title: countReset()
 slug: Web/API/console/countReset_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.countReset_static
 ---
 
@@ -13,8 +13,8 @@ The **`console.countReset()`** static method resets counter used with {{domxref(
 ## Syntax
 
 ```js-nolint
-countReset()
-countReset(label)
+console.countReset()
+console.countReset(label)
 ```
 
 ### Parameters
@@ -92,6 +92,6 @@ Resetting the value of the counter "bob" only changes the value of that counter.
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.countReset()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#countreset)
-- [Node.JS documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
+- [Microsoft Edge's documentation for `console.countReset()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#countreset)
+- [Node.js documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
 - [Google Chrome's documentation for `console.countReset()`](https://developer.chrome.com/docs/devtools/console/api/#countreset)

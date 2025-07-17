@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CryptoKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`CryptoKey`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
 
@@ -14,19 +14,15 @@ For security reasons, the `CryptoKey` interface can only be used in a [secure co
 ## Instance properties
 
 - {{domxref("CryptoKey.type")}} {{ReadOnlyInline}}
-
   - : The type of key the object represents. It may take one of the following values: `"secret"`, `"private"` or `"public"`.
 
 - {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}}
-
   - : A boolean value indicating whether or not the key may be extracted using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 
 - {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}}
-
   - : An object describing the algorithm for which this key can be used and any associated extra parameters.
 
 - {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}}
-
   - : An {{jsxref("Array")}} of strings, indicating what can be done with the key. Possible values for array elements are `"encrypt"`, `"decrypt"`, `"sign"`, `"verify"`, `"deriveKey"`, `"deriveBits"`, `"wrapKey"`, and `"unwrapKey"`.
 
 ## Examples

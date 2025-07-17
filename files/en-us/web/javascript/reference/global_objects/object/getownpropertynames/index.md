@@ -1,15 +1,26 @@
 ---
 title: Object.getOwnPropertyNames()
+short-title: getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertyNames
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyNames()`** static method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Syntax
 
@@ -103,11 +114,11 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 
 ```js
 const target = myObject;
-const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumAndNonEnum = Object.getOwnPropertyNames(target);
 const enumOnly = new Set(Object.keys(target));
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+const nonEnumOnly = enumAndNonEnum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenumOnly);
+console.log(nonEnumOnly);
 ```
 
 ## Specifications
@@ -121,7 +132,7 @@ console.log(nonenumOnly);
 ## See also
 
 - [Polyfill of `Object.getOwnPropertyNames` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

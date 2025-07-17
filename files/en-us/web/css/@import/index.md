@@ -3,11 +3,10 @@ title: "@import"
 slug: Web/CSS/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other valid stylesheets.
+The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to import style rules from other valid stylesheets.
 An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/@charset) and [@layer](/en-US/docs/Web/CSS/@layer)) and style declarations, or it will be ignored.
 
 ## Syntax
@@ -31,7 +30,7 @@ where:
 - _list-of-media-queries_
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_
-  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported.
+  - : Is the name of a [cascade layer](/en-US/docs/Web/CSS/@layer) into which the contents of the linked resource are imported. See [`layer()`](/en-US/docs/Web/CSS/@import/layer_function) for more information.
 - _supports-condition_
   - : Indicates the feature(s) that the browser must support in order for the stylesheet to be imported.
     If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
@@ -63,7 +62,7 @@ As the `@import` at-rule is declared after the styles it is invalid and hence ig
 /* more styles */
 ```
 
-The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules).
+The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/CSS_syntax/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules).
 
 So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 
@@ -91,7 +90,7 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 ### Importing CSS rules conditional on media queries
 
 ```css
-@import url("fineprint.css") print;
+@import url("fine-print.css") print;
 @import url("bluish.css") print, screen;
 @import "common.css" screen;
 @import url("landscape.css") screen and (orientation: landscape);
@@ -102,16 +101,16 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ### Importing CSS rules conditional on feature support
 
 ```css
-@import url("gridy.css") supports(display: grid) screen and (max-width: 400px);
-@import url("flexy.css") supports((not (display: grid)) and (display: flex))
-  screen and (max-width: 400px);
+@import url("grid.css") supports(display: grid) screen and (width <= 400px);
+@import url("flex.css") supports((not (display: grid)) and (display: flex))
+  screen and (width <= 400px);
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
-While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`. However, you must use parenthesis to define precedence when you mix them, e.g. `supports((..) or (..) and not (..))` is invalid, but `supports((..) or ((..) and (not (..))))` is valid.
-Note that if you just have a single declaration then you don't need to wrap it in additional parenthese: this is shown in the first example above.
+While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`. However, you must use parenthesis to define precedence when you mix them, e.g., `supports((..) or (..) and not (..))` is invalid, but `supports((..) or ((..) and (not (..))))` is valid.
+Note that if you just have a single declaration then you don't need to wrap it in additional parentheses: this is shown in the first example above.
 
-The examples above show support conditions using simple declaration syntax.
+The examples above show support conditions using basic declaration syntax.
 You can also specify CSS functions in `supports()`, and it will evaluate to `true` if they are supported and can be evaluated on the user-agent.
 For example, the code below shows an `@import` that is conditional on both [child combinators](/en-US/docs/Web/CSS/Child_combinator) (`selector()`) and the `font-tech()` function:
 
@@ -160,4 +159,5 @@ This is an example of creating two separate unnamed cascade layers and importing
 
 - {{CSSxRef("@media")}}
 - {{CSSxRef("@supports")}}
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)

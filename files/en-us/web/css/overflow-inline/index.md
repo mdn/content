@@ -3,9 +3,8 @@ title: overflow-inline
 slug: Web/CSS/overflow-inline
 page-type: css-property
 browser-compat: css.properties.overflow-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the inline start and end edges of a box. This may be nothing, a scroll bar, or the overflow content.
 
@@ -137,4 +136,4 @@ div {
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)
-- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)

@@ -8,7 +8,7 @@ browser-compat: api.SVGPointList.insertItemBefore
 
 {{APIRef("SVG")}}
 
-The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("SVGPoint", "point")}} before another item in the list.
+The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("DOMPoint")}} before another item in the list.
 
 ## Syntax
 
@@ -19,13 +19,13 @@ insertItemBefore(obj, index)
 ### Parameters
 
 - `obj`
-  - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be inserted.
+  - : A {{domxref("DOMPoint")}} object containing the coordinates of the point to be inserted.
 - `index`
   - : The index of the item the object should be inserted before. If the index passed in is greater than the length of the list, then index will be set to the list length and the item inserted before the last item in the list.
 
 ### Return value
 
-The {{domxref("SVGPoint")}} object that was inserted.
+The {{domxref("DOMPoint")}} object that was inserted.
 
 ### Exceptions
 
@@ -34,7 +34,7 @@ The {{domxref("SVGPoint")}} object that was inserted.
 
 ## Examples
 
-The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and inserted before the point at index `2`.
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("DOMPoint")}} is created, and inserted before the point at index `2`.
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -47,11 +47,11 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-let svgpoint = document.getElementById("svg").createSVGPoint();
-svgpoint.y = 10;
-svgpoint.x = 10;
-console.log(example.points.insertItemBefore(svgpoint, 2));
+const example = document.getElementById("example");
+const point = document.getElementById("svg").createSVGPoint();
+point.y = 10;
+point.x = 10;
+console.log(example.points.insertItemBefore(point, 2));
 ```
 
 ## Specifications

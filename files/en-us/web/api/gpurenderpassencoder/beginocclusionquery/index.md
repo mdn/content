@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: beginOcclusionQuery() method"
 short-title: beginOcclusionQuery()
 slug: Web/API/GPURenderPassEncoder/beginOcclusionQuery
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.beginOcclusionQuery
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginOcclusionQuery()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface begins an occlusion query at the specified index of the relevant {{domxref("GPUQuerySet")}} (provided as the value of the `occlusionQuerySet` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run the render pass).
@@ -35,12 +33,12 @@ The following criteria must be met when calling **`beginOcclusionQuery()`**, oth
 - A {{domxref("GPUQuerySet")}} was specified in the `occlusionQuerySet` descriptor property when invoking the originating {{domxref("GPUCommandEncoder.beginRenderPass()")}}.
 - `queryIndex` is smaller than {{domxref("GPUQuerySet.count")}}.
 - The `queryIndex` has not already been written to in the same render pass.
-- An occlusion query is not already active for this render pass (i.e. via a previous `beginOcclusionQuery()` call).
+- An occlusion query is not already active for this render pass (i.e., via a previous `beginOcclusionQuery()` call).
 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create a query set to hold the occlusion queries
 const querySet = device.createQuerySet({
@@ -75,7 +73,7 @@ passEncoder.draw(3);
 // End the occlusion query
 passEncoder.endOcclusionQuery();
 
-// ...
+// …
 ```
 
 ## Specifications

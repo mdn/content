@@ -2,9 +2,10 @@
 title: Iterators and generators
 slug: Web/JavaScript/Guide/Iterators_and_generators
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Internationalization")}}
 
 Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of", "for...of")}} loops.
 
@@ -32,7 +33,7 @@ The most common iterator in JavaScript is the Array iterator, which returns each
 
 While it is easy to imagine that all iterators could be expressed as arrays, this is not true. Arrays must be allocated in their entirety, but iterators are consumed only as necessary. Because of this, iterators can express sequences of unlimited size, such as the range of integers between `0` and {{jsxref("Infinity")}}.
 
-Here is an example which can do just that. It allows creation of a simple range iterator which defines a sequence of integers from `start` (inclusive) to `end` (exclusive) spaced `step` apart. Its final return value is the size of the sequence it created, tracked by the variable `iterationCount`.
+Here is an example which can do just that. It allows creation of a range iterator which defines a sequence of integers from `start` (inclusive) to `end` (exclusive) spaced `step` apart. Its final return value is the size of the sequence it created, tracked by the variable `iterationCount`.
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
@@ -97,7 +98,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 An object is **iterable** if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.
 
-In order to be **iterable**, an object must implement the `[Symbol.iterator]()` method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
+In order to be **iterable**, an object must implement the `[Symbol.iterator]()` method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.
 
@@ -164,7 +165,7 @@ for (const value of myIterable) {
 
 ### Syntaxes expecting iterables
 
-Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of", "for...of")}} loops, {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}}, {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring_assignment", "destructuring", "", 1)}} syntax.
+Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of", "for...of")}} loops, {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}}, {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring", "destructuring", "", 1)}} syntax.
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -234,4 +235,4 @@ If the exception is not caught from within the generator, it will propagate up t
 
 Generators have a {{jsxref("Generator/return", "return()")}} method that returns the given value and finishes the generator itself.
 
-{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Internationalization")}}

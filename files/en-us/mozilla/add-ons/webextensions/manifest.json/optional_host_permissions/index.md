@@ -3,9 +3,8 @@ title: optional_host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_host_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -24,7 +23,7 @@ browser-compat: webextensions.manifest.optional_host_permissions
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "optional_host_permissions": [
   "*://developer.mozilla.org/*",
   "*://*.example.org/*"

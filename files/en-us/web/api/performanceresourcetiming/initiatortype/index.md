@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`initiatorType`** read-only property is a string representing web platform feature that initiated the resource load.
 
@@ -70,9 +70,9 @@ Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resou
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  const scripts = list.getEntries().filter((entry) => {
-    return entry.initiatorType === "script";
-  });
+  const scripts = list
+    .getEntries()
+    .filter((entry) => entry.initiatorType === "script");
   console.log(scripts);
 });
 
@@ -82,9 +82,9 @@ observer.observe({ type: "resource", buffered: true });
 Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
 
 ```js
-const scripts = performance.getEntriesByType("resource").filter((entry) => {
-  return entry.initiatorType === "script";
-});
+const scripts = performance
+  .getEntriesByType("resource")
+  .filter((entry) => entry.initiatorType === "script");
 console.log(scripts);
 ```
 

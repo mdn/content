@@ -15,13 +15,12 @@ The **`updateCurrentEntry()`** method of the {{domxref("Navigation")}} interface
 ## Syntax
 
 ```js-nolint
-updateCurrentEntry()
 updateCurrentEntry(options)
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options`
   - : An options object containing the following properties:
     - `state`
       - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
@@ -35,7 +34,7 @@ None (`undefined`).
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the `state` parameter had values included in it that are not structured-cloneable.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e. there is no current history entry. This could occur for example if the current page is `about:blank`.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}} is `null`, i.e., there is no current history entry. This could occur for example if the current page is `about:blank`.
 
 ## Examples
 
@@ -59,4 +58,3 @@ detailsElem.addEventListener("toggle", () => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

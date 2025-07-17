@@ -2,9 +2,8 @@
 title: Using media queries for accessibility
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [**CSS media queries**](/en-US/docs/Web/CSS/CSS_media_queries) can be used to help users with disabilities better experience your website.
 
@@ -21,7 +20,7 @@ The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion
 
 ### Example
 
-This example has an annoying animation unless you turn on Reduce Motion in [your accessibility preferences](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely).
+This example has an annoying animation unless you turn on Reduce Motion in [your accessibility preferences](/en-US/docs/Web/Accessibility/Guides/Browsing_safely).
 
 #### HTML
 

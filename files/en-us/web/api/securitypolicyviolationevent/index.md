@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.SecurityPolicyViolationEvent
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of a `securitypolicyviolation` event sent on an {{domxref("Element/securitypolicyviolation_event", "Element")}}, {{domxref("Document/securitypolicyviolation_event", "Document")}}, or {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "worker","","nocode")}} when its [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) is violated.
+The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of a `securitypolicyviolation` event sent on an {{domxref("Element/securitypolicyviolation_event", "Element")}}, {{domxref("Document/securitypolicyviolation_event", "Document")}}, or {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "worker","","nocode")}} when its [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 
 {{InheritanceDiagram}}
 
@@ -43,7 +43,7 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 - {{domxref("SecurityPolicyViolationEvent.violatedDirective")}} {{ReadOnlyInline}}
   - : A string representing the directive that was violated.
-    This is a historical alias of [`effectiveDirective`](#effectivedirective).
+    This is a historical alias of [`effectiveDirective`](/en-US/docs/Web/API/SecurityPolicyViolationEvent/effectiveDirective).
 
 ## Examples
 
@@ -65,7 +65,7 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
 - {{domxref("CSPViolationReportBody")}}
 - The {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Element")}} interface
 - The {{domxref("Document/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Document")}} interface

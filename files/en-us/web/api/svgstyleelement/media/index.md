@@ -8,7 +8,7 @@ browser-compat: api.SVGStyleElement.media
 
 {{APIRef("SVG")}}
 
-The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute of the given SVG style element.
+The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Reference/Element/style#media) attribute of the given SVG style element.
 
 The query must be matched for the style to apply.
 
@@ -17,7 +17,7 @@ The query must be matched for the style to apply.
 A string defining a valid media query list with one or more comma separated values.
 For example `"screen, print"`, or `"all"` (the default).
 
-The value is initialized with the string specified in the corresponding style's [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute.
+The value is initialized with the string specified in the corresponding style's [`media`](/en-US/docs/Web/SVG/Reference/Element/style#media) attribute.
 
 ## Examples
 
@@ -25,7 +25,7 @@ This example demonstrates programmatically getting and setting the media propert
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that is conditional on the media query `"all and (min-width: 600px)"`.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element that is conditional on the media query `"(width >= 600px)"`.
 We also define a `button` that will be used to display the current style and change the style.
 
 ```html
@@ -67,7 +67,7 @@ addEventListener("resize", () => {
 });
 
 button.addEventListener("click", () => {
-  style.media = "all and (min-width: 700px)";
+  style.media = "(width >= 700px)";
   setButtonText();
 });
 ```

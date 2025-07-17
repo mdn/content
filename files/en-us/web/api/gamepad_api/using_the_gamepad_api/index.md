@@ -36,7 +36,7 @@ Each gamepad has a unique ID associated with it, which is available on the event
 
 ## Disconnecting a gamepad
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g., {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
@@ -111,11 +111,10 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 - `mapping`: A string indicating whether the browser has remapped the controls on the device to a known layout. Currently there is only one supported known layout — the [standard gamepad](https://w3c.github.io/gamepad/gamepad.html#remapping). If the browser is able to map controls on the device to that layout the `mapping` property will be set to the string `standard`.
 - `connected`: A boolean indicating whether the gamepad is still connected to the system. If this is so the value is `True`; if not, it is `False`.
 - `buttons`: An array of {{ domxref("GamepadButton") }} objects representing the buttons present on the device. Each {{ domxref("GamepadButton") }} has a `pressed` and a `value` property:
-
   - The `pressed` property is a boolean indicating whether the button is currently pressed (`true`) or unpressed (`false`).
   - The `value` property is a floating point value used to enable representing analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0..1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
 
-- `axes`: An array representing the controls with axes present on the device (e.g. analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
+- `axes`: An array representing the controls with axes present on the device (e.g., analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
 - `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
 
 > [!NOTE]
@@ -123,7 +122,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 
 ### Using button information
 
-Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
+Let's look at an example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
 
 To start with, we declare some variables: The `gamepadInfo` paragraph that the connection info is written into, the `ball` that we want to move, the `start` variable that acts as the ID for `requestAnimation Frame`, the `a` and `b` variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.
 
@@ -193,16 +192,16 @@ function gameLoop() {
 This example shows how to use the {{domxref("Gamepad")}} object, as well as the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events to display the state of all gamepads connected to the system. The example is based on a [Gamepad demo](https://luser.github.io/gamepadtest/), which has the [source code available on GitHub](https://github.com/luser/gamepadtest).
 
 ```js
-let loopstarted = false;
+let loopStarted = false;
 
 window.addEventListener("gamepadconnected", (evt) => {
-  addgamepad(evt.gamepad);
+  addGamepad(evt.gamepad);
 });
 window.addEventListener("gamepaddisconnected", (evt) => {
-  removegamepad(evt.gamepad);
+  removeGamepad(evt.gamepad);
 });
 
-function addgamepad(gamepad) {
+function addGamepad(gamepad) {
   const d = document.createElement("div");
   d.setAttribute("id", `controller${gamepad.index}`);
 
@@ -242,13 +241,13 @@ function addgamepad(gamepad) {
   }
 
   document.body.append(d);
-  if (!loopstarted) {
+  if (!loopStarted) {
     requestAnimationFrame(updateStatus);
-    loopstarted = true;
+    loopStarted = true;
   }
 }
 
-function removegamepad(gamepad) {
+function removeGamepad(gamepad) {
   document.querySelector(`#controller${gamepad.index}`).remove();
 }
 

@@ -22,12 +22,9 @@ write(data)
 ### Parameters
 
 - `data`
-
   - : Can be one of the following:
-
     - The file data to write, in the form of an {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref('Blob')}}, or string.
     - An object containing the following properties:
-
       - `type`
         - : A string that is one of `"write"`, `"seek"`, or `"truncate"`.
       - `data`

@@ -1,15 +1,30 @@
 ---
 title: Function.prototype.call()
+short-title: call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.call
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## Syntax
 
@@ -65,13 +80,13 @@ greet.call(obj); // cats typically sleep between 12 and 16 hours
 If the first `thisArg` parameter is omitted, it defaults to `undefined`. In non-strict mode, the `this` value is then substituted with {{jsxref("globalThis")}} (which is akin to the global object).
 
 ```js
-globalThis.globProp = "Wisen";
+globalThis.globProp = "foo";
 
 function display() {
   console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // Logs "globProp value is Wisen"
+display.call(); // Logs "globProp value is foo"
 ```
 
 In strict mode, the value of `this` is not substituted, so it stays as `undefined`.
@@ -79,7 +94,7 @@ In strict mode, the value of `this` is not substituted, so it stays as `undefine
 ```js
 "use strict";
 
-globalThis.globProp = "Wisen";
+globalThis.globProp = "foo";
 
 function display() {
   console.log(`globProp value is ${this.globProp}`);
@@ -97,7 +112,7 @@ Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use f
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -109,7 +124,7 @@ Note that you can't save `slice.call` and call it as a plain function, because t
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```
@@ -128,4 +143,4 @@ slice(arguments);
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
 - [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
+- [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

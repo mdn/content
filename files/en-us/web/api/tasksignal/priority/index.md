@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TaskSignal.priority
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The read-only **`priority`** property of the {{domxref("TaskSignal")}} interface indicates the signal [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 

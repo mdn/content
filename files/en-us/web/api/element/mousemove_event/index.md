@@ -10,14 +10,16 @@ browser-compat: api.Element.mousemove_event
 
 The `mousemove` event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
 
+These events happen whether or not any mouse buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the mouse, how fast the machine is, what other tasks and processes are happening, etc.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mousemove", (event) => {});
+```js-nolint
+addEventListener("mousemove", (event) => { })
 
-onmousemove = (event) => {};
+onmousemove = (event) => { }
 ```
 
 ## Event type
@@ -171,7 +173,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/click_event", "click")}}
@@ -181,3 +183,4 @@ function drawLine(context, x1, y1, x2, y2) {
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointermove_event", "pointermove")}}

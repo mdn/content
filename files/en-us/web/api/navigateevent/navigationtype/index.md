@@ -28,7 +28,7 @@ The possible values are:
 
 ### Async transitions with special back/forward handling
 
-Sometimes it's desirable to handle back/forward navigations specially, e.g. reusing cached views by transitioning them onto the screen. This can be done by branching as follows:
+Sometimes it's desirable to handle back/forward navigations specially, e.g., reusing cached views by transitioning them onto the screen. This can be done by branching as follows:
 
 ```js
 navigation.addEventListener("navigate", (event) => {
@@ -78,4 +78,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 7
 slug: Mozilla/Firefox/Releases/7/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.
 
@@ -36,7 +35,7 @@ A few interfaces have methods that have been changed:
 - `nsINavHistoryObserver` and `nsINavBookmarkObserver`
   - : These have been changed to support Firefox Sync better by adding a new GUID parameter to several of their methods. JavaScript-based code shouldn't require any changes, since this is just the addition of a new, optional, parameter. However, binary components will need to be updated to take the new parameter into account.
 - `nsIDOMFile`
-  - : A number of non-standard methods have been removed from this interface. This affects the {{ domxref("File") }} object's {{ domxref("File.getDataAsUrl()") }} and {{ domxref("File.getAsBinary()") }} methods. However, this functionality can now be found in the standard {{ domxref("FileReader") }} object.
+  - : A number of non-standard methods have been removed from this interface. This affects the {{ domxref("File") }} object's `File.getDataAsUrl()` and `File.getAsBinary()` methods. However, this functionality can now be found in the standard {{ domxref("FileReader") }} object.
 
 ## Other changes of note
 

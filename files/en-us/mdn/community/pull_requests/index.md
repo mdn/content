@@ -1,10 +1,9 @@
 ---
-title: Pull request submission and review guidelines
+title: Pull request submission and reviews
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This document describes how contributors make changes to MDN Web Docs and how the changes are reviewed and land on the site.
 Content changes to MDN Web Docs include:
@@ -29,9 +28,9 @@ The content changes go through the following stages before they are published on
 ### Values and participation
 
 We want MDN Web Docs to be a welcoming, friendly community that we can all be proud of.
-All participants must follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+All participants must follow our [Community Participation Guidelines](/en-US/docs/MDN/Community/Community_Participation_Guidelines) which are derived from [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 Be polite and constructive when opening pull requests, writing review comments, interacting with the pull request author or other community members.
-If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
+If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](/en-US/docs/MDN/Community/Community_Participation_Guidelines#reporting_process).
 
 ### Before you start
 
@@ -62,7 +61,7 @@ When you're ready to open a pull request, follow these guidelines:
   If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
 - **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
 - **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
-  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
 - **Accompany code example changes with content changes:** This is important to ensure that updated examples are served correctly.
   If you're making content changes that affect how examples are used, the related code examples should also be updated.
@@ -70,7 +69,6 @@ When you're ready to open a pull request, follow these guidelines:
 - **Don't make grammar-only changes:**
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
-- **Don't enable auto-merge.**
 
 ### After you open a pull request
 
@@ -117,7 +115,7 @@ Do leave the door open to the author to ask for help, especially new contributor
 
 ### Reviewing a pull request
 
-When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 When you are reviewing a pull request, you should:
 
@@ -202,3 +200,4 @@ Reviewers are encouraged to read the following articles for help with common tas
 - [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
 - [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
 - [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
+- [How to do a code review](https://google.github.io/eng-practices/review/reviewer/) on google.github.io/eng-practices

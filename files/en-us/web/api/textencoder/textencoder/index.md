@@ -6,9 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.TextEncoder.TextEncoder
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`TextEncoder()`** constructor returns a newly created {{DOMxRef("TextEncoder")}} object that will generate a byte stream with UTF-8 encoding.
+The **`TextEncoder()`** constructor returns a newly created {{DOMxRef("TextEncoder")}} object.
 
 ## Syntax
 

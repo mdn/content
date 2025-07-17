@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.SourceBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.
 
@@ -28,7 +28,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
+  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e., whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
@@ -90,14 +90,13 @@ function loadVideo() {
 
 async function sourceOpen() {
   console.log(this.readyState); // open
-  const mediaSource = this;
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const sourceBuffer = this.addSourceBuffer(mimeCodec);
   const response = await fetch(assetURL);
   const buffer = await response.arrayBuffer();
   sourceBuffer.addEventListener("updateend", () => {
-    mediaSource.endOfStream();
+    this.endOfStream();
     video.play();
-    console.log(mediaSource.readyState); // ended
+    console.log(this.readyState); // ended
   });
   sourceBuffer.appendBuffer(buffer);
 }

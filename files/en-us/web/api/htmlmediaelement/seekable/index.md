@@ -20,7 +20,7 @@ A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#norma
 const video = document.querySelector("video");
 const timeRangesObject = video.seekable;
 const timeRanges = [];
-//Go through the object and output an array
+// Go through the object and output an array
 for (let count = 0; count < timeRangesObject.length; count++) {
   timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
 }
@@ -38,4 +38,4 @@ for (let count = 0; count < timeRangesObject.length; count++) {
 
 - {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.seekable` property
 - [Media Source API](/en-US/docs/Web/API/Media_Source_Extensions_API)
-- [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [Media buffering, seeking, and time ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)

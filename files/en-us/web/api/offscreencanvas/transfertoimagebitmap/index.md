@@ -32,6 +32,13 @@ If your goal is to pass the `ImageBitmap` to other web APIs which do not consume
 
 If you call `transferToImageBitmap()` and don't intend to pass it to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}, consider whether you need to call `transferToImageBitmap()` at all. Many web APIs which accept `ImageBitmap` also accept `OffscreenCanvas` as an argument.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Throws if:
+    - the canvas has transferred to another context scope, such as a worker
+    - the canvas context mode has not been set by calling {{domxref("OffscreenCanvas.getContext()")}}.
+
 ## Examples
 
 ```js

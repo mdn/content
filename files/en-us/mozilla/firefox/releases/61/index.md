@@ -1,10 +1,10 @@
 ---
 title: Firefox 61 for developers
+short-title: Firefox 61
 slug: Mozilla/Firefox/Releases/61
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.
 
@@ -15,7 +15,6 @@ This article provides information about the changes in Firefox 61 that will affe
 - The new-look Console UI has been enabled by default for the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) & [Browser Toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html) ([Firefox bug 1362023](https://bugzil.la/1362023)/[Firefox bug 1347127](https://bugzil.la/1347127)). The old UI has been removed.
 - In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html), clicking _Open in New Tab_ in a `POST` request's context menu correctly resends the request with the expected `POST` parameters ([Firefox bug 1407515](https://bugzil.la/1407515)).
 - [CSS variables now autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#css-variable-autocompletion) with color swatches, allowing you to see exactly what color value is stored in each variable ([Firefox bug 1451211](https://bugzil.la/1451211)).
-
   - In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ([Firefox bug 1431949](https://bugzil.la/1431949)).
 
 - The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ([Firefox bug 1226272](https://bugzil.la/1226272)).
@@ -36,14 +35,13 @@ _No changes._
 
 - CSS parsing has been parallelized ([Firefox bug 1346988](https://bugzil.la/1346988)).
 - Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ([Firefox bug 1447163](https://bugzil.la/1447163)).
-- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
+- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
 - The {{cssxref("flex-basis")}} `content` value is now supported ([Firefox bug 1105111](https://bugzil.la/1105111)).
 - Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
 - The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ([Firefox bug 992245](https://bugzil.la/992245)).
 - {{cssxref("overflow")}} now accepts two-value syntax ([Firefox bug 1453148](https://bugzil.la/1453148)).
 - Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/width#values) for more details of these values.
 - {{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by [CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) ([Firefox bug 1436048](https://bugzil.la/1436048)):
-
   - {{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.
   - {{cssxref("font-stretch")}} now accepts percentage values.
   - {{cssxref("font-style")}} now accepts an angle after the `oblique` keyword.
@@ -103,7 +101,7 @@ _No changes._
 
 ### HTTP
 
-- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
+- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
 
 ### Networking
 
@@ -144,9 +142,8 @@ _No changes._
 
 ### SVG
 
-- The deprecated (and never properly implemented) {{domxref("SVGViewElement")}}`.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
+- The deprecated (and never properly implemented) `SVGViewElement.viewTarget` property has been removed ([Firefox bug 1455763](https://bugzil.la/1455763)).
 - The following deprecated properties have been removed from {{domxref("SVGSVGElement")}} ([Firefox bug 1133172](https://bugzil.la/1133172)):
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`
@@ -173,9 +170,4 @@ _No changes._
 - The `toolbar`, `toolbar_text`, `toolbar_field`, `toolbar_field_text`, and `toolbar_field_border` [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest properties now also apply to the findbar ([Firefox bug 1418605](https://bugzil.la/1418605)).
 - In [`sidebarAction.getPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel), [`sidebarAction.getTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle), [`sidebarAction.setPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel), [`sidebarAction.setTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle), and [`sidebarAction.setIcon()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon), you can now specify a `windowId` so that the features will be set/got only for a specific window ([Firefox bug 1390464](https://bugzil.la/1390464)).
 - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide) and [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show) are now enabled by default ([Firefox bug 1455040](https://bugzil.la/1455040)).
-
   - The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead ([Firefox bug 1438363](https://bugzil.la/1438363)).
-
-## Older versions
-
-{{Firefox_for_developers}}

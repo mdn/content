@@ -1,11 +1,10 @@
 ---
 title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
-page-type: guide
+page-type: css-property
 browser-compat: css.properties.custom-property
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.
 
@@ -16,9 +15,9 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ## Syntax
 
 ```css
---somekeyword: left;
---somecolor: #0000ff;
---somecomplexvalue: 3px 6px rgb(20 32 54);
+--some-keyword: left;
+--some-color: #0000ff;
+--some-complex-value: 3px 6px rgb(20 32 54);
 ```
 
 - `<declaration-value>`
@@ -89,5 +88,5 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 - The {{cssxref("var", "var()")}} function
 - {{cssxref("@property")}} at-rule
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties) guide
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) guide
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

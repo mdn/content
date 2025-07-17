@@ -2,9 +2,8 @@
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 page-type: webextension-api-function
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.
 
@@ -20,7 +19,7 @@ This means that if extension X tries to change a setting:
 3. Otherwise, if a lower-precedence extension Y has already changed the setting, then X succeeds in changing the setting, and now controls the setting. However, Y's change is remembered, and is stored in a queue in precedence order. If X subsequently clears its value, or if X is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
 4. Otherwise, if a higher-precedence extension Z has already changed the setting, then X does not succeed in changing the setting, but its change is queued. If Z subsequently clears its value, or if Z is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
 
-An extension can find out which of these scenarios applies by examining the "`levelOfControl`" property returned from a call to [`BrowserSetting.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get).
+An extension can find out which of these scenarios applies by examining the `levelOfControl` property returned from a call to [`BrowserSetting.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get).
 
 The `BrowserSetting.set()` method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
 
@@ -35,19 +34,13 @@ let setting = setting.set(
 ### Parameters
 
 - `details`
-
   - : An object that must contain the following property:
-
     - `value`
       - : `any`. The value you want to change the setting to. Its type depends on the particular setting.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was modified, `false` otherwise (for example, because the extension did not control the setting).
-
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Example
 
@@ -71,6 +64,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.

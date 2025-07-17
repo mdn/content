@@ -3,13 +3,60 @@ title: writing-mode
 slug: Web/CSS/writing-mode
 page-type: css-property
 browser-compat: css.properties.writing-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
-{{EmbedInteractiveExample("pages/css/writing-mode.html")}}
+{{InteractiveExample("CSS Demo: writing-mode")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-rl;
+```
+
+```css interactive-example-choice
+writing-mode: sideways-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+```
 
 This property specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
 
@@ -20,6 +67,8 @@ This property specifies the _block flow direction_, which is the direction in wh
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
+writing-mode: sideways-rl;
+writing-mode: sideways-lr;
 
 /* Global values */
 writing-mode: inherit;
@@ -51,7 +100,7 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
 - `tb`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-lr`
+- `tb-lr` {{Deprecated_Inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
@@ -289,12 +338,13 @@ span {
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- SVG {{SVGAttr("writing-mode")}} attribute
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)

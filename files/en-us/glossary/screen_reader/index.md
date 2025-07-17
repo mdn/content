@@ -2,9 +2,8 @@
 title: Screen reader
 slug: Glossary/Screen_reader
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Screen readers are software applications that attempt to convey what is seen on a screen display in a non-visual way, usually as text to speech, but also into braille or sound icons. Screen readers are essential to people who are visually impaired, illiterate, or have a learning disability. There are some browser extension screen readers, but most screen readers operate system-wide for all user applications, not just the browser.
 
@@ -35,7 +34,7 @@ See [ChromeVox screen reader](https://support.google.com/accessibility/answer/70
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - Related glossary terms:
   - {{Glossary("Accessibility")}}

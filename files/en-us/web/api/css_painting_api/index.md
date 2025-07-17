@@ -13,7 +13,7 @@ The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_A
 
 ## Concepts and usage
 
-Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('image/paint', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
+Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('image/paint', 'paint()')}}, a CSS {{cssxref('&lt;image&gt;')}} function. You can then apply these values to properties like {{cssxref('background-image')}} to set complex custom backgrounds on an element.
 
 For example:
 
@@ -30,21 +30,23 @@ The API defines a {{domxref('worklet')}} that can be used to programmatically ge
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the paint worklet.
 - {{domxref('PaintRenderingContext2D')}}
-  - : Implements a subset of the [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) API. It has an output bitmap that is the size of the object it is rendering to.
+  - : The rendering context for the CSS Painting API's rendering context for drawing to the bitmap.
 - {{domxref('PaintSize')}}
-  - : Returns the read-only values of the output bitmap's width and height.
+  - : Represents the size of the output bitmap that the author should draw.
 
 ## Examples
 
-The following example creates a list of items with a background image that rotates between three different colors and three widths. In a supporting browser you will see something like the image below.
+The following example creates a list of items with a background image that rotates between three different colors and three widths.
+In [a supporting browser](#browser_compatibility) you will see something like the image below.
 
-![The width and color of the background image changes based on the custom properties](guide/boxbg.png)
+![The width and color of the background image changes based on the custom properties](Guide/boxbg.png)
 
 To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
 
 ### The paint worklet
 
-In our worklet, we can reference these custom properties.
+The worklet is an external JavaScript file (in this case we've called it `boxbg.js`) which defines a paint {{domxref('worklet')}}.
+Using the worklet, we can access CSS properties (and custom properties) of elements:
 
 ```js
 registerPaint(
@@ -53,22 +55,21 @@ registerPaint(
     static get contextOptions() {
       return { alpha: true };
     }
-
     /*
-     use this function to retrieve any custom properties (or regular properties, such as 'height')
-     defined for the element, return them in the specified array
-  */
+      Retrieve any custom properties (or regular properties,
+      such as 'height') defined for the element, and return
+      them as an array.
+    */
     static get inputProperties() {
       return ["--boxColor", "--widthSubtractor"];
     }
 
     paint(ctx, size, props) {
       /*
-       ctx -> drawing context
-       size -> paintSize: width and height
-       props -> properties: get() method
-    */
-
+        ctx -> drawing context
+        size -> paintSize: width and height
+        props -> properties: get() method
+      */
       ctx.fillStyle = props.get("--boxColor");
       ctx.fillRect(
         0,
@@ -87,7 +88,7 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 #### HTML
 
-```html
+```html live-sample___example-boxbg
 <ul>
   <li>item 1</li>
   <li>item 2</li>
@@ -99,14 +100,7 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
   <li>item 8</li>
   <li>item 9</li>
   <li>item 10</li>
-  <li>item 11</li>
-  <li>item 12</li>
-  <li>item 13</li>
-  <li>item 14</li>
-  <li>item 15</li>
-  <li>item 16</li>
-  <li>item 17</li>
-  <li>item</li>
+  <li>item N</li>
 </ul>
 ```
 
@@ -114,26 +108,38 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties.
 
-```css
+```css live-sample___example-boxbg
+body {
+  font: 1.2em / 1.2 sans-serif;
+}
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60% / 100%);
+  --boxColor: hsl(55 90% 60%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 100%);
+  --boxColor: hsl(155 90% 60%);
   --widthSubtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 100%);
+  --boxColor: hsl(255 90% 60%);
   --widthSubtractor: 40;
 }
 ```
 
 #### JavaScript
 
-In our `<script>` we register the worklet:
+The setup and logic of the paint worklet is in the external script.
+To register the worklet, we need to call {{domxref('Worklet.addModule', 'addModule()')}} from our main script:
+
+```js live-sample___example-boxbg
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/boxbg.js",
+);
+```
+
+In this example, the worklet is hosted at `https://mdn.github.io/`, but your worklet may be a relative resource like so:
 
 ```js
 CSS.paintWorklet.addModule("boxbg.js");
@@ -143,7 +149,7 @@ CSS.paintWorklet.addModule("boxbg.js");
 
 While you can't play with the worklet's script, you can alter the custom property values in DevTools to change the colors and width of the background image.
 
-{{EmbedGHLiveSample("css-examples/houdini/css_painting_api/example-boxbg.html", '100%', 400)}}
+{{EmbedLiveSample("example-boxbg", "", "300px")}}
 
 ## Specifications
 

@@ -11,52 +11,6 @@ The **`SVGFEBlendElement`** interface corresponds to the {{SVGElement("feBlend")
 
 {{InheritanceDiagram}}
 
-## Constants
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_NORMAL</code></td>
-      <td>1</td>
-      <td>Corresponds to the value <code>normal</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_MULTIPLY</code></td>
-      <td>2</td>
-      <td>Corresponds to the value <code>multiply</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_SCREEN</code></td>
-      <td>3</td>
-      <td>Corresponds to the value <code>screen</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_DARKEN</code></td>
-      <td>4</td>
-      <td>Corresponds to the value <code>darken</code>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_FEBLEND_MODE_LIGHTEN</code></td>
-      <td>5</td>
-      <td>Corresponds to the value <code>lighten</code>.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
@@ -81,6 +35,21 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
+
+## Static properties
+
+- `SVG_FEBLEND_MODE_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_FEBLEND_MODE_NORMAL` (1)
+  - : Corresponds to the value `normal`.
+- `SVG_FEBLEND_MODE_MULTIPLY` (2)
+  - : Corresponds to the value `multiply`.
+- `SVG_FEBLEND_MODE_SCREEN` (3)
+  - : Corresponds to the value `screen`.
+- `SVG_FEBLEND_MODE_DARKEN` (4)
+  - : Corresponds to the value `darken`.
+- `SVG_FEBLEND_MODE_LIGHTEN` (5)
+  - : Corresponds to the value `lighten`.
 
 ## Specifications
 

@@ -18,10 +18,8 @@ Long animation frames (LoAFs) are rendering updates that are delayed beyond 50ms
 The `PerformanceScriptTiming` interface (instances of which are accessed via the {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} property) provides the following granular set of information on individual scripts that contribute to LoAFs, allowing developers to narrow down their root causes:
 
 - A detailed set of timestamps for each script.
-- The identity and type of the invoker, i.e. the feature that, when invoked, ran the script.
+- The identity and type of the invoker, i.e., the feature that, when invoked, ran the script.
 - Detailed information on each script source file, including the URL, and the function name and character position that contributed to the LoAF.
-
-## Inheritance
 
 `PerformanceScriptTiming` inherits from {{domxref("PerformanceEntry")}}.
 

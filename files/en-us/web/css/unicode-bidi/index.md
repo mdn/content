@@ -3,13 +3,36 @@ title: unicode-bidi
 slug: Web/CSS/unicode-bidi
 page-type: css-property
 browser-compat: css.properties.unicode-bidi
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
 
-{{EmbedInteractiveExample("pages/css/unicode-bidi.html")}}
+{{InteractiveExample("CSS Demo: unicode-bidi")}}
+
+```css interactive-example-choice
+unicode-bidi: normal;
+```
+
+```css interactive-example-choice
+unicode-bidi: bidi-override;
+```
+
+```css interactive-example-choice
+unicode-bidi: plaintext;
+```
+
+```css interactive-example-choice
+unicode-bidi: isolate-override;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ.
+  </p>
+</section>
+```
 
 The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
 
@@ -44,7 +67,7 @@ unicode-bidi: unset;
 - `bidi-override`
   - : For inline elements this creates an override. For block container elements this creates an override for inline-level descendants not within another block container element. This means that inside the element, reordering is strictly in sequence according to the {{Cssxref("direction")}} property; the implicit part of the bidirectional algorithm is ignored.
 - `isolate`
-  - : This keyword indicates that the element's container directionality should be calculated without considering the content of this element. The element is therefore _isolated_ from its siblings. When applying its bidirectional-resolution algorithm, its container element treats it as one or several `U+FFFC Object Replacement Character`, i.e. like an image.
+  - : This keyword indicates that the element's container directionality should be calculated without considering the content of this element. The element is therefore _isolated_ from its siblings. When applying its bidirectional-resolution algorithm, its container element treats it as one or several `U+FFFC Object Replacement Character`, i.e., like an image.
 - `isolate-override`
   - : This keyword applies the isolation behavior of the `isolate` keyword to the surrounding content and the override behavior of the `bidi-override` keyword to the inner content.
 - `plaintext`
@@ -92,3 +115,5 @@ unicode-bidi: unset;
 ## See also
 
 - {{Cssxref("direction")}}
+- SVG {{SVGAttr("unicode-bidi")}} attribute
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

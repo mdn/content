@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaSource.clearLiveSeekableRange
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`clearLiveSeekableRange()`** method of the
 {{domxref("MediaSource")}} interface clears a seekable range previously set with a call

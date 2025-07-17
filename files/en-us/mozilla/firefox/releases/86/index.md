@@ -1,10 +1,10 @@
 ---
 title: Firefox 86 for developers
+short-title: Firefox 86
 slug: Mozilla/Firefox/Releases/86
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 
@@ -25,7 +25,7 @@ _No changes._
 
 ### SVG
 
-- SVG filters can now use the {{SVGElement("feComposite")}} element with the [`lighter` operator](/en-US/docs/Web/SVG/Attribute/operator#fecomposite) ([Firefox bug 1518099](https://bugzil.la/1518099)). This operator sums the pixels of two source graphics.
+- SVG filters can now use the {{SVGElement("feComposite")}} element with the [`lighter` operator](/en-US/docs/Web/SVG/Reference/Attribute/operator#fecomposite) ([Firefox bug 1518099](https://bugzil.la/1518099)). This operator sums the pixels of two source graphics.
 
 ### CSS
 
@@ -50,7 +50,7 @@ _No changes._
 
 #### DOM
 
-- [`Window.name`](/en-US/docs/Web/API/Window/name) is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see [Firefox bug 1685089](https://bugzil.la/1685089).
+- [`Window.name`](/en-US/docs/Web/API/Window/name) is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g., by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see [Firefox bug 1685089](https://bugzil.la/1685089).
 - [`EventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) now supports the `signal` option. This option allows an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to be passed to the method. The `AbortSignal` can later be used to remove the listener by calling `abort()`. For more information see [Firefox bug 1679204](https://bugzil.la/1679204).
 
 ### WebDriver conformance (Marionette)
@@ -75,7 +75,3 @@ _No changes._
 - `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ([Firefox bug 1253129](https://bugzil.la/1253129)).
 - {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ([Firefox bug 1614919](https://bugzil.la/1614919)).
 - The page ID is now returned as part of {{WebExtAPIRef("history.onTitleChanged")}} ([Firefox bug 1678611](https://bugzil.la/1678611)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -1,13 +1,14 @@
 ---
-title: "::-moz-meter-bar"
+title: ::-moz-meter-bar
 slug: Web/CSS/::-moz-meter-bar
 page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-meter-bar
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-moz-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) represents the meter gauge in a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the gauge inside a meter element.
 
@@ -18,10 +19,6 @@ The **`::-moz-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/do
   /* ... */
 }
 ```
-
-## Specifications
-
-Not part of any standard.
 
 ## Examples
 
@@ -54,6 +51,10 @@ meter {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

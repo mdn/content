@@ -25,9 +25,9 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedAudioChunk(init);
+const chunk = new EncodedAudioChunk(init);
 
-console.log(chunk.duration); //2000000
+console.log(chunk.duration); // 2000000
 ```
 
 ## Specifications

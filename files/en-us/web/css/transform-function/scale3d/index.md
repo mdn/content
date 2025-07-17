@@ -3,28 +3,110 @@ title: scale3d()
 slug: Web/CSS/transform-function/scale3d
 page-type: css-function
 browser-compat: css.types.transform-function.scale3d
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element in 3D space.
+The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element in 3D space.
 Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-scale3d.html")}}
+{{InteractiveExample("CSS Demo: scale3d()")}}
+
+```css interactive-example-choice
+transform: scale3d(1, 1, 1);
+```
+
+```css interactive-example-choice
+transform: scale3d(1.3, 1.3, 1.3);
+```
+
+```css interactive-example-choice
+transform: scale3d(0.5, 1, 1.7);
+```
+
+```css interactive-example-choice
+transform: scale3d(-1.4, 0.4, 0.7);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
 is done in each direction. If all three coordinates are equal, the scaling is uniform (_isotropic_) and the
 {{glossary("aspect ratio")}} of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
 
 When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+shrinks. If it is negative, the result is a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. A value of 1 has no effect.
 
 ## Syntax
-
-The `scale3d()` function is specified with three values, which represent the amount of scaling to be
-applied in each direction.
 
 ```css
 scale3d(sx, sy, sz)
@@ -66,6 +148,10 @@ scale3d(sx, sy, sz)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SourceBuffer.changeType
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`changeType()`** method of the
 {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to
@@ -53,7 +53,7 @@ None ({{jsxref("undefined")}}).
 
 If the {{domxref("MediaSource.readyState", "readyState")}} property of the parent {{domxref("MediaSource")}} is set to `"ended"`, calling `changeType()`
 will set the `readyState` property to `"open"` and
-fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
+fire an event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
 
 ## Specifications
 

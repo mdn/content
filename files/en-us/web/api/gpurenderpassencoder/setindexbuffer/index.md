@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setIndexBuffer() method"
 short-title: setIndexBuffer()
 slug: Web/API/GPURenderPassEncoder/setIndexBuffer
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setIndexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setIndexBuffer()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
@@ -53,7 +51,7 @@ The following criteria must be met when calling **`setIndexBuffer()`**, otherwis
 In the WebGPU Samples [Shadow Mapping](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) example, `setIndexBuffer()` is used in two separate render passes in each animation frame, one to draw the main model and one to draw its shadow. Study the example code listing for the full context.
 
 ```js
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 {
@@ -79,7 +77,7 @@ const commandEncoder = device.createCommandEncoder();
   renderPass.end();
 }
 
-// ...
+// …
 ```
 
 ## Specifications

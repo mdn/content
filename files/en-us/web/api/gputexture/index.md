@@ -2,12 +2,10 @@
 title: GPUTexture
 slug: Web/API/GPUTexture
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 
@@ -17,42 +15,42 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 
 ## Instance properties
 
-- {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.depthOrArrayLayers", "depthOrArrayLayers")}} {{ReadOnlyInline}}
   - : A number representing the depth or layer count of the `GPUTexture` (pixels, or number of layers).
-- {{domxref("GPUTexture.dimension", "dimension")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.dimension", "dimension")}} {{ReadOnlyInline}}
   - : An enumerated value representing the dimension of the set of texels for each `GPUTexture` subresource.
-- {{domxref("GPUTexture.format", "format")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : An enumerated value representing the format of the `GPUTexture`.
-- {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.format", "format")}} {{ReadOnlyInline}}
+  - : An enumerated value representing the format of the `GPUTexture`. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
+- {{domxref("GPUTexture.height", "height")}} {{ReadOnlyInline}}
   - : A number representing the height of the `GPUTexture` in pixels.
-- {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
-- {{domxref("GPUTexture.mipLevelCount", "mipLevelCount")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.mipLevelCount", "mipLevelCount")}} {{ReadOnlyInline}}
   - : A number representing the number of mip levels of the `GPUTexture`.
-- {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.sampleCount", "sampleCount")}} {{ReadOnlyInline}}
   - : A number representing the sample count of the `GPUTexture`.
-- {{domxref("GPUTexture.usage", "usage")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.usage", "usage")}} {{ReadOnlyInline}}
   - : The {{glossary("bitwise flags")}} representing the allowed usages of the `GPUTexture`.
-- {{domxref("GPUTexture.width", "width")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPUTexture.width", "width")}} {{ReadOnlyInline}}
   - : A number representing the width of the `GPUTexture` in pixels.
 
 ## Instance methods
 
-- {{domxref("GPUTexture.createView", "createView()")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.createView", "createView()")}}
   - : Creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
-- {{domxref("GPUTexture.destroy", "destroy()")}} {{Experimental_Inline}}
+- {{domxref("GPUTexture.destroy", "destroy()")}}
   - : Destroys the `GPUTexture`.
 
 ## Examples
 
 In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), a texture to use on the faces of a cube is created by:
 
-- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("createImageBitmap()")}}.
+- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("Window.createImageBitmap", "createImageBitmap()")}}.
 - Creating a new `GPUTexture` using `createTexture()`.
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 
 ```js
-//...
+// …
 let cubeTexture;
 {
   const img = document.createElement("img");
@@ -81,7 +79,7 @@ let cubeTexture;
     [imageBitmap.width, imageBitmap.height],
   );
 }
-//...
+// …
 ```
 
 ## Specifications

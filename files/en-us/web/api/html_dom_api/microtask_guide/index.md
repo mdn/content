@@ -4,13 +4,13 @@ slug: Web/API/HTML_DOM_API/Microtask_guide
 page-type: guide
 ---
 
-{{APIRef("HTML DOM")}}
+{{DefaultAPISidebar("HTML DOM")}}
 
-A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Event_loop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
+A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
 
 This event loop may be either the browser's main event loop or the event loop driving a [web worker](/en-US/docs/Web/API/Web_Workers_API). This lets the given function run without the risk of interfering with another script's execution, yet also ensures that the microtask runs before the user agent has the opportunity to react to actions taken by the microtask.
 
-JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and the [Mutation Observer API](/en-US/docs/Web/API/MutationObserver) both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up is helpful. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the {{domxref("queueMicrotask()")}} method is exposed on the {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
+JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and the [Mutation Observer API](/en-US/docs/Web/API/MutationObserver) both use the microtask queue to run their callbacks, but there are other times when the ability to defer work until the current event loop pass is wrapping up is helpful. In order to allow microtasks to be used by third-party libraries, frameworks, and polyfills, the {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} method is exposed on the {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}} interfaces.
 
 ## Tasks vs. microtasks
 
@@ -24,7 +24,7 @@ For example, tasks get added to the task queue when:
 
 - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a {{HTMLElement("script")}} element) directly.
 - The user clicks an element. A task is then created and executes all event callbacks.
-- A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
+- A timeout or interval created with {{domxref("Window.setTimeout", "setTimeout()")}} or {{domxref("Window.setInterval", "setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
 
 The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. The oldest runnable task in the task queue will be executed during a single iteration of the event loop. After that, microtasks will be executed until the microtask queue is empty, and then the browser may choose to update rendering. Then the browser moves on to the next iteration of event loop.
 
@@ -36,7 +36,7 @@ There are two key differences.
 
 First, each time a task exits, the event loop checks to see if the task is returning control to other JavaScript code. If not, it runs all of the microtasks in the microtask queue. The microtask queue is, then, processed multiple times per iteration of the event loop, including after handling events and other callbacks.
 
-Second, if a microtask adds more microtasks to the queue by calling {{domxref("queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
+Second, if a microtask adds more microtasks to the queue by calling {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
 
 > [!WARNING]
 > Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
@@ -47,7 +47,7 @@ Before getting farther into this, it's important to note again that most develop
 
 ### Enqueueing microtasks
 
-As such, you should typically use microtasks only when there's no other solution, or when creating frameworks or libraries that need to use microtasks in order to create the functionality they're implementing. While there have been tricks available that made it possible to enqueue microtasks in the past (such as by creating a promise that resolves immediately), the addition of the {{domxref("queueMicrotask()")}} method adds a standard way to introduce a microtask safely and without tricks.
+As such, you should typically use microtasks only when there's no other solution, or when creating frameworks or libraries that need to use microtasks in order to create the functionality they're implementing. While there have been tricks available that made it possible to enqueue microtasks in the past (such as by creating a promise that resolves immediately), the addition of the {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} method adds a standard way to introduce a microtask safely and without tricks.
 
 By introducing `queueMicrotask()`, the quirks that arise when sneaking in using promises to create microtasks can be avoided. For instance, when using promises to create microtasks, exceptions thrown by the callback are reported as rejected promises rather than being reported as standard exceptions. Also, creating and destroying promises takes additional overhead both in terms of time and memory that a function which properly enqueues microtasks avoids.
 
@@ -74,7 +74,7 @@ The main reason to use microtasks is that: to ensure consistent ordering of task
 One situation in which microtasks can be used to ensure that the ordering of execution is always consistent is when promises are used in one clause of an `if...else` statement (or other conditional statement), but not in the other clause. Consider code such as this:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
@@ -104,7 +104,7 @@ Executing this code twice in a row gives the following results.
 When the data is not cached:
 
 ```plain
-Fetching data
+Fetching data…
 Data fetched
 Loaded data
 ```
@@ -112,7 +112,7 @@ Loaded data
 When the data is cached:
 
 ```plain
-Fetching data
+Fetching data…
 Loaded data
 Data fetched
 ```
@@ -122,7 +122,7 @@ Even worse, sometimes the element's `data` property will be set and other times 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
@@ -191,7 +191,7 @@ const logElem = document.getElementById("log");
 const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
-In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
+In the following code, we see a call to {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
 
 ```js
 log("Before enqueueing the microtask");
@@ -220,7 +220,7 @@ const logElem = document.getElementById("log");
 const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
-In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
+In the following code, we see a call to {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
 
 The code below schedules a timeout to occur in zero milliseconds, then enqueues a microtask. This is bracketed by calls to `log()` to output additional messages.
 
@@ -287,8 +287,7 @@ log("Main program exiting");
 ## See also
 
 - [In depth: Microtasks and the JavaScript runtime environment](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
-- {{domxref("queueMicrotask()")}}
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
+  - [Introducing asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [Graceful asynchronous programming with Promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)

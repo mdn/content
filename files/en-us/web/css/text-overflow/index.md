@@ -3,13 +3,53 @@ title: text-overflow
 slug: Web/CSS/text-overflow
 page-type: css-property
 browser-compat: css.properties.text-overflow
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis (`…`), or display a custom string.
 
-The **`text-overflow`** [CSS](/en-US/docs/Web/CSS) property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('`…`'), or display a custom string.
+{{InteractiveExample("CSS Demo: text-overflow")}}
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container, you have to set other CSS properties: {{cssxref("overflow")}} and {{cssxref("white-space")}}. For example:
 

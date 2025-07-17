@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSSkewX.ax
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed OM")}}{{AvailableInWorkers}}
 
 The **`ax`** property of the
 {{domxref("CSSSkewX")}} interface gets and sets the angle used to distort the element

@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("close", (event) => {});
+```js-nolint
+addEventListener("close", (event) => { })
 
-onclose = (event) => {};
+onclose = (event) => { }
 ```
 
 ## Event type
@@ -89,5 +89,5 @@ closeButton.addEventListener("click", () => {
 
 ## See also
 
-- HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog) element
+- HTML [`<dialog>`](/en-US/docs/Web/HTML/Reference/Elements/dialog) element
 - The [`Event`](/en-US/docs/Web/API/Event) interface

@@ -1,13 +1,12 @@
 ---
-title: ":right"
+title: :right
 slug: Web/CSS/:right
 page-type: css-pseudo-class
 browser-compat: css.selectors.right
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents all right-hand pages of a printed document.
+The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents all right-hand pages of a printed document.
 
 ```css
 /* Selects any right-hand pages when printing */

@@ -3,13 +3,51 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
 
-{{EmbedInteractiveExample("pages/css/border-top-color.html")}}
+{{InteractiveExample("CSS Demo: border-top-color")}}
+
+```css interactive-example-choice
+border-top-color: red;
+```
+
+```css interactive-example-choice
+border-top-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-top-color: rgb(170 50 220 / 0.6);
+```
+
+```css interactive-example-choice
+border-top-color: hsl(60 90% 50% / 0.8);
+```
+
+```css interactive-example-choice
+border-top-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -47,15 +85,15 @@ The `border-top-color` property is specified as a single value.
 
 ## Examples
 
-### A simple div with a border
+### A div with a border
 
 #### HTML
 
 ```html
-<div class="mybox">
+<div class="my-box">
   <p>
     This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    <span class="red-text">red</span>.
   </p>
 </div>
 ```
@@ -63,20 +101,20 @@ The `border-top-color` property is specified as a single value.
 #### CSS
 
 ```css
-.mybox {
+.my-box {
   border: solid 0.3em gold;
   border-top-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('A_div_with_a_border')}}
 
 ## Specifications
 

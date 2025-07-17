@@ -1,11 +1,10 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
@@ -18,7 +17,7 @@ h1:has(+ p) {
 }
 ```
 
-The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
+The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
 
 ## Syntax
 
@@ -30,9 +29,9 @@ The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specifi
 
 If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where).
 
-The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
+The `:has()` pseudo-class cannot be nested within another `:has()`.
 
-Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`.
+Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
 ## Examples
 

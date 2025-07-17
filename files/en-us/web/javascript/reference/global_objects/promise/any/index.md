@@ -1,15 +1,27 @@
 ---
 title: Promise.any()
+short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.any
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.any()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(new Error("error"));
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## Syntax
 
@@ -46,7 +58,7 @@ Also, unlike {{jsxref("Promise.race()")}}, which returns the first _settled_ val
 
 ```js
 const pErr = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("Always fails"));
 });
 
 const pSlow = new Promise((resolve, reject) => {
@@ -71,7 +83,7 @@ Promise.any([pErr, pSlow, pFast]).then((value) => {
 
 ```js
 const failure = new Promise((resolve, reject) => {
-  reject("Always fails");
+  reject(new Error("Always fails"));
 });
 
 Promise.any([failure]).catch((err) => {
@@ -82,7 +94,7 @@ Promise.any([failure]).catch((err) => {
 
 ### Displaying the first image loaded
 
-In this example, we have a function that fetches an image and returns a blob. We use `Promise.any()` to fetch a couple of images and display the first one available (i.e. whose promise has resolved).
+In this example, we have a function that fetches an image and returns a blob. We use `Promise.any()` to fetch a couple of images and display the first one available (i.e., whose promise has resolved).
 
 ```js
 async function fetchAndDecode(url, description) {
@@ -121,6 +133,7 @@ Promise.any([coffee, tea])
 ## See also
 
 - [Polyfill of `Promise.any` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.any`](https://www.npmjs.com/package/promise.any)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.allSettled()")}}

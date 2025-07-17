@@ -1,10 +1,10 @@
 ---
 title: Firefox 68 for developers
+short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 68 that will affect developers. Firefox 68 was released on July 9, 2019.
 
@@ -55,25 +55,24 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Removals
 
-- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Reference/Elements/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 
 - [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
+  - The `scroll-padding` property ([Firefox bug 1373832](https://bugzil.la/1373832))
+  - The `scroll-margin` property ([Firefox bug 1373833](https://bugzil.la/1373833))
+  - The {{CSSxRef("scroll-snap-align")}} property ([Firefox bug 1373835](https://bugzil.la/1373835))
 
-  - The `scroll-padding` properties ([Firefox bug 1373832](https://bugzil.la/1373832))
-  - The `scroll-margin` properties ([Firefox bug 1373833](https://bugzil.la/1373833))
-  - {{CSSxRef("scroll-snap-align")}} ([Firefox bug 1373835](https://bugzil.la/1373835))
-
-- The {{CSSxRef("-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ([Firefox bug 866102](https://bugzil.la/866102)).
+- The {{CSSxRef("line-clamp", "-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ([Firefox bug 866102](https://bugzil.la/866102)).
 - Support has been added for the {{CSSxRef("::marker")}} pseudo-element ([Firefox bug 205202](https://bugzil.la/205202)) and animation for `::marker` pseudos ([Firefox bug 1538618](https://bugzil.la/1538618))
 - We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property) ([Firefox bug 760345](https://bugzil.la/760345)).
 - Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ([Firefox bug 282126](https://bugzil.la/282126))
 - The {{CSSxRef("counter-set")}} property has been implemented. ([Firefox bug 1518201](https://bugzil.la/1518201)).
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ([Firefox bug 288704](https://bugzil.la/288704)).
 - Selector matching and parsing support has been implemented for [`::part()`](/en-US/docs/Web/CSS/::part) ([Firefox bug 1545430](https://bugzil.la/1545430)) and ([Firefox bug 1545425](https://bugzil.la/1545425)).
-- [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) are now supported in indirectly rendered things e.g.) {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ([Firefox bug 1323962](https://bugzil.la/1323962)).
-- While we're keeping the prefixed versions of the various gradient properties ({{cssxref("gradient/linear-gradient")}}, {{cssxref("gradient/radial-gradient")}}, and {{cssxref("gradient/repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
+- [CSS Transforms](/en-US/docs/Web/CSS/CSS_transforms) are now supported in indirectly rendered things e.g., {{SVGElement("mask")}}, {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{SVGElement("clipPath")}} ([Firefox bug 1323962](https://bugzil.la/1323962)).
+- While we're keeping the prefixed versions of the various gradient properties {{cssxref("gradient/linear-gradient")}}, {{cssxref("gradient/radial-gradient")}}, and {{cssxref("gradient/repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.
 
   In particular, the complicated syntax taking both an angle and a position will no longer work, and the `to` keyword in the `<side-or-corner>` parameter is not required for the prefixed gradient properties. You are encouraged to use the standard, non-prefixed gradient properties instead, as they're now widely supported ([Firefox bug 1547939](https://bugzil.la/1547939)).
 
@@ -109,7 +108,7 @@ _No changes._
 
 #### DOM events
 
-- [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
+- [Firefox for Android](https://firefox-source-docs.mozilla.org/mobile/android/index.html) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
 - The dispatching of events for non-primary mouse buttons has been made to more closely follow the specification; the {{domxref("Element.click_event", "click")}} event is no longer sent when non-primary buttons are clicked, instead using {{domxref("Element.auxclick_event", "auxclick")}}. In addition, {{domxref("Element.dblclick_event", "dblclick")}} no longer fires for non-primary buttons ([Firefox bug 1379466](https://bugzil.la/1379466)).
 - The proprietary `mozPressure` property has been deprecated, and will now trigger a warning in the console ([Firefox bug 1165211](https://bugzil.la/1165211)).
 
@@ -180,7 +179,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 68: BigInts, Contrast Checks, and the QuantumBar](https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/)
-
-## Older versions
-
-{{Firefox_for_developers}}

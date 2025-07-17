@@ -95,7 +95,7 @@ const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
-// Connect the source to be analysed
+// Connect the source to be analyzed
 source.connect(analyser);
 
 // Get a canvas defined with ID "oscilloscope"

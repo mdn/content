@@ -3,9 +3,8 @@ title: rx
 slug: Web/CSS/rx
 page-type: css-property
 browser-compat: css.properties.rx
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis, or horizontal, radius of an SVG {{SVGElement("ellipse")}} and the horizontal curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("rx")}} attribute.
 
@@ -35,15 +34,12 @@ rx: unset;
 The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value denotes the horizontal radius of ellipses and the horizontal border-radius of rectangles.
 
 - {{cssxref("length")}}
-
   - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the width of the current SVG viewport. The used value for a `<rect>` is never more than 50% of the width of the rectangle.
 
 - `auto`
-
   - : When set or defaulting to `auto`, the `rx` value equals the absolute length value used for {{cssxref("ry")}}. If both `rx` and `ry` have a computed value of `auto`, the used value is `0`.
 
 ## Formal definition
@@ -201,3 +197,4 @@ When using percentage values for `rx`, the values are relative to the width of t
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
+- SVG {{SVGAttr("rx")}} attribute

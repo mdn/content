@@ -68,7 +68,7 @@ function download() {
   a.href = url;
   a.download = "test.webm";
   a.click();
-  window.URL.revokeObjectURL(url);
+  URL.revokeObjectURL(url);
 }
 
 // demo: to download after 9sec
@@ -93,7 +93,7 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 ```js
 navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
-    const menu = document.getElementById("inputdevices");
+    const menu = document.getElementById("input-devices");
     if (device.kind === "audioinput") {
       const item = document.createElement("option");
       item.textContent = device.label;
@@ -119,6 +119,61 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - {{domxref("MediaRecorderErrorEvent")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The interface that represents errors thrown by the MediaStream Recording API. Its {{domxref("MediaRecorderErrorEvent.error", "error")}} property is a {{domxref("DOMException")}} that specifies that error occurred.
 
+## Examples
+
+### Basic video recording
+
+```html
+<button id="record-btn">Start</button>
+<video id="player" src="" autoplay controls></video>
+```
+
+```js
+const recordBtn = document.getElementById("record-btn");
+const video = document.getElementById("player");
+
+let chunks = [];
+let isRecording = false;
+let mediaRecorder = null;
+
+const constraints = { video: true };
+
+recordBtn.addEventListener("click", async () => {
+  if (!isRecording) {
+    // Acquire a recorder on load
+    if (!mediaRecorder) {
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.addEventListener("dataavailable", () => {
+        console.log("data available");
+        chunks.push(e.data);
+      });
+      mediaRecorder.addEventListener("stop", (e) => {
+        console.log("onstop fired");
+        const blob = new Blob(chunks, { type: "video/ogv; codecs=opus" });
+        video.src = window.URL.createObjectURL(blob);
+      });
+      mediaRecorder.addEventListener("error", (e) => {
+        console.error("An error occured:", e);
+      });
+    }
+    isRecording = true;
+    recordBtn.textContent = "Stop";
+    chunks = [];
+    mediaRecorder.start();
+    console.log("recorder started");
+  } else {
+    isRecording = false;
+    recordBtn.textContent = "Start";
+    mediaRecorder.stop();
+    console.log("recorder stopped");
+  }
+});
+```
+
+<!-- TODO: re-enable when blob: URLs are allowed by CSP settings -->
+<!-- {{EmbedLiveSample("Basic video recording", , "400", , , , "camera")}} -->
+
 ## Specifications
 
 {{Specifications}}
@@ -135,7 +190,6 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
-- [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
 - [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [MediaStream Recorder API Now Available in Safari Technology Preview 73](https://blog.addpipe.com/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)

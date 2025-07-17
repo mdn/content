@@ -2,9 +2,8 @@
 title: Background scripts
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.
 
@@ -324,7 +323,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 ### Change timers into alarms
 
-DOM-based timers, such as {{domxref("setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
+DOM-based timers, such as {{domxref("Window.setTimeout", "setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
 
 ```js
 browser.alarms.create({ delayInMinutes: 3.0 });

@@ -15,10 +15,10 @@ To detect when scrolling has completed, see the {{domxref("Element/scrollend_eve
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scroll", (event) => {});
+```js-nolint
+addEventListener("scroll", (event) => { })
 
-onscroll = (event) => {};
+onscroll = (event) => { }
 ```
 
 ## Event type
@@ -28,7 +28,7 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 The following examples show how to use the `scroll` event with an event listener and with the `onscroll` event handler property.
-The {{DOMxRef("setTimeout()")}} method is used to {{glossary("throttle")}} the event handler because `scroll` events can fire at a high rate.
+The {{DOMxRef("Window.setTimeout", "setTimeout()")}} method is used to {{glossary("throttle")}} the event handler because `scroll` events can fire at a high rate.
 For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, see the `Document` {{domxref("Document/scroll_event", "scroll")}} event page.
 
 ### Using `scroll` with an event listener
@@ -36,12 +36,28 @@ For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "re
 The following example shows how to use the `scroll` event to detect when the user is scrolling inside an element:
 
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p>Scroll me!</p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
+```
+
+```css
+#scroll-box {
+  overflow: scroll;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#scroll-box p {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
 ```
 
 ```js
@@ -63,12 +79,28 @@ element.addEventListener("scroll", (event) => {
 The following example shows how to use the `onscroll` event handler property to detect when the user is scrolling:
 
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p>Scroll me!</p>
 </div>
-<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
+```
+
+```css
+#scroll-box {
+  overflow: scroll;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#scroll-box p {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
 ```
 
 ```js

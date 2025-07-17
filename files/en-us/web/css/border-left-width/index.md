@@ -3,13 +3,51 @@ title: border-left-width
 slug: Web/CSS/border-left-width
 page-type: css-property
 browser-compat: css.properties.border-left-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS Demo: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -35,9 +73,7 @@ border-left-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

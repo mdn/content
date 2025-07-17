@@ -1,20 +1,20 @@
 ---
 title: Customize your app's theme and background colors
+short-title: Customize colors of your app
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 When building [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed.
 
-One way to customize the window in which your app appears is by using the [`theme_color`](/en-US/docs/Web/Manifest/theme_color) and [`background_color`](/en-US/docs/Web/Manifest/background_color) [web app manifest](/en-US/docs/Web/Manifest) members.
+One way to customize the window in which your app appears is by using the [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) and [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) members.
 
 By defining the `theme_color` and `background_color` members in your PWA manifest, you can create a more polished experience for your users. These small details can help make your PWA feel more like an OS-native app, and more familiar to your users.
 
 ## Customize the app window background color
 
-The [`background_color`](/en-US/docs/Web/Manifest/background_color) manifest member defines the color that appears in the application window before your app's stylesheets have loaded.
+The [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color) manifest member defines the color that appears in the application window before your app's stylesheets have loaded.
 
 Because this color appears before your stylesheets have loaded, set its value to the same color value as the `background-color` CSS property in your application's stylesheet. This will ensure a smooth visual transition between launching the web application and loading its content.
 
@@ -50,7 +50,7 @@ The following screenshot shows the above code in action. The PWA that uses this 
 
 ## Define a theme color
 
-The [`theme_color`](/en-US/docs/Web/Manifest/theme_color) member in your PWA manifest defines the default color of operating system and browser UI elements used in the application.
+The [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color) member in your PWA manifest defines the default color of operating system and browser UI elements used in the application.
 
 Different devices, operating systems, and browsers apply the `theme_color` member differently. For example:
 
@@ -84,7 +84,7 @@ The following screenshot shows the above code in action when the app is installe
 
 ### Relationship with the `theme-color` meta element value
 
-The [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value for the [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute of the {{htmlelement("meta")}} HTML element can be used to define a theme color per webpage. This is different from the `theme_color` manifest member which you define only once, globally, for your app.
+The [`theme-color`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/theme-color) value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} HTML element can be used to define a theme color per webpage. This is different from the `theme_color` manifest member which you define only once, globally, for your app.
 
 If both are set, the `theme-color` meta element value overrides the `theme_color` manifest member. This lets you define a global color for your app and override it on specific pages.
 
@@ -92,6 +92,6 @@ Note that on some browsers, like Safari on macOS and Chrome on Android, the `the
 
 ## See also
 
-- [Web App Manifests](/en-US/docs/Web/Manifest).
+- [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
 - [Meta Theme Color and Trickery on css-tricks.com](https://css-tricks.com/meta-theme-color-and-trickery/) (2021)
 - [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest#recommended_fields)

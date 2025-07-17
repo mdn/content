@@ -1,10 +1,10 @@
 ---
 title: Firefox 37 for developers
+short-title: Firefox 37
 slug: Mozilla/Firefox/Releases/37
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 37 was released on March 31st, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -39,7 +39,6 @@ Highlights:
 - The Non-standard `String.prototype.quote()` method has been removed ([Firefox bug 1103181](https://bugzil.la/1103181)).
 - The {{jsxref("RegExp.prototype.flags")}} property has been implemented ([Firefox bug 1108467](https://bugzil.la/1108467)).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
-
   - The {{jsxref("TypedArray.every", "every()")}} and {{jsxref("TypedArray.some", "some()")}} methods ([Firefox bug 1116390](https://bugzil.la/1116390)).
   - The {{jsxref("TypedArray.find", "find()")}} and {{jsxref("TypedArray.findIndex", "findIndex()")}} methods ([Firefox bug 1078975](https://bugzil.la/1078975)).
   - The {{jsxref("TypedArray.fill", "fill()")}} method ([Firefox bug 1113722](https://bugzil.la/1113722)).
@@ -60,11 +59,10 @@ Highlights:
 - The experimental, not activated by default, implementation of [Service Workers](/en-US/docs/Web/API/Service_Worker_API) progresses: {{domxref("ServiceWorkerRegistration/update", "ServiceWorkerGlobalScope.update()")}} has been implemented [Firefox bug 1065366](https://bugzil.la/1065366).
 - The [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) can now be used in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 701634](https://bugzil.la/701634)).
 - Our experimental implementation of WebGL 2.0 is going forward!
-
   - The {{domxref("WebGL2RenderingContext.getBufferSubData()")}} method has been implemented to provide access to Buffer Objects ([Firefox bug 1048731](https://bugzil.la/1048731)).
 
 - In keeping with the evolving WebRTC specification, we have deprecated `RTCIceServer.url` in favor of `RTCIceServer.urls`, which lets you specify more than one URL for a given ICE server.
-- Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://w3c.github.io/DOM-Level-3-Events-key/). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/KeyboardEvent/key#key_values). The green cells are new values. And purple values are still unstable. Be careful if you use them (meta bug for these changes is [Firefox bug 900372](https://bugzil.la/900372)).
+- Some key names of `KeyboardEvent.key` are changed for conforming [the latest DOM Level 3 Events spec](https://w3c.github.io/DOM-Level-3-Events-key/). See [the tables of `KeyboardEvent.key` values in MDN](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values). Meta bug for these changes is [Firefox bug 900372](https://bugzil.la/900372).
 - The {{domxref("console")}} interface is now working on {{domxref("ServiceWorker")}} and {{domxref("SharedWorker")}}. It was previously available but not working ([Firefox bug 1058644](https://bugzil.la/1058644)).
 - The value of {{domxref("KeyboardEvent.key")}} was incorrectly being reported as `"RomanCharacters"` when the `英数` (`Eisu`) key was pressed. Now it correctly returns `"Eisu"`.
 
@@ -87,7 +85,7 @@ _No change._
 ## Security
 
 - The usage of weak protocols or ciphers, like SSL 3.0 and RC4, are now logged in the console, to warn sites that are using it ([Firefox bug 1092835](https://bugzil.la/1092835)).
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `referrer` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 965727](https://bugzil.la/965727)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `referrer` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 965727](https://bugzil.la/965727)).
 
 ## Changes for add-on and Mozilla developers
 
@@ -98,7 +96,3 @@ _No change._
 ### XUL
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

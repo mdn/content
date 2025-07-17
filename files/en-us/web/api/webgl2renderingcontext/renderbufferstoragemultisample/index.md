@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The
 **`WebGL2RenderingContext.renderbufferStorageMultisample()`**
@@ -23,9 +23,7 @@ renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a
         renderable internal format.
@@ -34,10 +32,8 @@ renderbufferStorageMultisample(target, samples, internalFormat, width, height)
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of samples to be used for the
     renderbuffer storage.
 - `internalFormat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
     values (`gl.DEPTH_STENCIL` is not supported):
-
     - `gl.R8`
     - `gl.R8UI`
     - `gl.R8I`

@@ -61,4 +61,5 @@ with (node) {
 
 ## See also
 
-- [Polyfill](https://github.com/chenzhenxi/element-remove)
+- {{domxref("CharacterData.remove()")}}
+- {{domxref("DocumentType.remove()")}}

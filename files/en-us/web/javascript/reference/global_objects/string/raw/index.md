@@ -1,15 +1,24 @@
 ---
 title: String.raw()
+short-title: raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.raw
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`String.raw()`** static method is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals). This is similar to the `r` prefix in Python, or the `@` prefix in C# for string literals. It's used to get the raw string form of template literals — that is, substitutions (e.g., `${foo}`) are processed, but escape sequences (e.g., `\n`) are not.
 
-The **`String.raw()`** static method is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals). This is similar to the `r` prefix in Python, or the `@` prefix in C# for string literals. It's used to get the raw string form of template literals — that is, substitutions (e.g. `${foo}`) are processed, but escape sequences (e.g. `\n`) are not.
+{{InteractiveExample("JavaScript Demo: String.raw()")}}
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+```js interactive-example
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\about.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// Expected output: "The file was uploaded from: C:\Development\profile\about.html"
+```
 
 ## Syntax
 
@@ -49,7 +58,7 @@ In most cases, `String.raw()` is used with template literals. The first syntax m
 > [!WARNING]
 > You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
 
-If `String.raw()` is called with an object whose `raw` property doesn't have a `length` property or a non-positive `length`, it returns an empty string `""`. If `substitutions.length < strings.raw.length - 1` (i.e. there are not enough substitutions to fill the placeholders — which can't happen in a well-formed tagged template literal), the rest of the placeholders are filled with empty strings.
+If `String.raw()` is called with an object whose `raw` property doesn't have a `length` property or a non-positive `length`, it returns an empty string `""`. If `substitutions.length < strings.raw.length - 1` (i.e., there are not enough substitutions to fill the placeholders — which can't happen in a well-formed tagged template literal), the rest of the placeholders are filled with empty strings.
 
 ## Examples
 
@@ -138,7 +147,7 @@ const doc = html`<canvas>\n</canvas>`;
 // "<canvas>\\n</canvas>"
 ```
 
-This may not be what you want for a "true identity" tag, where the tag is purely for markup and doesn't change the literal's value. In this case, you can create a custom tag and pass the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+This may not be what you want for a "true identity" tag, where the tag is purely for markup and doesn't change the literal's value. In this case, you can create a custom tag and pass the "cooked" (i.e., escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js-nolint
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
@@ -164,6 +173,7 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 ## See also
 
 - [Polyfill of `String.raw` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.raw`](https://www.npmjs.com/package/string.raw)
 - [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

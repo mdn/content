@@ -1,15 +1,25 @@
 ---
 title: String.prototype.trimStart()
+short-title: trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trimStart
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`trimStart()`** method of {{jsxref("String")}} values removes whitespace from the beginning of this string and returns a new string, without modifying the original string. `trimLeft()` is an alias of this method.
 
-{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.trimStart()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";
+```
 
 ## Syntax
 
@@ -64,5 +74,6 @@ console.log(str); // 'foo  '
 ## See also
 
 - [Polyfill of `String.prototype.trimStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.trimStart`](https://www.npmjs.com/package/string.prototype.trimstart)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}

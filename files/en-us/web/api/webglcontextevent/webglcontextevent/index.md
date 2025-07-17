@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.WebGLContextEvent.WebGLContextEvent
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLContextEvent()`** constructor creates a new {{domxref("WebGLContextEvent")}} object.
 

@@ -3,13 +3,51 @@ title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-width`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
 
-The **`border-width`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
+{{InteractiveExample("CSS Demo: border-width")}}
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Constituent properties
 
@@ -59,9 +97,7 @@ The `border-width` property may be specified using one, two, three, or four valu
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

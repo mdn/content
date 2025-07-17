@@ -6,12 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.Response.redirected
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
+The **`redirected`** read-only property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
 
 > [!NOTE]
-> Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.
+> Checking `redirected` to prevent redirects is not recommended, because by the time a response is received, the redirect has already happened, and you may have sent the request to an unintended destination, potentially sending sensitive information.
 > Instead, you should do the filtering when you call {{domxref("Window/fetch", "fetch()")}}.
 > See the example [Disallowing redirects](#disallowing_redirects), which shows this being done.
 
@@ -46,7 +46,7 @@ fetch("awesome-picture.jpg")
 
 ### Disallowing redirects
 
-Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to `"error"` in the `init` parameter when calling {{domxref("Window/fetch", "fetch()")}}, like this:
+Checking `redirected` is a bad way to prevent redirects, because the redirect has already happened. Instead, you should set the redirect mode to `"error"` in the `options` parameter when calling {{domxref("Window/fetch", "fetch()")}}, like this:
 
 ```js
 fetch("awesome-picture.jpg", { redirect: "error" })
@@ -69,5 +69,5 @@ fetch("awesome-picture.jpg", { redirect: "error" })
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

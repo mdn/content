@@ -3,9 +3,8 @@ title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overscroll-behavior-inline`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 
@@ -132,4 +131,8 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module

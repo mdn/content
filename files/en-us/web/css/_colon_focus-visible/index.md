@@ -1,15 +1,48 @@
 ---
-title: ":focus-visible"
+title: :focus-visible
 slug: Web/CSS/:focus-visible
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:focus-visible`** pseudo-class applies while an element matches the {{CSSxRef(":focus")}} pseudo-class and the UA ({{glossary("User Agent")}}) determines via heuristics that the focus should be made evident on the element. (Many browsers show a "focus ring" by default in this case.)
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-visible.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :focus-visible", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:focus-visible {
+  outline: 2px solid crimson;
+  border-radius: 3px;
+}
+
+select:focus-visible {
+  border: 2px dashed crimson;
+  border-radius: 3px;
+  outline: none;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
 
 This selector is useful to provide a different focus indicator based on the user's input modality (mouse vs. keyboard).
 
@@ -47,11 +80,11 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ### Comparing :focus and :focus-visible
 
-This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Element/input/text) input and a button.
+This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) input and a button.
 
 - The first pair does not add any custom styles for focus states, and shows the default case.
 - The second pair adds styles using the `:focus` pseudo-class.
-- The third pair add styles using the `:focus-visible` pseudo-class.
+- The third pair adds styles using the `:focus-visible` pseudo-class.
 
 ```html
 <input type="text" value="Default styles" /><br />
@@ -134,4 +167,3 @@ If your code has to work in old browser versions that do not support `:focus-vis
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}
-- [A polyfill for `:focus-visible`](https://github.com/WICG/focus-visible)

@@ -14,10 +14,10 @@ The `loadedmetadata` event is fired when the metadata has been loaded.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("loadedmetadata", (event) => {});
+```js-nolint
+addEventListener("loadedmetadata", (event) => { })
 
-onloadedmetadata = (event) => {};
+onloadedmetadata = (event) => { }
 ```
 
 ## Event type

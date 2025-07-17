@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextEncoderStream.readable
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
@@ -19,8 +19,8 @@ A {{domxref("ReadableStream")}}.
 The following example demonstrates how to return a `ReadableStream` from a `TextEncoderStream` object.
 
 ```js
-stream = new TextEncoderStream();
-console.log(stream.readable); //a ReadableStream
+const stream = new TextEncoderStream();
+console.log(stream.readable); // A ReadableStream
 ```
 
 ## Specifications

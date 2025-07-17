@@ -10,7 +10,7 @@ browser-compat: api.Navigator.appVersion
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-Returns either "`4.0`" or a string representing version information about
+Returns either `"4.0"` or a string representing version information about
 the browser.
 
 > [!NOTE]
@@ -18,7 +18,7 @@ the browser.
 
 ## Value
 
-Either "`4.0`" or a string representing version information about the
+Either `"4.0"` or a string representing version information about the
 browser.
 
 ## Examples
@@ -31,7 +31,7 @@ alert(`Your browser version is reported as ${navigator.appVersion}`);
 
 The `window.navigator.userAgent` property may also contain the version
 number (for example
-"`Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1`"),
+`"Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1"`),
 but you should be aware of how easy it is to change the user agent string and "spoof"
 other browsers, platforms, or user agents, and also how cavalier the browser vendor
 themselves are with these properties.

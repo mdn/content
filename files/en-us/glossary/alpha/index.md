@@ -2,9 +2,8 @@
 title: Alpha (alpha channel)
 slug: Glossary/Alpha
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **alpha channel** specifies to opacity of a ({{CSSxRef("&lt;color&gt;")}}). Colors are represented in digital form as a collection of numbers, each representing the strength or intensity level of a given component of the color. Each of these components is called a **channel**. In a typical image file, the color channels describe how much red, green, and blue are used to make up the final color. To represent a color through which the background can be seen to some extent, a fourth channel is added to the color: the alpha channel.
 
@@ -17,8 +16,8 @@ As you can see, the color without an alpha channel completely blocks the backgro
 ## See also
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors)
-- [CSS values and units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha compositing](https://en.wikipedia.org/wiki/Alpha_compositing) on Wikipedia
 - [RGBA color model](https://en.wikipedia.org/wiki/RGBA_color_model) on Wikipedia
 - [Channel (digital image)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) on Wikipedia

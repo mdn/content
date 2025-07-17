@@ -17,8 +17,7 @@ The matching is done using depth-first pre-order traversal of the document's nod
 If the specified selector matches an ID that is incorrectly used more than once in the
 document, the first element with that ID is returned.
 
-[CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) will never return
-any elements, as specified in the [Selectors API](https://www.w3.org/TR/selectors-api/#grammar).
+[CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) will never return any elements.
 
 ## Syntax
 
@@ -29,12 +28,11 @@ querySelector(selectors)
 ### Parameters
 
 - `selectors`
-
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
 ### Return value
 
@@ -54,7 +52,7 @@ If you need a list of all elements matching the specified selectors, you should 
 ### Finding the first element matching a class
 
 In this example, the first element in the document with the class
-"`myclass`" is returned:
+`myclass` is returned:
 
 ```js
 const el = document.querySelector(".myclass");
@@ -87,7 +85,7 @@ not the `main` class.
 
 ### Escaping attribute values
 
-This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelector()`.
+This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelector()`.
 
 #### HTML
 

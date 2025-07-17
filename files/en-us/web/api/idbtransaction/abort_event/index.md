@@ -18,15 +18,16 @@ This can happen for any of the following reasons:
 - An I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure).
 - Quota exceeded.
 
-This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) to the associated {{domxref("IDBDatabase")}} object.
+This non-cancelable event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the associated {{domxref("IDBDatabase")}} object.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("abort", (event) => {});
-onabort = (event) => {};
+```js-nolint
+addEventListener("abort", (event) => { })
+
+onabort = (event) => { }
 ```
 
 ## Event type
@@ -37,7 +38,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("IDBDatabase")}}. The `event.target` property refers to the {{domxref('IDBTransaction')}} object that bubbles up.
 
-For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Examples
 

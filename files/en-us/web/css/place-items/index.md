@@ -3,13 +3,56 @@ title: place-items
 slug: Web/CSS/place-items
 page-type: css-shorthand-property
 browser-compat: css.properties.place-items
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) aligns items along both the block and inline directions at once. It sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties. If the second value is not set, the first value is also used for it.
 
-The [CSS](/en-US/docs/Web/CSS) **`place-items`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align items along both the block and inline directions at once (i.e. the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout). If the second value is not set, the first value is also used for it.
+{{InteractiveExample("CSS Demo: place-items")}}
 
-{{EmbedInteractiveExample("pages/css/place-items.html")}}
+```css interactive-example-choice
+place-items: center stretch;
+```
+
+```css interactive-example-choice
+place-items: center start;
+```
+
+```css interactive-example-choice
+place-items: start end;
+```
+
+```css interactive-example-choice
+place-items: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgb(0 0 255 / 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Constituent properties
 
@@ -229,7 +272,7 @@ select {
 ```
 
 ```html hidden
-<div id="gridcontainer">
+<div id="grid-container">
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
@@ -238,8 +281,8 @@ select {
 </div>
 
 <div class="row">
-  <label for="gridvalues">place-items: </label>
-  <select id="gridvalues">
+  <label for="grid-values">place-items: </label>
+  <select id="grid-values">
     <option value="stretch">stretch</option>
     <option value="start">start</option>
     <option value="center">center</option>
@@ -266,8 +309,8 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById("gridvalues");
-const container = document.getElementById("gridcontainer");
+const values = document.getElementById("grid-values");
+const container = document.getElementById("grid-container");
 
 values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
@@ -277,7 +320,7 @@ values.addEventListener("change", (evt) => {
 #### CSS
 
 ```css
-#gridcontainer {
+#grid-container {
   height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
@@ -286,7 +329,7 @@ values.addEventListener("change", (evt) => {
   grid-template-columns: repeat(3, 1fr);
 }
 
-#gridcontainer > div {
+#grid-container > div {
   width: 50px;
 }
 ```
@@ -311,5 +354,5 @@ values.addEventListener("change", (evt) => {
 - {{CSSxRef("justify-self")}}
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

@@ -8,7 +8,7 @@ browser-compat: api.ValidityState.tooLong
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`tooLong`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}}, after having been edited by the user, exceeds the maximum code-unit length established by the element's [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attribute.
+The read-only **`tooLong`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}}, after having been edited by the user, exceeds the maximum code-unit length established by the element's [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) attribute.
 
 ## Value
 
@@ -18,8 +18,8 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Textarea with too long character count
 
-The following example checks the validity of a [textarea element](/en-US/docs/Web/HTML/Element/textarea).
-A constraint has been added using the [`maxlength` attribute](/en-US/docs/Web/HTML/Element/input/text#maxlength) so the textarea expects a maximum of 10 characters.
+The following example checks the validity of a [textarea element](/en-US/docs/Web/HTML/Reference/Elements/textarea).
+A constraint has been added using the [`maxlength` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/text#maxlength) so the textarea expects a maximum of 10 characters.
 If there are too many characters in the textarea (which is true below), the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} CSS pseudo-class are applied.
 
 When editing the textarea, the browser will not allow the user to add characters that would fail constraint validation of maximum character count, so at first, only deleting characters is allowed.
@@ -86,5 +86,5 @@ userInput.addEventListener("input", () => {
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

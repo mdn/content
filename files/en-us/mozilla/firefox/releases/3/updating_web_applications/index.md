@@ -2,9 +2,8 @@
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 There are a number of changes in the upcoming Firefox 3 that may affect your website or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
@@ -58,7 +57,7 @@ Firefox 3 only allows web content to access items in the `chrome://browser/` and
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
 ```plain
-content mypackage location/ contentaccessible=yes
+content my-package location/ contentaccessible=yes
 ```
 
 This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
@@ -67,8 +66,8 @@ This shouldn't be something you need to do very often, but it's available for th
 > Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
 >
 > ```bash
-> content mypackage location/
-> content mypackage location/ contentaccessible=yes
+> content my-package location/
+> content my-package location/ contentaccessible=yes
 >
 > ```
 

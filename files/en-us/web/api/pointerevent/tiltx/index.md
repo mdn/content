@@ -11,7 +11,7 @@ browser-compat: api.PointerEvent.tiltX
 The **`tiltX`** read-only property of the {{domxref("PointerEvent")}} interface is the angle (in degrees) between the _Y-Z plane_ of the pointer and the screen.
 This property is typically only useful for a pen/stylus pointer type.
 
-Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either `tiltX` and {{domxref("PointerEvent.tilty", "tiltY")}} or {{domxref("PointerEvent.altitudeAngle", "altitudeAngle")}} and {{domxref("PointerEvent.azimuthAngle", "azimuthAngle")}}.
+Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either `tiltX` and {{domxref("PointerEvent.tiltY", "tiltY")}} or {{domxref("PointerEvent.altitudeAngle", "altitudeAngle")}} and {{domxref("PointerEvent.azimuthAngle", "azimuthAngle")}}.
 
 ![The tiltX angle of a pointer compared to the tiltY angle](tilt_x_y_angles.svg)
 

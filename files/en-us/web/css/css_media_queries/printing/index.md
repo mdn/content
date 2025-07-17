@@ -2,9 +2,8 @@
 title: Printing
 slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 There may be times in which your website or application would like to improve the user's experience when printing content. There are several possible scenarios:
 
@@ -27,7 +26,7 @@ Add the following to your {{HTMLElement("head")}} tag.
 
 You can use the CSS {{cssxref("@media")}} at-rule to set different styles for your webpage when it is printed on paper or as a PDF versus when it is displayed on the screen. The `print` [media type](/en-US/docs/Web/CSS/@media#media_types) sets the styles for printed media; these styles will only be used for printed content.
 
-Add this at the end of your stylesheet. Note that [specificity](/en-US/docs/Web/CSS/Specificity) and precedence rules still apply:
+Add this at the end of your stylesheet. Note that [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) and precedence rules still apply:
 
 ```css
 @media print {

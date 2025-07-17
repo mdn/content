@@ -3,9 +3,8 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Executes JavaScript in the window that the devtools are attached to.
 
@@ -30,7 +29,7 @@ The script gets access to a number of objects that help the injected script inte
 - `$0`
   - : Contains a reference to the element that's currently selected in the devtools Inspector.
 - `inspect()`
-  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.
+  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
 
 [See some examples.](#examples)
 
@@ -48,13 +47,11 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
-
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
-
     - `frameURL` {{optional_inline}}
       - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
     - `useContentScriptContext` {{optional_inline}}
-      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
+      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a DevTools error will be thrown.
     - `contextSecurityOrigin` {{optional_inline}}
       - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
 
@@ -67,18 +64,12 @@ If no error occurred, element 0 will contain the result of evaluating the expres
 If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
 - errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-
   - a boolean property `isException`, set to `true`
   - a string property `value`, giving more details.
 
 - other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -87,7 +78,7 @@ This tests whether jQuery is defined in the inspected window, and logs the resul
 ```js
 function handleError(error) {
   if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
+    console.log(`DevTools error: ${error.code}`);
   } else {
     console.log(`JavaScript error: ${error.value}`);
   }
@@ -102,10 +93,10 @@ function handleResult(result) {
   }
 }
 
-const checkjQuery = "typeof jQuery !== 'undefined'";
+const checkJQuery = "typeof jQuery !== 'undefined'";
 
 evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
+  browser.devtools.inspectedWindow.eval(checkJQuery).then(handleResult);
 });
 ```
 
@@ -119,7 +110,7 @@ const evalString = "$0.style.backgroundColor = 'red'";
 
 function handleError(error) {
   if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
+    console.log(`DevTools error: ${error.code}`);
   } else {
     console.log(`JavaScript error: ${error.value}`);
   }
@@ -144,7 +135,7 @@ const inspectString = "inspect(document.querySelector('h1'))";
 
 function handleError(error) {
   if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
+    console.log(`DevTools error: ${error.code}`);
   } else {
     console.log(`JavaScript error: ${error.value}`);
   }
@@ -162,6 +153,10 @@ inspectButton.addEventListener("click", () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

@@ -1,11 +1,11 @@
 ---
 title: Object.assign()
+short-title: assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.assign
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.assign()`** static method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
@@ -13,7 +13,20 @@ copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
 _source objects_ to a _target object_. It returns the modified target
 object.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -27,14 +40,20 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 ### Parameters
 
 - `target`
-  - : The target object — what to apply the sources' properties to, which is returned
-    after it is modified.
+  - : The target object — what to apply the sources' properties to, which is returned after it is modified. If a primitive value is provided as the target, it will be converted to an object.
 - `source1`, …, `sourceN`
   - : The source object(s) — objects containing the properties you want to apply.
 
 ### Return value
 
 The target object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - The `target` parameter is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}.
+    - Assignment of a property on the target object fails; for example, because the property is non-writable on the target object, or because its setter throws an error.
 
 ## Description
 
@@ -60,8 +79,8 @@ In case of an error, for example if a property is non-writable, a
 {{jsxref("TypeError")}} is raised, and the `target` object is
 changed if any properties are added before the error is raised.
 
-> **Note:** `Object.assign()` does not throw on
-> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
+> [!NOTE]
+> `Object.assign()` does not throw on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
@@ -73,9 +92,9 @@ const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 ```
 
-### Warning for Deep Clone
+### Warning for deep clone
 
-For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like [`structuredClone()`](/en-US/docs/Web/API/structuredClone), because `Object.assign()`
+For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like {{DOMxRef("Window.structuredClone", "structuredClone()")}}, because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -175,6 +194,19 @@ const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
 // Note, only string wrappers can have own enumerable properties.
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+// Primitives as the target are also wrapped to objects
+const number = Object.assign(3, { a: 1 });
+console.log(number); // Number {3, a: 1}
+console.log(typeof number); // object
+console.log(number.a); // 1
+
+// null and undefined as targets throw TypeError
+try {
+  Object.assign(null, { a: 1 });
+} catch (e) {
+  console.log(e.message); // "Cannot convert undefined or null to object"
+}
 ```
 
 ### Exceptions will interrupt the ongoing copying task
@@ -247,6 +279,7 @@ console.log(copy);
 ## See also
 
 - [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.assign`](https://www.npmjs.com/package/object.assign)
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

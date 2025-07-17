@@ -3,11 +3,10 @@ title: <system-color>
 slug: Web/CSS/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<system-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) usually reflects the default color choices used for the different parts of a web page.
+The **`<system-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) usually reflects the default color choices used for the different parts of a web page.
 
 However, user agents can provide an accessibility feature called _forced colors mode_, in which colors are restricted into a user- and user agent-defined palette, overriding the author's choice of colors in certain properties. In forced colors mode, `<system-color>` exposes the chosen colors, so that the rest of the page can integrate with them. An example of forced colors mode is [high contrast mode on Windows](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/).
 
@@ -21,95 +20,269 @@ A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/
 
 Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
-- `AccentColor`
-  - : Background of accented user interface controls
-- `AccentColorText`
-  - : Text of accented user interface controls
-- `ActiveText`
-  - : Text of active links
-- `ButtonBorder`
-  - : Base border color of controls
-- `ButtonFace`
-  - : Background color of controls
-- `ButtonText`
-  - : Text color of controls
-- `Canvas`
-  - : Background of application content or documents
-- `CanvasText`
-  - : Text color in application content or documents
-- `Field`
-  - : Background of input fields
-- `FieldText`
-  - : Text in input fields
-- `GrayText`
-  - : Text color for disabled items (e.g. a disabled control)
-- `Highlight`
-  - : Background of selected items
-- `HighlightText`
-  - : Text color of selected items
-- `LinkText`
-  - : Text of non-active, non-visited links
-- `Mark`
-  - : Background of text that has been specially marked (such as by the HTML `mark` element)
-- `MarkText`
-  - : Text that has been specially marked (such as by the HTML `mark` element)
-- `SelectedItem`
-  - : Background of selected items, for example, a selected checkbox
-- `SelectedItemText`
-  - : Text of selected items
-- `VisitedText`
-  - : Text of visited links
+Depending on your settings, the sample colors displayed in the table may change. You can also view this page with different browsers, operating systems, and system settings, to check the differences.
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>Description</th>
+      <th>Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>AccentColor</code></td>
+      <td>Background of accented user interface controls.</td>
+      <td style="background-color: AccentColor;"></td>
+    </tr>
+    <tr>
+      <td><code>AccentColorText</code></td>
+      <td>Text of accented user interface controls.</td>
+      <td style="background-color: AccentColorText;"></td>
+    </tr>
+    <tr>
+      <td><code>ActiveText</code></td>
+      <td>Text of active links.</td>
+      <td style="background-color: ActiveText;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonBorder</code></td>
+      <td>Base border color of controls.</td>
+      <td style="background-color: ButtonBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonFace</code></td>
+      <td>Background color of controls.</td>
+      <td style="background-color: ButtonFace;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonText</code></td>
+      <td>Text color of controls.</td>
+      <td style="background-color: ButtonText;"></td>
+    </tr>
+    <tr>
+      <td><code>Canvas</code></td>
+      <td>Background of application content or documents.</td>
+      <td style="background-color: Canvas;"></td>
+    </tr>
+    <tr>
+      <td><code>CanvasText</code></td>
+      <td>Text color in application content or documents.</td>
+      <td style="background-color: CanvasText;"></td>
+    </tr>
+    <tr>
+      <td><code>Field</code></td>
+      <td>Background of input fields.</td>
+      <td style="background-color: Field;"></td>
+    </tr>
+    <tr>
+      <td><code>FieldText</code></td>
+      <td>Text in input fields.</td>
+      <td style="background-color: FieldText;"></td>
+    </tr>
+    <tr>
+      <td><code>GrayText</code></td>
+      <td>Text color for disabled items (for example, a disabled control).</td>
+      <td style="background-color: GrayText;"></td>
+    </tr>
+    <tr>
+      <td><code>Highlight</code></td>
+      <td>Background of selected items.</td>
+      <td style="background-color: Highlight;"></td>
+    </tr>
+    <tr>
+      <td><code>HighlightText</code></td>
+      <td>Text color of selected items.</td>
+      <td style="background-color: HighlightText;"></td>
+    </tr>
+    <tr>
+      <td><code>LinkText</code></td>
+      <td>Text of non-active, non-visited links.</td>
+      <td style="background-color: LinkText;"></td>
+    </tr>
+    <tr>
+      <td><code>Mark</code></td>
+      <td>Background of text that has been specially marked (such as by the HTML <code>mark</code> element).</td>
+      <td style="background-color: Mark;"></td>
+    </tr>
+    <tr>
+      <td><code>MarkText</code></td>
+      <td>Text that has been specially marked (such as by the HTML <code>mark</code> element).</td>
+      <td style="background-color: MarkText;"></td>
+    </tr>
+    <tr>
+      <td><code>SelectedItem</code></td>
+      <td>Background of selected items, for example, a selected checkbox.</td>
+      <td style="background-color: SelectedItem;"></td>
+    </tr>
+    <tr>
+      <td><code>SelectedItemText</code></td>
+      <td>Text of selected items.</td>
+      <td style="background-color: SelectedItemText;"></td>
+    </tr>
+    <tr>
+      <td><code>VisitedText</code></td>
+      <td>Text of visited links.</td>
+      <td style="background-color: VisitedText;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
 
-- `ActiveBorder`
-  - : Active window border.
-- `ActiveCaption`
-  - : Active window caption. Should be used with `CaptionText` as foreground color.
-- `AppWorkspace`
-  - : Background color of multiple document interface.
-- `Background`
-  - : Desktop background.
-- `ButtonHighlight`
-  - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `ButtonShadow`
-  - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `CaptionText`
-  - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
-- `InactiveBorder`
-  - : Inactive window border.
-- `InactiveCaption`
-  - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
-- `InactiveCaptionText`
-  - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
-- `InfoBackground`
-  - : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
-- `InfoText`
-  - : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
-- `Menu`
-  - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
-- `MenuText`
-  - : Text in menus. Should be used with the `Menu` background color.
-- `Scrollbar`
-  - : Background color of scroll bars.
-- `ThreeDDarkShadow`
-  - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDFace`
-  - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
-- `ThreeDHighlight`
-  - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDLightShadow`
-  - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDShadow`
-  - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `Window`
-  - : Window background. Should be used with the `WindowText` foreground color.
-- `WindowFrame`
-  - : Window frame.
-- `WindowText`
-  - : Text in windows. Should be used with the `Window` background color.
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>Description</th>
+      <th>Replacement</th>
+      <th>Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ActiveBorder</code></td>
+      <td>Active window border</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ActiveBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>ActiveCaption</code></td>
+      <td>Active window caption. Should be used with <code>CaptionText</code> as foreground color.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: ActiveCaption;"></td>
+    </tr>
+    <tr>
+      <td><code>AppWorkspace</code></td>
+      <td>Background color of multiple document interface.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: AppWorkspace;"></td>
+    </tr>
+    <tr>
+      <td><code>Background</code></td>
+      <td>Desktop background.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Background;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonHighlight</code></td>
+      <td>The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ButtonHighlight;"></td>
+    </tr>
+    <tr>
+      <td><code>ButtonShadow</code></td>
+      <td>The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ButtonShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>CaptionText</code></td>
+      <td>Text in caption, size box, and scrollbar arrow box. Should be used with the <code>ActiveCaption</code> background color.</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: CaptionText;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveBorder</code></td>
+      <td>Inactive window border.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: InactiveBorder;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaption</code></td>
+      <td>Inactive window caption. Should be used with the <code>InactiveCaptionText</code> foreground color.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: InactiveCaption;"></td>
+    </tr>
+    <tr>
+      <td><code>InactiveCaptionText</code></td>
+      <td>Color of text in an inactive caption. Should be used with the <code>InactiveCaption</code> background color.</td>
+      <td><code>GrayText</code></td>
+      <td style="background-color: InactiveCaptionText;"></td>
+    </tr>
+    <tr>
+      <td><code>InfoBackground</code></td>
+      <td>Background color for tooltip controls. Should be used with the <code>InfoText</code> foreground color.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: InfoBackground;"></td>
+    </tr>
+    <tr>
+      <td><code>InfoText</code></td>
+      <td>Text color for tooltip controls. Should be used with the <code>InfoBackground</code> background color.</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: InfoText;"></td>
+    </tr>
+    <tr>
+      <td><code>Menu</code></td>
+      <td>Menu background. Should be used with the <code>MenuText</code> or <code>-moz-MenuBarText</code> foreground color.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Menu;"></td>
+    </tr>
+    <tr>
+      <td><code>MenuText</code></td>
+      <td>Text in menus. Should be used with the <code>Menu</code> background color.</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: MenuText;"></td>
+    </tr>
+    <tr>
+      <td><code>Scrollbar</code></td>
+      <td>Background color of scroll bars.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Scrollbar;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDDarkShadow</code></td>
+      <td>The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDDarkShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDFace</code></td>
+      <td>The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the <code>ButtonText</code> foreground color.</td>
+      <td><code>ButtonFace</code></td>
+      <td style="background-color: ThreeDFace;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDHighlight</code></td>
+      <td>The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDHighlight;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDLightShadow</code></td>
+      <td>The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDLightShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>ThreeDShadow</code></td>
+      <td>The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: ThreeDShadow;"></td>
+    </tr>
+    <tr>
+      <td><code>Window</code></td>
+      <td>Window background. Should be used with the <code>WindowText</code> foreground color.</td>
+      <td><code>Canvas</code></td>
+      <td style="background-color: Window;"></td>
+    </tr>
+    <tr>
+      <td><code>WindowFrame</code></td>
+      <td>Window frame.</td>
+      <td><code>ButtonBorder</code></td>
+      <td style="background-color: WindowFrame;"></td>
+    </tr>
+    <tr>
+      <td><code>WindowText</code></td>
+      <td>Text in windows. Should be used with the <code>Window</code> background color.</td>
+      <td><code>CanvasText</code></td>
+      <td style="background-color: WindowText;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 

@@ -1,10 +1,10 @@
 ---
 title: Firefox 105 for developers
+short-title: Firefox 105
 slug: Mozilla/Firefox/Releases/105
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 105 that affect developers. Firefox 105 was released on September 20, 2022.
 
@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-- Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
+- Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
   Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ([Firefox bug 1779457](https://bugzil.la/1779457)).
 
 ### JavaScript
@@ -50,7 +50,3 @@ No notable changes.
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ([Firefox bug 1751436](https://bugzil.la/1751436)).
 - An extension's resources can no longer be loaded by other extensions by default. To enable other extensions to load resources they must be listed in the extension's [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest key ([Firefox bug 1711168](https://bugzil.la/1711168)).
-
-## Older versions
-
-{{Firefox_for_developers}}

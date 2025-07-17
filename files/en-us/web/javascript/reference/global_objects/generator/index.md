@@ -3,15 +3,12 @@ title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
 page-type: javascript-class
 browser-compat: javascript.builtins.Generator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Generator`** object is returned by a {{jsxref("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
-
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
 
 ## Constructor
 
@@ -38,10 +35,10 @@ There's only a hidden object which is the prototype object shared by all objects
 These properties are defined on `Generator.prototype` and shared by all `Generator` instances.
 
 - {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
-
   - : The constructor function that created the instance object. For `Generator` instances, the initial value is [`GeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction).
 
-    > **Note:** `Generator` objects do not store a reference to the generator function that created them.
+    > [!NOTE]
+    > `Generator` objects do not store a reference to the generator function that created them.
 
 - `Generator.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.

@@ -3,9 +3,8 @@ title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGeneratorFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncGeneratorFunction`** object provides methods for [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*). In JavaScript, every async generator function is actually an `AsyncGeneratorFunction` object.
 
@@ -17,7 +16,29 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction", "taller")}}
+
+```js interactive-example
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str += val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## Constructor
 

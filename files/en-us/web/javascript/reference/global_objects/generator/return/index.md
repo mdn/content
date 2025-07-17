@@ -1,11 +1,11 @@
 ---
 title: Generator.prototype.return()
+short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.return
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`return()`** method of {{jsxref("Generator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 
@@ -34,6 +34,11 @@ An {{jsxref("Object")}} with two properties:
 - `value`
   - : The value that is given as an argument, or, if the `yield` expression is wrapped in a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block), the value yielded/returned from the `finally` block.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
 ## Description
 
 The `return()` method, when called, can be seen as if a `return value;` statement is inserted in the generator's body at the current suspended position, where `value` is the value passed to the `return()` method. Therefore, in a typical flow, calling `return(value)` will return `{ done: true, value: value }`. However, if the `yield` expression is wrapped in a `try...finally` block, the control flow doesn't exit the function body, but proceeds to the `finally` block instead. In this case, the value returned may be different, and `done` may even be `false`, if there are more `yield` expressions within the `finally` block.
@@ -42,7 +47,7 @@ The `return()` method, when called, can be seen as if a `return value;` statemen
 
 ### Using return()
 
-The following example shows a simple generator and the `return` method.
+The following example shows a generator and the `return` method.
 
 ```js
 function* gen() {

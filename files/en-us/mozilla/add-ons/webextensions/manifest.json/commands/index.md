@@ -3,9 +3,8 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.commands
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -42,18 +41,18 @@ browser-compat: webextensions.manifest.commands
 
 Use the **`commands`** key to define one or more keyboard shortcuts for your extension.
 
-Each keyboard shortcut is defined with a **name**, a **combination of keys**, and a **description**. Once you've defined commands in your extension's `manifest.json`, you can listen for their associated key combinations with the {{WebExtAPIRef("commands")}} JavaScript API.
+Each keyboard shortcut is defined with a **name**, a **combination of keys**, and a **description**. After defining commands in your extension's `manifest.json`, you can listen for their associated key combinations with the {{WebExtAPIRef("commands")}} API.
 
 ## Syntax
 
 The `commands` key is an object, and each shortcut is a property of it. **The property's name is the name of the shortcut.**
 
-Each shortcut's value is an object, with up to 2 properties:
+Each shortcut's value is an object with up to 2 properties:
 
-1. `suggested_key`: the combination of keys that activate the shortcut.
-2. `description`: a string that describes the shortcut; i.e. what it does.
+1. `suggested_key` {{optional_inline}}: the combination of keys that activate the shortcut.
+2. `description` {{optional_inline}}: a string that describes the shortcut, i.e., what it does.
 
-The `suggested_key` property is an object with any of the following properties (all strings):
+The `suggested_key` property is an object with any or none of these properties (all strings):
 
 - `"default"`
 - `"mac"`
@@ -63,7 +62,7 @@ The `suggested_key` property is an object with any of the following properties (
 - `"android"`
 - `"ios"`
 
-The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "`+`". The value for `"default"` is used on all platforms that are not explicitly listed.
+The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by `+`. The value for `"default"` is used on all platforms that aren't explicitly listed. If `"default"` isn't included, the command doesn't have a keyboard shortcut on any platform not included, unless a shortcut is configured by the user or through the {{WebExtAPIRef("commands.update")}} API.
 
 For example:
 
@@ -80,53 +79,24 @@ For example:
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     }
-  }
+  },
+  "do-something-else": {
+    "suggested_key": {
+      "linux": "Ctrl+Shift+P"
+    }
+  },
+  "do-nothing-yet": {}
 }
 ```
 
-This JSON defines 2 shortcuts:
+This JSON defines these shortcuts:
 
-1. `"toggle-feature"`, accessed with
+1. `"toggle-feature"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on Linux, and <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on all other platforms.
+2. `"do-another-thing"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Y</kbd> on all platforms.
+3. `"do-something-else"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Linux only, and no default shortcut on other platforms.
+4. `"do-nothing-yet"`, sets no keyboard shortcut but enables a shortcut to be set by the user or with the {{WebExtAPIRef("commands.update")}} API.
 
-   <kbd>Ctrl</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>U</kbd>
-
-   on Linux, and
-
-   <kbd>Alt</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>U</kbd>
-
-   on all other platforms.
-
-2. `"do-another-thing"`, accessed with
-
-   <kbd>Ctrl</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>Y</kbd>
-
-   on all platforms.
-
-You could then listen for the `"toggle-feature"` command with code like this:
+You can listen for the commands with code like this, in this case for the `"toggle-feature"` command:
 
 ```js
 browser.commands.onCommand.addListener((command) => {
@@ -138,7 +108,7 @@ browser.commands.onCommand.addListener((command) => {
 
 ### Special shortcuts
 
-There are these 4 **special shortcuts with default actions** for which the {{WebExtAPIRef("commands.onCommand")}} event does not fire:
+There are 4 **special shortcuts with default actions** for which the {{WebExtAPIRef("commands.onCommand")}} event doesn't fire:
 
 - `_execute_browser_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) created with {{WebExtAPIRef("browserAction")}} or specified in the [browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json key.
 - `_execute_action`: works like a click on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) created with {{WebExtAPIRef("action")}} or specified in the [action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json key.
@@ -208,19 +178,20 @@ Key combinations must consist of 2 or 3 keys:
 1. **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
 2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
 3. **key** (mandatory). This can be any one of:
-
    - the letters `A` – `Z`
    - the numbers `0` – `9`
    - the function keys `F1` – `F12`
+     > [!NOTE]
+     > From Firefox 135, users can assign the `F13` to `F19` keys to an extension using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox). Your extension can't assign these keys from the manifest file. However, it can assign them using {{WebExtAPIRef("commands.update")}}.
    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
-The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.
+The key is then given as a string containing the set of key values, in the order listed above, separated by `+`. For example, `"Ctrl+Shift+Z"`.
 
 If a key combination is already used by the browser (like `"Ctrl+P"`) or by an existing add-on, then you can't override it. You can define it, but your event handler will not be called when the user presses the key combination.
 
 ### Media keys
 
-Alternatively, the shortcut may be specified as one of the following media keys:
+Alternatively, the shortcut can be specified as one of these media keys:
 
 - `"MediaNextTrack"`
 - `"MediaPlayPause"`
@@ -229,11 +200,15 @@ Alternatively, the shortcut may be specified as one of the following media keys:
 
 ## Updating shortcuts
 
-Shortcuts can be updated via {{WebExtAPIRef("commands.update()")}}. Users can also update shortcuts via the "Manage Extension Shortcuts" option at `about:addons` in Firefox, as shown in [this video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). In Chrome, users can change shortcuts at `chrome://extensions/shortcuts`.
+In Firefox, your extension can update shortcut key settings using {{WebExtAPIRef("commands.update()")}}. Users can update shortcuts using the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) option at `about:addons`, as shown in [this video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). Your extension can open this option using {{WebExtAPIRef("commands.openShortcutSettings()")}}.
+
+In Chrome, extensions can't programmatically update shortcut keys. Users can change shortcuts at `chrome://extensions/shortcuts`, which can be opened using {{WebExtAPIRef("tabs.create()")}}.
+
+Safari doesn't support programmatic or user modification of extension shortcut keys.
 
 ## Example
 
-Define a single keyboard shortcut, using only the default key combination:
+Define a keyboard shortcut using only the default key combination:
 
 ```json
 "commands": {

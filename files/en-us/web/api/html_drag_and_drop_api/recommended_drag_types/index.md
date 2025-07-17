@@ -97,7 +97,7 @@ You could use feature detection to determine which method is supported on `types
 
 ## Dragging Images
 
-Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/URI/Schemes/data) if the image is not stored on a website or disk.
+Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data) if the image is not stored on a website or disk.
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
@@ -109,8 +109,8 @@ It is important to set the data in the right order, from most-specific to least-
 
 ```js
 const dt = event.dataTransfer;
-dt.setData("text/uri-list", imageurl);
-dt.setData("text/plain", imageurl);
+dt.setData("text/uri-list", imageURL);
+dt.setData("text/plain", imageURL);
 ```
 
 ## Dragging Nodes

@@ -1,11 +1,10 @@
 ---
-title: ":scope"
+title: :scope
 slug: Web/CSS/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:scope`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that are a reference point, or scope, for selectors to match against.
 
@@ -36,21 +35,11 @@ Which element(s) `:scope` matches depends on the context in which it is used:
 
 This example shows that `:scope` is equivalent to `:root` when used at the root level of a stylesheet. In this case, the provided CSS colors the background of the `<html>` element orange.
 
-#### HTML
-
-```html
-<html></html>
-```
-
-#### CSS
-
 ```css
 :scope {
   background-color: orange;
 }
 ```
-
-#### Result
 
 {{ EmbedLiveSample("Using :scope as an alternative to :root", "100%", 50) }}
 
@@ -150,7 +139,7 @@ document.getElementById("results").textContent = Array.prototype.map
 
 #### Result
 
-The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
+The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 
@@ -164,7 +153,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Globa
 
 ## See also
 
-- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/At-rule)
+- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}

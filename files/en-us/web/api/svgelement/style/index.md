@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.style
 
 {{APIRef("CSSOM")}}
 
-The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+The read-only **`style`** property of the {{domxref("SVGElement")}} returns the _inline_ style of an element in the form of a live {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned only for the attributes that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
@@ -39,8 +39,6 @@ The following code snippet demonstrates how the `style` attribute is translated 
 
 ```html
 <svg
-  width="50"
-  height="50"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 250 250"
   width="250"
@@ -66,7 +64,7 @@ for (const prop in elementStyle) {
   // We also ensure that the property is a numeric index (indicating an inline style)
   if (
     Object.hasOwn(elementStyle, prop) &&
-    !Number.isNaN(Number.parseInt(prop))
+    !Number.isNaN(Number.parseInt(prop, 10))
   ) {
     out.textContent += `${
       elementStyle[prop]

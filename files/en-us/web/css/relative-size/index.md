@@ -3,11 +3,10 @@ title: <relative-size>
 slug: Web/CSS/relative-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-relative-size
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes relative size keywords. The `<relative-size>` keywords define a size relative to the computed size of the parent element. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
+The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes relative size keywords. The `<relative-size>` keywords define a size relative to the computed size of the parent element. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
 ## Syntax
 
@@ -20,11 +19,9 @@ The **`<relative-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web
 The `<relative-size>` data type is defined using a keyword value chosen from the list below.
 
 - `smaller`
-
   - : A relative size one size smaller than the inherited size.
 
 - `larger`
-
   - : A relative size one size larger than the inherited size.
 
 ## Description

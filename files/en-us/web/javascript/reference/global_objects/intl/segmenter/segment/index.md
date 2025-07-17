@@ -1,15 +1,28 @@
 ---
 title: Intl.Segmenter.prototype.segment()
+short-title: segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segmenter.segment
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`segment()`** method of {{jsxref("Intl.Segmenter")}} instances segments a string according to the locale and granularity of this `Intl.Segmenter` object.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment()")}}
+
+```js interactive-example
+const string1 = "Que ma joie demeure";
+
+const segmenterFrGrapheme = new Intl.Segmenter("fr", {
+  granularity: "grapheme",
+});
+const graphemeSegments = segmenterFrGrapheme.segment(string1);
+
+console.log(Array.from(graphemeSegments)[0]);
+// Expected output:
+// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+```
 
 ## Syntax
 

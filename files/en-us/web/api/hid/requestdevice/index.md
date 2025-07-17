@@ -23,18 +23,15 @@ requestDevice(options)
 ### Parameters
 
 - `options`
-
   - : An object containing an array of filter objects for possible devices to pair with. Each filter object can have the following properties:
-
     - `vendorId` {{optional_inline}}
       - : An integer representing the vendorId of the requested HID device
     - `productId` {{optional_inline}}
       - : An integer representing the productId of the requested HID device.
     - `usagePage` {{optional_inline}}
-
       - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
-        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-15) document
+        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-16) document
 
     - `usage` {{optional_inline}}
       - : An integer representing the usage ID component of the HID usage of the requested device.

@@ -43,5 +43,5 @@ Many event targets (including elements, documents, and windows) also support set
 ## See also
 
 - [Event reference](/en-US/docs/Web/Events) – the events available in the platform.
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} interface

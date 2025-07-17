@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.text-decoration-skip
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`text-decoration-skip`** [CSS](/en-US/docs/Web/CSS) property sets what parts of an element's content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
 
@@ -50,7 +51,6 @@ text-decoration-skip: unset;
 - `trailing-spaces`
   - : The same as `spaces`, except that only trailing spaces are skipped.
 - `edges`
-
   - : The start and end of the text decoration is inset slightly (e.g., by half of the line thickness) from the content edge of the decorating box. Thus, adjacent elements receive separate underlines. (This is important in Chinese, where underlining is a form of punctuation.)
 
     ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)

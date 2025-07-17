@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("activate", (event) => {});
+```js-nolint
+addEventListener("activate", (event) => { })
 
-onactivate = (event) => {};
+onactivate = (event) => { }
 ```
 
 ## Event type
@@ -41,11 +41,16 @@ self.addEventListener("activate", (event) => {
   const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.forEach((cache, cacheName) => {
-      if (!cacheAllowlist.includes(cacheName)) {
-        return caches.delete(cacheName);
-      }
-    }),
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheAllowlist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+          return undefined;
+        }),
+      ),
+    ),
   );
 });
 ```
@@ -54,7 +59,7 @@ You can also set up the event handler using the `onactivate` property:
 
 ```js
 self.onactivate = (event) => {
-  // ...
+  // …
 };
 ```
 

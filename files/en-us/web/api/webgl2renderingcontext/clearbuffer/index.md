@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.clearBufferiv
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.clearBuffer[fiuv]()`** methods of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) clear buffers from the
@@ -30,9 +30,7 @@ clearBufferfi(buffer, drawbuffer, depth, stencil)
 ### Parameters
 
 - `buffer`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffer to clear. Possible values are:
-
     - `gl.COLOR`: Color buffer.
     - `gl.DEPTH`: Depth buffer.
     - `gl.STENCIL`: Stencil buffer.

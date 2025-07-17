@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
 jobs:
   check-redirects:
     runs-on: ubuntu-latest
@@ -21,7 +24,7 @@ jobs:
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
       # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@v3
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         name: See if any file needs checking
         id: filter
         with:
@@ -40,4 +43,8 @@ jobs:
 
       - name: Check redirects file(s)
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn content validate-redirects en-us --strict
+        run: yarn content validate-redirects en-US
+        env:
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

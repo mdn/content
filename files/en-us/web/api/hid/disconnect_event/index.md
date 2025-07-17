@@ -8,7 +8,7 @@ status:
 browser-compat: api.HID.disconnect_event
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`disconnect`** event of the {{domxref("HID")}} interface fires when the user agent disconnects a HID device.
 
@@ -16,10 +16,10 @@ The **`disconnect`** event of the {{domxref("HID")}} interface fires when the us
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("disconnect", (event) => {});
+```js-nolint
+addEventListener("disconnect", (event) => { })
 
-ondisconnect = (event) => {};
+ondisconnect = (event) => { }
 ```
 
 ## Event type

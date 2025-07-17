@@ -10,7 +10,7 @@ browser-compat: api.CanvasRenderingContext2D.textRendering
 
 The **`CanvasRenderingContext2D.textRendering`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) provides information to the rendering engine about what to optimize for when rendering text.
 
-The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Attribute/text-rendering) attribute (and CSS [`text-rendering`](/en-US/docs/Web/CSS/text-rendering) property).
+The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Reference/Attribute/text-rendering) attribute (and CSS [`text-rendering`](/en-US/docs/Web/CSS/text-rendering) property).
 
 ## Value
 
@@ -26,7 +26,6 @@ This one of:
   - : The browser emphasizes legibility over rendering speed and geometric precision.
     This enables kerning and optional ligatures.
 - `geometricPrecision`
-
   - : The browser emphasizes geometric precision over rendering speed and legibility.
     Certain aspects of fonts — such as kerning — don't scale linearly.
     For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect (neither rounded up nor down to the nearest font size supported by the underlying operating system).

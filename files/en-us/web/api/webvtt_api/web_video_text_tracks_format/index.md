@@ -26,7 +26,7 @@ The content must be encoded using {{Glossary("UTF-8")}}.
 
 The structure of a WebVTT consists of the following components, some of them optional, in this order:
 
-- A header, consisting of an optional byte order mark (BOM) — the string "`WEBVTT`" — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
+- A header, consisting of an optional byte order mark (BOM) — the string `WEBVTT` — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
 - One or more blank lines, each which is equivalent to two consecutive newlines.
 - Zero or more `STYLE`, `REGION`, or `NOTE` blocks, separated by one or more blank lines.
 - Zero or more cue or `NOTE` blocks, separated by one or more blank lines.
@@ -56,12 +56,11 @@ The following sections explain the parts of the file, including those not used i
 WebVTT files start with a header block containing the following:
 
 - An optional byte order mark (BOM), which is Unicode character `U+FEFF`.
-- The string "`WEBVTT`".
+- The string `WEBVTT`.
 - An optional text header to the right of `WEBVTT`.
-
   - There must be at least one space after `WEBVTT`.
   - You could use this header to add a description to the file.
-  - You may use anything in the text header except newlines or the string "`-->`".
+  - You may use anything in the text header except newlines or the string `-->`.
 
 The `WEBVTT` string is the only required part of the WebVTT file, so the simplest possible WebVTT file would look like this:
 
@@ -88,7 +87,7 @@ Each cue consists of three or more lines:
 - The cue payload text, which may span multiple lines, and will be terminated by an empty line.
 
 Here is an example of a simple cue.
-The first line specifies the cue's display start and end times, separated using the string "`-->`".
+The first line specifies the cue's display start and end times, separated using the string `-->`.
 The second line defines the text to be displayed.
 
 ```plain
@@ -97,7 +96,7 @@ Never drink liquid nitrogen.
 ```
 
 The next cue is slightly more complicated.
-It starts with a cue identifier — "`1 - Title Crawl`" — which may be used to reference the cue in JavaScript and CSS.
+It starts with a cue identifier — `1 - Title Crawl` — which may be used to reference the cue in JavaScript and CSS.
 It also has cue settings after the cue timings to set the cue position.
 
 ```plain
@@ -118,7 +117,7 @@ Each part of the cue is explained in more detail in the following sections.
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string `-->`. It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 The example below shows a file with several cues that include identifiers:
 
@@ -142,13 +141,13 @@ This is the third
 
 A cue timing indicates the time interval when the cue is shown. It has a start and end time, represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times.
 
-Cues may have overlapping timings, unless the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters`).
+Cues may have overlapping timings, unless the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) is `chapters`).
 
 Each cue timing contains five components:
 
 - A timestamp for the start time.
 - At least one space.
-- The string "`-->`".
+- The string `-->`.
 - At least one space.
 - A timestamp for the end time, which must be greater than the start time.
 
@@ -209,9 +208,7 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     - `lr`
       - : The writing direction is left to right.
 - `line`
-
   - : If `vertical` is not set, `line` specifies where the text appears vertically. If `vertical` is set, `line` specifies where text appears horizontally. Its value can be:
-
     - A line number
       - : The position of the first line of the cue as it appears on the video. Positive numbers are counted from the top down and negative numbers are counted from the bottom up.
     - A percentage
@@ -225,7 +222,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `line:100%` | bottom             | left          | right         |
 
 - `position`
-
   - : If `vertical` is not set, `position` specifies where the text will appear horizontally. If `vertical` is set, `position` specifies where the text will appear vertically. The value is a percentage between 0 and 100 inclusive.
 
     | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -234,7 +230,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `position:100%` | right              | bottom        | bottom        |
 
 - `size`
-
   - : If `vertical` is not set, `size` specifies the width of the text area. If `vertical` is set, `size` specifies the height of the text area. The value is a percentage between 0 and 100 inclusive.
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
@@ -243,7 +238,6 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     | `size:50%`  | half width         | half height   | half height   |
 
 - `align`
-
   - : Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
 
     | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
@@ -290,10 +284,9 @@ Older browser versions may support only the following subset of named character 
 ### Cue payload text tags
 
 A number of tags, such as `<b>`, can be used for marking up and styling text within a cue.
-However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Element/track#kind) is `chapters` then you cannot use tags.
+However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
-
   - : Timestamp tags are used to enable karaoke-style captions.
     The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp.
     The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload.
@@ -318,7 +311,6 @@ The following tags are the HTML tags allowed in a cue and require opening and cl
 Text marked up with these tags can be formatted in [`STYLE` blocks](#style_blocks) using the {{cssxref("::cue")}} pseudo-element.
 
 - Italics tag (`<i></i>`)
-
   - : Italicize the contained text.
 
     ```xml
@@ -326,7 +318,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Bold tag (`<b></b>`)
-
   - : Bold the contained text.
 
     ```xml
@@ -334,7 +325,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Underline tag (`<u></u>`)
-
   - : Underline the contained text.
 
     ```xml
@@ -342,7 +332,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Class tag (`<c></c>`)
-
   - : Add a class to the contained text for selection via CSS.
 
     ```xml
@@ -350,7 +339,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Ruby tag (`<ruby></ruby>`)
-
   - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -358,7 +346,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Ruby text tag (`<rt></rt>`)
-
   - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
 
     ```xml
@@ -366,7 +353,6 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Voice tag (`<v></v>`)
-
   - : Similar to class tag, also used to style the contained text using CSS.
 
     ```xml
@@ -374,11 +360,10 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
     ```
 
 - Lang tag (`<lang></lang>`)
-
   - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
     ```xml
-    <lang en-GB>Engish text as spoken in Great Britain!</lang>
+    <lang en-GB>English text as spoken in Great Britain!</lang>
     ```
 
 ## NOTE blocks
@@ -474,7 +459,7 @@ For example, the following `STYLE` block would match all cue text and color it y
 
 ```plain
 STYLE
-cue {
+::cue {
   color: yellow;
 }
 ```
@@ -487,16 +472,16 @@ For example, the following block would match cue payload text marked up with `la
 
 ```plain
 STYLE
-cue(c),
-cue(i),
-cue(b),
-cue(u),
-cue(ruby),
-cue(rt),
-cue(v) {
+::cue(c),
+::cue(i),
+::cue(b),
+::cue(u),
+::cue(ruby),
+::cue(rt),
+::cue(v) {
   color: red;
 }
-cue(lang) {
+::cue(lang) {
   color: yellow;
 }
 ```
@@ -529,7 +514,7 @@ STYLE
 To select a particular tag and class you must specify both in `::cue()`:
 
 ```css
-STYLE ::cue(b.myclass) {
+::cue(b.myclass) {
   color: yellow;
 }
 ```
@@ -619,13 +604,13 @@ Note that escape sequences are used in WebVTT CSS in the same way as HTML pages.
 WEBVTT
 
 STYLE
-::cue(#crédit\ de\ transcription) {
+::cue(#transcription\ credits) {
   color: red;
 }
 
-crédit de transcription
+transcription credits
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+Transcribed by Célestes™
 ```
 
 ## Specifications

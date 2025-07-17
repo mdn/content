@@ -3,13 +3,72 @@ title: scroll-margin
 slug: Web/CSS/scroll-margin
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.
 
-The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the [`margin`](/en-US/docs/Web/CSS/margin) property does for margins of an element.
+{{InteractiveExample("CSS Demo: scroll-margin")}}
 
-{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
+```css interactive-example-choice
+scroll-margin: 0;
+```
+
+```css interactive-example-choice
+scroll-margin: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## Constituent properties
 
@@ -42,7 +101,7 @@ scroll-margin: unset;
 
 ## Description
 
-You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the snapport should remain visible.
+You can see the effect of `scroll-margin` by scrolling to a point partway between two of the "pages" of the example's content. The value specified for `scroll-margin` determines how much of the page that's primarily outside the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport) should remain visible.
 
 Thus, the `scroll-margin` values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
@@ -56,7 +115,7 @@ Thus, the `scroll-margin` values represent outsets defining the scroll snap area
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.
 
@@ -64,7 +123,7 @@ The aim here is to create four horizontally-scrolling blocks, the second and thi
 
 #### HTML
 
-The HTML that represents the blocks is very simple:
+The HTML includes a scroller with four children:
 
 ```html
 <div class="scroller">
@@ -138,7 +197,7 @@ This means that when scrolling past the middle child elements, the scrolling wil
 
 Try it for yourself:
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## Specifications
 

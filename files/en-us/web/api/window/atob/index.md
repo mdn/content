@@ -15,7 +15,7 @@ data which may otherwise cause communication problems, then transmit it and use 
 `atob()` method to decode the data again. For example, you can encode,
 transmit, and decode control characters such as {{Glossary("ASCII")}} values 0 through 31.
 
-For use with arbitrary Unicode strings, see _The "Unicode Problem"_ in the {{Glossary("Base64")}} glossary entry.
+Also consider using the {{jsxref("Uint8Array.fromBase64()")}} method, which creates a `Uint8Array` object from a base64-encoded string. It results in a byte array, which is easier to work with than a string containing raw bytes.
 
 ## Syntax
 
@@ -26,11 +26,11 @@ atob(encodedData)
 ### Parameters
 
 - `encodedData`
-  - : A binary string (i.e., a string in which each character in the string is treated as a byte of binary data) containing base64-encoded data.
+  - : A base64-encoded string, using the alphabet produced by {{domxref("Window.btoa()")}}.
 
 ### Return value
 
-An ASCII string containing decoded data from `encodedData`.
+A binary string containing raw bytes decoded from `encodedData`. Strings in JavaScript are encoded as {{glossary("UTF-16")}}, so this means each character must have a code point less than 256, representing one byte of data.
 
 ### Exceptions
 
@@ -44,6 +44,8 @@ const encodedData = window.btoa("Hello, world"); // encode a string
 const decodedData = window.atob(encodedData); // decode the string
 ```
 
+For more examples, see the {{domxref("Window.btoa()")}} method.
+
 ## Specifications
 
 {{Specifications}}
@@ -55,6 +57,7 @@ const decodedData = window.atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
+- [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}: the same method, but in worker scopes.
 - {{domxref("Window.btoa()")}}
+- {{jsxref("Uint8Array.fromBase64()")}}

@@ -3,15 +3,28 @@ title: Spread syntax (...)
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 page-type: javascript-operator
 browser-compat: javascript.operators.spread
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **spread (`...`)** syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
-Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#rest_property).
+Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_properties_and_rest_elements).
 
-{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{InteractiveExample("JavaScript Demo: Spread syntax (...)")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## Syntax
 
@@ -38,14 +51,14 @@ const obj = { key1: "value1" };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
 
-On the other hand, spreading in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) [enumerates](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
+On the other hand, spreading in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) [enumerates](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
 
 ```js
 const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
 
-All [primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) can be spread in objects. Only strings have enumerable own properties, and spreading anything else doesn't create properties on the new object.
+All [primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) can be spread in objects. Only strings have enumerable own properties, and spreading anything else doesn't create properties on the new object.
 
 ```js
 const obj = { ...true, ..."test", ...10 };
@@ -122,7 +135,7 @@ arr2.push(4);
 // arr remains unaffected
 ```
 
-Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone. The web API method {{domxref("structuredClone()")}} allows deep copying values of certain [supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types). See [shallow copy](/en-US/docs/Glossary/Shallow_copy) for more details.
+Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone. The web API method {{DOMxRef("Window.structuredClone", "structuredClone()")}} allows deep copying values of certain [supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types). See [shallow copy](/en-US/docs/Glossary/Shallow_copy) for more details.
 
 ```js example-bad
 const a = [[1], [2], [3]];
@@ -342,5 +355,5 @@ const mergedObj1 = merge(obj1, obj2);
 ## See also
 
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#rest_property)
+- [Rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_properties_and_rest_elements)
 - {{jsxref("Function.prototype.apply()")}}

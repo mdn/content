@@ -8,9 +8,9 @@ page-type: guide
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for making HTTP requests and processing the responses.
 
-Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS).
+Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS).
 
-With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
+With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window")}} and {{domxref("WorkerGlobalScope", "worker")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
 
 The `fetch()` function returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("Response")}} object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
 
@@ -47,7 +47,7 @@ To make a request, call `fetch()`, passing in:
 
 1. a definition of the resource to fetch. This can be any one of:
    - a string containing the URL
-   - an object, such an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
+   - an object, such as an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 
@@ -55,12 +55,12 @@ In this section we'll look at some of the most commonly-used options. To read ab
 
 ### Setting the method
 
-By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the `method` option to use a different [request method](/en-US/docs/Web/HTTP/Methods):
+By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the `method` option to use a different [request method](/en-US/docs/Web/HTTP/Reference/Methods):
 
 ```js
 const response = await fetch("https://example.org/post", {
   method: "POST",
-  // ...
+  // …
 });
 ```
 
@@ -74,8 +74,9 @@ To set a request body, pass it as the `body` option:
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   body: JSON.stringify({ username: "example" }),
-  // ...
+  // …
 });
 ```
 
@@ -89,6 +90,21 @@ You can supply the body as an instance of any of the following types:
 - {{domxref("File")}}
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
+- {{domxref("ReadableStream")}}
+
+Other objects are converted to strings using their `toString()` method. For example, you can use a {{domxref("URLSearchParams")}} object to encode form data (see [setting headers](#setting_headers) for more information):
+
+```js
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  // Automatically converted to "username=example&password=password"
+  body: new URLSearchParams({ username: "example", password: "password" }),
+  // …
+});
+```
 
 Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
 
@@ -127,7 +143,7 @@ See [Locked and disturbed streams](#locked_and_disturbed_streams) for more infor
 
 ### Setting headers
 
-Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
+Request headers give the server information about the request: for example, in a `POST` request, the {{httpheader("Content-Type")}} header tells the server the format of the request's body.
 
 To set request headers, assign them to the `headers` option.
 
@@ -135,10 +151,12 @@ You can pass an object literal here containing `header-name: header-value` prope
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
-  // ...
+  body: JSON.stringify({ username: "example" }),
+  // …
 });
 ```
 
@@ -149,40 +167,40 @@ const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: myHeaders,
-  // ...
+  body: JSON.stringify({ username: "example" }),
+  // …
 });
 ```
 
-If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
+Compared to using plain objects, the `Headers` object provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden request header", "Forbidden request headers")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
 
-### Making POST requests
+### Sending data in a GET request
 
-We can combine the `method`, `body`, and `headers` options to make a POST request:
+`GET` requests don't have a body, but you can still send data to the server by appending it to the URL as a query string. This is a common way to send form data to the server. You can do this by using {{domxref("URLSearchParams")}} to encode the data, and then appending it to the URL:
 
 ```js
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+const params = new URLSearchParams();
+params.append("username", "example");
 
-const response = await fetch("https://example.org/post", {
-  method: "POST",
-  body: JSON.stringify({ username: "example" }),
-  headers: myHeaders,
-});
+// GET request sent to https://example.org/login?username=example
+const response = await fetch(`https://example.org/login?${params}`);
 ```
 
 ### Making cross-origin requests
 
-Whether a request can be made cross-origin or not is determined by the value of the `mode` option. This may take one of three values: `cors`, `no-cors`, or `same-origin`.
+Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `same-origin`, or `no-cors`.
 
-- By default, `mode` is set to `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. This means that:
-
-  - if the request is a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
-  - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
+- For fetch requests the default value of `mode` is `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism. This means that:
+  - if the request is a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
+  - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
 
 - Setting `mode` to `same-origin` disallows cross-origin requests completely.
 
-- Setting `mode` to `no-cors` means the request must be a simple request, which restricts the headers that may be set, and restricts methods to `GET`, `HEAD`, and `POST`.
+- Setting `mode` to `no-cors` disables CORS for cross-origin requests. This restricts the headers that may be set, and restricts methods to GET, HEAD, and POST. The response is _opaque_, meaning that its headers and body are not available to JavaScript. Most of the time a website should not use `no-cors`: the main application of it is for certain service worker use cases.
+
+See the reference documentation for {{domxref("RequestInit", "", "mode")}} for more details.
 
 ### Including credentials
 
@@ -194,15 +212,15 @@ To control whether or not the browser sends credentials, as well as whether the 
 - `same-origin` (the default): only send and include credentials for same-origin requests.
 - `include`: always include credentials, even cross-origin.
 
-Note that if a cookie's [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute is set to `Strict` or `Lax`, then the cookie will not be sent cross-site, even if `credentials` is set to `include`.
+Note that if a cookie's [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute is set to `Strict` or `Lax`, then the cookie will not be sent cross-site, even if `credentials` is set to `include`.
 
 Including credentials in cross-origin requests can make a site vulnerable to {{glossary("CSRF")}} attacks, so even if `credentials` is set to `include`, the server must also agree to their inclusion by including the {{httpheader("Access-Control-Allow-Credentials")}} header in its response. Additionally, in this situation the server must explicitly specify the client's origin in the {{httpheader("Access-Control-Allow-Origin")}} response header (that is, `*` is not allowed).
 
 This means that if `credentials` is set to `include` and the request is cross-origin, then:
 
-- If the request is a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), then the request will be sent with credentials, but the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the response, including credentials, will be delivered to the caller.
+- If the request is a [simple request](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests), then the request will be sent with credentials, but the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the response, including credentials, will be delivered to the caller.
 
-- If the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/CORS#preflighted_requests) without credentials, and the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the browser will follow up with the real request, including credentials, and will deliver the real response, including credentials, to the caller.
+- If the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/Guides/CORS#preflighted_requests) without credentials, and the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the browser will follow up with the real request, including credentials, and will deliver the real response, including credentials, to the caller.
 
 ### Creating a `Request` object
 
@@ -319,7 +337,7 @@ As soon as the browser has received the response status and headers from the ser
 
 The promise returned by `fetch()` will reject on some errors, such as a network error or a bad scheme. However, if the server responds with an error like {{httpstatus("404")}}, then `fetch()` fulfills with a `Response`, so we have to check the status before we can read the response body.
 
-The {{domxref("Response.status")}} property tells us the numerical status code, and the {{domxref("Response.ok")}} property returns `true` if the status is in the [200 range](/en-US/docs/Web/HTTP/Status#successful_responses).
+The {{domxref("Response.status")}} property tells us the numerical status code, and the {{domxref("Response.ok")}} property returns `true` if the status is in the [200 range](/en-US/docs/Web/HTTP/Reference/Status#successful_responses).
 
 A common pattern is to check the value of `ok` and throw if it is `false`:
 
@@ -331,7 +349,7 @@ async function getData() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-    // ...
+    // …
   } catch (error) {
     console.error(error.message);
   }
@@ -345,7 +363,7 @@ Responses have a {{domxref("Response.type", "type")}} property that can be one o
 - `basic`: the request was a same-origin request.
 - `cors`: the request was a cross-origin CORS request.
 - `opaque`: the request was a cross-origin simple request made with the `no-cors` mode.
-- `opaqueredirect`: the request set the `redirect` option to `manual`, and the server returned a [redirect status](/en-US/docs/Web/HTTP/Status#redirection_messages).
+- `opaqueredirect`: the request set the `redirect` option to `manual`, and the server returned a [redirect status](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages).
 
 The type determines the possible contents of the response, as follows:
 
@@ -475,18 +493,16 @@ async function* makeTextFileLineIterator(fileURL) {
   const response = await fetch(fileURL);
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
-  let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk || "";
+  let { value: chunk = "", done: readerDone } = await reader.read();
 
-  const newline = /\r?\n/gm;
+  const newline = /\r?\n/g;
   let startIndex = 0;
-  let result;
 
   while (true) {
     const result = newline.exec(chunk);
     if (!result) {
       if (readerDone) break;
-      const remainder = chunk.substr(startIndex);
+      const remainder = chunk.slice(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
@@ -593,6 +609,6 @@ self.addEventListener("fetch", (event) => {
 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Streams API](/en-US/docs/Web/API/Streams_API)
-- [CORS](/en-US/docs/Web/HTTP/CORS)
+- [CORS](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

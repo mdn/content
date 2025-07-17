@@ -25,9 +25,6 @@ The possible values are:
 
 ## Usage notes
 
-> [!NOTE]
-> In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
-
 ### JavaScript must be enabled
 
 Loading is only deferred when JavaScript is enabled.
@@ -50,8 +47,8 @@ That means that when `load` fires, it's possible that any lazy-loaded images loc
 
 When an image whose loading has been delayed by the `loading` attribute being set to `lazy` is finally loaded, the browser will determine the final size of the {{HTMLElement("img")}} element based on the style and intrinsic size of the image, then reflow the document as needed to update the positions of elements based on any size change made to the element to fit the image.
 
-To prevent this reflow from occurring, you should explicitly specify the size of the image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Element/img#width) and
-[`height`](/en-US/docs/Web/HTML/Element/img#height) attributes.
+To prevent this reflow from occurring, you should explicitly specify the size of the image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Reference/Elements/img#width) and
+[`height`](/en-US/docs/Web/HTML/Reference/Elements/img#height) attributes.
 By establishing the intrinsic {{glossary("aspect ratio")}} in this manner, you prevent elements from shifting around while the document loads, which can be disconcerting or off-putting at best and can cause users to click the wrong thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples
@@ -87,6 +84,6 @@ function addImageToList(url) {
 ## See also
 
 - The {{HTMLElement("img")}} element
-- [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web
+- [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance) in the MDN Learning Area
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) in the MDN web
   performance guide

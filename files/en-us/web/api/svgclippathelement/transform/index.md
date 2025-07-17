@@ -12,7 +12,7 @@ The read-only **`transform`** property of the {{domxref("SVGClipPathElement")}} 
 
 ## Value
 
-A {{domxref("SVGTransformList")}}.
+An {{domxref("SVGTransformList")}}.
 
 ## Examples
 

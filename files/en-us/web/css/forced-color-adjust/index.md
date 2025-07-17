@@ -3,9 +3,8 @@ title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`forced-color-adjust`** [CSS](/en-US/docs/Web/CSS) property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
 
@@ -14,6 +13,7 @@ The **`forced-color-adjust`** [CSS](/en-US/docs/Web/CSS) property allows authors
 ```css
 forced-color-adjust: auto;
 forced-color-adjust: none;
+forced-color-adjust: preserve-parent-color;
 
 /* Global values */
 forced-color-adjust: inherit;
@@ -28,9 +28,11 @@ The `forced-color-adjust` property's value must be one of the following keywords
 ### Values
 
 - `auto`
-  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
+  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
 - `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
+- `preserve-parent-color`
+  - : In forced colors mode, if the {{cssxref("color")}} property inherits from its parent (i.e., there is no [cascaded value](/en-US/docs/Web/CSS/CSS_cascade/Cascade) or the cascaded value is `currentcolor`, {{cssxref("inherit")}}, or another keyword that inherits from the parent), then it computes to the [used color](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of its parent's `color` property. In all other cases, it behaves the same as `none`.
 
 ## Usage notes
 
@@ -50,7 +52,7 @@ This property should only be used to makes changes that will support a user's co
 
 In the example below the first box will use the color scheme that the user has set. For example in Windows High Contrast mode black scheme it will have a black background and white text. The second box will preserve the site colors set on the `.box` class.
 
-By using the [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) media feature you could add any other optimizations for forced color mode alongside the `forced-color-adjust` property.
+By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature, you could add any other optimizations for forced color mode alongside the `forced-color-adjust` property.
 
 #### CSS
 

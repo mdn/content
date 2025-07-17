@@ -1,15 +1,35 @@
 ---
-title: "::first-letter"
+title: ::first-letter
 slug: Web/CSS/::first-letter
 page-type: css-pseudo-element
 browser-compat: css.selectors.first-letter
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
 
-The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
+{{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
+```css interactive-example
+p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+```
+
+```html interactive-example
+<p>
+  Scientists exploring the depths of Monterey Bay unexpectedly encountered a
+  rare and unique species of dragonfish. This species is the rarest of its
+  species.
+</p>
+
+<p>
+  When Robison and a team of researchers discovered this fish, they were aboard
+  a week-long expedition.
+</p>
+```
 
 The first letter of an element is not always trivial to identify:
 
@@ -44,9 +64,9 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Examples
 
-### Simple drop cap
+### Basic drop cap
 
-In this example we will use the `::first-letter` pseudo-element to create a simple drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
+In this example we will use the `::first-letter` pseudo-element to create a drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
 
 #### HTML
 
@@ -86,7 +106,7 @@ h2 + p::first-letter {
 
 #### Result
 
-{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
+{{ EmbedLiveSample('Basic_drop_cap', '100%', 350) }}
 
 ### Effect on special punctuation and non-Latin characters
 

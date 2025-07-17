@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getActiveUniforms()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves information about
@@ -26,9 +26,7 @@ getActiveUniforms(program, uniformIndices, pname)
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} specifying the indices of the active
     uniforms to query.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to query. Possible values:
-
     - `gl.UNIFORM_TYPE`
       - : Returns an {{jsxref("Array")}} of
         {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).

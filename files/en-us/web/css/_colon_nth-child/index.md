@@ -1,49 +1,87 @@
 ---
-title: ":nth-child()"
+title: :nth-child()
 slug: Web/CSS/:nth-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:nth-child(-n + 3) {
+  border: 2px solid orange;
+  margin-bottom: 1px;
+}
+
+li:nth-child(even) {
+  background-color: lightyellow;
+}
+```
+
+```html interactive-example
+<p>Track &amp; field champions:</p>
+<ul>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+```
 
 > [!NOTE]
 > In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
 
 ## Syntax
 
-`:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
-
 ```css-nolint
-:nth-child(<nth> [of <complex-selector-list>]?) {
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
   /* ... */
 }
 ```
 
-### Keyword values
+### Parameters
+
+`:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
+
+#### Keyword values
 
 - `odd`
   - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc.
 - `even`
   - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc.
 
-### Functional notation
+#### Functional notation
 
 - `<An+B>`
-
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
-
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
-### The `of <selector>` syntax
+#### The `of <selector>` syntax
 
 By passing a selector argument, we can select the **nth** element that matches that selector. For example, the following selector matches the first three list items which have a `class="important"` set.
 
@@ -344,10 +382,6 @@ A common practice for tables is to use _zebra-stripes_ which alternates between 
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html-nolint
 <table class="broken">
   <thead>
@@ -377,14 +411,10 @@ A common practice for tables is to use _zebra-stripes_ which alternates between 
 </table>
 ```
 
-```html hidden
-</div>
-```
-
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   display: flex;
   justify-content: space-around;
 }

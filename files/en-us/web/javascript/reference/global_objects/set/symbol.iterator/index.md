@@ -1,17 +1,32 @@
 ---
 title: Set.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.@@iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.iterator]()`** method of {{jsxref("Set")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Set` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [set iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the values of the set in insertion order.
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Set.prototype.values")}} property.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1[Symbol.iterator]();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## Syntax
 

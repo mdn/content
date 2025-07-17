@@ -5,13 +5,13 @@ page-type: web-api-interface
 browser-compat: api.DOMException
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException`** interface represents an abnormal event (called an **exception**) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
 
 Each exception has a **name**, which is a short "PascalCase"-style string identifying the error or abnormal condition.
 
-`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -89,7 +89,7 @@ Note that the following deprecated historical errors don't have an error name bu
 - `NotReadableError` {{experimental_inline}}
   - : The input/output read operation failed (No legacy code value and constant name).
 - `UnknownError` {{experimental_inline}}
-  - : The operation failed for an unknown transient reason (e.g. out of memory) (No legacy code value and constant name).
+  - : The operation failed for an unknown transient reason (e.g., out of memory) (No legacy code value and constant name).
 - `ConstraintError` {{experimental_inline}}
   - : A mutation operation in a transaction failed because a constraint was not satisfied (No legacy code value and constant name).
 - `DataError` {{experimental_inline}}

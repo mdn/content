@@ -3,11 +3,12 @@ title: "copy: Wasm text instruction"
 short-title: copy
 slug: WebAssembly/Reference/Memory/Copy
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat:
+  - webassembly.bulk-memory-operations
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one region of a memory to another.
 
@@ -18,7 +19,7 @@ If either the source or destination range is out of bounds, the instruction trap
 
 Copy within default memory
 
-```wasm
+```wat
 ;; Copy data in default memory from [100, 125] to [50, 75]
 i32.const 50 ;; Destination address to copy to
 i32.const 100 ;; Source address to copy from
@@ -31,7 +32,7 @@ memory.copy  ;; Copy memory
 
 Copy specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Copy data in specific memory  [100, 125] to [50, 75]
 i32.const 50 ;; Destination address to copy to
 i32.const 100 ;; Source address to copy from
@@ -60,8 +61,7 @@ memory.copy (memory $memoryName) ;; Copy memory with memory named "$memoryName"
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `copy` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `copy` can be used with a specified memory.

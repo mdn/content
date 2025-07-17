@@ -1,10 +1,10 @@
 ---
-title: "Handling overflow: try fallbacks and conditional hiding"
+title: Fallback options and conditional hiding for overflow
+short-title: Handling overflow
 slug: Web/CSS/CSS_anchor_positioning/Try_options_hiding
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), an important consideration is ensuring that anchor-positioned elements always appear in a convenient place for the user to interact with them, if at all possible, regardless of where the anchor is positioned. For example, when you scroll the page, anchors and their associated positioned elements will move toward the edge of the viewport. When a positioned element starts to overflow the viewport, you will want to change its position to put it back on the screen again, for example on the opposite side of the anchor.
 
@@ -265,7 +265,7 @@ The `descriptor-list` defines the property values for that individual custom try
 
 - {{cssxref("position-area")}}
 - [Inset properties](/en-US/docs/Glossary/Inset_properties)
-- Margin properties (e.g. {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
+- Margin properties (e.g., {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
 - [self-alignment](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) properties
 - Sizing properties ({{cssxref("width")}}, {{cssxref("block-size")}}, etc.)
 - {{cssxref("position-anchor")}}
@@ -595,6 +595,6 @@ Scroll down the page and note how the positioned element is hidden once it reach
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Learn: CSS positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

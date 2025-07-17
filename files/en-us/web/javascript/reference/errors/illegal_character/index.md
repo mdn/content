@@ -2,9 +2,8 @@
 title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "illegal character" occurs when the [lexer](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) reads a character that's not part of a string literal, and the character cannot constitute a valid token in the language.
 
@@ -80,7 +79,7 @@ const foo = "bar";​
 // SyntaxError: illegal character
 ```
 
-When inspecting this code in an editor like Vim, you can see that there is actually a
+When inspecting this code in an editor like VIM, you can see that there is actually a
 [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
 ```js-nolint

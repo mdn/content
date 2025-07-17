@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{DOMxRef("DOMException")}}._
 ## Examples
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {
@@ -38,7 +38,7 @@ async function initTransport(url) {
     // The connection can be used once ready fulfills
     await transport.ready;
 
-    // ...
+    // …
   } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.

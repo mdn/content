@@ -14,9 +14,9 @@ The `textformatupdate` event of the {{domxref("EditContext")}} interface fires w
 
 The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 
-The following screenshot shows an example of text being written in the Nodepad app on Windows, by using the Japanese IME. The text is formatted with a thick underline to indicate that it's been composed from one of the IME's suggestions.
+The following screenshot shows an example of text being written in the Notepad app on Windows, by using the Japanese IME. The text is formatted with a thick underline to indicate that it's been composed from one of the IME's suggestions.
 
-![Nodepad on Windows with some Japanese text being composed from the IME window](./ime-nodepad.png)
+![Notepad on Windows with some Japanese text being composed from the IME window](./ime-notepad.png)
 
 As a web developer, you should listen for the `textformatupdate` event and update the formatting of the text displayed in your editable region accordingly.
 
@@ -24,10 +24,10 @@ As a web developer, you should listen for the `textformatupdate` event and updat
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("textformatupdate", (event) => {});
+```js-nolint
+addEventListener("textformatupdate", (event) => { })
 
-ontextformatupdate = (event) => {};
+ontextformatupdate = (event) => { }
 ```
 
 ## Event type

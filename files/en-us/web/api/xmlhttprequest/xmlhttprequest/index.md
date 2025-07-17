@@ -15,40 +15,26 @@ creates a new {{domxref("XMLHttpRequest")}}.
 
 ```js-nolint
 new XMLHttpRequest()
+// Non-standard
+new XMLHttpRequest(options)
 ```
 
 ### Parameters
 
-None.
+There are no standard parameters. However, Firefox allows a non-standard parameter:
+
+- `options` {{non-standard_inline}}
+  - : An object that can contain the following flags:
+    - `mozAnon`
+      - : A boolean. When setting this flag to `true` will cause the browser not to expose the {{Glossary("origin")}} and user credentials when fetching resources. Most important, this means that {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using `setRequestHeader`.
+    - `mozSystem`
+      - : A boolean. When setting this flag to `true`, the same origin policy will not be enforced on the request.
 
 ### Return value
 
 A new {{domxref("XMLHttpRequest")}} object. The object must be prepared by at least
 calling {{domxref("XMLHttpRequest.open", "open()")}} to initialize it before calling
 {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.
-
-## Non-standard Firefox syntax
-
-Firefox 16 added a non-standard parameter to the constructor that can enable anonymous
-mode (see [Firefox bug 692677](https://bugzil.la/692677)). Setting the `mozAnon` flag to `true`
-effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest)
-constructor described in older versions of the XMLHttpRequest specification.
-
-```js
-const request = new XMLHttpRequest(paramsDictionary);
-```
-
-### Parameters (non-standard)
-
-- `objParameters`
-
-  - : One flag you can set:
-
-    - `mozAnon`
-      - : Boolean: Setting this flag to `true` will cause the browser not to
-        expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) when fetching resources. Most important, this means that
-        {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using
-        setRequestHeader.
 
 ## Specifications
 

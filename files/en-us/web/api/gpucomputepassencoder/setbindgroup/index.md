@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: setBindGroup() method"
 short-title: setBindGroup()
 slug: Web/API/GPUComputePassEncoder/setBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent compute commands, for a given index.
@@ -27,9 +25,9 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent compute commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent compute commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
-  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
+  - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e., in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
     - A {{jsxref("Uint32Array")}} containing numbers specifying the offsets.
 
@@ -63,12 +61,14 @@ The following criteria must be met when calling **`dispatchWorkgroups()`**, othe
 
 ## Examples
 
+### Set bind group
+
 In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the {{domxref("GPUComputePassEncoder")}} created via `beginComputePass()`. The `setBindGroup()` call used here is the simplest form, just specifying index and bind group.
 
 ```js
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -96,7 +96,17 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
+```
+
+### Unset bind group
+
+```js
+// Set bind group in slot 0
+passEncoder.setBindGroup(0, bindGroup);
+
+// Later, unset bind group in slot 0
+passEncoder.setBindGroup(0, null);
 ```
 
 ## Specifications

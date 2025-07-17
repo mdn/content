@@ -4,12 +4,11 @@ short-title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
 page-type: web-api-constructor
 status:
-  - deprecated
-  - non-standard
+  - experimental
 browser-compat: api.InstallEvent.InstallEvent
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.
 
@@ -33,7 +32,7 @@ A new {{domxref("InstallEvent")}} object.
 
 ## Specifications
 
-_This feature is no more on the standard track._
+{{Specifications}}
 
 ## Browser compatibility
 

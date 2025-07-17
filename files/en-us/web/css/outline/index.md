@@ -3,13 +3,49 @@ title: outline
 slug: Web/CSS/outline
 page-type: css-shorthand-property
 browser-compat: css.properties.outline
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets most of the outline properties in a single declaration.
+{{InteractiveExample("CSS Demo: outline")}}
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgb(170 50 220 / 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Constituent properties
 
@@ -42,7 +78,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value).
+The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value).
 
 > [!NOTE]
 > The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.

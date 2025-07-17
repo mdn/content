@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Performance
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`Performance`** interface provides access to performance-related information for the current page.
 
@@ -18,15 +18,12 @@ Performance entries are specific to each execution context. You can access perfo
 _The `Performance` interface doesn't inherit any properties._
 
 - {{domxref("Performance.eventCounts")}} {{ReadOnlyInline}}
-
   - : An {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
 
 - {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
 
 - {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
 
 - {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -43,7 +40,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.clearMeasures()")}}
   - : Removes the given _measure_ from the browser's performance entry buffer.
 - {{domxref("Performance.clearResourceTimings()")}}
-  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with a {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from the browser's performance data buffer.
+  - : Removes all [performance entries](/en-US/docs/Web/API/PerformanceEntry) with a {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance data buffer.
 - {{domxref("Performance.getEntries()")}}
   - : Returns a list of {{domxref("PerformanceEntry")}} objects based on the given _filter_.
 - {{domxref("Performance.getEntriesByName()")}}
@@ -59,7 +56,7 @@ _The `Performance` interface doesn't inherit any methods._
 - {{domxref("Performance.now()")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since a reference instant.
 - {{domxref("Performance.setResourceTimingBufferSize()")}}
-  - : Sets the browser's resource timing buffer size to the specified number of "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry")}} objects.
+  - : Sets the browser's resource timing buffer size to the specified number of `"resource"` {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry")}} objects.
 - {{domxref("Performance.toJSON()")}}
   - : Returns a JSON representation of the `Performance` object.
 

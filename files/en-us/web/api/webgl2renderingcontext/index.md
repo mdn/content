@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebGL2RenderingContext
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
 
@@ -93,6 +93,13 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
   - : Methods specifying integer values for generic vertex attributes.
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
   - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
+
+## Color spaces
+
+- {{domxref("WebGL2RenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGL2RenderingContext.unpackColorSpace")}}
+  - : Specifies the color space to convert to when importing textures.
 
 ## Drawing buffers
 

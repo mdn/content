@@ -3,13 +3,21 @@ title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 page-type: javascript-function
 browser-compat: javascript.builtins.encodeURIComponent
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`encodeURIComponent()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURI()")}}, this function encodes more characters, including those that are part of the URI syntax.
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: encodeURIComponent()", "shorter")}}
+
+```js interactive-example
+// Encodes characters such as ?,=,/,&,:
+console.log(`?x=${encodeURIComponent("test?")}`);
+// Expected output: "?x=test%3F"
+
+console.log(`?x=${encodeURIComponent("шеллы")}`);
+// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```
 
 ## Syntax
 
@@ -41,7 +49,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server — this will encode `&` symbols that may inadvertently be generated during data entry for {{glossary("character reference", "character references")}} or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
+Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms sent to the server — this will encode `&` symbols that may inadvertently be generated during data entry for {{glossary("character reference", "character references")}} or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
 
 For [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 

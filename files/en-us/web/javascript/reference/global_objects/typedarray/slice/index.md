@@ -1,15 +1,23 @@
 ---
 title: TypedArray.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.slice
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`slice()`** method of {{jsxref("TypedArray")}} instances returns a copy of a portion of a typed array into a new typed array object selected from `start` to `end` (`end` not included) where `start` and `end` represent the index of items in that typed array. The original typed array will not be modified. This method has the same algorithm as {{jsxref("Array.prototype.slice()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.slice()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.slice(1, 3);
+
+console.log(array1);
+// Expected output: Uint8Array [20, 30]
+```
 
 ## Syntax
 
@@ -57,6 +65,7 @@ uint8.slice(0, 1); // Uint8Array [ 1 ]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [es-shims polyfill of `TypedArray.prototype.slice`](https://www.npmjs.com/package/typedarray.prototype.slice)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.slice()")}}

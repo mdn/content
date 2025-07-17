@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.signal
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The read-only **`signal`** property of the {{DOMxRef("Request")}} interface returns the {{domxref("AbortSignal")}} associated with the request.
 
@@ -30,9 +30,9 @@ req.signal.addEventListener("abort", () => {
 
 // In case of abort, log the AbortSignal reason, if any
 fetch(req).catch(() => {
-  if (signal.aborted) {
-    if (signal.reason) {
-      console.log(`Request aborted with reason: ${signal.reason}`);
+  if (req.signal.aborted) {
+    if (req.signal.reason) {
+      console.log(`Request aborted with reason: ${req.signal.reason}`);
     } else {
       console.log("Request aborted but no reason was given.");
     }

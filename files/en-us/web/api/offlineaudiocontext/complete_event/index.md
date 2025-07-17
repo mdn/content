@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("complete", (event) => {});
+```js-nolint
+addEventListener("complete", (event) => { })
 
-oncomplete = (event) => {};
+oncomplete = (event) => { }
 ```
 
 ## Event type
@@ -44,7 +44,7 @@ const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.addEventListener("complete", () => {
   console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
+  alert("Song processed and ready to play");
   playBtn.disabled = false;
 });
 ```
@@ -56,7 +56,7 @@ const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = () => {
   console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
+  alert("Song processed and ready to play");
   playBtn.disabled = false;
 };
 ```

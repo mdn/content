@@ -1,13 +1,14 @@
 ---
-title: "-webkit-transform-2d"
+title: -webkit-transform-2d
 slug: Web/CSS/@media/-webkit-transform-2d
 page-type: css-media-feature
 status:
   - non-standard
 browser-compat: css.at-rules.media.-webkit-transform-2d
+sidebar: cssref
 ---
 
-{{CSSRef}} {{ Non-standard_header }}
+{{ Non-standard_header }}
 
 > [!NOTE]
 > All browsers support the [`transform`](/en-US/docs/Web/CSS/transform#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-transform-2d` media feature. No browsers support `transform`, without the prefix or `2d` extension, as a media query. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.

@@ -2,9 +2,8 @@
 title: Updating add-ons for Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.
 
@@ -27,7 +26,7 @@ Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.rem
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js",
+  "chrome://my-extension/content/some-script.js",
 );
 ```
 
@@ -50,7 +49,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 ## DOM changes
 
 - The long-obsolete method `Navigator.taintEnabled()` has been removed. This hasn't done anything useful in a very long time, but was often used in browser detection scripts, since it was Netscape-specific. Calling this method throws an exception starting in Firefox 9.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but [there are exceptions](/en-US/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, unless you are setting or accessing event handlers on DOM prototype objects. Now you can't, for example, change `Window.prototype.onload`.
 
 ## Other changes that may affect binary compatibility
 

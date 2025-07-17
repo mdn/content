@@ -19,9 +19,7 @@ new Touch(options)
 ### Parameters
 
 - `touchInit`
-
   - : An object with the following fields:
-
     - `identifier`
       - : A `long` value, that is the identification number for the touch point.
     - `target`
@@ -39,9 +37,9 @@ new Touch(options)
     - `pageY` {{optional_inline}}
       - : Defaults to `0`, of type `double`, that is the vertical position of the touch on the client window of the user's screen, including any scroll offset.
     - `radiusX` {{optional_inline}}
-      - : Defaults to `0`, of type `float`, that is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis indicated by rotationAngle, in CSS pixels of the same scale as screenX; `0` if no value is known. The value must not be negative.
+      - : Defaults to `0`, of type `float`, that is the radius of the ellipse which most closely circumscribes the touching area (e.g., finger, stylus) along the axis indicated by rotationAngle, in CSS pixels of the same scale as screenX; `0` if no value is known. The value must not be negative.
     - `radiusY` {{optional_inline}}
-      - : Defaults to `0`, of type `float`, that is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis perpendicular to that indicated by rotationAngle, in CSS pixels of the same scale as screenY; `0` if no value is known. The value must not be negative.
+      - : Defaults to `0`, of type `float`, that is the radius of the ellipse which most closely circumscribes the touching area (e.g., finger, stylus) along the axis perpendicular to that indicated by rotationAngle, in CSS pixels of the same scale as screenY; `0` if no value is known. The value must not be negative.
     - `rotationAngle` {{optional_inline}}
       - : Defaults to `0`, of type `float`, that is the angle (in degrees) that the ellipse described by radiusX and radiusY is rotated clockwise about its center; `0` if no value is known. The value must be greater than or equal to `0` and less than `90`. If the ellipse described by radiusX and radiusY is circular, then rotationAngle has no effect. The user agent may use `0` as the value in this case, or it may use any other value in the allowed range. (For example, the user agent may use the rotationAngle value from the previous touch event, to avoid sudden changes.).
     - `force` {{optional_inline}}

@@ -32,7 +32,7 @@ This example shows how `clearParameters()` can be used to reset all parameters b
 
 #### HTML
 
-```HTML
+```html
 <div id="result"></div>
 ```
 

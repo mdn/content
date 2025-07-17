@@ -19,9 +19,7 @@ deleteRule(select)
 ### Parameters
 
 - `select`
-
   - : A string which contains the keyframe selector of the rule to be deleted, which must be:
-
     - a comma-separated list of percentage values between 0% and 100%;
     - or, the keywords `from` or `to`
 
@@ -39,7 +37,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 After deleting a rule with `deleteRule()` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing one rule.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

@@ -1,13 +1,11 @@
 ---
 title: Promise.try()
+short-title: try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Promise.try
+sidebar: jsref
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 The **`Promise.try()`** static method takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
 
@@ -15,12 +13,17 @@ The **`Promise.try()`** static method takes a callback of any kind (returns or t
 
 ```js-nolint
 Promise.try(func)
+Promise.try(func, arg1)
+Promise.try(func, arg1, arg2)
+Promise.try(func, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
 - `func`
-  - : A function that is called synchronously with no arguments. It can do anything—either return a value, throw an error, or return a promise.
+  - : A function that is called synchronously with the arguments provided (`arg1`, `arg2`, …, `argN`). It can do anything—either return a value, throw an error, or return a promise.
+- `arg1`, `arg2`, …, `argN`
+  - : Arguments to pass to `func`.
 
 ### Return value
 
@@ -57,6 +60,20 @@ Promise.resolve().then(func);
 The difference is that the callback passed to {{jsxref("Promise/then", "then()")}} is always called asynchronously, while the executor of the `Promise()` constructor is called synchronously. `Promise.try` also calls the function synchronously, and resolves the promise immediately if possible.
 
 `Promise.try()`, combined with {{jsxref("Promise/catch", "catch()")}} and {{jsxref("Promise/finally", "finally()")}}, can be used to handle both synchronous and asynchronous errors in a single chain, and make promise error handling appear almost like synchronous error handling.
+
+Like {{domxref("Window/setTimeout", "setTimeout()")}}, `Promise.try()` accepts extra arguments that are passed to the callback. This means instead of doing this:
+
+```js
+Promise.try(() => func(arg1, arg2));
+```
+
+You can do this:
+
+```js
+Promise.try(func, arg1, arg2);
+```
+
+Which are equivalent, but the latter avoids creating an extra closure and is more efficient.
 
 ## Examples
 
@@ -154,6 +171,7 @@ Unlike `Promise()`, this `NotPromise()` constructor _does not_ gracefully handle
 ## See also
 
 - [Polyfill of `Promise.try` in `core-js`](https://github.com/zloirock/core-js#promisetry)
+- [es-shims polyfill of `Promise.try`](https://www.npmjs.com/package/promise.try)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}
 - [`Promise()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)

@@ -16,8 +16,16 @@ If several listeners are attached to the same element for the same event type, t
 ## Syntax
 
 ```js-nolint
-event.stopImmediatePropagation()
+stopImmediatePropagation()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

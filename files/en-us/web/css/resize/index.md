@@ -3,18 +3,55 @@ title: resize
 slug: Web/CSS/resize
 page-type: css-property
 browser-compat: css.properties.resize
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
 
-{{EmbedInteractiveExample("pages/css/resize.html")}}
+{{InteractiveExample("CSS Demo: resize")}}
+
+```css interactive-example-choice
+resize: both;
+```
+
+```css interactive-example-choice
+resize: horizontal;
+```
+
+```css interactive-example-choice
+resize: vertical;
+```
+
+```css interactive-example-choice
+resize: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">Try resizing this element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
+  border: 3px solid #c5c5c5;
+  overflow: auto;
+  width: 250px;
+  height: 250px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+```
 
 `resize` does not apply to the following:
 
 - Inline elements
-- Block elements for which the {{cssxref("overflow")}} property is set to `visible`
+- Block elements for which the {{cssxref("overflow")}} property is set to `visible` or `clip`
 
 ## Syntax
 
@@ -62,7 +99,7 @@ The `resize` property is specified as a single keyword value from the list below
 
 ## Examples
 
-### Disabling resizability of textareas
+### Disabling resizability of text areas
 
 In many browsers, {{HTMLElement("textarea")}} elements are resizable by default. You may override this behavior with the `resize` property.
 
@@ -82,7 +119,7 @@ textarea {
 
 #### Result
 
-{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}
+{{EmbedLiveSample("Disabling_resizability_of_text_areas","200","100")}}
 
 ### Using resize with arbitrary elements
 

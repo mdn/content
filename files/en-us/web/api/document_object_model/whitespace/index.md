@@ -61,7 +61,7 @@ Conserving whitespace characters in the DOM is useful in many ways, but there ar
 
 ### How does CSS process whitespace?
 
-Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3/), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
+Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in [CSS Text Module Level 3](https://drafts.csswg.org/css-text-3/), and especially the parts about the [CSS `white-space` property](https://drafts.csswg.org/css-text-3/#white-space-property) and [whitespace processing details](https://drafts.csswg.org/css-text-3/#white-space-processing), but we also offer an easier explanation below.
 
 #### Example
 
@@ -91,7 +91,7 @@ The `<h1>` element contains only inline elements. In fact it contains:
 - An inline element (the `<span>`, which contains a space, and the word "World!").
 - Another text node (consisting only of tabs and spaces).
 
-Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
+Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
 
 Inside this context, whitespace character processing can be summarized as follows:
 
@@ -136,7 +136,8 @@ Inside this context, whitespace character processing can be summarized as follow
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
-> **Note:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
+> [!NOTE]
+> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
 ### Whitespace in block formatting contexts
 
@@ -278,7 +279,7 @@ The Firefox DevTools HTML Inspector will highlight text nodes, and also show you
 
 There are a few ways of getting around this problem:
 
-Use [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
+Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
 
 ```css
 ul {
@@ -347,48 +348,46 @@ The JavaScript code below defines several functions that make it easier to deal 
 /**
  * Determine whether a node's text content is entirely whitespace.
  *
- * @param nod  A node implementing the |CharacterData| interface (i.e.,
- *             a |Text|, |Comment|, or |CDATASection| node
- * @return     True if all of the text content of |nod| is whitespace,
- *             otherwise false.
+ * @param nod  A node implementing the `CharacterData` interface (i.e.,
+ *             a `Text`, `Comment`, or `CDATASection` node)
+ * @return     `true` if all of the text content of `nod` is whitespace,
+ *             otherwise `false`.
  */
-function is_all_ws(nod) {
+function isAllWs(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
 /**
  * Determine if a node should be ignored by the iterator functions.
  *
- * @param nod  An object implementing the DOM1 |Node| interface.
- * @return     true if the node is:
- *                1) A |Text| node that is all whitespace
- *                2) A |Comment| node
- *             and otherwise false.
+ * @param nod  An object implementing the `Node` interface.
+ * @return     `true` if the node is:
+ *                1) A `Text` node that is all whitespace
+ *                2) A `Comment` node
+ *             and otherwise `false`.
  */
-
-function is_ignorable(nod) {
+function isIgnorable(nod) {
   return (
-    nod.nodeType === 8 || // A comment node
-    (nod.nodeType === 3 && is_all_ws(nod))
+    nod.nodeType === 8 || // a comment node
+    (nod.nodeType === 3 && isAllWs(nod))
   ); // a text node, all ws
 }
 
 /**
- * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments. (Normally |previousSibling| is a property
+ * Version of `previousSibling` that skips nodes that are entirely
+ * whitespace or comments. (Normally `previousSibling` is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest previous sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The closest previous sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null` if
+ *             no such node exists.
  */
-function node_before(sib) {
+function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -396,18 +395,17 @@ function node_before(sib) {
 }
 
 /**
- * Version of |nextSibling| that skips nodes that are entirely
+ * Version of `nextSibling` that skips nodes that are entirely
  * whitespace or comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest next sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The closest next sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null`
+ *             if no such node exists.
  */
-function node_after(sib) {
+function nodeAfter(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -415,21 +413,20 @@ function node_after(sib) {
 }
 
 /**
- * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments. (Normally |lastChild| is a property
+ * Version of `lastChild` that skips nodes that are entirely
+ * whitespace or comments. (Normally `lastChild` is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The last child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The last child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
-function last_child(par) {
+function lastChild(par) {
   let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.previousSibling;
@@ -438,19 +435,18 @@ function last_child(par) {
 }
 
 /**
- * Version of |firstChild| that skips nodes that are entirely
+ * Version of `firstChild` that skips nodes that are entirely
  * whitespace and comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The first child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The first child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
-function first_child(par) {
+function firstChild(par) {
   let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.nextSibling;
@@ -459,15 +455,15 @@ function first_child(par) {
 }
 
 /**
- * Version of |data| that doesn't include whitespace at the beginning
+ * Version of `data` that doesn't include whitespace at the beginning
  * and end and normalizes all whitespace to a single space. (Normally
- * |data| is a property of text nodes that gives the text of the node.)
+ * `data` is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of(txt) {
+function dataOf(txt) {
   let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data[0] === " ") {
@@ -485,12 +481,12 @@ function data_of(txt) {
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-let cur = first_child(document.getElementById("test"));
+let cur = firstChild(document.getElementById("test"));
 while (cur) {
-  if (data_of(cur.firstChild) === "This is the third paragraph.") {
+  if (dataOf(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }
-  cur = node_after(cur);
+  cur = nodeAfter(cur);
 }
 ```

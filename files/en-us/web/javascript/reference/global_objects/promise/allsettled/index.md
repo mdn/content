@@ -1,15 +1,31 @@
 ---
 title: Promise.allSettled()
+short-title: allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.allSettled
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.allSettled()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.allSettled()", "taller")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) =>
+  setTimeout(reject, 100, "foo"),
+);
+const promises = [promise1, promise2];
+
+Promise.allSettled(promises).then((results) =>
+  results.forEach((result) => console.log(result.status)),
+);
+
+// Expected output:
+// "fulfilled"
+// "rejected"
+```
 
 ## Syntax
 
@@ -28,7 +44,6 @@ A {{jsxref("Promise")}} that is:
 
 - **Already fulfilled**, if the `iterable` passed is empty.
 - **Asynchronously fulfilled**, when all promises in the given `iterable` have settled (either fulfilled or rejected). The fulfillment value is an array of objects, each describing the outcome of one promise in the `iterable`, in the order of the promises passed, regardless of completion order. Each outcome object has the following properties:
-
   - `status`
     - : A string, either `"fulfilled"` or `"rejected"`, indicating the eventual state of the promise.
   - `value`
@@ -75,8 +90,9 @@ Promise.allSettled([
 ## See also
 
 - [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.allSettled`](https://www.npmjs.com/package/promise.allsettled)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
-- [Graceful asynchronous programming with promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.any()")}}

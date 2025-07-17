@@ -21,11 +21,9 @@ new GainNode(context, options)
 ### Parameters
 
 - `context`
-  - : A reference to a {{domxref("BaseAudioContext")}}, e.g. an {{domxref("AudioContext")}}.
+  - : A reference to a {{domxref("BaseAudioContext")}}, e.g., an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `gain`
       - : The amount of gain to apply. This parameter is a- `rate`
         and it's nominal range is (-∞,+∞). The default is `1`.

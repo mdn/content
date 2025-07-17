@@ -2,21 +2,37 @@
 title: image()
 slug: Web/CSS/image/image
 page-type: css-function
-browser-compat: css.types.image.image
+spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
+The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
 
 > [!NOTE]
 > The CSS `image()` function should not confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
 
 ## Syntax
 
-{{CSSSyntax}}
+```css-nolint
+/* Basic usage */
+image("image1.jpg");
+image(url("image2.jpg"));
 
-where:
+/* Bidi-sensitive Images */
+image(ltr "image1.jpg");
+image(rtl "image1.jpg");
+
+/* Image Fallbacks */
+image("image1.jpg", black);
+
+/* Image Fragments */
+image("image1.jpg#xywh=40,0,20,20");
+
+/* Solid-color Images */
+image(rgb(0 0 255 / 0.5)), url("bg-image.png");
+```
+
+### Values
 
 - `image-tags` {{optional_inline}}
   - : The directionality of the image, either `ltr` for left-to-right or `rtl` for right-to-left.
@@ -34,14 +50,14 @@ The first, optional parameter of the `image()` notation is the directionality of
 One key difference between `url()` and `image()` is the ability to add a media fragment identifier — a starting point along the x and y axis, along with a width and height — onto the image source to display only a section of the source image. The section of the image defined in the parameter becomes a standalone image. The syntax looks like so:
 
 ```css
-background-image: image("myimage.webp#xywh=0,20,40,60");
+background-image: image("my-image.webp#xywh=0,20,40,60");
 ```
 
 The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left-hand corner) and is 40px wide and 60px tall.
 
 The `#xywh=#,#,#,#` media fragment syntax takes four comma separated numeric values. The first two represent the X and Y coordinates for the starting point of the box that will be created. The third value is the width of the box, and the last value is the height. By default, these are pixel values. The [spacial dimension definition in the media specification](https://www.w3.org/TR/media-frags/#naming-space) indicates that percentages will be supported as well:
 
-```css
+```plain
 xywh=160,120,320,240        /* results in a 320x240 image at x=160 and y=120 */
 xywh=pixel:160,120,320,240  /* results in a 320x240 image at x=160 and y=120 */
 xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */
@@ -59,12 +75,16 @@ Omitting image sources while including a color is valid and creates a color swat
 
 The size of the color swatch can be set with the {{CSSxRef("background-size")}} property. This is different from the `background-color`, which sets a color to cover the entire element. Both `image(color)` and `background-color` placements are impacted by the {{CSSxRef("background-clip")}} and {{CSSxRef("background-origin")}} properties.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 This feature can help improve accessibility by providing a fallback color when an image fails to load. While this can and should be done by including a background-color on every background image, the CSS `image()` function allows adding allows only including background colors should an image fail to load, which means you can add a fall back color should a transparent PNG/GIF/WebP not load.
 
@@ -108,7 +128,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ### Putting color on top of a background image
 
 ```css hidden
-.quarterlogo {
+.quarter-logo {
   height: 200px;
   width: 200px;
   border: 1px solid;
@@ -116,7 +136,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ```
 
 ```css
-.quarterlogo {
+.quarter-logo {
   background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
@@ -124,7 +144,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ```
 
 ```html
-<div class="quarterlogo">
+<div class="quarter-logo">
   If supported, a quarter of this div has a darkened logo
 </div>
 ```
@@ -139,7 +159,7 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 

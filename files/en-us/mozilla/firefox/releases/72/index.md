@@ -1,10 +1,10 @@
 ---
 title: Firefox 72 for Developers
+short-title: Firefox 72
 slug: Mozilla/Firefox/Releases/72
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
 
@@ -39,9 +39,8 @@ _No changes._
 
 ### CSS
 
-- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ([Firefox bug 1559074](https://bugzil.la/1559074)).
 - [CSS Motion Path](/en-US/docs/Web/CSS/CSS_motion_path) has been shipped ([Firefox bug 1582554](https://bugzil.la/1582554), also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
-
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
   - {{cssxref("offset-anchor")}}
@@ -70,13 +69,11 @@ _No changes._
 #### DOM
 
 - The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has had some interface name updates, as per recent spec changes ([Firefox bug 1575144](https://bugzil.la/1575144)):
-
   - `Coordinates` has been changed to {{domxref("GeolocationCoordinates")}}.
   - `Position` has been changed to {{domxref("GeolocationPosition")}}.
   - `PositionError` has been changed to {{domxref("GeolocationPositionError")}}.
 
 - A number of properties have been updated to use standard stringifiers ([Firefox bug 824857](https://bugzil.la/824857)):
-
   - {{domxref("DOMTokenList.value")}}
   - {{domxref("HTMLAnchorElement.href")}}
   - {{domxref("Location.href")}}
@@ -98,7 +95,7 @@ _No changes._
 - Removed the non-standard `window.mozPaintCount` property. ([Firefox bug 1591968](https://bugzil.la/1591968))
 - The {{domxref("BatteryManager")}} interface is no longer exposed to web content ([Firefox bug 1441976](https://bugzil.la/1441976)).
 - {{domxref("Navigator.vibrate()")}} is no longer supported in cross-origin {{htmlelement("iframe")}}s ([Firefox bug 1591113](https://bugzil.la/1591113)).
-- WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as "`a=simulcast: send rid=7 recv rid=8`" is now "`a=simulcast: send 7 recv 8`". The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ([Firefox bug 1470568](https://bugzil.la/1470568)).
+- WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as `a=simulcast: send rid=7 recv rid=8` is now `a=simulcast: send 7 recv 8`. The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ([Firefox bug 1470568](https://bugzil.la/1470568)).
 
 ### Security
 
@@ -131,7 +128,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 72 — our first song of 2020](https://hacks.mozilla.org/2020/01/firefox-72-our-first-song-of-2020/)
-
-## Older versions
-
-{{Firefox_for_developers}}

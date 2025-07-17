@@ -19,7 +19,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 The following new functions can be used in GLSL shader code, if this extension is enabled:
 
-```cpp
+```c
 vec4 texture2DLodEXT(sampler2D sampler, vec2 coord, float lod)
 vec4 texture2DProjLodEXT(sampler2D sampler, vec3 coord, float lod)
 vec4 texture2DProjLodEXT(sampler2D sampler, vec4 coord, float lod)
@@ -46,11 +46,11 @@ Shader code that avoids artifacts when wrapping texture coordinates:
   #extension GL_OES_standard_derivatives : enable
 
   uniform sampler2D myTexture;
-  varying vec2 texcoord;
+  varying vec2 texCoord;
 
   void main(){
-    gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
-                                    dFdx(texcoord), dFdy(texcoord));
+    gl_FragColor = texture2DGradEXT(myTexture, mod(texCoord, vec2(0.1, 0.5)),
+                                    dFdx(texCoord), dFdy(texCoord));
   }
 </script>
 ```

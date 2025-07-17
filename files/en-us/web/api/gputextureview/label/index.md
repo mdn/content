@@ -3,12 +3,10 @@ title: "GPUTextureView: label property"
 short-title: label
 slug: Web/API/GPUTextureView/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTextureView.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUTextureView")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -24,7 +22,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUTextureView.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],
@@ -34,15 +32,15 @@ const depthTexture = device.createTexture({
 
 const view = depthTexture.createView();
 
-view.label = "myview";
+view.label = "my_view";
 
-console.log(view.label); // "myview"
+console.log(view.label); // "my_view"
 ```
 
 Setting a label via the originating {{domxref("GPUTexture.createView()")}} call, and then getting it via `GPUTextureView.label`:
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],
@@ -51,10 +49,10 @@ const depthTexture = device.createTexture({
 });
 
 const view = depthTexture.createView({
-  label: "myview",
+  label: "my_view",
 });
 
-console.log(view.label); // "myview"
+console.log(view.label); // "my_view"
 ```
 
 ## Specifications

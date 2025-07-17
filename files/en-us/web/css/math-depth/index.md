@@ -3,13 +3,13 @@ title: math-depth
 slug: Web/CSS/math-depth
 page-type: css-property
 browser-compat: css.properties.math-depth
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`math-depth`** property describes a notion of _depth_ for each element of a mathematical formula, with respect to the top-level container of that formula. This is used to scale the computed value of the [font-size](/en-US/docs/Web/CSS/font-size) of elements when `font-size: math` is applied.
 
-> **Note:** `font-size: math` is the default for `<math>` elements in the MathML Core [User Agent stylesheet](https://w3c.github.io/mathml-core/#user-agent-stylesheet), so it's not necessary to specify it explicitly.
+> [!NOTE]
+> `font-size: math` is the default for `<math>` elements in the MathML Core [User Agent stylesheet](https://w3c.github.io/mathml-core/#user-agent-stylesheet), so it's not necessary to specify it explicitly.
 
 ## Syntax
 
@@ -64,7 +64,7 @@ The last two subformulas show the effect of setting `math-depth` to a specific v
 #### HTML
 
 ```html
-<p style="font-size: 3rem; margin: 1rem 0">
+<p>
   <math>
     <mtext>0</mtext>
 
@@ -91,6 +91,13 @@ The last two subformulas show the effect of setting `math-depth` to a specific v
     </mrow>
   </math>
 </p>
+```
+
+```css hidden
+p {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
 ```
 
 #### Result

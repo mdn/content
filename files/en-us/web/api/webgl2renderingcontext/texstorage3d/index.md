@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texStorage3D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.texStorage3D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies all levels of a
@@ -21,19 +21,15 @@ texStorage3D(target, levels, internalformat, width, height, depth)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of texture levels.
 - `internalformat`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture store format. Possible values:
-
     - `gl.R8`
     - `gl.R16F`
     - `gl.R32F`
@@ -59,7 +55,6 @@ texStorage3D(target, levels, internalformat, width, height, depth)
     - `gl.RGBA8UI`
 
     In addition if the {{domxref("WEBGL_compressed_texture_etc")}} extension is supported, the following values are also possible:
-
     - `gl.COMPRESSED_R11_EAC`
     - `gl.COMPRESSED_SIGNED_R11_EAC`
     - `gl.COMPRESSED_RG11_EAC`

@@ -2,9 +2,8 @@
 title: Bézier curve
 slug: Glossary/Bezier_curve
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **Bézier curve** (pronounced \[bezje]) is a mathematically described curve used in computer graphics and animation. In vector images, they are used to model smooth curves that can be scaled indefinitely.
 
@@ -17,5 +16,5 @@ To draw a quadratic Bézier curve, two imaginary lines are drawn, one from P<sub
 ## See also
 
 - [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) on Wikipedia
-- [Cubic Bézier easing functions in CSS](/en-US/docs/Web/CSS/easing-function#using_the_cubic-bezier_function)
+- [Cubic Bézier easing functions in CSS](/en-US/docs/Web/CSS/easing-function/cubic-bezier)
 - {{SVGAttr("keySplines")}} SVG attribute

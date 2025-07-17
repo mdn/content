@@ -19,13 +19,13 @@ A DOM {{domxref('Element')}}.
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-shadow-dom-element");
+const shadow = customElem.shadowRoot;
 
-// ...
+// …
 
 // return the original host element some time later
-let hostElem = shadow.host;
+const hostElem = shadow.host;
 ```
 
 ## Specifications
@@ -38,7 +38,7 @@ let hostElem = shadow.host;
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) HTML attributes
+- [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) HTML attributes
 - {{HTMLelement("template")}} and {{HTMLElement("slot")}} HTML elements
 - {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements

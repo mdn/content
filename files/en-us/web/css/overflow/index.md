@@ -3,13 +3,52 @@ title: overflow
 slug: Web/CSS/overflow
 page-type: css-shorthand-property
 browser-compat: css.properties.overflow
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
 
-The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
+{{InteractiveExample("CSS Demo: overflow")}}
 
-{{EmbedInteractiveExample("pages/css/overflow.html")}}
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## Constituent properties
 
@@ -63,7 +102,7 @@ The following nuances should be kept in mind while using the various keywords fo
 
 - Specifying a value other than `visible` (the default) or `clip` for `overflow` creates a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). This is necessary for technical reasons; if a float intersects with a scrolling element, it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
 - For an `overflow` setting to create the desired effect, the block-level element must have either a set height ({{cssxref("height")}} or {{cssxref("max-height")}}) if the overflow is in the vertical direction, a set width ({{cssxref("width")}} or {{cssxref("max-width")}}) if the overflow is in the horizontal direction, a set block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) if the overflow is in the block direction, or a set inline-size (({{cssxref("inline-size")}} or {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap` if the overflow is in the inline direction.
-- Setting overflow to `visible` in one direction (i.e. `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
+- Setting overflow to `visible` in one direction (i.e., `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
 - Setting overflow to `clip` in one direction when it isn't set to `visible` or `clip` in the other direction results in the `clip` value behaving as `hidden`.
 - The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, except when `overflow` is set to `clip`.
 
@@ -77,9 +116,9 @@ The following nuances should be kept in mind while using the various keywords fo
 
 ## Accessibility
 
-A scrolling content area cannot be scrolled by a keyboard-only user, with the exception of users on Firefox (which makes the container keyboard focusable by default).
+A scrolling content area is not keyboard-focusable, so it cannot be scrolled by a keyboard-only user. Firefox and Chrome 132 and later are exceptions; they make scroll containers focusable by default.
 
-As a developer, to allow non-Firefox keyboard-only users to scroll the container, you will need to give it a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, they will have no context for what it is and their screen reader will likely announce the entirety of its contents. Giving it an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)) can mitigate this.
+For other browsers, to enable keyboard-only users to scroll the container, you will need to assign a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) to the container using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, it may have no context about the container and could likely announce entire contents of the container. To mitigate this, give the container an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)).
 
 ## Examples
 
@@ -214,5 +253,6 @@ p.overlay {
 - {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow)
+- SVG {{SVGAttr("overflow")}} attribute
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)

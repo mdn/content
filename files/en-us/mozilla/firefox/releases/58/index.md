@@ -1,10 +1,10 @@
 ---
 title: Firefox 58 for developers
+short-title: Firefox 58
 slug: Mozilla/Firefox/Releases/58
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
 
@@ -15,7 +15,7 @@ This article provides information about the changes in Firefox 58 that will affe
 - The [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) has been enabled by default for shapes generated via {{cssxref("clip-path")}} ([Firefox bug 1405339](https://bugzil.la/1405339)).
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now has a button to [pause/play recording of network traffic](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#pausing-and-resume-network-traffic-recording) ([Firefox bug 1005755](https://bugzil.la/1005755)).
 - In the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) the "Flash" filter button is no longer available, and Flash requests are included in the "Others" filter ([Firefox bug 1413540](https://bugzil.la/1413540)).
-- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the Devtools ([Firefox bug 1305777](https://bugzil.la/1305777)). See [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) for information on the new tools.
+- The code for the old Responsive Design Mode (enabled by default pre-Firefox 52) has now been removed from the DevTools ([Firefox bug 1305777](https://bugzil.la/1305777)). See [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) for information on the new tools.
 - The option to view MDN docs from the CSS pane of the page inspector has been removed ([Firefox bug 1382171](https://bugzil.la/1382171)) (was disabled since 55, [Firefox bug 1352801](https://bugzil.la/1352801)).
 
 ### HTML
@@ -43,7 +43,6 @@ _No changes._
 #### New APIs
 
 - The {{domxref("PerformanceNavigationTiming")}} API has been implemented ([Firefox bug 1263722](https://bugzil.la/1263722)).
-
   - Gecko has also been given a pref that can be used to disable the interface if required — `dom.enable_performance_navigation_timing`, defaulting to `true` ([Firefox bug 1403926](https://bugzil.la/1403926)).
 
 #### DOM
@@ -65,7 +64,6 @@ _No changes._
 #### Canvas and WebGL
 
 - Support for prefixed WebGL extensions has been removed ([Firefox bug 1403413](https://bugzil.la/1403413)):
-
   - For `MOZ_WEBGL_compressed_texture_atc` use `WEBGL_compressed_texture_atc` instead.
   - For `MOZ_WEBGL_compressed_texture_pvrtc` use {{domxref("WEBGL_compressed_texture_pvrtc")}} instead.
   - For `MOZ_WEBGL_compressed_texture_s3tc` use {{domxref("WEBGL_compressed_texture_s3tc")}} instead.
@@ -74,10 +72,10 @@ _No changes._
 
 ### HTTP
 
-- [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
+- [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
 - Firefox now implements a TLS handshake timeout with a default value of 30 seconds. The timeout value can be varied by editing the `network.http.tls-handshake-timeout` pref in about:config ([Firefox bug 1393691](https://bugzil.la/1393691)).
-- The [`worker-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
-- The [425: Too Early](/en-US/docs/Web/HTTP/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
+- The [`worker-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
+- The [425: Too Early](/en-US/docs/Web/HTTP/Reference/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
 
 ### Security
 
@@ -90,7 +88,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ([Firefox bug 1212648](https://bugzil.la/1212648)).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) [Firefox bug 1347644](https://bugzil.la/1347644).
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) and [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) [Firefox bug 1347644](https://bugzil.la/1347644).
 
 ## Removals from the web platform
 
@@ -101,7 +99,6 @@ _No changes._
 ### CSS
 
 - The following proprietary Mozilla system metric pseudo-classes are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `:-moz-system-metric(images-in-menus)`
   - `:-moz-system-metric(mac-graphite-theme)`
   - `:-moz-system-metric(scrollbar-end-backward)`
@@ -113,7 +110,6 @@ _No changes._
   - `:-moz-system-metric(windows-default-theme)`
 
 - The following proprietary Mozilla media features are no longer available to web content ([Firefox bug 1396066](https://bugzil.la/1396066)):
-
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
   - `-moz-mac-graphite-theme`
@@ -139,14 +135,14 @@ _No changes._
 ### JavaScript
 
 - The non-standard [`Date.prototype.toLocaleFormat()`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#date_2) method has been removed ([Firefox bug 818634](https://bugzil.la/818634)).
-- The non-standard and deprecated {{jsxref("Object.prototype.watch()")}} and {{jsxref("Object.prototype.unwatch", "unwatch()")}} methods have been removed and will no longer work ([Firefox bug 638054](https://bugzil.la/638054)). Consider using [setters and getters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) or [proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) instead.
-- The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator), the [`StopIteration`](/en-US/docs/Archive/Web/StopIteration) object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) and the non-standard {{jsxref("Function.prototype.isGenerator()")}} method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) instead ([Firefox bug 1083482](https://bugzil.la/1083482), [Firefox bug 1413867](https://bugzil.la/1413867), [Firefox bug 1119777](https://bugzil.la/1119777)).
+- The non-standard and deprecated [`Object.prototype.watch()` and `Object.prototype.unwatch()`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#object_2) methods have been removed and will no longer work ([Firefox bug 638054](https://bugzil.la/638054)). Consider using [setters and getters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) or [proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) instead.
+- The [legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator), the `StopIteration` object, the [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) and the non-standard `Function.prototype.isGenerator()` method have been removed. Use the ES2015 [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and standards-compliant [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) instead ([Firefox bug 1083482](https://bugzil.la/1083482), [Firefox bug 1413867](https://bugzil.la/1413867), [Firefox bug 1119777](https://bugzil.la/1119777)).
 - The non-standard [Array comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) and [Generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) have been removed ([Firefox bug 1414340](https://bugzil.la/1414340)).
 
 ### APIs
 
 - The proprietary `moz-blob` and `moz-chunked-text` values of the {{domxref("XMLHttpRequest.responseType")}} property were removed completely in Firefox 58 ([Firefox bug 1397145](https://bugzil.la/1397145), [Firefox bug 1397151](https://bugzil.la/1397151), [Firefox bug 1120171](https://bugzil.la/1120171)).
-- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API#aborting_a_fetch) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
+- The `dom.abortController.enabled` and `dom.abortController.fetch.enabled` prefs that controlled exposure of the [Abort API functionality](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request) have now been removed, since those features are now enabled by default ([Firefox bug 1402317](https://bugzil.la/1402317)).
 - The proprietary `mozSrcObject` property was removed in Firefox 58 ([Firefox bug 1183495](https://bugzil.la/1183495)). Use the standard {{domxref("HTMLMediaElement.srcObject")}} property instead.
 
 ### SVG
@@ -158,38 +154,28 @@ _No changes._
 ### WebExtensions
 
 - [browserSettings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [browserSettings.webNotificationsDisabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled) has been implemented (bug 1364942)
 
 - [browsingData](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [browsingData.localStorage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage) now supports deleting localStorage by host (bug 1388428)
 
 - [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to manage security devices (Bug 1357391)
 - privacy
-
   - first party isolation can now be toggled though firstPartyIsolate (bug 1409045)
   - resist fingerprinting pref can now be toggle through resistFingerprinting (bug [1397611)](https://bugzil.la/1397611)
 
 - tabs
-
-  - [tabs.discard](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
+  - [`tabs.discard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
   - isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)
-  - [toggleReaderMode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)() method implemented (Bug 1381992)
+  - [`toggleReaderMode()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) method implemented (Bug 1381992)
   - openInReaderMode option of tabs.created implemented (Bug 1408993)
   - tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)
 
 - theme
-
-  - [getCurrent](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent)() method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
+  - [`getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent) method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
   - onUpdated method to receive WebExtension theme updates (Bug [1349944](https://bugzil.la/1349944))
   - colors.bookmark_text now supported as alias of colors.toolbar_text (Bug [1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug [1347190)](https://bugzil.la/1347190)
 
 - webRequest
-
   - [webRequest.onBeforeRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) now includes a "frameAncestors" parameter
-
-## Older versions
-
-{{Firefox_for_developers}}

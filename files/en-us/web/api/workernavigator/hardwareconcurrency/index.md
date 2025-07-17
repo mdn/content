@@ -42,7 +42,7 @@ let workerList = [];
 
 for (let i = 0; i < navigator.hardwareConcurrency; i++) {
   let newWorker = {
-    worker: new Worker("cpuworker.js"),
+    worker: new Worker("cpu-worker.js"),
     inUse: false,
   };
   workerList.push(newWorker);

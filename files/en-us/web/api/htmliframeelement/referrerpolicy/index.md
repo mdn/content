@@ -10,7 +10,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 
 The
 **`HTMLIFrameElement.referrerPolicy`**
-property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) attribute of the
+property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) attribute of the
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 
@@ -42,7 +42,6 @@ resource.
     protocol security level stays the same (HTTPS→HTTPS), and send no header to a less
     secure destination (HTTPS→HTTP).
 - `unsafe-url`
-
   - : Send a full URL when performing a same-origin or cross-origin request.
 
     > [!NOTE]

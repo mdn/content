@@ -56,12 +56,24 @@
       "inh": "",
       "impl": []
     },
+    "AnimationTrigger": {
+      "inh": "",
+      "impl": []
+    },
     "AnimationWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
       "impl": []
     },
     "Attr": {
       "inh": "Node",
+      "impl": []
+    },
+    "Attribution": {
+      "inh": "",
+      "impl": []
+    },
+    "AttributionAggregationServices": {
+      "inh": "",
       "impl": []
     },
     "AudioBuffer": {
@@ -109,14 +121,6 @@
       "impl": []
     },
     "AudioProcessingEvent": {
-      "inh": "Event",
-      "impl": []
-    },
-    "AudioRenderCapacity": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "AudioRenderCapacityEvent": {
       "inh": "Event",
       "impl": []
     },
@@ -420,6 +424,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "CommandEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Comment": {
       "inh": "CharacterData",
       "impl": []
@@ -476,8 +484,8 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
+    "CreateMonitor": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Credential": {
@@ -498,10 +506,6 @@
     },
     "CryptoKey": {
       "inh": "",
-      "impl": []
-    },
-    "CSPViolationReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "CSSAnimation": {
@@ -550,6 +554,14 @@
     },
     "CSSFontPaletteValuesRule": {
       "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDeclarations": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSFunctionRule": {
@@ -864,8 +876,8 @@
       "inh": "AudioNode",
       "impl": []
     },
-    "DeprecationReportBody": {
-      "inh": "ReportBody",
+    "DelegatedInkTrailPresenter": {
+      "inh": "",
       "impl": []
     },
     "DeviceChangeEvent": {
@@ -1269,10 +1281,6 @@
       "impl": []
     },
     "GamepadPose": {
-      "inh": "",
-      "impl": []
-    },
-    "GamepadTouch": {
       "inh": "",
       "impl": []
     },
@@ -1860,6 +1868,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityCredentialError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "IdentityProvider": {
       "inh": "",
       "impl": []
@@ -1905,10 +1917,6 @@
       "impl": []
     },
     "Ink": {
-      "inh": "",
-      "impl": []
-    },
-    "InkPresenter": {
       "inh": "",
       "impl": []
     },
@@ -1960,10 +1968,6 @@
       "inh": "",
       "impl": []
     },
-    "InterventionReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "IntrinsicSizes": {
       "inh": "",
       "impl": []
@@ -1997,6 +2001,10 @@
       "impl": []
     },
     "KHR_parallel_shader_compile": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageDetector": {
       "inh": "",
       "impl": []
     },
@@ -2252,16 +2260,16 @@
       "inh": "",
       "impl": []
     },
+    "MLTensor": {
+      "inh": "",
+      "impl": []
+    },
     "Module": {
       "inh": "",
       "impl": []
     },
     "MouseEvent": {
       "inh": "UIEvent",
-      "impl": []
-    },
-    "MutationEvent": {
-      "inh": "Event",
       "impl": []
     },
     "MutationObserver": {
@@ -2381,6 +2389,10 @@
       "impl": []
     },
     "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
+    "Observable": {
       "inh": "",
       "impl": []
     },
@@ -2604,10 +2616,6 @@
       "inh": "",
       "impl": []
     },
-    "PermissionsPolicyViolationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "PermissionStatus": {
       "inh": "EventTarget",
       "impl": []
@@ -2632,6 +2640,10 @@
       "inh": "MouseEvent",
       "impl": []
     },
+    "PointerTimeline": {
+      "inh": "AnimationTimeline",
+      "impl": []
+    },
     "PopStateEvent": {
       "inh": "Event",
       "impl": []
@@ -2641,6 +2653,14 @@
       "impl": []
     },
     "PortalHost": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "PreferenceManager": {
+      "inh": "",
+      "impl": []
+    },
+    "PreferenceObject": {
       "inh": "EventTarget",
       "impl": []
     },
@@ -2684,6 +2704,10 @@
       "inh": "",
       "impl": []
     },
+    "PrivateAggregation": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2701,6 +2725,10 @@
       "impl": []
     },
     "ProtectedAudience": {
+      "inh": "",
+      "impl": []
+    },
+    "ProtectedAudienceUtilities": {
       "inh": "",
       "impl": []
     },
@@ -2800,14 +2828,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "Report": {
-      "inh": "",
-      "impl": []
-    },
-    "ReportBody": {
-      "inh": "",
-      "impl": []
-    },
     "ReportingObserver": {
       "inh": "",
       "impl": []
@@ -2833,6 +2853,10 @@
       "impl": []
     },
     "RestrictionTarget": {
+      "inh": "",
+      "impl": []
+    },
+    "Rewriter": {
       "inh": "",
       "impl": []
     },
@@ -2980,10 +3004,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "ScriptingPolicyReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "ScriptProcessorNode": {
       "inh": "AudioNode",
       "impl": []
@@ -3056,12 +3076,36 @@
       "inh": "",
       "impl": []
     },
+    "SharedStorageAppendMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageClearMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageDeleteMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageModifierMethod": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageSetMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
     },
     "SharedStorageWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
+      "impl": []
+    },
+    "SharedStorageWorkletNavigator": {
+      "inh": "",
       "impl": []
     },
     "SharedWorker": {
@@ -3106,6 +3150,10 @@
     },
     "SpeechRecognitionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "SpeechRecognitionPhrase": {
+      "inh": "",
       "impl": []
     },
     "SpeechRecognitionResult": {
@@ -3188,7 +3236,15 @@
       "inh": "Event",
       "impl": []
     },
+    "Subscriber": {
+      "inh": "",
+      "impl": []
+    },
     "SubtleCrypto": {
+      "inh": "",
+      "impl": []
+    },
+    "Summarizer": {
       "inh": "",
       "impl": []
     },
@@ -3468,6 +3524,10 @@
       "inh": "SVGGeometryElement",
       "impl": []
     },
+    "SVGPathSegment": {
+      "inh": "",
+      "impl": []
+    },
     "SVGPatternElement": {
       "inh": "SVGElement",
       "impl": []
@@ -3702,6 +3762,10 @@
     },
     "TransitionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Translator": {
+      "inh": "",
       "impl": []
     },
     "TreeWalker": {
@@ -4064,6 +4128,10 @@
       "inh": "",
       "impl": []
     },
+    "WebTransportDatagramsWritable": {
+      "inh": "WritableStream",
+      "impl": []
+    },
     "WebTransportError": {
       "inh": "DOMException",
       "impl": []
@@ -4153,6 +4221,10 @@
       "impl": []
     },
     "WritableStreamDefaultWriter": {
+      "inh": "",
+      "impl": []
+    },
+    "Writer": {
       "inh": "",
       "impl": []
     },

@@ -24,10 +24,8 @@ delete(request, options)
   - : The {{domxref("Request")}} you are looking to delete.
     This can be a `Request` object or a URL.
 - `options` {{optional_inline}}
-
   - : An object whose properties control how matching is done in the `delete` operation.
     The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the matching process should ignore the query string in the URL.
         If set to `true`, the `?value=bar` part of `http://foo.com/?value=bar` would be ignored when performing a match.
@@ -39,7 +37,7 @@ delete(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.
@@ -54,11 +52,12 @@ deleted, or `false` otherwise.
 ## Examples
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.delete("/images/image.png").then((response) => {
+caches
+  .open("v1")
+  .then((cache) => cache.delete("/images/image.png"))
+  .then((response) => {
     someUIUpdateFunction();
   });
-});
 ```
 
 ## Specifications

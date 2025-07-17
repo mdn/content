@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Scheduler.postTask
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`postTask()`** method of the {{domxref("Scheduler")}} interface is used for adding tasks to be [scheduled](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) according to their [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 
@@ -36,22 +36,17 @@ postTask(callback, options)
 ### Parameters
 
 - `callback`
-
   - : An callback function that implements the task.
     The return value of the callback is used to resolve the promise returned by this function.
 
 - `options` {{optional_inline}}
-
   - : Task options, including:
-
     - `priority` {{optional_inline}}
-
       - : The immutable [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of the task.
         One of: [`"user-blocking"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking), [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background).
         If set, this priority is used for the lifetime of the task and priority set on the `signal` is ignored.
 
     - `signal` {{optional_inline}}
-
       - : A {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} that can be used to abort the task (from its associated controller).
 
         If the `options.priority` parameter is set then the task priority cannot be changed, and any priority on the signal is ignored.
@@ -62,7 +57,7 @@ postTask(callback, options)
         The actual delay may be higher than specified, but will not be less.
         The default delay is 0.
 
-### Return Value
+### Return value
 
 Returns a {{jsxref("Promise")}} that is resolved with the return value of the `callback` function, or which may be rejected with the `signal`'s abort reason ({{domxref("AbortSignal.reason")}}).
 The promise may also be rejected with an error thrown by the callback during execution.
@@ -73,13 +68,13 @@ The following examples are slightly simplified versions of the live examples pro
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" (such as {{domxref("Window.scheduler")}} in window's scope or {{domxref("WorkerGlobalScope.scheduler")}} in worker's scope).
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global scope (such as {{domxref("Window.scheduler")}} in window's scope or {{domxref("WorkerGlobalScope.scheduler")}} in worker's scope).
 
 For example, the code below logs "Feature: Supported" if the API is supported on this browser.
 
 ```js
 // Check that feature is supported
-if ("scheduler" in this) {
+if ("scheduler" in globalThis) {
   console.log("Feature: Supported");
 } else {
   console.error("Feature: NOT Supported");
@@ -137,7 +132,7 @@ When run, each task simply logs it's expected order (we're not waiting on the re
 
 ```js
 // three tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 1"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 1"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 1"), {
   priority: "user-visible",
 });
@@ -146,7 +141,7 @@ scheduler.postTask(() => console.log("usr-blk 1"), {
 });
 
 // three more tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 2"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 2"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 2"), {
   priority: "user-visible",
 });
@@ -168,8 +163,8 @@ usr-blk 2
 usr-vis 1
 usr-vis 2
 usr-vis 3 (default)
-bckg 1
-bckg 2
+bkg 1
+bkg 2
 ```
 
 ### Changing task priorities
@@ -235,7 +230,7 @@ scheduler
   .postTask(() => console.log("Task executing"), {
     signal: abortTaskController.signal,
   })
-  .then((taskResult) => console.log(`${taskResult}`)) //This won't run!
+  .then((taskResult) => console.log(`${taskResult}`)) // This won't run!
   .catch((error) => console.error("Error:", error)); // Log the error
 
 // Abort the task
@@ -245,7 +240,7 @@ abortTaskController.abort();
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("Window.setTimeout", "setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 The code below shows two tasks added (as arrow functions) with a delay.

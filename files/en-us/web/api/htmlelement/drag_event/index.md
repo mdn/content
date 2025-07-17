@@ -16,10 +16,10 @@ This event is cancelable and may bubble up to the {{domxref("Document")}} and {{
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("drag", (event) => {});
+```js-nolint
+addEventListener("drag", (event) => { })
 
-ondrag = (event) => {};
+ondrag = (event) => { }
 ```
 
 ## Event type
@@ -45,7 +45,7 @@ _In addition to the properties listed below, properties from the parent interfac
 <div class="dropzone">
   <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
@@ -102,7 +102,7 @@ source.addEventListener("dragend", (event) => {
 });
 
 /* events fired on the drop targets */
-const target = document.getElementById("droptarget");
+const target = document.getElementById("drop-target");
 target.addEventListener(
   "dragover",
   (event) => {

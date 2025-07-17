@@ -1,13 +1,15 @@
 ---
 title: "Function: displayName"
+short-title: displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 page-type: javascript-instance-data-property
 status:
   - non-standard
 browser-compat: javascript.builtins.Function.displayName
+sidebar: jsref
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The optional **`displayName`** property of a {{jsxref("Function")}} instance specifies the display name of the function.
 
@@ -37,7 +39,7 @@ If none of the above patterns match, the entire `displayName` is displayed.
 By entering the following in a Firefox console, it should display as something like `function MyFunction()`:
 
 ```js
-const a = function () {};
+function a() {}
 a.displayName = "MyFunction";
 
 a; // function MyFunction()

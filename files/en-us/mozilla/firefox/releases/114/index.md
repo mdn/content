@@ -1,10 +1,10 @@
 ---
 title: Firefox 114 for developers
+short-title: Firefox 114
 slug: Mozilla/Firefox/Releases/114
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 114 that affect developers. Firefox 114 was released on June 06, 2023.
 
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 114 that affect d
 
 ### Developer Tools
 
-- Fixed an issue where the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role) were displayed.
+- Fixed an issue where the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) did not correctly show ARIA roles on elements, which affected how [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role) were displayed.
   Roles that cannot be mapped to ARIA use a Gecko internal role name ([Firefox bug 1572512](https://bugzil.la/1572512)).
 
 ### HTML
@@ -31,11 +31,11 @@ No notable changes.
 - [Workers](/en-US/docs/Web/API/Web_Workers_API) now support loading [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   You can load modules into workers by specifying the `{type: "module"}` option in the [`Worker`](/en-US/docs/Web/API/Worker/Worker#type) and [`SharedWorker` constructors](/en-US/docs/Web/API/SharedWorker/SharedWorker#type).
   Worker scripts can also statically or dynamically import modules using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), respectively ([Firefox bug 1812591](https://bugzil.la/1812591)).
-- [Worklets](/en-US/docs/Web/API/Worklet) can now use [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) to statically import [ECMAscript/JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1812591](https://bugzil.la/1812591)).
+- [Worklets](/en-US/docs/Web/API/Worklet) can now use [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) to statically import [ECMAScript/JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) ([Firefox bug 1812591](https://bugzil.la/1812591)).
 
 ### SVG
 
-- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
+- The [`crossorigin`](/en-US/docs/Web/SVG/Reference/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Reference/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Reference/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 ### APIs
 
@@ -43,7 +43,7 @@ No notable changes.
 - The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is now supported, which includes the following interfaces: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream), [`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream), [`WebTransportSendStream`](/en-US/docs/Web/API/WebTransportSendStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
   For more information see [Firefox bug 1692754](https://bugzil.la/1692754), [Firefox bug 1818754](https://bugzil.la/1818754), and [Firefox bug 1791835](https://bugzil.la/1791835).
 
-- [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) can now be used for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).
+- [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) can now be used for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).
 
 #### Removals
 
@@ -70,7 +70,3 @@ No notable changes.
 ### Removals
 
 - Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) is deprecated for Manifest V3 extensions ([Firefox bug 1827910](https://bugzil.la/1827910)). See [Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
-
-## Older versions
-
-{{Firefox_for_developers}}

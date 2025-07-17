@@ -67,7 +67,7 @@ let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
   const glLayer = xrSession.renderState.baseLayer;
-  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
+  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
   for (const view of pose.views) {
     const viewport = glLayer.getViewport(view);

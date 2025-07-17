@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 Part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
 **`getUniformLocation()`** returns the location of a
@@ -45,7 +45,6 @@ getUniformLocation(program, name)
 - `program`
   - : The {{domxref("WebGLProgram")}} in which to locate the specified uniform variable.
 - `name`
-
   - : A string specifying the name of the uniform variable whose
     location is to be returned. The name can't have any whitespace in it, and you
     can't use this function to get the location of any uniforms starting with the
@@ -59,7 +58,6 @@ getUniformLocation(program, name)
 
     Additionally, for uniforms declared as arrays, the following names are also
     valid:
-
     - The uniform name without the `[0]` suffix. E.g. the location
       returned for `arrayUniform` is equivalent to the one for
       `arrayUniform[0]`.

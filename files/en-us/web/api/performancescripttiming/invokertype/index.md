@@ -17,7 +17,7 @@ The **`invokerType`** read-only property of the {{domxref("PerformanceScriptTimi
 A string indicating the invoker type of the script entry point. Possible values are:
 
 - `"user-callback"`
-  - : A known callback invoked from within a web platform API, such as {{domxref("setTimeout()")}} or {{domxref("Window.requestAnimationFrame()")}}.
+  - : A known callback invoked from within a web platform API, such as {{domxref("Window.setTimeout", "setTimeout()")}} or {{domxref("Window.requestAnimationFrame()")}}.
 - `"event-listener"`
   - : An event listener for a web platform event, such as [`click`](/en-US/docs/Web/API/Element/click_event), [`load`](/en-US/docs/Web/API/Window/load_event), or [`keyup`](/en-US/docs/Web/API/Element/keyup_event).
 - `"resolve-promise"`

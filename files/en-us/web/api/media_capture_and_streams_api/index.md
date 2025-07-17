@@ -22,7 +22,7 @@ It provides the interfaces and methods for working with the streams and their co
 
 ## Concepts and usage
 
-The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#the_startup_function).
+The API is based on the manipulation of a {{domxref("MediaStream")}} object representing a flux of audio- or video-related data. See an example in [Get the media stream](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#demo).
 
 A `MediaStream` consists of zero or more {{domxref("MediaStreamTrack")}} objects, representing various audio or video **tracks**. Each `MediaStreamTrack` may have one or more **channels**. The channel represents the smallest unit of a media stream, such as an audio signal associated with a given speaker, like _left_ or _right_ in a stereo audio track.
 
@@ -59,6 +59,10 @@ In these reference articles, you'll find the fundamental information you'll need
 The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) article discusses the concepts of **constraints** and **capabilities**, as well as media settings, and includes a [Constraint Exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) that lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
 The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) article shows how to use [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

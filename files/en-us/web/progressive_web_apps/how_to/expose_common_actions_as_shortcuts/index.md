@@ -2,9 +2,8 @@
 title: Expose common app actions as shortcuts
 slug: Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
 page-type: how-to
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 Many operating systems support showing shortcut menus, or jump-list, when the user right-clicks or long-presses an app icon. For example, on Windows, right-clicking on any pinned program in the taskbar shows a list of program-specific actions and recently opened files:
 
@@ -24,7 +23,7 @@ Defining shortcuts for your PWA can make users more productive by letting them a
 
 ## Define shortcuts in the web app manifest
 
-To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Manifest/shortcuts) member of the [web app manifest](/en-US/docs/Web/Manifest). This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
+To define shortcuts for your PWA, use the [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). This member is an array of objects defining each shortcut's name and URL, as well as the optional short name, description, and icons. For example, here's the web app manifest of a calendar app that defines two shortcuts:
 
 ```json
 {
@@ -56,7 +55,7 @@ The most important properties of each shortcut object are:
 - `name`
   - : The name of the shortcut, which is displayed in the shortcut menu. Make sure to keep it short but also descriptive enough to let users know what the shortcut does.
 - `url`
-  - : The URL to launch the PWA with when the user selects the shortcut. This URL can be absolute, in which case it should exist within the [scope](/en-US/docs/Web/Manifest/scope) of the web app manifest. The URL can also be relative, in which case it's resolved relative to the PWA's [start URL](/en-US/docs/Web/Manifest/start_url).
+  - : The URL to launch the PWA with when the user selects the shortcut. This URL can be absolute, in which case it should exist within the [scope](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) of the web app manifest. The URL can also be relative, in which case it's resolved relative to the PWA's [start URL](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url).
 
 All other shortcut object properties are optional, but you should consider providing them to make the shortcut more useful to users:
 
@@ -65,10 +64,10 @@ All other shortcut object properties are optional, but you should consider provi
 - `description`
   - : A description of the shortcut. This string can be accessed by assistive technologies, such as screen readers, to help users understand what the shortcut does.
 - `icons`
-  - : An array of image objects to display in the shortcut menu. Each image object is processed just like the [`icons`](/en-US/docs/Web/Manifest/icons) member of the web app manifest, and can be used to provide different-sized icons for different device requirements.
+  - : An array of image objects to display in the shortcut menu. Each image object is processed just like the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) member of the web app manifest, and can be used to provide different-sized icons for different device requirements.
 
 ## See also
 
-- [`shortcuts` manifest member](/en-US/docs/Web/Manifest/shortcuts)
+- [`shortcuts` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
 - [Get things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts) on web.dev (2022)
-- [Define app shortcuts](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/shortcuts) on learn.microsoft.com (2023)
+- [Define app shortcuts](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/shortcuts) on learn.microsoft.com (2023)

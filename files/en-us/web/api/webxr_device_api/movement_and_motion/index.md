@@ -35,7 +35,6 @@ const enableRotation = true;
 const allowMouseRotation = true;
 const allowKeyboardMotion = true;
 const enableForcePolyfill = false;
-//const SESSION_TYPE = "immersive-vr";
 const SESSION_TYPE = "inline";
 const MOUSE_SPEED = 0.003;
 ```
@@ -248,7 +247,7 @@ function sessionStarted(session) {
   buffers = initBuffers(gl);
   texture = loadTexture(
     gl,
-    "https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244",
+    "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png",
   );
 
   xrSession.updateRenderState({
@@ -277,7 +276,7 @@ After storing the newly-created {{domxref("XRSession")}} object into `xrSession`
 
 Then we get a reference to the {{HTMLElement("canvas")}} found in our HTML—as well as its WebGL rendering context—which will be used as the drawing surface for the scene. The `xrCompatible` property is requested when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the element to gain access to the WebGL rendering context for the canvas. This ensures that the context is configured for use as a source for WebXR rendering.
 
-Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "mouselook" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
+Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
 
 Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) and its preceding articles [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL) and [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL). Then our `loadTexture()` function is called to load the texture file.
 
@@ -357,47 +356,13 @@ function handleKeyDown(event) {
 
 The keys and their effects are:
 
-- The
-
-  <kbd>W</kbd>
-
-  key moves the viewer upward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>S</kbd>
-
-  key moves the viewer downward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>A</kbd>
-
-  key slides the viewer to the left by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>D</kbd>
-
-  key slides the viewer to the right by `MOVE_DISTANCE`.
-
-- The up arrow key,
-
-  <kbd>↑</kbd>
-
-  , slides the viewer forward by `MOVE_DISTANCE`.
-
-- The down arrow key,
-
-  <kbd>↓</kbd>
-
-  , slides the viewer backward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>R</kbd>
-
-  key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
+- The <kbd>W</kbd> key moves the viewer upward by `MOVE_DISTANCE`.
+- The <kbd>S</kbd> key moves the viewer downward by `MOVE_DISTANCE`.
+- The <kbd>A</kbd> key slides the viewer to the left by `MOVE_DISTANCE`.
+- The <kbd>D</kbd> key slides the viewer to the right by `MOVE_DISTANCE`.
+- The up arrow key, <kbd>↑</kbd>, slides the viewer forward by `MOVE_DISTANCE`.
+- The down arrow key, <kbd>↓</kbd>, slides the viewer backward by `MOVE_DISTANCE`.
+- The <kbd>R</kbd> key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
 
 These offsets will be applied by the renderer starting with the next frame drawn.
 
@@ -715,7 +680,8 @@ The rest of the code is identical to that found in the earlier examples:
 
 ### Putting it all together
 
-When you take all of this code and add in the HTML and the other JavaScript code not included above, you get what you see when you [try out this example on Glitch](https://webxr-experiment.glitch.me/). Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
+When you take the code and add in HTML and some additional JavaScript, you'll have something like our [WebXR: Example with rotating object and user movement](https://mdn.github.io/dom-examples/webxr/) demo.
+Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
 
 A tip: if you don't have an XR device, you may be able to get some of the 3D effect if you bring your face very close to the screen, with your nose centered along the border between the left and right eye images in the canvas. By carefully focusing through the screen at the image, and slowly moving forward and backward, you should eventually be able to bring the 3D image into focus. It can take practice, and your nose may literally be touching the screen, depending on how sharp your eyesight is.
 

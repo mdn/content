@@ -50,28 +50,28 @@ For example, let's say you have a game with a UI on top, the gameplay action in 
   <canvas id="game-layer" width="480" height="320"></canvas>
   <canvas id="background-layer" width="480" height="320"></canvas>
 </div>
+```
 
-<style>
-  #stage {
-    width: 480px;
-    height: 320px;
-    position: relative;
-    border: 2px solid black;
-  }
+```css
+#stage {
+  width: 480px;
+  height: 320px;
+  position: relative;
+  border: 2px solid black;
+}
 
-  canvas {
-    position: absolute;
-  }
-  #ui-layer {
-    z-index: 3;
-  }
-  #game-layer {
-    z-index: 2;
-  }
-  #background-layer {
-    z-index: 1;
-  }
-</style>
+canvas {
+  position: absolute;
+}
+#ui-layer {
+  z-index: 3;
+}
+#game-layer {
+  z-index: 2;
+}
+#background-layer {
+  z-index: 1;
+}
 ```
 
 ### Use plain CSS for large background images
@@ -89,7 +89,7 @@ const scaleY = window.innerHeight / canvas.height;
 const scaleToFit = Math.min(scaleX, scaleY);
 const scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transformOrigin = "0 0"; // Scale from top left
 stage.style.transform = `scale(${scaleToFit})`;
 ```
 
@@ -130,11 +130,7 @@ canvas.style.height = `${rect.height}px`;
 - Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.
 - Avoid [text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) whenever possible.
 - Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas).
-- With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("setInterval()")}}.
+- With animations, use {{domxref("Window.requestAnimationFrame()")}} instead of {{domxref("Window.setInterval", "setInterval()")}}.
 - Be careful with heavy physics libraries.
-
-## See also
-
-- [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

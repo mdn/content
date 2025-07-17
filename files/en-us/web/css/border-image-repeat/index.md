@@ -3,13 +3,55 @@ title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 page-type: css-property
 browser-compat: css.properties.border-image-repeat
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the images for the sides and the middle part of the [border image](/en-US/docs/Web/CSS/border-image) are scaled and tiled. The middle region can be displayed by using the keyword "fill" in the {{cssxref("border-image-slice")}} property.
 
-The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) and [middle region](/en-US/docs/Web/CSS/border-image-slice#middle-region) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image). The middle region can be displayed by using the keyword "fill" in the border-image-slice property.
+{{InteractiveExample("CSS Demo: border-image-repeat")}}
 
-{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
+```css interactive-example-choice
+border-image-repeat: stretch;
+```
+
+```css interactive-example-choice
+border-image-repeat: repeat;
+```
+
+```css interactive-example-choice
+border-image-repeat: round;
+```
+
+```css interactive-example-choice
+border-image-repeat: space;
+```
+
+```css interactive-example-choice
+border-image-repeat: round stretch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## Syntax
 
@@ -108,5 +150,5 @@ repetition.addEventListener("change", (evt) => {
 ## See also
 
 - [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

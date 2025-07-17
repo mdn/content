@@ -20,15 +20,15 @@ let deltaTime = 0;
 
 Now we need to update the `drawScene()` function to apply the current rotation to the camera when drawing it. After translating the camera to the initial drawing position for the square, we apply the rotation.
 
-> [!NOTE]
-> In your "draw-scene.js" module, update the declaration of your `drawScene()` function so it can be passed the rotation to use:
+In your "draw-scene.js" module, update the declaration of your `drawScene()` function so it can be passed the rotation to use:
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, squareRotation) {
+  // …
+}
 ```
 
-> [!NOTE]
-> In your `drawScene()` function, right after the line `mat4.translate()` call, add this code:
+In your `drawScene()` function, right after the line `mat4.translate()` call, add this code:
 
 ```js
 mat4.rotate(
@@ -43,8 +43,7 @@ This rotates the modelViewMatrix by the current value of `squareRotation`, aroun
 
 To actually animate, we need to add code that changes the value of `squareRotation` over time.
 
-> [!NOTE]
-> Add this code at the end of your `main()` function, replacing the existing `drawScene()` call:
+Add this code at the end of your `main()` function, replacing the existing `drawScene()` call:
 
 ```js
 let then = 0;
@@ -63,7 +62,7 @@ function render(now) {
 requestAnimationFrame(render);
 ```
 
-This code uses `requestAnimationFrame` to ask the browser to call the function "`render`" on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime`, which is the number of second since the last frame was rendered.
+This code uses `requestAnimationFrame` to ask the browser to call the function `render` on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime`, which is the number of second since the last frame was rendered.
 
 Finally, we update `squareRotation`.
 

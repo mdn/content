@@ -2,11 +2,11 @@
 title: CSS module landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-> **Note:** _Remember to remove this note block before publishing._
+> [!NOTE]
+> _Remember to remove this note block before publishing._
 >
 > ---
 >
@@ -23,6 +23,7 @@ page-type: mdn-writing-guide
 > spec-urls:
 >   - url1
 >   - url2
+> sidebar: cssref
 > ---
 > ```
 >
@@ -35,23 +36,18 @@ page-type: mdn-writing-guide
 >     This will be formatted as `Web/CSS/CSS_NameOfTheModule`.
 >     For example, the slug for the [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module landing page is `Web/CSS/CSS_grid_layout`.
 > - **page-type**
->   - : The `page-type` value for CSS module landing pages is `css-module`.
+>   - : The `page-type` value for CSS module landing pages is always `css-module`.
 > - **spec-urls**
->
 >   - : The `spec-urls` value is a URL of the specification. In case there is more than one version of the specification that is relevant, present them in a bulleted list. For example, the value for `spec-urls` key for the [filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module landing page is:
 >
 >     ```plain
->     - `https://drafts.fxtf.org/filter-effects-2/`
->     - `https://drafts.fxtf.org/filter-effects-1/`
+>     - https://drafts.fxtf.org/filter-effects-2/
+>     - https://drafts.fxtf.org/filter-effects-1/
 >     ```
 >
-> ---
->
-> **Top-of-page macros**
->
-> The `\{{CSSRef}}` macro call appears at the top of the content section (immediately below the page front matter).
-> This macro must be present on every CSS module landing page. It generates a suitable CSS sidebar, depending on the tags included on the page.
-> Remove the `\{{MDNSidebar}}` macro when you use this template.
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
@@ -62,10 +58,13 @@ This should ideally be one or two short sentences.
 
 ## NameOfTheModule in action
 
-In this section, include an interactive example of the module that helps to demonstrate the usefulness or the power of various properties provided by this module. The purpose of this section is to demonstrate a few use cases and to create interest and curiosity in the mind of the readers learning about this module.
+In this section, include an example that helps demonstrate the usefulness or the power of various properties provided by this module.
+The purpose of this section is to demonstrate a few use cases and to create interest and curiosity in the mind of the readers learning about this module.
 
-Provide a short description of how readers can interact with the example. Don't go into a lot of detail to explain the example, and don't include code snippets. Add a link to the source code for the example in the [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules) repository. For example, for the filter effects module interactive example, you would say:
-"To see the code for this example, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/filters.html)."
+Provide a short description of how readers can interact with the example.
+Don't go into a lot of detail to explain the example, and don't include code snippets.
+
+Add a live sample that demonstrates the feature using `\{{EmbedLiveSample}}` (see [Live examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) documentation for more information).
 
 ## Reference
 

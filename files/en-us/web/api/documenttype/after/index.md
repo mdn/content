@@ -58,3 +58,5 @@ myDoc.childNodes;
 ## See also
 
 - {{domxref("DocumentType.before()")}}
+- {{domxref("CharacterData.after()")}}
+- {{domxref("Element.after()")}}

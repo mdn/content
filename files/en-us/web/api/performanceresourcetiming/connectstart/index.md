@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.connectStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`connectStart`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the user agent starts establishing the connection to the server to retrieve the resource.
 

@@ -16,9 +16,9 @@ The **`SVGPolygonElement`** interface provides access to the properties of {{SVG
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
 - {{domxref("SVGPolygonElement.animatedPoints")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the `points` property.
+  - : An {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the `points` property.
 - {{domxref("SVGPolygonElement.points")}}
-  - : A {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
+  - : An {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
 
 ## Instance methods
 

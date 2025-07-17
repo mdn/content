@@ -8,7 +8,7 @@ browser-compat: api.WakeLock.request
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The **`request()`** method of the {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that fullfills with a {{domxref("WakeLockSentinel")}} object if the system screen wake lock is granted.
+The **`request()`** method of the {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("WakeLockSentinel")}} object if the system screen wake lock is granted.
 
 The screen wake lock prevents device screens from dimming or locking when an application needs to keep running.
 
@@ -21,9 +21,7 @@ request(type)
 ### Parameters
 
 - `type` {{optional_inline}}
-
   - : A string specifying the screen wake lock type, from among the following enumerated types:
-
     - `screen`
       - : Prevents the screen from turning off.
         Only visible documents can acquire the screen wake lock.
@@ -37,10 +35,8 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : Thrown when wake lock is not available, which can happen because:
-
-    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The document is not fully active.
     - The document's visibility state is `hidden`.
     - The {{Glossary("User Agent")}} could not acquire platform's wake lock.

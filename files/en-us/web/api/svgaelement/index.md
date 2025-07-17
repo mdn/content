@@ -18,7 +18,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.download")}}
   - : See {{domxref("HTMLAnchorElement.download")}}.
 - {{domxref("SVGAElement.hash")}}
-  - : A string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
+  - : A string representing the fragment identifier, including the leading hash mark (`#`), if any, in the referenced URL.
 - {{domxref("SVGAElement.host")}}
   - : A string representing the hostname and port (if it's not the default port) in the referenced URL.
 - {{domxref("SVGAElement.hostname")}}
@@ -30,7 +30,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.origin")}} {{ReadOnlyInline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("SVGAElement.pathname")}}
-  - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("SVGAElement.password")}}
   - : A string containing the password specified before the domain name.
 - {{domxref("SVGAElement.ping")}}
@@ -38,7 +38,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.port")}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("SVGAElement.protocol")}}
-  - : A string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
+  - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 - {{domxref("SVGAElement.referrerPolicy")}}
   - : See {{domxref("HTMLAnchorElement.referrerPolicy")}}.
 - {{domxref("SVGAElement.rel")}}
@@ -46,7 +46,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.relList")}}
   - : See {{domxref("HTMLAnchorElement.relList")}}.
 - {{domxref("SVGAElement.search")}}
-  - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
+  - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
 - {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
   - : It corresponds to the {{SVGAttr("target")}} attribute of the given element.
 - {{domxref("SVGAElement.text")}} {{deprecated_inline}}

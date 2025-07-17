@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.blob
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`blob()`** method of the {{domxref("Response")}} interface takes
 a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
@@ -75,5 +75,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

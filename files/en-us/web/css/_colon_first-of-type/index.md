@@ -1,15 +1,42 @@
 ---
-title: ":first-of-type"
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.first-of-type
+sidebar: cssref
 ---
 
-{{CSSRef}}
+The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type (tag name) among a group of sibling elements.
 
-The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type among a group of sibling elements.
+{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-of-type.html", "tabbed-shorter")}}
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:first-of-type {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntax
 

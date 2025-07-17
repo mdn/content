@@ -1,10 +1,10 @@
 ---
 title: Firefox 20 for developers
+short-title: Firefox 20
 slug: Mozilla/Firefox/Releases/20
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
 
@@ -12,9 +12,9 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 ### HTML
 
-- Support for the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ([Firefox bug 676619](https://bugzil.la/676619)).
-- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) has been implemented ([Firefox bug 548206](https://bugzil.la/548206)).
-- The [global attribute](/en-US/docs/Web/HTML/Global_attributes) `contextmenu` now works on Firefox for Android ([Firefox bug 736321](https://bugzil.la/736321)).
+- Support for the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute on the {{HTMLElement("a")}} and {{HTMLElement("area")}} element has been added ([Firefox bug 676619](https://bugzil.la/676619)).
+- The value `auto` for the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) has been implemented ([Firefox bug 548206](https://bugzil.la/548206)).
+- The [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) `contextmenu` now works on Firefox for Android ([Firefox bug 736321](https://bugzil.la/736321)).
 
 ### JavaScript
 
@@ -27,7 +27,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### CSS
 
 - [CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) is now available by default in pre-release builds only (excluding beta versions). It can be enabled in release and beta versions by setting the `layout.css.flexbox.enabled` about:config preference to `true`.
-- The `mask-type` property from the [CSS Masking specification](https://www.w3.org/TR/css-masking-1/#the-mask-type) has been added ([Firefox bug 793617](https://bugzil.la/793617)).
+- The [`mask-type`](/en-US/docs/Web/CSS/mask-type) property has been added ([Firefox bug 793617](https://bugzil.la/793617)).
 - Experimental support for the {{cssxref(":scope")}} pseudo-class has been added. Enabled by default in Aurora and Nightly, it can be enabled in release and beta versions by setting the `layout.css.scope-pseudo.enabled` about:config preference to `true` ([Firefox bug 648722](https://bugzil.la/648722)).
 
 ### DOM/APIs
@@ -56,12 +56,12 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### MathML
 
 - To help MathML authors debugging "invalid-markup" errors in their documents, MathML parsing errors (such as having too many / too few child elements) and warnings about deprecated attributes or wrong attribute values are now reported to the error console.
-- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value ("`8pt`").
+- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value (`8pt`).
 - Unitless values are now also allowed for the `mathsize` and `fontsize` attributes; they multiply the default value.
 
 ## Changes for add-on and Mozilla developers
 
-- EcmaScript for XML (E4X) is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.
+- ECMAScript for XML (E4X) is now fully disabled for all chrome and content scripts. It was previously disabled for content in Firefox 17 and has been removed entirely for Firefox 21. Use DOMParser/DOMSerializer or a non-native JXON algorithm instead.
 - The `nsIDOMParserJS` interface no longer exists ([Firefox bug 816410](https://bugzil.la/816410)). See `nsIDOMParser` for alternatives.
 - Content Preferences: The `nsIContentPrefService` interface is now deprecated and the asynchronous `nsIContentPrefService2` storage API has been implemented.
 - The `nsIProfile` and `nsIProfileChangeStatus` interfaces have been removed, along with other code supporting the pre-Firefox profile management system. You probably weren't using these interfaces, but if you were, you should stop doing so. This prevents defunct parts of the profile management system from vetoing the shutdown process.
@@ -71,7 +71,3 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 - [Firefox 20 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/20.0/releasenotes/)
 - [Add-on Compatibility for Firefox 20](https://blog.mozilla.org/addons/2013/03/20/compatibility-for-firefox-20/)
-
-### Older versions
-
-{{Firefox_for_developers}}

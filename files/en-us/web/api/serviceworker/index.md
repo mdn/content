@@ -7,7 +7,7 @@ browser-compat: api.ServiceWorker
 
 {{securecontext_header}}{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
 
-The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique `ServiceWorker` object.
+The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g., pages, workers, etc.) can be associated with the same service worker, each through a unique `ServiceWorker` object.
 
 A `ServiceWorker` object is available via a number of properties:
 
@@ -17,7 +17,8 @@ A `ServiceWorker` object is available via a number of properties:
 - {{domxref("ServiceWorkerRegistration.installing")}} — when the service worker is in `installing` state
 - {{domxref("ServiceWorkerRegistration.waiting")}} — when the service worker is in `installed` state
 
-The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
+The {{domxref("ServiceWorker.state")}} property and [`statechange` event](/en-US/docs/Web/API/ServiceWorker/statechange_event) can be used to check and observe changes in the lifecycle-state of the object's associated service worker.
+Related lifecycle events, such as [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) are fired at the service worker itself.
 
 Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
@@ -46,7 +47,6 @@ _The `ServiceWorker` interface inherits methods from its parent, {{domxref("Even
 ## Events
 
 - {{domxref("ServiceWorker.statechange_event", "statechange")}}
-
   - : Fired when {{domxref("ServiceWorker.state")}} changes.
 
 - {{domxref("ServiceWorker.error_event", "error")}}

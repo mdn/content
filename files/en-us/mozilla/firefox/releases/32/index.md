@@ -1,10 +1,12 @@
 ---
 title: Firefox 32 for developers
+short-title: Firefox 32
 slug: Mozilla/Firefox/Releases/32
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -32,13 +34,12 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
-- [**id**](/en-US/docs/Web/HTML/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- [**id**](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Reference/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and also apply to XML elements, in a namespace or not ([Firefox bug 741295](https://bugzil.la/741295)).
 
 ### JavaScript
 
 - The following new ECMAScript 2015 built-in methods got implemented:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723)),
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox bug 934423](https://bugzil.la/934423)),
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox bug 1003764](https://bugzil.la/1003764)).
@@ -59,7 +60,7 @@ Highlights:
 - To complete our Hit Regions implementation, `MouseEvent.region` has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
 - The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
-- [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076))..
+- [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076)).
 
 ### MathML
 
@@ -71,21 +72,21 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("Navigator.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```js
-  {
+  const constraints = {
     mandatory: {
       width: { min: 640 },
       height: { min: 480 },
     },
     optional: [
       { width: 650 },
-      { width: { min: 650 }},
+      { width: { min: 650 } },
       { frameRate: 60 },
-      { width: { max: 800 }},
-    ]
-  }
+      { width: { max: 800 } },
+    ],
+  };
   ```
 
 - WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -102,7 +103,7 @@ _No change._
 
 Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays-for-javascript-objects).
 
-A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
+A `getDataDirectory()` method has been added to `Addon` instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
 ### Add-on SDK
 
@@ -110,7 +111,7 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 
 - Added [`exclude`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod#pagemod%28options%29) option to `PageMod`.
 - Added [`anonymous`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request#request%28options%29) option to `Request`.
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/) now includes a Console and a Scratchpad.
 
 #### Details
 
@@ -121,7 +122,3 @@ A `getDataDirectory()` method has been added to [`Addon`](/en-US/docs/Mozilla/Ad
 ### XPCOM
 
 - The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
-
-### Older versions
-
-{{Firefox_for_developers}}

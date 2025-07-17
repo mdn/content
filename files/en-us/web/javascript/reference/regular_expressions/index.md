@@ -3,9 +3,8 @@ title: Regular expressions
 slug: Web/JavaScript/Reference/Regular_expressions
 page-type: landing-page
 browser-compat: javascript.regular_expressions
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **regular expression** (_regex_ for short) allow developers to match strings against a pattern, extract submatch information, or simply test if the string conforms to that pattern. Regular expressions are used in many programming languages, and JavaScript's syntax is inspired by [Perl](https://www.perl.org/).
 
@@ -50,7 +49,7 @@ Flags are special parameters that can change the way a regular expression is int
 | `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
 | `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
 | `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`  | Allows `^` and `$` to match next to newline characters.                                       | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `m`  | Makes `^` and `$` match the start and end of each line instead of those of the entire string. | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
 | `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
@@ -147,7 +146,7 @@ _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed
 [VCC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class
 [WBA]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
 
-`\` followed by any other digit character becomes a [legacy octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences), which is forbidden in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode).
+`\` followed by `0` and another digit becomes a [legacy octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences), which is forbidden in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). `\` followed by any other digit sequence becomes a [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference).
 
 In addition, `\` can be followed by some non-letter-or-digit characters, in which case the escape sequence is always a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) representing the escaped character itself:
 

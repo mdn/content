@@ -3,9 +3,8 @@ title: CSS pseudo-elements
 slug: Web/CSS/CSS_pseudo-elements
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-pseudo/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS pseudo-element** module defines abstract elements that are not directly present in the document tree. These abstract elements, called pseudo-elements, represent portions of the render tree that can be selected and styled. Pseudo-elements are used to create abstractions about the document tree beyond those provided by the document tree.
 
@@ -23,11 +22,14 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - {{CSSXref("::first-letter")}}
 - {{CSSXref("::first-line")}}
 - {{CSSXref("::grammar-error")}}
+- {{CSSXref("::highlight()")}}
 - {{CSSXref("::marker")}}
 - {{CSSXref("::placeholder")}}
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
+
+The specification also defines the `::details-content` and `::search-text` pseudo-elements and the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. The {{CSSXref("::highlight()")}} pseudo-element is included within this module, but most details are provided in the [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API).
 
 ### Interfaces
 
@@ -42,15 +44,12 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 ## Guides
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
-
   - : Alphabetical list of pseudo-elements defined by all the CSS specifications and WebVTT.
 
-- [Building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
   - : Part of CSS building blocks section on selectors. This article defines what a pseudo-element is and how it can be combined with pseudo-classes and be used for generating content with `::before` and `::after` pseudo-elements.
 
-- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
-
+- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
   - : Example of styling generated content using `::before` and `::after` pseudo-elements for visual effects.
 
 ## Related concepts
@@ -58,23 +57,28 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - {{cssxref("::backdrop")}}
 
 - Web Video Text Tracks Format (WebVTT) cues:
-
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+  - {{cssxref("::column")}}
 
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
 - [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
-
   - {{CSSXref("::part")}}
 
 - [CSS view transitions](/en-US/docs/Web/CSS/CSS_view_transitions) module
-
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
@@ -82,7 +86,6 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
-
   - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
   - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
   - [Class selectors](/en-US/docs/Web/CSS/Class_selectors)
@@ -91,15 +94,14 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
   - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
   - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
-- [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute of the `<input>` element
+- [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute of the `<input>` element
 - [`:placeholder-shown`](/en-US/docs/Web/CSS/:placeholder-shown) selector
 
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
-
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property
@@ -111,8 +113,9 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 
 ## See also
 
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)
