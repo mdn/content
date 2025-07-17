@@ -3,9 +3,8 @@ title: browserSettings.contextMenuShowEvent
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.contextMenuShowEvent
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object which determines whether the browser's context menu is shown on the mouseup event or on the mousedown event.
 

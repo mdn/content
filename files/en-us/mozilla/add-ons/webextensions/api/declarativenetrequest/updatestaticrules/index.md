@@ -3,9 +3,8 @@ title: declarativeNetRequest.updateStaticRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateStaticRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateStaticRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the enabled state of rules in a static ruleset. The number of rules that can be disabled in a ruleset is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}.
 

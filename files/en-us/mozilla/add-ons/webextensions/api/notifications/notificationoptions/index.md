@@ -3,9 +3,8 @@ title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.NotificationOptions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This type contains all the data needed to:
 

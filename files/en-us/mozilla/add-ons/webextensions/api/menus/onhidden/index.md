@@ -3,9 +3,8 @@ title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onHidden
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser stops displaying a menu: for example because the user clicked outside it or selected an item.
 

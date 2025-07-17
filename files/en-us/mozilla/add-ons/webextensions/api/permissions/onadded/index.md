@@ -3,9 +3,8 @@ title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onAdded
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the extension granted new permissions.
 

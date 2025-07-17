@@ -3,9 +3,8 @@ title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.openPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Open the page action's popup.
 

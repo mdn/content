@@ -3,9 +3,8 @@ title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadItem
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadItem` type of the {{WebExtAPIRef("downloads")}} API represents a downloaded file.
 

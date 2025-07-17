@@ -3,9 +3,8 @@ title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Closes one or more tabs.
 

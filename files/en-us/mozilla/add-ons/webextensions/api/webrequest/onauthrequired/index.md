@@ -3,9 +3,8 @@ title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onAuthRequired
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the server sends a `401` or `407` status code and a `WWW-Authenticate` header using the `Basic` scheme (that is, when the server asks the client to provide authentication credentials, such as a username and password).
 

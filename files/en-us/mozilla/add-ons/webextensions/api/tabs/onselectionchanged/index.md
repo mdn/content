@@ -5,9 +5,8 @@ page-type: webextension-api-event
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.onSelectionChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.

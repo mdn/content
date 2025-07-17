@@ -3,9 +3,8 @@ title: webRequest.SecurityInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.SecurityInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.
 

@@ -3,9 +3,8 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.openOptionsPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 

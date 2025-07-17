@@ -3,9 +3,8 @@ title: userScripts.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/unregister
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.unregister
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Unregisters user scripts registered by the extension.
 

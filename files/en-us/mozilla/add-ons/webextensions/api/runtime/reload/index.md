@@ -3,9 +3,8 @@ title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Reloads the extension.
 
