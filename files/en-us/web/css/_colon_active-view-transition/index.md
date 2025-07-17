@@ -73,12 +73,8 @@ h2 {
 ```
 
 ```js hidden
-const colors = [
-  "darkred",
-  "darkslateblue",
-  "darkgreen"
-]
-const colBlock = document.querySelector(".color")
+const colors = ["darkred", "darkslateblue", "darkgreen"];
+const colBlock = document.querySelector(".color");
 let count = 0;
 const updateColour = () => {
   colBlock.style = `--bg: ${colors[count]}`
