@@ -30,7 +30,14 @@ or a missing file to the element's [`src`](/en-US/docs/Web/HTML/Reference/Elemen
 handler outputs a message to a box onscreen describing the error, including both the
 `code` and the `message`.
 
-Only the relevant parts of the code are displayed; you can [see the complete source code here](https://github.com/mdn/dom-examples/tree/main/media/mediaerror).
+```html
+<audio controls id="audio"></audio>
+<div>
+  <button id="valid-button">Valid File</button>
+  <button id="invalid-button">Missing File</button>
+</div>
+<pre id="log"></pre>
+```
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the
@@ -40,36 +47,48 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
+const audioElement = document.getElementById("audio");
+const validButton = document.getElementById("valid-button");
+const invalidButton = document.getElementById("invalid-button");
+
+const logMessage = (msg) => {
+  const now = new Date();
+  const timestamp = now.toLocaleTimeString();
+  document.getElementById("log").innerText += `[${timestamp}] ${msg}\n`;
+};
+
+validButton.addEventListener("click", () => {
+  audioElement.src = "https://mdn.github.io/shared-assets/audio/guitar.mp3";
+});
+
+invalidButton.addEventListener("click", () => {
+  audioElement.src = "no-file-here.mp3";
+});
+
 audioElement.onerror = () => {
-  let s = "";
-  const err = audioElement.error;
+  let message = "";
+  let err = audioElement.error;
 
   switch (err.code) {
     case MediaError.MEDIA_ERR_ABORTED:
-      s += "The user canceled the audio.";
+      message += "The user canceled the audio.";
       break;
     case MediaError.MEDIA_ERR_NETWORK:
-      s += "A network error occurred while fetching the audio.";
+      message += "A network error occurred while fetching the audio.";
       break;
     case MediaError.MEDIA_ERR_DECODE:
-      s += "An error occurred while decoding the audio.";
+      message += "An error occurred while decoding the audio.";
       break;
     case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
-      s +=
+      message +=
         "The audio is missing or is in a format not supported by your browser.";
       break;
     default:
-      s += "An unknown error occurred.";
+      message += "An unknown error occurred.";
       break;
   }
 
-  const message = err.message;
-
-  if (message?.length > 0) {
-    s += ` ${message}`;
-  }
-
-  displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
+  logMessage(`Error ${err.code}: ${message}`);
 };
 ```
 
@@ -80,11 +99,7 @@ This gets the {{domxref("MediaError")}} object describing the error from the
 message to display, and, if `message` is not empty, it's appended to provide
 additional details. Then the resulting text is output to the log.
 
-### Result
-
-You can try out this example below, and can [see the example in action outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
-
-{{ EmbedGHLiveSample('dom-examples/media/mediaerror', 650, 200) }}
+{{embedlivesample("", , '300')}}
 
 ## Specifications
 
