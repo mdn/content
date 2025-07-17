@@ -92,15 +92,87 @@ article[data-columns="4"] {
 }
 ```
 
-You can see all this working together [in this JS Bin example](https://jsbin.com/ujiday/2/edit).
-
-Data attributes can also be stored to contain information that is constantly changing, like scores in a game. Using the CSS selectors and JavaScript access here this allows you to build some nifty effects without having to write your own display routines. See [this screencast](https://www.youtube.com/watch?v=On_WyUB1gOk) for an example using generated content and CSS transitions ([JS Bin example](https://jsbin.com/atawaz/3/edit)).
-
 Data values are strings. Number values must be quoted in the selector for the styling to take effect.
+
+## Examples
+
+### Style variants
+
+Imagine you have a `callout` class. Now you want to implement different variants, such as "note" and "warning". Traditionally, people just use different class names.
+
+```html
+<div class="callout callout--note">...</div>
+<div class="callout callout--warning">...</div>
+```
+
+```css
+.callout {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.callout--note {
+  border-color: rgb(15 15 235);
+  background-color: rgb(15 15 235 / 0.2);
+}
+.callout--warning {
+  border-color: rgb(235 15 15);
+  background-color: rgb(235 15 15 / 0.2);
+}
+```
+
+With data attributes, here's an alternative you can consider:
+
+```html live-sample___callout-data-attr
+<div class="callout">...</div>
+<div class="callout" data-variant="note">...</div>
+<div class="callout" data-variant="warning">...</div>
+```
+
+```css live-sample___callout-data-attr
+.callout {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Default style */
+.callout:not([data-variant]) {
+  border-color: rgb(15 15 15);
+  background-color: rgb(15 15 15 / 0.2);
+}
+.callout[data-variant="note"] {
+  border-color: rgb(15 15 235);
+  background-color: rgb(15 15 235 / 0.2);
+}
+.callout[data-variant="warning"] {
+  border-color: rgb(235 15 15);
+  background-color: rgb(235 15 15 / 0.2);
+}
+```
+
+{{EmbedLiveSample("callout-data-attr", "", "200")}}
+
+There are multiple benefits of this:
+
+- It eliminates a lot of invalid states, such as applying `callout--note` without also adding `callout`, or applying multiple variants simultaneously.
+- A separate `data-variant` attribute allows static analysis for valid values via linting or type checking.
+- Toggling the variant is more intuitive: you can use `div.dataset.variant = "warning";` instead of manipulating the [`classList`](/en-US/docs/Web/API/Element/classList) which requires multiple steps.
+
+### Associating arbitrary data with DOM elements
+
+Most web apps have JavaScript data as the source-of-truth for their UI state, so you only add HTML attributes where needed. But occasionally, it may be more convenient to have everything be present in the markup, and only use JavaScript to handle events, sync state, etc.
+
+For example, in our [carousel with scroll margin](/en-US/docs/Web/API/IntersectionObserver/scrollMargin#carousel_with_scroll_margin) example, we have an HTML page already populated with many `<img>` elements. The image's source is initially stored in `data-src` to prevent any request being fired, and the real `src` is only added when the `<img>` scrolls into view. The data (image source) is colocated with the element, and the JavaScript is only responsible for defining behavior.
 
 ## Issues
 
-Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. In addition, search crawlers may not index data attributes' values.
+Do not store content that should be visible and accessible in data attributes, because assistive technology may not access them. In addition, search crawlers may not index data attributes' values. Often, if you only intend for the data attribute to be displayed, you can directly manipulate [`textContent`](/en-US/docs/Web/API/Node/textContent).
 
 ## See also
 
