@@ -26,7 +26,7 @@ Before diving in and writing huge chunks of CSS, plan your styles carefully. Wha
 
 You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them (a.k.a. {{glossary("Baseline")}}).
 
-This rule does not apply to the CSS feature being documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write full examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
+This rule does not apply to the CSS feature being documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write complete examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
 
 ### Follow common best practices
 
@@ -46,7 +46,7 @@ In the same spirit as the previous guideline, don't write example codes on MDN W
 
 ### Don't use resets
 
-For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world, CSS resets can be an overkill, resulting in a lot of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.
+For maximum control over CSS across platforms, many people used to use CSS resets to remove all styles before then building things back up themselves. This certainly has its merits, but especially in the modern world, CSS resets can be overkill, resulting in a lot of extra time spent reimplementing things that weren't completely broken in the first place, such as default margins and list styles.
 
 ### Formal syntax and pseudocode
 
@@ -274,7 +274,7 @@ Use classes for styling, and reserve IDs for non-CSS purposes, such as for use i
 
 ### Old pseudo-element selectors
 
-The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because the syntax is discouraged and they could be misidentified as [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
+The `::before`, `::after`, `::first-letter`, and `::first-line` [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can also be written with single colons (like `:before`). Avoid the single-colon syntax because it is discouraged and could be misidentified as a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) (`:hover`) by readers.
 
 ### Complex selector lists
 
