@@ -3,9 +3,8 @@ title: cookies.set()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/set
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.set
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
 

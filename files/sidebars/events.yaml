@@ -1,0 +1,11 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Events
+  - /Web/Events/Creating_and_triggering_events
+  - /Web/Events/Event_handlers
+  - type: section
+    title: Learn
+  - link: /Learn_web_development/Core/Scripting/Events
+    title: Introduction to events

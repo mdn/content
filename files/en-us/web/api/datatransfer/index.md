@@ -48,7 +48,7 @@ Every method and property listed in this document has its own reference page and
 
 ### Reading the data in a paste or drop event
 
-In the following example, we have a {{htmlelement("form")}} containing three different types of text inputs: a text {{htmlelement("input")}} element, a {{htmlelement("textarea")}} element, and a {{htmlelement("div")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set to `true`. The user can paste or drop text into any of these elements, and the data in the {{domxref("ClipboardEvent.clipboardData")}} or {{domxref("DragEvent.dataTransfer")}} object will be displayed.
+In the following example, we have a {{htmlelement("form")}} containing three different types of text inputs: a text {{htmlelement("input")}} element, a {{htmlelement("textarea")}} element, and a {{htmlelement("div")}} element with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set to `true`. The user can paste or drop text into any of these elements, and the data in the {{domxref("ClipboardEvent.clipboardData")}} or {{domxref("DragEvent.dataTransfer")}} object will be displayed.
 
 #### HTML
 

@@ -3,9 +3,8 @@ title: tabGroups.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/onMoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabGroups.onMoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a tab group is moved within a window or to another window. {{WebExtAPIRef("tabs.onMoved")}} also fire for the tabs within the group.
 

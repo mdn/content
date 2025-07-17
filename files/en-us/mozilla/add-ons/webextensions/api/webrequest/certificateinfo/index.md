@@ -3,9 +3,8 @@ title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.CertificateInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object describing a single [X.509 certificate](https://datatracker.ietf.org/doc/html/rfc5280).
 
@@ -50,8 +49,8 @@ Values of this type are objects. They contain the following properties:
     - `end`
       - : `Number`. The end of the certificate's validity period, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

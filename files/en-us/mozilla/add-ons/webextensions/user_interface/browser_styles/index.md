@@ -8,9 +8,8 @@ browser-compat:
   - webextensions.manifest.page_action
   - webextensions.manifest.sidebar_action
   - webextensions.manifest.options_ui
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Your extension can include user interface elements - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
 

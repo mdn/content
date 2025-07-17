@@ -3,9 +3,8 @@ title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a new contextual identity. Once created, the user will be able to create new tabs belonging to this contextual identity, just as they can with the built-in identities.
 
@@ -57,10 +56,6 @@ let createContext = browser.contextualIdentities.create(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the new identity. If the contextual identities feature is not enabled, the promise is rejected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example creates a new contextual identity and logs its cookie store ID:
@@ -84,3 +79,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
