@@ -26,7 +26,9 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The CSS {{CSSXRef("font-variant-emoji")}} property allows you to set a default presentation style for displaying emojis ([Firefox bug 1954214](https://bugzil.la/1954214)).
 
 <!-- No notable changes. -->
 
