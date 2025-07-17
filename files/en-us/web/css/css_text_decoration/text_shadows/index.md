@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-You can apply shadows to your text using the {{cssxref("text-shadow")}} property. This property takes a comma-separated list of shadows, with each shadow including two to four component values: two or three {{cssxref("length")}} values and zero or one {{cssxref("color")}} values. Alternatively, you can use the keyword `none` to ensure the text doesn't have a drop shadow:
+You can apply shadows to your text using the {{cssxref("text-shadow")}} property. This property takes a comma-separated list of shadows. Each shadow includes at minimum two {{cssxref("length")}} values, but it can include up to three `<length>` values and one {{cssxref("color")}} value. Alternatively, the property value can be the keyword `none`, which sets the text to not have a drop shadow:
 
 ```css
 text-shadow: none;
