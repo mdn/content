@@ -129,14 +129,13 @@ The extension's UI uses a toolbar button ({{WebExtAPIRef("browserAction")}}) imp
 To handle the icon buttons the script first gathers all the class names used for the buttons in the HTML file. It then loops through all the buttons assigning them their image and creating an `onclick` listener for each button:
 
 ```js
-let bgBtns = document.querySelectorAll(".bg-container button");
+const bgBtns = document.querySelectorAll(".bg-container button");
 
-for (let i = 0; i < bgBtns.length; i++) {
-  let imgName = bgBtns[i].getAttribute("class");
-  let bgImg = `url('images/${imgName}.png')`;
-  bgBtns[i].style.backgroundImage = bgImg;
+for (const btn of bgBtns) {
+  const imgName = btn.getAttribute("class");
+  btn.style.backgroundImage = `url('images/${imgName}.png')`;
 
-  bgBtns[i].onclick = (e) => {
+  btn.onclick = (e) => {
     // ...
   };
 }
