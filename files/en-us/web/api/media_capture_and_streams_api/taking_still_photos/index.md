@@ -14,10 +14,59 @@ You can also jump straight to the [Demo](#demo) if you like.
 
 ## The HTML markup
 
-Our HTML interface has two main operational sections: the stream and capture panel and the presentation panel. Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
+Our HTML interface has two main operational sections: the stream and capture panel and the presentation panel.
+Each of these is presented side-by-side in its own {{HTMLElement("div")}} to facilitate styling and control.
+There's a {{HTMLElement("button")}} element (`permissions-button`) that we can use later in JavaScript so the user can allow or block camera permissions per device using `getUserMedia()`.
 
-```html-nolint hidden live-sample___photo-capture live-sample___photo-capture-with-filters
-<div class="content-area">
+The box on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from `navigator.mediaDevices.getUserMedia()`, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
+This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
+
+```css hidden live-sample___photo-capture live-sample___photo-capture-with-filters
+body {
+  font:
+    1rem "Lucida Grande",
+    "Arial",
+    sans-serif;
+  padding: 0.8rem;
+}
+
+button {
+  display: block;
+  margin-block: 1rem;
+}
+
+#start-button {
+  position: relative;
+  margin: auto;
+  bottom: 32px;
+  background-color: rgb(0 150 0 / 50%);
+  border: 1px solid rgb(255 255 255 / 70%);
+  box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
+  font-size: 14px;
+  color: rgb(255 255 255 / 100%);
+}
+
+#video,
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera,
+.output {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  vertical-align: top;
+}
 ```
 
 ```html hidden live-sample___photo-capture live-sample___photo-capture-with-filters
@@ -28,20 +77,18 @@ Our HTML interface has two main operational sections: the stream and capture pan
   using your built-in webcam, fetch an image from that stream, and create a PNG
   using that image.
 </p>
+<button id="permissions-button">Allow camera</button>
 ```
-
-The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from `navigator.mediaDevices.getUserMedia()`, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
 
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
 <div class="camera">
   <video id="video">Video stream not available.</video>
-  <button id="start-button">Take photo</button>
+  <button id="start-button">Capture photo</button>
 </div>
 ```
 
-This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
-
-Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display", "display: none")}}, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
+Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file.
+This canvas is kept hidden by styling the canvas with {{cssxref("display", "display: none")}}, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
 
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
@@ -49,23 +96,6 @@ We also have an {{HTMLElement("img")}} element into which we will draw the image
 <canvas id="canvas"> </canvas>
 <div class="output">
   <img id="photo" alt="The screen capture will appear in this box." />
-</div>
-```
-
-That's all of the relevant HTML. The rest is just some page layout fluff and a bit of text offering a link back to this page.
-
-```html hidden live-sample___photo-capture live-sample___photo-capture-with-filters
-<p>
-  Visit our article
-  <a
-    href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">
-    Taking still photos with WebRTC
-  </a>
-  to learn more about the technologies used here.
-</p>
-```
-
-```html-nolint hidden live-sample___photo-capture live-sample___photo-capture-with-filters
 </div>
 ```
 
@@ -87,6 +117,7 @@ const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const photo = document.getElementById("photo");
 const startButton = document.getElementById("start-button");
+const allowButton = document.getElementById("permissions-button");
 ```
 
 Those variables are:
@@ -105,32 +136,37 @@ Those variables are:
   - : A reference to the {{HTMLElement("img")}} element.
 - `startButton`
   - : A reference to the {{HTMLElement("button")}} element that's used to trigger capture.
+- `allowButton`
+  - : A reference to the {{HTMLElement("button")}} element that's used to control whether the page can access devices or not.
 
-As part of the initial setup, we request access to the user's webcam, initialize the output {{HTMLElement("img")}} to a default state, and establish the event listeners needed to receive each frame of video from the camera and react when the button is clicked to capture an image.
+As part of the initial setup, we initialize the output {{HTMLElement("img")}} to a default state, and establish the event listeners needed to request camera access and react when the button is clicked to capture an image.
 
 #### Get the media stream
 
-The next task is to get the media stream:
+The next task is to get the media stream, we have an event listener that calls `getUserMedia()` when the user clicks on the "Allow camera" button.
+We're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio).
+It returns a promise which we attach success and failure callbacks to:
 
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
-navigator.mediaDevices
-  .getUserMedia({ video: true, audio: false })
-  .then((stream) => {
-    video.srcObject = stream;
-    video.play();
-  })
-  .catch((err) => {
-    console.error(`An error occurred: ${err}`);
-  });
+allowButton.addEventListener("click", () => {
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then((stream) => {
+      video.srcObject = stream;
+      video.play();
+    })
+    .catch((err) => {
+      console.error(`An error occurred: ${err}`);
+    });
+});
 ```
 
-Here, we're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio). It returns a promise which we attach success and failure callbacks to.
-
-The success callback receives a `stream` object as input. It is the {{HTMLElement("video")}} element's source to our new stream.
-
+The success callback receives a `stream` object as input.
+It is the {{HTMLElement("video")}} element's source to our new stream.
 Once the stream is linked to the `<video>` element, we start it playing by calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play_event).
 
-The error callback is called if opening the stream doesn't work. This will happen for example if there's no compatible camera connected, or the user denied access.
+The error callback is called if opening the stream doesn't work.
+This will happen for example if there's no compatible camera connected, or the user denied access.
 
 #### Listen for the video to start playing
 
@@ -231,66 +267,22 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ## Demo
 
-```css hidden live-sample___photo-capture live-sample___photo-capture-with-filters
-#video {
-  border: 1px solid black;
-  box-shadow: 2px 2px 3px black;
-  width: 320px;
-  height: 240px;
-}
+Click "Allow camera" to select an input device and allow the page to access the camera.
+Once video starts, you can click "Capture photo" to capture a still from the stream as an image drawn to the canvas on the right:
 
-#photo {
-  border: 1px solid black;
-  box-shadow: 2px 2px 3px black;
-  width: 320px;
-  height: 240px;
-}
-
-#canvas {
-  display: none;
-}
-
-.camera {
-  width: 340px;
-  display: inline-block;
-}
-
-.output {
-  width: 340px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-#start-button {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 32px;
-  background-color: rgb(0 150 0 / 50%);
-  border: 1px solid rgb(255 255 255 / 70%);
-  box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
-  font-size: 14px;
-  font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgb(255 255 255 / 100%);
-}
-
-.content-area {
-  font:
-    1rem "Lucida Grande",
-    "Arial",
-    sans-serif;
-  padding: 0.8rem;
-}
-```
-
-{{EmbedLiveSample('photo-capture', '', '600', , , , , 'camera', 'allow-popups')}}
+{{EmbedLiveSample('photo-capture', '', '600')}}
 
 ## Fun with filters
 
-Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can apply fun effects to the video with filters. These filters range from basic (making the image black and white) to complex (Gaussian blurs and hue rotation).
+Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can apply fun CSS {{cssxref("filter")}} effects to the video with filters. These filters range from basic (making the image black and white) to complex (Gaussian blurs and hue rotation).
 
-For the video filters to be applied to the photo, the `takePicture()` function needs the following changes. Note that, while CSS {{cssxref("filter")}} effects applied to the video element affect its display, they do not automatically apply to the captured photo unless handled in the canvas drawing process.
+```css live-sample___photo-capture-with-filters
+#video {
+  filter: grayscale(100%);
+}
+```
+
+For the video filters to be applied to the photo, the `takePicture()` function needs the following changes.
 
 ```js live-sample___photo-capture-with-filters
 function takePicture() {
@@ -318,7 +310,7 @@ function takePicture() {
 }
 ```
 
-{{EmbedLiveSample('photo-capture-with-filters', , '600', , , , 'camera', 'allow-popups')}}
+{{EmbedLiveSample('photo-capture-with-filters', , '600')}}
 
 You can play with this effect using, for example, the Firefox developer tools' [style editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html); see [Edit CSS filters](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html) for details on how to do so.
 
@@ -331,4 +323,3 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 - {{domxref("MediaDevices.getUserMedia")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
-- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
