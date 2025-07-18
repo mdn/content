@@ -1,5 +1,5 @@
 ---
-title: Opera Browser
+title: Opera browser
 slug: Glossary/Opera_Browser
 page-type: glossary-definition
 sidebar: glossarysidebar

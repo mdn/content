@@ -315,20 +315,19 @@ It's easy to throw links up on your page. That's not enough. We need to make our
 
 Let's look at a specific example:
 
-**Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
+**Good** link text: [Download Firefox](https://www.firefox.com/en-US/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/en-US/firefox/new/">Download Firefox</a></p>
+<p><a href="https://www.firefox.com/en-US/">Download Firefox</a></p>
 ```
 
 <!-- markdownlint-disable descriptive-link-text -->
 
-**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/new/) to download Firefox
+**Bad** link text: [Click here](https://www.firefox.com/en-US/) to download Firefox
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/en-US/firefox/new/">Click here</a> to
-  download Firefox
+  <a href="https://www.firefox.com/en-US/">Click here</a> to download Firefox
 </p>
 ```
 

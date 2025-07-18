@@ -7,7 +7,7 @@ sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.
-Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=141).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
