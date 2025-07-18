@@ -104,7 +104,7 @@ Alternatively, you can use the {{domxref("Element.getAttribute()","getAttribute(
 
 ```js
 const pElement = document.querySelector("p");
-console.log(pElement.getAttribute("dir"); // "RTL"
+console.log(pElement.getAttribute("dir")); // "RTL"
 ```
 
 ## Reflected element references
