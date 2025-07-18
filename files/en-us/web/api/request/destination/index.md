@@ -64,7 +64,7 @@ Possible values are:
   - : The target is a service worker.
 - `"sharedworker"`
   - : The target is a shared worker.
-- `"speculationrules"`
+- `"speculationrules"` {{experimental_inline}}
   - : The target is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON document.
 - `"style"`
   - : The target is a style
