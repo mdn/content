@@ -30,7 +30,7 @@ A {{domxref("ViewTransition")}} object instance.
 
 ## Examples
 
-### Color Change SPA View Transition
+### Using a same-document view transition
 
 In this Color Change SPA View Transition, the `changeColor()` function handles both browsers that do and don't support the View Transition API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
 
