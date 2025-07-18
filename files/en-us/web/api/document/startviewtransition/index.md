@@ -89,8 +89,6 @@ changeColorButton.addEventListener("click", changeColor);
 changeColorButton.addEventListener("keypress", changeColor);
 ```
 
-#### Result
-
 Clicking the button will transition the color from one to another over 2 seconds.
 
 {{EmbedLiveSample('color_change', '100%', '120')}}
