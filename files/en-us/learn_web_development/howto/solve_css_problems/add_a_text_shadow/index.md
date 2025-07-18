@@ -6,11 +6,11 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-In this guide you can find out how to add a shadow to any text on your page.
+In this guide, you'll learn how to add a shadow to any text on your page.
 
 ## Adding shadows to text
 
-In our [guide to adding a shadow to boxes](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow), you can find out how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text inside the box you need a different CSS property — {{cssxref("text-shadow")}}.
+In our [guide to adding a shadow to boxes](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow), you'll learn how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text itself, you need a different CSS property: {{cssxref("text-shadow")}}.
 
 The `text-shadow` property takes a number of values:
 
@@ -19,7 +19,7 @@ The `text-shadow` property takes a number of values:
 - A blur radius
 - A color
 
-In the example below we have set the x-axis offset to 2px, the y-axis offset to 4px, the blur radius to 4px, and the color to a semi-transparent blue. Play with the different values to see how they change the shadow.
+In the example below, we have set the x-axis offset to `2px`, the y-axis offset to `4px`, the blur radius to `4px`, and the color to a semi-transparent blue. Play with the different values to see how they change the shadow effect.
 
 ```html live-sample___text-shadow
 <div class="wrapper">
@@ -34,7 +34,7 @@ h1 {
 }
 ```
 
-{{EmbedLiveSample("text-shadow")}}
+{{EmbedLiveSample("Text_shadow")}}
 
 > [!NOTE]
-> It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for visitors who have difficulty with low-contrast text.
+> When adding text shadows, you might unintentionally make the text difficult to read. Make sure that your choices keep your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for users who have difficulty reading low-contrast text.
