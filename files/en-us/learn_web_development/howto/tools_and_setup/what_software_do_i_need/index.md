@@ -258,7 +258,7 @@ Uploading files to a web server is a very important step while creating a websit
 
 There are [many web browsers available](https://en.wikipedia.org/wiki/List_of_web_browsers). When you're developing a website you should test it at least with the following major browsers on both desktop and mobile platforms, to make sure your site works for most people:
 
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Mozilla Firefox](https://www.firefox.com/en-US/)
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 

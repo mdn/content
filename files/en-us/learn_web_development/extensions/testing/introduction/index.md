@@ -136,7 +136,7 @@ If you wish to invest money in testing, there are also commercial tools that can
 
 It is often a good idea to test on prerelease versions of browsers; see the following links:
 
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)
 - [Microsoft Edge Insider](https://www.microsoft.com/en-us/edge/download/insider)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/canary/)
