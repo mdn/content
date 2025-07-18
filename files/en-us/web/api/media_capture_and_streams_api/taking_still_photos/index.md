@@ -50,8 +50,8 @@ button {
 #photo {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width: 320px;
-  height: 240px;
+  width: 100%%;
+  height: auto;
 }
 
 #canvas {
@@ -60,8 +60,10 @@ button {
 
 .camera,
 .output {
-  width: 340px;
+  width: 300px;
   display: inline-block;
+  width: 49%;
+  height: auto;
 }
 
 .output {
@@ -107,7 +109,7 @@ This canvas is kept hidden by styling the canvas with {{cssxref("display", "disp
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
-<canvas id="canvas"> </canvas>
+<canvas id="canvas"></canvas>
 <div class="output">
   <img id="photo" alt="The screen capture will appear in this box." />
 </div>
@@ -280,7 +282,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 Click "Allow camera" to select an input device and allow the page to access the camera.
 Once video starts, you can click "Capture photo" to capture a still from the stream as an image drawn to the canvas on the right:
 
-{{EmbedLiveSample('photo-capture', '', '600', , , , 'camera', 'allow-popups')}}
+{{EmbedLiveSample('photo-capture', '', '500', , , , 'camera', 'allow-popups')}}
 
 ## Fun with filters
 
