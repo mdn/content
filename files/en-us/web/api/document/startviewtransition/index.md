@@ -89,7 +89,8 @@ changeColorButton.addEventListener("click", changeColor);
 changeColorButton.addEventListener("keypress", changeColor);
 ```
 
-Clicking the button will transition the color from one to another over 2 seconds.
+If view transitions are supported, clicking the button will transition the color from one to another over 2 seconds.
+Otherwise, the background color is set using a fallback method, without any animation.
 
 {{EmbedLiveSample('color_change', '100%', '120')}}
 
