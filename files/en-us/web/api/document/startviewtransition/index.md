@@ -64,8 +64,6 @@ section {
 }
 ```
 
-#### JavaScript
-
 ```js
 const colors = ["darkred", "darkslateblue", "darkgreen"];
 const colBlock = document.querySelector("section");
