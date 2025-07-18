@@ -331,9 +331,12 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 141           | Yes                 |
-| Developer Edition | -             | No                  |
-| Beta              | -             | No                  |
+| Developer Edition | 141           | No                  |
+| Beta              | 141           | No                  |
 | Release           | -             | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
 
 ## SVG
 
@@ -727,9 +730,9 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
+| Developer Edition | 139             | No                  |
+| Beta              | 139             | No                  |
+| Release           | 139             | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
