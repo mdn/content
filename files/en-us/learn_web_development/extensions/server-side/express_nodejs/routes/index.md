@@ -198,7 +198,7 @@ app.get("/file/:filename{.:ext}", (req, res) => {
 
 ### Reserved characters
 
-The following characters are reserved:`(()[]?+!)`.
+The following characters are reserved: `(()[]?+!)`.
 If you want to use them, you must escape them with a backslash (`\`).
 
 You also can't use the pipe character (`|`) in a regular expression.
@@ -227,19 +227,19 @@ The code below shows the same example using a promise chain.
 Note that if you wanted to, you could `catch()` the error and implement your own custom handling.
 
 ```js
-exports.get("/about", (req, res, next) => {
+exports.get(
+  "/about",
   // Removed 'async'
-  return About.find({})
-    .exec()
-    .then((successfulResult) => {
-      res.render("about_view", { title: "About", list: successfulResult });
-    });
-  /*
-    .catch(err => {
-      next(err);
-    });
-    */
-});
+  (req, res, next) =>
+    About.find({})
+      .exec()
+      .then((successfulResult) => {
+        res.render("about_view", { title: "About", list: successfulResult });
+      })
+      .catch((err) => {
+        next(err);
+      }),
+);
 ```
 
 > [!NOTE]

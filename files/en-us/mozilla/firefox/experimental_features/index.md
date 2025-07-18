@@ -11,8 +11,8 @@ Each entry below includes information about the builds in which a feature is inc
 The description of each feature also includes links to relevant [Bugzilla bugs](https://bugzilla.mozilla.org) that implement or enable the feature.
 This information allows you to try out experimental features and provide feedback before they are officially released.
 
-In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
-If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
+In terms of lifecycle, new features usually appear first in [Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
+If no major problems are found, they are included in [Beta](https://www.firefox.com/en-US/channel/desktop/#beta) and [Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.firefox.com/en-US/) channel.
 When a feature is enabled by default in a release, it is no longer considered experimental and is removed from this page.
 
 To enable these features, enter `about:config` in the Firefox address bar, search for the associated **preference** and change its value, which is usually a toggle between `true` and `false`.
@@ -834,5 +834,5 @@ Mozilla's developer tools are constantly evolving. We experiment with new ideas,
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)

@@ -7,7 +7,7 @@ sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 141 that affect developers.
-Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress. You can [view the project tracker for this release here](https://github.com/mdn/mdn/issues/698).
