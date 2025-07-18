@@ -241,7 +241,7 @@ These pseudo-classes relate to pages in a printed document and are used with the
 
 ## View transition pseudo-classes
 
-These pseudo-classes relate to [view transitions](/en-US/docs/Web/API/View_Transition_API).
+These pseudo-classes relate to elements involved in a [view transition](/en-US/docs/Web/API/View_Transition_API).
 
 - {{cssxref(":active-view-transition")}}
   - : Enabled when a view transition is happening.
