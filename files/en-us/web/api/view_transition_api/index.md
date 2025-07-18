@@ -72,9 +72,9 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ### Pseudo-classes
 
 - {{cssxref(":active-view-transition")}}
-  - : Enabled when a view transition is happening.
+  - : Matches elements when a view transition is in progress.
 - {{cssxref(":active-view-transition-type()")}}
-  - : Enabled when a specific view transition is happening.
+  - : Matches elements when a view transition of a specific type is in progress.
 
 ### Pseudo-elements
 

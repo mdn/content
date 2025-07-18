@@ -265,6 +265,8 @@ Pseudo-classes defined by a set of CSS specifications include the following:
 A
 
 - {{CSSxRef(":active")}}
+- {{CSSxRef(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
@@ -387,8 +389,6 @@ V
 
 - {{CSSxRef(":valid")}}
 - {{CSSxRef(":visited")}}
-- {{CSSxRef(":active-view-transition")}}
-- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
 - {{CSSxRef(":volume-locked")}}
 
 W
