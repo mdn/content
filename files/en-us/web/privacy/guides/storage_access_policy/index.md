@@ -93,7 +93,7 @@ In order to improve web compatibility and permit third-party integrations that r
 
 In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
 
-Third-party storage access may be granted when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. When that occurs, and then the user interacts with the pop-up, the origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document if that origin has received user interaction as a first party within the past 30 days.
+Third-party storage access may be granted when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. If the user interacts with the pop-up, the origin of the resource that is initially loaded in the pop-up window is granted storage access to the opener document if that origin has received user interaction as a first-party within the past 30 days.
 
 Third-party storage access may also be granted when a user navigates to another origin within the same window, interacts with that other origin, then quickly navigates back to the initial origin. This gives the origin in the intermediate page storage access on the final document.
 

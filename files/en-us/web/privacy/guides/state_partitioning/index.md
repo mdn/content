@@ -135,7 +135,7 @@ When a partitioned third-party opens a pop-up window that has [opener access](/e
 
 #### Navigation Heuristic
 
-When a site `a.example` navigates a user to `b.example` in the same window, the user interacts with `b.example`, then the user is quickly navigated back to `a.example`, then `b.example` is granted storage access as a third party on `a.example` for 30 days.
+Let's say a site hosted at `a.example` navigates a user to `b.example` in the same window, the user interacts with `b.example`, then the user is quickly navigated back to `a.example`. In such a case, `b.example` is granted storage access as a third-party on `a.example` for 30 days.
 
 ## Storage Access API
 
