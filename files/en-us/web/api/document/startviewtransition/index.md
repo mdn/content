@@ -41,7 +41,7 @@ Otherwise, we can safely call `document.startViewTransition()` with animation ru
 ```html
 <main>
   <section></section>
-  <button id="change-color">Change Color</button>
+  <button id="change-color">Change color</button>
 </main>
 ```
 
