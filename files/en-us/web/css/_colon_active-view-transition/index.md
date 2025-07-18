@@ -6,9 +6,9 @@ browser-compat: css.selectors.active-view-transition
 sidebar: cssref
 ---
 
-The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when a view transition is actually taking place and ceases to match once the transition has completed.
+The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements when a [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops to match once the transition has completed.
 
-This pseudo-class is useful for styling elements while a transition is happening.
+This pseudo-class is useful for styling elements while a transition is in progress.
 
 ## Syntax
 
