@@ -9,10 +9,6 @@ sidebar: learnsidebar
 
 Express is a popular unopinionated web framework, written in JavaScript and hosted within the Node.js runtime environment. This module explains some of the key benefits of the framework, how to set up your development environment and how to perform common web development and deployment tasks.
 
-> [!WARNING]
-> The Express documentation and tutorial are written for Express version 4, while the latest version is Express 5.
-> We plan to update the documentation in the second half of 2025.
-
 ## Prerequisites
 
 Before starting this module you will need to understand what server-side web programming and web frameworks are, ideally by reading the topics in our [Server-side website programming first steps](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps) module. A general knowledge of programming concepts and [JavaScript](/en-US/docs/Web/JavaScript) is highly recommended, but not essential to understanding the core concepts.
