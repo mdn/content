@@ -8,6 +8,13 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 
 {{APIRef("Shadow DOM")}}
 
+> [!WARNING]
+> This API parses its input as HTML, writing the result into the DOM.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+>
+> For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+> This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
+
 The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
 
 Unlike with {{domxref("ShadowRoot.setHTML()")}}, XSS-unsafe HTML entities are not guaranteed to be removed.
@@ -22,12 +29,12 @@ setHTMLUnsafe(input, options)
 ### Parameters
 
 - `input`
-  - : A string or {{domxref("TrustedHTML")}} instance defining HTML to be parsed.
+  - : A {{domxref("TrustedHTML")}} or string instance defining HTML to be parsed.
 - `options` {{optional_inline}}
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed.
-        Note that generally a `"Sanitizer` is expected than the to be more efficient than a `SanitizerConfig` if the configuration is to reused.
+        Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
         If not specified, no sanitizer is used.
 
 ### Return value
@@ -38,7 +45,7 @@ None (`undefined`).
 
 - `TypeError`
   - : This is thrown if:
-    - `html` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+    - `input` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
       - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
       - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
