@@ -35,7 +35,7 @@ This example extends on the [same-document view transition](/en-US/docs/Web/API/
 
 #### CSS
 
-The heading is set to `display: none` and this rule is overwritten when the view transition starts using the `:active-view-transition` pseudo-class:
+A `<h2>` element initially has a `display: none` style, and this is overwritten using the `:active-view-transition` pseudo-class when the view transition is in progress, setting the `<h2>` style to `display: block`:
 
 ```css hidden
 html {
