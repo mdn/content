@@ -326,7 +326,7 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 
 ### `:active-view-transition` pseudo-class
 
-The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while an single-page-app (SPA) [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place. ([Firefox bug 1950759](https://bugzil.la/1950759)).
+The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
