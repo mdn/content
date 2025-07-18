@@ -36,8 +36,6 @@ In this same-document view transition, we check if the browser supports view tra
 If there's no support, we set the background color using a fallback method which is applied immediately.
 Otherwise, we can safely call `document.startViewTransition()` with animation rules that we define in CSS.
 
-#### HTML
-
 ```html
 <main>
   <section></section>
