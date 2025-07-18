@@ -6,7 +6,9 @@ browser-compat: css.properties.font-size
 sidebar: cssref
 ---
 
-The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
+The **`font-size`** [CSS](/en-US/docs/Web/CSS) property has two primary functions:
+1. **It sets the size of the font.** Its most direct job is to specify the size of the glyphs for the text within an element. 
+2. **It acts as a reference for other properties.** It is the foundational unit used to compute font-relative {{cssxref("&lt;length&gt;")}} units like em, rem, ch etc. These units are then often used to set the value of other properties, such as width, margin, and padding.
 
 {{InteractiveExample("CSS Demo: font-size")}}
 
