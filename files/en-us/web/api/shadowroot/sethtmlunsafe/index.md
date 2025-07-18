@@ -11,9 +11,10 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 > [!WARNING]
 > This API parses its input as HTML, writing the result into the DOM.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+> It is better to use XSS-safe methods where possible, such as {{domxref("ShadowRoot.setHTML()")}}.
 >
-> For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-> This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
+> On sites that [enforce Trusted Type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive you will need to pass {{domxref("TrustedHTML")}} objects into this method.
+> This allows you to pass through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
 
 The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
 
@@ -233,6 +234,31 @@ When you click the "allowScript" button the `<script>` element is still present,
 With this approach you can create safe HTML, but you aren't forced to.
 
 {{EmbedLiveSample("setHTMLUnsafe() live example","100","350px")}}
+
+<!--
+
+### `setHTMLUnsafe()` with trusted types
+
+If trusted types are enforced using Xxxx you will need to define a policy.
+
+```js
+const parsePolicy = trustedTypes.createPolicy('parseHTMLPolicy', {
+  createHTML(input) {
+    // Developer must pass input through here manually
+    return input;
+  }
+});
+
+const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
+const trusted = parsePolicy.createHTML(rawInput);
+
+// Define custom Sanitizer and use in setHTMLUnsafe()
+// This allows only elements: <div>, <p>, <span>, <script> (<script> is unsafe)
+const sanitizer1 = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+shadow.setHTMLUnsafe(trusted, { sanitizer: sanitizer });
+```
+
+-->
 
 ## Specifications
 
