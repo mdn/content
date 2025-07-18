@@ -20,7 +20,7 @@ This pseudo-class is useful for styling elements while a transition is in progre
 
 ## Examples
 
-### Showing View Transition is running
+### Styling a view transition in progress
 
 This example extends on the [Color Change SPA View Transition](/en-US/docs/Web/API/Document/startViewTransition#color_change_spa_view_transition) on the `startViewTransition` page.
 
