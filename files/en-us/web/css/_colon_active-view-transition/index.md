@@ -22,7 +22,7 @@ This pseudo-class is useful for styling elements while a transition is in progre
 
 ### Styling a view transition in progress
 
-This example extends on the [Color Change SPA View Transition](/en-US/docs/Web/API/Document/startViewTransition#color_change_spa_view_transition) on the `startViewTransition` page.
+This example extends on the [same-document view transition](/en-US/docs/Web/API/Document/startViewTransition#same-document_view_transition) example on the `startViewTransition` page.
 
 #### HTML
 
