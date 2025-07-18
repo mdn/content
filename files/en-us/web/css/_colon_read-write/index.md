@@ -53,8 +53,8 @@ input[type="submit"] {
 
 ### Confirming form information in read-only/read-write controls
 
-One use of `readonly` form controls is to allow the user to verify information that have entered earlier (for example, their address), and submit that information with the rest of the form.
-In the example below, the `:read-write` pseudo-class provides a way to style the editable `<textarea>`, and the `:read-only` pseudo-class is used to remove the styling that makes the `<textarea>` with a `readonly` attribute look like a regular paragraph:
+You can use `readonly` form controls when you want a user to verify information they have entered earlier, and submit it along with new data.
+In the example below, the `:read-only` pseudo-class is used to make the `<textarea>` (a user's address) look like a regular paragraph and the `:read-write` pseudo-class provides a way to highlight the editable `<textarea>` (the delivery instructions):
 
 ```css hidden
 body {
