@@ -43,8 +43,6 @@ Otherwise, we can safely call `document.startViewTransition()` with animation ru
 </main>
 ```
 
-#### CSS
-
 We are setting the `animation-duration` to 2 seconds using the {{CSSXRef("::view-transition-group")}} pseudo-element.
 
 ```css
