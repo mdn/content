@@ -324,6 +324,20 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 - `layout.css.details-content.enabled`
   - : Set to `true` to enable.
 
+### `:active-view-transition` pseudo-class
+
+The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 141           | Yes                 |
+| Developer Edition | 141           | No                  |
+| Beta              | 141           | No                  |
+| Release           | -             | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -716,9 +730,9 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
+| Developer Edition | 139             | No                  |
+| Beta              | 139             | No                  |
+| Release           | 139             | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
