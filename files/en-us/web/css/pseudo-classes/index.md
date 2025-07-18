@@ -246,7 +246,7 @@ These pseudo-classes relate to elements involved in a [view transition](/en-US/d
 - {{cssxref(":active-view-transition")}}
   - : Matches elements when a view transition is in progress.
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
-  - : Enabled when a specific view transition is happening.
+  - : Matches elements when a view transition of a specific type is in progress.
 
 ## Syntax
 
