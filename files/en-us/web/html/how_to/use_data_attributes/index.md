@@ -166,7 +166,7 @@ There are multiple benefits of this:
 
 ### Associating arbitrary data with DOM elements
 
-Most web apps have JavaScript data as the source-of-truth for their UI state, so you only add HTML attributes where needed. But occasionally, it may be more convenient to have everything be present in the markup, and only use JavaScript to handle events, sync state, etc.
+Many web apps have JavaScript data as the source-of-truth for their UI state. In these cases, you only add HTML attributes necessary for rendering. Data attributes are useful in the cases where everything is present in the markup, and JavaScript is only needed for handling events, syncing state, etc.
 
 For example, in our [carousel with scroll margin](/en-US/docs/Web/API/IntersectionObserver/scrollMargin#carousel_with_scroll_margin) example, we have an HTML page already populated with many `<img>` elements. The image's source is initially stored in `data-src` to prevent any request being fired, and the real `src` is only added when the `<img>` scrolls into view. The data (image source) is colocated with the element, and the JavaScript is only responsible for defining behavior.
 
