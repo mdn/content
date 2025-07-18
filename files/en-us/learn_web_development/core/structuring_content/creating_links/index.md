@@ -327,8 +327,7 @@ Let's look at a specific example:
 
 ```html example-bad
 <p>
-  <a href="https://www.firefox.com/en-US/">Click here</a> to
-  download Firefox
+  <a href="https://www.firefox.com/en-US/">Click here</a> to download Firefox
 </p>
 ```
 
