@@ -47,6 +47,8 @@ The config file (hosted at `https://accounts.idp.example/config.json` in our exa
 ```json
 {
   "accounts_endpoint": "/accounts.php",
+  "account_label": "developer",
+  "supports_use_other_account": true,
   "client_metadata_endpoint": "/client_metadata.php",
   "disconnect_endpoint": "/disconnect.php",
   "id_assertion_endpoint": "/assertion.php",
@@ -68,6 +70,12 @@ The properties are as follows:
 
 - `accounts_endpoint`
   - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the browser-provided FedCM UI.
+- `account_label` {{optional_inline}}
+  - : A string that, if included, specifies an identifier for a subset of accounts that should be returned when this IdP is used for federated authentication. When a `get()` request is made, only accounts matching this string in their `label_hints` parameters will be returned from the [accounts endpoint](#the_accounts_list_endpoint).
+- `supports_use_other_account` {{optional_inline}}
+  - : A boolean that defaults to `false`; if set to `true`, it means that users can sign in with an account different from the one they're currently logged in with (if the IdP supports multiple accounts). This only applies to `get()` calls that specify [active mode](/en-US/docs/Web/API/IdentityCredentialRequestOptions#active).
+    > [!NOTE]
+    > In the browser sign-in UI, this will likely manifest as some kind of "Choose other account" button.
 - `client_metadata_endpoint` {{optional_inline}}
   - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
 - `disconnect_endpoint` {{optional_inline}}
@@ -121,6 +129,8 @@ The response to a successful request returns a list of all the IdP accounts that
       "email": "elaina_maduro@idp.example",
       "picture": "https://idp.example/profile/123",
       "approved_clients": ["123", "456", "789"],
+      "domain_hints": ["rp1.example.com", "rp3.example.com"],
+      "label_hints": ["developer", "admin"],
       "login_hints": ["elaina_maduro", "elaina_maduro@idp.example"]
     },
     {
@@ -130,6 +140,8 @@ The response to a successful request returns a list of all the IdP accounts that
       "email": "Elly@idp.example",
       "picture": "https://idp.example/profile/456",
       "approved_clients": ["abc", "def", "ghi"],
+      "domain_hints": ["rp1.example.com", "rp2.example.com"],
+      "label_hints": ["developer", "test"],
       "login_hints": ["elly", "elly@idp.example"]
     }
   ]
@@ -150,6 +162,10 @@ This includes the following information:
   - : The URL of the user's avatar image.
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
+- `domain_hints` {{optional_inline}}
+  - : An array of domains the account is associated with. The RP can make a `get()` call that includes a [`domainHint`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#domainhint) property to filter the returned accounts by domain.
+- `label_hints` {{optional_inline}}
+  - : An array of strings specifying labels that define account types that the account is identified with. If the config file specifies an [`account_label`](#account_label), only accounts that contain that label in their `label_hints` will be returned from the accounts list endpoint.
 - `login_hints` {{optional_inline}}
   - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 

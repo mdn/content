@@ -53,6 +53,8 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
       - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
+    - `domainHint` {{optional_inline}}
+      - : A string representing a hint corresponding to a domain the RP is interested in. If provided, the user agent will only show accounts that match the domain hint value in their [`domain_hints`](/en-US/docs/Web/API/FedCM_API/IDP_integration#domain_hints) array. If `"any"` is specified, the RP will show any account that is associated with at least one domain hint.
     - `fields` {{optional_inline}}
       - : An array of strings specifying user information that the RP wishes to obtain from the IdP for use in the sign-in process. The exact strings will vary by IdP, but tend to be similar to `"name"`, `"email"`, or `"profile-picture-url"`.
     - `loginHint` {{optional_inline}}
