@@ -248,8 +248,8 @@ Empty lines between properties should be used sparingly. Add them only when each
   margin-top: 1em;
   margin: 2em; /* Oops, margin-top is ignored */
 
-  border: solid red 1px;
-  border-bottom-width: 5px; /* Overrides the width *only* */
+  border-width: 1px;
+  border-bottom-width: 5px; /* Overrides one border's width *only* */
   ```
 
 ### Use class selectors
