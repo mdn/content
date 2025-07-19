@@ -50,10 +50,10 @@ This is still unsafe, but allows you to reduce the risk by restricting unsafe en
 For example, if you wanted to inject unsafe HTML but for some reason you needed the input to include the `onblur` handler, you could more safely do so by amending the default sanitizer and using an unsafe method as shown:
 
 ```js
-const sanitizer1 = Sanitizer(); // Default sanitizer
+const sanitizer = Sanitizer(); // Default sanitizer
 sanitizer.allowAttribute("onblur"); // Allow onblur
 
-someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
+someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 ```
 
 ### Sanitizer configuration
@@ -206,8 +206,8 @@ This code shows how you might use `Element.setHTMLUnsafe()` with an allow saniti
 All other elements in the input string would be removed.
 
 ```js
-const sanitizer1 = new Sanitizer({ elements: ["p", "b", "div"] });
-someElement.setHTMLUnsafe(untrustedString, { sanitizer: sanitizer1 });
+const sanitizer = new Sanitizer({ elements: ["p", "b", "div"] });
+someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 ```
 
 Note that in this case you should normally use `setHTML()`.

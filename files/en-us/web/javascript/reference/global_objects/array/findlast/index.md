@@ -23,9 +23,9 @@ If you need to find:
 {{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const found = array.findLast((element) => element > 45);
 
 console.log(found);
 // Expected output: 130

@@ -14,11 +14,11 @@ The first time that the callback is run there is no "return value of the previou
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduce()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3, 4];
+const array = [1, 2, 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
 const initialValue = 0;
-const sumWithInitial = array1.reduce(
+const sumWithInitial = array.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   initialValue,
 );

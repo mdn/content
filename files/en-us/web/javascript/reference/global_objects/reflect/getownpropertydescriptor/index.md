@@ -12,17 +12,17 @@ The **`Reflect.getOwnPropertyDescriptor()`** static method is like {{jsxref("Obj
 {{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
+console.log(Reflect.getOwnPropertyDescriptor(object, "property1").value);
 // Expected output: 42
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
+console.log(Reflect.getOwnPropertyDescriptor(object, "property2"));
 // Expected output: undefined
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
+console.log(Reflect.getOwnPropertyDescriptor(object, "property1").writable);
 // Expected output: true
 ```
 

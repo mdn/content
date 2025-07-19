@@ -12,15 +12,15 @@ The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specifi
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+const weakmap = new WeakMap();
+const object = {};
 
-weakmap1.set(object1, 42);
+weakmap.set(object, 42);
 
-console.log(weakmap1.delete(object1));
+console.log(weakmap.delete(object));
 // Expected output: true
 
-console.log(weakmap1.has(object1));
+console.log(weakmap.has(object));
 // Expected output: false
 ```
 

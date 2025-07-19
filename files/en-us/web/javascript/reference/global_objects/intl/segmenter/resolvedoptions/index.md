@@ -12,13 +12,13 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances ret
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const segmenter1 = new Intl.Segmenter("fr-FR");
-const options1 = segmenter1.resolvedOptions();
+const segmenter = new Intl.Segmenter("fr-FR");
+const options = segmenter.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output: "fr-FR"
 
-console.log(options1.granularity);
+console.log(options.granularity);
 // Expected output: "grapheme"
 ```
 

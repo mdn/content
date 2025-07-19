@@ -13,14 +13,14 @@ is extensible (whether it can have new properties added to it).
 {{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {};
 
-console.log(Object.isExtensible(object1));
+console.log(Object.isExtensible(object));
 // Expected output: true
 
-Object.preventExtensions(object1);
+Object.preventExtensions(object);
 
-console.log(Object.isExtensible(object1));
+console.log(Object.isExtensible(object));
 // Expected output: false
 ```
 

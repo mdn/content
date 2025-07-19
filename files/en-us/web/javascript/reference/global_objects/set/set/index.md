@@ -12,15 +12,15 @@ The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 {{InteractiveExample("JavaScript Demo: Set() constructor")}}
 
 ```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+const set = new Set([1, 2, 3, 4, 5]);
 
-console.log(set1.has(1));
+console.log(set.has(1));
 // Expected output: true
 
-console.log(set1.has(5));
+console.log(set.has(5));
 // Expected output: true
 
-console.log(set1.has(6));
+console.log(set.has(6));
 // Expected output: false
 ```
 

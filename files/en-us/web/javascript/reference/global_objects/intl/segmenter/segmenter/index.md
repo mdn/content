@@ -13,14 +13,14 @@ The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} obje
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
 
-console.log(iterator1.next().value.segment);
+console.log(iterator.next().value.segment);
 // Expected output: 'Que'
 
-console.log(iterator1.next().value.segment);
+console.log(iterator.next().value.segment);
 // Expected output: ' '
 ```
 
