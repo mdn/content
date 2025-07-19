@@ -42,8 +42,8 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border: 2px solid #666;
   background-color: #f66;
   translate:
-    /* X-axis */ calc(cos(var(--angle)) * var(--radius))
-    /* Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1)
+    calc(cos(var(--angle)) * var(--radius)) /* X-axis */
+    calc(sin(var(--angle)) * var(--radius) * -1) /* Y-axis */
   ;
 }
 ```

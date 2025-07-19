@@ -32,7 +32,7 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border: 2px solid #666;
   background-image:
     radial-gradient(black var(--dotsize), transparent var(--dotsize)),
-    linear-gradient(135deg, #0000FF, #00C9FF, #92FE9D, #E6E6FA, #F0FFF0);
+    linear-gradient(135deg, #0000ff, #00c9ff, #92fe9d, #e6e6fa, #f0fff0);
 }
 .dot {
   display: block;
@@ -42,8 +42,8 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border: 2px solid #666;
   background-color: #f66;
   translate:
-    /* X-axis */ calc(cos(var(--angle)) * var(--radius))
-    /* Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1)
+    calc(cos(var(--angle)) * var(--radius)) /* X-axis */
+    calc(sin(var(--angle)) * var(--radius) * -1) /* Y-axis */
   ;
 }
 ```
