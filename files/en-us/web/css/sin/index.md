@@ -12,41 +12,39 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 ```html interactive-example
 <div id="circle">
-	<span class="dot"></span>
+  <span class="dot"></span>
 </div>
 ```
 
 ```css interactive-example
 :root {
-	--radius: 100px;
-	--dotsize: 10px;
-	--angle: 0deg;
+  --radius: 100px;
+  --dotsize: 10px;
+  --angle: 0deg;
 }
 #circle {
-	display: grid;
-	place-content: center;
-	margin: 0 auto;
-	width: calc(var(--radius) * 2);
-	aspect-ratio: 1;
-	border-radius: 50%;
-	border: 2px solid #666;
-	background-image:
-		radial-gradient(black var(--dotsize), transparent var(--dotsize)),
-		linear-gradient(135deg, #0000FF, #00C9FF, #92FE9D, #E6E6FA, #F0FFF0);
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  width: calc(var(--radius) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666;
+  background-image:
+    radial-gradient(black var(--dotsize), transparent var(--dotsize)),
+    linear-gradient(135deg, #0000FF, #00C9FF, #92FE9D, #E6E6FA, #F0FFF0);
 }
 .dot {
-	display: block;
-	width: var(--dotsize);
-	aspect-ratio: 1;
-	border-radius: 50%;
-	border: 2px solid #666;
-	background-color: #f66;
-	translate:
-		/* Translation on X-axis */
-		calc(cos(var(--angle)) * var(--radius))
-		/* Translation on Y-axis */
-		calc(sin(var(--angle)) * var(--radius) * -1)
-	;
+  display: block;
+  width: var(--dotsize);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666;
+  background-color: #f66;
+  translate:
+    /* X-axis */ calc(cos(var(--angle)) * var(--radius))
+    /* Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1)
+  ;
 }
 ```
 
