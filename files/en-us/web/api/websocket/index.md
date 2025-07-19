@@ -14,6 +14,12 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 > [!NOTE]
 > The `WebSocket` API has no way to apply [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure), therefore when messages arrive faster than the application can process them, the application will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both. For an alternative that provides backpressure automatically, see {{domxref("WebSocketStream")}}.
 
+> [!NOTE]
+> `WebSocket` API usage may penalize user experience if the connection is not handled in a way to make it compatible with the {{glossary("bfcache")}} by following these best practices ([web.dev article](https://web.dev/articles/bfcache#close-open-connections)):
+>
+> - All `WebSocket` API connections should be closed when the `pagehide` event occurs.
+> - When the page is restored from the bfcache (observable using the `pageshow` event where `event.peristed=true`) the previously WebSocket connection may be restarted.
+
 {{InheritanceDiagram}}
 
 ## Constructor
