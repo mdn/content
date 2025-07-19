@@ -3,9 +3,8 @@ title: alarms.Alarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 page-type: webextension-api-type
 browser-compat: webextensions.api.alarms.Alarm
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.
 

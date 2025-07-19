@@ -3,9 +3,8 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`bookmarks.remove()`** method removes a single bookmark or an empty bookmark folder.
 

@@ -3,9 +3,8 @@ title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.openSearchResultsInNewTabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 

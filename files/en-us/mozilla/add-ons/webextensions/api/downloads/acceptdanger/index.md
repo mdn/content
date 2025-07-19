@@ -3,9 +3,8 @@ title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.acceptDanger
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`acceptDanger()`** function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
 

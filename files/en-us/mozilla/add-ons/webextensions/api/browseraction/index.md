@@ -3,9 +3,8 @@ title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 page-type: webextension-api
 browser-compat: webextensions.api.browserAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Read and modify attributes of and listen to clicks on the browser toolbar button defined with the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key.
 

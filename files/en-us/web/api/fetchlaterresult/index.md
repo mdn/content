@@ -9,7 +9,7 @@ browser-compat: api.FetchLaterResult
 
 {{APIRef("fetchLater API")}}{{SeeCompatTable}}
 
-The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) is returned by the {{domxref("Window.FetchLater()")}} method after a deferred fetch has been created.
+The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) is returned by the {{domxref("Window.fetchLater()")}} method after a deferred fetch has been created.
 
 It contains a single `activated` property that indicates whether the deferred request has been sent out or not.
 

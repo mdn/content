@@ -3,9 +3,8 @@ title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 

@@ -3,9 +3,8 @@ title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 page-type: webextension-api
 browser-compat: webextensions.api.tabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Interact with the browser's tab system.
 

@@ -11,8 +11,8 @@ Each entry below includes information about the builds in which a feature is inc
 The description of each feature also includes links to relevant [Bugzilla bugs](https://bugzilla.mozilla.org) that implement or enable the feature.
 This information allows you to try out experimental features and provide feedback before they are officially released.
 
-In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
-If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
+In terms of lifecycle, new features usually appear first in [Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
+If no major problems are found, they are included in [Beta](https://www.firefox.com/en-US/channel/desktop/#beta) and [Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.firefox.com/en-US/) channel.
 When a feature is enabled by default in a release, it is no longer considered experimental and is removed from this page.
 
 To enable these features, enter `about:config` in the Firefox address bar, search for the associated **preference** and change its value, which is usually a toggle between `true` and `false`.
@@ -322,6 +322,20 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 | Release           | 138           | No                  |
 
 - `layout.css.details-content.enabled`
+  - : Set to `true` to enable.
+
+### `:active-view-transition` pseudo-class
+
+The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 141           | Yes                 |
+| Developer Edition | 141           | No                  |
+| Beta              | 141           | No                  |
+| Release           | -             | No                  |
+
+- `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
 ## SVG
@@ -716,28 +730,14 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
+| Developer Edition | 139             | No                  |
+| Beta              | 139             | No                  |
+| Release           | 139             | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy
-
-### Block plain text requests from Flash on encrypted pages
-
-In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 59            | No                  |
-| Developer Edition | 59            | No                  |
-| Beta              | 59            | No                  |
-| Release           | 59            | No                  |
-
-- `security.mixed_content.block_object_subrequest`
-  - : Set to `true` to enable.
 
 ### Insecure page labeling
 
@@ -848,5 +848,5 @@ Mozilla's developer tools are constantly evolving. We experiment with new ideas,
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)

@@ -3,9 +3,8 @@ title: contextualIdentities.ContextualIdentity
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
 page-type: webextension-api-type
 browser-compat: webextensions.api.contextualIdentities.ContextualIdentity
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`contextualIdentities.ContextualIdentity`** type describes a single contextual identity.
 

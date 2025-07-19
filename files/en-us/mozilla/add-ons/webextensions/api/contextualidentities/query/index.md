@@ -3,9 +3,8 @@ title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about all contextual identities, or about those contextual identities that match a given filter argument.
 

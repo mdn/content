@@ -77,6 +77,36 @@ The {{domxref("Element.getAttribute()")}} will return `""` if the input is check
 The corresponding {{domxref("HTMLInputElement.checked")}} property returns `true` or `false` for the checked state.
 Otherwise boolean reflected attributes are the same as any other reflected attributes.
 
+### Enumerated reflected attributes
+
+In HTML, [enumerated attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) are attributes with a limited, predefined set of text values. For example, the global HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute has three valid values: `ltr`, `rtl`, and `auto`.
+
+```html
+<p dir="rtl">Right to left</p>
+```
+
+Like for HTML tag names, HTML enumerated attributes and their values are case-insensitive, so `LTR`, `RTL`, and `AUTO` will also work.
+
+```html
+<p dir="RTL">Right to left</p>
+```
+
+The IDL-reflected property, {{domxref("HTMLElement.dir")}}, always returns a canonical value as provided in the specification (lowercased values in this example). Setting the value also serializes it to the canonical form.
+
+```js
+const pElement = document.querySelector("p");
+console.log(pElement.dir); // "rtl"
+pElement.dir = "RTL";
+console.log(pElement.dir); // "rtl"
+```
+
+Alternatively, you can use the {{domxref("Element.getAttribute()","getAttribute()")}} method of the {{domxref("Element")}} interface. It will get the attribute value from HTML without modifications.
+
+```js
+const pElement = document.querySelector("p");
+console.log(pElement.getAttribute("dir")); // "RTL"
+```
+
 ## Reflected element references
 
 > [!NOTE]

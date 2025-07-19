@@ -3,9 +3,8 @@ title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.options_ui
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

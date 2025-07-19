@@ -3,9 +3,8 @@ title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 page-type: webextension-api
 browser-compat: webextensions.api.extensionTypes
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Some common types used in other WebExtension APIs.
 
