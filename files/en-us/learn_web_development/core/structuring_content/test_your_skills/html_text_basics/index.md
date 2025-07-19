@@ -6,18 +6,20 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how to mark up text in HTML to give it structure and meaning.
+The aim of this skill test is to help you assess whether you understand how to mark up text in HTML to give it structure and meaning.
 
 > [!NOTE]
-> You can try solutions in the MDN Playground or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
 In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) and work locally in your own editor.
+To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
@@ -37,7 +39,7 @@ The crafty anaconda likes to slither around the page, traveling rapidly by way o
 
 <!-- Shared/setup CSS code -->
 
-```css hidden live-sample___text-basics-1 hidden live-sample___text-basics-2 live-sample___text-basics-3 live-sample___text-basics-4
+```css hidden live-sample___text-basics-1 live-sample___text-basics-2 live-sample___text-basics-3 live-sample___text-basics-4
 body {
   background-color: #fff;
   color: #333;
@@ -116,7 +118,11 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) and work locally in your own editor.
+To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
@@ -197,7 +203,11 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the provided animals and their definitions into a description list.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) and work locally in your own editor.
+To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
@@ -264,7 +274,11 @@ Your finished HTML should look like this:
 
 In this task, you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) and work locally in your own editor.
+To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 

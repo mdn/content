@@ -6,23 +6,26 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
+The aim of this skill test is to help you assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
 > [!NOTE]
-> You can try solutions in the MDN Playground or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to add some semantics to the provided HTML as follows:
+In this task, we want you to add some semantics to the provided HTML.
 
-- Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility).
-- Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
-- Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
-- Semantically associate machine-readable dates with the dates in the text.
+To complete this task:
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) and work locally in your own editor.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Turn the second paragraph into a block-level quote, and semantically indicate that the quote is taken from [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility).
+3. Semantically mark up "HTML" and "CSS" as acronyms, providing expansions as tooltips.
+4. Use subscript and superscript to provide correct semantics for the chemical formulae and dates, and make them display correctly.
+5. Semantically associate machine-readable dates with the dates in the text.
+
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 

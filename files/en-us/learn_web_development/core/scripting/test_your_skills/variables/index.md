@@ -6,13 +6,11 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
+The aim of this skill test is to help you assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
 
 > [!NOTE]
-> For Tasks 1 and 2, you can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> If code returns an error, it will be logged into the results panel on this page or in the JavaScript console.
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Interactive challenge
 
@@ -31,7 +29,7 @@ To complete this task:
 
 > [!CALLOUT]
 >
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) to work in your own editor or in an online editor.
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 

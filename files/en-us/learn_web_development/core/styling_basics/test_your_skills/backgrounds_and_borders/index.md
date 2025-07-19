@@ -6,20 +6,21 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders).
+The aim of this skill test is to help you assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to add a background, border, and some basic styles to a page header:
+In this task, we want you to add a background, border, and some basic styles to a page header.
 
-1. Give the box a 5px black solid border, with rounded corners of 10px.
-2. Give the `<h2>` a semi-transparent black background color, and make the text white.
-3. Add a background image and size it so that it covers the box. You can use the following image:
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Give the box a 5px black solid border, with rounded corners of 10px.
+3. Give the `<h2>` a semi-transparent black background color, and make the text white.
+4. Add a background image and size it so that it covers the box. You can use the following image:
 
    ```plain
    https://mdn.github.io/shared-assets/images/examples/balloons.jpg
@@ -29,7 +30,11 @@ Your final result should look like the image below:
 
 ![Images shows a box with a photograph background, rounded border and white text on a semi-transparent black background.](backgrounds-task1.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___backgrounds1
 <div class="box">
@@ -37,20 +42,20 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___backgrounds1
+```css live-sample___backgrounds1
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .box {
   padding: 0.5em;
 }
-```
 
-```css live-sample___backgrounds1
 .box {
   /* Add styles here */
 }
@@ -85,24 +90,30 @@ h2 {
 
 ## Task 2
 
-In this task, we want you to add background images, a border, and some other styling to a decorative box:
+In this task, we want you to add background images, a border, and some other styling to a decorative box.
 
-1. Give the box a 5px lightblue border and round the top left corner 20px and the bottom right corner 40px.
+To complete the task:
 
-2. The heading uses the `star.png` image as a background image, with a single centered star on the left and a repeating pattern of stars on the right.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Give the box a 5px lightblue border and round the top left corner 20px and the bottom right corner 40px.
+3. The heading uses the `star.png` image as a background image, with a single centered star on the left and a repeating pattern of stars on the right.
    You can use the following image:
 
    ```plain
    https://mdn.github.io/shared-assets/images/examples/star.png
    ```
 
-3. Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
+4. Make sure that the heading text does not overlay the image, and that it is centered — you will need to use techniques learned in previous lessons to achieve this.
 
 Your final result should look like the image below:
 
 ![Images shows a box with a blue border rounded at the top left and bottom right corners. On the left of the text is a single star, on the right 3 stars.](backgrounds-task2.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___backgrounds2
 <div class="box">
@@ -110,7 +121,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___backgrounds2
+```css live-sample___backgrounds2
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
@@ -122,9 +133,7 @@ body {
   width: 300px;
   padding: 0.5em;
 }
-```
 
-```css live-sample___backgrounds2
 .box {
   /* Add styles here */
 }

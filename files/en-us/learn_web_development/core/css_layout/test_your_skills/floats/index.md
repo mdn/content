@@ -6,20 +6,27 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [floats in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) using the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
+The aim of this skill test is to help you assess whether you understand [floats in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) using the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, you need to float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as in the image below:
+To complete this task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as in the image below:
 
 ![Two blocks displaying left and right of some text.](float-task1.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float1
 <div class="box">
@@ -29,16 +36,19 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___float1
+```css live-sample___float1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .box {
   padding: 0.5em;
 }
+
 .float {
   margin: 15px;
   width: 150px;
@@ -48,13 +58,13 @@ body {
   color: #fff;
   padding: 1em;
 }
-```
 
-```css live-sample___float1
 .float1 {
+  /* Add styles here */
 }
 
 .float2 {
+  /* Add styles here */
 }
 ```
 
@@ -79,13 +89,21 @@ You can use `float` for both boxes:
 
 ## Task 2
 
-In this task, the element with a class of `float` should be floated left. Then we want the first line of text to display next to that element, but the following line of text (which has a class of `below`) to display underneath it.
+To complete this task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Float the element with a class of `float` to the left.
+3. Update the code so that the first line of text displays next to that element, but the following line of text (which has a class of `below`) displays underneath it.
 
 Your final result should look like the image below:
 
 ![A box displayed to the left of a line of text, with some more text below.](float-task2.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float2
 <div class="box">
@@ -95,16 +113,19 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___float2
+```css live-sample___float2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
+
 .box {
   padding: 0.5em;
 }
+
 .float {
   margin: 15px;
   width: 150px;
@@ -114,13 +135,13 @@ body {
   color: #fff;
   padding: 1em;
 }
-```
 
-```css live-sample___float2
 .float {
+  /* Add styles here */
 }
 
 .below {
+  /* Add styles here */
 }
 ```
 
@@ -145,11 +166,20 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 ## Task 3
 
-In this task, we have a floated element. The box wrapping the float and text is displaying behind the float. Use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
+In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
+
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
 
 ![A block displayed to the right of some text both wrapped by a box with a background color.](float-task3.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float3
 <div class="box">
@@ -158,10 +188,11 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___float3
+```css live-sample___float3
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -185,14 +216,13 @@ body {
   padding: 10px;
   color: #fff;
 }
-```
 
-```css live-sample___float3
 .float {
   float: right;
 }
 
 .box {
+  /* Add styles here */
 }
 ```
 

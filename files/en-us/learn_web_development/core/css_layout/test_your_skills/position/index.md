@@ -6,16 +6,19 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [positioning in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
+The aim of this skill test is to help you assess whether you understand [positioning in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
+To complete this task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Position the item with a class of `target` to the top and right of the container, which has the 5px grey border.
 
 Your final result should look like the image below:
 
@@ -23,7 +26,11 @@ Your final result should look like the image below:
 
 **Bonus question:** Can you change the target to display underneath the text?
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___position1
 <div class="container">
@@ -40,10 +47,11 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___position1
+```css live-sample___position1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -61,13 +69,13 @@ body {
   padding: 1em;
   color: white;
 }
-```
 
-```css live-sample___position1
 .container {
+  /* Add styles here */
 }
 
 .target {
+  /* Add styles here */
 }
 ```
 
@@ -97,11 +105,20 @@ For the bonus question, you need to add a negative `z-index` to the target, for 
 
 ## Task 2
 
-In this task, if you scroll the box in the example below, the sidebar scrolls with the content. Change it so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls.
+In this task, if you scroll the box in the example below, the sidebar scrolls with the content.
+
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Update the code so that the sidebar (`<div class="sidebar">`) stays in place and only the content scrolls.
 
 ![The content is scrolled but the sidebar has stayed in place.](position-task2.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___position2
 <div class="container">
@@ -134,10 +151,11 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___position2
+```css live-sample___position2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -161,13 +179,13 @@ body {
   padding: 1em;
   margin-left: 160px;
 }
-```
 
-```css live-sample___position2
 .container {
+  /* Add styles here */
 }
 
 .sidebar {
+  /* Add styles here */
 }
 ```
 

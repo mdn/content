@@ -6,26 +6,30 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
+The aim of this skill test is to help you assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
 > [!NOTE]
-> You can try solutions in the MDN Playground or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to help fill in the links on our Whales information page. To complete the task:
+In this task, we want you to help fill in the links on our Whales information page.
 
-- The first link should be linked to a page called `whales.html`, which is in the same directory as the current page.
-- We'd also like you to give it a tooltip when moused over that tells the user that the page includes information on Blue Whales and Sperm Whales.
-- The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
-- Bonus points if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Update the links as follows:
+   1. The first link should be linked to a page called `whales.html`, which is in the same directory as the current page.
+   2. Give it a tooltip when moused over that tells the user that the page includes information on Blue Whales and Sperm Whales.
+   3. The second link should be turned into a link you can click to open up an email in the user's default mail application, with the recipient set as "whales\@example.com".
+   4. Bonus points if you also set it so that the subject line of the email is automatically filled in as "Question about Whales".
 
 > [!NOTE]
 > The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) and work locally in your own editor.
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
@@ -99,17 +103,23 @@ Your finished HTML should look like this:
 
 ## Task 2
 
-In this task, we want you to fill in the four links so that they link to the appropriate places. To complete the task:
+In this task, we want you to fill in the four links so that they link to the appropriate places.
 
-- The first link should link to an image called `blue-whale.jpg`, which is located in a directory called `blue` inside the current directory.
-- The second link should link to an image called `narwhal.jpg`, which is located in a directory called `narwhal`, which is located one directory level above the current directory.
-- The third link should link to the UK Google Image search. The base URL is `https://www.google.co.uk`, and the image search is located in a subdirectory called `imghp`.
-- The fourth link should link to the paragraph at the very bottom of the current page. It has an ID of `bottom`.
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Update the links as follows:
+   1. The first link should link to an image called `blue-whale.jpg`, which is located in a directory called `blue` inside the current directory.
+   2. The second link should link to an image called `narwhal.jpg`, which is located in a directory called `narwhal`, which is located one directory level above the current directory.
+   3. The third link should link to the UK Google Image search. The base URL is `https://www.google.co.uk`, and the image search is located in a subdirectory called `imghp`.
+   4. The fourth link should link to the paragraph at the very bottom of the current page. It has an ID of `bottom`.
 
 > [!NOTE]
 > The first three links in the example have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) and work locally in your own editor.
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
@@ -191,15 +201,20 @@ Your finished HTML should look like this:
 
 ## Task 3
 
-The following links link to an info page about Narwhals, a support email address, and a PDF factfile that is 4MB in size. In this task, we want you to:
+The following links link to an info page about Narwhals, a support email address, and a PDF factfile that is 4MB in size.
 
-- Take the existing paragraphs with poorly-written link text, and rewrite them so that they have good link text.
-- Add a warning to any links that need a warning added.
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Take the existing paragraphs with poorly-written link text, and rewrite them so that they have good link text.
+3. Add a warning to any links that need a warning added.
 
 > [!NOTE]
 > The first and third links in the example have the `target="_blank"` attribute set on them, so that when you click on them, they open the linked page in a new tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
-To get started, you can click **"Play"** in the code block below to edit the example in the MDN Playground, or [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) and work locally in your own editor.
+> [!CALLOUT]
+>
+> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) to work in your own editor or in an online editor.
 
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
