@@ -463,9 +463,9 @@ The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 113           | Yes                 |
-| Developer Edition | 73            | No                  |
-| Beta              | 73            | No                  |
-| Release           | 73            | No                  |
+| Developer Edition | 141           | Windows only        |
+| Beta              | 141           | Windows only        |
+| Release           | 141           | Windows only        |
 
 - `dom.webgpu.enabled`
   - : Set to `true` to enable.
