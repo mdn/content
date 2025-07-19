@@ -353,7 +353,7 @@ When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in
 - If all IdPs' login statuses are `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case, it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
 - If an IdP's login status is `"unknown"`, a request is made to the accounts list endpoint and the login status is updated depending on the response:
   - If the endpoint returns a list of available accounts for sign-in, update the status to `"logged-in"` and display the sign-in options to the user in the browser-provided FedCM dialog.
-  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request will reject in no other `logged-in` IdPs are available.
+  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request will reject if no other `logged-in` IdPs are available.
 
 ### What if the browser and the IdP login status become out of sync?
 
