@@ -20,9 +20,11 @@ On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to 
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
-### Using modern JavaScript features
+### Use modern JavaScript features when supported
 
-You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
+You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them (a.k.a. {{glossary("Baseline")}}).
+
+This rule does not apply to the JavaScript feature being documented on the page (which is dictated instead by the [criteria for inclusion](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). For example, you can document [non-standard or experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) features and write complete examples demonstrating their behavior, but you should refrain from using these features in the demos for other unrelated features, such as a web API.
 
 ## Arrays
 
