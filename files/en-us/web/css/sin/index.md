@@ -8,6 +8,64 @@ sidebar: cssref
 
 The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the sine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `sin(45deg)`, `sin(0.125turn)`, and `sin(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
+{{InteractiveExample("CSS Demo: sin()")}}
+
+```html interactive-example
+<div id="circle">
+	<span class="dot"></span>
+</div>
+```
+
+```css interactive-example
+:root {
+	--radius: 100px;
+	--dotsize: 10px;
+	--angle: 0deg;
+}
+#circle {
+	display: grid;
+	place-content: center;
+	margin: 0 auto;
+	width: calc(var(--radius) * 2);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 2px solid #666;
+	background-image:
+		radial-gradient(black var(--dotsize), transparent var(--dotsize)),
+		linear-gradient(135deg, #0000FF, #00C9FF, #92FE9D, #E6E6FA, #F0FFF0);
+}
+.dot {
+	display: block;
+	width: var(--dotsize);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: 2px solid #666;
+	background-color: #f66;
+	translate:
+		/* Translation on X-axis */
+		calc(cos(var(--angle)) * var(--radius))
+		/* Translation on Y-axis */
+		calc(sin(var(--angle)) * var(--radius) * -1)
+	;
+}
+```
+
+```css interactive-example-choice
+--angle: 0deg;
+```
+
+```css interactive-example-choice
+--angle: 90deg;
+```
+
+```css interactive-example-choice
+--angle: 135deg;
+```
+
+```css interactive-example-choice
+--angle: 180deg;
+```
+
 ## Syntax
 
 ```css
