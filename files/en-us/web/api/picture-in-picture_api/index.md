@@ -77,9 +77,65 @@ The availability of picture-in-picture mode can be controlled using [Permissions
 
 ## Examples
 
-In this example, a video is presented in a web page. Clicking the button below lets the user toggle the floating video window.
+In this example, a video is presented in a web page.
+Clicking the button below lets the user toggle the floating video window.
 
-{{EmbedGHLiveSample("dom-examples/picture-in-picture/index.html", '100%', 350)}}
+```html
+<video
+  src="/shared-assets/videos/friday.mp4"
+  id="video"
+  muted
+  controls
+  loop
+  width="300"></video>
+
+<button id="pip-button">Toggle PiP</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+body {
+  font:
+    14px "Open Sans",
+    sans-serif;
+  padding: 0.5em;
+}
+
+button {
+  display: block;
+  margin-block: 1rem;
+}
+```
+
+```js
+const video = document.getElementById("video");
+const pipButton = document.getElementById("pip-button");
+const log = document.getElementById("log");
+
+if (document.pictureInPictureEnabled) {
+  log.innerText = "pictureInPictureEnabled -> hurray!";
+} else {
+  log.innerText = "PiP not available :(";
+}
+
+function togglePictureInPicture() {
+  if (document.pictureInPictureElement) {
+    document.exitPictureInPicture();
+  } else {
+    video.requestPictureInPicture();
+  }
+}
+
+pipButton.addEventListener("click", togglePictureInPicture);
+```
+
+```css
+:picture-in-picture {
+  outline: 5px dashed green;
+}
+```
+
+{{embedlivesample("", , "350")}}
 
 ### Toggling picture-in-picture mode
 
