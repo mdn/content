@@ -26,8 +26,6 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
 
 ## See also
 
-- [Creative JS](http://creativejs.com/)
-  - : A collection of impressive JavaScript techniques and experiments, not specific to games, but helpful nonetheless. Has not been very active recently, but still holds some nice resources.
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
   - : An online book, written by Bob Nystrom, which discusses programming patterns in the context of game development with the aim of helping game developers produce more effective and efficient code.
 - [Gamedev.js Weekly](https://gamedevjsweekly.com/)
