@@ -95,7 +95,7 @@ In order to improve web compatibility, Firefox currently includes some heuristic
 
 Third-party storage access may be granted when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. If the user interacts with the pop-up, the origin of the resource that is initially loaded in the pop-up window is granted storage access to the opener document if that origin has received user interaction as a first-party within the past 30 days.
 
-Third-party storage access may also be granted when a user navigates to another origin within the same window, interacts with that other origin, then quickly navigates back to the initial origin. This gives the origin in the intermediate page storage access on the final document.
+Third-party storage access may also be granted when a user navigates to another origin within the same window. If the user interacts with that origin, then quickly navigates to a document in the initial origin, the intermediate page is granted storage access to that final document.
 
 ### Scope of storage access
 
