@@ -239,6 +239,15 @@ These pseudo-classes relate to pages in a printed document and are used with the
 - `:blank`
   - : Represents a blank page in a printed document.
 
+## View transition pseudo-classes
+
+These pseudo-classes relate to elements involved in a [view transition](/en-US/docs/Web/API/View_Transition_API).
+
+- {{cssxref(":active-view-transition")}}
+  - : Matches elements when a view transition is in progress.
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
+  - : Matches elements when a view transition of a specific type is in progress.
+
 ## Syntax
 
 ```css
@@ -256,6 +265,8 @@ Pseudo-classes defined by a set of CSS specifications include the following:
 A
 
 - {{CSSxRef(":active")}}
+- {{CSSxRef(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
