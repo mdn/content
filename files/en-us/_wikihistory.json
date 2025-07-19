@@ -74810,19 +74810,6 @@
       "cvrebert"
     ]
   },
-  "Web/CSS/@media/aural": {
-    "modified": "2020-08-05T13:50:38.977Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "mfluehr",
-      "kscarfone",
-      "ethertank",
-      "BijuGC"
-    ]
-  },
   "Web/CSS/@media/color": {
     "modified": "2020-10-15T21:30:16.164Z",
     "contributors": [
