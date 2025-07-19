@@ -61,7 +61,7 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border-radius: 50%;
   border: 2px solid #666;
   background-color: #f66;
-	transform: translateX(calc(cos(var(--angle)) * var(--radius)))
+  transform: translateX(calc(cos(var(--angle)) * var(--radius)))
     translateY(calc(sin(var(--angle)) * var(--radius) * -1));
 }
 ```
