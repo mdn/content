@@ -10,6 +10,22 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 {{InteractiveExample("CSS Demo: sin()")}}
 
+```css interactive-example-choice
+--angle: 0deg;
+```
+
+```css interactive-example-choice
+--angle: 90deg;
+```
+
+```css interactive-example-choice
+--angle: 135deg;
+```
+
+```css interactive-example-choice
+--angle: 180deg;
+```
+
 ```html interactive-example
 <div id="circle">
   <span class="dot"></span>
@@ -18,7 +34,7 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 ```css interactive-example
 :root {
-  --radius: 100px;
+  --radius: 125px;
   --dotsize: 10px;
   --angle: 0deg;
 }
@@ -46,22 +62,6 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
     calc(sin(var(--angle)) * var(--radius) * -1) /* Y-axis */
   ;
 }
-```
-
-```css interactive-example-choice
---angle: 0deg;
-```
-
-```css interactive-example-choice
---angle: 90deg;
-```
-
-```css interactive-example-choice
---angle: 135deg;
-```
-
-```css interactive-example-choice
---angle: 180deg;
 ```
 
 ## Syntax
