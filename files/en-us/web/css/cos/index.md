@@ -31,7 +31,7 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 ```
 
 ```html interactive-example
-<div id="circle">
+<div class="circle" id="example-element">
   <span class="dot"></span>
 </div>
 ```
@@ -42,7 +42,7 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   --dotsize: 10px;
   --angle: 0deg;
 }
-#circle {
+.circle {
   display: grid;
   place-content: center;
   margin: 0 auto;
@@ -61,7 +61,8 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border-radius: 50%;
   border: 2px solid #666;
   background-color: #f66;
-  translate: /* X-axis */ calc(cos(var(--angle)) * var(--radius)) /* Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1);
+  translate: /* Translate on X-axis */ calc(cos(var(--angle)) * var(--radius))
+    /* Translate on Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1);
 }
 ```
 
