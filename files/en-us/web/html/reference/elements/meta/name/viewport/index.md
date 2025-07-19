@@ -52,6 +52,12 @@ A `<meta name="viewport">` element has the following additional attributes:
         >
         > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
         > - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+    - `interactive-widget`
+      - : Specifies the effect that interactive UI widgets, such as a virtual keyboard, have on the page's viewports.
+        It can be one of the keywords `resizes-visual`, `resizes-content`, or `overlays-content`, defaulting to `resizes-visual`.
+        - `resizes-visual`: The {{Glossary("visual viewport")}} gets resized by the interactive widget.
+        - `resizes-content`: The {{Glossary("viewport")}} gets resized by the interactive widget.
+        - `overlays-content`: Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
     - `viewport-fit`
       - : Defines the viewable portions of the web page.
         It can be one of the keywords `auto`, `contain`, or `cover`.
