@@ -14,7 +14,7 @@ In other words, any target of events implements the three methods associated wit
 but other objects can be event targets, too.
 For example {{domxref("IDBRequest")}}, {{domxref("AudioNode")}}, and {{domxref("AudioContext")}} are also event targets.
 
-Many event targets (including elements, documents, and windows) also support setting [event handlers](/en-US/docs/Web/Events/Event_handlers) via `onevent` properties and attributes.
+Many event targets (including elements, documents, and windows) also support setting [event handlers](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) via `onevent` properties and attributes.
 
 {{InheritanceDiagram}}
 
@@ -42,6 +42,6 @@ Many event targets (including elements, documents, and windows) also support set
 
 ## See also
 
-- [Event reference](/en-US/docs/Web/Events) – the events available in the platform.
+- [Event reference](/en-US/docs/Web/API/Document_Object_Model/Events) – the events available in the platform.
 - [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} interface

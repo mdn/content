@@ -52,7 +52,7 @@ addEventListener(type, listener, useCapture)
 ### Parameters
 
 - `type`
-  - : A case-sensitive string representing the [event type](/en-US/docs/Web/Events) to listen for.
+  - : A case-sensitive string representing the [event type](/en-US/docs/Web/API/Document_Object_Model/Events) to listen for.
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
@@ -826,5 +826,5 @@ The effect is that:
 ## See also
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [Creating and triggering custom events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and triggering custom events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)
