@@ -38,7 +38,7 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 ```css interactive-example
 :root {
-  --radius: 125px;
+  --radius: 140px;
   --dotsize: 10px;
   --angle: 0deg;
 }
