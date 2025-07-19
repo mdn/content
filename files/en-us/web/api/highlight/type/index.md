@@ -46,4 +46,5 @@ spellErrorsHighlight.type = "spelling-error";
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
