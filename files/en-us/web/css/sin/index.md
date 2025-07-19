@@ -26,6 +26,10 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 --angle: 180deg;
 ```
 
+```css interactive-example-choice
+--angle: -45deg;
+```
+
 ```html interactive-example
 <div id="circle">
   <span class="dot"></span>
