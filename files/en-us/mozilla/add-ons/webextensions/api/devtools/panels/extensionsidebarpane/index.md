@@ -16,6 +16,8 @@ To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements
 
 - [`devtools.panels.ExtensionSidebarPane.setExpression()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression)
   - : Evaluate a JavaScript expression in the web page that the inspector is inspecting. The result is displayed in the sidebar pane.
+- [`devtools.panels.ExtensionSidebarPane.setHeight()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setHeight)
+  - : Sets the height of the sidebar.
 - [`devtools.panels.ExtensionSidebarPane.setObject()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject)
   - : Sets a JSON object that will be displayed in the sidebar pane.
 - [`devtools.panels.ExtensionSidebarPane.setPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage)
