@@ -19,10 +19,17 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
+- {{domxref("IdentityCredential.configURL")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A string specifying the config file URL of the IdP used for sign-in.
 - {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A boolean value that indicates whether the federated sign-in was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e., without user mediation) or not.
 - {{domxref("IdentityCredential.token")}} {{experimental_inline}}
   - : Returns the token used to validate the associated sign-in.
+
+## Static methods
+
+- {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}}
+  - : Disconnects the federated sign-in account used to obtain the credential.
 
 ## Examples
 
