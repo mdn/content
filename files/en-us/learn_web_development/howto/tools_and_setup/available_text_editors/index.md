@@ -111,17 +111,6 @@ Here are some popular editors:
       <td><a href="https://extensions.panic.com/">Yes</a></td>
     </tr>
     <tr>
-      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
-      <td>Closed source</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
-      </td>
-      <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
       <td>
         <a href="https://www.gnu.org/software/emacs/" rel="external">Emacs</a>
       </td>
