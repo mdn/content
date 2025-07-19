@@ -61,8 +61,8 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border-radius: 50%;
   border: 2px solid #666;
   background-color: #f66;
-  translate: /* Translate on X-axis */ calc(cos(var(--angle)) * var(--radius))
-    /* Translate on Y-axis */ calc(sin(var(--angle)) * var(--radius) * -1);
+	transform: translateX(calc(cos(var(--angle)) * var(--radius)))
+    translateY(calc(sin(var(--angle)) * var(--radius) * -1));
 }
 ```
 
