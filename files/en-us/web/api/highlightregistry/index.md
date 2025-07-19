@@ -37,6 +37,8 @@ _The `HighlightRegistry` interface doesn't inherit any methods_.
   - : Gets the named `Highlight` object from the registry.
 - {{domxref("HighlightRegistry.has()")}}
   - : Returns a boolean asserting whether a `Highlight` object is present the registry or not.
+- {{domxref("HighlightRegistry.highlightsFromPoint()")}}
+  - : Returns an array of objects representing the custom highlights applied at a specific point within the viewport.
 - {{domxref("HighlightRegistry.keys()")}}
   - : An alias for {{domxref("HighlightRegistry.values()")}}.
 - {{domxref("HighlightRegistry.set()")}}
