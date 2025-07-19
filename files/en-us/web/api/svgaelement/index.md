@@ -34,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.password")}}
   - : A string containing the password specified before the domain name.
 - {{domxref("SVGAElement.ping")}}
-  - : A string that reflects the ping attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
+  - : A string that reflects the `ping` attribute, containing a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
 - {{domxref("SVGAElement.port")}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("SVGAElement.protocol")}}
@@ -42,9 +42,9 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGAElement.referrerPolicy")}}
   - : See {{domxref("HTMLAnchorElement.referrerPolicy")}}.
 - {{domxref("SVGAElement.rel")}}
-  - : See {{domxref("HTMLAnchorElement.rel")}}.
+  - : A string reflecting the `rel` SVG attribute, specifying the relationship of the link's target.
 - {{domxref("SVGAElement.relList")}}
-  - : See {{domxref("HTMLAnchorElement.relList")}}.
+  - : A {{domxref("DOMTokenList")}} reflecting the `rel` SVG attribute, as a list of tokens.
 - {{domxref("SVGAElement.search")}}
   - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
 - {{domxref("SVGAElement.target")}} {{ReadOnlyInline}}
