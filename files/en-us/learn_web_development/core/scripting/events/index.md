@@ -48,7 +48,7 @@ For example:
 - A video is played, paused, or ends.
 - An error occurs.
 
-You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
+You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/API/Document_Object_Model/Events)) that there are **a lot** of events that can be fired.
 
 To react to an event, you attach an **event listener** to it. This is a code feature that listens out for the event firing. When the event fires, an **event handler** function (referenced by, or contained inside the event listener) is called to respond to the event firing. When such a block of code is set up to run in response to an event, we say we are **registering an event handler**.
 

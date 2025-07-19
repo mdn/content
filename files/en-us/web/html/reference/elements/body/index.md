@@ -205,4 +205,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [Event handling overview](/en-US/docs/Web/Events/Event_handlers)
+- [Event handling overview](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers)

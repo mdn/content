@@ -16,7 +16,7 @@ A handler for this event can access the clipboard contents by calling {{domxref(
 
 To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.
 
-It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `paste` event, but this will not affect the document's contents.
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) `paste` event, but this will not affect the document's contents.
 
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 

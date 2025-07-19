@@ -8,7 +8,7 @@ browser-compat: api.Event.Event
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The **`Event()`** constructor creates a new {{domxref("Event")}} object. An event created in this way is called a _synthetic event_, as opposed to an event fired by the browser, and can be [dispatched](/en-US/docs/Web/Events/Creating_and_triggering_events) by a script.
+The **`Event()`** constructor creates a new {{domxref("Event")}} object. An event created in this way is called a _synthetic event_, as opposed to an event fired by the browser, and can be [dispatched](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) by a script.
 
 ## Syntax
 
@@ -62,4 +62,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)
