@@ -6,13 +6,13 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [how to use media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn_web_development/Core/CSS_layout).
+The aim of this skill test is to help you assess whether you understand [how to use media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn_web_development/Core/CSS_layout).
 
 > [!NOTE]
 > Because you need to test your design in multiple screen sizes, we do not have interactive editors on this page.
 > Download the code and work locally, or use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task
 

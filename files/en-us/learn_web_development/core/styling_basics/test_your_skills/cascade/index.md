@@ -6,22 +6,29 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
+The aim of this skill test is to help you assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
+In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#controlling_inheritance) section.
+
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
 Your final result should look like the image below:
 
 ![Barely visible yellow links on a white background.](mdn-cascade.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___cascade
 <div class="container" id="outer">
@@ -68,7 +75,10 @@ Then you need to remember there are special keyword values for all properties. I
 
 ## Task 2
 
-In this task, we want you to manipulate the cascade layer order to color the links `rebeccapurple`. No editing the `lightgreen` declaration!
+To complete this task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Manipulate the cascade layer order to color the links `rebeccapurple`. No editing the `lightgreen` declaration!
 
 This task is a stretch goal — it requires knowledge of cascade layers, which we didn't cover in the [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) article. You can find the information you need to attempt this task at [Cascade layers > Determining the precedence based on the order of layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#determining_the_precedence_based_on_the_order_of_layers).
 
@@ -76,7 +86,11 @@ Your final result should look like the image below:
 
 ![Barely visible yellow links on a white background.](mdn-cascade.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___cascade-layer
 <div class="container" id="outer">

@@ -6,12 +6,12 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
+The aim of this skill test is to help you assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
 
 > [!NOTE]
 > Click **"Play"** in the code blocks in Tasks 1, 2, and 3 to edit the examples in the MDN Playground.
 > You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Interactive challenge
 
@@ -23,13 +23,22 @@ Watch the embedded scrim, and complete all the tasks on the timeline (the little
 
 ## Task 1
 
-In this task, the list items are the navigation for a site. They should be laid out as a row, with an equal amount of space between each item.
+In this task, the list items are the navigation for a site.
+
+To complete the task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Use flexbox to lay out the list items as a row, with an equal amount of space between each item.
 
 Your final result should look like the image below:
 
 ![Flex items laid out as a row with space between them.](flex-task1.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___flexbox1
 <nav>
@@ -42,7 +51,7 @@ Try to update the code below to recreate the finished example:
 </nav>
 ```
 
-```css hidden live-sample___flexbox1
+```css live-sample___flexbox1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -62,10 +71,9 @@ nav a:visited {
   display: inline-block;
   text-decoration: none;
 }
-```
 
-```css live-sample___flexbox1
 nav ul {
+  /* Add styles here */
 }
 ```
 
@@ -89,13 +97,19 @@ nav ul {
 
 In this task, the list items are all different sizes, but we want them to be displayed as three equal sized columns, no matter what content is in each item.
 
+To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+
 Your final result should look like the image below:
 
 ![Flex items laid out as three equal size columns with different amounts of content.](flex-task2.png)
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___flexbox2
 <ul>
@@ -109,7 +123,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox2
+```css live-sample___flexbox2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -127,13 +141,13 @@ li {
   color: #fff;
   padding: 0.5em;
 }
-```
 
-```css live-sample___flexbox2
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
@@ -166,11 +180,18 @@ li:first-child {
 
 ## Task 3
 
-In this task, we want you to arrange these items into rows as in the image below:
+To complete this task:
+
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Arrange the list items into rows as shown in the image below:
 
 ![A set of items displayed as rows.](flex-task4.png)
 
-Try to update the code below to recreate the finished example:
+> [!CALLOUT]
+>
+> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
+
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___flexbox4
 <ul>
@@ -187,7 +208,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox4
+```css live-sample___flexbox4
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -206,13 +227,13 @@ li {
   padding: 0.5em;
   margin: 0.5em;
 }
-```
 
-```css live-sample___flexbox4
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
