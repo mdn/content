@@ -142,22 +142,28 @@ The `<container-condition>` can include one or more boolean size queries, each w
 ```
 
 - `aspect-ratio`
-  - : The {{cssxref("aspect-ratio")}} of the container calculated as the width to the height of the container expressed as a {{cssxref("ratio")}} value.
+  - : The ratio of the container's **content box** width to its **content box** height, expressed as a {{cssxref("ratio")}} value.  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 - `block-size`
-  - : The {{cssxref("block-size")}} of the container expressed as a {{cssxref("length")}} value.
+  - : The size of the container's **content box** in the block dimension, expressed as a {{cssxref("length")}} value.  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 - `height`
-  - : The height of the container expressed as a {{cssxref("length")}} value.
+  - : The height of the container's **content box**, expressed as a {{cssxref("length")}} value.  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 - `inline-size`
-  - : The {{cssxref("inline-size")}} of the container expressed as a {{cssxref("length")}} value.
+  - : The size of the container's **content box** in the inline dimension, expressed as a {{cssxref("length")}} value.  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 - `orientation`
-  - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container, either `landscape` or `portrait`.
+  - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container's **content box**, either `landscape` (width > height) or `portrait` (height > width).  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 - `width`
-  - : The width of the container expressed as a {{cssxref("length")}} value.
+  - : The width of the container's **content box**, expressed as a {{cssxref("length")}} value.  
+     **Always measures the content box**, ignoring `box-sizing`.
 
 #### Scroll-state container descriptors
 
