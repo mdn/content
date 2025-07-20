@@ -116,16 +116,14 @@ Its `value` can, however, still be changed from JavaScript code that directly se
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below.
-Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `1970-01` (Unix epoch) if neither is provided.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (the Unix epoch, `1970-01`) if neither is provided.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+For `month` inputs, the value of `step` is given in months. The default value of `step` is 1, indicating 1 month.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `month` inputs because the picker UI only allows selecting whole months.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-For `month` inputs, the value of `step` is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months).
-The default value of `step` is 1 month.
 
 ## Using month inputs
 
