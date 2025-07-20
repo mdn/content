@@ -19,7 +19,9 @@ A string with the following possible value:
 - `"half"`
   - : The browser must send the entire request before processing the response.
 
-If not specified when creating the request, the value will be `undefined`.
+## Notes
+
+Although `duplex` can be passed as an option when constructing a `Request`, it is not currently exposed as a readable property on the resulting `Request` object in all browsers.
 
 ## Examples
 
