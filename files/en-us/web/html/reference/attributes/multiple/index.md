@@ -83,6 +83,8 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 
 When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
 
+Multiple selected options are submitted using the `URLSearchParams` array convention, i.e., `name=value1&name=value2`.
+
 ## Accessibility concerns
 
 Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `multiple` attribute, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "separate email addresses with a comma."
