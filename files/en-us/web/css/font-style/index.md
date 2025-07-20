@@ -3,9 +3,8 @@ title: font-style
 slug: Web/CSS/font-style
 page-type: css-property
 browser-compat: css.properties.font-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-style`** [CSS](/en-US/docs/Web/CSS) property sets whether a font should be styled with a normal, italic, or oblique face from its {{cssxref("font-family")}}.
 
@@ -48,7 +47,7 @@ font-style: oblique 40deg;
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 

@@ -3,9 +3,8 @@ title: CSS color values
 short-title: Color values
 slug: Web/CSS/CSS_colors/Color_values
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 To represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking the color down into components, such as amounts of different primary colors to mix together, or brightness and hue. Defined color models ensure that colors will appear the same no matter where they are rendered.
 
@@ -98,7 +97,7 @@ The HTML creates a box containing a color picker control (with a label created u
     16px "Lucida Grande",
     "Helvetica",
     "Arial",
-    "sans-serif";
+    sans-serif;
 }
 ```
 
@@ -193,7 +192,7 @@ th {
 }
 ```
 
-```html
+```html hidden
 <table>
   <thead>
     <tr>
@@ -201,33 +200,31 @@ th {
       <th scope="col">Example</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><code>hsl(90deg 0% 50%)</code></td>
-      <td style="background-color: hsl(90deg 0% 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(90 100% 50%)</code></td>
-      <td style="background-color: hsl(90 100% 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn 50% 75%)</code></td>
-      <td style="background-color: hsl(0.15turn 50% 75%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn 90% 75%)</code></td>
-      <td style="background-color: hsl(0.15turn 90% 75%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn 90% 50%)</code></td>
-      <td style="background-color: hsl(0.15turn 90% 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(270deg 90% 50% / 50%)</code></td>
-      <td style="background-color: hsl(270deg 90% 50% / 50%);">&nbsp;</td>
-    </tr>
-  </tbody>
+  <tbody></tbody>
 </table>
+```
+
+```js hidden
+const colors = [
+  "hsl(90deg 0% 50%)",
+  "hsl(90 100% 50%)",
+  "hsl(0.15turn 50% 75%)",
+  "hsl(0.15turn 90% 75%)",
+  "hsl(0.15turn 90% 50%)",
+  "hsl(270deg 90% 50% / 50%)",
+];
+
+const tbody = document.querySelector("tbody");
+for (const color of colors) {
+  const tr = document.createElement("tr");
+  const td1 = document.createElement("td");
+  td1.appendChild(document.createElement("code")).textContent = color;
+  const td2 = document.createElement("td");
+  td2.style.backgroundColor = color;
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tbody.appendChild(tr);
+}
 ```
 
 {{EmbedLiveSample("HSL_functional_notation", 300, 200)}}
@@ -260,8 +257,7 @@ hwb(90 10% 10% / 50%)
 
 In the below examples, we set the same hues as in the `hsl()` examples, but we are adding whiteness and blackness to each hue via `hwb()` instead of saturation and lightness:
 
-```css hidden
-{/*end the bad selector*/}
+```css hidden live-sample___hwb_functional_notation
 table {
   border: 1px solid black;
   font:
@@ -285,7 +281,7 @@ th {
 }
 ```
 
-```html
+```html hidden live-sample___hwb_functional_notation
 <table>
   <thead>
     <tr>
@@ -293,33 +289,31 @@ th {
       <th scope="col">Example</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><code>hwb(90deg 50% 50%)</code></td>
-      <td style="background-color: hwb(90deg 50% 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hwb(90 0% 0%)</code></td>
-      <td style="background-color: hwb(90 0% 0%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hwb(0.15turn 25% 0%)</code></td>
-      <td style="background-color: hwb(0.15turn 25% 0%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hwb(0.15turn 10% 25%)</code></td>
-      <td style="background-color: hwb(0.15turn 10% 25%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hwb(1turn 10% 65%)</code></td>
-      <td style="background-color: hwb(1turn 10% 65%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hwb(270deg 75% 10%)</code></td>
-      <td style="background-color: hwb(270deg 75% 10%);">&nbsp;</td>
-    </tr>
-  </tbody>
+  <tbody></tbody>
 </table>
+```
+
+```js hidden live-sample___hwb_functional_notation
+const colors = [
+  "hwb(90deg 50% 50%)",
+  "hwb(90 0% 0%)",
+  "hwb(0.15turn 25% 0%)",
+  "hwb(0.15turn 10% 25%)",
+  "hwb(1turn 10% 65%)",
+  "hwb(270deg 75% 10%)",
+];
+
+const tbody = document.querySelector("tbody");
+for (const color of colors) {
+  const tr = document.createElement("tr");
+  const td1 = document.createElement("td");
+  td1.appendChild(document.createElement("code")).textContent = color;
+  const td2 = document.createElement("td");
+  td2.style.backgroundColor = color;
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tbody.appendChild(tr);
+}
 ```
 
 {{EmbedLiveSample("HWB_functional_notation", 300, 200)}}
@@ -339,11 +333,11 @@ Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `okl
 The following gradients demonstrate the hue colors at every angle form `0deg` to `360deg` in the sRGB, CIE Lab, and OKlab color spaces:
 
 ```html hidden live-sample___hues
-<p>sRGB (`hsl()` and `hwb()`)</p>
+<p>sRGB (<code>hsl()</code> and <code>hwb()</code>)</p>
 <div id="srgb"></div>
-<p>CIE Lab (`lch()`)</p>
+<p>CIE Lab (<code>lch()</code>)</p>
 <div id="lch"></div>
-<p>OKLab (`oklch()`)</p>
+<p>OKLab (<code>oklch()</code>)</p>
 <div id="oklch"></div>
 <p>
   <label><input type="checkbox" /> Toggle greyscale</label>
@@ -417,9 +411,8 @@ The example below shows the effect of changing the lightness value in the `lch()
   grid-template-columns: repeat(6, 1fr);
   gap: 4px;
 }
-[id$="99"],
-[id$="90"],
-[id$="80"] {
+
+.dark-text {
   color: lch(1% 40 0deg);
 }
 
@@ -427,104 +420,32 @@ The example below shows the effect of changing the lightness value in the `lch()
   border-radius: 8px;
   padding: 8px 4px;
 }
-#lch-1 {
-  background-color: lch(1% 40 0deg);
-}
-#lch-10 {
-  background-color: lch(10% 40 0deg);
-}
-#lch-20 {
-  background-color: lch(20% 40 0deg);
-}
-#lch-30 {
-  background-color: lch(30% 40 0deg);
-}
-#lch-40 {
-  background-color: lch(40% 40 0deg);
-}
-#lch-50 {
-  background-color: lch(50% 40 0deg);
-}
-#lch-60 {
-  background-color: lch(60% 40 0deg);
-}
-#lch-70 {
-  background-color: lch(70% 40 0deg);
-}
-#lch-80 {
-  background-color: lch(80% 40 0deg);
-}
-#lch-90 {
-  background-color: lch(90% 40 0deg);
-}
-#lch-99 {
-  background-color: lch(99% 40 0deg);
-}
-
-#oklch-1 {
-  background-color: oklch(1% 0.12 0deg);
-}
-#oklch-10 {
-  background-color: oklch(10% 0.12 0deg);
-}
-#oklch-20 {
-  background-color: oklch(20% 0.12 0deg);
-}
-#oklch-30 {
-  background-color: oklch(30% 0.12 0deg);
-}
-#oklch-40 {
-  background-color: oklch(40% 0.12 0deg);
-}
-#oklch-50 {
-  background-color: oklch(50% 0.12 0deg);
-}
-#oklch-60 {
-  background-color: oklch(60% 0.12 0deg);
-}
-#oklch-70 {
-  background-color: oklch(70% 0.12 0deg);
-}
-#oklch-80 {
-  background-color: oklch(80% 0.12 0deg);
-}
-#oklch-90 {
-  background-color: oklch(90% 0.12 0deg);
-}
-#oklch-99 {
-  background-color: oklch(99% 0.12 0deg);
-}
 ```
 
 ```html hidden live-sample___lch-colors
-<div class="container">
-  <div id="lch-1">lch(1 40 0)</div>
-  <div id="lch-10">lch(10 40 0)</div>
-  <div id="lch-20">lch(20 40 0)</div>
-  <div id="lch-30">lch(30 40 0)</div>
-  <div id="lch-40">lch(40 40 0)</div>
-  <div id="lch-50">lch(50 40 0)</div>
-  <div id="lch-60">lch(60 40 0)</div>
-  <div id="lch-70">lch(70 40 0)</div>
-  <div id="lch-80">lch(80 40 0)</div>
-  <div id="lch-90">lch(90 40 0)</div>
-  <div id="lch-99">lch(99 40 0)</div>
-  <div></div>
-  <div id="oklch-1">oklch(1 .12 0)</div>
-  <div id="oklch-10">oklch(10 .12 0)</div>
-  <div id="oklch-20">oklch(20 .12 0)</div>
-  <div id="oklch-30">oklch(30 .12 0)</div>
-  <div id="oklch-40">oklch(40 .12 0)</div>
-  <div id="oklch-50">oklch(50 .12 0)</div>
-  <div id="oklch-60">oklch(60 .12 0)</div>
-  <div id="oklch-70">oklch(70 .12 0)</div>
-  <div id="oklch-80">oklch(80 .12 0)</div>
-  <div id="oklch-90">oklch(90 .12 0)</div>
-  <div id="oklch-99">oklch(99 .12 0)</div>
-</div>
+<div class="container"></div>
 ```
 
-{{embedlivesample("lch-colors", '100', '150') }}
+```js hidden live-sample___lch-colors
+const container = document.querySelector(".container");
+for (let l = 0; l <= 100; l += 10) {
+  const div = document.createElement("div");
+  const usedL = l === 0 ? 1 : l === 100 ? 99 : l;
+  div.textContent = div.style.backgroundColor = `lch(${usedL}% 40 0)`;
+  if (usedL >= 80) div.classList.add("dark-text");
+  container.appendChild(div);
+}
+container.appendChild(document.createElement("div"));
+for (let l = 0; l <= 100; l += 10) {
+  const div = document.createElement("div");
+  const usedL = l === 0 ? 1 : l === 100 ? 99 : l;
+  div.textContent = div.style.backgroundColor = `oklch(${usedL}% 0.12 0)`;
+  if (usedL >= 80) div.classList.add("dark-text");
+  container.appendChild(div);
+}
+```
+
+{{embedlivesample("lch-colors", '100', '200') }}
 
 ## Lab and OKLab
 
@@ -544,27 +465,7 @@ The `b` value has the same constraints. It specifies the color's distance along 
 The following example demonstrates the effects of varying the `a` axis via a `lab()` function and the `b` axis via an `oklab()` function.
 
 ```html hidden live-sample___lab-colors
-<div class="container">
-  <div id="lab-100">lab(50% -100% 0)</div>
-  <div id="lab-75">lab(50% -75% 0)</div>
-  <div id="lab-50">lab(50% -50% 0)</div>
-  <div id="lab-25">lab(50% -25% 0)</div>
-  <div id="lab-0">lab(50% 0 0)</div>
-  <div id="lab--25">lab(50% 25% 0)</div>
-  <div id="lab--50">lab(50% 50% 0)</div>
-  <div id="lab--75">lab(50% 75% 0)</div>
-  <div id="lab--100">lab(50% 100% 0)</div>
-  <div></div>
-  <div id="oklab-4">oklab(50% 0 -0.4)</div>
-  <div id="oklab-3">oklab(50% 0 -0.3)</div>
-  <div id="oklab-2">oklab(50% 0 -0.2)</div>
-  <div id="oklab-1">oklab(50% 0 -0.1)</div>
-  <div id="oklab-0">oklab(50% 0 0)</div>
-  <div id="oklab--1">oklab(50% 0 0.1)</div>
-  <div id="oklab--2">oklab(50% 0 0.2)</div>
-  <div id="oklab--3">oklab(50% 0 0.3)</div>
-  <div id="oklab--4">oklab(50% 0 0.4)</div>
-</div>
+<div class="container"></div>
 ```
 
 ```css hidden live-sample___lab-colors
@@ -581,60 +482,21 @@ The following example demonstrates the effects of varying the `a` axis via a `la
   border-radius: 8px;
   padding: 8px 4px;
 }
-#lab-100 {
-  background-color: lab(50% -100% 0);
-}
-#lab-75 {
-  background-color: lab(50% -75% 0);
-}
-#lab-50 {
-  background-color: lab(50% -50% 0);
-}
-#lab-25 {
-  background-color: lab(50% -25% 0);
-}
-#lab-0 {
-  background-color: lab(50% 0 0);
-}
-#lab--25 {
-  background-color: lab(50% 25% 0);
-}
-#lab--50 {
-  background-color: lab(50% 50% 0);
-}
-#lab--75 {
-  background-color: lab(50% 75% 0);
-}
-#lab--100 {
-  background-color: lab(50% 100% 0);
-}
+```
 
-#oklab-4 {
-  background-color: oklab(50% 0 -0.4);
+```js hidden live-sample___lab-colors
+const container = document.querySelector(".container");
+
+for (let a = -100; a <= 100; a += 25) {
+  const div = document.createElement("div");
+  div.textContent = div.style.backgroundColor = `lab(50% ${a}% 0)`;
+  container.appendChild(div);
 }
-#oklab-3 {
-  background-color: oklab(50% 0 -0.3);
-}
-#oklab-2 {
-  background-color: oklab(50% 0 -0.2);
-}
-#oklab-1 {
-  background-color: oklab(50% 0 -0.1);
-}
-#oklab-0 {
-  background-color: oklab(50% 0 0);
-}
-#oklab--1 {
-  background-color: oklab(50% 0 0.1);
-}
-#oklab--2 {
-  background-color: oklab(50% 0 0.2);
-}
-#oklab--3 {
-  background-color: oklab(50% 0 0.3);
-}
-#oklab--4 {
-  background-color: oklab(50% 0 0.4);
+container.appendChild(document.createElement("div"));
+for (let b = -4; b <= 4; b++) {
+  const div = document.createElement("div");
+  div.textContent = div.style.backgroundColor = `oklab(50% 0 ${b / 10})`;
+  container.appendChild(div);
 }
 ```
 

@@ -3,9 +3,8 @@ title: display
 slug: Web/CSS/display
 page-type: css-property
 browser-compat: css.properties.display
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`display`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is treated as a [block or inline box](/en-US/docs/Web/CSS/CSS_display/Flow_layout) and the layout used for its children, such as [flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout), [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
@@ -87,7 +86,7 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* box generation */
+/* Box suppression */
 display: none;
 display: contents;
 

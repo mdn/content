@@ -2,9 +2,8 @@
 title: Using relative colors
 slug: Web/CSS/CSS_colors/Relative_colors
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS colors module](/en-US/docs/Web/CSS/CSS_colors) defines **relative color syntax**, which allows a CSS {{cssxref("&lt;color&gt;")}} value to be defined relative to another color. This is a powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — enabling more effective color palette creation.
 
@@ -430,7 +429,7 @@ The full HTML is included below for reference. The most interesting parts are as
       </fieldset>
     </div>
   </form>
-  <div id="container" class="comp" style="--base-color: #ff0000;">
+  <div id="container" class="comp">
     <div></div>
     <div></div>
     <div></div>
@@ -489,6 +488,9 @@ fieldset {
 /* Palette container styling */
 
 #container {
+  /* Default value */
+  --base-color: #ff0000;
+
   display: flex;
   width: 100vw;
   height: 250px;

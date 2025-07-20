@@ -3,9 +3,8 @@ title: position-try-order
 slug: Web/CSS/position-try-order
 page-type: css-property
 browser-compat: css.properties.position-try-order
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various fallback options that result in an available position-try fallback being used to set an anchor-positioned element's position, instead of its initial position settings.
 

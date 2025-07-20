@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-conditional-5/
   - https://drafts.csswg.org/css-conditional-4/
   - https://drafts.csswg.org/css-conditional-3/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS conditional rules** module defines CSS media and support queries, enabling you to define styles that are only applied if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewport capabilities. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 
@@ -52,7 +51,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 ### data types
 
-- [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
+- [`<container-name>`](/en-US/docs/Web/CSS/@container#container-name)
 - [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 - [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)

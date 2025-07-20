@@ -1,10 +1,10 @@
 ---
 title: Firefox 57 (Quantum) for developers
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
 
@@ -29,7 +29,7 @@ _No changes._
 
 ### CSS
 
-- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest#display).
+- The `minimal-ui` and `standalone` values of the [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode) media query are now supported ([Firefox bug 1369815](https://bugzil.la/1369815)). See also the [Web app manifest `display` field](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display).
 - The `grid-row-gap` and `grid-column-gap` properties are no longer reset by the {{CSSxRef("grid")}} shorthand ([Firefox bug 1387410](https://bugzil.la/1387410)).
 - The `layout.css.clip-path-shapes.enabled` preference has been removed ([Firefox bug 1399767](https://bugzil.la/1399767)). This preference allowed disabling the {{CSSxRef("&lt;basic-shape&gt;")}} support in {{CSSxRef("clip-path")}}. This support was shipped in Firefox 54 and can no longer be disabled.
 
@@ -218,7 +218,3 @@ The following APIs have been added or extended:
 
 - [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
   - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
-
-## Older versions
-
-{{Firefox_for_developers}}

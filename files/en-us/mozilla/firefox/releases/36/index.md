@@ -1,10 +1,10 @@
 ---
 title: Firefox 36 for developers
+short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -154,7 +154,3 @@ _No change._
 ### Other
 
 - Firefox `-remote` [command line option](https://wiki.mozilla.org/Firefox/CommandLineOptions) has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -2,9 +2,8 @@
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Bookmarks enable users to collect and organize lists of web pages, so they can easily get back to their favorites. Using the Bookmarks API, your extensions can manipulate bookmarks in much the same way users can.
 
@@ -118,13 +117,23 @@ let gettingActiveTab = browser.tabs.query({
 gettingActiveTab.then(updateTab);
 ```
 
-`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`:
+`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`. If the protocol is supported by bookmarks, the extension determines whether the tab's URL is bookmarked and, if it is, calls `updateIcon()`.
 
 ```js
-  function updateTab(tabs) {
-    if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
+function updateTab(tabs) {
+  if (tabs[0]) {
+    currentTab = tabs[0];
+    if (isSupportedProtocol(currentTab.url)) {
+      let searching = browser.bookmarks.search({ url: currentTab.url });
+      searching.then((bookmarks) => {
+        currentBookmark = bookmarks[0];
+        updateIcon();
+      });
+    } else {
+      console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`);
+    }
+  }
+}
 ```
 
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLAnchorElement](/en-US/docs/Web/API/HTMLAnchorElement) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
@@ -136,15 +145,6 @@ function isSupportedProtocol(urlString) {
   url.href = urlString;
   return supportedProtocols.includes(url.protocol);
 }
-```
-
-If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
-
-```js
-      let searching = browser.bookmarks.search({ url: currentTab.url });
-      searching.then((bookmarks) => {
-        currentBookmark = bookmarks[0];
-        updateIcon();
 ```
 
 `updateIcon()` sets the toolbar button's icon and title, depending on whether the URL is bookmarked or not.

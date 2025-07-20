@@ -3,9 +3,8 @@ title: "@font-palette-values"
 slug: Web/CSS/@font-palette-values
 page-type: css-at-rule
 browser-compat: css.at-rules.font-palette-values
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@font-palette-values`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to customize the default values of [font-palette](/en-US/docs/Web/CSS/font-palette) created by the font-maker.
 
@@ -53,7 +52,7 @@ This example shows how you can change some or all of the colors in a color font.
 ```css
 @import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
 p {
-  font-family: "Bungee Spice";
+  font-family: "Bungee Spice", fantasy;
   font-size: 2rem;
 }
 @font-palette-values --Alternate {

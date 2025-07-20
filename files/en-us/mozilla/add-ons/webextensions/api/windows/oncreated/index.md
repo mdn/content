@@ -3,9 +3,8 @@ title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a window is created.
 
@@ -35,10 +34,6 @@ Events have three functions:
     - `window`
       - : A {{WebExtAPIRef('windows.Window')}} object containing details of the window that was created.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the IDs of new windows as they are created:
@@ -50,6 +45,10 @@ browser.windows.onCreated.addListener((window) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#event-onCreated) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

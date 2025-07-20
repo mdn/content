@@ -3,7 +3,7 @@ title: Firefox 140 for developers
 short-title: Firefox 140 (Stable)
 slug: Mozilla/Firefox/Releases/140
 page-type: firefox-release-notes-active
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 140 that affect developers. Firefox 140 was released on [June 24, 2025](https://whattrainisitnow.com/release/?version=140).
@@ -104,7 +104,3 @@ These features shipped in Firefox 140 but are disabled by default. To experiment
 
 - **`CloseWatcher`** (Nightly - desktop only): `dom.closewatcher.enabled`.
   The {{domxref("CloseWatcher")}} interface enables you to implement components that can be closed using device-native mechanisms, in the same way as built-in components. On Windows, for example, you can use this interface to make a custom sidebar close when users press the <kbd>Esc</kbd> key. ([Firefox bug 1966459](https://bugzil.la/1966459)).
-
-## Older versions
-
-{{Firefox_for_developers}}

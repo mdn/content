@@ -3,9 +3,8 @@ title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Reference/Elements/head
 page-type: html-element
 browser-compat: html.elements.head
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Reference/Elements/title), [scripts](/en-US/docs/Web/HTML/Reference/Elements/script), and [style sheets](/en-US/docs/Web/HTML/Reference/Elements/style). There can be only one `<head>` element in an HTML document.
 

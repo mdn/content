@@ -1,10 +1,10 @@
 ---
 title: Firefox 130 for developers
+short-title: Firefox 130
 slug: Mozilla/Firefox/Releases/130
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 was released on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
 
@@ -68,7 +68,3 @@ These features are newly shipped in Firefox 130 but are disabled by default. To 
   This includes support for {{domxref('Report')}} objects that have a `type` property with the value `"csp-violation"` and `body` property that is an instance of the {{domxref('CSPViolationReportBody')}} interface, the {{CSP("report-to")}} directive of the {{httpheader('Content-Security-Policy')}} HTTP response header, and the {{httpheader('Reporting-Endpoints')}} and {{httpheader('Report-To')}} HTTP response headers.
   This feature is disabled by default.
   ([Firefox bug 1391243](https://bugzil.la/1391243)).
-
-## Older versions
-
-{{Firefox_for_developers}}

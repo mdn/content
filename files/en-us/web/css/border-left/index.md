@@ -3,9 +3,8 @@ title: border-left
 slug: Web/CSS/border-left
 page-type: css-shorthand-property
 browser-compat: css.properties.border-left
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-left`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
@@ -28,7 +27,7 @@ border-left: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+border-left: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example

@@ -3,9 +3,8 @@ title: position-area
 slug: Web/CSS/position-area
 page-type: css-property
 browser-compat: css.properties.position-area
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 
@@ -140,7 +139,7 @@ The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>`
 <p class="positionedElement" contenteditable="true">This can be edited.</p>
 
 <style contenteditable="true">.positionedElement {
-    position-area: CHANGEME;
+    position-area: top center;
   }
 </style>
 ```
@@ -185,7 +184,7 @@ style {
 
 {{ EmbedLiveSample("Basic example", "100%", "360") }}
 
-Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the invalid "CHANGEME" value of the `position-area` property to a valid value.
+Try changing the amount of text in the anchor-positioned element to see how it grows. Also, try changing the value of the `position-area` property to something else, like `center`.
 
 ### `position-area` value comparison
 

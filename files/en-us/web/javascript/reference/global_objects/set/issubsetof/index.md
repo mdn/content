@@ -4,9 +4,8 @@ short-title: isSubsetOf()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isSubsetOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isSubsetOf()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if all elements of this set are in the given set.
 

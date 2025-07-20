@@ -2,9 +2,8 @@
 title: Anatomy of a video game
 slug: Games/Anatomy
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article looks at the anatomy and workflow of the average video game from a technical point of view, in terms of how the main loop should run. It helps beginners to modern game development understand what is required when building a game and how web standards like JavaScript lend themselves as tools. Experienced game programmers who are new to web development could also benefit, too.
 

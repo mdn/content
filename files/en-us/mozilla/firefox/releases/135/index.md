@@ -1,10 +1,10 @@
 ---
 title: Firefox 135 for developers
+short-title: Firefox 135
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 was released on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
@@ -80,7 +80,3 @@ These features are newly shipped in Firefox 135 but are disabled by default. To 
   The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
   This has temporarily been disabled in Nightly builds in order to avoid [breakage in-the-wild](https://bugzil.la/1937232).
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
-
-## Older versions
-
-{{Firefox_for_developers}}

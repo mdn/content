@@ -1,10 +1,10 @@
 ---
 title: Firefox 66 for developers
+short-title: Firefox 66
 slug: Mozilla/Firefox/Releases/66
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 66 that will affect developers. Firefox 66 was released on March 19, 2019.
 
@@ -138,7 +138,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 66: The Sound of Silence](https://hacks.mozilla.org/2019/03/firefox-66-the-sound-of-silence/)
-
-## Older versions
-
-{{Firefox_for_developers}}

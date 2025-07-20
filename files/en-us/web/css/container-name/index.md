@@ -3,9 +3,8 @@ title: container-name
 slug: Web/CSS/container-name
 page-type: css-property
 browser-compat: css.properties.container-name
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 A container query will apply styles to elements based on the [size](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
@@ -95,13 +94,13 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` element and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
 
 ```css
-@container excerpt (min-width: 400px) {
+@container excerpt (width >= 400px) {
   p {
     visibility: hidden;
   }
 }
 
-@container (min-width: 400px) {
+@container (width >= 400px) {
   p {
     font-size: 2rem;
   }
@@ -125,13 +124,13 @@ This will allow you to target the container using either name in the {{cssxref("
 This is useful if you want to target the same container with multiple container queries where either condition could be true:
 
 ```css
-@container meta (max-width: 500px) {
+@container meta (width <= 500px) {
   p {
     visibility: hidden;
   }
 }
 
-@container card (max-height: 200px) {
+@container card (width <= 200px) {
   h2 {
     font-size: 1.5em;
   }

@@ -20,6 +20,10 @@ remove()
 
 None.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Example
 
 ### Using `remove()`

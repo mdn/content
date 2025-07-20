@@ -1,10 +1,10 @@
 ---
 title: Firefox 70 for developers
+short-title: Firefox 70
 slug: Mozilla/Firefox/Releases/70
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.
 
@@ -81,7 +81,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed [Firefox bug 1563587](https://bugzil.la/1563587).
 - We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
-- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clear")}} ([Firefox bug 1558570](https://bugzil.la/1558570), [Firefox bug 1558571](https://bugzil.la/1558571)).
+- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, `Document.captureEvents`, and {{domxref("Document.clear")}} ([Firefox bug 1558570](https://bugzil.la/1558570), [Firefox bug 1558571](https://bugzil.la/1558571)).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ([Firefox bug 1560741](https://bugzil.la/1560741)).
 
 #### Media, Web Audio, and WebRTC
@@ -138,7 +138,3 @@ The following [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 ## See also
 
 - Hacks release post: [Firefox 70 — a bountiful release for all](https://hacks.mozilla.org/2019/10/firefox-70-a-bountiful-release-for-all/)
-
-## Older versions
-
-{{Firefox_for_developers}}

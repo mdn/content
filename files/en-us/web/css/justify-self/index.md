@@ -3,9 +3,8 @@ title: justify-self
 slug: Web/CSS/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
@@ -48,7 +47,7 @@ justify-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

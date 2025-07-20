@@ -3,9 +3,8 @@ title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCommitted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 
@@ -62,10 +61,6 @@ Events have three functions:
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URLs and extra transition information for `onCommitted`, if the target URL's hostname contains "example.com" or starts with "developer".
@@ -85,6 +80,10 @@ browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

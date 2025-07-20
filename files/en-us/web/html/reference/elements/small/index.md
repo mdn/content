@@ -3,9 +3,8 @@ title: "<small>: The Side Comment element"
 slug: Web/HTML/Reference/Elements/small
 page-type: html-element
 browser-compat: html.elements.small
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
 

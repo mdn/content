@@ -1,12 +1,12 @@
 ---
 title: Firefox 49 for developers
+short-title: Firefox 49
 slug: Mozilla/Firefox/Releases/49
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -38,7 +38,7 @@ page-type: firefox-release-notes
 - The {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ([Firefox bug 1190641](https://bugzil.la/1190641)).
 - Support for microdata attributes and the Microdata API have been removed ([Firefox bug 909633](https://bugzil.la/909633)).
 - The [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade'` and `'origin-when-cross-origin'` ([Firefox bug 1178337](https://bugzil.la/1178337)).
-- The [`form`](/en-US/docs/Web/HTML/Reference/Elements/label#form) content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
+- The `form` content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ([Firefox bug 1268852](https://bugzil.la/1268852)).
 
 ### CSS
 
@@ -144,7 +144,7 @@ page-type: firefox-release-notes
 - Our implementation of the Frame Timing API, consisting of the two interfaces `PerformanceCompositeTiming` and `PerformanceRenderTiming`, has been removed as the spec has been completely rewritten ([Firefox bug 1271846](https://bugzil.la/1271846)).
 - To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a `PositionAlign` enum instead of an `Align` enum ([Firefox bug 1276129](https://bugzil.la/1276129)).
 - The speech synthesis part of [Web Speech API](/en-US/docs/Web/API/Web_Speech_API#speech_synthesis) is now activated by default ([Firefox bug 1268633](https://bugzil.la/1268633)).
-- The [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline) is now available by default in Nightly (though not in Aurora, Beta or Release).
+- The [Performance Timeline API](/en-US/docs/Web/API/Performance_API) is now available by default in Nightly (though not in Aurora, Beta or Release).
 - The {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) ([Firefox bug 1265279](https://bugzil.la/1265279)).
 - When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — `{disableNormalization: true}` ([Firefox bug 1265405](https://bugzil.la/1265405)).
 - In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a `PositionAlignSetting` enum as per spec; previously it returned an `AlignSetting` enum ([Firefox bug 1276129](https://bugzil.la/1276129)).
@@ -173,11 +173,11 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 ## HTTP
 
 - The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) directive has been implemented ([Firefox bug 1267474](https://bugzil.la/1267474)). See also this [blog post](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) for more information.
-- The {{CSP("require-sri-for")}} {{HTTPHeader("Content-Security-Policy")}} has been implemented ([Firefox bug 1265318](https://bugzil.la/1265318)).
+- The `require-sri-for` {{HTTPHeader("Content-Security-Policy")}} has been implemented ([Firefox bug 1265318](https://bugzil.la/1265318)).
 
 ## Networking
 
-- The [Proxy Auto-Configuration (PAC)](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) implementation has been updated. Now `weekdayRange`, `dateRange`, and `timeRange` support "reversed ranges", for example, `weekdayRange("SAT", "MON")` will evaluate `true` if the current day is Saturday, Sunday, or Monday ([Firefox bug 1251332](https://bugzil.la/1251332)).
+- The [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) implementation has been updated. Now `weekdayRange`, `dateRange`, and `timeRange` support "reversed ranges", for example, `weekdayRange("SAT", "MON")` will evaluate `true` if the current day is Saturday, Sunday, or Monday ([Firefox bug 1251332](https://bugzil.la/1251332)).
 
 ## Security
 
@@ -259,9 +259,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/@media/resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/@media/resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 
@@ -277,7 +277,3 @@ In order to improve compatibility with existing content, Firefox now accepts som
 ### Other
 
 _No change._
-
-## Older versions
-
-{{Firefox_for_developers}}

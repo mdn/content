@@ -4,9 +4,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
 spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
@@ -153,7 +152,7 @@ function fn() {} // Function declaration
 const obj = { key: "value" }; // Object keys
 // Class declaration
 class C {
-  #priv = "value"; // Private property
+  #priv = "value"; // Private field
 }
 lbl: console.log(1); // Label
 ```
@@ -179,7 +178,7 @@ Not all places accept the full range of identifiers. Certain syntaxes, such as f
 function import() {} // Illegal: import is a reserved word.
 ```
 
-Most notably, private properties and object properties allow reserved words.
+Most notably, private elements and object properties allow reserved words.
 
 ```js
 const obj = { import: "value" }; // Legal despite `import` being reserved
@@ -566,7 +565,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' s
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
-- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties))
+- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements))
 - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import), [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 However, to make the language more approachable and convenient, JavaScript is able to automatically insert semicolons when consuming the token stream, so that some invalid token sequences can be "fixed" to valid syntax. This step happens after the program text has been parsed to tokens according to the lexical grammar. There are three cases when semicolons are automatically inserted:

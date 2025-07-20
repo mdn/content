@@ -1,10 +1,10 @@
 ---
 title: Firefox 78 for developers
+short-title: Firefox 78
 slug: Mozilla/Firefox/Releases/78
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 78 that will affect developers. Firefox 78 was released on June 30, 2020.
 
@@ -61,7 +61,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### Service workers
 
-- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
+- [Extended Support Releases (ESR)](https://www.firefox.com/en-US/browsers/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
 
 ### WebAssembly
 
@@ -78,7 +78,3 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 - When using [`proxy.onRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest), a filter that limits based on tab id or window id is now correctly applied. This could be useful for add-ons that want to provide proxy functionality just in just one window.
 - [Clicking within the context menu](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) from the "all tabs" dropdown now passed the appropriate tab object. In the past, the active tab was erroneously passed.
 - When using [`downloads.download`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) with the saveAs option, the recently used directory is now remembered. While this information is not available to developers, it is very convenient to users.
-
-## Older versions
-
-{{Firefox_for_developers}}

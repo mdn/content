@@ -1,10 +1,10 @@
 ---
 title: Firefox 1.5 for developers
+short-title: Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improved its already best in class standards support, and provided new capabilities to enable the next generation of web applications. Firefox 1.5 features improved support for CSS2 and CSS3, APIs for scriptable and programmable 2D graphics through [SVG](/en-US/docs/Web/SVG) 1.1 and [`<canvas>`](/en-US/docs/Web/API/Canvas_API), [XForms](/en-US/docs/Glossary/XForms) and XML events, as well as many DHTML, JavaScript, and DOM enhancements.
 
@@ -12,7 +12,7 @@ Based on the [Gecko](/en-US/docs/Glossary/Gecko) 1.8 engine, Firefox 1.5 improve
 
 Several tools and browser extensions are available to help developers support Firefox 1.5.
 
-- [DOM Inspector](/en-US/docs/DOM_Inspector), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
+- [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
 - JavaScript console, a tool to write and test JavaScript code as well as view JavaScript and CSS errors on a page.
 - View page source, with syntax highlighting and find features.
 - [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.

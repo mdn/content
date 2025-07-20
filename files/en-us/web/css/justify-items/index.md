@@ -3,9 +3,8 @@ title: justify-items
 slug: Web/CSS/justify-items
 page-type: css-property
 browser-compat: css.properties.justify-items
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 
@@ -50,7 +49,7 @@ justify-items: end;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

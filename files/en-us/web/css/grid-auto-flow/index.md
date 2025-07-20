@@ -3,9 +3,8 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 page-type: css-property
 browser-compat: css.properties.grid-auto-flow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-auto-flow`** [CSS](/en-US/docs/Web/CSS) property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
 
@@ -48,7 +47,7 @@ grid-auto-flow: row dense;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 

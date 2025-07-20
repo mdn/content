@@ -3,9 +3,8 @@ title: Equality (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 page-type: javascript-operator
 browser-compat: javascript.operators.equality
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **equality (`==`)** operator checks whether its two operands are equal,
 returning a Boolean result.

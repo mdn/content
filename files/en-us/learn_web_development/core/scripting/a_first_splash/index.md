@@ -203,7 +203,7 @@ Let's now move forward, looking at how we can turn these steps into code, buildi
 To begin this tutorial, we'd like you to make a local copy of the following code in a new HTML file using your code editor.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

@@ -4,9 +4,8 @@ short-title: script-src-elem
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src-elem
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** directive specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
 

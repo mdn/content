@@ -3,9 +3,8 @@ title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
 page-type: css-property
 browser-compat: css.properties.font-variant-numeric
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
@@ -152,7 +151,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 
 .ordinal {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   font-variant-numeric: ordinal;
 }

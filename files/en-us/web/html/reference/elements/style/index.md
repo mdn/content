@@ -3,9 +3,8 @@ title: "<style>: The Style Information element"
 slug: Web/HTML/Reference/Elements/style
 page-type: html-element
 browser-compat: html.elements.style
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
@@ -143,7 +142,7 @@ In this example we build on the previous one, including a `media` attribute on t
         border: 1px solid black;
       }
     </style>
-    <style media="all and (max-width: 500px)">
+    <style media="(width < 500px)">
       p {
         color: blue;
         background-color: yellow;

@@ -3,9 +3,8 @@ title: CSS data types
 slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://drafts.csswg.org/css-values/#component-types).
 
@@ -15,13 +14,7 @@ Below you will find a reference to the types that you are most likely to come ac
 
 ## Syntax
 
-```css
-selector {
-  property: <unit-data-type>;
-}
-```
-
-In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`.
+In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`. They don't correspond to any tangible CSS code entity.
 
 ## Textual data types
 

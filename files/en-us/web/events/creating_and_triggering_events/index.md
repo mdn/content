@@ -2,6 +2,7 @@
 title: Creating and triggering events
 slug: Web/Events/Creating_and_triggering_events
 page-type: guide
+sidebar: events
 ---
 
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
@@ -166,11 +167,3 @@ function simulateClick() {
 - {{domxref("Event.initEvent()")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
 - {{domxref("EventTarget.addEventListener()")}}
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
-    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
-  </ol>
-</section>

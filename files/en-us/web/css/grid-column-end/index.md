@@ -3,9 +3,8 @@ title: grid-column-end
 slug: Web/CSS/grid-column-end
 page-type: css-property
 browser-compat: css.properties.grid-column-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-column-end`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
 
@@ -48,12 +47,12 @@ grid-column-end: span 3;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```

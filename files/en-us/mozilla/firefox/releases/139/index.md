@@ -3,7 +3,7 @@ title: Firefox 139 for developers
 short-title: Firefox 139
 slug: Mozilla/Firefox/Releases/139
 page-type: firefox-release-notes
-sidebar: firefoxsidebar
+sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 139 that affect developers.
@@ -97,7 +97,3 @@ These features shipped in Firefox 139 but are disabled by default. To experiment
 - **Disable non-standard `beforescriptexecute` and `afterscriptexecute`**: `dom.events.script_execute.enabled`.
   The events have been disabled on Nightly only, allowing browser testing prior to their removal.
   The affected events are: [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface. ([Firefox bug 1954685](https://bugzil.la/1954685)).
-
-## Older versions
-
-{{Firefox_for_developers}}

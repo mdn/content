@@ -3,9 +3,8 @@ title: "<img>: The Image Embed element"
 slug: Web/HTML/Reference/Elements/img
 page-type: html-element
 browser-compat: html.elements.img
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
@@ -202,7 +201,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     1. A [media condition](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax). This must be omitted for the last item in the list.
     2. A source size value.
 
-    Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px. Because a source size descriptor is used to specify the width to use for the image during layout of the page, the media condition is typically (but not necessarily) based on the [width](/en-US/docs/Web/CSS/@media/width) information.
+    Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(height <= 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px. Because a source size descriptor is used to specify the width to use for the image during layout of the page, the media condition is typically (but not necessarily) based on the [width](/en-US/docs/Web/CSS/@media/width) information.
 
     Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
@@ -366,14 +365,14 @@ In this example we include a `srcset` attribute with a reference to a high-resol
 
 ### Using the srcset and sizes attributes
 
-The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that support `srcset` when `w` descriptors are included. When the `(max-width: 600px)` media condition matches, the 200 pixel-wide image will load (it is the one that matches `200px` most closely), otherwise the other image will load.
+The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that support `srcset` when `w` descriptors are included. When the `(width <= 600px)` media condition matches, the 200 pixel-wide image will load (it is the one that matches `200px` most closely), otherwise the other image will load.
 
 ```html
 <img
   src="clock-demo-200px.png"
   alt="The time is 12:45."
   srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
-  sizes="(max-width: 600px) 200px, 50vw" />
+  sizes="(width <= 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}

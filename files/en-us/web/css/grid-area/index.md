@@ -3,9 +3,8 @@ title: grid-area
 slug: Web/CSS/grid-area
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-area
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-area`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid", "grid")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
 
@@ -50,12 +49,12 @@ grid-area: 2 / 1 / 2 / 4;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```

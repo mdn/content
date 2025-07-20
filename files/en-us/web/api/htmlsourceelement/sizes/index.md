@@ -23,15 +23,14 @@ A string.
   id="el"
   src="mediumVideo.mov"
   type="video/quicktime"
-  sizes="((min-width: 50em) and (max-width: 60em)) 50em,
-         ((min-width: 30em) and (max-width: 50em)) 30em" />
+  sizes="(50em <= width <= 60px) 50em,
+         (30em <= width < 50em) 30em" />
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.sizes); // Output: "((min-width: 50em) and (max-width: 60em)) 50em, ((min-width: 30em) and (max-width: 50em)) 30em"
-el.sizes =
-  "((min-width: 50em) and (max-width: 60em)) 50em, ((min-width: 30em) and (max-width: 50em)) 30em"; // Updates the sizes value
+console.log(el.sizes); // Output: "(50em <= width <= 60px) 50em, (30em <= width < 50em) 30em"
+el.sizes = "(50em <= width <= 60px) 100em, (30em <= width < 50em) 60em"; // Updates the sizes value
 ```
 
 ## Specifications

@@ -3,9 +3,8 @@ title: color-index
 slug: Web/CSS/@media/color-index
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-index
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-index`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the number of entries in the output device's color lookup table.
 
@@ -55,7 +54,7 @@ This HTML will apply a special stylesheet for devices that have at least 256 col
 <link rel="stylesheet" href="http://foo.bar.com/base.css" />
 <link
   rel="stylesheet"
-  media="all and (min-color-index: 256)"
+  media="(color-index >= 256)"
   href="http://foo.bar.com/color-stylesheet.css" />
 ```
 

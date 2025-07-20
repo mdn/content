@@ -3,9 +3,8 @@ title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_scripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

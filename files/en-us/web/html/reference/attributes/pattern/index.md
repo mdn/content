@@ -4,9 +4,8 @@ short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 page-type: html-attribute
 browser-compat: html.elements.input.pattern
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
 

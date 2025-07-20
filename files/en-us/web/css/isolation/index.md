@@ -3,9 +3,8 @@ title: isolation
 slug: Web/CSS/isolation
 page-type: css-property
 browser-compat: css.properties.isolation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`isolation`** [CSS](/en-US/docs/Web/CSS) property determines whether an element must create a new {{glossary("stacking context")}}.
 
@@ -88,7 +87,7 @@ The `isolation` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="big-square ">
+<div class="big-square">
   <div class="isolation-auto">
     <div class="small-square">auto</div>
   </div>

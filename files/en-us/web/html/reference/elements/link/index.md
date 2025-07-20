@@ -3,9 +3,8 @@ title: "<link>: The External Resource Link element"
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
@@ -52,10 +51,7 @@ You can also provide a media type or query inside a `media` attribute; this reso
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+<link href="mobile.css" rel="stylesheet" media="screen and (width <= 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
@@ -354,14 +350,11 @@ this resource will then only be loaded if the media condition is true. For examp
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
 <link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
+<link href="desktop.css" rel="stylesheet" media="screen and (width >= 600px)" />
 <link
   href="highres.css"
   rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
+  media="screen and (resolution >= 300dpi)" />
 ```
 
 ### Stylesheet load events

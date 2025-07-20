@@ -4,9 +4,8 @@ short-title: style-src-elem
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src-elem
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-elem`** directive specifies valid sources for stylesheet {{HTMLElement("style")}} elements and {{HTMLElement("link")}} elements with `rel="stylesheet"`.
 

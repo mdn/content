@@ -1868,6 +1868,10 @@
       "inh": "Credential",
       "impl": []
     },
+    "IdentityCredentialError": {
+      "inh": "DOMException",
+      "impl": []
+    },
     "IdentityProvider": {
       "inh": "",
       "impl": []
@@ -3149,10 +3153,6 @@
       "impl": []
     },
     "SpeechRecognitionPhrase": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechRecognitionPhraseList": {
       "inh": "",
       "impl": []
     },

@@ -3,9 +3,8 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
 browser-compat: css.properties.flex-basis
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
@@ -43,7 +42,7 @@ flex-basis: 200px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;

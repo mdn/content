@@ -3,9 +3,8 @@ title: flex
 slug: Web/CSS/flex
 page-type: css-shorthand-property
 browser-compat: css.properties.flex
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 
@@ -44,7 +43,7 @@ flex: 1 1 100px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -53,7 +52,7 @@ flex: 1 1 100px;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```

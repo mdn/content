@@ -3,9 +3,8 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
 
@@ -20,11 +19,11 @@ border-top-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+border-top-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
+border-top-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice

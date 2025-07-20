@@ -2,9 +2,8 @@
 title: Application context
 slug: Glossary/Application_context
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Application context** refers to the top-level {{glossary("browsing context")}} of a [web application](/en-US/docs/Web/Progressive_web_apps).
 It determines how an app's browsing context, such as a tab or a window, is presented and behaves.

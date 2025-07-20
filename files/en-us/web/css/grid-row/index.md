@@ -3,9 +3,8 @@ title: grid-row
 slug: Web/CSS/grid-row
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-row
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
@@ -48,12 +47,12 @@ grid-row: 1 / span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```

@@ -3,9 +3,8 @@ title: Handling overflow in multi-column layout
 short-title: Handling overflow
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we look at how to deal with overflow in a multi-column (_multicol_) layout, both inside the column boxes and in situations where there is more content than will fit into the container.
 
@@ -138,7 +137,7 @@ body {
 
 One issue with multicol on the web is that if the columns are taller than the viewport, the reader will need to scroll the page up and down to read, which is not a good user experience. One way to avoid this is to only apply the column properties if you know there is enough vertical space.
 
-In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
+In the example below, we used a `height` [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
 
 ```html hidden live-sample___min-height
 <div class="container">
@@ -165,7 +164,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 
-@media (min-height: 300px) {
+@media (height >= 300px) {
   .container {
     column-width: 200px;
   }

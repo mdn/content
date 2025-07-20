@@ -3,9 +3,8 @@ title: tabGroups.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabGroups.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a tab group is removed. This occurs when a user closes a tab group or a tab group is closed automatically because another change means it no longer contained any tabs.
 

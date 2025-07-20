@@ -3,9 +3,8 @@ title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.src
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
@@ -192,7 +191,7 @@ The example below shows how to define two font faces with the same font family. 
 
 /* Using the regular font face */
 p {
-  font-family: MainText;
+  font-family: MainText, sans-serif;
 }
 
 /* Font-family is inherited, but bold fonts are used */
@@ -217,7 +216,7 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 
 /* Using the font face */
 p {
-  font-family: "Trickster";
+  font-family: "Trickster", fantasy;
 }
 ```
 
@@ -268,7 +267,7 @@ The block of CSS inside `@supports` will be applied if the user agent supports `
   }
 
   .colored_text {
-    font-family: "Trickster";
+    font-family: "Trickster", fantasy;
   }
 }
 ```

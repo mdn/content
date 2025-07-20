@@ -155,5 +155,4 @@ The [Permissions API](/en-US/docs/Web/API/Permissions_API) `screen-wake-lock` pe
 
 ## See also
 
-- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
-- [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/) on developer.chrome.com

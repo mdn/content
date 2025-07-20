@@ -3,9 +3,8 @@ title: grid-template-areas
 slug: Web/CSS/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-template-areas`** [CSS](/en-US/docs/Web/CSS) property specifies named {{glossary("grid areas")}}, establishing the cells in the grid and assigning them names.
 
@@ -55,19 +54,19 @@ grid-template-areas:
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   grid-area: a;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-area: b;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-area: c;
 }

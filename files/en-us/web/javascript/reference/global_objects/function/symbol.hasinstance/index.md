@@ -4,9 +4,8 @@ short-title: "[Symbol.hasInstance]()"
 slug: Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.@@hasInstance
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.hasInstance]()`** method of {{jsxref("Function")}} instances specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. It is called by the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator.
 

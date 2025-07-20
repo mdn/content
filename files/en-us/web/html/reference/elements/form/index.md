@@ -3,9 +3,8 @@ title: "<form>: The Form element"
 slug: Web/HTML/Reference/Elements/form
 page-type: html-element
 browser-compat: html.elements.form
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 
@@ -72,7 +71,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `on`: The browser may automatically complete entries.
 
 - `name`
-  - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
+  - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any. The name becomes a property of the {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("document.forms")}} objects, containing a reference to the form element.
 
 - [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
   - : Controls the annotations and what kinds of links the form creates. Annotations include [`external`](/en-US/docs/Web/HTML/Reference/Attributes/rel#external), [`nofollow`](/en-US/docs/Web/HTML/Reference/Attributes/rel#nofollow), [`opener`](/en-US/docs/Web/HTML/Reference/Attributes/rel#opener), [`noopener`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noopener), and [`noreferrer`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noreferrer). Link types include [`help`](/en-US/docs/Web/HTML/Reference/Attributes/rel#help), [`prev`](/en-US/docs/Web/HTML/Reference/Attributes/rel#prev), [`next`](/en-US/docs/Web/HTML/Reference/Attributes/rel#next), [`search`](/en-US/docs/Web/HTML/Reference/Attributes/rel#search), and [`license`](/en-US/docs/Web/HTML/Reference/Attributes/rel#license). The [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) value is a space-separated list of these enumerated values.

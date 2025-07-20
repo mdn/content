@@ -5,9 +5,8 @@ page-type: guide
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 

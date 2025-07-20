@@ -1,10 +1,10 @@
 ---
 title: Firefox 38 for developers
+short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 38 was released on May 12th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -27,7 +27,7 @@ Highlights:
 ### CSS
 
 - Support for {{cssxref("ruby-position")}} and {{cssxref("ruby-align")}} have been added and is available by default ([Firefox bug 1055676](https://bugzil.la/1055676) [Firefox bug 1123917](https://bugzil.la/1123917) and [Firefox bug 1039006](https://bugzil.la/1039006)).
-- The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
+- The `:unresolved` pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ([Firefox bug 1120721](https://bugzil.la/1120721)).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ([Firefox bug 1110277](https://bugzil.la/1110277)).
 - The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
@@ -146,7 +146,3 @@ _No change._
 - `"@mozilla.org/network/atomic-file-output-stream;1"` and `"@mozilla.org/network/safe-file-output-stream;1"` now throw an exception if `PR_APPEND` is passed without `PR_TRUNCATE` ([Firefox bug 1117580](https://bugzil.la/1117580)).
 - `nsICompositionStringSynthesizer` and `nsIDOMWindowUtils.sendCompositionEvent()` have been removed. Instead, use `nsITextInputProcessor`. ([Firefox bug 917322](https://bugzil.la/917322))
 - `nsIDOMWindowUtils.sendKeyEvent()` is now deprecated. Instead, use `nsITextInputProcessor` ([Firefox bug 1119609](https://bugzil.la/1119609)).
-
-## Older versions
-
-{{Firefox_for_developers}}

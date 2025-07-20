@@ -1,10 +1,10 @@
 ---
 title: Firefox 56 for developers
+short-title: Firefox 56
 slug: Mozilla/Firefox/Releases/56
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.
 
@@ -22,7 +22,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 
 ### CSS
 
-- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query [`-moz-windows-accent-color-in-titlebar`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) (see [Firefox bug 1379938](https://bugzil.la/1379938)).
+- Implemented the proprietary Mozilla-specific {{cssxref("&lt;color&gt;")}} values `-moz-win-accentcolor` and `-moz-win-accentcolortext` (see [Firefox bug 1344910](https://bugzil.la/1344910)), and the proprietary media query `-moz-windows-accent-color-in-titlebar` (see [Firefox bug 1379938](https://bugzil.la/1379938)).
 
 ### SVG
 
@@ -44,7 +44,7 @@ _No changes._
 - The {{domxref("Gamepad.displayId")}} property has been implemented ([Firefox bug 1375816](https://bugzil.la/1375816)).
 - The {{domxref("PerformanceTiming.secureConnectionStart")}} property has been implemented ([Firefox bug 772589](https://bugzil.la/772589)).
 - Firefox used to accept `iso-2022-jp-2` sequences silently when an `iso-2022-jp` {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} was instantiated, however this has now been removed to simplify the API, as no other browsers support it and no pages seem to use it. ([Firefox bug 715833](https://bugzil.la/715833)).
-- The 4ms clamping behavior of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) ([Firefox bug 1378586](https://bugzil.la/1378586)).
+- The 4ms clamping behavior of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} has been updated to be more in line with other browsers, as described in [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) ([Firefox bug 1378586](https://bugzil.la/1378586)).
 - The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.visibilitychange_event", "onvisibilitychange")}} handler has been added ([Firefox bug 1333912](https://bugzil.la/1333912)).
 - The `Window.showModalDialog()` method has been removed ([Firefox bug 981796](https://bugzil.la/981796)).
 - The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ([Firefox bug 1366361](https://bugzil.la/1366361)).
@@ -104,7 +104,7 @@ _No changes._
 - [cookies.set()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/set) and [cookies.remove()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove) now work in private browsing mode
 - [devtools.panels.elements.onSelectionChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
 - [downloads.open()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/open) can now only be called from a user action
-- [FindProxyForURL "DIRECT" return type no longer takes an argument](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_environment)
+- [FindProxyForURL "DIRECT" return type no longer takes an argument](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format)
 - [history.onVisited](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) now includes the page title if it is known.
 - [management.get()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/get) and [management.getAll()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/getAll)
 - [menus](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) now supports the "tools_menu" context
@@ -123,7 +123,3 @@ _No changes._
 - [tabs.Tab.lastAccessed](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)
 - [theme.reset()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset)
 - [windows.create()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) and [windows.update()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update) now support prefacing window title
-
-## Older versions
-
-{{Firefox_for_developers}}

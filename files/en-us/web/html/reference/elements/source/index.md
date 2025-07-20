@@ -3,9 +3,8 @@ title: "<source>: The Media or Image Source element"
 slug: Web/HTML/Reference/Elements/source
 page-type: html-element
 browser-compat: html.elements.source
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Guides/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Guides/Formats).
 
@@ -98,7 +97,7 @@ This example demonstrates how to offer an alternate source file for viewports ab
 
 ```html
 <video controls>
-  <source src="foo-large.webm" media="(min-width: 800px)" />
+  <source src="foo-large.webm" media="(width >= 800px)" />
   <source src="foo.webm" />
   I'm sorry; your browser doesn't support HTML video.
 </video>
@@ -112,8 +111,8 @@ In this example, two `<source>` elements are included within {{HTMLElement("pict
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
-  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <source srcset="mdn-logo-wide.png" media="(width >= 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(width >= 600px)" />
   <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
 </picture>
 ```
@@ -129,17 +128,17 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 <picture>
   <source
     srcset="landscape.png"
-    media="(min-width: 1000px)"
+    media="(width >= 1000px)"
     width="1000"
     height="400" />
   <source
     srcset="square.png"
-    media="(min-width: 800px)"
+    media="(width >= 800px)"
     width="800"
     height="800" />
   <source
     srcset="portrait.png"
-    media="(min-width: 600px)"
+    media="(width >= 600px)"
     width="600"
     height="800" />
   <img

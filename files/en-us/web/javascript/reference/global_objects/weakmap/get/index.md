@@ -4,9 +4,8 @@ short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.get
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`get()`** method of {{jsxref("WeakMap")}} instances returns a specified element from this `WeakMap`.
 

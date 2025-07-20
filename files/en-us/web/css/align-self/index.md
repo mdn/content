@@ -3,9 +3,8 @@ title: align-self
 slug: Web/CSS/align-self
 page-type: css-property
 browser-compat: css.properties.align-self
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In flexbox, it aligns the item on the {{glossary("cross axis")}}.
 
@@ -48,7 +47,7 @@ align-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

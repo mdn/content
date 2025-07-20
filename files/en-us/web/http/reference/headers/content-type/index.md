@@ -4,9 +4,8 @@ short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
 page-type: http-header
 browser-compat: http.headers.Content-Type
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Type`** {{Glossary("representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of a resource before any content encoding is applied.
 

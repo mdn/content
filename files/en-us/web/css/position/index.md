@@ -3,9 +3,8 @@ title: position
 slug: Web/CSS/position
 page-type: css-property
 browser-compat: css.properties.position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} physical properties and the {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} flow-relative logical properties can be used to determine the final location of positioned elements.
 
@@ -75,7 +74,7 @@ section {
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   float: left;
   width: 65px;
@@ -499,7 +498,7 @@ div {
   overflow: scroll;
   scrollbar-width: thin;
   font-size: 16px;
-  font-family: verdana;
+  font-family: Verdana;
   border: 1px solid;
 }
 

@@ -2,9 +2,8 @@
 title: Your second extension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
 
@@ -136,7 +135,7 @@ The HTML file looks like this:
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />

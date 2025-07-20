@@ -13,7 +13,7 @@ Open **/controllers/bookController.js**. Find the exported `book_update_get()` c
 
 ```js
 // Display book update form on GET.
-exports.book_update_get = asyncHandler(async (req, res, next) => {
+exports.book_update_get = async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
     Book.findById(req.params.id).populate("author").exec(),
@@ -39,7 +39,7 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
     genres: allGenres,
     book,
   });
-});
+};
 ```
 
 The controller gets the id of the `Book` to be updated from the URL parameter (`req.params.id`).
@@ -48,7 +48,7 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
 > [!NOTE]
-> Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
+> Not finding any book results is **not an error** for a search, but it is for this application because we know there must be a matching book record! The code above tests for (`book===null`) in the callback, but it could equally well have daisy-chained the method [`orFail()`](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -85,7 +85,7 @@ exports.book_update_post = [
   body("genre.*").escape(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -123,11 +123,12 @@ exports.book_update_post = [
       });
       return;
     }
+
     // Data from form is valid. Update the record.
     const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
     // Redirect to book detail page.
     res.redirect(updatedBook.url);
-  }),
+  },
 ];
 ```
 

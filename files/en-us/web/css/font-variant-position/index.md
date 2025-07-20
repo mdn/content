@@ -3,9 +3,8 @@ title: font-variant-position
 slug: Web/CSS/font-variant-position
 page-type: css-property
 browser-compat: css.properties.font-variant-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-position`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
 

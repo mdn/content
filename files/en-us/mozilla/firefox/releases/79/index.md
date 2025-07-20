@@ -1,10 +1,10 @@
 ---
 title: Firefox 79 for developers
+short-title: Firefox 79
 slug: Mozilla/Firefox/Releases/79
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
 
@@ -92,7 +92,3 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 - New API: [`tabs.warmup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup) ([bug 1402256](https://bugzil.la/1402256))
 - [Storage quotas are now enforced for the `sync` storage area](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data) ([bug 1634615](https://bugzil.la/1634615)) ([addons.mozilla.org blog post](https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/))
-
-## Older versions
-
-{{Firefox_for_developers}}

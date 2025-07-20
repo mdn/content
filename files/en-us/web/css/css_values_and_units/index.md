@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-values-3/
   - https://drafts.csswg.org/css-values-4/
   - https://drafts.csswg.org/css-values-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single integer, keyword, function, or a combination of different items; some values have units, while others do not. Every property also accepts the CSS-wide values. The CSS values and units module defines the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
 
@@ -33,6 +32,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("exp()")}}
 - {{cssxref("hypot()")}}
 - {{cssxref("ident()")}}
+- {{cssxref("if()")}}
 - {{cssxref("inherit()")}}
 - {{cssxref("log()")}}
 - {{cssxref("max()")}}
@@ -41,13 +41,15 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("sibling-index()")}}
 - {{cssxref("sign()")}}
 - {{cssxref("sin()")}}
 - {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
-- {{cssxref("url()")}}
+- {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
 
 ### Data types
 

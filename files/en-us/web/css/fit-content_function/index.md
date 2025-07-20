@@ -5,9 +5,8 @@ page-type: css-function
 browser-compat:
   - css.properties.grid-template-columns.fit-content
   - css.properties.width.fit-content_function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
@@ -48,7 +47,7 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   text-align: left;
 }
@@ -61,8 +60,6 @@ See the {{cssxref("grid-template-columns")}} page for more information on the `m
 The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
 ## Syntax
-
-The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
 
 ```css
 /* <length> values */

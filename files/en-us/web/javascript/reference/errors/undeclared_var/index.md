@@ -2,9 +2,8 @@
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "Assignment to undeclared variable" occurs when the value has been assigned to an undeclared variable.
 

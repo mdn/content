@@ -1,10 +1,10 @@
 ---
 title: Firefox 8 for developers
+short-title: Firefox 8
 slug: Mozilla/Firefox/Releases/8
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 8 was released on November 8, 2011. This article provides information both for [web developers](#changes_for_web_developers) and for add-on and [Mozilla project developers](#changes_for_mozilla_and_add-on_developers) to help take full advantage of the features of this release.
 
@@ -13,7 +13,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 ### HTML
 
 - The {{ domxref("HTMLImageElement") }} `crossOrigin` property has been added and the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute has been added to the {{ HTMLElement("img") }} element. (see [Firefox bug 664299](https://bugzil.la/664299))
-- The {{ domxref("HTMLSelectElement","","add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
+- The {{ domxref("HTMLSelectElement.add()") }} method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [Firefox bug 666200](https://bugzil.la/666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [Firefox bug 617528](https://bugzil.la/617528)).
 - Support for the {{ domxref("HTMLElement.accessKeyLabel") }} attribute has been added to all elements.
@@ -159,15 +159,3 @@ The `nsIWorkerFactory` interface has been removed as well. Workers can still be 
 - You can now specify a filter when opening `about:config`; for example, `about:config?filter=sessionstore` will show only session storage related preferences.
 
 <!-- cSpell:ignore sessionstore -->
-
-## See also
-
-- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/en-US/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/en-US/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/1.5)

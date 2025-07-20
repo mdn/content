@@ -1,10 +1,10 @@
 ---
 title: Firefox 75 for developers
+short-title: Firefox 75
 slug: Mozilla/Firefox/Releases/75
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
 
@@ -106,7 +106,3 @@ _No changes._
 ### Manifest changes
 
 - The "privacy" permission is now optional. ([Firefox bug 1618399](https://bugzil.la/1618399))
-
-## Older versions
-
-{{Firefox_for_developers}}

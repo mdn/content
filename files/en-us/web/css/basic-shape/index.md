@@ -3,9 +3,8 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 page-type: css-type
 browser-compat: css.types.basic-shape
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
@@ -281,7 +280,10 @@ div {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}},
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
+- SVG shape elements: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Edit shape paths in Firefox developer tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

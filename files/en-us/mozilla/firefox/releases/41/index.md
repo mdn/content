@@ -1,12 +1,12 @@
 ---
 title: Firefox 41 for developers
+short-title: Firefox 41
 slug: Mozilla/Firefox/Releases/41
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -52,7 +52,7 @@ Highlights:
 - {{jsxref("Date.prototype.toString")}} is now a generic method ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} has been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
 - [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species) and [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species) getters have been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
-- Non-standard {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} support has been dropped ([Firefox bug 1023609](https://bugzil.la/1023609)).
+- Non-standard [let expressions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) support has been dropped ([Firefox bug 1023609](https://bugzil.la/1023609)).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, curly braces are required for [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ([Firefox bug 1150855](https://bugzil.la/1150855)).
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ([Firefox bug 1059908](https://bugzil.la/1059908) and [Firefox bug 1166950](https://bugzil.la/1166950)).
@@ -136,7 +136,7 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 ## Security
 
 - The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) referrer directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 
@@ -157,7 +157,3 @@ _No change._
 ### Other
 
 - A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: `CanvasRenderingContext2D.drawWidgetAsOnScreen()`. This API uses the operating system to snapshot the widget on-screen. For more details see [Firefox bug 1167477](https://bugzil.la/1167477).
-
-## Older versions
-
-{{Firefox_for_developers}}

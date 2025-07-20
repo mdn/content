@@ -3,9 +3,8 @@ title: "@container"
 slug: Web/CSS/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
@@ -16,16 +15,6 @@ The {{cssxref("container-name")}} property specifies a list of query container n
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
 
 ## Syntax
-
-The `@container` at-rule has the following syntax:
-
-```plain
-@container <container-condition># {
-  <stylesheet>
-}
-```
-
-For example:
 
 ```css
 /* With a <size-query> */
@@ -72,7 +61,7 @@ For example:
 }
 ```
 
-### Values
+### Parameters
 
 - `<container-condition>`
   - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
@@ -80,9 +69,6 @@ For example:
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
       - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
-
-- `<stylesheet>`
-  - : A set of CSS rules or declarations.
 
 ### Logical keywords in container queries
 
@@ -231,7 +217,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `snapped`
-  - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
+  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
@@ -396,7 +382,7 @@ The shorthand syntax for this declaration is described in the {{cssxref("contain
 Next, target that container by adding the name to the container query:
 
 ```css
-@container summary (min-width: 400px) {
+@container summary (width >= 400px) {
   .card {
     font-size: 1.5em;
   }
@@ -411,8 +397,8 @@ It is possible to nest container queries which has the same effect.
 The following query evaluates to true and applies the declared style if the container named `summary` is wider than `400px` and has an ancestor container wider than `800px`:
 
 ```css
-@container summary (min-width: 400px) {
-  @container (min-width: 800px) {
+@container summary (width > 400px) {
+  @container (width > 800px) {
     /* <stylesheet> */
   }
 }

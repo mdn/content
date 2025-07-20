@@ -3,9 +3,8 @@ title: justify-content
 slug: Web/CSS/justify-content
 page-type: css-property
 browser-compat: css.properties.justify-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the browser distributes space between and around content items along the {{Glossary("main axis")}} of a flex container and the [inline axis](/en-US/docs/Glossary/Logical_properties#inline_direction) of grid and multicol containers.
 
@@ -56,7 +55,7 @@ justify-content: space-evenly;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```

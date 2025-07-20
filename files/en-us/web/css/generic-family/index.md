@@ -3,20 +3,14 @@ title: <generic-family>
 slug: Web/CSS/generic-family
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#generic-font-families
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<generic-family>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the keyword values for generic font families used in the {{cssxref("font")}} shorthand and {{cssxref("font-family")}} longhand properties. The `<generic-family>` represents one or more locally-installed fonts belonging to that category of fonts.
 
 ## Syntax
 
-```css
-<generic-family> = serif | sans-serif | monospace | cursive | fantasy | system-ui |
-   ui-serif | ui-sans-serif | ui-monospace | ui-rounded | emoji | math | fangsong
-```
-
-## Values
+### Values
 
 The `<generic-family>` {{glossary("enumerated")}} type is specified using one of the values listed below:
 
@@ -58,6 +52,10 @@ The `<generic-family>` {{glossary("enumerated")}} type is specified using one of
 
 - `fangsong`
   - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+
+## Formal syntax
+
+{{CSSSyntaxRaw(`<generic-family> = serif | sans-serif | monospace | cursive | fantasy | system-ui | ui-serif | ui-sans-serif | ui-monospace | ui-rounded | emoji | math | fangsong`)}}
 
 ## Examples
 

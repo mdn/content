@@ -19,6 +19,10 @@ The **`clear()`** method of the {{domxref("Highlight")}} interface removes all t
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 None ({{jsxref("undefined")}}).

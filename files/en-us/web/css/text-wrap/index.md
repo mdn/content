@@ -3,9 +3,8 @@ title: text-wrap
 slug: Web/CSS/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-wrap`** CSS shorthand property controls how text inside an element is wrapped. The different values provide:
 

@@ -3,9 +3,8 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
 browser-compat: css.properties.font-variant-alternates
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-alternates`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
 
@@ -103,7 +102,7 @@ We can then use that name inside `font-variant-alternates` to switch on swashes 
 }
 
 p {
-  font-family: "MonteCarlo";
+  font-family: "MonteCarlo", cursive;
   font-size: 3rem;
   margin: 0.7rem 3rem;
 }

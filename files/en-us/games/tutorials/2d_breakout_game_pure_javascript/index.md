@@ -2,9 +2,8 @@
 title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 

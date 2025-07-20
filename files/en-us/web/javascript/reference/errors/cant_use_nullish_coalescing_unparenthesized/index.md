@@ -2,9 +2,8 @@
 title: "SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions"
 slug: Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "cannot use `??` unparenthesized within `||` and `&&` expressions" occurs when an [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) is used with a [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) or [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) in the same expression without parentheses.
 

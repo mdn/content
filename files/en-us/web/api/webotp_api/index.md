@@ -2,10 +2,13 @@
 title: WebOTP API
 slug: Web/API/WebOTP_API
 page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.OTPCredential
 spec-urls: https://wicg.github.io/web-otp/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
+{{DefaultAPISidebar("WebOTP API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **WebOTP API** provides a streamlined user experience for web apps to verify that a phone number belongs to a user when using it as a sign-in factor. WebOTP is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API).
 
@@ -114,7 +117,7 @@ Or you could specify it directly on the `<iframe>` like this:
 
 In this example, when an SMS message arrives and the user grants permission, an {{domxref("OTPCredential")}} object is returned with an OTP. This password is then prefilled into the verification form field, and the form is submitted.
 
-[Try this demo using a phone](https://web-otp.glitch.me/).
+[Try this demo using a phone](https://chrome.dev/web-otp-demo/).
 
 The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute with the value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even though the WebOTP API isn't fully supported in Safari.
 
@@ -172,6 +175,10 @@ If the user becomes distracted or navigates somewhere else, it is good to cancel
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

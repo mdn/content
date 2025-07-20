@@ -3,9 +3,8 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 page-type: css-property
 browser-compat: css.properties.grid-auto-rows
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-auto-rows`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
 
@@ -52,7 +51,7 @@ grid-auto-rows: minmax(30px, auto);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   font-size: 22px;
 }

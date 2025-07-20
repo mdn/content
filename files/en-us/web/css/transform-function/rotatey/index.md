@@ -3,9 +3,8 @@ title: rotateY()
 slug: Web/CSS/transform-function/rotateY
 page-type: css-function
 browser-compat: css.types.transform-function.rotateY
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`rotateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around the
 y-axis (vertical) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -49,9 +48,6 @@ The axis of rotation passes through an origin, defined by the {{ cssxref("transf
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
-
-The amount of rotation created by `rotateY()` is specified by an {{cssxref("&lt;angle&gt;")}}. If
-positive, the movement will be clockwise; if negative, it will be counter-clockwise.
 
 ```css
 rotateY(a)

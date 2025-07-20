@@ -3,9 +3,8 @@ title: mask-clip
 slug: Web/CSS/mask-clip
 page-type: css-property
 browser-compat: css.properties.mask-clip
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
 
@@ -156,4 +155,9 @@ body {
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
+- {{cssxref("background-clip")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

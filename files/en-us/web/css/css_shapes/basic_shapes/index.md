@@ -3,9 +3,8 @@ title: Basic shapes with shape-outside
 short-title: Using shape-outside
 slug: Web/CSS/CSS_shapes/Basic_shapes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS shapes can be defined using the {{cssxref("&lt;basic-shape&gt;")}} type. In this guide, we discuss creating rectangles, circles, ellipses, and polygons with the {{cssxref("shape-outside")}} property. These are features defined in the [CSS shapes module](/en-US/docs/Web/CSS/CSS_shapes).
 
@@ -48,8 +47,6 @@ For your shape to use a different reference box, include a different {{cssxref("
 ```
 
 Shapes created that extend past the margin box will have the shape clipped to the margin box. The following basic shapes demonstrate this.
-
-For a more extensive explanation of reference boxes as they apply to CSS Shapes, see [Understanding reference boxes for CSS shapes](http://razvancaliman.com/writing/css-shapes-reference-boxes/).
 
 ## inset()
 

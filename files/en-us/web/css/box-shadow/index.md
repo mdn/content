@@ -3,9 +3,8 @@ title: box-shadow
 slug: Web/CSS/box-shadow
 page-type: css-property
 browser-compat: css.properties.box-shadow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`box-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.
 
@@ -20,7 +19,7 @@ box-shadow: 60px -16px teal;
 ```
 
 ```css interactive-example-choice
-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 0.2);
 ```
 
 ```css interactive-example-choice
