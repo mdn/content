@@ -32,7 +32,7 @@ Highlights:
 - The {{cssxref("text-decoration")}} property is turned into shorthand property ([Firefox bug 1039488](https://bugzil.la/1039488)).
 - The properties {{cssxref("object-fit")}} and {{cssxref("object-position")}} are now supported ([Firefox bug 624647](https://bugzil.la/624647))
 - The `contents` value of the {{cssxref("display")}} property has been experimentally implemented. It is preffed off by default ([Firefox bug 907396](https://bugzil.la/907396)).
-- In [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), the [`:active` and `:hover` quiver quirk](/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
+- In [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), the [`:active` and `:hover` quiver quirk](https://web.archive.org/web/20210414153205/https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_quirks_mode_behavior#Miscellaneous_.26_Style) has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ([Firefox bug 783213](https://bugzil.la/783213)).
 - The {{cssxref("isolation")}} property has been implemented ([Firefox bug 1077872](https://bugzil.la/1077872)).
 - CSS {{cssxref("&lt;gradient&gt;")}} now applies on the premultiplied colors, matching the spec and other browsers, and getting rid of unexpected gray colors appearing in them ([Firefox bug 591600](https://bugzil.la/591600)).
 - Interpolation hint syntax has been added to {{cssxref("&lt;gradient&gt;")}} ([Firefox bug 1074056](https://bugzil.la/1074056)).
@@ -45,7 +45,7 @@ Highlights:
 
 ### JavaScript
 
-- The [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ([Firefox bug 1066322](https://bugzil.la/1066322)):
+- The [ECMAScript 2015](https://web.archive.org/web/20210612110055/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ([Firefox bug 1066322](https://bugzil.la/1066322)):
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
@@ -116,8 +116,8 @@ _No change._
 
 #### Highlights
 
-- The [`sdk/test/httpd`](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed, use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
-- Add badges to [`sdk/ui`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/ui) buttons ([Firefox bug 994280](https://bugzil.la/994280)).
+- The [`sdk/test/httpd`](https://web.archive.org/web/20160422002127/https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed, use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
+- Add badges to [`sdk/ui`](https://web.archive.org/web/20210216154222/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/ui) buttons ([Firefox bug 994280](https://bugzil.la/994280)).
 - Implemented global `require` function to access sdk modules anywhere ([Firefox bug 1070927](https://bugzil.la/1070927)), using:
 
   ```js

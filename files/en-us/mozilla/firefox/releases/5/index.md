@@ -13,10 +13,10 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 ### HTML
 
 - All HTML elements now have the {{ domxref("HTMLElement.accessKey", "accessKey") }} attribute, as well as the {{ domxref("HTMLElement.blur()", "blur()") }}, {{ domxref("HTMLElement.click()", "click()") }}, and {{ domxref("HTMLElement.focus()", "focus()") }} methods. These are specified in the {{ domxref("HTMLElement") }} interface.
-- In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
+- In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](https://web.archive.org/web/20210612224236/https://developer.mozilla.org/en-US/docs/Gecko/Character_sets_supported_by_Gecko) has been removed.
 - When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
-- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
+- WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP/Guides/CORS) support should be coming sometime in the future to make this possible more securely.
 
 #### Canvas improvements
 
@@ -82,13 +82,13 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Releases/5/Updating_add-ons).
 
 > [!NOTE]
-> Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](https://web.archive.org/web/20210119071646/https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### Changes to JavaScript code modules
 
 #### New JavaScript code modules
 
-- The [`Dict.jsm`](/en-US/docs/JavaScript_code_modules/Dict.jsm) code module was added; it provides an API for dictionaries of key/value pairs.
+- The [`Dict.jsm`](https://web.archive.org/web/20210517202711/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm) code module was added; it provides an API for dictionaries of key/value pairs.
 
 #### NetUtil.jsm
 
@@ -118,11 +118,11 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Debugging aids
 
-- The new [`DebugOnly<T>`](/en-US/Namespace/Mozilla/DebugOnly%3CT%3E) helper makes it possible to declare variables only for `DEBUG` builds.
+- The new [`DebugOnly<T>`](https://web.archive.org/web/20160805223656/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Namespace/Mozilla) helper makes it possible to declare variables only for `DEBUG` builds.
 
 ### JavaScript API (SpiderMonkey)
 
-- [`JS_DoubleToInt32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_DoubleToUint32) have been added, for converting [`jsdouble`](/en-US/docs/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
+- [`JS_DoubleToInt32()`](https://web.archive.org/web/20210124042726/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](https://web.archive.org/web/20210124042726/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) have been added, for converting [`jsdouble`](https://web.archive.org/web/20210512110527/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/jsdouble) values into C integers and unsigned integers.
 
 ### Build system changes
 
