@@ -16,7 +16,7 @@ Windows are _script-closable_ if they were created by web content. This generall
 - Windows opened using {{domxref("Window.open()")}}
 - Windows opened via web content, such as links (`<a target="_blank">`) or forms (`<form target="_blank">`), without user modifier actions
 
-Windows opened by browser UI actions — such as right-click → Open in new tab, Ctrl+Click, Shift+Click, or middle-click — are not script-closable. Calling `close()` on such windows might result in a console warning like: `Scripts may not close windows that were not opened by script.`
+Windows opened by browser UI actions (like right-click → new tab) are often not script-closable. They may only be closed if they have not been navigated (history length remains 1). Calling `close()` otherwise typically shows a console warning.
 
 Note also that `close()` has no effect when called on {{domxref("Window")}}
 objects returned by
