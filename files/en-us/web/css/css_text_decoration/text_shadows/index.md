@@ -15,6 +15,7 @@ text-shadow:
   10px 10px magenta,
   15px 15px rebeccapurple;
   text-shadow: none;
+```
 
 In this guide, we look at the components of text shadows and how you can apply multiple text shadows to an element.
 
@@ -57,7 +58,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Horizontal_offset','auto','320')}}
+{{EmbedLiveSample('horizontal','auto','320')}}
 
 You may have noticed that the `text-shadow` property has no effect on the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), similar to the {{cssxref("outline")}} property. Just like {{cssxref("box-shadow")}}, text shadows do not affect layout, do not trigger scrolling, and do not impact the size of the scrollable overflow area. While text shadows can make an element's text appear bigger, they have no actual impact on the width (or height) of content.
 
@@ -81,7 +82,7 @@ In this example, the `text-shadow` declarations differ only in their vertical of
 }
 ```
 
-{{EmbedLiveSample('Vertical_offset','auto','320')}}
+{{EmbedLiveSample('vertical','auto','320')}}
 
 ### Blur radius
 
@@ -104,7 +105,7 @@ In this example, the `text-shadow` declarations differ only in their blur radii.
 }
 ```
 
-{{EmbedLiveSample('Blur_radius','auto','320')}}
+{{EmbedLiveSample('blur','auto','320')}}
 
 ### Shadow color
 
@@ -155,7 +156,7 @@ p {
 <p>I have three shadows</p>
 ```
 
-{{EmbedLiveSample('Multiple_shadows','auto','120')}}
+{{EmbedLiveSample('multiple1','auto','120')}}
 
 ## Multiple shadows with transparent text
 
@@ -210,6 +211,6 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Multiple_shadows_with_transparent_text','auto','540')}}
+{{EmbedLiveSample('opaque','auto','540')}}
 
 In the "transparent" example, the text is transparent but is fully legible because the top shadow is not blurred. Note how the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the "semi-opaque white" example. This behavior differs from non-inset box shadows, where shadows are clipped at the border's outer edge.
