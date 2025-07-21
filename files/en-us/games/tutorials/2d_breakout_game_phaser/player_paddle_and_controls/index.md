@@ -51,8 +51,7 @@ this.paddle = this.add.sprite(
 
 We can use the `scale.width` and `scale.height` values to position the paddle exactly where we want it: `this.scale.width * 0.5` will be right in the middle of the screen. Typically, the `scale.width` and `scale.height` are the same as those in the `config` object, which represent the canvas's size before the scale factor is applied.
 
-// TODO: Phaser 3's default origin is 0.5, 0.5, so we don't need to set it explicitly here.
-As you'll notice if you reload your `index.html` at this point, the paddle is currently not exactly in the middle. Why? Because the origin from which the position is calculated always starts from the top left edge of the object. We can change that to have the origin in the middle of the paddle's width and at the bottom of its height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
+As you'll notice if you reload your `index.html` at this point, the paddle is currently at the complete bottom of the screen, too low for the paddle. Why? Because the origin from which the position is calculated starts from the center of the object. We can change that to have the origin in the middle of the paddle's width and at the bottom of its height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
 
 ```js
 this.paddle.setOrigin(0.5, 1);
