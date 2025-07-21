@@ -136,9 +136,6 @@ async function signIn() {
           clientId: "********",
           nonce: "******",
         },
-        {
-          // ...
-        },
       ],
     },
   });
@@ -161,9 +158,6 @@ async function signIn() {
           nonce: "******",
           loginHint: "user1@example.com",
         },
-        {
-          // ...
-        },
       ],
     },
   });
@@ -182,9 +176,6 @@ async function signIn() {
             configURL: "https://accounts.idp.example/config.json",
             clientId: "********",
             nonce: "******",
-          },
-          {
-            // ...
           },
         ],
       },
