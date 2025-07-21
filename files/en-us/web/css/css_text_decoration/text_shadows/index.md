@@ -5,28 +5,28 @@ page-type: guide
 sidebar: cssref
 ---
 
-You can apply shadows to your text using the {{cssxref("text-shadow")}} property. This property takes a comma-separated list of shadows. Each shadow includes at minimum two {{cssxref("length")}} values, but it can include up to three `<length>` values and one {{cssxref("color")}} value. Alternatively, the property value can be the keyword `none`, which sets the text to not have a drop shadow:
+You can apply shadows to your text by using the {{cssxref("text-shadow")}} property. This property accepts a comma-separated list of shadow values. Each shadow requires at least two {{cssxref("length")}} values but can include up to three `<length>` values and one {{cssxref("color")}} value. To remove any shadow from the text, use the keyword `none`.
 
 ```css
-text-shadow: none;
+text-shadow: 1px 3px;
 text-shadow: 1px -2px 3px white;
 text-shadow:
   5px 5px mediumblue,
   10px 10px magenta,
   15px 15px rebeccapurple;
-```
+  text-shadow: none;
 
-In this guide we look at the text shadows various component parts and applying multiple text shadows to an element.
+In this guide, we look at the components of text shadows and how you can apply multiple text shadows to an element.
 
-## Components of the `text-shadow` property
+## Components of text shadows
 
-Each shadow includes a horizontal offset and vertical offset, and an optional blur radius, in that order. You can also define the shadow's color.
+Each shadow includes a horizontal offset, a vertical offset, and an optional blur radius, in that order. You can also define the color of the shadow.
 
 ### Horizontal offset
 
-The first {{cssxref("length")}} in the value of the `text-shadow` is the horizontal offset of the shadow from the original text. Positive values move the shadow to the right. Negative values move the shadow left. A value of `0` is a common valid value.
+The first {{cssxref("length")}} in the value of `text-shadow` represents the horizontal offset of the shadow relative to the original text. Positive values move the shadow to the right, while negative values move it to the left. A value of `0` is a common valid value.
 
-In this example, we only change the horizontal offset. This first `<length>` in the value moves the shadow left or right.
+In this example, the different `text-shadow` declarations differ only in their horizontal offsets. The first `<length>` value moves the shadow to the left (`-30px`) or to the right (`30px`).
 
 ```css live-sample___horizontal
 .negative {
@@ -57,15 +57,15 @@ p {
 }
 ```
 
-{{EmbedLiveSample('horizontal','auto','320')}}
+{{EmbedLiveSample('Horizontal_offset','auto','320')}}
 
-You may have notice that the `text-shadow` property has no effect on the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), like the {{cssxref("outline")}} property. Just like {{cssxref("box-shadow")}}, text shadows do not effect layout, do not trigger scrolling, and do not impact the size of the scrollable overflow area. While text shadows can make an element's text look bigger, shadows have no actual impact on the width (or height) of content.
+You may have noticed that the `text-shadow` property has no effect on the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), similar to the {{cssxref("outline")}} property. Just like {{cssxref("box-shadow")}}, text shadows do not affect layout, do not trigger scrolling, and do not impact the size of the scrollable overflow area. While text shadows can make an element's text appear bigger, they have no actual impact on the width (or height) of content.
 
 ### Vertical offset
 
-The second {{cssxref("length")}} in the value is the vertical offset of the shadow from the original text. This required value behaves similarly to the horizontal offset except that it moves the shadow up or down rather than left or right.
+The second {{cssxref("length")}} in the value of `text-shadow` represents the vertical offset of the shadow relative to the original text. This required value behaves similarly to the horizontal offset, except that it moves the shadow up or down rather than left or right.
 
-In this example, we change the vertical offset in each `text-shadow` declaration. This second `<length>` in the value moves the shadow down if positive or up if negative.
+In this example, the `text-shadow` declarations differ only in their vertical offsets. The second `<length>` value moves the shadow up (`-30px`) or down (`30px`).
 
 ```css live-sample___vertical
 .negative {
@@ -81,13 +81,13 @@ In this example, we change the vertical offset in each `text-shadow` declaration
 }
 ```
 
-{{EmbedLiveSample('vertical','auto','320')}}
+{{EmbedLiveSample('Vertical_offset','auto','320')}}
 
 ### Blur radius
 
-The optional blur radius is defined by the third {{cssxref("length")}}, if included. If omitted, the blur radius is `0`, creating a copy of the text positioned by the first two length values. The value must be `0` or greater, and the greater the value the more widely dispersed the shadow effect will be.
+The blur radius is defined by the third {{cssxref("length")}} value and is optional. If omitted, the blur radius is `0`, creating a copy of the text positioned by the first two length values. The value must be `0` or greater; the greater the value, the more widely dispersed the shadow effect will be.
 
-In this example, we change the blur radius in each `text-shadow` declaration. This third `<length>` in the value blurs the shadow if positive, creates a copy of the text if `0`, and is invalid if negative.
+In this example, the `text-shadow` declarations differ only in their blur radii. This third `<length>` value is either invalid (`-5px`), blurs the shadow (`5px`), or creates a copy of the text (`0`).
 
 ```css live-sample___blur
 .negative {
@@ -104,28 +104,35 @@ In this example, we change the blur radius in each `text-shadow` declaration. Th
 }
 ```
 
-{{EmbedLiveSample('blur','auto','320')}}
+{{EmbedLiveSample('Blur_radius','auto','320')}}
 
 ### Shadow color
 
-While text can have multiple comma-separated shadows applied, each shadow consists of a single base color. That color can be any valid CSS {{cssxref("color")}} value, defaulting to to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) if omitted.
+While you can apply [multiple shadows](#multiple_shadows) to text, each shadow consists of a single base color. That color can be any valid CSS {{cssxref("color")}} value, defaulting to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) if omitted.
 
-The following three shadows are equivalent:
+The following three shadows are equivalent in terms of their shadow colors:
 
 ```css
-text-shadow:
-  5px 5px mediumblue,
-  10px 10px magenta,
-  15px 15px rebeccapurple;
-text-shadow:
-  5px 5px #0000cd,
-  10px 10px #ff00ff,
-  15px 15px #663399;
-text-shadow:
-  5px 5px rgb(0 0 205),
-  10px 10px rgb(255 0 255),
-  15px 15px rgb(102 51 153);
-```
+.shadow-color {
+  text-shadow:
+    5px 5px mediumblue,
+    10px 10px magenta,
+    15px 15px rebeccapurple;
+}
+
+.shadow-color-hex {
+  text-shadow:
+    5px 5px #0000cd,
+    10px 10px #ff00ff,
+    15px 15px #663399;
+}
+
+.shadow-color-rgb {
+  text-shadow:
+    5px 5px rgb(0 0 205),
+    10px 10px rgb(255 0 255),
+    15px 15px rgb(102 51 153);
+}
 
 ## Multiple shadows
 
@@ -133,7 +140,7 @@ You can apply multiple shadows to the same text by including multiple shadow val
 
 The shadow effects are applied front-to-back: the first shadow is on top.
 
-In our example, `text-shadow: 5px 5px mediumblue, 10px 10px magenta, 15px 15px rebeccapurple;`, the blue is on top of the pink which is on top of the purple:
+In our example of `text-shadow: 5px 5px mediumblue, 10px 10px magenta, 15px 15px rebeccapurple;`, it defines three shadows, with the blue one on top of the pink, which is on top of the purple:
 
 ```css hidden live-sample___multiple1
 p {
@@ -148,13 +155,13 @@ p {
 <p>I have three shadows</p>
 ```
 
-{{EmbedLiveSample('multiple1','auto','120')}}
+{{EmbedLiveSample('Multiple_shadows','auto','120')}}
 
-### With transparent text
+## Multiple shadows with transparent text
 
-Shadows are painted above any background colors or images and below any borders. While shadows overlay each other, they don't overlay text. There is no equivalent to the {{cssxref("box-shadow")}} property's `inset` keyword. Unlike box-shadow, text shadows are not clipped to the shadowed shape and may show through if the text is partially-transparent.
+Shadows are painted above any background colors or images and below any borders. While shadows overlay each other, they don't overlay the text. There is no equivalent of the {{cssxref("box-shadow")}} property's `inset` keyword in the text shadow world. Unlike a box shadow, text shadows are not clipped to the shadowed shape and may show through if the text is partially-transparent.
 
-These examples have the same shadows applied to content with different {{cssxref("color")}} property values. The semi-transparent examples are difficult to read, but are included to demonstrate how shadows render:
+The following examples apply the same shadows to the text but with different {{cssxref("color")}} property values. The semi-transparent examples are difficult to read but are included to demonstrate how shadows render:
 
 ```css live-sample___opaque
 p {
@@ -203,6 +210,6 @@ p {
 }
 ```
 
-{{EmbedLiveSample('opaque','auto','540')}}
+{{EmbedLiveSample('Multiple_shadows_with_transparent_text','auto','540')}}
 
-In the "transparent" example, the text is transparent, but is fully legible because the top shadow is not blurred. Note how the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the semi-opaque white example. This is different from non-inset box shadows which are clipped at the border's outer edge.
+In the "transparent" example, the text is transparent but is fully legible because the top shadow is not blurred. Note how the shadow appears behind the text and is visible when the text is less than fully opaque. This is especially noticeable in the "semi-opaque white" example. This behavior differs from non-inset box shadows, where shadows are clipped at the border's outer edge.
