@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-You can apply shadows to your text by using the {{cssxref("text-shadow")}} property. This property accepts a comma-separated list of shadow values. Each shadow requires at least two {{cssxref("length")}} values but can include up to three `<length>` values and one {{cssxref("color")}} value. To remove any shadow from the text, use the keyword `none`.
+You can apply shadows to your text by using the {{cssxref("text-shadow")}} property. This property accepts a comma-separated list of shadow values. Each shadow requires at least two {{cssxref("length")}} values but can include up to three `<length>` values and one {{cssxref("color")}} value.
 
 ```css
 text-shadow: 1px 3px;
@@ -14,6 +14,11 @@ text-shadow:
   5px 5px mediumblue,
   10px 10px magenta,
   15px 15px rebeccapurple;
+```
+
+To remove any shadow from the text, use the keyword `none`.
+
+```css
   text-shadow: none;
 ```
 
