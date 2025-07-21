@@ -10,7 +10,7 @@ In this guide, you'll learn how to add a shadow to any text on your page.
 
 ## Adding shadows to text
 
-In our [guide to adding a shadow to boxes](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow), you'll learn how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text itself, you need a different CSS property: {{cssxref("text-shadow")}}.
+Our [guide to adding a shadow to boxes](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow) explains how to add a shadow to any element on your page. However, that technique only adds shadows to the element's surrounding box. To add a drop shadow to the text itself, you need a different CSS property: {{cssxref("text-shadow")}}.
 
 The `text-shadow` property takes a number of values:
 
@@ -37,4 +37,4 @@ h1 {
 {{EmbedLiveSample("Text_shadow")}}
 
 > [!NOTE]
-> When adding text shadows, you might unintentionally make the text difficult to read. Make sure that your choices keep your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for users who have difficulty reading low-contrast text.
+> When adding text shadows, you might unintentionally make the text difficult to read. Ensure that your choices offer sufficient [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) to keep your text readable.
