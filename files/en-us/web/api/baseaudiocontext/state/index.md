@@ -44,7 +44,7 @@ Interruptions that may trigger the `interrupted` state can include:
 - API features designed to initiate or respond to audio interruptions.
 
 > [!NOTE]
-> There are currently no browser implementations that make use of the `interrupted` state.
+> How the `interrupted` state is triggered may vary between browsers.
 
 Note also the potential for transitions between the `interrupted` and `suspended` states:
 
