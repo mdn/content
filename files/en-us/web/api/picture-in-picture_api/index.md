@@ -78,7 +78,7 @@ The availability of picture-in-picture mode can be controlled using [Permissions
 ## Examples
 
 In this example, a video is presented in a web page.
-Clicking the button below lets the user toggle the floating video window.
+Clicking the "**Toggle PiP**" button lets the user toggle between playing the video in the page and in a floating window.
 
 ```html
 <video
@@ -115,7 +115,7 @@ const log = document.getElementById("log");
 if (document.pictureInPictureEnabled) {
   log.innerText = "pictureInPictureEnabled -> hurray!";
 } else {
-  log.innerText = "PiP not available :(";
+  log.innerText = "PiP is not supported in your browser. Check browser compatibility for more information.";
 }
 
 function togglePictureInPicture() {
