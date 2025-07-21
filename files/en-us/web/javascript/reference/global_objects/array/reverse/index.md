@@ -14,17 +14,17 @@ To reverse the elements in an array without mutating the original array, use {{j
 {{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
 
 ```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+const array = ["one", "two", "three"];
+console.log("array:", array);
+// Expected output: "array:" Array ["one", "two", "three"]
 
-const reversed = array1.reverse();
+const reversed = array.reverse();
 console.log("reversed:", reversed);
 // Expected output: "reversed:" Array ["three", "two", "one"]
 
 // Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+console.log("array:", array);
+// Expected output: "array:" Array ["three", "two", "one"]
 ```
 
 ## Syntax

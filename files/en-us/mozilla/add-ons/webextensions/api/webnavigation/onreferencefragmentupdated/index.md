@@ -52,6 +52,8 @@ Events have three functions:
   - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+- `parentFrameId`
+  - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
 - `timeStamp`
   - : `number`. The time that the fragment identifier for the page was changed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`

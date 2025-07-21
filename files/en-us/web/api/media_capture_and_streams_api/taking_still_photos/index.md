@@ -50,7 +50,7 @@ button {
 #photo {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width: 100%%;
+  width: 100%;
   height: auto;
 }
 
@@ -60,7 +60,6 @@ button {
 
 .camera,
 .output {
-  width: 300px;
   display: inline-block;
   width: 49%;
   height: auto;

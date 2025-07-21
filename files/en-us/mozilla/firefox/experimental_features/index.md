@@ -131,21 +131,6 @@ The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/e
 - `layout.css.at-scope.enabled`
   - : Set to `true` to enable.
 
-### font-variant-emoji property
-
-The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
-See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 108           | Yes                 |
-| Developer Edition | 108           | No                  |
-| Beta              | 108           | No                  |
-| Release           | 108           | No                  |
-
-- `layout.css.font-variant-emoji.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
 The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
@@ -322,6 +307,20 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 | Release           | 138           | No                  |
 
 - `layout.css.details-content.enabled`
+  - : Set to `true` to enable.
+
+### `:active-view-transition` pseudo-class
+
+The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 141           | Yes                 |
+| Developer Edition | 141           | No                  |
+| Beta              | 141           | No                  |
+| Release           | -             | No                  |
+
+- `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
 ## SVG
@@ -716,9 +715,9 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
+| Developer Edition | 139             | No                  |
+| Beta              | 139             | No                  |
+| Release           | 139             | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.

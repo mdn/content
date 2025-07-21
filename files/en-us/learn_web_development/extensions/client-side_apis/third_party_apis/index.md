@@ -291,7 +291,7 @@ function displayResults(json) {
       const heading = document.createElement("h2");
       const link = document.createElement("a");
       const img = document.createElement("img");
-      const para1 = document.createElement("p");
+      const para = document.createElement("p");
       const keywordPara = document.createElement("p");
       keywordPara.classList.add("keywords");
 
@@ -299,7 +299,7 @@ function displayResults(json) {
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
+      para.textContent = current.snippet;
       keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
         const span = document.createElement("span");
@@ -315,7 +315,7 @@ function displayResults(json) {
       article.appendChild(heading);
       heading.appendChild(link);
       article.appendChild(img);
-      article.appendChild(para1);
+      article.appendChild(para);
       article.appendChild(keywordPara);
       section.appendChild(article);
     }

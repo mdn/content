@@ -110,8 +110,12 @@ If you want to preserve the element's state, you can do so by defining a `connec
 You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
 
 ```js
-connectedMoveCallback() {
-  console.log("Custom move-handling logic here.");
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("Custom move-handling logic here.");
+  }
+  // ...
 }
 ```
 
