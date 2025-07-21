@@ -29,7 +29,7 @@ IdentityCredential.disconnect(options)
     - `clientId`
       - : A string specifying the RP's client identifier, as specified in the `providers` [`clientId`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#clientid) property during sign-in.
     - `configURL`
-      - : A string specifying the config file URL of the IdP, as specified during sign-in in the `providers` [`configURL`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#configurl) property.
+      - : A string specifying the config file URL of the IdP, as specified in the `providers` [`configURL`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#configurl) property during sign-in.
 
 ### Return value
 
