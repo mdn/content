@@ -109,7 +109,7 @@ For a practical usage guide with code examples, you should include a "Usage…" 
 
 ## Guides
 
-Include a list of guide pages under this landing page. Each DT should link to the guide page.
+Include a list of guide pages under this landing page. Each DT should link to the guide page. This section is optional; if there's only a single "Using" guide, along with a few other conceptual guides, you may find it more convenient to link to it at the end of the "Concepts and usage" section instead. This section may be more helpful if there are so many guides that prose becomes hard to scan.
 
 - Using the ... API
   - : Intro paragraph of this guide page
