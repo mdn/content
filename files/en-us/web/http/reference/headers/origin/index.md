@@ -63,6 +63,7 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
 - {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that doesn't contain the value `allow-same-origin`.
+- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive that doesn't include `allow-same-origin`.
 - Responses that are network errors.
 - {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 
