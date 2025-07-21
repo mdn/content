@@ -30,7 +30,7 @@ To enable styling text ranges on a webpage using the CSS Custom Highlight API, y
 </label>
 ```
 
-This example uses the {{cssxref("text-decoration")}} property to strike throgh the `steps` highlight range defined by our JavaScript:
+This example uses the {{cssxref("text-decoration")}} property to strike through the `steps` highlight range defined by our JavaScript:
 
 ```css
 ::highlight(steps) {
