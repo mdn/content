@@ -27,7 +27,7 @@ IdentityCredential.disconnect(options)
     - `accountHint`
       - : A string specifying an account hint that the IdP uses the identify the account to disconnect. The hint can be an arbitrary string as long as the `disconnect_endpoint` can identify the account — for example an email address or user ID. This will not necessarily match the account ID provided by the `accounts_endpoint`.
     - `clientId`
-      - : A string specifying the RP's client identifier, as specified during sign-in in the `providers` [`clientId`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#clientid) property.
+      - : A string specifying the RP's client identifier, as specified in the `providers` [`clientId`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#clientid) property during sign-in.
     - `configURL`
       - : A string specifying the config file URL of the IdP, as specified during sign-in in the `providers` [`configURL`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#configurl) property.
 
