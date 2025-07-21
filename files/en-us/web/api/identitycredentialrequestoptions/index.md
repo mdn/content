@@ -48,7 +48,7 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
       - : The sign-in flow can be initiated without direct user interaction. This is the default value.
 
 - `providers`
-  - : An array of objects specifying details of the IdPs the user should be presented with as options for signing in. These objects can contain the following properties:
+  - : An array of objects specifying details of the IdPs that the user should be presented with as options for signing in. These objects can contain the following properties:
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
