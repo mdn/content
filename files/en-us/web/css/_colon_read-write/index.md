@@ -51,9 +51,9 @@ input[type="submit"] {
 
 ## Examples
 
-### Confirming form information in read-only/read-write controls
+### Confirming form details using read-only controls
 
-You can use `readonly` form controls when you want a user to verify information they have entered earlier, and submit it along with new data.
+You can use `readonly` form controls when you want a user to verify information they have entered earlier, and submit it along with new data in read-write controls.
 In the example below, the `:read-only` pseudo-class is used to make the `<textarea>` (a user's address) look like a regular paragraph and the `:read-write` pseudo-class provides a way to highlight the editable `<textarea>` (the delivery instructions):
 
 ```css hidden
@@ -133,7 +133,7 @@ CA</textarea
 </form>
 ```
 
-{{embedlivesample("", , "300")}}
+{{embedlivesample("confirming_form_details_using_read-only_controls", , "300")}}
 
 ### Styling read-write non-form controls
 
