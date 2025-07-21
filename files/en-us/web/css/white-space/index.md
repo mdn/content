@@ -81,6 +81,7 @@ This property is a shorthand for the following CSS properties:
 
 > [!NOTE]
 > The spec defines a third constituent property: `white-space-trim`, which is not implemented in any browser yet.
+
 ## Syntax
 
 ```css
