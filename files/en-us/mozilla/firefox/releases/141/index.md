@@ -26,7 +26,9 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The CSS {{CSSXRef("font-variant-emoji")}} property allows you to set a default presentation style for displaying emojis ([Firefox bug 1954214](https://bugzil.la/1954214)).
 
 <!-- No notable changes. -->
 
@@ -109,3 +111,7 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 141 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`:active-view-transition`** (Nightly): `dom.viewTransitions.enabled`
+
+  The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).

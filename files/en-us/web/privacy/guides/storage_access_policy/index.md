@@ -93,11 +93,9 @@ In order to improve web compatibility and permit third-party integrations that r
 
 In order to improve web compatibility, Firefox currently includes some heuristics to grant storage access automatically to third parties that receive user interaction. These heuristics are intended to allow some third-party integrations that are common on the web to continue to function. They are intended to be temporary and will be removed in a future version of Firefox. They should not be relied upon for current and future web development.
 
-Third-party storage access may be granted to resources that have been classified as tracking resources when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. When that occurs, there are three possible ways a third-party origin can be granted access:
+Third-party storage access may be granted when a user gesture triggers a pop-up window that has [opener access](/en-US/docs/Web/API/Window/opener) to the originating document. If the user interacts with the pop-up, the origin of the resource that is initially loaded in the pop-up window is granted storage access to the opener document if that origin has received user interaction as a first-party within the past 30 days.
 
-- The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document if that origin has received user interaction as a first party within the past 30 days.
-- After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.
-- When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
+Third-party storage access may also be granted when a user navigates to another origin within the same window. If the user interacts with that origin, then quickly navigates to a document in the initial origin, the intermediate page is granted storage access to that final document.
 
 ### Scope of storage access
 

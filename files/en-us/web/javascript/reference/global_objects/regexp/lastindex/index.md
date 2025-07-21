@@ -12,17 +12,17 @@ The **`lastIndex`** data property of a {{jsxref("RegExp")}} instance specifies t
 {{InteractiveExample("JavaScript Demo: RegExp: lastIndex")}}
 
 ```js interactive-example
-const regex1 = /foo/g;
-const str1 = "table football, foosball";
+const regex = /foo/g;
+const str = "table football, foosball";
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
+console.log(regex.lastIndex);
 // Expected output: 9
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
+console.log(regex.lastIndex);
 // Expected output: 19
 ```
 
