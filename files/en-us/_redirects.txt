@@ -9796,6 +9796,7 @@
 /en-US/docs/Web/API/PaymentRequest/onshippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequest/onshippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
+/en-US/docs/Web/API/PaymentRequestEvent/instrumentKey	/en-US/docs/Web/API/PaymentRequestEvent
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
 /en-US/docs/Web/API/PaymentResponse/onpayerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/API/PaymentResponse/payerdetail_event	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event

@@ -50561,10 +50561,6 @@
     "modified": "2020-10-15T22:04:40.998Z",
     "contributors": ["SterileSummer", "sideshowbarker", "jpmedley"]
   },
-  "Web/API/PaymentRequestEvent/instrumentKey": {
-    "modified": "2020-10-15T22:04:43.225Z",
-    "contributors": ["jpmedley"]
-  },
   "Web/API/PaymentRequestEvent/methodData": {
     "modified": "2020-10-15T22:04:44.132Z",
     "contributors": ["jpmedley"]
