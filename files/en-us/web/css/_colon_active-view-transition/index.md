@@ -31,7 +31,8 @@ This example extends on the [same-document view transition](/en-US/docs/Web/API/
 </main>
 ```
 
-A `<h2>` element initially has a `display: none` style, and this is overwritten using the `:active-view-transition` pseudo-class setting the `<h2>` style to `display: block`, and the button is also hidden using `visibility:hidden`, when the view transition is in progress:
+A `<h2>` element initially has a `display: none` style, and this is overwritten using the `:active-view-transition` pseudo-class setting the `<h2>` style to `display: block`.
+The button is hidden using `visibility: hidden`, when the view transition is in progress:
 
 ```css hidden
 html {
