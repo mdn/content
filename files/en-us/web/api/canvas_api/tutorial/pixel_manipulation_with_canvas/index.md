@@ -124,7 +124,7 @@ img.addEventListener("load", () => {
 const hoveredColor = document.getElementById("hovered-color");
 const selectedColor = document.getElementById("selected-color");
 
-function pick(event, destination) {
+const pick = (event, destination) => {
   const bounding = canvas.getBoundingClientRect();
   const x = event.clientX - bounding.left;
   const y = event.clientY - bounding.top;
@@ -136,7 +136,7 @@ function pick(event, destination) {
   destination.textContent = rgbColor;
 
   return rgbColor;
-}
+};
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
 canvas.addEventListener("click", (event) => pick(event, selectedColor));
@@ -205,13 +205,12 @@ See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more i
 ```
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "/shared-assets/images/examples/rhino.jpg";
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
   ctx.drawImage(img, 0, 0);
 };
@@ -328,10 +327,10 @@ img.onload = () => {
   draw(img);
 };
 
-function draw(img) {
+const draw = (image) => {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(image, 0, 0);
 
   const smoothCtx = document.getElementById("smoothed").getContext("2d");
   smoothCtx.imageSmoothingEnabled = true;
@@ -340,19 +339,10 @@ function draw(img) {
   pixelatedCtx.imageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
-    const imageData = ctx.getImageData(
-      Math.min(Math.max(0, x - 5), img.width - 10),
-      Math.min(Math.max(0, y - 5), img.height - 10),
-      10,
-      10,
-    );
-
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
     ctx.drawImage(
       canvas,
-      Math.min(Math.max(0, x - 5), img.width - 10),
-      Math.min(Math.max(0, y - 5), img.height - 10),
+      Math.min(Math.max(0, x - 5), image.width - 10),
+      Math.min(Math.max(0, y - 5), image.height - 10),
       10,
       10,
       0,
@@ -368,7 +358,7 @@ function draw(img) {
     zoom(smoothCtx, x, y);
     zoom(pixelatedCtx, x, y);
   });
-}
+};
 ```
 
 {{embedlivesample("zooming_and_anti-aliasing", , 300)}}
