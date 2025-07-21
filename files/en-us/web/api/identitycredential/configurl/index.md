@@ -20,7 +20,7 @@ A string.
 
 ## Examples
 
-Relying parties (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A typical request would look like this:
+Relying parties (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A request indicating a single provider would look like this:
 
 ```js
 async function signIn() {
