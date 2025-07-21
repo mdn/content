@@ -134,6 +134,7 @@ The following three shadows are equivalent in terms of their shadow colors:
     10px 10px rgb(255 0 255),
     15px 15px rgb(102 51 153);
 }
+```
 
 ## Multiple shadows
 
