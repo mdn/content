@@ -47,7 +47,7 @@ A JSON string can be stored in its own file, which is basically just a text file
 
 As described above, JSON is a string whose format very much resembles JavaScript object literal format.
 The following is a valid JSON string representing an object.
-Note how it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
+Note that it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
 
 ```json
 {
@@ -157,9 +157,9 @@ You should be careful to validate any data you are attempting to use (although c
 You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://www.json-validate.com/)
 
 > [!NOTE]
-> Now you've read through this section, you might also want to supplement your learning with Scrimba's [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provide some useful guidance around basic JSON syntax and how to view JSON request data inside your browser's devtools.
+> Now you've read through this section, you might also want to supplement your learning with Scrimba's [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provides some useful guidance around basic JSON syntax and how to view JSON request data inside your browser's devtools.
 
-## Active learning: Working through a JSON example
+## Working through a JSON example
 
 So, let's work through an example to show how we could make use of some JSON formatted data on a website.
 
@@ -282,7 +282,7 @@ function populateHeroes(obj) {
 
 To start with, we store the `members` property of the JavaScript object in a new variable. This array contains multiple objects that contain the information for each hero.
 
-Next, we use a [for...of loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_for...of_loop) to loop through each object in the array. For each one, we:
+Next, we use a [`for...of` loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_for...of_loop) to iterate through each object in the array. For each one, we:
 
 1. Create several new elements: an `<article>`, an `<h2>`, three `<p>`s, and a `<ul>`.
 2. Set the `<h2>` to contain the current hero's `name`.

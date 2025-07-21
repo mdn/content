@@ -2,9 +2,8 @@
 title: Split navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **split navigation** is a navigation pattern where one or more elements are separated from the rest of the navigation items.
 

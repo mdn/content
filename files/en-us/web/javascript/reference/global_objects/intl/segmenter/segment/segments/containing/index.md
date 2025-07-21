@@ -4,9 +4,8 @@ short-title: containing()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segments.containing
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 
@@ -14,9 +13,9 @@ The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Referen
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const segments = segmenterFr.segment(string1);
+const segments = segmenterFr.segment(string);
 
 console.log(segments.containing(5));
 // Expected output:

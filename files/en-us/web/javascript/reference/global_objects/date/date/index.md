@@ -4,9 +4,8 @@ short-title: Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Date.Date
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date()`** constructor creates {{jsxref("Date")}} objects. When called as a function, it returns a string representing the current time.
 

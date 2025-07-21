@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.since
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`since()`** method of {{jsxref("Temporal.Instant")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}) to this instant. The duration is positive if the other instant is before this instant, and negative if after.
 

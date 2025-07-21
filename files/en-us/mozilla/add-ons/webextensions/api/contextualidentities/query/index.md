@@ -3,9 +3,8 @@ title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about all contextual identities, or about those contextual identities that match a given filter argument.
 
@@ -29,10 +28,6 @@ let getContext = browser.contextualIdentities.query(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} objects, each describing a single identity. If the contextual identities feature is not enabled, the promise is rejected.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -73,3 +68,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -4,9 +4,8 @@ short-title: freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.freeze
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.freeze()`** static method _freezes_ an object. Freezing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed, their enumerability, configurability, writability, or value cannot be changed, and the object's prototype cannot be re-assigned. `freeze()` returns the same object that was passed in.
 

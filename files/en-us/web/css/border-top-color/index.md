@@ -3,9 +3,8 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's top [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-top")}}.
 

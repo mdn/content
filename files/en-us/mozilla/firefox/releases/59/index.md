@@ -1,5 +1,6 @@
 ---
 title: Firefox 59 for developers
+short-title: Firefox 59
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes
 sidebar: firefox
@@ -116,7 +117,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 
 ### JavaScript
 
-- Non-standard [conditional catch clauses](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
+- Non-standard conditional catch clauses have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
 
 ### APIs
 
@@ -167,7 +168,3 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - New [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) setting "cookieConfig".
 - Support in [`cookies`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API for [first-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - New option `upgradeToSecure` in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
-
-## Older versions
-
-{{Firefox_for_developers}}

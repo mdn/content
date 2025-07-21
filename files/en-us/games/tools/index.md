@@ -2,9 +2,8 @@
 title: Tools for game development
 slug: Games/Tools
 page-type: landing-page
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 On this page, you can find links to our game development tools articles, which eventually aim to cover frameworks, compilers, and debugging tools.
 

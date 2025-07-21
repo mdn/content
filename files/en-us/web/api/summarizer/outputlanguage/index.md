@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.outputLanguage
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`outputLanguage`** read-only property of the {{domxref("Summarizer")}} interface returns the language the summary should be generated in.
 

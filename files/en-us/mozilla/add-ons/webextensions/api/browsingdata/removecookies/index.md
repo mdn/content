@@ -3,9 +3,8 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCookies
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the browser's cookies.
 
@@ -76,11 +75,11 @@ function onError(error) {
 browser.browsingData.removeCookies({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

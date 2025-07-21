@@ -2,9 +2,8 @@
 title: CSS box alignment overview
 slug: Web/CSS/CSS_box_alignment/Box_alignment
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models. The module aims to create a consistent method of alignment across all of CSS. The CSS box alignment properties provide full horizontal and vertical alignment capabilities.
 

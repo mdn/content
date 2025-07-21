@@ -2,9 +2,8 @@
 title: Mouse controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 

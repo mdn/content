@@ -3,9 +3,8 @@ title: this
 slug: Web/JavaScript/Reference/Operators/this
 page-type: javascript-language-feature
 browser-compat: javascript.operators.this
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`this`** keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where `this` refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
 
@@ -529,17 +528,17 @@ Note, however, that auto-bound methods suffer from the same problem as [using ar
 
 ### this in with statements
 
-Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is bound to the scope object, as if the `obj1.` prefix exists.
+Although [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statements are deprecated and not available in strict mode, they still serve as an exception to the normal `this` binding rules. If a function is called within a `with` statement and that function is a property of the scope object, the `this` value is bound to the scope object, as if the `obj.` prefix exists.
 
 ```js
-const obj1 = {
+const obj = {
   foo() {
     return this;
   },
 };
 
-with (obj1) {
-  console.log(foo() === obj1); // true
+with (obj) {
+  console.log(foo() === obj); // true
 }
 ```
 

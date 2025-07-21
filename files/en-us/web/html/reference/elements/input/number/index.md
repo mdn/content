@@ -3,9 +3,8 @@ title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`number`** are used to let the user enter a number. They include built-in validation to reject non-numerical entries.
 
@@ -83,14 +82,14 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 ### `step`
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` if neither is provided.
+
+The default stepping value for `number` inputs is `1`, allowing only integers to be entered—_unless_ the stepping base is not an integer.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-The default stepping value for `number` inputs is `1`, allowing only integers to be entered—_unless_ the stepping base is not an integer.
 
 ## Using number inputs
 

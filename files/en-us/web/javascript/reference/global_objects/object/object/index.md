@@ -4,9 +4,8 @@ short-title: Object()
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Object.Object
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object()`** constructor turns the input into an object. Its behavior depends on the input's type.
 

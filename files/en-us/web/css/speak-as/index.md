@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.speak-as
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`speak-as`** [CSS](/en-US/docs/Web/CSS) property is used to define how [HTML](/en-US/docs/Web/HTML) content is spoken. The one to three enumerated key terms determine the manner by which elements and text get rendered by aural technologies, such as {{glossary("screen reader", "screen readers")}} and digital assistants.
 

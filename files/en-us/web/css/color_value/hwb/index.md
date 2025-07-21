@@ -6,9 +6,8 @@ browser-compat: css.types.color.hwb
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HWB
   - https://drafts.csswg.org/css-color/#the-hwb-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hwb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 

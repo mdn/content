@@ -4,9 +4,8 @@ short-title: id
 slug: Web/HTML/Reference/Global_attributes/id
 page-type: html-attribute
 browser-compat: html.global_attributes.id
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) defines an identifier (ID) that must be unique within the entire document.
 

@@ -3,9 +3,8 @@ title: "<input>: The HTML Input element"
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
@@ -591,15 +590,13 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
 - [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) if specified, [`value`](#value) otherwise, or `0` if neither is provided (except for `week`, which has a default step base of −259,200,000, representing the start of week `1970-W01`).
 
     If not explicitly included:
     - `step` defaults to 1 for `number` and `range`.
     - Each date/time input type has a default `step` value appropriate for the type; see the individual input pages: [`date`](/en-US/docs/Web/HTML/Reference/Elements/input/date#step), [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local#step), [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month#step), [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time#step), and [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week#step).
 
-    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
-
-    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the [`min`](#min) value and increments of the step value, up to the [`max`](#max) value, if specified.
+    The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)).
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`.
 

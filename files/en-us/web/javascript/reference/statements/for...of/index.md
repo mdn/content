@@ -3,18 +3,17 @@ title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 page-type: javascript-statement
 browser-compat: javascript.statements.for_of
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for...of`** statement executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
 
 {{InteractiveExample("JavaScript Demo: for...of statement")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-for (const element of array1) {
+for (const element of array) {
   console.log(element);
 }
 

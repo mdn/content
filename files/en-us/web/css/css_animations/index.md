@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-animations-2/
   - https://drafts.csswg.org/css-animations/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS animations** module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 

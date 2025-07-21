@@ -4,9 +4,8 @@ short-title: isDisjointFrom()
 slug: Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.isDisjointFrom
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`isDisjointFrom()`** method of {{jsxref("Set")}} instances takes a set and returns a boolean indicating if this set has no elements in common with the given set.
 

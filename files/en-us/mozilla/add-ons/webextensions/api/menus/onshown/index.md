@@ -3,9 +3,8 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser has shown a menu.
 

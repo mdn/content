@@ -3,9 +3,8 @@ title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_color
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
 

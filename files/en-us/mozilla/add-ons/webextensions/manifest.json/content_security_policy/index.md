@@ -3,9 +3,8 @@ title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_security_policy
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

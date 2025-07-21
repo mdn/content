@@ -3,9 +3,8 @@ title: tabGroups.TabGroup
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/TabGroup
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabGroups.TabGroup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The state of a tab group.
 

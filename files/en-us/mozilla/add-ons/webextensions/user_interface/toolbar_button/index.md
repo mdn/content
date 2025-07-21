@@ -2,9 +2,8 @@
 title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.
 ![A custom browser action icon it the browser tool bar that looks like paw print.](toolbar_button.png)

@@ -3,9 +3,8 @@ title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 page-type: webextension-api-function
 browser-compat: webextensions.api.find.highlightResults
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
 
@@ -36,10 +35,6 @@ browser.find.highlightResults(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Search the active tab for "banana", log the number of matches, and highlight them:
@@ -54,3 +49,7 @@ function found(results) {
 
 browser.find.find("banana").then(found);
 ```
+
+## Browser compatibility
+
+{{Compat}}

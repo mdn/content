@@ -1,5 +1,6 @@
 ---
 title: Firefox 132 for developers
+short-title: Firefox 132
 slug: Mozilla/Firefox/Releases/132
 page-type: firefox-release-notes
 sidebar: firefox
@@ -16,7 +17,7 @@ No notable changes
 ### CSS
 
 - The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
-- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations#nested_declarations_rule), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
+- CSS now supports the [Nested declaration rule](/en-US/docs/Web/API/CSSNestedDeclarations), which means that nested CSS is now parsed in the correct order ([Firefox bug 1918408](https://bugzil.la/1918408)).
 
 #### Removals
 
@@ -90,7 +91,3 @@ These features are newly shipped in Firefox 132 but are disabled by default. To 
   - The `JSON.parse()` [`reviver` parameter `context` argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): Provides access to the original JSON source text that was parsed.
   - [`JSON.isRawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): Tests whether a value is an object returned by `JSON.rawJSON()`.
   - [`JSON.rawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): Creates a "raw JSON" object containing a piece of JSON text, which can then be included in an object to preserve the specified value when that object is stringified.
-
-## Older versions
-
-{{Firefox_for_developers}}

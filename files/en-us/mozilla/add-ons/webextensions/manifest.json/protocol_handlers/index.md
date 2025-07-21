@@ -3,9 +3,8 @@ title: protocol_handlers
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.protocol_handlers
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

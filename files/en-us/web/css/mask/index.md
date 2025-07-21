@@ -3,9 +3,8 @@ title: mask
 slug: Web/CSS/mask
 page-type: css-shorthand-property
 browser-compat: css.properties.mask
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) hides an element (partially or fully) by masking or clipping a specified area of the image. It is a shorthand for all the [`mask-*`](#constituent_properties) properties. The property accepts one or more comma-separated values, where each value corresponds to a [`<mask-layer>`](#mask-layer).
 

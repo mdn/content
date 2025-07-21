@@ -1,5 +1,6 @@
 ---
 title: Firefox 3.5 for developers
+short-title: Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5
 page-type: firefox-release-notes
 sidebar: firefox
@@ -29,7 +30,7 @@ sidebar: firefox
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/docs/Web/CSS/length#units). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
@@ -40,7 +41,7 @@ sidebar: firefox
   - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
 - `-moz-box-shadow`, `-moz-border-image`, `-moz-column-rule`, `-moz-column-rule-width`, `-moz-column-rule-style`, `-moz-column-rule-color`
   - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
-- The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
+- The `-moz-nativehyperlinktext` color value
   - : This new color value represents the user's system's default hyperlink color.
 - The `-moz-window-shadow` property and the `:-moz-system-metric(mac-graphite-theme)` pseudo-class
   - : These new CSS features were added to facilitate theming.
@@ -53,7 +54,7 @@ sidebar: firefox
 
 #### New DOM features
 
-- [localStorage](/en-US/docs/Web/API/Web_Storage_API#localstorage)
+- [localStorage](/en-US/docs/Web/API/Window/localStorage)
   - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
@@ -188,7 +189,3 @@ If you're an extension developer, you should start by reading [Updating extensio
   - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine. Web applications are much faster than in Firefox 3.
 - Faster page rendering
   - : Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."
-
-## See also
-
-{{Firefox_for_developers}}

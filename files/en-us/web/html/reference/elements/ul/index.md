@@ -3,9 +3,8 @@ title: "<ul>: The Unordered List element"
 slug: Web/HTML/Reference/Elements/ul
 page-type: html-element
 browser-compat: html.elements.ul
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ul>`** [HTML](/en-US/docs/Web/HTML) element represents an unordered list of items, typically rendered as a bulleted list.
 

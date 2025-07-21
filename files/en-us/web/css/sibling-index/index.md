@@ -2,10 +2,13 @@
 title: sibling-index()
 slug: Web/CSS/sibling-index
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.sibling-index
+sidebar: cssref
 ---
 
-{{CSSRef}}
+{{SeeCompatTable}}
 
 The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning {{domxref("Element.children")}}.length.
 

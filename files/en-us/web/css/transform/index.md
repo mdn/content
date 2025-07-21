@@ -3,9 +3,8 @@ title: transform
 slug: Web/CSS/transform
 page-type: css-property
 browser-compat: css.properties.transform
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
 It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model).

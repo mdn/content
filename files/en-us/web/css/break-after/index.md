@@ -3,9 +3,8 @@ title: break-after
 slug: Web/CSS/break-after
 page-type: css-property
 browser-compat: css.properties.break-after
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`break-after`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave after a generated box. If there is no generated box, the property is ignored.
 

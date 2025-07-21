@@ -2,9 +2,8 @@
 title: 'SyntaxError: "0"-prefixed octal literals are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals are deprecated; use the "0o" prefix instead" occurs when deprecated octal literals (`0` followed by digits) are used.
 

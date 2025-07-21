@@ -3,9 +3,8 @@ title: override-colors
 slug: Web/CSS/@font-palette-values/override-colors
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.override-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 

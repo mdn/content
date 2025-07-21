@@ -4,9 +4,8 @@ short-title: hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.hasOwn
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property. If the property is inherited, or does not exist, the method returns `false`.
 
@@ -16,17 +15,17 @@ The **`Object.hasOwn()`** static method returns `true` if the specified object h
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   prop: "exists",
 };
 
-console.log(Object.hasOwn(object1, "prop"));
+console.log(Object.hasOwn(object, "prop"));
 // Expected output: true
 
-console.log(Object.hasOwn(object1, "toString"));
+console.log(Object.hasOwn(object, "toString"));
 // Expected output: false
 
-console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+console.log(Object.hasOwn(object, "undeclaredPropertyValue"));
 // Expected output: false
 ```
 
