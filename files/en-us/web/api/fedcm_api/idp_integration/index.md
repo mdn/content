@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("FedCM API")}}
 
-This article details all the steps an identity provider (IdP) needs to take to integrate with the Federated Credential Management (FedCM) API.
+This article details all the steps an {{glossary("Identity provider", "identity provider")}} (IdP) needs to take to integrate with the Federated Credential Management (FedCM) API.
 
 ## IdP integration steps
 
@@ -18,9 +18,9 @@ To integrate with FedCM, an IdP needs to do the following:
 
 ## Provide a well-known file
 
-There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
+There is a potential privacy issue whereby an [IdP is able to discern whether a user visited a relying party (RP) without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which {{glossary("Relying party", "RP")}} is attempting to connect.
 
 The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
@@ -85,7 +85,7 @@ The properties are as follows:
 - `login_url`
   - : The login page URL for the user to sign into the IdP.
 - `branding` {{optional_inline}}
-  - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP.
+  - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP. The provided icon size must be greater than or equal to `25` (`25px`) in passive mode and greater than or equal to `40` (`40px`) in active mode (see [Active versus passive mode](/en-US/docs/Web/API/FedCM_API/RP_sign-in#active_versus_passive_mode) for more details).
 
 The following table summarizes the different requests made by the FedCM API:
 

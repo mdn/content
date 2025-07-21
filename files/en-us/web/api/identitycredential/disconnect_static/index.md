@@ -10,7 +10,7 @@ browser-compat: api.IdentityCredential.disconnect_static
 
 {{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`disconnect()`** static method of the {{domxref("IdentityCredential")}} interface disconnects a specified federated sign-in account from the IdP used to obtain the credential.
+The **`disconnect()`** static method of the {{domxref("IdentityCredential")}} interface disconnects a specified federated sign-in account from the {{glossary("Identity provider", "IdP")}} used to obtain the credential.
 
 Afterwards, using that account for federated login requires starting the federated sign-in process again.
 
@@ -25,9 +25,9 @@ IdentityCredential.disconnect(options)
 - `options`
   - : An options object, which can contain the following properties:
     - `accountHint`
-      - : A string specifying an account hint that the IdP uses the identify the account to disconnect. The hint can be an arbitrary string as long as the `disconnect_endpoint` can identify the account — for example an email address or user ID. This will not necessarily match the account ID provided by the `accounts_endpoint`.
+      - : A string specifying an account hint that the IdP uses to identify the account to disconnect. The hint can be an arbitrary string as long as the [disconnect endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_disconnect_endpoint) can identify the account — for example an email address or user ID. This will not necessarily match the account ID provided by the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
     - `clientId`
-      - : A string specifying the RP's client identifier, as specified in the `providers` [`clientId`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#clientid) property during sign-in.
+      - : A string specifying the {{glossary("Relying party", "RP")}}'s client identifier, as specified in the `providers` [`clientId`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#clientid) property during sign-in.
     - `configURL`
       - : A string specifying the config file URL of the IdP, as specified in the `providers` [`configURL`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#configurl) property during sign-in.
 
@@ -53,7 +53,9 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 ## Examples
 
-The RP may disconnect a specified federated sign-in account from the associated IdP by invoking disconnect(). This function can be called from a top-level RP frame.
+### Basic `disconnect()` usage
+
+The RP may disconnect a specified federated sign-in account from the associated IdP by invoking `disconnect()`. This function can be called from a top-level RP frame.
 
 ```js
 IdentityCredential.disconnect({

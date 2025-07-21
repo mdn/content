@@ -6,17 +6,17 @@ page-type: guide
 
 {{DefaultAPISidebar("FedCM API")}}
 
-This article describes the process by which a relying party (RP) can use the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) to perform a federated sign-in via an identity provider (IdP).
+This article describes the process by which a {{glossary("Relying party", "relying party")}} (RP) can use the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) to perform a federated sign-in via an {{glossary("Identity provider", "identity provider")}} (IdP).
 
-## Calling the get() method
+## Calling the `get()` method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in to on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user using credentials (cookies) provided to the browser on login.
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in to on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user using credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
 
 The method returns a promise that fulfills with an {{domxref("IdentityCredential")}} object if the user identity is successfully validated by the chosen IdP. This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
 
 The RP sends the token to its server to validate the certificate, and on success can use the (now trusted) identity information in the token to sign them into their service (starting a new session), sign them up to their service if they are a new user, etc.
 
-If the user has never signed into an IdP or is logged out, the `get()` method rejects with an error and the RP can direct the user to an IdP login page to sign in or create an account.
+If the user has never signed into an IdP or is logged out, the `get()` method rejects with an error and the RP can direct the user to an IdP page to sign in or create an account.
 
 > [!NOTE]
 > The exact structure and content of the validation token is opaque to the FedCM API, and to the browser. An IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
@@ -103,6 +103,32 @@ The flow is as follows:
 
 11. When the flow is complete, the `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which provides further RP functionality. Most notably, this object contains a token that the RP can verify comes from the IdP (using a certificate) and that contains trusted information about the signed in user. Once the RP validates the token, they can use the contained information to sign the user in and start a new session, sign them up to their service, etc. The format and structure of the token depends on the IdP and has nothing to do with the FedCM API (the RP needs to follow the IdP's instructions).
 
+## Active versus passive mode
+
+There are two different UI modes the browser can provide to an RP user when they sign-in via the FedCM API, **`active`** and **`passive`** mode. Which mode is used for sign-in is controlled by the [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode) option of the `ideitity` object:
+
+```js
+async function signIn() {
+  const identityCredential = await navigator.credentials.get({
+    identity: {
+      mode: active,
+      providers: [
+        {
+          configURL: "https://accounts.idp.example/config.json",
+          clientId: "********",
+        },
+      ],
+    },
+  });
+}
+```
+
+The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. In this mode, browsers typically present the user with a sign-in dialog window containing all the different sign-in options specified in the `providers` object, and they can choose whichever one suits them best and then enter the appropriate credentials.
+
+If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
+
+See [FedCM UI modes](https://privacysandbox.google.com/cookies/fedcm/why#fedcm_ui_modes) on privacysandbox.google.com for an example of how the different UI modes are presented in Google Chrome.
+
 ## Auto-reauthentication
 
 FedCM auto-reauthentication lets users reauthenticate automatically when they try to sign in to an RP again after their initial authentication using FedCM. "Initial authentication" refers to when the user creates an account or signs into the RP's website via the FedCM sign-in dialog for the first time on the RP site, on the same browser instance.
@@ -139,6 +165,7 @@ With these `mediation` options, auto-reauthentication will occur under the follo
 - The user is signed into the IdP with that account.
 - Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
 - The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
+- The UI mode is [passive]().
 
 When these conditions are met, an attempt to automatically reauthenticate the user starts as soon as the `get()` is invoked. If auto-reauthentication is successful, the user will log into the RP site again, without being shown a confirmation prompt, using the same IdP account and validated token as they did before.
 

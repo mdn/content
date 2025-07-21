@@ -20,7 +20,7 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 - {{domxref("IdentityCredential.configURL")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A string specifying the [config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) URL of the IdP used for sign-in.
+  - : A string specifying the [config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) URL of the {{glossary("Identity provider", "IdP")}} used for sign-in.
 - {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A boolean value that indicates whether the federated sign-in was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e., without user mediation) or not.
 - {{domxref("IdentityCredential.token")}} {{experimental_inline}}
@@ -33,7 +33,9 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 ## Examples
 
-Relying parties (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A typical request would look like this:
+### Basic federated sign-in
+
+{{glossary("Relying party", "Relying parties")}} (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A typical request would look like this:
 
 ```js
 async function signIn() {

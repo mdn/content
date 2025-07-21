@@ -10,7 +10,7 @@ browser-compat: api.IdentityCredential.configURL
 
 {{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`configURL`** read-only property of the {{domxref("IdentityCredential")}} interface returns a string specifying the config file URL of the IdP used for sign-in.
+The **`configURL`** read-only property of the {{domxref("IdentityCredential")}} interface returns a string specifying the config file URL of the {{glossary("Identity provider", "identity provider")}} (IdP) used for sign-in.
 
 See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
 
@@ -20,7 +20,9 @@ A string.
 
 ## Examples
 
-Relying parties (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A request indicating a single provider would look like this:
+### Basic federated sign-in and `configURL` access
+
+{{glossary("Relying party", "Relying parties")}} (RPs) can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. A request indicating a single provider would look like this:
 
 ```js
 async function signIn() {

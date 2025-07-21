@@ -12,7 +12,7 @@ spec-urls: https://w3c-fedid.github.io/FedCM/#dictdef-identitycredentialrequesto
 
 The **`IdentityCredentialRequestOptions`** dictionary represents the object passed to {{domxref("CredentialsContainer.get()")}} as the value of the `identity` option.
 
-It is used to request an {{domxref("IdentityCredential")}} provided by a {{glossary("identity provider", "federated identity provider")}} that supports the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API).
+When an `identity` option is provided in a `get()` call made on a {{glossary("Relying party", "relying party")}} (RP) website, the user is offered a list of {{glossary("identity provider", "federated identity providers")}} (IdPs) as sign-in options. Once the user signs in successfully using one of these options, the promise returned by the `get()` call returns an {{domxref("IdentityCredential")}} object.
 
 ## Instance properties
 
@@ -41,18 +41,20 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
     The default value is `"signin"`.
 
 - `mode` {{optional_inline}}
-  - : A string specifying the UI mode to use for the sign-in flow, which browsers can use to specify different behaviors if wished. Possible values are:
+  - : A string specifying the UI mode to use for the sign-in flow. Possible values are:
     - `active`
       - : The sign-in flow must be initiated via a user action such as clicking a button. If `mode` is set to `active`, `providers` can only have a length of `1`, otherwise the `get()` promise will reject.
     - `passive`
       - : The sign-in flow can be initiated without direct user interaction. This is the default value.
+
+    See [Active versus passive mode](/en-US/docs/Web/API/FedCM_API/RP_sign-in#active_versus_passive_mode) for more details of the difference between the two modes.
 
 - `providers`
   - : An array of objects specifying details of the IdPs that the user should be presented with as options for signing in. These objects can contain the following properties:
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
-      - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
+      - : A string specifying the RP client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
     - `domainHint` {{optional_inline}}
       - : A string hinting at the domain of accounts that the RP is interested in. If provided, the user agent will only show accounts that match the domain hint value in their [`domain_hints`](/en-US/docs/Web/API/FedCM_API/IDP_integration#domain_hints) array. If `"any"` is specified, the RP will show any account that is associated with at least one domain hint.
     - `fields` {{optional_inline}}
