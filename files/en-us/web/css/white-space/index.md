@@ -79,6 +79,8 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("white-space-collapse")}}
 - {{cssxref("text-wrap-mode")}}
 
+> [!NOTE]
+> The spec defines a third constituent property: `white-space-trim`, which is not implemented in any browser yet.
 ## Syntax
 
 ```css
