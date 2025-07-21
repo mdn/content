@@ -301,10 +301,10 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
         <canvas id="canvas" width="300" height="227"></canvas>
       </td>
       <td>
-        <canvas id="smoothed-zoom" width="200" height="200"></canvas>
+        <canvas id="smoothed" width="200" height="200"></canvas>
       </td>
       <td>
-        <canvas id="pixelated-zoom" width="200" height="200"></canvas>
+        <canvas id="pixelated" width="200" height="200"></canvas>
       </td>
     </tr>
   </tbody>
@@ -325,7 +325,7 @@ const img = new Image();
 img.crossOrigin = "anonymous";
 img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
-  draw(this);
+  draw(img);
 };
 
 function draw(img) {
@@ -333,15 +333,22 @@ function draw(img) {
   const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
 
-  const smoothCtx = document.getElementById("smoothed-zoom").getContext("2d");
+  const smoothCtx = document.getElementById("smoothed").getContext("2d");
   smoothCtx.imageSmoothingEnabled = true;
 
-  const pixelatedCtx = document
-    .getElementById("pixelated-zoom")
-    .getContext("2d");
+  const pixelatedCtx = document.getElementById("pixelated").getContext("2d");
   pixelatedCtx.imageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
+    const imageData = ctx.getImageData(
+      Math.min(Math.max(0, x - 5), img.width - 10),
+      Math.min(Math.max(0, y - 5), img.height - 10),
+      10,
+      10,
+    );
+
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
     ctx.drawImage(
       canvas,
       Math.min(Math.max(0, x - 5), img.width - 10),
