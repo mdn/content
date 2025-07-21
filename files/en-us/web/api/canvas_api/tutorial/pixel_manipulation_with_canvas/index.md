@@ -83,9 +83,12 @@ This method returns an `ImageData` object representing the pixel data for the ar
 
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
-### A color picker
+## Creating a color picker
 
-In this example, we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse, then we look up the pixel data at that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but uses the selected color.
+In this example, we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor.
+For this, we need the current position of the mouse, then we look up the pixel data at that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides.
+Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
+Clicking on the image will do the same operation but uses the selected color.
 
 ```html
 <table>
@@ -156,9 +159,10 @@ td {
 }
 ```
 
-Hover your cursor anywhere over the image to see the result in the "Hovered color" column. Click anywhere in the image to see the result in the "Selected color" column. 
+Hover your cursor anywhere over the image to see the result in the "Hovered color" column.
+Click anywhere in the image to see the result in the "Selected color" column.
 
-{{embedlivesample("", , 300)}}
+{{embedlivesample("creating_a_color_picker", , 300)}}
 
 ## Painting pixel data into a context
 
@@ -176,9 +180,12 @@ For example, to paint the entire image represented by `myImageData` to the top l
 ctx.putImageData(myImageData, 0, 0);
 ```
 
-### Grayscaling and inverting colors
+## Grayscaling and inverting colors
 
-In this example, we iterate over all pixels to change their values, then we put the modified pixel array back onto the canvas using [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData). The `invert` function subtracts each color from the max value, `255`. The `grayscale` function uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
+In this example, we iterate over all pixels to change their values, then we put the modified pixel array back onto the canvas using [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData).
+The `invert` function subtracts each color from the max value, `255`.
+The `grayscale` function uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example.
+See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
 
 ```html
 <canvas id="canvas" width="300" height="227"></canvas>
@@ -273,7 +280,7 @@ for (const input of inputs) {
 
 Click different options to view the result in action.
 
-{{embedlivesample("", , 300)}}
+{{embedlivesample("grayscaling_and_inverting_colors", , 300)}}
 
 ## Zooming and anti-aliasing
 
@@ -357,7 +364,7 @@ function draw(img) {
 }
 ```
 
-{{embedlivesample("", , 300)}}
+{{embedlivesample("zooming_and_anti-aliasing", , 300)}}
 
 ## Saving images
 
