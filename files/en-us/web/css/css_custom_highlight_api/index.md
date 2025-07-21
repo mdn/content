@@ -12,11 +12,11 @@ The CSS Custom Highlight API extends the concept of other highlight pseudo-eleme
 
 ## Custom highlight API in action
 
-To enable styling text ranges on a webpage using the CSS Custom Highlight API, you create a {{domxref("Range")}} object, then a {{domxref("Highlight")}} object for the range. After registering the highlight using the {{domxref("HighlightRegistry.set()")}} method, you can then select the range using the {{cssxref("::highlight", "::highlight()")}} pseudo-element. The name defined in the `set()` method is used as the parameter of the `::highlight()` pseudo-element selector to select that range.The range selected by the `::highlight()` pseudo-element can be styled using a limited number of properties.
+To enable styling text ranges on a webpage using the CSS Custom Highlight API, you create a {{domxref("Range")}} object, then a {{domxref("Highlight")}} object for the range. After registering the highlight using the {{domxref("HighlightRegistry.set()")}} method, you can then select the range using the {{cssxref("::highlight", "::highlight()")}} pseudo-element. The name defined in the `set()` method is used as the parameter of the `::highlight()` pseudo-element selector to select that range.The range selected by the `::highlight()` pseudo-element can be styled using a [limited number of properties](/en-US/docs/Web/CSS/::highlight#allowable_properties).
 
 ```html hidden
 <h1>Directions</h1>
-<h2>Lincoln Memorial to Martin Luther King, Jr. Memorial</h1>
+<h2>Lincoln Memorial to Martin Luther King, Jr. Memorial</h2>
 <ol><li>
     Head south on Lincoln Memorial Circle</li><li>
     Turn right toward Independence Ave</li><li>
@@ -30,7 +30,7 @@ To enable styling text ranges on a webpage using the CSS Custom Highlight API, y
 </label>
 ```
 
-This example uses the {{cssxref("text-decoration")}} property to cross out the `steps` highligh range defined by our JavaScript:
+This example uses the {{cssxref("text-decoration")}} property to strike throgh the `steps` highlight range defined by our JavaScript:
 
 ```css
 ::highlight(steps) {
@@ -39,7 +39,7 @@ This example uses the {{cssxref("text-decoration")}} property to cross out the `
 }
 ```
 
-We create a `Range`, with a start and end point (which is the same point in this case). We then set this range as the `Highlight` using the `set()` method of the CSS `highlights` interface extension.
+We create a `Range` with a start and end node (which is the same node in this case). We then set this range as the `Highlight` using the `set()` method of the CSS `HighlightRegistry` interface.
 
 ```js
 let rangeToHighlight = new Range();
