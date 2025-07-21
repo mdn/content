@@ -19,7 +19,7 @@ text-shadow:
 To remove any shadow from the text, use the keyword `none`.
 
 ```css
-  text-shadow: none;
+text-shadow: none;
 ```
 
 In this guide, we look at the components of text shadows and how you can apply multiple text shadows to an element.
