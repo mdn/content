@@ -8,14 +8,19 @@ browser-compat: api.Element.insertAdjacentHTML
 
 {{APIRef("DOM")}}
 
-The **`insertAdjacentHTML()`** method of the
-{{domxref("Element")}} interface parses the specified text as HTML or XML and inserts
-the resulting nodes into the DOM tree at a specified position.
+> [!WARNING]
+> This method parses its input as HTML or XML, writing the result into the DOM.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+>
+> You can reduce the risk by assigning {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+> This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
+
+The **`insertAdjacentHTML()`** method of the {{domxref("Element")}} interface parses the specified input as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.
 
 ## Syntax
 
 ```js-nolint
-insertAdjacentHTML(position, text)
+insertAdjacentHTML(position, input)
 ```
 
 ### Parameters
@@ -30,9 +35,8 @@ insertAdjacentHTML(position, text)
       - : Just inside the element, after its last child.
     - `"afterend"`
       - : After the element. Only valid if the element is in the DOM tree and has a parent element.
-
-- `text`
-  - : The string to be parsed as HTML or XML and inserted into the tree.
+- `input`
+  - : A {{domxref("TrustedHTML")}} instance or string defining the HTML or XML to be parsed.
 
 ### Return value
 
@@ -45,13 +49,17 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if `position` is `"beforebegin"` or `"afterend"` and the element either does not have a parent or its parent is the `Document` object.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if `position` is not one of the four listed values.
+  - : Thrown if:
+    - `position` is not one of the four listed values.
+    - The input is XML that is not well-formed.
+- `TypeError`
+  - : Thrown if the property is set to a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Description
 
 The `insertAdjacentHTML()` method does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct {{domxref("Element.innerHTML", "innerHTML")}} manipulation.
 
-We can visualize the possible positions for the inserted content as follows:
+Where `<p>` is the element, we can visualize the possible positions for the inserted content "foo" as follows:
 
 ```html
 <!-- beforebegin -->
@@ -63,19 +71,25 @@ We can visualize the possible positions for the inserted content as follows:
 <!-- afterend -->
 ```
 
+The method does not include any special handling for {{htmlelement("template")}} elements.
+In most cases developers should use `insertAdjacentHTML()` on the template's {{domxref("HTMLTemplateElement/content","content")}} property instead of directly manipulating the child nodes of a template element.
+
 ### Security considerations
 
-When inserting HTML into a page by using `insertAdjacentHTML()`, be careful
-not to use user input that hasn't been escaped.
+The method does not perform any sanitization to remove XSS-unsafe elements such as {{htmlelement("script")}}, or event handler content attributes.
 
-You should not use `insertAdjacentHTML()` when inserting plain
-text. Instead, use the {{domxref("Node.textContent")}} property or the
-{{domxref("Element.insertAdjacentText()")}} method. This doesn't interpret the passed
-content as HTML, but instead inserts it as raw text.
+When inserting HTML into a page using `insertAdjacentHTML()`, you should pass {{domxref("TrustedHTML")}} objects instead of strings, and [enforce trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
+
+The {{domxref("Element.insertAdjacentText()")}} method or {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
+This inserts the input as raw text instead of parsing it as HTML.
 
 ## Examples
 
 ### Inserting HTML
+
+This example demonstrates the four insertion positions.
+All inserted text is bold, while text inserted inside the element is further styled as red monotype (code).
 
 #### HTML
 
@@ -105,15 +119,35 @@ code {
 
 #### JavaScript
 
+```js hidden
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+While not required for this example, below we follow the recommendation of defining a policy to create {{domxref("TrustedHTML")}} objects from the input (we should also enforce the policy `safe-content-policy` using CSP).
+In this case we know the input is safe so this policy passes it through without modification.
+The commented code shows how you might instead use the "DOMPurify" library to sanitize content that wasn't trusted.
+
+```js
+const policy = trustedTypes.createPolicy("safe-content-policy", {
+  createHTML: (input) => {
+    // DOMPurify.sanitize(input);
+    return input;
+  },
+});
+
+const unsafeText = "<strong>inserted text</strong>";
+const trustedHTML = policy.createHTML(unsafeText);
+```
+
+The remaining code inserts the trusted HTML at the selected position relative to the element with id `subject`.
+
 ```js
 const insert = document.querySelector("#insert");
 insert.addEventListener("click", () => {
   const subject = document.querySelector("#subject");
   const positionSelect = document.querySelector("#position");
-  subject.insertAdjacentHTML(
-    positionSelect.value,
-    "<strong>inserted text</strong>",
-  );
+  subject.insertAdjacentHTML(positionSelect.value, trustedHTML);
 });
 
 const reset = document.querySelector("#reset");
@@ -124,7 +158,7 @@ reset.addEventListener("click", () => {
 
 #### Result
 
-{{EmbedLiveSample("Examples", 100, 100)}}
+{{EmbedLiveSample("Inserting HTML", 100, 100)}}
 
 ## Specifications
 
@@ -139,5 +173,5 @@ reset.addEventListener("click", () => {
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("XMLSerializer")}}: Serialize a DOM tree into an XML string
-- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
-  that insertAdjacentHTML can be way faster in some cases.
+- [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing that `insertAdjacentHTML()` can be way faster in some cases.
