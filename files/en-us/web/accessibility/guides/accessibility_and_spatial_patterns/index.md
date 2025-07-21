@@ -10,11 +10,11 @@ This document describes visual patterns that can induce physical symptoms in peo
 
 ## Spatial Localization
 
-NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)"
+NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://web.archive.org/web/20250216024807/https://colorusage.arc.nasa.gov/blue_2.php)"
 
 ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_3.gif) ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_4.gif)
 
-"_**Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel._"
+> **Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel.
 
 ## Distance between stripes
 
@@ -67,10 +67,6 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 - [Part 3: A Step-by-Step Guide to Typesetting ADA Braille Correctly in Adobe Illustrator](https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/)
 - [Spatial Math in BrailleBlaster (4 of 5)](https://www.youtube.com/watch?v=yz9vefDsj1g)
-
-### Government Literature
-
-- [NASA: Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)
 
 ### Math
 

@@ -264,7 +264,7 @@ There are [many web browsers available](https://en.wikipedia.org/wiki/List_of_we
 
 If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/mini).
 
-Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
+Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://www.browsershots.at/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
 
 See [Strategies for carrying out testing: Putting together a testing lab](/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies#putting_together_a_testing_lab) for more information.
 
