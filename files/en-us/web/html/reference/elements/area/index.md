@@ -122,6 +122,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Examples
 
+### Image with clickable areas
+
 ```html
 <map name="primary">
   <area
@@ -144,6 +146,199 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 ### Result
 
 {{ EmbedLiveSample('Examples', 360, 160) }}
+
+### Obtaining coordinates
+
+It could be difficult to obtain the coordinates for the `coords` attribute. The tool below helps you visualize the resulting shape and get the coordinates for each point. To use it, first upload an image by either dragging or clicking to select a file. Then, click on the image to add points for the shape you want to create. You can select the shape type from the dropdown menu and adjust the scale of the canvas using the range input.
+
+```html hidden
+<div id="controls">
+  <p>
+    <label for="scale">
+      Scale:
+      <input type="range" id="scale" min="0.1" max="3" value="1" step="any"
+    /></label>
+  </p>
+  <p>
+    <label for="shape">
+      Shape:
+      <select id="shape">
+        <option value="rect">Rectangle (x1,y1,x2,y2)</option>
+        <option value="circle">Circle (x,y,r)</option>
+        <option value="poly">Polygon (x1,y1,...,xn,yn)</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <button id="reset">Reset</button>
+  </p>
+  <pre id="coords">Click on the canvas to add points.</pre>
+</div>
+<canvas id="canvas"></canvas>
+```
+
+```css hidden
+body {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+#canvas {
+  border: 1px solid black;
+  transform-origin: top left;
+}
+
+#controls {
+  width: 20em;
+  overflow: scroll;
+  flex-shrink: 0;
+}
+
+#coords {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("canvas");
+const scaleInput = document.getElementById("scale");
+const shapeSelect = document.getElementById("shape");
+const resetButton = document.getElementById("reset");
+const coordsDisplay = document.getElementById("coords");
+const ctx = canvas.getContext("2d");
+let currentImage = null;
+let currentShape = "rect";
+let coords = [];
+
+function renderImage(file) {
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.src = url;
+  img.addEventListener("load", () => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    canvas.style.width = `${img.width}px`;
+    canvas.style.height = `${img.height}px`;
+    ctx.drawImage(img, 0, 0);
+    currentImage = img;
+  });
+}
+
+function init() {
+  if (currentImage) {
+    URL.revokeObjectURL(currentImage.src);
+    currentImage = null;
+  }
+  coords = [];
+  scaleInput.value = 1;
+  canvas.style.transform = "scale(1)";
+  canvas.width = 400;
+  canvas.height = 300;
+  canvas.style.width = "400px";
+  canvas.style.height = "300px";
+  ctx.font = "20px serif";
+  ctx.fillText("Drop an image here, or click to upload", 10, 20);
+}
+
+function resetDrawnShape() {
+  if (!currentImage) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(currentImage, 0, 0);
+}
+
+function drawShape() {
+  ctx.strokeStyle = "magenta";
+  ctx.fillStyle = "red";
+  resetDrawnShape();
+  if (currentShape === "rect" && coords.length === 2) {
+    ctx.strokeRect(
+      coords[0].x,
+      coords[0].y,
+      coords[1].x - coords[0].x,
+      coords[1].y - coords[0].y,
+    );
+  } else if (currentShape === "circle" && coords.length === 2) {
+    ctx.beginPath();
+    const radius = Math.sqrt(
+      (coords[1].x - coords[0].x) ** 2 + (coords[1].y - coords[0].y) ** 2,
+    );
+    ctx.arc(coords[0].x, coords[0].y, radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.closePath();
+  } else if (currentShape === "poly" && coords.length > 2) {
+    ctx.beginPath();
+    ctx.moveTo(coords[0].x, coords[0].y);
+    for (let i = 1; i < coords.length; i++) {
+      ctx.lineTo(coords[i].x, coords[i].y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+  }
+  for (const coord of coords) {
+    ctx.beginPath();
+    ctx.arc(coord.x, coord.y, 3, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.closePath();
+  }
+}
+
+init();
+canvas.addEventListener("dragover", (event) => {
+  event.preventDefault();
+});
+canvas.addEventListener("drop", (event) => {
+  event.preventDefault();
+  renderImage(event.dataTransfer.files[0]);
+});
+canvas.addEventListener("click", (e) => {
+  if (!currentImage) {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.addEventListener("change", (event) => {
+      renderImage(event.target.files[0]);
+    });
+    input.click();
+    return;
+  }
+  if (
+    (currentShape === "rect" || currentShape === "circle") &&
+    coords.length === 2
+  ) {
+    coords = [];
+  }
+  coords.push({ x: e.offsetX, y: e.offsetY });
+  drawShape();
+  if (
+    (currentShape === "rect" && coords.length === 2) ||
+    (currentShape === "poly" && coords.length > 2)
+  ) {
+    coordsDisplay.textContent = `coords="${coords
+      .map((coord) => `${coord.x},${coord.y}`)
+      .join(",")}"`;
+  } else if (currentShape === "circle" && coords.length === 2) {
+    const radius = Math.sqrt(
+      (coords[1].x - coords[0].x) ** 2 + (coords[1].y - coords[0].y) ** 2,
+    );
+    coordsDisplay.textContent = `coords="${coords[0].x},${coords[0].y},${radius.toFixed(1)}"`;
+  } else {
+    coordsDisplay.textContent = "Click on the canvas to add points.";
+  }
+});
+scaleInput.addEventListener("input", () => {
+  canvas.style.transform = `scale(${scaleInput.value})`;
+});
+shapeSelect.addEventListener("change", () => {
+  coords = [];
+  currentShape = shapeSelect.value;
+  resetDrawnShape();
+});
+resetButton.addEventListener("click", init);
+```
+
+{{EmbedLiveSample("Obtaining coordinates", "", 400)}}
 
 ## Technical summary
 
