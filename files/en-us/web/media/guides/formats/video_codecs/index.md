@@ -911,7 +911,7 @@ H.263 is a proprietary format, with [patents](https://www.itu.int/ITU-T/recommen
 
 ### HEVC (H.265)
 
-The **[High Efficiency Video Coding](http://hevc.info/)** (**HEVC**) codec is defined by ITU's **H.265** as well as by MPEG-H Part 2 (the still in-development follow-up to MPEG-4). HEVC was designed to support efficient encoding and decoding of video in sizes including very high resolutions (including 8K video), with a structure specifically designed to let software take advantage of modern processors. Theoretically, HEVC can achieve compressed file sizes half that of [AVC](#avc_h.264) but with comparable image quality.
+The **High Efficiency Video Coding** (**HEVC**) codec is defined by ITU's **H.265** as well as by MPEG-H Part 2 (the still in-development follow-up to MPEG-4). HEVC was designed to support efficient encoding and decoding of video in sizes including very high resolutions (including 8K video), with a structure specifically designed to let software take advantage of modern processors. Theoretically, HEVC can achieve compressed file sizes half that of [AVC](#avc_h.264) but with comparable image quality.
 
 For example, each coding tree unit (CTU)—similar to the macroblock used in previous codecs—consists of a tree of luma values for each sample as well as a tree of chroma values for each chroma sample used in the same coding tree unit, as well as any required syntax elements. This structure supports easy processing by multiple cores.
 

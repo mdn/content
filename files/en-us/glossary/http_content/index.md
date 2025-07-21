@@ -1,5 +1,5 @@
 ---
-title: HTTP Content
+title: HTTP content
 slug: Glossary/HTTP_Content
 page-type: glossary-definition
 sidebar: glossarysidebar

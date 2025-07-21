@@ -50561,10 +50561,6 @@
     "modified": "2020-10-15T22:04:40.998Z",
     "contributors": ["SterileSummer", "sideshowbarker", "jpmedley"]
   },
-  "Web/API/PaymentRequestEvent/instrumentKey": {
-    "modified": "2020-10-15T22:04:43.225Z",
-    "contributors": ["jpmedley"]
-  },
   "Web/API/PaymentRequestEvent/methodData": {
     "modified": "2020-10-15T22:04:44.132Z",
     "contributors": ["jpmedley"]
@@ -74808,19 +74804,6 @@
       "ErwinWessels",
       "andylampert",
       "cvrebert"
-    ]
-  },
-  "Web/CSS/@media/aural": {
-    "modified": "2020-08-05T13:50:38.977Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "mfluehr",
-      "kscarfone",
-      "ethertank",
-      "BijuGC"
     ]
   },
   "Web/CSS/@media/color": {
