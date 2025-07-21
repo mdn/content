@@ -22,8 +22,6 @@ The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-
 
 This example extends on the [same-document view transition](/en-US/docs/Web/API/Document/startViewTransition#same-document_view_transition) example on the `startViewTransition` page.
 
-#### HTML
-
 ```html
 <main>
   <section class="color">
@@ -33,9 +31,7 @@ This example extends on the [same-document view transition](/en-US/docs/Web/API/
 </main>
 ```
 
-#### CSS
-
-A `<h2>` element initially has a `display: none` style, and this is overwritten using the `:active-view-transition` pseudo-class when the view transition is in progress, setting the `<h2>` style to `display: block`:
+A `<h2>` element initially has a `display: none` style, and this is overwritten using the `:active-view-transition` pseudo-class setting the `<h2>` style to `display: block`, and the button is also hidden using `visibility:hidden`, when the view transition is in progress:
 
 ```css hidden
 html {
@@ -67,6 +63,9 @@ h2 {
 :root:active-view-transition h2 {
   display: block;
 }
+:root:active-view-transition button {
+  visibility: hidden;
+}
 ```
 
 ```js hidden
@@ -90,8 +89,6 @@ const changeColorButton = document.querySelector("#change-color");
 changeColorButton.addEventListener("click", changeColor);
 changeColorButton.addEventListener("keypress", changeColor);
 ```
-
-#### Result
 
 {{EmbedLiveSample('showing_view_transition_is_running', '100%', '120')}}
 
