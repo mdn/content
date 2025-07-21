@@ -244,9 +244,9 @@ These pseudo-classes relate to pages in a printed document and are used with the
 These pseudo-classes relate to elements involved in a [view transition](/en-US/docs/Web/API/View_Transition_API).
 
 - {{cssxref(":active-view-transition")}}
-  - : Matches elements when a view transition is in progress.
+  - : Matches the root element of a document when a [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
-  - : Matches elements when a view transition of a specific type is in progress.
+  - : Matches the root element of a document when a specified [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
 
 ## Syntax
 
