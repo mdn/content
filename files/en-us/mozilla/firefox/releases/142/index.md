@@ -71,6 +71,7 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
+- Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} event that listens for changes in the user-specified settings that affect an extension's browser action. ([Firefox bug 1828220](https://bugzil.la/1828220))
 
 <!-- ### Removals -->
 
