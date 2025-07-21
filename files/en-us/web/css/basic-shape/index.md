@@ -86,7 +86,7 @@ The parameters common across the syntax of some basic shape functions include:
 
 ### `<basic-shape-rect>`
 
-The `<basic-shape-rect>` type represents all the rectangular shapes: `inset()`, `rect()`, and `xywh()`.
+The `<basic-shape-rect>` type represents the rectangle-shape functions, including {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}.
 
 #### Syntax for rectangles by container insets
 
