@@ -271,3 +271,4 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("ShadowRoot.getHTML()")}}
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
+- [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
