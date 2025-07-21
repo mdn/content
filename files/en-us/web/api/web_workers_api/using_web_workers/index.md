@@ -338,11 +338,11 @@ worker.onmessage = (event) => {
     Object.hasOwn(event.data, "queryMethodArguments")
   ) {
     listeners[event.data.queryMethodListener].apply(
-      instance,
+      this,
       event.data.queryMethodArguments,
     );
   } else {
-    this.defaultListener.call(instance, event.data);
+    this.defaultListener.call(this, event.data);
   }
 };
 ```
@@ -427,7 +427,6 @@ It needs to execute the following script, either inline or as an external file:
 // QueryableWorker instances properties:
 //   * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
 function QueryableWorker(url, defaultListener, onError) {
-  const instance = this;
   const worker = new Worker(url);
   const listeners = {};
 
@@ -474,11 +473,11 @@ function QueryableWorker(url, defaultListener, onError) {
       Object.hasOwn(event.data, "queryMethodArguments")
     ) {
       listeners[event.data.queryMethodListener].apply(
-        instance,
+        this,
         event.data.queryMethodArguments,
       );
     } else {
-      this.defaultListener.call(instance, event.data);
+      this.defaultListener.call(this, event.data);
     }
   };
 }

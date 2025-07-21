@@ -44,6 +44,12 @@ Events have three functions:
 
 ### details
 
+- `documentId`
+  - : `string`. A UUID of the document loaded.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, and `"pending_deletion"`.
 - `tabId`
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
@@ -54,6 +60,8 @@ Events have three functions:
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
+- `frameType`
+  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, and `"sub_frame"`.
 - `timeStamp`
   - : `number`. The time that the navigation was committed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`
