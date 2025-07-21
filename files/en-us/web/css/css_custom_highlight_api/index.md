@@ -43,7 +43,7 @@ This example uses the {{cssxref("text-decoration")}} property to strike throgh t
 We create a `Range` with a start and end node (which is the same node in this case). We then set this range as the `Highlight` using the `set()` method of the CSS `HighlightRegistry` interface.
 
 ```js
-let rangeToHighlight = new Range();
+const rangeToHighlight = new Range();
 const list = document.querySelector("ol");
 rangeToHighlight.setStart(list, 0);
 rangeToHighlight.setEnd(list, 0);
@@ -55,7 +55,7 @@ An event listener updates the end of the highlighted range when the number of co
 
 ```js
 const currentPositionSlider = document.querySelector("input");
-currentPositionSlider.addEventListener("change", function (e) {
+currentPositionSlider.addEventListener("change", (e) => {
   rangeToHighlight.setEnd(list, e.target.value);
 });
 ```
