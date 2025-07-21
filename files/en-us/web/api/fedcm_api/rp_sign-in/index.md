@@ -10,7 +10,7 @@ This article describes the process by which a relying party (RP) can use the [Fe
 
 ## Calling the get() method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user is given the option to sign in to the RP with an a choice of existing IdP accounts that they are already signed in to on the browser. The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user using credentials (cookies) provided to the browser on login.
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in to on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user using credentials (cookies) provided to the browser on login.
 
 The method returns a promise that fulfills with an {{domxref("IdentityCredential")}} object if the user identity is successfully validated by the chosen IdP. This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
 
