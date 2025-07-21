@@ -17,16 +17,17 @@ To enable styling text ranges on a webpage using the CSS Custom Highlight API, y
 ```html hidden
 <h1>Directions</h1>
 <h2>Lincoln Memorial to Martin Luther King, Jr. Memorial</h2>
-<ol><li>
-    Head south on Lincoln Memorial Circle</li><li>
-    Turn right toward Independence Ave</li><li>
-    Turn left onto Independence Ave</li><li>
-    Turn right onto West Basin Dr</li><li>
-    Look up when you reach 64 Independence Ave!
-</li></ol>
-<hr>
-<label>Number of steps completed:
-  <input type="number" min="0" max="5" value="0" id="currentStep">
+<ol>
+  <li>Head south on Lincoln Memorial Circle</li>
+  <li>Turn right toward Independence Ave</li>
+  <li>Turn left onto Independence Ave</li>
+  <li>Turn right onto West Basin Dr</li>
+  <li>Look up when you reach 64 Independence Ave!</li>
+</ol>
+<hr />
+<label
+  >Number of steps completed:
+  <input type="number" min="0" max="5" value="0" id="currentStep" />
 </label>
 ```
 
