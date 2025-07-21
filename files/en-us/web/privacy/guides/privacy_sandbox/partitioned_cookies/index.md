@@ -42,7 +42,7 @@ Revisiting our example:
 3. When the user visits `https://site-b.example`, which also embeds `https://3rd-party.example`, this new embedded instance is no longer able to access the cookie because the partition key doesn't match.
 
 > [!NOTE]
-> CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/Guides/State_Partitioning) implemented by Firefox. However, state partitioning partitions cookie storage by default for third-party contexts, whereas CHIPS allows opt-in to partitioned cookies if desired in both first-party and third-party contexts. It is preferred to use the opt-in mechanism of CHIPS to have the most compatible partitioned cookies.
+> CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/Guides/State_Partitioning) implemented by Firefox. However, state partitioning partitions cookie storage by default for third-party contexts, whereas CHIPS allows opt-in to partitioned cookies for both first-party and third-party contexts. It is recommended to use the opt-in mechanism of CHIPS rather than state partitioning to provide the most compatible partitioned cookies.
 
 ## CHIPS and subdomains
 
