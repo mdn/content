@@ -251,7 +251,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See [Firefox bug 503943](https://bugzil.la/503943).
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
   - : The existing document history object, available through the {{domxref("window.history")}} object, now supports the new HTML5 `pushState()` and `replaceState()` methods.
-- Animations using MozBeforePaint
+- Animations using `MozBeforePaint`
   - : A new event has been added which, in concert with the `window.mozRequestAnimationFrame()` method and `window.mozAnimationStartTime` property, provides a way to create animations that are synchronized with one another.
 - Touch and multi-touch events
   - : Support has been added for touch and multi-touch events.
