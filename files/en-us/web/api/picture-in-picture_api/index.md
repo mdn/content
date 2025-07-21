@@ -77,8 +77,10 @@ The availability of picture-in-picture mode can be controlled using [Permissions
 
 ## Examples
 
-In this example, a video is presented in a web page.
-Clicking the "**Toggle PiP**" button lets the user toggle between playing the video in the page and in a floating window.
+### Toggling picture-in-picture mode
+
+In this example, we have a {{HTMLElement("video")}} element in a web page, a {{HTMLElement("button")}} to toggle picture-in-picture, and an element to log information relevant for the example.
+The {{HTMLElement("button")}} element is `disabled` initially until we've determined browser support.
 
 ```html
 <video
@@ -89,7 +91,7 @@ Clicking the "**Toggle PiP**" button lets the user toggle between playing the vi
   loop
   width="300"></video>
 
-<button id="pip-button">Toggle PiP</button>
+<button id="pip-button" disabled>Toggle PiP</button>
 <pre id="log"></pre>
 ```
 
@@ -107,16 +109,26 @@ button {
 }
 ```
 
+We first check if the browser supports PiP with `document.pictureInPictureEnabled`, and if it's not supported, we log that information to the `<pre>` element.
+If it is available in the browser, we can enable the toggle to enter and exit PiP.
+
+For the controls, an event listener on the {{HTMLElement("button")}} element calls a `togglePictureInPicture()` function that we've defined.
+In `togglePictureInPicture()`, an `if` statement checks the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
+
+- If the value is `null`, no video is in a floating window, so we can request the video to enter picture-in-picture mode.
+  We do that by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+- If the value is not `null`, an element is currently in picture-in-picture mode.
+  We can then call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box, exiting picture-in-picture mode.
+
 ```js
 const video = document.getElementById("video");
 const pipButton = document.getElementById("pip-button");
 const log = document.getElementById("log");
 
 if (document.pictureInPictureEnabled) {
-  log.innerText = "pictureInPictureEnabled -> hurray!";
+  pipButton.removeAttribute("disabled");
 } else {
-  log.innerText =
-    "PiP is not supported in your browser. Check browser compatibility for more information.";
+  log.innerText = "PiP not supported. Check browser compatibility for details.";
 }
 
 function togglePictureInPicture() {
@@ -136,27 +148,9 @@ pipButton.addEventListener("click", togglePictureInPicture);
 }
 ```
 
-{{embedlivesample("", , "350")}}
+Clicking the "Toggle PiP" button lets the user toggle between playing the video in the page and in a floating window:
 
-### Toggling picture-in-picture mode
-
-This code is called by a click handler when the user clicks the "Toggle Picture-in-Picture" button:
-
-```js
-function togglePictureInPicture() {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
-  } else if (document.pictureInPictureEnabled) {
-    video.requestPictureInPicture();
-  }
-}
-```
-
-This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
-
-If the value is not `null`, it's the element that's currently in picture-in-picture mode, that is in a floating window. We call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box.
-
-If the value is `null`, no video is in the floating window. So we can request a video to enter the picture-in-picture mode. We do it by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+{{embedlivesample("toggling_picture-in-picture", , "350")}}
 
 ## Specifications
 
