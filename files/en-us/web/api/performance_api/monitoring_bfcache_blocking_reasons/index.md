@@ -171,7 +171,7 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"background-work"`
   - : The Document requested background work by calling [`SyncManager`](/en-US/docs/Web/API/SyncManager)'s [`register()`](/en-US/docs/Web/API/SyncManager/register) method, [`PeriodicSyncManager`](/en-US/docs/Web/API/PeriodicSyncManager)'s [`register()`](/en-US/docs/Web/API/PeriodicSyncManager/register) method, or [`BackgroundFetchManager`](/en-US/docs/Web/API/BackgroundFetchManager)'s [`fetch()`](/en-US/docs/Web/API/BackgroundFetchManager/fetch) method.
 - `"broadcastchannel-message"`
-  - : While the page was stored in back/forward cache, a [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel) connection on the page received a message to trigger a `message` event.
+  - : While the page was stored in back/forward cache, a [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel) connection on the page received a message to trigger a [`message`](https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent) event.
 - `"idbversionchangeevent"`
   - : The Document had a pending [`IDBVersionChangeEvent`](/en-US/docs/Web/API/IDBVersionChangeEvent) while unloading.
 - `"idledetector"`
