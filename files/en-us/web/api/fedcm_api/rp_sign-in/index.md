@@ -135,7 +135,7 @@ Auto-reauthentication can occur if `mediation` is set to `optional` or `silent`.
 With these `mediation` options, auto-reauthentication will occur under the following conditions:
 
 - FedCM is available to use. For example, the user has not disabled FedCM either globally or in the RP's settings.
-- The user has only used one account to sign into the RP website on this browser via FedCM. If returning accounts exist for multiple IdPs, the user won't be automatically re-authenticated.
+- The user has only used one account to sign into the RP website on this browser via FedCM. If accounts exist for multiple IdPs, the user won't be automatically re-authenticated.
 - The user is signed into the IdP with that account.
 - Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
 - The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
