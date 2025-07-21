@@ -18,7 +18,7 @@ The **`:active-view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-
 
 ## Examples
 
-### Styling a view transition in progress
+### Styling an active view transition
 
 This example extends on the [same-document view transition](/en-US/docs/Web/API/Document/startViewTransition#same-document_view_transition) example on the `startViewTransition` page.
 
