@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS custom highlight API** module provides a programmatic way to target specific ranges of text defined by range objects, without affecting the underlying DOM structure. The range objects can then be selected via `::highlight()` pseudo-elements, and have highlight styles added and removed. The features of this module can create highlight effects similar to how text editors highlight spelling or grammar errors, and code editors highlight syntax errors.
 
-The CSS Custom Highlight API extends the concept of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}} by providing a way to create and style arbitrary {{domxref('Range')}} objects, rather than being limited to browser-defined ranges. In other words, the CSS custom hightlight API makes it possible to apply CSS styles to arbitrary text ranges selected from JavaScript.
+The CSS Custom Highlight API extends the concept of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}} by providing a way to create arbitrary text ranges (defined as {{domxref('Range')}} objects in JavaScript) and style them via CSS, rather than being limited to browser-defined ranges.
 
 ## Custom highlight API in action
 
