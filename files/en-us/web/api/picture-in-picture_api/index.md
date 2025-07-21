@@ -115,7 +115,8 @@ const log = document.getElementById("log");
 if (document.pictureInPictureEnabled) {
   log.innerText = "pictureInPictureEnabled -> hurray!";
 } else {
-  log.innerText = "PiP is not supported in your browser. Check browser compatibility for more information.";
+  log.innerText =
+    "PiP is not supported in your browser. Check browser compatibility for more information.";
 }
 
 function togglePictureInPicture() {
