@@ -56,7 +56,11 @@ where `<value>` can optionally be one of the following values:
 - `allow-presentation`
   - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
 - `allow-same-origin`
-  - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+  - : Allows a same-origin sandboxed resource to be treated as same-origin, reducing the restrictions normally applied to a sandbox.
+
+    If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+    The {{httpheader("Origin")}} of such a request would be `null`.
+
 - `allow-scripts`
   - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
 - `allow-storage-access-by-user-activation` {{experimental_inline}}
