@@ -14,11 +14,11 @@ of the array.
 {{InteractiveExample("JavaScript Demo: Array.prototype.shift()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
-const firstElement = array1.shift();
+const firstElement = array.shift();
 
-console.log(array1);
+console.log(array);
 // Expected output: Array [2, 3]
 
 console.log(firstElement);

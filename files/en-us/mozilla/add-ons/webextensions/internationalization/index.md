@@ -5,7 +5,7 @@ page-type: guide
 sidebar: addonsidebar
 ---
 
-The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works.
 
 > [!NOTE]
 > The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
@@ -378,7 +378,7 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs.
+To test your extension's localization, you use [Firefox](https://www.firefox.com/en-US/) or [Firefox Beta](https://www.firefox.com/en-US/channel/desktop/), the Firefox builds in which you can install language packs.
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 

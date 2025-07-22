@@ -209,8 +209,8 @@ function handleSelection(e) {
 
 There are two ways to solve the problem outlined in this task:
 
-- Add an `aria-live=""` attribute to the animal-description `<div>` to turn it into a live region, so when its content changes, the updated content will be read out by a screenreader. The best value is probably `assertive`, which makes the screenreader read out the updated content as soon as it changed. `polite` means that the screenreader will wait until other descriptions have finished before it starts reading out the changed content.
-- Add a `role="alert"` attribute to the animal-description `<div>`, to make it have alert box semantics. This has the same effect on the screenreader as setting `aria-live="assertive"` on it.
+- Add an `aria-live=""` attribute to the animal-description `<div>` to turn it into a live region, so when its content changes, the updated content will be read out by a screen reader. The best value is probably `assertive`, which makes the screen reader read out the updated content as soon as it changed. `polite` means that the screen reader will wait until other descriptions have finished before it starts reading out the changed content.
+- Add a `role="alert"` attribute to the animal-description `<div>`, to make it have alert box semantics. This has the same effect on the screen reader as setting `aria-live="assertive"` on it.
 
 </details>
 

@@ -405,66 +405,6 @@ console.log(products.latestBrowser);
 //  'Edge'
 ```
 
-### A complete traps list example
-
-Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
-
-```js
-/*
-  const docCookies = ... get the "docCookies" object here:
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
-*/
-
-const docCookies = new Proxy(docCookies, {
-  get(target, key) {
-    return target[key] ?? target.getItem(key) ?? undefined;
-  },
-  set(target, key, value) {
-    if (key in target) {
-      return false;
-    }
-    return target.setItem(key, value);
-  },
-  deleteProperty(target, key) {
-    if (!(key in target)) {
-      return false;
-    }
-    return target.removeItem(key);
-  },
-  ownKeys(target) {
-    return target.keys();
-  },
-  has(target, key) {
-    return key in target || target.hasItem(key);
-  },
-  defineProperty(target, key, descriptor) {
-    if (descriptor && "value" in descriptor) {
-      target.setItem(key, descriptor.value);
-    }
-    return target;
-  },
-  getOwnPropertyDescriptor(target, key) {
-    const value = target.getItem(key);
-    return value
-      ? {
-          value,
-          writable: true,
-          enumerable: true,
-          configurable: false,
-        }
-      : undefined;
-  },
-});
-
-/* Cookies test */
-
-console.log((docCookies.myCookie1 = "First value"));
-console.log(docCookies.getItem("myCookie1"));
-
-docCookies.setItem("myCookie1", "Changed value");
-console.log(docCookies.myCookie1);
-```
-
 ## Specifications
 
 {{Specifications}}

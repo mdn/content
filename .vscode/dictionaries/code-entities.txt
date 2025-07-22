@@ -22,6 +22,8 @@ accessibility.disablecache
 accessibilitysidebar
 acodec
 activetitlebarcolor
+addonsidebar
+addonsidebarmain
 addstream
 adduser
 adlm
@@ -528,6 +530,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onwebkitmouseforcewillbegin
+onzoomlevelchange
 opendocument
 openidconnect
 openpgp4fpr
@@ -740,6 +743,7 @@ tnsa
 todoapp
 togglecamera
 togglemicrophone
+togglescreenshare
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
@@ -870,3 +874,4 @@ xpcnativewrappers
 xpidl
 xpinstall
 xywh
+zoomlevelchange
