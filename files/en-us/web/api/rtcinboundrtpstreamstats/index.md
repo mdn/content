@@ -38,7 +38,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer indicating the number of frames decoded in the last second.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesReceived", "framesReceived")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of complete frames received on this RTP stream.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.frameWidth", "frameWidth")}}
   - : A positive integer indicating the width of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
