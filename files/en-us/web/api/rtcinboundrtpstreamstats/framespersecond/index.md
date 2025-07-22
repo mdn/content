@@ -13,7 +13,7 @@ The **`framesPerSecond`** property of the {{domxref("RTCInboundRtpStreamStats")}
 Note that this may be lower than the media source frame rate, which is provided in {{domxref("RTCVideoSourceStats.framesPerSecond")}}.
 
 > [!NOTE]
-> The value does not exist for audio.
+> The value is undefined for audio streams.
 
 ## Value
 

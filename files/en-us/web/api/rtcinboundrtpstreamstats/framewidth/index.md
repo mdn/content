@@ -13,7 +13,7 @@ The **`frameWidth`** property of the {{domxref("RTCInboundRtpStreamStats")}} dic
 Note that the resolution of the encoded frame may be lower than that of the media source, which is provided in {{domxref("RTCVideoSourceStats.width")}}.
 
 > [!NOTE]
-> The value does not exist for audio, or before the first frame is encoded.
+> The value is undefined for audio streams, or before the first frame is encoded.
 
 ## Value
 
