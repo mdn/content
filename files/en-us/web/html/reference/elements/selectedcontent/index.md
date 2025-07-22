@@ -33,7 +33,7 @@ The `<selectedcontent>` element can be included as the only child of a {{htmlele
 
 ### Option cloning
 
-The `<selectedcontent>` contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content. This clone is rendered by the user agent using {{domxref("Node.cloneNode", "cloneNode()")}}. When a different `<option>` is selected, when a [`change`](HTMLElement/change_event) event occurs, the `<selectedcontent>` element's content is replaced by a new cloned copy of the newly selected `<option>`. 
+The `<selectedcontent>` contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content. This clone is rendered by the user agent using {{domxref("Node.cloneNode", "cloneNode()")}}. When a different `<option>` is selected, when a [`change`](HTMLElement/change_event) event occurs, the `<selectedcontent>` element's content is replaced by a new cloned copy of the newly selected `<option>`.
 
 > [!WARNING]
 > As browser cloning updates to the `<selectedcontent>` element only occurs on `change`, dynamic modifications to the selected `<option>` element's content made after the `<select>` element has been created are not automatically cloned to the `<selectedcontent>` element. These must be manually updated by the developer. In particular, this may cause issues with sites that use popular front-end JavaScript frameworks where {{htmlelement("option")}} elements are dynamically updated after creation, as these updates will not be cloned to the `<selectedcontent>` element.
@@ -44,7 +44,7 @@ As the `<selectedcontent>` element is rendered inside a `<button>`, and the `<bu
 
 ### Styling with CSS
 
-You can target the currently selected `<option>` element's content as it appears inside the select button with CSS styles, without affecting the styling of the content of the `<option>` that was cloned. 
+You can target the currently selected `<option>` element's content as it appears inside the select button with CSS styles, without affecting the styling of the content of the `<option>` that was cloned.
 
 For example, your `<option>` elements may contain icons, images, or even videos that render nicely inside the picker, but may cause the select button to increase in size, look untidy, and affect the surrounding layout.
 
