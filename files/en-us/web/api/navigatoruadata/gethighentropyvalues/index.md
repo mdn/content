@@ -30,7 +30,7 @@ getHighEntropyValues(hints)
   - : An array containing the hints to be returned, one or more of:
     - `"architecture"`
     - `"bitness"`
-    - `"formFactor"`
+    - `"formFactors"`
     - `"fullVersionList"`
     - `"model"`
     - `"platformVersion"`
@@ -56,8 +56,8 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 - `bitness`
   - : A string containing the architecture bitness. For example, `"32"` or `"64"`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
-- `formFactor`
-  - : A string containing the form-factor of a device. For example, `"Tablet"` or `"VR"`.
+- `formFactors`
+  - : An array of strings containing the form-factors of a device. For example, `["Tablet", "XR"]`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Form-Factors")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `fullVersionList`
   - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.

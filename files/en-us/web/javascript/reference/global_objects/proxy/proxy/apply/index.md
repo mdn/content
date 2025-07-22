@@ -25,11 +25,11 @@ const handler = {
   },
 };
 
-const proxy1 = new Proxy(sum, handler);
+const proxy = new Proxy(sum, handler);
 
 console.log(sum(1, 2));
 // Expected output: 3
-console.log(proxy1(1, 2));
+console.log(proxy(1, 2));
 // Expected output: 30
 ```
 

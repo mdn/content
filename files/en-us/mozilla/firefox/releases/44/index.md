@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -203,7 +203,7 @@ _No change._
 ### JavaScript code modules
 
 - Added `LIKE` support to Sqlite.jsm ([Firefox bug 1188760](https://bugzil.la/1188760)).
-- Added [Snackbars.jsm](/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
+- Added [Snackbars.jsm](https://web.archive.org/web/20160423072423/https://developer.mozilla.org/en-US/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](https://web.archive.org/web/20210518020027/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
 
 ### XPCOM
 
@@ -211,4 +211,4 @@ _No change._
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](https://web.archive.org/web/20201201072958/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](https://web.archive.org/web/20181116093809/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx_to_jpm).
