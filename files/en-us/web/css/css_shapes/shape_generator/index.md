@@ -30,22 +30,23 @@ The tool below helps you visualize the resulting shape and get the coordinates f
   </label>
   <button id="reset">Reset</button>
 </div>
-<output id="coords">Click on the canvas to add points.</output>
 <canvas id="canvas"></canvas>
+<output id="coords">Click on the canvas to add points.</output>
 ```
 
 ```css hidden live-sample___shape-generator
+#canvas {
+  display: block;
+  border: 1px solid black;
+  transform-origin: top left;
+  margin: 0.5em 0;
+}
+
 #coords {
   display: block;
   font-family: monospace;
   white-space: pre-wrap;
   word-break: break-all;
-}
-
-#canvas {
-  display: block;
-  border: 1px solid black;
-  transform-origin: top left;
 }
 ```
 
