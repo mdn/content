@@ -11,7 +11,7 @@ sidebar: learnsidebar
 This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 
 > [!WARNING]
-> The CSS and HTML features demonstrated in this article have limited browser support and may not work reliably in production. Most JavaScript frameworks either block these features or cause hydration failures when Server-Side Rendering (SSR) is enabled.
+> The CSS and HTML features demonstrated in this article currently have limited browser support; check the browser compatibility tables on the individual feature reference pages for more details. Some JavaScript frameworks block these features; in others, they cause hydration failures when Server-Side Rendering (SSR) is enabled.
 
 ## Background
 
