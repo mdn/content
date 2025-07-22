@@ -9,8 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you've understood our [Classes in JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript) article.
 
 > [!NOTE]
-> If your code returns errors, it will be logged into the results panel on this page or in the JavaScript console.
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## OOJS 1
 
@@ -18,34 +17,12 @@ In this task we provide you with the start of a definition for a `Shape` class. 
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add a constructor to this class. The constructor takes arguments for the `name`, `sides`, and `sideLength` properties, and initializes them.
-3. Add a new method `calcPerimeter()` method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
-4. Create a new instance of the `Shape` class called `square`. Give it a `name` of `square`, `4` `sides`, and a `sideLength` of `5`.
-5. Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser's console as expected.
-6. Create a new instance of `Shape` called `triangle`, with a `name` of `triangle`, `3` `sides` and a `sideLength` of `3`.
-7. Call `triangle.calcPerimeter()` to check that it works OK.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
-
-<!-- Code shared across examples -->
-
-```css hidden live-sample___oojs-1 live-sample___oojs-2
-p {
-  color: purple;
-  margin: 0.5em 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-```
-
-<!-- Example-specific code -->
+1. Add a constructor to this class. The constructor takes arguments for the `name`, `sides`, and `sideLength` properties, and initializes them.
+2. Add a new method `calcPerimeter()` method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
+3. Create a new instance of the `Shape` class called `square`. Give it a `name` of `square`, `4` `sides`, and a `sideLength` of `5`.
+4. Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser's console as expected.
+5. Create a new instance of `Shape` called `triangle`, with a `name` of `triangle`, `3` `sides` and a `sideLength` of `3`.
+6. Call `triangle.calcPerimeter()` to check that it works OK.
 
 ```js live-sample___oojs-1
 class Shape {
@@ -96,13 +73,10 @@ Now it's time to add some inheritance into the mix.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a `Square` class that inherits from `Shape`.
-3. Add a `calcArea()` method to `Square` that calculates its area.
-4. Set up the `Square` constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
-5. Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works OK.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create a `Square` class that inherits from `Shape`.
+2. Add a `calcArea()` method to `Square` that calculates its area.
+3. Set up the `Square` constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
+4. Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works OK.
 
 ```js live-sample___oojs-2
 class Shape {
@@ -158,3 +132,5 @@ square.calcArea();
 ```
 
 </details>
+
+&nbsp;

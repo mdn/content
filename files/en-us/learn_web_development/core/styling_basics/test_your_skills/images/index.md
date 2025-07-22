@@ -9,26 +9,15 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
 > [!NOTE]
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, you have an image that is overflowing the box.
-
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
+In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
 
 Your final result should look like the image below:
 
 ![An image in a box](mdn-images-object-fit.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___object-fit
 <div class="box">
@@ -74,17 +63,14 @@ In this task, you have a basic form.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Use attribute selectors to target the search field and button inside `.my-form`.
-3. Make the form field and button use the same text size as the rest of the form.
-4. Give the form field and button `10px` of padding.
-5. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
+1. Use attribute selectors to target the search field and button inside `.my-form`.
+2. Make the form field and button use the same text size as the rest of the form.
+3. Give the form field and button `10px` of padding.
+4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
 Your final result should look like the image below:
 
 ![A single line form](mdn-images-form.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___forms-1
 <form action="" class="my-form" method="post">
@@ -142,16 +128,9 @@ Our second form styling assessment is fairly free-form, and you have a lot of fl
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior)
-3. On top of that, add in some nice, consistent styling for the inputs and button.
-4. Use some kind of layout technique to make the inputs and labels line up neatly.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
+2. On top of that, add in some nice, consistent styling for the inputs and button.
+3. Use some kind of layout technique to make the inputs and labels line up neatly.
 
 ```html hidden live-sample___forms-2
 <form>
@@ -277,3 +256,5 @@ button:focus {
 ```
 
 </details>
+
+&nbsp;

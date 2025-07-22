@@ -9,19 +9,15 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you understand how to mark up text in HTML to give it structure and meaning.
 
 > [!NOTE]
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
 In this task, we want you to mark up the provided HTML using semantic heading and paragraph elements.
 
-To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+The finished example should look like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
 
 ```html-nolint live-sample___text-basics-1
 Basic HTML Animals
@@ -83,10 +79,6 @@ p {
 
 {{ EmbedLiveSample('text-basics-1', "100%", 130) }}
 
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1-finished.html", '100%', 300)}}
-
 <details>
 <summary>Click here to show the solution</summary>
 
@@ -118,13 +110,9 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the first un-marked up list into an unordered list, and the second one into an ordered list.
 
-To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+The finished example should look like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
 
 ```html-nolint live-sample___text-basics-2
 <h1>Looking at lists</h1>
@@ -166,10 +154,6 @@ ul {
 
 {{ EmbedLiveSample('text-basics-2', "100%", 220) }}
 
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2-finished.html", '100%', 400)}}
-
 <details>
 <summary>Click here to show the solution</summary>
 
@@ -203,13 +187,9 @@ Your finished HTML should look like this:
 
 In this task, we want you to turn the provided animals and their definitions into a description list.
 
-To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+The finished example should look like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
 
 ```html-nolint live-sample___text-basics-3
 <h1>Advanced HTML Animals</h1>
@@ -239,10 +219,6 @@ dt {
 ```
 
 {{ EmbedLiveSample('text-basics-3', "100%", 160) }}
-
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -274,13 +250,9 @@ Your finished HTML should look like this:
 
 In this task, you are provided with a paragraph, and your aim is to use some inline elements to mark up a couple of appropriate words with strong importance, and a couple with emphasis.
 
-To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
+The finished example should look something like this:
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
 
 ```html live-sample___text-basics-4
 <h1>Emphasis and importance</h1>
@@ -309,10 +281,6 @@ em {
 
 {{ EmbedLiveSample('text-basics-4', "100%", 160) }}
 
-The finished example should look something like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3-finished.html", '100%', 120)}}
-
 <details>
 <summary>Click here to show the solution</summary>
 
@@ -330,3 +298,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+&nbsp;

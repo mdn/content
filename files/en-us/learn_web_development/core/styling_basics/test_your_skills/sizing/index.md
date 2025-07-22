@@ -9,7 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
 
 > [!NOTE]
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
@@ -17,18 +17,13 @@ In this task, you have two boxes.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. However, the content should not overflow if there is more content than fits in 100 pixels.
-3. Test this box by removing the content from the HTML to make sure you still get a `100px` tall box even with no content.
-4. Size the second box so that it is fixed at `100px` tall, so that content will overflow if there is too much.
+1. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. However, the content should not overflow if there is more content than fits in 100 pixels.
+2. Test this box by removing the content from the HTML to make sure you still get a `100px` tall box even with no content.
+3. Size the second box so that it is fixed at `100px` tall, so that content will overflow if there is too much.
+
+Your final result should look like the image below:
 
 ![Two boxes one with overflowing content](mdn-sizing-height-min-height.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___height-min-height
 <div class="box box1">
@@ -94,19 +89,12 @@ In this task, you have a box, which contains another box.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Make the inner box width `60%` of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border.
-3. Give the inner box padding of `10%` using the width (or inline size) as the size from which that percentage is calculated.
+1. Make the inner box width `60%` of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border.
+2. Give the inner box padding of `10%` using the width (or inline size) as the size from which that percentage is calculated.
 
 Your final result should look like the image below:
 
 ![A box with another box nested inside](mdn-sizing-percentages.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___percentages
 <div class="box">
@@ -164,16 +152,11 @@ All elements already have `box-sizing: border-box` to save you from worrying abo
 
 In this task, you have two images in boxes. One image is smaller than the box, the other is larger and breaking out of the box.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the image so that the large image shrinks down into the box but the small image does not stretch.
+To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the image so that the large image shrinks down into the box but the small image does not stretch.
 
 Your final result should look like the images below:
 
 ![Two boxes with images in](mdn-sizing-max-width.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___max-width
 <div class="box">
@@ -220,6 +203,4 @@ img {
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+&nbsp;

@@ -9,24 +9,13 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you understand [floats in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) using the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-To complete this task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as in the image below:
+To complete this task, float the two elements with a class of `float1` and `float2` left and right, respectively. The text should then appear between the two boxes, as shown in the image below:
 
 ![Two blocks displaying left and right of some text.](float-task1.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float1
 <div class="box">
@@ -91,19 +80,12 @@ You can use `float` for both boxes:
 
 To complete this task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Float the element with a class of `float` to the left.
-3. Update the code so that the first line of text displays next to that element, but the following line of text (which has a class of `below`) displays underneath it.
+1. Float the element with a class of `float` to the left.
+2. Update the code so that the first line of text displays next to that element, but the following line of text (which has a class of `below`) displays underneath it.
 
 Your final result should look like the image below:
 
 ![A box displayed to the left of a line of text, with some more text below.](float-task2.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float2
 <div class="box">
@@ -168,18 +150,9 @@ You need to flow the item left, then add `clear: left` to the class for the seco
 
 In this task, we have a floated element. The box wrapping the float and text is displaying behind the float.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
+To complete the task, use the most up-to-date method available to cause the box background to extend to below the float, as in the image below:
 
 ![A block displayed to the right of some text both wrapped by a box with a background color.](float-task3.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___float3
 <div class="box">
@@ -242,6 +215,4 @@ Other methods might be to use `overflow` or a clearfix hack, however the learnin
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+&nbsp;

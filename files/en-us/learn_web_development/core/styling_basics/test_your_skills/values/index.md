@@ -9,29 +9,19 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 
 > [!NOTE]
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, the first list item has been given a background color using a hex color code.
+In this task, the first list item has been given a background color using a hex color code. Complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
-   - The second list item should use RGB color.
-   - The third should use HSL color.
-   - The fourth should use RGB color but with the alpha channel set to `0.6`.
+- The second list item should use RGB color.
+- The third should use HSL color.
+- The fourth should use RGB color but with the alpha channel set to `0.6`.
 
 You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
 
 ![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___color
 <ul>
@@ -93,26 +83,16 @@ By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA
 
 ## Task 2
 
-In this task, we want you to set the size of various items of text.
+In this task, we want you to set the font size of various items of text:
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the CSS so that:
-   - The `<h1>` element should be 50 pixels.
-   - The `<h2>` element should be 2em.
-   - All `<p>` elements should be 16 pixels.
-   - A `<p>` element that is directly after an `<h1>` should be 120%.
+- The `<h1>` element should be `50px`.
+- The `<h2>` element should be `2em`.
+- All `<p>` elements should be `16px`.
+- A `<p>` element that is directly after an `<h1>` should be `120%`.
 
 Your final result should look like the image below:
 
 ![Some text at varying sizes.](mdn-value-length.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___length
 <h1>Level 1 heading</h1>
@@ -179,20 +159,11 @@ h1 + p {
 
 ## Task 3
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the CSS to move the background image so that it is centered horizontally and is 20% from the top of the box.
+To complete the task, update the CSS to move the background image so that it is centered horizontally and is `20%` from the top of the box.
 
 Your final result should look like the image below:
 
 ![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___position
 <div class="box"></div>
@@ -227,6 +198,4 @@ Use `background-position` with the `center` keyword and a percentage:
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+&nbsp;

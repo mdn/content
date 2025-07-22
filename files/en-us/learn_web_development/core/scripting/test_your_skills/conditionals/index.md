@@ -9,8 +9,7 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) article.
 
 > [!NOTE]
-> If your code returns an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Conditionals 1
 
@@ -21,15 +20,8 @@ In this task you are provided with two variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a conditional that checks whether `season` contains the string "summer", and if so assigns a string to `response` that gives the user an appropriate message about the season. If not, it should assign a generic string to `response` that tells the user we don't know what season it is.
-3. Add another conditional that checks whether `season` contains the string "winter", and again assigns an appropriate string to `response`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals1-download.html) to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)).
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create a conditional that checks whether `season` contains the string "summer", and if so assigns a string to `response` that gives the user an appropriate message about the season. If not, it should assign a generic string to `response` that tells the user we don't know what season it is.
+2. Add another conditional that checks whether `season` contains the string "winter", and again assigns an appropriate string to `response`.
 
 <!-- Code shared across examples -->
 
@@ -100,9 +92,8 @@ For this task you are given three variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
-3. Inside the first `if...else`, nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of `score` is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
+1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `response` variable if it isn't, telling the user to switch the machine on.
+2. Inside the first `if...else`, nest another `if...else` that puts appropriate messages into the `response` variable depending on what the value of `score` is — if the machine is turned on. The different conditional tests (and resulting responses) are as follows:
    - Score of less than 0 or more than 100 — "This is not possible, an error has occurred."
    - Score of 0 to 19 — "That was a terrible score — total fail!"
    - Score of 20 to 39 — "You know some things, but it's a pretty bad score. Needs improvement."
@@ -112,12 +103,6 @@ To complete the task:
 
 After you've entered your code, try changing `machineActive` to `true`, and `score` to a few different values to see if it works.
 Please note that, for the scope of this exercise, the `Your score is __` string will remain on the screen regardless of the `machineActive` variable's value.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```js live-sample___conditionals-2
 let response;
@@ -185,15 +170,8 @@ For the final task you are given four variables:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
-3. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/conditionals/conditionals3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create an `if...else` structure that checks whether the machine is switched on and puts a message into the `machineResult` variable telling the user whether it is on or off.
+2. If the machine is on, we also want a second conditional to run that checks whether the `pwd` is equal to `cheese`. If so, it should assign a string to `pwdResult` telling the user they logged in successfully. If not, it should assign a different string to `pwdResult` telling the user their login attempt was not successful. We'd like you to do this in a single line, using something that isn't an `if...else` structure.
 
 ```js live-sample___conditionals-3
 let machineActive = true;
@@ -244,3 +222,5 @@ if (machineActive) {
 ```
 
 </details>
+
+&nbsp;

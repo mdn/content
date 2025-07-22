@@ -9,26 +9,15 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> To get help, reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-To complete this task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
+In this task, we want you to create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20 pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
 
 Your final result should look like the image below:
 
 ![A three column grid with four items placed into it.](grid-task1.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___grid1
 <div class="grid">
@@ -76,22 +65,11 @@ Create a grid using `display: grid` with three columns using `grid-template-colu
 
 ## Task 2
 
-In this task, we already have a grid defined.
-
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as in the image below:
+In this task, we already have a grid defined. We want you to edit the CSS rules for the two child elements, causing them to span over several grid tracks each. The second item should overlay the first as in the image below:
 
 ![A box with two items inside one overlaying the other.](grid-task2.png)
 
 **Bonus question:** Can you now cause the first item to display on top without changing the order of items in the source?
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___grid2
 <div class="grid">
@@ -178,18 +156,9 @@ Another valid solution is to use `z-index`:
 
 In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the image below:
+To complete the task, use the `grid-area` and `grid-template-areas` properties to lay the items out as shown in the image below:
 
 ![Four items displayed in a grid.](grid-task3.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___grid3
 <div class="grid">
@@ -260,15 +229,7 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the image below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
 
-To get started, click **"Play"** in the code block below to edit the example in the MDN Playground.
-
 ![Two rows of cards, each with an image and a set of tags.](grid-task4.png)
-
-> [!CALLOUT]
->
-> You can also copy the code (click the clipboard icon) and paste it into your own editor or an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)) if you'd prefer to work there instead.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution at the bottom of the section.
 
 ```html live-sample___grid4
 <div class="container">
@@ -387,6 +348,4 @@ You may try to use flexbox on the container and restrict the cards with percenta
 
 </details>
 
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+&nbsp;
