@@ -52,7 +52,10 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCIceCandidatePairStats/currentRoundTripTime", "currentRoundTripTime")}}, {{domxref("RTCIceCandidatePairStats/totalRoundTripTime", "totalRoundTripTime")}}, and {{domxref("RTCIceCandidatePairStats/responsesReceived", "responsesReceived")}} properties of the {{domxref("RTCIceCandidatePairStats")}} dictionary are now supported. These return the current round trip time (RTT) and the information needed to calculate the average RTT for the connection.
+  ([Firefox bug 1371391](https://bugzil.la/1371391)).
 
 <!-- #### Removals -->
 
