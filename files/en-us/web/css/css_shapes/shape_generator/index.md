@@ -36,12 +36,14 @@ The tool below helps you visualize the resulting shape and get the coordinates f
 
 ```css hidden live-sample___shape-generator
 #coords {
+  display: block;
   font-family: monospace;
   white-space: pre-wrap;
   word-break: break-all;
 }
 
 #canvas {
+  display: block;
   border: 1px solid black;
   transform-origin: top left;
 }
