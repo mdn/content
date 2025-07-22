@@ -18,32 +18,38 @@ This element is used only within a {{HTMLElement("map")}} element.
     shape="poly"
     coords="129,0,260,95,129,138"
     href="https://developer.mozilla.org/docs/Web/HTTP"
-    alt="HTTP" />
+    alt="HTTP"
+  />
   <area
     shape="poly"
     coords="260,96,209,249,130,138"
     href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML" />
+    alt="HTML"
+  />
   <area
     shape="poly"
     coords="209,249,49,249,130,139"
     href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript" />
+    alt="JavaScript"
+  />
   <area
     shape="poly"
     coords="48,249,0,96,129,138"
     href="https://developer.mozilla.org/docs/Web/API"
-    alt="Web APIs" />
+    alt="Web APIs"
+  />
   <area
     shape="poly"
     coords="0,95,128,0,128,137"
     href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS" />
+    alt="CSS"
+  />
 </map>
 <img
   usemap="#infographic"
   src="/shared-assets/images/examples/mdn-info.png"
-  alt="MDN infographic" />
+  alt="MDN infographic"
+/>
 ```
 
 ```css interactive-example
@@ -130,17 +136,20 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     shape="circle"
     coords="75,75,75"
     href="left.html"
-    alt="Click to go Left" />
+    alt="Click to go Left"
+  />
   <area
     shape="circle"
     coords="275,75,75"
     href="right.html"
-    alt="Click to go Right" />
+    alt="Click to go Right"
+  />
 </map>
 <img
   usemap="#primary"
   src="https://dummyimage.com/350x150"
-  alt="350 x 150 pic" />
+  alt="350 x 150 pic"
+/>
 ```
 
 ### Result
@@ -156,23 +165,24 @@ It could be difficult to obtain the coordinates for the `coords` attribute. The 
   <p>
     <label for="scale">
       Scale:
-      <input type="range" id="scale" min="0.1" max="3" value="1" step="any"
-    /></label>
+      <input type="range" id="scale" min="0.1" max="3" value="1" step="any" />
+    </label>
   </p>
   <p>
     <label for="shape">
       Shape:
       <select id="shape">
-        <option value="rect">Rectangle (x1,y1,x2,y2)</option>
-        <option value="circle">Circle (x,y,r)</option>
-        <option value="poly">Polygon (x1,y1,...,xn,yn)</option>
+        <option value="rect">Rectangle</option>
+        <option value="circle">Circle</option>
+        <option value="poly">Polygon</option>
+        <option value="points">Discrete points</option>
       </select>
     </label>
   </p>
   <p>
     <button id="reset">Reset</button>
   </p>
-  <pre id="coords">Click on the canvas to add points.</pre>
+  <output id="coords">Click on the canvas to add points.</output>
 </div>
 <canvas id="canvas"></canvas>
 ```
@@ -196,6 +206,7 @@ body {
 }
 
 #coords {
+  font-family: monospace;
   white-space: pre-wrap;
   word-break: break-all;
 }
@@ -209,10 +220,25 @@ const resetButton = document.getElementById("reset");
 const coordsDisplay = document.getElementById("coords");
 const ctx = canvas.getContext("2d");
 let currentImage = null;
-let currentShape = "rect";
 let coords = [];
 
-function renderImage(file) {
+function init() {
+  if (currentImage) {
+    URL.revokeObjectURL(currentImage.src);
+    currentImage = null;
+  }
+  resetCoords();
+  scaleInput.value = 1;
+  canvas.style.transform = "scale(1)";
+  canvas.width = 400;
+  canvas.height = 300;
+  canvas.style.width = "400px";
+  canvas.style.height = "300px";
+  ctx.font = "20px serif";
+  ctx.fillText("Drop an image here, or click to upload", 10, 20);
+}
+
+function initImage(file) {
   const url = URL.createObjectURL(file);
   const img = new Image();
   img.src = url;
@@ -226,48 +252,34 @@ function renderImage(file) {
   });
 }
 
-function init() {
-  if (currentImage) {
-    URL.revokeObjectURL(currentImage.src);
-    currentImage = null;
-  }
-  coords = [];
-  scaleInput.value = 1;
-  canvas.style.transform = "scale(1)";
-  canvas.width = 400;
-  canvas.height = 300;
-  canvas.style.width = "400px";
-  canvas.style.height = "300px";
-  ctx.font = "20px serif";
-  ctx.fillText("Drop an image here, or click to upload", 10, 20);
-}
-
-function resetDrawnShape() {
-  if (!currentImage) return;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(currentImage, 0, 0);
-}
-
-function drawShape() {
+function renderShape() {
   ctx.strokeStyle = "magenta";
   ctx.fillStyle = "red";
   resetDrawnShape();
-  if (currentShape === "rect" && coords.length === 2) {
-    ctx.strokeRect(
-      coords[0].x,
-      coords[0].y,
-      coords[1].x - coords[0].x,
-      coords[1].y - coords[0].y,
-    );
-  } else if (currentShape === "circle" && coords.length === 2) {
+  if (shapeSelect.value === "rect" && coords.length === 2) {
+    const { x: x1, y: y1 } = coords[0];
+    const { x: x2, y: y2 } = coords[1];
+    const w = x2 - x1;
+    const h = y2 - y1;
+    ctx.strokeRect(x1, y1, w, h);
+    coordsDisplay.innerText = `coords="${x1},${y1},${x2},${y2}"
+inset(${y1}px ${x1}px ${canvas.height - y2}px ${canvas.width - x2}px)
+xywh(${x1}px ${y1}px ${w}px ${h}px)
+rect(${y1}px ${x2}px ${y2}px ${x1}px)
+<rect x="${x1}" y="${y1}" width="${w}" height="${h}" />`;
+  } else if (shapeSelect.value === "circle" && coords.length === 2) {
     ctx.beginPath();
-    const radius = Math.sqrt(
-      (coords[1].x - coords[0].x) ** 2 + (coords[1].y - coords[0].y) ** 2,
-    );
-    ctx.arc(coords[0].x, coords[0].y, radius, 0, Math.PI * 2);
+    const { x, y } = coords[0];
+    const r = Math.sqrt(
+      (coords[1].x - x) ** 2 + (coords[1].y - y) ** 2,
+    ).toFixed(1);
+    ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.stroke();
     ctx.closePath();
-  } else if (currentShape === "poly" && coords.length > 2) {
+    coordsDisplay.textContent = `coords="${x},${y},${r}"
+circle(${r}px at ${x}px ${y}px)
+<circle cx="${x}" cy="${y}" r="${r}" />`;
+  } else if (shapeSelect.value === "poly" && coords.length > 2) {
     ctx.beginPath();
     ctx.moveTo(coords[0].x, coords[0].y);
     for (let i = 1; i < coords.length; i++) {
@@ -275,6 +287,13 @@ function drawShape() {
     }
     ctx.closePath();
     ctx.stroke();
+    coordsDisplay.textContent = `coords="${coords.map((coord) => `${coord.x},${coord.y}`).join(",")}"
+polygon(${coords.map((coord) => `${coord.x} ${coord.y}`).join(", ")})
+<polygon points="${coords.map((coord) => `${coord.x},${coord.y}`).join(" ")}" />`;
+  } else if (shapeSelect.value === "points") {
+    coordsDisplay.textContent = coords
+      .map((coord) => `${coord.x},${coord.y}`)
+      .join("\n");
   }
   for (const coord of coords) {
     ctx.beginPath();
@@ -284,55 +303,50 @@ function drawShape() {
   }
 }
 
+function resetDrawnShape() {
+  if (!currentImage) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(currentImage, 0, 0);
+}
+
+function resetCoords() {
+  coords = [];
+  coordsDisplay.textContent = "Click on the canvas to add points.";
+}
+
 init();
 canvas.addEventListener("dragover", (event) => {
   event.preventDefault();
 });
 canvas.addEventListener("drop", (event) => {
   event.preventDefault();
-  renderImage(event.dataTransfer.files[0]);
+  initImage(event.dataTransfer.files[0]);
 });
-canvas.addEventListener("click", (e) => {
+canvas.addEventListener("click", (event) => {
   if (!currentImage) {
     const input = document.createElement("input");
     input.type = "file";
     input.accept = "image/*";
-    input.addEventListener("change", (event) => {
-      renderImage(event.target.files[0]);
+    input.addEventListener("change", (e) => {
+      initImage(e.target.files[0]);
     });
     input.click();
     return;
   }
   if (
-    (currentShape === "rect" || currentShape === "circle") &&
+    (shapeSelect.value === "rect" || shapeSelect.value === "circle") &&
     coords.length === 2
   ) {
-    coords = [];
+    resetCoords();
   }
-  coords.push({ x: e.offsetX, y: e.offsetY });
-  drawShape();
-  if (
-    (currentShape === "rect" && coords.length === 2) ||
-    (currentShape === "poly" && coords.length > 2)
-  ) {
-    coordsDisplay.textContent = `coords="${coords
-      .map((coord) => `${coord.x},${coord.y}`)
-      .join(",")}"`;
-  } else if (currentShape === "circle" && coords.length === 2) {
-    const radius = Math.sqrt(
-      (coords[1].x - coords[0].x) ** 2 + (coords[1].y - coords[0].y) ** 2,
-    );
-    coordsDisplay.textContent = `coords="${coords[0].x},${coords[0].y},${radius.toFixed(1)}"`;
-  } else {
-    coordsDisplay.textContent = "Click on the canvas to add points.";
-  }
+  coords.push({ x: event.offsetX, y: event.offsetY });
+  renderShape();
 });
 scaleInput.addEventListener("input", () => {
   canvas.style.transform = `scale(${scaleInput.value})`;
 });
 shapeSelect.addEventListener("change", () => {
-  coords = [];
-  currentShape = shapeSelect.value;
+  resetCoords();
   resetDrawnShape();
 });
 resetButton.addEventListener("click", init);
