@@ -43,7 +43,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.headerBytesReceived", "headerBytesReceived")}}
-  - : TBD.
+ - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration", "insertedSamplesForDeceleration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}
