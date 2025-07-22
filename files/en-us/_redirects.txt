@@ -9983,6 +9983,7 @@
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/averageRtcpInterval	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsDuplicated	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
