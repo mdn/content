@@ -28,7 +28,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsReceived", "fecPacketsReceived")}}
   - : An integer value indicating the total number of RTP FEC packets received for this source. This counter may also be incremented when FEC packets arrive in-band along with media content; this can happen with Opus, for example.
 - {{domxref("RTCInboundRtpStreamStats.frameHeight", "frameHeight")}}
-  - : TBD.
+  - : A positive integer indicating the height of the last decoded frame, in pixels.
+    _Undefined for audio streams and before the first frame is decoded._
 - {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
@@ -39,11 +40,12 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.framesReceived", "framesReceived")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.frameWidth", "frameWidth")}}
-  - : TBD.
+  - : A positive integer indicating the width of the last decoded frame, in pixels.
+    _Undefined for audio streams and before the first frame is decoded._
 - {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.headerBytesReceived", "headerBytesReceived")}}
- - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
+  - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration", "insertedSamplesForDeceleration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}
