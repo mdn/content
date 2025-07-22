@@ -17,36 +17,54 @@ If no specific details are available, this string is empty.
 
 ## Examples
 
+### Logging MediaError messages
+
 This example creates an {{HTMLElement("audio")}} element, establishes an error handler for it, then lets the user click buttons to choose whether to assign a valid audio file or a missing file to the element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/audio#src) attribute.
-The error handler outputs a message to a box onscreen describing the error, including both the `code` and the `message`.
+The error handler outputs log lines to a box onscreen describing the error, including the `code`, the `message`, and a hint that may be more useful for visitors than the diagnostic `message`:
 
 ```html
 <audio controls id="audio"></audio>
 <div>
-  <button id="valid-button">Valid File</button>
-  <button id="invalid-button">Missing File</button>
+  <button id="valid-button">Valid file</button>
+  <button id="invalid-button">Missing file</button>
+  <button id="svg-button">Wrong format</button>
 </div>
-<pre id="log"></pre>
+<pre id="log">Logs:</pre>
+```
+
+```css hidden
+pre {
+  white-space: wrap;
+  border: 1px solid grey;
+}
 ```
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either a valid music file to it, or a link to a file which doesn't exist.
 This lets us see the behavior of the {{domxref("HTMLMediaElement/error_event", "error")}} event handler, which is received by an event handler we add to the `<audio>` element itself.
 
-The error handler looks like this:
+First, it gets the {{domxref("MediaError")}} object describing the error from the {{domxref("HTMLMediaElement.error", "error")}} property on the {{domxref("HTMLAudioElement")}} representing the audio player.
+The error's numeric {{domxref("MediaError.code", "code")}} is checked to create a generic hint, and if `message` is not empty, it's added to the log line to provide more detailed diagnostic information for developers.
+The resulting text is then added to the `<pre>` element:
 
 ```js
 const audioElement = document.getElementById("audio");
 const validButton = document.getElementById("valid-button");
 const invalidButton = document.getElementById("invalid-button");
+const svgButton = document.getElementById("svg-button");
 
-const logMessage = (msg) => {
+const logMessage = (logLine) => {
   const now = new Date();
   const timestamp = now.toLocaleTimeString();
-  document.getElementById("log").innerText += `[${timestamp}] ${msg}\n`;
+  document.getElementById("log").innerText += `\n[${timestamp}] ${logLine}`;
 };
 
 validButton.addEventListener("click", () => {
   audioElement.src = "https://mdn.github.io/shared-assets/audio/guitar.mp3";
+});
+
+svgButton.addEventListener("click", () => {
+  audioElement.src =
+    "https://mdn.github.io//shared-assets/images/examples/dino.svg";
 });
 
 invalidButton.addEventListener("click", () => {
@@ -54,37 +72,37 @@ invalidButton.addEventListener("click", () => {
 });
 
 audioElement.onerror = () => {
-  let message = "";
-  let err = audioElement.error;
+  const err = audioElement.error;
+  let userHint = "";
 
   switch (err.code) {
-    case MediaError.MEDIA_ERR_ABORTED:
-      message += "The user canceled the audio.";
+    case 1:
+      userHint = "Canceled audio playback.";
       break;
-    case MediaError.MEDIA_ERR_NETWORK:
-      message += "A network error occurred while fetching the audio.";
+    case 2:
+      userHint = "A network error occurred while fetching the audio.";
       break;
-    case MediaError.MEDIA_ERR_DECODE:
-      message += "An error occurred while decoding the audio.";
+    case 3:
+      userHint = "An error occurred while decoding the audio.";
       break;
-    case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
-      message +=
-        "The audio is missing or is in a format not supported by your browser.";
+    case 4:
+      userHint = "Audio is missing or is an unsupported format.";
       break;
     default:
-      message += "An unknown error occurred.";
+      userHint += "An unknown error occurred.";
       break;
   }
 
-  logMessage(`Error ${err.code}: ${message}`);
+  const message = err.message || "no message available";
+
+  logMessage(`Error code ${err.code} (${err.message}), ${userHint}`);
 };
 ```
 
-This gets the {{domxref("MediaError")}} object describing the error from the {{domxref("HTMLMediaElement.error", "error")}} property on the {{domxref("HTMLAudioElement")}} representing the audio player.
-The error's {{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error message to display, and, if `message` is not empty, it's appended to provide additional details.
-Then the resulting text is output to the log.
+Click the "Valid file" button to start playback as expected, the "Missing file" button to try to load a missing resource, and the "Wrong format" button to try to set an SVG file as the source for the audio element.
+Comparing the log output for the two error cases illustrates the difference between a `MediaError`'s `code` and `message`:
 
-{{embedlivesample("", , '300')}}
+{{embedlivesample("logging_mediaerror_messages", , "300")}}
 
 ## Specifications
 
