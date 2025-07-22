@@ -62,8 +62,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Cross-origin images and media data, including that in {{HTMLElement("img")}}, {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.
-- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive that don't include `allow-same-origin`.
-- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that don't contain the value `allow-same-origin`.
+- Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive, where its value doesn't include `allow-same-origin`.
+- {{HTMLElement("iframe", "iframes")}} with a sandbox attribute, where its value doesn't include `allow-same-origin`.
 - Responses that are network errors.
 - {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 
