@@ -143,9 +143,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   alt="350 x 150 pic" />
 ```
 
-### Result
-
-{{ EmbedLiveSample('Examples', 360, 160) }}
+{{ EmbedLiveSample('Image with clickable areas', 360, 160) }}
 
 ### Obtaining coordinates
 
