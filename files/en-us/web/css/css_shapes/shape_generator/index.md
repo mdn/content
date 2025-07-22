@@ -44,6 +44,7 @@ The tool below helps you visualize the resulting shape and get the coordinates f
 
 #coords {
   display: block;
+  position: relative;
   font-family: monospace;
   white-space: pre-wrap;
   word-break: break-all;
@@ -67,6 +68,7 @@ function init() {
   }
   resetCoords();
   scaleInput.value = 1;
+  canvas.style.transform = "scale(1)";
   canvas.width = 400;
   canvas.height = 300;
   canvas.style.width = "400px";
@@ -180,8 +182,8 @@ canvas.addEventListener("click", (event) => {
   renderShape();
 });
 scaleInput.addEventListener("input", () => {
-  canvas.style.width = `${canvas.width * scaleInput.value}px`;
-  canvas.style.height = `${canvas.height * scaleInput.value}px`;
+  canvas.style.transform = `scale(${scaleInput.value})`;
+  coordsDisplay.style.top = `${canvas.height * (scaleInput.value - 1)}px`;
 });
 shapeSelect.addEventListener("change", () => {
   resetCoords();
