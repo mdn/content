@@ -28,7 +28,7 @@ const locale = new Intl.Locale("sl-rozaj-biske");
 console.log(locale.variants); // Prints "rozaj-biske"
 ```
 
-### Addingvariants via the configuration object argument
+### Adding variants via the configuration object argument
 
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optional configuration object argument. Set the `variants` property of the configuration object to your desired variants, and then pass it into the constructor.
 
