@@ -60456,12 +60456,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCInboundRtpStreamStats/receiverId": {
-    "modified": "2020-10-15T22:17:14.678Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCInboundRtpStreamStats/remoteId": {
     "modified": "2020-10-15T22:17:14.927Z",
     "contributors": [
