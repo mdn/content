@@ -18,38 +18,32 @@ This element is used only within a {{HTMLElement("map")}} element.
     shape="poly"
     coords="129,0,260,95,129,138"
     href="https://developer.mozilla.org/docs/Web/HTTP"
-    alt="HTTP"
-  />
+    alt="HTTP" />
   <area
     shape="poly"
     coords="260,96,209,249,130,138"
     href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML"
-  />
+    alt="HTML" />
   <area
     shape="poly"
     coords="209,249,49,249,130,139"
     href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript"
-  />
+    alt="JavaScript" />
   <area
     shape="poly"
     coords="48,249,0,96,129,138"
     href="https://developer.mozilla.org/docs/Web/API"
-    alt="Web APIs"
-  />
+    alt="Web APIs" />
   <area
     shape="poly"
     coords="0,95,128,0,128,137"
     href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS"
-  />
+    alt="CSS" />
 </map>
 <img
   usemap="#infographic"
   src="/shared-assets/images/examples/mdn-info.png"
-  alt="MDN infographic"
-/>
+  alt="MDN infographic" />
 ```
 
 ```css interactive-example
@@ -136,20 +130,17 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     shape="circle"
     coords="75,75,75"
     href="left.html"
-    alt="Click to go Left"
-  />
+    alt="Click to go Left" />
   <area
     shape="circle"
     coords="275,75,75"
     href="right.html"
-    alt="Click to go Right"
-  />
+    alt="Click to go Right" />
 </map>
 <img
   usemap="#primary"
   src="https://dummyimage.com/350x150"
-  alt="350 x 150 pic"
-/>
+  alt="350 x 150 pic" />
 ```
 
 ### Result
