@@ -11,7 +11,9 @@ The **`variants`** accessor property of {{jsxref("Intl.Locale")}} instances retu
 
 ## Description
 
-Variants are a part of the main language ID. They select variants of a language that the (language, region, script) triple cannot differentiate. Usually, they represent the same language in different eras or different orthographies. For example, German has the `1901` and `1996` orthography variants, which are written as `de-1901` and `de-1996`; the "Early Modern English (1500-1700)" variant is written as `en-emodeng`. The subtag can contain multiple identifiers separated by dashes (`-`). These identifiers are technically unordered, although in practice they often have a semantic hierarchy—for example, the Resian dialect of Slovenian is written as `sl-rozaj`, and the San Giorgio/Bila dialect of Resian is written as `sl-rozaj-biske`. The `variants` property's value is set at construction time, either through the `variants` subtag (following any language, region, and script subtags, if present) of the locale identifier or through the `variants` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
+Variants are a part of the main language ID. They select variants of a language that the (language, region, script) triple cannot differentiate. Usually, they represent the same language in different eras or different orthographies. For example, German has the `1901` and `1996` orthography variants, which are written as `de-1901` and `de-1996`; the "Early Modern English (1500-1700)" variant is written as `en-emodeng`. The subtag can contain multiple identifiers separated by dashes (`-`). These identifiers are technically unordered, although in practice they often have a semantic hierarchy—for example, the Resian dialect of Slovenian is written as `sl-rozaj`, and the San Giorgio/Bila dialect of Resian is written as `sl-rozaj-biske`.
+
+The `variants` property's value is set at construction time, either through the part of the locale identifier after `region` or through the `variants` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
 The set accessor of `variants` is `undefined`. You cannot change this property directly.
 
@@ -25,7 +27,7 @@ The variants, if present, are the last parts of a valid Unicode language identif
 
 ```js
 const locale = new Intl.Locale("sl-rozaj-biske");
-console.log(locale.variants); // Prints "rozaj-biske"
+console.log(locale.variants); // "rozaj-biske"
 ```
 
 ### Adding variants via the configuration object argument
@@ -34,7 +36,7 @@ The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optiona
 
 ```js
 const locale = new Intl.Locale("sl", { variants: "rozaj-biske" });
-console.log(locale.variants); // Prints "rozaj-biske"
+console.log(locale.variants); // "rozaj-biske"
 ```
 
 ## Specifications
@@ -49,3 +51,4 @@ console.log(locale.variants); // Prints "rozaj-biske"
 
 - {{jsxref("Intl.Locale")}}
 - [Unicode variant subtag](https://www.unicode.org/reports/tr35/#unicode_variant_subtag_validity) in the Unicode locale data markup language spec
+- [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
