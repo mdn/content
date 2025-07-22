@@ -19,7 +19,7 @@ A string. Possible values are:
   - : The audio context has been closed (with the
     {{domxref("AudioContext.close()")}} method.)
 - `interrupted` {{experimental_inline}}
-  - : The audio context has been interrupted by an occurence outside the control of the web app.
+  - : The audio context has been interrupted by an occurrence outside the control of the web app.
 - `running`
   - : The audio context is running normally.
 - `suspended`

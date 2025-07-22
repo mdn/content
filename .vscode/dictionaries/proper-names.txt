@@ -74,6 +74,7 @@ Bynens
 Béziers
 caitmuenster
 Camino
+Cammy
 Camtasia
 Canva
 Carakan
@@ -92,6 +93,7 @@ Choyce
 chrisdavidmills
 Chromecast
 Chromeo
+Chun-Li
 Cinepak
 Cipherlist.eu
 Clippy
@@ -167,6 +169,7 @@ Eichenwald
 Eisenberg
 Elaina
 Elchi
+Elfie
 Elly
 Emscripten
 Endtest
@@ -241,6 +244,7 @@ Hoshi
 Hoth
 Hyperaudio
 Hönigswald
+Ibuki
 Icecast
 idb-keyval
 Igalia
@@ -252,6 +256,7 @@ Ionos
 Irena
 ITCSS
 ITEC
+Jada
 Jalkhov
 jamiedoe
 Janc
@@ -272,10 +277,12 @@ jpmedley
 JSCAMP
 jswebm
 Junxia
+Juri
 Júnior
 Kadlec
 Kahlo
 Kaku
+Kang
 Kaply
 Kaspersky
 Katari
@@ -471,7 +478,9 @@ Roushan
 rsvg
 Rumyra
 Ryuno
+Sagat
 Saionaro
+Sakura
 Salame
 Salva
 Sandrina
@@ -549,6 +558,7 @@ Tokopedia
 Tomayac
 Tonisha
 Transcribear
+Transfonter
 Transformiix
 Trekhleb
 Trint
@@ -613,6 +623,7 @@ Yuki
 Yura
 Zakas
 Zakirt
+Zangief
 zantroke
 zantrokeregular
 Zaptec

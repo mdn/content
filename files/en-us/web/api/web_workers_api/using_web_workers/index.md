@@ -342,7 +342,7 @@ worker.onmessage = (event) => {
       event.data.queryMethodArguments,
     );
   } else {
-    this.defaultListener.call(this, event.data);
+    this.defaultListener(event.data);
   }
 };
 ```
@@ -477,7 +477,7 @@ function QueryableWorker(url, defaultListener, onError) {
         event.data.queryMethodArguments,
       );
     } else {
-      this.defaultListener.call(this, event.data);
+      this.defaultListener(event.data);
     }
   };
 }
