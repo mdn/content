@@ -1,5 +1,5 @@
 ---
-title: Text shadows
+title: Introduction to text shadows
 slug: Web/CSS/CSS_text_decoration/Text_shadows
 page-type: guide
 sidebar: cssref
