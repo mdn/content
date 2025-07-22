@@ -60438,12 +60438,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption": {
-    "modified": "2020-10-15T22:17:13.980Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived": {
     "modified": "2020-10-15T22:17:13.721Z",
     "contributors": [
