@@ -54,7 +54,10 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCIceCandidatePairStats/currentRoundTripTime", "currentRoundTripTime")}}, {{domxref("RTCIceCandidatePairStats/totalRoundTripTime", "totalRoundTripTime")}}, and {{domxref("RTCIceCandidatePairStats/responsesReceived", "responsesReceived")}} properties of the {{domxref("RTCIceCandidatePairStats")}} dictionary are now supported. These return the current round trip time (RTT) and the information needed to calculate the average RTT for the connection.
+  ([Firefox bug 1371391](https://bugzil.la/1371391)).
 
 <!-- #### Removals -->
 
