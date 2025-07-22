@@ -46,7 +46,7 @@ jobs:
             maxLength=64000
             if [ ${#output} -gt ${maxLength} ]; then
               output=$(echo "$output" | head -c $maxLength)
-              output+=$'\n...\n\n> [!WARNING]\n> The long report is has been truncated. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
+              output+=$'\n...\n\n> [!WARNING]\n> The report is too long to be posted in full. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
             fi
 
             echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
