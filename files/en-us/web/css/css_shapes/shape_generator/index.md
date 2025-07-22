@@ -13,7 +13,7 @@ This tool can be used to generate the syntax for three features that use {{cssxr
 
 The tool below helps you visualize the resulting shape and get the coordinates for each point, superimposed over an image. To use it, first upload an image by either dragging or clicking to select a file. Then, click on the image to add reference points for the shape you want to create. You can select the shape type from the dropdown menu and adjust the scale of the canvas using the range input.
 
-```html hidden
+```html hidden live-sample___shape-generator
 <div>
   <label for="scale">
     Scale:
@@ -34,7 +34,7 @@ The tool below helps you visualize the resulting shape and get the coordinates f
 <canvas id="canvas"></canvas>
 ```
 
-```css hidden
+```css hidden live-sample___shape-generator
 #coords {
   font-family: monospace;
   white-space: pre-wrap;
@@ -47,7 +47,7 @@ The tool below helps you visualize the resulting shape and get the coordinates f
 }
 ```
 
-```js hidden
+```js hidden live-sample___shape-generator
 const canvas = document.getElementById("canvas");
 const scaleInput = document.getElementById("scale");
 const shapeSelect = document.getElementById("shape");
@@ -187,4 +187,4 @@ shapeSelect.addEventListener("change", () => {
 resetButton.addEventListener("click", init);
 ```
 
-{{EmbedLiveSample("", "", 700)}}
+{{EmbedLiveSample("shape-generator", "", 700)}}
