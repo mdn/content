@@ -129,6 +129,7 @@ img {
 
 ## See also
 
+- [Shape generator](/en-US/docs/Web/CSS/CSS_shapes/Shape_generator)]
 - [CSS Shapes resources](https://codepen.io/KristopherVanSant/post/css-shapes-resources)
 - [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/) via alistapart.com (2014)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/) via sarasoueidan.com (2013)
