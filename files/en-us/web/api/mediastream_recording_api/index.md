@@ -154,7 +154,7 @@ recordBtn.addEventListener("click", async () => {
         video.src = window.URL.createObjectURL(blob);
       });
       mediaRecorder.addEventListener("error", (e) => {
-        console.error("An error occured:", e);
+        console.error("An error occurred:", e);
       });
     }
     isRecording = true;
