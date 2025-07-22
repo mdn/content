@@ -113,7 +113,3 @@ This must be placed in the prolog section of the XML document.
 - [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
 - [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
 - [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
-
-### Other
-
-- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
