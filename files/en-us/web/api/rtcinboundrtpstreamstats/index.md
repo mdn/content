@@ -55,7 +55,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of key frames successfully decoded for this RTP media stream.
+    _Undefined for audio streams_.
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
     The [`timestamp`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
