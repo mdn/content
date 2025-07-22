@@ -24,15 +24,25 @@ For example, even for a document delivered over TLS within an {{HTMLElement("ifr
 
 However, it's important to note that if a non-secure context causes a new window to be created (with or without specifying [noopener](/en-US/docs/Web/API/Window/open)), then the fact that the opener was insecure has no effect on whether the new window is considered secure. That's because the determination of whether a particular document is in a secure context is based only on considering it within the top-level browsing context with which it is associated — and not whether a non-secure context happened to be used to create it.
 
-Locally-delivered resources such as those with `http://127.0.0.1` URLs, `http://localhost` and `http://*.localhost` URLs (e.g., `http://dev.whatever.localhost/`), and `file://` URLs are also considered to have been delivered securely.
-
-> [!NOTE]
-> Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
-
 Resources that are not local, to be considered secure, must meet the following criteria:
 
 - must be served over `https://` or `wss://` URLs
 - the security properties of the network channel used to deliver the resource must not be considered deprecated
+
+## Potentially trustworthy origins
+
+A **potentially trustworthy origin** is one that the browser can generally trust to deliver data security, even though strictly speaking it does not meet the criteria of a secure context.
+
+Locally-delivered resources such as those with `http://127.0.0.1`, `http://localhost`, and `http://*.localhost` URLs (for example, `http://dev.whatever.localhost/`) are not delivered using HTTPS, but they can be considered to have been delivered securely because they are on the same device as the browser. They are therefore potentially trustworthy. This is convenient for developers testing applications locally.
+
+The same is generally true for `file://` URLs.
+
+Secure [WebSocket](/en-US/docs/Web/API/WebSockets_API) (`"wss://"`) URLs are also considered potentially trustworthy.
+
+> [!NOTE]
+> Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
+
+Vendor-specific URL schemes like `app://` or `chrome-extension://` are not considered potentially trustworthy by all browsers, but they may well be by the browsers whose vendors they originate from.
 
 ## Feature detection
 

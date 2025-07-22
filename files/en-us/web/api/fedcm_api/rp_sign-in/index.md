@@ -10,7 +10,7 @@ This article describes the process by which a {{glossary("Relying party", "relyi
 
 ## Calling the `get()` method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in to on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user using credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user be given the option to sign in to the RP with a choice of existing IdP accounts (that they are already signed in with on the browser). The IdPs identify the RP by its `clientId`, which was issued by each IdP to the RP in a separate IdP-specific process. The chosen IdP identifies the specific user who is attempting to sign-in with the credentials (cookies) provided to the browser during the [sign-in flow](#fedcm_sign-in_flow).
 
 The method returns a promise that fulfills with an {{domxref("IdentityCredential")}} object if the user identity is successfully validated by the chosen IdP. This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
 
@@ -123,7 +123,7 @@ async function signIn() {
 }
 ```
 
-The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. In this mode, browsers typically present the user with a sign-in dialog window containing all the different sign-in options specified in the `providers` object, and they can choose whichever one suits them best and then enter the appropriate credentials.
+The default value for `mode` is `passive`. If `mode` is not set, or is set explicitly to `passive`, the browser can initiate the sign-in flow via a `get()` call without direct user interaction. For example, you might want to initiate the sign-in flow as soon as the user navigates to the sign-in page, provided they have IdP accounts to sign in with. In this mode, browsers typically present the user with a sign-in dialog window containing all the different sign-in options specified in the `providers` object, and they can choose whichever one suits them best and then enter the appropriate credentials.
 
 If `mode` is set to `active`, the browser requires the sign-in flow to be initiated via a user action such as clicking a button ({{glossary("transient activation")}} is required), and the `providers` object can only have a length of `1`, otherwise the `get()` promise will reject. This mode is typically used when the RP wishes to provide a separate button for each IdP choice. When the user clicks one of those buttons, a simplified dialog window appears that just requires them to enter the credentials for that account.
 
