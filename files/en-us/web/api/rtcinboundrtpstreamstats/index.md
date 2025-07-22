@@ -14,7 +14,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 ## Instance properties
 
 - {{domxref("RTCInboundRtpStreamStats.audioLevel", "audioLevel")}}
-  - : TBD.
+  - : A number that indicates the audio level of the received track.
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.bytesReceived", "bytesReceived")}}
   - : A 64-bit integer which indicates the total number of bytes that have been received so far for this media source.
 - {{domxref("RTCInboundRtpStreamStats.concealedSamples", "concealedSamples")}}
