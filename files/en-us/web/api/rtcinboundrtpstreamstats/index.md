@@ -34,9 +34,9 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
   - : A long integer value indicating the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped. _Only valid for video streams._
-
 - {{domxref("RTCInboundRtpStreamStats.framesPerSecond", "framesPerSecond")}}
-  - : TBD.
+  - : A positive integer indicating the number of frames decoded in the last second.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesReceived", "framesReceived")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.frameWidth", "frameWidth")}}
@@ -58,7 +58,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}
   - : A positive integer that indicates the total number of key frames successfully decoded for this RTP media stream.
-    _Undefined for audio streams_.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
     The [`timestamp`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
@@ -72,7 +72,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}}
-  - : A string which identifies the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC. This ID is stable across multiple calls to `getStats()`.
+  - : A string which identifies the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC.
+    This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration", "removedSamplesForAcceleration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples", "silentConcealedSamples")}}
