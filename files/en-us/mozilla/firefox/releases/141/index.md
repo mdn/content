@@ -34,9 +34,11 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The [`variants`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) accessor property is now supported on {{jsxref("Intl.Locale")}} instances.
+  This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
+  It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
 
 <!-- #### Removals -->
 
