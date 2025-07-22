@@ -173,15 +173,14 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/What_is_accessibility
       - /Learn_web_development/Core/Accessibility/Tooling
       - /Learn_web_development/Core/Accessibility/HTML
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/HTML
       - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
       - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-      - type: listSubPages
-        path: /Learn_web_development/Core/Accessibility/Test_your_skills
-        link: /Learn_web_development/Core/Accessibility/Test_your_skills
-        details: closed
   - link: /Learn_web_development/Core/Design_for_developers
     title: Design_for_developers
   - link: /Learn_web_development/Core/Version_control

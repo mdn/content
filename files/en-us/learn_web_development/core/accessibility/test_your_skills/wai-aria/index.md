@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: WAI-ARIA"
-short-title: WAI-ARIA
+short-title: "Test your skills: WAI-ARIA"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 The aim of this skill test is to help you assess whether you've understood our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
@@ -242,3 +244,5 @@ There are two ways to solve the problem outlined in this task:
 - Add a `role="alert"` attribute to the animal-description `<div>`, to make it have alert box semantics. This has the same effect on the screen reader as setting `aria-live="assertive"` on it.
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}

@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: CSS and JavaScript accessibility"
-short-title: CSS and JavaScript
+short-title: "Test your skills: CSS/JS a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 The aim of this skill test is to help you assess whether you've understood our [CSS and JavaScript accessibility best practices](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript) article.
 
@@ -329,3 +331,5 @@ item.addEventListener("keyup", (e) => {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
