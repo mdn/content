@@ -43,9 +43,9 @@ Most of the questions feature HTML/CSS/JavaScript code blocks that show the star
 If you make a mistake, you can clear your work using the Reset button in the MDN Playground. If you get really stuck, you can (usually) view the solution at the bottom of each question section, or [reach out for help](#contact_us).
 
 > [!NOTE]
-> If you'd prefer to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)), you can feel free to copy the code from the MDN Playground into your chosen environment.
+> If you'd prefer to work in your own editor or in an online editor (such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/)), you can copy the code from the MDN Playground into your chosen environment.
 
-Some questions don't feature in-page starting code, and instead ask you to download starter files to work on your local machine with. Sometimes this is due to the complex nature of the question, and sometimes we just wanted to change things up a bit.
+Some questions don't include code blocks to start from, and instead ask you to download starter files to work on your local machine with. Sometimes this is due to the complex nature of the question, and sometimes we just wanted to change things up a bit.
 
 ## Getting our code examples
 
