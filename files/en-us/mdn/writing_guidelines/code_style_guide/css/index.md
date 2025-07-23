@@ -50,7 +50,7 @@ For maximum control over CSS across platforms, many people used to use CSS reset
 
 ### Formal syntax and pseudocode
 
-Formal syntax is more front and central for CSS docs than other docs, and readers tend to understand them to some degree, so they are not forbidden even outside of the "Formal syntax" section. However, if your code is not syntactically well-formed CSS, do not mark it as CSS. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render complete formal syntax. Syntax errors in `css` code blocks results in the code being unparsable by static checkers, confuses readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting.
+Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, formal syntax is not syntactically well-formed CSS, and should, therefore, not be marked as such. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
 
 Don't write descriptions like this (this is not real formal syntax anyway, it's just pseudo-CSS with some placeholders):
 
