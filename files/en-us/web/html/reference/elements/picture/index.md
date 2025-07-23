@@ -119,7 +119,7 @@ For example:
 <picture>
   <source
     srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
-    sizes="(max-width: 600px) 400px, 800px"
+    sizes="(max-width: 600px) 400px, 600px"
     type="image/jpeg" />
   <img src="fallback.jpg" alt="Example image" />
 </picture>
