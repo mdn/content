@@ -217,7 +217,7 @@ However, this means all logic has to be written inside the `if` or `else`, causi
 }
 ```
 
-Another use case is when you have a resource that does not yet implement the disposable protocol, so it will be rejected by `using`.
+You may have a resource that does not yet implement the disposable protocol, so it will be rejected by `using`. In this case, you can use {{jsxref("DisposableStack/adopt", "adopt()")}}.
 
 ```js
 {
@@ -233,7 +233,7 @@ Another use case is when you have a resource that does not yet implement the dis
 }
 ```
 
-Yet another use case is when you have a disposal action to perform but it's not "tethered" to any resource in particular. Maybe you just want to log a message saying "All database connections closed" when there are multiple connections open simultaneously.
+You may have a disposal action to perform but it's not "tethered" to any resource in particular. Maybe you just want to log a message saying "All database connections closed" when there are multiple connections open simultaneously. In this case, you can use {{jsxref("DisposableStack/defer", "defer()")}}.
 
 ```js
 {
@@ -244,6 +244,30 @@ Yet another use case is when you have a disposal action to perform but it's not 
   // Do something with connection1 and connection2
   // Before scope exit, disposer is disposed, which first disposes connection1
   // and connection2 and then logs the message
+}
+```
+
+You may want to do _conditional_ disposal—for example, only dispose claimed resources when an error occurred. In this case, you can use {{jsxref("DisposableStack/move", "move()")}} to preserve the resources which would otherwise be disposed.
+
+```js
+class MyResource {
+  #resource1;
+  #resource2;
+  #disposables;
+  constructor() {
+    using disposer = new DisposableStack();
+    this.#resource1 = disposer.use(getResource1());
+    this.#resource2 = disposer.use(getResource2());
+    // If we made it here, then there were no errors during construction and
+    // we can safely move the disposables out of `disposer` and into `#disposables`.
+    this.#disposables = disposer.move();
+    // If construction failed, then `disposer` would be disposed before reaching
+    // the line above, disposing `#resource1` and `#resource2`.
+  }
+  
+  [Symbol.dispose]() {
+    this.#disposables.dispose(); // Dispose `#resource2` and `#resource1`.
+  }
 }
 ```
 

@@ -29,7 +29,33 @@ An object is async disposable if it has the `[Symbol.asyncDispose]()` method. Th
 
 `[Symbol.asyncDispose]` allows the creation of custom async disposables. See the `await using` reference for more information.
 
-TODO
+```js
+class Disposable {
+  #fileHandle;
+  #disposed;
+
+  constructor(handle) {
+    this.#disposed = false;
+    this.#fileHandle = handle;
+  }
+
+  async [Symbol.asyncDispose]() {
+    await this.#fileHandle.close()
+    this.disposed = true;
+  }
+
+  get isDisposed() {
+    return this.disposed;
+  }
+}
+
+const resource = new Disposable(await fs.open("my-file.txt", "r"));
+{
+  await using resourceUsed = resource;
+  console.log(resource.isDisposed); // false
+}
+console.log(resource.isDisposed); // true
+```
 
 ## Specifications
 

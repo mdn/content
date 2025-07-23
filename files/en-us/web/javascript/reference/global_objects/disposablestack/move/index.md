@@ -27,6 +27,57 @@ A new {{jsxref("DisposableStack")}} instance.
 - {{jsxref("ReferenceError")}}
   - : Thrown if the stack is already disposed.
 
+## Description
+
+The primary purpose of `move()` is to enable conditional disposal. For example, your function can claim ownership of some resources and dispose them if an error occurs; if everything completes successfully, then you return these resources and transfer ownership to the caller.
+
+Caling `move()` should be the very last step in your function, because there will be no owner in between the function dropping ownership via `move()` and the caller picking up ownership from the return value.
+
+```js example-good
+let resource1;
+
+function init() {
+  using disposer = new DisposableStack();
+  resource1 = disposer.use(getResource1());
+  // ...
+  // Drop ownership immediately before returning
+  return disposer.move();
+}
+
+// Pick up ownership immediately after returning
+using disposer = init();
+```
+
+```js example-bad
+let resource1;
+
+function init() {
+  using disposer = new DisposableStack();
+  resource1 = disposer.use(getResource1());
+  // ...
+  const newDisposer = disposer.move();
+  // If someone adds code in between these lines and an error occurs,
+  // there would be no owner to free resource1
+  return newDisposer;
+}
+
+using disposer = init();
+```
+
+```js example-bad
+function init() {
+  using disposer = new DisposableStack();
+  const resource1 = disposer.use(getResource1());
+  // ...
+  return { disposer: disposer.move(), resource1 };
+}
+
+const { resource1, ...rest } = init();
+// If someone adds code in between these lines and an error occurs,
+// there would be no owner to free resource1
+using disposer = rest.disposer;
+```
+
 ## Examples
 
 ### Claiming ownership of a stack
@@ -50,7 +101,6 @@ console.log(stack.disposed); // true
 The major use case of `move()` is when you have one or more resources which could either be disposed right here or could be persisted for later use. In this case, you can put the resources in a `DisposableStack` and then call `move()` when you need to persist the resources for later usage.
 
 ```js
-// sync
 class PluginHost {
   #disposed = false;
   #disposables;
