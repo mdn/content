@@ -259,5 +259,3 @@ para.textContent = shortNames;
 ```
 
 </details>
-
-&nbsp;

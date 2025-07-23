@@ -202,5 +202,3 @@ img {
 ```
 
 </details>
-
-&nbsp;

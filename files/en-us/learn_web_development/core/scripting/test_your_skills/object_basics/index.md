@@ -279,5 +279,3 @@ const cat2 = new Cat("Elfie", "Aphrodite Giant", "ginger");
 ```
 
 </details>
-
-&nbsp;

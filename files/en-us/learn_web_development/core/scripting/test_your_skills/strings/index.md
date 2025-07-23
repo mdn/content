@@ -224,5 +224,3 @@ const myString = `Using ${theorem}, we can work out that if the two shortest sid
 ```
 
 </details>
-
-&nbsp;

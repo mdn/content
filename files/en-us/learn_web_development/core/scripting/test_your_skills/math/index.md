@@ -228,5 +228,3 @@ const pwdMatch = pwd1 === pwd2;
 ```
 
 </details>
-
-&nbsp;

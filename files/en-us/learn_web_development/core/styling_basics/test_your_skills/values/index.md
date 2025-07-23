@@ -197,5 +197,3 @@ Use `background-position` with the `center` keyword and a percentage:
 ```
 
 </details>
-
-&nbsp;

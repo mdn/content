@@ -213,5 +213,3 @@ There are two ways to solve the problem outlined in this task:
 - Add a `role="alert"` attribute to the animal-description `<div>`, to make it have alert box semantics. This has the same effect on the screen reader as setting `aria-live="assertive"` on it.
 
 </details>
-
-&nbsp;

@@ -247,5 +247,3 @@ const eBirds = birds.filter(startsWithE);
 ```
 
 </details>
-
-&nbsp;

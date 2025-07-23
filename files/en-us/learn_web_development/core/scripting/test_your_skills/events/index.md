@@ -221,5 +221,3 @@ buttonBar.addEventListener("click", setColor);
 ```
 
 </details>
-
-&nbsp;

@@ -123,5 +123,3 @@ There is one thing you need to do in this task: change the order of precedence s
 You need to remember that unlayered normal styles take precedence over layered normal styles. But, if all styles are within layers — as in the case of this task — styles in later declared layers take precedence over styles declared in earlier layers. Moving the purple layer to the end means it has precedence over the green and yellow layers.
 
 </details>
-
-&nbsp;

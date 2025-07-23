@@ -347,5 +347,3 @@ You may try to use flexbox on the container and restrict the cards with percenta
 ```
 
 </details>
-
-&nbsp;

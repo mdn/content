@@ -119,5 +119,3 @@ let myAge = 42;
 ```
 
 </details>
-
-&nbsp;

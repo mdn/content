@@ -389,5 +389,3 @@ a[href^="https"] {
 ```
 
 </details>
-
-&nbsp;

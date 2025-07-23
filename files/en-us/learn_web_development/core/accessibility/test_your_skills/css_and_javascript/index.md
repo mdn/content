@@ -303,5 +303,3 @@ item.addEventListener("keyup", (e) => {
 ```
 
 </details>
-
-&nbsp;

@@ -222,5 +222,3 @@ if (machineActive) {
 ```
 
 </details>
-
-&nbsp;

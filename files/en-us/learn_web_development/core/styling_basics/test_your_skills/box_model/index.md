@@ -168,5 +168,3 @@ After adding `display: inline-block`, the block direction margin, border and pad
 ```
 
 </details>
-
-&nbsp;

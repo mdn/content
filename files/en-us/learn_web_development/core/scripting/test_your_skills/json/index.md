@@ -116,5 +116,3 @@ function displayCatInfo(catString) {
 ```
 
 </details>
-
-&nbsp;

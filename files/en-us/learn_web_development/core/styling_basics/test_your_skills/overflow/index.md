@@ -108,5 +108,3 @@ You should add `overflow: hidden` to the `.box` selector:
 ```
 
 </details>
-
-&nbsp;

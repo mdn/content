@@ -226,5 +226,3 @@ li {
 ```
 
 </details>
-
-&nbsp;

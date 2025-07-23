@@ -256,5 +256,3 @@ button:focus {
 ```
 
 </details>
-
-&nbsp;

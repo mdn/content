@@ -181,5 +181,3 @@ We're testing your understanding of `position: fixed` with a slightly different 
 ```
 
 </details>
-
-&nbsp;

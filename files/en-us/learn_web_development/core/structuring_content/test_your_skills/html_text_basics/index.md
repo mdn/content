@@ -298,5 +298,3 @@ Your finished HTML should look like this:
 ```
 
 </details>
-
-&nbsp;

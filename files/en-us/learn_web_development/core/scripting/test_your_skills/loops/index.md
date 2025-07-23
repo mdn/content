@@ -199,5 +199,3 @@ do {
 ```
 
 </details>
-
-&nbsp;

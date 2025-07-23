@@ -451,5 +451,3 @@ Your finished HTML should look something like this:
 ```
 
 </details>
-
-&nbsp;

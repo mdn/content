@@ -214,5 +214,3 @@ Other methods might be to use `overflow` or a clearfix hack, however the learnin
 ```
 
 </details>
-
-&nbsp;

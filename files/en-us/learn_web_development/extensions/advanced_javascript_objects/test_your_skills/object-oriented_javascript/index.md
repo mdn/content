@@ -132,5 +132,3 @@ square.calcArea();
 ```
 
 </details>
-
-&nbsp;
