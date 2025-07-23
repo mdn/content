@@ -92,5 +92,4 @@ canvas.toBlob((blob) => {
 - [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
 - {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
-- [URIs](/en-US/docs/Web/URI)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
