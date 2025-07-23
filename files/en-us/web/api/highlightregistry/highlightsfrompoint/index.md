@@ -122,12 +122,15 @@ article {
 
 #### JavaScript
 
-We start by grabbing references to the `<p>` element, its contained text node, and our `<section>` element. We then create a variable called `highlightCount`, initially set to `1`, which will be used to specify which custom highlight to apply later on.
+The script for this example has two distinct areas of functionality: We first need to create custom highlights and apply them to our content, then we can use the `highlightsFromPoint()` method to return custom highlights from a specific point.
+
+##### Creating and applying custom highlights
+
+To create custom highlights, we start by grabbing references to the `<p>` element and its contained text node. We then create a variable called `highlightCount`, initially set to `1`, which will be used to specify which custom highlight to apply later on.
 
 ```js live-sample___highlights-from-point-example
 const pElem = document.querySelector(".highlightable-text");
 const textNode = pElem.firstChild;
-const section = document.querySelector("section");
 let highlightCount = 1;
 ```
 
@@ -157,11 +160,17 @@ window.addEventListener("keydown", (event) => {
 });
 ```
 
-Next, we define a [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) event handler function to handle outputting the highlighted text at the mouse cursor position when the event fires. We pass the current mouse coordinates into a `highlightsFromPoint()` call, clear the contents of the `<section>` element, then loop through each highlight in the `highlights` array.
+##### Returning custom highlights from a point
+
+Now that we have the ability to create and apply custom highlights, we can use the `highlightsFromPoint()` method to return the custom highlights applied at a specific point.
+
+We grab a reference to our `<section>` element, then define a [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) event handler function to handle outputting the highlighted text at the mouse cursor position when the event fires. Inside the handler we pass the current mouse coordinates into a `highlightsFromPoint()` call, clear the contents of the `<section>` element, then loop through each highlight in the `highlights` array.
 
 For each `highlight`, we grab the first range in the [`ranges`](#ranges) array (there is only ever one range in each highlight, in this case), then get the exact highlighted string using {{domxref("Range.toString()")}} and add it to the `<section>` element's `innerHTML`, inside an `<article>` element.
 
 ```js live-sample___highlights-from-point-example
+const section = document.querySelector("section");
+
 pElem.addEventListener("dblclick", (event) => {
   const highlights = CSS.highlights.highlightsFromPoint(
     event.clientX,
