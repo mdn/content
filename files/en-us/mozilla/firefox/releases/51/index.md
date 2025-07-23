@@ -148,7 +148,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
   - {{WebExtAPIRef("runtime.getBrowserInfo()")}} ([Firefox bug 1268399](https://bugzil.la/1268399))
   - {{WebExtAPIRef("runtime.reload()")}} and {{WebExtAPIRef("runtime.onUpdateAvailable()")}} ([Firefox bug 1279012](https://bugzil.la/1279012))
 
-- You can now [embed a WebExtension in a legacy add-on type](/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) ([Firefox bug 1252215](https://bugzil.la/1252215)).
+- You can now [embed a WebExtension in a legacy add-on type](https://web.archive.org/web/20210528055219/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Embedded_WebExtensions) ([Firefox bug 1252215](https://bugzil.la/1252215)).
 - [Clipboard access](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) is now supported ([Firefox bug 1197451](https://bugzil.la/1197451))
 - The arguments passed to the callback of {{WebExtAPIRef("tabs.executeScript()")}} have been fixed ([Firefox bug 1290157](https://bugzil.la/1290157))
 - [localStorage](/en-US/docs/Web/API/Window/localStorage) is now cleared when a WebExtension is uninstalled ([Firefox bug 1213990](https://bugzil.la/1213990))
@@ -156,7 +156,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Other
 
-- The [`multiprocessCompatible` property of `install.rdf`](/en-US/docs/Mozilla/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
+- The [`multiprocessCompatible` property of `install.rdf`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#multiprocesscompatible) must now be explicitly set to `false` to prevent multiprocess from being enabled in Firefox when the add-on is installed.
 - The Mozilla-specific Social API has been substantially changed (largely to remove APIs no longer used), as follows:
   - The `MozSocial` interface and the `Navigator.mozSocial` property which supports it have been removed.
   - The Social Bookmarks API has been removed.
@@ -167,4 +167,4 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
   - Social service provider manifest properties supporting the removed functionality are no longer supported.
 
 - If an add-on uses `mimeTypes.rdf` to provide a file extension to MIME type mapping, it must now register an entry in the `"ext-to-type-mapping"` category ([Firefox bug 306471](https://bugzil.la/306471)).
-- The [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the `mozbrowserlocationchange` event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).
+- The [Browser API](https://web.archive.org/web/20210124171655/https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the `mozbrowserlocationchange` event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ([Firefox bug 1279635](https://bugzil.la/1279635)).
