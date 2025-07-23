@@ -118,7 +118,7 @@ function displayCoords(htmlCoords, cssFunc, svgElem) {
   const dd2 = document.createElement("dd");
   dd2.innerText = cssFunc;
   const dt3 = document.createElement("dt");
-  dt3.textContent = "CSS shape functions";
+  dt3.textContent = "SVG element";
   const dd3 = document.createElement("dd");
   dd3.innerText = svgElem;
   dl.append(dt1, dd1, dt2, dd2, dt3, dd3);
