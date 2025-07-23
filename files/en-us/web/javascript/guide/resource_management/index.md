@@ -264,7 +264,6 @@ class MyResource {
     // If construction failed, then `disposer` would be disposed before reaching
     // the line above, disposing `#resource1` and `#resource2`.
   }
-  
   [Symbol.dispose]() {
     this.#disposables.dispose(); // Dispose `#resource2` and `#resource1`.
   }
