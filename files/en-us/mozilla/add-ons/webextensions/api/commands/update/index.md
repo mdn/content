@@ -3,9 +3,8 @@ title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.commands.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Change the description or keyboard shortcut for the given command.
 

@@ -3,9 +3,8 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.duplicate
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Duplicates a tab, given its ID.
 

@@ -3,9 +3,8 @@ title: action.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeTextColor
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeTextColor
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
 

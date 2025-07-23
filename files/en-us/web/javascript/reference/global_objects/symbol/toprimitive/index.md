@@ -12,7 +12,7 @@ The **`Symbol.toPrimitive`** static data property represents the [well-known sym
 {{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   [Symbol.toPrimitive](hint) {
     if (hint === "number") {
       return 42;
@@ -21,7 +21,7 @@ const object1 = {
   },
 };
 
-console.log(+object1);
+console.log(+object);
 // Expected output: 42
 ```
 

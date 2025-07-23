@@ -3,9 +3,8 @@ title: proxy.settings
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 page-type: webextension-api-property
 browser-compat: webextensions.api.proxy.settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to change the browser's proxy settings.
 

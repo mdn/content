@@ -3,9 +3,8 @@ title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
 

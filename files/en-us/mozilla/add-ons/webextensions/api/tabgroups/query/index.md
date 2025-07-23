@@ -3,9 +3,8 @@ title: tabGroups.query
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/query
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.query
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Return all tab groups or find groups with certain properties.
 

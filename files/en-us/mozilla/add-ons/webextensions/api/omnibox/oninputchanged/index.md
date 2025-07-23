@@ -3,9 +3,8 @@ title: omnibox.onInputChanged
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.
 

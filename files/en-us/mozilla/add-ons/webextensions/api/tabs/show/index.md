@@ -3,9 +3,8 @@ title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.show
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Shows one or more tabs that were previously hidden by a call to {{WebExtAPIRef("tabs.hide")}}.
 

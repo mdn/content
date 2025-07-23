@@ -272,15 +272,15 @@ function doIt() {
   Here is the recommended way:
 
   ```js example-good
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce((a, b) => a + b);
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce((a, b) => a + b);
   ```
 
   Instead of this:
 
   ```js example-bad
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce(function (a, b) {
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce(function (a, b) {
     return a + b;
   });
   ```

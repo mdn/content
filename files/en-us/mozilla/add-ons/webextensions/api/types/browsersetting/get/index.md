@@ -2,9 +2,8 @@
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 page-type: webextension-api-function
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
 

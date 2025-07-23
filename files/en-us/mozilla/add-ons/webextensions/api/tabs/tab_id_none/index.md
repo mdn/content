@@ -3,9 +3,8 @@ title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 page-type: webextension-api-property
 browser-compat: webextensions.api.tabs.TAB_ID_NONE
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
 

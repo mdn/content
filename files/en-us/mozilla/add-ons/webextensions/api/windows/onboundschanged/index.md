@@ -3,9 +3,8 @@ title: windows.onBoundsChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onBoundsChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onBoundsChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a window is resized or moved. This event is fired when the new bounds are committed. It doesn't fire for in-progress changes.
 

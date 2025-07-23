@@ -3,9 +3,8 @@ title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 page-type: webextension-api-function
 browser-compat: webextensions.api.find.highlightResults
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
 

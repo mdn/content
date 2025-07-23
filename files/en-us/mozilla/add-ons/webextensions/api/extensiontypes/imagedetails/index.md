@@ -3,9 +3,8 @@ title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.ImageDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details about the format, quality, area and scale of a captured image.
 

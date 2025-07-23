@@ -3,9 +3,8 @@ title: windows.Window
 slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
 page-type: webextension-api-type
 browser-compat: webextensions.api.windows.Window
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Information about a browser window.
 

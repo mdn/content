@@ -3,9 +3,8 @@ title: runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformArch
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The machine's processor architecture.
 

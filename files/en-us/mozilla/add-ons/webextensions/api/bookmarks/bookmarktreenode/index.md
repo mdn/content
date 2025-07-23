@@ -3,9 +3,8 @@ title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 page-type: webextension-api-type
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark tree, where each node is a bookmark, a bookmark folder, or a separator. Child nodes are ordered by an `index` within their respective parent folders.
 
