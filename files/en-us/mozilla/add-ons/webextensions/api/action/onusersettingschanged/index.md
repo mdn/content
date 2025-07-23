@@ -32,10 +32,9 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs. The function is passed these arguments:
     - `change`
-      - : 'object'. Details of the changed user-specified settings. 
+      - : 'object'. Details of the changed user-specified settings.
         - `isOnToolbar`
           - : `boolean`. Whether the extension's action icon is visible on the top-level toolbar of the browser windows (i.e., whether the extension has been 'pinned' by the user).
-
 
 {{WebExtExamples}}
 

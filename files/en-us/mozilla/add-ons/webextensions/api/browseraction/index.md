@@ -70,7 +70,6 @@ With the `browserAction` API, you can:
 - {{WebExtAPIRef("browserAction.onUserSettingsChanged")}}
   - : Fired when a change occurs in the user-specified settings that affect an extension's browser action.
 
-
 {{WebExtExamples("h2")}}
 
 ## Browser compatibility
