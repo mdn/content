@@ -28,7 +28,6 @@ Text decoration features also enable you to follow editorial and localization st
 
 ```css hidden
 p {
-  font-family: monospace;
   margin: 1em 0;
 }
 .under {
@@ -43,22 +42,13 @@ p {
   text-decoration: line-through;
 }
 
-.plain {
-  text-decoration: none;
-}
-
 .underover {
   text-decoration: dashed underline overline;
 }
 
 .thick {
   text-decoration: solid underline purple 4px;
-}
-.offset {
   text-underline-offset: -5px;
-}
-.position {
-  text-underline-position: under;
 }
 .shadow {
   text-shadow: red 4px 4px 0;
@@ -69,31 +59,13 @@ p {
 ```
 
 ```html hidden
-<p class="initial">
-  text-decoration: initial; (applied to a
-  <a href="#" class="initial">Pretty link</a>)
-</p>
-<p>
-  <a class="offset"
-    >text-underline-offset: -5px; (applied to a
-    <a href="#" class="offset">Pretty link</a>)
-    <p>
-      <a class="position"
-        >text-underline-position: under; (applied to a
-        <a href="#" class="position">Pretty link</a>)
-        <p class="plain">
-          text-decoration: none; (applied to a
-          <a class="plain" href="#">Pretty link</a>)
-        </p>
-        <p class="under">text-decoration: underline red;</p>
-        <p class="over">text-decoration: wavy overline lime;</p>
-        <p class="line">text-decoration: line-through;</p>
-        <p class="underover">text-decoration: dashed underline overline;</p>
-        <p class="thick">text-decoration: solid underline purple 4px;</p>
-        <p class="shadow">text-shadow: red 4px 4px 0;</p>
-        <p class="emphasis">text-emphasis: triangle red;</p></a
-      >
-    </p></a
+        <p class="under">A red underline</p>
+        <p class="over">A wavy lime overlines</p>
+        <p class="line">This has a line-through it</p>
+        <p class="underover">This has a dashed underline and overline</p>
+        <p class="thick">An offset solid purple underline</p>
+        <p class="shadow">This has a red shadow</p>
+        <p class="emphasis">Emphasised with red triangles</p>
   >
 </p>
 ```
