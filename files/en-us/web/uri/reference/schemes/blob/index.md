@@ -3,7 +3,7 @@ title: "blob: URLs"
 short-title: "blob:"
 slug: Web/URI/Reference/Schemes/blob
 page-type: uri-scheme
-brower-compat: api.URL.createObjectURL_static
+browser-compat: api.URL.createObjectURL_static
 spec-urls: https://w3c.github.io/FileAPI/#url
 sidebar: urlsidebar
 ---
