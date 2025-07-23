@@ -83,7 +83,7 @@ The `multiple` attribute on the {{HTMLElement("select")}} element represents a c
 
 When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
 
-Multiple selected options are submitted using the `URLSearchParams` array convention, i.e., `name=value1&name=value2`.
+Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`.
 
 ## Accessibility concerns
 
