@@ -2,9 +2,8 @@
 title: Make network requests
 slug: Mozilla/Add-ons/WebExtensions/Make_network_requests
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Extensions can use the [`fetch()`](/en-US/docs/Web/API/Fetch_API) API to send and receive data from remote servers. A [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) can initiate requests on behalf of the web origin it's injected into and is subject to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that it can only make a request to the same origin as the web page. However, extension origins aren't so limited. A script executing in an extension background page or foreground tab can communicate with remote servers outside of its origin as long as the extension requests the necessary cross-origin permissions.
 
