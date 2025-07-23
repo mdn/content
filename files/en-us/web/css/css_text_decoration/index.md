@@ -8,12 +8,12 @@ spec-urls:
 sidebar: cssref
 ---
 
-
 The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks. Text decoration features can provide visual cues for spelling errors, grammar issues, and links. These features can help improve the usability, accessibility, functionality, and aesthetics of your text.
 
 By varying the color, style, and thickness of text decoration using pseudo-classes and pseudo-elements, you can highlight the emphasis in text in ways that don't rely on color alone.
 
 Several features can help improve text readability:
+
 - {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders.
 - {{cssxref("text-underline-offset")}} enables you to fine-tune the underline placement to better match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts).
 - {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make the text visually pop when placed on a background with insufficient contrast.
