@@ -3,9 +3,8 @@ title: clamp()
 slug: Web/CSS/clamp
 page-type: css-function
 browser-compat: css.types.clamp
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 

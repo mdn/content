@@ -3,9 +3,8 @@ title: image-set()
 slug: Web/CSS/image/image-set
 page-type: css-function
 browser-compat: css.types.image.image-set
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`image-set()`** [CSS](/en-US/docs/Web/CSS) [functional](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.
 

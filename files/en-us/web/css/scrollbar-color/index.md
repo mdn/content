@@ -3,9 +3,8 @@ title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
 

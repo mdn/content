@@ -3,9 +3,8 @@ title: CSS generated content
 slug: Web/CSS/CSS_generated_content
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-content/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS generated content** module defines how an element's content can be replaced and content can be added to a document with CSS.
 

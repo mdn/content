@@ -3,9 +3,8 @@ title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.request
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Asks the user for the permissions listed in the {{WebExtAPIRef("permissions.Permissions")}} object.
 
@@ -37,10 +36,6 @@ let requesting = browser.permissions.request(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is granted the permissions listed in the `permissions` argument, or `false` otherwise.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -74,6 +69,10 @@ document
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

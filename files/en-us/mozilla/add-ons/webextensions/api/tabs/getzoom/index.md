@@ -3,9 +3,8 @@ title: tabs.getZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.getZoom
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the current zoom factor for the specified tab.
 

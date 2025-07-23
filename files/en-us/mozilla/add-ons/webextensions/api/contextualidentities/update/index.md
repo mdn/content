@@ -3,9 +3,8 @@ title: contextualIdentities.update()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates properties of a contextual identity, given its cookie store ID.
 
@@ -60,10 +59,6 @@ let createContext = browser.contextualIdentities.update(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the updated identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example updates the contextual identity whose ID is "firefox-container-1" to have a new name, color, and icon:
@@ -87,3 +82,7 @@ browser.contextualIdentities
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

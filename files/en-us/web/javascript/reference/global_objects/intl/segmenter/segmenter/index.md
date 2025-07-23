@@ -4,9 +4,8 @@ short-title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} objects.
 
@@ -14,14 +13,14 @@ The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} obje
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
 
-console.log(iterator1.next().value.segment);
+console.log(iterator.next().value.segment);
 // Expected output: 'Que'
 
-console.log(iterator1.next().value.segment);
+console.log(iterator.next().value.segment);
 // Expected output: ' '
 ```
 

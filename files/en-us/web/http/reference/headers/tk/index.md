@@ -87,6 +87,10 @@ Tk: N
 
 {{specifications}}
 
+## Browser compatibility
+
+This response header doesn't trigger any browser behavior, so browser compatibility is irrelevant.
+
 ## See also
 
 - {{HTTPHeader("DNT")}} header

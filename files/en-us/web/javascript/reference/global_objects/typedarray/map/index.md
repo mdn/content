@@ -4,9 +4,8 @@ short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`map()`** method of {{jsxref("TypedArray")}} instances creates a new typed array populated with the results of calling a provided function on every element in the calling typed array. This method has the same algorithm as {{jsxref("Array.prototype.map()")}}.
 

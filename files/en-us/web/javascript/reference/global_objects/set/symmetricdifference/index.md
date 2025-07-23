@@ -4,9 +4,8 @@ short-title: symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.symmetricDifference
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`symmetricDifference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
 

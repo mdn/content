@@ -4,9 +4,8 @@ short-title: Intl.RelativeTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl.RelativeTimeFormat")}} objects.
 

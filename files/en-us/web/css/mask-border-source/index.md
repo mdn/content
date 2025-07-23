@@ -3,9 +3,8 @@ title: mask-border-source
 slug: Web/CSS/mask-border-source
 page-type: css-property
 browser-compat: css.properties.mask-border-source
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 

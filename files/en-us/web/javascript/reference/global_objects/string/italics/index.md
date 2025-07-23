@@ -6,9 +6,10 @@ page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.italics
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`italics()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes this string to be displayed as italic.
 

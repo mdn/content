@@ -2,9 +2,8 @@
 title: BCP 47 language tag
 slug: Glossary/BCP_47_language_tag
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **BCP 47 language tag** is a string of characters that precisely specifies a human language in terms of the basic language, but also optionally the writing system and dialect. For example, `en` specifies English, but `en-GB` and `en-US` more precisely specify British English and American English, respectively.
 

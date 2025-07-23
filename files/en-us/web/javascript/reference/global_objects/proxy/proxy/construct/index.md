@@ -4,31 +4,30 @@ short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.construct
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`handler.construct()`** method is a trap for the `[[Construct]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/new", "new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself be a valid constructor.
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
 ```js interactive-example
-function monster1(disposition) {
+function Monster(disposition) {
   this.disposition = disposition;
 }
 
-const handler1 = {
+const handler = {
   construct(target, args) {
     console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+    // Expected output: "Creating a monster"
 
     return new target(...args);
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const ProxiedMonster = new Proxy(Monster, handler);
 
-console.log(new proxy1("fierce").disposition);
+console.log(new ProxiedMonster("fierce").disposition);
 // Expected output: "fierce"
 ```
 

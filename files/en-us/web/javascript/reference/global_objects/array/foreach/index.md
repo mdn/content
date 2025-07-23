@@ -4,9 +4,8 @@ short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
@@ -14,9 +13,9 @@ for each array element.
 {{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-array1.forEach((element) => console.log(element));
+array.forEach((element) => console.log(element));
 
 // Expected output: "a"
 // Expected output: "b"

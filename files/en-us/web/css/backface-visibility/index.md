@@ -3,9 +3,8 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
 

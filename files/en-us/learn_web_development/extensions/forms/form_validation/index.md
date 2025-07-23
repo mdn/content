@@ -534,8 +534,9 @@ email.addEventListener("input", (event) => {
 });
 ```
 
-You can try this example in the page at the {{LiveSampleLink('Extending_built-in_form_validation', 'Live sample demo link')}}.
 Try submitting an invalid email address, a valid email address that doesn't end in `@example.com`, and one that does end in `@example.com`.
+
+{{EmbedLiveSample("extending built-in form validation", "", 200, , , , , "allow-forms")}}
 
 #### A more detailed example
 
@@ -846,10 +847,6 @@ The result looks like this:
 {{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 150)}}
 
 As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as [Validate.js](https://rickharrison.github.io/validate.js/).
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation).
 
 ## Summary
 

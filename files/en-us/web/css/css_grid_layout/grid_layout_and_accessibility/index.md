@@ -2,9 +2,8 @@
 title: Grid layout and accessibility
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 HTML is the content layer of a website where we create semantic, well-structured documents. CSS is the presentation layer; we apply CSS to create, among other things, the desired layout for our content. Two-dimensional grid structures are defined using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 

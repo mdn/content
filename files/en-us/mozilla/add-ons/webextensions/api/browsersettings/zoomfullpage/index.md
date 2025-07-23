@@ -3,9 +3,8 @@ title: browserSettings.zoomFullPage
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.zoomFullPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
@@ -15,10 +14,6 @@ The settings are:
 
 - `true`: zoom applies to all the content of a web page (default).
 - `false`: zoom applies to web page text only.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -33,3 +28,7 @@ browser.browserSettings.zoomFullPage.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

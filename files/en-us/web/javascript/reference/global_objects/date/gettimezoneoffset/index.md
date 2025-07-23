@@ -4,9 +4,8 @@ short-title: getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTimezoneOffset
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the difference, in minutes, between this date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
 

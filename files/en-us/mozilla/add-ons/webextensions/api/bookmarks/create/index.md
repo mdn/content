@@ -3,9 +3,8 @@ title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified `parentId`. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.
 

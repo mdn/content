@@ -16,7 +16,7 @@ The **`CSSLayerBlockRule`** represents a {{cssxref("@layer")}} block rule.
 _Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 - {{DOMxRef("CSSLayerBlockRule.name")}} {{ReadOnlyInline}}
-  - A string containing the name of the associated cascade layer.
+  - : A string containing the name of the associated cascade layer.
 
 ## Instance methods
 

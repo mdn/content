@@ -3,9 +3,8 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.commands
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

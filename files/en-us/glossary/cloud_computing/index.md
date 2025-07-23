@@ -2,9 +2,8 @@
 title: Cloud computing
 slug: Glossary/Cloud_computing
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Cloud computing** refers to the on-demand delivery of a wide range of computing services such as storage, databases, networking, analytics, and intelligence via the Internet — also known as **cloud services**.
 

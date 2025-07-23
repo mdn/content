@@ -3,9 +3,8 @@ title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

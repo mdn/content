@@ -1,11 +1,12 @@
 ---
 title: Firefox 44 for developers
+short-title: Firefox 44
 slug: Mozilla/Firefox/Releases/44
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/).
 Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -34,7 +35,7 @@ Highlights:
 
 - The non-standard properties `-moz-math-display` and `-moz-window-shadow` are no more available from Web content ([Firefox bug 1207002](https://bugzil.la/1207002), [Firefox bug 1211040](https://bugzil.la/1211040), and [Firefox bug 1212607](https://bugzil.la/1212607)).
 - The {{cssxref("font-style")}} property now distinguishes between `oblique` and `italic` when both variants are available ([Firefox bug 543715](https://bugzil.la/543715)).
-- Though not supported, the properties {{cssxref("@page/marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
+- Though not supported, the properties {{cssxref("@page/marks", "marks")}}, {{cssxref("orphans")}}, {{cssxref("page")}}, {{cssxref("@page/size", "size")}}, and {{cssxref("widows")}}, were parsed and {{cssxref("@supports")}} was incorrectly reporting them as supported; this has been fixed and the properties are not parsed anymore, nor marked as supported ([Firefox bug 1215702](https://bugzil.la/1215702)).
 - The internal value `-moz-mac-unified-toolbar` has been removed from the possible values for the {{cssxref("appearance")}} property ([Firefox bug 1206468](https://bugzil.la/1206468)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 837211](https://bugzil.la/837211)):
   - `-webkit-animation`
@@ -112,7 +113,7 @@ Highlights:
 - A new experimental {{domxref("OffscreenCanvas")}} API that allows rendering contexts (such as [WebGL](/en-US/docs/Web/API/WebGL_API)) to run in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) has been implemented. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ([Firefox bug 709490](https://bugzil.la/709490)). This API includes:
   - The {{domxref("OffscreenCanvas")}} interface,
   - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}, and
-  - {{domxref("WebGLRenderingContext.commit()")}}.
+  - `WebGLRenderingContext.commit()`.
   - Several WebGL interfaces are now also available in a worker context when this API is enabled.
 
 #### WebGL
@@ -202,7 +203,7 @@ _No change._
 ### JavaScript code modules
 
 - Added `LIKE` support to Sqlite.jsm ([Firefox bug 1188760](https://bugzil.la/1188760)).
-- Added [Snackbars.jsm](/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
+- Added [Snackbars.jsm](https://web.archive.org/web/20160423072423/https://developer.mozilla.org/en-US/Add-ons/Firefox_for_Android/API/Snackbars.jsm) module to [Firefox for Android](https://web.archive.org/web/20210518020027/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android) ([Firefox bug 1215026](https://bugzil.la/1215026))
 
 ### XPCOM
 
@@ -210,8 +211,4 @@ _No change._
 
 ### Other
 
-- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](/en-US/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm).
-
-## Older versions
-
-{{Firefox_for_developers}}
+- Due to breaking changes in Firefox 44 ([bug 1202902](https://bugzil.la/1202902)), add-ons packed with [cfx](https://web.archive.org/web/20201201072958/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx) will not work any longer. To make your add-on compatible again, please use [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm). See the [_cfx_ to _jpm_ migration guide](https://web.archive.org/web/20181116093809/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/cfx_to_jpm).

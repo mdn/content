@@ -4,9 +4,8 @@ short-title: inputmode
 slug: Web/HTML/Reference/Global_attributes/inputmode
 page-type: html-attribute
 browser-compat: html.global_attributes.inputmode
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`inputmode`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that hints at the type of data that might be entered by the user while editing the element or its contents.
 This allows a browser to display an appropriate virtual keyboard.

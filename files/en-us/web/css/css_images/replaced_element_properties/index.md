@@ -2,9 +2,8 @@
 title: Styling replaced elements
 slug: Web/CSS/CSS_images/Replaced_element_properties
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Some [CSS](/en-US/docs/Web/CSS) properties apply to all elements, some only to grid and flex containers, others only to transformable elements. This guide introduces the properties that only apply to _replaced elements_.
 

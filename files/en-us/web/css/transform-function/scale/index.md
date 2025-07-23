@@ -3,9 +3,8 @@ title: scale()
 slug: Web/CSS/transform-function/scale
 page-type: css-function
 browser-compat: css.types.transform-function.scale
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element on the 2D
 plane. Because the amount of scaling is defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at

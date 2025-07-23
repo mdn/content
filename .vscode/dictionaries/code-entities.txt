@@ -22,6 +22,8 @@ accessibility.disablecache
 accessibilitysidebar
 acodec
 activetitlebarcolor
+addonsidebar
+addonsidebarmain
 addstream
 adduser
 adlm
@@ -309,6 +311,7 @@ jsapi.h
 jscript
 jsdouble
 jspubtd.h
+jsref
 jssidebar
 jsval
 kaios
@@ -527,6 +530,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onwebkitmouseforcewillbegin
+onzoomlevelchange
 opendocument
 openidconnect
 openpgp4fpr
@@ -739,6 +743,7 @@ tnsa
 todoapp
 togglecamera
 togglemicrophone
+togglescreenshare
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
@@ -869,3 +874,4 @@ xpcnativewrappers
 xpidl
 xpinstall
 xywh
+zoomlevelchange

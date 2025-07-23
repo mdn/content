@@ -1,5 +1,6 @@
 ---
 title: Firefox 69 for developers
+short-title: Firefox 69
 slug: Mozilla/Firefox/Releases/69
 page-type: firefox-release-notes
 sidebar: firefox
@@ -90,7 +91,7 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{domxref("DOMMatrix")}}, {{domxref("DOMPoint")}}, and related objects are now supported in workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
 - The `pageX` and `pageY` properties have been moved from {{domxref("UIEvent")}} to {{domxref("MouseEvent")}}, for better spec compliance ([Firefox bug 1178763](https://bugzil.la/1178763)). These properties are no longer exposed to the {{domxref("CompositionEvent")}}, {{domxref("FocusEvent")}}, {{domxref("InputEvent")}}, {{domxref("KeyboardEvent")}}, and {{domxref("TouchEvent")}} interfaces, which all inherit from `UIEvent`.
 - The {{domxref("Blob.text()")}}, {{domxref("Blob.arrayBuffer()")}}, and {{domxref("Blob.stream()")}} methods are now implemented ([Firefox bug 1557121](https://bugzil.la/1557121)).
-- {{domxref("DOMMatrixReadOnly.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
+- `DOMMatrixReadOnly.fromMatrix()` has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
 - We now support the six-parameter version of the {{domxref("DOMMatrixReadOnly.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
 - The arguments for {{domxref("DOMMatrixReadOnly.translate()")}}, {{domxref("DOMMatrixReadOnly.skewX()")}}, and {{domxref("DOMMatrixReadOnly.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
 - The {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.platform")}}, and {{domxref("Navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
@@ -130,7 +131,3 @@ This article provides information about the changes in Firefox 69 that will affe
 ## See also
 
 - Hacks release post: [Firefox 69 — a tale of Resize Observer, microtasks, CSS, and DevTools](https://hacks.mozilla.org/2019/09/firefox-69-a-tale-of-resize-observer-microtasks-css-and-devtools/)
-
-## Older versions
-
-{{Firefox_for_developers}}

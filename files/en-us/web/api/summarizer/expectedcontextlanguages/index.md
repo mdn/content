@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.expectedContextLanguages
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`expectedContextLanguages`** read-only property of the {{domxref("Summarizer")}} interface returns the languages the context strings should be written in.
 

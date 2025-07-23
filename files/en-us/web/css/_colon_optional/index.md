@@ -3,9 +3,8 @@ title: :optional
 slug: Web/CSS/:optional
 page-type: css-pseudo-class
 browser-compat: css.selectors.optional
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
