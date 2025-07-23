@@ -110,20 +110,21 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
 
 The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute of the `<source>` element allows you to specify a set of media condition-length pairs and indicate the image display size for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
 
-When the browser loads an image, it:
+> [!NOTE]
+> The browser evaluates the media conditions in the sizes attribute before it downloads any images.
 
-- Evaluates the media conditions in the `sizes` attribute from left to right.
-- Uses the first matching condition to determine the slot size (the image's display width in CSS pixels).
-- Selects the image from `srcset` whose width descriptor (`w`) is closest to the slot size and device pixel ratio.
+see the sizes attribute of the [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) and [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) elements for more information.
 
 For example:
 
 ```html
-<img
-  srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
-  sizes="(max-width: 600px) 400px, 800px"
-  src="fallback.jpg"
-  alt="Example image" />
+<picture>
+  <source 
+    srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+    sizes="(max-width: 600px) 400px, 800px"
+    type="image/jpeg" />
+  <img src="fallback.jpg" alt="Example image" />
+</picture>
 ```
 
 In this example:
