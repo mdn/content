@@ -40,7 +40,7 @@ class Disposable {
   }
 
   async [Symbol.asyncDispose]() {
-    await this.#fileHandle.close()
+    await this.#fileHandle.close();
     this.disposed = true;
   }
 
