@@ -114,6 +114,9 @@ You can use heading elements in `<summary>`, like this:
 
 This currently has some spacing issues that could be addressed using CSS.
 
+> [!WARNING]
+> The role assigned to the `<summary>` element varies across browsers. Some still assign it a default [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) role, which removes all roles from its children. This inconsistency can cause issues for users of assistive technologies such as screen readers (`<h4>` in the previous example will have its role removed and will not be treated as a heading for these users). You should test your `<summary>` implementation on multiple platforms to ensure there's consistent accessibility support.
+
 ### HTML in summaries
 
 This example adds some semantics to the `<summary>` element to indicate the label as important:
