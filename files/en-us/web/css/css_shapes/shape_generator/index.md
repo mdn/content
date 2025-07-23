@@ -14,24 +14,33 @@ This tool can be used to generate the syntax for three features that use {{cssxr
 The tool below helps you visualize the resulting shape and get the coordinates for each point, superimposed over an image. To use it, first upload an image by either dragging or clicking to select a file. Then, click on the image to add reference points for the shape you want to create. You can select the shape type from the dropdown menu and adjust the scale of the canvas using the range input.
 
 ```html hidden live-sample___shape-generator
-<div>
-  <label for="scale">
-    Scale:
-    <input type="range" id="scale" min="0.1" max="3" value="1" step="any" />
-  </label>
-  <label for="shape">
-    Shape:
-    <select id="shape">
-      <option value="rect">Rectangle</option>
-      <option value="circle">Circle</option>
-      <option value="poly">Polygon</option>
-      <option value="points">Discrete points</option>
-    </select>
-  </label>
-  <button id="reset">Reset</button>
-</div>
-<canvas id="canvas"></canvas>
-<output id="coords">Click on the canvas to add points.</output>
+<fieldset>
+  <legend>Controls</legend>
+  <p>
+    <label for="scale">
+      Scale:
+      <input type="range" id="scale" min="0.1" max="3" value="1" step="any" />
+    </label>
+  </p>
+  <p>
+    <label for="shape">
+      Shape:
+      <select id="shape">
+        <option value="rect">Rectangle</option>
+        <option value="circle">Circle</option>
+        <option value="poly">Polygon</option>
+        <option value="points">Discrete points</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <button id="reset">Reset</button>
+  </p>
+</fieldset>
+<canvas id="canvas">Drop and image here, or click to upload.</canvas>
+<p>
+  <output id="coords">Click on the canvas to add points.</output>
+</p>
 ```
 
 ```css hidden live-sample___shape-generator
@@ -45,9 +54,16 @@ The tool below helps you visualize the resulting shape and get the coordinates f
 #coords {
   display: block;
   position: relative;
-  font-family: monospace;
-  white-space: pre-wrap;
   word-break: break-all;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+dd {
+  white-space: pre-wrap;
+  font-family: monospace;
 }
 ```
 
@@ -74,7 +90,7 @@ function init() {
   canvas.style.width = "400px";
   canvas.style.height = "300px";
   ctx.font = "20px serif";
-  ctx.fillText("Drop an image here, or click to upload", 10, 20);
+  ctx.fillText("Drop an image here, or click to upload.", 10, 20);
 }
 
 function initImage(file) {
@@ -91,6 +107,25 @@ function initImage(file) {
   });
 }
 
+function displayCoords(htmlCoords, cssFunc, svgElem) {
+  const dl = document.createElement("dl");
+  const dt1 = document.createElement("dt");
+  dt1.innerHTML = "HTML <code>coords</code> attribute";
+  const dd1 = document.createElement("dd");
+  dd1.innerText = htmlCoords;
+  const dt2 = document.createElement("dt");
+  dt2.textContent = "CSS shape functions";
+  const dd2 = document.createElement("dd");
+  dd2.innerText = cssFunc;
+  const dt3 = document.createElement("dt");
+  dt3.textContent = "CSS shape functions";
+  const dd3 = document.createElement("dd");
+  dd3.innerText = svgElem;
+  dl.append(dt1, dd1, dt2, dd2, dt3, dd3);
+  coordsDisplay.textContent = "";
+  coordsDisplay.appendChild(dl);
+}
+
 function renderShape() {
   ctx.strokeStyle = "magenta";
   ctx.fillStyle = "red";
@@ -101,11 +136,13 @@ function renderShape() {
     const w = x2 - x1;
     const h = y2 - y1;
     ctx.strokeRect(x1, y1, w, h);
-    coordsDisplay.innerText = `coords="${x1},${y1},${x2},${y2}"
-inset(${y1}px ${x1}px ${canvas.height - y2}px ${canvas.width - x2}px)
+    displayCoords(
+      `coords="${x1},${y1},${x2},${y2}"`,
+      `inset(${y1}px ${x1}px ${canvas.height - y2}px ${canvas.width - x2}px)
 xywh(${x1}px ${y1}px ${w}px ${h}px)
-rect(${y1}px ${x2}px ${y2}px ${x1}px)
-<rect x="${x1}" y="${y1}" width="${w}" height="${h}" />`;
+rect(${y1}px ${x2}px ${y2}px ${x1}px)`,
+      `<rect x="${x1}" y="${y1}" width="${w}" height="${h}" />`,
+    );
   } else if (shapeSelect.value === "circle" && coords.length === 2) {
     ctx.beginPath();
     const { x, y } = coords[0];
@@ -115,9 +152,11 @@ rect(${y1}px ${x2}px ${y2}px ${x1}px)
     ctx.arc(x, y, r, 0, Math.PI * 2);
     ctx.stroke();
     ctx.closePath();
-    coordsDisplay.textContent = `coords="${x},${y},${r}"
-circle(${r}px at ${x}px ${y}px)
-<circle cx="${x}" cy="${y}" r="${r}" />`;
+    displayCoords(
+      `coords="${x},${y},${r}"`,
+      `circle(${r}px at ${x}px ${y}px)`,
+      `<circle cx="${x}" cy="${y}" r="${r}" />`,
+    );
   } else if (shapeSelect.value === "poly" && coords.length > 2) {
     ctx.beginPath();
     ctx.moveTo(coords[0].x, coords[0].y);
@@ -126,13 +165,18 @@ circle(${r}px at ${x}px ${y}px)
     }
     ctx.closePath();
     ctx.stroke();
-    coordsDisplay.textContent = `coords="${coords.map((coord) => `${coord.x},${coord.y}`).join(",")}"
-polygon(${coords.map((coord) => `${coord.x} ${coord.y}`).join(", ")})
-<polygon points="${coords.map((coord) => `${coord.x},${coord.y}`).join(" ")}" />`;
+    displayCoords(
+      `coords="${coords.map((coord) => `${coord.x},${coord.y}`).join(",")}"`,
+      `polygon(${coords.map((coord) => `${coord.x} ${coord.y}`).join(", ")})`,
+      `<polygon points="${coords.map((coord) => `${coord.x},${coord.y}`).join(" ")}" />`,
+    );
   } else if (shapeSelect.value === "points") {
-    coordsDisplay.textContent = coords
+    const p = document.createElement("p");
+    p.innerText = `Coordinate:\n${coords
       .map((coord) => `${coord.x},${coord.y}`)
-      .join("\n");
+      .join("\n")}`;
+    coordsDisplay.textContent = "";
+    coordsDisplay.appendChild(p);
   }
   for (const coord of coords) {
     ctx.beginPath();
