@@ -20,7 +20,7 @@ highlightsFromPoint(x, y, options)
 ### Parameters
 
 - `x`
-  - : The x coordinate of the point within the viewport to return custom highlight information for.
+  - : The x-coordinate of the point within the viewport from which to return custom highlight information.
 - `y`
   - : The y coordinate of the point within the viewport to return custom highlight information for.
 - `options` {{optional_inline}}
