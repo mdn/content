@@ -355,11 +355,13 @@ The final XSLT stylesheet looks as follows:
 
 ### Articles
 
-- [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
+- [XSL Transformations](https://www.ibiblio.org/xml/books/bible3/chapters/ch15.html) by Elliotte Rusty Harold
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### Tutorials/Examples
 
 - [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
 - [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
-- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
+- [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) by Miloslav Nic, Jiri Jirat
+- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/) by Paul Grosso, Norman Walsh
+- [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) by Miloslav Nic
