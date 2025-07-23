@@ -43,8 +43,9 @@ The example creates an {{HTMLElement("audio")}} element and lets the user assign
 This lets us see the behavior of the {{domxref("HTMLMediaElement/error_event", "error")}} event handler, which is received by an event handler we add to the `<audio>` element itself.
 
 First, it gets the {{domxref("MediaError")}} object describing the error from the {{domxref("HTMLMediaElement.error", "error")}} property on the {{domxref("HTMLAudioElement")}} representing the audio player.
-The error's numeric {{domxref("MediaError.code", "code")}} is checked to create a generic hint, and if `message` is not empty, it's added to the log line to provide more detailed diagnostic information for developers.
-The resulting text is then added to the `<pre>` element:
+The error's numeric {{domxref("MediaError.code", "code")}} is checked against `MediaError` constants, which are initially undefined.
+If the `err.code` is equal to any constant, it creates a generic hint with `MediaError.message` added to the log line to provide more detailed diagnostic information for developers.
+The resulting text is added to the `<pre>` element:
 
 ```js
 const audioElement = document.getElementById("audio");
@@ -64,7 +65,7 @@ validButton.addEventListener("click", () => {
 
 svgButton.addEventListener("click", () => {
   audioElement.src =
-    "https://mdn.github.io//shared-assets/images/examples/dino.svg";
+    "https://mdn.github.io/shared-assets/images/examples/dino.svg";
 });
 
 invalidButton.addEventListener("click", () => {
@@ -76,16 +77,16 @@ audioElement.onerror = () => {
   let userHint = "";
 
   switch (err.code) {
-    case 1:
+    case MediaError.MEDIA_ERR_ABORTED:
       userHint = "Canceled audio playback.";
       break;
-    case 2:
+    case MediaError.MEDIA_ERR_NETWORK:
       userHint = "A network error occurred while fetching the audio.";
       break;
-    case 3:
+    case MediaError.MEDIA_ERR_DECODE:
       userHint = "An error occurred while decoding the audio.";
       break;
-    case 4:
+    case MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED:
       userHint = "Audio is missing or is an unsupported format.";
       break;
     default:
