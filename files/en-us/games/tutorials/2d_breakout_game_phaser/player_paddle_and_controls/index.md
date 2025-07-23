@@ -137,7 +137,7 @@ class Example extends Phaser.Scene {
 
   preload() {
     this.load.setBaseURL(
-      "https://mdn.github.io/shared-assets/images/examples/",
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
     );
 
     this.load.image("ball", "ball.png");
