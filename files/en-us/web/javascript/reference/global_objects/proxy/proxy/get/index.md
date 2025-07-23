@@ -12,12 +12,12 @@ The **`handler.get()`** method is a trap for the `[[Get]]` [object internal meth
 {{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
 
 ```js interactive-example
-const monster1 = {
+const monster = {
   secret: "easily scared",
   eyeCount: 4,
 };
 
-const handler1 = {
+const handler = {
   get(target, prop, receiver) {
     if (prop === "secret") {
       return `${target.secret.substring(0, 4)} ... shhhh!`;
@@ -26,12 +26,12 @@ const handler1 = {
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const proxy = new Proxy(monster, handler);
 
-console.log(proxy1.eyeCount);
+console.log(proxy.eyeCount);
 // Expected output: 4
 
-console.log(proxy1.secret);
+console.log(proxy.secret);
 // Expected output: "easi ... shhhh!"
 ```
 

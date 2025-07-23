@@ -3,9 +3,8 @@ title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.sidebar_action
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

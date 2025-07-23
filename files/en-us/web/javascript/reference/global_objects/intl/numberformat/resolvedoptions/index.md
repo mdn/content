@@ -12,17 +12,17 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances 
 {{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const numberFormat1 = new Intl.NumberFormat("de-DE");
-const options1 = numberFormat1.resolvedOptions();
+const numberFormat = new Intl.NumberFormat("de-DE");
+const options = numberFormat.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output (Firefox / Safari): "de-DE"
 // Expected output (Chrome): "de"
 
-console.log(options1.numberingSystem);
+console.log(options.numberingSystem);
 // Expected output: "latn"
 
-console.log(options1.style);
+console.log(options.style);
 // Expected output: "decimal"
 ```
 

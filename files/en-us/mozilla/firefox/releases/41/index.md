@@ -1,11 +1,12 @@
 ---
 title: Firefox 41 for developers
+short-title: Firefox 41
 slug: Mozilla/Firefox/Releases/41
 page-type: firefox-release-notes
 sidebar: firefox
 ---
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -156,7 +157,3 @@ _No change._
 ### Other
 
 - A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: `CanvasRenderingContext2D.drawWidgetAsOnScreen()`. This API uses the operating system to snapshot the widget on-screen. For more details see [Firefox bug 1167477](https://bugzil.la/1167477).
-
-## Older versions
-
-{{Firefox_for_developers}}

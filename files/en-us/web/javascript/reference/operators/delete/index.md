@@ -243,6 +243,5 @@ console.log(globalVar); // ReferenceError: globalVar is not defined
 
 ## See also
 
-- [In depth analysis on delete](http://perfectionkills.com/understanding-delete/)
 - {{jsxref("Reflect.deleteProperty()")}}
 - {{jsxref("Map.prototype.delete()")}}

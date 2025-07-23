@@ -3,9 +3,8 @@ title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a cookie, given the cookie's name and URL.
 

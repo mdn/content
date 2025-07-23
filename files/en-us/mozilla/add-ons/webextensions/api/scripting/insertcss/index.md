@@ -3,9 +3,8 @@ title: scripting.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.insertCSS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects CSS into a page.
 

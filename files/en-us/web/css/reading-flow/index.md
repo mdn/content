@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.reading-flow
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`reading-flow`** [CSS](/en-US/docs/Web/CSS) property enables modifying the {{glossary("reading order")}} of child elements of a [block](/en-US/docs/Glossary/Block/CSS), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), or [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout. This affects the order in which they are rendered to speech and navigated to when using sequential navigation such as tabbing to links or buttons.
 

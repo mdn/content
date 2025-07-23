@@ -1,5 +1,6 @@
 ---
 title: Firefox 4 for developers
+short-title: Firefox 4
 slug: Mozilla/Firefox/Releases/4
 page-type: firefox-release-notes
 sidebar: firefox
@@ -227,8 +228,6 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
   - : The developing WebGL standard is now supported by Firefox.
-- [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
-  - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
 - [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats/Containers#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
@@ -252,7 +251,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See [Firefox bug 503943](https://bugzil.la/503943).
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
   - : The existing document history object, available through the {{domxref("window.history")}} object, now supports the new HTML5 `pushState()` and `replaceState()` methods.
-- [Animations using MozBeforePaint](/en-US/docs/DOM/Animations_using_MozBeforePaint)
+- Animations using `MozBeforePaint`
   - : A new event has been added which, in concert with the `window.mozRequestAnimationFrame()` method and `window.mozAnimationStartTime` property, provides a way to create animations that are synchronized with one another.
 - Touch and multi-touch events
   - : Support has been added for touch and multi-touch events.
@@ -290,11 +289,11 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - `Node.mozMatchesSelector()` now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("HTMLElement/style", "style")}} for details.
-- The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
+- The document root now has [a `privatebrowsingmode` attribute](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM {{domxref("StorageEvent")}} object now matches the latest version of the specification.
 - The minimum allowed delay for the {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
-- The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
+- The [`MozAfterPaint`](https://web.archive.org/web/20191010014917/https://developer.mozilla.org/en-US/docs/Web/Events#Add-on-specific_events) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security
 
@@ -309,7 +308,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 
 ### JavaScript
 
-For an overview of the changes implemented in JavaScript 1.8.5, see [New in JavaScript 1.8.5](/en-US/docs/JavaScript/New_in_JavaScript/1.8.5). JavaScript in Firefox 4 will have additional adherence to the ECMAScript 5 standard.
+For an overview of the changes implemented in JavaScript 1.8.5, see [New in JavaScript 1.8.5](https://web.archive.org/web/20210516173330/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8.5). JavaScript in Firefox 4 will have additional adherence to the ECMAScript 5 standard.
 
 ### Developer tools
 
@@ -323,41 +322,41 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 
 For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en-US/docs/Mozilla/Firefox/Releases/4/Updating_extensions_for_Firefox_4). There are several key changes that break compatibility with existing add-ons, so be sure to read that article.
 
-If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US/docs/Theme_changes_in_Firefox_4) to understand some critical changes you'll need to be aware of.
+If you're a theme developer, you should read [Theme changes in Firefox 4](https://web.archive.org/web/20210515184532/https://developer.mozilla.org/en-US/docs/Archive/Themes/Theme_changes_in_Firefox_4) to understand some critical changes you'll need to be aware of.
 
 ### JavaScript code modules
 
-- [Services.jsm](/en-US/docs/JavaScript_code_modules/Services.jsm)
+- [Services.jsm](https://web.archive.org/web/20210417185248/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm)
   - : The `Services.jsm` code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.
-- [JS-ctypes API](/en-US/docs/JavaScript_code_modules/ctypes.jsm)
+- [JS-ctypes API](https://web.archive.org/web/20210528115949/https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes)
   - : The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.
 - [Add-ons Manager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/index.html)
   - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
-- [PopupNotifications.jsm](/en-US/docs/JavaScript_code_modules/PopupNotifications.jsm)
-  - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](/en-US/docs/Using_popup_notifications).
-- [Loading code modules from chrome: URLs](/en-US/docs/JavaScript_code_modules/Using#locating_the_code_module)
+- [PopupNotifications.jsm](https://web.archive.org/web/20210414083224/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PopupNotifications.jsm)
+  - : The new popup notifications module makes it easy to present attractive, non-modal notifications to the user. You can see how to use this API in [Using popup notifications](https://web.archive.org/web/20210411021529/https://developer.mozilla.org/en-US/docs/Mozilla/Using_popup_notifications).
+- [Loading code modules from chrome: URLs](https://web.archive.org/web/20210529003507/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using#locating_the_code_module)
   - : You can now load JavaScript code modules using **chrome:** URLs, even inside JAR files.
 - DownloadLastDir.jsm
-  - : The [`DownloadLastDir.jsm`](/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm) code module provides the `gDownloadLastDir` global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.
-- [Measuring performance using the PerfMeasurement.jsm code module](/en-US/docs/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module)
-  - : The [`PerfMeasurement.jsm`](/en-US/docs/JavaScript_code_modules/PerfMeasurement.jsm) code module provides an API to measure CPU-level performance data in JavaScript code.
+  - : The [`DownloadLastDir.jsm`](https://web.archive.org/web/20210615230651/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/DownloadLastDir.jsm) code module provides the `gDownloadLastDir` global variable, which contains a string you can use to learn the path of the directory into which the last download occurred. This module handles issues related to private browsing for you.
+- [Measuring performance using the PerfMeasurement.jsm code module](https://web.archive.org/web/20210420142952/https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module)
+  - : The [`PerfMeasurement.jsm`](https://web.archive.org/web/20210620175828/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PerfMeasurement.jsm) code module provides an API to measure CPU-level performance data in JavaScript code.
 
 #### Miscellaneous changes to code modules
 
 - The `NetUtil.jsm` code module now offers the `readInputStreamToString()` method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
 - The XPCOMUtils.jsm code module now offers IterSimpleEnumerator() and IterStringEnumerator() helpers to iterate over XPCOM enumerators.
-- You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
+- You can now [use workers in JavaScript code modules](https://web.archive.org/web/20210620192749/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes
 
 - `ChromeWorker`
-  - : A new type of worker for privileged code; this lets you use things like [js-ctypes](/en-US/docs/js-ctypes) from workers in extensions and application code.
+  - : A new type of worker for privileged code; this lets you use things like [js-ctypes](https://web.archive.org/web/20210528115949/https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes) from workers in extensions and application code.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Support for (non-standard) touch events has been added; these let you track multiple fingers moving on a touch screen at the same time.
 
 #### Other DOM changes
 
-- The [new "document-element-inserted" notification](/en-US/docs/Observer_Notifications#documents) is sent when a document's root element is created, but before any scripts are executed on it.
+- The [new "document-element-inserted" notification](https://web.archive.org/web/20210703204149/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Observer_Notifications#documents) is sent when a document's root element is created, but before any scripts are executed on it.
 
 ### XUL
 
@@ -430,28 +429,28 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 
 In addition to the specific changes referenced below, it's important to note that there are no longer any frozen interfaces. All interfaces are now unfrozen, regardless of what the documentation may say. We'll update the documentation over time.
 
-- [XPCOM changes in Gecko 2.0](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0)
+- [XPCOM changes in Gecko 2.0](https://web.archive.org/web/20210514105748/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Changes_in_Gecko_2.0)
   - : Details about changes to XPCOM that impact compatibility in Firefox 4.
-- [Components.utils.getGlobalForObject()](/en-US/docs/Components.utils.getGlobalForObject)
+- [Components.utils.getGlobalForObject()](https://web.archive.org/web/20210625071536/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.getGlobalForObject)
   - : This new method returns the global object with which an object is associated; this replaces a common use case of the now-removed `__parent__`.
 
 ### Places
 
 - Places query results may now be observed by multiple observers, and queries may be executed asynchronously. This means there have been some changes to the `nsINavHistoryResult`, `nsINavHistoryQueryOptions`, and `nsINavHistoryContainerResultNode` interfaces. More significantly, the `nsINavHistoryResultViewer` interface has been renamed to `nsINavHistoryResultObserver`.
-- Some [new notifications](/en-US/docs/Observer_Notifications#places) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
+- Some [new notifications](https://web.archive.org/web/20210703204149/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Observer_Notifications) have been added to enable the browser to track the shutdown process of the Places service more reliably. Of these, most are for internal use only, but the `places-connection-closed` notification is available to know when the Places service has completed its shutdown process.
 - The array size output parameter on several Places methods is now optional.
-- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](/en-US/docs/Displaying_Places_information_using_views#menu_view) for details.
+- Support for `<menupopup type="places">` has been removed. Instead, you need to create and populate a menu with Places information manually, instead of having it done for you. See [Displaying Places information using views: Menu view](https://web.archive.org/web/20201028190050/https://developer.mozilla.org/en-US/docs/Mozilla/Displaying_Place_information_using_views#menu_view) for details.
 
 ### Interface changes
 
 - The `nsIDocShell` and `nsIWebBrowser` interfaces now have a new `isActive` attribute, which is used to allow optimization of code paths for documents that aren't currently visible.
-- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](/en-US/docs/XPCOM_Interface_Reference/nsIMemory#low_memory_notifications) to watch for low memory situations instead.
+- The `nsIMemory` method `nsIMemory.isLowMemory()` has been deprecated. You should use ["memory-pressure" notifications](https://web.archive.org/web/20210516060454/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory#low_memory_notifications) to watch for low memory situations instead.
 - The API for handling redirects on HTTP channels has changed to let them be processed asynchronously. Any code that implements redirect handling using `nsIChannelEventSink.onChannelRedirect()` needs to be updated to use `nsIChannelEventSink.asyncOnChannelRedirect()` instead. This accepts a callback handler that must be called when a redirect is successfully completed.
 - The `nsINavHistoryResultObserver.batching()` method has been added, providing a way to group Places operations into batches, reducing the number of update notifications delivered, which can improve performance when observers are performing relatively involved tasks (such as refreshing views).
 - The long-obsolete `nsIPref` interface has finally been removed. If you haven't already switched to `nsIPrefService`, now is the time.
 - The `nsISessionStore` and `nsISessionStartup` interfaces received changes to support on-demand session restore. See the `nsISessionStore.restoreLastSession()` method.
 - The `nsIPrincipal` methods `nsIPrincipal.subsumes()` and `nsIPrincipal.checkMayLoad()`, as well as its `origin`, `csp`, and `URI` attributes, are now available from script; previously they were only available from native code.
-- The `nsIPrompt` interface now supports tab-modal alerts; see [Using tab-modal prompts](/en-US/docs/Using_tab-modal_prompts) for details.
+- The `nsIPrompt` interface now supports tab-modal alerts; see [Using tab-modal prompts](https://web.archive.org/web/20210513121539/https://developer.mozilla.org/en-US/docs/Mozilla/Using_tab-modal_prompts) for details.
 - The `nsIEffectiveTLDService.getPublicSuffixFromHost()` method now correctly rejects host name starting with a period (".").
 - The `mozIJSSubScriptLoader.loadSubScript()` method now has an optional argument allowing you to specify the character set of the script; if one is not provided, ASCII is assumed (as was always assumed previously).
 - The `nsIAccessProxy` interface has been removed. It was an implementation detail that has outlived its usefulness.
@@ -463,37 +462,33 @@ In addition to the specific changes referenced below, it's important to note tha
 
 ### Memory management
 
-- [Infallible memory allocation](/en-US/docs/Infallible_memory_allocation)
+- [Infallible memory allocation](https://web.archive.org/web/20201026230445/https://developer.mozilla.org/en-US/docs/Mozilla/Infallible_memory_allocation)
   - : Mozilla now provides infallible memory allocators that are guaranteed not to return null. You should read this article to learn how they work and how to explicitly request fallible versus infallible memory allocation.
 
 ### Other changes
 
-- Most of the resources contained within Firefox have been combined into a single JAR archive, `omni.jar`, which improves startup performance by reducing I/O. For details, read [About omni.jar](/en-US/docs/About_omni.jar).
+- Most of the resources contained within Firefox have been combined into a single JAR archive, `omni.jar`, which improves startup performance by reducing I/O. For details, read [About omni.jar](https://web.archive.org/web/20210620190432/https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_%28formerly_omni.jar%29).
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/XML/Guides/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
-- You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#unpack) property in the [install manifest](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](https://web.archive.org/web/20210528115949/https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes), [search plugins](/en-US/docs/Web/XML/Guides/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](https://web.archive.org/web/20201109001036/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Overlay_Extensions/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- You may now include extensions that [automatically get installed at application startup](https://web.archive.org/web/20180604010849/https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes
 
 - Only the root chrome.manifest file is loaded
-  - : Only the root `chrome.manifest` file is loaded now; if you need secondary manifest files to be loaded, you can use the [`manifest`](/en-US/docs/Chrome_Registration#manifest) command in your root `chrome.manifest` to load them.
+  - : Only the root `chrome.manifest` file is loaded now; if you need secondary manifest files to be loaded, you can use the [`manifest`](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration#manifest) command in your root `chrome.manifest` to load them.
 - Gopher support removed
   - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/en-US/firefox/addon/overbitenx/) extension.
-- [Content process event handling](/en-US/docs/The_message_manager)
+- [Content process event handling](https://web.archive.org/web/20210531151101/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/Message_Manager)
   - : In order to support out-of-process plugins and other multiple-process features, a new API has been introduced to support sending messages across processes.
-- [Bootstrapped extensions](/en-US/docs/Extensions/Bootstrapped_extensions)
+- [Bootstrapped extensions](https://web.archive.org/web/20210519000929/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions)
   - : You can now create extensions that can be installed, uninstalled, and upgraded (or downgraded) without requiring a browser restart.
 - Default plugin removed
   - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See [Firefox bug 533891](https://bugzil.la/533891).
 - Extension Manager replaced by Addon Manager
   - : `nsIExtensionManager` has been replaced by [AddonManager](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/AddonManager.html).
 - Child HWNDs no longer used
-  - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an [NPAPI](/en-US/docs/NPAPI) plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
+  - : Firefox no longer creates child HWNDs for its internal use on Windows. If you've written an extension that uses native code to manipulate these HWNDs, your extension will not work on Firefox 4. You'll need to either stop using HWNDs or wrap your code that relies on HWNDs in an NPAPI plugin. That's a lot of work, so if you can avoid using HWNDs directly, you should.
 - Gesture changes
   - : The three finger up and down swipe gestures on trackpads have been changed to, by default, open and close Firefox Panorama view (neé TabCandy). To change these back to the previous scroll-to-top and scroll-to-bottom commands, open about:config and set `browser.gesture.swipe.down` to `cmd_scrollBottom` and `browser.gesture.swipe.up` to `cmd_scrollTop`.
-
-## See also
-
-{{Firefox_for_developers}}

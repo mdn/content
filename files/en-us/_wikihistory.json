@@ -8730,34 +8730,6 @@
       "notabene"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling": {
-    "modified": "2020-07-16T22:22:12.770Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls": {
-    "modified": "2020-07-16T22:22:10.786Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure": {
-    "modified": "2020-07-16T22:22:10.470Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation": {
-    "modified": "2020-07-16T22:22:13.092Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Input_types": {
-    "modified": "2020-07-16T22:22:11.117Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls": {
-    "modified": "2020-07-16T22:22:11.804Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics": {
-    "modified": "2020-07-16T22:22:12.453Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Learn_web_development/Extensions/Forms/UI_pseudo-classes": {
     "modified": "2020-07-22T23:59:16.367Z",
     "contributors": [
@@ -50589,10 +50561,6 @@
     "modified": "2020-10-15T22:04:40.998Z",
     "contributors": ["SterileSummer", "sideshowbarker", "jpmedley"]
   },
-  "Web/API/PaymentRequestEvent/instrumentKey": {
-    "modified": "2020-10-15T22:04:43.225Z",
-    "contributors": ["jpmedley"]
-  },
   "Web/API/PaymentRequestEvent/methodData": {
     "modified": "2020-10-15T22:04:44.132Z",
     "contributors": ["jpmedley"]
@@ -74836,19 +74804,6 @@
       "ErwinWessels",
       "andylampert",
       "cvrebert"
-    ]
-  },
-  "Web/CSS/@media/aural": {
-    "modified": "2020-08-05T13:50:38.977Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "wbamberg",
-      "ExE-Boss",
-      "mfluehr",
-      "kscarfone",
-      "ethertank",
-      "BijuGC"
     ]
   },
   "Web/CSS/@media/color": {

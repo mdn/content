@@ -3,9 +3,8 @@ title: font-synthesis-small-caps
 slug: Web/CSS/font-synthesis-small-caps
 page-type: css-property
 browser-compat: css.properties.font-synthesis-small-caps
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-synthesis-small-caps`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize small-caps typeface when it is missing in a font family. Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
 

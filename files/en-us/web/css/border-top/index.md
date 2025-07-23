@@ -3,9 +3,8 @@ title: border-top
 slug: Web/CSS/border-top
 page-type: css-shorthand-property
 browser-compat: css.properties.border-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/border).
 

@@ -3,9 +3,8 @@ title: Creating CSS carousels
 short-title: Creating carousels
 slug: Web/CSS/CSS_overflow/CSS_carousels
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 

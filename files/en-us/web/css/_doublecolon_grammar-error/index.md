@@ -3,9 +3,8 @@ title: ::grammar-error
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
 

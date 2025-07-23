@@ -3,9 +3,8 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 page-type: css-property
 browser-compat: css.properties.vertical-align
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
 

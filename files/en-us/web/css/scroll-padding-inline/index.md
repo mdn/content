@@ -3,9 +3,8 @@ title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
 

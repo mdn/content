@@ -3,9 +3,8 @@ title: <resolution>
 slug: Web/CSS/resolution
 page-type: css-type
 browser-compat: css.types.resolution
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/CSS_media_queries), denotes the pixel density of an output device, i.e., its resolution.
 

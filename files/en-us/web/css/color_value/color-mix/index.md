@@ -3,9 +3,8 @@ title: color-mix()
 slug: Web/CSS/color_value/color-mix
 page-type: css-function
 browser-compat: css.types.color.color-mix
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
 

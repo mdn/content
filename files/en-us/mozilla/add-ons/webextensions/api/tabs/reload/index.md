@@ -3,9 +3,8 @@ title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Reload a tab, optionally bypassing the local web cache.
 

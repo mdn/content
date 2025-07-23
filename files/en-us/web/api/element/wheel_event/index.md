@@ -14,7 +14,7 @@ This event replaces the non-standard deprecated {{domxref("Element/mousewheel_ev
 
 Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event:
 
-- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events.
+- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events (with {{domxref("MouseEvent/ctrlKey", "ctrlKey")}} set to true).
 - A `scroll` event isn't necessarily triggered by a `wheel` event. Elements can also be scrolled by using the keyboard, dragging a scrollbar, or using JavaScript.
 - Even when the `wheel` event does trigger scrolling, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction.
 

@@ -3,9 +3,8 @@ title: fallback
 slug: Web/CSS/@counter-style/fallback
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.fallback
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fallback`** descriptor of the {{cssxref("@counter-style")}} at-rule can be used to specify a counter style to fall back to if the counter style being defined cannot create a marker representation for a particular counter value.
 

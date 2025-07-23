@@ -3,9 +3,8 @@ title: runtime.setUninstallURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.setUninstallURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. The URL can be up to 1023 characters. This limit used to be 255, see [Browser compatibility](#browser_compatibility) for more details.
 
@@ -28,10 +27,6 @@ let settingUrl = browser.runtime.setUninstallURL(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments when the URL is set or rejected with an error message if the operation fails.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -48,6 +43,10 @@ settingUrl.then(onSetURL, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

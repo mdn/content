@@ -7,7 +7,7 @@ sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 141 that affect developers.
-Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress. You can [view the project tracker for this release here](https://github.com/mdn/mdn/issues/698).
@@ -26,15 +26,19 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The CSS {{CSSXRef("font-variant-emoji")}} property allows you to set a default presentation style for displaying emojis ([Firefox bug 1954214](https://bugzil.la/1954214)).
 
 <!-- No notable changes. -->
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The [`variants`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) accessor property is now supported on {{jsxref("Intl.Locale")}} instances.
+  This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
+  It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
 
 <!-- #### Removals -->
 
@@ -77,13 +81,24 @@ Firefox 141 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Removed the temporary `remote.system-access-check.enabled` preference. This preference can no longer be used to disable system access checks when using WebDriver in Firefox's chrome scope during testing ([Firefox bug 1955007](https://bugzil.la/1955007)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Added support for the "proxy" argument of the `browser.createUserContext` command. This allows clients to setup either a "direct" or "manual" proxy when creating a user context (ie Firefox Container). Support for additional proxy types will be added later on ([Firefox bug 1967653](https://bugzil.la/1967653)).
+- Implemented the new `browsingContext.historyUpdated` event which is emitted when `history.pushState()`, `history.replaceState()` or `document.open()` is called within the context of a web page ([Firefox bug 1906051](https://bugzil.la/1906051)).
+- Improved the error message shown when attempting to permanently install an unpacked, unsigned web extension ([Firefox bug 1958723](https://bugzil.la/1958723)).
+- Updated the `browsingContext.navigate` and `browsingContext.reload` commands to wait for the `browsingContext.navigationCommitted` event when using the "wait" condition "none" ([Firefox bug 1967469](https://bugzil.la/1967469)).
+- Updated the WebDriver BiDi cookie APIs to support "default" value in "sameSite" property to address recent changes in platform API which wouldn't allow anymore to set a cookie with "sameSite=None" and "secure=false" on HTTP pages ([Firefox bug 1971488](https://bugzil.la/1971488)).
+
+#### Marionette
+
+- To avoid unnecessary 200ms delays for each call to `WebDriver:ElementClick` - even when no navigation occurs - we lowered the click-and-wait timeout for a potential navigation to 50ms for backward compatibility. The [timeout is now also configurable](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-timeout) and [can be completely disabled](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-enabled) by users through a preference ([Firefox bug 1972271](https://bugzil.la/1972271)).
+- Added support in Marionette for interacting with CHIPS cookies (Cookies Having Independent Partitioned State) ([Firefox bug 1972830](https://bugzil.la/1972830)).
 
 ## Changes for add-on developers
 
@@ -99,6 +114,6 @@ These features are shipping in Firefox 141 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-## Older versions
+- **`:active-view-transition`** (Nightly): `dom.viewTransitions.enabled`
 
-{{Firefox_for_developers}}
+  The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).

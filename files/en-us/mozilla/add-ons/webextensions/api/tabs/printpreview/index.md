@@ -3,9 +3,8 @@ title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.printPreview
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Opens print preview for the active tab.
 
