@@ -11,24 +11,13 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you've understood our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## WAI-ARIA 1
 
 In our first ARIA task, we present you with a section of non-semantic markup, which is visually meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to understand what it is?
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
 
 <!-- Code shared across examples -->
 
@@ -107,15 +96,8 @@ In our second WAI-ARIA task, we present a basic search form, and we want you to 
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add an attribute to allow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable.
-3. Give the search input a suitable label, without explicitly adding a visible text label to the DOM.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/aria/aria2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Add an attribute to allow the search form to be called out as a separate landmark on the page by screen readers, to make it easily findable.
+2. Give the search input a suitable label, without explicitly adding a visible text label to the DOM.
 
 ```html live-sample___aria-2
 <form>
@@ -147,17 +129,6 @@ For this final WAI-ARIA task, we return to an example we previously saw in the [
 As before, we have an app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list. Here, we are starting with a mouse- and keyboard-accessible version.
 
 The problem we have now is that when the DOM changes to show a new description, screen readers cannot see what has changed. Can you update it so that description changes are announced by the screen reader?
-
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the HTML so that the description updates are announced by the screen reader.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/aria/aria-js1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html live-sample___aria-3
 <section class="preview">
