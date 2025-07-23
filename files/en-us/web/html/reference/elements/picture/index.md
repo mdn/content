@@ -109,7 +109,7 @@ The `srcset` attribute can also be used on the `<img>` element without needing t
 
 ### The sizes attribute
 
-The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute allows you to specify a set of media conditions (similar to media queries) and indicate the image display size (in CSS pixels) for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
+The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attribute of the `<source>` element allows you to specify a set of media condition-length pairs and indicate the image display size for each condition. This helps the browser select the most appropriate image from the `srcset` attribute, which lists images with their [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) widths.
 
 When the browser loads an image, it:
 
