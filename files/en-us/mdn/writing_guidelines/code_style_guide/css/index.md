@@ -50,9 +50,9 @@ For maximum control over CSS across platforms, many people used to use CSS reset
 
 ### Formal syntax and pseudocode
 
-Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, formal syntax is not syntactically well-formed CSS, and should, therefore, not be marked as such. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
+Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks results in the code being unparsable by static checkers, confuses readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
 
-Don't write descriptions like this (this is not real formal syntax anyway, it's just pseudo-CSS with some placeholders):
+Don't write descriptions like this (this is not real formal syntax anyway; it's just pseudo-CSS with some placeholders):
 
 ````md example-bad
 The `border` property has the following general form:
@@ -94,7 +94,7 @@ rgb(31 41 59);
 rgb(31 41 59 / 26%);
 ```
 
-Note that this rule does not apply to the first code block in the "Syntax" section, which is specified instead by [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#css_reference_syntax).
+Note that this rule does not apply to the first code block in the "Syntax" section, which is specified instead by [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#css_reference_syntax), and requires functions to be written without the property.
 
 ## Animations
 
