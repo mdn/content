@@ -33,7 +33,7 @@ Each time you call `createObjectURL()`, a new object URL is created, even if you
 
 Browsers will release object URLs automatically when the document is unloaded; however, for optimal performance and memory usage, if there are safe times when you can explicitly unload them, you should do so.
 
-However, avoid freeing the object URL too early. One common antipattern is the following:
+However, avoid freeing the object URL too early. One common anti-pattern is the following:
 
 ```js example-bad
 const url = URL.createObjectURL(blob);
