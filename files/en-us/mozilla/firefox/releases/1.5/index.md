@@ -1,5 +1,6 @@
 ---
 title: Firefox 1.5 for developers
+short-title: Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5
 page-type: firefox-release-notes
 sidebar: firefox
@@ -14,7 +15,7 @@ Several tools and browser extensions are available to help developers support Fi
 - [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
 - JavaScript console, a tool to write and test JavaScript code as well as view JavaScript and CSS errors on a page.
 - View page source, with syntax highlighting and find features.
-- [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.
+- [Browser extensions](https://addons.mozilla.org/en-US/firefox/search/?q=Developer%20Tools) including the [FireBug](https://web.archive.org/web/20061205073236/http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Live HTTP Headers](https://web.archive.org/web/20200628024648/http://livehttpheaders.mozdev.org/), [HTML Validator](https://validator.w3.org/) and many more.
 
 > [!NOTE]
 > Some extensions do not currently support Firefox 1.5, and will be automatically disabled.
@@ -26,7 +27,7 @@ Some of the new features in Firefox 1.5:
 ### Website and application developers
 
 - SVG is supported in XHTML
-  - : SVG can be used in XHTML pages. JavaScript and CSS can be used to manipulate the picture in the same way you would script regular XHTML. See [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) to learn about the status and known problems of SVG implementation in Firefox.
+  - : SVG can be used in XHTML pages. JavaScript and CSS can be used to manipulate the picture in the same way you would script regular XHTML. See [SVG in Firefox](https://web.archive.org/web/20210413180914/https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) to learn about the status and known problems of SVG implementation in Firefox.
 - [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn about the new `<canvas>` tag and how to draw graphs and other objects in Firefox.
 - [CSS3 Columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
@@ -38,15 +39,15 @@ Some of the new features in Firefox 1.5:
 
 - [Building an Extension](/en-US/docs/Mozilla/Add-ons)
   - : This tutorial will take you through the steps required to build a very basic extension for Firefox. Also see [another tutorial on MozillaZine knowledge base](https://kb.mozillazine.org/Getting_started_with_extension_development), which demonstrates the new features of the Extension Manager in 1.5 that make creating a new extension even easier.
-- [XPCNativeWrapper](/en-US/docs/XPCNativeWrapper)
-  - : `XPCNativeWrapper` is a way to wrap up an object so that it's [safe to access from privileged code](/en-US/docs/Safely_accessing_content_DOM_from_chrome). It can be used in all Firefox versions, though the behavior changed somewhat starting with Firefox 1.5 (Gecko 1.8).
-- [Preferences System](/en-US/docs/Preferences_System)
+- [XPCNativeWrapper](https://web.archive.org/web/20140604075216/https://developer.mozilla.org/en-US/docs/XPCNativeWrapper)
+  - : `XPCNativeWrapper` is a way to wrap up an object so that it's [safe to access from privileged code](https://web.archive.org/web/20130905110328/https://developer.mozilla.org/en-US/docs/Safely_accessing_content_DOM_from_chrome). It can be used in all Firefox versions, though the behavior changed somewhat starting with Firefox 1.5 (Gecko 1.8).
+- [Preferences System](https://web.archive.org/web/20210620034317/https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preferences_system)
   - : Learn about the new widgets that allow you to create Options windows easier using less JavaScript code.
-- [International characters in XUL JavaScript](/en-US/docs/International_characters_in_XUL_JavaScript)
+- [International characters in XUL JavaScript](https://web.archive.org/web/20210126100844/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/International_characters_in_XUL_JavaScript)
   - : XUL JavaScript files can now contain non-{{Glossary("ASCII")}} characters.
-- [Tree API changes](/en-US/docs/Tree_Widget_Changes)
+- [Tree API changes](https://web.archive.org/web/20210414021241/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/Tree_Widget_Changes)
   - : The interfaces for accessing XUL `<tree>` elements have changed.
-- [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)
+- [XUL Changes for Firefox 1.5](https://web.archive.org/web/20200812075014/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/XUL_Changes_for_Firefox_1.5)
   - : Summary of XUL changes.
 
 #### Networking-related changes
@@ -88,7 +89,7 @@ Firefox support for Web standards continues to lead the industry with consistent
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [JavaScript](/en-US/docs/Web/JavaScript) 1.6, based on [ECMA-262, revision 3](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
 
-Firefox 1.5 supports the following data transport protocols (HTTP, FTP, SSL, TLS, and others), multilingual character data (Unicode), graphics (GIF, JPEG, PNG, SVG, and others) and the latest version of the world's most popular scripting language, [JavaScript 1.6](/en-US/docs/New_in_JavaScript_1.6).
+Firefox 1.5 supports the following data transport protocols (HTTP, FTP, SSL, TLS, and others), multilingual character data (Unicode), graphics (GIF, JPEG, PNG, SVG, and others) and the latest version of the world's most popular scripting language, [JavaScript 1.6](https://web.archive.org/web/20210623231028/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.6).
 
 ## Changes since Firefox 1.0
 

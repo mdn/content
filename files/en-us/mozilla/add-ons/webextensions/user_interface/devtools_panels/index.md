@@ -2,9 +2,8 @@
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > This feature is available since Firefox 54.

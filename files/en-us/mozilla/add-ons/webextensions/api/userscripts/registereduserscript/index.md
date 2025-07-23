@@ -3,9 +3,8 @@ title: userScripts.RegisteredUserScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.RegisteredUserScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object representing registered user scripts. Returned by {{WebExtAPIRef("userScripts.getScripts","userScripts.getScripts()")}} and used as input to {{WebExtAPIRef("userScripts.register","userScripts.register()")}} and {{WebExtAPIRef("userScripts.update","userScripts.update()")}}.
 

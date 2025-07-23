@@ -3,9 +3,8 @@ title: CSS compositing and blending
 slug: Web/CSS/CSS_compositing_and_blending
 page-type: css-module
 spec-urls: https://drafts.fxtf.org/compositing/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS compositing and blending** module defines how an element's background layers can be blended together, how an element can be blended with its container, and whether the element must create a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 

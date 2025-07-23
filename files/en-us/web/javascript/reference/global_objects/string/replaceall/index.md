@@ -52,21 +52,35 @@ A new string, with all matches of a pattern replaced by a replacement.
 
 This method does not mutate the string value it's called on. It returns a new string.
 
-Unlike [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), this method replaces all occurrences of a string, not just the first one. While it is also possible to use `replace()` with a global regex dynamically constructed with [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) to replace all instances of a string, this can have unintended consequences if the string contains special characters that have meaning in regular expressions (which might happen if the replacement string comes from user input). While you can mitigate this case using {{jsxref("RegExp.escape()")}} to make the regular expression string into a literal pattern, it is better to just use `replaceAll()` and pass the string without converting it to a regex.
+Unlike [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), this method replaces all occurrences of a string, not just the first one. While it is also possible to use `replace()` with a global regex dynamically constructed with [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) to replace all instances of a string, this can have unintended consequences if the string contains special characters that have meaning in regular expressions (which might happen if the replacement string comes from user input). While you can mitigate this case using {{jsxref("RegExp.escape()")}} to make the regular expression string into a literal pattern, it is simpler to pass the string to `replaceAll()` directly, without converting it to a regex.
+
+<!-- cSpell:ignore acke -->
 
 ```js
 function unsafeRedactName(text, name) {
   return text.replace(new RegExp(name, "g"), "[REDACTED]");
 }
-function safeRedactName(text, name) {
+function semiSafeRedactName(text, name) {
   return text.replaceAll(name, "[REDACTED]");
 }
+function superSafeRedactName(text, name) {
+  // only match at word boundaries
+  return text.replaceAll(
+    new RegExp(`\\b${RegExp.escape(name)}\\b`, "g"),
+    "[REDACTED]",
+  );
+}
 
-const report =
+let report =
   "A hacker called ha.*er used special characters in their name to breach the system.";
 
 console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
-console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+console.log(semiSafeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+
+report = "A hacker called acke breached the system.";
+
+console.log(semiSafeRedactName(report, "acke")); // "A h[REDACTED]r called [REDACTED] breached the system."
+console.log(superSafeRedactName(report, "acke")); // "A hacker called [REDACTED] breached the system."
 ```
 
 If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replaceAll()`. In this case the behavior of `replaceAll()` is entirely encoded by the `[Symbol.replace]()` method, and therefore will have the same result as `replace()` (apart from the extra input validation that the regex is global).

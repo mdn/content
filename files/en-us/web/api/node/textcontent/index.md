@@ -100,5 +100,3 @@ document.getElementById("divA").textContent = "This text is different!";
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/)
-  (blog post)

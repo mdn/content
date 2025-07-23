@@ -12,13 +12,13 @@ The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with
 {{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add(42);
-set1.add(13);
+set.add(42);
+set.add(42);
+set.add(13);
 
-for (const item of set1) {
+for (const item of set) {
   console.log(item);
   // Expected output: 42
   // Expected output: 13

@@ -3,9 +3,8 @@ title: userScripts.update()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates user scripts registered by the extension.
 

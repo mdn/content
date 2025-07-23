@@ -1,5 +1,6 @@
 ---
 title: Firefox 9 for developers
+short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes
 sidebar: firefox
@@ -136,7 +137,3 @@ The IDL parser no longer includes support for the never fully-implemented notion
 
 - The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
 - You can now register components to add features to the {{ domxref("window.navigator") }} object by using the "JavaScript-navigator-property" category.
-
-## See also
-
-{{Firefox_for_developers}}

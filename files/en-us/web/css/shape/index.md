@@ -5,9 +5,10 @@ page-type: css-type
 status:
   - deprecated
 browser-compat: css.types.shape
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) defines the specific form (shape) of a region. The region represents the part of an element to which the {{cssxref("clip")}} property applies.
 

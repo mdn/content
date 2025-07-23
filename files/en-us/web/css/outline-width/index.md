@@ -3,9 +3,8 @@ title: outline-width
 slug: Web/CSS/outline-width
 page-type: css-property
 browser-compat: css.properties.outline-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`outline-width`** property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 

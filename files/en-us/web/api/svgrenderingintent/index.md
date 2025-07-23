@@ -46,7 +46,3 @@ _This interface doesn't implement any specific methods._
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{SVGAttr("rendering-intent")}}

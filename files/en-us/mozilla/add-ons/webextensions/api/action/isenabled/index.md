@@ -3,9 +3,8 @@ title: action.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/action/isEnabled
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.isEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns `true` if the browser action is enabled.
 

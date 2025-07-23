@@ -3,9 +3,8 @@ title: declarativeNetRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The resource type of a request. Comparable to {{WebExtAPIRef('webRequest.ResourceType')}}.
 

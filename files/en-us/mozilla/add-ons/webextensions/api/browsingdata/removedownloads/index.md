@@ -3,9 +3,8 @@ title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeDownloads
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the browser's download history. Note that this does not delete the downloaded objects themselves, only records of downloads in the browser's history.
 
@@ -71,11 +70,11 @@ function onError(error) {
 browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
