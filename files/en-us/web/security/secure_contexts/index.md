@@ -26,8 +26,8 @@ However, it's important to note that if a non-secure context causes a new window
 
 Resources that are not local, to be considered secure, must meet the following criteria:
 
-- must be served over `https://` or `wss://` URLs
-- the security properties of the network channel used to deliver the resource must not be considered deprecated
+- They must be served over `https://` URLs.
+- The security properties of the network channel used to deliver the resource must not be considered deprecated.
 
 ## Potentially trustworthy origins
 
@@ -39,10 +39,10 @@ The same is generally true for `file://` URLs.
 
 Secure [WebSocket](/en-US/docs/Web/API/WebSockets_API) (`"wss://"`) URLs are also considered potentially trustworthy.
 
+Vendor-specific URL schemes like `app://` or `chrome-extension://` are not considered potentially trustworthy by all browsers, but they may well be by the browsers whose vendors they originate from.
+
 > [!NOTE]
 > Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
-
-Vendor-specific URL schemes like `app://` or `chrome-extension://` are not considered potentially trustworthy by all browsers, but they may well be by the browsers whose vendors they originate from.
 
 ## Feature detection
 
