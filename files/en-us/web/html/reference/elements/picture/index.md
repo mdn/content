@@ -119,7 +119,7 @@ For example:
 
 ```html
 <picture>
-  <source 
+  <source
     srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
     sizes="(max-width: 600px) 400px, 800px"
     type="image/jpeg" />
