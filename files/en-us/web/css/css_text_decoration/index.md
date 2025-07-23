@@ -8,15 +8,21 @@ spec-urls:
 sidebar: cssref
 ---
 
-{{CSSRef}}
 
-The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks. Text decoration features can provide visual cue for spelling errors, grammar issues, and links. This module's features can help improve the usability, accessibility, functionality, and aesthetics of your text.
+The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks. Text decoration features can provide visual cues for spelling errors, grammar issues, and links. These features can help improve the usability, accessibility, functionality, and aesthetics of your text.
 
-Varying text decoration colors, styles, and thicknesses based on pseudo-classes and pseudo-elements can help differentiate emphasis without relying on color alone. Features like {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders, {{cssxref("text-underline-offset")}} enables fine-tuning underline placement to match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts), while {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make text visually pop when placed on a background with insufficient contrast. These features all help improve legibility and therefore accessibility; reducing visual noise and improving text clarity is especially helpful for users with dyslexia or low vision.
+By varying the color, style, and thickness of text decoration using pseudo-classes and pseudo-elements, you can highlight the emphasis in text in ways that don't rely on color alone.
 
-In the writing systems of some languages, overlines or underlines carry semantic meaning. CSS lets you adapt styling to cultural norms. Text decoration features are especially useful for writing in languages where underline placement may differ from Latin-based text, such as Japanese and Korean.
+Several features can help improve text readability:
+- {{cssxref("text-decoration-skip-ink")}} can increase legibility by skipping descenders.
+- {{cssxref("text-underline-offset")}} enables you to fine-tune the underline placement to better match font metrics or design aesthetics, which can be especially useful for unique [typefaces](/en-US/docs/Web/CSS/CSS_fonts).
+- {{cssxref("text-shadow")}} colors that contrast with text {{cssxref("color")}} can make the text visually pop when placed on a background with insufficient contrast.
 
-Features enable mimicing editorial and localization standards inherited from print media. A line-through can be used to indicate content status; informing users that content has been removed, or prices have been halved, enabling you to present both the original and updated content. Overlines or double underlines are commonly used for academic and editorial annotations.
+These features all help improve legibility, and therefore, accessibility. Reducing visual noise and improving text clarity is especially helpful for users with [dyslexia](https://en.wikipedia.org/wiki/Dyslexia) or low vision.
+
+In the writing systems of some languages, [overlines](/en-US/docs/Web/CSS/text-decoration-line#overline) and [underlines](/en-US/docs/Web/CSS/text-decoration-line#underline) carry semantic meaning. CSS lets you adapt styling to cultural norms. Text decoration features are especially useful for languages that do not use Latin-based scripts and instead follow different underline placements, such as Japanese and Korean.
+
+Text decoration features also enable you to follow editorial and localization standards that come from print media. For example, with a strikethrough (line-through), you can indicate the status of content. Use it to inform users that content has been removed or that prices have been halved. This feature lets you present both the original and the updated content. Overlines or double underlines are commonly used for academic and editorial annotations.
 
 ## Text decoration in action
 
