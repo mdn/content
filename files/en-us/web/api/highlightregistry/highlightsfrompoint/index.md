@@ -22,7 +22,7 @@ highlightsFromPoint(x, y, options)
 - `x`
   - : The x-coordinate of the point within the viewport from which to return custom highlight information.
 - `y`
-  - : The y coordinate of the point within the viewport to return custom highlight information for.
+  - : The y-coordinate of the point within the viewport from which to return custom highlight information.
 - `options` {{optional_inline}}
   - : An object containing options, which can include:
     - `shadowRoots`
