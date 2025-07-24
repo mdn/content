@@ -56,7 +56,6 @@ With `display: flow-root;` on the `<div>`, everything inside that container part
 
 The value name of `flow-root` makes sense when you understand you are creating something that acts like the `root` element (`<html>` element in browser) in terms of how it creates a new context for the flow layout inside it.
 
-
 #### HTML
 
 ```html
