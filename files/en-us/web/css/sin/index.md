@@ -12,8 +12,8 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 ```css
 transform:
-  translateX(calc(cos(var(--angle)) * var(--radius)))
-  translateY(calc(sin(var(--angle)) * var(--radius) * -1))
+  translateX(calc(cos(var(--angle, 0deg)) * var(--radius, 100px)))
+  translateY(calc(sin(var(--angle, 0deg)) * var(--radius, 100px) * -1))
 ;
 ```
 
