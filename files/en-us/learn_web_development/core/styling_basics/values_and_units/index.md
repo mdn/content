@@ -145,6 +145,10 @@ The following are all **absolute** length units — they are not relative to any
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 
+Note that `1px` doesn't necessarily equal one physical device pixel. On HD displays, it may span multiple physical pixels.
+Similarly, `1cm` in CSS often doesn't correspond to one tenth of [SI](https://en.wikipedia.org/wiki/International_System_of_Units) meter. On a large TV screen, it typically be longer than that.
+The lengths are perceptual: `16px` looks roughly the same on a phone, laptop, or TV screen.
+
 #### Relative length units
 
 Relative length units are relative to something else. For example:
