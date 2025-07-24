@@ -84,6 +84,5 @@ relations.forEach((relValue) => {
 
 - [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel)
 - {{domxref("SVGAElement.rel")}}
-- {{domxref("SVGAnchorElement.relList")}}
 - {{domxref("HTMLAnchorElement.relList")}}
 - {{domxref("HTMLLinkElement.relList")}}
