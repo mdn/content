@@ -5,13 +5,13 @@ page-type: guide
 sidebar: cssref
 ---
 
-This tool can be used to generate the syntax for three features that use {{cssxref("&lt;basic-shape&gt;")}}:
+This shape generator tool can be used to define the coordinates and syntax for features that use {{cssxref("&lt;basic-shape&gt;")}}
 
 - The [`coords`](/en-US/docs/Web/HTML/Reference/Elements/area#coords) attribute of the {{HTMLElement("area")}} element
-- The CSS functions {{cssxref("basic-shape/inset()")}}, {{cssxref("basic-shape/xywh()")}}, {{cssxref("basic-shape/rect()")}}, {{cssxref("basic-shape/circle()")}}, {{cssxref("basic-shape/polygon()")}}
-- The SVG elements {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("polygon")}}
+- The CSS {{cssxref("basic-shape/inset()")}}, {{cssxref("basic-shape/xywh()")}}, {{cssxref("basic-shape/rect()")}}, {{cssxref("basic-shape/circle()")}}, {{cssxref("basic-shape/polygon()")}} functions
+- The SVG {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("polygon")}} elements
 
-The tool below helps you visualize the resulting shape and get the coordinates for each point, superimposed over an image. To use it, first upload an image by either dragging or clicking to select a file. Then, click on the image to add reference points for the shape you want to create. You can select the shape type from the dropdown menu and adjust the scale of the canvas using the range input.
+The shape generator helps you visualize basic shapes, outputting the coordinates of each point, superimposed over your image. Upload an image by either dragging or clicking to select a file. Then select the type of shape you want to create from the dropdown menu. Optionally, you can also adjust the scale of the canvas using the range input. Then click on points on the image to add reference points for the shape you want to create. The tool will then output the markup for the HTML `coords` attribute value, CSS basic shape function with coordinates, and SVG shape.
 
 ```html hidden live-sample___shape-generator
 <fieldset>
