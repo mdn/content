@@ -10,12 +10,10 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 {{InteractiveExample("CSS Demo: cos()")}}
 
-```css
-transform:
+<pre>transform:
   translateX(calc(cos(var(--angle, 0deg)) * var(--radius, 100px)))
   translateY(calc(sin(var(--angle, 0deg)) * var(--radius, 100px) * -1))
-;
-```
+;</pre>
 
 ```css interactive-example-choice
 --angle: 0deg;
