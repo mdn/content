@@ -44,7 +44,7 @@ console.log(p01.firstChild.nodeName);
 In the above, the console will show '#text'
 because a text node is inserted to maintain the whitespace between the end of the
 opening `<p>` and `<span>` tags. **Any**
-[whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+[whitespace](/en-US/docs/Web/CSS/CSS_text/Whitespace#whitespace_in_dom)
 will create a `#text` node, from a single space to multiple spaces, returns,
 tabs, and so on.
 

@@ -359,3 +359,4 @@ text {
 
 - Properties that define how words break _within themselves_: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
 - [`tab-size`](/en-US/docs/Web/CSS/tab-size)
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)

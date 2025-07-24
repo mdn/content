@@ -140,3 +140,4 @@ h2 {
 
 - Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap-mode")}}: The {{CSSxRef("white-space")}} property.
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)
