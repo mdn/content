@@ -23,7 +23,7 @@ These offsets are added to the corresponding values in the root's bounding box b
 The string returned by this property may not match the one specified when the {{domxref("IntersectionObserver")}} was instantiated.
 The browser is permitted to alter the values
 
-If `rootMargin` isn't specified when the object was instantiated, it defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection will be computed between the root element's unmodified bounds rectangle and the target's bounds.
+If `rootMargin` isn't specified when the object was instantiated, it defaults to the string `"0px 0px 0px 0px"`, meaning that the intersection will be computed between the root element's unmodified bounds rectangle and the target's bounds. Each offset value can be expressed in pixels (px) or a percentage (%).
 [How intersections are calculated](/en-US/docs/Web/API/Intersection_Observer_API#how_intersection_is_calculated) describes how the `rootMargin` is used in more detail.
 
 ## Specifications
