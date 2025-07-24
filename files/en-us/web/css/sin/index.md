@@ -10,6 +10,11 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 {{InteractiveExample("CSS Demo: sin()")}}
 
+<pre>transform:
+  translateX(calc(cos(var(--angle)) * var(--radius)))
+  translateY(calc(sin(var(--angle)) * var(--radius) * -1))
+;</pre>
+
 ```css interactive-example-choice
 --angle: 0deg;
 ```
