@@ -159,6 +159,8 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## See also
 
-- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
+- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- {{cssxref("&lt;color&gt;")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module

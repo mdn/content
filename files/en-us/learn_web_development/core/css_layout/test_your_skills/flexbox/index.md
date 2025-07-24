@@ -6,12 +6,10 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
+The aim of this skill test is to help you assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four sets of design problems you can solve using flexbox. Your task is to fix the problems.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks in Tasks 1, 2, and 3 to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Interactive challenge
 
@@ -23,13 +21,11 @@ Watch the embedded scrim, and complete all the tasks on the timeline (the little
 
 ## Task 1
 
-In this task, the list items are the navigation for a site. They should be laid out as a row, with an equal amount of space between each item.
+In this task, the list items are the navigation for a site. To complete the task, use flexbox to lay out the list items as a row, with an equal amount of space between each item.
 
 Your final result should look like the image below:
 
 ![Flex items laid out as a row with space between them.](flex-task1.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___flexbox1
 <nav>
@@ -42,7 +38,7 @@ Try to update the code below to recreate the finished example:
 </nav>
 ```
 
-```css hidden live-sample___flexbox1
+```css live-sample___flexbox1
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -62,10 +58,9 @@ nav a:visited {
   display: inline-block;
   text-decoration: none;
 }
-```
 
-```css live-sample___flexbox1
 nav ul {
+  /* Add styles here */
 }
 ```
 
@@ -95,8 +90,6 @@ Your final result should look like the image below:
 
 **Bonus question:** Can you now make the first item twice the size of the other items?
 
-Try to update the code below to recreate the finished example:
-
 ```html live-sample___flexbox2
 <ul>
   <li>I am small</li>
@@ -109,7 +102,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox2
+```css live-sample___flexbox2
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -127,13 +120,13 @@ li {
   color: #fff;
   padding: 0.5em;
 }
-```
 
-```css live-sample___flexbox2
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
@@ -166,11 +159,9 @@ li:first-child {
 
 ## Task 3
 
-In this task, we want you to arrange these items into rows as in the image below:
+In this task, we'd like you to arrange the list items into rows as shown in the image below:
 
 ![A set of items displayed as rows.](flex-task4.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___flexbox4
 <ul>
@@ -187,7 +178,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___flexbox4
+```css live-sample___flexbox4
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -206,13 +197,13 @@ li {
   padding: 0.5em;
   margin: 0.5em;
 }
-```
 
-```css live-sample___flexbox4
 ul {
+  /* Add styles here */
 }
 
 li {
+  /* Add styles here */
 }
 ```
 
@@ -235,7 +226,3 @@ li {
 ```
 
 </details>
-
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

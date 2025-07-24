@@ -9,24 +9,13 @@ sidebar: learnsidebar
 The aim of this skill test is to help you assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## HTML accessibility 1
 
 In this task we will test your understanding of semantic HTML, and why it is good for accessibility. The given text is an information panel with action buttons, but the HTML is really bad.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the markup to use appropriate semantic HTML. You don't need to worry too much about recreating the _exact_ same look and text sizing, as long as the semantics are good.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, update the markup to use appropriate semantic HTML. You don't need to worry too much about recreating the _exact_ same look and text sizing, as long as the semantics are good.
 
 <!-- Code shared across examples -->
 
@@ -138,16 +127,9 @@ In the second task, you have a form containing three input fields.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Semantically associate the inputs with their labels.
-3. Assume that these inputs will be part of a larger form, and wrap them in an element that associates them all together as a single related group.
-4. Give the group a description/title that summarizes all of the information as personal data.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Semantically associate the inputs with their labels.
+2. Assume that these inputs will be part of a larger form, and wrap them in an element that associates them all together as a single related group.
+3. Give the group a description/title that summarizes all of the information as personal data.
 
 ```html live-sample___html-ally-2
 <form>
@@ -220,26 +202,21 @@ In this task you are required to turn all the information links in the paragraph
 - The third link goes to a PDF, and it's large — 8MB.
 - The fourth link goes to a Word document, so the user will need some kind of application installed that can handle that.
 
-To complete the task:
+To complete the task, update the links appropriately based on the above descriptions.
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the links appropriately, based on the above descriptions.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
-
-```html live-sample___html-ally-3
+```html-nolint live-sample___html-ally-3
 <p>
-  For more information about our activities, check out our fundraising page (
-  <a href="/fundraising">click here</a>), education page (
-  <a href="/education">click here</a>), sponsorship pack (
-  <a href="/resources/sponsorship.pdf">click here</a>), and assessment sheets (
-  <a href="/resources/assessments.docx">click here</a>).
+  For more information about our activities, check out our fundraising page
+  (<a href="/fundraising" target="_blank">click here</a>), education page
+  (<a href="/education" target="_blank">click here</a>), sponsorship pack
+  (<a href="/resources/sponsorship.pdf" target="_blank">click here</a>),
+   and assessment sheets
+  (<a href="/resources/assessments.docx" target="_blank">click here</a>).
 </p>
 ```
+
+> [!NOTE]
+> The links in the starting code have the `target="_blank"` attribute set on them, so that when you click on them, they try to open the linked pages in a new tab rather than the same tab. This is not strictly best practice, but we've done it here so that the pages don't open in the MDN Playground output `<iframe>`, getting rid of your example code in the process!
 
 {{ EmbedLiveSample("html-ally-3", "100%", 140) }}
 
@@ -251,10 +228,14 @@ Your finished HTML should look something like this:
 ```html
 <p>
   For more information about our activities, check out our
-  <a href="/fundraising">fundraising page</a>,
-  <a href="/education">education page</a>,
-  <a href="/resources/sponsorship.pdf">sponsorship pack (PDF, 8MB)</a>, and
-  <a href="/resources/assessments.docx">assessment sheets (Word document)</a>.
+  <a href="/fundraising" target="_blank">fundraising page</a>,
+  <a href="/education" target="_blank">education page</a>,
+  <a href="/resources/sponsorship.pdf" target="_blank"
+    >sponsorship pack (PDF, 8MB)</a
+  >, and
+  <a href="/resources/assessments.docx" target="_blank"
+    >assessment sheets (Word document)</a
+  >.
 </p>
 ```
 
@@ -267,16 +248,7 @@ In our final HTML accessibility task, you are given an image gallery, which has 
 - The header image has an accessibility issue, and so do the gallery images.
 - You could take the header image further and implement it using CSS for arguably better accessibility. How would you create such a solution?
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the code to fix the problems described above.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/html/html-a11y4-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+Update the code to fix the problems described above.
 
 ```html live-sample___html-ally-4
 <header>
