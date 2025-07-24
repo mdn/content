@@ -3,7 +3,7 @@ title: "MediaTrackSettings: screenPixelRatio property"
 short-title: screenPixelRatio
 slug: Web/API/MediaTrackSettings/screenPixelRatio
 page-type: web-api-instance-property
-spec-urls: https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksettings-screenpixelratio
+browser-compat: api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
 ---
 
 {{APIRef("Media Capture and Streams")}}
