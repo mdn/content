@@ -58,7 +58,7 @@ important differences:
 
 ### Differences from innerHTML
 
-{{domxref("Element.innerHTML")}} gets or sets HTML, as its name indicates. Sometimes people use `innerHTML` to get or set text inside an element, but it is unsuited to this purpose, as it deals with raw HTML rather than plain text and can be susceptible to {{glossary("Cross-site_scripting", "XSS attacks")}}. Use `textContent` instead for this purpose.
+{{domxref("Element.innerHTML")}} gets or sets HTML, as its name indicates. We advise against using `innerHTML` to get or set text inside an element because it deals with raw HTML rather than plain text and can be susceptible to {{glossary("Cross-site_scripting", "XSS attacks")}}. Even if you are sure that the text never contains HTML syntax, it is still less semantic and slower because it needs to invoke the HTML parser.
 
 ## Examples
 
