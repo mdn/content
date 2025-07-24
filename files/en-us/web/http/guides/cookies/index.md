@@ -18,7 +18,7 @@ Typically, the server will use the contents of HTTP cookies to determine whether
 3. At a later time, the user moves to a different page on the same site. The browser sends the cookie containing the session ID along with the corresponding request to indicate that it still thinks the user is signed in.
 4. The server checks the session ID and, if it is still valid, sends the user a personalized version of the new page. If it is not valid, the session ID is deleted and the user is shown a generic version of the page (or perhaps shown an "access denied" message and asked to sign in again).
 
-![visual representation of the above sign-in system description](cookie-basic-example.png)
+![visual representation of the above sign-in system description](/shared-assets/images/diagrams/http/cookies/cookie-basic-example.png)
 
 Cookies are mainly used for three purposes:
 
