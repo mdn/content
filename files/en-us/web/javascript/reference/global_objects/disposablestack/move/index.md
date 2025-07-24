@@ -29,9 +29,9 @@ A new {{jsxref("DisposableStack")}} instance.
 
 ## Description
 
-The primary purpose of `move()` is to enable conditional disposal. For example, your function can claim ownership of some resources and dispose them if an error occurs; if everything completes successfully, then you return these resources and transfer ownership to the caller.
+The primary purpose of `move()` is to enable transferring responsibility for disposal out of the current scope. For example, your function can claim ownership of some resources and dispose them if an error occurs; if everything completes successfully, then you return these resources and transfer ownership to the caller.
 
-Caling `move()` should be the very last step in your function, because there will be no owner in between the function dropping ownership via `move()` and the caller picking up ownership from the return value.
+When using `move()` to transfer ownership, caling `move()` should be the very last step in your control flow, because there will be no owner in between your code dropping ownership via `move()` and the caller picking up ownership from the return value.
 
 ```js example-good
 let resource1;
@@ -64,7 +64,9 @@ function init() {
 using disposer = init();
 ```
 
-```js example-bad
+Also be cautious with the following pattern, although using the "good" pattern may be very awkward in many cases:
+
+```js
 function init() {
   using disposer = new DisposableStack();
   const resource1 = disposer.use(getResource1());
@@ -76,6 +78,23 @@ const { resource1, ...rest } = init();
 // If someone adds code in between these lines and an error occurs,
 // there would be no owner to free resource1
 using disposer = rest.disposer;
+```
+
+`move()` can also be used for conditional disposal in cases where you may sometimes not want to dispose the resources at all. For example:
+
+```js
+using disposer = new DisposableStack();
+const server = disposer.use(makeServer());
+await server.init();
+if (server.ready) {
+  // Successfully initialized server; it now should live through the rest
+  // of the program. Drop its disposer and don't pick it up. It will no
+  // longer be disposed at all.
+  disposer.move();
+}
+// If we reach the end of the scope without running disposer.move(),
+// then server isn't ready for any reason, and we dispose its resources
+// by disposing the disposer.
 ```
 
 ## Examples
