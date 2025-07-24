@@ -19,7 +19,7 @@ A block formatting context is created by at least one of the following:
 - Anonymous table cells implicitly created by the elements with {{cssxref("display", "display: table")}}, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("display", "display: flow-root")}}.
-- {{htmlelement("button")}} elements and button {{htmlelement("input")}} types defaulting to `display: flow-root`.
+- By default, browser user-agent stylesheets render {{htmlelement("button")}} and button {{htmlelement("input")}} types as inline-block elements. This display type causes them to establish a new Block Formatting Context (BFC). For the container {{htmlelement("button")}} element, this BFC meaningfully contains its children; for the void {{htmlelement("input")}} element, this context is empty.
 - Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
 - Flex items (direct children of the element with {{cssxref("display", "display: flex")}} or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
 - Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
@@ -56,7 +56,6 @@ With `display: flow-root;` on the `<div>`, everything inside that container part
 
 The value name of `flow-root` makes sense when you understand you are creating something that acts like the `root` element (`<html>` element in browser) in terms of how it creates a new context for the flow layout inside it.
 
-This is the default rendering for {{htmlelement("button")}} elements and button {{htmlelement("input")}} types meaning button's create a new BFC as long as their `display` value isn't set to a value that doesn't automatically create a new BFC.
 
 #### HTML
 
