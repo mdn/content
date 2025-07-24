@@ -73,15 +73,19 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 Let's take an example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
+<!-- markdownlint-disable no-hard-tabs -->
+
 ```html-nolint live-sample___ex-inline
 <h1>   Hello
-        <span> World!</span>   </h1>
+				<span> World!</span>	  </h1>
 
 <!--
 <h1>◦◦◦Hello◦⏎
 ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
 -->
 ```
+
+<!-- markdownlint-enable no-hard-tabs -->
 
 This example is rendered in the browser like so:
 
