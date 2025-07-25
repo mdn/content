@@ -131,7 +131,7 @@ The following attributes are deprecated and should not be used. They are documen
 - In simple contexts, using the [`scope`](#scope) attribute on header cells (`<th>` elements) is redundant because [`scope`](#scope) is inferred. However, certain assistive technologies may fail to infer correctly, so specifying header scope may improve user experiences.
 - When using the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes to span header cells across multiple columns and rows, cells without these attributes defined (with a default value of `1`) are automatically fitted into free available spaces in the table structure that span 1x1 cells, as illustrated in the following figure:
 
-  ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+  ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](/shared-assets/images/diagrams/html/table/column-row-span.png)
 
   > [!NOTE]
   > These attributes must not be used to overlap cells.
