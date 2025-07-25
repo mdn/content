@@ -1,22 +1,15 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Beta)
+short-title: Firefox 141 (Stable)
 slug: Mozilla/Firefox/Releases/141
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 141 that affect developers.
-Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress. You can [view the project tracker for this release here](https://github.com/mdn/mdn/issues/698).
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release/?version=141).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
@@ -24,15 +17,9 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
   The attribute can be set to indicate that an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element should offer selection of directories instead of files.
   Note that the returned file entries for the selected folder always contain an empty string in ({{domxref("File.webkitRelativePath")}}), which means that using `webkitdirectory` is not suitable for use cases where information about the directory structure is needed ([Firefox bug 1973726](https://bugzil.la/1973726)).
 
-<!-- #### Removals -->
-
 ### CSS
 
 - The CSS {{CSSXRef("font-variant-emoji")}} property allows you to set a default presentation style for displaying emojis ([Firefox bug 1954214](https://bugzil.la/1954214)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
 
 ### JavaScript
 
@@ -40,22 +27,10 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
   It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
 
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 ### HTTP
 
 - The [`"cache"`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) directive of the {{httpheader("Clear-Site-Data")}} response header now clears the {{glossary("bfcache")}} (backwards-forwards cache).
   This allows a site to ensure that if anyone navigates backward after a user has signed out, private details that were visible during the initial session will not be exposed. ([Firefox bug 1930501](https://bugzil.la/1930501)).
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -71,16 +46,6 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
   - The [`force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force) or [`options.force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force_2) arguments to `togglePopover()` can be used to force the popover open or closed, and is ignored if the popover is already in the forced state.
     Unlike `showPopover()` and `hidePopover()`, this does not throw an exception if the popover is already in the target state.
 - The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) is now fully supported on Windows, in all contexts except for service workers. This allows developers to perform computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of a user's computer. ([Firefox bug 1972486](https://bugzil.la/1972486)).
-
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -104,10 +69,6 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for add-on developers
 
 - Adds the {{WebExtAPIRef('i18n.getPreferredSystemLanguages')}} method to retrieve the preferred locales of the operating system. This complements {{WebExtAPIRef('i18n.getAcceptLanguages')}} which return details of the locales set in the browser. ([Firefox bug 1888486](https://bugzil.la/1888486))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
