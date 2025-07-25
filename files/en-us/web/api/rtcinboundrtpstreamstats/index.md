@@ -25,7 +25,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the number of concealment events, where a single event is counted for all consecutive concealed samples following a non-concealed sample.
      _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}
-  - : TBD.
+  - : A {{domxref("DOMHighResTimeStamp")}} that indicates the estimated playout time of this receiver's track.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}
   - : An integer value that indicates the number of RTP Forward Error Correction (FEC) packets which have been received for this source, for which the error correction payload was discarded.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsReceived", "fecPacketsReceived")}}
@@ -64,7 +64,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the total number of key frames successfully decoded for this RTP media stream.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
+  - : A {{domxref("DOMHighResTimeStamp")}} that indicates the time at which the last packet was received for this source.
     The [`timestamp`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
 - {{domxref("RTCInboundRtpStreamStats.mid", "mid")}}
   - : A string that uniquely identifies the pairing of source and destination of the transceiver's stream.
