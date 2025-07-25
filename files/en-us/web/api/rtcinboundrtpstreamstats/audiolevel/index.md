@@ -32,4 +32,4 @@ The value is between 0..1 (linear), where 1.0 represents 0 dBov, 0 represents si
 
 ## See also
 
-- {{domxref("RTCAudioSourceStats.audioLevel")}} for audio levels of tracks that are being sent
+- {{domxref("RTCAudioSourceStats.audioLevel")}} for audio levels of local tracks (that are being sent)

@@ -83,7 +83,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy", "totalAudioEnergy")}}
-  - : TBD.
+  - : A number that represents the total audio energy of the received track over the lifetime of the stats object.
+     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
