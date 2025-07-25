@@ -25,7 +25,7 @@ requestPermission(descriptor)
 - `descriptor` {{optional_inline}}
   - : An object which specifies the permission mode to query for. Options are as follows:
     - `'mode'` {{optional_inline}}
-      - : Can be either `'read'`, `write`, or `'readwrite'`.
+      - : Can be either `'read'`, `'write'`, or `'readwrite'`.
 
 ### Return value
 
