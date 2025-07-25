@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.framesAssembledFromMultipleP
 
 The **`framesAssembledFromMultiplePackets`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of correctly decoded frames for this RTP stream that were assembled from more than one RTP packet.
 
-The can be used with {{domxref("RTCInboundRtpStreamStats/totalAssemblyTime","totalAssemblyTime")}} to determine the average assembly time: `totalAssemblyTime / framesAssembledFromMultiplePacket`.
+This property can be used with {{domxref("RTCInboundRtpStreamStats/totalAssemblyTime","totalAssemblyTime")}} to determine the average assembly time: `totalAssemblyTime / framesAssembledFromMultiplePacket`.
 A higher average assembly time might indicate network issues or inefficiencies in the receiving pipeline.
 
 > [!NOTE]
