@@ -22,7 +22,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the number of samples that had to be concealed because they were in packets that were lost or arrived too late to be played out.
      _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.concealmentEvents", "concealmentEvents")}}
-  - : TBD.
+  - : A positive integer that indicates the number of concealment events, where a single event is counted for all consecutive concealed samples following a non-concealed sample.
+     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}
