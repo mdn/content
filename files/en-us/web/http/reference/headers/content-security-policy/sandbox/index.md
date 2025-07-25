@@ -59,7 +59,7 @@ where `<value>` can optionally be one of the following values:
   - : Allows a same-origin sandboxed resource to be treated as same-origin, reducing the restrictions normally applied to a sandbox.
 
     If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
-    The {{httpheader("Origin")}} of such a request would be `null`.
+    The {{httpheader("Origin")}} of sandboxed resources without the `allow-same-origin` keyword is `null`.
 
 - `allow-scripts`
   - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
