@@ -12,7 +12,7 @@ browser-compat: api.IdentityCredential.isAutoSelected
 
 The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in flow was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e., without user mediation) or not.
 
-Automatic reauthentication can occur when a {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for a relying party (RP) to know whether auto reauthentication occurred for analytics/performance evaluation and for UX purposes — automatic sign-in may warrant a different UI flow to non-automatic sign-in.
+Automatic reauthentication can occur when a {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for a {{glossary("Relying party", "relying party")}} (RP) to know whether auto reauthentication occurred for analytics/performance evaluation and for UX purposes — automatic sign-in may warrant a different UI flow to non-automatic sign-in.
 
 ## Value
 
@@ -20,7 +20,9 @@ A boolean value. `true` indicates that automatic reauthentication was used; `fal
 
 ## Examples
 
-RPs can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an identity provider (IdP), using identity federation. Auto-reauthentication behavior is controlled by the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option in the `get()` call:
+### Basic federated sign-in and `isAutoSelected` access
+
+RPs can call `navigator.credentials.get()` with the `identity` option to make a request for users to sign in to the RP via an {{glossary("Identity provider", "IdP")}}, using identity federation. Auto-reauthentication behavior is controlled by the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option in the `get()` call:
 
 ```js
 async function signIn() {
@@ -40,6 +42,8 @@ async function signIn() {
   const isAutoSelected = identityCredential.isAutoSelected;
 }
 ```
+
+A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call that includes an `identity` option fulfills with an `IdentityCredential` instance, which can be used to access the `isAutoSelected` property: this will equal `true` if auto-reauthentication occurred.
 
 Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 

@@ -254,7 +254,7 @@ The positioned element is `5px` below and `5px` to the right of the anchor eleme
 
 The {{cssxref("position-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `position-area` property works on the concept of a 3x3 grid of tiles, with the anchor element being the center tile. The `position-area` property can be used to position the anchor positioned element in any of the nine tiles, or have it span across two or three tiles.
 
-![The position-area grid, as described below](position-area.png)
+![The position-area grid, as described below](/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg)
 
 The grid tiles are broken up into rows and columns:
 
