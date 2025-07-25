@@ -17,7 +17,7 @@ Note that this may be lower than the media source frame rate, which is provided 
 
 ## Value
 
-A positive number.
+A positive integer.
 
 ## Specifications
 
