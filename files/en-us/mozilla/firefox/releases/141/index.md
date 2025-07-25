@@ -70,6 +70,7 @@ Firefox 141 is the current [Beta version of Firefox](https://www.firefox.com/en-
     In the same way as the equivalent declarative attribute, [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget), this makes the popover more accessible to keyboard users (see [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)). It also creates an implicit anchor reference between the two, which enables more natural positioning of popovers relative to their controls (see [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning)).
   - The [`force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force) or [`options.force`](/en-US/docs/Web/API/HTMLElement/togglePopover#force_2) arguments to `togglePopover()` can be used to force the popover open or closed, and is ignored if the popover is already in the forced state.
     Unlike `showPopover()` and `hidePopover()`, this does not throw an exception if the popover is already in the target state.
+- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) is now fully supported on Windows, in all contexts except for service workers. This allows developers to perform computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of a user's computer. ([Firefox bug 1972486](https://bugzil.la/1972486)).
 
 <!-- #### DOM -->
 
