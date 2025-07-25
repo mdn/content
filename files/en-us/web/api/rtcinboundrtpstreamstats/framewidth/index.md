@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.frameWidth
 
 {{APIRef("WebRTC")}}
 
-The **`frameWidth`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a positive integer that indicates the width of the last decoded frame, in pixels.
+The **`frameWidth`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the width of the last decoded frame, in pixels.
 
 Note that the resolution of the encoded frame may be lower than that of the media source, which is provided in {{domxref("RTCVideoSourceStats.width")}}.
 
@@ -17,7 +17,7 @@ Note that the resolution of the encoded frame may be lower than that of the medi
 
 ## Value
 
-A positive integer.
+A positive integer, in pixels.
 
 ## Specifications
 
