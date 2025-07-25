@@ -7,7 +7,7 @@ sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 143 that affect developers.
-Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [September 16, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [September 16, 2025](https://whattrainisitnow.com/release/?version=143).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
