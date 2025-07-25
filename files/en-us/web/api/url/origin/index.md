@@ -25,14 +25,14 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("blob:https://mozilla.org:443/");
-console.log(url.origin); // 'https://mozilla.org'
+const url1 = new URL("blob:https://mozilla.org:443/");
+console.log(url1.origin); // 'https://mozilla.org'
 
-const url = new URL("http://localhost:80/");
-console.log(url.origin); // 'http://localhost'
+const url2 = new URL("http://localhost:80/");
+console.log(url2.origin); // 'http://localhost'
 
-const url = new URL("https://mozilla.org:8080/");
-console.log(url.origin); // 'https://mozilla.org:8080'
+const url3 = new URL("https://mozilla.org:8080/");
+console.log(url3.origin); // 'https://mozilla.org:8080'
 ```
 
 ## Specifications
