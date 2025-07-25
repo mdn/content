@@ -34,7 +34,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the height of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
 - {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of correctly decoded frames for this RTP stream that consist of more than one RTP packet.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
   - : A long integer value that indicates the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped. _Only valid for video streams._
 - {{domxref("RTCInboundRtpStreamStats.framesPerSecond", "framesPerSecond")}}
