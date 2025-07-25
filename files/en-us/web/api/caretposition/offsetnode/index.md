@@ -34,7 +34,7 @@ document.querySelector("input").addEventListener("click", (event) => {
   const node = caret.offsetNode;
   const offset = caret.offset;
 
-  console.dir("offsetNode:", node);
+  console.log("offsetNode:", node);
   console.log("offset:", offset);
 });
 ```
