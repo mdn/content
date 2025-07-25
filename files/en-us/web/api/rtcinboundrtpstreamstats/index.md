@@ -85,7 +85,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the number of silent concealed samples.
      _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}
-  - : TBD.
+  - : A number that indicates the total time spent assembling successfully decoded video frames that were transported in multiple RTP packets, in seconds.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy", "totalAudioEnergy")}}
   - : A number that represents the total audio energy of the received track over the lifetime of the stats object.
      _Undefined for video streams._
