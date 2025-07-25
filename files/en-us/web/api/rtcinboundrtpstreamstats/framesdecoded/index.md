@@ -14,7 +14,7 @@ This represents the number of frames that would have been displayed assuming no 
 
 ## Value
 
-An positive integer value.
+An positive integer.
 
 ## Specifications
 
