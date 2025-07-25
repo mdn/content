@@ -48,7 +48,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the width of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
 - {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of video freezes experienced by this receiver.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.headerBytesReceived", "headerBytesReceived")}}
   - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration", "insertedSamplesForDeceleration")}}
