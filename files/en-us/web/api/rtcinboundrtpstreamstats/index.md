@@ -17,7 +17,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number that indicates the audio level of the received track.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.bytesReceived", "bytesReceived")}}
-  - : A 64-bit integer that indicates the total number of bytes that have been received so far for this media source.
+  - : A positive integer that indicates the total number of bytes that have been received so far for this media source.
 - {{domxref("RTCInboundRtpStreamStats.concealedSamples", "concealedSamples")}}
   - : A positive integer that indicates the number of samples that had to be concealed because they were in packets that were lost or arrived too late to be played out.
      _Undefined for video streams._
@@ -27,9 +27,9 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} that indicates the estimated playout time of this receiver's track.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}
-  - : An integer value that indicates the number of RTP Forward Error Correction (FEC) packets which have been received for this source, for which the error correction payload was discarded.
+  - : A positive integer value that indicates the number of RTP Forward Error Correction (FEC) packets which have been received for this source, for which the error correction payload was discarded.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsReceived", "fecPacketsReceived")}}
-  - : An integer value that indicates the total number of RTP FEC packets received for this source. This counter may also be incremented when FEC packets arrive in-band along with media content; this can happen with Opus, for example.
+  - : A positive integer value that indicates the total number of Forward Error Correction (FEC) packets received for this source.
 - {{domxref("RTCInboundRtpStreamStats.frameHeight", "frameHeight")}}
   - : A positive integer that indicates the height of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
@@ -81,7 +81,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration", "removedSamplesForAcceleration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples", "silentConcealedSamples")}}
-  - : TBD.
+  - : A positive integer that indicates the number of silent concealed samples.
+     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy", "totalAudioEnergy")}}
@@ -114,9 +115,7 @@ Their primary purpose is to examine the error resiliency of the connection, as t
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
   - : A number that indicates the number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
 - {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
-  - : A 64-bit value that provides the sum of the QP values for every frame decoded by this RTP receiver to date on the video track described by this statistics object.
-    You can approximate the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}, keeping in mind that codecs often vary the quantizer values even within frames.
-    Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
+  - : A positive integer that provides the sum of the QP values for every frame decoded by this RTP receiver to date on the video track described by this statistics object.
     _Valid only for video streams._
 
 ### Statistics measured at the receiver of an RTP stream
