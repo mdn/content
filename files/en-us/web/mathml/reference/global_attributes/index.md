@@ -13,7 +13,7 @@ Global attributes may be specified on all [MathML elements](/en-US/docs/Web/Math
 
 In addition to the basic MathML global attributes, the following global attributes also exist:
 
-- The [event handler](/en-US/docs/Web/Events/Event_handlers) attributes such as **`onclick`**, **`onfocus`**, etc.
+- The [event handler](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) attributes such as **`onclick`**, **`onfocus`**, etc.
 - The [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) attribute for making MathML element a hyperlink.
 
 ## List of global attributes
