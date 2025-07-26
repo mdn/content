@@ -31,7 +31,7 @@ A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-This example displays the number of consecutive clicks on a {{HtmlElement("button")}}.
+This example listens for `DOMActivate` on a {{HtmlElement("button")}} element and displays its {{domxref("UIEvent/detail", "detail")}}.
 
 ### HTML
 
@@ -51,7 +51,7 @@ button.addEventListener("DOMActivate", (event) => {
 
 ### Result
 
-Note that `detail` of the `DOMActivate` event may have browser-specific behavior. It may either always be `0`, or have similar behavior as the {{domxref("Element/click_event", "click")}} event's `detail` (i.e., indicating the current click count).
+Note that `detail` of the `DOMActivate` event may have browser-specific behavior. It may either always be `0`, or have similar behavior as the {{domxref("Element/click_event", "click")}} event's `detail` (i.e., indicating the number of consecutive clicks).
 
 {{EmbedLiveSample("Examples")}}
 
