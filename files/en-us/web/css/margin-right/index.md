@@ -3,9 +3,8 @@ title: margin-right
 slug: Web/CSS/margin-right
 page-type: css-property
 browser-compat: css.properties.margin-right
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
@@ -49,13 +48,13 @@ margin-right: 0;
 .col {
   width: 33.33%;
   border: solid #5b6dcd 10px;
-  background-color: rgba(229, 232, 252, 0.6);
+  background-color: rgb(229 232 252 / 0.6);
   flex-shrink: 0;
 }
 
 #example-element {
   border: solid 10px #ffc129;
-  background-color: rgba(255, 244, 219, 0.6);
+  background-color: rgb(255 244 219 / 0.6);
 }
 ```
 
@@ -87,15 +86,12 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 - `auto`
-
   - : The right margin receives a share of the unused horizontal space, as determined mainly by the layout mode that is used. If the values of `margin-left` and `margin-right` are both `auto`, the calculated space is evenly distributed. This table summarizes the different cases:
 
     <table class="standard-table">

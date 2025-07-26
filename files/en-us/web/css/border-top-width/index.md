@@ -3,9 +3,8 @@ title: border-top-width
 slug: Web/CSS/border-top-width
 page-type: css-property
 browser-compat: css.properties.border-top-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the top border of an element.
 
@@ -74,9 +73,7 @@ border-top-width: unset;
 ### Values
 
 - `<line-width>`
-
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-
     - `thin`
     - `medium`
     - `thick`

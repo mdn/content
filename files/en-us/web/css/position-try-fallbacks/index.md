@@ -2,12 +2,9 @@
 title: position-try-fallbacks
 slug: Web/CSS/position-try-fallbacks
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-try-fallbacks
+sidebar: cssref
 ---
-
-{{CSSRef}}{{seecompattable}}
 
 The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you to specify a list of one or more alternative **position try fallback options** for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
 
@@ -167,7 +164,7 @@ body {
 
 The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top-left corner using a `position-area`.
 
-We include a `position-try-fallbacks` list (and re-declare it with the `position-try` shorthand incase the longhand property name is not yet supported), providing two predefined position-try fallback options to prevent it from overflowing when the anchor gets near the edge of the viewport, by flipping it along the inline or block axis of the anchor.
+We include a `position-try-fallbacks` list (and re-declare it with the `position-try` shorthand in case the longhand property name is not yet supported), providing two predefined position-try fallback options to prevent it from overflowing when the anchor gets near the edge of the viewport, by flipping it along the inline or block axis of the anchor.
 
 ```css hidden
 .infobox {

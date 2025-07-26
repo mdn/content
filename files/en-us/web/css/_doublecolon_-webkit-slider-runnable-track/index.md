@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-slider-runnable-track
+sidebar: cssref
 ---
 
-{{CSSRef}}{{non-standard_header}}
+{{non-standard_header}}
 
 The **`::-webkit-slider-runnable-track`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "track" (the groove in which the indicator slides) of an {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}.
 
@@ -31,7 +32,6 @@ Not part of any standard.
 
 - {{CSSxRef("::-webkit-slider-thumb")}}
 - Similar pseudo-elements used by other browsers:
-
   - {{CSSxRef("::-moz-range-track")}}
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

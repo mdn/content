@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("Translator")}} interface returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 
@@ -21,9 +21,7 @@ Translator.availability(options)
 ### Parameters
 
 - `options`
-
   - : An object specifying configuration options for the `Translator`. Possible values include:
-
     - `sourceLanguage`
       - : A string specifying the language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
     - `targetLanguage`

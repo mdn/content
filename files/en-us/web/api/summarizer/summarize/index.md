@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.summarize
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`summarize()`** method of the {{domxref("Summarizer")}} interface generates a new summary string.
 

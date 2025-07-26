@@ -1,11 +1,11 @@
 ---
 title: Math.expm1()
+short-title: expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.expm1
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.expm1()`** static method returns [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E) raised to the power of a number, subtracted by 1. That is
 

@@ -3,9 +3,8 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 page-type: webextension-api-property
 browser-compat: webextensions.api.storage.local
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Represents the `local` storage area. Items in `local` storage are local to the machine the extension is installed on.
 

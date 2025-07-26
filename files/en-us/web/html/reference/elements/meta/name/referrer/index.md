@@ -4,9 +4,8 @@ short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.referrer
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`referrer`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element controls the HTTP {{httpheader("Referer")}} header of requests sent from the document.
 If specified, you define the referrer using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a keyword value.

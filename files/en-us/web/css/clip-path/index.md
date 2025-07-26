@@ -3,9 +3,8 @@ title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
 browser-compat: css.properties.clip-path
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
@@ -120,9 +119,7 @@ The `clip-path` property is specified as one or a combination of the values list
 - `<clip-source>`
   - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : Defines an inset rectangle.
     - {{cssxref("basic-shape/circle","circle()")}}
@@ -141,9 +138,7 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
 - `<geometry-box>`
-
   - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
-
     - `margin-box`
       - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) as the reference box.
     - `border-box`

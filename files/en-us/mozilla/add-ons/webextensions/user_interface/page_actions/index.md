@@ -2,9 +2,8 @@
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
 
@@ -17,12 +16,10 @@ The address bar button (or page action) is similar to the toolbar button (or bro
 The differences are:
 
 - **The button's location:**
-
   - The page action is displayed inside the browser address bar.
   - The browser action is displayed outside the address bar, in the browser toolbar.
 
 - **The button's visibility:**
-
   - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) to show or hide it in specific tabs.
   - The browser action is always displayed.
 

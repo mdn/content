@@ -2,9 +2,8 @@
 title: Authentication
 slug: Glossary/Authentication
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Authentication** is in general the process of proving that some fact is genuine. More specifically, in web security, it is the process of verifying the claimed identity of some entity, such as a user. This then makes it possible to decide whether to grant the user the access that they are requesting, such as being signed into a particular account.
 

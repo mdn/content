@@ -2,9 +2,8 @@
 title: Accessible description
 slug: Glossary/Accessible_description
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **accessible description** is the description of a user interface element that provides additional information to help users of assistive technology understand the UI element and its context. It's associated with an HTML or SVG element and gives users additional context about its purpose beyond what is provided by the element's {{glossary("accessible name")}}. This is particularly important for users who rely on assistive technologies like {{glossary("Screen_reader", "screen readers")}}. An element's accessible description is part of the {{glossary("accessibility tree")}}.
 
@@ -25,7 +24,6 @@ For HTML elements, if an element doesn't have an accessible description, the des
 2. [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute.
 
 3. Language-specific features that participate in the description computation if the feature is not already being used to define the {{glossary("accessible name")}}. For example:
-
    - A {{htmlelement("summary")}} is described by the content of {{htmlelement("details")}} it is nested in.
    - {{htmlelement("input")}} buttons (with type attribute `button`, `submit` or `reset`) are described by their `value` attribute's value.
    - In SVG, the content of the [`<desc>`](/en-US/docs/Web/SVG/Reference/Element/desc) element, if present, otherwise, the text contained in descendant text container elements (i.e., [`<text>`](/en-US/docs/Web/SVG/Reference/Element/text)), if they are not already used for the {{glossary("accessible name")}}

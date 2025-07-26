@@ -1,11 +1,11 @@
 ---
 title: Math.imul()
+short-title: imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.imul
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.imul()`** static method returns the result of the C-like 32-bit multiplication of the two parameters.
 

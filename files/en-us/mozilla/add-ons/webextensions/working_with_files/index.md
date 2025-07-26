@@ -2,9 +2,8 @@
 title: Work with files
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Your browser extension may need to work with files to deliver its full functionality. This article looks at the five mechanisms you have for handling files:
 
@@ -64,9 +63,7 @@ The key features of the library are:
 - [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)
   - : Returns an `IDBFileStorage` instance, creating the named storage if it does not exist.
 - [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html)
-
   - : Provides the methods to save and retrieve files, such as:
-
     - list to obtain an optionally filtered list of file in the database.
     - put to add a file or blob to the database.
     - get to retrieve a file or blob from the database.

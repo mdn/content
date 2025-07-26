@@ -3,9 +3,8 @@ title: CSS color adjustment
 slug: Web/CSS/CSS_color_adjustment
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-color-adjust-1/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS color adjustment** module provides a model and controls automatic color adjustment by the user agent to handle user preferences, such as "Dark Mode", contrast adjustment, and other color scheme preferences.
 

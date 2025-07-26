@@ -1,10 +1,10 @@
 ---
 title: Firefox 135 for developers
+short-title: Firefox 135
 slug: Mozilla/Firefox/Releases/135
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 was released on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
@@ -53,7 +53,6 @@ No notable changes
   Due to this significant change, some regressions may still exist. If you encounter any issues, please [file a bug for the Remote Agent](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Remote%20Agent). If the regressions block test execution, you can temporarily revert to the previous behavior by setting the Firefox preference `remote.events.async.enabled` to `false`.
 
 - With the processing of actions now handled in the parent process the following issues were fixed as well:
-
   - We now support proper queuing of action sequences without race conditions. This is particularly important for WebDriver BiDi's `input.performActions` command, which can be called multiple times in parallel and must execute the enqueued actions sequentially ([Firefox bug 1915798](https://bugzil.la/1915798)).
 
   - When dispatching actions, the `input cancel list` is now correctly updated only after the action has been successfully dispatched. Previously, if an action failed to execute, a reverse action could be left in place, leading to unexpected side effects when resetting the state of the `input source` ([Firefox bug 1930845](https://bugzil.la/1930845)).
@@ -81,7 +80,3 @@ These features are newly shipped in Firefox 135 but are disabled by default. To 
   The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
   This has temporarily been disabled in Nightly builds in order to avoid [breakage in-the-wild](https://bugzil.la/1937232).
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
-
-## Older versions
-
-{{Firefox_for_developers}}

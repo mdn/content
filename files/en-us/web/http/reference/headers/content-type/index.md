@@ -4,9 +4,8 @@ short-title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
 page-type: http-header
 browser-compat: http.headers.Content-Type
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Type`** {{Glossary("representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of a resource before any content encoding is applied.
 
@@ -67,10 +66,8 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 ## Directives
 
 - `<media-type>`
-
   - : The [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the resource or data.
     May contain the following parameters:
-
     - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used.
       The value is case insensitive but lowercase is preferred.
     - **`boundary`**: For multipart entities, the `boundary` parameter is required.

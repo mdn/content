@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.calendarId
+short-title: calendarId
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/calendarId
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.calendarId
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`calendarId`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) used to interpret the internal ISO 8601 date.
 

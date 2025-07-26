@@ -2,9 +2,8 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 If you would like to contribute an example for the Layout Cookbook, then this page explains the steps to take to have your example published.
 
@@ -17,7 +16,6 @@ A recipe consists of:
 - A live example, stored in the [CSS Examples GitHub repo](https://github.com/mdn/css-examples).
 - A downloadable version of that example, also stored in the CSS Examples repo.
 - A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site, which should include the following components:
-
   1. Introduction
   2. Requirements
   3. Recipe

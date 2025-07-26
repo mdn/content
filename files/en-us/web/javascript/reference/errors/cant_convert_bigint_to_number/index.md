@@ -2,9 +2,8 @@
 title: "TypeError: can't convert BigInt to number"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_BigInt_to_number
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "can't convert BigInt to number" occurs when an arithmetic operation involves a mix of {{jsxref("BigInt")}} and {{jsxref("Number")}} values.
 

@@ -1,10 +1,10 @@
 ---
 title: Firefox 78 for developers
+short-title: Firefox 78
 slug: Mozilla/Firefox/Releases/78
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 78 that will affect developers. Firefox 78 was released on June 30, 2020.
 
@@ -35,19 +35,16 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 - The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ([Firefox bug 1632646](https://bugzil.la/1632646)).
 - The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ([Firefox bug 312971](https://bugzil.la/312971)).
-
   - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) and [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-write) ([Firefox bug 888884](https://bugzil.la/888884)).
 
 ### JavaScript
 
 - The [`Intl.ListFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) API is now supported ([Firefox bug 1589095](https://bugzil.la/1589095)).
 - The [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor has been extended to support new options specified in the [Intl.NumberFormat Unified API Proposal](https://github.com/tc39/proposal-unified-intl-numberformat) ([Firefox bug 1633836](https://bugzil.la/1633836)). This includes among other things:
-
   - [Support for scientific notations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#scientific_engineering_or_compact_notations)
   - [Unit](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit_formatting), [currency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currency_formatting) and [sign display](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#displaying_signs) formatting
 
 - The {{JSxRef("RegExp")}} engine [has been updated](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/) and now supports all new features introduced in ECMAScript 2018:
-
   - [Lookbehind assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
   - {{JSxRef("RegExp.prototype.dotAll")}} ([Firefox bug 1361856](https://bugzil.la/1361856))
   - [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) ([Firefox bug 1361876](https://bugzil.la/1361876))
@@ -64,7 +61,7 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 
 #### Service workers
 
-- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
+- [Extended Support Releases (ESR)](https://www.firefox.com/en-US/browsers/enterprise/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ([Firefox bug 1547023](https://bugzil.la/1547023)).
 
 ### WebAssembly
 
@@ -81,7 +78,3 @@ See also [New in Firefox 78: DevTools improvements, new regex engine, and abunda
 - When using [`proxy.onRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest), a filter that limits based on tab id or window id is now correctly applied. This could be useful for add-ons that want to provide proxy functionality just in just one window.
 - [Clicking within the context menu](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) from the "all tabs" dropdown now passed the appropriate tab object. In the past, the active tab was erroneously passed.
 - When using [`downloads.download`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) with the saveAs option, the recently used directory is now remembered. While this information is not available to developers, it is very convenient to users.
-
-## Older versions
-
-{{Firefox_for_developers}}

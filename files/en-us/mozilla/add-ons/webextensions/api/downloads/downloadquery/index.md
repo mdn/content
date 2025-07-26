@@ -3,9 +3,8 @@ title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadQuery
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 
@@ -68,11 +67,11 @@ Values of this type are objects. They contain the following properties:
 - `exists` {{optional_inline}}
   - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `exists` value.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadQuery) API.

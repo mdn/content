@@ -1,10 +1,10 @@
 ---
 title: Firefox 76 for developers
+short-title: Firefox 76
 slug: Mozilla/Firefox/Releases/76
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
 
@@ -82,7 +82,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

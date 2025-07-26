@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDate.prototype.withCalendar()
+short-title: withCalendar()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/withCalendar
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.withCalendar
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`withCalendar()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new `Temporal.PlainDate` object representing this date interpreted in the new calendar system. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date's {{jsxref("Temporal/PlainDate/calendarId", "calendarId")}} property.
 

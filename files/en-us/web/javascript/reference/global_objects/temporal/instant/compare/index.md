@@ -1,13 +1,15 @@
 ---
 title: Temporal.Instant.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/compare
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.compare
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Instant.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. It is equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 

@@ -1,13 +1,15 @@
 ---
 title: "Function: displayName"
+short-title: displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 page-type: javascript-instance-data-property
 status:
   - non-standard
 browser-compat: javascript.builtins.Function.displayName
+sidebar: jsref
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The optional **`displayName`** property of a {{jsxref("Function")}} instance specifies the display name of the function.
 

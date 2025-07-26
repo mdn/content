@@ -2,11 +2,10 @@
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 page-type: guide
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works.
 
 > [!NOTE]
 > The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
@@ -16,33 +15,24 @@ The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather 
 An internationalized extension can contain the same features as any other extension — [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:
 
 - extension-root-directory/
-
   - \_locales
-
     - en
-
       - messages.json
-
         - English messages (strings)
 
     - de
-
       - messages.json
-
         - German messages (strings)
 
     - etc.
 
   - manifest.json
-
     - locale-dependent metadata
 
   - myJavascript.js
-
     - JavaScript for retrieving browser locale, locale-specific messages, etc.
 
   - myStyles.css
-
     - locale-dependent CSS
 
 Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.
@@ -235,25 +225,17 @@ Locales can be specified using a language code, such as `fr` or `en` or qualifie
 Take this example:
 
 - extension-root-directory/
-
   - \_locales
-
     - en_GB
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
 
       en
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
 
     - fr
-
       - messages.json
-
         - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
 
 Suppose the `default_locale` is set to `fr`.
@@ -396,7 +378,7 @@ padding-left: 1.5em;
 
 ## Testing your extension
 
-To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs.
+To test your extension's localization, you use [Firefox](https://www.firefox.com/en-US/) or [Firefox Beta](https://www.firefox.com/en-US/channel/desktop/), the Firefox builds in which you can install language packs.
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 

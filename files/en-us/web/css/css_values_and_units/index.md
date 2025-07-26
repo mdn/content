@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-values-3/
   - https://drafts.csswg.org/css-values-4/
   - https://drafts.csswg.org/css-values-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single integer, keyword, function, or a combination of different items; some values have units, while others do not. Every property also accepts the CSS-wide values. The CSS values and units module defines the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
 
@@ -33,6 +32,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("exp()")}}
 - {{cssxref("hypot()")}}
 - {{cssxref("ident()")}}
+- {{cssxref("if()")}}
 - {{cssxref("inherit()")}}
 - {{cssxref("log()")}}
 - {{cssxref("max()")}}
@@ -41,13 +41,15 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("pow()")}}
 - {{cssxref("rem()")}}
 - {{cssxref("round()")}}
+- {{cssxref("sibling-count()")}}
+- {{cssxref("sibling-index()")}}
 - {{cssxref("sign()")}}
 - {{cssxref("sin()")}}
 - {{cssxref("sqrt()")}}
 - {{cssxref("tan()")}}
-- {{cssxref("url()")}}
+- {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `sibling-count()`, `sibling-index()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
 
 ### Data types
 
@@ -185,37 +187,29 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 ## Guides
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-
   - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
 
 - [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-
   - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
 
 - [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
-
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
 - [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 - [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-
   - : The CSS math functions that allow a property value to be written as a mathematical expression.
 
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-
   - : A look at some of the most frequently used value types, what they are, and how they work.
 
 ## Related
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}
@@ -224,22 +218,18 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
   - {{cssxref("all")}}
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-
   - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
 
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module
-
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
 

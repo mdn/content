@@ -132,20 +132,20 @@ Let's consider this example:
 <p>Required fields are followed by <span aria-label="required">*</span>.</p>
 
 <!-- So this: -->
-<!--div>
+<!--<div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username" required>
-  <label for="username"><span aria-label="required">*</label>
-</div-->
+  <input id="username" type="text" name="username" required />
+  <label for="username"><span aria-label="required">*</span></label>
+</div>-->
 
 <!-- would be better done like this: -->
-<!--div>
+<!--<div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username" required>
+    <input id="username" type="text" name="username" required />
     <span aria-label="required">*</span>
   </label>
-</div-->
+</div>-->
 
 <!-- But this is probably best: -->
 <div>
@@ -180,7 +180,7 @@ In addition to the {{HTMLElement("fieldset")}} element, it's also common practic
 
 Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
 
-### Active learning: building a form structure
+### Building a form structure
 
 Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
@@ -389,11 +389,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
 We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example) or visit [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
 
-{{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find a further test to verify that you've retained this information before you move on — see [Test your skills: Form structure](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure).
+{{EmbedLiveSample("building_a_form_structure","100%",620)}}
 
 ## Summary
 

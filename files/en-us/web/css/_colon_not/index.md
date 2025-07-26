@@ -3,9 +3,8 @@ title: :not()
 slug: Web/CSS/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
@@ -43,13 +42,15 @@ The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected result
 
 ## Syntax
 
-The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
-
 ```css-nolint
 :not(<complex-selector-list>) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ## Description
 
@@ -181,7 +182,6 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
-
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

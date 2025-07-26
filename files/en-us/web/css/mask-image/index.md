@@ -3,9 +3,8 @@ title: mask-image
 slug: Web/CSS/mask-image
 page-type: css-property
 browser-compat: css.properties.mask-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as the mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
 
@@ -36,11 +35,9 @@ mask-image: unset;
 ### Values
 
 - `none`
-
   - : This keyword is interpreted as a transparent black image layer.
 
 - `<mask-source>`
-
   - : A {{cssxref("url_value", "&lt;url&gt;")}} reference to a {{SVGElement("mask")}} or to a CSS image.
 
 - {{cssxref("&lt;image&gt;")}}
@@ -289,5 +286,8 @@ Toggle the checkbox to toggle the value of the `mask-mode` between `alpha` (chec
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-border")}}
 - {{cssxref("clip-path")}}
+- {{cssxref("background-image")}}
 - [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

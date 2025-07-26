@@ -2,9 +2,10 @@
 title: Internationalization
 slug: Web/JavaScript/Guide/Internationalization
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
+{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Modules")}}
 
 The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationalization API, which provides a wide range of locale- and culture-sensitive data and operations.
 
@@ -47,11 +48,12 @@ new Intl.SomeObject(locales, options)
 
 Locales underlie all behaviors of `Intl`. A _locale_ is a set of conventions, represented in the `Intl` API by the {{jsxref("Intl.Locale")}} object. All `Intl` constructors that accept language tags also accept `Intl.Locale` objects.
 
-Each locale is primarily defined by three things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, and a {{jsxref("Intl/Locale/region", "region")}}. When connected together by `-` in that order, they form a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646).
+Each locale is primarily defined by four things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, a {{jsxref("Intl/Locale/region", "region")}}, and sometimes some {{jsxref("Intl/Locale/variants", "variants")}}. When connected together by `-` in that order, they form a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646).
 
 - The language is the most important part of the locale and is mandatory. When given a single language, like `en` or `fr`, there are algorithms to infer the rest of the information (see {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}).
 - However, you often want to specify the region as well, because conventions can differ drastically between regions that speak the same language. For example, the date format in the US is MM/DD/YYYY, whereas in the UK it is DD/MM/YYYY, so specifying `en-US` or `en-GB` is important.
 - You can also specify a script. The script is the writing system, or the characters used to transcribe the language. In practice, the script is often unnecessary, because the language used in a certain region is only written in one script. However, there are exceptions such as the Serbian language, which can be written in both the Latin and Cyrillic scripts (`sr-Latn` and `sr-Cyrl`), or the Chinese language, which can be written in both the Simplified and Traditional scripts (`zh-Hans` and `zh-Hant`).
+- The variants are rarely used. Usually, they denote different orthographies; for example, German has the `1901` and `1996` orthography variants, which are written as `de-1901` and `de-1996`.
 
 ```js
 // These two are equivalent when passed to other Intl APIs

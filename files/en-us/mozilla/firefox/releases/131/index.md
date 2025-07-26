@@ -1,10 +1,10 @@
 ---
 title: Firefox 131 for developers
+short-title: Firefox 131
 slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 
@@ -68,7 +68,3 @@ These features are newly shipped in Firefox 131 but are disabled by default. To 
 - **Permissions for microphone and camera:** `permissions.media.query.enabled`.
 
   The `microphone` and `camera` [permissions](/en-US/docs/Web/API/Permissions_API) can now be used in the {{domxref("Permissions.query()")}} method to test whether access to the corresponding hardware has been granted, denied, or still requires user approval. ([Firefox bug 1609427](https://bugzil.la/1609427) and [Firefox bug 1915222](https://bugzil.la/1915222)).
-
-## Older versions
-
-{{Firefox_for_developers}}

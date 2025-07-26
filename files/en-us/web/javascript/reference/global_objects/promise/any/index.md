@@ -1,11 +1,11 @@
 ---
 title: Promise.any()
+short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.any
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.any()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 

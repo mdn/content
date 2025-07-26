@@ -37,7 +37,7 @@ In the previous article, we looked at one of the most important features for mak
 
 ## Recap: Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Ghent during August 2016. To understand its information, we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>Items Sold August 2016</caption>
@@ -66,7 +66,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
       <td>23</td>
     </tr>
     <tr>
-      <th scope="row">Gent</th>
+      <th scope="row">Ghent</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
@@ -146,23 +146,22 @@ At this point we'll get you to try out adding a caption to an HTML table, using 
 
 Your finished HTML should look something like this:
 
-```html-nolint
+```html
 <table>
   <caption>
     Florence's weekly lesson timetable
   </caption>
   <colgroup>
     <col span="2" />
-    <col style="background-color:#97DB9A;" />
-    <col style="width:42px;" />
-    <col style="background-color:#97DB9A;" />
-    <col style="background-color:#DCC48E; border:4px solid #C1437A;" />
-    <col span="2" style="width:42px;" />
+    <col style="background-color: #97DB9A;" />
+    <col style="width: 42px;" />
+    <col style="background-color: #97DB9A;" />
+    <col style="background-color: #DCC48E; border: 4px solid #C1437A;" />
+    <col span="2" style="width: 42px;" />
   </colgroup>
   <tr>
-
     <!-- Rest of code omitted for brevity -->
-
+  </tr>
 </table>
 ```
 
@@ -182,7 +181,8 @@ To use them, they should be included in the following order:
 - The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
 - The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
 
-> **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
+> [!NOTE]
+> `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
 ### Adding structure to a spending record table
 
@@ -251,7 +251,7 @@ Your finished HTML should look something like this:
     </tr>
     <tr>
       <td>Shoes</td>
-      <td>Shoeshop</td>
+      <td>Shoe shop</td>
       <td>13/09</td>
       <td>Big regrets</td>
       <td>65</td>
@@ -435,7 +435,7 @@ The first finished HTML example should look something like this:
       <td>23</td>
     </tr>
     <tr>
-      <th scope="row">Gent</th>
+      <th scope="row">Ghent</th>
       <td>46</td>
       <td>18</td>
       <td>50</td>
@@ -503,12 +503,12 @@ While the second one should look like this:
       <td headers="antwerp belgium accessories rings">23</td>
     </tr>
     <tr>
-      <th id="gent" headers="belgium">Gent</th>
-      <td headers="gent belgium clothes trousers">46</td>
-      <td headers="gent belgium clothes skirts">18</td>
-      <td headers="gent belgium clothes dresses">50</td>
-      <td headers="gent belgium accessories bracelets">61</td>
-      <td headers="gent belgium accessories rings">15</td>
+      <th id="ghent" headers="belgium">Ghent</th>
+      <td headers="ghent belgium clothes trousers">46</td>
+      <td headers="ghent belgium clothes skirts">18</td>
+      <td headers="ghent belgium clothes dresses">50</td>
+      <td headers="ghent belgium accessories bracelets">61</td>
+      <td headers="ghent belgium accessories rings">15</td>
     </tr>
     <tr>
       <th id="brussels" headers="belgium">Brussels</th>

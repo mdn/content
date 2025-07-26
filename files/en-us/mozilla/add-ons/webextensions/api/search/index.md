@@ -3,9 +3,8 @@ title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
 page-type: webextension-api
 browser-compat: webextensions.api.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the search API to retrieve the installed search engines and execute searches.
 

@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.getSeconds()
+short-title: getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getSeconds
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getSeconds()`** method of {{jsxref("Date")}} instances returns the seconds for this date according to local time.
 

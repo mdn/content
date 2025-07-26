@@ -3,9 +3,8 @@ title: tabGroups.move
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Moves a tab group within or to another window. Groups can't be moved before a pinned tab or inside another tab group.
 
@@ -21,7 +20,6 @@ let movedTabGroup = await browser.tabGroups.move(
 ### Parameters
 
 - `groupId`
-
   - : `integer` The ID of the tab group to move.
 
 - `moveProperties`

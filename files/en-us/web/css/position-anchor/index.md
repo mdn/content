@@ -2,12 +2,9 @@
 title: position-anchor
 slug: Web/CSS/position-anchor
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}{{seecompattable}}
 
 The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
 
@@ -29,11 +26,9 @@ position-anchor: unset;
 ### Values
 
 - `auto`
-
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
 
 - {{cssxref("dashed-ident")}}
-
   - : The name of the anchor element to associate the positioned element with, as listed in the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
 
 ## Description

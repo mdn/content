@@ -2,15 +2,14 @@
 title: CSS value functions
 slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
-```css
+```plain
 selector {
   property: function([argument]? [, argument]!);
 }
@@ -283,6 +282,8 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
+- {{CSSxRef("if", "if()")}}
+  - : Conditionally sets a property value depending on the result of a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 - {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
@@ -344,6 +345,15 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
+
+## Tree counting functions
+
+The following functions return an integer value based on the DOM tree, rather than the flat tree like most CSS values do:
+
+- {{cssxref("sibling-index", "sibling-index()")}}
+  - : Returns an integer reflecting the position of the selected element among its siblings.
+- {{cssxref("sibling-count", "sibling-count()")}}
+  - : Returns an integer reflecting the total number of siblings, including the selected element.
 
 ## See also
 

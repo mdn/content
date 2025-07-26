@@ -6,22 +6,24 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
+The aim of this skill test is to help you assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, you have two boxes. The first should be sized so that the height will be at least 100 pixels tall, even if there is less content that would cause it to grow to that height. However, the content should not overflow if there is more content than fits in 100 pixels. Test this box by removing the content from the HTML to make sure you still get a 100 pixel tall box even with no content.
+In this task, you have two boxes.
 
-The second box should be fixed at 100 pixels tall, so that content will overflow if there is too much.
+To complete the task:
+
+1. Size the first box so that the height will be at least `100px`, even if there is less content that would cause it to grow to that height. However, the content should not overflow if there is more content than fits in 100 pixels.
+2. Test this box by removing the content from the HTML to make sure you still get a `100px` tall box even with no content.
+3. Size the second box so that it is fixed at `100px` tall, so that content will overflow if there is too much.
+
+Your final result should look like the image below:
 
 ![Two boxes one with overflowing content](mdn-sizing-height-min-height.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___height-min-height
 <div class="box box1">
@@ -41,7 +43,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___height-min-height
+```css live-sample___height-min-height
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
@@ -52,9 +54,7 @@ body {
   width: 400px;
   margin-bottom: 1em;
 }
-```
 
-```css live-sample___height-min-height
 .box1 {
   /* Add styles here */
 }
@@ -85,13 +85,16 @@ There are two boxes, the first should be given a minimum height, in which case i
 
 ## Task 2
 
-In this task, you have a box, which contains another box. Your task is to make the inner box 60% of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border. You should also give the inner box padding of 10% using the width (or inline size) as the size from which that percentage is calculated.
+In this task, you have a box, which contains another box.
+
+To complete the task:
+
+1. Make the inner box width `60%` of the width of the outer box. The value of the {{cssxref("box-sizing")}} property is set to `border-box`, which means that the total width includes any padding and border.
+2. Give the inner box padding of `10%` using the width (or inline size) as the size from which that percentage is calculated.
 
 Your final result should look like the image below:
 
 ![A box with another box nested inside](mdn-sizing-percentages.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___percentages
 <div class="box">
@@ -99,11 +102,12 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___percentages
+```css live-sample___percentages
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
 }
+
 .box {
   border: 5px solid #000;
   width: 400px;
@@ -115,9 +119,7 @@ body {
   color: white;
   border-radius: 5px;
 }
-```
 
-```css live-sample___percentages
 * {
   box-sizing: border-box;
 }
@@ -148,13 +150,13 @@ All elements already have `box-sizing: border-box` to save you from worrying abo
 
 ## Task 3
 
-In this task, you have two images in boxes. One image is smaller than the box, the other is larger and breaking out of the box. If you imagine that the box is responsive and therefore could grow and shrink, which property would you apply to the image so that the large image shrinks down into the box but the small image does not stretch.
+In this task, you have two images in boxes. One image is smaller than the box, the other is larger and breaking out of the box.
+
+To complete the task, imagine that the box is responsive and therefore could grow and shrink. Apply a declaration to the image so that the large image shrinks down into the box but the small image does not stretch.
 
 Your final result should look like the images below:
 
 ![Two boxes with images in](mdn-sizing-max-width.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___max-width
 <div class="box">
@@ -170,7 +172,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___max-width
+```css live-sample___max-width
 body {
   font: 1.2em / 1.5 sans-serif;
   padding: 1em;
@@ -180,9 +182,7 @@ body {
   margin-bottom: 1em;
   width: 500px;
 }
-```
 
-```css live-sample___max-width
 img {
   /* Add styles here */
 }
@@ -202,7 +202,3 @@ img {
 ```
 
 </details>
-
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

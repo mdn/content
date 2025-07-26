@@ -3,6 +3,7 @@ title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onUpdated
+sidebar: addonsidebar
 ---
 
 Fired when a tab is updated.
@@ -38,9 +39,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tabId`
       - : `integer`. The ID of the updated tab.
     - `changeInfo`
@@ -49,15 +48,11 @@ Events have three functions:
       - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
 - `filter` {{optional_inline}}
-
   - : `object`. A set of filters that restrict the events sent to this listener. This object can have one or more of these properties. Events are only sent if they satisfy all the filters provided.
-
     - `urls`
       - : `Array`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Fires the event only for tabs whose current `url` property matches any one of the patterns.
     - `properties`
-
       - : `Array`. An array of strings consisting of supported {{WebExtAPIRef("tabs.Tab")}} object property names. Fires the event only for changes to one of the properties named in the array. These properties can be used:
-
         - "attention"
         - "autoDiscardable"
         - "audible"
@@ -258,5 +253,3 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
-{{AddonSidebar}}

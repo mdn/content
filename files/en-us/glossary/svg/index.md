@@ -2,9 +2,8 @@
 title: SVG
 slug: Glossary/SVG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 _Scalable Vector Graphics_ (**SVG**) is a 2D vector image format based on an {{Glossary("XML")}} syntax.
 
@@ -16,7 +15,11 @@ As a [vector image format](https://en.wikipedia.org/wiki/Vector_graphics), SVG g
 
 ## See also
 
-- [SVG](https://en.wikipedia.org/wiki/SVG) on Wikipedia
-- [W3.org's SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
+- [SVG section in the Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics)
 - [SVG documentation on MDN](/en-US/docs/Web/SVG)
-- [Latest SVG specification](https://svgwg.org/svg2-draft/)
+- Other image formats (glossary terms): {{Glossary("GIF")}}, {{Glossary("JPEG")}}, {{Glossary("PNG")}}, {{Glossary("WebP")}}
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images) (Learn web development)
+- [Adding custom icons to your site](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site)
+- [Including vector graphics in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
+- [SVG](https://en.wikipedia.org/wiki/SVG) on Wikipedia
+- [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) on w3.org

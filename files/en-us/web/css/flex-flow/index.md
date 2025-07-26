@@ -3,9 +3,8 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 page-type: css-shorthand-property
 browser-compat: css.properties.flex-flow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
 
@@ -49,7 +48,7 @@ flex-flow: column wrap;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
   margin: 10px;

@@ -1,19 +1,19 @@
 ---
 title: Array.prototype.values()
+short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.values()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+const array = ["a", "b", "c"];
+const iterator = array.values();
 
 for (const value of iterator) {
   console.log(value);

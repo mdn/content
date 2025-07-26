@@ -356,7 +356,7 @@ button {
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 
@@ -375,10 +375,6 @@ And voilà! Your form should now look like this:
 
 > [!NOTE]
 > If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
-
-## Test your skills
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics).
 
 ## Summary
 

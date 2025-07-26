@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.setMonth()
+short-title: setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setMonth
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setMonth()`** method of {{jsxref("Date")}} instances changes the month and/or day of the month for this date according to local time.
 

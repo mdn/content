@@ -6,7 +6,7 @@ sidebar: webdriver
 ---
 
 The **`moz:firefoxOptions` capability** is a namespaced set of
-capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/new/). It is used to control the
+capabilities specific to [Firefox](https://www.firefox.com/en-US/). It is used to control the
 behavior of Firefox and can be used as a member of
 [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) or as a member of one of the
 [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) entries.

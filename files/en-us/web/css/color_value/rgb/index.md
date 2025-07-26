@@ -6,9 +6,8 @@ browser-compat: css.types.color.rgb
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-RGB
   - https://drafts.csswg.org/css-color/#rgb-functions
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `rgba()` functional notation is an alias for `rgb()`. They are exactly equivalent. It is recommended to use `rgb()`.

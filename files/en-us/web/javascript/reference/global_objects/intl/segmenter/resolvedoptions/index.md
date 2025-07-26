@@ -1,24 +1,24 @@
 ---
 title: Intl.Segmenter.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances returns a new object with properties reflecting the options computed during initialization of this `Segmenter` object.
 
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const segmenter1 = new Intl.Segmenter("fr-FR");
-const options1 = segmenter1.resolvedOptions();
+const segmenter = new Intl.Segmenter("fr-FR");
+const options = segmenter.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output: "fr-FR"
 
-console.log(options1.granularity);
+console.log(options.granularity);
 // Expected output: "grapheme"
 ```
 

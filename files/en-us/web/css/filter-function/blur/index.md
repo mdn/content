@@ -3,9 +3,8 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 page-type: css-function
 browser-compat: css.types.filter-function.blur
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
@@ -34,8 +33,6 @@ filter: blur(1.5rem);
 ```
 
 ## Syntax
-
-The `blur()` function applies a Gaussian blur to the elements on which it is applied.
 
 ```css
 blur(radius)
@@ -126,7 +123,7 @@ svg:not([height]) {
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" style="overflow: visible">
+        <svg id="svg" height="220" width="220" overflow="visible">
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>

@@ -3,9 +3,8 @@ title: Using CSS math functions
 short-title: Using math functions
 slug: Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS math functions** allow a property value - such as the `height`, `animation-duration`, or `font-size` of an element - to be written as a mathematical expression.
 
@@ -99,7 +98,7 @@ There are cases where we don't want the value of a CSS property to exceed a cert
 The `min()` math function takes a set of comma-separated values as arguments and returns the smallest of those values, e.g.:
 
 ```css
-property: min(<first value>, <second value>, <third value>, ...);
+width: min(32px, 50%, 2rem);
 ```
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
@@ -171,7 +170,7 @@ Similar to `min()`, sometimes we don't want the value of a CSS property to go be
 The `max()` math function takes a set of comma-separated values as arguments and returns the largest of those values, e.g.:
 
 ```css
-property: max(<first value>, <second value>, <third value>, ...);
+width: max(32px, 50%, 2rem);
 ```
 
 This function is often used to compare two CSS values that have different units, such as `%` and `px`.
@@ -244,7 +243,8 @@ div > code {
 We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", "clamp()")}}. The `clamp()` math function takes a minimum value, the value to be clamped, and the maximum value as arguments, e.g.:
 
 ```css
-property: clamp(<minimum value>, <value to be clamped>, <maximum value>);
+/* clamped value: 50%, minimum: 100px, maximum: 300px */
+width: clamp(100px, 50%, 300px);
 ```
 
 - If the value to be clamped is less than the passed minimum value, the function will return the minimum value.

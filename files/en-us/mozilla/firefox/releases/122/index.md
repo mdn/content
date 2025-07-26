@@ -1,10 +1,10 @@
 ---
 title: Firefox 122 for developers
+short-title: Firefox 122
 slug: Mozilla/Firefox/Releases/122
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 was released on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
 
@@ -78,7 +78,6 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
   The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
 
 - **Clonable option and property for shadow DOM.**
-
   - The {{domxref("Element.attachShadow()")}} method now supports the `clonable` boolean option that specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
   - The {{domxref("ShadowRoot")}} interface now supports the {{domxref("ShadowRoot.clonable", "clonable")}} read-only property. It returns `true` if the shadow root is clonable, and `false` otherwise. It always returns `true` for shadow roots created via declarative shadow DOM.
 
@@ -95,7 +94,3 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 - **`Intl.Segmenter`:** enabled by default only in Firefox Nightly.
 
   The {{jsxref("Intl.Segmenter")}} object allows accurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
-
-## Older versions
-
-{{Firefox_for_developers}}

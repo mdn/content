@@ -10,7 +10,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Angle
 
 - \<angle>
-
   - : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an \<angle> is defined as follows:
 
     ```plain
@@ -34,7 +33,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Anything
 
 - \<anything>
-
   - : The basic type \<anything> is a sequence of zero or more characters. Specifically:
 
     ```plain
@@ -46,7 +44,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Clock-value
 
 - \<clock-value>
-
   - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/smil-animation/#Timing-ClockValueSyntax) specification. The grammar for clock values is repeated here:
 
     ```plain
@@ -68,7 +65,6 @@ SVG makes use of a number of data types. This article lists these types along wi
     For `Timecount` values, the default metric suffix is `s` (for seconds). No embedded white space is allowed in clock values, although leading and trailing white space characters will be ignored.
 
     The following are examples of legal clock values:
-
     - Full clock values:
       - `02:30:03` = 2 hours, 30 minutes and 3 seconds
       - `50:00:10.25` = 50 hours, 10 seconds and 250 milliseconds
@@ -88,7 +84,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Color
 
 - \<color>
-
   - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
     The definition of \<color> in SVG is exactly the same as the CSS {{cssxref("color_value", "&lt;color&gt;")}} definition.
@@ -96,7 +91,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Coordinate
 
 - \<coordinate>
-
   - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
@@ -104,9 +98,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Frequency
 
 - \<frequency>
-
   - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
-
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
 
@@ -120,7 +112,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Integer
 
 - \<integer>
-
   - : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
 
     ```plain
@@ -136,7 +127,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## IRI
 
 - \<IRI>
-
   - : An **I**nternationalized **R**esource **I**dentifier.
 
     On the Internet, resources are identified using _IRIs_ (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following _IRI_:
@@ -167,7 +157,6 @@ SVG makes use of a number of data types. This article lists these types along wi
     ```
 
     SVG supports two types of _IRI_ references:
-
     - **local _IRI_ references**, where the IRI reference does not contain an \<absoluteIRI> or \<relativeIRI> and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
     - **non-local _IRI_ references**, where the _IRI_ reference does contain an \<absoluteIRI> or \<relativeIRI>.
 
@@ -176,7 +165,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Length
 
 - \<length>
-
   - : A length is a distance measurement, given as a number along with a unit.
     The SVG2 specification aligns with CSS {{cssxref("length")}} data types and units for the attribute syntax and values.
     A length unit identifier must be provided and the values of the length unit identifiers are case-insensitive.
@@ -190,7 +178,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     Note that the non-property \<length> definition also allows a percentage (`%`) unit identifier.
     The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
-
     - when a percentage length value represents a percentage of the viewport width or height
     - when a percentage length value represents a percentage of the bounding box width or height on a given object.
 
@@ -199,7 +186,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## List-of-Ts
 
 - \<list-of-Ts>
-
   - : (Where _T_ is some type.) A list consists of a separated sequence of values. Unless explicitly described differently, lists within SVG's XML attributes can be either comma-separated (with optional white space before or after the comma), or white space-separated.
 
     White space in lists is defined as one or more of the following consecutive characters: "space" (`U+0020`), "tab" (`U+0009`), "line feed" (`U+000A`), "carriage return" (`U+000D`), and "form-feed" (`U+000C`).
@@ -216,7 +202,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Name
 
 - \<name>
-
   - : A name, which is a string where a few characters of syntactic significance are disallowed.
 
     ```plain
@@ -226,7 +211,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Number
 
 - \<number>
-
   - : Real numbers are specified in one of two ways. When used in a stylesheet, a \<number> is defined as follows:
 
     ```plain
@@ -248,7 +232,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Number-optional-number
 
 - \<number-optional-number>
-
   - : A pair of \<number>s, where the second \<number> is optional.
 
     ```plain
@@ -266,7 +249,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Paint
 
 - \<paint>
-
   - : The values for properties {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} define the type of paint to use when filling or stroking a given graphics element.
     The available options and syntax for \<paint> are:
 
@@ -279,7 +261,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Percentage
 
 - \<percentage>
-
   - : Percentages are specified as a number followed by a `%` character:
 
     ```plain
@@ -295,16 +276,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Time
 
 - \<time>
-
   - : A time value is a \<number> immediately followed by a time unit identifier. The time unit identifiers are:
-
     - `ms`: milliseconds
     - `s`: seconds
 
 ## Transform-list
 
 - \<transform-list>
-
   - : A \<transform-list> is used to specify a list of coordinate system transformations. A detailed description of the possible values for a \<transform-list> is given in the {{SVGAttr("transform")}} attribute definition.
 
     Within the SVG DOM, a \<transform-list> value is represented using an {{domxref("SVGTransformList")}} or {{domxref("SVGAnimatedTransformList")}} object.
@@ -312,7 +290,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## URL
 
 - URL
-
   - : A **U**niform **R**esource **L**ocator.
 
     A URL is a sequence of {{Glossary("Unicode")}} characters, building an address to an internal or external resource.

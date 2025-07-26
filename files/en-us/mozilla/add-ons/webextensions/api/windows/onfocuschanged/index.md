@@ -3,9 +3,8 @@ title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onFocusChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} if all browser windows have lost focus.
 
@@ -34,15 +33,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `windowId`
       - : `integer`. ID of the newly focused window.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -55,6 +48,10 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#event-onFocusChanged) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

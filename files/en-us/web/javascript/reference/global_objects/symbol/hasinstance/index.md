@@ -1,11 +1,11 @@
 ---
 title: Symbol.hasInstance
+short-title: hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.hasInstance
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.hasInstance`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.hasInstance`. The {{jsxref("Operators/instanceof", "instanceof")}} operator looks up this symbol on its right-hand operand for the method used to determine if the constructor object recognizes an object as its instance.
 

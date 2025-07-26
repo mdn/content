@@ -272,15 +272,15 @@ function doIt() {
   Here is the recommended way:
 
   ```js example-good
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce((a, b) => a + b);
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce((a, b) => a + b);
   ```
 
   Instead of this:
 
   ```js example-bad
-  const array1 = [1, 2, 3, 4];
-  const sum = array1.reduce(function (a, b) {
+  const array = [1, 2, 3, 4];
+  const sum = array.reduce(function (a, b) {
     return a + b;
   });
   ```
@@ -712,7 +712,7 @@ Good variable names are essential to understanding code.
 
 - Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
 - Try to use real-world relevant examples where each variable has clear semantics. Only fall back to placeholder names like `foo` and `bar` when the example is simple and contrived.
-- Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "John Doe"` instead of `sName = "John Doe"`.
+- Do not use the [Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation) naming convention. Do not prefix the variable name with its type. For example, write `bought = car.buyer !== null` rather than `bBought = oCar.sBuyer != null` or `name = "Maria Sanchez"` instead of `sName = "Maria Sanchez"`.
 - For collections, avoid adding the type such as list, array, queue in the name. Use the content name in the plural form. For example, for an array of cars, use `cars` and not `carArray` or `carList`. There may be exceptions, like when you want to show the abstract form of a feature without the context of a particular application.
 - For primitive values, use _camelCase_, starting with a lowercase character. Do not use `_`. Use concise, human-readable, and semantic names where appropriate. For example, use `currencyName` rather than `currency_name`.
 - Avoid using articles and possessives. For example, use `car` instead of `myCar` or `aCar`. There may be exceptions, like when describing a feature in general without a practical context.

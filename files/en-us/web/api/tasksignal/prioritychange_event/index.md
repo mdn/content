@@ -37,7 +37,14 @@ A {{domxref("TaskPriorityChangeEvent")}}. Inherits from {{domxref("Event")}}.
 The example below shows how to listen for the `prioritychange` event on a {{domxref("TaskSignal")}}.
 
 ```html hidden
-<textarea id="log" style="min-height: 70px; width: 95%"></textarea>
+<textarea id="log"></textarea>
+```
+
+```css hidden
+#log {
+  min-height: 70px;
+  width: 95%;
+}
 ```
 
 ```js hidden

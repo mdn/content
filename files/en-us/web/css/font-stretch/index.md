@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.font-stretch
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
@@ -106,7 +107,6 @@ This property may be specified as a single `<font-stretch-css3>` keyword value o
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Specifies a more expanded font face than normal, with `ultra-expanded` as the most expanded.
 - `<percentage>`
-
   - : A {{cssxref("&lt;percentage&gt;")}} value between 50% and 200% (inclusive). Negative values are not allowed for this property.
 
 ### Keyword to numeric mapping
@@ -163,7 +163,9 @@ td {
     sans-serif;
 }
 #anek-malayalam td {
-  font: 90px "Anek Malayalam";
+  font:
+    90px "Anek Malayalam",
+    sans-serif;
 }
 #inconsolata td:nth-child(2),
 #anek-malayalam td:nth-child(2) {

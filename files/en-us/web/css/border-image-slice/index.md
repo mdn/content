@@ -3,9 +3,8 @@ title: border-image-slice
 slug: Web/CSS/border-image-slice
 page-type: css-property
 browser-compat: css.properties.border-image-slice
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
@@ -125,7 +124,7 @@ The following example shows a `<div>` with a border image set on it. The source 
 
 ![nice multi-colored diamonds](border-diamonds.png)
 
-The diamonds are 30px across, therefore setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
+The diamonds are 30px across, so setting 30 pixels as the value for both [`border-width`](/en-US/docs/Web/CSS/border-width) and `border-image-slice` will get you complete and fairly crisp diamonds in your border:
 
 ```css
 border-width: 30px;

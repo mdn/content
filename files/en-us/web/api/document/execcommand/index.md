@@ -28,7 +28,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### Parameters
 
 - `aCommandName`
-
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument.
@@ -139,13 +138,12 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 A boolean value that is `false` if the command is unsupported or disabled.
 
-> **Note:** `document.execCommand()` only returns
+> [!NOTE]
+> `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
 > verify browser support before calling a command.
 
 ## Examples
-
-An example of [how to use execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
 ### Using insertText
 
@@ -229,5 +227,6 @@ function insertText(newText, selector) {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- MDN example: [execCommands supported in your browser](https://mdn.github.io/dom-examples/execcommand/)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}

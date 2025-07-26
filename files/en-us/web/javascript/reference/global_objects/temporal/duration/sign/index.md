@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.sign
+short-title: sign
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/sign
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.sign
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`sign`** accessor property of {{jsxref("Temporal.Duration")}} instances returns `1` if this duration is positive, `-1` if negative, and `0` if zero. Because [a duration never has mixed signs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_sign), the sign of a duration is determined by the sign of any of its non-zero fields.
 

@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-view-transitions-1/
   - https://drafts.csswg.org/css-view-transitions-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS view transitions** module defines the behavior of the [View Transition API](/en-US/docs/Web/API/View_Transition_API), which allows developers to create animated transitions between different states within a document and across documents. This module also defines the CSS properties and pseudo-elements for styling these transitions.
 
@@ -46,7 +45,6 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 ## Guides
 
 - [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
-
   - : Explains how to create view transitions and customize transition animations, including manipulating active view transitions.
 
 ## Related concepts
@@ -56,7 +54,6 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 - {{domxref("Document.visibilityState")}}
 
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
-
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
@@ -64,7 +61,6 @@ The **CSS view transitions** module defines the behavior of the [View Transition
   - [Web animations API](/en-US/docs/Web/API/Web_Animations_API)
 
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

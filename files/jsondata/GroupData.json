@@ -1377,6 +1377,7 @@
         "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
+        "IntegrityViolationReportBody",
         "Report",
         "ReportBody",
         "ReportingObserver",
@@ -1397,7 +1398,8 @@
       "overview": ["Screen Capture API"],
       "guides": [
         "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
-        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture",
+        "/docs/Web/API/Screen_Capture_API/Captured_Surface_Control"
       ],
       "interfaces": [
         "BrowserCaptureMediaStreamTrack",
@@ -1900,7 +1902,6 @@
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
-        "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
         "/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics"

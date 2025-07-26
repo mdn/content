@@ -1,28 +1,28 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `NumberFormat` object.
 
 {{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const numberFormat1 = new Intl.NumberFormat("de-DE");
-const options1 = numberFormat1.resolvedOptions();
+const numberFormat = new Intl.NumberFormat("de-DE");
+const options = numberFormat.resolvedOptions();
 
-console.log(options1.locale);
+console.log(options.locale);
 // Expected output (Firefox / Safari): "de-DE"
 // Expected output (Chrome): "de"
 
-console.log(options1.numberingSystem);
+console.log(options.numberingSystem);
 // Expected output: "latn"
 
-console.log(options1.style);
+console.log(options.style);
 // Expected output: "decimal"
 ```
 

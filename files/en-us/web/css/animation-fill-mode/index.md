@@ -3,9 +3,8 @@ title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 page-type: css-property
 browser-compat: css.properties.animation-fill-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
 
@@ -143,7 +142,6 @@ animation-fill-mode: unset;
 - `none`
   - : The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.
 - `forwards`
-
   - : The target will retain the computed values set by the last [keyframe](/en-US/docs/Web/CSS/@keyframes) encountered during execution. The last keyframe depends on the value of {{cssxref("animation-direction")}} and {{cssxref("animation-iteration-count")}}:
 
     | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
@@ -158,7 +156,6 @@ animation-fill-mode: unset;
     Animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 
 - `backwards`
-
   - : The animation will apply the values defined in the first relevant [keyframe](/en-US/docs/Web/CSS/@keyframes) as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:
 
     | `animation-direction`            | first relevant keyframe |
@@ -172,7 +169,8 @@ animation-fill-mode: unset;
 > [!NOTE]
 > When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-> **Note:** `animation-fill-mode` has the same effect when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) as it does for regular time-based animations.
+> [!NOTE]
+> `animation-fill-mode` has the same effect when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) as it does for regular time-based animations.
 
 ## Formal definition
 

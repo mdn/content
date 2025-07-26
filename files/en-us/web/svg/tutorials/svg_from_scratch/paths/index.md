@@ -122,7 +122,7 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('rectangle-lines', 100, 130) }}
 
-We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
+We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first unclosed point (first point after the last `Z` command if there is one, or the first point in the path otherwise), and closes off the path with a line joint. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
 
 ```plain
 Z

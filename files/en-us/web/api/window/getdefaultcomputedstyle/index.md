@@ -41,30 +41,30 @@ user rules.
 ### Simple example
 
 ```js
-const elem1 = document.getElementById("elemId");
-const style = window.getDefaultComputedStyle(elem1);
+const elem = document.getElementById("elemId");
+const style = getDefaultComputedStyle(elem);
 ```
 
 ### Longer example
 
 ```html
-<style>
-  #elem-container {
-    position: absolute;
-    left: 100px;
-    top: 200px;
-    height: 100px;
-  }
-</style>
-
 <div id="elem-container">dummy</div>
 <div id="output"></div>
+```
 
-<script>
-  const elem = document.getElementById("elem-container");
-  const theCSSprop = window.getDefaultComputedStyle(elem).position;
-  document.getElementById("output").textContent = theCSSprop; // Will output "static"
-</script>
+```css
+#elem-container {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  height: 100px;
+}
+```
+
+```js
+const elem = document.getElementById("elem-container");
+const theCSSprop = getDefaultComputedStyle(elem).position;
+document.getElementById("output").textContent = theCSSprop; // outputs "static"
 ```
 
 ### Use with pseudo-elements
@@ -73,20 +73,20 @@ The `getDefaultComputedStyle()` method can pull style info from
 pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 
 ```html
-<style>
-  h3:after {
-    content: " rocks!";
-  }
-</style>
-
 <h3>generated content</h3>
+```
 
-<script>
-  const h3 = document.querySelector("h3");
-  const result = getDefaultComputedStyle(h3, ":after").content;
+```css
+h3::after {
+  content: " rocks!";
+}
+```
 
-  console.log("the generated content is: ", result); // returns 'none'
-</script>
+```js
+const h3 = document.querySelector("h3");
+const result = getDefaultComputedStyle(h3, "::after").content;
+
+console.log("the generated content is: ", result); // returns 'none'
 ```
 
 ## Notes

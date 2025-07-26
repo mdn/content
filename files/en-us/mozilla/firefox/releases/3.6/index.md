@@ -1,12 +1,12 @@
 ---
 title: Firefox 3.6 for developers
+short-title: Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6
 page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
-
-[Firefox 3.6](https://www.mozilla.org/en-US/firefox/new/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
+[Firefox 3.6](https://www.firefox.com/en-US/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
 ## For website and application developers
 
@@ -16,7 +16,7 @@ page-type: firefox-release-notes
   - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
 - [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
-- [Mozilla-specific media features](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#mozilla-specific_media_features)
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
@@ -50,7 +50,7 @@ page-type: firefox-release-notes
 
 ### JavaScript
 
-Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language features from the [ECMAScript 5 standard](/en-US/docs/JavaScript/ECMAScript_5_support_in_Mozilla):
+Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language features from the [ECMAScript 5 standard](https://web.archive.org/web/20210619182836/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla):
 
 - [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) can now parse ISO 8601 dates like YYYY-MM-DD.
 - The [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) property of function instances is no longer enumerable.
@@ -62,10 +62,10 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 - Drag and drop now supports files
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
-  - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See [Firefox bug 518003](https://bugzil.la/518003).
+  - : The new [`Node.mozMatchesSelector`](/en-US/docs/Web/API/Element/matches) method lets you determine whether or not an element matches a specified CSS selector. See [Firefox bug 518003](https://bugzil.la/518003).
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
-- [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
+  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/Web/API/Screen/change_event) event. Firefox 3.6 supports the accelerometer in Mac laptops.
+- Detecting document width and height changes
   - : The new `MozScrollAreaChanged` event is dispatched whenever the document's `scrollWidth` and/or `scrollHeight` properties change.
 
 #### Miscellaneous DOM changes
@@ -93,10 +93,10 @@ If you're an extension developer, you should start by reading [Updating extensio
 ### New features
 
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
-- [Monitoring HTTP activity](/en-US/docs/Monitoring_HTTP_activity)
+  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/Web/API/Screen/change_event) event. Firefox 3.6 supports the accelerometer in Mac laptops.
+- [Monitoring HTTP activity](https://web.archive.org/web/20210421090042/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Monitoring_HTTP_activity)
   - : You can now monitor HTTP transactions to observe requests and responses in real time.
-- [Working with the Windows taskbar](/en-US/docs/Working_with_the_Windows_taskbar)
+- Working with the Windows taskbar
   - : It's now possible to customize the appearance of windows in the taskbar in Windows 7 or later. _This has been disabled by default in Firefox 3.6._
 
 ### Places
@@ -106,9 +106,9 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### Storage
 
-- [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
+- [Locale-aware collation of data is now supported by the Storage API](https://web.archive.org/web/20210401045303/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Storage#collation_sorting)
   - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
-- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
+- [Properties on a statement can now be enumerated](https://web.archive.org/web/20210513165422/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatementParams#enumeration_of_properties)
   - : You can now use a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
   - : See [Firefox bug 528166](https://bugzil.la/528166) for details.
@@ -123,13 +123,13 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) for a list of changes related to themes.
 
-- [Lightweight themes](/en-US/docs/Themes/Lightweight_themes)
+- [Lightweight themes](https://web.archive.org/web/20180617103446/https://developer.mozilla.org/en-US/Add-ons/Themes/Lightweight_themes)
   - : Firefox 3.6 supports lightweight themes; these are easy-to-create themes that apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing [Personas](https://addons.mozilla.org/en-US/firefox/themes/) theme architecture into Firefox.
 
 ### Miscellaneous
 
-- Firefox will no longer load third-party components installed in its internal components directory. This helps to ensure stability by preventing buggy third-party components from being executed. Developers that install components this way must [repackage their components as XPI packages](/en-US/docs/Migrating_raw_components_to_add-ons) so they can be installed as standard add-ons.
-- `contents.rdf` is no longer supported for registering chrome in extensions. You must now use the [`chrome.manifest`](/en-US/docs/Install_Manifests) file instead. See [Firefox bug 492008](https://bugzil.la/492008).
+- Firefox will no longer load third-party components installed in its internal components directory. This helps to ensure stability by preventing buggy third-party components from being executed. Developers that install components this way must [repackage their components as XPI packages](https://web.archive.org/web/20170622232046/https://developer.mozilla.org/en-US/docs/Migrating_raw_components_to_add-ons) so they can be installed as standard add-ons.
+- `contents.rdf` is no longer supported for registering chrome in extensions. You must now use the [`chrome.manifest`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests) file instead. See [Firefox bug 492008](https://bugzil.la/492008).
 - Added support for hiding the menu bar automatically. See [Firefox bug 477256](https://bugzil.la/477256).
 - Added support for the `container-live-role` attribute to objects. See [Firefox bug 391829](https://bugzil.la/391829).
 - The `tabs-closebutton` binding has been removed. See [Firefox bug 500971](https://bugzil.la/500971).
@@ -137,16 +137,16 @@ See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/U
 - The syntax for the `nsITreeView` methods `nsITreeView.canDrop()` and `nsITreeView.drop()` has changed to support the new drag & drop API introduced in Gecko 1.9. See [Firefox bug 455590](https://bugzil.la/455590).
 - Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see [Firefox bug 76053](https://bugzil.la/76053). This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call `nsIDOMChromeWindow.notifyDefaultButtonLoaded` during the window's `onload` event handler.
 - The `nsILocalFileMac` interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
-- The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
-- The new [`openLocationLastURL.jsm`](/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
+- The new [`NetUtils.jsm`](https://web.archive.org/web/20210620035742/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
+- The new [`openLocationLastURL.jsm`](https://web.archive.org/web/20210417025317/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
 - On Windows, the `nsIScreen` interface now reports 24-bit per pixel color depths when the graphics driver claims 32 bits, since 24 more accurately represents the actual number of color pixels in use.
-- Menu bars can now be hidden on Windows, using the new [`autohide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/autohide) attribute on the [`<xul:toolbar>`](/en-US/docs/Mozilla/Tech/XUL/toolbar) XUL element.
-- The [`loadOneTab`](/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab) and [`addTab`](/en-US/docs/Mozilla/Tech/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
-- The "[hidden](/en-US/docs/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
+- Menu bars can now be hidden on Windows, using the new [`autohide`](https://web.archive.org/web/20201124231843/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/toolbar#autohide) attribute on the [`<xul:toolbar>`](https://web.archive.org/web/20201124231843/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/toolbar) XUL element.
+- The [`loadOneTab`](https://web.archive.org/web/20201210182023/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/Method/loadOneTab) and [`addTab`](https://web.archive.org/web/20201208182934/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
+- The "[hidden](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
 - The `@mozilla.org/webshell;1` component no longer exists; you need to use `@mozilla.org/docshell;1` instead.
 - You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See `nsIUpdateTimerManager.registerTimer()` for details.
-- The [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) function no longer provides access to XPCOM through the variable values `NPNVserviceManager`, `NPNVDOMelement`, and `NPNVDOMWindow`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
-- Plugins are no longer scriptable through XPCOM (IDL) interfaces, [NPRuntime](/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins) is the API to use for making plugins scriptable, and [`NPP_GetValue()`](/en-US/docs/NPP_GetValue) is no longer called to with the value `NPPVpluginScriptableInstance` or `NPPVpluginScriptableIID`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
+- The [`NPN_GetValue()`](https://web.archive.org/web/20210308202622/https://developer.mozilla.org/en-US/docs/Archive/Plugins/Reference/NPN_GetValue) function no longer provides access to XPCOM through the variable values `NPNVserviceManager`, `NPNVDOMelement`, and `NPNVDOMWindow`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
+- Plugins are no longer scriptable through XPCOM (IDL) interfaces, [NPRuntime](https://web.archive.org/web/20211028124814/https://developer.mozilla.org/en-US/docs/Plugins/Guide/Scripting_plugins) is the API to use for making plugins scriptable, and [`NPP_GetValue()`](https://web.archive.org/web/20201023225330/https://developer.mozilla.org/en-US/docs/Archive/Plugins/Reference/NPP_GetValue) is no longer called to with the value `NPPVpluginScriptableInstance` or `NPPVpluginScriptableIID`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 
 ## For Firefox/Gecko developers
 
@@ -198,9 +198,5 @@ The following assorted changes have been made:
 
 ### Changes in accessibility code
 
-- The `EVENT_REORDER` [accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See [Firefox bug 420845](https://bugzil.la/420845).
+- The `EVENT_REORDER` [accessibility event](https://web.archive.org/web/20210516055347/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See [Firefox bug 420845](https://bugzil.la/420845).
 - The `nsIAccessibleTable.selectRow()` now correctly removes any current selection before selecting the specified row.
-
-## See also
-
-{{Firefox_for_developers}}

@@ -6,13 +6,14 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Speculation-Rules
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Speculation-Rules`** {{Glossary("response header")}} provides one or more URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 
-The resource file containing the speculation rules JSON can have any valid name and extension, but it must be served with an `application/speculationrules+json` MIME type.
+The resource file containing the speculation rules JSON can have any valid name and extension, but it will be requested with a [`destination`](/en-US/docs/Web/API/Request/destination) type of [`speculationrules`](/en-US/docs/Web/API/Request/destination#speculationrules), and must be served with an `application/speculationrules+json` MIME type.
 
 > [!NOTE]
 > This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.

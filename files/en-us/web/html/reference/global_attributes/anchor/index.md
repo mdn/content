@@ -7,9 +7,10 @@ status:
   - experimental
   - non-standard
 browser-compat: html.global_attributes.anchor
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to associate a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 

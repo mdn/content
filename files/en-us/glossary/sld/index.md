@@ -2,9 +2,8 @@
 title: SLD
 slug: Glossary/SLD
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **Second Level Domain (SLD)** is the part of the domain name that is located right before a _{{Glossary("TLD", "Top Level Domain (TLD)")}}_.
 

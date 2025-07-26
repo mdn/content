@@ -31,7 +31,6 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 - {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
   - : An `unsigned short` representing the type of the value. Possible values are:
 
     | Constant         | Description                                                                                                                                                                  |

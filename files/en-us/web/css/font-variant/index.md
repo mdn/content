@@ -3,9 +3,8 @@ title: font-variant
 slug: Web/CSS/font-variant
 page-type: css-shorthand-property
 browser-compat: css.properties.font-variant
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the font variants for a font.
 
@@ -103,35 +102,27 @@ font-variant: unset;
 ### Values
 
 - `normal`
-
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.
 
 - `none`
-
   - : Sets the value of the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) as `none` and the values of the other longhand properties as `normal`, their initial value.
 
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-
   - : Specifies the keywords related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property. The possible values are `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, and `no-contextual`.
 
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-
   - : Specifies the keywords and functions related to the [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures) longhand property.
 
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-
   - : Specifies the keywords and functions related to the [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps) longhand property. The `small-caps` value is the only non-`normal` font variant valid within the {{cssxref("font")}} shorthand property.
 
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-
   - : Specifies the keywords related to the [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric) longhand property. The possible values are `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-
   - : Specifies the keywords related to the [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian) longhand property. The possible values are `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, and `ruby`.
 
 - `sub`, `super`
-
   - : Specifies the keywords and functions related to the [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position) longhand property.
 
 - `text`, `emoji`, `unicode`

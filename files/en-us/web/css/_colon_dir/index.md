@@ -3,9 +3,8 @@ title: :dir()
 slug: Web/CSS/:dir
 page-type: css-pseudo-class
 browser-compat: css.selectors.dir
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.
 
@@ -26,8 +25,6 @@ The `:dir()` pseudo-class uses only the _semantic_ value of the directionality, 
 
 ## Syntax
 
-The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
-
 ```css-nolint
 :dir([ltr | rtl]) {
   /* ... */
@@ -35,6 +32,8 @@ The `:dir()` pseudo-class requires one parameter, representing the text directio
 ```
 
 ### Parameters
+
+The `:dir()` pseudo-class requires one parameter, representing the text directionality you want to target.
 
 - `ltr`
   - : Target left-to-right elements.

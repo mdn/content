@@ -3,9 +3,8 @@ title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
 page-type: css-function
 browser-compat: css.types.filter-function.drop-shadow
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
@@ -16,7 +15,7 @@ filter: drop-shadow(30px 10px 4px #4444dd);
 ```
 
 ```css interactive-example-choice
-filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+filter: drop-shadow(0 -6mm 4mm rgb(160 0 210));
 ```
 
 ```css interactive-example-choice
@@ -70,7 +69,6 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 ### Parameters
 
 - `<color>` {{optional_inline}}
-
   - : Specifies the color for the shadow. If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
 - `<length>`
@@ -144,16 +142,19 @@ In the absence of a `<color>` value in the `drop-shadow()` function in the first
 
 ## See also
 
-The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
-
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
-- {{cssxref("box-shadow")}} property
-- {{cssxref("text-shadow")}} property
+- {{cssxref("&lt;filter-function&gt;")}} functions:
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/opacity", "opacity()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("filter")}}
+- {{cssxref("backdrop-filter")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("text-shadow")}}
+- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module

@@ -3,9 +3,8 @@ title: color-scheme
 slug: Web/CSS/color-scheme
 page-type: css-property
 browser-compat: css.properties.color-scheme
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in. User agents change the following aspects of the UI chrome to match the used color scheme:
 
@@ -73,7 +72,6 @@ The `color-scheme` property's value must be one of the following keywords.
 - `dark`
   - : Indicates that the element can be rendered using the operating system _dark_ color scheme.
 - `only`
-
   - : Forbids the user agent from overriding the color scheme for the element.
 
     Can be used to turn off color overrides caused by Chrome's [Auto Dark Theme](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out), by applying `color-scheme: only light;` on a specific element or `:root`.

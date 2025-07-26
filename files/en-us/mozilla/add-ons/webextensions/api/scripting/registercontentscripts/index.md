@@ -3,9 +3,8 @@ title: scripting.registerContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/registerContentScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.registerContentScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers one or more content scripts.
 

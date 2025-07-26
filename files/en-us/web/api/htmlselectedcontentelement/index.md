@@ -2,10 +2,13 @@
 title: HTMLSelectedContentElement
 slug: Web/API/HTMLSelectedContentElement
 page-type: web-api-interface
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLSelectedContentElement
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`HTMLSelectedContentElement`** interface represents a {{HTMLElement("selectedcontent")}} element in the [DOM](/en-US/docs/Web/API/Document_Object_Model).
 

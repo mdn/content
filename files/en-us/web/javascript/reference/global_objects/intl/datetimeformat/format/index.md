@@ -1,35 +1,35 @@
 ---
 title: Intl.DateTimeFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DateTimeFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.DateTimeFormat")}} instances formats a date according to the locale and formatting options of this `Intl.DateTimeFormat` object.
 
 {{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
-const options1 = {
+const options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
-const date1 = new Date(2012, 5);
+const date = new Date(2012, 5);
 
-const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
-console.log(dateTimeFormat1.format(date1));
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options);
+console.log(dateTimeFormat1.format(date));
 // Expected output: "петак, 1. јун 2012."
 
-const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
-console.log(dateTimeFormat2.format(date1));
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options);
+console.log(dateTimeFormat2.format(date));
 // Expected output: "Friday, 1 June 2012"
 
-const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
-console.log(dateTimeFormat3.format(date1));
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options);
+console.log(dateTimeFormat3.format(date));
 // Expected output: "Friday, June 1, 2012"
 ```
 
@@ -42,7 +42,6 @@ format(date)
 ### Parameters
 
 - `date`
-
   - : The date to format. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}} object. Additionally can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}} object if the `DateTimeFormat` object was configured to print at least one relevant part of the date.
 
     > [!NOTE]

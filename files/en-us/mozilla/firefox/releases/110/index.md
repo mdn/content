@@ -1,10 +1,10 @@
 ---
 title: Firefox 110 for developers
+short-title: Firefox 110
 slug: Mozilla/Firefox/Releases/110
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 110 that will affect developers. Firefox 110 was released on February 14, 2023.
 
@@ -74,7 +74,3 @@ No notable changes.
 
 - Added the `"webRequestFilterResponse"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). This permission provides access to {{WebExtAPIRef("webRequest.filterResponseData")}}. This permission can be provided as an optional permission. See {{WebExtAPIRef("webRequest.filterResponseData")}} for more information on using this permission ([Firefox bug 1809235](https://bugzil.la/1809235)).
 - The `defaultZoomFactor` property of {{WebExtAPIRef("tabs.ZoomSettings")}} now returns the value of the default zoom factor setting ([Firefox bug 1772166](https://bugzil.la/1772166))
-
-## Older versions
-
-{{Firefox_for_developers}}
