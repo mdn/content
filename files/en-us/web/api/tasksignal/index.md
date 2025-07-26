@@ -30,7 +30,7 @@ _The `TaskSignal` interface also inherits properties from its parent interface, 
 
 _The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
 
-- {{domxref("TaskSignal/any_static", "TaskSignal.any()")}} {{experimental_inline}}
+- {{domxref("TaskSignal/any_static", "TaskSignal.any()")}}
   - : Returns an **`TaskSignal`** that aborts when any of the given abort signals abort.
 
 ## Instance methods

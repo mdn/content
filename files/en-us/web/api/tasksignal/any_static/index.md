@@ -3,12 +3,10 @@ title: "TaskSignal: any() static method"
 short-title: any()
 slug: Web/API/TaskSignal/any_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.TaskSignal.any_static
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskSignal.any()`** static method takes an iterable of {{domxref("AbortSignal")}} objects and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted.
 
