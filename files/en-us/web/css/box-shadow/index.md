@@ -61,19 +61,19 @@ The `box-shadow` property enables you to cast a drop shadow from the frame of al
 box-shadow: none;
 
 /* A color and two length values */
-/* <color> | <length> | <length> */
+/* <color> && <length> && <length> */
 box-shadow: red 60px -16px;
 
 /* Three length values and a color */
-/* <length> | <length> | <length> | <color> */
+/* <length> && <length> && <length> && <color> */
 box-shadow: 10px 5px 5px black;
 
 /* Four length values and a color */
-/* <length> | <length> | <length> | <length> | <color> */
+/* <length> && <length> && <length> && <length> && <color> */
 box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 
 /* inset, length values, and a color */
-/* <inset> | <length> | <length> | <color> */
+/* <inset> && <length> && <length> && <color> */
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
