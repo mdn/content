@@ -827,7 +827,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
 
 ## Creating and dispatching events
 
-In addition to the events fired by built-in interfaces, you can also create and dispatch DOM events yourself. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
+In addition to the events fired by built-in interfaces, you can create and dispatch DOM events yourself. Such events are commonly called _synthetic events_, as opposed to the events fired by the browser.
 
 ### Creating custom events
 
@@ -849,7 +849,7 @@ elem.addEventListener(
 elem.dispatchEvent(event);
 ```
 
-The above code example uses the [EventTarget.dispatchEvent()](/en-US/docs/Web/API/EventTarget/dispatchEvent) method.
+This code example uses the [EventTarget.dispatchEvent()](/en-US/docs/Web/API/EventTarget/dispatchEvent) method.
 
 ### Adding custom data – CustomEvent()
 
@@ -887,7 +887,7 @@ class BuildEvent extends Event {
 }
 ```
 
-The above code example defines a `BuildEvent` class with a read-only property, and a fixed event type.
+This code example defines a `BuildEvent` class with a read-only property and a fixed event type.
 
 The event could then be created as follows:
 
@@ -905,7 +905,7 @@ function eventHandler(e) {
 
 ### Event bubbling
 
-It is often desirable to trigger an event from a child element, and have an ancestor catch it; optionally, with data:
+It is often desirable to trigger an event from a child element and have an ancestor catch it; optionally, you can include data with the event:
 
 ```html
 <form>
@@ -926,7 +926,7 @@ const eventAwesome = new CustomEvent("awesome", {
 // The form element listens for the custom "awesome" event and then consoles the output of the passed text() method
 form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
-// As the user types, the textarea inside the form dispatches/triggers the event to fire, and uses itself as the starting point
+// As the user types, the textarea inside the form dispatches/triggers the event to fire, using itself as the starting point
 textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
 ```
 
@@ -984,18 +984,18 @@ function simulateClick() {
 
 ## Registering event handlers
 
-There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding _onevent_ property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#interfaces_based_on_event)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
+There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered either by assigning it to the target element's corresponding _onevent_ property or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case, the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#interfaces_based_on_event)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
 
 > [!WARNING]
-> A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see [Inline event handlers](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these).
+> A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information, see [Inline event handlers](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these).
 
 ### Using onevent properties
 
-By convention, JavaScript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
+By convention, JavaScript objects that fire events have corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
 
-To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
+To set event handler code, you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed, the handler can be replaced by assigning another function to the same property.
 
-Below we show how to set a `greet()` function for the `click` event using the `onclick` property.
+The following example shows how to set a `greet()` function for the `click` event using the `onclick` property.
 
 ```js
 const btn = document.querySelector("button");
@@ -1011,12 +1011,12 @@ Note that an object representing the event is passed as the first argument to th
 
 ### EventTarget.addEventListener
 
-The most flexible way to set an event handler on an element is to use the {{domxref("EventTarget.addEventListener")}} method. This approach allows multiple listeners to be assigned to an element, and for listeners to be _removed_ if needed (using {{domxref("EventTarget.removeEventListener")}}).
+The most flexible way to set an event handler on an element is to use the {{domxref("EventTarget.addEventListener")}} method. This approach allows multiple listeners to be assigned to an element and enables listeners to be _removed_, if needed, using {{domxref("EventTarget.removeEventListener")}}.
 
 > [!NOTE]
-> The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.
+> The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs, cleaning up old/unused event handlers can improve efficiency.
 
-Below we show how a `greet()` function can be set as a listener/event handler for the `click` event (you could use an anonymous function expression instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
+The following example shows how a `greet()` function can be set as a listener/event handler for the `click` event (you could use an anonymous function expression instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
 
 ```js
 const btn = document.querySelector("button");
@@ -1030,7 +1030,7 @@ btn.addEventListener("click", greet);
 
 The method can also take additional arguments/options to control aspects of how the events are captured and removed. More information can be found on the {{domxref("EventTarget.addEventListener")}} reference page.
 
-#### Using an Abort Signal
+#### Using AbortSignal
 
 A notable event listener feature is the ability to use an abort signal to clean up multiple event handlers at the same time.
 
@@ -1048,7 +1048,7 @@ btn.addEventListener(
 ); // pass an AbortSignal to this handler
 ```
 
-Then the event handler created by the code above can be removed like this:
+This event handler can then be removed like this:
 
 ```js
 controller.abort(); // removes any/all event handlers associated with this controller
@@ -1057,3 +1057,8 @@ controller.abort(); // removes any/all event handlers associated with this contr
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
+- [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)

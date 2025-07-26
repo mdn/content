@@ -139,7 +139,7 @@ Note that all event interfaces have names which end in "Event".
 
 ## See also
 
-- Types of events available: [Event reference](/en-US/docs/Web/API/Document_Object_Model/Events)
+- [Event index](/en-US/docs/Web/API/Document_Object_Model/Events#event_index)
 - [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - [Learn: Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
 - [Creating and triggering custom events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)

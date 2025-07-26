@@ -428,8 +428,8 @@ Next up, you'll find a challenge that will test your understanding of the last f
 
 - [domevents.dev](https://domevents.dev/)
   - : A useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.
-- [Event reference](/en-US/docs/Web/API/Document_Object_Model/Events)
-  - : The main MDN event reference.
+- [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events)
+  - : A comprehensive guide for understanding and handling events.
 - [Event order](https://www.quirksmode.org/js/events_order.html)
   - : An excellently detailed discussion of capturing and bubbling by Peter-Paul Koch.
 
