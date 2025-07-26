@@ -6,6 +6,8 @@ page-type: web-api-instance-method
 browser-compat: api.CaretPosition.getClientRect
 ---
 
+{{APIRef("CSSOM")}}
+
 The `getClientRect()` method of the {{domxref("CaretPosition")}} interface returns the client rectangle for the caret range.
 
 ## Syntax
@@ -27,10 +29,16 @@ A {{domxref("DOMRect")}} object.
 ### Get the caret's screen position
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
+```
+
+```css
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 ```
 
 ```js
