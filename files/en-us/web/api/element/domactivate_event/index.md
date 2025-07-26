@@ -51,7 +51,7 @@ button.addEventListener("DOMActivate", (event) => {
 
 ### Result
 
-Try making rapid, repeated clicks on the button to increase the click count. If you take a break between clicks, the count will reset.
+Note that `detail` of the `DOMActivate` event may have browser-specific behavior. It may either always be `0`, or have similar behavior as the {{domxref("Element/click_event", "click")}} event's `detail` (i.e., indicating the current click count).
 
 {{EmbedLiveSample("Examples")}}
 
