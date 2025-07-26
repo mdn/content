@@ -249,7 +249,7 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-See our [HolySpaceCow](https://mdn.github.io/webaudio-examples/holy-space-cow) example for an applied (but very, very silly) example.
+See our [HolySpaceCow](https://mdn.github.io/webaudio-examples/holy-space-cow/) example for an applied (but very, very silly) example.
 
 ### Spatial audio
 

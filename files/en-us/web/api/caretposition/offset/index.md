@@ -6,6 +6,8 @@ page-type: web-api-instance-property
 browser-compat: api.CaretPosition.offset
 ---
 
+{{APIRef("CSSOM")}}
+
 The **`offset`** property of the {{domxref("CaretPosition")}} interface returns an integer representing the offset of the selection in the caret position node.
 
 This will be the character offset in a text node or the selected child node's index in an element node.
@@ -19,10 +21,16 @@ An integer.
 This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
+```
+
+```css
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 ```
 
 ```js

@@ -59,7 +59,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## ConvolverNode Example
 
-The following example shows basic usage of an AudioContext to create a convolver node. You will need to find an impulse response to complete the example below. See our [HolySpaceCow](https://mdn.github.io/webaudio-examples/holy-space-cow) example for a complete, applied example.
+The following example shows basic usage of an AudioContext to create a convolver node. You will need to find an impulse response to complete the example below. See our [HolySpaceCow](https://mdn.github.io/webaudio-examples/holy-space-cow/) example for a complete, applied example.
 
 ```js
 let audioCtx = new window.AudioContext();
