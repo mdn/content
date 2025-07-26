@@ -28,11 +28,27 @@ The translated string.
 
 ## Description
 
+For every character in `string`, if `abc` contains that character, it is replaced with the character at the same index in `XYZ`. If `abc` does not contain that character, it is kept as-is.
+
+- If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
+- If `XYZ` contains more characters than `abc`, the extra characters are ignored.
+- If a character appears multiple times in `abc`, then the first occurrence determines the replacement character.
+
+Note that these cases should be avoided. `translate()` is not a regexp or string replacement function. It is a character-by-character substitution function.
+
+```xml example-bad
+<xsl:value-of select="translate('The quick brown fox', 'brown', 'red')" />
+```
+
+This does not output `The quick red fox` as you might expect, but rather `The quick red fdx`.
+
+## Examples
+
+### Using `translate()` for case conversion
+
 XPath notes that the translate function is not a sufficient solution for case conversion in all languages. A future version of XPath may provide additional functions for case conversion.
 
 However, this is the closest we have at present to a function that can convert a string to uppercase or lowercase.
-
-Example
 
 ```xml
 <xsl:value-of select="translate('The quick brown fox.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
@@ -43,22 +59,6 @@ Output
 ```plain
 THE QUICK BROWN FOX.
 ```
-
-- If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
-
-Example
-
-```xml
-<xsl:value-of select="translate('The quick brown fox.', 'brown', 'red')" />
-```
-
-Output
-
-```plain
-The quick red fdx.
-```
-
-- If `XYZ` contains more characters than `abc`, the extra characters are ignored.
 
 ## Specifications
 
