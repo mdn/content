@@ -23,7 +23,7 @@ function update() {
 }
 ```
 
-The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs — `ballHitBrick`. Create this new function as the last method of the `Example` class, just before the closing brace `}`, as follows:
+The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs — `hitBrick`. Create this new function as the last method of the `Example` class, just before the closing brace `}`, as follows:
 
 ```js
 hitBrick (ball, brick) {
