@@ -21,7 +21,7 @@ Implementing a settings page is a three-step process:
 
 First, we'll write an extension that adds a blue border to every page the user visits.
 
-Create a new directory called `settings`, then create a file called `manifest.json` inside it with the following contents:
+Create a directory called `settings`, then a file called `manifest.json` inside it with this content:
 
 ```json
 {
@@ -40,7 +40,7 @@ Create a new directory called `settings`, then create a file called `manifest.js
 
 This extension instructs the browser to load a content script called "borderify.js" into all web pages the user visits.
 
-Next, create a file called `borderify.js` inside the `settings` directory, and give it these contents:
+Next, create a file called `borderify.js` inside the `settings` directory, and give it this content:
 
 ```js
 document.body.style.border = "10px solid blue";
@@ -77,7 +77,7 @@ First, update `manifest.json` so it has these contents:
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "addon@example.com"
+      "id": "@addonexample"
     }
   }
 }
