@@ -51,6 +51,8 @@ sidebar:
         title: Guide_Typed_arrays
       - link: /Web/JavaScript/Guide/Iterators_and_generators
         title: Guide_Iterators_generators
+      - link: /Web/JavaScript/Guide/Resource_management
+        title: Guide_Resource_management
       - link: /Web/JavaScript/Guide/Internationalization
         title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Modules
@@ -167,6 +169,7 @@ l10n:
     Guide_Promises: Verwendung von Promises
     Guide_Typed_arrays: Typisierte Arrays in JavaScript
     Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalisierung
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
@@ -220,6 +223,7 @@ l10n:
     Guide_Promises: Using promises
     Guide_Typed_arrays: JavaScript typed arrays
     Guide_Iterators_generators: Iterators and generators
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
@@ -273,6 +277,7 @@ l10n:
     Guide_Promises: Использование промисов
     Guide_Typed_arrays: Типизированные массивы JavaScript
     Guide_Iterators_generators: Итераторы и генераторы
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Метапрограммирование
     Guide_Modules: Модули JavaScript
@@ -320,6 +325,7 @@ l10n:
     Guide_Promises: Utiliser les promesses
     Guide_Typed_arrays: Tableaux typés en JavaScript
     Guide_Iterators_generators: Itérateurs et générateurs
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
@@ -367,6 +373,7 @@ l10n:
     Guide_Promises: 使用 Promise
     Guide_Typed_arrays: JavaScript 类型化数组
     Guide_Iterators_generators: 迭代器和生成器
+    Guide_Resource_management: 资源管理
     Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
@@ -414,6 +421,7 @@ l10n:
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
@@ -461,6 +469,7 @@ l10n:
     Guide_Promises: promise 사용하기
     Guide_Typed_arrays: JavaScript 형식화 배열
     Guide_Iterators_generators: 반복기와 생성기
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: 메타 프로그래밍
     Guide_Modules: JavaScript 모듈
@@ -508,6 +517,7 @@ l10n:
     Guide_Promises: Usando "promises"
     Guide_Typed_arrays: Arranjos tipados em JavaScript
     Guide_Iterators_generators: Iteradores e geradores
+    Guide_Resource_management: Resource management
     Guide_Internationalization: Internationalization
     Guide_Meta: Metaprogramação
     Guide_Modules: JavaScript modules
