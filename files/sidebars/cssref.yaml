@@ -348,6 +348,7 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:
     Beginners: Einsteiger-Tutorials
