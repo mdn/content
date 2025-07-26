@@ -8,6 +8,69 @@ sidebar: cssref
 
 The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
+{{InteractiveExample("CSS Demo: cos()")}}
+
+<pre>transform:
+  translateX(calc(cos(var(--angle, 0deg)) * var(--radius, 100px)))
+  translateY(calc(sin(var(--angle, 0deg)) * var(--radius, 100px) * -1))
+;</pre>
+
+```css interactive-example-choice
+--angle: 0deg;
+```
+
+```css interactive-example-choice
+--angle: 90deg;
+```
+
+```css interactive-example-choice
+--angle: 135deg;
+```
+
+```css interactive-example-choice
+--angle: 180deg;
+```
+
+```css interactive-example-choice
+--angle: -45deg;
+```
+
+```html interactive-example
+<div class="circle" id="example-element">
+  <span class="dot"></span>
+</div>
+```
+
+```css interactive-example
+:root {
+  --radius: 140px;
+  --dotsize: 10px;
+  --angle: 0deg;
+}
+.circle {
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  width: calc(var(--radius) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666;
+  background-image:
+    radial-gradient(black var(--dotsize), transparent var(--dotsize)),
+    linear-gradient(135deg, #0000ff, #00c9ff, #92fe9d, #e6e6fa, #f0fff0);
+}
+.dot {
+  display: block;
+  width: var(--dotsize);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666;
+  background-color: #f66;
+  transform: translateX(calc(cos(var(--angle)) * var(--radius)))
+    translateY(calc(sin(var(--angle)) * var(--radius) * -1));
+}
+```
+
 ## Syntax
 
 ```css
