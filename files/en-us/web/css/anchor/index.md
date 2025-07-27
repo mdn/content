@@ -6,8 +6,6 @@ browser-compat: css.types.anchor
 sidebar: cssref
 ---
 
-
-
 The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used within an **anchor-positioned** element's [inset property](#properties_that_accept_anchor_function_values) values, returning a length value relative to the position of the edges of its associated anchor element.
 
 ## Syntax
