@@ -137,7 +137,7 @@ The `&` nesting selector can be placed multiple times:
 
 ### Cannot represent pseudo-elements
 
-The `&` selector is equivalent to the {{cssxref(":is", ":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements. This is a current limitation that may be addressed in the future.
+The `&` selector is equivalent to the {{cssxref(":is", ":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
 
 For example, with the following style rule, no generated content will be styled red, even when nested in `<div class="important">`, because `.important :is(.foo::before)` cannot match anything.
 
