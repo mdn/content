@@ -14,9 +14,9 @@ Every CSS property's value comes from the declaration that wins the {{cssxref("C
 
 Each property value comes from a single property name-value pair; a single value is applied from each property. Even if the value is a comma separated list of values, that list of values came from a single declaration.
 
-To determine which [declared value](#declared-value) is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
+To determine which [declared value](#declared_value) is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
 
-The {{cssxref("Cascade")}} determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [declared value](#declared-value) from the origin with the highest precedence gets applied, even if a selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
+The {{cssxref("Cascade")}} determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [declared value](#declared_value) from the origin with the highest precedence gets applied, even if a selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
 
 Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed_value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial_value) for that element.
 
@@ -44,7 +44,7 @@ p {
 }
 ```
 
-As a result of filtering, each element has zero or more [**declared values**](#declared-value) for each property. These declared values are the starting point for the next processing stages; [Cascading](#cascading).
+As a result of filtering, each element has zero or more [**declared values**](#declared_value) for each property. These declared values are the starting point for the next processing stages; [Cascading](#cascading).
 
 ### Cascading
 
@@ -62,7 +62,7 @@ p.large {
 } /* Author origin, specificity: 0,1,1 - wins! */
 ```
 
-After cascading, the browser determines the [**cascaded value**](#cascaded-value) for each property on each element. This value is the one that will be used in the next processing stage; [Defaulting](#defaulting).
+After cascading, the browser determines the [**cascaded value**](#cascaded_value) for each property on each element. This value is the one that will be used in the next processing stage; [Defaulting](#defaulting).
 
 ### Defaulting
 
@@ -80,13 +80,13 @@ All elements that are part of the document's flattened element tree have declare
 
 The value processing stages are:
 
-- [Declared value](#declared-value)
-- [Cascaded value](#cascaded-value)
-- [Specified value](#specified-value)
-- [Computed value](#computed-value)
-- [Used value](#used-value)
+- [Declared value](#declared_value)
+- [Cascaded value](#cascaded_value)
+- [Specified value](#specified_value)
+- [Computed value](#computed_value)
+- [Used value](#used_value)
 
-These values are used to determine the final [rendered value](#rendered-values).
+These values are used to determine the final [rendered value](#rendered_values).
 
 ### Declared value
 
@@ -128,18 +128,18 @@ If there are no declared values for a property, there is no cascaded value, whic
 
 The **specified value** is the result of the [defaulting](#defaulting) process. It is guaranteed to exist for every property on every element. The specified value is determined as follows:
 
-1. If there is a [cascaded value](#cascaded-value), it becomes the specified value.
-2. If there is _no_ [cascaded value](#cascaded-value) and the property is inherited, the specified value is the [computed value](#computed-value) of the parent element.
-3. If there is _no_ [cascaded value](#cascaded-value) and the property is _not_ inherited, the specified value is the property's [initial value](#initial-value).
+1. If there is a [cascaded value](#cascaded_value), it becomes the specified value.
+2. If there is _no_ [cascaded value](#cascaded_value) and the property is inherited, the specified value is the [computed value](#computed_value) of the parent element.
+3. If there is _no_ [cascaded value](#cascaded_value) and the property is _not_ inherited, the specified value is the property's [initial value](#initial_value).
 
-In our example, since we have a [cascaded value](#cascaded-value) of `1.25em`, this becomes the specified value:
+In our example, since we have a [cascaded value](#cascaded_value) of `1.25em`, this becomes the specified value:
 
 ```css
 /* Result of defaulting - Specified Value */
 font-size: 2em;
 ```
 
-For properties without [cascaded values](#cascaded-value), the [defaulting](#defaulting) process fills in the gaps:
+For properties without [cascaded values](#cascaded_value), the [defaulting](#defaulting) process fills in the gaps:
 
 ```css
 /* Example of inherited property */
@@ -266,7 +266,7 @@ The **resolved value** of a property is the value after applying active styleshe
 
 Historically, `getComputedStyle()` returned the computed value of an element or pseudo-element. As CSS evolved, so did the concept of "computed value", but the values returned by `getComputedStyle()` had to remain the same for backward compatibility with deployed scripts. These values are the "resolved values".
 
-For most properties, the resolved value is the computed value, but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is the used value. The [CSSOM specification](https://drafts.csswg.org/cssom/#resolved-values) provides per-property details.
+For most properties, the resolved value is the computed value, but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is the used value. The [CSSOM specification](https://drafts.csswg.org/cssom/#resolved_values) provides per-property details.
 
 CSS 2.0 defined _computed value_ as the last step in a property's calculation. CSS 2.1 introduced the distinct definition of "used value". An element could then explicitly inherit the width/height of its parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following list contains the CSS 2.1 properties that _do_ depend on layout, and therefore have a different computed value and used value (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q21.36)):
 
