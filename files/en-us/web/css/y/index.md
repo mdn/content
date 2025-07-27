@@ -6,7 +6,7 @@ browser-compat: css.properties.y
 sidebar: cssref
 ---
 
-The **`y`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport and nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("y")}} attribute.
+The **`y`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport and nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/API/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("y")}} attribute.
 
 > [!NOTE]
 > The `y` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, and {{SVGElement("svg")}} elements nested in an `<svg>`. It has no effect on outermost `<svg>` elements and does not apply to other SVG elements nor to HTML elements or pseudo-elements.
