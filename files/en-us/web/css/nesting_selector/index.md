@@ -91,7 +91,7 @@ With the `&` nesting selector added with no whitespace, the elements matched by 
 }
 ```
 
-## Appending the `&` nesting selector
+### Appending the `&` nesting selector
 
 The `&` nesting selector can also be appended to reverse the context of the rules.
 
@@ -132,6 +132,34 @@ The `&` nesting selector can be placed multiple times:
 
 .featured .card .card .card {
   /* .featured .card .card .card styles */
+}
+```
+
+### Cannot represent pseudo-elements
+
+The `&` selector is equivalent to the {{cssxref(":is", ":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements. This is a current limitation that may be addressed in the future.
+
+For example, with the following style rule, no generated content will be styled red, even when nested in `<div class="important">`, because `.important :is(.foo::before)` cannot match anything.
+
+```css
+.foo::before {
+  content: "Hello";
+
+  .important & {
+    color: red;
+  }
+}
+```
+
+This limitation also applies to [nested at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules), whose properties are implicitly wrapped in an `&` selector. For example, with the following rule, no generated content will be styled red, even on a small screen, because the `color: red` property is implicitly wrapped in an `&` selector, which in this case is `:is(.foo::before)`.
+
+```css
+.foo::before {
+  content: "Hello";
+
+  @media (width < 600px) {
+    color: red;
+  }
 }
 ```
 
