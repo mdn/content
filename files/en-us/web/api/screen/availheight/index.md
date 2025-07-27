@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Screen.availHeight
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view")}}
 
 The read-only {{DOMxRef("Screen")}} interface's
 **`availHeight`** property returns the height, in CSS pixels, of
