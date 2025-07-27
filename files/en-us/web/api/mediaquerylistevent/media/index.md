@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaQueryListEvent.media
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view")}}
 
 The **`media`** read-only property of the
 {{DOMxRef("MediaQueryListEvent")}} interface is a string representing

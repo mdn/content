@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CaretPosition.offset
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view")}}
 
 The **`offset`** property of the {{domxref("CaretPosition")}} interface returns an integer representing the offset of the selection in the caret position node.
 

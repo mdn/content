@@ -353,6 +353,19 @@
         "Window: resize"
       ]
     },
+    "CSSOM view": {
+      "overview": ["CSSOM view"],
+      "interfaces": [
+        "CaretPosition",
+        "MediaQueryList",
+        "MediaQueryListEvent",
+        "Screen",
+        "VisualViewport"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Device Memory API": {
       "overview": ["Device Memory API"],
       "guides": [],
@@ -1856,13 +1869,6 @@
         "HTMLElement.virtualKeyboardPolicy",
         "Navigator.virtualKeyboard"
       ],
-      "events": []
-    },
-    "Visual Viewport": {
-      "overview": ["Visual Viewport API"],
-      "interfaces": ["VisualViewport"],
-      "methods": [],
-      "properties": ["Window.visualViewport"],
       "events": []
     },
     "Web Animations": {

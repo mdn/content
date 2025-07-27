@@ -185,11 +185,6 @@ sidebar:
       - /Web/CSS/CSS_containment/Container_queries
       - /Web/CSS/CSS_containment/Using_CSS_containment
       - /Web/CSS/CSS_containment/Container_size_and_style_queries
-  - title: CSSOM_view
-    details: closed
-    children:
-      - /Web/CSS/CSSOM_view/Coordinate_systems
-      - /Web/CSS/CSSOM_view/Viewport_concepts
   - title: Display
     details: closed
     children:
@@ -374,7 +369,6 @@ l10n:
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
     Containment: Containment
-    CSSOM_view: CSSOM-Ansicht
     Display: Display
     Flexbox: Flexbox
     Fonts: Schriftarten
@@ -420,7 +414,6 @@ l10n:
     Conditional_rules: Conditional rules
     Containment: Containment
     Custom_properties: Custom properties
-    CSSOM_view: CSSOM view
     Display: Display
     Filter_effects: Filter effects
     Flexbox: Flexbox
@@ -452,7 +445,6 @@ l10n:
     Box_model: Modèle de boîte
     Columns: Colonnes
     Conditional_rules: Règles conditionnelles
-    CSSOM_view: Vue CSSOM
     Flexbox: Boîtes flexibles
     Display: Mis en page
     Fonts: Polices
@@ -493,7 +485,6 @@ l10n:
     Conditional_rules: 条件付きルール
     Containment: コンテナー
     Custom_properties: カスタムプロパティ
-    CSSOM_view: CSSOM view
     Display: 表示方法
     Filter_effects: フィルター効果
     Flexbox: フレックスボックス
@@ -534,7 +525,6 @@ l10n:
     Box_model: 박스 모델
     Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
-    CSSOM_view: CSSOM view
     Display: 플로 레이아웃
     Flexbox: 플렉스박스
     Fonts: 글꼴
@@ -564,7 +554,6 @@ l10n:
     Box_model: Блочная модель
     Columns: Колонки
     Conditional_rules: Условные конструкции
-    CSSOM_view: CSSOM View
     Display: Потоковая раскладка
     Flexbox: Флексбокс
     Fonts: Шрифты
@@ -603,7 +592,6 @@ l10n:
     Columns: 多列
     Conditional_rules: 条件规则
     Custom_properties: 自定义属性
-    CSSOM_view: CSS 对象模型视图
     Display: 流式布局
     Filter_effects: 滤镜效果
     Flexbox: 弹性盒布局
