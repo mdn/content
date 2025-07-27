@@ -12,8 +12,8 @@ The **`formatToParts()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instan
 {{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts()")}}
 
 ```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
-const parts = rtf1.formatToParts(10, "seconds");
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf.formatToParts(10, "seconds");
 
 console.log(parts[0].value);
 // Expected output: "in "

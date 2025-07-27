@@ -141,7 +141,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 #### New components and functionality
 
-- [Supporting private browsing mode](https://web.archive.org/web/20191029190431/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)
+- [Supporting private browsing mode](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)
   - : Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities. Extensions may support private browsing following the guidelines offered by this article.
 - [Security changes in Firefox 3.5](/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes)
   - : This article covers security-related changes in Firefox 3.5.

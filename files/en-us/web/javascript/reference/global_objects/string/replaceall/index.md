@@ -54,6 +54,8 @@ This method does not mutate the string value it's called on. It returns a new st
 
 Unlike [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), this method replaces all occurrences of a string, not just the first one. While it is also possible to use `replace()` with a global regex dynamically constructed with [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) to replace all instances of a string, this can have unintended consequences if the string contains special characters that have meaning in regular expressions (which might happen if the replacement string comes from user input). While you can mitigate this case using {{jsxref("RegExp.escape()")}} to make the regular expression string into a literal pattern, it is simpler to pass the string to `replaceAll()` directly, without converting it to a regex.
 
+<!-- cSpell:ignore acke -->
+
 ```js
 function unsafeRedactName(text, name) {
   return text.replace(new RegExp(name, "g"), "[REDACTED]");

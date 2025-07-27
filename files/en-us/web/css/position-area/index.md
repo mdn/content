@@ -69,7 +69,7 @@ The property value is two `<position-area>` keyterms, or the keyword `none`. If 
 
 The `position-area` property provides an alternative to the `anchor()` function for positioning elements relative to anchors. `position-area` works on the concept of a 3x3 grid of tiles, called the **position-area grid**, with the anchor element being the center tile:
 
-![The position-area grid, as described below](position-area.png)
+![The position-area grid, as described below](/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg)
 
 The grid tiles are broken up into rows and columns:
 

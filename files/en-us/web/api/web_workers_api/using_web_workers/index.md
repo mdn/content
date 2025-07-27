@@ -342,7 +342,7 @@ worker.onmessage = (event) => {
       event.data.queryMethodArguments,
     );
   } else {
-    this.defaultListener.call(this, event.data);
+    this.defaultListener(event.data);
   }
 };
 ```
@@ -477,7 +477,7 @@ function QueryableWorker(url, defaultListener, onError) {
         event.data.queryMethodArguments,
       );
     } else {
-      this.defaultListener.call(this, event.data);
+      this.defaultListener(event.data);
     }
   };
 }
@@ -689,12 +689,11 @@ The worker sets the property `onmessage` to a function which will receive messag
 ```html
 <form>
   <div>
-    <label for="number"
-      >Enter a number that is a zero-based index position in the fibonacci
+    <label for="number">
+      Enter a number that is a zero-based index position in the fibonacci
       sequence to see what number is in that position. For example, enter 6 and
-      you'll get a result of 8 — the fibonacci number at index position 6 is
-      8.</label
-    >
+      you'll get a result of 8 — the fibonacci number at index position 6 is 8.
+    </label>
     <input type="number" id="number" />
   </div>
   <div>
