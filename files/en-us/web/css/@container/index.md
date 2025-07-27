@@ -127,7 +127,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -142,28 +142,22 @@ The `<container-condition>` can include one or more boolean size queries, each w
 ```
 
 - `aspect-ratio`
-  - : The ratio of the container's **content box** width to its **content box** height, expressed as a {{cssxref("ratio")}} value.  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The {{cssxref("aspect-ratio")}} of the container calculated as the width to the height of the container expressed as a {{cssxref("ratio")}} value.
 
 - `block-size`
-  - : The size of the container's **content box** in the block dimension, expressed as a {{cssxref("length")}} value.  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The {{cssxref("block-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `height`
-  - : The height of the container's **content box**, expressed as a {{cssxref("length")}} value.  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The height of the container expressed as a {{cssxref("length")}} value.
 
 - `inline-size`
-  - : The size of the container's **content box** in the inline dimension, expressed as a {{cssxref("length")}} value.  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The {{cssxref("inline-size")}} of the container expressed as a {{cssxref("length")}} value.
 
 - `orientation`
-  - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container's **content box**, either `landscape` (width > height) or `portrait` (height > width).  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The [orientation](/en-US/docs/Web/CSS/@media/orientation) of the container, either `landscape` or `portrait`.
 
 - `width`
-  - : The width of the container's **content box**, expressed as a {{cssxref("length")}} value.  
-     **Always measures the content box**, ignoring `box-sizing`.
+  - : The width of the container expressed as a {{cssxref("length")}} value.
 
 #### Scroll-state container descriptors
 
