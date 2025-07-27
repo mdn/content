@@ -14,10 +14,10 @@ object.
 {{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
 
 ```js interactive-example
-const prototype1 = {};
-const object1 = Object.create(prototype1);
+const prototype = {};
+const object = Object.create(prototype);
 
-console.log(Object.getPrototypeOf(object1) === prototype1);
+console.log(Object.getPrototypeOf(object) === prototype);
 // Expected output: true
 ```
 

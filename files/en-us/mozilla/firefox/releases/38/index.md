@@ -139,7 +139,7 @@ _No change._
 
 #### Downloads.jsm
 
-- [`DownloadTarget`](/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
+- [`DownloadTarget`](https://web.archive.org/web/20210623121639/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
 
 ### XPCOM
 

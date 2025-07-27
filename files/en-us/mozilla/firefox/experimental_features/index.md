@@ -458,17 +458,22 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
+From version 142 this is enabled in on Windows in all contexts except service workers.
+For other platforms it is enabled in nightly.
+See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 113           | Yes                 |
-| Developer Edition | 73            | No                  |
-| Beta              | 73            | No                  |
-| Release           | 73            | No                  |
+| Release channel   | Version added | Enabled by default?                                |
+| ----------------- | ------------- | -------------------------------------------------- |
+| Nightly           | 141           | Yes                                                |
+| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
+| Beta              | 141           | No (Yes on Windows, not including service workers) |
+| Release           | 141           | No (Yes on Windows, not including service workers) |
 
 - `dom.webgpu.enabled`
-  - : Set to `true` to enable.
+  - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
+- `dom.webgpu.service-workers.enabled`
+  - : Set to `true` to enable (enabled in Nightly)
 
 ### Reporting API support for CSP Violations
 
@@ -561,28 +566,6 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 | Release           | 98              | No                  |
 
 - `dom.vr.enabled`
-  - : Set to `true` to enable.
-
-### HTML DOM API
-
-#### Selections crossing shadow DOM boundary
-
-The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
-Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
-Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
-The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
-
-User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
-([Firefox bug 1867058](https://bugzil.la/1867058)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `dom.shadowdom.selection_across_boundary.enabled`
   - : Set to `true` to enable.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks

@@ -106,8 +106,8 @@ _No change._
 
 #### Highlights
 
-- New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
-- [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
+- New API: [dev/panel](https://web.archive.org/web/20210517043357/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
+- [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm) beta released.
 - `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
 - Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#manipulating_a_tabs_css).
 

@@ -147,7 +147,7 @@ canvas {
 <pre id="metadata-info"></pre>
 ```
 
-{{embedlivesample("", , "540")}}
+{{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
 
 ## Specifications
 

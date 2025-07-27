@@ -197,21 +197,21 @@ Try updating both lines like this, then save and refresh — the game should now
 
 There are other common errors you'll come across in your code. This section highlights most of them.
 
-### The program always says you've won, regardless of the guess you enter
+### The game is over after the first wrong guess
 
 This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside `checkGuess()`:
 
 ```js
-if (userGuess === randomNumber) {
+} else if (guessCount === 10) {
 ```
 
 to
 
 ```js
-if (userGuess = randomNumber) {
+} else if (guessCount = 10) {
 ```
 
-the test would always return `true`, causing the program to report that the game has been won. Be careful!
+the test would always return `true`, causing the program to `setGameOver()` after the first wrong guess. Be careful!
 
 ### SyntaxError: missing ) after argument list
 

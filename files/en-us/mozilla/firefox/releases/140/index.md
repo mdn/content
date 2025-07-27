@@ -1,8 +1,8 @@
 ---
 title: Firefox 140 for developers
-short-title: Firefox 140 (Stable)
+short-title: Firefox 140
 slug: Mozilla/Firefox/Releases/140
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 

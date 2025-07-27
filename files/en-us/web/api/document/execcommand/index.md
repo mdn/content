@@ -145,8 +145,6 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 ## Examples
 
-An example of [how to use execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
-
 ### Using insertText
 
 This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set.
@@ -229,5 +227,6 @@ function insertText(newText, selector) {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- MDN example: [execCommands supported in your browser](https://mdn.github.io/dom-examples/execcommand/)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}

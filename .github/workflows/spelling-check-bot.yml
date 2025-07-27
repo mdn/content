@@ -39,7 +39,16 @@ jobs:
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
+            echo "Log size is ${#output} characters"
             echo "$output"
+
+            # Trim output to avoid GraphQL 'Body is too long (maximum is 65536 characters)' error
+            maxLength=64000
+            if [ ${#output} -gt ${maxLength} ]; then
+              output=$(echo "$output" | head -c $maxLength)
+              output+=$'\n...\n\n> [!WARNING]\n> The report is too long to be posted in full. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
+            fi
+
             echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
             echo "$output" >> "$GITHUB_OUTPUT"
             echo "EOF" >> "$GITHUB_OUTPUT"
