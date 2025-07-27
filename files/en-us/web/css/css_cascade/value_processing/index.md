@@ -10,13 +10,13 @@ For every element in a document tree, the browser assigns a value to every CSS p
 
 ## Property values
 
-Every CSS property's value comes from the declaration that wins the {{cssxref("Cascade")}} algorithm. When multiple declarations provide different property values for the same element, the declaration that ranks highest in the [Cascade Sorting Order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) gets applied.
+Every CSS property's value comes from the declaration that wins the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) algorithm. When multiple declarations provide different property values for the same element, the declaration that ranks highest in the [cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) gets applied.
 
 Each property value comes from a single property name-value pair; a single value is applied from each property. Even if the value is a comma separated list of values, that list of values came from a single declaration.
 
 To determine which [declared value](#declared_value) is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
 
-The {{cssxref("Cascade")}} determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [declared value](#declared_value) from the origin with the highest precedence gets applied, even if a selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
+The [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [declared value](#declared_value) from the origin with the highest precedence gets applied, even if a selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
 
 Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed_value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial_value) for that element.
 
@@ -48,7 +48,7 @@ As a result of filtering, each element has zero or more [**declared values**](#d
 
 ### Cascading
 
-{{cssxref("Cascade")}} resolves conflicts when multiple declarations apply to the same property on the same element. {{cssxref("Cascade")}} sorts declarations using [the Cascade Sorting Order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
+[Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) resolves conflicts when multiple declarations apply to the same property on the same element. [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
 
 For example, if you have the following declarations for `<p class="large">CSS is fun!</p>`, the second declaration wins because it has higher specificity:
 
