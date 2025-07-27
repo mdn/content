@@ -33,19 +33,43 @@ A {{domxref("DOMRect")}} object.
   style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
 ```
 
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
 ```js
 document.querySelector("input").addEventListener("click", (event) => {
   const x = event.clientX;
   const y = event.clientY;
 
   const caret = document.caretPositionFromPoint?.(x, y);
-  if (!caret) return;
+  if (!caret) {
+    log("Not supported");
+    return;
+  }
 
   const rect = caret.getClientRect();
 
-  console.dir("Caret bounding rect:", rect);
-  console.log(`Caret is at (${rect.x.toFixed(2)}, ${rect.y.toFixed(2)})`);
+  log(`Caret bounding rect: ${JSON.stringify(rect)}`);
+  log(`Caret is at (${rect.x.toFixed(2)}, ${rect.y.toFixed(2)})`);
 });
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
 ```
 
 {{EmbedLiveSample("get_client_rect", "", 300)}}
