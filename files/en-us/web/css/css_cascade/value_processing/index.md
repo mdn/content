@@ -142,11 +142,11 @@ font-size: 2em;
 For properties without [cascaded values](#cascaded_value), the [defaulting](#defaulting) process fills in the gaps:
 
 ```css
-/* Example of inherited property */
-color: /* inherits from parent's computed value */
+/* Example of inherited property without cascaded value */
+color: inherit; /* if color is not specified, it inherits from parent's computed value as it's inherited property */
 
-/* Example of non-inherited property */
-margin: 0; /* uses initial value */
+/* Example of non-inherited property without cascaded value */
+margin: 0; /* margin uses initial value as it's non-inherited property */
 ```
 
 #### Initial value
