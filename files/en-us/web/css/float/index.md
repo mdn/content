@@ -120,6 +120,8 @@ The `float` property is specified as a single keyword, chosen from the list of v
 
 {{cssinfo}}
 
+**Note:** The `float` property has no effect when applied to elements with `display: none` or `display: contents`
+
 ## Formal syntax
 
 {{csssyntax}}
