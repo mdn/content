@@ -22,7 +22,9 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- No notable changes. -->
 
-<!-- #### Removals -->
+#### Removals
+
+- The {{HTMLElement('object')}} element no longer supports the deprecated `codebase` attribute. Use [`data`](/en-US/docs/Web/HTML/Reference/Elements/object#data) attribute instead. (See [Firefox bug 1973900](https://bugzil.la/1973900) for more details.)
 
 <!-- ### CSS -->
 
