@@ -24,6 +24,8 @@ A string.
 
 ## Examples
 
+The following examples show how the `origin` property is computed for a `blob:` URL, an `http:` URL, and one using a non-default port:
+
 ```js
 const url = new URL("blob:https://mozilla.org:443/");
 console.log(url.origin); // 'https://mozilla.org'
