@@ -8,7 +8,6 @@ sidebar: addonsidebar
 
 Retrieves the keys of all items in a storage area.
 
-
 ## Syntax
 
 ```js-nolint

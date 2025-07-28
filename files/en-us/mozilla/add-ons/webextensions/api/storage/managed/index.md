@@ -50,7 +50,6 @@ The `managed` object implements the methods defined on the {{WebExtAPIRef("stora
 - {{WebExtAPIRef("storage.StorageArea.getKeys()", "storage.managed.getKeys()")}}
   - : Retrieves the keys of all items in the storage area.
 
-
 ## Events
 
 The `managed` object implements the events defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
