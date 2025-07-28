@@ -6,6 +6,8 @@ page-type: web-api-instance-property
 browser-compat: api.CaretPosition.offsetNode
 ---
 
+{{APIRef("CSSOM")}}
+
 The **`offsetNode`** property of the {{domxref("CaretPosition")}} interface returns a {{domxref("Node")}} containing the found node at the caret's position.
 
 ## Value
