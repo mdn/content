@@ -11,32 +11,27 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 {{InteractiveExample("CSS Demo: sin()")}}
 
 ```css interactive-example-choice
-transform:
-  translateX(calc(cos(0deg) * var(--radius, 100px)))
+transform: translateX(calc(cos(0deg) * var(--radius, 100px)))
   translateY(calc(sin(0deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
-transform:
-  translateX(calc(cos(90deg) * var(--radius, 100px)))
+transform: translateX(calc(cos(90deg) * var(--radius, 100px)))
   translateY(calc(sin(90deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
-transform:
-  translateX(calc(cos(135deg) * var(--radius, 100px)))
+transform: translateX(calc(cos(135deg) * var(--radius, 100px)))
   translateY(calc(sin(135deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
-transform:
-  translateX(calc(cos(180deg) * var(--radius, 100px)))
+transform: translateX(calc(cos(180deg) * var(--radius, 100px)))
   translateY(calc(sin(180deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
-transform:
-  translateX(calc(cos(-45deg) * var(--radius, 100px)))
+transform: translateX(calc(cos(-45deg) * var(--radius, 100px)))
   translateY(calc(sin(-45deg) * var(--radius, 100px) * -1));
 ```
 
