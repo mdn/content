@@ -18,7 +18,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
 
 <!-- No notable changes. -->
 
