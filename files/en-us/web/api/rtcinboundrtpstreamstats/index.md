@@ -20,10 +20,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the total number of bytes that have been received so far for this media source.
 - {{domxref("RTCInboundRtpStreamStats.concealedSamples", "concealedSamples")}}
   - : A positive integer that indicates the number of samples that had to be concealed because they were in packets that were lost or arrived too late to be played out.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.concealmentEvents", "concealmentEvents")}}
   - : A positive integer that indicates the number of concealment events, where a single event is counted for all consecutive concealed samples following a non-concealed sample.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} that indicates the estimated playout time of this receiver's track.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}
@@ -54,9 +54,9 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration", "insertedSamplesForDeceleration")}}
   - : A positive integer that indicates the number of samples inserted to slow playout from the jitter buffer.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}
-  - : TBD.
+  - : A number indicating the the accumulated time that all audio samples and complete video frames have spent in the jitter buffer, in seconds.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}
@@ -83,16 +83,16 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration", "removedSamplesForAcceleration")}}
   - : A positive integer that indicates the number of samples removed from to speed up playout from the jitter buffer.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples", "silentConcealedSamples")}}
   - : A positive integer that indicates the number of silent concealed samples.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}
   - : A number that indicates the total time spent assembling successfully decoded video frames that were transported in multiple RTP packets, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy", "totalAudioEnergy")}}
   - : A number that represents the total audio energy of the received track over the lifetime of the stats object.
-     _Undefined for video streams._
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
