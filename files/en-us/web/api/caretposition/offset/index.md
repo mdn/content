@@ -69,7 +69,7 @@ function log(text) {
 }
 ```
 
-{{EmbedLiveSample("offset", "", 300)}}
+{{EmbedLiveSample("Examples", "", 300)}}
 
 ## Specifications
 
