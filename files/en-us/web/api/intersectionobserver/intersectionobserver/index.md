@@ -50,7 +50,7 @@ new IntersectionObserver(callback, options)
         viewport as the root, with no margin, and a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback).
     - `rootMargin`
       - : A string which specifies a set of offsets to add to the root's {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
-        or growing the root for calculation purposes.
+        or growing the root for calculation purposes. Each offset value can be only expressed in pixels (px) or a percentage (%).
         The syntax is approximately the same as that for the CSS {{cssxref("margin")}} property;
         see [The intersection root and root margin](/en-US/docs/Web/API/Intersection_Observer_API#the_intersection_root_and_root_margin) for more information on how the margin works and the syntax.
         The default is "0px 0px 0px 0px".
