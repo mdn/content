@@ -3,7 +3,6 @@ title: "RTCInboundRtpStreamStats: silentConcealedSamples property"
 short-title: silentConcealedSamples
 slug: Web/API/RTCInboundRtpStreamStats/silentConcealedSamples
 page-type: web-api-instance-property
-status:
 browser-compat: api.RTCStatsReport.type_inbound-rtp.silentConcealedSamples
 ---
 

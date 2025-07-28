@@ -3,7 +3,6 @@ title: "RTCInboundRtpStreamStats: concealmentEvents property"
 short-title: concealmentEvents
 slug: Web/API/RTCInboundRtpStreamStats/concealmentEvents
 page-type: web-api-instance-property
-status:
 browser-compat: api.RTCStatsReport.type_inbound-rtp.concealmentEvents
 ---
 
