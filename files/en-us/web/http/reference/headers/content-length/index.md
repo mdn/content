@@ -51,9 +51,9 @@ Content-Length: <length>
 In HTTP/1.1 either `Content-Length` or {{httpheader("Transfer-Encoding","Transfer-Encoding: chunked")}} can be used to indicate message size (`Content-Length` is ignored if `Transfer-Encoding: chunked` is set).
 At least one of these is required for persistent connections.
 Note that `Transfer-Encoding: chunked` allows the content to be sent out in parts as its size is calculated, which is recommended better when the message size is not known up front.
-    
 In HTTP/2 `Content-Length` is optional and redundant, because the content length may be inferred from DATA frames. It may still be included for backwards compatibility.
 Note that `Transfer-Encoding` should not be used in HTTP/2.
+
 ## Specifications
 
 {{Specifications}}
