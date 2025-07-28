@@ -45,6 +45,8 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 
 If you specify a number outside the expected range, the date information in the {{jsxref("Date")}} object is updated accordingly. For example, if the `Date` object holds June 1st, a `dateValue` of 40 changes the date to July 10th, while a `dateValue` of 0 changes the date to the last day of the previous month, May 31st.
 
+Because `setDate()` operates according to local time, crossing a Daylight Saving Time (DST) boundary may result in a different elapsed time than expected. For example, if setting the date crosses a spring-forward transition (losing an hour), the difference in milliseconds between the new and old date will be one hour less than the nominal day difference multiplied by 24 hours. Conversely, crossing a fall-back transition (gaining an hour) will result in an extra hour. If you need to adjust the date by a fixed amount of time, consider using {{jsxref("Date.prototype.setUTCDate()")}}. For more information on how local time can be ambiguous or have gaps due to DST, see [Ambiguity and gaps from local time to UTC time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time).
+
 ## Examples
 
 ### Using setDate()
