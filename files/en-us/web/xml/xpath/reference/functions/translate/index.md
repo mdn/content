@@ -30,7 +30,7 @@ The translated string.
 
 For every character in `string`, if `abc` contains that character, it is replaced with the character at the same index in `XYZ`. If `abc` does not contain that character, it is kept as-is.
 
-- If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
+- If `abc` is longer than `XYZ`, then the extra characters at the end of `abc` are mapped to the empty string (i.e., they are removed from the source string).
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.
 - If a character appears multiple times in `abc`, then the first occurrence determines the replacement character.
 
