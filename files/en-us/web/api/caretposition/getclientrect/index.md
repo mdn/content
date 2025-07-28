@@ -76,7 +76,7 @@ function log(text) {
 }
 ```
 
-{{EmbedLiveSample("get_client_rect", "", 300)}}
+{{EmbedLiveSample("Get the caret's screen position", "", 300)}}
 
 ## Specifications
 
