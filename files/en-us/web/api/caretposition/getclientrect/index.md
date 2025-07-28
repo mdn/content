@@ -27,10 +27,7 @@ A {{domxref("DOMRect")}} object.
 ### Get the caret's screen position
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
 ```
 
 ```html hidden
@@ -38,6 +35,13 @@ A {{domxref("DOMRect")}} object.
 ```
 
 ```css hidden
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
 #log {
   height: 200px;
   overflow: scroll;

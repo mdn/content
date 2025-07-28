@@ -19,10 +19,7 @@ An integer.
 This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
 ```
 
 ```html hidden
@@ -30,6 +27,13 @@ This example logs the `offsetNode` and `offset` of the caret position when click
 ```
 
 ```css hidden
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
 #log {
   height: 200px;
   overflow: scroll;
