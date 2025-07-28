@@ -47,11 +47,11 @@ Content-Length: <length>
 
 The handling of `Content-Length` differs between HTTP versions:
 
-| Feature               | HTTP/1.1                         | HTTP/2                    |
-|-----------------------|----------------------------------|---------------------------|
-| Required              | Yes (for persistent connections) | Optional                  |
-| Primary purpose       | Frame body size                  | Backward compatibility    |
-| Alternatives          | `Transfer-Encoding`              | Inferred from DATA frames |
+| Feature         | HTTP/1.1                         | HTTP/2                    |
+| --------------- | -------------------------------- | ------------------------- |
+| Required        | Yes (for persistent connections) | Optional                  |
+| Primary purpose | Frame body size                  | Backward compatibility    |
+| Alternatives    | `Transfer-Encoding`              | Inferred from DATA frames |
 
 ## Specifications
 
