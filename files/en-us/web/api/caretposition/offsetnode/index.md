@@ -14,7 +14,7 @@ A {{domxref("Node")}}.
 
 ## Examples
 
-This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field
+This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field.
 
 ```html
 <input aria-label="text field" value="Click inside this input field" />
