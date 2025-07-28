@@ -6,6 +6,8 @@ page-type: web-api-instance-property
 browser-compat: api.CaretPosition.offsetNode
 ---
 
+{{APIRef("CSSOM")}}
+
 The **`offsetNode`** property of the {{domxref("CaretPosition")}} interface returns a {{domxref("Node")}} containing the found node at the caret's position.
 
 ## Value
@@ -17,10 +19,16 @@ A {{domxref("Node")}}.
 This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
+```
+
+```css
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 ```
 
 ```js
