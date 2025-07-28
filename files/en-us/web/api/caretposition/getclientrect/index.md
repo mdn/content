@@ -6,6 +6,8 @@ page-type: web-api-instance-method
 browser-compat: api.CaretPosition.getClientRect
 ---
 
+{{APIRef("CSSOM")}}
+
 The `getClientRect()` method of the {{domxref("CaretPosition")}} interface returns the client rectangle for the caret range.
 
 ## Syntax
