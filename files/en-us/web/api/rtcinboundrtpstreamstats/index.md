@@ -53,7 +53,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.headerBytesReceived", "headerBytesReceived")}}
   - : A positive integer that indicates the total number of RTP header and padding bytes received for this SSRC, including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration", "insertedSamplesForDeceleration")}}
-  - : TBD.
+  - : A positive integer that indicates the number of samples inserted to slow playout from the jitter buffer.
+     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
@@ -81,7 +82,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A string that identifies the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC.
     This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration", "removedSamplesForAcceleration")}}
-  - : TBD.
+  - : A positive integer that indicates the number of samples removed from to speed up playout from the jitter buffer.
+     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples", "silentConcealedSamples")}}
   - : A positive integer that indicates the number of silent concealed samples.
      _Undefined for video streams._

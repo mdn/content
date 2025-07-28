@@ -3,7 +3,6 @@ title: "RTCInboundRtpStreamStats: totalAudioEnergy property"
 short-title: totalAudioEnergy
 slug: Web/API/RTCInboundRtpStreamStats/totalAudioEnergy
 page-type: web-api-instance-property
-status:
 browser-compat: api.RTCStatsReport.type_inbound-rtp.totalAudioEnergy
 ---
 
