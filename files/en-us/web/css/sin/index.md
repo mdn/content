@@ -41,8 +41,8 @@ transform:
 ```
 
 ```html interactive-example
-<div class="circle" id="example-element">
-  <span class="dot"></span>
+<div class="circle">
+  <span class="dot" id="example-element"></span>
 </div>
 ```
 
