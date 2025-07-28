@@ -34,7 +34,7 @@ For every character in `string`, if `abc` contains that character, it is replace
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.
 - If a character appears multiple times in `abc`, then the first occurrence determines the replacement character.
 
-`translate()` is a character-by-character substitution function, not a regexp or string replacement function. The `abc` and `XYZ` strings represent _character ciphers_, not substrings. This means that if run into any of the cases above, you may be using the method incorrectly (except perhaps having a longer `abc` to remove certain characters).
+`translate()` is a character-by-character substitution function, not a regexp or string replacement function. The `abc` and `XYZ` strings represent _character ciphers_, not substrings. This means that if you run into any of the cases above, you may be using the method incorrectly (except perhaps having a longer `abc` to remove certain characters).
 
 A substitution like this will not output `The quick red fox` as you might expect; instead the result is `The quick red fdx`.
 
