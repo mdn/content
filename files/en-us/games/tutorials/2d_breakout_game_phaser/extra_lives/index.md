@@ -138,14 +138,187 @@ When the number of available lives reaches zero, the game is over and the game o
 
 ## Events
 
-TODO: Describe `once` and `on` methods.
-You have probably noticed the `once()` method call in the above two code blocks and wondered what it is. In our case, on every `outOfBounds` event the `ballLeaveScreen` will be executed, but when the ball leaves the screen we only want to remove the message from the screen once.
+You have probably noticed the `once` method call in the above code block and wondered what it is. The `once()` method is a Phaser event listener that listens for the next occurrence of the specified event (in this case, a pointer down event) and then removes itself after being triggered. This means that the code inside the callback will only run once after calling `once`, which is exactly what we want here — we want to hide the life lost message and start the ball moving again only once, after the player clicks or touches the screen.
 
 ## Compare your code
 
 You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/yk1c5n0b/","","400")}}
+```html hidden live-sample__final
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden live-sample__final
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden live-sample__final
+class Example extends Phaser.Scene {
+  ball;
+  paddle;
+  bricks;
+
+  scoreText;
+  score = 0;
+
+  lives = 3;
+  livesText;
+  lifeLostText;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+    this.load.image("paddle", "paddle.png");
+    this.load.image("brick", "brick.png");
+  }
+  create() {
+    this.ball = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 25,
+      "ball",
+    );
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, -150);
+    this.ball.body.setCollideWorldBounds(true, 1, 1);
+    this.ball.body.setBounce(1);
+
+    this.paddle = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 5,
+      "paddle",
+    );
+    this.paddle.setOrigin(0.5, 1);
+    this.physics.add.existing(this.paddle);
+    this.paddle.body.setImmovable(true);
+
+    this.physics.world.checkCollision.down = false;
+    this.ball.body.onWorldBounds = true;
+
+    this.initBricks();
+
+    const textStyle = { font: "18px Arial", fill: "#0095DD" };
+    this.scoreText = this.add.text(5, 5, "Points: 0", textStyle);
+
+    this.livesText = this.add.text(
+      this.scale.width - 5,
+      5,
+      `Lives: ${this.lives}`,
+      textStyle,
+    );
+    this.livesText.setOrigin(1, 0);
+    this.lifeLostText = this.add.text(
+      this.scale.width * 0.5,
+      this.scale.height * 0.5,
+      "Life lost, click to continue",
+      textStyle,
+    );
+    this.lifeLostText.setOrigin(0.5, 0.5);
+    this.lifeLostText.visible = false;
+  }
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
+      this.physics.world.bounds,
+      this.ball.getBounds(),
+    );
+    if (ballIsOutOfBounds) {
+      this.ballLeaveScreen();
+    }
+  }
+
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
+
+    this.bricks = this.add.group();
+    for (let c = 0; c < bricksLayout.count.col; c++) {
+      for (let r = 0; r < bricksLayout.count.row; r++) {
+        const brickX =
+          c * (bricksLayout.width + bricksLayout.padding) +
+          bricksLayout.offset.left;
+        const brickY =
+          r * (bricksLayout.height + bricksLayout.padding) +
+          bricksLayout.offset.top;
+
+        const newBrick = this.add.sprite(brickX, brickY, "brick");
+        this.physics.add.existing(newBrick);
+        newBrick.body.setImmovable(true);
+        this.bricks.add(newBrick);
+      }
+    }
+  }
+
+  hitBrick(ball, brick) {
+    brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
+
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
+    }
+  }
+
+  ballLeaveScreen() {
+    this.lives--;
+    if (this.lives > 0) {
+      this.livesText.setText(`Lives: ${this.lives}`);
+      this.lifeLostText.visible = true;
+      this.ball.body.reset(this.scale.width * 0.5, this.scale.height - 25);
+      this.input.once(
+        "pointerdown",
+        () => {
+          this.lifeLostText.visible = false;
+          this.ball.body.setVelocity(150, -150);
+        },
+        this,
+      );
+    } else {
+      alert("Game over!");
+      location.reload();
+    }
+  }
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: Example,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{embedlivesample("final", "", "480px")}}
 
 ## Next steps
 
