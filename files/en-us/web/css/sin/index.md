@@ -10,29 +10,34 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 
 {{InteractiveExample("CSS Demo: sin()")}}
 
-<pre>transform:
-  translateX(calc(cos(var(--angle, 0deg)) * var(--radius, 100px)))
-  translateY(calc(sin(var(--angle, 0deg)) * var(--radius, 100px) * -1))
-;</pre>
-
 ```css interactive-example-choice
---angle: 0deg;
+transform:
+  translateX(calc(cos(0deg) * var(--radius, 100px)))
+  translateY(calc(sin(0deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
---angle: 90deg;
+transform:
+  translateX(calc(cos(90deg) * var(--radius, 100px)))
+  translateY(calc(sin(90deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
---angle: 135deg;
+transform:
+  translateX(calc(cos(135deg) * var(--radius, 100px)))
+  translateY(calc(sin(135deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
---angle: 180deg;
+transform:
+  translateX(calc(cos(180deg) * var(--radius, 100px)))
+  translateY(calc(sin(180deg) * var(--radius, 100px) * -1));
 ```
 
 ```css interactive-example-choice
---angle: -45deg;
+transform:
+  translateX(calc(cos(-45deg) * var(--radius, 100px)))
+  translateY(calc(sin(-45deg) * var(--radius, 100px) * -1));
 ```
 
 ```html interactive-example
@@ -45,7 +50,6 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 :root {
   --radius: 140px;
   --dotsize: 10px;
-  --angle: 0deg;
 }
 .circle {
   display: grid;
@@ -66,8 +70,8 @@ The **`sin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
   border-radius: 50%;
   border: 2px solid #666;
   background-color: #f66;
-  transform: translateX(calc(cos(var(--angle)) * var(--radius)))
-    translateY(calc(sin(var(--angle)) * var(--radius) * -1));
+  transform: translateX(calc(cos(0deg) * var(--radius)))
+    translateY(calc(sin(0deg) * var(--radius) * -1));
 }
 ```
 
