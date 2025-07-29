@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.rel
 
 {{APIRef("SVG")}}
 
-The **`rel`** property of the {{domxref("SVGAElement")}} returns a {{domxref("String")}} reflecting the value of the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel) attribute of the SVG {{svgelement("a")}} element.
+The **`rel`** property of the {{domxref("SVGAElement")}} returns a string reflecting the value of the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel) attribute of the SVG {{svgelement("a")}} element.
 
 The `rel` attribute specifies the space-separated list of link types, the [`<list-of-Link-Types>`](/en-US/docs/Web/HTML/Reference/Attributes/rel), indicating the relationship between the target or resource represented by the {{SVGElement("a")}} element and the current document. The property can get or set the `rel` attribute value.
 
@@ -86,6 +86,5 @@ log(`New rel: "${svgLink.rel}"`); // New rel: "alternate bookmark"
 
 - [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel)
 - {{domxref("SVGAElement.relList")}}
-- {{domxref("SVGAnchorElement.rel")}}
 - {{domxref("HTMLAnchorElement.rel")}}
 - {{domxref("HTMLLinkElement.rel")}}

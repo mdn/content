@@ -80,7 +80,6 @@ textarea {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   padding: 5px;

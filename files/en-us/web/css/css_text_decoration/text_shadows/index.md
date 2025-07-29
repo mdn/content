@@ -50,7 +50,7 @@ In this example, the different `text-shadow` declarations differ only in their h
 
 ```html hidden live-sample___horizontal live-sample___vertical live-sample___blur
 <p class="negative">Negative</p>
-<p class="positive">Postive</p>
+<p class="positive">Positive</p>
 <p class="zero">Zero</p>
 ```
 

@@ -37,8 +37,6 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : JavaScript is the Web's native programming language.
 - [WebAssembly](/en-US/docs/WebAssembly)
   - : WebAssembly allows programs written in C, C++, Rust, Swift, C#, Go, and more to run on the Web.
-- [Events](/en-US/docs/Web/Events)
-  - : Events are what you build Web apps to react to; for example, when a Web page finishes loading, or a user selects something, presses a key, resizes a window, submits a form, or pauses a video.
 - [HTTP](/en-US/docs/Web/HTTP)
   - : HTTP is the fundamental Internet protocol for fetching documents, stylesheets, scripts, images, videos, fonts, and other resources over the Web — and for sending data back to Web servers.
 - [Media](/en-US/docs/Web/Media)
