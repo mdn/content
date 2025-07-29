@@ -59,15 +59,13 @@ p {
 ```
 
 ```html hidden
-        <p class="under">A red underline</p>
-        <p class="over">A wavy lime overlines</p>
-        <p class="line">This has a line-through it</p>
-        <p class="underover">This has a dashed underline and overline</p>
-        <p class="thick">An offset solid purple underline</p>
-        <p class="shadow">This has a red shadow</p>
-        <p class="emphasis">Emphasised with red triangles</p>
-  >
-</p>
+<p class="under">A red underline</p>
+<p class="over">A wavy lime overlines</p>
+<p class="line">This has a line-through it</p>
+<p class="underover">This has a dashed underline and overline</p>
+<p class="thick">An offset solid purple underline</p>
+<p class="shadow">This has a red shadow</p>
+<p class="emphasis">Emphasized with red triangles</p>
 ```
 
 {{EmbedLiveSample('Text decoration in action','auto','320')}}
