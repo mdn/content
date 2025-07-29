@@ -31,3 +31,5 @@ A positive integer.
 ## See also
 
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples")}}
+- {{domxref("RTCInboundRtpStreamStats.concealmentEvents")}}
+- [Packet loss concealment](https://en.wikipedia.org/wiki/Packet_loss_concealment) on Wikipedia
