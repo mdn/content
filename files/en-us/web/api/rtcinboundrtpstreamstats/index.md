@@ -73,7 +73,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A string that uniquely identifies the pairing of source and destination of the transceiver's stream.
     This is the value of the corresponding {{domxref("RTCRtpTransceiver.mid")}} unless that is null, in which case the statistic property is not present.
 - {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of RTP packets discarded by the jitter buffer due to late or early-arrival.
 - {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}}
