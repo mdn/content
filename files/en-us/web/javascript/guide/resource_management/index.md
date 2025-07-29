@@ -16,9 +16,9 @@ This guide talks about how to do _resource management_ in JavaScript. Resource m
 
 Let's first look at a few examples of resources that need to be managed:
 
-- **File handles**: A file handle is used to read and write bytes in a file. When you are done with it, you must call [`filehandle.close()`](https://nodejs.org/api/fs.html#filehandleclose), otherwise the file will remain open, even when the JS object is no longer accessible. As the linked Node.js docs say:
+- **File handles**: A file handle is used to read and write bytes in a file. When you are done with it, you must call [`fileHandle.close()`](https://nodejs.org/api/fs.html#filehandleclose), otherwise the file will remain open, even when the JS object is no longer accessible. As the linked Node.js docs say:
 
-  > If a `<FileHandle>` is not closed using the `filehandle.close()` method, it will try to automatically close the file descriptor and emit a process warning, helping to prevent memory leaks. Please do not rely on this behavior because it can be unreliable and the file may not be closed. Instead, always explicitly close `<FileHandle>`s. Node.js may change this behavior in the future.
+  > If a `<FileHandle>` is not closed using the `fileHandle.close()` method, it will try to automatically close the file descriptor and emit a process warning, helping to prevent memory leaks. Please do not rely on this behavior because it can be unreliable and the file may not be closed. Instead, always explicitly close `<FileHandle>`s. Node.js may change this behavior in the future.
 
 - **Network connections**: Some connections, such as {{domxref("WebSocket")}} and {{domxref("RTCPeerConnection")}}, need to be closed if no messages are transmitted. Otherwise, the connection remains open, and connection pools are often very limited in size.
 - **Stream readers**: If you don't call {{domxref("ReadableStreamDefaultReader.releaseLock()")}}, the stream will be locked and does not permit another reader to consume it.
@@ -154,14 +154,14 @@ Through the disposable protocol, `using` can dispose all resources in a consiste
 
 Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method. For example, in the example above, `reader1` is declared before `reader2`, so `reader2` is disposed first, then `reader1`. Errors thrown when attempting to dispose one resource will not prevent disposal of other resources. This is consistent with the `try...finally` pattern, and respects possible dependencies between resources.
 
-`await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `filehandle.close()`, in which case the result of the disposal can only be known asynchronously.
+`await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `fileHandle.close()`, in which case the result of the disposal can only be known asynchronously.
 
 ```js
 {
-  await using filehandle = open("file.txt", "w");
-  await filehandle.write("Hello");
+  await using fileHandle = open("file.txt", "w");
+  await fileHandle.write("Hello");
 
-  // filehandle.close() is called and awaited
+  // fileHandle.close() is called and awaited
 }
 ```
 
