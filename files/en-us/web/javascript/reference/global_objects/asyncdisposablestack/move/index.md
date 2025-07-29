@@ -2,9 +2,13 @@
 title: AsyncDisposableStack.prototype.move()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/move
 page-type: javascript-instance-method
+status:
+  - non-standard
 browser-compat: javascript.builtins.AsyncDisposableStack.move
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`move()`** method of {{jsxref("AsyncDisposableStack")}} instances creates a new `AsyncDisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
 

@@ -2,9 +2,13 @@
 title: DisposableStack
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack
 page-type: javascript-class
+status:
+  - non-standard
 browser-compat: javascript.builtins.DisposableStack
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`DisposableStack`** object represents a stack of [disposers](/en-US/docs/Web/JavaScript/Reference/Statements/using) to run when the stack itself is disposed. Disposer functions are executed in reverse order of registration, with strong error handling guarantees. Calling its `move()` method will transfer responsibility for calling the current registered disposers to a new `DisposableStack` and prevent registering any additional disposers.
 
@@ -33,7 +37,7 @@ Functionally, these two code snippets are equivalent. However, the first one is 
 
 ## Constructor
 
-- {{jsxref("DisposableStack/DisposableStack", "DisposableStack()")}}
+- {{jsxref("DisposableStack/DisposableStack", "DisposableStack()")}} {{non-standard_inline}}
   - : Creates a new `DisposableStack` object.
 
 ## Instance properties
@@ -42,22 +46,22 @@ These properties are defined on `DisposableStack.prototype` and shared by all `D
 
 - {{jsxref("Object/constructor", "DisposableStack.prototype.constructor")}}
   - : The constructor function that created the instance object. For `DisposableStack` instances, the initial value is the {{jsxref("DisposableStack/DisposableStack", "DisposableStack")}} constructor.
-- {{jsxref("DisposableStack.prototype.disposed")}}
+- {{jsxref("DisposableStack.prototype.disposed")}} {{non-standard_inline}}
   - : Read-only. Returns `true` if the `DisposableStack` has been disposed, or `false` if not.
 - `DisposableStack.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"DisposableStack"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
-- {{jsxref("DisposableStack.prototype.adopt()")}}
+- {{jsxref("DisposableStack.prototype.adopt()")}} {{non-standard_inline}}
   - : Registers a value that doesn't implement the disposable protocol to the stack by providing a custom disposer function.
-- {{jsxref("DisposableStack.prototype.defer()")}}
+- {{jsxref("DisposableStack.prototype.defer()")}} {{non-standard_inline}}
   - : Takes a callback function to be called when the stack is disposed.
-- {{jsxref("DisposableStack.prototype.dispose()")}}
+- {{jsxref("DisposableStack.prototype.dispose()")}} {{non-standard_inline}}
   - : Disposes this stack by calling all disposers registered to it in reverse order of registration.
-- {{jsxref("DisposableStack.prototype.move()")}}
+- {{jsxref("DisposableStack.prototype.move()")}} {{non-standard_inline}}
   - : Creates a new `DisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
-- {{jsxref("DisposableStack.prototype.use()")}}
+- {{jsxref("DisposableStack.prototype.use()")}} {{non-standard_inline}}
   - : Registers a value that implements the disposable protocol to the stack.
 - [`DisposableStack.prototype[Symbol.dispose]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
   - : An alias for the `dispose()` method.

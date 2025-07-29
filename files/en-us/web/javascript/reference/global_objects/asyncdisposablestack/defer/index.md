@@ -2,9 +2,13 @@
 title: AsyncDisposableStack.prototype.defer()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/defer
 page-type: javascript-instance-method
+status:
+  - non-standard
 browser-compat: javascript.builtins.AsyncDisposableStack.defer
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`defer()`** method of {{jsxref("AsyncDisposableStack")}} instances takes a callback function to be called and awaited when the stack is disposed.
 

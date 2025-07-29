@@ -2,9 +2,13 @@
 title: SuppressedError
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError
 page-type: javascript-class
+status:
+  - non-standard
 browser-compat: javascript.builtins.SuppressedError
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`SuppressedError`** object represents an error generated while handing another error. It is generated during resource disposal using {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 
@@ -14,7 +18,7 @@ Compared to {{jsxref("AggregateError")}}, `SuppressedError` is used to represent
 
 ## Constructor
 
-- {{jsxref("SuppressedError/SuppressedError", "SuppressedError()")}}
+- {{jsxref("SuppressedError/SuppressedError", "SuppressedError()")}} {{non-standard_inline}}
   - : Creates a new `SuppressedError` object.
 
 ## Instance properties

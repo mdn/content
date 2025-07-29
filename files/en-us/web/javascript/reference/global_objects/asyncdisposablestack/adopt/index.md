@@ -2,9 +2,13 @@
 title: AsyncDisposableStack.prototype.adopt()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/adopt
 page-type: javascript-instance-method
+status:
+  - non-standard
 browser-compat: javascript.builtins.AsyncDisposableStack.adopt
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`adopt()`** method of {{jsxref("AsyncDisposableStack")}} instances registers a value that doesn't implement the async disposable protocol to the stack by providing a custom disposer function.
 

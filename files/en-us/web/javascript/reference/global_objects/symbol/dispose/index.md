@@ -2,9 +2,13 @@
 title: Symbol.dispose
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/dispose
 page-type: javascript-static-data-property
+status:
+  - non-standard
 browser-compat: javascript.builtins.Symbol.dispose
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`Symbol.dispose`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.dispose`. The {{jsxref("Statements/using", "using")}} declaration looks up this symbol on the variable initializer for the method to call when the variable goes out of scope.
 

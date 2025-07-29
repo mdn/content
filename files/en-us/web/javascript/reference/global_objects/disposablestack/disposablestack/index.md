@@ -2,9 +2,13 @@
 title: DisposableStack() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/DisposableStack
 page-type: javascript-constructor
+status:
+  - non-standard
 browser-compat: javascript.builtins.DisposableStack.DisposableStack
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`DisposableStack()`** constructor creates {{jsxref("DisposableStack")}} objects.
 

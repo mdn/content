@@ -2,9 +2,13 @@
 title: using
 slug: Web/JavaScript/Reference/Statements/using
 page-type: javascript-statement
+status:
+  - non-standard
 browser-compat: javascript.statements.using
 sidebar: jssidebar
 ---
+
+{{non-standard_header}}
 
 The **`using`** declaration declares block-scoped local variables that are _synchronously disposed_. Like {{jsxref("Statements/const", "const")}}, variables declared with `using` must be initialized and cannot be reassigned. The variable's value must be either `null`, `undefined`, or an object with a [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. When the variable goes out of scope, the `[Symbol.dispose]()` method of the object is called, to ensure that resources are freed.
 

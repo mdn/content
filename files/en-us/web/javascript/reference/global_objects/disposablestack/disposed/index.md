@@ -2,9 +2,13 @@
 title: DisposableStack.prototype.disposed
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/disposed
 page-type: javascript-instance-accessor-property
+status:
+  - non-standard
 browser-compat: javascript.builtins.DisposableStack.disposed
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`disposed`** accessor property of {{jsxref("DisposableStack")}} instances returns a boolean indicating whether or not this `DisposableStack` has been disposed or moved by doing any of the following:
 

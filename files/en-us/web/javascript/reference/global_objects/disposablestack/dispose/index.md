@@ -2,9 +2,13 @@
 title: DisposableStack.prototype.dispose()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/dispose
 page-type: javascript-instance-method
+status:
+  - non-standard
 browser-compat: javascript.builtins.DisposableStack.dispose
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`dispose()`** method of {{jsxref("DisposableStack")}} instances disposes this stack by calling all disposers registered to it in reverse order of registration. If the stack is already disposed, this method does nothing.
 

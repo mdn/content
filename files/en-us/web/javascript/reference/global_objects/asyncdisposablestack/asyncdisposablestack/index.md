@@ -2,9 +2,13 @@
 title: AsyncDisposableStack() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/AsyncDisposableStack
 page-type: javascript-constructor
+status:
+  - non-standard
 browser-compat: javascript.builtins.AsyncDisposableStack.AsyncDisposableStack
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`AsyncDisposableStack()`** constructor creates {{jsxref("AsyncDisposableStack")}} objects.
 

@@ -2,9 +2,13 @@
 title: DisposableStack.prototype.use()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/use
 page-type: javascript-instance-method
+status:
+  - non-standard
 browser-compat: javascript.builtins.DisposableStack.use
 sidebar: jsref
 ---
+
+{{non-standard_header}}
 
 The **`use()`** method of {{jsxref("DisposableStack")}} instances registers a value that implements the [disposable protocol](/en-US/docs/Web/JavaScript/Guide/Resource_management) to the stack.
 
