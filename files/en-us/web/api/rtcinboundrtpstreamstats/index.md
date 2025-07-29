@@ -130,12 +130,12 @@ Their primary purpose is to examine the error resiliency of the connection, as t
 These statistics are measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
 
 - {{domxref("RTCInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
-  - : The total number of RTP packets received for this synchronizing source, including retransmissions.
+  - : The total number of RTP packets received for this [synchronizing source (SSRC)](#ssrc), including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.packetsLost", "packetsLost")}}
-  - : The total number of RTP packets lost for this synchronizing source.
+  - : The total number of RTP packets lost for this [synchronizing source (SSRC)](#ssrc).
     Note that this can be negative, as more packets may be received than the receiver expects.
 - {{domxref("RTCInboundRtpStreamStats.jitter", "jitter")}}
-  - : Packet jitter for this [synchronizing source](#ssrc), measured in seconds.
+  - : Packet jitter for this [synchronizing source (SSRC)](#ssrc), measured in seconds.
 
 ### Common RTP stream statistics
 
