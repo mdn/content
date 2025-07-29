@@ -37,7 +37,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the total number of correctly decoded frames for this RTP stream that consist of more than one RTP packet.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
-  - : A long integer value that indicates the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped. _Only valid for video streams._
+  - : A long integer value that indicates the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesPerSecond", "framesPerSecond")}}
   - : A positive integer that indicates the number of frames decoded in the last second.
     _Undefined for audio streams._
@@ -96,7 +97,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number that represents the total audio energy of the received track over the lifetime of the stats object.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}
-  - : TBD.
+  - : A number that indicates the total time spent decoding frames in this stream, in seconds.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
