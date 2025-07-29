@@ -12,6 +12,9 @@ The **`framesDecoded`** property of the {{domxref("RTCInboundRtpStreamStats")}} 
 
 This represents the number of frames that would have been displayed assuming no frames were skipped.
 
+> [!NOTE]
+> The property is undefined for audio streams.
+
 ## Value
 
 An positive integer.
@@ -23,3 +26,7 @@ An positive integer.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}

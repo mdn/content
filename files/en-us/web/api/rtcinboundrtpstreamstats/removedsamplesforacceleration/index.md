@@ -43,4 +43,4 @@ A positive integer.
 ## See also
 
 - {{domxref("RTCInboundRtpStreamStats.insertedSamplesForDeceleration")}}
-- [The better way](https://webrtchacks.com/how-webrtcs-neteq-jitter-buffer-provides-smooth-audio/#post-4560-_mv3ivinthkf5) in "How WebRTC’s NetEQ Jitter Buffer Provides Smooth Audio" (webrtchacks.com, June 2025)
+- [The better way](https://webrtchacks.com/how-webrtcs-neteq-jitter-buffer-provides-smooth-audio/#post-4560-_mv3ivinthkf5) in "How WebRTC's NetEQ Jitter Buffer Provides Smooth Audio" (webrtchacks.com, June 2025)
