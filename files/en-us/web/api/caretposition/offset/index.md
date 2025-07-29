@@ -6,6 +6,8 @@ page-type: web-api-instance-property
 browser-compat: api.CaretPosition.offset
 ---
 
+{{APIRef("CSSOM")}}
+
 The **`offset`** property of the {{domxref("CaretPosition")}} interface returns an integer representing the offset of the selection in the caret position node.
 
 This will be the character offset in a text node or the selected child node's index in an element node.
@@ -16,13 +18,30 @@ An integer.
 
 ## Examples
 
-This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field
+This example logs the `offsetNode` and `offset` of the caret position when clicking inside the input field.
 
 ```html
-<input
-  aria-label="text field"
-  value="Click inside this input field"
-  style="width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box" />
+<input aria-label="text field" value="Click inside this input field" />
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
 ```
 
 ```js
@@ -31,17 +50,28 @@ document.querySelector("input").addEventListener("click", (event) => {
   const y = event.clientY;
 
   const caret = document.caretPositionFromPoint?.(x, y);
-  if (!caret) return;
+  if (!caret) {
+    log("Not supported");
+    return;
+  }
 
   const node = caret.offsetNode;
   const offset = caret.offset;
 
-  console.log("offsetNode:", node);
-  console.log("offset:", offset);
+  log(`offsetNode: ${node}`);
+  log(`offset: ${offset}`);
 });
 ```
 
-{{EmbedLiveSample("offset", "", 300)}}
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+{{EmbedLiveSample("Examples", "", 300)}}
 
 ## Specifications
 
