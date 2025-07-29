@@ -31,7 +31,7 @@ sidebar: addonsidebar
         <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
-    "id": "@addonexample",
+    "id": "@addon-example",
     "strict_min_version": "58.0"
   }
 }
@@ -87,7 +87,7 @@ The latter format is easier to generate and manipulate. Be aware that using a re
 For example:
 
 ```json
-"id": "@extensionname.developername"
+"id": "@extension-name.developer-name"
 ```
 
 ```json
@@ -114,7 +114,7 @@ Example with all possible keys. Note that most extensions omit `strict_max_versi
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "@addonexample",
+    "id": "@addon-example",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"

@@ -77,7 +77,7 @@ First, update `manifest.json` so it has these contents:
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "@addonexample"
+      "id": "@addon-example"
     }
   }
 }
