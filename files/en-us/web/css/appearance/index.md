@@ -82,8 +82,10 @@ The `appearance` property can be applied to all elements and pseudo elements, bu
 
 - `<compat-special>`
   - : The equivalent of `auto` on elements with no special styling.
-  - : `textfield`: For some `<input>` types, the [appearance matches the `text` type](#try_it).
-  - : `menulist-button`: When set on the `<select>` element, the drop-down picker is set to match that of its devolved, or default, state.
+    - `textfield`
+      - : For some `<input>` types, the [appearance matches the `text` type](#try_it).
+    - `menulist-button`
+      - : When set on the `<select>` element, the drop-down picker is set to match that of its devolved, or default, state.
 
 - `<compat-auto>`
   - : Included for backwards compatibility, with `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea` as values, sets the value to `auto`. Use `auto` instead.
@@ -235,7 +237,7 @@ We set the element with the class of `text` to look like a text field.
 
 {{EmbedLiveSample("Basic example", 600, 100)}}
 
-Notice how the spinner is visually removed when the control is set to look like a text field? The `appearance` property has no effect on the functionality: for example, while there is no longer a spinner to click on, the up and down arrows still work.
+Notice how the spinner is visually removed when the control is set to look like a text field. The `appearance` property has no effect on the functionality: for example, while there is no longer a spinner to click on, the up and down arrows still work.
 
 ### Appearance set to `none`
 
