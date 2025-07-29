@@ -8,7 +8,7 @@ sidebar: jsref
 
 The **`disposed`** accessor property of {{jsxref("AsyncDisposableStack")}} instances returns a boolean indicating whether or not this `AsyncDisposableStack` has been disposed or moved by doing any of the following:
 
-- Calling its {{jsxref("AsyncDisposableStack/dispose", "dispose()")}} method
+- Calling its {{jsxref("AsyncDisposableStack/disposeAsync", "disposeAsync()")}} method
 - Calling its {{jsxref("AsyncDisposableStack/move", "move()")}} method
 - Declaring it with {{jsxref("Statements/await_using", "await using")}} and letting the variable go out of scope, which automatically calls the [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose) method.
 
