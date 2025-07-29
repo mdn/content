@@ -26,6 +26,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 - The [`variants`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants) accessor property is now supported on {{jsxref("Intl.Locale")}} instances.
   This property returns the variants associated with a locale as a string of dash (`-`) separated identifiers.
   It offers a more robust way to get and set variant subtags of a language identifier as opposed to manually parsing or modifying a locale string ([Firefox bug 1970161](https://bugzil.la/1970161)).
+- Explicit resource management with {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}} declarations, the {{jsxref("DisposableStack")}} and {{jsxref("AsyncDisposableStack")}} objects, the {{jsxref("Symbol.dispose")}} and {{jsxref("Symbol.asyncDispose")}} methods is now supported. These features ensure automatic cleanup of resources like file handles or stream readers when they go out of scope, reducing leaks and simplifying error handling ([Firefox bug 1967744](https://bugzil.la/1967744)).
 
 ### HTTP
 
