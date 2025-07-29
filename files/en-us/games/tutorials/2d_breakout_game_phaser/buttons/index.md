@@ -7,34 +7,41 @@ sidebar: games
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
 
-This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html).
+This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson15.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson15.html).
 
 Instead of starting the game right away we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
-## New variables
+## New properties
 
-We will need a variable to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other variable definitions:
+We will need a variable to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other properties definitions:
 
 ```js
-let playing = false;
-let startButton;
+class Example extends Phaser.Scene {
+  // ... previous property definitions ...
+  playing = false;
+  startButton;
+  // ... rest of the class ...
+}
 ```
 
 ## Loading the button spritesheet
 
-We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the `preload()` function:
+We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the `preload` method:
 
 ```js
-game.load.spritesheet("button", "img/button.png", 120, 40);
+this.load.spritesheet("button", "img/button.png", {
+  frameWidth: 120,
+  frameHeight: 40,
+});
 ```
 
 A single button frame is 120 pixels wide and 40 pixels high.
 
-You also need to [grab the button spritesheet from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/button.png), and save it in your `/img` directory.
+You also need to [grab the button spritesheet from GitHub](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/img/button.png), and save it in your `/img` directory.
 
 ## Adding the button to the game
 
-Adding the new button to the game is done by using the `add.button` method. Add the following lines to the bottom of your `create()` function:
+Adding the new button to the game is done by using the `add.button` method. Add the following lines to the bottom of your `create` method:
 
 ```js
 startButton = game.add.button(
