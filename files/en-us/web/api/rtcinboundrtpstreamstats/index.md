@@ -75,7 +75,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}
   - : A positive integer that indicates the total number of RTP packets discarded by the jitter buffer due to late or early-arrival.
 - {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}
-  - : TBD.
+  - : A positive integer that indicates the number of video pauses experienced by this receiver.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}}
@@ -100,7 +101,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}}
-  - : TBD.
+  - : A positive number indicating the total time that the stream has spent with paused video, in seconds.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalProcessingDelay", "totalProcessingDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration", "totalSamplesDuration")}}
