@@ -56,13 +56,13 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the number of samples inserted to slow playout from the jitter buffer.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}
-  - : A number indicating the the accumulated time that all audio samples and complete video frames have spent in the jitter buffer, in seconds.
+  - : A number that indicates the accumulated time that all audio samples and complete video frames have spent in the jitter buffer, in seconds.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
-  - : TBD.
+  - : A positive integer indicating the total number of audio samples and/or video frames that have come out of the jitter buffer.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}
-  - : TBD.
+  - : A number that indicates the minimum delay that might be achieved given only the network characteristics such as jitter and packet loss.
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}
-  - : TBD.
+  - : A number that indicates the accumulated target jitter buffer delay.
 - {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}
   - : A positive integer that indicates the total number of key frames successfully decoded for this RTP media stream.
     _Undefined for audio streams._
@@ -135,7 +135,7 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
   - : The total number of RTP packets lost for this synchronizing source.
     Note that this can be negative if more packets are received than sent.
 - {{domxref("RTCInboundRtpStreamStats.jitter", "jitter")}}
-  - : Packet jitter for this synchronizing source, measured in seconds.
+  - : Packet jitter for this [synchronizing source](#ssrc), measured in seconds.
 
 ### Common RTP stream statistics
 

@@ -11,7 +11,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.insertedSamplesForDecelerati
 The **`insertedSamplesForDeceleration`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary accumulates the difference between the number of samples received and the number of samples played out of the {{glossary("jitter","jitter buffer")}} while audio playout is slowed down.
 
 The WebRTC jitter buffer sets a target playout delay level such that the inflow and outflow of the jitter buffer should be approximately the same.
-If the jitter buffer empties too quickly the audio sample that is next in line to be output may be "ahead of schedule", so the jitter buffer may slow down playout.
+If the jitter buffer empties too quickly the audio sample that is next in line to be output may be "ahead of schedule", and the jitter buffer may slow down playout.
 If the jitter buffer slows down the playout of the sample by inserting additional audio samples, this property indicates the accumulated number of such added samples.
 
 You might track `insertedSamplesForDeceleration` over the duration of the connection.

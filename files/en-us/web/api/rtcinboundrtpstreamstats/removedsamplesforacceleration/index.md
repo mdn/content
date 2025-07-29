@@ -11,7 +11,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.removedSamplesForAcceleratio
 The **`removedSamplesForAcceleration`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary accumulates the difference between the number of samples played out of the {{glossary("jitter","jitter buffer")}} and the number of samples received while audio playout is sped up.
 
 The WebRTC jitter buffer sets a target playout delay level such that the inflow and outflow of the jitter buffer should be approximately the same.
-If the jitter buffer empties too slowly the audio sample that is next in line to be output may be "ahead of schedule", and the engine may speed up playout to catch up.
+If the jitter buffer empties too slowly the audio sample that is next in line to be output may be "behind schedule", and the engine may speed up playout to catch up.
 If the engine speeds up playout by removing some audio samples, this property indicates the accumulated number of such removed samples.
 
 You might track `removedSamplesForAcceleration` over the duration of the connection.
@@ -22,9 +22,6 @@ This might lead to an accumulation of samples in the jitter buffer, increasing l
 
 > [!NOTE]
 > The value is undefined for video streams.
-
-
-
 
 You might track `insertedSamplesForDeceleration` over the duration of the connection.
 Consistently high and increasing values suggests that playout is consistently running too fast relative to the incoming audio stream.
@@ -42,7 +39,6 @@ A positive integer.
 ## Browser compatibility
 
 {{Compat}}
-
 
 ## See also
 
