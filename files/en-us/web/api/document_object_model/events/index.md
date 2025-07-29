@@ -1,6 +1,6 @@
 ---
 title: DOM events
-short-title: Events
+short-title: Working with events
 slug: Web/API/Document_Object_Model/Events
 page-type: guide
 spec-urls:
