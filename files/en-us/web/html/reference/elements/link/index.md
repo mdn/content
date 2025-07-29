@@ -202,9 +202,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- `fetchpriority`
-  - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
-    Allowed values:
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching a resource of a particular type. Allowed values:
     - `high`
       - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
@@ -213,9 +212,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
-
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - `hreflang`

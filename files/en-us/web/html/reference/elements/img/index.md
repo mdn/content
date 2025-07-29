@@ -70,7 +70,7 @@ If an error occurs while loading or rendering an image, and an `onerror` event h
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- [`alt`](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes)
+- `alt`
   - : Defines text that can replace the image in the page.
 
     > [!NOTE]
@@ -146,9 +146,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming)
   - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute page.
 
-- `fetchpriority`
-  - : Provides a hint of the relative priority to use when fetching the image.
-    Allowed values:
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
     - `high`
       - : Fetch the image at a high priority relative to other images.
     - `low`
@@ -157,9 +156,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLImageElement.fetchPriority")}} for more information.
-
 - `height`
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
@@ -179,11 +175,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `lazy`
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
-    > [!NOTE]
-    > Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+    While explicit [`width`](#width) and [`height`](#height) attributes are recommended for all images to avoid layout shift, they are especially important for lazy-loaded ones. Lazy-loaded images will never be loaded if they do not intersect a visible part of an element, even if loading them would change that, because unloaded images have a `width` and `height` of `0`. It is also more a more disturbing user experience if the page reflows in the middle of reading.
 
-    > [!NOTE]
-    > Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazy-loaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
+    The {{domxref("Window.load_event", "load")}} event is fired after eager-loaded images have been fetched and processed, but before lazy-laded ones are, even if the lazy-loaded images are located within the visual viewport immediately upon initial page load. These images are still loaded as soon as layout completes; they just don't affect the timing of the `load` event. That means that when `load` fires, it's possible that any lazy-loaded images located in the visual viewport may not yet be visible.
+
+    Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
 - `referrerpolicy`
   - : A string indicating which referrer to use when fetching the resource:
@@ -229,19 +225,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     ```
 
 - `src`
-  - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
+  - : The image {{glossary("URL")}}. At least one of `src` and [`srcset`](#srcset) is required for an `<img>` element. If [`srcset`](#srcset) is specified, `src` is used in one of two ways:
+    - as a fallback for browsers that don't support `srcset`.
+    - if `srcset` uses the "x" descriptor, then `src` is equivalent to a source with the density descriptor `1x`; that is, the image specified by `src` is used on low-density screens (such as typical 72 DPI or 96 DPI displays).
+
 - `srcset`
-  - : One or more strings separated by commas, indicating possible image sources for the {{glossary("user agent")}} to use. Each string is composed of:
+  - : One or more strings separated by commas, indicating possible image sources for the {{glossary("user agent")}} to use.
+
+    Each string is composed of:
     1. A {{glossary("URL")}} to an image
     2. Optionally, whitespace followed by one of:
-       - A width descriptor (a positive integer directly followed by `w`). The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density.
-       - A pixel density descriptor (a positive floating point number directly followed by `x`).
+       - A width descriptor (a positive integer directly followed by `w`). It _must_ match the intrinsic width of the referenced image. The width descriptor is divided by the source size given in the `sizes` attribute to calculate the effective pixel density. For example, to provide an image resource to be used when the renderer needs a 450 pixel wide image, use the width descriptor `450w`. When a `srcset` contains "w" descriptors, the browser uses those descriptors together with the `sizes` attribute to pick a resource.
+       - A pixel density descriptor (a positive floating point number directly followed by `x`). It specifies the condition in which the corresponding image resource should be used as the display's pixel density. For example, to provide an image resource to be used when the pixel density is double the standard density, use the pixel density descriptor `2x` or `2.0x`.
 
-    If no descriptor is specified, the source is assigned the default descriptor of `1x`.
+    If no descriptor is specified, the source is assigned the default descriptor of `1x`. It is incorrect to mix width descriptors and pixel density descriptors in the same `srcset` attribute. Duplicate descriptors (for instance, two sources in the same `srcset` which are both described with `2x`) are also invalid.
 
-    It is incorrect to mix width descriptors and pixel density descriptors in the same `srcset` attribute. Duplicate descriptors (for instance, two sources in the same `srcset` which are both described with `2x`) are also invalid.
+    Space characters, other than the whitespace separating the URL and the corresponding condition descriptor, are ignored; this includes both leading and trailing space, as well as space before or after each comma.
 
-    If the `srcset` attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+    When the `<img>` element's `srcset` uses `x` descriptors, browsers also consider the URL in the `src` attribute (if present) as a candidate, and assign it a default descriptor of `1x`. On the other hand, if the `srcset` attribute uses width descriptors, `src` is not considered, and the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
     The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial for an example.
 
