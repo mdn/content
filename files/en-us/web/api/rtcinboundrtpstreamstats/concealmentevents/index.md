@@ -28,3 +28,9 @@ A positive integer.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCInboundRtpStreamStats.concealedSamples")}}
+- {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples")}}
+- [Packet loss concealment](https://en.wikipedia.org/wiki/Packet_loss_concealment) on Wikipedia
