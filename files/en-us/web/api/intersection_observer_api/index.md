@@ -63,7 +63,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 - `root`
   - : The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if `null`.
 - `rootMargin`
-  - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be [absolute lengths](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#absolute_length_units)(pixels) or percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
+  - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be in pixels (`px`) or percentages (`%`). This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
 - `scrollMargin`
   - : Margin around nested {{glossary("scroll container","scroll containers")}} that takes the same values/has same default as `rootMargin`.
     The margins are applied to nested scrollable containers before computing intersections.
