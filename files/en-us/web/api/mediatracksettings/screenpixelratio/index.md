@@ -3,10 +3,12 @@ title: "MediaTrackSettings: screenPixelRatio property"
 short-title: screenPixelRatio
 slug: Web/API/MediaTrackSettings/screenPixelRatio
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`screenPixelRatio`** property is a number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 

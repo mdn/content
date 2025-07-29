@@ -43,7 +43,7 @@ _No change._
 - DOM Level 3 [composition events](/en-US/docs/Web/API/CompositionEvent) are now supported.
 - The {{ domxref("Document.scripts") }} attribute has been implemented; this returns an {{ domxref("HTMLCollection") }} of all the {{ HTMLElement("script") }} elements on the document.
 - The {{ domxref("Document.queryCommandSupported()") }} method has been implemented.
-- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/en-US/docs/Web/Events) reflects which events can be listened for on {{ HTMLElement("body") }}.
+- The set of events that can be listened for on {{ HTMLElement("body") }} elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide reflects which events can be listened for on {{ HTMLElement("body") }}.
 - The `readystatechange` event is now fired only on the {{ domxref("Document") }}, as intended.
 - Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but there are exceptions.
 - A new response type, `"moz-json"`, has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/Glossary/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
