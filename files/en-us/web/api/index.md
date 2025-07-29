@@ -19,7 +19,3 @@ This is a list of all the APIs that are available.
 This is a list of all the interfaces (that is, types of objects) that are available.
 
 {{APIListAlpha}}
-
-## See also
-
-- [Web API event reference](/en-US/docs/Web/Events)

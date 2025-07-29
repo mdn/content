@@ -2,13 +2,9 @@
 title: anchor-size()
 slug: Web/CSS/anchor-size
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.anchor-size
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) enables setting anchor-positioned element's [size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size), [position](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size), and [margins](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values).
 

@@ -4,12 +4,11 @@ slug: Web/HTML/Reference/Elements/selectedcontent
 page-type: html-element
 status:
   - experimental
-  - non-standard
 browser-compat: html.elements.selectedcontent
 sidebar: htmlsidebar
 ---
 
-{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}
 
 The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to display the content of the currently selected `<option>` inside a closed `<select>` element.
 
@@ -117,7 +116,7 @@ You can see a full example that includes the `<selectedcontent>` element in our 
 
 ## Specifications
 
-Not currently part of a specification. See https://github.com/whatwg/html/pull/10633 for the relevant specification PR.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -28,7 +28,7 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 ## Static methods
 
-- {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}}
+- {{domxref("IdentityCredential.disconnect_static", "IdentityCredential.disconnect()")}} {{experimental_inline}}
   - : Disconnects the federated sign-in account used to obtain the credential.
 
 ## Examples

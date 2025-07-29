@@ -14,7 +14,7 @@ Normally, scripts on different pages are allowed to access each other if and onl
 
 Furthermore, an accessing script must have obtained the window object of the accessed document beforehand. This can occur through methods such as [`window.open()`](/en-US/docs/Web/API/Window/open) for popups or [`iframe.contentWindow`](/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) for iframes.
 
-Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
+Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The receiving window is then free to [handle this event](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) as needed. The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
 
 ## Syntax
 

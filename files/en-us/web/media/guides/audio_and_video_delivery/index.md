@@ -530,4 +530,4 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [Event reference: Media](/en-US/docs/Web/Events#media)
+- [Event index: Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)
