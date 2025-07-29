@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.jitterBufferDelay
 
 {{APIRef("WebRTC")}}
 
-The **`jitterBufferDelay`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the accumulated time that all audio samples and complete video frames have spent in the jitter buffer.
+The **`jitterBufferDelay`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the accumulated time that all audio samples and complete video frames have spent in the {{glossary("jitter","jitter buffer")}}.
 
 For an audio sample the time is calculated from the time that the sample is received by the jitter buffer ("ingest timestamp"), until the time that the sample is emitted ("exit timestamp").
 For a video frame, the ingest time is when the first packet in the frame was ingested until the time at which the whole frame exits the buffer.
@@ -38,3 +38,5 @@ A positive number, in seconds.
 ## See also
 
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
+- {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferMinimumDelay")}}
+- {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}
