@@ -235,7 +235,7 @@ We set the element with the class of `text` to look like a text field.
 
 {{EmbedLiveSample("Basic example", 600, 100)}}
 
-Notice how the spinner is visually removed when the input is set to look like a textfield. The `appearance` property has no effect on the functionality: for example, while there is no longer a spinner to click on, the up and down arrows still work.
+Notice how the spinner is visually removed when the control is set to look like a text field? The `appearance` property has no effect on the functionality: for example, while there is no longer a spinner to click on, the up and down arrows still work.
 
 ### Appearance set to `none`
 
