@@ -92,7 +92,7 @@ function example() {
 
 Here, `resource[Symbol.dispose]()` will be called after `getValue()`, before the `return` statement executes.
 
-The resource may outlive the declaration, in case it's captured by a [closure](/en-US/docs/Web/JavaScript/Closures):
+The resource may outlive the declaration, in case it's captured by a [closure](/en-US/docs/Web/JavaScript/Guide/Closures):
 
 ```js
 function example() {
