@@ -78,7 +78,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the number of video pauses experienced by this receiver.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}}
-  - : TBD.
+  - : A string that identifies the corresponding {{domxref("RTCAudioPlayoutStats")}} for an audio stream.
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}}
   - : A string that identifies the {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC.
     This ID is stable across multiple calls to `getStats()`.
