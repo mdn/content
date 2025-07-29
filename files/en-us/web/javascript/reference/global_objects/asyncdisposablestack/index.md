@@ -38,7 +38,7 @@ These properties are defined on `AsyncDisposableStack.prototype` and shared by a
   - : Creates a new `AsyncDisposableStack` instance that contains the same disposers as this stack, and then marks this stack as disposed, without calling any disposers.
 - {{jsxref("AsyncDisposableStack.prototype.use()")}}
   - : Registers a value that implements the async disposable protocol to the stack.
-- [`AsyncDisposableStack.prototype[Symbol.asyncDispose]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.AsyncDispose)
+- [`AsyncDisposableStack.prototype[Symbol.asyncDispose]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose)
   - : An alias for the `disposeAsync()` method.
 
 ## Specifications
