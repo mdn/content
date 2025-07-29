@@ -80,6 +80,10 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Experimental web features
 
+- **`anchor-size()`** (Nightly): `layout.css.anchor-positioning.enabled`
+
+  The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
