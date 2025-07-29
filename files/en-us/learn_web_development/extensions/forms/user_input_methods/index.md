@@ -41,7 +41,7 @@ window.addEventListener("keyup", handleKeyUp, true);
 `handleKeyDown` and `handleKeyUp` are functions defining the control logic to be executed when the `keydown` and `keyup` events are fired.
 
 > [!NOTE]
-> See the [DOM event guide](/en-US/docs/Web/API/Document_Object_Model/Events) and the {{domxref("KeyboardEvent")}} reference to find out more about keyboard events.
+> See the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events) guide and the {{domxref("KeyboardEvent")}} reference to find out more about keyboard events.
 
 ### Mouse
 
