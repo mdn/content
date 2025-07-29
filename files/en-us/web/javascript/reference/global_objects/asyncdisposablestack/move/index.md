@@ -112,4 +112,4 @@ class PluginHost {
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("AsyncDisposableStack")}}
-- {{jsxref("AsyncDisposableStack.prototype.dispose()")}}
+- {{jsxref("AsyncDisposableStack.prototype.disposeAsync()")}}
