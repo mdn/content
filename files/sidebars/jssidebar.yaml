@@ -411,18 +411,18 @@ l10n:
     Guide_Loops: ループとイテレーター
     Guide_Functions: 関数
     Guide_Expressions: 式と演算子
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: 数値と文字列
+    Guide_Dates: 日付と時刻の表現
     Guide_RegExp: 正規表現
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
-    Guide_Objects: オブジェクトを利用する
+    Guide_Objects: オブジェクトの利用
     Guide_Classes: クラスの使用
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
-    Guide_Resource_management: Resource management
-    Guide_Internationalization: Internationalization
+    Guide_Resource_management: リソース管理
+    Guide_Internationalization: 国際化
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
     Intermediate: 中級編
@@ -442,13 +442,13 @@ l10n:
     Classes: クラス
     Errors: エラー
     More: その他
-    Execution_model: Execution model
+    Execution_model: 実行モデル
     Lexical_grammar: 字句文法
     Enumerability: プロパティの列挙可能性と所有権
     Iteration_protocols: 反復処理プロトコル
     Template_strings: テンプレート文字列
     Trailing_commas: 末尾のカンマ
-    Deprecated_features: 廃止予定の機能
+    Deprecated_features: 非推奨の機能
   ko:
     Technology_overview: JavaScript 소개
     Tutorials: "자습서:"
