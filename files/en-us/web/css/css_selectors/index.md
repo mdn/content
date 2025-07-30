@@ -18,21 +18,21 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator))
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 - `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
+
+> [!NOTE]
+> The CSS selectors module introduces the [column combinator](/en-US/docs/Web/CSS/Column_combinator) (`||`) that has not yet been implemented.
 
 ### Selectors
 
 - {{CSSXref(":active")}}
 - {{CSSXref(":any-link")}}
 - {{CSSXref(":autofill")}}
-- {{CSSXref(":blank")}}
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
-- {{CSSXref(":current")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
 - {{CSSXref(":dir", ":dir()")}}
@@ -56,7 +56,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":last-child")}}
 - {{CSSXref(":last-of-type")}}
 - {{CSSXref(":link")}}
-- {{CSSXref(":local-link")}}
 - `:matches()` (obsolete legacy selector alias for {{CSSXref( ":is", ":is()")}})
 - {{CSSXref(":modal")}}
 - {{CSSXref(":muted")}}
@@ -84,7 +83,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":seeking")}}
 - {{CSSXref(":stalled")}}
 - {{CSSXref(":target")}}
-- {{CSSXref(":target-within")}}
 - {{CSSXref(":user-invalid")}}
 - {{CSSXref(":user-valid")}}
 - {{CSSXref(":valid")}}
@@ -97,6 +95,9 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [ID selectors](/en-US/docs/Web/CSS/ID_selectors)
 - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
+
+> [!NOTE]
+> The CSS selectors module introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, {{CSSXref(":local-link")}}, and {{CSSXref(":target-within")}} pseudo-classes, which have not yet been implemented.
 
 ## Terms
 

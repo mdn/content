@@ -91,3 +91,4 @@ Currently, no browsers have implemented this feature.
 ## See also
 
 - {{CSSxRef(":target")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

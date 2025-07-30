@@ -70,8 +70,8 @@ The specification also defines the `font-width` property, which is not yet suppo
 The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors, which are not yet supported by any browser.
 
 - At-rule: {{cssxref("@font-feature-values")}}
-  - : Descriptor:
-    - {{cssxref("@font-feature-values/font-display", "font-display")}}
+
+The specification also defines the{{cssxref("@font-feature-values/font-display", "font-display")}} descriptor which is not yet supported by any browser.
 
 - At-rule: {{cssxref("@font-palette-values")}}
   - : Descriptors:

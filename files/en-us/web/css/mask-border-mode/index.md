@@ -44,7 +44,7 @@ mask-border-mode: unset;
 
 ## Browser compatibility
 
-This property is not supported by any browser yet.
++Currently, no browsers have implemented this property.
 
 ## See also
 
@@ -57,3 +57,4 @@ This property is not supported by any browser yet.
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
 - {{cssxref("mask-mode")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
