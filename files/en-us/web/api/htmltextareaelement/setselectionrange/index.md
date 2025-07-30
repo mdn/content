@@ -8,12 +8,12 @@ browser-compat: api.HTMLTextAreaElement.setSelectionRange
 
 {{APIRef("HTML DOM")}}
 
-The **`setSelectionRange()`** method of the {{domxref("HTMLTextAreaElement")}} interface sets the start and end positions of the current text selection, and optionally the direction, in a {{HTMLElement("textarea")}} element. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
+The **`setSelectionRange()`** method of the {{domxref("HTMLTextAreaElement")}} interface sets the start and end positions of the current text selection, and optionally the direction, in a {{HTMLElement("textarea")}} element. This updates the selection state immediately, though the visual highlight only appears when the element is focused. The direction indicates the in which selection should be considered to have occurred; for example, that the selection was set by the user clicking and dragging from the end of the selected text toward the beginning. In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
 
-This method also updates the {{domxref("HTMLTextAreaElement.selectionStart")}}, {{domxref("HTMLTextAreaElement.selectionEnd")}}, and {{domxref("HTMLTextAreaElement.selectionDirection")}} properties.
+This method updates the {{domxref("HTMLTextAreaElement.selectionStart")}}, {{domxref("HTMLTextAreaElement.selectionEnd")}}, and {{domxref("HTMLTextAreaElement.selectionDirection")}} properties immediately, regardless of focus state. The visual selection highlight requires the element to be focused.
 
 > [!NOTE]
-> The `<textarea>` must be focused to enable selecting a subsection of the text to be selected using the `setSelectionRange()` method. Setting focus also fires a `selectchange` event.
+> While `setSelectionRange()` updates the selection properties immediately, the visual selection highlight only appears when the `<textarea>` is focused. Focusing the element will also fire a `selectchange` event.
 
 To select **all** of the text of an `<textarea>` element, use the {{domxref("HTMLTextAreaElement.select()")}} method.
 
