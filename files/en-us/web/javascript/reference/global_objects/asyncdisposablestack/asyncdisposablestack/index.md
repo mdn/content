@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack() constructor
+short-title: AsyncDisposableStack()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/AsyncDisposableStack
 page-type: javascript-constructor
 browser-compat: javascript.builtins.AsyncDisposableStack.AsyncDisposableStack

@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype.adopt()
+short-title: adopt()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/adopt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.adopt

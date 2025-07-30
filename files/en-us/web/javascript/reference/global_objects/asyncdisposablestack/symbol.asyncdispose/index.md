@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype[Symbol.asyncDispose]()
+short-title: "[Symbol.asyncDispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/Symbol.asyncDispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.@@asyncDispose
