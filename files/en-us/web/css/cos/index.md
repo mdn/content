@@ -11,28 +11,28 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 {{InteractiveExample("CSS Demo: cos()")}}
 
 ```css interactive-example-choice
-transform: translateX(calc(cos(0deg) * var(--radius)))
-  translateY(calc(sin(0deg) * var(--radius) * -1));
+transform: translateX(calc(cos(0deg) * 140px))
+  translateY(calc(sin(0deg) * -140px));
 ```
 
 ```css interactive-example-choice
-transform: translateX(calc(cos(90deg) * var(--radius)))
-  translateY(calc(sin(90deg) * var(--radius) * -1));
+transform: translateX(calc(cos(90deg) * 140px))
+  translateY(calc(sin(90deg) * -140px));
 ```
 
 ```css interactive-example-choice
-transform: translateX(calc(cos(135deg) * var(--radius)))
-  translateY(calc(sin(135deg) * var(--radius) * -1));
+transform: translateX(calc(cos(135deg) * 140px))
+  translateY(calc(sin(135deg) * -140px));
 ```
 
 ```css interactive-example-choice
-transform: translateX(calc(cos(180deg) * var(--radius)))
-  translateY(calc(sin(180deg) * var(--radius) * -1));
+transform: translateX(calc(cos(180deg) * 140px))
+  translateY(calc(sin(180deg) * -140px));
 ```
 
 ```css interactive-example-choice
-transform: translateX(calc(cos(-45deg) * var(--radius)))
-  translateY(calc(sin(-45deg) * var(--radius) * -1));
+transform: translateX(calc(cos(-45deg) * 140px))
+  translateY(calc(sin(-45deg) * -140px));
 ```
 
 ```html interactive-example
