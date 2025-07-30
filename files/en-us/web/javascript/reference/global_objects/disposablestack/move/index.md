@@ -1,5 +1,6 @@
 ---
 title: DisposableStack.prototype.move()
+short-title: move()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/move
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.move

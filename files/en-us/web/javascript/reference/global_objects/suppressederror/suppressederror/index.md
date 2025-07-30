@@ -1,5 +1,6 @@
 ---
 title: SuppressedError() constructor
+short-title: SuppressedError()
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError/SuppressedError
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SuppressedError.SuppressedError

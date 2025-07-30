@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype.disposeAsync()
+short-title: disposeAsync()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/disposeAsync
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.disposeAsync

@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype.use()
+short-title: use()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/use
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.use
