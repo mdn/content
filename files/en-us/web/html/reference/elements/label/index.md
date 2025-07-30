@@ -36,25 +36,15 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
-  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) for a [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
-
-    > [!NOTE]
-    > To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
-
-    The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
-
-    Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
-
-    > [!NOTE]
-    > A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
+  - : The value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) form control in the same document, [associating the `<label>` with that form control](#associating_a_label_with_a_form_control). Note that its JavaScript reflection property is [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
 ## Usage notes
 
-### Styling with CSS
-
-There are no special styling considerations for `<label>` elements — structurally they are inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
-
 ### Associating a label with a form control
+
+The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](/en-US/docs/Web/HTML/Guides/Content_categories#labelable). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
+
+Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
 
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
@@ -79,11 +69,14 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 </label>
 ```
 
-These two methods are equivalent in modern browsers. However, there are some other considerations:
+> [!NOTE]
+> A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
 
-- Not all assistive technologies support implicit association.
-- Implicit association may be harder to style because the label box contains the form control instead of being separate elements.
-- When using component frameworks with explicit association, it's often hard to ensure that the control has a globally unique `id` (React introduced the [`useId()`](https://react.dev/reference/react/useId) hook for this purpose).
+These two methods are equivalent, but there are a few considerations:
+
+- While common browser and {{glossary("screen reader")}} combinations support implicit association, not all assistive technologies do.
+- Depending on your design, the type of association may impact stylability. Explicit association makes the label and form control separate boxes, enabling more customizable layout such as lining them up with grid or flex layout methods.
+- Explicit association requires the form control to have an `id`, which must be unique in the whole document. This is hard especially in a componentized application. Frameworks often provide their own solutions, such as React's [`useId()`](https://react.dev/reference/react/useId), but it still requires extra orchestration to get right.
 
 Generally, we recommend using explicit association with the `for` attribute, to ensure compatibility with external tools and assistive technologies. In fact, you can simultaneously nest _and_ provide `id`/`for` for maximum compatibility.
 
@@ -125,7 +118,7 @@ Don't place additional interactive elements such as {{HTMLElement("a", "anchors"
 ```
 
 > [!NOTE]
-> It is also a good practice to place any necessary context, such as the link to the terms and conditions, before the form control, so that the user can read it before they interact with the control.
+> It is a good practice to place any necessary context, such as the link to the terms and conditions, before the form control, so that the user can read it before they interact with the control.
 
 ### Headings
 
