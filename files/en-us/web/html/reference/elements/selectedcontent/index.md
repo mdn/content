@@ -45,7 +45,7 @@ This means users can't interact with or focus on content inside `<selectedconten
 
 ### Styling the selected option's content with CSS
 
-You can target the currently selected `<option>` element's content as it appears inside the select button with CSS styles, without affecting the styling of the content of the `<option>` that was cloned.
+You can target the currently selected `<option>` element's content as it appears inside the select button with CSS styles. This lets you customize how the selected option appears in the button, separately from how it appears in the drop-down list, as it doesn't affect the styling of the content of the `<option>` that was cloned.
 
 For example, your `<option>` elements may contain icons, images, or even videos that render nicely inside the drop-down, but could cause the select `<button>` to increase in size, look untidy, and affect the surrounding layout.
 
