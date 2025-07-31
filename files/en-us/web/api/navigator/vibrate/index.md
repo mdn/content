@@ -17,6 +17,8 @@ If the method was unable to vibrate because of invalid parameters, it will retur
 `false`, else it returns `true`. If the pattern leads to a too
 long vibration, it is truncated: the max length depends on the implementation.
 
+Some devices may not vibrate if they are in Silent mode or Do Not Disturb (DND) mode. To ensure vibration works, make sure these modes are turned off and that vibration is enabled in the system settings.
+
 ## Syntax
 
 ```js-nolint
