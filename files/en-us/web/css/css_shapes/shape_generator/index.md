@@ -129,6 +129,7 @@ function displayCoords(htmlCoords, cssFunc, svgElem) {
 function renderShape() {
   ctx.strokeStyle = "magenta";
   ctx.fillStyle = "red";
+  ctx.strokeWidth = "3";
   resetDrawnShape();
   if (shapeSelect.value === "rect" && coords.length === 2) {
     const { x: x1, y: y1 } = coords[0];
