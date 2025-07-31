@@ -12,10 +12,7 @@ The **`colorSpace`** property of the {{domxref("HTMLInputElement")}} interface r
 
 ## Value
 
-A string representing the element's `colorspace` value. Possible values:
-
-- `"limited-srgb"`: The SRGB color space and limited to 8-bits per component, e.g., `#123456` or `color(srgb 0 1 0 / 0.5)`.
-- `"display-p3"`: The Display P3 color space, e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
+A string; the value of the [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute.
 
 ## Examples
 
