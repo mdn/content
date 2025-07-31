@@ -338,9 +338,10 @@ In your `package.json`, you can add `build` and `serve` scripts that will run we
 Next, create a file named `index.js`, and give it these contents:
 
 ```js
-import * as wasm from "hello-wasm";
+import init, { greet } from "hello-wasm";
 
-wasm.greet("WebAssembly with npm");
+await init();
+greet("WebAssembly with npm");
 ```
 
 This imports the module from the `node_modules` folder and calls the `greet` function, passing `"WebAssembly with npm"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
