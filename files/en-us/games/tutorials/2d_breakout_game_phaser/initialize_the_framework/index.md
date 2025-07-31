@@ -76,11 +76,18 @@ The {{htmlelement("canvas")}} element is generated automatically by the framewor
 
 Here's the full source code of the first lesson, running live:
 
-```html interactive-example
-<script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser-arcade-physics.min.js"></script>
+```html hidden live-sample__final
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
 ```
 
-```js interactive-example
+```css hidden live-sample__final
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden live-sample__final
 class Example extends Phaser.Scene {
   preload() {}
   create() {}
@@ -97,12 +104,7 @@ const config = {
 const game = new Phaser.Game(config);
 ```
 
-```css interactive-example
-* {
-  padding: 0;
-  margin: 0;
-}
-```
+{{embedlivesample("final", "", "480px")}}
 
 ## Next steps
 

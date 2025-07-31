@@ -98,7 +98,55 @@ This kind of functionality is just the tip of the iceberg — there are various 
 
 You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}
+```html hidden live-sample__final
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden live-sample__final
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden live-sample__final
+class Example extends Phaser.Scene {
+  ball;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+  }
+  create() {
+    this.ball = this.add.sprite(50, 50, "ball");
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, 150);
+  }
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: Example,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{embedlivesample("final", "", "480px")}}
 
 ## Next steps
 

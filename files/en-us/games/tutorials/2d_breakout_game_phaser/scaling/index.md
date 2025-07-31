@@ -54,7 +54,40 @@ const config = {
 
 You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/6a64vecL/","","400")}}
+```html hidden live-sample__final
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden live-sample__final
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden live-sample__final
+class Example extends Phaser.Scene {
+  preload() {}
+  create() {}
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: Example,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eee",
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{embedlivesample("final", "", "480px")}}
 
 ## Next steps
 
