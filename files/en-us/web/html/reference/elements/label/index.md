@@ -44,7 +44,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](/en-US/docs/Web/HTML/Guides/Content_categories#labelable). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
 
-Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
+Multiple `<label>` elements can be associated with the same form control by having multiple `<label>` elements with the same `for` attribute value, which gives the form control multiple labels.
 
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
@@ -75,7 +75,7 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 These two methods are equivalent, but there are a few considerations:
 
 - While common browser and {{glossary("screen reader")}} combinations support implicit association, not all assistive technologies do.
-- Depending on your design, the type of association may impact stylability. Explicit association makes the label and form control separate boxes, enabling more customizable layout such as lining them up with grid or flex layout methods.
+- Depending on your design, the type of association may impact stylability. Making the `<label>` and form control sibling elements instead of parent-child means they are separate, adjacent boxes, enabling more customizable layout such as lining them up with grid or flex layout methods.
 - Explicit association requires the form control to have an `id`, which must be unique in the whole document. This is hard especially in a componentized application. Frameworks often provide their own solutions, such as React's [`useId()`](https://react.dev/reference/react/useId), but it still requires extra orchestration to get right.
 
 Generally, we recommend using explicit association with the `for` attribute, to ensure compatibility with external tools and assistive technologies. In fact, you can simultaneously nest _and_ provide `id`/`for` for maximum compatibility.
@@ -94,7 +94,7 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 ### Interactive content
 
-Don't place additional interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `label` (the only interactive child should be the element being labeled, if you are using [implicit association](#associating_a_label_with_a_form_control)). Doing so makes it difficult for people to activate the form input associated with the `label`.
+Other than the [implicitly associated](#associating_a_label_with_a_form_control) form control, don't place additional interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `<label>`. Doing so makes it difficult for people to activate the form input associated with the `label`.
 
 **Don't do this:**
 
