@@ -38,7 +38,7 @@ The `<selectedcontent>` element contains a clone of the content of the currently
 > [!WARNING]
 > Since the browser updates `<selectedcontent>` only when the selected `<option>` changes, any dynamic modifications to the content of the selected `<option>` after the `<select>` is rendered won't be cloned to `<selectedcontent>`. You'll need to update `<selectedcontent>` manually. Watch out if you're using any of the popular front-end JavaScript frameworks where `<option>` elements are updated dynamically after the initial render–the result may not match what you expect in `<selectedcontent>`.
 
-### Inertness
+### `<selectedcontent>` inertness
 
 By default, any `<button>` inside a `<select>` element is [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert). As a result, all content inside that button—including `<selectedcontent>`—is also inert.
 This means users can't interact with or focus on content inside `<selectedcontent>`.
