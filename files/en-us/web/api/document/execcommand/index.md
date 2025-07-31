@@ -11,11 +11,11 @@ browser-compat: api.Document.execCommand
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 > [!NOTE]
-> Although the `execCommand` method is deprecated, there are still some valid use cases that do not yet have viable alternatives, such as implementing undo/redo, changing content within the selection range, or applying rich-text formatting. Developers should use it carefully and test to ensure cross-browser compatibility.
+> Although the `execCommand()` method is deprecated, there are still some valid use cases that do not yet have viable alternatives. For example, unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history). For these use cases, you can still use this method, but test to ensure cross-browser compatibility, such as by using {{domxref("document.queryCommandSupported()")}}.
 
 The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
-To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
+To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. 
 
 Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g., `copy`) can work without an editable element.
 
@@ -223,7 +223,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-{{Specifications}}
+This feature is not part of any current specification. It is no longer on track to become a standard. There is an unofficial [W3C execCommand spec draft](https://w3c.github.io/editing/docs/execCommand/).
 
 ## Browser compatibility
 
@@ -234,3 +234,6 @@ function insertText(newText, selector) {
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
+- {{domxref("document.queryCommandEnabled()")}}
+- {{domxref("document.queryCommandState()")}}
+- {{domxref("document.queryCommandSupported()")}}
