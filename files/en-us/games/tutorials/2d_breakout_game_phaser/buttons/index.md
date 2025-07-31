@@ -41,58 +41,88 @@ You also need to [grab the button spritesheet from GitHub](https://github.com/ig
 
 ## Adding the button to the game
 
-Adding the new button to the game is done by using the `add.button` method. Add the following lines to the bottom of your `create` method:
+Adding the new button to the game is done by using the `add.sprite` method. Add the following lines to the bottom of your `create` method:
 
 ```js
-startButton = game.add.button(
-  game.world.width * 0.5,
-  game.world.height * 0.5,
+this.startButton = this.add.sprite(
+  this.scale.width * 0.5,
+  this.scale.height * 0.5,
   "button",
-  startGame,
-  this,
-  1,
   0,
-  2,
 );
-startButton.anchor.set(0.5);
 ```
 
-The `button()` method's parameters are as follows:
+In addition to the parameters we passed to the other `add.sprite` calls (such as when we added the ball and paddle), this time we also pass the frame number, which is `0` in this case. This means that the first frame of the spritesheet will be used for the button's initial appearance.
 
-- The button's x and y coordinates
-- The name of the graphic asset to be displayed for the button
-- A callback function that will be executed when the button is pressed
-- A reference to `this` to specify the execution context
-- The frames that will be used for the _over_, _out_ and _down_ events.
+To make the button respond to various inputs such as mouse clicks, we need to add the following lines right after the previous `add.sprite` call:
+
+```js
+this.startButton.setInteractive();
+this.startButton.on(
+  "pointerover",
+  () => {
+    this.startButton.setFrame(1);
+  },
+  this,
+);
+this.startButton.on(
+  "pointerdown",
+  () => {
+    this.startButton.setFrame(2);
+  },
+  this,
+);
+this.startButton.on(
+  "pointerout",
+  () => {
+    this.startButton.setFrame(0);
+  },
+  this,
+);
+this.startButton.on(
+  "pointerup",
+  () => {
+    this.startGame();
+  },
+  this,
+);
+```
+
+First, we call `setInteractive` on the button to make it respond to pointer events. Then we add the four event listeners to the button:
+
+- `pointerover` — when the pointer is over the button, we change the button's frame to `1`, the second frame of the spritesheet.
+- `pointerdown` — when the button is pressed, we change the button's frame to `2`, the third frame of the spritesheet.
+- `pointerout` — when the pointer moves out of the button, we change the button's frame back to `0`, the first frame of the spritesheet.
+- `pointerup` — when the button is released, we call the `startGame` method to start the game.
 
 > [!NOTE]
 > The over event is the same as hover, out is when the pointer moves out of the button and down is when the button is pressed.
 
-Now we need to define the `startGame()` function referenced in the code above:
+Now, we need to define the `startGame` method referenced in the code above:
 
 ```js
-function startGame() {
-  startButton.destroy();
-  ball.body.velocity.set(150, -150);
-  playing = true;
+startGame () {
+  this.startButton.destroy();
+  this.ball.body.setVelocity(150, -150);
+  this.playing = true;
 }
 ```
 
 When the button is pressed, we remove the button, sets the ball's initial velocity and set the `playing` variable to `true`.
 
-Finally for this section, go back into your `create()` function, find the `ball.body.velocity.set(150, -150);` line, and remove it. You only want the ball to move when the button is pressed, not before!
+Finally for this section, go back into your `create` method, find the `this.ball.body.setVelocity(150, -150);` line, and remove it. You only want the ball to move when the button is pressed, not before!
 
 ## Keeping the paddle still before the game starts
 
-It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` variable and make the paddle movable only when the game has started. To do that, adjust the `update()` function like so:
+It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` variable and make the paddle movable only when the game has started. To do that, adjust the `update` function like so:
 
 ```js
-function update() {
-  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-  game.physics.arcade.collide(ball, bricks, ballHitBrick);
-  if (playing) {
-    paddle.x = game.input.x || game.world.width * 0.5;
+update () {
+  // ...
+  if (this.playing) {
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
   }
+  // ...
 }
 ```
 
@@ -102,7 +132,257 @@ That way the paddle is immovable after everything is loaded and prepared, but be
 
 You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/1rpj71k4/","","400")}}
+```html hidden live-sample__final
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden live-sample__final
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden live-sample__final
+class Example extends Phaser.Scene {
+  ball;
+  paddle;
+  bricks;
+
+  scoreText;
+  score = 0;
+
+  lives = 3;
+  livesText;
+  lifeLostText;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+    this.load.image("paddle", "paddle.png");
+    this.load.image("brick", "brick.png");
+    this.load.spritesheet("wobble", "wobble.png", {
+      frameWidth: 20,
+      frameHeight: 20,
+    });
+    this.load.spritesheet("button", "button.png", {
+      frameWidth: 120,
+      frameHeight: 40,
+    });
+  }
+  create() {
+    this.ball = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 25,
+      "ball",
+    );
+    this.physics.add.existing(this.ball);
+    this.ball.body.setCollideWorldBounds(true, 1, 1);
+    this.ball.body.setBounce(1);
+    this.ball.anims.create({
+      key: "wobble",
+      frameRate: 24,
+      frames: this.anims.generateFrameNumbers("wobble", {
+        frames: [0, 1, 0, 2, 0, 1, 0, 2, 0],
+      }),
+    });
+
+    this.paddle = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height - 5,
+      "paddle",
+    );
+    this.paddle.setOrigin(0.5, 1);
+    this.physics.add.existing(this.paddle);
+    this.paddle.body.setImmovable(true);
+
+    this.physics.world.checkCollision.down = false;
+    this.ball.body.onWorldBounds = true;
+
+    this.initBricks();
+
+    const textStyle = { font: "18px Arial", fill: "#0095DD" };
+    this.scoreText = this.add.text(5, 5, "Points: 0", textStyle);
+
+    this.livesText = this.add.text(
+      this.scale.width - 5,
+      5,
+      `Lives: ${this.lives}`,
+      textStyle,
+    );
+    this.livesText.setOrigin(1, 0);
+    this.lifeLostText = this.add.text(
+      this.scale.width * 0.5,
+      this.scale.height * 0.5,
+      "Life lost, click to continue",
+      textStyle,
+    );
+    this.lifeLostText.setOrigin(0.5, 0.5);
+    this.lifeLostText.visible = false;
+
+    this.startButton = this.add.sprite(
+      this.scale.width * 0.5,
+      this.scale.height * 0.5,
+      "button",
+      0,
+    );
+    this.startButton.setInteractive();
+    this.startButton.on(
+      "pointerover",
+      () => {
+        this.startButton.setFrame(1);
+      },
+      this,
+    );
+    this.startButton.on(
+      "pointerdown",
+      () => {
+        this.startButton.setFrame(2);
+      },
+      this,
+    );
+    this.startButton.on(
+      "pointerout",
+      () => {
+        this.startButton.setFrame(0);
+      },
+      this,
+    );
+    this.startButton.on(
+      "pointerup",
+      () => {
+        this.startGame();
+      },
+      this,
+    );
+  }
+  update() {
+    this.physics.collide(this.ball, this.paddle, this.hitPaddle.bind(this));
+    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+
+    if (this.playing) {
+      this.paddle.x = this.input.x || this.scale.width * 0.5;
+    }
+
+    const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
+      this.physics.world.bounds,
+      this.ball.getBounds(),
+    );
+    if (ballIsOutOfBounds) {
+      this.ballLeaveScreen();
+    }
+  }
+
+  startGame() {
+    this.startButton.destroy();
+    this.ball.body.setVelocity(150, -150);
+    this.playing = true;
+  }
+
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
+
+    this.bricks = this.add.group();
+    for (let c = 0; c < bricksLayout.count.col; c++) {
+      for (let r = 0; r < bricksLayout.count.row; r++) {
+        const brickX =
+          c * (bricksLayout.width + bricksLayout.padding) +
+          bricksLayout.offset.left;
+        const brickY =
+          r * (bricksLayout.height + bricksLayout.padding) +
+          bricksLayout.offset.top;
+
+        const newBrick = this.add.sprite(brickX, brickY, "brick");
+        this.physics.add.existing(newBrick);
+        newBrick.body.setImmovable(true);
+        this.bricks.add(newBrick);
+      }
+    }
+  }
+
+  hitPaddle(ball, paddle) {
+    this.ball.anims.play("wobble");
+  }
+
+  hitBrick(ball, brick) {
+    const destroyTween = this.tweens.add({
+      targets: brick,
+      ease: "Linear",
+      repeat: 0,
+      duration: 200,
+      props: {
+        scaleX: 0,
+        scaleY: 0,
+      },
+      onComplete: () => {
+        brick.destroy();
+      },
+    });
+    destroyTween.play();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
+
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
+    }
+  }
+
+  ballLeaveScreen() {
+    this.lives--;
+    if (this.lives > 0) {
+      this.livesText.setText(`Lives: ${this.lives}`);
+      this.lifeLostText.visible = true;
+      this.ball.body.reset(this.scale.width * 0.5, this.scale.height - 25);
+      this.input.once(
+        "pointerdown",
+        () => {
+          this.lifeLostText.visible = false;
+          this.ball.body.setVelocity(150, -150);
+        },
+        this,
+      );
+    } else {
+      alert("Game over!");
+      location.reload();
+    }
+  }
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: Example,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{embedlivesample("final", "", "480px")}}
 
 ## Next steps
 
