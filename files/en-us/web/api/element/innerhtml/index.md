@@ -39,14 +39,16 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 `innerHTML` gets a serialization of the nested child DOM elements within the element, or sets HTML or XML that should be parsed to replace the DOM tree within the element.
 
+Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
+This is to prevent a potential security vulnerability ([mutation XSS](https://research.securitum.com/dompurify-bypass-using-mxss/)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
+
+### Shadow DOM considerations
+
 The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 
 Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
 So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified.
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must instead use {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
-
-Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
-This is to prevent a potential security vulnerability ([mutation XSS](https://research.securitum.com/dompurify-bypass-using-mxss/)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
 
 ### Security considerations
 
@@ -61,7 +63,6 @@ el.innerHTML = name; // shows the alert
 
 You can mitigate these issues by always assigning {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
-This is demonstrated in the following sections.
 
 > [!NOTE]
 > {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
@@ -71,18 +72,23 @@ This is demonstrated in the following sections.
 
 ### Reading the HTML contents of an element
 
-Reading `innerHTML` causes the user agent to serialize the HTML or XML fragment comprised of the element's descendants.
-The resulting string is returned.
+Reading `innerHTML` causes the user agent to serialize the element's descendants.
 
-```js
-const contents = myElement.innerHTML;
+Given the following HTML:
+
+```html
+<div id="example">
+  <p>My name is Joe</p>
+</div>
 ```
 
-This lets you look at the HTML markup of the element's content nodes.
+You can get and log the markup for the contents of the outer {{htmlelement("div")}} as shown:
 
-> [!NOTE]
-> The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment may not match the original page markup.
-> It will also omit any shadow roots.
+```js
+const myElement = document.querySelector("#example");
+const contents = myElement.innerHTML;
+console.log(contents); // "\n  <p>My name is Joe</p>\n"
+```
 
 ### Replacing the contents of an element
 
@@ -90,9 +96,7 @@ Setting the value of `innerHTML` lets you replace the existing contents of an el
 This completely removes the original content, including any event handlers associated with the removed elements.
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
-This provides an implementation of `trustedTypes.createPolicy()` which just returns the `policyOptions` object it was passed.
-The object defines sanitization functions for data, and these functions are expected to return strings.
-Effectively it is a transparent replacement for the trusted types JavaScript API:
+This acts as a transparent replacement for the trusted types JavaScript API:
 
 ```js
 if (typeof trustedTypes === "undefined")
@@ -125,126 +129,6 @@ element.innerHTML = trustedHTML;
 > [!WARNING]
 > While you can directly assign a string to `innerHTML` this is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
 > You should use `TrustedHTML` to ensure that the content is sanitized before it is inserted, and you should set a CSP header to [enforce trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
-
-### Clearing the contents of an element
-
-You can clear the content of an element by setting its content to the empty string.
-For example, the code below clears the entire contents of a document by setting the {{domxref("Document.body", "body")}} element to a `TrustedHTML` object for the empty string:
-
-```js
-// Create a TrustedHTML instance using the policy
-document.body.textContent = policy.createHTML(policy.createHTML(""));
-```
-
-```js
-document.body.textContent = "";
-```
-
-### Logging messages using innerHTML
-
-This example uses `innerHTML` to create a mechanism for logging messages into a box on a web page.
-
-#### HTML
-
-The HTML is quite simple for our example.
-
-```html
-<div class="box">
-  <div><strong>Log:</strong></div>
-  <div class="log"></div>
-</div>
-```
-
-The {{HTMLElement("div")}} with the class `"box"` is just a container for layout purposes, presenting the contents with a box around it.
-The `<div>` whose class is `"log"` is the container for the log text itself.
-
-#### CSS
-
-The following CSS styles our example content.
-
-```css
-.box {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-
-.log {
-  margin-top: 8px;
-  font-family: monospace;
-}
-```
-
-#### JavaScript
-
-The example doesn't actually require sanitization/trusted types because we know that the strings will only contain {{htmlelement("strong")}} and {{htmlelement("em")}} elements.
-However we'll use them anyway, because in a real application you should enforce and use trusted types everywhere.
-
-First we define the tinyfill:
-
-```js
-if (typeof trustedTypes === "undefined")
-  trustedTypes = { createPolicy: (n, rules) => rules };
-```
-
-Then we create our policy `"safe-string-policy"` for using with inputs that we _know_ to be safe.
-This just passes the input through to the output without performing sanitization:
-
-```js
-const safeStringPolicy = trustedTypes.createPolicy("safe-string-policy", {
-  createHTML: (input) => input,
-});
-```
-
-Next we define a `log()` function that uses this policy.
-
-```js
-const logElem = document.querySelector(".log");
-
-function log(msg) {
-  const time = new Date();
-  const timeStr = `${logElem.innerHTML}${time.toLocaleTimeString()}: ${msg}<br/>`;
-  const trustedHTML = safeStringPolicy.createHTML(timeStr);
-  logElem.innerHTML = trustedHTML;
-}
-
-log("Logging mouse events inside this container…");
-```
-
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
-This string is appended to the original content of the log and then the policy is used to pass the string through our `createHTML()` "transformation" function.
-Then the message is assigned to the element with the class `"log"`.
-
-We add a second method that logs information about {{domxref("MouseEvent")}} based events (such as {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, and {{domxref("Element/mouseenter_event", "mouseenter")}}):
-
-```js
-function logEvent(event) {
-  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
-  log(msg);
-}
-```
-
-Then we use this as the event handler for a number of mouse events on the box that contains our log:
-
-```js
-const boxElem = document.querySelector(".box");
-
-boxElem.addEventListener("mousedown", logEvent);
-boxElem.addEventListener("mouseup", logEvent);
-boxElem.addEventListener("click", logEvent);
-boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);
-```
-
-#### Result
-
-The resulting content looks like this.
-You can see output into the log by moving the mouse in and out of the box, clicking in it, and so forth.
-
-{{EmbedLiveSample("Logging messages using innerHTML", 640, 350)}}
 
 ## Specifications
 
