@@ -19,7 +19,7 @@ or `null` if the specified node is the first in that list.
 > or `Node.previousSibling`
 > may refer to a whitespace text node rather than the actual element the author intended to get.
 >
-> See [Whitespace in the DOM](/en-US/docs/Web/CSS/CSS_text/Whitespace#whitespace_in_dom) for more information.
+> See [Whitespace in DOM](/en-US/docs/Web/CSS/CSS_text/Whitespace#whitespace_in_dom) for more information.
 >
 > You can use [`previousElementSibling`](/en-US/docs/Web/API/Element/previousElementSibling)
 > to get the previous element node (skipping text nodes and any other non-element nodes).

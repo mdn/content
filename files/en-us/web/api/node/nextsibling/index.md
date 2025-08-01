@@ -20,7 +20,7 @@ if the specified node is the last child in the parent element.
 > may refer to a whitespace text node rather than the actual element the author
 > intended to get.
 >
-> The article [Whitespace in the DOM](/en-US/docs/Web/CSS/CSS_text/Whitespace#whitespace_in_dom)
+> The section [Whitespace in DOM](/en-US/docs/Web/CSS/CSS_text/Whitespace#whitespace_in_dom)
 > contains more information about this behavior.
 >
 > You can use {{domxref("Element.nextElementSibling")}} to obtain the next element
