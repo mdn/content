@@ -68,7 +68,9 @@ Firefox 143 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Marionette -->
 
-<!-- ## Changes for add-on developers -->
+## Changes for add-on developers
+
+- Addition of {{WebExtAPIRef("storage.StorageArea.getKeys()")}}. This method returns an array containing all of the keys in a storage area. It's available for all storage areas, that is {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, and {{WebExtAPIRef("storage.managed", "managed")}}. ([Firefox bug 1910669](https://bugzil.la/1910669))
 
 <!-- ### Removals -->
 
