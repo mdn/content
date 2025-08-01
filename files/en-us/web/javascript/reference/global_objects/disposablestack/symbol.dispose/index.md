@@ -1,5 +1,6 @@
 ---
 title: DisposableStack.prototype[Symbol.dispose]()
+short-title: "[Symbol.dispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.@@dispose

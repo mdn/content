@@ -65,7 +65,7 @@ IdentityCredential.disconnect({
 });
 ```
 
-For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`](/en-US//docs/Web/API/FedCM_API/IDP_integration#disconnect_endpoint) in its config file. See [The disconnect endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_disconnect_endpoint) for more details of the underlying HTTP communication.
+For a `disconnect()` call to work, the IdP must include a [`disconnect_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#disconnect_endpoint) in its config file. See [The disconnect endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_disconnect_endpoint) for more details of the underlying HTTP communication.
 
 ## Specifications
 

@@ -667,7 +667,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype

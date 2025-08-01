@@ -1,5 +1,6 @@
 ---
 title: DisposableStack.prototype.dispose()
+short-title: dispose()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/dispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.dispose

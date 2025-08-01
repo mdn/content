@@ -1,5 +1,6 @@
 ---
 title: "SuppressedError: suppressed"
+short-title: suppressed
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError/suppressed
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.SuppressedError.suppressed

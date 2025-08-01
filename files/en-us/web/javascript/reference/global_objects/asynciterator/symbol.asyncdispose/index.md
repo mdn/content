@@ -1,5 +1,6 @@
 ---
 title: AsyncIterator.prototype[Symbol.asyncDispose]()
+short-title: "[Symbol.asyncDispose]()"
 slug: Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncDispose
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncIterator.@@asyncDispose

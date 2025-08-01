@@ -1,5 +1,6 @@
 ---
 title: "SuppressedError: error"
+short-title: error
 slug: Web/JavaScript/Reference/Global_Objects/SuppressedError/error
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.SuppressedError.error
