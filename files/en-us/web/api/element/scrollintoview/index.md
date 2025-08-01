@@ -56,6 +56,11 @@ scrollIntoView(scrollIntoViewOptions)
         - `end`: Aligns the element's right edge with the right of the scrollable container, placing the element at the end of the visible area horizontally.
         - `nearest`: Scrolls the element to the nearest edge in the horizontal direction. If the element is closer to the left edge of the scrollable container, it will align to the left; if it's closer to the right edge, it will align to the right. This minimizes the scrolling distance.
         - Defaults to `nearest`.
+    - `container` {{optional_inline}}
+      - : Defines the scrollable ancestor container. This option is a string and accepts one of the following values:
+        - `all`: All scrollable containers will be impacted (including the viewport).
+        - `nearest`: Only the nearest scrollable container will be impacted by the scroll.
+        - Defaults to `all`.
 
 ### Return value
 
