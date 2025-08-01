@@ -323,6 +323,20 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
+### `anchor-size()` function
+
+The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
