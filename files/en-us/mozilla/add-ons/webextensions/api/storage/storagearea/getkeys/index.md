@@ -36,33 +36,19 @@ If managed storage is not set, `undefined` is returned.
 Suppose storage contains two items:
 
 ```js
-// storage contains two items,
-// "kitten" and "monster"
+// storage contains two items, "kitten" and "monster"
 browser.storage.local.set({
   kitten: { name: "Mog", eats: "mice" },
   monster: { name: "Kraken", eats: "people" },
 });
 ```
 
-With these success and failure handlers for the promise:
+Retrieve keys of all items in storage.local and log the result.
 
 ```js
-function onGot(item) {
-  console.log(item);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-```
-
-Retrieve the storage item keys:
-
-```js
-let gettingKeys = browser.storage.local.getKeys();
-gettingKeys.then(onGot, onError);
-
-// -> array [ kitten, monster ]
+browser.storage.local.getKeys()
+  .then((keys) => console.log(keys)) // [ "kitten", "monster" ]
+  .catch((err) => console.error(`Error: ${error}`));
 ```
 
 {{WebExtExamples}}
