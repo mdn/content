@@ -111,15 +111,15 @@ The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transm
 
 ### Security of basic authentication
 
-> [!WARNING]
-> As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure. HTTPS/TLS should be used with basic authentication to prevent credential interception.
->
-> **Additional Security Considerations**:
->
-> - Unlike cookies with `SameSite=Lax` protections, HTTP Basic Auth is vulnerable to [Cross-Site Request Forgery (CSRF)](/en-US/docs/Glossary/CSRF) attacks.
-> - For state-changing requests, implement [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF) or other protections.
->
-> Without these security enhancements, basic authentication should not be used to protect sensitive or valuable information.
+As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure.
+HTTPS/TLS should be used with basic authentication to prevent credential interception.
+
+In addition:
+
+- Unlike cookies with `SameSite=Lax` protections, HTTP Basic Auth is vulnerable to [Cross-Site Request Forgery (CSRF)](/en-US/docs/Glossary/CSRF) attacks.
+- For state-changing requests, implement [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF) or other protections.
+
+Without these security enhancements, basic authentication should not be used to protect sensitive or valuable information.
 
 ### Restricting access with Apache and basic authentication
 
