@@ -46,7 +46,8 @@ browser.storage.local.set({
 Retrieve keys of all items in storage.local and log the result.
 
 ```js
-browser.storage.local.getKeys()
+browser.storage.local
+  .getKeys()
   .then((keys) => console.log(keys)) // [ "kitten", "monster" ]
   .catch((err) => console.error(`Error: ${error}`));
 ```
