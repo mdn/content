@@ -43,9 +43,13 @@ this.ball.body.setVelocity(150, 150);
 Remember to remove our old method of adding values to `x` and `y` from the `update` method:
 
 ```js
-update () {
-  ball.x += 1;
-  ball.y += 1;
+class Example extends Phaser.Scene {
+  // ...
+  update() {
+    ball.x += 1;
+    ball.y += 1;
+  }
+  // ...
 }
 ```
 

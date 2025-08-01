@@ -16,18 +16,26 @@ Now onto the next challenge — the collision detection between the ball and the
 The physics engine makes everything a lot easier — we just need to add two simple pieces of code. First, add a new line inside your `update` method that detects a collision between the ball and bricks, as shown below:
 
 ```js
-function update() {
-  this.physics.collide(this.ball, this.paddle);
-  this.physics.collide(this.ball, this.bricks, this.hitBrick);
-  paddle.x = game.input.x || game.world.width * 0.5;
+class Example extends Phaser.Scene {
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, this.hitBrick);
+    paddle.x = game.input.x || game.world.width * 0.5;
+  }
+  // ...
 }
 ```
 
 The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs — `hitBrick`. Create this new function as the last method of the `Example` class, just before the closing brace `}`, as follows:
 
 ```js
-hitBrick (ball, brick) {
-  brick.destroy();
+class Example extends Phaser.Scene {
+  // ...
+  hitBrick(ball, brick) {
+    brick.destroy();
+  }
+  // ...
 }
 ```
 

@@ -30,9 +30,13 @@ The `bricks` property will be used to create a group of bricks, which will make 
 Next, let's load the image of the brick — add the following `load.image()` call just below the others:
 
 ```js
-preload () {
+class Example extends Phaser.Scene {
   // ...
-  this.load.image('brick', 'img/brick.png');
+  preload() {
+    // ...
+    this.load.image("brick", "img/brick.png");
+  }
+  // ...
 }
 ```
 
@@ -43,29 +47,37 @@ You also need to [grab the brick image from GitHub](https://github.com/igrep/2D_
 We will place all the code for drawing the bricks inside an `initBricks` method to keep it separated from the rest of the code. Add a call to `initBricks` at the end of the `create` method:
 
 ```js
-create () {
+class Example extends Phaser.Scene {
   // ...
-  this.initBricks();
+  create() {
+    // ...
+    this.initBricks();
+  }
+  // ...
 }
 ```
 
 Now onto the method itself. Add the `initBricks` method at the end of the `Example` class, just before the closing brace `}`, as shown below. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
 
 ```js
-initBricks () {
-  const bricksLayout = {
-    width: 50,
-    height: 20,
-    count: {
-      row: 3,
-      col: 7,
-    },
-    offset: {
-      top: 50,
-      left: 60,
-    },
-    padding: 10,
-  };
+class Example extends Phaser.Scene {
+  // ...
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
+  }
+  // ...
 }
 ```
 
@@ -121,35 +133,41 @@ Each `brickX` position is worked out as `bricksLayout.width` plus `bricksLayout.
 Here is the complete code for the `initBricks()` function:
 
 ```js
-initBricks () {
-  const bricksLayout = {
-    width: 50,
-    height: 20,
-    count: {
-      row: 3,
-      col: 7,
-    },
-    offset: {
-      top: 50,
-      left: 60,
-    },
-    padding: 10,
-  };
+class Example extends Phaser.Scene {
+  // ...
+  initBricks() {
+    const bricksLayout = {
+      width: 50,
+      height: 20,
+      count: {
+        row: 3,
+        col: 7,
+      },
+      offset: {
+        top: 50,
+        left: 60,
+      },
+      padding: 10,
+    };
 
-  this.bricks = this.add.group();
-  for (let c = 0; c < bricksLayout.count.col; c++) {
-    for (let r = 0; r < bricksLayout.count.row; r++) {
-      const brickX =
-        c * (bricksLayout.width + bricksLayout.padding) + bricksLayout.offset.left;
-      const brickY =
-        r * (bricksLayout.height + bricksLayout.padding) + bricksLayout.offset.top;
+    this.bricks = this.add.group();
+    for (let c = 0; c < bricksLayout.count.col; c++) {
+      for (let r = 0; r < bricksLayout.count.row; r++) {
+        const brickX =
+          c * (bricksLayout.width + bricksLayout.padding) +
+          bricksLayout.offset.left;
+        const brickY =
+          r * (bricksLayout.height + bricksLayout.padding) +
+          bricksLayout.offset.top;
 
-      const newBrick = this.add.sprite(brickX, brickY, "brick");
-      this.physics.add.existing(newBrick);
-      newBrick.body.setImmovable(true);
-      this.bricks.add(newBrick);
+        const newBrick = this.add.sprite(brickX, brickY, "brick");
+        this.physics.add.existing(newBrick);
+        newBrick.body.setImmovable(true);
+        this.bricks.add(newBrick);
+      }
     }
   }
+  // ...
 }
 ```
 

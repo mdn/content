@@ -20,16 +20,23 @@ From the framework point of view the paddle is very similar to the ball — we n
 First, add the `paddle` property we will be using in our game, right after the `ball` property:
 
 ```js
-paddle;
+class Example extends Phaser.Scene {
+  ball;
+  paddle;
+  // ...
+}
 ```
 
-Then, in the `preload` function, load the `paddle` image by adding the following new `load.image()` call:
+Then, in the `preload` method, load the `paddle` image by adding the following new `load.image()` call:
 
 ```js
-function preload() {
-  // …
-  this.load.image("ball", "img/ball.png");
-  this.load.image("paddle", "img/paddle.png");
+class Example extends Phaser.Scene {
+  // ...
+  preload() {
+    this.load.image("ball", "img/ball.png");
+    this.load.image("paddle", "img/paddle.png");
+  }
+  // ...
 }
 ```
 

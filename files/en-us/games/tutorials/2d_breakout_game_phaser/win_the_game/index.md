@@ -16,15 +16,19 @@ Implementing winning in our game is quite easy: if you happen to destroy all the
 Add the following new code into your `hitBrick` method:
 
 ```js
-hitBrick (ball, brick) {
-  brick.destroy();
-  this.score += 10;
-  this.scoreText.setText(`Points: ${this.score}`);
+class Example extends Phaser.Scene {
+  // ...
+  hitBrick (ball, brick) {
+    brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
 
-  if (this.bricks.countActive() === 0) {
-    alert("You won the game, congratulations!");
-    location.reload();
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
+    }
   }
+  // ...
 }
 ```
 

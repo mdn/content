@@ -115,20 +115,28 @@ if (ballIsOutOfBounds) {
 We want to decrease the number of lives every time the ball leaves the canvas. Add the `ballLeaveScreen()` method definition at the end of the `Example` class:
 
 ```js
-ballLeaveScreen () {
-  this.lives--;
-  if (this.lives > 0) {
-    this.livesText.setText(`Lives: ${this.lives}`);
-    this.lifeLostText.visible = true;
-    this.ball.body.reset(this.scale.width * 0.5, this.scale.height - 25);
-    this.input.once("pointerdown", () => {
-      this.lifeLostText.visible = false;
-      this.ball.body.setVelocity(150, -150);
-    }, this);
-  } else {
-    alert("Game over!");
-    location.reload();
+class Example extends Phaser.Scene {
+  // ...
+  ballLeaveScreen() {
+    this.lives--;
+    if (this.lives > 0) {
+      this.livesText.setText(`Lives: ${this.lives}`);
+      this.lifeLostText.visible = true;
+      this.ball.body.reset(this.scale.width * 0.5, this.scale.height - 25);
+      this.input.once(
+        "pointerdown",
+        () => {
+          this.lifeLostText.visible = false;
+          this.ball.body.setVelocity(150, -150);
+        },
+        this,
+      );
+    } else {
+      alert("Game over!");
+      location.reload();
+    }
   }
+  // ...
 }
 ```
 

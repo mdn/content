@@ -24,8 +24,12 @@ ball;
 Loading images and printing them on our canvas is a lot easier using Phaser than using pure JavaScript. To load the asset, we will use the `Phaser.Scene`'s `load.image` method, available as `this.load.image`. Add the following new line just the `preload()` method:
 
 ```js
-preload () {
-  this.load.image('ball', 'img/ball.png');
+class Example extends Phaser.Scene {
+  // ...
+  preload() {
+    this.load.image("ball", "img/ball.png");
+  }
+  // ...
 }
 ```
 
@@ -36,8 +40,12 @@ Of course, to load the image, it must be available in our code directory. [Grab 
 Now, to show it on the screen we will use another `Phaser.Scene`'s method called `add.sprite`; add the following new line inside the `create()` method:
 
 ```js
-create () {
-  this.ball = this.add.sprite(50, 50, 'ball');
+class Example extends Phaser.Scene {
+  // ...
+  create() {
+    this.ball = this.add.sprite(50, 50, "ball");
+  }
+  // ...
 }
 ```
 

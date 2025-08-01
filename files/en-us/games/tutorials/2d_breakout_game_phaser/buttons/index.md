@@ -101,10 +101,14 @@ First, we call `setInteractive` on the button to make it respond to pointer even
 Now, we need to define the `startGame` method referenced in the code above:
 
 ```js
-startGame () {
-  this.startButton.destroy();
-  this.ball.body.setVelocity(150, -150);
-  this.playing = true;
+class Example extends Phaser.Scene {
+  // ...
+  startGame() {
+    this.startButton.destroy();
+    this.ball.body.setVelocity(150, -150);
+    this.playing = true;
+  }
+  // ...
 }
 ```
 
@@ -117,10 +121,14 @@ Finally for this section, go back into your `create` method, find the `this.ball
 It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` variable and make the paddle movable only when the game has started. To do that, adjust the `update` function like so:
 
 ```js
-update () {
+class Example extends Phaser.Scene {
   // ...
-  if (this.playing) {
-    this.paddle.x = this.input.x || this.scale.width * 0.5;
+  update() {
+    // ...
+    if (this.playing) {
+      this.paddle.x = this.input.x || this.scale.width * 0.5;
+    }
+    // ...
   }
   // ...
 }

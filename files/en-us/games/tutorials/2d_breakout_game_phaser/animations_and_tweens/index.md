@@ -59,18 +59,26 @@ To add an animation to the object we use the `anims.create` method, which receiv
 In the `physics.collide` method call that handles the collision between the ball and the paddle (the first line inside `update`, see below), we can add an extra parameter that specifies a function to be executed every time the collision happens, in the same fashion as the `hitBrick` method. Update the first line inside `update()` as shown below:
 
 ```js
-update () {
-  this.physics.collide(this.ball, this.paddle, this.hitPaddle.bind(this));
-  this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
-  this.paddle.x = this.input.x || this.scale.width * 0.5;
+class Example extends Phaser.Scene {
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle, this.hitPaddle.bind(this));
+    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+  }
+  // ...
 }
 ```
 
 Then, we can create the `hitPaddle` method (having `ball` and `paddle` as default parameters), playing the wobble animation when it is called. Add the following method just before your closing brace `}` of the `Example` class:
 
 ```js
-hitPaddle (ball, paddle) {
-  this.ball.anims.play('wobble');
+class Example extends Phaser.Scene {
+  // ...
+  hitPaddle(ball, paddle) {
+    this.ball.anims.play("wobble");
+  }
+  // ...
 }
 ```
 

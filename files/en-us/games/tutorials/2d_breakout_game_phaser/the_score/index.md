@@ -50,10 +50,14 @@ The last parameter looks very similar to CSS styling. In our case the score text
 We will increase the number of points every time the ball hits a brick and update the `scoreText` to display the current score. This can be done using the `setText` method — add the two new lines seen below to the `hitBrick` method:
 
 ```js
-hitBrick (ball, brick) {
-  brick.destroy();
-  this.score += 10;
-  this.scoreText.setText(`Points: ${this.score}`);
+class Example extends Phaser.Scene {
+  // ...
+  hitBrick (ball, brick) {
+    brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
+  }
+  // ...
 }
 ```
 
