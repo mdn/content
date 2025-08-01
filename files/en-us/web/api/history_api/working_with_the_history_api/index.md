@@ -115,7 +115,7 @@ document.addEventListener("click", async (event) => {
       displayContent(result);
       // Add a new entry to the history.
       // This simulates loading a new page.
-      history.pushState(json, "", creature);
+      history.pushState(result, "", creature);
     } catch (err) {
       console.error(err);
     }
