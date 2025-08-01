@@ -51,9 +51,9 @@ document.addEventListener("click", async (event) => {
     try {
       // Fetch new content
       const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
+      const result = await response.json();
       // Update the page with the new content
-      displayContent(json);
+      displayContent(result);
     } catch (err) {
       console.error(err);
     }
@@ -111,8 +111,8 @@ document.addEventListener("click", async (event) => {
     event.preventDefault();
     try {
       const response = await fetch(`creatures/${creature}.json`);
-      const json = await response.json();
-      displayContent(json);
+      const result = await response.json();
+      displayContent(result);
       // Add a new entry to the history.
       // This simulates loading a new page.
       history.pushState(json, "", creature);
@@ -125,7 +125,7 @@ document.addEventListener("click", async (event) => {
 
 Here, we're calling `pushState()` with three arguments:
 
-- `json`: This is the content we just fetched. It will be stored with the history entry, and later included as the {{domxref("PopStateEvent.state", "state")}} property of the argument passed to the `popstate` event handler.
+- `result`: This is the content we just fetched. It will be stored with the history entry, and later included as the {{domxref("PopStateEvent.state", "state")}} property of the argument passed to the `popstate` event handler.
 - `""`: This is needed for backward compatibility with legacy sites, and should always be an empty string.
 - `creature`: This will be used as the URL for the entry. It will be shown in the browser's URL bar, and will be used as the value of the {{httpheader("Referer")}} header in any HTTP requests that the page makes. Note that this must be {{Glossary("Same-origin policy", "same-origin")}} with the page.
 
