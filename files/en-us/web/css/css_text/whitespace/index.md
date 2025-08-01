@@ -1,5 +1,5 @@
 ---
-title: Handling whitespace in CSS
+title: Handling whitespace
 slug: Web/CSS/CSS_text/Whitespace
 page-type: guide
 sidebar: cssref
@@ -9,39 +9,15 @@ The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Mode
 
 ## What is whitespace?
 
-_Document white space characters_, as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (U+000A), and carriage returns (U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code in a way that will make it easily readable by yourself and other people. In fact, much of our source code is full of these whitespace characters, and we only tend to get rid of it in a production build step to reduce code download sizes.
+_Document white space characters_, as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (U+000A), and carriage returns (U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code for readability. In fact, much of our source code is full of these whitespace characters, and we only tend to get rid of it in a production build step to reduce code download sizes.
 
 Note that because this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML), they don't trigger any collapsing, which is why they are often used to create longer spaces in HTML.
 
-## HTML largely ignores whitespace?
+## How does HTML process whitespace?
 
-**It is not true that "HTML ignores whitespace".** HTML, as a markup language that produces {{glossary("DOM")}}, does not ignore any whitespace in the text content—otherwise, there would be no way for CSS, a downstream rendering engine which works on the DOM, to be able to preserve whitespace via the {{cssxref("white-space")}} property! Every single character of text content in the source code corresponds to something in the DOM tree, which can be retrieved and manipulated via DOM APIs such as {{domxref("Node.textContent")}}.
+**It is not true that "HTML largely ignores whitespace".** HTML, as a markup language that produces {{glossary("DOM")}}, does not ignore any whitespace in the text content—otherwise, there would be no way for CSS, a downstream rendering engine which works on the DOM, to be able to preserve whitespace via the {{cssxref("white-space")}} property! Every single character of text content in the source code corresponds to something in the DOM tree, which can be retrieved and manipulated via DOM APIs such as {{domxref("Node.textContent")}}.
 
 To be clear, we are talking about _in between tags_, which become the text nodes in the DOM. Whitespace _within tags_ (between the angle brackets and not within any attribute value) is part of the HTML syntax and is irrelevant to the DOM.
-
-```html-nolint
-<!doctype html>
-
-  <h1>      Hello      World!     </h1>
-```
-
-This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
-
-{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
-
-This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
-
-> [!NOTE]
-> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there are certain whitespace characters that could be ignored by HTML; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just deal with concrete, rendered text content.
->
-> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream). It would replace CR (U+000D) and CRLF sequences with single LF (U+000A). However, CR characters can still be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to deal with them.
-
-## What happens to whitespace?
-
-Any whitespace characters that are outside of HTML elements in the original document are represented in the DOM. This is needed internally so that the editor can preserve formatting of documents. This means that:
-
-- There will be some text nodes that contain only whitespace, and
-- Some text nodes will have whitespace at the beginning or end.
 
 Take the following document, for example:
 
@@ -63,9 +39,33 @@ The DOM tree for this looks like so:
 
 ![The DOM tree representing a simple HTML document](dom-string.png)
 
+Note that:
+
+- There will be some text nodes that contain only whitespace, and
+- Some text nodes will have whitespace at the beginning or end.
+
 Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 
-### How does CSS process whitespace?
+When the DOM is passed to CSS for rendering, however, the whitespace is largely stripped by default so the code formatting becomes irrelevant to the end user.
+
+```html-nolint
+<!doctype html>
+
+  <h1>      Hello      World!     </h1>
+```
+
+This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
+
+{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
+
+This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
+
+> [!NOTE]
+> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there are certain whitespace characters that could be ignored by HTML; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just deal with concrete, rendered text content.
+>
+> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream). It would replace CR (U+000D) and CRLF sequences with single LF (U+000A). However, CR characters can still be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to deal with them.
+
+## How does CSS process whitespace?
 
 Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren't — these are specified at least in part in the CSS Text Module, and especially the [whitespace processing details](https://drafts.csswg.org/css-text-4/#white-space-processing), but we also offer an easier explanation below.
 
@@ -157,6 +157,17 @@ After these steps, we process line wrapping and bidirectional text, which we wil
 > [!NOTE]
 > [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
+In a nutshell, different whitespace characters are collapsed in the following fashion:
+
+- Tabs are generally converted to spaces.
+- If segment breaks are to be collapsed:
+  - Sequences of segment breaks are collapsed down to a single segment break.
+  - They are converted to spaces in the case of languages that separate words with spaces (like English), or removed altogether in the case of languages that do not separate words with spaces (like Chinese).
+- If spaces are to be collapsed:
+  - Spaces or tabs before or after segment breaks are removed.
+  - Sequences of spaces are converted, or "collapsed", to a single space.
+- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e., the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
+
 ### Trimming and positioning
 
 For both inline and [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), elements are laid out in _lines_ (for inline formatting, because of wrapping; for block formatting, each block is already a line). As each line is laid out, whitespace is processed further.
@@ -208,7 +219,7 @@ We can summarize how the whitespace here is handled as follows:
    <body>◦<div>◦Hello◦</div>◦<div>◦World!◦</div>◦</body>
    ```
 
-2. We are laying out lines here, so we first need to figure out how many lines there are. In this example, `<body>` establishes a block formatting context, so its five child nodes are each one line:
+2. We are laying out lines here, so we first need to figure out how many lines there are. In this example, `<body>` establishes a block formatting context, so its five child nodes are each one line (each line in this code and below represents a line in the layout, not in the source code):
 
    ```html-nolint
    <body>
@@ -247,7 +258,7 @@ We can summarize how the whitespace here is handled as follows:
 
 5. The 3 empty lines we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 lines taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
-## Spaces in between inline and inline-block elements
+### Whitespace processing between inline and inline-block elements
 
 Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.
 
@@ -363,7 +374,7 @@ You can also solve this problem by avoiding whitespace nodes between `<li>` item
 </li>
 ```
 
-## Whitespace in DOM
+## Working with whitespace in the DOM
 
 As mentioned previously, whitespace is collapsed and trimmed when rendered, but preserved in DOM. This may present some pitfalls when trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript. For example, if you have a reference to a parent node and want to affect its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.
 
