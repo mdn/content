@@ -92,8 +92,8 @@ console.log(contents); // "\n  <p>My name is Joe</p>\n"
 
 ### Replacing the contents of an element
 
-Setting the value of `innerHTML` lets you replace the existing contents of an element with a new DOM tree parsed from an input.
-This completely removes the original content, including any event handlers associated with the removed elements.
+In this example we'll replace an element's DOM by assigning HTML to the element's `innerHTML` property.
+To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then assign that object to `innerHTML`.
 
 Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
 This acts as a transparent replacement for the trusted types JavaScript API:
