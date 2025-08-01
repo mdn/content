@@ -23,11 +23,8 @@ To insert the HTML into the document rather than replace the contents of an elem
 
 Getting the property returns a string containing the HTML serialization of the element's descendants.
 
-Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the assigned {{domxref("TrustedHTML")}} or string.
+Setting the property accepts either a {{domxref("TrustedHTML")}} object or a string. It parses this value as HTML and replaces all the element's descendants with the result.
 When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
-Note that {{htmlelement("script")}} elements in the assigned value are injected but not executed.
-
-Shadow roots are dropped from the serialized and injected HTML.
 
 ### Exceptions
 
@@ -102,7 +99,7 @@ if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-Next create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
 Commonly implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input as shown below:
 
 ```js
@@ -111,7 +108,7 @@ const policy = trustedTypes.createPolicy("my-policy", {
 });
 ```
 
-Then use this `policy` object to create a `TrustedHTML` object from the potentially unsafe input string, and assign the result to the element:
+Then we use this `policy` object to create a `TrustedHTML` object from the potentially unsafe input string, and assign the result to the element:
 
 ```js
 // The potentially malicious string
@@ -138,9 +135,6 @@ For example, the code below clears the entire contents of a document by setting 
 // Create a TrustedHTML instance using the policy
 document.body.textContent = policy.createHTML(policy.createHTML(""));
 ```
-
-Note that in this case we're setting the element to an empty string, which we know is safe.
-If we weren't [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) we could instead directly assign the empty string:
 
 ```js
 document.body.textContent = "";
