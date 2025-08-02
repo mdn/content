@@ -85,11 +85,11 @@ This way, changing the font in one variable will apply the changes to every plac
 
 ## The lives handling code
 
-To implement lives in our game, let's first change the behavior when the ball gets out of bounds. Instead of showing the alert right away:
+To implement lives in our game, let's first change the behavior when the ball gets out of bounds. Instead of restarting right away:
 
 ```js
 if (ballIsOutOfBounds) {
-  alert("Game over!");
+  // Game over logic
   location.reload();
 }
 ```

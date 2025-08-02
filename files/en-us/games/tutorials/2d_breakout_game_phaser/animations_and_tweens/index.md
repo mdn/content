@@ -67,6 +67,7 @@ class ExampleScene extends Phaser.Scene {
       this.hitBrick(ball, brick),
     );
     this.paddle.x = this.input.x || this.scale.width * 0.5;
+    // ...
   }
   // ...
 }

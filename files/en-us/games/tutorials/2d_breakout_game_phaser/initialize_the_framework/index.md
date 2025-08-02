@@ -26,26 +26,29 @@ The HTML document structure is quite simple, as the game will be rendered entire
       }
     </style>
     <script src="js/phaser.min.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
-  <body>
-    <script>
-      class ExampleScene extends Phaser.Scene {
-        preload() {}
-        create() {}
-        update() {}
-      }
-
-      const config = {
-        type: Phaser.CANVAS,
-        width: 480,
-        height: 320,
-        scene: ExampleScene,
-      };
-
-      const game = new Phaser.Game(config);
-    </script>
-  </body>
+  <body></body>
 </html>
+```
+
+And create a new `js` directory in the same location as your `index.html` file, and create a new file called `script.js` inside it. This is where we will write the JavaScript code that controls the game. Initially it should contain the following:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  preload() {}
+  create() {}
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+};
+
+const game = new Phaser.Game(config);
 ```
 
 ## Downloading the Phaser code
@@ -54,7 +57,7 @@ Next, we need to go through the process of downloading the Phaser source code an
 
 1. Go to the [Phaser download page](https://phaser.io/download/stable).
 2. Choose an option that suits you best—we recommend the _phaser.min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway.
-3. Save the Phaser code inside a `/js` directory in the same location as your `index.html` file. If you use another path, make sure to update the `src` value of the first {{htmlelement("script")}} element in the HTML accordingly.
+3. Save the Phaser code in the `js` directory. If you use another file name, make sure to update the `src` value of the first {{htmlelement("script")}} element in the HTML accordingly.
 
 ## Walking through what we have so far
 
