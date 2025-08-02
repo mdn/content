@@ -53,6 +53,11 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
+- The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) is now supported, providing a standardized mechanism to assign and manage task priorities for an application.
+  The supported interfaces include: {{domxref("Scheduler")}}, {{domxref("TaskController")}}, {{domxref("TaskSignal")}}, {{domxref("TaskPriorityChangeEvent")}} (and the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event), and the properties {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}.
+  The {{domxref("Scheduling")}} interface and {{domxref("Navigator.scheduling")}} property are not supported.
+  ([Firefox bug 1966997](https://bugzil.la/1966997)).
+
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
