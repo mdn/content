@@ -62,6 +62,43 @@ Now all that remains is for you to load the resulting `hello.html` in a browser 
 > [!NOTE]
 > If you try to open generated HTML file (`hello.html`) directly from your local hard drive (e.g., `file://your_path/hello.html`), you will end up with an error message along the lines of _`both async and sync fetching of the wasm failed`._ You need to run your HTML file through an HTTP server (`http://`) — see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for more information.
 
+### Using your Wasm in an ES 6 bundler (webpack / Vite / Rollup)
+
+If your project uses ES 6 imports and a bundler, you can import the generated JavaScript glue file so it runs as a side effect:
+
+```bash
+emcc hello.c -o hello.js
+```
+
+In your app's entry module, add:
+
+```js
+import "./hello.js"; // this fetches, compiles, and instantiates the Wasm module automatically
+```
+
+In Vite, the same behavior can be achieved. Simply import './hello.js', and the module will run as soon as the bundle loads.
+
+To produce an ES 6 factory module that you can instantiate on demand, add two flags:
+
+```bash
+emcc hello.c \
+  -o hello.mjs \
+  -s MODULARIZE=1 \
+  -s EXPORT_ES6=1
+```
+
+Then in your code import the factory and call it:
+
+```js
+import createModule from "./hello.mjs";
+
+createModule().then((Module) => {
+  console.log("Wasm ready", Module);
+});
+```
+
+Note: TypeScript projects may need a simple `declare module './hello.js';` in a `.d.ts` file. Full TypeScript integration is beyond the scope of this guide.
+
 If everything has worked as planned, you should see "Hello world" output in the Emscripten console appearing on the web page, and your browser's JavaScript console. Congratulations, you've just compiled C to WebAssembly and run it in your browser!
 ![image](helloworld.png)
 
