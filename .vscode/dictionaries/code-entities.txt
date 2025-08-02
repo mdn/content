@@ -38,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
