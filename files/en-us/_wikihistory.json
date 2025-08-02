@@ -29758,32 +29758,6 @@
       "Gor1"
     ]
   },
-  "Web/API/Document_Object_Model/Whitespace": {
-    "modified": "2020-03-27T15:25:12.263Z",
-    "contributors": [
-      "mfuji09",
-      "dev-nicolaos",
-      "chrisdavidmills",
-      "violasong",
-      "mfluehr",
-      "teoli",
-      "michaelnetbiz",
-      "ishita",
-      "Brettz9",
-      "Jeremie",
-      "Sheppy",
-      "jswisher",
-      "hectorsan68",
-      "ethertank",
-      "VK",
-      "Mgjbot",
-      "BobChao",
-      "Ptak82",
-      "NickolayBot",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-10-15T21:29:10.598Z",
     "contributors": [
@@ -77487,6 +77461,32 @@
       "mfluehr",
       "Sebastianz",
       "teoli"
+    ]
+  },
+  "Web/CSS/CSS_text/Whitespace": {
+    "modified": "2020-03-27T15:25:12.263Z",
+    "contributors": [
+      "mfuji09",
+      "dev-nicolaos",
+      "chrisdavidmills",
+      "violasong",
+      "mfluehr",
+      "teoli",
+      "michaelnetbiz",
+      "ishita",
+      "Brettz9",
+      "Jeremie",
+      "Sheppy",
+      "jswisher",
+      "hectorsan68",
+      "ethertank",
+      "VK",
+      "Mgjbot",
+      "BobChao",
+      "Ptak82",
+      "NickolayBot",
+      "Dria",
+      "JesseW"
     ]
   },
   "Web/CSS/CSS_text_decoration": {
