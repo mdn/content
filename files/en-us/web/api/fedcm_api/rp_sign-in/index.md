@@ -77,7 +77,7 @@ The flow is as follows:
 4. If the browser has an [IdP's login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) set to `"logged-in"`, it makes a credentialed request (i.e., with a cookie that identifies the user that is signed in) to the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) inside the IdP config file for the user's account details. This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents IdPs from learning which RP the user is trying to sign in to. As a result, the list of accounts returned is RP-agnostic.
 
    > [!NOTE]
-   > If the IdPs' login statusus are all `"logged-out"`, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's `accounts_endpoint`. In this case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
+   > If the IdPs' login statuses are all `"logged-out"`, the `get()` call rejects with a `NetworkError` {{domxref("DOMException")}} and does not make a request to any IdP's `accounts_endpoint`. In this case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP. Note that there may be some delay in the rejection to avoid leaking IdP login status to the RP.
 
 5. The IdPs respond with the account information requested from their `accounts_endpoint`s. These are arrays of all accounts associated with the user's IdP cookies for any RPs associated with an IdP.
 
@@ -105,7 +105,7 @@ The flow is as follows:
 
 ## Active versus passive mode
 
-There are two different UI modes the browser can provide to an RP user when they sign-in via the FedCM API, **`active`** and **`passive`** mode. Which mode is used for sign-in is controlled by the [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode) option of the `ideitity` object:
+There are two different UI modes the browser can provide to an RP user when they sign-in via the FedCM API, **`active`** and **`passive`** mode. Which mode is used for sign-in is controlled by the [`mode`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#mode) option of the `identity` object:
 
 ```js
 async function signIn() {
