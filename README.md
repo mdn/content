@@ -31,6 +31,7 @@ After you have installed Node.js and Yarn, you can install the dependencies usin
 yarn
 yarn start
 ```
+### WARNING: RUNNING THIS SITE INSIDE A DIRECTORY WITH SPACES MAY CAUSE THE WEBSITE TO MALFUNCTION OR NOT RUN AT ALL!
 
 Once started, a live preview is available at `http://localhost:5042/`.
 
