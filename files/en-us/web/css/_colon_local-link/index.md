@@ -59,3 +59,4 @@ Currently, no browsers have implemented this feature.
 ## See also
 
 - Link-related pseudo-classes: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

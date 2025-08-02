@@ -48,7 +48,7 @@ Invalid frequency values:
 
 ## Browser compatibility
 
-No browser currently supports this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
