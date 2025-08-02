@@ -42,6 +42,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/forced-colors", "forced-colors")}}
 - {{cssxref("@media/grid", "grid")}}
 - {{cssxref("@media/height", "height")}}
+- {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}
 - {{cssxref("@media/hover", "hover")}}
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
 - {{cssxref("@media/monochrome", "monochrome")}}
@@ -58,11 +59,12 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/scan", "scan")}}
 - {{cssxref("@media/scripting", "scripting")}}
 - {{cssxref("@media/update", "update")}}
+- {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
 - {{cssxref("@media/width", "width")}}
 
 > [!NOTE]
-> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: `environment-blending`, `horizontal-viewport-segments`, `nav-controls`, `vertical-viewport-segments`, and `video-color-gamut`.
+> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: `environment-blending`, `nav-controls`, and `video-color-gamut`.
 
 > [!NOTE]
 > CSS media queries level 4 deprecated three `@media` descriptors: {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, and {{cssxref("@media/device-width", "device-width")}}.
