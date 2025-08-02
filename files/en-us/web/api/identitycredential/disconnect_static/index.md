@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The IdP's `configURL` is invalid or missing the `disconnect_enpoint`.
+    - The IdP's `configURL` is invalid or missing the `disconnect_endpoint`.
     - The document's origin does not match the `configURL`.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if:

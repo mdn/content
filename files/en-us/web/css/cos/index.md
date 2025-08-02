@@ -44,7 +44,7 @@ transform: translateX(calc(cos(-45deg) * 140px))
 ```css interactive-example
 :root {
   --radius: 140px;
-  --dotsize: 10px;
+  --dot-size: 10px;
 }
 .circle {
   display: grid;
@@ -55,12 +55,12 @@ transform: translateX(calc(cos(-45deg) * 140px))
   border-radius: 50%;
   border: 2px solid #666;
   background-image:
-    radial-gradient(black var(--dotsize), transparent var(--dotsize)),
+    radial-gradient(black var(--dot-size), transparent var(--dot-size)),
     linear-gradient(135deg, #0000ff, #00c9ff, #92fe9d, #e6e6fa, #f0fff0);
 }
 .dot {
   display: block;
-  width: var(--dotsize);
+  width: var(--dot-size);
   aspect-ratio: 1;
   border-radius: 50%;
   border: 2px solid #666;
