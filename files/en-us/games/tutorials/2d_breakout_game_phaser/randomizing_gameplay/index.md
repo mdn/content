@@ -18,8 +18,8 @@ We can change the ball's velocity depending on the exact spot it hits the paddle
 ```js
 class Example extends Phaser.Scene {
   // ...
-  hitPaddle (ball, paddle) {
-    this.ball.anims.play('wobble');
+  hitPaddle(ball, paddle) {
+    this.ball.anims.play("wobble");
     ball.body.velocity.x = -5 * (paddle.x - ball.x);
   }
   // ...

@@ -52,7 +52,7 @@ We will increase the number of points every time the ball hits a brick and updat
 ```js
 class Example extends Phaser.Scene {
   // ...
-  hitBrick (ball, brick) {
+  hitBrick(ball, brick) {
     brick.destroy();
     this.score += 10;
     this.scoreText.setText(`Points: ${this.score}`);

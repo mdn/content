@@ -18,7 +18,7 @@ Add the following new code into your `hitBrick` method:
 ```js
 class Example extends Phaser.Scene {
   // ...
-  hitBrick (ball, brick) {
+  hitBrick(ball, brick) {
     brick.destroy();
     this.score += 10;
     this.scoreText.setText(`Points: ${this.score}`);
