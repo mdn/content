@@ -5,39 +5,37 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Physics", "Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls")}}
 
-This is the **6th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson06.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson06.html).
-
-Now that physics have been introduced, we can start implementing collision detection into the game — first we'll look at the walls.
+This is the **6th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now that physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
 
 ## Bouncing off the world boundaries
 
-The easiest way to get our ball bouncing off the walls is to tell the framework that we want to treat the boundaries of the {{htmlelement("canvas")}} element as walls and not let the ball move past them. In Phaser this can be easily accomplished using the `setCollideWorldBounds` method. Add this line right after the existing `this.ball.body.setVelocity` method call:
+The easiest way to get our ball bouncing off the walls is to tell the framework that we want to treat the boundaries of the {{htmlelement("canvas")}} element as walls and not let the ball move past them. In Phaser this can be easily accomplished using the `setCollideWorldBounds()` method. Add this line right after the existing `this.ball.body.setVelocity()` method call:
 
 ```js
 this.ball.body.setCollideWorldBounds(true, 1, 1);
 ```
 
-Try reloading index.html again — now you should see the ball bouncing off all the walls and moving inside the canvas area.
+The `true` tells Phaser to enable collision detection with the world bounds, while the two `1`s are the bounce factor on the x and y axes, respectively. This means that when the ball hits a wall, it will bounce back with the same speed it had before hitting the wall. Try reloading index.html again—now you should see the ball bouncing off all the walls and moving inside the canvas area.
 
 ## Compare your code
 
-You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-```html hidden live-sample__final
+```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
 ```
 
-```css hidden live-sample__final
+```css hidden
 * {
   padding: 0;
   margin: 0;
 }
 ```
 
-```js hidden live-sample__final
-class Example extends Phaser.Scene {
+```js hidden
+class ExampleScene extends Phaser.Scene {
   ball;
 
   preload() {
@@ -60,12 +58,12 @@ const config = {
   type: Phaser.CANVAS,
   width: 480,
   height: 320,
-  scene: Example,
+  scene: ExampleScene,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  backgroundColor: "#eee",
+  backgroundColor: "#eeeeee",
   physics: {
     default: "arcade",
   },
@@ -74,10 +72,10 @@ const config = {
 const game = new Phaser.Game(config);
 ```
 
-{{embedlivesample("final", "", "480px")}}
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-This is starting to look more like a game now, but we can't control it in any way — it's high time we introduced the [player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls).
+This is starting to look more like a game now, but we can't control it in any way—it's high time we introduced the [player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Physics", "Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls")}}

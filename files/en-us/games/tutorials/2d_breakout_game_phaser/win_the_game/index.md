@@ -5,24 +5,19 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-This is the **12th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson12.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson12.html).
-
-Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
+This is the **12th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
 
 ## How to win?
 
-Add the following new code into your `hitBrick` method:
+Add the following new code into your `update()` method:
 
 ```js
-class Example extends Phaser.Scene {
+class ExampleScene extends Phaser.Scene {
   // ...
-  hitBrick(ball, brick) {
-    brick.destroy();
-    this.score += 10;
-    this.scoreText.setText(`Points: ${this.score}`);
-
+  update() {
+    // ...
     if (this.bricks.countActive() === 0) {
       alert("You won the game, congratulations!");
       location.reload();
@@ -32,27 +27,25 @@ class Example extends Phaser.Scene {
 }
 ```
 
-We count the number of bricks that are still alive, using the `countAlive` method on `this.bricks`. If there are no more bricks left alive, then we display the winning message, restarting the game once the alert is dismissed.
+We count the number of bricks that are still alive, using the `countAlive()` method on `this.bricks`. If there are no more bricks left alive, then we display the winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 
-You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-_NOTE_: Due to the limitations of the live demo, you will not see the alert. The game will immediately reload when the ball goes out of bounds.
-
-```html hidden live-sample__final
+```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
 ```
 
-```css hidden live-sample__final
+```css hidden
 * {
   padding: 0;
   margin: 0;
 }
 ```
 
-```js hidden live-sample__final
-class Example extends Phaser.Scene {
+```js hidden
+class ExampleScene extends Phaser.Scene {
   ball;
   paddle;
   bricks;
@@ -69,6 +62,8 @@ class Example extends Phaser.Scene {
     this.load.image("brick", "brick.png");
   }
   create() {
+    this.physics.world.checkCollision.down = false;
+
     this.ball = this.add.sprite(
       this.scale.width * 0.5,
       this.scale.height - 25,
@@ -88,19 +83,18 @@ class Example extends Phaser.Scene {
     this.physics.add.existing(this.paddle);
     this.paddle.body.setImmovable(true);
 
-    this.physics.world.checkCollision.down = false;
-    this.ball.body.onWorldBounds = true;
-
     this.initBricks();
 
     this.scoreText = this.add.text(5, 5, "Points: 0", {
       font: "18px Arial",
-      color: "#0095DD",
+      color: "#0095dd",
     });
   }
   update() {
     this.physics.collide(this.ball, this.paddle);
-    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
 
     this.paddle.x = this.input.x || this.scale.width * 0.5;
     const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
@@ -108,7 +102,11 @@ class Example extends Phaser.Scene {
       this.ball.getBounds(),
     );
     if (ballIsOutOfBounds) {
-      alert("Game over!");
+      // Game over logic
+      location.reload();
+    }
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
       location.reload();
     }
   }
@@ -150,11 +148,6 @@ class Example extends Phaser.Scene {
     brick.destroy();
     this.score += 10;
     this.scoreText.setText(`Points: ${this.score}`);
-
-    if (this.bricks.countActive() === 0) {
-      alert("You won the game, congratulations!");
-      location.reload();
-    }
   }
 }
 
@@ -162,12 +155,12 @@ const config = {
   type: Phaser.CANVAS,
   width: 480,
   height: 320,
-  scene: Example,
+  scene: ExampleScene,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  backgroundColor: "#eee",
+  backgroundColor: "#eeeeee",
   physics: {
     default: "arcade",
   },
@@ -176,10 +169,10 @@ const config = {
 const game = new Phaser.Game(config);
 ```
 
-{{embedlivesample("final", "", "480px")}}
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra — we'll give the player three [lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) instead of one.
+Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra—we'll give the player three [lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) instead of one.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

@@ -5,18 +5,16 @@ page-type: guide
 sidebar: games
 ---
 
-{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
+{{Previous("Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
-This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson16.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson16.html).
-
-Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.
+This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.
 
 ## Making rebounds more random
 
-We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the `hitPaddle` method is run using a line along the lines of the below. Add this new line to your code now, and try it out.
+We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the `hitPaddle()` method is run using a line along the lines of the below. Add this new line to your code now, and try it out.
 
 ```js
-class Example extends Phaser.Scene {
+class ExampleScene extends Phaser.Scene {
   // ...
   hitPaddle(ball, paddle) {
     this.ball.anims.play("wobble");
@@ -26,25 +24,25 @@ class Example extends Phaser.Scene {
 }
 ```
 
-It's a little bit of magic — the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value — if the ball hits the left side of the paddle it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values, you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
+It's a little bit of magic—the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value—if the ball hits the left side of the paddle it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values, you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
 
 ## Compare your code
 
-You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-```html hidden live-sample__final
+```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
 ```
 
-```css hidden live-sample__final
+```css hidden
 * {
   padding: 0;
   margin: 0;
 }
 ```
 
-```js hidden live-sample__final
-class Example extends Phaser.Scene {
+```js hidden
+class ExampleScene extends Phaser.Scene {
   ball;
   paddle;
   bricks;
@@ -74,6 +72,8 @@ class Example extends Phaser.Scene {
     });
   }
   create() {
+    this.physics.world.checkCollision.down = false;
+
     this.ball = this.add.sprite(
       this.scale.width * 0.5,
       this.scale.height - 25,
@@ -99,12 +99,9 @@ class Example extends Phaser.Scene {
     this.physics.add.existing(this.paddle);
     this.paddle.body.setImmovable(true);
 
-    this.physics.world.checkCollision.down = false;
-    this.ball.body.onWorldBounds = true;
-
     this.initBricks();
 
-    const textStyle = { font: "18px Arial", fill: "#0095DD" };
+    const textStyle = { font: "18px Arial", fill: "#0095dd" };
     this.scoreText = this.add.text(5, 5, "Points: 0", textStyle);
 
     this.livesText = this.add.text(
@@ -160,8 +157,12 @@ class Example extends Phaser.Scene {
     );
   }
   update() {
-    this.physics.collide(this.ball, this.paddle, this.hitPaddle.bind(this));
-    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+    this.physics.collide(this.ball, this.paddle, (ball, paddle) =>
+      this.hitPaddle(ball, paddle),
+    );
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
 
     if (this.playing) {
       this.paddle.x = this.input.x || this.scale.width * 0.5;
@@ -173,6 +174,10 @@ class Example extends Phaser.Scene {
     );
     if (ballIsOutOfBounds) {
       this.ballLeaveScreen();
+    }
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
     }
   }
 
@@ -237,11 +242,6 @@ class Example extends Phaser.Scene {
     destroyTween.play();
     this.score += 10;
     this.scoreText.setText(`Points: ${this.score}`);
-
-    if (this.bricks.countActive() === 0) {
-      alert("You won the game, congratulations!");
-      location.reload();
-    }
   }
 
   ballLeaveScreen() {
@@ -259,7 +259,7 @@ class Example extends Phaser.Scene {
         this,
       );
     } else {
-      alert("Game over!");
+      // Game over logic
       location.reload();
     }
   }
@@ -269,12 +269,12 @@ const config = {
   type: Phaser.CANVAS,
   width: 480,
   height: 320,
-  scene: Example,
+  scene: ExampleScene,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  backgroundColor: "#eee",
+  backgroundColor: "#eeeeee",
   physics: {
     default: "arcade",
   },
@@ -283,15 +283,15 @@ const config = {
 const game = new Phaser.Game(config);
 ```
 
-{{embedlivesample("final", "", "480px")}}
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Summary
 
-You've finished all the lessons — congratulations! By this point you would have learnt the basics of Phaser and the logic behind simple 2D games.
+You've finished all the lessons—congratulations! By this point you would have learnt the basics of Phaser and the logic behind simple 2D games.
 
 ### Exercises to follow
 
-You can do a lot more in the game — add whatever you feel would be best to make it more fun and interesting. It's a basic intro scratching the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:
+You can do a lot more in the game—add whatever you feel would be best to make it more fun and interesting. It's a basic intro scratching the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:
 
 - Add a second ball or paddle.
 - Change the color of the background on every hit.
@@ -303,4 +303,4 @@ Be sure to check the ever-growing list of [examples](https://labs.phaser.io/) an
 
 You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
-{{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
+{{Previous("Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}

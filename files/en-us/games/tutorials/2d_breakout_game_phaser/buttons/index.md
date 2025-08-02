@@ -5,18 +5,16 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
 
-This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [2D_Breakout_game_Phaser/lesson15.html](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/lesson15.html).
-
-Instead of starting the game right away we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
 ## New properties
 
-We will need a variable to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other properties definitions:
+We will need a property to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other properties definitions:
 
 ```js
-class Example extends Phaser.Scene {
+class ExampleScene extends Phaser.Scene {
   // ... previous property definitions ...
   playing = false;
   startButton;
@@ -26,7 +24,7 @@ class Example extends Phaser.Scene {
 
 ## Loading the button spritesheet
 
-We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the `preload` method:
+We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the `preload()` method:
 
 ```js
 this.load.spritesheet("button", "img/button.png", {
@@ -37,11 +35,11 @@ this.load.spritesheet("button", "img/button.png", {
 
 A single button frame is 120 pixels wide and 40 pixels high.
 
-You also need to [grab the button spritesheet from GitHub](https://github.com/igrep/2D_Breakout_game_Phaser/blob/main/img/button.png), and save it in your `/img` directory.
+You also need to [grab the button spritesheet from GitHub](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/button.png), and save it in your `/img` directory.
 
 ## Adding the button to the game
 
-Adding the new button to the game is done by using the `add.sprite` method. Add the following lines to the bottom of your `create` method:
+Adding the new button to the game is done by using the `add.sprite` method. Add the following lines to the bottom of your `create()` method:
 
 ```js
 this.startButton = this.add.sprite(
@@ -90,38 +88,34 @@ this.startButton.on(
 
 First, we call `setInteractive` on the button to make it respond to pointer events. Then we add the four event listeners to the button:
 
-- `pointerover` — when the pointer is over the button, we change the button's frame to `1`, the second frame of the spritesheet.
-- `pointerdown` — when the button is pressed, we change the button's frame to `2`, the third frame of the spritesheet.
-- `pointerout` — when the pointer moves out of the button, we change the button's frame back to `0`, the first frame of the spritesheet.
-- `pointerup` — when the button is released, we call the `startGame` method to start the game.
+- `pointerover`—when the pointer is over the button, we change the button's frame to `1`, the second frame of the spritesheet.
+- `pointerdown`—when the button is pressed, we change the button's frame to `2`, the third frame of the spritesheet.
+- `pointerout`—when the pointer moves out of the button, we change the button's frame back to `0`, the first frame of the spritesheet.
+- `pointerup`—when the button is released, we call the `startGame` method to start the game.
 
-> [!NOTE]
-> The over event is the same as hover, out is when the pointer moves out of the button and down is when the button is pressed.
-
-Now, we need to define the `startGame` method referenced in the code above:
+Now, we need to define the `startGame()` method referenced in the code above:
 
 ```js
-class Example extends Phaser.Scene {
+class ExampleScene extends Phaser.Scene {
   // ...
   startGame() {
     this.startButton.destroy();
     this.ball.body.setVelocity(150, -150);
     this.playing = true;
   }
-  // ...
 }
 ```
 
-When the button is pressed, we remove the button, sets the ball's initial velocity and set the `playing` variable to `true`.
+When the button is pressed, we remove the button, sets the ball's initial velocity and set the `playing` property to `true`.
 
 Finally for this section, go back into your `create` method, find the `this.ball.body.setVelocity(150, -150);` line, and remove it. You only want the ball to move when the button is pressed, not before!
 
 ## Keeping the paddle still before the game starts
 
-It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` variable and make the paddle movable only when the game has started. To do that, adjust the `update` function like so:
+It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` property and make the paddle movable only when the game has started. To do that, adjust the `update()` method like so:
 
 ```js
-class Example extends Phaser.Scene {
+class ExampleScene extends Phaser.Scene {
   // ...
   update() {
     // ...
@@ -138,21 +132,21 @@ That way the paddle is immovable after everything is loaded and prepared, but be
 
 ## Compare your code
 
-You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-```html hidden live-sample__final
+```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
 ```
 
-```css hidden live-sample__final
+```css hidden
 * {
   padding: 0;
   margin: 0;
 }
 ```
 
-```js hidden live-sample__final
-class Example extends Phaser.Scene {
+```js hidden
+class ExampleScene extends Phaser.Scene {
   ball;
   paddle;
   bricks;
@@ -182,6 +176,8 @@ class Example extends Phaser.Scene {
     });
   }
   create() {
+    this.physics.world.checkCollision.down = false;
+
     this.ball = this.add.sprite(
       this.scale.width * 0.5,
       this.scale.height - 25,
@@ -207,12 +203,9 @@ class Example extends Phaser.Scene {
     this.physics.add.existing(this.paddle);
     this.paddle.body.setImmovable(true);
 
-    this.physics.world.checkCollision.down = false;
-    this.ball.body.onWorldBounds = true;
-
     this.initBricks();
 
-    const textStyle = { font: "18px Arial", fill: "#0095DD" };
+    const textStyle = { font: "18px Arial", fill: "#0095dd" };
     this.scoreText = this.add.text(5, 5, "Points: 0", textStyle);
 
     this.livesText = this.add.text(
@@ -268,8 +261,12 @@ class Example extends Phaser.Scene {
     );
   }
   update() {
-    this.physics.collide(this.ball, this.paddle, this.hitPaddle.bind(this));
-    this.physics.collide(this.ball, this.bricks, this.hitBrick.bind(this));
+    this.physics.collide(this.ball, this.paddle, (ball, paddle) =>
+      this.hitPaddle(ball, paddle),
+    );
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
 
     if (this.playing) {
       this.paddle.x = this.input.x || this.scale.width * 0.5;
@@ -281,6 +278,10 @@ class Example extends Phaser.Scene {
     );
     if (ballIsOutOfBounds) {
       this.ballLeaveScreen();
+    }
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
     }
   }
 
@@ -344,11 +345,6 @@ class Example extends Phaser.Scene {
     destroyTween.play();
     this.score += 10;
     this.scoreText.setText(`Points: ${this.score}`);
-
-    if (this.bricks.countActive() === 0) {
-      alert("You won the game, congratulations!");
-      location.reload();
-    }
   }
 
   ballLeaveScreen() {
@@ -366,7 +362,7 @@ class Example extends Phaser.Scene {
         this,
       );
     } else {
-      alert("Game over!");
+      // Game over logic
       location.reload();
     }
   }
@@ -376,12 +372,12 @@ const config = {
   type: Phaser.CANVAS,
   width: 480,
   height: 320,
-  scene: Example,
+  scene: ExampleScene,
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  backgroundColor: "#eee",
+  backgroundColor: "#eeeeee",
   physics: {
     default: "arcade",
   },
@@ -390,10 +386,10 @@ const config = {
 const game = new Phaser.Game(config);
 ```
 
-{{embedlivesample("final", "", "480px")}}
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
 The last thing we will do in this article series is make the gameplay even more interesting by adding some [randomization](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay) to the way the ball bounces off the paddle.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
