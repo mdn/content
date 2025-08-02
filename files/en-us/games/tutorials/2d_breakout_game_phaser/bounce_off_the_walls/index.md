@@ -11,7 +11,7 @@ This is the **6th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/
 
 ## Bouncing off the world boundaries
 
-The easiest way to get our ball bouncing off the walls is to tell the framework that we want to treat the boundaries of the {{htmlelement("canvas")}} element as walls and not let the ball move past them. In Phaser this can be easily accomplished using the `setCollideWorldBounds()` method. Add this line right after the existing `this.ball.body.setVelocity()` method call:
+The easiest way to get our ball bouncing off the walls is to tell the framework that we want to treat the boundaries of the {{htmlelement("canvas")}} element as walls and not let the ball move past them. In Phaser, this can be easily accomplished using the `setCollideWorldBounds()` method. Add this line right after the existing `this.ball.body.setVelocity()` method call:
 
 ```js
 this.ball.body.setCollideWorldBounds(true, 1, 1);

@@ -27,13 +27,13 @@ The `mode` property in `scale` has a few different options available for how the
 
 - `NO_SCALE`—nothing is scaled (the default value).
 - `ENVELOP`—adjusts the width and height automatically to cover the entire target area while keeping the aspect ratio. It may extend further out than the target size.
-- `FIT`—scales the canvas to fit the available space while keeping the aspect ratio untouched. Depending on the aspect ratio, it may not cover some space.
+- `FIT`—scales the canvas to fit the available space while keeping the aspect ratio untouched. Depending on the aspect ratio, it may not cover the entire space.
 - `HEIGHT_CONTROLS_WIDTH`—adjusts the width of the canvas based on the height.
 - `WIDTH_CONTROLS_HEIGHT`—adjusts the height of the canvas based on the width.
 - `RESIZE`—resizes the visible area of the canvas to fit all available _parent_ space, regardless of aspect ratio.
 - `EXPAND`—resizes the visible area of the canvas to fit all available _parent_ space like the RESIZE mode, and scale the canvas size to fit inside the visible area like the FIT mode.
 
-The other property, `autoCenter`, is responsible for aligning the canvas element horizontally and vertically, so it always centers the canvas on screen regardless of size.
+The other property, `autoCenter`, is responsible for aligning the canvas element horizontally and vertically, so it always centers the canvas on the screen regardless of size.
 
 ## Adding a custom canvas background color
 

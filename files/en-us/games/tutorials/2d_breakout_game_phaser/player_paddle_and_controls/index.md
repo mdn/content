@@ -11,7 +11,7 @@ This is the **7th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/
 
 ## Rendering the paddle
 
-From the framework point of view the paddle is very similar to the ball—we need to add a property to represent it, load the relevant image asset, and then do the magic.
+From the framework point of view, the paddle is very similar to the ball—we need to add a property to represent it, load the relevant image asset, and then do the magic.
 
 ### Loading the paddle
 
@@ -52,7 +52,7 @@ this.paddle = this.add.sprite(
 );
 ```
 
-We can use the `scale.width` and `scale.height` values to position the paddle exactly where we want it: `this.scale.width * 0.5` will be right in the middle of the screen. In our case the world is the same as the canvas, but for other types of games, like side-scrollers for example, the world will be bigger, and you can tinker with it to create interesting effects.
+We can use the `scale.width` and `scale.height` values to position the paddle exactly where we want it: `this.scale.width * 0.5` will be right in the middle of the screen. In our case, the world is the same as the canvas, but for other types of games, like side-scrollers, the world will be bigger, and you can tinker with it to create interesting effects.
 
 As you'll notice, if you reload your `index.html` at this point, the paddle is currently at the complete bottom of the screen, too low for the paddle. Why? Because the origin from which the position is calculated starts from the center of the object. We can change that to have the origin in the middle of the paddle's width and at the bottom of its height, so it's easier to position it against the bottom edge. Add the following line below the previous new one:
 
@@ -93,13 +93,13 @@ Now it works as expected.
 
 ## Controlling the paddle
 
-The next problem is that we can't move the paddle. To fix that, we can use the system's default input (mouse or touch, depending on platform) and set the paddle position to where the `input` position is. Add the following new line to the `update()` method, as shown:
+The next problem is that we can't move the paddle. To fix that, we can use the system's default input (mouse or touch, depending on the platform) and set the paddle position to where the `input` position is. Add the following new line to the `update()` method, as shown:
 
 ```js
 this.paddle.x = this.input.x;
 ```
 
-Now on every new frame the paddle's `x` position will adjust accordingly to the input's `x` position, however, when we start the game, the position of the paddle is not in the middle. It's because the input position is not yet defined. To fix that we can set the default position (if an input position is not yet defined) to be the middle of the screen. Update the previous line as follows:
+Now on every new frame, the paddle's `x` position will adjust accordingly to the input's `x` position. However, when we start the game, the position of the paddle is not in the middle. It's because the input position is not yet defined. To fix that, we can set the default position (if an input position is not yet defined) to be the middle of the screen. Update the previous line as follows:
 
 ```js
 this.paddle.x = this.input.x || this.scale.width * 0.5;
@@ -109,7 +109,7 @@ If you haven't already done so, reload your `index.html` and try it out!
 
 ## Position the ball
 
-We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle—we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it we will set the origin to the exact middle of the ball. Find the existing `this.ball = this.add.sprite(...)` line, and replace it with the following lines:
+We have the paddle working as expected, so let's position the ball on it. It's very similar to positioning the paddle—we need to have it placed in the middle of the screen horizontally and at the bottom vertically with a little offset from the bottom. To place it exactly as we want it, we will set the origin to the exact middle of the ball. Find the existing `this.ball = this.add.sprite(...)` line, and replace it with the following lines:
 
 ```js
 this.ball = this.add.sprite(

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection")}}
 
-This is the **9th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although it's still easier with Phaser than in pure JavaScript.
+This is the **9th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although it's still easier with Phaser than in pure JavaScript.
 
 ## New properties
 
@@ -55,7 +55,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-Now onto the method itself. Add the `initBricks` method at the end of the `ExampleScene` class, just before the closing brace `}`, as shown below. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
+Now on to the method itself. Add the `initBricks` method at the end of the `ExampleScene` class, just before the closing brace `}`, as shown below. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
 
 ```js
 class ExampleScene extends Phaser.Scene {
@@ -96,7 +96,7 @@ for (let c = 0; c < bricksLayout.count.col; c++) {
 }
 ```
 
-This way we will create the exact number of bricks we need and have them all contained in a group. Now we need to add some code inside the nested loop structure to draw each brick. Fill in the contents as shown below:
+This way, we will create the exact number of bricks we need and have them all contained in a group. Now we need to add some code inside the nested loop structure to draw each brick. Fill in the contents as shown below:
 
 ```js
 for (let c = 0; c < bricksLayout.count.col; c++) {

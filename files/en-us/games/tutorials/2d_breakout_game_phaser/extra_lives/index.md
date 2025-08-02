@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}
 
-This is the **13th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
+This is the **13th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
 
 ## New properties
 
@@ -27,7 +27,7 @@ These respectively will store the number of lives, the text label that displays 
 
 ## Defining the new text labels
 
-Defining the texts look like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
+Defining the texts looks like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
 
 ```js
 this.livesText = this.add.text(
@@ -53,7 +53,7 @@ The `lifeLostText` will be shown only when the life is lost, so its visibility i
 
 ### Making our text styling DRY
 
-As you probably noticed we're using the same styling for all three texts: `scoreText`, `livesText` and `lifeLostText`. If we ever want to change the font size or color we will have to do it in multiple places. To make it easier for us to maintain in the future we can create a separate variable that will hold our styling, let's call it `textStyle` and place it before the text definitions:
+As you probably noticed, we're using the same styling for all three texts: `scoreText`, `livesText`, and `lifeLostText`. If we ever want to change the font size or color, we will have to do it in multiple places. To make it easier for us to maintain in the future, we can create a separate variable that will hold our styling, let's call it `textStyle` and place it before the text definitions:
 
 ```js
 const textStyle = { font: "18px Arial", fill: "#0095dd" };
@@ -81,7 +81,7 @@ this.lifeLostText.setOrigin(0.5, 0.5);
 this.lifeLostText.visible = false;
 ```
 
-This way changing the font in one variable will apply the changes to every place it is used.
+This way, changing the font in one variable will apply the changes to every place it is used.
 
 ## The lives handling code
 
@@ -129,9 +129,9 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-Instead of instantly printing out the alert when you lose a life, we first subtract one life from the current number and check if it's a non-zero value. If yes, then the player still has some lives left and can continue to play—they will see the life lost message, the ball and paddle positions will be reset on screen and on the next input (click or touch) the message will be hidden and the ball will start to move again.
+Instead of instantly printing out the alert when you lose a life, we first subtract one life from the current number and check if it's a non-zero value. If yes, then the player still has some lives left and can continue to play—they will see the life lost message, the ball and paddle positions will be reset on the screen, and on the next input (click or touch) the message will be hidden and the ball will start to move again.
 
-When the number of available lives reaches zero, the game is over and the game over alert message will be shown.
+When the number of available lives reaches zero, the game is over, and the game over alert message will be shown.
 
 ## Events
 

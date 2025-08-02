@@ -7,11 +7,11 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
-This is the **4th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have our blue ball printed on screen, but it's doing nothing—It would be cool to make it move somehow. This article covers how to do just that.
+This is the **4th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have our blue ball printed on screen, but it's doing nothing—it would be cool to make it move somehow. This article covers how to do just that.
 
 ## Updating the ball's position on each frame
 
-Remember the `update()` method and its definition? The code inside it is executed on every frame, so it's a perfect place to put the code that will update the ball's position on screen. Add the following new lines of the code inside `update()`, as shown:
+Remember the `update()` method and its definition? The code inside it is executed on every frame, so it's a perfect place to put the code that will update the ball's position on screen. Add the following new lines inside `update()`, as shown:
 
 ```js
 class ExampleScene extends Phaser.Scene {
@@ -79,8 +79,8 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-The next step is to add some basic collision detection, so our ball can bounce off the walls. This would take several lines of code—a significantly more complex step than we have seen so far, especially if we want to add paddle and brick collisions too—but fortunately Phaser allows us to do this much more easily than if we wanted to use pure JavaScript.
+The next step is to add some basic collision detection, so our ball can bounce off the walls. This would take several lines of code—a significantly more complex step than we have seen so far, especially if we want to add paddle and brick collisions too—but fortunately, Phaser allows us to do this much more easily than if we wanted to use pure JavaScript.
 
-In any case, before we do all that, we will first introduce Phaser's [physics](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics) engines, and do some setup work.
+In any case, before we do all that, we will first introduce Phaser's [physics](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics) engines and do some setup work.
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
 
-This is the **10th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough we can use the physics engine to check collisions not only between single objects (like the ball and the paddle), but also between an object and the group.
+This is the **10th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough, we can use the physics engine to check collisions not only between single objects (like the ball and the paddle), but also between an object and the group.
 
 ## Brick/Ball collision detection
 
@@ -39,7 +39,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-And that's it! Reload your code and you should see the new collision detection working just as required.
+And that's it! Reload your code, and you should see the new collision detection working just as required.
 
 You would expect to have to write a lot more calculations of your own to implement collision detection when using [pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection). That's the beauty of using the framework—you can leave a lot of boring code to Phaser, and focus on the most fun and interesting parts of making a game.
 
@@ -174,6 +174,6 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to count the destroyed bricks increment [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) as a result.
+We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to count the destroyed bricks and increment [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) as a result.
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}

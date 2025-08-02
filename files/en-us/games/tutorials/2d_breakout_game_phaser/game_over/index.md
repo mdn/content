@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}
 
-This is the **8th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). To make the game more interesting we can introduce the ability to lose—if you don't hit the ball before it reaches the bottom edge of the screen, it will be game over.
+This is the **8th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). To make the game more interesting, we can introduce the ability to lose—if you don't hit the ball before it reaches the bottom edge of the screen, it will be game over.
 
 ## How to lose
 
@@ -17,7 +17,7 @@ To provide the ability to lose, we will disable the ball's collision with the bo
 this.physics.world.checkCollision.down = false;
 ```
 
-This will make the three walls (top, left and right) bounce the ball back, but the fourth (bottom) will disappear, letting the ball fall off the screen if the paddle misses it. We need a way to detect this and act accordingly. Add the following lines at the bottom of the `update()` method:
+This will make the three walls (top, left, and right) bounce the ball back, but the fourth (bottom) will disappear, letting the ball fall off the screen if the paddle misses it. We need a way to detect this and act accordingly. Add the following lines at the bottom of the `update()` method:
 
 ```js
 const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(

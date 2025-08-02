@@ -7,7 +7,7 @@ sidebar: games
 
 {{Previous("Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
-This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Our game appears to be completed, but if you look close enough you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability we should make the rebound angles more random, and in this article we'll look at how.
+This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Our game appears to be completed, but if you look close enough, you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability, we should make the rebound angles more random, and in this article we'll look at how.
 
 ## Making rebounds more random
 
@@ -24,7 +24,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-It's a little bit of magic—the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value—if the ball hits the left side of the paddle it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values, you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
+It's a little bit of magic—the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value—if the ball hits the left side of the paddle, it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values; you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
 
 ## Compare your code
 
@@ -291,12 +291,12 @@ You've finished all the lessons—congratulations! By this point you would have 
 
 ### Exercises to follow
 
-You can do a lot more in the game—add whatever you feel would be best to make it more fun and interesting. It's a basic intro scratching the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:
+You can do a lot more in the game—add whatever you feel would be best to make it more fun and interesting. It's a basic intro that scratches the surface of the countless helpful methods that Phaser provides. Below are some suggestions as to how you could expand our little game, to get you started:
 
 - Add a second ball or paddle.
 - Change the color of the background on every hit.
 - Change the images and use your own.
-- Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing.)
+- Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing).
 - Create levels with different brick layouts.
 
 Be sure to check the ever-growing list of [examples](https://labs.phaser.io/) and the [official documentation](https://phaser.io/docs/), and visit the [Phaser Discourse forum](https://phaser.discourse.group/) if you ever need any help.

@@ -58,7 +58,7 @@ Next, we need to go through the process of downloading the Phaser source code an
 
 ## Walking through what we have so far
 
-At this point we have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the header to reset the default `margin` and `padding`. We also have a {{htmlelement("script")}} element to apply the Phaser source code to the page. The body contains a second {{htmlelement("script")}} element, where we will write the JavaScript code to render the game and control it.
+At this point, we have a `charset` defined, {{htmlelement("title")}}, and some basic CSS in the header to reset the default `margin` and `padding`. We also have a {{htmlelement("script")}} element to apply the Phaser source code to the page. The body contains a second {{htmlelement("script")}} element, where we will write the JavaScript code to render the game and control it.
 
 The {{htmlelement("canvas")}} element is generated automatically by the framework. We are initializing it by creating a new `Phaser.Game` object and assigning it to the `game` variable. The parameters are:
 

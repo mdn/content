@@ -11,7 +11,7 @@ This is the **14th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs
 
 ## Animations
 
-In Phaser, animations, involve taking a spritesheet from an external source and displaying the sprites sequentially. As an example, we will make the ball wobble when it hits something.
+In Phaser, animations involve taking a spritesheet from an external source and displaying the sprites sequentially. As an example, we will make the ball wobble when it hits something.
 
 First of all, [grab the spritesheet](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/wobble.png) and save it in your `/img` directory.
 
@@ -24,7 +24,7 @@ this.load.spritesheet("wobble", "img/wobble.png", {
 });
 ```
 
-Instead of loading a single image of the ball we can load the whole spritesheet—a collection of different images. We will show the sprites sequentially to create the illusion of animation. The `spritesheet()` method's extra parameter determine the width and height of each single frame in the given spritesheet file, indicating to the program how to chop it up to get the individual frames.
+Instead of loading a single image of the ball, we can load the whole spritesheet—a collection of different images. We will show the sprites sequentially to create the illusion of animation. The `spritesheet()` method's extra parameter determines the width and height of each single frame in the given spritesheet file, indicating to the program how to chop it up to get the individual frames.
 
 ## Loading the animation
 
@@ -46,7 +46,7 @@ this.ball.anims.create({
 });
 ```
 
-To add an animation to the object we use the `anims.create()` method, which receives the parameter with the following properties:
+To add an animation to the object, we use the `anims.create()` method, which receives the parameter with the following properties:
 
 - `key`: The name we chose for the animation.
 - `frameRate`: The frame rate in fps. Since we are running the animation at 24fps and there are 9 frames, the animation will display just under three times per second.
@@ -111,10 +111,10 @@ destroyTween.play();
 
 Let's walk through this so you can see what's happening here:
 
-1. When defining a new tween you have to specify which property of the `targets` will be tweened—in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `tweens.add()` method, specifying `brick` as the `targets` and the `scaleX` and `scaleY` properties to tween in the `props` object.
+1. When defining a new tween, you have to specify which property of the `targets` will be tweened—in our case, instead of hiding the bricks instantly when hit by the ball, we will make their width and height scale to zero, so they will nicely disappear. To the end, we use the `tweens.add()` method, specifying `brick` as the `targets` and the `scaleX` and `scaleY` properties to tween in the `props` object.
 2. Other properties we can set are `ease`, which defines the easing function to use (in this case, `Linear`), `repeat`, which defines how many times the tween should repeat (0 means it will not repeat), and `duration`, which is the time in milliseconds that the tween will take to complete.
 3. We will also add the optional `onComplete` event handler, which defines a function to be executed when the tween finishes.
-4. The last thing do to is to start the tween right away using the `play()` method.
+4. The last thing to do is to start the tween right away using the `play()` method.
 
 ## Compare your code
 

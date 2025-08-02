@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
 
-This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
 ## New properties
 
@@ -35,7 +35,7 @@ this.load.spritesheet("button", "img/button.png", {
 
 A single button frame is 120 pixels wide and 40 pixels high.
 
-You also need to [grab the button spritesheet from GitHub](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/button.png), and save it in your `/img` directory.
+You also need to [grab the button spritesheet](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/button.png), and save it in your `/img` directory.
 
 ## Adding the button to the game
 
@@ -106,7 +106,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-When the button is pressed, we remove the button, sets the ball's initial velocity and set the `playing` property to `true`.
+When the button is pressed, we remove the button, set the ball's initial velocity, and set the `playing` property to `true`.
 
 Finally for this section, go back into your `create` method, find the `this.ball.body.setVelocity(150, -150);` line, and remove it. You only want the ball to move when the button is pressed, not before!
 
