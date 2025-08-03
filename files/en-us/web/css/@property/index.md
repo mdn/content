@@ -163,7 +163,7 @@ In this example, we define a custom property called `--progress` using `@propert
 }
 ```
 
-{{ EmbedLiveSample('Using `@property` to animate linear gradient', '100%', '250px') }}
+{{ EmbedLiveSample('Animating a custom property value', '100%', '60px') }}
 
 ## Specifications
 
