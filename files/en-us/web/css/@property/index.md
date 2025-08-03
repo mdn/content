@@ -130,7 +130,7 @@ For item three, the `--item-size` value gets set to `1000px`. While `1000px` is 
 
 ### Animating a custom property value
 
-In this example, we define a custom property called `--progress` using `@property`: this accepts [`<percentage>`](/en-US/docs/Web/CSS/percentage) values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("<linear-gradient>")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
+In this example, we define a custom property called `--progress` using `@property`: this accepts [`<percentage>`](/en-US/docs/Web/CSS/percentage) values and has an initial value of `25%`. We use `--progress` to define the position value of the color stops in a {{cssxref("linear-gradient()")}}, specifying where a green color stops, and black starts. We then animate the value of `--progress` to `100%` over 2.5 seconds, giving the effect of animating a progress bar.
 
 ```html
 <div class="bar"></div>
