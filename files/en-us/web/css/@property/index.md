@@ -128,7 +128,7 @@ For item two, CSS global keywords are set for both custom properties which are v
 
 For item three, the `--item-size` value gets set to `1000px`. While `1000px` is a {{cssxref("length")}} value, the `@property` declaration requires the value be a `<percentage>`, so the declaration is not valid and is ignored, meaning the inheritable `20%` set on the parent is used. The `xyz` value is also invalid. As `registerProperty()` set `--item-color` to not be inherited, the default initial value of `aqua` is used and not the parent's `orange` value.
 
-### Using `@property` to animate linear gradient
+### Animating a custom property value
 
 In this example we define a custom property `--progress` that animates the position of a progress bar within a linear gradient.
 
