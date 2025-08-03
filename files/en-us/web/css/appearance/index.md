@@ -6,7 +6,7 @@ browser-compat: css.properties.appearance
 sidebar: cssref
 ---
 
-The **`appearance`** [CSS](/en-US/docs/Web/CSS) property defines replaced UI widget elements as having native, platform-specific styling, based on the operating system's theme, or having a primitive appearance with styles that can be overridden with CSS
+The **`appearance`** [CSS](/en-US/docs/Web/CSS) property specifies the rendered appearance of replaced UI widget elements. Most commonly, such elements are given native, platform-specific styling, based on the operating system's theme, or a primitive appearance with styles that can be overridden using CSS.
 
 {{InteractiveExample("CSS Demo: appearance")}}
 
@@ -69,56 +69,56 @@ appearance: checkbox;
 
 ### Values
 
-The `appearance` property can be applied to all elements and pseudo elements, but the effect of the value, if any, depends on the element on which it is applied.
+The `appearance` property can be applied to all elements and pseudo-elements, but the effect of the specified value, if any, depends on the element to which it is applied.
 
 - `none`
-  - : Gives the widget on which it is applied a _primitive_ appearance, making it stylable via CSS, while maintaining the widget's native functionality. This value has no effect on non widgets.
+  - : Gives the widget a _primitive_ appearance, making it stylable via CSS, while maintaining the widget's native functionality. This value does not affect non-widgets.
 
 - `auto`
-  - : When set on interactive widgets, sets the widget to its _native_ appearance. Otherwise, acts as `none` on elements with no special styling.
+  - : Sets interactive widgets to render with their _OS-native_ appearance. Behaves as `none` on elements with no OS-native styling.
 
 - `base-select`
-  - : Only relevant for the {{htmlelement("select")}} and {{cssxref("::picker()", "::picker(select)")}}, allowing them to be styled.
+  - : Only relevant to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allowing them to be styled.
 
 - `<compat-special>`
-  - : The equivalent of `auto` on elements with no special styling.
+  - : Has an effect similar to`auto` on certain elements.
     - `textfield`
-      - : For some `<input>` types, the [appearance matches the `text` type](#try_it).
+      - : Causes the appearance of certain `<input>` types, to [match the appearance of the `text` type](#try_it).
     - `menulist-button`
       - : When set on the `<select>` element, the drop-down picker is set to match that of its devolved, or default, state.
 
 - `<compat-auto>`
-  - : Included for backwards compatibility, with `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea` as values, sets the value to `auto`. Use `auto` instead.
+  - : Included for backwards compatibility; possible values include `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea`. The values all behave as `auto`: use `auto` instead.
 
 The specification also defines a `base` value. This is not yet supported by any browser.
 
 Some non-standard values are also supported in some browsers:
 
 - `slider-vertical`
-  - : When applied to `<input type="range">`, it makes the slider vertical in supporting browsers. To [create a vertical slider](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
+  - : Makes the slider vertical when applied to `<input type="range">` elements. To [create a vertical slider](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) you should instead set the {{cssxref("writing-mode")}} to `vertical-lr` and the {{cssxref("direction")}} to `rtl`.
 
 - `-apple-pay-button`
-  - : In supporting browsers it displays the Apple Pay logo when set on a {{htmlelement("button")}}, {{htmlelement("a")}} link, or {{htmlelement("input")}} element of type `button` or `reset`.
+  - : Displays the Apple Pay logo when set on a {{htmlelement("button")}}, {{htmlelement("a")}}, or {{htmlelement("input")}} element of type `button` or `reset`.
 
 ## Description
 
-The `appearance` property enables the displaying of element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value. Setting `appearance: none`, or otherwise changing the appearance of UI widgets does not change the element's functionality.
+The `appearance` property enables displaying elements in their OS-native style based on the operating system's theme, as well as the removal of any platform-native styling with the `none` value. Setting `appearance: none`, or otherwise changing the appearance of UI widgets, does not change the element's functionality.
 
-While most elements in a document can be fully controlled by CSS, UI controls, or _widgets_, are typically rendered by the browser using the operating system's native UI controls. This _native_ appearance differs between operating systems and browsers. In this default state, widgets have limited, if any, features that can be styled with CSS. Which elements have this native UI appearance is defined in HTML.
+While most elements in a document can be fully styled by CSS, UI controls (_widgets_) are typically rendered by the browser using the operating system's native UI styles. This _native_ appearance differs between operating systems and browsers. In this default state, widgets have limited, if any, features that can be styled with CSS. Which elements have this native UI appearance is defined in HTML.
 
-The `appearance` property provides some control over the appearance of HTML widgets that by default look like native operating system controls. Most notably, the `none` value suppresses some of a widget's native appearance, giving the widget a _primitive_ appearance, enabling the widget to be styled via CSS while still maintaining the functionality and supporting native user interactions.
+The `appearance` property provides some control over the appearance of HTML widgets that, by default, look like native operating system controls. Most notably, the `none` value suppresses some of a widget's native appearance. This results in a _primitive_ look that can be styled via CSS while still maintaining functionality and supporting native user interactions.
 
-Widgets with a primitive appearance have their native appearance suppressed, causing some widgets types to disappear completely. While visually hidden, with inline, block, border, and padding sizes of `0`, the hidden controls are still interactive. For example, clicking on a {{htmlelement("label")}} associated with an `appearance: none` checkbox will toggle the checkbox's checked state.
+Some widgets disappear completely when set to `appearance: none`. The hidden controls are still interactive, however. For example, clicking on a {{htmlelement("label")}} associated with an `appearance: none` checkbox will toggle the checkbox's checked state.
 
 Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance, wherein the widget maintains it's native appearance but CSS can be used to change the styles that are not changeable by default. Unlike `none`, in this case the element retains a primitive appearance with default styles that are usable and interoperable.
 
 This `base` value is not yet supported, but the `<compat-auto>` values provide similar functionality but are not global in nature. When supported, `base` will reset widgets to their default appearance.
 
-The `base-select` value, which is relevant only for the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` element and the select pickers](#Setting_the_appearance_of_a_select), which represents the part of the form control that pops out of the page, on which the value is applied. The picker pane of {{htmlelements("option")}} elements are rendered in the top-layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other element) using CSS anchoring features. When `base-select` is set, the `<select>` does not render outside the browser pane, does not trigger built-in mobile operating system components, and is no longer sized based on the width of the widest `<option>`.
+The `base-select` value, which is relevant only for the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#Setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using CSS anchoring features. In addition, the `base-select` value causes the `<select>` to not render outside the browser pane and not trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
 
 ### Prefixed non-standard values
 
-Before standardization, the prefixed **`-moz-appearance`** and **`-webkit-appearance`** allowed elements to be shown as widgets, such as buttons or check boxes. The following non-standard values may be encountered in legacy style sheets, most commonly as values of shadow DOM component [prefixed pseudo-elements](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-elements):
+Before standardization, the prefixed **`-moz-appearance`** and **`-webkit-appearance`** properties allowed elements to be shown as widgets such as buttons or checkboxes. The following non-standard values may be encountered in legacy style sheets, most commonly as values of shadow DOM component [prefixed pseudo-elements](/en-US/docs/Web/CSS/WebKit_Extensions#pseudo-elements):
 
 - `attachment`
 - `borderless-attachment`
@@ -206,7 +206,7 @@ Authors are encouraged to use only standard keywords.
 
 ### Basic example
 
-This example demonstrates altering the appearance of a {{htmlelement("input")}} element using the `appearance` property.
+This example demonstrates altering the appearance of an {{htmlelement("input")}} element using the `appearance` property.
 
 #### HTML
 
