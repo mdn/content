@@ -11,15 +11,11 @@ The **`appearance`** [CSS](/en-US/docs/Web/CSS) property specifies the rendered 
 {{InteractiveExample("CSS Demo: appearance")}}
 
 ```css interactive-example-choice
-appearance: none;
-```
-
-```css interactive-example-choice
 appearance: auto;
 ```
 
 ```css interactive-example-choice
-appearance: searchfield;
+appearance: none;
 ```
 
 ```css interactive-example-choice
@@ -28,20 +24,19 @@ appearance: textfield;
 
 ```html interactive-example
 <section id="default-example">
-  <div class="background">
-    <input id="example-element" type="search" value="search" />
+  <div class="background" id="example-element">
+    <input type="search" value="search" aria-label="unlabeled search" />
+    <input type="checkbox" aria-label="unlabeled checkbox" />
+    <input type="radio" aria-label="unlabeled radio button" />
+    <button>Button</button>
   </div>
 </section>
 ```
 
 ```css interactive-example
-.background {
-  display: flex;
-  place-content: center;
-  place-items: center;
-  width: 150px;
-  height: 150px;
-  background-color: white;
+input,
+button {
+  appearance: inherit;
 }
 ```
 
@@ -90,7 +85,10 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
 - `<compat-auto>`
   - : Included for backwards compatibility; possible values include `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea`. The values all behave as `auto`: use `auto` instead.
 
-The specification also defines a `base` value. This is not yet supported by any browser.
+> [!NOTE]
+> The specification also defines a `base` value. This is not yet supported by any browser.
+
+#### Non-standard values
 
 Some non-standard values are also supported in some browsers:
 
@@ -110,9 +108,7 @@ The `appearance` property provides some control over the appearance of HTML widg
 
 Some widgets disappear completely when set to `appearance: none`. The hidden controls are still interactive, however. For example, clicking on a {{htmlelement("label")}} associated with an `appearance: none` checkbox will toggle the checkbox's checked state.
 
-Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance, wherein the widget maintains it's native appearance but CSS can be used to change the styles that are not changeable by default. Unlike `none`, in this case the element retains a primitive appearance with default styles that are usable and interoperable.
-
-This `base` value is not yet supported, but the `<compat-auto>` values provide similar functionality but are not global in nature. When supported, `base` will reset widgets to their default appearance.
+Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance. When supported, the `base` value will ensure widgets maintain their native appearance while enabling CSS to be used to change a widget's styles that are not changeable by default. Unlike `none`, that can make radio buttons and checkboxes disappear, with base, the widget will retain a primitive appearance with default styles that are usable and interoperable. In other words, the `base` value is an alternative to `none` that guarantees widgets some usable, interoperable native styles as well as a good degree of customization via CSS. While this `base` value is not yet supported, the many `<compat-auto>` values provide similar functionality but are type-specific and not global in nature.
 
 The `base-select` value, which is relevant only for the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#Setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using CSS anchoring features. In addition, the `base-select` value causes the `<select>` to not render outside the browser pane and not trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
 
@@ -206,7 +202,7 @@ Authors are encouraged to use only standard keywords.
 
 ### Basic example
 
-This example demonstrates altering the appearance of an {{htmlelement("input")}} element using the `appearance` property.
+This example demonstrates basic usage of the `appearance` property, altering the appearance of an {{htmlelement("input")}} element in some browsers.
 
 #### HTML
 
@@ -237,14 +233,15 @@ We set the element with the class of `text` to look like a text field.
 
 {{EmbedLiveSample("Basic example", 600, 100)}}
 
-Notice how the spinner is visually removed when the control is set to look like a text field. The `appearance` property has no effect on the functionality: for example, while there is no longer a spinner to click on, the up and down arrows still work.
+Depending on the browser, the spinner may be visually removed when the control is set to look like a text field. The `appearance` property has no effect on the functionality: for example, while there may no longer be a spinner to click on,the up and down cursor keys will still increment and decrement the value.
 
 ### Appearance set to `none`
 
-The following example shows how to remove the default styling from a checkbox and {{htmlelement("select")}} element, and apply custom styling.
-The appearance of the checkbox is changed to a circle, and the `<select>` element shows how to remove the arrow indicating that the list can be expanded.
+The following example shows how to remove the default styling from a checkbox, a radio button, and a {{htmlelement("select")}} element, and apply custom styling.
 
 #### HTML
+
+We include pairs of checkboxes, radio buttons, and `<select>` elements, along with their associated labels:
 
 ```html
 <label><input type="checkbox" /> Default unchecked </label>
@@ -283,7 +280,7 @@ label {
 }
 ```
 
-We include styles to apply to both {{htmlelement("input")}} elements of type `checkbox`. We set `appearance: none` to the {{cssxref(":checked")}} UI state for all inputs (`checkbox` and `radio`), as well as to elements with the `.none` class.
+We include styles to apply to both {{htmlelement("input")}} elements of type `checkbox`. We provide styles for the checkbox that will create a red square if the element is styleable. We set `appearance: none` to the {{cssxref(":checked")}} UI state for all inputs (`checkbox` and `radio`), as well as to elements with the `.none` class. This removes all the style of the radio button and checkbox, other than the margins, and allows them to be styled; but there are no alternative styles provided for the radio button or `<select>` for when `none` is set.
 
 ```css
 [type="checkbox"] {
@@ -300,7 +297,7 @@ input:checked,
 
 #### Result
 
-{{EmbedLiveSample("Appearance set to none", 600, 200)}}
+{{EmbedLiveSample("Appearance set to none", 600, 220)}}
 
 Setting `appearance: none` enables UI elements to be styled, but it also runs the risk of hiding the widget. The unchecked checkbox, with it's `appearance` defaulting to `auto`, looks like a checkbox. Setting `appearance: none` in the `:checked` state enables it to be styled. Like the unchecked checkbox, the unchecked radio looks like the native UI widget, because it is. When in the checked state, with `appearance: none` applied, the radio button disappears; only its margins impact the page while the functionality remains present.
 
