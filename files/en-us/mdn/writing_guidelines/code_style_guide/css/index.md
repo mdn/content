@@ -50,7 +50,7 @@ For maximum control over CSS across platforms, many people used to use CSS reset
 
 ### Formal syntax and pseudocode
 
-Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks results in the code being unparsable by static checkers, confuses readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
+Formal syntax is an integral part of MDN's CSS documentation (as an example, see the [Formal syntax](/en-US/docs/Web/CSS/background-image#formal_syntax) section on the `background-image` property page). Because a lot of developers are familiar with syntax in this format, it's acceptable to write pseudocode in a formal-syntax-like fashion in descriptions and examples. However, any code that is not syntactically well-formed CSS should not be marked as CSS. Syntax errors in `css` code blocks result in the code being unparsable by static checkers, confuse readers who expect to see valid CSS code, and may even result in nonsensical syntax highlighting. Either mark your code block as `plain`, or use the `CSSSyntaxRaw` macro to render the complete formal syntax.
 
 Don't write descriptions like this (this is not real formal syntax anyway; it's just pseudo-CSS with some placeholders):
 
@@ -94,7 +94,7 @@ rgb(31 41 59);
 rgb(31 41 59 / 26%);
 ```
 
-Note that this rule does not apply to the first code block in the "Syntax" section, which is specified instead by [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#css_reference_syntax), and requires functions to be written without the property.
+Note that this rule does not apply to the first code block in the "Syntax" section, which is specified instead by [Syntax sections](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#css_reference_syntax), and requires functions to be written without the property name.
 
 ## Animations
 
@@ -268,9 +268,7 @@ Generally, prefer [class selectors](/en-US/docs/Web/CSS/Class_selectors) (and us
 }
 ```
 
-ID selectors are acceptable if unique handles are required elsewhere, for example, for form controls.
-
-Use classes for styling, and reserve IDs for non-CSS purposes, such as for use in JavaScript or for linking to unique page anchors (`<a href="#section1">`). In the case where the use of ID is justified, you can take advantage of it for [controlling specificity](#controlling_specificity).
+Use classes for styling, and reserve IDs for non-CSS purposes, such as for use in JavaScript or for linking to unique page anchors (`<a href="#section1">`). In the case where the use of ID is justified, you can use it as a selector, potentially to [control specificity](#controlling_specificity).
 
 ### Old pseudo-element selectors
 
@@ -310,7 +308,7 @@ Generally, if the specific color palette is not a concern, default to using comm
 
 If a specific color is needed, default to using the `rgb()` notation. `hsl()` and other functions should only be used where the particular representation has a meaning (for example, a color wheel or a gradient). Hexadecimal notation is terser but may be less readable; it is interchangeable with `rgb()` depending on which one is more convenient for you.
 
-Whatever color function you use, always use the modern syntax (`rgb(31 41 59 / 0.26)`), not the legacy comma-separated one. Always use the function without the `a` suffix (`rgb` instead of `rgba`), because it's shorter and doesn't require changing the name if you later decide to add an alpha channel.
+Whatever color function you use, always use the modern syntax (`rgb(31 41 59 / 0.26)`), not the legacy comma-separated one. Always use the function without the `a` suffix (`rgb` instead of `rgba`), because it's shorter and doesn't require changing the name if you later decide to add or remove the alpha channel.
 
 When using the hexadecimal notation, always use the six (or eight) digit version to avoid cognitive load: `#aabbcc` instead of `#abc`.
 
@@ -414,9 +412,9 @@ Use the modern range syntax instead of `min-` and `max-`. The former allows spec
 }
 ```
 
-This principle extends to HTML attributes, such as the `media` attribute of `<link>` elements.
+This principle extends to non-CSS usage of media queries, such as the [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attribute of `<link>` elements or {{domxref("window.matchMedia()")}}.
 
-If you have different alternative styles, be especially careful with your media queries. Remember that `width` and `height` can be fractional values; make sure that with every value, there is one and only one alternative style in effect.
+If you have different alternative styles selected by media thresholds, be especially careful with your media queries. Remember that `width` and `height` can be fractional values; make sure that with every value, there is one and only one alternative style in effect.
 
 ### Mobile-first media queries
 
