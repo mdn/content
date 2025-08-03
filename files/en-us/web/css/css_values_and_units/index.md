@@ -88,7 +88,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 #### Units
 
-- [`%` (percentage)](/en-US/docs/Web/CSS/length#cap)
+- [`%` (percentage)](/en-US/docs/Web/CSS/percentage)
 - [`cap`](/en-US/docs/Web/CSS/length#cap)
 - [`ch`](/en-US/docs/Web/CSS/length#ch)
 - [`cm`](/en-US/docs/Web/CSS/length#cm)
