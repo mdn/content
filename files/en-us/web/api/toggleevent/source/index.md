@@ -10,11 +10,11 @@ browser-compat: api.ToggleEvent.source
 
 The **`source`** read-only property of the {{domxref("ToggleEvent")}} interface is an {{domxref("Element")}} object instance representing the HTML popover control element that initiated the toggle.
 
-A {{htmlelement("button")}} or `<input type="button">` element can be specified as a popover control by specifying the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the popover element in its [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) or [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute.
+A {{htmlelement("button")}} element can be specified as a popover control by specifying the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the popover element in its [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) or [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute (if the button is specified using `<input type="button">`, only the `popovertarget` attribute works).
 
 ## Value
 
-An {{domxref("Element")}} object instance, or `null` if the popover does not have a control element (for example, if the popover is being controlled using a JavaScript method such as {{domxref("HTMLElement.togglePopover()")}}).
+An {{domxref("Element")}} object instance, or `null` if the popover was not activated by a control element (for example, if the popover is being controlled using a JavaScript method such as {{domxref("HTMLElement.togglePopover()")}}).
 
 ## Examples
 
