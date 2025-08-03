@@ -49,7 +49,6 @@ You can target the content of the currently selected `<option>` element and styl
 
 For example, your `<option>` elements may contain icons, images, or even videos that render nicely inside the drop-down, but could cause the select `<button>` to increase in size, look untidy, and affect the surrounding layout. By targeting the content inside `<selectedcontent>`, you can hide elements such as images in the button, without affecting how they appear in the drop-down, as shown in the following snippet:
 
-
 ```css
 selectedcontent img {
   display: none;
