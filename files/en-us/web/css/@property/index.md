@@ -150,7 +150,7 @@ In this example, we define a custom property called `--progress` using `@propert
   height: 5px;
   background: linear-gradient(
     to right,
-    #00d230 0 var(--progress),
+    #00d230 var(--progress),
     #000000 var(--progress)
   );
   animation: progressAnimation 2.5s ease infinite;
