@@ -570,7 +570,7 @@ There are also a couple of events related to buffering:
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
-- [Event reference > Media](/en-US/docs/Web/Events#media)
+- [Event reference > Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.
