@@ -80,7 +80,7 @@ Uses the resolution from the image. If the image does not have a resolution, use
 
 ## Browser compatibility
 
-No browser currently supports this property.
+Currently, no browsers support this feature.
 
 ## See also
 

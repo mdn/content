@@ -49,7 +49,7 @@ Every CSS declaration consists of a property/value pair. The value can take vari
 - {{cssxref("tan()")}}
 - {{cssxref("url_function", "url()")}}
 
-Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, `if()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()`, are defined in the specifications, but not yet implemented in browsers.
+The CSS values and units module also introduces the `calc-mix()`, `crossorigin()`, `first-valid()`, `integrity()`, `progress()`, `random()`, `random-item()`, `referrerpolicy()`, `src()`, `type()`, and `toggle()` functions. Currently, no browsers support these features.
 
 ### Data types
 
@@ -66,8 +66,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<dimension>`](/en-US/docs/Web/CSS/dimension)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - [`<first-valid()>`](/en-US/docs/Web/CSS)
-- [`<frequency>`](/en-US/docs/Web/CSS/frequency)
-- [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage)
 - [`<ident>`](/en-US/docs/Web/CSS/ident)
 - [`<integer>`](/en-US/docs/Web/CSS/integer)
 - [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage)
@@ -85,6 +83,8 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<url>`](/en-US/docs/Web/CSS/url_value)
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
+
+The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/Web/CSS/frequency) and [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage) data types. Currently, no browsers support these features.
 
 #### Units
 
