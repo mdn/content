@@ -6,7 +6,7 @@ browser-compat: css.properties.appearance
 sidebar: cssref
 ---
 
-The **`appearance`** [CSS](/en-US/docs/Web/CSS) property specifies the rendered appearance of replaced UI widget elements. Most commonly, such elements are given native, platform-specific styling, based on the operating system's theme, or a primitive appearance with styles that can be overridden using CSS.
+The **`appearance`** [CSS](/en-US/docs/Web/CSS) property specifies the rendered appearance of replaced UI widget elements such as form controls. Most commonly, such elements are given native, platform-specific styling based on the operating system's theme, or a primitive appearance with styles that can be overridden using CSS.
 
 {{InteractiveExample("CSS Demo: appearance")}}
 
@@ -78,7 +78,7 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
 - `<compat-special>`
   - : Has an effect similar to`auto` on certain elements.
     - `textfield`
-      - : Causes the appearance of certain `<input>` types, to [match the appearance of the `text` type](#try_it).
+      - : Causes the appearance of certain `<input>` types to [match the appearance of the `text` type](#try_it).
     - `menulist-button`
       - : When set on the `<select>` element, the drop-down picker is set to match that of its devolved, or default, state.
 
@@ -108,9 +108,9 @@ The `appearance` property provides some control over the appearance of HTML widg
 
 Some widgets disappear completely when set to `appearance: none`. The hidden controls are still interactive, however. For example, clicking on a {{htmlelement("label")}} associated with an `appearance: none` checkbox will toggle the checkbox's checked state.
 
-Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance. When supported, the `base` value will ensure widgets maintain their native appearance while enabling CSS to be used to change a widget's styles that are not changeable by default. Unlike `none`, that can make radio buttons and checkboxes disappear, with base, the widget will retain a primitive appearance with default styles that are usable and interoperable. In other words, the `base` value is an alternative to `none` that guarantees widgets some usable, interoperable native styles as well as a good degree of customization via CSS. While this `base` value is not yet supported, the many `<compat-auto>` values provide similar functionality but are type-specific and not global in nature.
+Because `none` can cause a widget to be hidden, the `base` value is being added to provide widgets with a base appearance. When supported, the `base` value will ensure widgets maintain their native appearance while enabling CSS to be used to change a widget's styles that are not changeable by default. Unlike `none`, which can make radio buttons and checkboxes disappear, `base` causes the widget to retain a primitive appearance with default native styles that are usable and interoperable, as well as a good degree of customization via CSS. While this `base` value is not yet supported, the many `<compat-auto>` values provide similar functionality but are type-specific and not global.
 
-The `base-select` value, which is relevant only for the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#Setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using CSS anchoring features. In addition, the `base-select` value causes the `<select>` to not render outside the browser pane and not trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
+The `base-select` value, which is relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, enables [styling `<select>` elements and the select picker](#Setting_the_appearance_of_a_select) (which contains the `<option>` elements). The picker is rendered in the top layer, similar to a popover. When `base-select` is set, the picker can be positioned relative to the select (or other elements) using CSS anchoring features. In addition, the `base-select` value causes the `<select>` to not render outside the browser pane and not trigger built-in mobile operating system components. It is also no longer sized based on the width of the widest `<option>`.
 
 ### Prefixed non-standard values
 
@@ -280,7 +280,7 @@ label {
 }
 ```
 
-We include styles to apply to both {{htmlelement("input")}} elements of type `checkbox`. We provide styles for the checkbox that will create a red square if the element is styleable. We set `appearance: none` to the {{cssxref(":checked")}} UI state for all inputs (`checkbox` and `radio`), as well as to elements with the `.none` class. This removes all the style of the radio button and checkbox, other than the margins, and allows them to be styled; but there are no alternative styles provided for the radio button or `<select>` for when `none` is set.
+We apply styles to both {{htmlelement("input")}} elements of type `checkbox` that create a red square if the element is styleable. We set `appearance: none` on the {{cssxref(":checked")}} UI state for all inputs (`checkbox` and `radio`), as well as to elements with the `.none` class. This removes all the style of the radio button and checkbox, other than the margins, and allows any set styles to be applied. There are no alternative styles provided for the radio buttons or `<select>` elements for when `none` is set.
 
 ```css
 [type="checkbox"] {
@@ -299,7 +299,9 @@ input:checked,
 
 {{EmbedLiveSample("Appearance set to none", 600, 220)}}
 
-Setting `appearance: none` enables UI elements to be styled, but it also runs the risk of hiding the widget. The unchecked checkbox, with it's `appearance` defaulting to `auto`, looks like a checkbox. Setting `appearance: none` in the `:checked` state enables it to be styled. Like the unchecked checkbox, the unchecked radio looks like the native UI widget, because it is. When in the checked state, with `appearance: none` applied, the radio button disappears; only its margins impact the page while the functionality remains present.
+Setting `appearance: none` enables UI elements to be styled, but it also runs the risk of hiding the widget. The unchecked checkbox, with its `appearance` defaulting to `auto`, looks like a checkbox. Setting `appearance: none` in the `:checked` state enables it to be styled.
+
+Like the unchecked checkbox, the unchecked radio button looks like the native UI widget, because it is. When in the checked state, with `appearance: none` applied, the radio button disappears; its functionality is retained, and only its margins affect page rendering.
 
 ### Setting the appearance of a select
 
@@ -376,7 +378,7 @@ select {
 
 While the {{cssxref("background-color")}} and {{cssxref("border")}} styles are defined on all the `<select>` elements and their pickers, the `::picker(select)` styles only effect the picker where both the select and the picker have the `appearance` property set to `base-select`. The first and third selects look the same because `menulist-button` is a compatibility keyword.
 
-Notice that, by default, the inline-size of the `<select>` is generally the inline-size of the `<option>` with the most text and the picker pane is fully visible when opened. This is no longer true when `base-select` is set.
+Notice that, by default, the inline-size of the `<select>` is generally the inline-size of the `<option>` with the most text, and that the drop-down picker appears over the top of the rendered page when opened, making it not constrained by the surrounding page and therefore fully visible. These statements are no longer true when `base-select` is set.
 
 ## Specifications
 
