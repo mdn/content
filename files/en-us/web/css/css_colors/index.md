@@ -71,7 +71,7 @@ The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "d
 
 ### Interfaces
 
-The CSS color module introduces the `CSSColorProfileRule` interface. Currently, no browsers support this feature.
+The CSS color module also introduces the `CSSColorProfileRule` interface. Currently, no browsers support this feature.
 
 ## Guides
 
