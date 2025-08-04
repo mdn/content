@@ -100,18 +100,19 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number that indicates the total time spent decoding frames in this stream, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
-  - : A positive number indicating the total time that the stream has spent frozen, in seconds.
+  - : A positive number that indicates the total time that the stream has spent frozen, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
-  - : A positive number indicating the total time spent between consecutively rendered frames, recorded just after a frame has been rendered.
+  - : A positive number that indicates the total time spent between consecutively rendered frames, recorded just after a frame has been rendered.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}}
-  - : A positive number indicating the total time that the stream has spent with paused video, in seconds.
+  - : A positive number that indicates the total time that the stream has spent with paused video, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalProcessingDelay", "totalProcessingDelay")}}
-  - : A positive number indicating the total time spent processing audio or video samples, in seconds.
+  - : A positive number that indicates the total time spent processing audio or video samples, in seconds.
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration", "totalSamplesDuration")}}
-  - : TBD.
+  - : A positive number that indicates the total duration of all samples that have been received, in seconds.
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesReceived", "totalSamplesReceived")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalSquaredInterFrameDelay", "totalSquaredInterFrameDelay")}}
