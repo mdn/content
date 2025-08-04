@@ -12,12 +12,12 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 
 ```html interactive-example
 <div class="preference">
-  <label for="cheese">Do you like cheese?</label>
+  <label for="cheese">I like cheese.</label>
   <input type="checkbox" name="cheese" id="cheese" />
 </div>
 
 <div class="preference">
-  <label for="peas">Do you like peas?</label>
+  <label for="peas">I like peas.</label>
   <input type="checkbox" name="peas" id="peas" />
 </div>
 ```
@@ -64,7 +64,7 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 
 ```html
 <label>
-  Do you like peas?
+  I like peas.
   <input type="checkbox" name="peas" />
 </label>
 ```
