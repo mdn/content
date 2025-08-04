@@ -111,7 +111,7 @@ import "./hello.js";
 Alternatively, you can produce a factory module, which allows you to produce multiple instances of the module (by default the glue code loads the module globally, causing multiple instances to collide).
 
 ```bash
-emcc hello.c -o hello.mjs -sMODULARIZE
+emcc -o hello.mjs hello.c -O3 -sMODULARIZE
 ```
 
 > [!NOTE]
