@@ -222,7 +222,7 @@ select {
 
 div > div {
   box-sizing: border-box;
-  border: 2px solid #fff;
+  border: 2px solid white;
   width: 100px;
   display: flex;
   align-items: center;

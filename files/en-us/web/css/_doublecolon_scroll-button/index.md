@@ -128,7 +128,7 @@ ul::scroll-button(*) {
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  color: black;
 }
 
 ul::scroll-button(*):active {

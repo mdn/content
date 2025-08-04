@@ -262,7 +262,7 @@ html {
 
 /* Transition for the popover's backdrop */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -279,7 +279,7 @@ html {
 so specify a standalone starting-style block. */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -399,11 +399,7 @@ div {
   flex: 1;
   border: 1px solid gray;
   position: relative;
-  background: linear-gradient(
-    to right,
-    rgb(255 255 255 / 0%),
-    rgb(255 255 255 / 50%)
-  );
+  background: linear-gradient(to right, transparent, rgb(255 255 255 / 50%));
   opacity: 1;
   scale: 1 1;
 

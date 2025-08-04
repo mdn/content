@@ -207,7 +207,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
