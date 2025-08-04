@@ -1,5 +1,6 @@
 ---
 title: Firefox 16 for developers
+short-title: Firefox 16
 slug: Mozilla/Firefox/Releases/16
 page-type: firefox-release-notes
 sidebar: firefox
@@ -40,7 +41,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - The [Battery API](/en-US/docs/Web/API/Navigator/getBattery) is now unprefixed.
 - The Vibration API has been unprefixed.
 - The non-standard `Keyboard` interface, prefixed as `mozKeyboard`, now has the `Keyboard.setSelectedOption()` and `Keyboard.setValue()` methods, as well as the `Keyboard.onfocuschange`. _This interface, only available for Firefox OS, has been removed in Firefox 31._
-- The [`java`](/en-US/docs/LiveConnect_Reference/java) and [`Packages`](/en-US/docs/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](/en-US/docs/LiveConnect).
+- The [`java`](https://web.archive.org/web/20201004062409/https://developer.mozilla.org/en-US/docs/Archive/Web/LiveConnect_Reference/java) and [`Packages`](https://web.archive.org/web/20201031083247/https://developer.mozilla.org/en-US/docs/Archive/Web/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](https://web.archive.org/web/20210516230302/https://developer.mozilla.org/en-US/docs/Archive/Web/LiveConnect).
 - The `CSSRule.type` associated with {{domxref("CSSNamespaceRule")}} has been updated from `UNKNOWN_RULE` (`0`) to `NAMESPACE_RULE` (`10`) ([bug 765590](https://bugzil.la/765590)).
 - WebSMS API: `SmsRequest` has been superseded by the more general `DOMRequest`.
 - The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ([Firefox bug 766937](https://bugzil.la/766937)).
@@ -74,16 +75,10 @@ _No change._
 
 ## Changes for Open Web App developers
 
-- Initial [Open Web App support](/en-US/docs/Web/Apps/Getting_Started) has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).
+- Initial [Open Web App support](https://web.archive.org/web/20190117093115/https://developer.mozilla.org/en-US/docs/Web/Apps/Getting_Started) has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).
 
 ## Changes for add-on and Mozilla developers
 
 ### Interface changes
 
 `nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ([Firefox bug 761613](https://bugzil.la/761613))
-
-#### New interfaces
-
-#### Removed interfaces
-
-The following interfaces have been removed.

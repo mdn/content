@@ -3,9 +3,8 @@ title: "<select>: The HTML Select element"
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
@@ -66,7 +65,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
 - [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
-  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
+  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown. Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`.
 - `name`
   - : This attribute is used to specify the name of the control.
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)

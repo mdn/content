@@ -3,9 +3,8 @@ title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 page-type: javascript-language-feature
 browser-compat: javascript.classes.constructor
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`constructor`** method is a special method of a [class](/en-US/docs/Web/JavaScript/Reference/Classes) for creating and initializing an object instance of that class.
 
@@ -21,9 +20,9 @@ class Polygon {
   }
 }
 
-const poly1 = new Polygon();
+const poly = new Polygon();
 
-console.log(poly1.name);
+console.log(poly.name);
 // Expected output: "Polygon"
 ```
 

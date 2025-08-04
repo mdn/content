@@ -4,9 +4,8 @@ short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.viewport
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`viewport`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element gives hints about the initial size of the {{glossary("viewport")}}.
 If specified, you define viewport-related behaviors using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element as a comma-separated list of one or more values.
@@ -53,6 +52,12 @@ A `<meta name="viewport">` element has the following additional attributes:
         >
         > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
         > - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+    - `interactive-widget`
+      - : Specifies the effect that interactive UI widgets, such as virtual keyboards, have on a page's viewport.
+        It can be the keyword `resizes-visual`, `resizes-content`, or `overlays-content`.
+        - `resizes-visual`: The {{Glossary("visual viewport")}} gets resized by the interactive widget. This is the default.
+        - `resizes-content`: The {{Glossary("viewport")}} gets resized by the interactive widget.
+        - `overlays-content`: Neither the viewport nor the visual viewport gets resized by the interactive widget.
     - `viewport-fit`
       - : Defines the viewable portions of the web page.
         It can be one of the keywords `auto`, `contain`, or `cover`.

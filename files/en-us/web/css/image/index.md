@@ -3,9 +3,8 @@ title: <image>
 slug: Web/CSS/image
 page-type: css-type
 browser-compat: css.types.image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a two-dimensional image.
 

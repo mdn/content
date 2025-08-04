@@ -4,9 +4,8 @@ short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.color-scheme
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`color-scheme`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element indicates a suggested color scheme that user agents should use for a page.
 If specified, you define the color scheme using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element with a valid CSS {{cssxref("color-scheme")}} value.

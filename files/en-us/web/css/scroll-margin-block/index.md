@@ -3,9 +3,8 @@ title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-block
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
 

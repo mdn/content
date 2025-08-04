@@ -2,9 +2,8 @@
 title: Hash routing
 slug: Glossary/Hash_routing
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Hash routing** is a client-side technique used in single-page applications (SPAs) to manage navigation and state changes without reloading the entire page.
 

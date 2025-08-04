@@ -3,9 +3,8 @@ title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `Port` object represents one end of a connection between two specific contexts, which can be used to exchange messages.
 
@@ -103,10 +102,6 @@ which holds in Chrome, is replaced by
 - _Any_ frame that received the port (via `runtime.onConnect`) has unloaded.
 
 in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -215,6 +210,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

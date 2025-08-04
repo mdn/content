@@ -69,10 +69,6 @@ The result of this is that documents loaded into credentialless `<iframe>`s are 
 
 If `credentialless` is set on an `<iframe>` that has child `<iframe>`s embedded in the document loaded inside it, those child `<iframe>`s inherit the credentialless setting.
 
-## Live demo
-
-Use the [https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me/) demo to see IFrame credentialless in action.
-
 ## Specifications
 
 {{Specifications}}

@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-color/
   - https://drafts.csswg.org/css-color-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS colors** module defines colors, color types, color blending, opacity, and how you can apply these colors and effects to HTML content.
 
@@ -32,8 +31,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### At-rules and descriptors
 
-> [!NOTE]
-> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule, along with its `components`, `rendering-intent` and `src` descriptors. These features have not yet been implemented in any browser.
+The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule, along with its `components`, `rendering-intent` and `src` descriptors. Currently, no browsers support these features.
 
 ### Functions
 
@@ -50,8 +48,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
-> [!NOTE]
-> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions, which have not yet been implemented in any browser.
+The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions. Currently, no browsers support these features.
 
 ### Data types
 
@@ -74,8 +71,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### Interfaces
 
-> [!NOTE]
-> The CSS color module introduces the `CSSColorProfileRule` interface, which has not been implemented in any browser.
+The CSS color module also introduces the `CSSColorProfileRule` interface. Currently, no browsers support this feature.
 
 ## Guides
 

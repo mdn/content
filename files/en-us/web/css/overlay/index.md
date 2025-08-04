@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.overlay
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element appearing in the [top layer](/en-US/docs/Glossary/Top_layer) (for example, a shown [popover](/en-US/docs/Web/API/Popover_API) or modal {{htmlelement("dialog")}} element) is actually rendered in the top layer. This property is only relevant within a list of {{cssxref("transition-property")}} values, and only if `allow-discrete` is set as the {{cssxref("transition-behavior")}}.
 

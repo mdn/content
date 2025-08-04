@@ -2,9 +2,8 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a web page. It can read and modify page content using the standard [Web APIs](/en-US/docs/Web/API). Content script behavior is similar to scripts that are part of a website, such as those loaded using the {{HTMLElement("script")}} element). However, content scripts can only access page content when [host permissions for the web page's origin are granted](#permissions).
 

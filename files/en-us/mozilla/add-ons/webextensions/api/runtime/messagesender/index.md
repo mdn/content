@@ -3,9 +3,8 @@ title: runtime.MessageSender
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.MessageSender
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An object containing information about the sender of a message or connection request that is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
 

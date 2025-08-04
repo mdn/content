@@ -7,7 +7,7 @@ status:
 browser-compat: api.Summarizer
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`Summarizer`** interface of the {{domxref("Summarizer API", "Summarizer API", "", "nocode")}} contains all the functionality for this API, including checking AI model availability, creating a new `Summarizer` instance, using it to generate a new summary, and more.
 

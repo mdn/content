@@ -2,9 +2,8 @@
 title: Working with userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.

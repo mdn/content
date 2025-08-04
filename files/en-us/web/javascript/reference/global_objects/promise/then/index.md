@@ -4,9 +4,8 @@ short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.then
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It stores the callbacks within the promise it is called on and immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
@@ -48,9 +47,9 @@ then(onFulfilled, onRejected)
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}} immediately. This new promise is always pending when returned, regardless of the current promise's status.
+Returns a new {{jsxref("Promise")}} immediately. This returned promise is always pending when returned, regardless of the current promise's status.
 
-One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the returned promise (call it `p`) depends on the handler's execution result, following a specific set of rules. If the handler function:
+One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the promise returned by `then()` (referred to as `p` in the following list) depends on the handler's execution result, following a specific set of rules. If the handler function:
 
 - returns a value: `p` gets fulfilled with the returned value as its value.
 - doesn't return anything: `p` gets fulfilled with `undefined` as its value.

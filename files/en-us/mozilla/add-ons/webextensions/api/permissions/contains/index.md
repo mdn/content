@@ -3,9 +3,8 @@ title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.contains
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 
@@ -29,10 +28,6 @@ let getContains = browser.permissions.contains(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -73,6 +68,10 @@ console.log(testResult4); // false: "https://example.org/", `origins` doesn't ma
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

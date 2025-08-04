@@ -1,13 +1,13 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Nightly)
+short-title: Firefox 142 (Beta)
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.
-Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -48,9 +48,11 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
@@ -68,7 +70,9 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 <!-- #### Marionette -->
 
-<!-- ## Changes for add-on developers -->
+## Changes for add-on developers
+
+- Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
 
 <!-- ### Removals -->
 
@@ -76,10 +80,10 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 ## Experimental web features
 
+- **`anchor-size()`** (Nightly): `layout.css.anchor-positioning.enabled`
+
+  The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-
-## Older versions
-
-{{Firefox_for_developers}}

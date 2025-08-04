@@ -5,9 +5,10 @@ page-type: css-combinator
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/selectors/#selectordef-column
+sidebar: cssref
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 
@@ -76,7 +77,7 @@ col.selected||td {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
@@ -85,3 +86,4 @@ Currently, no browsers have implemented this feature.
 - {{CSSxRef("grid")}}
 - {{CSSxRef(":nth-of-type")}}
 - {{CSSxRef(":nth-last-of-type")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

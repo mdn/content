@@ -3,9 +3,8 @@ title: ::view-transition-old()
 slug: Web/CSS/::view-transition-old
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-old
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::view-transition-old()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
 

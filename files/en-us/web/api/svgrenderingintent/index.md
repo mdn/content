@@ -9,7 +9,7 @@ browser-compat: api.SVGRenderingIntent
 
 {{APIRef("SVG")}}{{deprecated_header}}
 
-The **`SVGRenderingIntent`** interface defines the enumerated list of possible values for {{SVGAttr("rendering-intent")}} attributes or descriptors.
+The **`SVGRenderingIntent`** interface defines the enumerated list of possible values for `rendering-intent` attributes or descriptors.
 
 {{InheritanceDiagram}}
 
@@ -46,7 +46,3 @@ _This interface doesn't implement any specific methods._
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{SVGAttr("rendering-intent")}}

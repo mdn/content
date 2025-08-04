@@ -3,9 +3,8 @@ title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_email
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute is specified, a list of email addresses.
 

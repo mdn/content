@@ -3,9 +3,8 @@ title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onMoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is moved within a window.
 

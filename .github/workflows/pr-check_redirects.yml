@@ -44,3 +44,7 @@ jobs:
       - name: Check redirects file(s)
         if: steps.filter.outputs.required_files == 'true'
         run: yarn content validate-redirects en-US
+        env:
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

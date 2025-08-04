@@ -3,9 +3,8 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the localized string for the specified message.
 
@@ -35,10 +34,6 @@ browser.i18n.getMessage(
 ### Return value
 
 `string`. Message localized for current locale.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -73,6 +68,10 @@ If `target.url` is "https\://developer.mozilla.org", then the value of message, 
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.

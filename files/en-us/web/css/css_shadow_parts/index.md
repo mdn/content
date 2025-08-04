@@ -3,9 +3,8 @@ title: CSS shadow parts
 slug: Web/CSS/CSS_shadow_parts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-shadow-parts/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS shadow parts** module defines the {{CSSXref("::part", "::part()")}} pseudo-element that can be set on a [shadow host](/en-US/docs/Glossary/Shadow_tree). Using this pseudo-element, you can enable shadow hosts to expose the selected element in the shadow tree to the outside page for styling purposes.
 

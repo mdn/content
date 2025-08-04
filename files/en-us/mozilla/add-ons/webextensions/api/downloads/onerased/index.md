@@ -3,9 +3,8 @@ title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onErased
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 
@@ -37,10 +36,6 @@ Events have three functions:
     - `downloadId`
       - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Add a listener for `onErased` events, then erase the most recent download:
@@ -59,6 +54,10 @@ let erasing = browser.downloads.erase({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onErased) API.

@@ -398,7 +398,7 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
   - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
   - [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
-  - `blob:` URLs
+  - [`blob:` URLs](/en-US/docs/Web/URI/Reference/Schemes/blob)
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
 - {{domxref("Window.print()")}}: Any calls to this method are ignored.
@@ -442,7 +442,7 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## Examples
 
-You can find a [complete prerender demo here](https://prerender-demos.glitch.me/).
+For code examples, see [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2025)
 
 ## Specifications
 
@@ -454,5 +454,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 
 ## See also
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

@@ -1,5 +1,6 @@
 ---
 title: Firefox 6 for developers
+short-title: Firefox 6
 slug: Mozilla/Firefox/Releases/6
 page-type: firefox-release-notes
 sidebar: firefox
@@ -14,7 +15,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The HTML5 {{ HTMLElement("progress") }} element, which lets you create a progress bar, is now supported.
 - The parsing of the HTML5 {{ HTMLElement("track") }} element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
 - The {{ HTMLElement("iframe") }} element is now clipped correctly by its container when the container's corners have been rounded using the {{ cssxref("border-radius") }} property.
-- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute to set the maximum width of input fields.
+- {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](https://web.archive.org/web/20190117013205/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Property/maxWidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute to set the maximum width of input fields.
 - The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
 - The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
 - Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows to access them.
@@ -69,7 +70,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The standard {{ domxref("event.defaultPrevented") }} property is now supported; you should use this instead of the non-standard `getPreventDefault()` method to detect whether or not {{ domxref("event.preventDefault()") }} was called on the event.
 - The {{ domxref("window.top") }} property is now properly read only.
 - DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
-- The `EventTarget` function [`addEventListener()`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
+- The `EventTarget` function [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
 - The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
 - The {{ domxref("HTMLElement/dataset", "dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) of an element.
 - The {{ domxref("CustomEvent") }} interface has been implemented. (see [Firefox bug 427537](https://bugzil.la/427537))
@@ -114,16 +115,16 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ## Changes for Mozilla and add-on developers
 
-For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
+For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Releases/6/Updating_add-ons).
 
 > [!NOTE]
-> Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](https://web.archive.org/web/20210119071646/https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### JavaScript code modules
 
 #### FileUtils.jsm
 
-- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](/en-US/docs/XPCOM_Interface_Reference/nsIFileOutputStream#behavior_flag_constants) instead of attempting to open them immediately.
+- The `openSafeFileOutputStream()` method now opens files with the `DEFER_OPEN` [behavior flag](https://web.archive.org/web/20210506072901/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFileOutputStream#behavior_flag_constants) instead of attempting to open them immediately.
 
 #### XPCOMUtils.jsm
 
@@ -131,11 +132,11 @@ For an overview of the changes you may need to make in order to make your add-on
 
 ### XPCOM
 
-- [`nsCOMArray<T>`](/en-US/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](/en-US/docs/XPCOM_array_guide#deleting_objects) method for removing multiple objects at once from the array.
+- [`nsCOMArray<T>`](https://web.archive.org/web/20210413085248/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Arrays#nsCOMArray.3cT.3e) now has a [`RemoveObjectsAt()`](https://web.archive.org/web/20210413085248/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Arrays#deleting_objects) method for removing multiple objects at once from the array.
 
 ### Using the DOM from chrome
 
-- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using the DOM File API in chrome code](https://web.archive.org/web/20210618235235/https://developer.mozilla.org/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
   - : Although you've always been able to use the DOM File API from chrome code, the {{ domxref("File") }} constructor now supports specifying a local pathname string when used from chrome. In addition, you can also specify the file to access using the DOM File API using an `nsIFile` object.
 
 ### Interface changes
@@ -161,7 +162,7 @@ For an overview of the changes you may need to make in order to make your add-on
 - `nsIHttpUpgradeListener`
   - : The callback interface for handling HTTP upgrade requests via the `nsIHttpChannelInternal.HTTPUpgrade()` method.
 - `nsIStructuredCloneContainer`
-  - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/HTML/Structured_clones).
+  - : A container for objects that have been serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `nsITelemetry`
   - : Implements telemetry support to allow recording of telemetry data to be used to present histograms for performance tracking purposes. See [Firefox bug 649502](https://bugzil.la/649502) and [Firefox bug 585196](https://bugzil.la/585196).
 - `nsITimedChannel`
@@ -189,9 +190,5 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Other changes
 
-- [Using preferences from application code](/en-US/docs/Mozilla/Preferences/Using_preferences_from_application_code)
+- [Using preferences from application code](https://web.archive.org/web/20210419233418/https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Using_preferences_from_application_code)
   - : A new static API is available for easily accessing preferences; this is only available to application code and can't be used by add-ons.
-
-## See also
-
-{{Firefox_for_developers}}

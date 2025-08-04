@@ -4,9 +4,8 @@ short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`set()`** method of {{jsxref("WeakMap")}} instances adds a new element with a specified key
 and value to this `WeakMap`.
@@ -14,17 +13,17 @@ and value to this `WeakMap`.
 {{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
 
 ```js interactive-example
-const weakmap1 = new WeakMap();
+const weakmap = new WeakMap();
 const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap.set(object1, "foo");
+weakmap.set(object2, "bar");
 
-console.log(weakmap1.get(object1));
+console.log(weakmap.get(object1));
 // Expected output: "foo"
 
-console.log(weakmap1.get(object2));
+console.log(weakmap.get(object2));
 // Expected output: "bar"
 ```
 

@@ -3,9 +3,8 @@ title: counters()
 slug: Web/CSS/counters
 page-type: css-function
 browser-compat: css.types.counters
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) enables combining markers when nesting counters. The function returns a string that concatenates the current values of the named and nested counters, if any are present, with the string provided. The third, optional parameter enables defining the list style.
 

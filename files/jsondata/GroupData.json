@@ -409,7 +409,6 @@
         "/docs/Web/API/Document_Object_Model/Reflected_attributes",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_Object_Model/Transforming_with_XSLT",
         "/docs/Web/API/Document_Object_Model/Events",
         "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
@@ -1398,7 +1397,8 @@
       "overview": ["Screen Capture API"],
       "guides": [
         "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
-        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture",
+        "/docs/Web/API/Screen_Capture_API/Captured_Surface_Control"
       ],
       "interfaces": [
         "BrowserCaptureMediaStreamTrack",

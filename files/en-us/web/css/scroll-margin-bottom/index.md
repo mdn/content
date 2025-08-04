@@ -3,9 +3,8 @@ title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
 page-type: css-property
 browser-compat: css.properties.scroll-margin-bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-margin-bottom` property defines the bottom margin of the scroll snap area that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 

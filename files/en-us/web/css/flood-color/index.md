@@ -3,9 +3,8 @@ title: flood-color
 slug: Web/CSS/flood-color
 page-type: css-property
 browser-compat: css.properties.flood-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flood-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the current filter primitive subregion in {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements within a {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("flood-color")}} attribute.
 

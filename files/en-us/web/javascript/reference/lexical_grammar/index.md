@@ -4,9 +4,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 page-type: guide
 browser-compat: javascript.grammar
 spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
@@ -561,7 +560,7 @@ tag`string text ${expression} string text`;
 
 Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' syntax definitions require semicolons (`;`) at the end. They include:
 
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using)
 - [Expression statements](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement)
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
@@ -631,6 +630,7 @@ This rule is a complement to the previous rule, specifically for the case where 
 - `yield <here> * expr`
 - `(param) <here> => {}`
 - `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
+- `using <here> id`, `await <here> using <here> id`
 
 Here [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) is not treated as a postfix operator applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
@@ -772,6 +772,18 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
   ```js-nolint example-good
   async function
   foo() {}
+  ```
+
+- The `using` keyword in `using` and `await using` statements should be on the same line as the first identifier it declares.
+
+  ```js-nolint example-bad
+  using
+  resource = acquireResource()
+  ```
+
+  ```js-nolint example-good
+  using resource
+    = acquireResource()
   ```
 
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.

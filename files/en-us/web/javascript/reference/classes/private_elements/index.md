@@ -6,9 +6,8 @@ browser-compat:
   - javascript.classes.private_class_fields
   - javascript.classes.private_class_fields_in
   - javascript.classes.private_class_methods
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 **Private elements** are counterparts of the regular class elements which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private elements get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class elements is enforced by JavaScript itself. The only way to access a private element is via [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation), and you can only do so within the class that defines the private element.
 

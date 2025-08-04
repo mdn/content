@@ -3,9 +3,8 @@ title: "<template>: The Content Template element"
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
@@ -45,6 +44,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The value defaults to `false`.
 
 ## Usage notes
+
+This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property. However, if you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property.
+
+Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
 There are two main ways to use the `<template>` element.
 
@@ -320,7 +323,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>No restrictions</td>
+      <td>Nothing (see <a href="#usage_notes">Usage notes</a>)</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

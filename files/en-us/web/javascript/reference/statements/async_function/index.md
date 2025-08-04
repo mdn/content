@@ -3,9 +3,8 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 page-type: javascript-statement
 browser-compat: javascript.statements.async_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`async function`** declaration creates a {{Glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
 

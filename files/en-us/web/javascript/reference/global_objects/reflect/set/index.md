@@ -4,25 +4,24 @@ short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
 
 {{InteractiveExample("JavaScript Demo: Reflect.set()")}}
 
 ```js interactive-example
-const object1 = {};
-Reflect.set(object1, "property1", 42);
+const object = {};
+Reflect.set(object, "foo", 42);
 
-console.log(object1.property1);
+console.log(object.foo);
 // Expected output: 42
 
-const array1 = ["duck", "duck", "duck"];
-Reflect.set(array1, 2, "goose");
+const array = ["duck", "duck", "duck"];
+Reflect.set(array, 2, "goose");
 
-console.log(array1[2]);
+console.log(array[2]);
 // Expected output: "goose"
 ```
 

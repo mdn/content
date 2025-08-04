@@ -3,9 +3,8 @@ title: "<mark>: The Mark Text element"
 slug: Web/HTML/Reference/Elements/mark
 page-type: html-element
 browser-compat: html.elements.mark
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes due to the marked passage's relevance in the enclosing context.
 

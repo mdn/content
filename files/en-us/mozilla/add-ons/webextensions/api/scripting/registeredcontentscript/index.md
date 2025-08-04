@@ -3,9 +3,8 @@ title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
 page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.RegisteredContentScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This object contains details of a script to be registered or that is registered.
 
@@ -36,11 +35,11 @@ Values of this type are objects. They contain these properties:
 - `world` {{optional_inline}}
   - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-RegisteredContentScript) API.

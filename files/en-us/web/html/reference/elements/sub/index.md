@@ -3,9 +3,8 @@ title: "<sub>: The Subscript element"
 slug: Web/HTML/Reference/Elements/sub
 page-type: html-element
 browser-compat: html.elements.sub
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
 

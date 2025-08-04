@@ -3,9 +3,8 @@ title: declarativeNetRequest
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
 page-type: webextension-api
 browser-compat: webextensions.api.declarativeNetRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This API enables extensions to specify conditions and actions that describe how network requests should be handled. These declarative rules enable the browser to evaluate and modify network requests without notifying extensions about individual network requests.
 

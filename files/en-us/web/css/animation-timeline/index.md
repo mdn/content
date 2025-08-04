@@ -3,9 +3,8 @@ title: animation-timeline
 slug: Web/CSS/animation-timeline
 page-type: css-property
 browser-compat: css.properties.animation-timeline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the timeline that is used to control the progress of a CSS animation.
 

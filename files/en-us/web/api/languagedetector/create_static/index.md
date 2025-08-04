@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.create_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`create()`** static method of the {{domxref("LanguageDetector")}} interface creates a new `LanguageDetector` instance to detect languages.
 
