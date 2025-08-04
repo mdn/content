@@ -46,8 +46,6 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - {{cssxref("fit-content")}} value
 - {{cssxref("fit-content_function", "fit-content()")}} function
 
-The CSS box sizing module defines the `stretch` and `contain` keywords as sizing values that have not yet been implemented on the box sizing properties.
-
 ### Functions
 
 - [`fit-content()`](/en-US/docs/Web/CSS/fit-content_function)
