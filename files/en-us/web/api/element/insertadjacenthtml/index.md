@@ -119,20 +119,24 @@ code {
 
 #### JavaScript
 
-```js hidden
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
 if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-While not required for this example, below we follow the recommendation of defining a policy to create {{domxref("TrustedHTML")}} objects from the input (we should also enforce the policy `safe-content-policy` using CSP).
-In this case we know the input is safe so this policy passes it through without modification.
-The commented code shows how you might instead use the "DOMPurify" library to sanitize content that wasn't trusted.
+Next we define a policy named `some-content-policy` to create {{domxref("TrustedHTML")}} objects from the input (we should also enforce the `some-content-policy` using CSP).
+The code implements no-op policy in order to allow this example to work without a third-party dependency.
+Your own application code should use a third party library such as the "DOMPurify" library to return sanitized content from the untrusted input.
 
 ```js
-const policy = trustedTypes.createPolicy("safe-content-policy", {
+const policy = trustedTypes.createPolicy("some-content-policy", {
   createHTML: (input) => {
-    // DOMPurify.sanitize(input);
-    return input;
+    return input; // Do not do this in your own code!
+    // Instead do something like:
+    // return DOMPurify.sanitize(input);
   },
 });
 
@@ -174,4 +178,3 @@ reset.addEventListener("click", () => {
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("XMLSerializer")}}: Serialize a DOM tree into an XML string
 - [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API)
-- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing that `insertAdjacentHTML()` can be way faster in some cases.
