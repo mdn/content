@@ -56,7 +56,7 @@ There are two ways to associate a `<label>` with a form control, commonly referr
 To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, you add the `for` attribute to the `<label>` element, where the value of `for` is the same as the `id` in the `<input>` element.
 
 ```html
-<label for="peas">Do you like peas?</label>
+<label for="peas">I like peas.</label>
 <input type="checkbox" name="peas" id="peas" />
 ```
 
