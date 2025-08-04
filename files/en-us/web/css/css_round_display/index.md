@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-round-display/
 sidebar: cssref
 ---
 
-The **CSS round display** module defines CSS extensions to support a round display help developers build a pages suitable for a round display.
+The **CSS round display** module defines CSS extensions to support a round display help developers build a pages suitable for rounds displays, such as wrist-watches.
 
 ## Reference
 
