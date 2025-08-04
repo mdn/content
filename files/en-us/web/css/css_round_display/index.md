@@ -12,11 +12,11 @@ The **CSS round display** module defines CSS extensions to support a round displ
 
 ### Properties
 
-The CSS round display module introduces the `border-boundary` and `shape-inside"` properties. Currently, no browsers support these features.
+The CSS round display module introduces the `border-boundary` and `shape-inside` properties. Currently, no browsers support these features.
 
-### @media descriptors
+### Descriptors
 
-- {{cssxref("@media/shape", "shape")}} `@media` feature
+- {{cssxref("@media/shape", "shape")}} ({{cssxref("@media")}} feature)
 
 ## Guides
 
@@ -42,5 +42,5 @@ The CSS round display module introduces the `border-boundary` and `shape-inside"
 
 - {{cssxref("basic-shape")}} data-type
 - {{cssxref("shape-outside")}} property
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
