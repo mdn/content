@@ -17,7 +17,6 @@ It reflects the `blocking` attribute of the {{HTMLElement("script")}} element.
 A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:
 
 - `render`
-
   - : The rendering of content on the screen is blocked.
 
     > [!NOTE]
