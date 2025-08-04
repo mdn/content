@@ -16,8 +16,7 @@ const numberFormat = new Intl.NumberFormat("de-DE");
 const options = numberFormat.resolvedOptions();
 
 console.log(options.locale);
-// Expected output (Firefox / Safari): "de-DE"
-// Expected output (Chrome): "de"
+// Expected output: "de-DE"
 
 console.log(options.numberingSystem);
 // Expected output: "latn"

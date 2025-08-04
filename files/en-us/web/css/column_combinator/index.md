@@ -77,7 +77,7 @@ col.selected||td {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
@@ -86,3 +86,4 @@ Currently, no browsers have implemented this feature.
 - {{CSSxRef("grid")}}
 - {{CSSxRef(":nth-of-type")}}
 - {{CSSxRef(":nth-last-of-type")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
