@@ -6,6 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCStatsReport.type_inbound-rtp.playoutId
 ---
 
+
 {{APIRef("WebRTC")}}
 
 The **`playoutId`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the {{domxref("RTCAudioPlayoutStats.id", "id")}} of the {{domxref("RTCAudioPlayoutStats")}} object that corresponds to this stream.
