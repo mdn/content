@@ -99,28 +99,28 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 You could specify outputting just the JavaScript "glue" file (Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems) rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, like this:
 
 ```bash
-emcc -o hello2.js hello2.c -O3
+emcc -o hello.js hello.c -O3
 ```
 
 You could then incorporate this JavaScript file into your program, which is especially useful if you are using a bundler and are not working with the HTML directly. For example, you can import the generated JavaScript glue file so it runs as a side effect. In your app's entry module, add:
 
 ```js
-import "./hello2.js";
+import "./hello.js";
 ```
 
-To produce an ES 6 factory module that you can instantiate on demand, add two flags:
+Alternatively, you can produce a factory module, which allows you to produce multiple instances of the module (by default the glue code loads the module globally, causing multiple instances to collide).
 
 ```bash
-emcc hello.c \
-  -o hello.mjs \
-  -s MODULARIZE=1 \
-  -s EXPORT_ES6=1
+emcc hello.c -o hello.mjs -sMODULARIZE
 ```
+
+> [!NOTE]
+> If your output file extension is .js and not .mjs, then you have to add the `-sEXPORT_ES6` setting to output a JavaScript module.
 
 Then in your code import the factory and call it:
 
 ```js
-import createModule from "./hello.mjs";
+import createModule from "./hello.js";
 
 createModule().then((Module) => {
   console.log("Wasm ready", Module);
