@@ -109,7 +109,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive number indicating the total time that the stream has spent with paused video, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalProcessingDelay", "totalProcessingDelay")}}
-  - : TBD.
+  - : A positive number indicating the total time spent processing audio or video samples, in seconds.
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration", "totalSamplesDuration")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesReceived", "totalSamplesReceived")}}
