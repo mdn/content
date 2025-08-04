@@ -117,7 +117,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that indicates the total number of samples received on this stream.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalSquaredInterFrameDelay", "totalSquaredInterFrameDelay")}}
-  - : TBD.
+  - : A positive number that indicates the sum of the square of inter-frame delays between consecutively rendered frames, recorded just after a frame has been rendered.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.trackIdentifier", "trackIdentifier")}}
   - : A string that provides the {{domxref("MediaStreamTrack.id", "id")}} value of the `MediaStreamTrack` associated with the inbound stream.
 
