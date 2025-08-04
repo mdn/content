@@ -18,11 +18,10 @@ A string. Must be a space-separated list of blocking tokens listed below indicat
 
 - `render`
 
-- : The rendering of content on the screen is blocked.
+  - : The rendering of content on the screen is blocked.
 
-  > [!NOTE]
-  > In order to block rendering, `link` elements with `blocking="render"` must be in the `head` of the document.
-  > `link` elements with `rel="stylesheet"` that are in the `head` are implicitly render-blocking, unless they are added to the document via script. `link` elements with `rel="stylesheet"` added via script need an explicit `blocking="render"` in order to block rendering.
+    > [!NOTE]
+    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
 ## Examples
 

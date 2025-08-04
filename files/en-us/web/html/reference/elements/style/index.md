@@ -54,7 +54,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]
-    > In order to block rendering, `style` elements with `blocking="render"` must be in the `head` of the document. `style` elements that are in the `head` are implicitly render-blocking, _unless_ they are added to the document via script. `style` elements added via script need an explicit `blocking="render"` in order to block rendering.
+    > Only `style` elements in the document's `<head>` can possibly block rendering. By default, a `style` element in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `style` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
 - `media`
 

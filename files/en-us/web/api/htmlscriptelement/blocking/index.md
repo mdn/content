@@ -18,10 +18,10 @@ A string. Must be a space-separated list of blocking tokens listed below indicat
 
 - `render`
 
-- : The rendering of content on the screen is blocked.
+  - : The rendering of content on the screen is blocked.
 
-  > [!NOTE]
-  > In order to block rendering, `script` elements with `blocking="render"` must be in the `head` of the document. `script` elements in the `head` are implicitly render-blocking unless they have `type="module"`, `async`, or `defer`. `script` elements with any of these attributes need an explicit `blocking="render"` in order to block rendering.
+    > [!NOTE]
+    > Only `script` elements in the document's `<head>` can possibly block rendering. Scripts are not render-blocking by default; if a `script` element does not include `type="module"`, `async`, or `defer`, then it blocks _parsing_, not _rendering_. If such a `script` element is added dynamically via script, you must set `blocking = "render"` for it to block rendering.
 
 ## Examples
 

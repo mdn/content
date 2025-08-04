@@ -186,8 +186,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     - `render`: The rendering of content on the screen is blocked.
 
     > [!NOTE]
-    > In order to block rendering, `link` elements with `blocking="render"` must be in the `head` of the document.
-    > `link` elements with `rel="stylesheet"` that are in the `head` are implicitly render-blocking, unless they are added to the document via script. `link` elements with `rel="stylesheet"` added via script need an explicit `blocking="render"` in order to block rendering.
+    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 
