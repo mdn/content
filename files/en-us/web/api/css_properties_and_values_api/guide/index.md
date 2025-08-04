@@ -56,7 +56,7 @@ In this example, the custom property `--registered` has been registered using th
 ```css
 .registered {
   --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
+  background-image: linear-gradient(to right, white, var(--registered));
   transition: --registered 1s ease-in-out;
 }
 
@@ -67,7 +67,7 @@ In this example, the custom property `--registered` has been registered using th
 
 .unregistered {
   --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  background-image: linear-gradient(to right, white, var(--unregistered));
   transition: --unregistered 1s ease-in-out;
 }
 

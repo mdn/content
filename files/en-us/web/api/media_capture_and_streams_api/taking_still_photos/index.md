@@ -43,7 +43,7 @@ button {
   border: 1px solid rgb(255 255 255 / 70%);
   box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
   font-size: 14px;
-  color: rgb(255 255 255 / 100%);
+  color: white;
 }
 
 #video,
