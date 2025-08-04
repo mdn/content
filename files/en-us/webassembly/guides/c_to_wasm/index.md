@@ -120,7 +120,7 @@ emcc hello.c -o hello.mjs -sMODULARIZE
 Then in your code import the factory and call it:
 
 ```js
-import createModule from "./hello.js";
+import createModule from "./hello.mjs";
 
 createModule().then((Module) => {
   console.log("Wasm ready", Module);
