@@ -25,7 +25,7 @@ In addition, the specification provides CSS-only mechanisms to:
 - {{cssxref("position-try")}} shorthand
 - {{cssxref("position-visibility")}}
 
-The CSS anchor positioning module introduces the `anchor-scope` property. Currently, no browsers support this feature.
+The CSS anchor positioning module also introduces the `anchor-scope` property. Currently, no browsers support this feature.
 
 ### At-rules and descriptors
 

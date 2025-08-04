@@ -48,7 +48,7 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
 - [`contrast-color()`](/en-US/docs/Web/CSS/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
-The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions. Currently, no browsers support these features.
+The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions. Currently, no browsers support these features.
 
 ### Data types
 
