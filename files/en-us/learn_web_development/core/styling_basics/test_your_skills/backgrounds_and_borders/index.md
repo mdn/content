@@ -67,7 +67,7 @@ You should use `border`, `border-radius`, `background-image`, and `background-si
 
 ```css
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 10px;
   background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-size: cover;
@@ -75,7 +75,7 @@ You should use `border`, `border-radius`, `background-image`, and `background-si
 
 h2 {
   background-color: rgb(0 0 0 / 50%);
-  color: #fff;
+  color: white;
 }
 ```
 

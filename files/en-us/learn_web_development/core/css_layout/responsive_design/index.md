@@ -163,7 +163,7 @@ body {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -241,7 +241,7 @@ body {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -361,7 +361,7 @@ h1 {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 
 @media screen and (width >= 600px) {
@@ -447,7 +447,7 @@ h1 {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 
 @media screen and (width >= 600px) {

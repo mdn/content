@@ -204,7 +204,7 @@ body {
 /* adds styles to the already existing `layout` layer */
 @layer layout {
   main {
-    color: #000;
+    color: black;
   }
 }
 
