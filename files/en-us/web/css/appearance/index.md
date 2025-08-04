@@ -80,7 +80,7 @@ The `appearance` property can be applied to all elements and pseudo-elements, bu
     - `textfield`
       - : Causes the appearance of certain `<input>` types to [match the appearance of the `text` type](#try_it).
     - `menulist-button`
-      - : When set on the `<select>` element, the drop-down picker is set to [match that of its default state](#Setting_the_appearance_of_a_select)).
+      - : When set on the `<select>` element, the drop-down picker is set to [match that of its default state](#Setting_the_appearance_of_a_select).
 
 - `<compat-auto>`
   - : Included for backwards compatibility; possible values include `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, and `textarea`. The values all behave as `auto`: use `auto` instead.
