@@ -100,7 +100,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number that indicates the total time spent decoding frames in this stream, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
-  - : TBD.
+  - : A positive number indicating the total time that the stream has spent frozen, in seconds.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}}
