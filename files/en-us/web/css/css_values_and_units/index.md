@@ -84,7 +84,7 @@ The CSS values and units module introduces the `calc-mix()`, `crossorigin()`, `f
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
 
-The CSS values and units module introduces the [`<frequency>`](/en-US/docs/Web/CSS/frequency) and [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage) data types, which are not yet supported in any browser.
+The CSS values and units module also introduces the [`<frequency>`](/en-US/docs/Web/CSS/frequency) and [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage) data types. Currently, no browsers support these features.
 
 #### Units
 

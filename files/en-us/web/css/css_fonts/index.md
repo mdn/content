@@ -71,7 +71,7 @@ The specification also defines the `font-language-override`, `font-named-instanc
 
 - At-rule: {{cssxref("@font-feature-values")}}
 
-The specification also defines the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor which is not yet supported by any browser.
+The specification also defines the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor. Crrently, no browsers support this feature.
 
 - At-rule: {{cssxref("@font-palette-values")}}
   - : Descriptors:
