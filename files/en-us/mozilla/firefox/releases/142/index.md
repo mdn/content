@@ -53,6 +53,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
+- The {{domxref("Animation.commitStyles()")}} method no longer requires that [`fill`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) is set on an animation in order to commit the computed styles after the animation has finished. Note that until more browsers support this change, code should continue to set `fill`. ([Firefox bug 19197320303870](https://bugzil.la/1973203)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
