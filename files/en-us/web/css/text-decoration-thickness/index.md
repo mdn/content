@@ -37,7 +37,7 @@ font-size: 2rem;
 ```css interactive-example
 p {
   font: 1.5em sans-serif;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 
