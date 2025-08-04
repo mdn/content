@@ -54,7 +54,9 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}, {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}, {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}, {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}, {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}, {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}, {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}} and {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} properties of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1926622](https://bugzil.la/1926622)).
 
 <!-- #### Removals -->
 
