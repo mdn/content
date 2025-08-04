@@ -35,12 +35,18 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 - [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
   - : A challenge to test your knowledge of different layout methods by laying out a webpage.
 
+## Test your skills
+
+You will find regular "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills).
+
 ## Additional tutorials
 
 These tutorials are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 
 - [Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
+- [Practical positioning examples](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
+  - : This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 - [Legacy layout methods](/en-US/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)
   - : Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g., 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
 - [Supporting older browsers](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
@@ -48,8 +54,6 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 ## See also
 
-- [Practical positioning examples](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
-  - : This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 - [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook)
   - : The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used and the choices you can make as a developer.
 
