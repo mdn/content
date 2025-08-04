@@ -14,10 +14,9 @@ The WebRTC jitter buffer sets a target playout delay level such that the inflow 
 If the jitter buffer empties too quickly the audio sample that is next in line to be output may be "ahead of schedule", and the jitter buffer may slow down playout.
 If the jitter buffer slows down the playout of the sample by inserting additional audio samples, this property indicates the accumulated number of such added samples.
 
-You might track `insertedSamplesForDeceleration` over the duration of the connection.
-Consistently high and increasing values suggests that playout is consistently running too fast relative to the incoming audio stream.
-
-`insertedSamplesForDeceleration` can be correlated with {{domxref("RTCInboundRtpStreamStats/totalSamplesReceived","totalSamplesReceived")}} to get a relative measure of deceleration.
+Slowing down and/or speeding up the audio (as tracked with {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration","removedSamplesForAcceleration")}}) may result in audible warbling or other distortion.
+The totals at the end of the call also give you some indication of how many samples or seconds were impacted, and `insertedSamplesForDeceleration` can be correlated with {{domxref("RTCInboundRtpStreamStats/totalSamplesReceived","totalSamplesReceived")}} to get a relative measure of deceleration.
+Logging `insertedSamplesForDeceleration` and `removedSamplesForAcceleration` in timeslices can be helpful for isolating the times at which the problem occurred and you can then correlate other metrics in the same timeslice to determine likely causes.
 
 > [!NOTE]
 > The value is undefined for video streams.
@@ -36,5 +35,5 @@ A positive integer.
 
 ## See also
 
-- {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration")}}
+- {{domxref("RTCInboundRtpStreamStats.removedSamplesForAcceleration","removedSamplesForAcceleration")}}
 - [The better way](https://webrtchacks.com/how-webrtcs-neteq-jitter-buffer-provides-smooth-audio/#post-4560-_mv3ivinthkf5) in "How WebRTC's NetEQ Jitter Buffer Provides Smooth Audio" (webrtchacks.com, June 2025)
