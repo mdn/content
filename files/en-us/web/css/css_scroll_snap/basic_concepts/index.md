@@ -324,8 +324,8 @@ body {
   position: sticky;
   top: 0;
   min-height: 40px;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
 }

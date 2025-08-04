@@ -67,7 +67,7 @@ body {
 
 .list-group .badge {
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 80%;
   border-radius: 10em;

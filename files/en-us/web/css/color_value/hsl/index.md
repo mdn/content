@@ -59,7 +59,7 @@ hsl(none 75% 25%)
 
 /* Relative values */
 hsl(from green h s l / 0.5)
-hsl(from #0000FF h s calc(l + 20))
+hsl(from #123456 h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 
 /* Legacy 'hsla()' alias */

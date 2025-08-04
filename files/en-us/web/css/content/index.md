@@ -214,13 +214,13 @@ This example inserts differently colored quotation marks around quotes.
 
 ```css
 q {
-  color: #00f;
+  color: blue;
 }
 
 q::before,
 q::after {
   font-size: larger;
-  color: #f00;
+  color: red;
   background: #ccc;
 }
 
