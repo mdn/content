@@ -72,7 +72,7 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

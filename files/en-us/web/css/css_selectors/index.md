@@ -23,8 +23,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 - `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
 
-> [!NOTE]
-> The CSS selectors module introduces the [column combinator](/en-US/docs/Web/CSS/Column_combinator) (`||`) that has not yet been implemented.
+The CSS selectors module also introduces the [column combinator](/en-US/docs/Web/CSS/Column_combinator) (`||`). Currently, no browsers support this feature.
 
 ### Selectors
 
@@ -96,8 +95,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [Type selectors](/en-US/docs/Web/CSS/Type_selectors)
 - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors)
 
-> [!NOTE]
-> The CSS selectors module introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, {{CSSXref(":local-link")}}, and {{CSSXref(":target-within")}} pseudo-classes, which have not yet been implemented.
+The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":current")}}, {{CSSXref(":local-link")}}, and {{CSSXref(":target-within")}} pseudo-classes. Currently, no browsers support these features.
 
 ## Terms
 

@@ -57,8 +57,7 @@ img {
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-outside")}}
 
-> [!NOTE]
-> The CSS shapes module introduces the `shape-inside` and `shape-padding` properties that have not yet been implemented.
+The CSS shapes module also introduces the `shape-inside` and `shape-padding` properties. Currently, no browsers support these features.
 
 ### Data types
 

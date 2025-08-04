@@ -54,7 +54,7 @@ a:local-link {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

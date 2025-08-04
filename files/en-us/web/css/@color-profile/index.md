@@ -63,7 +63,7 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

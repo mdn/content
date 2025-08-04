@@ -44,7 +44,7 @@ mask-border-mode: unset;
 
 ## Browser compatibility
 
-+Currently, no browsers have implemented this property.
+Currently, no browsers support this feature.
 
 ## See also
 

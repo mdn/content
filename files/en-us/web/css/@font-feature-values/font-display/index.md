@@ -65,7 +65,7 @@ The `font-display` descriptor in this example sets the default `font-display` va
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
