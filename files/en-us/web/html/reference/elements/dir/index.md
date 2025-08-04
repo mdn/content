@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.dir
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
@@ -39,7 +40,6 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, and {{HTMLElement("menu")}};
 - CSS properties that may be specially useful to style the `<dir>` element:
-
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
   - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), useful to handle complex nested lists.
   - The {{Cssxref('line-height')}} property, useful to simulate the deprecated [`compact`](#compact) attribute.

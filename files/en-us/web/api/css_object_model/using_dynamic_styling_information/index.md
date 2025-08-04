@@ -69,7 +69,7 @@ p1.addEventListener("click", () => {
   p1.style.background = "green";
 });
 button.addEventListener("click", () => {
-  elem.style.background = "white";
+  p1.style.background = "white";
 });
 ```
 

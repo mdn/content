@@ -3,9 +3,8 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!WARNING]
 > An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
@@ -13,12 +12,6 @@ browser-compat: css.at-rules.media.prefers-reduced-motion
 The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion. The setting is used to convey to the browser on the device that the user prefers an interface that removes, reduces, or replaces motion-based animations.
 
 Such animations can trigger discomfort for those with [vestibular motion disorders](https://www.a11yproject.com/posts/understanding-vestibular-disorders/). Animations such as scaling or panning large objects can be vestibular motion triggers.
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  /* styles to apply if a user's device settings are set to reduced motion */
-}
-```
 
 ## Syntax
 
@@ -32,7 +25,6 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 For Firefox, the `reduce` request is honoured if:
 
 - In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
-
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
 

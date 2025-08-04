@@ -3,9 +3,8 @@ title: <frequency>
 slug: Web/CSS/frequency
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#frequency-value
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<frequency>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties.
 

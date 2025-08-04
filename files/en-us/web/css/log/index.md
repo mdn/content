@@ -3,9 +3,8 @@ title: log()
 slug: Web/CSS/log
 page-type: css-function
 browser-compat: css.types.log
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the logarithm of a number.
 
@@ -27,7 +26,6 @@ width: calc(100px * log(625, 5)); /* 400px */
 The `log(value [, base]?)` function accepts two comma-separated values as its parameters.
 
 - `value`
-
   - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be taken the log of.
 
 - `base`

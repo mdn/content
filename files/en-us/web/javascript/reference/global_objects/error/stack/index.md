@@ -1,13 +1,15 @@
 ---
 title: Error.prototype.stack
+short-title: stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 page-type: javascript-instance-data-property
 status:
   - non-standard
 browser-compat: javascript.builtins.Error.stack
+sidebar: jsref
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > The `stack` property is de facto implemented by all major JavaScript engines, and [the JavaScript standards committee is looking to standardize it](https://github.com/tc39/proposal-error-stacks). You cannot rely on the precise content of the stack string due to implementation inconsistencies, but you can generally assume it exists and use it for debugging purposes.
@@ -113,7 +115,7 @@ Error: eval failed
     at filename.js:3:13
 ```
 
-In Firefox, you can use the `//# sourceURL` directive to name an eval source. See the Firefox [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) docs and the [Naming `eval` Scripts with the `//# sourceURL` Directive](https://fitzgen.com/2014/12/05/name-eval-scripts.html) blog post for more details.
+In Firefox, you can use the `//# sourceURL` directive to name an eval source. See the Firefox [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) docs.
 
 ## Examples
 

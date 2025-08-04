@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDateTime.prototype.year
+short-title: year
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/year
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.year
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`year`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

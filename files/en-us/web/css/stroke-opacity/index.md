@@ -3,9 +3,8 @@ title: stroke-opacity
 slug: Web/CSS/stroke-opacity
 page-type: css-property
 browser-compat: css.properties.stroke-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of an [SVG](/en-US/docs/Web/SVG) shape's stroke. The effect is identical to that of {{CSSxref('opacity')}}, except it is applied only to the stroke, not to the entire element. If present, it overrides the element's {{SVGAttr("stroke-opacity")}} attribute.
 
@@ -32,11 +31,9 @@ stroke-opacity: unset;
 ### Values
 
 - {{cssxref("&lt;number&gt;")}}
-
   - : Any real number from 0 to 1, inclusive. A value of `0` makes the stroke completely transparent, and a value of `1` makes it completely opaque. Values outside the range 0 – 1 are clipped to the nearest end of that range; thus, negative values are clipped to `0`.
 
 - {{cssxref("&lt;percentage&gt;")}}
-
   - : The same as `<number>` (see above), except the allowed range is 0% to 100% and clipping is done with regard to that range.
 
 ## Formal definition

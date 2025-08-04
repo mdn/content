@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainTime.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/with
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.with
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`with()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new `Temporal.PlainTime` object representing this time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the time's fields.
 

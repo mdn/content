@@ -1,10 +1,10 @@
 ---
-title: Common MIME types
+title: Common media types
+short-title: Common types
 slug: Web/HTTP/Guides/MIME_types/Common_types
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This topic lists the most common MIME types with corresponding document types, ordered by their common extensions.
 
@@ -79,6 +79,7 @@ IANA is the official registry of MIME media types and maintains a [list of all t
 | `.wav`          | Waveform Audio Format                                                                      | `audio/wav`                                                                                                                                                                                                                                                                                                                                                                                               |
 | `.weba`         | WEBM audio                                                                                 | `audio/webm`                                                                                                                                                                                                                                                                                                                                                                                              |
 | `.webm`         | WEBM video                                                                                 | `video/webm`                                                                                                                                                                                                                                                                                                                                                                                              |
+| `.webmanifest`  | Web application manifest                                                                   | `application/manifest+json`                                                                                                                                                                                                                                                                                                                                                                               |
 | `.webp`         | WEBP image                                                                                 | `image/webp`                                                                                                                                                                                                                                                                                                                                                                                              |
 | `.woff`         | Web Open Font Format (WOFF)                                                                | `font/woff`                                                                                                                                                                                                                                                                                                                                                                                               |
 | `.woff2`        | Web Open Font Format (WOFF)                                                                | `font/woff2`                                                                                                                                                                                                                                                                                                                                                                                              |

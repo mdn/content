@@ -68,6 +68,14 @@
       "inh": "Node",
       "impl": []
     },
+    "Attribution": {
+      "inh": "",
+      "impl": []
+    },
+    "AttributionAggregationServices": {
+      "inh": "",
+      "impl": []
+    },
     "AudioBuffer": {
       "inh": "",
       "impl": []
@@ -476,10 +484,6 @@
       "inh": "",
       "impl": []
     },
-    "CrashReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
@@ -502,10 +506,6 @@
     },
     "CryptoKey": {
       "inh": "",
-      "impl": []
-    },
-    "CSPViolationReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "CSSAnimation": {
@@ -533,6 +533,10 @@
       "impl": []
     },
     "CSSCounterStyleRule": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSCustomMediaRule": {
       "inh": "CSSRule",
       "impl": []
     },
@@ -880,10 +884,6 @@
       "inh": "",
       "impl": []
     },
-    "DeprecationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "DeviceChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -1138,6 +1138,10 @@
     },
     "FetchEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "FetchLaterResult": {
+      "inh": "",
       "impl": []
     },
     "File": {
@@ -1748,6 +1752,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLSelectedContentElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLSelectElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1856,6 +1864,10 @@
       "inh": "IDBRequest",
       "impl": []
     },
+    "IDBRecord": {
+      "inh": "",
+      "impl": []
+    },
     "IDBRequest": {
       "inh": "EventTarget",
       "impl": []
@@ -1870,6 +1882,10 @@
     },
     "IdentityCredential": {
       "inh": "Credential",
+      "impl": []
+    },
+    "IdentityCredentialError": {
+      "inh": "DOMException",
       "impl": []
     },
     "IdentityProvider": {
@@ -1940,10 +1956,6 @@
       "inh": "",
       "impl": []
     },
-    "IntegrityPolicyViolationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
@@ -1970,10 +1982,6 @@
     },
     "IntersectionObserverEntry": {
       "inh": "",
-      "impl": []
-    },
-    "InterventionReportBody": {
-      "inh": "ReportBody",
       "impl": []
     },
     "IntrinsicSizes": {
@@ -2624,10 +2632,6 @@
       "inh": "",
       "impl": []
     },
-    "PermissionsPolicyViolationReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "PermissionStatus": {
       "inh": "EventTarget",
       "impl": []
@@ -2650,6 +2654,10 @@
     },
     "PointerEvent": {
       "inh": "MouseEvent",
+      "impl": []
+    },
+    "PointerTimeline": {
+      "inh": "AnimationTimeline",
       "impl": []
     },
     "PopStateEvent": {
@@ -2716,14 +2724,6 @@
       "inh": "",
       "impl": []
     },
-    "PrivateAttribution": {
-      "inh": "",
-      "impl": []
-    },
-    "PrivateAttributionAggregationServices": {
-      "inh": "",
-      "impl": []
-    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2778,6 +2778,10 @@
     },
     "PushSubscriptionOptions": {
       "inh": "",
+      "impl": []
+    },
+    "QuotaExceededError": {
+      "inh": "DOMException",
       "impl": []
     },
     "RadioNodeList": {
@@ -2842,14 +2846,6 @@
     },
     "RemotePlayback": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "Report": {
-      "inh": "",
-      "impl": []
-    },
-    "ReportBody": {
-      "inh": "",
       "impl": []
     },
     "ReportingObserver": {
@@ -3028,10 +3024,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "ScriptingPolicyReportBody": {
-      "inh": "ReportBody",
-      "impl": []
-    },
     "ScriptProcessorNode": {
       "inh": "AudioNode",
       "impl": []
@@ -3156,6 +3148,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "SpeechGrammar": {
+      "inh": "",
+      "impl": []
+    },
+    "SpeechGrammarList": {
+      "inh": "",
+      "impl": []
+    },
     "SpeechRecognition": {
       "inh": "EventTarget",
       "impl": []
@@ -3173,10 +3173,6 @@
       "impl": []
     },
     "SpeechRecognitionPhrase": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechRecognitionPhraseList": {
       "inh": "",
       "impl": []
     },

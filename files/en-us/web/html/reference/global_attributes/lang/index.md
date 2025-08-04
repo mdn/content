@@ -1,11 +1,11 @@
 ---
-title: lang
+title: HTML lang global attribute
+short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 page-type: html-attribute
 browser-compat: html.global_attributes.lang
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`lang`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single {{glossary("BCP 47 language tag")}}.
 

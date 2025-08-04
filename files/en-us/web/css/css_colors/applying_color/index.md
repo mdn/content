@@ -3,9 +3,8 @@ title: Applying color to HTML elements using CSS
 short-title: Applying color to HTML elements
 slug: Web/CSS/CSS_colors/Applying_color
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Reference/Elements) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
@@ -25,27 +24,21 @@ At a fundamental level, the {{cssxref("color")}} property defines the foreground
 Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.
 
 - {{cssxref("color")}}
-
   - : The color to use when drawing the text and any [text decorations](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (such as the addition of under- or overlines, strike-through lines, and so forth.
 
 - {{cssxref("background-color")}}
-
   - : The text's background color.
 
 - {{cssxref("text-shadow")}}
-
   - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
-
   - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
 
 - {{cssxref("text-emphasis-color")}}
-
   - : The color to use when rendering emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
 
 - {{cssxref("caret-color")}}
-
   - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is set to `true`.
 
 ### Boxes
@@ -53,23 +46,18 @@ Whenever an element is rendered, these properties are used to determine the colo
 Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.
 
 - [Borders](#borders_2)
-
   - : See the [Borders](#borders_2) section for a list of the CSS properties you can use to set the colors of a box's borders.
 
 - {{cssxref("background-color")}}
-
   - : The background color to use in areas of the element that have no foreground content.
 
 - {{cssxref("box-shadow")}}
-
   - : Configures inset shadow and drop shadow effects on the box. Among the options for each shadow is the shadow's base color (which is then blurred and blended with any background based on the other parameters).
 
 - {{cssxref("column-rule-color")}}
-
   - : The color to use when drawing the line separating columns of text when using [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
 
 - {{cssxref("outline-color")}}
-
   - : The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document. Outlines do not participate in the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), overlapping other content. Outlines are generally used as focus indicators, indicating which element currently has focus and will receive keyboard input events.
 
 ### Borders
@@ -79,19 +67,15 @@ Any element can have a border drawn around it. A basic element border is a line 
 You can use the {{cssxref("border")}} shorthand property, which lets you configure everything about the border in one shot (including non-color features of borders, such as its [width](/en-US/docs/Web/CSS/border-width), [style](/en-US/docs/Web/CSS/border-style) (solid, dashed, etc.), and so forth.
 
 - {{cssxref("border-color")}} shorthand
-
   - : Specifies a single color to use for every side of the element's border.
 
 - {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, and {{cssxref("border-bottom-color")}}
-
   - : Lets you set the color of the corresponding side of the element's border.
 
 - {{cssxref("border-block-start-color")}} and {{cssxref("border-block-end-color")}}
-
   - : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
 
 - {{cssxref("border-inline-start-color")}} and {{cssxref("border-inline-end-color")}}
-
   - : These let you color the edges of the border closest to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
 
 ## Specifying colors as values in stylesheets

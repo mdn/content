@@ -3,9 +3,8 @@ title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getViews
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
 
@@ -27,9 +26,7 @@ let windows = browser.extension.getViews(
 ### Parameters
 
 - `fetchProperties` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `type` {{optional_inline}}
       - : `string`. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.
     - `windowId` {{optional_inline}}
@@ -38,10 +35,6 @@ let windows = browser.extension.getViews(
 ### Return value
 
 `array` of `object`. Array of [Window](/en-US/docs/Web/API/Window) objects.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -68,6 +61,10 @@ const windows = browser.extension.getViews({ type: "popup" });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-getViews) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

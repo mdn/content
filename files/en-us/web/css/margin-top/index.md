@@ -3,9 +3,8 @@ title: margin-top
 slug: Web/CSS/margin-top
 page-type: css-property
 browser-compat: css.properties.margin-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
@@ -89,9 +88,7 @@ The `margin-top` property is specified as the keyword `auto`, or a `<length>`, o
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : The size of the margin as a fixed value.
-
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("&lt;percentage&gt;")}}

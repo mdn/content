@@ -3,9 +3,8 @@ title: :out-of-range
 slug: Web/CSS/:out-of-range
 page-type: css-pseudo-class
 browser-compat: css.selectors.out-of-range
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes.
 

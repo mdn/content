@@ -3,9 +3,8 @@ title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
 page-type: css-property
 browser-compat: css.properties.border-bottom-left-radius
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-bottom-left-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the bottom-left corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
 

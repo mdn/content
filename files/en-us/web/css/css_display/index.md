@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-display/
   - https://drafts.csswg.org/css-display-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS display** module defines how the CSS formatting box tree is generated from the document element tree and defines properties controlling it.
 
@@ -73,7 +72,6 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 ### Guides
 
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-
   - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)

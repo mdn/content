@@ -3,9 +3,8 @@ title: "@import"
 slug: Web/CSS/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to import style rules from other valid stylesheets.
 An `@import` rule _must_ be defined at the top of the stylesheet, before any other at-rule (except [@charset](/en-US/docs/Web/CSS/@charset) and [@layer](/en-US/docs/Web/CSS/@layer)) and style declarations, or it will be ignored.
@@ -102,9 +101,9 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ### Importing CSS rules conditional on feature support
 
 ```css
-@import url("grid.css") supports(display: grid) screen and (max-width: 400px);
+@import url("grid.css") supports(display: grid) screen and (width <= 400px);
 @import url("flex.css") supports((not (display: grid)) and (display: flex))
-  screen and (max-width: 400px);
+  screen and (width <= 400px);
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.

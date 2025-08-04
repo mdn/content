@@ -1,10 +1,10 @@
 ---
 title: Firefox 136 for developers
+short-title: Firefox 136
 slug: Mozilla/Firefox/Releases/136
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
@@ -39,7 +39,6 @@ This article provides information about the changes in Firefox 136 that affect d
 - Element properties are now reflected for the [Aria attributes that contain element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) ([Firefox bug 1919102](https://bugzil.la/1919102)).
 
   This includes:
-
   - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
   - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
 
@@ -98,7 +97,3 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
 - **SVG path API methods**: `dom.svg.pathSegment.enabled`.
   The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
-
-## Older versions
-
-{{Firefox_for_developers}}

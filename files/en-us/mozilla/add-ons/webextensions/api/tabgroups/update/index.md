@@ -3,9 +3,8 @@ title: tabGroups.update
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the state of a tab group.
 
@@ -21,7 +20,6 @@ let updatedTabGroup = await browser.tabGroups.update(
 ### Parameters
 
 - `groupId`
-
   - : `integer` The ID of the tab group to update.
 
 - `updateProperties`

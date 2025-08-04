@@ -8,6 +8,38 @@ sidebar: svgref
 
 The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines a mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property and CSS {{cssxref("mask-image")}} property.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("height")}}
+  - : This attribute defines the height of the masking area.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
+- {{SVGAttr("mask-type")}}
+  - : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
+    _Value type_: `alpha` | `luminance`; _Default value_: `luminance`; _Animatable_: **yes**
+- {{SVGAttr("maskContentUnits")}}
+  - : This attribute defines the coordinate system for the contents of the `<mask>`.
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+- {{SVGAttr("maskUnits")}}
+  - : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+- {{SVGAttr("x")}}
+  - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `-10%`; _Animatable_: **yes**
+- {{SVGAttr("y")}}
+  - : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
+    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `-10%`; _Animatable_: **yes**
+- {{SVGAttr("width")}}
+  - : This attribute defines the width of the masking area.
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGMaskElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -39,34 +71,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 100, 100)}}
-
-## Attributes
-
-- {{SVGAttr("height")}}
-  - : This attribute defines the height of the masking area.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
-- {{SVGAttr("mask-type")}}
-  - : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
-    _Value type_: `alpha` | `luminance`; _Default value_: `luminance`; _Animatable_: **yes**
-- {{SVGAttr("maskContentUnits")}}
-  - : This attribute defines the coordinate system for the contents of the `<mask>`.
-    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
-- {{SVGAttr("maskUnits")}}
-  - : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
-    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
-- {{SVGAttr("x")}}
-  - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
-    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `-10%`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
-    _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `-10%`; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : This attribute defines the width of the masking area.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

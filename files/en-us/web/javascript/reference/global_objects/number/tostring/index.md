@@ -1,11 +1,11 @@
 ---
 title: Number.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Number")}} values returns a string representing this number value.
 

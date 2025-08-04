@@ -3,9 +3,8 @@ title: opacity
 slug: Web/CSS/opacity
 page-type: css-property
 browser-compat: css.properties.opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`opacity`** [CSS](/en-US/docs/Web/CSS) property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
 
@@ -60,7 +59,6 @@ opacity: unset;
 ### Values
 
 - `<alpha-value>`
-
   - : A {{cssxref("number")}} in the range `0.0` to `1.0`, inclusive, or a {{cssxref("percentage")}} in the range `0%` to `100%`, inclusive, representing the opacity of the channel (that is, the value of its alpha channel). Any value outside the interval, though valid, is clamped to the nearest limit in the range.
 
     | Value                                                  | Meaning                                                                       |

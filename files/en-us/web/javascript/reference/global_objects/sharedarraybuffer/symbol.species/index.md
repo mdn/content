@@ -1,11 +1,11 @@
 ---
 title: SharedArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`SharedArrayBuffer[Symbol.species]`** static accessor property returns the constructor used to construct return values from `SharedArrayBuffer` methods.
 

@@ -60,6 +60,8 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}} {{experimental_inline}}
+  - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("OffscreenCanvas.getContext()")}}.
 - {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
@@ -128,7 +130,7 @@ The following properties control how text is laid out.
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
 - {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
-- {{domxref("CanvasRenderingContext2D.lang")}}
+- {{domxref("CanvasRenderingContext2D.lang")}} {{experimental_inline}}
   - : Gets or sets the language of the canvas drawing context.
 
 ### Fill and stroke styles

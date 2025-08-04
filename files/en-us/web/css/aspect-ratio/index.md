@@ -3,9 +3,8 @@ title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 page-type: css-property
 browser-compat: css.properties.aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified {{glossary("aspect ratio")}} is used in the calculation of auto sizes and some other layout functions.
 
@@ -72,15 +71,12 @@ If the element is not a replaced element, then the given `ratio` is used.
 ### Values
 
 - `auto`
-
   - : {{glossary("Replaced elements")}} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 
 - {{cssxref("&lt;ratio&gt;")}}
-
   - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
 
 - `auto && <ratio>`
-
   - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio, like an `<img>` element. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
 
 ## Formal definition

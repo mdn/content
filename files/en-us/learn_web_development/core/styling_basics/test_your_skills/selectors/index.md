@@ -6,26 +6,24 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+The aim of this skill test is to help you assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+
+To complete these tasks you should only edit the CSS, not the HTML.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, use CSS to do the following things, without changing the HTML:
+To complete the task:
 
-- Make `<h1>` headings blue.
-- Give `<h2>` headings a blue background and white text.
-- Cause text wrapped in a `<span>` to have a font-size of 200%.
+1. Make the `<h1>` headings blue.
+2. Give `<h2>` headings a blue background and white text.
+3. Cause text wrapped in a `<span>` to have a font-size of `200%`.
 
 Your final result should look like the image below:
 
 ![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___type
 <div class="container">
@@ -77,18 +75,16 @@ span {
 
 ## Task 2
 
-In this task, we want you to make the following changes to the look of the content in this example, without changing the HTML:
+To complete the task:
 
-- Give the element with an id of `special` a yellow background.
-- Give the element with a class of `alert` a 2px grey border.
-- If the element with a class of `alert` also has a class of `stop`, make the background red.
-- If the element with a class of `alert` also has a class of `go`, make the background green.
+1. Give the element with an id of `special` a yellow background.
+2. Give the element with a class of `alert` a `2px` solid grey border.
+3. If the element with a class of `alert` also has a class of `stop`, make the background red.
+4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
 Your final result should look like the image below:
 
 ![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___class-id
 <div class="container">
@@ -145,17 +141,15 @@ This tests that you understand the difference between class and id selectors and
 
 ## Task 3
 
-In this task, we want you to make the following changes without changing the HTML:
+To complete the task:
 
-- Style links, making the link-state orange, visited links green, and remove the underline on hover.
-- Make the first element inside the container `font-size: 150%` and the first line of that element red.
-- Stripe every other row in the table by selecting these rows and giving them a background color of `#333` and foreground white.
+1. Style links, making the link-state orange, visited links green, and remove the underline on hover.
+2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
+3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333` and foreground white.
 
 Your final result should look like the image below:
 
 ![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___pseudo
 <div class="container">
@@ -200,7 +194,7 @@ Try to update the code below to recreate the finished example:
 </div>
 ```
 
-```css hidden live-sample___pseudo
+```css live-sample___pseudo
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -218,9 +212,7 @@ th {
   padding: 0.2em;
   text-align: left;
 }
-```
 
-```css live-sample___pseudo
 /* Add styles here */
 ```
 
@@ -263,16 +255,14 @@ tr:nth-child(even) {
 
 ## Task 4
 
-In this task, we want you to do the following:
+To complete the task:
 
-- Make any paragraph that directly follows an `<h2>` element red.
-- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of `list`.
+1. Make any paragraph that directly follows an `<h2>` element red.
+2. Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the `<ul>` with a class of `list`.
 
 Your final result should look like the image below:
 
 ![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___combinators
 <div class="container">
@@ -300,6 +290,7 @@ Try to update the code below to recreate the finished example:
 body {
   font: 1.2em / 1.5 sans-serif;
 }
+
 /* Add styles here */
 ```
 
@@ -326,17 +317,15 @@ h2 + p {
 
 ## Task 5
 
-In this task, add CSS using attribute selectors to do the following:
+To complete the task, provide solutions using for the following challenges using attribute selectors:
 
-- Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
-- Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
-- Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
+1. Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
+2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
+3. Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
 
 Your final result should look like the image below:
 
 ![Four links with different color borders.](selectors-attribute.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___attribute-links
 <ul>
@@ -347,7 +336,7 @@ Try to update the code below to recreate the finished example:
 </ul>
 ```
 
-```css hidden live-sample___attribute-links
+```css live-sample___attribute-links
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -366,12 +355,11 @@ a {
   display: block;
   padding: 0.5em;
 }
-```
 
-```css live-sample___attribute-links
 a {
   border: 5px solid grey;
 }
+
 /* Add styles here */
 ```
 
@@ -401,7 +389,3 @@ a[href^="https"] {
 ```
 
 </details>
-
-## See also
-
-- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

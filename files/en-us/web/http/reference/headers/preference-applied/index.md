@@ -4,9 +4,8 @@ short-title: Preference-Applied
 slug: Web/HTTP/Reference/Headers/Preference-Applied
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-3
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Preference-Applied`** header informs the client about which preferences from the {{httpheader("Prefer")}} request header were applied by the server.
 

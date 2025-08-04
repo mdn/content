@@ -30,7 +30,7 @@ The HTML and CSS for the app is really trivial. We have a title, instructions pa
 
 ```html
 <h1>Speech color changer</h1>
-<p>Tap/click then say a color to change the background color of the app.</p>
+<p class="hints"></p>
 <div>
   <p class="output"><em>…diagnostic messages</em></p>
 </div>

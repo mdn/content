@@ -72,9 +72,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 - {{domxref('CSSKeywordValue')}}
   - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of `CSSKeyword.value`.
 - {{domxref('CSSMathValue')}}
-
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
-
     - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc","calc()")}} value used as `calc(1 / <value>)`.
     - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max","max()")}} function.
     - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min","min()")}} function.
@@ -83,9 +81,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
     - {{domxref('CSSMathSum')}} - represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
 - {{domxref('CSSNumericValue')}}
-
   - : An interface representing operations that all numeric values can perform, including:
-
     - {{domxref('CSSNumericValue.add')}} - Adds supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.sub')}} - Subtracts supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.mul')}} - Multiplies supplied numbers to the `CSSNumericValue`.

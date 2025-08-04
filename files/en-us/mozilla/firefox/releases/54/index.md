@@ -1,10 +1,10 @@
 ---
 title: Firefox 54 for developers
+short-title: Firefox 54
 slug: Mozilla/Firefox/Releases/54
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.
 
@@ -50,7 +50,6 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
 - Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
-
   - If this object exists on another origin to the constructor call, the {{domxref("Request.referrer")}} is stripped out.
   - If this object has a {{domxref("Request.mode")}} of `navigate`, the `mode` value is converted to `same-origin`.
 
@@ -72,7 +71,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 #### Encrypted MediaExtensions API
 
 - The `MediaKeySession.keySystem` string has been removed from the specification, and as such we've taken it out of Firefox 54 ([Firefox bug 1335555](https://bugzil.la/1335555)).
-- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://www.w3.org/TR/encrypted-media/#clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
+- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://w3c.github.io/encrypted-media/#dfn-clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
 - Previously, MSE was only allowed to use WebM/VP8 video if the system was considered "fast enough." Now playback of VP8-encoded `webm/video` media is always supported, regardless of system performance.
 
 #### WebRTC
@@ -88,7 +87,3 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### HTTP
 
 - HTTP/1 Pipelining support has been removed in Firefox 54. Maintaining it as we make the move into a new world full of HTTP/2 and other substantial, standardized improvements to networking performance is not worthwhile given pipelining's compatibility and performance issues. The `network.http.pipelining` preference (as well as the other preferences that start with "network.http.pipelining") is now ignored. See [Firefox bug 1340655](https://bugzil.la/1340655) for further information.
-
-## Older versions
-
-{{Firefox_for_developers}}

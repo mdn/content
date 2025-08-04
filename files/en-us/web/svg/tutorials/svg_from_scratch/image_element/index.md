@@ -21,7 +21,7 @@ In this basic example, a .jpg image referenced by an {{ SVGAttr("href") }} attri
 </svg>
 ```
 
-There are some important things to take note of (referenced from the [W3 specs](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
+There are some important things to take note of:
 
 - If you do not set the `x` or `y` attributes, they will be set to `0`.
 - If you do not set the `height` or `width` attributes, they will be set to `0`.

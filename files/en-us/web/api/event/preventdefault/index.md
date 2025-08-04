@@ -8,7 +8,7 @@ browser-compat: api.Event.preventDefault
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that the event is being explicitly handled, so its default action, such as page scrolling, link navigation, or pasting text, should not be taken.
 
 The event continues to propagate as usual,
 unless one of its event listeners calls
@@ -31,6 +31,14 @@ If a passive listener calls `preventDefault()`, nothing will happen and a consol
 ```js-nolint
 preventDefault()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,24 +1,24 @@
 ---
 title: Map.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry in this map with a specified key and a value.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.get("bar"));
+console.log(map.get("bar"));
 // Expected output: "foo"
 
-console.log(map1.get("baz"));
+console.log(map.get("baz"));
 // Expected output: undefined
 ```
 

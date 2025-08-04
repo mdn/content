@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-position-4/
   - https://drafts.csswg.org/css-shadow-parts/
   - https://w3c.github.io/webvtt/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 

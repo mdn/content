@@ -3,9 +3,8 @@ title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputEntered
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list.
 
@@ -41,10 +40,6 @@ The listener function will be passed two parameters: a string `text`, and an {{W
   - : `String`. This is the value of the `content` property of the {{WebExtAPIRef("omnibox.SuggestResult")}} object that the user selected.
 - `disposition`
   - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. A {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} enumeration, indicating whether the extension should open the page in the current tab, in a new foreground tab, or in a new background tab.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -124,6 +119,10 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

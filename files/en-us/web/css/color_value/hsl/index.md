@@ -6,9 +6,8 @@ browser-compat: css.types.color.hsl
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HSL
   - https://drafts.csswg.org/css-color/#the-hsl-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > The `hsla()` functional notation is an alias for `hsl()`. They are exactly equivalent. It is recommended to use `hsl()`.
@@ -71,7 +70,8 @@ hsl(120, 75%, 25%)
 hsl(120deg, 75%, 25%, 0.8)
 ```
 
-> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
+> [!NOTE]
+> `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
 
 ### Values
 
@@ -86,7 +86,6 @@ hsl(H S L[ / A])
 The parameters are as follows:
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
     > [!NOTE]

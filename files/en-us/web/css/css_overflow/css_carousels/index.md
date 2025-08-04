@@ -1,10 +1,10 @@
 ---
 title: Creating CSS carousels
+short-title: Creating carousels
 slug: Web/CSS/CSS_overflow/CSS_carousels
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
@@ -19,7 +19,7 @@ Users can move through the items by clicking or activating navigational buttons 
 - **scroll markers**
   - : A series of button or link icons, each representing one or more items depending on how many items are shown at each scroll position within the carousel.
 
-![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](carousel.png)
+![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](/shared-assets/images/diagrams/css/carousels/carousel.svg)
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
@@ -256,7 +256,7 @@ ul {
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll button's, except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll button's, except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___first-example
 ul::scroll-marker-group {

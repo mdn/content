@@ -3,9 +3,8 @@ title: caret-color
 slug: Web/CSS/caret-color
 page-type: css-property
 browser-compat: css.properties.caret-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`caret-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
@@ -65,7 +64,6 @@ caret-color: unset;
 ### Values
 
 - `auto`
-
   - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentcolor`, the background, shadows, and other factors.
 
     > [!NOTE]

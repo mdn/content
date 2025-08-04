@@ -3,9 +3,8 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 page-type: css-property
 spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-mode`** [CSS](/en-US/docs/Web/CSS) property specifies the blending mode used in a [mask border](/en-US/docs/Web/CSS/mask-border).
 
@@ -49,8 +48,12 @@ This property is not supported by any browser yet.
 
 ## See also
 
-- {{cssxref("mask-border")}}
+- {{cssxref("mask-mode")}}
+- {{cssxref("mask-type")}}
+- [Alpha transparency versus luminance](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance)
+- {{cssxref("mask-border")}} shorthand
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-mode")}}

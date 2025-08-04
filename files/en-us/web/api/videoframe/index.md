@@ -55,6 +55,10 @@ Created frames may then turned into a media track, for example with the {{domxre
   - : Returns an integer indicating the timestamp of the video in microseconds.
 - {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
+- {{domxref("VideoFrame.flip")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns whether the `VideoFrame` is horizontally mirrored.
+- {{domxref("VideoFrame.rotation")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns the rotation (0, 90, 180, or 270) in degrees clockwise applied to the `VideoFrame`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 ## Instance methods
 

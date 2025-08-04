@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/with
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.with
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`with()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the year-month's fields.
 

@@ -3,9 +3,8 @@ title: action.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/action/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.action.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
@@ -36,15 +35,11 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the icon was clicked.
     - `OnClickData`
-
       - : An object containing information about the click.
-
         - `modifiers`
           - : An `array`. The keyboard modifiers active at the time of the click, being one or more of `Shift`, `Alt`, `Command`, `Ctrl`, or `MacCtrl`.
         - `button`

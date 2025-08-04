@@ -3,9 +3,7 @@ title: "ARIA: aria-activedescendant attribute"
 short-title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
 page-type: aria-attribute
-spec-urls:
-  - https://w3c.github.io/aria/#aria-activedescendant
-  - https://www.w3.org/TR/wai-aria-1.2/#aria-activedescendant
+spec-urls: https://w3c.github.io/aria/#aria-activedescendant
 sidebar: accessibilitysidebar
 ---
 

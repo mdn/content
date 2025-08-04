@@ -382,7 +382,7 @@ But this has problems — there is no way for a screen reader user to associate 
 Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes its content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > [!NOTE]
 > See our [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) article for more details about accessible data tables.
@@ -448,7 +448,8 @@ Let's have another quick look at the fourth method:
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
 
-> **Note:** [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
+> [!NOTE]
+> [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://w3c.github.io/aria/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
 
 ### Figures and figure captions
 

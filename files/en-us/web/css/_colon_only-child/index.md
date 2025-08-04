@@ -3,9 +3,8 @@ title: :only-child
 slug: Web/CSS/:only-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.only-child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element without any siblings. This is the same as `:first-child:last-child` or `:nth-child(1):nth-last-child(1)`, but with a lower specificity.
 

@@ -2,12 +2,10 @@
 title: GPUComputePipeline
 slug: Web/API/GPUComputePipeline
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUComputePipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUComputePipeline`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pipeline that controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
 
@@ -17,12 +15,12 @@ A `GPUComputePipeline` object instance can be created using the {{domxref("GPUDe
 
 ## Instance properties
 
-- {{domxref("GPUComputePipeline.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePipeline.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Instance methods
 
-- {{domxref("GPUComputePipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}}
+- {{domxref("GPUComputePipeline.getBindGroupLayout", "getBindGroupLayout()")}}
   - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e., included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
 
 ## Examples

@@ -3,9 +3,8 @@ title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
 page-type: css-property
 browser-compat: css.properties.text-emphasis-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-emphasis-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of emphasis marks. This value can also be set using the {{cssxref("text-emphasis")}} shorthand.
 
@@ -20,7 +19,7 @@ text-emphasis-color: red;
 ```
 
 ```css interactive-example-choice
-text-emphasis-color: rgba(90, 200, 160, 0.8);
+text-emphasis-color: rgb(90 200 160 / 0.8);
 ```
 
 ```html interactive-example

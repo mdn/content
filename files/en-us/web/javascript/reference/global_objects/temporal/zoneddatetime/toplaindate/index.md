@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.toPlainDate()
+short-title: toPlainDate()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toPlainDate
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.toPlainDate
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toPlainDate()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.PlainDate")}} object representing the date portion of this date-time.
 

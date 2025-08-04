@@ -20,8 +20,8 @@ Similarly, when setting element content using `innerHTML`, the HTML string is pa
 So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
-Note that some browsers serialize `<` and `>` in attributes as `&lt;` and `&gt;` when reading the HTML (see [Browser compatibility](#browser_compatibility)).
-This prevents certain exploits where code becomes executable when serialized and then deserialized into HTML.
+Note that some browsers serialize the `<` and `>` characters as `&lt;` and `&gt;` when they appear in attribute values (see [Browser compatibility](#browser_compatibility)).
+This is to prevent a potential security vulnerability ([mutation XSS](https://www.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass.html)) in which an attacker can craft input that bypasses a [sanitization function](/en-US/docs/Web/Security/Attacks/XSS#sanitization), enabling a cross-site scripting (XSS) attack.
 
 ## Value
 

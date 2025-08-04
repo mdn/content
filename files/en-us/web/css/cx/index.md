@@ -3,9 +3,8 @@ title: cx
 slug: Web/CSS/cx
 page-type: css-property
 browser-compat: css.properties.cx
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`cx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis center point of an SVG {{SVGElement("circle")}} or {{SVGElement("ellipse")}} element. If present, it overrides the element's {{SVGAttr("cx")}} attribute.
 
@@ -32,11 +31,9 @@ cx: unset;
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the horizontal center of the circle or ellipse.
 
 - {{cssxref("length")}}
-
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
-
   - : Percentages refer to the width of the current SVG viewport.
 
 ## Formal definition

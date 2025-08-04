@@ -43,7 +43,6 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : Checks the validity of the element and returns a boolean value holding the check result.
 - {{domxref("HTMLOutputElement.reportValidity()")}}
-
   - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns `false`; if there are no problems, it returns `true`.
 
     When the problem is reported, the user agent may focus the element and change the scrolling position of the document or perform some other action that brings the element to the user's attention. User agents may report more than one constraint violation if this element suffers from multiple problems at once. If the element is not rendered, then the user agent may report the error for the running script instead of notifying the user.

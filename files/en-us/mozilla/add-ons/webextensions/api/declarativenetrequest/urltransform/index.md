@@ -3,9 +3,8 @@ title: declarativeNetRequest.URLTransform
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/URLTransform
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.URLTransform
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details describing a URL transformation to perform for a redirect rule. This object can be specified at {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform.
 
@@ -26,11 +25,8 @@ Values of this type are objects. They contain these properties:
 - `query` {{optional_inline}}
   - : A `string`. The new query for the request. Should be either empty, in which case the existing query is cleared; or should begin with '?'.
 - `queryTransform` {{optional_inline}}
-
   - : An object describing how to add, remove, or replace query key-value pairs. Cannot be specified if 'query' is specified.
-
     - `addOrReplaceParams` {{optional_inline}}
-
       - : An array of objects describing the list of query key-value pairs to be added or replaced.
         - `key`
           - : A `string`. The key value.

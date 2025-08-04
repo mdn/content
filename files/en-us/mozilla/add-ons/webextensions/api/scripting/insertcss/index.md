@@ -3,9 +3,8 @@ title: scripting.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.insertCSS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects CSS into a page.
 
@@ -34,17 +33,13 @@ await browser.scripting.insertCSS(
 ### Parameters
 
 - `details`
-
   - : An object describing the CSS to insert and where to insert it. It contains the following properties:
-
     - `css` {{optional_inline}}
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified.
     - `files` {{optional_inline}}
       - : `array` of `string`. The path of CSS files to inject relative to the extension's root directory. Either `files` or `css` must be specified.
     - `origin` {{optional_inline}}
-
       - : `string`. The style origin for the injection, either `USER`, to add the CSS as a user stylesheet, or `AUTHOR`, to add it as an author stylesheet. Defaults to `AUTHOR`.
-
         - `USER` enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order).
         - `AUTHOR` stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 

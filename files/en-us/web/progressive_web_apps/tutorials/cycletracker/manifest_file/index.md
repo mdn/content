@@ -63,7 +63,6 @@ Write the first few lines of your manifest file. You can use the text below, or 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
-
   - : The start page when a user launches the PWA.
 
 - [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)

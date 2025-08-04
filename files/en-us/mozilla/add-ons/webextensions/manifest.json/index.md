@@ -3,9 +3,8 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 page-type: landing-page
 browser-compat: webextensions.manifest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) article.

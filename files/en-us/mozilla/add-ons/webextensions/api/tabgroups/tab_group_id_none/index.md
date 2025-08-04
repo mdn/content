@@ -3,9 +3,8 @@ title: tabGroups.TAB_GROUP_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/TAB_GROUP_ID_NONE
 page-type: webextension-api-property
 browser-compat: webextensions.api.tabGroups.TAB_GROUP_ID_NONE
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The tab group ID value returned when a tab isn't in a tab group.
 

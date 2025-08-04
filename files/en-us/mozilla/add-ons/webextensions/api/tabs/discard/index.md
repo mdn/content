@@ -3,9 +3,8 @@ title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.discard
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Discards one or more tabs.
 

@@ -3,9 +3,8 @@ title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
 

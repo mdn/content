@@ -3,9 +3,8 @@ title: grid
 slug: Web/CSS/@media/grid
 page-type: css-media-feature
 browser-compat: css.at-rules.media.grid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether the output device uses a grid-based screen.
 

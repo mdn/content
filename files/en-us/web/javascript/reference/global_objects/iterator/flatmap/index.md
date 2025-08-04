@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.flatMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 

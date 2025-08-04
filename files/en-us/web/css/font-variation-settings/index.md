@@ -3,9 +3,8 @@ title: font-variation-settings
 slug: Web/CSS/font-variation-settings
 page-type: css-property
 browser-compat: css.properties.font-variation-settings
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
@@ -45,7 +44,7 @@ font-variation-settings: "wdth" 75;
 
 p {
   font-size: 1.5rem;
-  font-family: Amstelvar;
+  font-family: Amstelvar, serif;
 }
 ```
 
@@ -137,7 +136,7 @@ To use variable fonts on your operating system, you need to make sure that it is
 
 ## Examples
 
-You can find a number of other variable font examples in our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide).
+You can find a number of other variable font examples in our [Variable fonts](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) guide.
 
 ### Controlling variable font weight (wght)
 

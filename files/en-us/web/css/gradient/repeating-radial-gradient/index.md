@@ -3,9 +3,8 @@ title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-radial-gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
@@ -69,7 +68,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<shape>`
   - : The gradient's shape. The value can be `circle` (meaning that the gradient's shape is a circle with constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
 - `<extent-keyword>`
-
   - : A keyword describing how big the ending shape must be. The possible values are:
 
     | Keyword           | Description                                                                                                                                                                     |

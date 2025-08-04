@@ -3,9 +3,8 @@ title: CSS logical properties and values
 slug: Web/CSS/CSS_logical_properties_and_values
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-logical/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS logical properties and values** module defines logical properties and values that can control layout through logical rather than physical direction and dimension mappings. Logical properties define direction‐relative equivalents to their corresponding physical properties.
 
@@ -105,19 +104,15 @@ CSS was initially designed with only physical coordinates. The logical propertie
 ## Guides
 
 - [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-
   - : Overview of flow relative properties and values.
 
 - [Logical properties for sizing](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-
   - : Flow-relative mappings between physical properties and logical properties used for sizing elements on the page.
 
 - [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-
   - : Flow-relative mappings for the various margin, border, and padding properties and their shorthands.
 
 - [Logical properties for floating and positioning](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
-
   - : Details mappings between the physical and logical values for `float` and `clear`, [inset properties](/en-US/docs/Glossary/Inset_properties), and `resize`.
 
 ## Related concepts

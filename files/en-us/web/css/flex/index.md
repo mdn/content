@@ -3,9 +3,8 @@ title: flex
 slug: Web/CSS/flex
 page-type: css-shorthand-property
 browser-compat: css.properties.flex
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 
@@ -44,7 +43,7 @@ flex: 1 1 100px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -53,7 +52,7 @@ flex: 1 1 100px;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -102,22 +101,18 @@ flex: unset;
 The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
-
   - a valid value for {{cssxref("&lt;flex-grow&gt;")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> 1 0%`. However the specification says it should expand to `flex: <flex-grow> 1 0`.
   - a valid value for {{cssxref("&lt;flex-basis&gt;")}}: then the shorthand expands to `flex: 1 1 <flex-basis>`.
   - the keyword `none` or one of the global keywords.
 
 - **Two-value syntax:**
-
   - The first value must be a valid value for {{cssxref("flex-grow")}}.
 
   - The second value must be one of:
-
     - a valid value for {{cssxref("flex-shrink")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> <flex-shrink> 0%`.
     - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
-
   1. a valid value for {{cssxref("flex-grow")}}.
   2. a valid value for {{cssxref("flex-shrink")}}.
   3. a valid value for {{cssxref("flex-basis")}}.

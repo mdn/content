@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.font-smooth
+sidebar: cssref
 ---
 
-{{CSSRef}} {{ Non-standard_header }}
+{{ Non-standard_header }}
 
 The **`font-smooth`** [CSS](/en-US/docs/Web/CSS) property controls the application of anti-aliasing when fonts are rendered.
 

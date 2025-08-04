@@ -23,19 +23,15 @@ texParameteri(target, pname, param)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `param`
-
   - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
     {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
 

@@ -1,10 +1,10 @@
 ---
 title: Firefox 26 for developers
+short-title: Firefox 26
 slug: Mozilla/Firefox/Releases/26
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 26 was released on December 10, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -67,7 +67,3 @@ ECMAScript 2015 implementation continues!
 
 - The Inspector is now remotable ([Firefox bug 805526](https://bugzil.la/805526)).
 - The web console text can be selected, {{cssxref("::before")}} and {{cssxref("::after")}} now inspectable, debugger and responsive design features are planned for this release. (<https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/>)
-
-### Older versions
-
-{{Firefox_for_developers}}

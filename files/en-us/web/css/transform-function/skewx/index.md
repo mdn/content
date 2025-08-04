@@ -3,9 +3,8 @@ title: skewX()
 slug: Web/CSS/transform-function/skewX
 page-type: css-function
 browser-compat: css.types.transform-function.skewX
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the
 horizontal direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -43,7 +42,8 @@ each point within an element by a certain angle in the horizontal direction. The
 modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
 origin a point is, the greater will be the value added it.
 
-> **Note:** `skewX(a)` is equivalent to
+> [!NOTE]
+> `skewX(a)` is equivalent to
 > `skew(a)`.
 
 ## Syntax

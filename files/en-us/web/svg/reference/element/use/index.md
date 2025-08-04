@@ -9,6 +9,37 @@ sidebar: svgref
 The **`<use>`** element takes nodes from within an SVG document, and duplicates them somewhere else.
 The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `<use>` element is, much like cloned {{HTMLElement("template")}} elements.
 
+## Usage context
+
+{{SVGInfo}}
+
+## Attributes
+
+- {{SVGAttr("href")}}
+  - : The URL to an element/fragment that needs to be duplicated. See [Usage notes](#usage_notes) for details on common pitfalls.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: none; _Animatable_: **yes**
+- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
+  - : An [`<IRI>`](/en-US/docs/Web/SVG/Guides/Content_type#iri) reference to an element/fragment that needs to be duplicated. If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.<br/> _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Guides/Content_type#iri); _Default value_: none; _Animatable_: **yes**
+    > [!WARNING]
+    > Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
+- {{SVGAttr("x")}}
+  - : The x coordinate of an additional final offset transformation applied to the `<use>` element.<br/> _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("y")}}
+  - : The y coordinate of an additional final offset transformation applied to the `<use>` element.<br/> _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("width")}}
+  - : The width of the `<use>` element.<br/> _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("height")}}
+  - : The height of the `<use>` element.<br/> _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0`; _Animatable_: **yes**
+
+> [!NOTE]
+> `width`, and `height` have no effect on `<use>` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `<use>` refers to a `<svg>` or `<symbol>` element.
+
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGUseElement")}} interface.
+
 ## Example
 
 The following example shows how to use the `<use>` element to draw a circle with a different fill and stroke color.
@@ -31,28 +62,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 200, 200)}}
-
-## Attributes
-
-- {{SVGAttr("href")}}
-  - : The URL to an element/fragment that needs to be duplicated. See [Usage notes](#usage_notes) for details on common pitfalls.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
-  - : An [`<IRI>`](/en-US/docs/Web/SVG/Guides/Content_type#iri) reference to an element/fragment that needs to be duplicated. If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.<br/> _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Guides/Content_type#iri); _Default value_: none; _Animatable_: **yes**
-    > [!WARNING]
-    > Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
-- {{SVGAttr("x")}}
-  - : The x coordinate of an additional final offset transformation applied to the `<use>` element.<br/> _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : The y coordinate of an additional final offset transformation applied to the `<use>` element.<br/> _Value type_: [**`<coordinate>`**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : The width of the `<use>` element.<br/> _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("height")}}
-  - : The height of the `<use>` element.<br/> _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0`; _Animatable_: **yes**
-
-> **Note:** `width`, and `height` have no effect on `<use>` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `<use>` refers to a `<svg>` or `<symbol>` element.
-
-> [!NOTE]
-> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
 ## Usage notes
 
@@ -93,13 +102,9 @@ Check the [Browser compatibility](#browser_compatibility) table for browser supp
 
 ### Loading resources from data URIs via `<use>`
 
-Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:...` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
+Loading resources with data URIs in the `href` attribute is deprecated for security reasons. This applies to `<use href="data:..."` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Reference/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
 
 Again, check the [Browser compatibility](#browser_compatibility) table for browser support.
-
-## Usage context
-
-{{SVGInfo}}
 
 ## Specifications
 

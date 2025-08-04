@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype.unicode
+short-title: unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicode
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`unicode`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `u` flag is used with this regular expression.
 

@@ -58,7 +58,7 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#tile);" />
+    filter="url(#tile)" />
 </svg>
 ```
 

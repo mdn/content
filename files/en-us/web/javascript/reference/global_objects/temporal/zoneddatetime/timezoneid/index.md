@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.timeZoneId
+short-title: timeZoneId
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/timeZoneId
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.timeZoneId
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`timeZoneId`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant. The string is either a named identifier in the preferred case (such as `"America/New_York"`), or an offset in the form `"±hh:mm"`. If the time zone has aliases, the `timeZoneId` is the identifier used to create the `ZonedDateTime`, without canonicalization to the primary identifier.
 
