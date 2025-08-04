@@ -253,7 +253,7 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 .skip-link {
   position: absolute;
   top: -3em;
-  background: #fff;
+  background: white;
 }
 .skip-link:focus {
   top: 0;
@@ -405,13 +405,13 @@ html {
   font-family: sans-serif;
 }
 canvas {
-  background: #fff;
+  background: white;
   border: 1px dashed;
 }
 a {
   display: inline-block;
   background: #69c;
-  color: #fff;
+  color: white;
   padding: 5px 10px;
 }
 ```

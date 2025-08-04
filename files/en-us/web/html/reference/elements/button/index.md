@@ -23,15 +23,15 @@ By default, HTML buttons are presented in a style resembling the platform the {{
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
   background-color: rgb(220 0 0);
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 0.2),
     rgb(0 0 0 / 0.2) 30%,
-    rgb(0 0 0 / 0)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 0.6),
@@ -162,7 +162,7 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 ```html
 <button name="favorite">
-  <svg fill="#000000" viewBox="0 0 42 42">
+  <svg fill="black" viewBox="0 0 42 42">
     <path
       d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
       3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
