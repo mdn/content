@@ -16,8 +16,7 @@ const deListFormatter = new Intl.ListFormat("de-DE", { type: "disjunction" });
 const options = deListFormatter.resolvedOptions();
 
 console.log(options.locale);
-// Expected output (Firefox / Safari): "de-DE"
-// Expected output (Chrome): "de"
+// Expected output: "de-DE"
 
 console.log(options.style);
 // Expected output: "long"

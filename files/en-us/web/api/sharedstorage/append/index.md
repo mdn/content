@@ -48,7 +48,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 ```js
 window.sharedStorage
   .append("integer-list", ",9")
-  .then(console.log("Value appended to integer list"));
+  .then(() => console.log("Value appended to integer list"));
 ```
 
 ## Specifications

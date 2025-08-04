@@ -8,7 +8,8 @@ browser-compat: api.CharacterData.remove
 
 {{APIRef("DOM")}}
 
-The **`remove()`** method of the {{domxref("CharacterData")}} removes the text contained in the node.
+The **`remove()`** method of the {{domxref("CharacterData")}} removes it from its parent node.
+If it has no parent node, calling `remove()` does nothing.
 
 ## Syntax
 

@@ -17,7 +17,7 @@ value of a mouse event once it's been created (normally using the {{domxref("Doc
 > Do not use this method anymore as it is deprecated.
 >
 > Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
-> The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> The section on [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) gives more information about the way to use these.
 
 Events initialized in this way must have been created with the {{domxref("Document.createEvent()") }} method.
 This method must be called to set the event

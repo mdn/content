@@ -323,6 +323,20 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
+### `anchor-size()` function
+
+The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -458,17 +472,22 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
+From version 142 this is enabled in on Windows in all contexts except service workers.
+For other platforms it is enabled in nightly.
+See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 113           | Yes                 |
-| Developer Edition | 73            | No                  |
-| Beta              | 73            | No                  |
-| Release           | 73            | No                  |
+| Release channel   | Version added | Enabled by default?                                |
+| ----------------- | ------------- | -------------------------------------------------- |
+| Nightly           | 141           | Yes                                                |
+| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
+| Beta              | 141           | No (Yes on Windows, not including service workers) |
+| Release           | 141           | No (Yes on Windows, not including service workers) |
 
 - `dom.webgpu.enabled`
-  - : Set to `true` to enable.
+  - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
+- `dom.webgpu.service-workers.enabled`
+  - : Set to `true` to enable (enabled in Nightly)
 
 ### Reporting API support for CSP Violations
 
