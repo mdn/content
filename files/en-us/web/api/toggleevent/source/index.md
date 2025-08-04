@@ -20,7 +20,9 @@ A {{htmlelement("button")}} element can be set as a popover control by specifyin
 
 When the [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) event fires on the popover, the `ToggleEvent` event object's `source` property will then contain a reference to the popover control button that initiated the toggle. This is useful for running different code in response to the `toggle` event depending on which control initiated it (see an [example](#basic_source_usage)).
 
-Before the `source` property was available, developers would have to reimplement the `command` attribute functionality from scratch to provide a similar identifier and then monitor it with JavaScript to know which button invoked the popover. In addition, there was a danger of such JavaScript tasks blocking the showing or hiding of the popover. The `toggle` event is asynchronous, therefore avoids this problem.
+Before the `source` property was available, developers would have to reimplement the `command` attribute functionality from scratch to provide a similar identifier and then monitor it with JavaScript to know which button invoked the popover.
+In addition, there was a danger of such JavaScript tasks blocking the showing or hiding of the popover.
+The `toggle` event is asynchronous, and therefore avoids this problem.
 
 If the popover was not activated by a control button — for example, if the popover is being controlled using a JavaScript method such as {{domxref("HTMLElement.togglePopover()")}} — the `source` property returns `null`.
 
