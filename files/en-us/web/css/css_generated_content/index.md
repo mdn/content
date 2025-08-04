@@ -110,7 +110,7 @@ Click "Play" in the example above to see or edit the code in the MDN Playground.
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-The CSS generated content module also introduces four at-risk properties, including `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`. Currently, no browsers support these features.
+The CSS generated content module also introduces four at-risk properties: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`. Currently, no browsers support these features.
 
 ### Functions
 
