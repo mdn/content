@@ -103,7 +103,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive number indicating the total time that the stream has spent frozen, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
-  - : TBD.
+  - : A positive number indicating the total time spent between consecutively rendered frames, recorded just after a frame has been rendered.
+    _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}}
   - : A positive number indicating the total time that the stream has spent with paused video, in seconds.
     _Undefined for audio streams._
