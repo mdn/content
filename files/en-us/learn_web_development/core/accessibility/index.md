@@ -36,6 +36,10 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
 - [Accessibility troubleshooting](/en-US/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>Challenge</sup>
   - : In this challenge, we present to you a simple site with several accessibility issues that you need to diagnose and fix.
 
+## Test your skills
+
+You will find regular "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills).
+
 ## See also
 
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)

@@ -362,6 +362,4 @@ We hope this article has given you a good amount of detail and understanding abo
 
 In the next article we'll test your knowledge of CSS and JavaScript accessibility, to see whether you can remember the most important information.
 
-Next up, WAI-ARIA!
-
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

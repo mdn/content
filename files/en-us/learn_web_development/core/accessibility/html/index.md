@@ -552,6 +552,6 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 ## Summary
 
-You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up, we'll test your knowledge of HTML accessibility, to see whether you can remember the most important information.
+You should now be well-versed in writing accessible HTML for most occasions. Next up, we'll test your knowledge of HTML accessibility, to see whether you can remember the most important information.
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
