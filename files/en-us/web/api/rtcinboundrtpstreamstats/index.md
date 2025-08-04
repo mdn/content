@@ -114,7 +114,8 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive number that indicates the total duration of all samples that have been received, in seconds.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalSamplesReceived", "totalSamplesReceived")}}
-  - : TBD.
+  - : A positive integer that indicates the total number of samples received on this stream.
+    _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.totalSquaredInterFrameDelay", "totalSquaredInterFrameDelay")}}
   - : TBD.
 - {{domxref("RTCInboundRtpStreamStats.trackIdentifier", "trackIdentifier")}}
