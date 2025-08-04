@@ -314,7 +314,7 @@ readUntil(stream, "b")
   });
 ```
 
-So, `using` does not swallow an errors: all errors that occur are still thrown, but the resources get closed right before that. Now, what happens if the resource cleanup itself also throws an error? Let's use a more contrived example:
+So, `using` does not swallow any errors: all errors that occur are still thrown, but the resources get closed right before that. Now, what happens if the resource cleanup itself also throws an error? Let's use a more contrived example:
 
 ```js
 class MyReader {

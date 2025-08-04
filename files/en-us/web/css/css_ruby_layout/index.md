@@ -15,8 +15,7 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 - {{cssxref("ruby-align")}}
 - {{cssxref("ruby-position")}}
 
-> [!NOTE]
-> The CSS ruby layout module introduces two properties, `ruby-merge` and `ruby-overhang`, that have not yet been implemented in any browser.
+The CSS ruby layout module also introduces the `ruby-merge` and `ruby-overhang` properties. Currently, no browsers support these features.
 
 ### Display values
 

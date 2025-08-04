@@ -1,5 +1,6 @@
 ---
 title: Symbol.dispose
+short-title: dispose
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/dispose
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.dispose

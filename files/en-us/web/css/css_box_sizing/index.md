@@ -36,8 +36,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - {{cssxref("min-width")}}
 - {{cssxref("width")}}
 
-> [!NOTE]
-> The CSS box sizing module introduces the `min-intrinsic-sizing` property that has not yet been implemented.
+The CSS box sizing module also introduces the `min-intrinsic-sizing` property. Currently, no browsers support this feature.
 
 ### Data types and values
 
@@ -46,9 +45,6 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - {{cssxref("max-content")}} value
 - {{cssxref("fit-content")}} value
 - {{cssxref("fit-content_function", "fit-content()")}} function
-
-> [!NOTE]
-> The CSS box sizing module introduces the `stretch` and `contain` keywords as sizing values that have not yet been implemented on the box sizing properties.
 
 ### Functions
 

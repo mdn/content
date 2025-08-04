@@ -82,7 +82,7 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

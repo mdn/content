@@ -36,12 +36,12 @@ While masking provides more control and options, clipping can perform better if 
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-border")}} shorthand
-- {{cssxref("mask-border-mode")}}
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-slice")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-border-mode")}}
 
 ### Data types
 

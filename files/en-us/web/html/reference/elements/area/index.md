@@ -74,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `poly`: the value is `x1,y1,x2,y2,..,xn,yn`. Value specifies the coordinates of the edges of the polygon.
       If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon
 
-    The values are numbers of CSS pixels.
+    The values are numbers of CSS pixels. Our [shape generator](/en-US/docs/Web/CSS/CSS_shapes/Shape_generator) can help you generate the `coords` syntax by selecting points on an image you upload.
 
 - `download`
   - : This attribute, if present, indicates that the linked resource is intended to be downloaded rather than displayed in the browser.
@@ -122,6 +122,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Examples
 
+### Image with clickable areas
+
 ```html
 <map name="primary">
   <area
@@ -141,9 +143,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   alt="350 x 150 pic" />
 ```
 
-### Result
-
-{{ EmbedLiveSample('Examples', 360, 160) }}
+{{ EmbedLiveSample('Image with clickable areas', 360, 160) }}
 
 ## Technical summary
 

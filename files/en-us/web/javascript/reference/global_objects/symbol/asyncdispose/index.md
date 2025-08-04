@@ -1,5 +1,6 @@
 ---
 title: Symbol.asyncDispose
+short-title: asyncDispose
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.asyncDispose

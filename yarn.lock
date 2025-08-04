@@ -1578,7 +1578,7 @@
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.2.0"
 
-"@lit/task@^1.0.2", "@lit/task@^1.0.3":
+"@lit/task@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@lit/task/-/task-1.0.3.tgz#52a66f0689d0aa9567b58df46842d29bbb8be20f"
   integrity sha512-1gJGJl8WON+2j0y9xfcD+XsS1rvcy3XDgsIhcdUW++yTR8ESjZW6o7dn8M8a4SZM8NnJe6ynS2cKWwsbfLOurg==
@@ -1600,10 +1600,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.1.0.tgz#9b2348abc1b19d1af62d01f3adf0b6f040ccaa5c"
-  integrity sha512-ZtXW7GkZAA7OUCUjM0lIpIHSZ21p7wKwnBHtXM1mu7YQi2ySCZSD7FL1IbgtNbbwLC2rxBw8/KWIHO06VI/sDg==
+"@mdn/fred@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.2.0.tgz#574c2e2def5e7f4d04e4ad18f6c4db36cc64719c"
+  integrity sha512-kXuDlOL/rumZ0OUJgk68hli2wntfu8aW2GBFM6nZ12X8hnnPztGeaXwEBPdngg9Dnw6ETxuk4rbbNA31Yn/XlQ==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
@@ -1614,11 +1614,11 @@
     "@fluent/bundle" "^0.19.0"
     "@lit-labs/ssr" "^3.3.1"
     "@lit-labs/ssr-client" "^1.1.7"
-    "@lit/task" "^1.0.2"
+    "@lit/task" "^1.0.3"
     "@mdn/watify" "^1.1.3"
-    "@mozilla/glean" "^5.0.4"
+    "@mozilla/glean" "^5.0.5"
     codemirror "^6.0.1"
-    compression "^1.8.0"
+    compression "^1.8.1"
     concurrently "^9.2.0"
     cookie-parser "^1.4.7"
     express "^5.0.1"
@@ -1626,8 +1626,9 @@
     he "^1.2.0"
     http-proxy-middleware "^3.0.3"
     insane "^2.6.2"
-    lit "^3.2.1"
-    lit-html "^3.2.1"
+    lit "^3.3.1"
+    lit-html "^3.3.1"
+    open-editor "^5.1.0"
     prism-svelte "^0.5.0"
     prismjs "^1.29.0"
 
@@ -1753,7 +1754,7 @@
     web-features "^2.40.2"
     web-specs "^3.54.0"
 
-"@mozilla/glean@5.0.5", "@mozilla/glean@^5.0.4":
+"@mozilla/glean@5.0.5", "@mozilla/glean@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@mozilla/glean/-/glean-5.0.5.tgz#6b319c49b3a0d421a529b986d9df9506ff353bb7"
   integrity sha512-OvimNMd4X/HzP9i5UOpYKpi+nqm8GugwIVV/XA5dgDfIkH1MniXBpUbBtn7xZdoHPg3AXpdmESkSN6f0THQPOQ==
@@ -3622,7 +3623,7 @@ compressible@~2.0.18:
   dependencies:
     mime-db ">= 1.43.0 < 2"
 
-compression@^1.8.0, compression@^1.8.1:
+compression@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/compression/-/compression-1.8.1.tgz#4a45d909ac16509195a9a28bd91094889c180d79"
   integrity sha512-9mAqGPHLakhCLeNyxPkK4xVo746zQ/czLH1Ky+vkitMnWfWZps8r0qXuwhwizagCRttsL4lfG4pIOvaWLpAP0w==
@@ -6732,14 +6733,14 @@ lit-element@^4.0.4, lit-element@^4.2.0:
     "@lit/reactive-element" "^2.1.0"
     lit-html "^3.3.0"
 
-lit-html@^3.1.2, lit-html@^3.2.1, lit-html@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-3.3.0.tgz#f66c734a6c69dbb12abf9a718fa5d3dfb46d0b7c"
-  integrity sha512-RHoswrFAxY2d8Cf2mm4OZ1DgzCoBKUKSPvA1fhtSELxUERq2aQQ2h05pO9j81gS1o7RIRJ+CePLogfyahwmynw==
+lit-html@^3.1.2, lit-html@^3.3.0, lit-html@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-3.3.1.tgz#f0a7e4b9ea0a1d034eb28a4bf2d1b0a0096253e3"
+  integrity sha512-S9hbyDu/vs1qNrithiNyeyv64c9yqiW9l+DBgI18fL+MTvOtWoFR0FWiyq1TxaYef5wNlpEmzlXoBlZEO+WjoA==
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^3.1.2, lit@^3.2.1, lit@^3.3.1:
+lit@^3.1.2, lit@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/lit/-/lit-3.3.1.tgz#9dc79be626bc9a3b824de98b107dd662cabdeda6"
   integrity sha512-Ksr/8L3PTapbdXJCk+EJVB78jDodUMaP54gD24W186zGRARvwrsPfS60wae/SSCTCNZVPd1chXqio1qHQmu4NA==

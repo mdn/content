@@ -48,6 +48,7 @@ belgin
 Benbadis
 Bento4
 Berners
+Bila
 Binaryen
 Birtles
 bitsies
@@ -89,6 +90,7 @@ Chakra
 Chamakh
 Chimero
 Chloé
+Choco
 Choyce
 chrisdavidmills
 Chromecast
@@ -170,6 +172,7 @@ Eisenberg
 Elaina
 Elchi
 Elfie
+Elliotte
 Elly
 Emscripten
 Endtest
@@ -207,6 +210,7 @@ geckodriver
 Gedit
 Gerd
 Giancarlo
+Giorgio
 Gitbash
 Golightly
 Googlebot
@@ -217,6 +221,7 @@ Graywolf9
 Grigsby
 Grissom
 Groff
+Grosso
 GSAP
 Guildford
 Haile
@@ -267,6 +272,8 @@ Jayla
 Jeni
 Jewett
 Jinping
+Jirat
+Jiri
 Jitsi
 Johansson
 Joomla
@@ -364,6 +371,7 @@ Miata
 Mielczarek
 Mihajlija
 Milica
+Miloslav
 Miracast
 Miroslav
 mirunacurtean
@@ -464,6 +472,7 @@ Recep
 Reis
 Rekapi
 Remy
+Resian
 Resig
 Rigby
 Robison
