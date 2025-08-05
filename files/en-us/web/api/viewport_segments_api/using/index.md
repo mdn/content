@@ -44,13 +44,8 @@ The viewport segments API provides features to overcome the challenges described
 
 The {{cssxref("@media/horizontal-viewport-segments")}} media feature detects whether the device has a specified number of viewport segments laid out horizontally, whereas the {{cssxref("@media/vertical-viewport-segments")}} media feature detects whether the device has a specified number of viewport segments laid out vertically.
 
-The feature design is also flexible to support future devices that may have more than two segments:
-
-```css
-@media (horizontal-viewport-segments: 3) {
-  /* ... */
-}
-```
+> [!NOTE]
+> Current implementations do not support more than two foldable screens.
 
 ## Viewport segment environment variables
 
@@ -82,7 +77,6 @@ The values are both integers of `0` or greater. The first value represents the h
 
 - In a horizontal side-by-side layout, the left segment is represented by `0 0`, and the right segment is represented by `1 0`.
 - In a vertical top to bottom layout, the top segment is represented by `0 0`, and the bottom segment is represented by `0 1`.
-- In theoretical future devices that have more than 2 segments, the numbers could be greater. Imagine a device with 9 screens representing different viewport segments arranged in a 3x3 grid. The middle segment would be represented by `1 1`, and the bottom-right segment would be represented by `2 2`.
 
 In a layout, you can use these variables to set your containers to fit neatly into the available segments. For example:
 

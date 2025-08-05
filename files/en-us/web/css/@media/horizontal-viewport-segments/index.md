@@ -14,9 +14,9 @@ This media feature is part of the [Viewport segments API](/en-US/docs/Web/API/Vi
 
 The `horizontal-viewport-segments` feature is specified as an integer of `1` or greater, representing the number of horizontal viewport segments the device has.
 
-- The value will usually be `2`, as foldable devices generally have two viewport segments (arranged either horizontally or vertically).
-- A value of `1` doesn't serve a useful purpose — you can use this to detect a viewport with only one horizontal segment, but this is the standard case for devices anyway, and you can apply CSS to this case without using any media queries.
-- Future devices may have more than two screens arranged in a row (or column), meaning that values of greater than `2` may be useful in the future.
+- The value will be `2` for a two-screen foldable device that is currently folded (in the [`folded` device posture](/en-US/docs/Web/API/Device_Posture_API#folded)) either horizontally or vertically.
+- The value will be `1` for a foldable device that is either unfolded or closed (in the [`continuous` device posture](/en-US/docs/Web/API/Device_Posture_API#continuous)), or a non-foldable device.
+- The value may be greater than `2` in future implementations, for foldable devices with more than two screens. Current implementations do not support more than two foldable screens.
 
 ## Examples
 
