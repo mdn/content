@@ -181,11 +181,11 @@ fetch("https://example.com/", {
       </td>
       <td>
         <pre class="brush: js">
-          const stream = new ReadableStream({ /* ... */ });
-          fetch("https://example.com", {
-            method: "POST",
-            body: stream,
-          });
+const stream = new ReadableStream({ /* ... */ });
+fetch("https://example.com", {
+  method: "POST",
+  body: stream,
+});
         </pre>
       </td>
     </tr>
