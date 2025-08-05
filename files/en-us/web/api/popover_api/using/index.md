@@ -49,7 +49,7 @@ When a popover is shown, it has `display: none` removed from it and it is put in
 
 ### `command` and `commandfor`
 
-More recent additions to the web platform are the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes. These provide very similar functionality to `popovertarget` and `popovertargetaction`, but with a more general design aimed at providing other functionality beyond popover commands, including custom commands.
+The [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes provide very similar functionality to `popovertarget` and `popovertargetaction`, but with a more general design aimed at providing other functionality beyond popover commands, including custom commands.
 
 The previous code snippet could be rewritten like this:
 
