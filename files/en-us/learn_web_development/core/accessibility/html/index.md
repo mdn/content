@@ -552,6 +552,6 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 ## Summary
 
-You should now be well-versed in writing accessible HTML for most occasions. Next up, we'll test your knowledge of HTML accessibility, to see whether you can remember the most important information.
+You should now be well-versed in writing accessible HTML for most occasions. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}

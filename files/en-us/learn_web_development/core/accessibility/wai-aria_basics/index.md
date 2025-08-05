@@ -898,7 +898,7 @@ You can also find several live examples in our [WAI-ARIA roles](/en-US/docs/Web/
 
 This article has by no means covered all that's available in WAI-ARIA, but it should have given you enough information to understand how to use it, and know some of the most common patterns you will encounter that require it.
 
-Next up, we'll test your knowledge of WAI-ARIA, to see whether you can remember the most important information.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 

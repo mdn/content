@@ -360,6 +360,6 @@ The [click](/en-US/docs/Web/API/Element/click_event) event is interesting — it
 
 We hope this article has given you a good amount of detail and understanding about the accessibility issues surrounding CSS and JavaScript use on web pages.
 
-In the next article we'll test your knowledge of CSS and JavaScript accessibility, to see whether you can remember the most important information.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/HTML","Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
