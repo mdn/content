@@ -25,9 +25,9 @@ The `layerName` property returns the name of the layer associated with the impor
 stylesheet.
 
 ```css
-@import url("style1.css") layer(layer-1);
-@import url("style2.css") layer;
-@import url("style3.css");
+@import "style1.css" layer(layer-1);
+@import "style2.css" layer;
+@import "style3.css";
 ```
 
 ```js

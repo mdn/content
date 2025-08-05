@@ -497,14 +497,14 @@ padding-left: 5px;
 This one line:
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
 ```
 
 is equivalent to these five lines:
 
 ```css
 background-color: red;
-background-image: url(bg-graphic.png);
+background-image: url("bg-graphic.png");
 background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;
@@ -563,9 +563,9 @@ div p + p {
 "Commenting out" code is also useful for temporarily disabling sections of code for testing. In the example below, the rules for `.special` are disabled by "commenting out" the code.
 
 ```css
-/*.special {
+/* .special {
   color: red;
-}*/
+} */
 
 p {
   color: blue;

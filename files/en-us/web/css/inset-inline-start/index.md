@@ -72,7 +72,7 @@ writing-mode: vertical-lr;
 /* <length> values */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
-inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: calc(anchor(--my-anchor 50%) + 10px);
 inset-inline-start: anchor-size(width);
 
 /* <percentage>s of the width or height of the containing block */

@@ -43,7 +43,7 @@ caret-color: transparent;
 /* Keyword values */
 caret-color: auto;
 caret-color: transparent;
-caret-color: currentcolor;
+caret-color: currentColor;
 
 /* <color> values */
 caret-color: red;

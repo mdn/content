@@ -68,7 +68,7 @@ margin-inline-start: 10px; /* An absolute length */
 margin-inline-start: 1em; /* relative to the text size */
 margin-inline-start: 5%; /* relative to the nearest block container's width */
 margin-inline-start: anchor-size(block);
-margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
+margin-inline-start: calc(anchor-size(--my-anchor width, 30px) / 4);
 
 /* Keyword values */
 margin-inline-start: auto;

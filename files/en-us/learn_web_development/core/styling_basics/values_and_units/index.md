@@ -358,7 +358,7 @@ In the below example, try changing the value of `opacity` to various decimal val
 
 ```css live-sample___opacity
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
@@ -521,7 +521,7 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ```css live-sample___color-rgba
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -623,7 +623,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 ```css live-sample___color-hsla
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -670,7 +670,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 }
 
 .image {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
 .gradient {
@@ -707,7 +707,7 @@ Try playing around with these values to see how you can push the image around.
 .box {
   height: 200px;
   width: 400px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
   background-repeat: no-repeat;
   background-position: right 60px;
   margin: 20px auto;

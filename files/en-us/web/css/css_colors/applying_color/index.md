@@ -33,7 +33,7 @@ Whenever an element is rendered, these properties are used to determine the colo
   - : Configures a shadow effect to apply to text. Among the options for the shadow is the shadow's base color (which is then blurred and blended with the background based on the other parameters). See [Text drop shadows](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
-  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
+  - : The default text decorations (such as underlines, strikethroughs, etc.) color is [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword). This keyword represents the current value of the `color` property. However, you can override that value and use a different color for them with the `text-decoration-color` property.
 
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when rendering emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.

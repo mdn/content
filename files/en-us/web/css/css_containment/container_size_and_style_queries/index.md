@@ -259,10 +259,10 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
       <label for="blue">--theme: blue</label>
     </li>
     <li>
-      <input type="radio" name="selection" value="currentcolor" id="other" />
+      <input type="radio" name="selection" value="currentColor" id="other" />
       <label for="other">Other</label>
       <label for="color">color:</label>
-      <input text="checkbox" name="selection" value="currentcolor" id="color" />
+      <input text="checkbox" name="selection" value="currentColor" id="color" />
     </li>
   </ol>
 </fieldset>
@@ -338,7 +338,7 @@ The second style query states that when `--theme` is equivalent to `red`, the `<
 
 {{EmbedLiveSample('example','100%','200')}}
 
-Try entering different color values into the text box. You may notice that values that are sRGB equivalents of `red` will make the `<output>` red — as it matches `style(--theme: red)` — while removing the outline, because `style(--theme)` returns false if the element's value for `--theme` is the same as the initial value for `--theme` defined by the `@property` at-rule. Any non-red sRGB valid color value, including `currentcolor` or `hsl(180 100% 50%)`, etc., makes the first style query return true; they are values that are different from the `initial-value`.
+Try entering different color values into the text box. You may notice that values that are sRGB equivalents of `red` will make the `<output>` red — as it matches `style(--theme: red)` — while removing the outline, because `style(--theme)` returns false if the element's value for `--theme` is the same as the initial value for `--theme` defined by the `@property` at-rule. Any non-red sRGB valid color value, including `currentColor` or `hsl(180 100% 50%)`, etc., makes the first style query return true; they are values that are different from the `initial-value`.
 
 Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid `<color>` values. Valid values for the {{cssxref("color")}} property that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) for this custom property, and will be ignored.
 

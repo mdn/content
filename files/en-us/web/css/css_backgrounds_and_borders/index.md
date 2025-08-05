@@ -38,19 +38,19 @@ div {
   width: 240px;
   padding: 20px;
   margin: 10px;
-  border: dotted 15px; /* defaults to `currentcolor` */
+  border: dotted 15px; /* defaults to `currentColor` */
   border-radius: 100px 0;
   background-image:
     radial-gradient(
       circle,
       transparent 60%,
-      currentcolor 60% 70%,
+      currentColor 60% 70%,
       transparent 70%
     ),
-    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(45deg, currentColor, white),
     linear-gradient(transparent, transparent);
   /* the third transparent background image was added to provide space for the background color to show through */
-  background-color: currentcolor;
+  background-color: currentColor;
   background-position: center;
   background-size:
     60px 60px,
@@ -181,7 +181,7 @@ The CSS backgrounds module level 4 also introduces the `background-position-bloc
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
 - [`<position>`](/en-US/docs/Web/CSS/position) data type
 
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) keyword
 
 ## Specifications
 

@@ -523,7 +523,7 @@ body {
 }
 .c-cb > label::before {
   background: transparent;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   content: "";
   position: absolute;
 }

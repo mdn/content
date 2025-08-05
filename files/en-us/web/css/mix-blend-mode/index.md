@@ -656,19 +656,19 @@ body {
 .R {
   transform-origin: center;
   transform: rotate(-30deg);
-  fill: url(#red);
+  fill: url("#red");
 }
 
 .G {
   transform-origin: center;
   transform: rotate(90deg);
-  fill: url(#green);
+  fill: url("#green");
 }
 
 .B {
   transform-origin: center;
   transform: rotate(210deg);
-  fill: url(#blue);
+  fill: url("#blue");
 }
 
 .isolate .group {
@@ -828,7 +828,7 @@ This example uses `mix-blend-mode` to blend text color with the background color
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap";
 
 .container {
   background-color: blue;

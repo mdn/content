@@ -17,7 +17,7 @@ The **`lighting-color`** [CSS](/en-US/docs/Web/CSS) property defines the color o
 /* <color> values */
 lighting-color: red;
 lighting-color: hsl(120deg 75% 25% / 60%);
-lighting-color: currentcolor;
+lighting-color: currentColor;
 
 /* Global values */
 lighting-color: inherit;

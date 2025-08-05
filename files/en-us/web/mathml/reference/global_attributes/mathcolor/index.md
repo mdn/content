@@ -44,7 +44,7 @@ body {
 
 ```html-nolint
 <!-- Keyword values -->
-<math mathcolor="currentcolor">
+<math mathcolor="currentColor">
 
 <!-- <named-color> values -->
 <math mathcolor="red">

@@ -19,7 +19,7 @@ To apply an SVG effect using CSS styles, you first need to create the CSS style 
 
 ```css
 p {
-  mask: url(#my-mask);
+  mask: url("#my-mask");
 }
 ```
 
@@ -44,7 +44,7 @@ For example, you can make a gradient mask for HTML content using SVG and CSS cod
 
 ```css
 .target {
-  mask: url(#mask-1);
+  mask: url("#mask-1");
 }
 p {
   width: 300px;
@@ -109,7 +109,7 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 
 ```css
 .target {
-  clip-path: url(#clipping-path-1);
+  clip-path: url("#clipping-path-1");
 }
 p {
   width: 300px;
@@ -225,22 +225,22 @@ The five filters are applied using the following CSS:
 
 ```css
 p.target {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 p.target:hover {
-  filter: url(#f5);
+  filter: url("#f5");
 }
 em.target {
-  filter: url(#f1);
+  filter: url("#f1");
 }
 em.target:hover {
-  filter: url(#f4);
+  filter: url("#f4");
 }
 pre.target {
-  filter: url(#f2);
+  filter: url("#f2");
 }
 pre.target:hover {
-  filter: url(#f3);
+  filter: url("#f3");
 }
 ```
 
@@ -265,7 +265,7 @@ You can apply the SVG and the CSS filter in the same class:
 
 ```css
 .blur {
-  filter: url(#wherearemyglasses);
+  filter: url("#wherearemyglasses");
 }
 ```
 
@@ -295,7 +295,7 @@ For example, if your CSS is in a file named `default.css`, it can look like this
 
 ```css
 .target {
-  clip-path: url(resources.svg#c1);
+  clip-path: url("resources.svg#c1");
 }
 ```
 

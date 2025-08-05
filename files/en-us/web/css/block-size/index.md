@@ -44,7 +44,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -55,7 +55,7 @@ writing-mode: vertical-lr;
 block-size: 300px;
 block-size: 25em;
 block-size: anchor-size(height);
-block-size: calc(anchor-size(--myAnchor block) * 0.75);
+block-size: calc(anchor-size(--my-anchor block) * 0.75);
 
 /* <percentage> values */
 block-size: 75%;

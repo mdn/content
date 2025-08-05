@@ -76,7 +76,7 @@ Content-Security-Policy: style-src-elem https://example.com/
 </style>
 
 <style>
-  @import url("https://not-example.com/styles/print.css") print;
+  @import "https://not-example.com/styles/print.css" print;
 </style>
 ```
 

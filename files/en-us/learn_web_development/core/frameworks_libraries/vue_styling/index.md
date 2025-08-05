@@ -61,7 +61,7 @@ While this tutorial will not be using such tools, it's good to know that when in
 Add the following contents to the `reset.css` file:
 
 ```css
-/*reset.css*/
+/* reset.css */
 /* RESETS */
 *,
 *::before,
@@ -137,7 +137,7 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 ```
 
 Next, in your `src/main.js` file, import the `reset.css` file like so:
@@ -420,7 +420,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {

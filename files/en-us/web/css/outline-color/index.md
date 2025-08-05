@@ -27,7 +27,7 @@ outline-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
-outline-color: currentcolor;
+outline-color: currentColor;
 ```
 
 ```html interactive-example
@@ -70,7 +70,7 @@ The `outline-color` property is specified as any one of the values listed below.
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
 
-The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/accent-color).
+The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description
 

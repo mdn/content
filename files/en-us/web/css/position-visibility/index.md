@@ -186,11 +186,11 @@ form {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   position-area: top span-all;
   margin-bottom: 5px;
