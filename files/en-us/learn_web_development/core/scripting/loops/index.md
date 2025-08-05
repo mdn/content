@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
 
@@ -850,16 +850,12 @@ do {
 > [!NOTE]
 > There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Loops](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
-
 ## Summary
 
 This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript.
 You should now be clear on why loops are a good mechanism for dealing with repetitive code and raring to use them in your own examples!
 
-Next up, we'll look at functions.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
 ## See also
 
@@ -869,4 +865,4 @@ Next up, we'll look at functions.
 - [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Conditionals","Learn_web_development/Core/Scripting/Test_your_skills/Loops", "Learn_web_development/Core/Scripting")}}
