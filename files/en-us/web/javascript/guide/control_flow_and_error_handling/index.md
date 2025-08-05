@@ -398,7 +398,7 @@ try {
 The `finally` block contains statements to be executed _after_ the
 `try` and `catch` blocks execute. Additionally, the
 `finally` block executes _before_ the code that follows the
-`try…catch…finally` statement.
+`try...catch...finally` statement.
 
 It is also important to note that the `finally` block will execute
 _whether or not_ an exception is thrown. If an exception is thrown, however, the
@@ -427,7 +427,7 @@ try {
 ```
 
 If the `finally` block returns a value, this value becomes the return value
-of the entire `try…catch…finally` production, regardless of any
+of the entire `try...catch...finally` production, regardless of any
 `return` statements in the `try` and `catch` blocks:
 
 ```js
@@ -444,6 +444,7 @@ function f() {
   } finally {
     console.log(3);
     return false; // overwrites the previous "return"
+    // `f` exits here
     console.log(4); // not reachable
   }
   console.log(5); // not reachable
@@ -464,8 +465,8 @@ function f() {
     // finally block has completed
     throw e;
   } finally {
-    // "return false" is executed now
     return false; // overwrites the previous "throw"
+    // `f` exits here
   }
 }
 
