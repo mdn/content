@@ -465,7 +465,7 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {

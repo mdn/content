@@ -11,7 +11,7 @@ The **`all`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) 
 {{InteractiveExample("CSS Demo: all")}}
 
 ```css interactive-example-choice
-/*no all property*/
+/* no all property */
 ```
 
 ```css interactive-example-choice

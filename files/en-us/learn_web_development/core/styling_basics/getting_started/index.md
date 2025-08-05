@@ -563,9 +563,9 @@ div p + p {
 "Commenting out" code is also useful for temporarily disabling sections of code for testing. In the example below, the rules for `.special` are disabled by "commenting out" the code.
 
 ```css
-/*.special {
+/* .special {
   color: red;
-}*/
+} */
 
 p {
   color: blue;
