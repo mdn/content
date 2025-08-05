@@ -138,7 +138,7 @@ This example demonstrates the applying `background-color` to HTML {{HTMLelement(
 
 .example-three {
   background-color: #777799;
-  color: #ffffff;
+  color: white;
 }
 ```
 

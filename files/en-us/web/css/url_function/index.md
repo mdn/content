@@ -13,6 +13,14 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 >
 > In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
+Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
+
+The **`url()`** function can be included as a value for
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
+[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/@counter-style/symbols)
+
+## Syntax
+
 ```css
 /* Basic usage */
 url("https://example.com/images/myImg.jpg");
@@ -50,19 +58,6 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 @document url("https://www.example.com/") { /* … */ }
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
-```
-
-Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
-
-The **`url()`** function can be included as a value for
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/@counter-style/symbols)
-
-## Syntax
-
-```css
-url("https://example.com/image.png")
-url(https://example.com/image.png)
 ```
 
 ### Values
@@ -164,11 +159,11 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 
 ```css
 .blur {
-  filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
+  filter: url("my-file.svg#svg-blur"); /* the URL of an SVG file used as a filter */
 }
 
 .inline-blur {
-  filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
+  filter: url("#svg-blur"); /* the ID of an SVG that is embedded in the HTML page */
 }
 ```
 

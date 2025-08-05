@@ -28,7 +28,7 @@ The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 ```css
 :-moz-loading {
-  background: url(loading-animation.gif) center no-repeat;
+  background: url("loading-animation.gif") center no-repeat;
 }
 ```
 

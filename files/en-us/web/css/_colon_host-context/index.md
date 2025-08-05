@@ -77,11 +77,11 @@ function init() {
 /* Changes paragraph text color from black to white when
    a .dark-theme class is applied to the document body */
 p {
-  color: #000;
+  color: black;
 }
 
 :host-context(body.dark-theme) p {
-  color: #fff;
+  color: white;
 }
 ```
 

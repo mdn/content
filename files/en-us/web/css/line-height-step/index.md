@@ -67,7 +67,7 @@ The result of these rules is shown below in the following screenshot:
 
 ## Specifications
 
-{{Specifications}}
+Currently, no browsers support this feature.
 
 ## Browser compatibility
 
@@ -78,3 +78,4 @@ The result of these rules is shown below in the following screenshot:
 - {{Cssxref("font")}}
 - {{Cssxref("font-size")}}
 - {{Cssxref("line-height")}}
+- [CSS Rhythmic Sizing](https://drafts.csswg.org/css-rhythm/) specification

@@ -94,11 +94,11 @@ This example demonstrates two things about background images. By default, the la
 }
 
 .a {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
 }
 
 .b {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
 }
 ```
 
@@ -136,7 +136,7 @@ Try these values out in the example below. We have set the value to `no-repeat` 
 
 ```css live-sample___repeat
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -178,7 +178,7 @@ Try the following:
 
 ```css live-sample___size
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-size: 80px 10em;
 }
@@ -197,7 +197,7 @@ The most common `background-position` values take two individual values — a ho
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -207,7 +207,7 @@ You can also use {{cssxref("length", "lengths")}} and {{cssxref("percentage", "p
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -217,7 +217,7 @@ You can also mix keyword values with lengths or percentages, in which case the f
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: 20px top;
 }
@@ -227,7 +227,7 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 ```css
 .box {
-  background-image: url(image.png);
+  background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
@@ -253,7 +253,7 @@ Use the example below to play around with these values and move the star around 
 
 ```css live-sample___position
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star.png");
   background-repeat: no-repeat;
   background-position: 120px 1em;
 }
@@ -328,7 +328,7 @@ The other `background-*` properties can also have comma-separated values in the 
 
 ```css
 background-image:
-  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+  url("image1.png"), url("image2.png"), url("image3.png"), url("image4.png");
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -366,8 +366,8 @@ Let's play. The example below includes two background images. Try editing the ex
 
 .box {
   background-image:
-    url(https://mdn.github.io/shared-assets/images/examples/star.png),
-    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+    url("https://mdn.github.io/shared-assets/images/examples/star.png"),
+    url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 ```
 
@@ -412,8 +412,8 @@ Take a look at the MDN page for {{cssxref("background")}} to learn more about th
         rgb(51 56 57 / 100%) 96%
       )
       center center / 400px 200px no-repeat,
-    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
-      no-repeat,
+    url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
+      center no-repeat,
     rebeccapurple;
 }
 ```
