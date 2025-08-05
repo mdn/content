@@ -53,7 +53,7 @@ border-style: dashed groove none dotted;
 }
 
 body {
-  background-color:;
+  background-color: white;
 }
 ```
 

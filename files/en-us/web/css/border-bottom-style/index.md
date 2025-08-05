@@ -53,7 +53,7 @@ border-bottom-style: inset;
 }
 
 body {
-  background-color:;
+  background-color: white;
 }
 ```
 
