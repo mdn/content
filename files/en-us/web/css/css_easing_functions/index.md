@@ -2,18 +2,17 @@
 title: CSS easing functions
 slug: Web/CSS/CSS_easing_functions
 page-type: css-module
-spec-urls:
-  - https://drafts.csswg.org/css-easing-2
+spec-urls: https://drafts.csswg.org/css-easing-2
 sidebar: cssref
 ---
 
-The **CSS easing functions** module defines functions that control the rate of change of transformation values. Easing functions provide a means to control the transformation of values. The functions defined include linear, cubic bezier, and step easing functions. These easing functions can be applied to animations and transitions. The transformation easing functions can be used to produce animations that mimic physical phenomena such as momentum or to cause the animation to move in discrete steps producing robot-like movement.
+The **CSS easing functions** module defines easing functions, which provide a means to control the transformation of values. The functions defined include linear, cubic bezier, and step easing functions. These easing functions can be applied to animations and transitions. The transformation easing functions can be used to produce animations that mimic physical phenomena such as momentum or to cause the animation to move in discrete steps producing robot-like movement.
 
-Easing functions enable you to control the rate at which a value changes. For example, gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. This can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts. Alternatively, it is sometimes desirable for animation to move forwards in distinct steps such as a segmented wheel that rotates such that the segments always appear in the same position.
+Gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. Easing functions enable you to control that rate at of change. Cubic bezier easing functions can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts.
 
-Similarly, controlling the rate of change of gradient interpolation can be used to produce different visual effects such as suggesting a concave or convex surface, or producing a striped effect.
+Alternatively, you may want an animation to move forwards in distinct steps such as a segmented wheel that rotates such that the segments always appear in the same position. For this, step easing functions can be used.
 
-Easing functions provide a means to transform such values by taking an input progress value and producing a corresponding transformed output progress value.
+By default, gradient color changes progress linearly between each pair of color stops. Easing functions enable controlling the rate of change of gradient interpolation, which can be used to produce different visual effects such as suggesting a concave or convex surface, or producing a striped effect.
 
 ## Reference
 
