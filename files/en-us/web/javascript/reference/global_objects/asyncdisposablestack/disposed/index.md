@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype.disposed
+short-title: disposed
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/disposed
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.AsyncDisposableStack.disposed

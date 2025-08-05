@@ -194,7 +194,7 @@ p {
   color: rgb(255 255 255);
 }
 
-.semiwhite {
+.semi-white {
   color: rgb(255 255 255 / 0.75);
 }
 ```
@@ -204,7 +204,7 @@ p {
 <p class="semitransparent">The text is semiopaque black</p>
 <p class="transparent">The text is transparent black</p>
 <p class="white">The text is opaque white</p>
-<p class="semiwhite">The text is semiopaque white</p>
+<p class="semi-white">The text is semiopaque white</p>
 ```
 
 ```css hidden live-sample___opaque

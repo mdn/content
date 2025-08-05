@@ -1,5 +1,6 @@
 ---
 title: AsyncDisposableStack.prototype.defer()
+short-title: defer()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/defer
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncDisposableStack.defer

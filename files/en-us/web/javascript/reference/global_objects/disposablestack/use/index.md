@@ -1,5 +1,6 @@
 ---
 title: DisposableStack.prototype.use()
+short-title: use()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/use
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.use

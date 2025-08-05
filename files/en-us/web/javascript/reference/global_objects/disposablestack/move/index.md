@@ -1,5 +1,6 @@
 ---
 title: DisposableStack.prototype.move()
+short-title: move()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/move
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DisposableStack.move
@@ -31,7 +32,7 @@ A new {{jsxref("DisposableStack")}} instance.
 
 The primary purpose of `move()` is to enable transferring responsibility for disposal out of the current scope. For example, your function can claim ownership of some resources and dispose them if an error occurs; if everything completes successfully, then you return these resources and transfer ownership to the caller.
 
-When using `move()` to transfer ownership, caling `move()` should be the very last step in your control flow, because there will be no owner in between your code dropping ownership via `move()` and the caller picking up ownership from the return value.
+When using `move()` to transfer ownership, calling `move()` should be the very last step in your control flow, because there will be no owner in between your code dropping ownership via `move()` and the caller picking up ownership from the return value.
 
 ```js example-good
 let resource1;

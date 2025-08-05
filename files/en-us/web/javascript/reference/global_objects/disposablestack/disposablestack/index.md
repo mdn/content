@@ -1,5 +1,6 @@
 ---
 title: DisposableStack() constructor
+short-title: DisposableStack()
 slug: Web/JavaScript/Reference/Global_Objects/DisposableStack/DisposableStack
 page-type: javascript-constructor
 browser-compat: javascript.builtins.DisposableStack.DisposableStack
