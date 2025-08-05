@@ -82,7 +82,7 @@ color: hsl(300deg 100% 50% / 100%);
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 
-/* by LAB representation of the sRGB value*/
+/* by LAB representation of the sRGB value */
 color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 

@@ -16,9 +16,10 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 
 - {{CSSxRef("image-orientation")}}
 - {{CSSxRef("image-rendering")}}
-- {{CSSxRef("image-resolution")}}
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+
+The CSS images module also defines the {{CSSxRef("image-resolution")}} property. Currently, no browsers support this feature.
 
 ### Functions
 
@@ -32,7 +33,7 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 
-The specification also defines the {{CSSxRef("image/image", "image()")}} function, which is not yet supported by any browser.
+The CSS images module also defines the {{CSSxRef("image/image", "image()")}} function. Currently, no browsers support this feature.
 
 ### Data types
 

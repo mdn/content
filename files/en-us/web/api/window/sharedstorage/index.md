@@ -24,7 +24,7 @@ A {{domxref("WindowSharedStorage")}} object instance.
 ```js
 window.sharedStorage
   .set("ab-testing-group", "0")
-  .then(console.log("Value saved to shared storage"));
+  .then(() => console.log("Value saved to shared storage"));
 ```
 
 ## Specifications

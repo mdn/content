@@ -1,13 +1,13 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Nightly)
+short-title: Firefox 142 (Beta)
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.
-Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=141).
+Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -18,11 +18,13 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
 
 <!-- No notable changes. -->
 
-<!-- #### Removals -->
+#### Removals
+
+- The {{HTMLElement('object')}} element no longer supports the deprecated `codebase` attribute. Use the [`data`](/en-US/docs/Web/HTML/Reference/Elements/object#data) attribute instead. (See [Firefox bug 1973900](https://bugzil.la/1973900) for more details.)
 
 <!-- ### CSS -->
 
@@ -79,6 +81,10 @@ Firefox 142 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- ### Other -->
 
 ## Experimental web features
+
+- **`anchor-size()`** (Nightly): `layout.css.anchor-positioning.enabled`
+
+  The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
 
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.

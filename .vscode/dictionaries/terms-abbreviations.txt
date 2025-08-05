@@ -275,6 +275,7 @@ halfwidth
 harissa
 HDCP
 headworn
+highlightable
 HILN
 hissy
 hitbox
@@ -549,6 +550,7 @@ quicklinks
 quickmenu
 qvalues
 QWERTZ
+RAII
 rari
 rasterizes
 RDBMS

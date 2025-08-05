@@ -465,7 +465,7 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
@@ -670,7 +670,7 @@ body {
 .c-cb > label::before {
   content: "";
   position: absolute;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .c-cb > input[type="checkbox"]:focus + label::before {

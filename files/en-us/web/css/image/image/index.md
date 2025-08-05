@@ -159,7 +159,7 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
@@ -170,3 +170,4 @@ There is no browser implementing this feature.
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module

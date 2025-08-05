@@ -42,11 +42,11 @@ svg|a {
 
 ```css
 /* Default namespace */
-@namespace url(XML-namespace-URL);
+@namespace url("XML-namespace-URL");
 @namespace "XML-namespace-URL";
 
 /* Prefixed namespace */
-@namespace prefix url(XML-namespace-URL);
+@namespace prefix url("XML-namespace-URL");
 @namespace prefix "XML-namespace-URL";
 ```
 
@@ -74,8 +74,8 @@ In HTML, known [foreign elements](https://html.spec.whatwg.org/multipage/syntax.
 ### Specifying default and prefixed namespaces
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace url("http://www.w3.org/1999/xhtml");
+@namespace svg url("http://www.w3.org/2000/svg");
 
 /* This matches all XHTML <a> elements, as XHTML is the default unprefixed namespace */
 a {

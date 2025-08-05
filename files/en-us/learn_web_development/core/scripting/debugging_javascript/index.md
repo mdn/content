@@ -178,7 +178,7 @@ The main feature of such tools is the ability to add breakpoints to code — the
 
 Let's explore using breakpoints:
 
-1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
+1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on the line number in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
 2. Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
 
 ![Firefox debugger with a breakpoint](breakpoint.png)

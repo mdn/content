@@ -19,7 +19,7 @@ Users can move through the items by clicking or activating navigational buttons 
 - **scroll markers**
   - : A series of button or link icons, each representing one or more items depending on how many items are shown at each scroll position within the carousel.
 
-![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](carousel.png)
+![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](/shared-assets/images/diagrams/css/carousels/carousel.svg)
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
@@ -209,12 +209,12 @@ First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, e
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 
@@ -261,7 +261,7 @@ Next, the list's `::scroll-marker-group` pseudo-element is positioned relative t
 ```css live-sample___first-example
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 
@@ -482,12 +482,12 @@ ul::scroll-button(right) {
 }
 
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 
 ul::scroll-button(left) {
@@ -506,7 +506,7 @@ ul {
 
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
   display: flex;
