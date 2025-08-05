@@ -71,24 +71,16 @@ If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return
 // Get permission to access audio or video devices
 navigator.mediaDevices
   .getUserMedia({ audio: true, video: true })
-  .then((stream) => {
-    console.log("Media stream started:", stream);
-
-    // Enumerate media devices
-    navigator.mediaDevices
-      .enumerateDevices()
-      .then((devices) => {
-        devices.forEach((device) => {
-          if (typeof device.getCapabilities === "function") {
-            console.log("Capabilities:", device.getCapabilities());
-          } else {
-            console.log("Device does not support getCapabilities:", device);
-          }
-        });
-      })
-      .catch((enumerateError) => {
-        console.error("Error enumerating devices:", enumerateError);
-      });
+  // Enumerate media devices
+  .then(() => navigator.mediaDevices.enumerateDevices())
+  .then((devices) => {
+    devices.forEach((device) => {
+      if (typeof device.getCapabilities === "function") {
+        console.log("Capabilities:", device.getCapabilities()); // A MediaTrackCapabilities object.
+      } else {
+        console.log("Device does not support getCapabilities:", device);
+      }
+    });
   })
   .catch((mediaError) => {
     console.error("Error accessing media devices:", mediaError);
