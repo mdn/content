@@ -631,6 +631,6 @@ You could use the starting point that we have created to test out more media que
 
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
-OK, we're nearly at the end of this module. Next up, we'll give you a test to see if you have retained the fundamentals of responsive web design and media queries, before finishing off with a challenge to test your wider understanding of CSS layout.
+OK, we're nearly at the end of this module. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the responsive web design and media queries information provided in the previous couple of articles.
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

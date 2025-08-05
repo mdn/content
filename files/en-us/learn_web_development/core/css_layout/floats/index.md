@@ -484,6 +484,6 @@ body {
 
 ## Summary
 
-That's all you need to know about floats. Next up, we'll give you some tests to verify that you've retained the most important information before you move on.
+That's all you need to know about floats. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout")}}

@@ -124,6 +124,7 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Media_queries
       - /Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed

@@ -874,7 +874,7 @@ button {
 
 ## Summary
 
-That concludes our tour of the basics of flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll give you some tests to verify that you've retained the most important information before you move on.
+That concludes our tour of the basics of flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 

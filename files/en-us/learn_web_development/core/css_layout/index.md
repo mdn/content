@@ -37,7 +37,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 
 ## Test your skills
 
-You will find regular "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills).
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills).
 
 ## Additional tutorials
 

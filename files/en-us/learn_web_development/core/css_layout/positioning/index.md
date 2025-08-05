@@ -666,7 +666,9 @@ Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling 
 
 ## Summary
 
-I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for. Next up, we'll give you some tests to verify that you've retained the most important information before you move on.
+I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for.
+
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 

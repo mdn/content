@@ -861,7 +861,9 @@ If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/
 
 ## Summary
 
-In this overview, we've toured the main features of CSS grid layout. You should be able to start using it in your designs. Next, we'll give you some tests to verify that you've retained the most important information before you move on.
+In this overview, we've toured the main features of CSS grid layout. You should be able to start using it in your designs.
+
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 
