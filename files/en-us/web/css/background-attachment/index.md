@@ -69,8 +69,8 @@ body {
   overflow: auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+    0 0 0.6rem black,
+    0 0 0.6rem black;
 }
 ```
 

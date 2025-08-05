@@ -45,7 +45,7 @@ border-left-style: inset;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,7 +53,7 @@ border-left-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

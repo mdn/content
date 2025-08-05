@@ -25,15 +25,9 @@ override-colors: 0 rgb(255 0 0);
 
 /* overriding multiple colors */
 override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
-
-/* overriding multiple colors with readability */
-override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
+  0 red,
+  1 green,
+  2 blue;
 ```
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
