@@ -190,6 +190,7 @@ Before standardization, the prefixed **`-moz-appearance`** and **`-webkit-appear
 - `sliderthumb-horizontal`
 - `sliderthumb-vertical`
 - `textfield-multiline`
+
 </details>
 
 Authors are encouraged to use only standard keywords.
