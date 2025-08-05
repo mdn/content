@@ -22,7 +22,7 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmasc
 - [Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character) on Wikipedia
 - [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)
 - {{cssxref("white-space")}}
-- Specifications
+- Specifications:
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 - Related glossary terms:
