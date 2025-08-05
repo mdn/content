@@ -569,6 +569,7 @@ dialog:open {
 }
 
 dialog:open::backdrop {
+  background-color: black;
   animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
@@ -604,11 +605,11 @@ dialog:open::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: transparent;
+    opacity: 0;
   }
 
   100% {
-    background-color: rgb(0 0 0 / 25%);
+    opacity: 0.25;
   }
 }
 

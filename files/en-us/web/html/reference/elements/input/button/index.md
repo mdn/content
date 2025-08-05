@@ -24,7 +24,7 @@ sidebar: htmlsidebar
   color: white;
   text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 20%),
