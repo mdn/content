@@ -446,7 +446,6 @@ function f() {
     return false; // overwrites the previous "return"
     console.log(4); // not reachable
   }
-  // "return false" is executed now
   console.log(5); // not reachable
 }
 console.log(f()); // 0, 1, 3, false
@@ -465,9 +464,9 @@ function f() {
     // finally block has completed
     throw e;
   } finally {
+    // "return false" is executed now
     return false; // overwrites the previous "throw"
   }
-  // "return false" is executed now
 }
 
 try {
