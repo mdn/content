@@ -107,4 +107,5 @@ steps(0, jump-none)
 ## See also
 
 - Other easing functions: {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}} and {{cssxref("easing-function/linear", "linear()")}}
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing-functions) module
 - [Step function](https://en.wikipedia.org/wiki/Step_function) on Wikipedia

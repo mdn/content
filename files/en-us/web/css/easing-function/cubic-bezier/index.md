@@ -141,4 +141,5 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 ## See also
 
 - Other easing functions: {{cssxref("easing-function/linear", "linear()")}} and {{cssxref("easing-function/steps", "steps()")}}
-- [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou (2011)
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing-functions) module
+- [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou
