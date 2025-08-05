@@ -175,12 +175,12 @@ First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to def
 
 ```css live-sample___positioning-scroll-buttons
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 

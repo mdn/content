@@ -122,7 +122,7 @@ for (const value of ofInterest) {
 
 {{EmbedLiveSample(".get_method_custom_properties", 120, 300)}}
 
-We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
+We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
 
 You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/named-color) and the `bold` keyword.
 
@@ -253,19 +253,19 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 
 ```css
 :root {
-  --mainColor: hsl(198 43% 42%);
+  --main-color: hsl(198 43% 42%);
   --black: hsl(0 0% 16%);
   --white: hsl(0 0% 97%);
   --unit: 1.2rem;
 }
 
 button {
-  --mainColor: hsl(198 100% 66%);
+  --main-color: hsl(198 100% 66%);
   display: inline-block;
   padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
-  background: no-repeat 5% center url("magic-wand.png") var(--mainColor);
-  border: 4px solid var(--mainColor);
+  background: no-repeat 5% center url("magic-wand.png") var(--main-color);
+  border: 4px solid var(--main-color);
   border-radius: 2px;
   font-size: calc(var(--unit) * 2);
   color: var(--white);

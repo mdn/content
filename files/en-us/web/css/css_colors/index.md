@@ -64,7 +64,7 @@ The CSS color module also introduces the {{CSSXref("color_value/device-cmyk", "d
 ### Glossary terms and keywords
 
 - {{glossary("color space")}}
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
 - {{glossary("interpolation")}}
 - {{glossary("RGB")}}
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)

@@ -52,8 +52,8 @@ In this example, when the `font-family` descriptor is used in the [@font-palette
 @font-palette-values --bungee-extra-spicy {
   font-family: "Bungee Spice";
   override-colors:
-    0 DarkRed,
-    1 Red;
+    0 darkred,
+    1 red;
 }
 
 h2 {

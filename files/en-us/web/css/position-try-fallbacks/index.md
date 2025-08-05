@@ -157,7 +157,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   margin: 100px 350px;
 }
 ```
@@ -180,7 +180,7 @@ We include a `position-try-fallbacks` list (and re-declare it with the `position
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
 
   position-try-fallbacks: flip-block, flip-inline;
@@ -237,7 +237,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   margin: 100px 350px;
 }
 
@@ -254,7 +254,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
 
   position-try:
@@ -310,7 +310,7 @@ body {
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   margin: 100px 350px;
 }
 
@@ -327,7 +327,7 @@ body {
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top left;
 
   position-try:

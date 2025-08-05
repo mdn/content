@@ -72,7 +72,7 @@ background-color: hsl(50 33% 25%); /* Fully opaque */
 background-color: hsl(50 33% 25% / 75%); /* 75% opaque, i.e. 25% transparent */
 
 /* Special keyword values */
-background-color: currentcolor;
+background-color: currentColor;
 background-color: transparent;
 
 /* Global values */

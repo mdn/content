@@ -49,7 +49,7 @@ To declare an element as an anchor with CSS, you need to set an anchor name on i
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: fit-content;
 }
 ```
@@ -70,7 +70,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 }
 ```
 
@@ -212,7 +212,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -231,7 +231,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   inset-block-start: anchor(end);
   inset-inline-start: anchor(self-end);
@@ -355,7 +355,7 @@ Let's demonstrate some of these values; this example uses the same HTML and base
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -397,7 +397,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
 }
 ```
@@ -475,7 +475,7 @@ This example uses the same HTML and base CSS as the previous example. The infobo
   border-radius: 10px;
   border: 1px solid black;
   padding: 3px;
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -496,7 +496,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   top: calc(anchor(bottom) + 5px);
   justify-self: anchor-center;
 }
@@ -600,7 +600,7 @@ Let's look at an example. The HTML and base CSS are the same as in the previous 
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -621,7 +621,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: right;
   margin-left: 5px;
   width: calc(anchor-size(width) * 5);
@@ -657,7 +657,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 left: anchor-size(width);
-inset-inline-end: anchor-size(--myAnchor height, 100px);
+inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
 This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
@@ -670,7 +670,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--myAnchor self-block, 20px);
+margin-block-start: anchor-size(--my-anchor self-block, 20px);
 ```
 
 This can be useful in cases where you want to set an anchor-positioned element's margin to be always equal to the same percentage of the anchor element's width, even when the width changes.
@@ -742,14 +742,14 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: 100px;
   height: 100px;
   transition: 1s all;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: absolute;
   height: 100px;
   width: 100px;

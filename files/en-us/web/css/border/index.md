@@ -91,7 +91,7 @@ The `border` property may be specified using one, two, or three of the values li
 - {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
-  - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
+  - : Sets the color of the border. Defaults to `currentColor` if absent. See {{Cssxref("border-color")}}.
 
 ## Description
 
