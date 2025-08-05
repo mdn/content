@@ -37,36 +37,36 @@ scrollIntoView(options)
   - : An object with the following properties:
     - `behavior` {{optional_inline}}
       - : Determines whether scrolling is instant or animates smoothly. Its value can be one of the following:
-        - `"smooth"`: scrolling should animate smoothly
-        - `"instant"`: scrolling should happen instantly in a single jump
-        - `"auto"`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
+        - `smooth`: scrolling should animate smoothly
+        - `instant`: scrolling should happen instantly in a single jump
+        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
 
-        The default is `"auto"`.
+        The default is `auto`.
 
     - `block` {{optional_inline}}
       - : Defines the vertical alignment of the element within the scrollable ancestor container. Its value can be one of the following:
-        - `"start"`: Aligns the element's top edge with the top of the scrollable container, making the element appear at the start of the visible area vertically.
-        - `"center"`: Aligns the element vertically at the center of the scrollable container, positioning it in the middle of the visible area.
-        - `"end"`: Aligns the element's bottom edge with the bottom of the scrollable container, placing the element at the end of the visible area vertically.
-        - `"nearest"`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom edge, it will align to the bottom. This minimizes the scrolling distance.
+        - `start`: Aligns the element's top edge with the top of the scrollable container, making the element appear at the start of the visible area vertically.
+        - `center`: Aligns the element vertically at the center of the scrollable container, positioning it in the middle of the visible area.
+        - `end`: Aligns the element's bottom edge with the bottom of the scrollable container, placing the element at the end of the visible area vertically.
+        - `nearest`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom edge, it will align to the bottom. This minimizes the scrolling distance.
 
-        The default is `"start"`.
+        The default is `start`.
 
     - `container` {{optional_inline}}
       - : Defines the scrollable ancestor container. Its value can be one of the following:
-        - `"all"`: All scrollable containers are impacted (including the viewport).
-        - `"nearest"`: Only the nearest scrollable container is impacted by the scroll.
+        - `all`: All scrollable containers are impacted (including the viewport).
+        - `nearest`: Only the nearest scrollable container is impacted by the scroll.
 
-        The default is `"all"`.
+        The default is `all`.
 
     - `inline` {{optional_inline}}
       - : Defines the horizontal alignment of the element within the scrollable ancestor container. Its value can be one of the following:
-        - `"start"`: Aligns the element's left edge with the left of the scrollable container, making the element appear at the start of the visible area horizontally.
-        - `"center"`: Aligns the element horizontally at the center of the scrollable container, positioning it in the middle of the visible area.
-        - `"end"`: Aligns the element's right edge with the right of the scrollable container, placing the element at the end of the visible area horizontally.
-        - `"nearest"`: Scrolls the element to the nearest edge in the horizontal direction. If the element is closer to the left edge of the scrollable container, it will align to the left; if it's closer to the right edge, it will align to the right. This minimizes the scrolling distance.
+        - `start`: Aligns the element's left edge with the left of the scrollable container, making the element appear at the start of the visible area horizontally.
+        - `center`: Aligns the element horizontally at the center of the scrollable container, positioning it in the middle of the visible area.
+        - `end`: Aligns the element's right edge with the right of the scrollable container, placing the element at the end of the visible area horizontally.
+        - `nearest`: Scrolls the element to the nearest edge in the horizontal direction. If the element is closer to the left edge of the scrollable container, it will align to the left; if it's closer to the right edge, it will align to the right. This minimizes the scrolling distance.
 
-        The default is `"nearest"`.
+        The default is `nearest`.
 
 ### Return value
 
