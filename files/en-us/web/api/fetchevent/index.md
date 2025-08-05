@@ -63,14 +63,22 @@ self.addEventListener("fetch", (event) => {
       const cachedResponse = await cache.match(event.request);
 
       if (cachedResponse) {
-        // If we found a match in the cache, return it, but also
-        // update the entry in the cache in the background.
+        // Asynchronously update the entry in the cache,
+        // implementing the "stale-while-revalidate" pattern.
         event.waitUntil(cache.add(event.request));
+
+        // Immediately return the cached response.
         return cachedResponse;
       }
 
       // If we didn't find a match in the cache, use the network.
-      return fetch(event.request);
+      const freshResponse = fetch(event.request);
+
+      // Asynchronously add the entry to the cache.
+      event.waitUntil(cache.put(event.request, freshResponse.clone()));
+
+      // Asynchronously update the entry in the cache
+      return freshResponse;
     })(),
   );
 });
