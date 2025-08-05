@@ -9,14 +9,14 @@ browser-compat: api.ShadowRoot.setHTMLUnsafe
 {{APIRef("Shadow DOM")}}
 
 > [!WARNING]
-> This API parses its input as HTML, writing the result into the DOM.
+> This method parses its input as HTML, writing the result into the DOM.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 > It is better to use XSS-safe methods where possible, such as {{domxref("ShadowRoot.setHTML()")}}.
 >
 > On sites that [enforce Trusted Type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive you will need to pass {{domxref("TrustedHTML")}} objects into this method.
 > This allows you to pass through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
 
-The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
+The **`setHTMLUnsafe()`** method of the {{domxref("ShadowRoot")}} interface can be used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and then use it to replace the existing tree in the Shadow DOM.
 
 Unlike with {{domxref("ShadowRoot.setHTML()")}}, XSS-unsafe HTML entities are not guaranteed to be removed.
 

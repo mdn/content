@@ -15,7 +15,7 @@ browser-compat: api.Document.parseHTMLUnsafe_static
 > For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 > This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
 
-The **`parseHTMLUnsafe()`** static method of the {{domxref("Document")}} object is used to parse an HTML input, optionally filtering unwanted HTML elements and attributes, in order to create a new {{domxref("Document")}} instance.
+The **`parseHTMLUnsafe()`** static method of the {{domxref("Document")}} object is used to parse HTML input, optionally filtering unwanted HTML elements and attributes, in order to create a new {{domxref("Document")}} instance.
 
 Unlike with {{domxref("Document.parseHTML_static", "Document.parseHTML()")}}, XSS-unsafe HTML entities are not guaranteed to be removed.
 
