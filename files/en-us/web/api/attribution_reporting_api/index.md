@@ -37,7 +37,7 @@ Say we have a online shop, `shop.example` (aka the advertiser), which embeds an 
 
 The online shop owners want to measure how many conversions they get from users interacting with the ad, viewing the product page on their site, and putting the product into their shopping cart.
 
-![Image representation of the steps described below](ara-flow.png)
+![Image representation of the steps described below](/shared-assets/images/diagrams/api/attribution-reporting/ara-flow.svg)
 
 The steps involved are as follows:
 

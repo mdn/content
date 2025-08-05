@@ -61,11 +61,11 @@ In this example, the tag name `swsh` and a boolean value `1` are used as the val
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 @font-face {
   font-family: MonteCarlo2;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
   font-feature-settings: "swsh" 1;
 }
 p {

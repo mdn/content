@@ -5,88 +5,114 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball", "Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls")}}
 
-This is the **5th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). You can find the source code as it should look after completing this lesson at [Gamedev-Phaser-Content-Kit/demos/lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html).
-
-For proper collision detection between objects in our game we will need to have physics; this article introduces you to what's available in Phaser, as well as demonstrating a typical simple setup.
+This is the **5th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). For proper collision detection between objects in our game, we will need to have physics; this article introduces you to what's available in Phaser, as well as demonstrating a typical simple setup.
 
 ## Adding physics
 
-Phaser is bundled with three different physics engines — Arcade Physics, P2 and Ninja Physics — with a fourth option, Box2D, being available as a commercial plugin. For simple games like ours, we can use the Arcade Physics engine. We don't need any heavy geometry calculations — after all it's just a ball bouncing off walls and bricks.
+Phaser is bundled with three different physics engines—Arcade Physics, Impact Physics, and Matter.js Physics—with the fourth option, Box2D, available as a commercial plugin. For simple games like ours, we can use the Arcade Physics engine. We don't need any heavy geometry calculations—after all, it's just a ball bouncing off walls and bricks.
 
-First, let's initialize the Arcade Physics engine in our game. Add the `physics.startSystem()` method at the beginning of the `create` function (make it the first line inside the function), as shown below:
+First, let's configure the Arcade Physics engine in our game. Add the `physics` property to the `config` object, as shown below:
 
 ```js
-game.physics.startSystem(Phaser.Physics.ARCADE);
+const config = {
+  // ...
+  physics: {
+    default: "arcade",
+  },
+};
 ```
 
-Next, we need to enable our ball for the physics system — Phaser object physics is not enabled by default. Add the following line at the bottom of the `create()` function:
+Next, we need to enable our ball for the physics system—Phaser object physics is not enabled by default. Add the following line at the bottom of the `create()` method:
 
 ```js
-game.physics.enable(ball, Phaser.Physics.ARCADE);
+this.physics.add.existing(this.ball);
 ```
 
 Next, if we want to move our ball on the screen, we can set `velocity` on its `body`. Add the following line, again at the bottom of `create()`:
 
 ```js
-ball.body.velocity.set(150, 150);
+this.ball.body.setVelocity(150, 150);
 ```
 
 ## Removing our previous update instructions
 
-Remember to remove our old method of adding values to `x` and `y` from the `update()` function:
+Remember to remove our old method of adding values to `x` and `y` from the `update()` method, i.e., restore it to the empty state:
 
 ```js
-function update() {
-  ball.x += 1;
-  ball.y += 1;
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {}
 }
 ```
 
-we are now handling this properly, with a physics engine.
+We are now handling this properly, with a physics engine.
 
-## Final code check
-
-The latest code should look like this:
-
-```js
-let ball;
-
-function preload() {
-  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-  game.scale.pageAlignHorizontally = true;
-  game.scale.pageAlignVertically = true;
-  game.stage.backgroundColor = "#eee";
-  game.load.image("ball", "img/ball.png");
-}
-
-function create() {
-  game.physics.startSystem(Phaser.Physics.ARCADE);
-  ball = game.add.sprite(50, 50, "ball");
-  game.physics.enable(ball, Phaser.Physics.ARCADE);
-  ball.body.velocity.set(150, 150);
-}
-
-function update() {}
-```
-
-Try reloading `index.html` again — The ball should now be moving constantly in the given direction. At the moment, the physics engine has gravity and friction set to zero. Adding gravity would result in the ball falling down while friction would eventually stop the ball.
+Try reloading `index.html` again. At the moment, the physics engine has no gravity or friction, so the ball will go in the given direction at a constant speed.
 
 ## Fun with physics
 
-You can do much more with physics, for example by adding `ball.body.gravity.y = 100;` you will set the vertical gravity of the ball. As a result it will be launched upwards, but then fall due to the effects of gravity pulling it down.
+You can do much more with physics, for example by adding `this.ball.body.gravity.y = 500;` inside `create()`, you will set the vertical gravity of the ball. Try changing the velocity to `this.ball.body.setVelocity(150, -150);`, and you will see the ball launched upwards, but then fall due to the effects of gravity pulling it down.
 
-This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://phaser.io/docs/#physics) and see the [huge collection of examples](https://samme.github.io/phaser-examples-mirror/) using the Arcade and P2 physics systems.
+This kind of functionality is just the tip of the iceberg—there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://docs.phaser.io/phaser/concepts/physics/arcade) and see the [huge collection of examples](https://phaser.io/examples/v3.85.0/physics) using the Arcade and Matter.js physics systems.
 
 ## Compare your code
 
-You can check the finished code for this lesson in the live demo below, and play with it to understand better how it works:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bjto9nj8/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  ball;
+
+  preload() {
+    this.load.setBaseURL(
+      "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",
+    );
+
+    this.load.image("ball", "ball.png");
+  }
+  create() {
+    this.ball = this.add.sprite(50, 50, "ball");
+    this.physics.add.existing(this.ball);
+    this.ball.body.setVelocity(150, 150);
+  }
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
+  physics: {
+    default: "arcade",
+  },
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
 Now we can move to the next lesson and see how to make the ball [bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball", "Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls")}}

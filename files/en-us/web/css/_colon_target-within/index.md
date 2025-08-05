@@ -86,8 +86,9 @@ p:target i {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - {{CSSxRef(":target")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

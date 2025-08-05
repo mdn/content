@@ -100,7 +100,8 @@ function handleStart(evt) {
   const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
-  for (const [i, touch] of touches.entries()) {
+  for (let i = 0; i < touches.length; i++) {
+    const touch = touches[i];
     log(`touchstart: ${i}.`);
     ongoingTouches.push(copyTouch(touch));
     const color = colorForTouch(touch);

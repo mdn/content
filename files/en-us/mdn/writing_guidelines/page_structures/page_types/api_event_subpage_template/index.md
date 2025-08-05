@@ -84,7 +84,7 @@ sidebar: mdnsidebar
 > For example, [Element: wheel event](/en-US/docs/Web/API/Element/wheel_event) is linked from [`Element` Events](/en-US/docs/Web/API/Element#events).
 >
 > If the parent object does not have an _Events_ section, then add one.
-> If this is a new "class" of event, then you should add a link to this section of the parent from the [Event reference](/en-US/docs/Web/Events).
+> If this is a new "class" of event, then you should add a link to this section of the parent from the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide.
 >
 > _Remember to remove this whole explanatory note before publishing._
 

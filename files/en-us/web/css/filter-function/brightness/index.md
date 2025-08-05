@@ -56,7 +56,7 @@ brightness(0%)
 brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
 brightness(40%)
 
-brightens()     /* Brightness of input is not changed */
+brightness()     /* Brightness of input is not changed */
 brightness(1)
 brightness(100%)
 
