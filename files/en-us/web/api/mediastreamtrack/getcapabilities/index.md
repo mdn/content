@@ -36,37 +36,42 @@ For both audio and video tracks:
 - `groupId`
   - : A string that groups related devices.
 
+> [!NOTE]
+> For historical reasons, these two properties are strings instead of an array of strings like all other capabilities.
+
 For audio tracks only:
 
 - `autoGainControl`
-  - : A boolean or an array of booleans. If the device supports script-controlled toggling, you may see both `true` and `false`.
+  - : An array of booleans. If the source cannot do auto gain control, a single `false` is reported. If auto gain control cannot be turned off, a single `true` is reported. If the script can control the feature, the source reports both `true` and `false`.
 - `channelCount`
-  - : A range object describing the supported number of channels. For example: `{ min: 1, max: 2 }`
+  - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported number of channels.
 - `echoCancellation`
-  - : A boolean or an array of booleans indicating if echo cancellation is supported.
+  - : An array of booleans or strings indicating if echo cancellation is supported. If the source cannot do echo cancellation, a single `false` is reported. If the source can do echo cancellation, then the array starts with `true`. If the script can control the feature, then the array starts with `true, false`. Additionally, if the source allows controlling which audio sources will be cancelled, the array also includes the values `"all"` and/or `"remote-only"`.
 - `latency`
-  - : Either a fixed numeric value or a range object (with `min`, `max`, and optionally `step`) representing the latency in seconds. This value could be an integer or, in some cases, a floating-point number depending on measurement precision
+  - : A range object, containing a `min` and a `max` property (both containing a number), describing the expected amount of latency in seconds from when the sound starts to when data becomes available.
 - `noiseSuppression`
-  - : A boolean or an array indicating whether noise suppression is available. If the feature can be controlled by a script the source will report both `true` and `false` as possible values.
+  - : An array of booleans indicating whether noise suppression is available. If the source cannot do noise suppression, a single `false` is reported. If noise suppression cannot be turned off, a single `true` is reported. If the script can control the feature, the source reports both `true` and `false`.
 - `sampleRate`
-  - : A range object indicating the supported audio sample rates (for example: `{ min: 22050, max: 48000 }`).
+  - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported audio sample rate range.
 - `sampleSize`
-  - : A range object describing the supported audio sample sizes in bits.
+  - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported linear sample size range in bits.
 
 For video tracks only:
 
 - `aspectRatio`
-  - : Either a single number or a range object that represents the ratio (width divided by height) the video device can output.
+  - : A range object, containing a `min` and a `max` property (both containing a number), describing the supported video aspect ratio range (width divided by height).
 - `facingMode`
-  - : A string or an array of strings (such as "user", "environment", or even "left"/"right") which indicate the camera orientation. On some devices, more than one facing mode may be reported.
+  - : An array of strings indicating the camera orientation. See {{domxref("MediaTrackConstraints.facingMode")}} for supported values. On some devices, more than one facing mode may be reported; for example, in a high-end telepresence solution with several cameras facing the user, a camera to the left of the user can report both `"left"` and `"user"`.
 - `frameRate`
-  - : A number (if fixed) or a range object giving the supported frames per second.
+  - : A range object, containing a `min` and a `max` property (both containing a number), describing the supported frames per second range.
 - `height`
-  - : A numeric value or range object (with pixel dimensions) representing the video track's height.
+  - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported height range in pixels.
 - `width`
-  - : A numeric value or range object (with pixel dimensions) representing the video track's width in pixels.
+  - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported width range in pixels.
 - `resizeMode`
-  - : A string or an array of strings that indicates how the user agent may derive the desired resolution (for example, modes like "none" or "crop-and-scale").
+  - : An array of strings that indicates how the user agent may derive the desired resolution from the camera resolution.See {{domxref("MediaTrackConstraints.resizeMode")}} for supported values. The value `"none"` is always included.
+
+For more information about what each property means, see {{domxref("MediaTrackConstraints")}}.
 
 ## Examples
 
