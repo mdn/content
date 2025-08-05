@@ -112,7 +112,7 @@ div {
   border: 10px solid blue;
   background-color: #8cffa0;
   padding: 10px;
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 section {
   border: 1px solid black;
@@ -194,9 +194,9 @@ div {
   background-color: #8cffa0;
   padding: 10px;
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-position:
     top left,
     top right,

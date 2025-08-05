@@ -62,7 +62,7 @@ The {{cssxref("border-image-slice")}} property is used to divide the source imag
 border-image-source: none;
 
 /* <image> values */
-border-image-source: url(image.jpg);
+border-image-source: url("image.jpg");
 border-image-source: linear-gradient(to top, red, yellow);
 
 /* Global values */

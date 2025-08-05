@@ -17,7 +17,7 @@ The direction each marker points is defined as the direction halfway between the
 
 ```css
 marker-mid: none;
-marker-mid: url(markers.svg#arrow);
+marker-mid: url("markers.svg#arrow");
 
 /* Global values */
 marker-mid: inherit;
@@ -78,7 +78,7 @@ svg {
 
 ```css
 polyline#test {
-  marker-mid: url(#triangle);
+  marker-mid: url("#triangle");
 }
 ```
 

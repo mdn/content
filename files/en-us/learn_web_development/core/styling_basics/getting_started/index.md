@@ -497,14 +497,14 @@ padding-left: 5px;
 This one line:
 
 ```css
-background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
 ```
 
 is equivalent to these five lines:
 
 ```css
 background-color: red;
-background-image: url(bg-graphic.png);
+background-image: url("bg-graphic.png");
 background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;

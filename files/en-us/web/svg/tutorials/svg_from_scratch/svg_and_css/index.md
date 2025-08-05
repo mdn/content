@@ -402,7 +402,7 @@ Notes about this demonstration:
 
   ```html
   <style>
-    @import url(style8.css);
+    @import "style8.css";
   </style>
   ```
 

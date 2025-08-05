@@ -12,10 +12,9 @@ The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies
 
 ```css
 /* <url> values */
-src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
-src: url(path/to/font.woff); /* Relative URL */
-src: url("path/to/font.woff"); /* Quoted URL */
-src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
+src: url("https://example.com/path/to/font.woff"); /* Absolute URL */
+src: url("path/to/font.woff"); /* Relative URL */
+src: url("path/to/svgFont.svg#example"); /* Fragment identifying font */
 
 /* <font-face-name> values */
 src: local(font); /* Unquoted name */
@@ -24,17 +23,17 @@ src: local("font"); /* Quoted name */
 src: local("some font"); /* Quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
-src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
-src: url(path/to/fontCOLR-svg.otf) tech(color-SVG);
+src: url("path/to/fontCOLRv1.otf") tech(color-COLRv1);
+src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* <format(<font-format>)> values */
-src: url(path/to/font.woff) format("woff");
-src: url(path/to/font.otf) format("opentype");
+src: url("path/to/font.woff") format("woff");
+src: url("path/to/font.otf") format("opentype");
 
 /* Multiple resources */
 src:
-  url(path/to/font.woff) format("woff"),
-  url(path/to/font.otf) format("opentype");
+  url("path/to/font.woff") format("woff"),
+  url("path/to/font.otf") format("opentype");
 
 /* Multiple resources with font format and technologies */
 src:
@@ -98,9 +97,9 @@ If the font file is a container for multiple fonts, a fragment identifier is inc
 
 ```css
 /* WhichFont is the PostScript name of a font in the font file */
-src: url(collection.otc#WhichFont);
+src: url("collection.otc#WhichFont");
 /* WhichFont is the element id of a font in the SVG Font file */
-src: url(fonts.svg#WhichFont);
+src: url("fonts.svg#WhichFont");
 ```
 
 ### Font formats

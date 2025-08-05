@@ -48,13 +48,13 @@ Imported rules must come before all other types of rules, except {{CSSxRef("@cha
   padding: 0;
 }
 /* more styles */
-@import url("my-imported-styles.css");
+@import "my-imported-styles.css";
 ```
 
 As the `@import` at-rule is declared after the styles it is invalid and hence ignored.
 
 ```css example-good
-@import url("my-imported-styles.css");
+@import "my-imported-styles.css";
 * {
   margin: 0;
   padding: 0;
@@ -90,10 +90,10 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 ### Importing CSS rules conditional on media queries
 
 ```css
-@import url("fine-print.css") print;
-@import url("bluish.css") print, screen;
+@import "fine-print.css" print;
+@import "bluish.css" print, screen;
 @import "common.css" screen;
-@import url("landscape.css") screen and (orientation: landscape);
+@import "landscape.css" screen and (orientation: landscape);
 ```
 
 The `@import` rules in the above examples show media-dependent conditions that will need to be true before the linked CSS rules are applied. So for instance, the last `@import` rule will load the `landscape.css` stylesheet only on a screen device in landscape orientation.
@@ -101,9 +101,9 @@ The `@import` rules in the above examples show media-dependent conditions that w
 ### Importing CSS rules conditional on feature support
 
 ```css
-@import url("grid.css") supports(display: grid) screen and (width <= 400px);
-@import url("flex.css") supports((not (display: grid)) and (display: flex))
-  screen and (width <= 400px);
+@import "grid.css" supports(display: grid) screen and (width <= 400px);
+@import "flex.css" supports((not (display: grid)) and (display: flex)) screen
+  and (width <= 400px);
 ```
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
@@ -115,8 +115,8 @@ You can also specify CSS functions in `supports()`, and it will evaluate to `tru
 For example, the code below shows an `@import` that is conditional on both [child combinators](/en-US/docs/Web/CSS/Child_combinator) (`selector()`) and the `font-tech()` function:
 
 ```css
-@import url("whatever.css")
-supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
+@import "whatever.css"
+  supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
 ```
 
 ### Importing CSS rules into a cascade layer
@@ -128,8 +128,8 @@ supports((selector(h2 > p)) and (font-tech(color-COLRv1)));
 In the above example, a cascade layer named `utilities` is created and it will include rules from the imported stylesheet `theme`.
 
 ```css
-@import url(headings.css) layer(default);
-@import url(links.css) layer(default);
+@import "headings.css" layer(default);
+@import "links.css" layer(default);
 
 @layer default {
   audio[controls] {
