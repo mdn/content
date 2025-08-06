@@ -90,7 +90,7 @@ The `:heading(3, 4)` matches the `<h3>` and `<h4>` elements.
 }
 ```
 
-The `:heading(-n+3)` matches the heading elements in reverse (negatively) from `<h3>`.
+The `:heading(-n + 3)` matches the heading elements in reverse (negatively) from `<h3>`.
 
 ```css
 :heading(-n + 3) {
@@ -98,7 +98,7 @@ The `:heading(-n+3)` matches the heading elements in reverse (negatively) from `
 }
 ```
 
-The `:heading(3n+1)` matches every third (`3n`) heading element from and including the first`<h1>` elements.
+The `:heading(3n + 1)` matches every third (`3n`) heading element from and including the first`<h1>` elements.
 
 ```css
 :heading(3n + 1) {
@@ -106,7 +106,7 @@ The `:heading(3n+1)` matches every third (`3n`) heading element from and includi
 }
 ```
 
-The `:heading(n+5)` matches the heading elements from `<h5>`.
+The `:heading(n + 5)` matches the heading elements from `<h5>`.
 
 ```css
 :heading(n + 5) {
