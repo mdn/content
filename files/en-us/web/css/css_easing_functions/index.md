@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS easing functions** module defines easing functions, which provide a means to control the transformation of values. The functions defined include linear, cubic bezier, and step easing functions. These easing functions can be applied to animations and transitions.
 
-Gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. Easing functions enable you to control that rate at of change. Cubic bezier easing functions can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts.
+Gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. Easing functions enable you to control the rate of change. Cubic bezier easing functions can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts.
 
 Alternatively, you may want an animation to move forward in distinct steps, to create robot-like movement, or the effect of a segmented wheel that rotates such that the segments always appear in the same position. For this, step easing functions can be used.
 
