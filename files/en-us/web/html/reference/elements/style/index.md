@@ -32,7 +32,7 @@ The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style informatio
 
 ```css interactive-example
 p {
-  color: #f00;
+  color: red;
 }
 ```
 
