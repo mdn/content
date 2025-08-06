@@ -18,19 +18,19 @@ The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ### Parameters
 
-`:nth-child()` takes a single argument that describes a pattern for matching element indices in a list of siblings. Element indices are 1-based.
+The `:heading()` pseudo-class function takes a single argument that describes a pattern for matching heading element.
 
 #### Keyword values
 
 - `odd`
-  - : Represents elements whose numeric position in a series of siblings is odd: 1, 3, 5, etc.
+  - : Represents the heading elements whose numeric position is odd: `<h1>`, `<h3>`, and `<h5>`.
 - `even`
-  - : Represents elements whose numeric position in a series of siblings is even: 2, 4, 6, etc.
+  - : Represents the heading elements whose numeric position is even: `<h2>`, `<h4>`, and `<h6>`.
 
 #### Functional notation
 
 - `<An+B>`
-  - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
+  - : Represents the heading elements whose numeric position matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
     - `A` is an integer step size,
     - `B` is an integer offset,
     - `n` is all nonnegative integers, starting from 0.
@@ -39,27 +39,79 @@ The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Examples
 
-### Basic example
+### Keyword example
 
-#### HTML
+In this example the `odd` keyword is used target the `<h1>`, `<h3>`, and `<h5>` elements while the `even` keyword is used to target the `<h2>`, `<h4>`, and `<h6>` elements.
 
 ```html
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
+<h4>Heading 4</h4>
 ```
 
-#### CSS
+```css
+:heading(odd) {
+  color: tomato;
+}
+:heading(even) {
+  color: slateblue;
+}
+```
+
+{{EmbedLiveSample("Keyword_example", "", "215")}}
+
+### Functional notation example
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+
+```css hidden
+main {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+The `:heading(3, 4)` matches the `<h3>` and `<h4>` elements.
 
 ```css
-:heading {
+:heading(3, 4) {
+  text-decoration: tomato wavy underline;
+}
+```
+
+The `:heading(-n+3)` matches the heading elements in reverse (negatively) from `<h3>`.
+
+```css
+:heading(-n+3) {
   color: tomato;
 }
 ```
 
-#### Result
+The `:heading(3n+1)` matches every third (`3n`) heading element from and including the first`<h1>` elements.
 
-{{EmbedLiveSample("Basic_example")}}
+```css
+:heading(3n+1) {
+  font-style: italic;
+}
+```
+
+The `:heading(n+5)` matches the heading elements from `<h5>`.
+
+```css
+:heading(n+5) {
+  color: slateblue;
+}
+```
+
+{{EmbedLiveSample("Functional_notation_example", "", "292")}}
 
 ## Specifications
 
