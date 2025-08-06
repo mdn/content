@@ -9,7 +9,7 @@ sidebar: cssref
 The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`). In other words, the `:heading` pseudo-class allows you to style all headings at once, rather than individually.
 
 > [!NOTE]
-> The `:heading` pseudo-class has the specificity of that of a class. So `:heading {…}` would have a specificity of [0,1,0], whereas `section:heading {…}` would have a specificity of [0,1,1]
+> The `:heading` pseudo-class has the specificity of that of a class. So `:heading {…}` would have a specificity of [0,1,0], whereas `section:heading {…}` would have a specificity of [0,1,1].
 
 ## Syntax
 
