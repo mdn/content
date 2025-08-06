@@ -101,7 +101,7 @@ The `:heading(-n+3)` matches the heading elements in reverse (negatively) from `
 The `:heading(3n+1)` matches every third (`3n`) heading element from and including the first`<h1>` elements.
 
 ```css
-:heading(3n+1) {
+:heading(3n + 1) {
   font-style: italic;
 }
 ```
