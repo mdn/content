@@ -83,7 +83,7 @@ A caret may be displayed in an editable element or its descendants, provided the
 
 ### Caret versus cursor
 
-There are multiple types of caret. The insertion caret is the only type affected by the `caret-color` property.
+There are multiple types of carets. The insertion caret is the only type affected by the `caret-color` property.
 
 Many browsers have a **navigation caret**, which acts similarly to an insertion caret but can be moved around in non-editable text.
 
