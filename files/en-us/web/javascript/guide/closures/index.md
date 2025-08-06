@@ -438,28 +438,6 @@ setupHelp();
 
 This works as expected. Rather than the callbacks all sharing a single lexical environment, the `makeHelpCallback` function creates _a new lexical environment_ for each callback, in which `help` refers to the corresponding string from the `helpText` array.
 
-If the index is not needed during iteration, using the **for...of** statement with the `const` modifier is the most modern and concise solution:
-
-```js
-function setupHelp() {
-  const helpText = [
-    { id: "email", help: "Your email address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
-  ];
-
-  for (const item of helpText) {
-    document.getElementById(item.id).onfocus = () => {
-      document.getElementById("help").textContent = item.help;
-    };
-  }
-}
-
-setupHelp();
-```
-
-This example's **for...of** statement with the `const` modifier effectively redeclares a new `item` variable on each iteration that has no connection to the `item` variable of previous iterations; closures inside the loop body will reference their own definition of `item` at the time of their creation, not one shared accross iterations.
-
 One other way to write the above using anonymous closures is:
 
 ```js
@@ -514,28 +492,20 @@ setupHelp();
 
 This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), as shown:
+If you are writing modern JavaScript anyway, you can consider more alternatives to the plain `for` loop, such as using {{jsxref("Statements/for...of", "for...of")}} loop and declaring `item` as `let` or `const`, or using the {{jsxref("Array/forEach", "forEach()")}} method, which both avoid the closure problem.
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+for (const item of helpText) {
+  document.getElementById(item.id).onfocus = () => {
+    document.getElementById("help").textContent = item.help;
+  };
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Your email address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
-  ];
-
-  helpText.forEach(function (text) {
-    document.getElementById(text.id).onfocus = function () {
-      showHelp(text.help);
-    };
-  });
-}
-
-setupHelp();
+helpText.forEach((item) => {
+  document.getElementById(item.id).onfocus = () => {
+    showHelp(item.help);
+  };
+});
 ```
 
 ## Performance considerations
