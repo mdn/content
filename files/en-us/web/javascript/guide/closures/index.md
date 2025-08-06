@@ -458,7 +458,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-This **for...of** statement with the `const` modifier effectively redeclares a new `item` variable on each iteration that has no connection to the `item` variable of previous iterations, closures inside the loop will reference their own definition of `item`, not to a shared one.
+This example's **for...of** statement with the `const` modifier effectively redeclares a new `item` variable on each iteration that has no connection to the `item` variable of previous iterations; closures inside the loop body will reference their own definition of `item` at the time of their creation, not one shared accross iterations.
 
 One other way to write the above using anonymous closures is:
 
