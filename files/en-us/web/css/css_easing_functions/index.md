@@ -37,7 +37,7 @@ By default, gradient color changes progress linearly between each pair of color 
 ## Guides
 
 - [CSS value functions: easing functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#easing_functions)
-  - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
+  - : The CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 ## Related concepts
 
