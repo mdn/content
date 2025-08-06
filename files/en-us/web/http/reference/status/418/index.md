@@ -2,7 +2,9 @@
 title: 418 I'm a teapot
 slug: Web/HTTP/Reference/Status/418
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc2324#section-2.3.2
+spec-urls:
+  - https://www.rfc-editor.org/rfc/rfc2324#section-2.3.2
+  - https://www.rfc-editor.org/rfc/rfc9110#name-418-unused
 sidebar: http
 ---
 
