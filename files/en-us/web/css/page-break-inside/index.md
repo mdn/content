@@ -26,22 +26,20 @@ page-break-inside: avoid;
 ```
 
 ```html interactive-example
-<section id="default-example">
-  <div>
-    <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
-    </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">
-        Content with 'page-break-inside'
-      </div>
-      <div class="box">Content after the property</div>
+<div>
+  <p>
+    The effect of this property can be noticed when the document is being
+    printed or a preview of a print is displayed.
+  </p>
+  <button id="print-btn">Show Print Preview</button>
+  <div class="box-container">
+    <div class="box">Content before the property</div>
+    <div class="box" id="example-element">
+      Content with 'page-break-inside'
     </div>
+    <div class="box">Content after the property</div>
   </div>
-</section>
+</div>
 ```
 
 ```css interactive-example
@@ -58,10 +56,6 @@ page-break-inside: avoid;
   color: black;
 }
 
-.hide-element {
-  display: none;
-}
-
 @media print {
   #example-element {
     height: 25cm;
@@ -70,29 +64,10 @@ page-break-inside: avoid;
 ```
 
 ```js interactive-example
-const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
-)[0];
-const exampleHTMLElement = document.getElementById("default-example");
-
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
+const btn = document.getElementById("print-btn")
 
 btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
-
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
-
   window.print();
-
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
 });
 ```
 
