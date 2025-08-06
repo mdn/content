@@ -34,9 +34,7 @@ page-break-inside: avoid;
   <button id="print-btn">Show Print Preview</button>
   <div class="box-container">
     <div class="box">Content before the property</div>
-    <div class="box" id="example-element">
-      Content with 'page-break-inside'
-    </div>
+    <div class="box" id="example-element">Content with 'page-break-inside'</div>
     <div class="box">Content after the property</div>
   </div>
 </div>
@@ -64,7 +62,7 @@ page-break-inside: avoid;
 ```
 
 ```js interactive-example
-const btn = document.getElementById("print-btn")
+const btn = document.getElementById("print-btn");
 
 btn.addEventListener("click", () => {
   window.print();
