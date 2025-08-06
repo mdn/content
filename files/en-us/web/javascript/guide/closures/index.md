@@ -438,6 +438,28 @@ setupHelp();
 
 This works as expected. Rather than the callbacks all sharing a single lexical environment, the `makeHelpCallback` function creates _a new lexical environment_ for each callback, in which `help` refers to the corresponding string from the `helpText` array.
 
+If the index is not needed during iteration, using the **for...of** statement with the `const` modifier is the most modern and concise solution:
+
+```js
+function setupHelp() {
+  const helpText = [
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
+
+  for (const item of helpText) {
+    document.getElementById(item.id).onfocus = () => {
+      document.getElementById("help").textContent = item.help;
+    };
+  }
+}
+
+setupHelp();
+```
+
+This **for...of** statement with the `const` modifier effectively redeclares a new `item` variable on each iteration that has no connection to the `item` variable of previous iterations, closures inside the loop will reference their own definition of `item`, not to a shared one.
+
 One other way to write the above using anonymous closures is:
 
 ```js
