@@ -34,7 +34,7 @@ Defining the relationship is done in a different way depending on the type of ap
 
 ### Examples
 
-#### Specifying related_application for web applications
+#### Specifying related_applications for web applications
 
 This example shows how to specify the self-defining entry for PWAs in your web app's manifest file. To ensure your web app can be a candidate to call `getInstalledRelatedApps()`, the web app manifest `related_applications` section must specify the `id` property.
 
