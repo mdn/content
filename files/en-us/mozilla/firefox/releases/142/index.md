@@ -86,6 +86,10 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
 
+- **`:heading`** and **`:heading()`**: `layout.css.anchor-positioning.enabled`
+
+  The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements with the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) syntax. ([Firefox bug 1974386](https://bugzil.la/1974386)).
+
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.

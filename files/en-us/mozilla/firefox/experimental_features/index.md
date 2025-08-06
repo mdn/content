@@ -337,6 +337,20 @@ The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned el
 - `layout.css.anchor-positioning.enabled`
   - : Set to `true` to enable.
 
+### `:heading` and `:heading()` pseudo-classes
+
+The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements with the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) syntax. ([Firefox bug 1974386](https://bugzil.la/1974386)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.heading-selector.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
