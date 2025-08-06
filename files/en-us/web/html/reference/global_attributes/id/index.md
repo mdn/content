@@ -20,7 +20,7 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes
 ```css interactive-example
 #exciting {
   background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
-  border: 1px solid #696969;
+  border: 1px solid dimgrey;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 2px 2px 1px black;

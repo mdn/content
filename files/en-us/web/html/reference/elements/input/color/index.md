@@ -127,7 +127,7 @@ First, there's some setup. Here we establish some variables, setting up a variab
 
 ```js
 let colorPicker;
-const defaultColor = "#0000ff";
+const defaultColor = "blue";
 
 window.addEventListener("load", startup, false);
 ```
