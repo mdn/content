@@ -34,9 +34,7 @@ page-break-after: always;
   <button id="print-btn">Show Print Preview</button>
   <div class="box-container">
     <div class="box">Content before the property</div>
-    <div class="box" id="example-element">
-      Content with 'page-break-after'
-    </div>
+    <div class="box" id="example-element">Content with 'page-break-after'</div>
     <div class="box">Content after the property</div>
   </div>
 </div>
