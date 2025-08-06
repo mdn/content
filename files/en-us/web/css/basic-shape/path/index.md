@@ -150,7 +150,7 @@ svg {
   height: 100%;
 }
 
-/* This path is displayed on hover*/
+/* This path is displayed on hover */
 #svg_css_ex1:hover path {
   d: path("M20,80 L50,20 L80,80");
 }

@@ -109,7 +109,7 @@ div {
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
-  background-color: #fff;
+  background-color: white;
   border-start-start-radius: 10px;
 }
 ```

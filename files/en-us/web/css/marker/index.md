@@ -19,7 +19,7 @@ For the middle vertices, the direction each marker points is defined as the dire
 
 ```css
 marker: none;
-marker: url(markers.svg#arrow);
+marker: url("markers.svg#arrow");
 
 /* Global values */
 marker: inherit;
@@ -80,7 +80,7 @@ svg {
 
 ```css
 polyline#test {
-  marker: url(#triangle);
+  marker: url("#triangle");
 }
 ```
 

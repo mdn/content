@@ -52,7 +52,7 @@ max-width: 20ch;
 ```css
 /* <length> value */
 max-width: 3.5em;
-max-width: anchor-size(--myAnchor inline, 245px);
+max-width: anchor-size(--my-anchor inline, 245px);
 max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> value */

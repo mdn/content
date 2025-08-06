@@ -430,8 +430,8 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
 ```css
-@import url(alternate1.css);
-@import url(alternate2.css);
+@import "alternate1.css";
+@import "alternate2.css";
 ```
 
 By using alternate style sheets (remember to add the titles) you are setting it up for users to be able to use their browsers to choose alternate styles.

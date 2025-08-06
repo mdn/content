@@ -25,7 +25,7 @@ The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline contai
 
 ```css interactive-example
 span.ingredient {
-  color: #f00;
+  color: red;
 }
 ```
 

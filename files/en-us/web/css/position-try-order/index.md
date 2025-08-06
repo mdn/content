@@ -124,7 +124,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   margin: 90px auto;
 }
 ```
@@ -162,7 +162,7 @@ We initially position the element above its anchor, and then give it our custom 
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 
   bottom: anchor(top);
   margin-bottom: 10px;

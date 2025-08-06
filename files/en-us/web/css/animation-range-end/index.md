@@ -46,8 +46,8 @@ Also check out the [View Timeline Ranges Visualizer](https://scroll-driven-anima
 
 ### Creating a named view progress timeline with range end
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
+This is then set as the timeline for the same element using `animation-timeline: --subject-reveal;`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 An `animation-range-end` declaration is also set to make the animation end earlier than expected.
 
@@ -129,8 +129,8 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timeline: --subject-reveal block;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-range-end: contain 50%;

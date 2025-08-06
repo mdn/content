@@ -37,7 +37,7 @@ This example first defines a few at-rules, among them two {{cssxref("@font-palet
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
     format("woff2");
 }
 

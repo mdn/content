@@ -250,7 +250,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media
   - : Cut and paste the lines between `/* print only */` and `/* end print only */` into a file named `style4_print.css`. In style4.css, add the following line at the beginning of the file:
 
     ```css
-    @import url("style4_print.css") print;
+    @import "style4_print.css" print;
     ```
 
 ### Heading hover color

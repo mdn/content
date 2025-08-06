@@ -201,7 +201,7 @@ And this code, `runComposite()`, handles the bulk of the work, relying on a numb
 ```js
 function createCanvas() {
   const canvas = document.createElement("canvas");
-  canvas.style.background = `url(${op_8x8.data})`;
+  canvas.style.background = `url(${JSON.stringify(op_8x8.data)})`;
   canvas.style.border = "1px solid #000";
   canvas.style.margin = "5px";
   canvas.width = width / 2;

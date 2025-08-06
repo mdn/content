@@ -44,7 +44,7 @@ The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -235,7 +235,7 @@ tbody > tr > td:last-of-type {
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -344,7 +344,7 @@ tbody {
 
 thead {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 ```
 

@@ -47,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -196,7 +196,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -294,7 +294,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {

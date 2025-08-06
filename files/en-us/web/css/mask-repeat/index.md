@@ -174,7 +174,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -205,7 +205,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -271,7 +271,7 @@ div {
   height: 180px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 
   mask-size: 50px 50px;
   mask-position: bottom right;

@@ -76,7 +76,7 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: black;
 }
 ```
 

@@ -28,7 +28,7 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 the `mediaText` property with a value of `screen`.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js

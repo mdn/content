@@ -66,8 +66,8 @@ left: 20px;
 /* <length> values */
 left: 3px;
 left: 2.4em;
-left: anchor(--myAnchor 50%);
-left: calc(anchor-size(--myAnchor inline, 100px) * 2);
+left: anchor(--my-anchor 50%);
+left: calc(anchor-size(--my-anchor inline, 100px) * 2);
 
 /* <percentage>s of the width of the containing block */
 left: 10%;

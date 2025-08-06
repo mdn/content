@@ -13,7 +13,7 @@ The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anch
 ```css
 /* Single values */
 position-anchor: auto;
-position-anchor: --anchorName;
+position-anchor: --anchor-name;
 
 /* Global values */
 position-anchor: inherit;
@@ -206,7 +206,7 @@ body {
 
 ```css
 #anchor1 {
-  anchor-name: --myAnchor1, --myAnchor2;
+  anchor-name: --my-anchor1, --my-anchor2;
 }
 ```
 
@@ -226,7 +226,7 @@ Each of the positioned elements is given a `position-anchor` property with a val
 
 ```css
 #infobox1 {
-  position-anchor: --myAnchor1;
+  position-anchor: --my-anchor1;
   position: fixed;
   left: anchor(right);
   align-self: anchor-center;
@@ -234,7 +234,7 @@ Each of the positioned elements is given a `position-anchor` property with a val
 }
 
 #infobox2 {
-  position-anchor: --myAnchor2;
+  position-anchor: --my-anchor2;
   position: fixed;
   bottom: anchor(top);
   justify-self: anchor-center;
@@ -271,12 +271,12 @@ function updateAnchorNames() {
   if (value1 === value2) {
     // If the chosen anchors are both the same, set both anchor
     // names on the same anchor
-    anchors[value1].style.anchorName = "--myAnchor1, --myAnchor2";
+    anchors[value1].style.anchorName = "--my-anchor1, --my-anchor2";
   } else {
     // If they are not the same, set the anchor names separately
     // on each selected anchor
-    anchors[value1].style.anchorName = "--myAnchor1";
-    anchors[value2].style.anchorName = "--myAnchor2";
+    anchors[value1].style.anchorName = "--my-anchor1";
+    anchors[value2].style.anchorName = "--my-anchor2";
   }
 }
 ```

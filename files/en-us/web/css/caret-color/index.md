@@ -45,7 +45,7 @@ Note that the insertion caret is only one type of caret. For example, many brows
 /* Keyword values */
 caret-color: auto;
 caret-color: transparent;
-caret-color: currentcolor;
+caret-color: currentColor;
 
 /* <color> values */
 caret-color: red;
@@ -64,10 +64,10 @@ caret-color: unset;
 ### Values
 
 - `auto`
-  - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentcolor`, the background, shadows, and other factors.
+  - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentColor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentColor`, the background, shadows, and other factors.
 
     > [!NOTE]
-    > While user agents may use `currentcolor` (which is usually animatable) for the `auto` value, `auto` is not interpolated in transitions and animations.
+    > While user agents may use `currentColor` (which is usually animatable) for the `auto` value, `auto` is not interpolated in transitions and animations.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the caret.
