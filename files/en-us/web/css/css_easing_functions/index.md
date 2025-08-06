@@ -12,8 +12,6 @@ Gradually increasing the speed at which an element moves can give the element a 
 
 Alternatively, you may want an animation to move forward in distinct steps, to create robot-like movement, or the effect of a segmented wheel that rotates such that the segments always appear in the same position. For this, step easing functions can be used.
 
-By default, gradient color changes progress linearly between each pair of color stops. Easing functions enable controlling the rate of change of gradient interpolation, which can be used to produce different visual effects such as suggesting a concave or convex surface, or producing a striped effect.
-
 ## Reference
 
 ### Functions
