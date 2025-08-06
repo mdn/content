@@ -93,7 +93,7 @@ The `:heading(3, 4)` matches the `<h3>` and `<h4>` elements.
 The `:heading(-n+3)` matches the heading elements in reverse (negatively) from `<h3>`.
 
 ```css
-:heading(-n+3) {
+:heading(-n + 3) {
   color: tomato;
 }
 ```
