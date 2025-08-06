@@ -11,13 +11,16 @@ The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Mode
 
 {{glossary("Whitespace")}} characters consist of different characters in different programming language contexts. _Document white space characters_, as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (LF, U+000A), and carriage returns (CR, U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code for readability. Much of our source code is full of these whitespace characters, and we tend to remove them only as part of a production build step to reduce file size.
 
-Note that this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML). So these characters don't trigger any [collapsing](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation), which is why they are often used to create longer spaces in HTML.
+Note that this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML). So these characters don't trigger any [collapsing](#collapsing_and_transformation), which is why they are often used to create longer spaces in HTML.
+
+CSS also defines the concept of _segment breaks_, which in the context of HTML are equivalent to _line breaks_.
 
 ## How does HTML process whitespace?
 
 **HTML generally does not ignore whitespace.** As a markup language, HTML produces a {{glossary("DOM")}} where all whitespace in the text content is preserved. This is how CSS, a downstream rendering engine that works on the DOM, lets us control how whitespace is displayed using the {{cssxref("white-space")}} property. Every single character of text content in the source code is represented in the DOM tree and can be retrieved and manipulated via DOM APIs such as {{domxref("Node.textContent")}}.
 
-To be clear, we're talking about whitespace _between HTML tags_, which becomes text nodes in the DOM. Any whitespace _inside a tag_ (between the angle brackets but not as part of an attribute value) is just part of the HTML syntax and does not appear in the DOM.
+> [!NOTE]
+> To be clear, we're talking about whitespace _between HTML tags_, which becomes text nodes in the DOM. Any whitespace _inside a tag_ (between the angle brackets but not as part of an attribute value) is just part of the HTML syntax and does not appear in the DOM.
 
 Take the following document, for example:
 
@@ -44,21 +47,10 @@ Note that:
 - Some text nodes will contain only whitespace.
 - Other text nodes may have whitespace at the beginning or the end.
 
+> [!NOTE]
+> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
+
 Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on.
-
-When the DOM is passed to CSS for rendering, the whitespace is largely stripped by default. This means that the way your code is formatted is not visible to the end user.
-
-```html-nolint
-<!doctype html>
-
-  <h1>      Hello      World!     </h1>
-```
-
-This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element. But the browser ignores these spaces and just shows the words "Hello World!" as if these characters didn't exist at all:
-
-{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
-
-This behavior ensures that whitespace characters in your code don't impact the layout of your page. If you want to create space around and inside elements, you should use CSS.
 
 > [!NOTE]
 > Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there are certain whitespace characters that could be ignored by HTML; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just deal with concrete, rendered text content.
@@ -67,7 +59,21 @@ This behavior ensures that whitespace characters in your code don't impact the l
 
 ## How does CSS process whitespace?
 
-In CSS, most whitespace characters are ignored, but not all. In the earlier example, one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. CSS uses [a specific algorithm](https://drafts.csswg.org/css-text-4/#white-space-processing) to decide which whitespace characters are user-irrelevant and how they are removed or transformed. We'll explain how this processing works in the next few sections.
+When the DOM is passed to CSS for rendering, the whitespace is largely stripped by default. This means that the way your code is formatted is not visible to the end user.
+
+```html-nolint live-sample___html-whitespace
+<!doctype html>
+
+  <h1>      Hello      World!     </h1>
+```
+
+This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element. But the browser ignores these spaces and just shows the words "Hello World!" as if these characters didn't exist at all:
+
+{{EmbedLiveSample("html-whitespace")}}
+
+This behavior ensures that whitespace characters in your code don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
+
+CSS ignores most, but not all, whitespace characters. In this example, one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. CSS uses [a specific algorithm](https://drafts.csswg.org/css-text-4/#white-space-processing) to decide which whitespace characters are user-irrelevant and how they are removed or transformed. We'll explain how this processing works in the next few sections.
 
 ### Collapsing and transformation
 
@@ -102,7 +108,7 @@ Because this `<h1>` element contains only inline elements, it establishes an [in
 Inside this inline formatting context, whitespace characters are processed as follows:
 
 > [!NOTE]
-> These processing steps don't apply when {{cssxref("white-space-collapse")}} is `preserve` or `preserve-spaces`.
+> This algorithm can be configured via the {{cssxref("white-space-collapse")}} property (or its shorthand property {{cssxref("white-space")}}). We'll start by assuming its default value (`white-space-collapse: collapse`), then look at how different property values affect this algorithm.
 
 1. First, all spaces and tabs immediately before and after a line break are ignored. So, if we take our example markup from before:
 
@@ -134,9 +140,6 @@ Inside this inline formatting context, whitespace characters are processed as fo
 
    might be rendered as "你好世界" without any spaces in between, depending on the browser's heuristics.
 
-   > [!NOTE]
-   > Steps 2 and 3 don't happen if {{cssxref("white-space-collapse")}} is set to `preserve-breaks`.
-
 4. Next, all tab characters are transformed into space characters, so the example becomes:
 
    ```html-nolint
@@ -154,8 +157,11 @@ This is why people visiting the web page will see the phrase "Hello World!" nice
 
 After these steps, the browser processes line wrapping and bidirectional text, which we will ignore here. Note that there are still spaces left after the opening `<h1>` tag and before the closing `</h1>` tag, but these are not rendered in the browser. We'll handle that next, as each line is laid out.
 
-> [!NOTE]
-> [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
+Different {{cssxref("white-space-collapse")}} values skip different steps of this algorithm:
+
+- `preserve` and `break-spaces`: the whole algorithm is skipped, and no whitespace collapsing or transformation happens.
+- `preserve-breaks`: steps 2 and 3 are skipped, and line breaks are preserved.
+- `preserve-spaces`: the whole algorithm is skipped and replaced with a single step to convert each tab or line break into a space.
 
 In a nutshell, different whitespace characters are collapsed and transformed in the following fashion:
 
@@ -201,7 +207,7 @@ This renders like so:
 We can summarize how the whitespace here is handled as follows:
 
 > [!NOTE]
-> Again, everything below doesn't apply when {{cssxref("white-space-collapse")}} is `preserve` or `preserve-spaces`.
+> This algorithm can be configured via the {{cssxref("white-space-collapse")}} property (or its shorthand property {{cssxref("white-space")}}). We'll start by assuming its default value (`white-space-collapse: collapse`), then look at how different property values affect this algorithm.
 
 1. We first collapse whitespace the way as before, turning this:
 
@@ -219,7 +225,7 @@ We can summarize how the whitespace here is handled as follows:
    <body>◦<div>◦Hello◦</div>◦<div>◦World!◦</div>◦</body>
    ```
 
-2. We are laying out lines here, so we first need to figure out how many lines there are. In this example, `<body>` establishes a block formatting context, so its five child nodes are each one line (each line in this code and below represents a line in the layout, not in the source code):
+   We are laying out lines here, so we first need to figure out how many lines there are. In this example, `<body>` establishes a block formatting context, so its five child nodes are each one line (each line in this code and below represents a line in the layout, not in the source code):
 
    ```html-nolint
    <body>
@@ -231,7 +237,9 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-   Sequences of spaces at the beginning of a line are removed, so the above becomes:
+   Note that if the lines get long, each line may wrap and create more lines, so in reality browsers can only know what each line contains as it lays them out. We'll skip the part about how text wrapping works.
+
+2. Sequences of spaces at the beginning of a line are removed, so the above becomes:
 
    ```html-nolint
    <body>
@@ -243,7 +251,7 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-3. Each tab that's preserved at this point (for example, via `white-space-collapse: preserve`) is rendered according to the {{cssxref("tab-size")}}.
+3. Each tab that's preserved at this point is rendered according to the {{cssxref("tab-size")}}. This can only happen with `white-space-collapse` set to `preserve` or `break-spaces`, because all other settings turn tabs into spaces.
 4. Sequences of spaces at the end of a line are removed, so the above becomes:
 
    ```html-nolint
@@ -256,7 +264,13 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-5. The 3 empty lines we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 lines taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
+The 3 empty lines we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 lines taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
+
+Different {{cssxref("white-space-collapse")}} values skip different steps of this algorithm:
+
+- `preserve` and `break-spaces`: the whole algorithm except step 3 is skipped, and no whitespace collapsing or transformation happens.
+- `preserve-spaces`: the whole algorithm is skipped, so whitespace at the start and end of lines are preserved.
+- `preserve-breaks`: the algorithm is the same as `collapse`.
 
 ### Whitespace processing between inline and inline-block elements
 
