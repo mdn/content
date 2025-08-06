@@ -109,7 +109,7 @@ The `:heading(3n+1)` matches every third (`3n`) heading element from and includi
 The `:heading(n+5)` matches the heading elements from `<h5>`.
 
 ```css
-:heading(n+5) {
+:heading(n + 5) {
   color: slateblue;
 }
 ```
