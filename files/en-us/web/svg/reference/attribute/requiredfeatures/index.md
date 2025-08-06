@@ -774,12 +774,12 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 }
 
 rect {
-  stroke: #000;
+  stroke: black;
   stroke-width: 2px;
 }
 
 text {
-  fill: #fff;
+  fill: white;
   font: 12px sans-serif;
 }
 ```
