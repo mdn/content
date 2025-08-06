@@ -11,7 +11,7 @@ The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Mode
 
 {{glossary("Whitespace")}} characters consist of different  characters in different programming language contexts. _Document white space characters_, as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (LF, U+000A), and carriage returns (CR, U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code for readability. Much of our source code is full of these whitespace characters, and we tend to remove them only as part of a production build step to reduce file size.
 
-Note that because this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML), they don't trigger any collapsing, which is why they are often used to create longer spaces in HTML.
+Note that this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML). So these characters don't trigger any [collapsing](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation), which is why they are often used to create longer spaces in HTML.
 
 ## How does HTML process whitespace?
 
