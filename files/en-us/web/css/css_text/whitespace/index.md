@@ -17,10 +17,15 @@ CSS also defines the concept of _segment breaks_, which in the context of HTML a
 
 ## How does HTML process whitespace?
 
-**HTML generally does not ignore whitespace.** As a markup language, HTML produces a {{glossary("DOM")}} where all whitespace in the text content is preserved. This is how CSS, a downstream rendering engine that works on the DOM, lets us control how whitespace is displayed using the {{cssxref("white-space")}} property. Every single character of text content in the source code is represented in the DOM tree and can be retrieved and manipulated via DOM APIs such as {{domxref("Node.textContent")}}.
+It is a common myth that "HTML ignores whitespace", which is untrue: **HTML preserves all whitespace text content as you wrote them in the source code.** As a markup language, HTML produces a {{glossary("DOM")}} where all whitespace in the text content is preserved, which can be retrieved and manipulated via DOM APIs such as {{domxref("Node.textContent")}}. If HTML strips whitespace from the DOM, then CSS, a downstream rendering engine that works on the DOM, would not be able to preserve them using the {{cssxref("white-space")}} property.
 
 > [!NOTE]
 > To be clear, we're talking about whitespace _between HTML tags_, which becomes text nodes in the DOM. Any whitespace _inside a tag_ (between the angle brackets but not as part of an attribute value) is just part of the HTML syntax and does not appear in the DOM.
+
+> [!NOTE]
+> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there do exist certain places where whitespace characters could be ignored; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just focus on concrete, rendered text content.
+>
+> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream). It would replace CR (U+000D) and CRLF sequences with single LF (U+000A). However, CR characters can still be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to explicitly handle them.
 
 Take the following document, for example:
 
@@ -52,14 +57,9 @@ Note that:
 
 Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on.
 
-> [!NOTE]
-> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there are certain whitespace characters that could be ignored by HTML; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just deal with concrete, rendered text content.
->
-> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream). It would replace CR (U+000D) and CRLF sequences with single LF (U+000A). However, CR characters can still be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to deal with them.
-
 ## How does CSS process whitespace?
 
-When the DOM is passed to CSS for rendering, the whitespace is largely stripped by default. This means that the way your code is formatted is not visible to the end user.
+When the DOM is passed to CSS for rendering, the whitespace is largely stripped by default. This means that the way your code is formatted is not visible to the end user—creating space around and inside elements is the job of CSS.
 
 ```html-nolint live-sample___html-whitespace
 <!doctype html>
@@ -70,8 +70,6 @@ When the DOM is passed to CSS for rendering, the whitespace is largely stripped 
 This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element. But the browser ignores these spaces and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample("html-whitespace")}}
-
-This behavior ensures that whitespace characters in your code don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
 CSS ignores most, but not all, whitespace characters. In this example, one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. CSS uses [a specific algorithm](https://drafts.csswg.org/css-text-4/#white-space-processing) to decide which whitespace characters are user-irrelevant and how they are removed or transformed. We'll explain how this processing works in the next few sections.
 
