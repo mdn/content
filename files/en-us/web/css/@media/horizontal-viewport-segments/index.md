@@ -16,7 +16,7 @@ The `horizontal-viewport-segments` feature is specified as an integer of `1` or 
 
 - The value will be `2` for a two-screen foldable device that is currently folded (in the [`folded` device posture](/en-US/docs/Web/API/Device_Posture_API#folded)) either horizontally or vertically.
 - The value will be `1` for a foldable device that is either unfolded or closed (in the [`continuous` device posture](/en-US/docs/Web/API/Device_Posture_API#continuous)), or a non-foldable device.
-- The value may be greater than `2` in future implementations, for foldable devices with more than two screens. Current implementations do not support more than two foldable screens.
+- The value may be greater than `2` for foldable devices with more than one fold.
 
 ## Examples
 

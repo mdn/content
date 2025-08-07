@@ -103,7 +103,7 @@ The values are both integers of `0` or greater. The first value represents the h
 
 - In a horizontal side-by-side layout, the left segment is represented by `0 0`, and the right segment is represented by `1 0`.
 - In a vertical top-to-bottom layout, the top segment is represented by `0 0`, and the bottom segment is represented by `0 1`.
-- In devices that have more than 2 segments, the numbers may be greater. However, current implementations do not support more than two foldable screens.
+- In devices with more than two segments, the numbers may be greater. For example, a device with three horizontal segments may have the center segment represented by `1 0`, and the right-hand segment represented by `2 0`.
 
 In a layout, you can use these variables to set your containers to fit neatly into the available segments. For example:
 
