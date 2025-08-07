@@ -17,7 +17,7 @@ The **`flood-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of t
 /* <color> values */
 flood-color: red;
 flood-color: hsl(120deg 75% 25% / 60%);
-flood-color: currentcolor;
+flood-color: currentColor;
 
 /* Global values */
 flood-color: inherit;

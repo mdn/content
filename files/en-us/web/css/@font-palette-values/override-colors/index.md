@@ -25,15 +25,9 @@ override-colors: 0 rgb(255 0 0);
 
 /* overriding multiple colors */
 override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
-
-/* overriding multiple colors with readability */
-override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
+  0 red,
+  1 green,
+  2 blue;
 ```
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
@@ -91,7 +85,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
     format("woff2");
 }
 

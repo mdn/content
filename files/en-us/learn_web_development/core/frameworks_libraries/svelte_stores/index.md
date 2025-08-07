@@ -161,7 +161,7 @@ Let's now create our `Alert` component and see how we can read values from the s
    }
    div svg {
      height: 1.6rem;
-     fill: currentcolor;
+     fill: currentColor;
      width: 1.4rem;
      margin-right: 0.5rem;
    }

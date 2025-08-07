@@ -54,11 +54,11 @@ As long as a comma-separated {{cssxref("mask-image")}} property declaration incl
 }
 
 .raster-mask {
-  mask-image: url(alphaImage.png);
+  mask-image: url("alphaImage.png");
 }
 
 .mask-element-mask {
-  mask-image: url(#svg-mask);
+  mask-image: url("#svg-mask");
 }
 ```
 
@@ -99,8 +99,8 @@ Otherwise, as long as there is a `mask-image` declared that isn't set to `none`,
 ```css
 .masked-element {
   mask-image:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
 }
 ```
 
@@ -111,8 +111,8 @@ We can also create the layers using the `mask` shorthand:
 ```css
 .masked-element {
   mask:
-    url(alphaImage.png), linear-gradient(to right, black, transparent),
-    radial-gradient(circle, white 50%, transparent 75%), none, url(#svg-mask);
+    url("alphaImage.png"), linear-gradient(to right, black, transparent),
+    radial-gradient(circle, white 50%, transparent 75%), none, url("#svg-mask");
 }
 ```
 
@@ -176,23 +176,23 @@ In this case, the order is very important. If only one or a pair of {{cssxref("l
 
 ```css
 mask:
-  url(star.svg) bottom 2em right 4em / auto 2vw no-repeat padding-box
+  url("star.svg") bottom 2em right 4em / auto 2vw no-repeat padding-box
     content-box luminance,
-  url(circle.svg) 100px 100px / 50% repeat-x border-box padding-box alpha;
+  url("circle.svg") 100px 100px / 50% repeat-x border-box padding-box alpha;
 ```
 
 If a single pair of `<length-percentage>` values is present, it sets the `mask-position` property, and the `mask-size` will be `auto`. If a layer includes both a `mask-size` and a `mask-position`, the `mask-size` property value must come after the `mask-position` property value and the values must be separated by a forward slash (`/`). The slash is required even if the `mask-size` is set to a value that is not a valid `mask-position` value.
 
 ```css example-bad
-mask: url(star.svg) contain;
-mask: url(star.svg) 10px 10px cover;
-mask: url(star.svg) top right 100px 100px;
+mask: url("star.svg") contain;
+mask: url("star.svg") 10px 10px cover;
+mask: url("star.svg") top right 100px 100px;
 ```
 
 ```css example-good
-mask: url(star.svg) 10px 10px / cover;
-mask: url(star.svg) top 100px right 100px;
-mask: url(star.svg) top right / 100px 100px;
+mask: url("star.svg") 10px 10px / cover;
+mask: url("star.svg") top 100px right 100px;
+mask: url("star.svg") top right / 100px 100px;
 ```
 
 To include a `mask-size` in a mask layer using the `mask` shorthand, you must include a `mask-position` value with a slash immediately before it.

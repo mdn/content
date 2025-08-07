@@ -176,7 +176,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 
 ```css
 .tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;

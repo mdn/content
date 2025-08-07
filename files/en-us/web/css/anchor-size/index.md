@@ -19,20 +19,20 @@ block-size: anchor-size(block);
 height: calc(anchor-size(self-inline) + 2em);
 
 /* sizing relative to named anchor's side */
-width: anchor-size(--myAnchor width);
-block-size: anchor-size(--myAnchor block);
+width: anchor-size(--my-anchor width);
+block-size: anchor-size(--my-anchor block);
 
 /* sizing relative to named anchor's side with fallback */
-width: anchor-size(--myAnchor width, 50%);
-block-size: anchor-size(--myAnchor block, 200px);
+width: anchor-size(--my-anchor width, 50%);
+block-size: anchor-size(--my-anchor block, 200px);
 
 /* positioning relative to anchor side */
 left: anchor-size(width);
-inset-inline-end: anchor-size(--myAnchor height, 100px);
+inset-inline-end: anchor-size(--my-anchor height, 100px);
 
 /* setting margin relative to anchor side */
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--myAnchor self-block, 20px);
+margin-block-start: anchor-size(--my-anchor self-block, 20px);
 ```
 
 ### Parameters
@@ -247,13 +247,13 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: 100px;
   height: 100px;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
 }
 ```

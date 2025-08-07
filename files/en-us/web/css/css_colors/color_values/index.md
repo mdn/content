@@ -20,7 +20,7 @@ The web defines a set of standard color names that lets you use keywords instead
 
 Color keywords include standard primary and secondary colors (such as `red`, `blue`, or `orange`), shades of gray (from `black` to `white`, including colors like `darkgray` and `lightgrey`), and a variety of other blended colors, including `lightseagreen`, `cornflowerblue`, and `rebeccapurple`. Named colors use the [RGB](/en-US/docs/Glossary/RGB) model and are associated with the sRGB (`srgb`) color space.
 
-There are over 160 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) sets a transparent color value, while [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) sets the current value of the CSS {{cssxref("color")}} property. There are also named {{cssxref("system-color")}} colors, such as `accentcolortext` and `buttonface`, that reflect the default color choices made by the user, the browser, or the operating system.
+There are over 160 named colors. There are named colors of special interest: [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) sets a transparent color value, while [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) sets the current value of the CSS {{cssxref("color")}} property. There are also named {{cssxref("system-color")}} colors, such as `accentcolortext` and `buttonface`, that reflect the default color choices made by the user, the browser, or the operating system.
 
 All color keywords are case-insensitive. See the {{cssxref("named-color")}} data type for more information on color keywords.
 

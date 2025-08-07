@@ -78,7 +78,7 @@ This example shows how to apply the `brightness()` filter to a paragraph via the
 
 ```css
 .container {
-  background: url(be_fierce.jpg) no-repeat right / contain #d4d5b2;
+  background: url("be_fierce.jpg") no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);

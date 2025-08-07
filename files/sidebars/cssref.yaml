@@ -313,6 +313,10 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_text/Wrapping_breaking_text
+  - title: Text decoration
+    details: closed
+    children:
+      - /Web/CSS/CSS_text_decoration/Text_shadows
   - title: Transforms
     details: closed
     children:

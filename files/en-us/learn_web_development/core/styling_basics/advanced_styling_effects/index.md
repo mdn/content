@@ -301,7 +301,7 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url(colorful-heart.png) no-repeat center 20px;
+  background: url("colorful-heart.png") no-repeat center 20px;
   background-color: green;
 }
 
@@ -354,7 +354,7 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url(colorful-heart.png) no-repeat center 20px;
+  background: url("colorful-heart.png") no-repeat center 20px;
   background-color: green;
 }
 
@@ -454,7 +454,7 @@ h2 {
 h2 {
   color: white;
   display: inline-block;
-  background: url(colorful-heart.png) no-repeat center;
+  background: url("colorful-heart.png") no-repeat center;
 }
 
 .text-clip {

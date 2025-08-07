@@ -319,7 +319,7 @@ It would be arguably better to implement the background header image using CSS b
 
 ```css
 h1 {
-  background: url(https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png)
+  background: url("https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png")
     no-repeat left;
   padding-left: 50px;
 }
