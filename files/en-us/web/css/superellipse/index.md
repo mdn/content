@@ -6,7 +6,7 @@ browser-compat: css.types.superellipse
 sidebar: cssref
 ---
 
-The **`superellipse()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an ellipse shape, which defines the {{cssxref("&lt;corner-shape-value>")}} values used to specify corner shapes.
+The **`superellipse()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines the curvature of an ellipse, and is used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape) either directly, or via {{cssxref("&lt;corner-shape-value>")}} keywords.
 
 ## Syntax
 
@@ -33,15 +33,17 @@ This is calculated using a modified version of the equation that defines a circl
 
 x<sup>2</sup> + y<sup>2</sup> = 1
 
-The circle is made from all points `(x,y)` that satisfy the equation. A given ellipse can be produced by scaling this shape along the x and/or y axis. This is done by replacing the 2 exponent in each case with 2<sup>K</sup>, `K` being the argument passed to `superellipse()`.
+A circle is defined by all the points `(x,y)` that satisfy the equation, and a given ellipse can be produced by scaling this shape along the x and/or y axis. A superellipse is created by replacing the 2 exponent in each case with 2<sup>K</sup>, `K` being the argument passed to `superellipse()`, which modifies the curvature of the ellipse.
 
 ![Line diagram illustrating the ellipses created using different K values, as described subsequently](superellipse-param.svg)
 
-- A `K` value of `1` creates a perfect ellipse.
-- A `K` value of `>1` makes the ellipse shape more square; `2` is used to create the traditional "squircle" shape.
-- A `K` value of `infinity` creates a perfect square, although `K` values of `10` or more are indistinguishable from a square.
-- A `K` value of `0` creates a perfect diamond shape, used to create bevelled corners.
-- Negative `K` values create concave curves, resulting in corner shapes that are "scooped out".
+- A `K` value of `0` creates a perfect diamond shape, used to create bevelled corners. This corresponds to the {{cssxref("&lt;corner-shape-value>")}} `bevel` keyword.
+- A `K` value of `1` creates a perfect ellipse, corresponding to the `round` keyword.
+- A `K` value of `>1` makes the ellipse shape more square; `2` corresponds to the `squircle` keyword.
+- A `K` value of `infinity` creates a perfect square (corresponding to the `square` keyword), although `K` values of `10` or more are indistinguishable from a square.
+- Negative `K` values result in a concave curve, resulting in corner shapes that are curved inward, or "scooped out". `-1` corresponds to the `scoop` keyword and `-infinity` corresponds to the `notch` keyword.
+
+A negative or positive superellipse would appear symmetrical to a superellipse with its inverse value.
 
 ## Formal syntax
 

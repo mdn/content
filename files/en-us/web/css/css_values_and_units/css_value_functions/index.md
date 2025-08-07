@@ -281,7 +281,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_V
 Additional shape functions are defined elsewhere, and used in other contexts:
 
 - {{CSSxRef("superellipse()")}}
-  - : Returns an ellipse shape, which defines the {{cssxref("&lt;corner-shape-value>")}} values used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape).
+  - : Defines the curvature of an ellipse, and is used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape) either directly, or via {{cssxref("&lt;corner-shape-value>")}} keywords.
 
 ## Reference functions
 

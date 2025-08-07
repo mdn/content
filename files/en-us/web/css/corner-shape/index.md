@@ -75,7 +75,7 @@ If a visible `border-radius` is not applied to a container, `corner-shape` will 
 
 The values available to be used within `corner-shape` values — and those of its associated and `corner-*-shape` shorthands and longhands — are defined inside the {{cssxref("&lt;corner-shape-value>")}} data type. This includes several keywords for commonly-used shapes, plus the {{cssxref("superellipse()")}} function, which enables custom shapes to be specified.
 
-The default (initial) value of `corner-shape` is `rounded`, which gives the same effect as using `border-radius` on its own, without `corner-shape`. There is also a keyword value `square`, which gives the same effect as default square corners, with no `border-radius` applied. These values are useful because they can be smoothly animated to other `corner-shape` values. When two `corner-shape` values are animated between, and one or both of them are keywords, the `superellipse()` equivalents of those keywords are interpolated between.
+The default (initial) value of `corner-shape` is `round`, which gives the same effect as using `border-radius` on its own, without `corner-shape`. There is also a keyword value `square`, which gives the same effect as default square corners, with no `border-radius` applied. These values are useful because they can be smoothly animated to other `corner-shape` values. When two `corner-shape` values are animated between, and one or both of them are keywords, the `superellipse()` equivalents of those keywords are interpolated between.
 
 The `corner-shape` shorthand is especially useful when you want all four borders to be the same, or you want to set different values using a single declaration. To set only one or two corner shapes at a time, use the `corner-*-shape` shorthands and longhands lister earlier.
 
@@ -91,6 +91,16 @@ div {
   border-radius: 80% 20px;
 }
 ```
+
+### Properties that follow the corner shape
+
+The following properties all follow the shape of the corner when set on the container:
+
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("overflow")}}
+- {{cssxref("backdrop-filter")}}
 
 ## Formal definition
 
@@ -187,6 +197,9 @@ The markup for this example contains a `<select>` element from which different `
 <div></div>
 ```
 
+> [!NOTE]
+> The JavaScript that applies the `<select>` values to the `<div>` has been hidden for brevity.
+
 #### CSS
 
 We give the `<div>` and `<select>` some basic styles, which we've hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} and a `border-radius` of 30 pixels to the `<div>`.
@@ -231,27 +244,15 @@ div {
 }
 ```
 
-#### JavaScript
-
-In our script, we first grab references to the `<div>` and the `<select>`:
-
-```js live-sample___corner-shape-select
+```js hidden live-sample___corner-shape-select
 const rectangle = document.querySelector("div");
 const select = document.querySelector("select");
-```
 
-We then define a function called `setCornerShape()`, which sets the current `value` of the `<select>` element as the value of the `<div>` element's `corner-shape` property, and also prints the set `corner-shape` declaration inside the `<div>` as text inside a {{htmlelement("code")}} element.
-
-```js live-sample___corner-shape-select
 function setCornerShape() {
   rectangle.style.cornerShape = select.value;
   rectangle.innerHTML = `<code>corner-shape: ${select.value}</code>`;
 }
-```
 
-Finally, we set `setCornerShape()` as an event handler function that will run whenever the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event fires on the `<select>` element. We also run `setCornerShape()` once so that the default selected value is applied on page load.
-
-```js live-sample___corner-shape-select
 select.addEventListener("change", setCornerShape);
 setCornerShape();
 ```
@@ -285,6 +286,9 @@ The markup for this example contains an `<input type="range">` element from whic
 </form>
 <div></div>
 ```
+
+> [!NOTE]
+> The JavaScript that applies the `<input>` values to the `<div>` has been hidden for brevity.
 
 #### CSS
 
@@ -326,28 +330,16 @@ div {
 }
 ```
 
-#### JavaScript
-
-In our script, we first grab references to the `<div>` and the `<input>`:
-
-```js live-sample___superellipse-slider
+```js hidden live-sample___superellipse-slider
 const rectangle = document.querySelector("div");
 const range = document.querySelector("input");
-```
 
-We then define a function called `setSuperEllipse()`, which sets the current `value` of the `<input>` element as the argument inside the `<div>` element's `corner-shape: superellipse()` value, and also prints the set `corner-shape` declaration inside the `<div>` as text inside a {{htmlelement("code")}} element.
-
-```js live-sample___superellipse-slider
 function setSuperEllipse() {
   const seValue = `superellipse(${range.value})`;
   rectangle.style.cornerShape = seValue;
   rectangle.innerHTML = `<code>corner-shape: ${seValue}</code>`;
 }
-```
 
-Finally, we set `setSuperEllipse()` as an event handler function that will run whenever the [`input`](/en-US/docs/Web/API/HTMLElement/input_event) event fires on the `<input>` element. We also run `setSuperEllipse()` once so that the default value is applied on page load.
-
-```js live-sample___superellipse-slider
 range.addEventListener("input", setSuperEllipse);
 setSuperEllipse();
 ```
