@@ -313,7 +313,7 @@ This behavior helps avoid repetition in your CSS. A common practice is to define
 ```css live-sample___mixing-rules
 h2 {
   font-size: 2em;
-  color: #000;
+  color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 

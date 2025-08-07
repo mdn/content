@@ -489,7 +489,7 @@ There are a variety of styles that you can use for borders. In the example below
   background-color: #567895;
   border: 5px solid #0b385f;
   border-bottom-style: dashed;
-  color: #fff;
+  color: white;
 }
 
 h2 {

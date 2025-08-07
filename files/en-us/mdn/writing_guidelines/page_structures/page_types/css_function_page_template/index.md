@@ -108,7 +108,7 @@ var(--custom-prop,)
 /* With a fallback value */
 /* var( <custom-property-name> , <declaration-value> ) */
 var(--custom-prop, initial)
-var(--custom-prop, #FF0000)
+var(--custom-prop, red)
 var(--my-background, linear-gradient(transparent, aqua), pink)
 var(--custom-prop, var(--default-value))
 var(--custom-prop, var(--default-value, red))

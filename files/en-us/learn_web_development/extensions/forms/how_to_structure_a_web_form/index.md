@@ -359,7 +359,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
    input:focus,
    textarea:focus {
-     border-color: #000;
+     border-color: black;
    }
 
    textarea {
