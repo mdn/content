@@ -139,8 +139,6 @@ jobs:
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
 
-          set -x
-
           # Read into array, one filename per line
           readarray -t files_to_build <<< "$GIT_DIFF_CONTENT"
 
