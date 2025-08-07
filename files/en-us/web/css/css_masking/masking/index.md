@@ -111,11 +111,11 @@ In this case we use an external PNG. The image contains a colorful heart with a 
 
 ```css live-sample___image1 live-sample___luminance1
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   mask-size: 220px 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  background: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   background-size: 220px 220px;
 }
 ```
@@ -204,12 +204,12 @@ In this example, we have a white moon against a black night sky.
 
 ```css live-sample___luminance3
 .applied-mask {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   mask-mode: luminance;
   mask-size: 220px;
 }
 .mask-source {
-  background: url(https://mdn.github.io/shared-assets/images/examples/moon.jpg);
+  background: url("https://mdn.github.io/shared-assets/images/examples/moon.jpg");
   background-size: 220px;
 }
 ```
@@ -260,10 +260,10 @@ In this example, we define an SVG with a `<mask>` element, an identical {{SVGEle
 
 ```css live-sample___svg1
 .applied-mask {
-  mask-image: url(#mask-heart);
+  mask-image: url("#mask-heart");
 }
 .applied-clip {
-  clip-path: url(#clip-heart);
+  clip-path: url("#clip-heart");
 }
 ```
 

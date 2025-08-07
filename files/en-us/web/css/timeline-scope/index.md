@@ -44,7 +44,7 @@ Allowed values for `timeline-scope` are:
 
 ## Examples
 
-In this example, a scroll timeline named `--myScroller` is defined using the `scroll-timeline-name` property on the element with the `scroller` class (the scrolling element). This is then applied to the animation on the element with the `box` and `animation` classes (the animated element) using `animation-timeline: --myScroller`. The key point to note here is that the animated element is not a descendant of the scrolling element — to make this work, we increase the scope of the `--myScroller` timeline by setting `timeline-scope: --myScroller` on the {{htmlelement("body")}}.
+In this example, a scroll timeline named `--my-scroller` is defined using the `scroll-timeline-name` property on the element with the `scroller` class (the scrolling element). This is then applied to the animation on the element with the `box` and `animation` classes (the animated element) using `animation-timeline: --my-scroller`. The key point to note here is that the animated element is not a descendant of the scrolling element — to make this work, we increase the scope of the `--my-scroller` timeline by setting `timeline-scope: --my-scroller` on the {{htmlelement("body")}}.
 
 ### HTML
 
@@ -64,7 +64,7 @@ The HTML for the example is shown below.
 
 The CSS is as follows.
 
-First of all, we set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox. We also set `timeline-scope: --myScroller` on it so that the `--myScroller` timeline can be set as the controlling timeline for an animation set on the `<body>` and any element inside it.
+First of all, we set the `<body>`'s height to `100vh`, and lay its two child elements out as two equal columns using flexbox. We also set `timeline-scope: --my-scroller` on it so that the `--my-scroller` timeline can be set as the controlling timeline for an animation set on the `<body>` and any element inside it.
 
 ```css
 body {
@@ -74,7 +74,7 @@ body {
 
   /* increases the timeline scope from the .scroller <div> element
   to the whole <body> */
-  timeline-scope: --myScroller;
+  timeline-scope: --my-scroller;
 }
 
 .content,
@@ -83,12 +83,12 @@ body {
 }
 ```
 
-Next, the scrolling element has the `--myScroller` timeline set on it, `overflow` so that it will scroll, and it is given a background color so that its boundary is clear to see. The scrolling element's child long element is given a large height so that the scrolling element will actually scroll.
+Next, the scrolling element has the `--my-scroller` timeline set on it, `overflow` so that it will scroll, and it is given a background color so that its boundary is clear to see. The scrolling element's child long element is given a large height so that the scrolling element will actually scroll.
 
 ```css
 .scroller {
   overflow: scroll;
-  scroll-timeline-name: --myScroller;
+  scroll-timeline-name: --my-scroller;
   background: deeppink;
 }
 
@@ -97,7 +97,7 @@ Next, the scrolling element has the `--myScroller` timeline set on it, `overflow
 }
 ```
 
-Next, we give the animated element some rudimentary styling, and apply an animation to it. We also apply the `--myScroller` timeline to it using `animation-timeline: --myScroller`. To reiterate, this is only possible because earlier we set `timeline-scope: --myScroller` on the `<body>` element — the animated element is **not** a descendant of the scrolling element.
+Next, we give the animated element some rudimentary styling, and apply an animation to it. We also apply the `--my-scroller` timeline to it using `animation-timeline: --my-scroller`. To reiterate, this is only possible because earlier we set `timeline-scope: --my-scroller` on the `<body>` element — the animated element is **not** a descendant of the scrolling element.
 
 ```css
 .box {
@@ -112,7 +112,7 @@ Next, we give the animated element some rudimentary styling, and apply an animat
 
 .animation {
   animation: rotate-appear;
-  animation-timeline: --myScroller;
+  animation-timeline: --my-scroller;
 }
 
 @keyframes rotate-appear {

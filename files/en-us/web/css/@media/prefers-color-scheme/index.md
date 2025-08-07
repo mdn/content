@@ -51,7 +51,7 @@ div.box {
   display: inline-block;
   padding: 1em;
   margin: 6px;
-  outline: 2px solid #000;
+  outline: 2px solid black;
   width: 12em;
   height: 2em;
   vertical-align: middle;
@@ -69,7 +69,7 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
   .theme-a.adaptive {
     background: #753;
     color: #dcb;
-    outline: 5px dashed #000;
+    outline: 5px dashed black;
   }
 }
 ```
@@ -85,7 +85,7 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
   .theme-b.adaptive {
     background: #bcd;
     color: #334;
-    outline: 5px dotted #000;
+    outline: 5px dotted black;
   }
 }
 ```

@@ -230,8 +230,8 @@ If using a prefix, make sure it is needed; that the property is one of the few r
 
 ```css
 .masked {
-  -webkit-mask-image: url(MDN.svg);
-  mask-image: url(MDN.svg);
+  -webkit-mask-image: url("MDN.svg");
+  mask-image: url("MDN.svg");
   -webkit-mask-size: 50%;
   mask-size: 50%;
 }

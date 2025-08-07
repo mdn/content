@@ -18,7 +18,7 @@ additive-symbols: 3 "*";
 additive-symbols:
   3 "0",
   2 "\2E\20",
-  1 url(symbol.png);
+  1 url("symbol.png");
 
 /* Binary counter */
 additive-symbols:

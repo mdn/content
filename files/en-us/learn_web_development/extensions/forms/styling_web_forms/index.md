@@ -250,7 +250,7 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: #fff url("background.jpg");
 
   /* we create our grid */
   display: grid;

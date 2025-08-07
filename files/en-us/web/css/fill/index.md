@@ -28,12 +28,12 @@ fill: red;
 fill: hsl(120deg 75% 25% / 60%);
 
 /* <url> values */
-fill: url(#gradientElementID);
-fill: url(star.png);
+fill: url("#gradientElementID");
+fill: url("star.png");
 
 /* <url> with fallback */
-fill: url(#gradientElementID) blue;
-fill: url(star.png) none;
+fill: url("#gradientElementID") blue;
+fill: url("star.png") none;
 
 /* Global values */
 fill: inherit;
@@ -159,7 +159,7 @@ svg {
 ```css
 path {
   stroke-width: 2px;
-  marker: url(#circle);
+  marker: url("#circle");
 }
 path:nth-of-type(1) {
   stroke: red;

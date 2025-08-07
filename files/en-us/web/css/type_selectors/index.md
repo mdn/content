@@ -54,7 +54,7 @@ span {
 In this example the selector will only match `<h1>` elements in the example namespace.
 
 ```css
-@namespace example url(http://www.example.com/);
+@namespace example url("http://www.example.com/");
 example|h1 {
   color: blue;
 }

@@ -176,7 +176,7 @@ Your final result should look like the image below:
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -190,7 +190,7 @@ Use `background-position` with the `center` keyword and a percentage:
 
 ```css
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
   background-position: center 20%;
 }

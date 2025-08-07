@@ -31,7 +31,7 @@ The @font-palette-values at-rule's applies to the font families:</pre
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";
