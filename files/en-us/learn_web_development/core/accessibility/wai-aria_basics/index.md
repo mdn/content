@@ -203,7 +203,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -456,7 +456,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -855,7 +855,7 @@ function toggleMusician(bool) {
   const instrument = formItems[formItems.length - 1];
   if (bool) {
     instrument.input.disabled = false;
-    instrument.label.style.color = "#000";
+    instrument.label.style.color = "black";
     instrument.input.setAttribute("aria-disabled", "false");
     hiddenAlert.textContent =
       "Instruments played field now enabled; use it to tell us what you play.";

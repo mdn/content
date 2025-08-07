@@ -61,7 +61,7 @@ Let's see an example piece of code that prints a red square on the canvas. Add t
 ```js
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 ```
@@ -119,7 +119,7 @@ const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 

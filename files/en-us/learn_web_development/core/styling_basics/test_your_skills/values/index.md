@@ -171,7 +171,7 @@ Your final result should look like the image below:
 
 ```css live-sample___position
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   height: 350px;
 }
 

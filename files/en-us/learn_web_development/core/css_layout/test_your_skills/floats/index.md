@@ -44,7 +44,7 @@ body {
   height: 150px;
   border-radius: 5px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   padding: 1em;
 }
 
@@ -114,7 +114,7 @@ body {
   height: 150px;
   border-radius: 5px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   padding: 1em;
 }
 
@@ -181,13 +181,13 @@ body {
   border-radius: 5px;
   background-color: rgb(207 232 220);
   padding: 1em;
-  color: #fff;
+  color: white;
 }
 
 .box {
   background-color: rebeccapurple;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 
 .float {

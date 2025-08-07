@@ -149,7 +149,7 @@ Let's now create our `Alert` component and see how we can read values from the s
      align-items: center;
      border-radius: 0.2rem;
      background-color: #565656;
-     color: #fff;
+     color: white;
      font-weight: 700;
      padding: 0.5rem 1.4rem;
      font-size: 1.5rem;
@@ -157,7 +157,7 @@ Let's now create our `Alert` component and see how we can read values from the s
      opacity: 95%;
    }
    div p {
-     color: #fff;
+     color: white;
    }
    div svg {
      height: 1.6rem;
