@@ -18,20 +18,26 @@ Here's a minimal function that uses `fetch()` to retrieve some JSON data from a 
 
 ```js
 async function getData() {
-  const url = "https://example.org/products.json";
+  const url = "https://jsonplaceholder.typicode.com/users";
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const result = await response.json();
-    console.log(result);
+    const users = await response.json();
+    console.log(users);
   } catch (error) {
     console.error(error.message);
   }
 }
 ```
+
+The example URLs in this guide are for demonstration only and won't work if tested directly. For actual API testing, use services like:
+
+[httpbin.org](https://httpbin.org/) |
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/) |
+[Reqres](https://reqres.in/)
 
 We declare a string containing the URL and then call `fetch()`, passing the URL with no extra options.
 
