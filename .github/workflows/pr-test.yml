@@ -68,8 +68,6 @@ jobs:
           # Set the boolean outputs
           echo "HAS_MD_FILES=${HAS_MD_FILES}" >> "$GITHUB_OUTPUT"
           echo "HAS_IMAGE_FILES=${HAS_IMAGE_FILES}" >> "$GITHUB_OUTPUT"
-
-          # Set overall flag
           if [ "${HAS_MD_FILES}" = "true" ] || [ "${HAS_IMAGE_FILES}" = "true" ]; then
             echo "HAS_FILES=true" >> "$GITHUB_OUTPUT"
           else
@@ -141,8 +139,6 @@ jobs:
 
           # Read into array, one filename per line
           readarray -t files_to_build <<< "$GIT_DIFF_CONTENT"
-
-          # ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
 
           ARGS=()
           for file in "${files_to_build[@]}"; do
