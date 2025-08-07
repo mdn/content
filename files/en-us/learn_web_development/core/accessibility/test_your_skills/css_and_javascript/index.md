@@ -1,6 +1,6 @@
 ---
-title: "Test your skills: CSS and JavaScript accessibility"
-short-title: "Test: CSS/JS a11y"
+title: "💡 Test your skills: CSS and JavaScript accessibility"
+short-title: "💡 Test: CSS/JS a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
 page-type: learn-module-assessment
 sidebar: learnsidebar
