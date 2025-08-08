@@ -75,13 +75,13 @@ const options = ["zero", "one", "two"];
 
 options.forEach((element, key) => {
   if (element === "zero") {
-    s[key] = new Option(element, key, false, false);
+    s[key] = new Option(element, s.options.length, false, false);
   }
   if (element === "one") {
-    s[key] = new Option(element, key, true, false); // Will add the "selected" attribute
+    s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
   }
   if (element === "two") {
-    s[key] = new Option(element, key, false, true); // Just will be selected in "view"
+    s[key] = new Option(element, s.options.length, false, true); // Will actually be selected in the view
   }
 });
 ```
@@ -91,9 +91,9 @@ Result:
 ```html
 <select id="s">
   <option value="0">zero</option>
-  <option value="1" selected="">one</option>
+  <option value="1" selected>one</option>
   <option value="2">two</option>
-  <!-- User will see this as 'selected' -->
+  <!-- User will see two as 'selected' -->
 </select>
 ```
 
