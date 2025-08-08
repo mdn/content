@@ -9,11 +9,11 @@ The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Mode
 
 ## What is whitespace?
 
-{{glossary("Whitespace")}} characters consist of different characters in different programming language contexts. _Document white space characters_, as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (LF, U+000A), and carriage returns (CR, U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code for readability. Much of our source code is full of these whitespace characters, and we tend to remove them only as part of a production build step to reduce file size.
+{{glossary("Whitespace")}} characters consist of different characters in different programming language contexts. [_Document white space characters_](https://drafts.csswg.org/css-text-4/#white-space), as far as the CSS whitespace processing rules are concerned, only include spaces (U+0020), tabs (U+0009), line feeds (LF, U+000A), and carriage returns (CR, U+000D), where CR characters are equivalent to spaces in every regard. These characters allow you to format your code for readability. Much of our source code is full of these whitespace characters, and we tend to remove them only as part of a production build step to reduce file size.
 
 Note that this list does not include non-breaking spaces (U+00A0, `&nbsp;` in HTML). So these characters don't trigger any [collapsing](#collapsing_and_transformation), which is why they are often used to create longer spaces in HTML.
 
-CSS also defines the concept of _segment breaks_, which in the context of HTML are equivalent to _line breaks_.
+CSS also defines the concept of [_segment breaks_](https://drafts.csswg.org/css-text-4/#segment-break), which in the context of HTML are equivalent to LF characters.
 
 ## How does HTML process whitespace?
 
@@ -23,9 +23,9 @@ It is a common myth that "HTML ignores whitespace", which is untrue: **HTML pres
 > To be clear, we're talking about whitespace _between HTML tags_, which becomes text nodes in the DOM. Any whitespace _inside a tag_ (between the angle brackets but not as part of an attribute value) is just part of the HTML syntax and does not appear in the DOM.
 
 > [!NOTE]
-> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there do exist certain places where whitespace characters could be ignored; for example, whitespace between the `<html>` and `<head>` opening tags, or `</body>` and `</html>` closing tags. Here, we just focus on concrete, rendered text content.
+> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there do exist certain places where whitespace characters could be ignored. For example, whitespace between the `<html>` and `<head>` opening tags or between the `</body>` and `</html>` closing tags is ignored and does not appear in the DOM. In this guide, we're focusing on the whitespace in rendered text content.
 >
-> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream). It would replace CR (U+000D) and CRLF sequences with single LF (U+000A). However, CR characters can still be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to explicitly handle them.
+> Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream): it replaces CR and [CRLF](/en-US/docs/Glossary/CRLF) sequences with a single LF. However, CR characters can also be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to define how to handle them.
 
 Take the following document, for example:
 
@@ -55,7 +55,7 @@ Note that:
 > [!NOTE]
 > [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
 
-Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on.
+Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on, in the [solving problems with whitespace nodes](#solving_problems_with_whitespace_nodes) section.
 
 ## How does CSS process whitespace?
 
@@ -174,9 +174,9 @@ In a nutshell, different whitespace characters are collapsed and transformed in 
 
 ### Trimming and positioning
 
-For both inline and [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), elements are laid out in _lines_ (for inline formatting, because of wrapping; for block formatting, each block is already a line). As each line is laid out, whitespace is processed further.
+In both [inline](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context) and [block](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) formatting contexts, elements are laid out in _lines_. In an inline formatting, lines are created by text wrapping. In a block formatting context, on the other hand, each block forms its own line. As each line is laid out, whitespace is processed further. Let's take a look at an example to explain how this works.
 
-Let's take a look at an example to explain how. We've marked the whitespace characters as before. We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
+In this example, as before, we've marked the whitespace characters in a comment. We have three text nodes that contain only whitespace: one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 
 <!-- markdownlint-disable no-hard-tabs -->
 
@@ -202,12 +202,12 @@ This renders like so:
 
 {{EmbedLiveSample('ex-block')}}
 
-We can summarize how the whitespace here is handled as follows:
+The whitespace in this example is handled as follows:
 
 > [!NOTE]
 > This algorithm can be configured via the {{cssxref("white-space-collapse")}} property (or its shorthand property {{cssxref("white-space")}}). We'll start by assuming its default value (`white-space-collapse: collapse`), then look at how different property values affect this algorithm.
 
-1. We first collapse whitespace the way as before, turning this:
+1. First, the whitespace is [collapsed](#collapsing_and_transformation) the same way as we saw in the previous section, turning this:
 
    ```html-nolint
    <body>⏎
@@ -217,13 +217,13 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-   Into this:
+   ...into this:
 
    ```html-nolint
    <body>◦<div>◦Hello◦</div>◦<div>◦World!◦</div>◦</body>
    ```
 
-   We are laying out lines here, so we first need to figure out how many lines there are. In this example, `<body>` establishes a block formatting context, so its five child nodes are each one line (each line in this code and below represents a line in the layout, not in the source code):
+   Lines are then laid out according to the block formatting context established by `<body>`. In this example, each of `<body>`'s five child nodes is laid out as a separate line. (Each line in this code block represents a line in the rendered layout, not a line in our original HTML code):
 
    ```html-nolint
    <body>
@@ -235,9 +235,9 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-   Note that if the lines get long, each line may wrap and create more lines, so in reality browsers can only know what each line contains as it lays them out. We'll skip the part about how text wrapping works.
+   Note that if the lines become too long, each line may wrap and create more lines. In reality, browsers determine the content of the lines as the lines are laid out. We'll skip the part about how text wrapping works.
 
-2. Sequences of spaces at the beginning of a line are removed, so the above becomes:
+2. Sequences of spaces at the beginning of a line are removed, so the example becomes:
 
    ```html-nolint
    <body>
@@ -249,7 +249,7 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-3. Each tab that's preserved at this point is rendered according to the {{cssxref("tab-size")}}. This can only happen with `white-space-collapse` set to `preserve` or `break-spaces`, because all other settings turn tabs into spaces.
+3. Each tab that's preserved at this point is rendered according to {{cssxref("tab-size")}}. This can only happen with `white-space-collapse` set to `preserve` or `break-spaces` because all other settings turn tabs into spaces.
 4. Sequences of spaces at the end of a line are removed, so the above becomes:
 
    ```html-nolint
@@ -262,25 +262,44 @@ We can summarize how the whitespace here is handled as follows:
    </body>
    ```
 
-The 3 empty lines we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 lines taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
+The three empty lines we now have are not going to occupy any space in the final layout, because they don't contain any visible content. So we'll end up with only two lines taking up space in the page. People viewing the web page see the words "Hello" and "World!" on two separate lines, just as you'd expect two `<div>`s to be laid out. Browsers essentially ignore all of the whitespace that was included in the HTML code.
 
 Different {{cssxref("white-space-collapse")}} values skip different steps of this algorithm:
 
-- `preserve` and `break-spaces`: the whole algorithm except step 3 is skipped, and no whitespace collapsing or transformation happens.
-- `preserve-spaces`: the whole algorithm is skipped, so whitespace at the start and end of lines are preserved.
+- `preserve` and `break-spaces`: The whole algorithm is skipped except for step 3, so no whitespace collapsing or transformation happens.
+- `preserve-spaces`: The whole algorithm is skipped, so whitespace characters at the start and end of lines are preserved.
 - `preserve-breaks`: the algorithm is the same as `collapse`.
+
+## How do DOM APIs process whitespace?
+
+As mentioned previously, [whitespace is preserved in the DOM](#how_does_html_process_whitespace). This means that if you retrieve {{domxref("Node.textContent")}}, you will get the text content as you wrote it in the HTML source code, and if you retrieve {{domxref("Node.childNodes")}}, you will get all the text nodes, including those that contain only whitespace.
+
+Not all DOM APIs preserve whitespace; some APIs deal with the _rendered text_ by design. For example, {{domxref("HTMLElement.innerText")}} returns the text exactly as it's rendered, with all whitespace collapsed and trimmed. {{domxref("Selection.toString()")}} returns the text as it would be pasted, which generally means that whitespace is collapsed. However, in Firefox (which collapses whitespace between Chinese characters, as mentioned in the [collapsing and transformation](#collapsing_and_transformation) section above), the collapsed whitespace is still preserved both in the string returned by `toString()` and in the pasted text.
+
+```html
+<div id="test">Hello world!</div>
+```
+
+```js
+const div = document.getElementById("test");
+console.log(div.textContent); // "  Hello\n  world!\n"
+console.log(div.innerText); // "Hello world!"
+const selection = document.getSelection();
+selection.selectAllChildren(div);
+console.log(selection.toString()); // "Hello world!"
+```
+
+## Solving problems with whitespace nodes
+
+Whitespace nodes are invisible to the website visitor due to the CSS processing rules, but they can interfere with certain layouts and DOM manipulation that rely on the exact structure of the DOM. Let's look at some common problems and how to solve them.
 
 ### Whitespace processing between inline and inline-block elements
 
-Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.
+Let's look at one layout issue with whitespace nodes: spaces between inline and inline-block elements. As we saw earlier with inline and block elements, most whitespace characters are ignored, but word-separating characters like spaces remain. The extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
 
-We said that there were rules to ignore most characters but that word-separating characters remain. When you're only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don't normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
+With `inline-block` elements, it gets more interesting: these elements behave like inline elements on the outside and blocks on the inside. (They're often used to display more complex pieces of UI, placed side by side on the same line, such as navigation menu items.) Any whitespace between adjacent inline or inline-block elements will result in spaces in the layout, just like the spaces between words in text. (This can surprise developers because they are blocks, and blocks don't normally show extra spaces.)
 
-It gets more interesting however when you start using `inline-block` elements. These elements behave like inline elements on the outside, and blocks on the inside, and are often used to display more complex pieces of UI than just text, side-by-side on the same line, for example navigation menu items.
-
-Because they are blocks, many people expect that they will behave as such, but really they don't. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
-
-Consider this example (again, we've included an HTML comment that shows the whitespace characters in the HTML):
+Consider this example (as before, we've included a comment in the HTML code to show the whitespace characters):
 
 ```css live-sample___inline-block
 .people-list {
@@ -330,69 +349,69 @@ This renders as follows:
 
 {{EmbedLiveSample('inline-block')}}
 
-You probably don't want the gaps in between the blocks — depending on the use case (is this a list of avatars, or horizontal nav buttons?), you probably want the element sides flush with each other, and to be able to control any spacing yourself.
+You probably don't want the gaps between the blocks. Depending on your use case (such as a list of avatars or a horizontal row of navigation buttons), you probably want the elements to flush against each other, and to be able to control any spacing yourself.
 
-The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!
+The Firefox DevTools HTML Inspector can highlight text nodes and also show you exactly the area the elements are taking up. This is useful to check out if you suspect there's extra margin or unexpected whitespace causing gaps.
 
 ![Example of displaying whitespaces between blocks in the Firefox DevTools HTML Inspector](whitespace-devtools.png)
 
 There are a few ways of getting around this problem:
 
-Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
+- Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. Flexbox handles spacing and alignment for you, and is definitely the preferred solution:
 
-```css
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-```
+  ```css
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  ```
 
-If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/font-size) of the list to 0. This only works if your blocks are not sized with ems (based on the `font-size`, so the block size would also end up being 0). rems would be a good choice here:
+- If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/font-size) of the list to `0`. This only works if the blocks are not sized with `em` units (since `em` is based on the `font-size`, so the block size would also end up being sized as `0`). Using `rem` units would be a good choice here:
 
-```css
-ul {
-  font-size: 0;
-  /* … */
-}
+  ```css
+  ul {
+    font-size: 0;
+    /* … */
+  }
 
-li {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  /* … */
-}
-```
+  li {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    /* … */
+  }
+  ```
 
-Or you could set negative margin on the list items:
+- Alternatively, you could set negative margin on the list items:
 
-```css
-li {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  margin-right: -0.25rem;
-}
-```
+  ```css
+  li {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: -0.25rem;
+  }
+  ```
 
-You can also solve this problem by avoiding whitespace nodes between `<li>` items:
+- You can also solve this problem by avoiding whitespace nodes between `<li>` items:
 
-```html-nolint
-<li>
-  ...
-</li><li>
-  ...
-</li>
-```
+  ```html-nolint
+  <li>
+    ...
+  </li><li>
+    ...
+  </li>
+  ```
 
-## Working with whitespace in the DOM
+### Working with whitespace in the DOM
 
-As mentioned previously, whitespace is collapsed and trimmed when rendered, but preserved in DOM. This may present some pitfalls when trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript. For example, if you have a reference to a parent node and want to affect its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.
+As mentioned previously, whitespace is [collapsed and trimmed](#collapsing_and_transformation) when rendered, but preserved in the DOM. This may present some pitfalls when trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript. For example, if you have a reference to a parent node and want to manipulate its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), a rogue whitespace node just after the opening parent tag will give you the wrong result. The text node would be selected instead of the element you want to target.
 
-As another example, if you have a certain subset of elements that you want to do something to based on whether they are empty (have no child nodes) or not, you could check whether each element is empty using something like [`Node.hasChildNodes()`](/en-US/docs/Web/API/Node/hasChildNodes), but again, if any target elements contain text nodes, you could end up with false results.
+As another example, if you want to do something to a subset of elements based on whether they are empty (have no child nodes), you could use [`Node.hasChildNodes()`](/en-US/docs/Web/API/Node/hasChildNodes). But if any of those elements contain text nodes, you could end up with false results.
 
-The JavaScript code below defines several functions that make it easier to deal with whitespace in the DOM:
+The following JavaScript code shows several functions that make it easier to deal with whitespace in the DOM:
 
 ```js
 /**
@@ -549,5 +568,3 @@ while (cur) {
   cur = nodeAfter(cur);
 }
 ```
-
-Not all DOM APIs preserve whitespace; some APIs deal with the _rendered text_ by design. For example, {{domxref("HTMLElement.innerText")}} returns the text exactly as it's rendered, with all whitespace collapsed and trimmed. {{domxref("Selection.toString()")}} returns the text as it would be pasted, which generally means that whitespace is collapsed. However, in Firefox (which collapses whitespace between Chinese characters, as mentioned in the [collapsing and transformation](#collapsing_and_transformation) section above), the collapsed whitespace is still preserved both in the string returned by `toString()` and in the pasted text.
