@@ -102,6 +102,8 @@ The following properties all follow the shape of the corner when set on the cont
 - {{cssxref("overflow")}}
 - {{cssxref("backdrop-filter")}}
 
+See [Demonstration of styles following `corner-shape`](#demonstration_of_styles_following_corner-shape) for some examples.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -163,6 +165,78 @@ The rendered result looks like this:
 {{EmbedLiveSample("basic-corner-shape", "100%", "240")}}
 
 Note how the `corner-shape` value of `scoop` gives the container concave corners — the curve is an inversion of the default `border-radius` curve. Note also how the `box-shadow` follows the shape of the curve.
+
+### Demonstration of styles following `corner-shape`
+
+#### HTML
+
+The markup for this example contains a single {{htmlelement("div")}} element with some text content inside it.
+
+```html live-sample___styles-following-corner-shape
+<div>
+  Some styles follow the corner shape, such as border, outline, box-shadow,
+  overflow, and backdrop-filter. This is useful for helping various aspects of
+  your design to not clash. It can result in some strange effects, however, so
+  you should test your visuals carefully and thoroughly.
+</div>
+```
+
+#### CSS
+
+Again, many of the basic setup styles are hidden for brevity. To demonstrate how some styles follow the shape of a container's corners, we apply a {{cssxref("background-image")}} to the document `<body>`, then apply a `border-radius` of 40 pixels and a `corner-shape` of `scoop notch` to the `<div>`.
+
+We then apply the following to the `<div>`:
+
+- A semi-transparent {{cssxref("background-color")}}.
+- A different color and style of {{cssxref("border")}} on each edge.
+- A {{cssxref("backdrop-filter")}} that inverts the `background-image` set on the `<body>`.
+
+```css hidden live-sample___styles-following-corner-shape
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: inherit;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  width: 240px;
+  height: 180px;
+}
+```
+
+```css live-sample___styles-following-corner-shape
+body {
+  background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+div {
+  border-radius: 40px;
+  corner-shape: scoop notch;
+  background-color: rgb(255 255 255 / 0.2);
+  border-top: 3px solid blue;
+  border-left: 6px dashed red;
+  border-bottom: 9px solid yellow;
+  border-right: 12px double green;
+  backdrop-filter: invert(100%);
+}
+```
+
+#### Result
+
+The rendered result looks like this:
+
+{{EmbedLiveSample("styles-following-corner-shape", "100%", "240")}}
+
+Note how most of the set styles follow the shape of the `<div>` resulting from its `corner-shape` styles.
 
 ### Comparing `corner-shape` values
 
