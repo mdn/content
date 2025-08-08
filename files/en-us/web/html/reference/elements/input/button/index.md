@@ -3,9 +3,8 @@ title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_button
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`button`** are rendered as push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
 
@@ -22,15 +21,15 @@ browser-compat: html.elements.input.type_button
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 20%),
     rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 60%),
@@ -38,7 +37,7 @@ browser-compat: html.elements.input.type_button
 }
 
 .styled:hover {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
 }
 
 .styled:active {

@@ -3,9 +3,8 @@ title: "<ol>: The Ordered List element"
 slug: Web/HTML/Reference/Elements/ol
 page-type: html-element
 browser-compat: html.elements.ol
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list of items — typically rendered as a numbered list.
 
@@ -34,14 +33,14 @@ li {
 
 This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
+- `compact` {{Deprecated_inline}} {{non-standard_inline}}
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute is browser-specific. Use [CSS](/en-US/docs/Web/CSS) instead: to give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 - `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
 - `start`
   - : An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering `type` is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use `start="4"`.
 - `type`
-
   - : Sets the numbering type:
-
     - `a` for lowercase letters
     - `A` for uppercase letters
     - `i` for lowercase Roman numerals
@@ -241,7 +240,6 @@ To determine which list to use, try changing the order of the list items; if the
 
 - Other list-related HTML Elements: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS properties that may be specially useful to style the `<ol>` element:
-
   - the {{CSSxRef("list-style")}} property, to choose the way the ordinal displays
   - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists
   - the {{CSSxRef("line-height")}} property, to simulate the deprecated `compact` attribute

@@ -3,9 +3,8 @@ title: border-style
 slug: Web/CSS/border-style
 page-type: css-shorthand-property
 browser-compat: css.properties.border-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-style`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
 
@@ -46,7 +45,7 @@ border-style: dashed groove none dotted;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +53,7 @@ border-style: dashed groove none dotted;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -111,9 +110,7 @@ Each value is a keyword chosen from the list below.
 ### Values
 
 - `<line-style>`
-
   - : Describes the style of the border. It can have the following values:
-
     - `none`
       - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
     - `hidden`

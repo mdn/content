@@ -3,9 +3,8 @@ title: marker-mid
 slug: Web/CSS/marker-mid
 page-type: css-property
 browser-compat: css.properties.marker-mid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`marker-mid`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the middle vertices of the element's path; that is, at each of its vertices between the start and end vertices. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref("url_value", "&lt;url&gt;")}} value. The value of the CSS property overrides any values of the `marker-mid` attribute in the SVG.
 
@@ -18,7 +17,7 @@ The direction each marker points is defined as the direction halfway between the
 
 ```css
 marker-mid: none;
-marker-mid: url(markers.svg#arrow);
+marker-mid: url("markers.svg#arrow");
 
 /* Global values */
 marker-mid: inherit;
@@ -31,11 +30,9 @@ marker-mid: unset;
 ### Values
 
 - `none`
-
   - : This means no marker will be drawn at each middle vertex of the element's path.
 
 - `<marker-ref>`
-
   - : A {{cssxref("url_value", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at each middle vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's middle vertices.
 
 ## Formal definition
@@ -81,7 +78,7 @@ svg {
 
 ```css
 polyline#test {
-  marker-mid: url(#triangle);
+  marker-mid: url("#triangle");
 }
 ```
 

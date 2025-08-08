@@ -82,26 +82,22 @@ const testDivs = Array.prototype.filter.call(
 This is the most commonly used method of operation.
 
 ```html
-<html lang="en">
-  <body>
-    <div id="parent-id">
-      <p>hello world 1</p>
-      <p class="test">hello world 2</p>
-      <p>hello world 3</p>
-      <p>hello world 4</p>
-    </div>
+<div id="parent-id">
+  <p>hello world 1</p>
+  <p class="test">hello world 2</p>
+  <p>hello world 3</p>
+  <p>hello world 4</p>
+</div>
+```
 
-    <script>
-      const parentDOM = document.getElementById("parent-id");
+```js
+const parentDOM = document.getElementById("parent-id");
 
-      const test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
-      console.log(test); // HTMLCollection[1]
+const test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
+console.log(test); // HTMLCollection[1]
 
-      const testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
-      console.log(testTarget); // <p class="test">hello world 2</p>
-    </script>
-  </body>
-</html>
+const testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
+console.log(testTarget); // <p class="test">hello world 2</p>
 ```
 
 ### Multiple Classes Example
@@ -117,7 +113,14 @@ elements with ALL of the classNames specified are selected.
 <span class="orange juice">Orange Juice</span>
 <span class="apple juice">Apple Juice</span>
 <span class="foo bar">Something Random</span>
-<textarea id="resultArea" style="width:98%;height:7em"></textarea>
+<textarea id="resultArea"></textarea>
+```
+
+```css hidden
+#resultArea {
+  width: 98%;
+  height: 7em;
+}
 ```
 
 #### JavaScript

@@ -3,9 +3,8 @@ title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_date
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of **`type="date"`** create input fields that let the user enter a date. The appearance of the date picker input UI varies based on the browser and operating system. The value is normalized to the format `yyyy-mm-dd`.
 
@@ -67,7 +66,7 @@ This code finds the first {{HTMLElement("input")}} element whose `type` is `date
 
 ## Additional attributes
 
-The attributes common to all {{HTMLElement("input")}} elements apply to the `date` inputs as well, but might not influence its presentation. For example `size` and `placeholder` might not work. `date` inputs have the following additional attributes.
+In addition to [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and the [input attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) common to all {{HTMLElement("input")}} elements, the `date` input supports the following attributes:
 
 ### max
 
@@ -83,17 +82,14 @@ If both the `max` and `min` attributes are set, this value must be a date string
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are a whole number of steps from the step base are valid. The step base is [`min`](#min) if specified, [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) otherwise, or `0` (the Unix epoch, `1970-01-01`) if neither is provided.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
+For `date` inputs, the value of `step` is given in days and is treated as a number of milliseconds equal to 86,400,000 times the `step` value (the underlying numeric value is in milliseconds). The default value is 1, indicating 1 day.
+
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)). In reality, it has the same effect as `1` for `date` inputs because the picker UI only allows selecting whole days.
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
-
-For `date` inputs, the value of `step` is given in days; and is treated as a number of milliseconds equal to 86,400,000 times the `step` value (the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1 day.
-
-> [!NOTE]
-> Specifying `any` as the value for `step` has the same effect as `1` for `date` inputs.
 
 ## Using date inputs
 
@@ -151,7 +147,7 @@ If you use [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`
 
 You can also use the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute to make filling in the date mandatory — an error will be displayed if you try to submit an empty date field.
 
-Let's look at an example of minimum and maximum dates, and also made a field required:
+Let's look at an example of minimum and maximum dates, and also make a field required:
 
 ```html
 <form>
@@ -285,7 +281,7 @@ input:valid + span::after {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

@@ -2,9 +2,8 @@
 title: Using media queries
 slug: Web/CSS/CSS_media_queries/Using_media_queries
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, {{glossary("aspect ratio")}}, browser {{glossary("viewport")}} width or height, user preferences such as preferring reduced motion, data usage, or transparency.
 
@@ -27,7 +26,6 @@ Media queries are case-insensitive.
   The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -206,7 +204,7 @@ The `and` keyword combines a media feature with a media type _or_ other media fe
 This example combines two media features to restrict styles to landscape-oriented devices with a width of at least 30 ems:
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) {
+@media (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -214,7 +212,7 @@ This example combines two media features to restrict styles to landscape-oriente
 To limit the styles to devices with a screen, you can chain the media features to the `screen` media type:
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) {
+@media screen and (width >= 30em) and (orientation: landscape) {
   /* … */
 }
 ```
@@ -226,7 +224,7 @@ You can use a comma-separated list of media queries to apply styles when the use
 The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) {
+@media (height >= 680px), screen and (orientation: portrait) {
   /* … */
 }
 ```

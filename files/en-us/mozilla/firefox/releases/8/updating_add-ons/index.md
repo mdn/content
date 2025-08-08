@@ -2,15 +2,14 @@
 title: Updating add-ons for Firefox 8
 slug: Mozilla/Firefox/Releases/8/Updating_add-ons
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8) for a complete list of everything that changed in Firefox 8.
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 8.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](https://web.archive.org/web/20210119071646/https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 8.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
@@ -34,7 +33,7 @@ As part of our ongoing effort to streamline Gecko's internals, a few interfaces 
 
 ## Date handling improved
 
-Now that the JavaScript [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object can parse ISO 8601 dates, the [`ISO8601DateUtils.jsm`](/en-US/docs/JavaScript_code_modules/ISO8601DateUtils.jsm) code module has been removed. If you were using this code module, you should update your code to use the methods on `Date` instead.
+Now that the JavaScript [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object can parse ISO 8601 dates, the [`ISO8601DateUtils.jsm`](https://web.archive.org/web/20210613204753/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/ISO8601DateUtils.jsm) code module has been removed. If you were using this code module, you should update your code to use the methods on `Date` instead.
 
 ## DOM changes
 

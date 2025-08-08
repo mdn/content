@@ -3,9 +3,8 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 page-type: css-property
 browser-compat: css.properties.font-variant-alternates
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-alternates`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
 
@@ -57,7 +56,6 @@ This property may take one of two forms:
 - `swash()`
   - : This function enables [swash](https://en.wikipedia.org/wiki/Swash_%28typography%29) glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType values `swsh` and `cswh`, like `swsh 2` and `cswh 2`.
 - `ornaments()`
-
   - : This function enables ornaments, like [fleurons](https://en.wikipedia.org/wiki/Fleuron_%28typography%29) and other dingbat glyphs. The parameter is a font-specific name mapped to a number. It corresponds to the OpenType value `ornm`, like `ornm 2`.
 
     > [!NOTE]
@@ -94,7 +92,7 @@ We can then use that name inside `font-variant-alternates` to switch on swashes 
 ```css
 @font-face {
   font-family: MonteCarlo;
-  src: url("montecarlo-regular.woff2");
+  src: url("/shared-assets/fonts/monte-carlo/monte-carlo-regular.woff2");
 }
 
 @font-feature-values "MonteCarlo" {
@@ -104,7 +102,7 @@ We can then use that name inside `font-variant-alternates` to switch on swashes 
 }
 
 p {
-  font-family: "MonteCarlo";
+  font-family: "MonteCarlo", cursive;
   font-size: 3rem;
   margin: 0.7rem 3rem;
 }

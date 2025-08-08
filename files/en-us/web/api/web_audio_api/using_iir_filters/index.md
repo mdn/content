@@ -14,7 +14,7 @@ Our simple example for this guide provides a play/pause button that starts and p
 
 ![A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied.](iir-filter-demo.png)
 
-You can check out the [full demo here on CodePen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can check out the [full demo live](https://mdn.github.io/webaudio-examples/iirfilter-node/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 ## Browser support
 

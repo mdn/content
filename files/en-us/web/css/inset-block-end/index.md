@@ -3,9 +3,8 @@ title: inset-block-end
 slug: Web/CSS/inset-block-end
 page-type: css-property
 browser-compat: css.properties.inset-block-end
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inset-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -72,7 +71,7 @@ writing-mode: vertical-lr;
 inset-block-end: 3px;
 inset-block-end: 2.4em;
 inset-block-end: calc(anchor(start) + 20px);
-inset-block-end: anchor-size(--myAnchor width, 10%);
+inset-block-end: anchor-size(--my-anchor width, 10%);
 
 /* <percentage>s of the width or height of the containing block */
 inset-block-end: 10%;

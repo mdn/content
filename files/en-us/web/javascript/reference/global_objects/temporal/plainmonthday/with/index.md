@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainMonthDay.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/with
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.with
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`with()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns a new `Temporal.PlainMonthDay` object representing this month-day with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the month-day's fields.
 

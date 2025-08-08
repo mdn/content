@@ -402,7 +402,7 @@ Notes about this demonstration:
 
   ```html
   <style>
-    @import url(style8.css);
+    @import "style8.css";
   </style>
   ```
 
@@ -416,7 +416,7 @@ Change the stylesheet so that the inner petals all turn pink when the mouse poin
 
 ## Simplified structure
 
-The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
+The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://svgwg.org/svg2-draft/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
 
 See below how the structure then looks like.
 

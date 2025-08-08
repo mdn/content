@@ -3,9 +3,8 @@ title: "<hr>: The Thematic Break (Horizontal Rule) element"
 slug: Web/HTML/Reference/Elements/hr
 page-type: html-element
 browser-compat: html.elements.hr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
 
@@ -30,7 +29,7 @@ hr {
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;

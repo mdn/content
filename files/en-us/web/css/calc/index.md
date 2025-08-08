@@ -3,9 +3,8 @@ title: calc()
 slug: Web/CSS/calc
 page-type: css-function
 browser-compat: css.types.calc
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
@@ -199,14 +198,14 @@ You can use `calc()` with [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_vari
 
 ```css
 .foo {
-  --widthA: 100px;
-  --widthB: calc(var(--widthA) / 2);
-  --widthC: calc(var(--widthB) / 2);
-  width: var(--widthC);
+  --width-a: 100px;
+  --width-b: calc(var(--width-a) / 2);
+  --width-c: calc(var(--width-b) / 2);
+  width: var(--width-c);
 }
 ```
 
-After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2) / 2)`. When it's assigned to `.foo`'s width property, all inner `calc()` functions (no matter how deeply nested) will be flattened to just parentheses. Therefore, the `width` property's value will eventually be `calc((100px / 2) / 2)`, which equals `25px`. In short, a `calc()` inside of a `calc()` is identical to using parentheses.
+After all variables are expanded, `--width-c`'s value will be `calc(calc(100px / 2) / 2)`. When it's assigned to `.foo`'s width property, all inner `calc()` functions (no matter how deeply nested) will be flattened to just parentheses. Therefore, the `width` property's value will eventually be `calc((100px / 2) / 2)`, which equals `25px`. In short, a `calc()` inside of a `calc()` is identical to using parentheses.
 
 ### Adjusting color channels in relative colors
 

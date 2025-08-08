@@ -1,10 +1,10 @@
 ---
 title: Basic concepts of flexbox
+short-title: Basic concepts
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module (usually referred to as flexbox) is a one-dimensional layout model for distributing space between items and includes numerous alignment capabilities. This article gives an outline of the main features of flexbox, which we will explore in more detail in the rest of these guides.
 

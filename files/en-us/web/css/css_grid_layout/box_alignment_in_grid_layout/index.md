@@ -1,10 +1,10 @@
 ---
 title: Aligning items in CSS grid layout
+short-title: Aligning items
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) implements [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment), which is the same standard [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) uses for aligning items in its flex container. The alignment module details how alignment should work in all the layout methods.
 

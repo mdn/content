@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.prototype.subtract()
+short-title: subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/subtract
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.subtract
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`subtract()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

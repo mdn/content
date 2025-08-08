@@ -1,11 +1,11 @@
 ---
 title: String.prototype.at()
+short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.at
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`at()`** method of {{jsxref("String")}} values takes an integer value and returns a new {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.
 

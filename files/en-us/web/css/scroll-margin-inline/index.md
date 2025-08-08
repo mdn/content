@@ -3,9 +3,8 @@ title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-inline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
 

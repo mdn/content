@@ -53,11 +53,11 @@ text {
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 
@@ -92,11 +92,11 @@ p {
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 

@@ -5,7 +5,6 @@ sidebar:
     link: /Web/Security
   - type: section
     title: Guides
-  - /Web/Security/Types_of_attacks
   - /Web/Security/Insecure_passwords
   - /Web/Security/Transport_Layer_Security
   - /Web/Security/Mixed_content

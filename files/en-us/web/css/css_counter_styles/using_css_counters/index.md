@@ -1,11 +1,11 @@
 ---
 title: Using CSS counters
+short-title: Using counters
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS counters** let you adjust the appearance of content based on its location in a document.
 For example, you can use counters to automatically number the headings on a webpage or to change the numbering on ordered lists.

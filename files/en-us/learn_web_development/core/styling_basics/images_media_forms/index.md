@@ -89,11 +89,13 @@ img {
 
 {{EmbedLiveSample("size", "", "250px")}}
 
-So what can we do about the overflowing issue?
+What can we do about the overflow issue?
 
-As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe)s.
+As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing), a common technique is to set the {{cssxref("max-width")}} of the image to `100%`. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe)s.
 
 Try adding `max-width: 100%` to the `<img>` element rule in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.
+
+### Handling image overflow with `object-fit`
 
 You can make other choices about images inside containers. For example, you may want to size an image so it completely covers a box.
 
@@ -189,7 +191,7 @@ You won't study layout until a later module. For now, just keep in mind that rep
 
 ## Form elements
 
-Form elements can be a tricky issue when it comes to styling with CSS. The [Web Forms extensions module](/en-US/docs/Learn_web_development/Extensions/Forms) covers the trickier aspects of styling certain form input types, which we will not go into here. There are, however, a few key basics worth highlighting in this section.
+Form elements have issues when it comes to styling with CSS. The [Web Forms extensions module](/en-US/docs/Learn_web_development/Extensions/Forms) covers the trickier aspects of styling certain form input types, which we will not go into here. There are, however, a few key basics worth highlighting in this section.
 
 Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) element — this defines simple form fields such as text inputs, through to more complex fields such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Reference/Elements/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Reference/Elements/legend).
 
@@ -197,9 +199,11 @@ HTML also contains attributes that enable web developers to indicate which field
 
 ## Styling text input elements
 
-Elements that allow for text input, such as `<input type="text">`, and the more specific `<input type="email">`, and the `<textarea>` element are quite easy to style and tend to behave just like other boxes on your page. The default styling of these elements will differ, however, based on the operating system and browser that your user visits the site with.
+Elements that allow for text input such as `<input type="text">`, the more specific `<input type="email">`, and the `<textarea>` element, are quite easy to style and tend to behave just like other boxes on your page. The default styling of these elements will differ, however, based on the operating system and browser that your user visits the site with.
 
-In the example below we have styled some text inputs using CSS — you can see that things such as borders, margins and padding all apply as you would expect. We are using attribute selectors to target the different input types. Try changing how this form looks by adjusting the borders, adding background colors to the fields, and changing fonts and padding.
+In the example below, we have styled some text inputs using CSS. You can see that things such as borders, margins and padding all apply as you would expect. We are using attribute selectors to target the different input types.
+
+Try editing the example to change how the form looks by adjusting the borders, adding background colors to the fields, and changing fonts and padding.
 
 ```html live-sample___form
 <form>
@@ -230,7 +234,7 @@ label {
 ```css live-sample___form
 input[type="text"],
 input[type="email"] {
-  border: 2px solid #000;
+  border: 2px solid black;
   margin: 0 0 1em 0;
   padding: 10px;
   width: 80%;
@@ -242,7 +246,7 @@ input[type="submit"] {
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 input[type="submit"]:hover,
@@ -325,7 +329,7 @@ textarea {
 ```
 
 > [!NOTE]
-> Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out [Normalize.css](https://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
+> Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However, if you want to take a look at an example, check out [Normalize.css](https://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
 
 ## Test your skills!
 

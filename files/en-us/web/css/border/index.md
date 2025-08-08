@@ -3,9 +3,8 @@ title: border
 slug: Web/CSS/border
 page-type: css-shorthand-property
 browser-compat: css.properties.border
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
@@ -28,7 +27,7 @@ border: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+border: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
@@ -42,7 +41,7 @@ border: 4mm ridge rgba(211, 220, 50, 0.6);
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #8b008b;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -92,7 +91,7 @@ The `border` property may be specified using one, two, or three of the values li
 - {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
-  - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
+  - : Sets the color of the border. Defaults to `currentColor` if absent. See {{Cssxref("border-color")}}.
 
 ## Description
 

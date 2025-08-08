@@ -1,10 +1,10 @@
 ---
 title: Firefox 121 for developers
+short-title: Firefox 121
 slug: Mozilla/Firefox/Releases/121
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 121 that affect developers. Firefox 121 was released on [December 19, 2023](https://whattrainisitnow.com/release/?version=121).
 
@@ -27,19 +27,16 @@ This article provides information about the changes in Firefox 121 that affect d
 - The {{jsxref("Promise.withResolvers()")}} static method is now supported. This exposes the `resolve` and `reject` callback functions in the same scope as the returned {{jsxref("Promise")}}, allowing code that resolves or rejects the promise to be defined after its construction ([Firefox bug 1845586](https://bugzil.la/1845586)).
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
-
   - Year > 9999 for `YYYY-MMM-DD` format (e.g., `19999-Jan-01`) ([Firefox bug 1858851](https://bugzil.la/1858851))
   - `MMM-DD-YYYY` (e.g., `Jan-01-1970`) ([Firefox bug 1863489](https://bugzil.la/1863489))
   - Milliseconds for non-ISO date formats (e.g., `Jan 1 1970 10:00:00.050`) ([Firefox bug 1863125](https://bugzil.la/1863125))
   - Day of week at the beginning of formats which were being rejected, such as:
-
     - `Wed, 1970-01-01`
     - `Wed, 1970-Jan-01`
 
     The day of week does not need to be correct, or a day of week at all; for example, `foo 1970-01-01` works ([Firefox bug 1617562](https://bugzil.la/1617562)).
 
 - Other {{jsxref("Date.parse()")}} fixes:
-
   - `YYYY-M-DD` and `YYYY-MM-D` are no longer assumed GMT as an ISO date `YYYY-MM-DD` would be ([Firefox bug 1783731](https://bugzil.la/1783731)).
   - Milliseconds for all formats are truncated after 3 digits, rather than being rounded ([Firefox bug 746529](https://bugzil.la/746529)).
 
@@ -89,7 +86,3 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
   > [!NOTE]
   > Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
   > For more information, see [Browser support of the `background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support).
-
-## Older versions
-
-{{Firefox_for_developers}}

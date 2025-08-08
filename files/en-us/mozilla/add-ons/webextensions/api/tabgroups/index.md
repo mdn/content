@@ -3,9 +3,8 @@ title: tabGroups
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups
 page-type: webextension-api
 browser-compat: webextensions.api.tabGroups
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This API enables extensions to modify and rearrange [tab groups](https://support.mozilla.org/en-US/kb/tab-groups).
 

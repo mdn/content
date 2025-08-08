@@ -3,9 +3,8 @@ title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -36,7 +35,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
         <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "58.0"
   }
 }
@@ -97,7 +96,26 @@ The `gecko_android` sub-key supports these properties:
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
-To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
+To support Firefox for Android without specifying a version range, the `gecko_android` sub-key must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
+
+#### Extension ID format
+
+The extension ID must be one of these:
+
+- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+- A string formatted like an email address: `extensionname@example.org` However, use of an `@string` format is recommended.
+
+The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
+
+For example:
+
+```json
+"id": "@extension-name.developer-name"
+```
+
+```json
+"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+```
 
 ### Safari properties
 
@@ -108,6 +126,10 @@ Safari stores its browser-specific settings in the `safari` sub-key, which has t
 - `strict_max_version`
   - : Maximum version of Safari to support.
 
+### Chrome properties
+
+Chrome doesn't use this key and ignores it if present in an extension's `manifest.json` file.
+
 ## Examples
 
 Example with all possible keys. Note that most extensions omit `strict_max_version` and `update_url`.
@@ -115,7 +137,7 @@ Example with all possible keys. Note that most extensions omit `strict_max_versi
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"

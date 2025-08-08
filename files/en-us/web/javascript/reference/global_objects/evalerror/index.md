@@ -3,9 +3,8 @@ title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 page-type: javascript-class
 browser-compat: javascript.builtins.EvalError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`EvalError`** object indicates an error regarding the global {{jsxref("Global_Objects/eval", "eval()")}} function. This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
 

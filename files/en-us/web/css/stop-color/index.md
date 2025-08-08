@@ -3,9 +3,8 @@ title: stop-color
 slug: Web/CSS/stop-color
 page-type: css-property
 browser-compat: css.properties.stop-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stop-color`** [CSS](/en-US/docs/Web/CSS) property defines the color to use for an SVG {{SVGElement("stop")}} element within a gradient. If present, it overrides the element's {{SVGAttr("stop-color")}} attribute.
 
@@ -18,7 +17,7 @@ The **`stop-color`** [CSS](/en-US/docs/Web/CSS) property defines the color to us
 /* <color> values */
 stop-color: red;
 stop-color: hsl(120deg 75% 25% / 60%);
-stop-color: currentcolor;
+stop-color: currentColor;
 
 /* Global values */
 stop-color: inherit;
@@ -31,7 +30,6 @@ stop-color: unset;
 ### Values
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The color of the fill. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 ## Formal definition

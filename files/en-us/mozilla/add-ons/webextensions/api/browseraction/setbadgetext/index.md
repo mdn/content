@@ -3,9 +3,8 @@ title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
@@ -24,11 +23,8 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `text`
-
       - : `string` or `null`. Any number of characters can be passed, but only about four can fit in the space.
 
         Use an empty string - `""` - if you don't want any badge.
@@ -47,10 +43,6 @@ This API is also available as `chrome.browserAction.setBadgeText()`.
 - If `windowId` and `tabId` are both supplied, the function fails.
 - If `windowId` and `tabId` are both omitted, the global badge is set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Add a badge indicating how many times the user clicked the button:
@@ -66,6 +58,10 @@ browser.browserAction.onClicked.addListener(increment);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

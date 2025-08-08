@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: dispatchWorkgroupsIndirect() method"
 short-title: dispatchWorkgroupsIndirect()
 slug: Web/API/GPUComputePassEncoder/dispatchWorkgroupsIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.dispatchWorkgroupsIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`dispatchWorkgroupsIndirect()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface dispatches a grid of workgroups, defined by the parameters of a {{domxref("GPUBuffer")}}, to perform the work being done by the current {{domxref("GPUComputePipeline")}} (i.e., set via {{domxref("GPUComputePassEncoder.setPipeline()")}}).
@@ -22,7 +20,6 @@ dispatchWorkgroupsIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-
   - : A {{domxref("GPUBuffer")}} containing the X, Y, and Z dimensions of the grid of workgroups to dispatch. The buffer must contain a tightly packed block of three 32-bit unsigned integer values representing the dimensions (12 bytes total), given in the same order as the arguments for {{domxref("GPUComputePassEncoder.dispatchWorkgroups()")}}. So for example:
 
     ```js

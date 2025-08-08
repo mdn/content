@@ -3,9 +3,8 @@ title: font-display
 slug: Web/CSS/@font-feature-values/font-display
 page-type: css-at-rule-descriptor
 spec-urls: https://drafts.csswg.org/css-fonts/#descdef-font-feature-values-font-display
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-display`** descriptor for the {{cssxref("@font-feature-values")}} at-rule sets the default value of how a font face is displayed based on whether and when it is downloaded. Setting a value for the `font-display` descriptor within a `@font-feature-values` block sets the default value of the `font-display` descriptor for the {{cssxref("@font-face")}} at-rule for all the fonts with the same {{cssxref("@font-face/font-family", "font-family")}} value.
 
@@ -66,7 +65,7 @@ The `font-display` descriptor in this example sets the default `font-display` va
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

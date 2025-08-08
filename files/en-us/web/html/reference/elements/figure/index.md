@@ -3,9 +3,8 @@ title: "<figure>: The Figure with Optional Caption element"
 slug: Web/HTML/Reference/Elements/figure
 page-type: html-element
 browser-compat: html.elements.figure
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-contained content, potentially with an optional caption, which is specified using the {{HTMLElement("figcaption")}} element. The figure, its caption, and its contents are referenced as a single unit.
 
@@ -22,7 +21,7 @@ The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-containe
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -37,7 +36,7 @@ img {
 
 figcaption {
   background-color: #222;
-  color: #fff;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
@@ -189,7 +188,7 @@ function NavigatorExample() {
       <td>
         With no
         <a href="/en-US/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a> descendant:
-        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
+        <a href="https://w3c.github.io/html-aria/#dfn-any-role">any</a>,
         otherwise no permitted roles
       </td>
     </tr>

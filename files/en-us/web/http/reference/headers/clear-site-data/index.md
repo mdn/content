@@ -4,9 +4,10 @@ short-title: Clear-Site-Data
 slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 page-type: http-header
 browser-compat: http.headers.Clear-Site-Data
+sidebar: http
 ---
 
-{{securecontext_header}}{{HTTPSidebar}}
+{{securecontext_header}}
 
 The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} sends a signal to the client that it should remove all browsing data of certain types (cookies, storage, cache) associated with the requesting website.
 It allows web developers to have more control over the data stored by browsers for their origins.
@@ -43,36 +44,29 @@ Clear-Site-Data: "*"
 > All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
 
 - `"cache"`
-
-  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
+  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)) for the origin of the response URL.
+    Depending on the browser, this might also clear out things like pre-rendered pages, {{glossary("bfcache","backwards-forwards cache")}}, script caches, WebGL shader caches, or address bar suggestions.
 
 - `"clientHints"` {{Experimental_Inline}}
-
   - : Indicates that the server will remove all [client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
 
     > [!NOTE]
     > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.
 
 - `"cookies"`
-
   - : The server signals that the client should remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
 
 - `"executionContexts"` {{Experimental_Inline}}
-
   - : The server signals that the client should reload all browsing contexts for the origin of the response ({{domxref("Location.reload")}}).
 
 - `"prefetchCache"` {{experimental_inline}}
-
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules", "", "nocode")}} prefetches that are scoped to the referrer origin.
 
 - `"prerenderCache"` {{experimental_inline}}
-
   - : Used to clear {{domxref("Speculation Rules API", "speculation rules","", "nocode")}} prerenders that are scoped to the referrer origin.
 
 - `"storage"`
-
   - : The server signals that the client should remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
-
     - localStorage (executes `localStorage.clear`),
     - sessionStorage (executes `sessionStorage.clear`),
     - IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),

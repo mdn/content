@@ -1,10 +1,10 @@
 ---
 title: Relationship of grid layout to other layout methods
+short-title: Grid and other layouts
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) is designed to work alongside other parts of CSS, as part of a complete system for doing the layout. This guide explains how grid layout fits together with other techniques.
 

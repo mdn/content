@@ -165,7 +165,7 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
   </head>
   <body>
     <input type="text" id="userInput" />
-    <button onclick="updateContent()">Update Content</button>
+    <button>Update Content</button>
     <div id="content"></div>
   </body>
 
@@ -176,6 +176,8 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
       // Passing unsanitized content - a violation of the policy
       document.getElementById("content").innerHTML = userInput;
     }
+
+    document.querySelector("button").addEventListener("click", updateContent);
   </script>
 </html>
 ```

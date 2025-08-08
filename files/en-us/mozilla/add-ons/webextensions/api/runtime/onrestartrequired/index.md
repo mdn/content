@@ -3,9 +3,8 @@ title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onRestartRequired
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an app or the device that it runs on needs to be restarted. The app should close all its windows at its earliest convenience to let the restart happen. If the app does nothing, a restart will be enforced after a 24-hour grace period has passed. Currently, this event is only fired for ChromeOS kiosk apps.
 
@@ -31,19 +30,17 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `reason`
       - : A {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} value — the reason that the event is being dispatched.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onRestartRequired) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

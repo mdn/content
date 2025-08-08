@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.with()
+short-title: with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/with
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.with
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`with()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's fields.
 

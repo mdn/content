@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
   - https://drafts.csswg.org/css-counter-styles/#typedef-counter-style-name
   - https://drafts.csswg.org/css-lists/#counter-properties
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<custom-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes an arbitrary user-defined string used as an {{glossary("identifier")}}. It is case-sensitive, and certain values are forbidden in various contexts to prevent ambiguity.
 
@@ -54,15 +53,12 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
-
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
-
     - `none`
     - `inline`
     - `outside`
 
     Also, quite a few predefined values are implemented by the different browsers:
-
     - `disc`
     - `circle`
     - `square`

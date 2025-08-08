@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainYearMonth.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/from
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.from
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainYearMonth.from()`** static method creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#rfc_9557_format) string.
 
@@ -21,9 +23,7 @@ Temporal.PlainYearMonth.from(info, options)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.PlainYearMonth")}} instance, which creates a copy of the instance.
     - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#rfc_9557_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a day is required.
     - An object containing the following properties (in the order they are retrieved and validated):

@@ -3,9 +3,8 @@ title: <calc-keyword>
 slug: Web/CSS/calc-keyword
 page-type: css-type
 browser-compat: css.types.calc-keyword
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<calc-keyword>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents well-defined constants such as `e` and `pi`. Rather than require authors to manually type out several digits of these mathematical constants or calculate them, a few of them are provided directly by CSS for convenience.
 
@@ -16,19 +15,15 @@ The `<calc-keyword>` type defines numeric constants that can be used in [CSS mat
 ### Values
 
 - `e`
-
   - : The base of the natural logarithm, approximately equal to `2.7182818284590452354`.
 
 - `pi`
-
   - : The ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
 
 - `infinity` & `-infinity`
-
   - : An infinite value, used to indicate the largest/smallest possible value.
 
 - `NaN`
-
   - : A value representing "Not a Number" canonical casing.
 
 ### Notes

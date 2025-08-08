@@ -133,7 +133,6 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
 Common patterns for detectable features include:
 
 - Members of an object
-
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
     Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
@@ -145,7 +144,6 @@ Common patterns for detectable features include:
     ```
 
 - Properties of an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
     This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
@@ -164,11 +162,9 @@ Common patterns for detectable features include:
     > The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 - Specific return values of a method on an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.
 
 - Retention of assigned property value by an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained.
 
 Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
@@ -178,7 +174,7 @@ Bear in mind that some features are, however, known to be undetectable. In these
 We also wanted to mention the {{domxref("Window.matchMedia")}} JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   // run JavaScript in here.
 }
 ```
@@ -186,16 +182,13 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
 ```html
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
+<link href="dist/brick.css" rel="stylesheet" media="(width <= 480px)" />
 ```
 
 We then use `matchMedia()` in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
 
 ```js
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (window.matchMedia("(width <= 480px)").matches) {
   deck.shuffleTo(1);
 }
 ```

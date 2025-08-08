@@ -3,9 +3,8 @@ title: user-select
 slug: Web/CSS/user-select
 page-type: css-property
 browser-compat: css.properties.user-select
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.
 
@@ -52,16 +51,15 @@ user-select: revert-layer;
 user-select: unset;
 ```
 
-> **Note:** `user-select` is not an inherited property, though the initial `auto` value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers _do_ implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium has chosen to [fix the issues](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) to make the final behavior meet the specifications.
+> [!NOTE]
+> `user-select` is not an inherited property, though the initial `auto` value makes it behave like it is inherited most of the time. WebKit/Chromium-based browsers _do_ implement the property as inherited, which violates the behavior described in the spec, and this will bring some issues. Until now, Chromium has chosen to [fix the issues](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) to make the final behavior meet the specifications.
 
 ### Values
 
 - `none`
   - : The text of the element and its sub-elements is not selectable. Note that the {{domxref("Selection")}} object can contain these elements.
 - `auto`
-
   - : The used value of `auto` is determined as follows:
-
     - On the `::before` and `::after` pseudo elements, the used value is `none`
     - If the used value of `user-select` on the parent of this element is `none`, the used value is `none`
     - Otherwise, if the used value of `user-select` on the parent of this element is `all`, the used value is `all`

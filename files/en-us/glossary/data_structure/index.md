@@ -2,9 +2,8 @@
 title: Data structure
 slug: Glossary/Data_structure
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Data structure** is a particular way of organizing _data_ so that it can be used efficiently.
 

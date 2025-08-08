@@ -3,9 +3,8 @@ title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.identity.getRedirectURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Generates a URL that you can use as a redirect URL.
 
@@ -27,10 +26,6 @@ None.
 
 A string containing a redirect URL value.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the redirect URL:
@@ -40,6 +35,10 @@ let redirectURL = browser.identity.getRedirectURL();
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

@@ -1,10 +1,10 @@
 ---
 title: Firefox 129 for developers
+short-title: Firefox 129
 slug: Mozilla/Firefox/Releases/129
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 was released on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
 
@@ -67,7 +67,3 @@ This article provides information about the changes in Firefox 129 that affect d
 - Fixed a bug in the `browsingContext.userPromptOpened` event, which would unexpectedly miss the `defaultValue` field ([Firefox bug 1859814](https://bugzil.la/1859814))
 - Fixed an issue with the `network.responseCompleted` event during authentication flows, which was emitted too many times compared to the specifications. Only one `responseCompleted` (or `fetchError`) event is expected for the whole HTTP authentication flow. ([Firefox bug 1906106](https://bugzil.la/1906106))
 - Improved the `browser.removeUserContext` command to skip all "beforeunload" prompts. ([Firefox bug 1876062](https://bugzil.la/1876062))
-
-## Older versions
-
-{{Firefox_for_developers}}

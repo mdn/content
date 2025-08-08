@@ -2,24 +2,12 @@
 title: Using multiple backgrounds
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 You can apply **multiple backgrounds** to elements. These are layered atop one another with the first background you provide on top and the last background listed in the back. Only the last background can include a background color.
 
-Specifying multiple backgrounds is easy:
-
-```css
-.myclass {
-  background:
-    background1,
-    background2,
-    /* …, */ backgroundN;
-}
-```
-
-You can do this with both the shorthand {{ cssxref("background") }} property and the individual properties thereof except for {{ cssxref("background-color") }}. That is, the following background properties can be specified as a list, one per background: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Multiple backgrounds are specified as a comma-separated list, such as `background: background1, background2, ...;`. This syntax is accepted by both the shorthand {{cssxref("background")}} property and the individual properties thereof except for {{cssxref("background-color")}}: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
 
 ## Example
 
@@ -38,7 +26,7 @@ In this example, three backgrounds are stacked: the Firefox logo, an image of bu
   width: 100%;
   height: 400px;
   background-image:
-    url(firefox.png), url(bubbles.png),
+    url("firefox.png"), url("bubbles.png"),
     linear-gradient(to right, rgb(30 75 115 / 100%), rgb(255 255 255 / 0%));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:

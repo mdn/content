@@ -3,9 +3,8 @@ title: CSS box model
 slug: Web/CSS/CSS_box_model
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-box-4/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box model** module defines the `margin` and `padding` properties, which along with the [height](/en-US/docs/Web/CSS/CSS_box_sizing), [width](/en-US/docs/Web/CSS/CSS_box_sizing) and [border properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders), make up the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model).
 
@@ -45,15 +44,12 @@ The CSS box model module defines physical (or "page relative") properties such a
 ## Guides
 
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-
   - : Explains one of the fundamental concepts of CSS: the box model. This model defines how CSS lays out elements, including their content, padding, border, and margin areas.
 
 - [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
 - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-
   - : Explains the visual formatting model.
 
 ## Related concepts

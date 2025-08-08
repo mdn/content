@@ -3,9 +3,8 @@ title: font-variant-caps
 slug: Web/CSS/font-variant-caps
 page-type: css-property
 browser-compat: css.properties.font-variant-caps
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-caps`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs used for small or petite capitals or for titling.
 
@@ -104,7 +103,7 @@ The `font-variant-caps` property is specified using a single keyword value from 
 Large sections of text set with a `font-variant` value of `all-small-caps` or `all-petite-caps` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+- [W3C Understanding WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## Formal definition
 

@@ -44,6 +44,8 @@ This might produce output akin to this:
 
 ## Reference
 
+The [WebDriver reference](/en-US/docs/Web/WebDriver/Reference) provides detailed information about the WebDriver API, including the available commands, capabilities, and errors.
+
 - [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 
 ### [Commands](/en-US/docs/Web/WebDriver/Reference/Commands)

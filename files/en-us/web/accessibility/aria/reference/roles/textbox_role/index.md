@@ -51,9 +51,7 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute
   - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox. This attribute must be updated programmatically as the focus changes.
 - [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute
-
   - : Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
-
     - `inline`: Predicted text is inserted after the caret.
     - `list`: Predicted text is presented as a collection of values.
     - `both`: Predicted text is presented as a collection of values, with the text needed to complete one value inserted after the caret.
@@ -62,7 +60,6 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
     If list or both is set, the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) and [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attributes should also be included. The value of `aria-controls` is the ID of the element that contains the list of suggested values. Additionally, either the textbox or a containing element with role `combobox` has a value for `aria-haspopup` that matches the role of the element that contains the list of suggested values.
 
 - [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) attribute
-
   - : If `aria-multiline="true"` is set, the AT informs the user that the textbox supports multi-line input, with the expectation that <kbd>Enter</kbd> or <kbd>Return</kbd> will create a line break rather than submitting the form. ARIA does not alter the behavior of the element; rather this feature must be controlled by the developer. If false is set, or the attribute is omitted and defaults to false, the user expectation is that the control is a single line text box, and <kbd>Enter</kbd> or <kbd>Return</kbd> submits the form.
 
 - [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) attribute
@@ -81,10 +78,10 @@ In a single-line use (when `aria-multiline` is `false` or not used), the Return 
 All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.
 
 - Focus event handler and aria-activedescendant attribute
-  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
+  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://w3c.github.io/aria/#aria-activedescendant) for further information.
 
 > [!NOTE]
-> It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
+> It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/).
 
 ## Possible effects on user agents and assistive technology
 

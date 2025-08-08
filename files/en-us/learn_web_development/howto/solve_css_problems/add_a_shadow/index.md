@@ -44,7 +44,7 @@ button {
   font-weight: bold;
   font-size: 140%;
   background-color: #db1f48;
-  color: #fff;
+  color: white;
 }
 ```
 

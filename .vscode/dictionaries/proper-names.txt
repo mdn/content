@@ -48,6 +48,7 @@ belgin
 Benbadis
 Bento4
 Berners
+Bila
 Binaryen
 Birtles
 bitsies
@@ -74,12 +75,14 @@ Bynens
 Béziers
 caitmuenster
 Camino
+Cammy
 Camtasia
 Canva
 Carakan
 Cardano
 carinaanand
 Carle
+carolinensis
 Cassini
 Caterina
 caugner
@@ -87,10 +90,12 @@ Chakra
 Chamakh
 Chimero
 Chloé
+Choco
 Choyce
 chrisdavidmills
 Chromecast
 Chromeo
+Chun-Li
 Cinepak
 Cipherlist.eu
 Clippy
@@ -164,7 +169,11 @@ Ehsan
 Eich
 Eichenwald
 Eisenberg
+Elaina
 Elchi
+Elfie
+Elliotte
+Elly
 Emscripten
 Endtest
 Ensatina
@@ -201,6 +210,7 @@ geckodriver
 Gedit
 Gerd
 Giancarlo
+Giorgio
 Gitbash
 Golightly
 Googlebot
@@ -211,6 +221,7 @@ Graywolf9
 Grigsby
 Grissom
 Groff
+Grosso
 GSAP
 Guildford
 Haile
@@ -238,8 +249,10 @@ Hoshi
 Hoth
 Hyperaudio
 Hönigswald
+Ibuki
 Icecast
 idb-keyval
+Igalia
 Imagify
 Iniesta
 Inkscape
@@ -248,6 +261,7 @@ Ionos
 Irena
 ITCSS
 ITEC
+Jada
 Jalkhov
 jamiedoe
 Janc
@@ -258,6 +272,8 @@ Jayla
 Jeni
 Jewett
 Jinping
+Jirat
+Jiri
 Jitsi
 Johansson
 Joomla
@@ -268,10 +284,12 @@ jpmedley
 JSCAMP
 jswebm
 Junxia
+Juri
 Júnior
 Kadlec
 Kahlo
 Kaku
+Kang
 Kaply
 Kaspersky
 Katari
@@ -353,6 +371,7 @@ Miata
 Mielczarek
 Mihajlija
 Milica
+Miloslav
 Miracast
 Miroslav
 mirunacurtean
@@ -453,6 +472,7 @@ Recep
 Reis
 Rekapi
 Remy
+Resian
 Resig
 Rigby
 Robison
@@ -460,13 +480,16 @@ Rocher
 Rohini
 Ronaldo
 Roselli
+Rosenburg
 Rossi
 Rossum
 Roushan
 rsvg
 Rumyra
 Ryuno
+Sagat
 Saionaro
+Sakura
 Salame
 Salva
 Sandrina
@@ -477,6 +500,7 @@ Schirra
 Schmarsow
 Schola
 Schwarz
+Sciurus
 Scooby
 scottohara
 Scribie
@@ -543,6 +567,7 @@ Tokopedia
 Tomayac
 Tonisha
 Transcribear
+Transfonter
 Transformiix
 Trekhleb
 Trint
@@ -565,6 +590,7 @@ Visio
 Voikko
 Volkman
 Vorbis
+vulgaris
 wabt
 Wakamai
 Waldron
@@ -606,6 +632,7 @@ Yuki
 Yura
 Zakas
 Zakirt
+Zangief
 zantroke
 zantrokeregular
 Zaptec

@@ -2,9 +2,8 @@
 title: Using filter effects
 slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Have you ever hovered over a black-and-white or sepia image and the full-color image came into view instantly? Have you ever encountered a background image with a small blurred-out section that makes the text on top more legible? In the past, these manipulations required image editing software, time, and additional HTTP requests.
 
@@ -35,7 +34,7 @@ The following table lists the 10 filter functions, along with their value types,
 | {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `0`                  | `blur(0)`                             |
 | {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
 | {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentColor` | `drop-shadow(0 0 0 currentColor)`     |
 | {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
 | {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                       |           |            | `0`                  | `hue-rotate(0deg)`                    |
 | {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
@@ -247,7 +246,7 @@ A single SVG can be used to define several filters, each with an `id`:
 The filter's `id` is referenced in the `url()` for both inline and external SVGs:
 
 ```css
-filter: url(#blur3);
+filter: url("#blur3");
 filter: url("https://example.com/svg/filters.svg#blur3");
 ```
 
@@ -310,7 +309,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
   filter: blur(3.5px);
 }
 .svgFilter {
-  filter: url(#blur);
+  filter: url("#blur");
 }
 ```
 

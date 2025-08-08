@@ -1,10 +1,10 @@
 ---
 title: Firefox 71 for Developers
+short-title: Firefox 71
 slug: Mozilla/Firefox/Releases/71
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 71 that will affect developers. Firefox 71 was released on December 3, 2019.
 
@@ -103,7 +103,6 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ### API changes
 
 - {{WebExtAPIRef("downloads.download")}} now identifies and reports as errors the following HTTP response codes:
-
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`
@@ -118,7 +117,3 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 ## See also
 
 - Hacks release post: [Firefox 71: A year-end arrival](https://hacks.mozilla.org/2019/12/firefox-71-a-year-end-arrival/)
-
-## Older versions
-
-{{Firefox_for_developers}}

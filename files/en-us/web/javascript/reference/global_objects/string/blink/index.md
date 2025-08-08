@@ -1,13 +1,15 @@
 ---
 title: String.prototype.blink()
+short-title: blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.blink
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`blink()`** method of {{jsxref("String")}} values creates a string that embeds this string in a `<blink>` element (`<blink>str</blink>`), which used to cause a string to blink in old browsers.
 

@@ -374,9 +374,9 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .btn-save:hover {
@@ -384,8 +384,8 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save:focus {
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: black;
 }
 
 .checkbox-wrapper {
@@ -394,7 +394,7 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn {
   background-color: #b90000;
-  color: #fff;
+  color: white;
   border-color: #9a0000;
 }
 
@@ -404,7 +404,7 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn:active {
   background-color: #e30000;
-  border-color: #000;
+  border-color: black;
 }
 
 .sm-text-input {
@@ -434,8 +434,8 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 }
 
 /* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -443,12 +443,12 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   width: 1.25em;
   height: 1.25em;
   border: 2px solid #ccc;
-  background: #fff;
+  background: white;
 }
 
 /* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
   content: "\2713\0020";
   position: absolute;
   top: 0.15em;
@@ -460,18 +460,18 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label::after {
   opacity: 0;
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
 
 /* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
+[type="checkbox"]:checked:focus + label::before,
+[type="checkbox"]:not(:checked):focus + label::before {
   border: 2px dotted blue;
 }
 ```

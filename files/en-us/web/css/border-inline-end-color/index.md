@@ -3,9 +3,8 @@ title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
 page-type: css-property
 browser-compat: css.properties.border-inline-end-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-inline-end-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -22,7 +21,7 @@ writing-mode: vertical-rl;
 ```
 
 ```css interactive-example-choice
-border-inline-end-color: rgb(170, 50, 220, 0.6);
+border-inline-end-color: rgb(170 50 220 / 0.6);
 writing-mode: horizontal-tb;
 direction: rtl;
 ```
@@ -38,7 +37,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

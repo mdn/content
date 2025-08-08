@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-animations-2/
   - https://drafts.csswg.org/css-animations/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS animations** module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 
@@ -245,8 +244,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-> [!NOTE]
-> The CSS Animations Module Level 2 introduces the `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, and `animation-trigger-type` properties. These have not yet been implemented.
+The CSS animations module level 2 also introduces the `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, and `animation-trigger-type` properties. Currently, no browsers support these features.
 
 ### At-rules
 

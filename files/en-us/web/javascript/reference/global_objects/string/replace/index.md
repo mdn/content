@@ -1,11 +1,11 @@
 ---
 title: String.prototype.replace()
+short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 

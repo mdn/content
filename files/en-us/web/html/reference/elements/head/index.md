@@ -3,13 +3,13 @@ title: "<head>: The Document Metadata (Header) element"
 slug: Web/HTML/Reference/Elements/head
 page-type: html-element
 browser-compat: html.elements.head
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<head>`** [HTML](/en-US/docs/Web/HTML) element contains machine-readable information ({{glossary("metadata")}}) about the document, like its [title](/en-US/docs/Web/HTML/Reference/Elements/title), [scripts](/en-US/docs/Web/HTML/Reference/Elements/script), and [style sheets](/en-US/docs/Web/HTML/Reference/Elements/style). There can be only one `<head>` element in an HTML document.
 
-> **Note:** `<head>` primarily holds information for machine processing, not human-readability. For human-visible information, like top-level headings and listed authors, see the {{HTMLElement("header")}} element.
+> [!NOTE]
+> `<head>` primarily holds information for machine processing, not human-readability. For human-visible information, like top-level headings and listed authors, see the {{HTMLElement("header")}} element.
 
 ## Attributes
 
@@ -75,7 +75,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -102,7 +102,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ## See also
 
 - Elements that can be used inside the `<head>`:
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

@@ -31,7 +31,6 @@ The code below is an example of a basic audio implementation using HTML5:
 
 - Here we define an {{ htmlelement("audio") }} element with multiple sources — we do this as not all browsers support the same audio formats. To ensure reasonable coverage, we should specify at least two different formats. The two formats that will give maximum coverage are mp3 and ogg vorbis.
 - We do this using the {{ htmlelement("source") }} element, which takes the attributes `src` and `type`.
-
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
@@ -571,7 +570,7 @@ There are also a couple of events related to buffering:
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
-- [Event reference > Media](/en-US/docs/Web/Events#media)
+- [Event reference > Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.

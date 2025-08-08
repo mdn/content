@@ -38,7 +38,6 @@ You (or your company) decide that you no longer want to maintain a blog, so you 
 Preventing subdomain takeovers is a matter of order of operations in lifecycle management for virtual hosts and DNS. Depending on the size of the organization, this may require communication and coordination across multiple departments, which can only increase the likelihood for a vulnerable misconfiguration.
 
 - Define standard processes for provisioning and deprovisioning hosts. Do all steps as closely together as possible.
-
   - Start provisioning by claiming the virtual host; create DNS records _last_.
   - Start deprovisioning by removing DNS records _first_.
 

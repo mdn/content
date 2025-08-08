@@ -1,10 +1,10 @@
 ---
 title: HTTP Client hints
+short-title: Client hints
 slug: Web/HTTP/Guides/Client_hints
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Client hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Reference/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.
@@ -28,7 +28,7 @@ It is also relatively "privacy-preserving", in that it is up to the client to de
 There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
 > [!NOTE]
-> Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute.
+> Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) attribute.
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />

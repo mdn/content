@@ -3,9 +3,8 @@ title: stroke-linecap
 slug: Web/CSS/stroke-linecap
 page-type: css-property
 browser-compat: css.properties.stroke-linecap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-linecap`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the end of open subpaths of [SVG](/en-US/docs/Web/SVG) elements' unclosed strokes. If present, it overrides the element's {{SVGAttr("stroke-linecap")}} attribute.
 
@@ -30,15 +29,12 @@ stroke-linecap: unset;
 ### Values
 
 - `butt`
-
   - : Indicates that the stroke for each subpath does not extend beyond its two endpoints. On a zero-length subpath, the path will not be rendered at all. This is the default value.
 
 - `round`
-
   - : Indicates that at the end of each subpath the stroke will be extended by a half circle with a diameter equal to the stroke width. On a zero-length subpath, the stroke consists of a full circle centered at the subpath's point.
 
 - `square`
-
   - : Indicates that at the end of each subpath the stroke will be extended by a rectangle with a width equal to half the width of the stroke and a height equal to the width of the stroke. On a zero-length subpath, the stroke consists of a square with its width equal to the stroke width, centered at the subpath's point.
 
 ## Formal definition

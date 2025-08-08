@@ -3,9 +3,8 @@ title: border-top-style
 slug: Web/CSS/border-top-style
 page-type: css-property
 browser-compat: css.properties.border-top-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's top {{CSSxRef("border")}}.
 
@@ -46,7 +45,7 @@ border-top-style: inset;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +53,7 @@ border-top-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

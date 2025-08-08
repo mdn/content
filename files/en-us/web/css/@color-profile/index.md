@@ -3,9 +3,8 @@ title: "@color-profile"
 slug: Web/CSS/@color-profile
 page-type: css-at-rule
 spec-urls: https://www.w3.org/TR/css-color-5/#at-profile
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
 
@@ -17,16 +16,19 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 }
 ```
 
+### Parameters
+
+- profile name
+  - : Either a {{cssxref("&lt;dashed-ident&gt;")}} or the identifier `device-cmyk`.
+
 ### Descriptors
 
 - `src`
   - : Specifies the URL to retrieve the color-profile information from.
 - `rendering-intent`
-
   - : If the color profile contains more than one rendering intent, this descriptor allows one to be selected as the one to use to define how to map the color to smaller {{glossary("gamut")}}s than this profile is defined over.
 
     If used, it must be one of the following keywords:
-
     - `relative-colorimetric`
       - : Media-relative colorimetric is required to leave source colors that fall inside the destination medium {{glossary("gamut")}} unchanged relative to the respective media white points. Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods.
     - `absolute-colorimetric`
@@ -42,7 +44,7 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 
 ## Examples
 
-This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).
+This example demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR). This example is from the specification.
 
 The `src` descriptor specifies the URL to retrieve the color-profile information from.
 
@@ -61,4 +63,8 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
+
+## See also
+
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module

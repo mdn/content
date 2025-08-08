@@ -3,9 +3,8 @@ title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
 browser-compat: javascript.statements.generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
@@ -45,7 +44,8 @@ function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > Generator functions do not have arrow function counterparts.
 
-> **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
 
 ### Parameters
 
@@ -70,8 +70,7 @@ function execution, replacing the `yield` expression where an execution was
 paused with the argument from `next()`.
 
 Generators in JavaScript — especially when combined with Promises — are a very
-powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
-\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
+powerful tool for asynchronous programming as they mitigate — if not entirely eliminate — the problems with callbacks, such as [Callback Hell](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1) and
 [Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
@@ -231,18 +230,6 @@ console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 ```js
 function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
-```
-
-### Generator defined in an expression
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
 ```
 
 ### Generator example

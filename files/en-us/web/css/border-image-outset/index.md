@@ -3,9 +3,8 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 page-type: css-property
 browser-compat: css.properties.border-image-outset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-outset`** [CSS](/en-US/docs/Web/CSS) property sets the distance by which an element's [border image](/en-US/docs/Web/CSS/border-image) is set out from its border box.
 
@@ -44,7 +43,7 @@ border-image-outset: 40px;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;

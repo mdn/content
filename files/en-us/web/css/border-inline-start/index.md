@@ -3,9 +3,8 @@ title: border-inline-start
 slug: Web/CSS/border-inline-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
 
@@ -38,7 +37,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #8b008b;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

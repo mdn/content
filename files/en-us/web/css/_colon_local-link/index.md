@@ -5,9 +5,10 @@ page-type: css-pseudo-class
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target's absolute URL matches the element's own document URL.
 
@@ -53,8 +54,9 @@ a:local-link {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - Link-related pseudo-classes: {{ cssxref(":link") }}, {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}, {{ cssxref(":any-link") }}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

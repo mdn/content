@@ -80,7 +80,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -109,17 +109,6 @@ Here are some popular editors:
       </td>
       <td><a href="https://help.panic.com/nova/">eBook</a></td>
       <td><a href="https://extensions.panic.com/">Yes</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
-      <td>Closed source</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
-      </td>
-      <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
-      <td>Yes</td>
     </tr>
     <tr>
       <td>
@@ -260,7 +249,7 @@ Here are some popular editors:
       <td>Mac</td>
       <td>
         <a href="https://x.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>
@@ -438,7 +427,6 @@ When you install a new text editor, your OS will probably continue to open text 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)
