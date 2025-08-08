@@ -23,7 +23,7 @@ It is a common myth that "HTML ignores whitespace", which is untrue: **HTML pres
 > To be clear, we're talking about whitespace _between HTML tags_, which becomes text nodes in the DOM. Any whitespace _inside a tag_ (between the angle brackets but not as part of an attribute value) is just part of the HTML syntax and does not appear in the DOM.
 
 > [!NOTE]
-> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there do exist certain places where whitespace characters could be ignored. For example, whitespace between the `<html>` and `<head>` opening tags or between the `</body>` and `</html>` closing tags is ignored and does not appear in the DOM. In this guide, we're focusing on the whitespace in rendered text content.
+> Due to the magic that is HTML parsing (quote from [DOM spec](https://dom.spec.whatwg.org/#introduction-to-the-dom)), there do exist certain places where whitespace characters could be ignored. For example, whitespace between the `<html>` and `<head>` opening tags or between the `</body>` and `</html>` closing tags is ignored and does not appear in the DOM. Also, when parsing the {{HTMLElement("pre")}} element's text content, a single leading newline character gets stripped. We ignore these edge cases.
 >
 > Furthermore, the HTML parser does [_normalize_ certain whitespaces](https://html.spec.whatwg.org/multipage/parsing.html#preprocessing-the-input-stream): it replaces CR and [CRLF](/en-US/docs/Glossary/CRLF) sequences with a single LF. However, CR characters can also be inserted into the DOM either via [character references](/en-US/docs/Glossary/Character_reference) or JavaScript, so the CSS whitespace processing rules still need to define how to handle them.
 
