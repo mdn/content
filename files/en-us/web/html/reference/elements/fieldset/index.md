@@ -29,8 +29,8 @@ The **`<fieldset>`** [HTML](/en-US/docs/Web/HTML) element is used to group sever
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 

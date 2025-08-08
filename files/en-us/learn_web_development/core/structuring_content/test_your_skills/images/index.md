@@ -31,7 +31,7 @@ To complete the task:
 
 ```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

@@ -21,7 +21,7 @@ The **`<figure>`** [HTML](/en-US/docs/Web/HTML) element represents self-containe
 
 ```css interactive-example
 figure {
-  border: thin #c0c0c0 solid;
+  border: thin silver solid;
   display: flex;
   flex-flow: column;
   padding: 5px;
@@ -36,7 +36,7 @@ img {
 
 figcaption {
   background-color: #222;
-  color: #fff;
+  color: white;
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;

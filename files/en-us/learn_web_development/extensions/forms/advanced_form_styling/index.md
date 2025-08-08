@@ -475,14 +475,14 @@ And then style the label to act like a button, which, when pressed, will open th
 label[for="file"] {
   box-shadow: 1px 1px 3px #ccc;
   background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169 169 169);
+  border: 1px solid darkgrey;
   border-radius: 5px;
   text-align: center;
   line-height: 1.5;
 }
 
 label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
+  background: linear-gradient(to bottom, white, #ddd);
 }
 
 label[for="file"]:active {
