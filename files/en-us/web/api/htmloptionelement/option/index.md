@@ -79,13 +79,13 @@ const options = ["zero", "one", "two"];
 
 options.forEach((element, key) => {
   if (element === "zero") {
-    s[key] = new Option(element, s.options.length, false, false);
+    s[key] = new Option(element, key, false, false);
   }
   if (element === "one") {
-    s[key] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+    s[key] = new Option(element, key, true, false); // Will add the "selected" attribute
   }
   if (element === "two") {
-    s[key] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+    s[key] = new Option(element, key, false, true); // Just will be selected in "view"
   }
 });
 
