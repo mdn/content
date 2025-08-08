@@ -60,9 +60,7 @@ Firefox stores browser-specific settings in these properties:
 The `gecko` sub-key supports these properties:
 
 - `id`
-
   - : The extension ID. Optional for Manifest V2 (although setting an ID is recommended) and required for signing Manifest V3 extensions. If you don't provide a value for Manifest V2 extensions, AMO assigns a GUID to the extension when it is signed. You must create an ID for signing Manifest V3 extensions; AMO does not assign an ID. When provided, this property must be a:
-
     - (recommended) string contain 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). While you can use a real email address (remembering that this may attract spam) any correctly formatted string can be used. For example, `great_app@developers.company`.
     - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (`^\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}$`)
 
