@@ -54,22 +54,22 @@ Here are some examples of using the constructor.
 // Base URLs:
 let baseUrl = "https://developer.mozilla.org";
 
-let A = new URL("/", baseUrl);
+let a = new URL("/", baseUrl);
 // => 'https://developer.mozilla.org/'
 
-let B = new URL(baseUrl);
+let b = new URL(baseUrl);
 // => 'https://developer.mozilla.org/'
 
-new URL("en-US/docs", B);
+new URL("en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-let D = new URL("/en-US/docs", B);
+let d = new URL("/en-US/docs", b);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", D);
+new URL("/en-US/docs", d);
 // => 'https://developer.mozilla.org/en-US/docs'
 
-new URL("/en-US/docs", A);
+new URL("/en-US/docs", a);
 // => 'https://developer.mozilla.org/en-US/docs'
 
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
