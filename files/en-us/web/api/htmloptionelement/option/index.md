@@ -65,15 +65,11 @@ options.forEach((element, key) => {
 
 ### Append options with different parameters
 
-```js
-/* assuming we have the following HTML
-<select id="s">
-    <option>First</option>
-    <option>Second</option>
-    <option>Third</option>
-</select>
-*/
+```html
+<select id="s"></select>
+```
 
+```js
 const s = document.getElementById("s");
 const options = ["zero", "one", "two"];
 
@@ -88,14 +84,17 @@ options.forEach((element, key) => {
     s[key] = new Option(element, key, false, true); // Just will be selected in "view"
   }
 });
+```
 
-/* Result
+Result:
+
+```html
 <select id="s">
   <option value="0">zero</option>
   <option value="1" selected="">one</option>
-  <option value="2">two</option> // User will see this as 'selected'
+  <option value="2">two</option>
+  <!-- User will see this as 'selected' -->
 </select>
-*/
 ```
 
 ## Specifications
