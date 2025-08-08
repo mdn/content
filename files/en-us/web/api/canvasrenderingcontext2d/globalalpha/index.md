@@ -81,7 +81,7 @@ ctx.fillStyle = "#09F";
 ctx.fillRect(0, 75, 75, 75);
 ctx.fillStyle = "#F30";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = "#FFF";
+ctx.fillStyle = "white";
 
 // Set transparency value
 ctx.globalAlpha = 0.2;

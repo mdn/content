@@ -53,7 +53,7 @@ Imagine you're building a weather app, and the background color in your app's st
 
 ```css
 body {
-  background-color: #87ceeb;
+  background-color: skyblue;
 }
 ```
 
@@ -63,7 +63,7 @@ To ensure your users see a consistent background color from launch to full load 
 {
   "name": "WeatherPro",
   "display": "standalone",
-  "background_color": "#87ceeb",
+  "background_color": "skyblue",
   "theme_color": "#4682b4",
   "icons": [
     {
