@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ## Description
 
 The `commitStyles()` method is primarily used to write the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) for the final state of an animation into the target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, so that the styling persists after the animation ends.
-This can be done when the animation has {{domxref("Animation.finished","finished")}}.
+This can be done when the animation has finished (that is, the {{domxref("Animation")}} object's {{domxref("Animation.finished","finished")}} property has resolved).
 
 The code below shows how you can animate an element named `animatedElement`, setting [`fill: "forwards"`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to persist the animation styles after it finishes.
 Once the animation is finished we commit the styles to the element with `commitStyles()`.
