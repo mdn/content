@@ -86,7 +86,7 @@ sidebar: mdnsidebar
 
 {{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The [read-only] **`NameOfTheProperty`** property of the \{{domxref("NameOfTheParentInterface")}} interface [provide concise summary of behavior].
+The **`NameOfTheProperty`** [read-only] property of the \{{domxref("NameOfTheParentInterface")}} interface _<provide concise summary of behavior>_.
 
 _Start by naming the property (indicating whether or not is is read-only) and what interface it is part of, and then say what it does._
 
@@ -111,7 +111,6 @@ Also, some WebIDL extended attributes with specific meanings can be associated w
 
 Additional description, if needed.
 -->
-
 
 ## Examples
 
