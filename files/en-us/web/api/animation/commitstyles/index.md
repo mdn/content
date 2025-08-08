@@ -61,7 +61,7 @@ Animations [take precedence over all static styles](/en-US/docs/Web/CSS/CSS_casc
 > [!NOTE]
 > You might also avoid having to explicitly save the final state by setting them as the element initial styles and animating to the final styles.
 
-### commitStyles() without setting fill mode
+### `commitStyles()` without setting fill mode
 
 In newer browsers you do not need to set the [`fill` mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) (see the [browser compatibility table](#browser_compatibility) for specific versions).
 
