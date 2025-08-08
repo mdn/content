@@ -53,5 +53,5 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - {{cssxref("will-change")}} CSS property
