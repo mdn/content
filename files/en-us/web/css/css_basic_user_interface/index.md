@@ -84,6 +84,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
 - {{CSSxRef("cursor")}}
 - {{CSSxRef("outline")}}, shorthand for:

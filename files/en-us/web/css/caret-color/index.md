@@ -129,4 +129,5 @@ p.custom {
 - The {{HTMLElement("input")}} element
 - The HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute, which can be used to make any element's text editable
 - The {{cssxref("&lt;color&gt;")}} data type
+- {{cssxref("caret-animation")}}
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("column-rule-color")}}
