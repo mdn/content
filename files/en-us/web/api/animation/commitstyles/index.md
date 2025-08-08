@@ -31,6 +31,10 @@ None ({{jsxref("undefined")}}).
 The `commitStyles()` method is primarily used to write the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) for the final state of an animation into the target element's [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, so that the styling persists after the animation ends.
 This can be done when the animation has finished (that is, the {{domxref("Animation")}} object's {{domxref("Animation.finished","finished")}} property has resolved).
 
+### `commitStyles()` alongside fill mode
+
+On older browsers, you must specify the [`fill` mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) in order to be able to commit the styles to the element _after_ the animation has finished.
+
 The code below shows how you can animate an element named `animatedElement`, setting [`fill: "forwards"`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to persist the animation styles after it finishes.
 Once the animation is finished we commit the styles to the element with `commitStyles()`.
 
@@ -59,7 +63,6 @@ Animations [take precedence over all static styles](/en-US/docs/Web/CSS/CSS_casc
 
 ### commitStyles() without setting fill mode
 
-On older browsers, you must specify the [`fill` mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) in order to be able to commit the styles to the element _after_ the animation has finished.
 In newer browsers you do not need to set the [`fill` mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) (see the [browser compatibility table](#browser_compatibility) for specific versions).
 
 > [!NOTE]
@@ -95,7 +98,7 @@ This example demonstrates how you can use `commitStyles()` to save the computed 
 It displays two buttons, labelled "Commit styles only" and "Commit styles with fill".
 Both buttons animate when you click them, and both buttons call `commitStyles()` to persist the final state of the animation.
 
-The difference, is that "Commit styles only" does not specify `fill: "forwards"` to persist the animation's final state.
+The difference is that "Commit styles only" does not specify `fill: "forwards"` to persist the animation's final state.
 On browsers that don't match the current specification the final state may not be captured.
 
 #### HTML
