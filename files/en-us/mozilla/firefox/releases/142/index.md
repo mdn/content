@@ -87,6 +87,11 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
 
+- **`Integrity-Policy` and `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
+
+  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported, allowing websites to enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts, or just report on violations of the policy, respectively.
+  ([Firefox bug 1976656](https://bugzil.la/1976656)).
+
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
