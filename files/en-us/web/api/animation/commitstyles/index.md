@@ -94,30 +94,45 @@ After the element's styles have been committed they can be modified and replaced
 ### Animation with and without using fill
 
 This example demonstrates how you can use `commitStyles()` to save the computed styles at the end of the animation, both with and without using `fill`.
+It also provides an example of what happens if neither `commitStyles()` or `fill` are used, for comparison.
 
-It displays two buttons, labelled "Commit styles only" and "Commit styles with fill".
+The example first displays two buttons labelled "commitStyles() only" and "commitStyles() with fill".
 Both buttons animate when you click them, and both buttons call `commitStyles()` to persist the final state of the animation.
-
-The difference is that "Commit styles only" does not specify `fill: "forwards"` to persist the animation's final state.
+The difference is that "commitStyles() only" does not specify `fill: "forwards"` to persist the animation's final state.
 On browsers that don't match the current specification the final state may not be captured.
+
+The code then displays a button "No commitStyles() or fill" that can be used for comparison, and a "Reset" button.
 
 #### HTML
 
 ```html
-<button class="commit-styles">Commit styles only</button>
-<br />
-<button class="commit-with-fill">Commit styles with fill</button>
+<button class="commit-styles">commitStyles() only</button>
+<button class="commit-with-fill">commitStyles() with fill</button>
+<button class="no-commit-or-fill">No commitStyles() or fill</button>
+```
+
+```html hidden
+<button id="reset" type="button">Reset</button>
 ```
 
 ```css hidden
 button {
   margin: 0.5rem;
+  display: block;
 }
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
 ```
 
 #### JavaScript
 
-This code defines a click handler for the "Commit styles only" button.
+This code defines a click handler for the "commitStyles() only" button.
 This animates the button to move right or left when it is clicked.
 Note that `commitStyles()` is called immediately after the animation is finished.
 
@@ -141,7 +156,7 @@ commitStyles.addEventListener("click", async (event) => {
 });
 ```
 
-This code defines a click handler for the "Commit styles with fill" button.
+This code defines a click handler for the "commitStyles() with fill" button.
 This also animates the button to move right or left when it is clicked.
 As it defines a `fill` it needs to cancel the animation afterwards.
 
@@ -168,10 +183,29 @@ commitStylesWithFill.addEventListener("click", async (event) => {
 });
 ```
 
+This code defines a click handler for the "No commitStyles() or fill" button.
+This also animates the button to move right or left when it is clicked.
+It doesn't define a fill and we don't cancel the animation.
+
+```js
+const noCommitStylesOrFill = document.querySelector(".no-commit-or-fill");
+let offset3 = 0;
+
+noCommitStylesOrFill.addEventListener("click", async (event) => {
+  // Start the animation
+  offset3 = 100 - offset3;
+  const animation = noCommitStylesOrFill.animate(
+    { transform: `translate(${offset3}px)` },
+    { duration: 500 },
+  );
+});
+```
+
 #### Result
 
 Click the buttons to animate them.
 Note that the first button will "jump" at the end of the animation if the current browser still requires `fill` for styles to be committed after the end of the animation.
+The "No commitStyles() or fill" button always jumps at the end, because the final state is not saved.
 
 {{EmbedLiveSample("Animation with and without using fill")}}
 
