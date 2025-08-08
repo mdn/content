@@ -55,6 +55,26 @@ new URLPattern(input, baseURL, options)
     - The given `input` is relative, but no `baseURL` is provided to form a complete absolute URL.
     - A `baseURL` is provided, and input is an absolute pattern or a structured object.
 
+## Description
+
+The `URLPattern` constructor's input pattern can take two forms — a pattern object, or a pattern string and optional baseURL.
+
+```js
+new URLPattern(obj);
+new URLPattern(pattern);
+new URLPattern(pattern, baseURL);
+```
+
+The first type of constructor takes an object that describes the URLs that should be matched by specifying patterns for each individual URL part.
+Its members can be any of `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`.
+If the `baseURL` property is provided it will be parsed as a URL and used to populate any other properties that are missing.
+If the `baseURL` property is missing, then any other missing properties default to the pattern `*` wildcard, accepting any input.
+
+The second type of constructor takes a URL string that contains patterns embedded in it.
+The URL string may be relative if a `baseURL` is provided as the second argument.
+Note that it may be necessary to escape some characters in the URL string if it is ambiguous whether the character is separating different URL components or is part of a pattern.
+For example, you must write `about\\:blank` to indicate that the `:` is the protocol suffix and not the start of a `:blank` named group pattern.
+
 ## Examples
 
 ### Matching a pathname
@@ -122,33 +142,6 @@ const pattern = new URLPattern("https://example.com/2022/feb/*", {
 console.log(pattern.test("https://example.com/2022/feb/xc44rsz")); // true
 console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // true
 ```
-
-## Usage notes
-
-The `URLPattern` constructor's input pattern can take two forms — a
-pattern object, or a pattern string and optional baseURL.
-
-```js
-new URLPattern(obj);
-new URLPattern(pattern);
-new URLPattern(pattern, baseURL);
-```
-
-The first type of constructor takes an object that describes the
-URLs that should be matched by specifying patterns for each individual URL part.
-Its members can be any of `protocol`, `username`, `password`, `hostname`,
-`port`, `pathname`, `search`, `hash`, or `baseURL`. If the `baseURL` property is
-provided it will be parsed as a URL and used to populate any other properties
-that are missing. If the `baseURL` property is missing, then any other missing
-properties default to the pattern `*` wildcard, accepting any input.
-
-The second type of constructor takes a URL string that contains
-patterns embedded in it. The URL string may be relative if a `baseURL` is
-provided as the second argument. Note that it may be necessary to escape some
-characters in the URL string if it is ambiguous whether the character is
-separating different URL components or is part of a pattern. For
-example, you must write `about\\:blank` to indicate that the `:` is the protocol
-suffix and not the start of a `:blank` named group pattern.
 
 ## Specifications
 

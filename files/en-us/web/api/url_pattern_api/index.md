@@ -10,10 +10,10 @@ spec-urls: https://urlpattern.spec.whatwg.org/
 
 The **URL Pattern API** defines a syntax that is used to create URL pattern matchers.
 These patterns can be matched against URLs or individual URL components.
-The URL Pattern API is used by the {{domxref("URLPattern")}} interface.
 
 ## Concepts and usage
 
+Patterns are specified using the {{domxref("URLPattern")}} interface.
 The pattern syntax is based on the syntax from the [path-to-regexp](https://github.com/pillarjs/path-to-regexp) library.
 Patterns can contain:
 
@@ -26,12 +26,9 @@ Patterns can contain:
   Some APIs prohibit the use of regular expression groups in `URLPattern` objects.
   The {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} property indicates whether or not regular expression groups are used.
 
-You can find details about the syntax in the [pattern syntax](#pattern_syntax)
-section below.
+You can find details about the syntax in the [pattern syntax](#pattern_syntax) section below.
 
 ## Interfaces
-
-The URL Pattern API only has a single related interface:
 
 - {{domxref("URLPattern")}}
   - : Represents a pattern that can match URLs or parts of URLs. The pattern can contain capturing groups that extract parts of the matched URL.
@@ -189,10 +186,9 @@ console.log(pattern.exec("https://example.com/books/123").pathname.groups); // {
 
 ### Group modifiers
 
-Groups can also have modifiers. These are specified after the group name (or
-after the regexp if there is one). There are three modifiers: `?` to make the
-group optional, `+` to make the group repeat one or more times, and `*` to make
-the group repeat zero or more times.
+Groups can also have modifiers.
+These are specified after the group name (or after the regexp if there is one).
+There are three modifiers: `?` to make the group optional, `+` to make the group repeat one or more times, and `*` to make the group repeat zero or more times.
 
 ```js
 // An optional group
@@ -322,12 +318,10 @@ console.log(pattern.test("https://example.com/.png")); // true
 
 ### Pattern normalization
 
-When a pattern is parsed it is automatically normalized to a canonical form. For
-example, unicode characters are percent encoded in the pathname property,
-punycode encoding is used in the hostname, default port numbers are elided,
-paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc. In addition,
-there are some pattern representations that parse to the same underlying
-meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
+When a pattern is parsed it is automatically normalized to a canonical form.
+For example, unicode characters are percent encoded in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc.
+In addition, there are some pattern representations that parse to the same underlying meaning, like `foo` and `{foo}`.
+Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
 
 ## Case sensitivity
@@ -381,7 +375,7 @@ console.log(pattern.test("https://example.com/foo/bar")); // true
 
 console.log(pattern.test({ hostname: "cdn.example.com" })); // true
 
-console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // false
+console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // true
 
 // Prints `false` because the hostname component does not match
 console.log(pattern.test("https://cdn-example.com/foo/bar"));
