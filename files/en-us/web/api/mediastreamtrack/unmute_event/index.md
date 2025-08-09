@@ -40,7 +40,7 @@ musicTrack.addEventListener(
   "mute",
   (event) => {
     const widget = document.getElementById("timeline-widget");
-	  widget.style.backgroundColor = "#aaaaaa";
+    widget.style.backgroundColor = "#aaaaaa";
   },
   false,
 );
