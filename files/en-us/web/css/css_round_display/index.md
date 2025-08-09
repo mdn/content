@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-round-display/
 sidebar: cssref
 ---
 
-The **CSS round display** module defines CSS extensions to support a round display help developers build a pages suitable for rounds displays, such as wrist-watches.
+The **CSS round display** module defines CSS extensions to support a round display, such as wrist-watches, to help developers build web pages suitable for those devices.
 
 ## Reference
 
@@ -24,7 +24,7 @@ The CSS round display module introduces the `border-boundary` and `shape-inside`
   - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
 
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-  - : Defining basic shapes and debugging basic shapes with developer tools.
+  - : Defines basic shapes and how to debug them with developer tools.
 
 ## Related concepts
 
