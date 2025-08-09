@@ -78,7 +78,7 @@ In the CSS, we define styling for three custom highlights named `highlight1`, `h
 
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -97,8 +97,8 @@ section {
 .highlightable-text,
 article {
   padding: 10px;
-  background-color: #eee;
-  border: 2px solid #ddd;
+  background-color: #eeeeee;
+  border: 2px solid #dddddd;
   border-radius: 5px;
 }
 

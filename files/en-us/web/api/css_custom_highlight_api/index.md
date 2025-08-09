@@ -213,7 +213,7 @@ Finally, the `::highlight()` pseudo-element is used in CSS to style the highligh
 
 ```css
 ::highlight(search-results) {
-  background-color: #f06;
+  background-color: #ff0066;
   color: white;
 }
 ```

@@ -53,8 +53,8 @@ This example changes the appearance of a document when it loses focus. It uses {
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  background: #dddddd;
+  color: #555555;
 }
 ```
 

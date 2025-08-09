@@ -88,7 +88,7 @@ aside {
   height: 100%;
   transform: translateX(100%);
   transition: 0.6s all;
-  background-color: #999;
+  background-color: #999999;
   background-image: linear-gradient(
     to top right,
     transparent,

@@ -75,7 +75,7 @@ The `.highlight` class created below uses a set of CSS
     outline: 1px solid red;
   }
   to {
-    outline: 1px solid #f000;
+    outline: 1px solid transparent;
   }
 }
 ```

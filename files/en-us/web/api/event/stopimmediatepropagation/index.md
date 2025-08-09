@@ -69,7 +69,7 @@ div {
 
 button {
   width: 100px;
-  color: #008;
+  color: #000088;
   padding: 5px;
   background-color: white;
   border: 2px solid black;

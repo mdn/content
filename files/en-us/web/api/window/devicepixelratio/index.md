@@ -104,10 +104,10 @@ body {
 }
 
 #container {
-  border: 2px solid #22d;
+  border: 2px solid #2222dd;
   margin: 1rem auto;
   padding: 1rem;
-  background-color: #a9f;
+  background-color: #aa99ff;
 }
 ```
 
