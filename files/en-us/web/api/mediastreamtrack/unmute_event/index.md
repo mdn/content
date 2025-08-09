@@ -39,7 +39,8 @@ In this example, event handlers are established for the {{domxref("MediaStreamTr
 musicTrack.addEventListener(
   "mute",
   (event) => {
-    document.getElementById("timeline-widget").style.backgroundColor = "#aaaaaa";
+    const widget = document.getElementById("timeline-widget");
+	  widget.style.backgroundColor = "#aaaaaa";
   },
   false,
 );
