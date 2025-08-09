@@ -77,7 +77,7 @@ In the CSS, we define styling for three custom highlights named `highlight1`, `h
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

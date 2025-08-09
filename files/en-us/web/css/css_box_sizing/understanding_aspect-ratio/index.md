@@ -393,7 +393,7 @@ div {
 p {
   aspect-ratio: 1;
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```
@@ -418,7 +418,7 @@ div {
 
 p {
   text-align: center;
-  border: 10px solid #ffffff;
+  border: 10px solid white;
   background-color: #f4aab9;
 }
 ```

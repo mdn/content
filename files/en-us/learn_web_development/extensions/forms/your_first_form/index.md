@@ -229,7 +229,7 @@ textarea:focus {
   /* Set the outline width and style */
   outline-style: solid;
   /* To give a little highlight on active elements */
-  outline-color: #000;
+  outline-color: black;
 }
 
 textarea {
@@ -364,7 +364,7 @@ textarea {
 input:focus,
 textarea:focus {
   /* To give a little highlight on active elements */
-  border-color: #000;
+  border-color: black;
 }
 
 textarea {

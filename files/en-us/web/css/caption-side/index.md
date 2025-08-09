@@ -52,7 +52,7 @@ caption-side: bottom;
 table {
   font-size: 1.2rem;
   text-align: left;
-  color: #000;
+  color: black;
 }
 
 th,

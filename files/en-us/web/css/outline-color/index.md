@@ -111,7 +111,7 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 ```css
 p {
   outline: 2px solid; /* Set the outline width and style */
-  outline-color: #0000ff; /* Make the outline blue */
+  outline-color: blue; /* Set the outline color */
   margin: 5px;
 }
 ```

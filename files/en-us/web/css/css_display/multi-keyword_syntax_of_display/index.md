@@ -252,7 +252,7 @@ p {
 }
 .inline-block {
   background-color: rgb(0 0 0 / 0.4);
-  color: #fff;
+  color: white;
   padding: 10px;
   display: inline-block;
 }

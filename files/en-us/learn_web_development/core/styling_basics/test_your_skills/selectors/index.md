@@ -247,7 +247,7 @@ a:hover {
 
 tr:nth-child(even) {
   background-color: #333;
-  color: #fff;
+  color: white;
 }
 ```
 

@@ -31,7 +31,7 @@ To complete this task:
 
 ```css hidden live-sample___video-1 live-sample___audio-1
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,
