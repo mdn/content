@@ -32,7 +32,7 @@ p {
 @media (monochrome) {
   p.mono {
     display: block;
-    color: #333;
+    color: #333333;
   }
 }
 

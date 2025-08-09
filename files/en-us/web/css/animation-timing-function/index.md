@@ -41,7 +41,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-play-state: paused;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;

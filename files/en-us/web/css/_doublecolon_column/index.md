@@ -147,8 +147,8 @@ li {
   width: 200px;
   text-align: left;
 
-  background-color: #eee;
-  outline: 1px solid #ddd;
+  background-color: #eeeeee;
+  outline: 1px solid #dddddd;
   padding: 0 20px;
   margin: 0 10px;
 }

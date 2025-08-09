@@ -40,7 +40,7 @@ border: 4mm ridge rgb(211 220 50 / 0.6);
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
+  background-color: #eeeeee;
   color: darkmagenta;
   padding: 0.75em;
   width: 80%;
@@ -66,7 +66,7 @@ border: solid;
 border: 2px dotted;
 
 /* style | color */
-border: outset #f33;
+border: outset #ff3333;
 
 /* width | style | color */
 border: medium dashed green;

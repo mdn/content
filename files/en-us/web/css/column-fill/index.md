@@ -92,7 +92,7 @@ The specification defines a `balance-all` value, in which content is equally div
 ```css
 p {
   height: 7em;
-  background: #ff9;
+  background: #ffff99;
   columns: 3;
   column-rule: 1px solid;
 }

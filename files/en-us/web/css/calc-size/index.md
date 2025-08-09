@@ -278,7 +278,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   width: 175px;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -286,7 +286,7 @@ section {
 
 header {
   padding: 10px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #cccccc;
 }
 
 main {
@@ -380,8 +380,8 @@ body {
 section {
   margin-top: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eee;
-  border: 2px solid #ccc;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
   padding: 0 20px;
   position: relative;
 }
@@ -506,8 +506,8 @@ form {
   margin-top: 20px;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #eee;
-  border: 2px solid #ccc;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
 }
 
 div {
