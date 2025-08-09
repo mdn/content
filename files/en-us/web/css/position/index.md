@@ -518,7 +518,8 @@ p {
 
 div {
   /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px no-repeat;
+  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px
+    no-repeat;
 }
 ```
 

@@ -236,7 +236,7 @@ In this case, other color values equivalent to sRGB `blue` (such as the hexadeci
 }
 ```
 
-In this case, if the value of `--accent-color` were set to `blue`, `#0000ff`, `#0000ff`, `rgb(0 0 255 / 1)`, or `rgb(0% 0% 100%)` it would return true for `@container style(--accent-color: blue)`.
+In this case, if the value of `--accent-color` were set to `blue`, `#00f`, `#0000ff`, `rgb(0 0 255 / 1)`, or `rgb(0% 0% 100%)` it would return true for `@container style(--accent-color: blue)`.
 
 ##### Example
 
@@ -290,7 +290,7 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `red`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `red` is equal to `rgb(255 0 0)`, `#ff0000`, and `#ff0000`).
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `red`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `red` is equal to `rgb(255 0 0)`, `#ff0000`, and `#f00`).
 
 ```css
 @property --theme {
