@@ -68,7 +68,7 @@ figure {
   height: 100%;
   margin: 1.25rem auto;
   padding: 1.051%;
-  background-color: #666;
+  background-color: #666666;
 }
 ```
 

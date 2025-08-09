@@ -21,7 +21,7 @@ The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Reference/Glob
 
 ```css interactive-example
 blockquote {
-  background: #eee;
+  background: #eeeeee;
   border-radius: 5px;
   margin: 16px 0;
 }

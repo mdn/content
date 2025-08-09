@@ -108,7 +108,7 @@ No image is used for the captions button, so it is styled as:
   text-indent: 0;
   font-size: 1rem;
   font-weight: bold;
-  color: #666;
+  color: #666666;
   background: black;
   border-radius: 2px;
 }
@@ -234,7 +234,7 @@ We also added some rudimentary styling for the newly created subtitles menu:
   position: absolute;
   bottom: 14.8%;
   right: 20px;
-  background: #666;
+  background: #666666;
   list-style-type: none;
   margin: 0;
   width: 100px;
@@ -277,7 +277,7 @@ For example, to change the text color of the text track cues you can write:
 
 ```css
 ::cue {
-  color: #ccc;
+  color: #cccccc;
 }
 ```
 
