@@ -58,7 +58,10 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Animation.overallProgress")}} property is now supported, allowing developers to track and display progress through an animation. ([Firefox bug 1834878](https://bugzil.la/1834878)).
 - The {{domxref("Animation.commitStyles()")}} method no longer requires [`fill`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to be set on an animation to commit the computed styles after the animation has finished. Note that until more browsers support this change, you should continue to set `fill`. ([Firefox bug 1973203](https://bugzil.la/1973203)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCIceCandidatePairStats/currentRoundTripTime", "currentRoundTripTime")}}, {{domxref("RTCIceCandidatePairStats/totalRoundTripTime", "totalRoundTripTime")}}, and {{domxref("RTCIceCandidatePairStats/responsesReceived", "responsesReceived")}} properties of the {{domxref("RTCIceCandidatePairStats")}} dictionary are now supported. These return the current round trip time (RTT) and the information needed to calculate the average RTT for the connection.
+  ([Firefox bug 1371391](https://bugzil.la/1371391)).
 
 <!-- #### Removals -->
 
