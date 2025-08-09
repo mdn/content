@@ -195,7 +195,7 @@ div {
 
 .child {
   margin: 1rem;
-  background: #0999;
+  background: #00999999;
 }
 
 .stretch {

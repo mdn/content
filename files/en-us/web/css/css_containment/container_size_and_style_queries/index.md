@@ -232,11 +232,11 @@ In this case, other color values equivalent to sRGB `blue` (such as the hexadeci
 @property --accent-color {
   syntax: "<color>";
   inherits: true;
-  initial-value: #00f;
+  initial-value: #0000ff;
 }
 ```
 
-In this case, if the value of `--accent-color` were set to `blue`, `#00f`, `#0000ff`, `rgb(0 0 255 / 1)`, or `rgb(0% 0% 100%)` it would return true for `@container style(--accent-color: blue)`.
+In this case, if the value of `--accent-color` were set to `blue`, `#0000ff`, `#0000ff`, `rgb(0 0 255 / 1)`, or `rgb(0% 0% 100%)` it would return true for `@container style(--accent-color: blue)`.
 
 ##### Example
 
@@ -290,7 +290,7 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `red`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `red` is equal to `rgb(255 0 0)`, `#ff0000`, and `#f00`).
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `red`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `red` is equal to `rgb(255 0 0)`, `#ff0000`, and `#ff0000`).
 
 ```css
 @property --theme {
@@ -307,13 +307,13 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#f00`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#ff0000`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
   output {
     outline: 5px dotted var(--theme);
-    color: #777;
+    color: #777777;
   }
 }
 ```

@@ -76,7 +76,7 @@ This example applies a `contrast()` filter via the {{cssxref("backdrop-filter")}
 
 ```css
 .container {
-  background: url("unity_for_the_people.jpg") no-repeat center / contain #339;
+  background: url("unity_for_the_people.jpg") no-repeat center / contain #333399;
 }
 p {
   backdrop-filter: contrast(0.5);

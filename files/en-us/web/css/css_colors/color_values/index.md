@@ -55,7 +55,7 @@ These two hex colors are equivalent color values; they're both red:
 
 ```css
 color: #ff0000;
-color: #f00;
+color: #ff0000;
 ```
 
 All components _must_ be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, `"#D"` becomes `"#DD"` when drawing.
@@ -64,7 +64,7 @@ To make the values 25% opaque, add in the alpha channel value as shown below:
 
 ```css
 color: #ff000044;
-color: #f004;
+color: #ff000044;
 ```
 
 See the {{cssxref("hex-color")}} data type for more information on hexadecimal string notation for colors.

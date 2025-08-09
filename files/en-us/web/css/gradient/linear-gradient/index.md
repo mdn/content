@@ -19,7 +19,7 @@ background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
-background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+background: linear-gradient(to left, #333333, #333333 50%, #eeeeee 75%, #333333 75%);
 ```
 
 ```css interactive-example-choice
