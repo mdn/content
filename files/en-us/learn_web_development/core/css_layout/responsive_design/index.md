@@ -154,7 +154,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -232,7 +232,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -347,7 +347,7 @@ body {
     sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -432,7 +432,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .wrapper {

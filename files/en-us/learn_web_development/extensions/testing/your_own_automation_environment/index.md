@@ -74,7 +74,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # Add WebDriver browser drivers to PATH
    export PATH=$PATH:/Users/bob
    ```
 

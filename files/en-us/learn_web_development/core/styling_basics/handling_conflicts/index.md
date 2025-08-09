@@ -171,7 +171,7 @@ The `color` property is an inherited property. So, the `color` property value is
 ```css live-sample___inheritance
 .main {
   color: rebeccapurple;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 1em;
 }
 

@@ -144,7 +144,7 @@ You can check the finished code for this article in the live demo below and play
 
 ```css
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
