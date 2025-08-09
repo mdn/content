@@ -47,7 +47,7 @@ body {
 
 .container {
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .target {
@@ -141,7 +141,7 @@ body {
 .container {
   height: 400px;
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   overflow: auto;
 }
 

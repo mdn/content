@@ -216,7 +216,7 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]:disabled {
   border-color: black;
-  background: #ddd;
+  background: #dddddd;
   color: gray;
 }
 ```
@@ -300,7 +300,7 @@ input[type="text"],
 input[type="datetime-local"],
 input[type="color"],
 select {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
@@ -348,7 +348,7 @@ input[type="text"],
 input[type="datetime-local"],
 input[type="color"],
 select {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```
@@ -473,8 +473,8 @@ And then style the label to act like a button, which, when pressed, will open th
 
 ```css
 label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
+  box-shadow: 1px 1px 3px #cccccc;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
   border: 1px solid darkgrey;
   border-radius: 5px;
   text-align: center;
@@ -482,11 +482,11 @@ label[for="file"] {
 }
 
 label[for="file"]:hover {
-  background: linear-gradient(to bottom, white, #ddd);
+  background: linear-gradient(to bottom, white, #dddddd);
 }
 
 label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
 }
 ```
 

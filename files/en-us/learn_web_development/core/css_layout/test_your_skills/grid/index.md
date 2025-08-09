@@ -305,7 +305,7 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
+  background-color: #999999;
   color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;

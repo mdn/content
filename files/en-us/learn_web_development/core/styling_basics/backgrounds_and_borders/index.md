@@ -89,7 +89,7 @@ This example demonstrates two things about background images. By default, the la
   width: 200px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 
@@ -129,7 +129,7 @@ Try these values out in the example below. We have set the value to `no-repeat` 
   width: 200px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 ```
@@ -171,7 +171,7 @@ Try the following:
   width: 500px;
   height: 100px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 10px;
 }
 ```
@@ -246,7 +246,7 @@ Use the example below to play around with these values and move the star around 
   width: 500px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 ```
@@ -288,7 +288,7 @@ Try some different gradient values in the example below. Initially, we have a li
   width: 400px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 
@@ -360,7 +360,7 @@ Let's play. The example below includes two background images. Try editing the ex
   width: 500px;
   height: 80px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 20px;
 }
 

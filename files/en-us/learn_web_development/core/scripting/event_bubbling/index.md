@@ -154,7 +154,7 @@ We're using CSS to hide elements with the `"hidden"` class set.
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {
@@ -239,7 +239,7 @@ All we're doing here is calling `stopPropagation()` on the event object in the h
 div {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .hidden {

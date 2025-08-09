@@ -373,7 +373,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   appearance: none;
 }
 .custom-checkbox > input:focus {
-  outline: 3px dashed #fd0;
+  outline: 3px dashed #ffdd00;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
 }

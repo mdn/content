@@ -170,15 +170,15 @@ You are now free to style this in any way you want. To begin with, the `<select>
 
 ```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
 select {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
   transition: 0.4s;
 }
 
 select:hover,
 select:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 
@@ -188,7 +188,7 @@ To style the icon inside the select button — the arrow that points down when t
 
 ```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
 select::picker-icon {
-  color: #999;
+  color: #999999;
   transition: 0.4s rotate;
 }
 ```
@@ -225,8 +225,8 @@ option {
   justify-content: flex-start;
   gap: 20px;
 
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
   transition: 0.4s;
 }

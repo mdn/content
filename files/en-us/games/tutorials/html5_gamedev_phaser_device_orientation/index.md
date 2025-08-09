@@ -42,7 +42,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
     <style>
       body {
         margin: 0;
-        background: #333;
+        background: #333333;
       }
     </style>
     <script src="src/phaser-arcade-physics.2.2.2.min.js"></script>

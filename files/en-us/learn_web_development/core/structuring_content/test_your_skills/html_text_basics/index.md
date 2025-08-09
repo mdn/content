@@ -38,7 +38,7 @@ The crafty anaconda likes to slither around the page, traveling rapidly by way o
 ```css hidden live-sample___text-basics-1 live-sample___text-basics-2 live-sample___text-basics-3 live-sample___text-basics-4
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
