@@ -93,7 +93,7 @@ code {
 }
 p {
   padding: 0.5rem;
-  color: #ffffff;
+  color: white;
   font-family: sans-serif;
 }
 ```

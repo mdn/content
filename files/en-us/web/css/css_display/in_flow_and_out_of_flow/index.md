@@ -147,7 +147,7 @@ p {
 .abspos {
   position: absolute;
   background-color: green;
-  color: #fff;
+  color: white;
   top: 30px;
   right: 30px;
   width: 400px;
@@ -198,7 +198,7 @@ p {
 .relative {
   position: relative;
   background-color: green;
-  color: #fff;
+  color: white;
   bottom: 50px;
   left: 50px;
   width: 400px;

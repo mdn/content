@@ -130,7 +130,7 @@ img {
 
 .card footer {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 0.5rem;
 }
 ```

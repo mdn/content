@@ -245,7 +245,7 @@ body {
 
 .subitem {
   background-color: #d9480f;
-  color: #fff;
+  color: white;
   border-radius: 5px;
 }
 ```
@@ -311,7 +311,7 @@ body {
 
 .subitem {
   background-color: #d9480f;
-  color: #fff;
+  color: white;
   border-radius: 5px;
 }
 ```
