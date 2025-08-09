@@ -178,7 +178,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #gradient {
   width: 200px;
   border: 30px solid;
-  border-image: repeating-linear-gradient(45deg, #ff3333, #33bbff, #ff3333 30px) 60;
+  border-image: repeating-linear-gradient(45deg, #ff3333, #33bbff, #ff3333 30px)
+    60;
   padding: 20px;
 }
 ```
