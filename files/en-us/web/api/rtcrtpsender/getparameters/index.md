@@ -32,6 +32,29 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
     - `active`
       - : `true` (the default) if the encoding is being sent, `false` if it is not being sent or used.
 
+    - `codec` {{optional_inline}}
+      - : Selects the [media codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) that is used for this encoding's RTP stream.
+        If not set, the user agent may select any codec negotiated for sending.
+        <!-- RTCRtpCodec -->
+        - `channels` {{optional_inline}}
+          - : A positive integer indicating the number of channels supported by the codec.
+            For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
+
+        - `clockRate`
+          - : A positive integer specifying the codec's clock rate in Hertz (Hz).
+            The clock rate is the rate at which the codec's RTP timestamp advances.
+            Most codecs have specific values or ranges of values they permit.
+            The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+
+        - `mimeType`
+          - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
+            The MIME type strings used by RTP differ from those used elsewhere.
+            IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
+            Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+
+        - `sdpFmtpLine` {{optional_inline}}
+          - : A string giving the format specific parameters provided by the local description.
+
     - `dtx` {{Deprecated_Inline}} {{Non-standard_Inline}}
       - : Only used for an {{domxref("RTCRtpSender")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio`, this property indicates whether or not discontinuous transmission is being used (a feature by which a phone is turned off or the microphone muted automatically in the absence of voice activity).
         The value is taken either `enabled` or `disabled`.
@@ -96,8 +119,15 @@ An object indicating the current configuration of the sender. <!-- RTCRtpSendPar
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver. Header extensions are described in {{RFC(3550, "", "5.3.1")}}.
     This parameter cannot be changed once initially set.
 - `rtcp`
-  - : An {{domxref("RTCRtcpParameters")}} object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver.
-    This parameter cannot be changed once initially set.
+  - : An object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender.
+    This parameter cannot be changed.
+
+    The object may have the following properties: <!-- RTCRtcpParameters -->
+    - `cname`
+      - : A read-only string giving the canonical name (CNAME) used by RTCP (e.g. in SDES messages).
+    - `reducedSize`
+      - : A read-only boolean that is `True` if reduced size RTCP is configured ({{rfc("5506")}}), and `False` if compound RTCP is specified ({{rfc("3550")}}).
+
 - `degradationPreference` {{deprecated_inline}} {{optional_inline}} <!-- removed from spec. May have been or be in chrome -->
   - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations.
     The possible values are `maintain-framerate`, `maintain-resolution`, or `balanced`.
