@@ -68,7 +68,7 @@ Via CSS, we then apply a dusky purple color to the rectangle and a red to the ci
 
 ```css
 rect {
-  stroke: hsl(270deg 50% 40%);
+  stroke: rebeccapurple;
 }
 circle {
   stroke: red;
@@ -180,7 +180,7 @@ We then write CSS to add a marker to both paths, and also to have a dusky purple
 
 ```css
 path {
-  stroke: hsl(270deg 50% 40%);
+  stroke: rebeccapurple;
   marker: url("#circle");
 }
 path:nth-of-type(2) {

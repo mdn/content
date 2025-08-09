@@ -39,7 +39,7 @@ border-color: var(--color-c);
 }
 
 #example-element {
-  border: 10px solid #000;
+  border: 10px solid black;
   padding: 10px;
 }
 ```
@@ -55,7 +55,7 @@ var(--custom-prop);
 /* With fallback */
 var(--custom-prop,);  /* empty value as fallback */
 var(--custom-prop, initial); /* initial value of the property as fallback */
-var(--custom-prop, #FF0000);
+var(--custom-prop, red);
 var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```
