@@ -41,7 +41,7 @@ new ImageData(dataArray, width, height, settings)
       - `"rgba-float16"`, for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
 
 - `dataArray`
-  - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
+  - : A {{jsxref("Uint8ClampedArray")}} or {{jsxref("Float16Array")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
 ### Return value
 
