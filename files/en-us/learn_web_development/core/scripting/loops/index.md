@@ -46,7 +46,7 @@ Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} elem
 html {
   width: 100%;
   height: inherit;
-  background: #ddd;
+  background: #dddddd;
 }
 
 canvas {

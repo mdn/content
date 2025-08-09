@@ -137,7 +137,7 @@ button {
   line-height: 2;
   border-radius: 10px;
   border: none;
-  background-image: linear-gradient(to bottom right, #777, #ddd);
+  background-image: linear-gradient(to bottom right, #777777, #dddddd);
   box-shadow:
     1px 1px 1px black,
     inset 2px 3px 5px rgb(0 0 0 / 30%),
@@ -146,7 +146,7 @@ button {
 
 button:focus,
 button:hover {
-  background-image: linear-gradient(to bottom right, #888, #eee);
+  background-image: linear-gradient(to bottom right, #888888, #eeeeee);
 }
 
 button:active {

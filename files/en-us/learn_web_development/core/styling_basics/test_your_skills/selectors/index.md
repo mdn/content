@@ -145,7 +145,7 @@ To complete the task:
 
 1. Style links, making the link-state orange, visited links green, and remove the underline on hover.
 2. Make the first element inside the container `font-size: 150%` and the first line of that element red.
-3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333` and foreground white.
+3. Stripe every other row in the table by selecting these rows and giving them a background color of `#333333` and foreground white.
 
 Your final result should look like the image below:
 
@@ -246,7 +246,7 @@ a:hover {
 }
 
 tr:nth-child(even) {
-  background-color: #333;
+  background-color: #333333;
   color: white;
 }
 ```
@@ -309,7 +309,7 @@ h2 + p {
 
 .list > li {
   list-style: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 ```
 

@@ -171,7 +171,7 @@ To complete the task:
 
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -234,7 +234,7 @@ select,
 button {
   display: block;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 3px;
 }
 
@@ -246,12 +246,12 @@ button {
   margin: 0 auto;
   padding: 5px 20px;
   line-height: 1.5;
-  background: #eee;
+  background: #eeeeee;
 }
 
 button:hover,
 button:focus {
-  background: #ddd;
+  background: #dddddd;
 }
 ```
 

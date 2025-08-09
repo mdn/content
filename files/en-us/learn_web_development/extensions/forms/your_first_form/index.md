@@ -197,7 +197,7 @@ form {
   display: inline-block;
   /* Form outline */
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 1em;
 }
 
@@ -221,7 +221,7 @@ textarea {
   width: 300px;
   box-sizing: border-box;
   /* Match form field borders */
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 input:focus,
@@ -330,7 +330,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 1em;
 }
 
@@ -358,7 +358,7 @@ textarea {
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 input:focus,
