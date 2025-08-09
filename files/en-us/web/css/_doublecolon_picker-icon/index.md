@@ -48,7 +48,7 @@ You could then, for example, target the `::picker-icon` and give it a custom {{c
 
 ```css
 select::picker-icon {
-  color: #999;
+  color: #999999;
   transition: 0.4s rotate;
 }
 ```

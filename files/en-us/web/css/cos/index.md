@@ -53,7 +53,7 @@ transform: translateX(calc(cos(-45deg) * 140px))
   width: calc(var(--radius) * 2);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid #666;
+  border: 2px solid #666666;
   background-image:
     radial-gradient(black var(--dot-size), transparent var(--dot-size)),
     linear-gradient(135deg, blue, deepskyblue, lightgreen, lavender, honeydew);
@@ -63,8 +63,8 @@ transform: translateX(calc(cos(-45deg) * 140px))
   width: var(--dot-size);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid #666;
-  background-color: #f66;
+  border: 2px solid #666666;
+  background-color: #ff6666;
   transform: translateX(calc(cos(0deg) * var(--radius)))
     translateY(calc(sin(0deg) * var(--radius) * -1));
 }
