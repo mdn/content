@@ -179,6 +179,6 @@ svg {
 ## See also
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [SVG Path Syntax Illustrated Guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) via CSS-tricks (2021)
