@@ -598,7 +598,7 @@ html,
 body {
   height: 100%;
   box-sizing: border-box;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .grid {

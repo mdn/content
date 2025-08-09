@@ -223,7 +223,7 @@ Next, we designate the container as a grid, where each item has an aspect ratio 
 
 div div {
   aspect-ratio: 5 / 2;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -295,7 +295,7 @@ To highlight the issue with setting a non-replaced element's aspect ratio via si
 
 ```css hidden live-sample___alder
 blockquote {
-  border: 3px dotted #ccc;
+  border: 3px dotted #cccccc;
   padding: 0 3px;
   margin: 20px 0;
   font-size: 1.25rem;
@@ -352,7 +352,7 @@ blockquote {
 
 ```css hidden live-sample___words
 blockquote {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 1px;
   margin: 20px 0;
   background-color: #ededed;
@@ -526,7 +526,7 @@ div {
 }
 
 div div {
-  background-color: #ccc;
+  background-color: #cccccc;
   aspect-ratio: 1;
   counter-increment: items;
 }

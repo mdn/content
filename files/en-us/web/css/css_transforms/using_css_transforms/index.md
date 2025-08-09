@@ -522,7 +522,7 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Make the layout a little nicer */
 section {
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

@@ -57,7 +57,7 @@ display: grid;
 }
 
 code {
-  background: #8888;
+  background: #88888888;
 }
 
 #example-element {

@@ -120,7 +120,7 @@ User agents handle white space collapsing as follows:
 h2 {
   font-size: 1.6rem;
   font-family: monospace;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #cccccc;
 }
 ```
 

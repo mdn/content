@@ -156,7 +156,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   top: 100%;
   margin-top: 10px;
   width: 100%;
-  color: #333;
+  color: #333333;
   font-size: 12px;
 }
 

@@ -44,7 +44,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -124,7 +124,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -197,7 +197,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -207,7 +207,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -253,7 +253,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -263,7 +263,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -305,7 +305,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -315,7 +315,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -373,7 +373,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -383,7 +383,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 

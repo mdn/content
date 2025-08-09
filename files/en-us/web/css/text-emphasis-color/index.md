@@ -49,7 +49,7 @@ p {
 text-emphasis-color: currentColor;
 
 /* <color> */
-text-emphasis-color: #555;
+text-emphasis-color: #555555;
 text-emphasis-color: blue;
 text-emphasis-color: rgb(90 200 160 / 80%);
 text-emphasis-color: transparent;

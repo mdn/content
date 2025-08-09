@@ -335,7 +335,7 @@ form {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 5px 2px;
   border-radius: 5px;
   font-size: 1rem;

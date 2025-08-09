@@ -454,7 +454,7 @@ dd {
 }
 
 dd + dd {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 ```
 
@@ -518,7 +518,8 @@ p {
 
 div {
   /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px
+    no-repeat;
 }
 ```
 

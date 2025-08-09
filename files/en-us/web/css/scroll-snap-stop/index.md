@@ -214,7 +214,7 @@ div[class] {
 
 div > div {
   flex: none;
-  outline: 1px solid #333;
+  outline: 1px solid #333333;
 }
 
 .x > div {

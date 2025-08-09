@@ -238,7 +238,7 @@ p.min-blue {
 }
 
 .child {
-  background: #0999;
+  background: #00999999;
   margin: 1rem;
 }
 

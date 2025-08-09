@@ -164,7 +164,7 @@ nav {
 
 a {
   flex: 1;
-  background-color: #333;
+  background-color: #333333;
   color: white;
   border: 1px solid;
   padding: 0.5rem;
@@ -176,7 +176,7 @@ a {
 a:hover,
 a:focus {
   background-color: white;
-  color: #333;
+  color: #333333;
 }
 ```
 
@@ -321,7 +321,7 @@ With CSS, you can smooth the styles applied through JavaScript. Add a transition
 ```css hidden live-sample___js-transitions
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1.2em / 1.5 Helvetica Neue,
     Helvetica,
@@ -342,7 +342,7 @@ main {
   align-items: center;
   max-width: 660px;
   height: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 20px;
 }
 ```
@@ -352,7 +352,7 @@ main {
   border-radius: 25px;
   width: 50px;
   height: 50px;
-  background: #c00;
+  background: #cc0000;
   position: absolute;
   top: 0;
   left: 0;

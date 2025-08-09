@@ -185,7 +185,7 @@ The background color of the HTML body will be pink in this case even though the 
 
 /* In the larger application's style: */
 .component {
-  --text-color: #080;
+  --text-color: #008800;
 }
 ```
 

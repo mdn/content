@@ -62,7 +62,7 @@ This property is a shorthand for the following CSS properties:
 outline: solid;
 
 /* style | color */
-outline: dashed #f66;
+outline: dashed #ff6666;
 
 /* width | style */
 outline: thick inset;
@@ -137,9 +137,9 @@ a {
 }
 
 a:focus {
-  outline: 4px dotted #e73;
+  outline: 4px dotted #ee7733;
   outline-offset: 4px;
-  background: #ffa;
+  background: #ffffaa;
 }
 ```
 

@@ -109,7 +109,7 @@ This example demonstrates how to dynamically increase the width of each {{htmlel
 ```css
 li {
   width: calc(sibling-index() * 50px);
-  background-color: #faa;
+  background-color: #ffaaaa;
 }
 ```
 

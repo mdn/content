@@ -66,7 +66,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 
 nav {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eeeeee;
   margin-top: 1em;
   padding-top: 0.5em;
   font: 1.2em sans-serif;
@@ -89,13 +89,13 @@ nav {
 .pagination a {
   display: block;
   padding: 0.5em 1em;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border-radius: 0.2em;
   text-decoration: none;
 }
 
 .pagination a[aria-current="page"] {
-  background-color: #333;
+  background-color: #333333;
   color: white;
 }
 ```

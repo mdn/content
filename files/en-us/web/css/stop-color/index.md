@@ -57,19 +57,19 @@ We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement(
       <stop offset="25%" stop-color="black" />
       <stop offset="40%" stop-color="white" />
       <stop offset="60%" stop-color="white" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
     <linearGradient id="myGradient2">
       <stop offset="25%" stop-color="black" />
       <stop offset="40%" stop-color="white" />
       <stop offset="60%" stop-color="white" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
     <linearGradient id="myGradient3">
       <stop offset="25%" stop-color="black" />
       <stop offset="40%" stop-color="white" />
       <stop offset="60%" stop-color="white" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
   </defs>
   <rect x="2" y="10" width="80" height="80" fill="url('#myGradient1')" />
@@ -92,7 +92,7 @@ svg {
 
 ```css
 rect {
-  stroke: #333;
+  stroke: #333333;
   stroke-width: 1px;
 }
 

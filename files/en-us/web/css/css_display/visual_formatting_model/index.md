@@ -134,7 +134,7 @@ body {
 }
 
 .following {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -203,14 +203,14 @@ body {
   margin: 20px;
 }
 .container {
-  background-color: #333;
+  background-color: #333333;
   color: white;
 }
 
 .item {
   background-color: white;
-  border: 1px solid #999;
-  color: #333;
+  border: 1px solid #999999;
+  color: #333333;
   width: 100px;
   height: 100px;
   padding: 10px;

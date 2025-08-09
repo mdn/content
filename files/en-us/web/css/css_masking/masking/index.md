@@ -85,7 +85,7 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
   mask-image: repeating-linear-gradient(
     to bottom right,
     red 0 20px,
-    #f005 20px 40px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -93,7 +93,7 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
   background: repeating-linear-gradient(
     to bottom right,
     red 0 20px,
-    #f005 20px 40px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }

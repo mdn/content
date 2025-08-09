@@ -232,7 +232,7 @@ In this case, other color values equivalent to sRGB `blue` (such as the hexadeci
 @property --accent-color {
   syntax: "<color>";
   inherits: true;
-  initial-value: #00f;
+  initial-value: #0000ff;
 }
 ```
 
@@ -307,13 +307,13 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#f00`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#ff0000`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
   output {
     outline: 5px dotted var(--theme);
-    color: #777;
+    color: #777777;
   }
 }
 ```

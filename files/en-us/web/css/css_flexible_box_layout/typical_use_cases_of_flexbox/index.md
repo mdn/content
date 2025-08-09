@@ -410,7 +410,7 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
   color: white;
 }
 .wrapper label {
-  background-color: #666;
+  background-color: #666666;
 }
 ```
 
