@@ -123,7 +123,7 @@ setParameters(parameters)
 
         The object may have the following properties: <!-- RTCRtcpParameters -->
         - `cname`
-          - : A read-only string giving the canonical name (CNAME) used by RTCP (e.g. in SDES messages).
+          - : A read-only string giving the canonical name (CNAME) used by RTCP (e.g., in SDES messages).
         - `reducedSize`
           - : A read-only boolean that is `True` if reduced size RTCP is configured ({{rfc("5506")}}), and `False` if compound RTCP is specified ({{rfc("3550")}}).
 
