@@ -17,19 +17,16 @@ The fields present in the report depend on the type.
 A string that can have one of the following values:
 
 - `"access-to-opener"`
-
   - : The violation was caused Xxxxx
 
     For more information see [`access-to-opener` report](access-to-opener_report).
 
 - `"navigation-to-response"`
-
   - : This report is from the opened document (that was navigated to) and indicates a policy violation that caused by a COOP policy mismatch.
 
     For more information see [`navigation-to-response` report](#navigation-to-response_report).
 
 - `"navigation-from-response"`
-
   - : This report is from the opener document (that was navigated from) and indicates a policy violation that caused by a COOP policy mismatch.
 
     For more information see [`navigation-from-response` report](#navigation-from-response_report).
