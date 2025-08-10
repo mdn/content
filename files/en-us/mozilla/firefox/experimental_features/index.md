@@ -774,9 +774,9 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 ### Integrity-Policy and Integrity-Policy-Report-Only headers
 
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported, allowing websites to enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts, or just report on violations of the policy, respectively.
-These allow a website to ensure that the browser will block the loading of scripts into a document that don't have the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute, or that have the attribute but where the hash doesn't match the script resource on the server.
-The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
+When these headers are used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
+The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as those from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
 ([Firefox bug 1976656](https://bugzil.la/1976656)).
 
 | Release channel   | Version added | Enabled by default? |
