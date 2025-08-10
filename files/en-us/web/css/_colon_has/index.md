@@ -217,6 +217,66 @@ The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the eleme
 
 Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
 
+## Performance considerations
+
+Certain uses of the `:has()` pseudo-class can significantly impact page performance, particularly during dynamic updates (DOM mutations). Browser engines must re-evaluate `:has()` selectors when the DOM changes, and complex or poorly constrained selectors can lead to expensive computations.
+
+### Avoid broad anchoring
+
+Anchoring `:has()` to very general selectors like `body`, `:root`, or `*` can degrade performance. Because `:has()` depends on the descendants of its anchor, any DOM change within the entire subtree of a broadly selected element requires the browser to re-check the `:has()` condition. The more complex the selector inside `:has()`, the greater the impact.
+
+```css example-bad
+/* Avoid anchoring :has() to broad elements */
+body:has(.sidebar-expanded) {
+  /* styles */
+}
+:root:has(main > article[data-priority="high"]) {
+  /* styles */
+}
+*:has(> img[data-loaded="false"]) {
+  /* styles */
+}
+```
+
+Instead, anchor `:has()` to the most specific element possible that still logically contains the elements you are checking for.
+
+### Minimize subtree traversals
+
+When the selector _inside_ `:has()` is not tightly constrained (for example, it doesn't use child `>` or sibling `+` / `~` combinators), the browser might need to traverse the entire subtree of the anchor element on every DOM mutation to check if the condition still holds.
+
+```css example-bad
+/* May trigger full subtree traversal */
+.ancestor:has(.foo) {
+  /* styles */
+}
+```
+
+```css example-good
+/* More constrained - limits traversal */
+.ancestor:has(> .foo) {
+  /* direct child */
+}
+.ancestor:has(+ .sibling .foo) {
+  /* descendant of adjacent sibling */
+}
+```
+
+### Be mindful of ancestor traversals
+
+Certain selector patterns involving `:has()` can force the browser to traverse up the ancestor chain for every DOM mutation, looking for potential `:has()` anchors that might need updating. This happens when the structure implies a need to check ancestors of the mutated element.
+
+```css example-bad
+/* Might trigger ancestor traversal */
+.ancestor:has(.foo > *) {
+  /* styles */
+}
+```
+
+In this example, any DOM change requires checking if the changed element is the `*` (any element) that is a direct child of `.foo`, and if its parent (or further ancestors) is `.ancestor`.
+
+> [!NOTE]
+> These performance characteristics may improve as browsers optimize `:has()` implementations, but the fundamental constraints remain.
+
 ## Specifications
 
 {{Specifications}}
