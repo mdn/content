@@ -86,22 +86,22 @@ sidebar: mdnsidebar
 
 {{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`NameOfTheProperty`** [read-only] property of the \{{domxref("NameOfTheParentInterface")}} interface _<provide concise summary of behavior>_.
+The **`NameOfTheProperty`** [read-only] property of the \{{domxref("NameOfTheParentInterface")}} interface _\<provide concise summary of behavior\>_.
 
-_Start by naming the property (indicating whether or not is is read-only) and what interface it is part of, and then say what it does._
+_Start by naming the property (indicating whether or not it is read-only) and the interface it is part of, and then say what it does._
 
 _This should ideally be one or two short sentences._
-_If you need more than a few paragraphs this should be added in a description section before the example section._
+_If you need more than a couple of paragraphs, this should be added in a "Description" section placed before the "Examples" section._
 
 ## Value
 
 A \{{domxref("SomeDataType" }}.
 
 _Normally just the data type, and allowed values for that data type if relevant._
-_A property that has different setter and getter behaviour would normally cover those in separate sentences._
+_If the property has different setter and getter behaviour, these should normally be covered in separate sentences._
 
 _In some cases you may want to say more about what the data type represents._
-_This is acceptable, but should not duplicate information in the description (it is more normal to include information about what the value means in the description)._
+_This is acceptable, but should not duplicate information from the "Description" section (you should include information about what the value means there)._
 
 _Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
 Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information._
