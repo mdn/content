@@ -89,7 +89,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - **`Integrity-Policy` and `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
 
-  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported, allowing websites to enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts, or just report on violations of the policy, respectively.
+  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
   ([Firefox bug 1976656](https://bugzil.la/1976656)).
 
 These features are shipping in Firefox 142 but are disabled by default.
