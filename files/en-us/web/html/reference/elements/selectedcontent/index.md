@@ -32,7 +32,7 @@ You use the `<selectedcontent>` element as the only child of a {{htmlelement("bu
 
 ### How `<selectedcontent>` works behind the scenes
 
-The `<selectedcontent>` element contains a clone of the content of the currently selected {{htmlelement("option")}}. The browser renders this clone using {{domxref("Node.cloneNode", "cloneNode()")}}. When the selected `<option>` changes, such as during a [`change`](HTMLElement/change_event) event, the contents of `<selectedcontent>` are replaced with a clone of the newly selected `<option>`. Being aware of this behavior is important, especially when working with dynamic content.
+The `<selectedcontent>` element contains a clone of the content of the currently selected {{htmlelement("option")}}. The browser renders this clone using {{domxref("Node.cloneNode", "cloneNode()")}}. When the selected `<option>` changes, such as during a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event, the contents of `<selectedcontent>` are replaced with a clone of the newly selected `<option>`. Being aware of this behavior is important, especially when working with dynamic content.
 
 > [!WARNING]
 > Since the browser updates `<selectedcontent>` only when the selected `<option>` changes, any dynamic modifications to the content of the selected `<option>` after the `<select>` is rendered won't be cloned to `<selectedcontent>`. You'll need to update `<selectedcontent>` manually. Watch out if you're using any of the popular front-end JavaScript frameworks where `<option>` elements are updated dynamically after the initial render–the result may not match what you expect in `<selectedcontent>`.

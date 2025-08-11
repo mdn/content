@@ -144,7 +144,7 @@ recordBtn.addEventListener("click", async () => {
     if (!mediaRecorder) {
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.addEventListener("dataavailable", () => {
+      mediaRecorder.addEventListener("dataavailable", (e) => {
         console.log("data available");
         chunks.push(e.data);
       });
