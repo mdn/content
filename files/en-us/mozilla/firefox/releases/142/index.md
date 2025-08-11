@@ -56,8 +56,8 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The {{domxref("RTCRtpSender.setParameters()","setParameters()")}} and {{domxref("RTCRtpSender.getParameters()","getParameters()")}} methods of the {{domxref("RTCRtpSender")}} interface now support setting and getting the specific [`codec`](/en-US/docs/Web/API/RTCRtpSender/setParameters#codec) that is used for each `encoding`.
-  A specific `codec` can also be set for each encoding specified in the [`init.sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) array passed to the {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} method of the {{domxref("RTCPeerConnection")}} interface.
+- The {{domxref("RTCRtpSender.setParameters()","setParameters()")}} and {{domxref("RTCRtpSender.getParameters()","getParameters()")}} methods of the {{domxref("RTCRtpSender")}} interface now support setting and getting the specific [`codec`](/en-US/docs/Web/API/RTCRtpSender/setParameters#codecs) used for each `encoding`.
+  You can also set a `codec` for each encoding in the [`init.sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) array that's passed to the {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} method of the {{domxref("RTCPeerConnection")}} interface.
   ([Firefox bug 1894137](https://bugzil.la/1894137)).
 
 <!-- #### Removals -->
