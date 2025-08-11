@@ -26,7 +26,7 @@ clearRect(x, y, width, height)
 ```
 
 The `clearRect()` method sets the pixels in a rectangular area to
-transparent black (`rgb(0 0 0 / 0%)`). The rectangle's top-left corner is at
+transparent. The rectangle's top-left corner is at
 `(x, y)`, and its size is specified by `width` and
 `height`.
 

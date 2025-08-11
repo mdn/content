@@ -29,7 +29,7 @@ Your final result should look like the image below:
 
 ```css live-sample___object-fit
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   height: 200px;
 }
@@ -87,7 +87,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 ```
@@ -101,7 +101,7 @@ Here's an example solution for the task:
 
 ```css
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 
@@ -170,7 +170,7 @@ To complete the task:
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

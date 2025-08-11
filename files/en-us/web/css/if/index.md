@@ -17,7 +17,7 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Val
 ```css-nolint
 /* Single <if-test> */
 if(style(--scheme: dark): #eee;)
-if(media(print): #000;)
+if(media(print): black;)
 if(media(width > 700px): 0 auto;)
 if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
 
@@ -30,8 +30,8 @@ if(
   else: #03045e;
 )
 if(
-  supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
-  else: 3px solid #c0c0c0;
+  supports(color: lch(75% 0 0)): 3px solid lch(75% 0 0);
+  else: 3px solid silver;
 )
 
 /* Multiple <if-test>s */
@@ -240,8 +240,8 @@ For example, the following returns an {{cssxref("color_value/lch()")}} color if 
 
 ```css-nolint
 color: if(
-  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: rgb(192 192 192);
+  supports(color: lch(75% 0 0)): lch(75% 0 0);
+  else: rgb(185 185 185);
 )
 ```
 
@@ -292,8 +292,8 @@ An `if()` function can be set as the value of any CSS property, but it can also 
 
 ```css-nolint
 border: if(
-  supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
-  else: 3px solid #c0c0c0;
+  supports(color: lch(75% 0 0)): 3px solid lch(75% 0 0);
+  else: 3px solid silver;
 );
 ```
 
@@ -302,7 +302,7 @@ However, we could use the `if()` function to determine the {{cssxref("border-col
 ```css-nolint
 border: 3px solid
   if(
-    supports(color: lch(77.7% 0 0)): lch(77.7% 0 0); else: #c0c0c0;
+    supports(color: lch(75% 0 0)): lch(75% 0 0); else: silver;
   );
 ```
 

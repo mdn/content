@@ -423,7 +423,7 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 }
 
 dl > div {
-  background: #fff;
+  background: white;
   padding: 24px 0 0 0;
 }
 
@@ -431,7 +431,7 @@ dt {
   background: #b8c1c8;
   border-bottom: 1px solid #989ea4;
   border-top: 1px solid #717d85;
-  color: #fff;
+  color: white;
   font:
     bold 18px/21px Helvetica,
     Arial,

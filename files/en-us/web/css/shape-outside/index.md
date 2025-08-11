@@ -83,7 +83,7 @@ shape-outside: margin-box ellipse();
 shape-outside: url("image.png");
 
 /* <gradient> value */
-shape-outside: linear-gradient(45deg, #fff 150px, red 150px);
+shape-outside: linear-gradient(45deg, white 150px, red 150px);
 
 /* Global values */
 shape-outside: inherit;

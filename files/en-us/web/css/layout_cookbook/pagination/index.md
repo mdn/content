@@ -96,7 +96,7 @@ nav {
 
 .pagination a[aria-current="page"] {
   background-color: #333;
-  color: #fff;
+  color: white;
 }
 ```
 

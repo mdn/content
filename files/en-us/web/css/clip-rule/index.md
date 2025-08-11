@@ -93,7 +93,7 @@ svg {
 
 #star3 path {
   fill: none;
-  stroke: #000;
+  stroke: black;
   stroke-width: 1;
 }
 ```

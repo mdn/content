@@ -625,7 +625,7 @@ body {
 .cell {
   margin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
+  background-color: white;
   overflow: hidden;
   text-align: center;
 }
@@ -646,8 +646,8 @@ body {
 .container {
   position: relative;
   background:
-    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
-    linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
+    linear-gradient(to right, black 0%, transparent 50%, white 100%),
+    linear-gradient(to bottom, yellow 0%, magenta 50%, cyan 100%);
   width: 150px;
   height: 150px;
   margin: 0 auto;
