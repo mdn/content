@@ -46,9 +46,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
     destination context. If not specified, the entire rectangle from the coordinates
     specified by `sx` and `sy` to the bottom-right corner of the
     image is used. Use the 3- or 5-argument syntax to omit this argument.
+    Negative values will grow the sub-rectangle in the opposite direction.
 - `sHeight` {{optional_inline}}
   - : The height of the sub-rectangle of the source `image` to draw into the
     destination context. Use the 3- or 5-argument syntax to omit this argument.
+    Negative values will grow the sub-rectangle in the opposite direction.
 - `dx`
   - : The x-axis coordinate in the destination canvas at which to place the top-left
     corner of the source `image`.
