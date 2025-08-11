@@ -18,6 +18,7 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: "NameOfTheParentInterface: NameOfTheProperty property"
+> short-title: NameOfTheProperty
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > status:
@@ -32,6 +33,8 @@ sidebar: mdnsidebar
 >   - : Title heading displayed at the top of the page.
 >     Format as "NameOfTheParentInterface: NameOfTheProperty property".
 >     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay: capabilities property`.
+> - **short-title**
+>   - : The name of the property (used in sidebar).
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
@@ -83,18 +86,31 @@ sidebar: mdnsidebar
 
 {{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Begin the content on the page with an introductory paragraph — start by naming the property, saying what interface it is part of, and saying what it does.
-This should ideally be one or two short sentences.
-You could copy most of this from the property's summary on the corresponding API reference page. Include whether it is read-only or not.
+The **`NameOfTheProperty`** [read-only] property of the \{{domxref("NameOfTheParentInterface")}} interface _\<provide concise summary of behavior\>_.
+
+_Start by naming the property (indicating whether or not it is read-only) and the interface it is part of, and then say what it does._
+
+_This should ideally be one or two short sentences._
+_If you need more than a couple of paragraphs, this should be added in a "Description" section placed before the "Examples" section._
 
 ## Value
 
-Include a description of the property's value, including data type and what it represents. This should be in the form: "A [name of the property type] representing ...". For example:
+A \{{domxref("SomeDataType" }}.
 
-> A string representing...
+_Normally just the data type, and allowed values for that data type if relevant._
+_If the property has different setter and getter behaviour, these should normally be covered in separate sentences._
 
-Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
-Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information.
+_In some cases you may want to say more about what the data type represents._
+_This is acceptable, but should not duplicate information from the "Description" section (you should include information about what the value means there)._
+
+_Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
+Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information._
+
+<!--
+## Description
+
+Additional description, if needed.
+-->
 
 ## Examples
 

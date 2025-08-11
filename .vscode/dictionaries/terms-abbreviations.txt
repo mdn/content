@@ -188,6 +188,7 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
 Emscripting
 encrypter
@@ -758,6 +759,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables
