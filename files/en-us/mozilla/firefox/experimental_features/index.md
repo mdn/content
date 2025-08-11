@@ -339,7 +339,7 @@ The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned el
 
 ### `:heading` and `:heading()` pseudo-classes
 
-The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements with the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) syntax. ([Firefox bug 1974386](https://bugzil.la/1974386)).
+The {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once, rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
