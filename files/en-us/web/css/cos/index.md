@@ -56,7 +56,7 @@ transform: translateX(calc(cos(-45deg) * 140px))
   border: 2px solid #666;
   background-image:
     radial-gradient(black var(--dot-size), transparent var(--dot-size)),
-    linear-gradient(135deg, #0000ff, #00c9ff, #92fe9d, #e6e6fa, #f0fff0);
+    linear-gradient(135deg, blue, deepskyblue, lightgreen, lavender, honeydew);
 }
 .dot {
   display: block;

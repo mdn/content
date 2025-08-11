@@ -60,7 +60,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgb(0 0 0 / 0%)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent.
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 

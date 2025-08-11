@@ -142,7 +142,7 @@ Some very simple link styling is shown below:
 
 ```css
 a {
-  color: #ff0000;
+  color: red;
 }
 
 a:hover,
@@ -153,7 +153,7 @@ a:focus {
 }
 
 a:active {
-  color: #000000;
+  color: black;
   background-color: #a60000;
 }
 ```

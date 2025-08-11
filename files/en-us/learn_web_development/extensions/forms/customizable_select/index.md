@@ -255,7 +255,7 @@ Next a different `background` color is set on the odd-numbered `<option>` elemen
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:hover,

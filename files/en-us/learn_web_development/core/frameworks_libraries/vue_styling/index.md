@@ -126,7 +126,7 @@ body {
     Helvetica,
     Arial,
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -178,7 +178,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   text-transform: capitalize;
 }
 .btn__danger {
-  color: #fff;
+  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -189,8 +189,8 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   outline-color: #c82333;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
 }
 .btn-group {
   display: flex;
@@ -249,7 +249,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 }
 /* End global styles */
 #app {
-  background: #fff;
+  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   padding-top: 0;

@@ -123,7 +123,7 @@ div {
 
 ```css
 .radial-gradient {
-  background: radial-gradient(red, yellow, rgb(30 144 255));
+  background: radial-gradient(red, yellow, dodgerblue);
 }
 ```
 
