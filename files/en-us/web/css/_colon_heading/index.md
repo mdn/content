@@ -21,7 +21,7 @@ This pseudo-class matches only elements that are semantically recognized as head
 
 ## Examples
 
-### Basic example
+### Styling all headings
 
 ```html
 <h1>Heading 1</h1>
