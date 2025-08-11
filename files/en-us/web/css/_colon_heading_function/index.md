@@ -11,9 +11,6 @@ The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 > [!NOTE]
 > The `:heading()` functional pseudo-class has the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated) as a class selector, that is, `0-1-0`. So `:heading()` would have a specificity of `0-1-0`, and `section:heading()` would have a specificity of `0-1-1`.
 
-> [!NOTE]
-> The `:heading()` functional pseudo-class only matches heading-level elements and not elements with a [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) attribute nor will it respect the ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) ARIA attribute.
-
 ## Syntax
 
 ```css-nolint
@@ -42,6 +39,10 @@ The `:heading()` pseudo-class function takes a comma-separated list of `An+B` or
     - `n` is all nonnegative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
+
+## Usage notes
+
+The `:heading()` functional pseudo-class only matches heading-level elements and not elements with a [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) attribute nor will it respect the ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) ARIA attribute.
 
 ## Examples
 
