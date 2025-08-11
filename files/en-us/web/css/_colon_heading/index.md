@@ -24,10 +24,9 @@ This pseudo-class matches only elements that are semantically recognized as head
 ### Styling all headings
 
 ```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-```
+<h1>Mastering CSS</h1>
+<h2>Chapter 1: Selectors</h2>
+<h3>1.1 Pseudo-classes</h3>
 
 ```css
 :heading {
