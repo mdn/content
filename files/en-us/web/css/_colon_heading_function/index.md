@@ -14,7 +14,7 @@ The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 ## Syntax
 
 ```css-nolint
-:heading([ <An+B> | even | odd ]) {
+:heading(<An+B> [, <An+B>]* | even | odd ]) {
   /* ... */
 }
 ```
