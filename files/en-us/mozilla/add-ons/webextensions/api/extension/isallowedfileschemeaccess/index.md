@@ -3,9 +3,8 @@ title: extension.isAllowedFileSchemeAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedFileSchemeAccess
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
 

@@ -47,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -233,7 +233,7 @@ tr:nth-of-type(odd) {
 
 tr th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 tr th[scope="row"] {
@@ -401,7 +401,7 @@ td {
 
 th {
   background-color: #505050;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
 ```

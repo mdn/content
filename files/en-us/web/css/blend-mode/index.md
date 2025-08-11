@@ -324,7 +324,7 @@ div {
   width: 300px;
   height: 300px;
   background:
-    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png")
       no-repeat center,
     linear-gradient(to bottom, blue, orange);
 }

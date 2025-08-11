@@ -91,7 +91,7 @@ aside {
   background-color: #999;
   background-image: linear-gradient(
     to top right,
-    rgb(0 0 0 / 0%),
+    transparent,
     rgb(0 0 0 / 50%)
   );
 }

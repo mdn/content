@@ -3,9 +3,8 @@ title: tabs.ZoomSettingsMode
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettingsMode
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Defines how zoom changes are handled. Extensions can pass this value into {{WebExtAPIRef("tabs.setZoomSettings()")}} to control how the browser handles attempts to change zoom settings for a tab. Defaults to "automatic".
 

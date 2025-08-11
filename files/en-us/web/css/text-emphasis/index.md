@@ -107,7 +107,7 @@ text-emphasis: unset;
 - `<string>`
   - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
 - `<color>`
-  - : Defines the color of the mark. If no color is present, it defaults to `currentcolor`.
+  - : Defines the color of the mark. If no color is present, it defaults to `currentColor`.
 
 ## Formal definition
 

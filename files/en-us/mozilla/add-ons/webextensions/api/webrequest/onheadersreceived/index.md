@@ -3,9 +3,8 @@ title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onHeadersReceived
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
 

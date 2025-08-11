@@ -95,8 +95,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
-> [!NOTE]
-> The spec also defines the properties: `caret`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up`. These properties have not been implemented in any browser yet.
+The CSS basic user interface module also defines the `caret`, `caret-animation`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
 
 ## Guides
 

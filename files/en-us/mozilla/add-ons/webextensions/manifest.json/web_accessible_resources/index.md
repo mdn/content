@@ -3,9 +3,8 @@ title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.web_accessible_resources
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

@@ -314,7 +314,7 @@ The process might look like this:
      - Copyright notice
      - Link to terms and conditions, contact details, and accessibility policy
 
-2. Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+2. Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](/shared-assets/images/diagrams/learn/structuring-documents/site-structure.svg)
 3. Now, brainstorm all the other (not common to every page) content you want to have on your website. For example:
    - Flights
    - Accommodation
@@ -347,7 +347,7 @@ The process might look like this:
        - Languages and culture
    - Buy holidays
 
-5. Now try to sketch a rough sitemap — have a box for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the top or at the center, and link to most if not all of the others. Most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, and checkout and purchase flow](site-map.png)
+5. Now try to sketch a rough sitemap — have a box for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the top or at the center, and link to most if not all of the others. Most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, and checkout and purchase flow](/shared-assets/images/diagrams/learn/structuring-documents/site-map.svg)
 
 Try carrying out the above exercise for a website of your own creation. What would you like to make a site about? As a stretch goal, use the HTML knowledge you've gained so far to create a few of the pages on the site. You could use our [basic HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) as a starting point.
 

@@ -3,9 +3,8 @@ title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 page-type: webextension-api
 browser-compat: webextensions.api.menus
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add items to the browser's menu system.
 

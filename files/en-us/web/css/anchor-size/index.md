@@ -2,13 +2,9 @@
 title: anchor-size()
 slug: Web/CSS/anchor-size
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.anchor-size
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) enables setting anchor-positioned element's [size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size), [position](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size), and [margins](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values).
 
@@ -23,20 +19,20 @@ block-size: anchor-size(block);
 height: calc(anchor-size(self-inline) + 2em);
 
 /* sizing relative to named anchor's side */
-width: anchor-size(--myAnchor width);
-block-size: anchor-size(--myAnchor block);
+width: anchor-size(--my-anchor width);
+block-size: anchor-size(--my-anchor block);
 
 /* sizing relative to named anchor's side with fallback */
-width: anchor-size(--myAnchor width, 50%);
-block-size: anchor-size(--myAnchor block, 200px);
+width: anchor-size(--my-anchor width, 50%);
+block-size: anchor-size(--my-anchor block, 200px);
 
 /* positioning relative to anchor side */
 left: anchor-size(width);
-inset-inline-end: anchor-size(--myAnchor height, 100px);
+inset-inline-end: anchor-size(--my-anchor height, 100px);
 
 /* setting margin relative to anchor side */
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--myAnchor self-block, 20px);
+margin-block-start: anchor-size(--my-anchor self-block, 20px);
 ```
 
 ### Parameters
@@ -251,13 +247,13 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: 100px;
   height: 100px;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
 }
 ```

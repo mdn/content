@@ -63,7 +63,7 @@ This example shows turning off synthesis of the bold typeface by the browser in 
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;

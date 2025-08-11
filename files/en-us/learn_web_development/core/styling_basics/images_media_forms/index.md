@@ -234,7 +234,7 @@ label {
 ```css live-sample___form
 input[type="text"],
 input[type="email"] {
-  border: 2px solid #000;
+  border: 2px solid black;
   margin: 0 0 1em 0;
   padding: 10px;
   width: 80%;
@@ -246,7 +246,7 @@ input[type="submit"] {
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 input[type="submit"]:hover,

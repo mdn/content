@@ -3,9 +3,8 @@ title: dns
 slug: Mozilla/Add-ons/WebExtensions/API/dns
 page-type: webextension-api
 browser-compat: webextensions.api.dns
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables an extension to resolve domain names.
 

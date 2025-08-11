@@ -6,12 +6,10 @@ page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you understand how [HTML forms and buttons](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms) work.
+The aim of this skill test is to help you assess whether you understand how [HTML forms and buttons](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms) work.
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Forms and buttons 1
 
@@ -19,22 +17,15 @@ This task starts you off nice and gently by asking you to create two `<input>` e
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create appropriate inputs for user ID and password.
-3. You should also associate them with their text labels semantically.
-4. Create a submit button inside the remaining list item, with button text of "Log in".
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create appropriate inputs for user ID and password.
+2. You should also associate them with their text labels semantically.
+3. Create a submit button inside the remaining list item, with button text of "Log in".
 
 <!-- Code shared across examples -->
 
 ```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,
@@ -95,17 +86,10 @@ The next task requires you to create working sets of checkboxes and radio button
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Turn the first `<fieldset>`'s contents into a set of radio buttons — you should only be able to select one pony character at once.
-3. Make it so that the first radio button is selected upon page load.
-4. Turn the second `<fieldset>`'s content into a set of checkboxes.
-5. Add a couple more hotdog choices of your own.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Turn the first `<fieldset>`'s contents into a set of radio buttons — you should only be able to select one pony character at once.
+2. Make it so that the first radio button is selected upon page load.
+3. Turn the second `<fieldset>`'s content into a set of checkboxes.
+4. Add a couple more hotdog choices of your own.
 
 ```html live-sample___forms-buttons-2
 <form>
@@ -194,22 +178,12 @@ Your finished HTML should look something like this:
 
 ## Forms and buttons 3
 
-In this task you'll explore some more specific input types.
+In this task you'll explore some more specific input types. We want you to create appropriate inputs for a user to update their details for:
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create appropriate inputs for a user to update their details for:
-   1. Email
-   2. Website
-   3. Phone number
-   4. Favorite color
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/html5-controls/html5-controls1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Email
+2. Website
+3. Phone number
+4. Favorite color
 
 ```html live-sample___forms-buttons-3
 <form>
@@ -276,16 +250,9 @@ Now it's time to have a go at implementing a drop-down select menu, to allow a u
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a basic select box structure.
-3. Associate it semantically with the provided "food" label.
-4. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create a basic select box structure.
+2. Associate it semantically with the provided "food" label.
+3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".
 
 ```html live-sample___forms-buttons-4
 <form>
@@ -344,16 +311,9 @@ In this task we want you to structure the provided form features.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Separate out the first two and second two form fields into two distinct containers, each with a descriptive legend (use "Personal details" for the first two, and "Comment information" for the second two).
-3. Mark up each text label with an appropriate element so that it is semantically associated with its respective form field.
-4. Add a suitable set of structural elements around the label/field pairs to separate them out.
-
-> [!CALLOUT]
->
-> You can [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Separate out the first two and second two form fields into two distinct containers, each with a descriptive legend (use "Personal details" for the first two, and "Comment information" for the second two).
+2. Mark up each text label with an appropriate element so that it is semantically associated with its respective form field.
+3. Add a suitable set of structural elements around the label/field pairs to separate them out.
 
 ```html live-sample___forms-buttons-5
 <form>
@@ -417,18 +377,11 @@ In this task, we are providing you with a simple support query form, and we want
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Make all of the input fields mandatory to complete before the form can be submitted.
-3. Change the type of the "Email address" and "Phone number" fields to make the browser apply some more specific validation suitable for the data being asked for.
-4. Give the "User name" field a required length of between 5 and 20 characters, the "Phone number" field a maximum length of 15 characters, and the "Comment" field a maximum length of 200 characters.
+1. Make all of the input fields mandatory to complete before the form can be submitted.
+2. Change the type of the "Email address" and "Phone number" fields to make the browser apply some more specific validation suitable for the data being asked for.
+3. Give the "User name" field a required length of between 5 and 20 characters, the "Phone number" field a maximum length of 15 characters, and the "Comment" field a maximum length of 200 characters.
 
 Try submitting your form — it should refuse to submit until the above constraints are followed, and give suitable error messages.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html live-sample___forms-buttons-6
 <form>

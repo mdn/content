@@ -3,9 +3,8 @@ title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired immediately after a notification has been shown.
 

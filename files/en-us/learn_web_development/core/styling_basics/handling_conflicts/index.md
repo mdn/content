@@ -73,7 +73,7 @@ h1 {
 
 [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is an algorithm that the browser uses to decide which property value is applied to an element. If multiple rules have different selectors that set different values for the same property and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
-- An type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
+- A type (element) selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
 - An ID selector is even more specific — it only selects a single element with a specific `id` value. It therefore has even more weight.
 
@@ -313,7 +313,7 @@ This behavior helps avoid repetition in your CSS. A common practice is to define
 ```css live-sample___mixing-rules
 h2 {
   font-size: 2em;
-  color: #000;
+  color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 

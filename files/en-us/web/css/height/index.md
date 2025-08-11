@@ -40,7 +40,7 @@ height: auto;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -57,7 +57,7 @@ height: 120px;
 height: 10em;
 height: 100vh;
 height: anchor-size(height);
-height: anchor-size(--myAnchor self-block, 250px);
+height: anchor-size(--my-anchor self-block, 250px);
 height: clamp(200px, anchor-size(width));
 
 /* <percentage> value */

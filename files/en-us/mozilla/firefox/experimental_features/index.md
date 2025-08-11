@@ -11,8 +11,8 @@ Each entry below includes information about the builds in which a feature is inc
 The description of each feature also includes links to relevant [Bugzilla bugs](https://bugzilla.mozilla.org) that implement or enable the feature.
 This information allows you to try out experimental features and provide feedback before they are officially released.
 
-In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
-If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
+In terms of lifecycle, new features usually appear first in [Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
+If no major problems are found, they are included in [Beta](https://www.firefox.com/en-US/channel/desktop/#beta) and [Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.firefox.com/en-US/) channel.
 When a feature is enabled by default in a release, it is no longer considered experimental and is removed from this page.
 
 To enable these features, enter `about:config` in the Firefox address bar, search for the associated **preference** and change its value, which is usually a toggle between `true` and `false`.
@@ -129,21 +129,6 @@ The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/e
 | Release           | 128           | No                  |
 
 - `layout.css.at-scope.enabled`
-  - : Set to `true` to enable.
-
-### font-variant-emoji property
-
-The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
-See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 108           | Yes                 |
-| Developer Edition | 108           | No                  |
-| Beta              | 108           | No                  |
-| Release           | 108           | No                  |
-
-- `layout.css.font-variant-emoji.enabled`
   - : Set to `true` to enable.
 
 ### prefers-reduced-transparency media feature
@@ -324,6 +309,34 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 - `layout.css.details-content.enabled`
   - : Set to `true` to enable.
 
+### `:active-view-transition` pseudo-class
+
+The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style content while a [view transition](/en-US/docs/Web/API/View_Transition_API) is taking place in a single-page app (SPA). ([Firefox bug 1956140](https://bugzil.la/1956140)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 141           | Yes                 |
+| Developer Edition | 141           | No                  |
+| Beta              | 141           | No                  |
+| Release           | -             | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
+### `anchor-size()` function
+
+The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.anchor-positioning.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -459,17 +472,22 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
+From version 142 this is enabled in on Windows in all contexts except service workers.
+For other platforms it is enabled in nightly.
+See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 113           | Yes                 |
-| Developer Edition | 73            | No                  |
-| Beta              | 73            | No                  |
-| Release           | 73            | No                  |
+| Release channel   | Version added | Enabled by default?                                |
+| ----------------- | ------------- | -------------------------------------------------- |
+| Nightly           | 141           | Yes                                                |
+| Developer Edition | 141           | No (Yes on Windows, not including service workers) |
+| Beta              | 141           | No (Yes on Windows, not including service workers) |
+| Release           | 141           | No (Yes on Windows, not including service workers) |
 
 - `dom.webgpu.enabled`
-  - : Set to `true` to enable.
+  - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
+- `dom.webgpu.service-workers.enabled`
+  - : Set to `true` to enable (enabled in Nightly)
 
 ### Reporting API support for CSP Violations
 
@@ -562,28 +580,6 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 | Release           | 98              | No                  |
 
 - `dom.vr.enabled`
-  - : Set to `true` to enable.
-
-### HTML DOM API
-
-#### Selections crossing shadow DOM boundary
-
-The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
-Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
-Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
-The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
-
-User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
-([Firefox bug 1867058](https://bugzil.la/1867058)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `dom.shadowdom.selection_across_boundary.enabled`
   - : Set to `true` to enable.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks
@@ -716,28 +712,14 @@ The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a me
 | Release channel   | Version changed | Enabled by default? |
 | ----------------- | --------------- | ------------------- |
 | Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
+| Developer Edition | 139             | No                  |
+| Beta              | 139             | No                  |
+| Release           | 139             | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy
-
-### Block plain text requests from Flash on encrypted pages
-
-In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 59            | No                  |
-| Developer Edition | 59            | No                  |
-| Beta              | 59            | No                  |
-| Release           | 59            | No                  |
-
-- `security.mixed_content.block_object_subrequest`
-  - : Set to `true` to enable.
 
 ### Insecure page labeling
 
@@ -789,6 +771,23 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
   - : Set to `true` to enable.
 
 ## HTTP
+
+### Integrity-Policy and Integrity-Policy-Report-Only headers
+
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
+When these headers are used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
+The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as those from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
+([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | Yes                 |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `security.integrity_policy.enabled`
+  - : Set to `true` to enable.
 
 ### Accept header with MIME type image/jxl
 
@@ -848,5 +847,5 @@ Mozilla's developer tools are constantly evolving. We experiment with new ideas,
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)

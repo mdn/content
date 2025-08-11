@@ -46,31 +46,31 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/fred": "0.1.0",
-    "@mdn/yari": "5.0.1",
+    "@mdn/fred": "0.2.0",
+    "@mdn/yari": "5.0.2",
     "@octokit/rest": "^22.0.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
-    "cross-env": "7.0.3",
+    "cross-env": "10.0.0",
     "env-cmd": "10.1.0",
     "fdir": "^6.4.6",
     "gray-matter": "^4.0.3",
-    "yaml": "^2.8.0"
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "cspell": "9.1.5",
+    "cspell": "9.2.0",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "jest": "^30.0.4",
+    "jest": "^30.0.5",
     "lefthook": "^1.12.2",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
     "parse-diff": "^0.11.1",
     "prettier": "3.6.2",
-    "yaml": "^2.8.0",
+    "yaml": "^2.8.1",
     "yargs": "^18.0.0"
   },
   "packageManager": "yarn@1.22.22"

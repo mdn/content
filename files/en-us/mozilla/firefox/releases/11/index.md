@@ -97,7 +97,7 @@ _No change._
 
 #### New JavaScript code modules
 
-- [`source-editor.jsm`](/en-US/docs/JavaScript_code_modules/source-editor.jsm)
+- [`source-editor.jsm`](https://web.archive.org/web/20210620193439/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm)
   - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by _Scratchpad_ and other developer tools integrated into Firefox.
 
 ### Interface changes
@@ -116,7 +116,7 @@ The following interfaces were implementation details that are no longer needed:
 
 ### Theme-related changes
 
-- The `omni.jar` file is now called [`omni.ja`](</en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)>).
+- The `omni.jar` file is now called [`omni.ja`](https://web.archive.org/web/20210620190432/https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_%28formerly_omni.jar%29).
 
 ### Preference changes
 

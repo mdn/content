@@ -2,9 +2,8 @@
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The WebExtension APIs aim to provide compatibility across all the main browsers, so extensions should run on any browser with minimal changes.
 

@@ -22,6 +22,8 @@ accessibility.disablecache
 accessibilitysidebar
 acodec
 activetitlebarcolor
+addonsidebar
+addonsidebarmain
 addstream
 adduser
 adlm
@@ -36,6 +38,7 @@ ALTGR
 amssymb
 android-safetynet
 animalfound
+anims
 anonid
 apacheconf
 apachectl
@@ -73,6 +76,7 @@ beforescriptexecute
 beforexrselect
 BGRX
 bhks
+biske
 bmatrix
 BPPV1
 Brai
@@ -528,6 +532,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onwebkitmouseforcewillbegin
+onzoomlevelchange
 opendocument
 openidconnect
 openpgp4fpr
@@ -626,6 +631,7 @@ romanlow
 rotr
 roundedbox
 rowindextext
+rozaj
 rport
 rquote
 rspadd
@@ -664,7 +670,6 @@ seekbackward
 seekforward
 seekto
 seeother
-selectchange
 selectedcontent
 selectend
 seltype
@@ -740,6 +745,7 @@ tnsa
 todoapp
 togglecamera
 togglemicrophone
+togglescreenshare
 toolbar-bgalignment
 toolbar-bgimage
 toolbaritem
@@ -870,3 +876,4 @@ xpcnativewrappers
 xpidl
 xpinstall
 xywh
+zoomlevelchange

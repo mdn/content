@@ -55,8 +55,9 @@ textarea:blank {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - {{CSSxRef(":empty")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

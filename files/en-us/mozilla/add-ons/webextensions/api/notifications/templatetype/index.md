@@ -3,9 +3,8 @@ title: notifications.TemplateType
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
 page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.TemplateType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".
 

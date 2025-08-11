@@ -3,9 +3,8 @@ title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstall
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Uninstalls an add-on, given its ID.
 

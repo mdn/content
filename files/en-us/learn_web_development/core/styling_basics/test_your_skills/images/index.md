@@ -9,19 +9,15 @@ sidebar: learnsidebar
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
 > [!NOTE]
-> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
-> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
 
-In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped.
+In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
 
 Your final result should look like the image below:
 
 ![An image in a box](mdn-images-object-fit.png)
-
-Try to update the code below to recreate the finished example so that the image doesn't overflow the box:
 
 ```html live-sample___object-fit
 <div class="box">
@@ -33,7 +29,7 @@ Try to update the code below to recreate the finished example so that the image 
 
 ```css live-sample___object-fit
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   height: 200px;
 }
@@ -63,18 +59,18 @@ img {
 
 ## Task 2
 
-In this task, you have a basic form. Your task is to make the following changes:
+In this task, you have a basic form.
 
-- Use attribute selectors to target the search field and button inside `.my-form`.
-- Make the form field and button use the same text size as the rest of the form.
-- Give the form field and button 10px of padding.
-- Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
+To complete the task:
+
+1. Use attribute selectors to target the search field and button inside `.my-form`.
+2. Make the form field and button use the same text size as the rest of the form.
+3. Give the form field and button `10px` of padding.
+4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
 Your final result should look like the image below:
 
 ![A single line form](mdn-images-form.png)
-
-Try to update the code below to recreate the finished example:
 
 ```html live-sample___forms-1
 <form action="" class="my-form" method="post">
@@ -91,7 +87,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 ```
@@ -105,7 +101,7 @@ Here's an example solution for the task:
 
 ```css
 .my-form {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 5px;
 }
 
@@ -132,16 +128,9 @@ Our second form styling assessment is fairly free-form, and you have a lot of fl
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior)
-3. On top of that, add in some nice, consistent styling for the inputs and button.
-4. Use some kind of layout technique to make the inputs and labels line up neatly.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
+2. On top of that, add in some nice, consistent styling for the inputs and button.
+3. Use some kind of layout technique to make the inputs and labels line up neatly.
 
 ```html hidden live-sample___forms-2
 <form>
@@ -181,7 +170,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

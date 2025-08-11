@@ -3,9 +3,8 @@ title: browserSettings.openUrlbarResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.openUrlbarResultsInNewTabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 

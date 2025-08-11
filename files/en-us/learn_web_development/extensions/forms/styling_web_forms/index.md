@@ -250,7 +250,7 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: white url("background.jpg");
 
   /* we create our grid */
   display: grid;
@@ -362,8 +362,8 @@ button::after {
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 

@@ -313,6 +313,10 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSS_text/Wrapping_breaking_text
+  - title: Text decoration
+    details: closed
+    children:
+      - /Web/CSS/CSS_text_decoration/Text_shadows
   - title: Transforms
     details: closed
     children:
@@ -348,6 +352,7 @@ sidebar:
       - /Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
       - /Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+      - /Web/CSS/CSS_shapes/Shape_generator
 l10n:
   de:
     Beginners: Einsteiger-Tutorials

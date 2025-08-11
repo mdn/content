@@ -3,9 +3,8 @@ title: webRequest.UploadData
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.UploadData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Contains data uploaded in a URL request.
 

@@ -76,25 +76,25 @@ The HTML contains a single paragraph of text to animate:
 In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla](https://nabla.typearture.com/) from [Google Fonts](https://fonts.google.com/?coloronly=true), and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then create {{cssxref("@keyframes")}} that animate between these two palettes, and apply this animation to our paragraph.
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
-@font-palette-values --blueNabla {
+@font-palette-values --blue-nabla {
   font-family: Nabla;
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
-@font-palette-values --greyNabla {
+@font-palette-values --grey-nabla {
   font-family: Nabla;
   base-palette: 3; /* this is Nabla's grey palette */
 }
 
 @keyframes animate-palette {
   from {
-    font-palette: --greyNabla;
+    font-palette: --grey-nabla;
   }
 
   to {
-    font-palette: --blueNabla;
+    font-palette: --blue-nabla;
   }
 }
 

@@ -65,7 +65,7 @@ option:last-of-type {
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:not(option:last-of-type) {

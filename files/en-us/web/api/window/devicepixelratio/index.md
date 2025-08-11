@@ -62,7 +62,7 @@ ctx.scale(scale, scale);
 
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
-ctx.fillStyle = "#ffffff";
+ctx.fillStyle = "white";
 ctx.font = "18px Arial";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";

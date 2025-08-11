@@ -456,7 +456,7 @@ body {
   font:
     1.6rem/1.25 Arial,
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
 }
 @media screen and (width >= 620px) {
@@ -465,7 +465,7 @@ body {
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
@@ -480,14 +480,14 @@ body {
 }
 .btn.toggle-btn {
   border-width: 1px;
-  border-color: #d3d3d3;
+  border-color: lightgray;
 }
 .btn.toggle-btn[aria-pressed="true"] {
   text-decoration: underline;
   border-color: #4d4d4d;
 }
 .btn__danger {
-  color: #fff;
+  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -495,8 +495,8 @@ body {
   border-color: lightgrey;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
 }
 .btn__primary:disabled {
   color: darkgrey;
@@ -549,7 +549,7 @@ body {
 /* END GLOBAL STYLES */
 
 .todoapp {
-  background: #fff;
+  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
@@ -586,7 +586,7 @@ body {
 }
 .input__lg {
   padding: 2rem;
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 .input__lg:focus {
   border-color: #4d4d4d;
@@ -670,7 +670,7 @@ body {
 .c-cb > label::before {
   content: "";
   position: absolute;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .c-cb > input[type="checkbox"]:focus + label::before {

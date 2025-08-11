@@ -72,6 +72,16 @@ The property specifies two things:
 > [!NOTE]
 > To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("white-space-collapse")}}
+- {{cssxref("text-wrap-mode")}}
+
+> [!NOTE]
+> The spec defines a third constituent property: `white-space-trim`, which is not implemented in any browser yet.
+
 ## Syntax
 
 ```css
@@ -82,7 +92,9 @@ white-space: pre-wrap;
 white-space: pre-line;
 
 /* white-space-collapse and text-wrap-mode shorthand values */
+white-space: nowrap;
 white-space: wrap;
+white-space: break-spaces;
 white-space: collapse;
 white-space: preserve nowrap;
 
@@ -96,18 +108,21 @@ white-space: unset;
 
 ### Values
 
-The `white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties.
+The `white-space` property values can be specified as one or two keywords representing the values for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties, or the following special keywords:
 
 - `normal`
-  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes. Equivalent to `collapse wrap`.
 - `pre`
-  - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
+  - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements. Equivalent to `preserve nowrap`.
 - `pre-wrap`
-  - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
+  - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes. Equivalent to `preserve wrap`.
 - `pre-line`
-  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes. Equivalent to `preserve-breaks wrap`.
 
-The following table summarizes the behavior of the various `white-space` keyword values:
+> [!NOTE]
+> The `white-space` property as a shorthand is a relatively new feature (see [browser compatibility](#browser_compatibility)). Originally, it had six keyword values; now, the value `nowrap` is instead interpreted as a value for {{cssxref("text-wrap-mode")}}, while the value `break-spaces` is interpreted as a value for {{cssxref("white-space-collapse")}}. The above four keywords are still specific to `white-space`, but they have longhand equivalents. The change to make `white-space` a shorthand expands acceptable values to even more keywords and combinations, such as `wrap` and `collapse`.
+
+The following table summarizes the behavior of these four `white-space` keyword values:
 
 <table class="standard-table">
   <thead>
@@ -232,7 +247,7 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220 220 220);
+  background-color: gainsboro;
   font-size: 16px;
   font-family: monospace;
 }

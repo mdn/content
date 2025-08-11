@@ -3,9 +3,8 @@ title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
 page-type: webextension-api
 browser-compat: webextensions.api.topSites
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the topSites API to get an array containing pages that the user has visited frequently.
 

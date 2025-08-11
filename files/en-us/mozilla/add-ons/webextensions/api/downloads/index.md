@@ -3,9 +3,8 @@ title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
 page-type: webextension-api
 browser-compat: webextensions.api.downloads
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to interact with the browser's download manager. You can use this API module to download files, cancel, pause, resume downloads, and show downloaded files in the file manager.
 

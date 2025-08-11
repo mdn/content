@@ -109,7 +109,7 @@ You may have used a CSS property in a specific way to get around older browser i
 ```css
 .box {
   background-color: red; /* fallback for older browsers that don't support gradients */
-  background-image: linear-gradient(to right, #ff0000, #aa0000);
+  background-image: linear-gradient(to right, red, #aa0000);
 }
 ```
 

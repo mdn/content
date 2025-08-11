@@ -3,9 +3,8 @@ title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a connection is made with either an extension process or a content script.
 

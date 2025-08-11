@@ -3,9 +3,8 @@ title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the sidebar's title.
 

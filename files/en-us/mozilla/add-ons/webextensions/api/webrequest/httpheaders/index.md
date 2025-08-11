@@ -3,9 +3,8 @@ title: webRequest.HttpHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
 page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.HttpHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
 

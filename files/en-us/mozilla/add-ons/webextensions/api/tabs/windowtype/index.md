@@ -3,9 +3,8 @@ title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.WindowType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type of window that hosts this tab.
 

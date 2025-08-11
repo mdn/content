@@ -3,9 +3,8 @@ title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.enable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 
