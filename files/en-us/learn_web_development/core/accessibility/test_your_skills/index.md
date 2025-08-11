@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Accessibility"
-short-title: Test your skills index
+short-title: "Test: A11y tests index"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills
 page-type: learn-module-assessment
 sidebar: learnsidebar
