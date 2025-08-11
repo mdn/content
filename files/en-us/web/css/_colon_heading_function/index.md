@@ -64,7 +64,7 @@ In this example, the `odd` keyword matches headings with odd-numbered levels, so
 
 {{EmbedLiveSample("Keyword_example", "", "215")}}
 
-### Functional notation example
+### Using the `An+B` notation
 
 ```html
 <h1>Heading 1</h1>
