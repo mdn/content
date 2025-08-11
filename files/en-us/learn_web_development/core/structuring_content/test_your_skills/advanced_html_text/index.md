@@ -47,7 +47,7 @@ The finished example should look like this:
 
 ```css hidden live-sample___advanced-text
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

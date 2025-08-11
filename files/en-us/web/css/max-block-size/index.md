@@ -51,7 +51,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -164,7 +164,7 @@ After that come the classes `horizontal` and `vertical`, which add the {{cssxref
 .standard-box {
   padding: 4px;
   background-color: #abcdef;
-  color: #000;
+  color: black;
   font:
     16px "Open Sans",
     "Helvetica",

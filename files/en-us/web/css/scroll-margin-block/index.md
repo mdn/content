@@ -56,7 +56,7 @@ scroll-margin-block: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ scroll-margin-block: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

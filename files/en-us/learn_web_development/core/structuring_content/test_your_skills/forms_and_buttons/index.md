@@ -25,7 +25,7 @@ To complete the task:
 
 ```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,

@@ -21,7 +21,7 @@ lch(52.2345% 72.2 56.2 / .5);
 
 /* Relative values */
 lch(from green l c h / 0.5)
-lch(from #0000FF calc(l + 10) c h)
+lch(from #123456 calc(l + 10) c h)
 lch(from hsl(180 100% 50%) calc(l - 10) c h)
 lch(from var(--aColorValue) l c h / calc(alpha - 0.1))
 ```

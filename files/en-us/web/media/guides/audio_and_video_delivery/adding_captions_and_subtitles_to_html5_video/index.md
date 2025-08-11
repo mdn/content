@@ -109,7 +109,7 @@ No image is used for the captions button, so it is styled as:
   font-size: 1rem;
   font-weight: bold;
   color: #666;
-  background: #000;
+  background: black;
   border-radius: 2px;
 }
 ```
@@ -248,8 +248,8 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 .subtitles-menu li button {
   border: none;
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
   cursor: pointer;
   width: 90%;
   padding: 2px 5px;
@@ -293,7 +293,7 @@ Then this specific 'voice' will be stylable like so:
 
 ```css
 ::cue(v[voice="Test"]) {
-  color: #fff;
+  color: white;
   background: #0095dd;
 }
 ```

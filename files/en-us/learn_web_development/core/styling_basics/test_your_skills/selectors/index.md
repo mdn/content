@@ -247,7 +247,7 @@ a:hover {
 
 tr:nth-child(even) {
   background-color: #333;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -317,7 +317,7 @@ h2 + p {
 
 ## Task 5
 
-To complete the task, provide solutions using for the following challenges using attribute selectors:
+To complete the task, provide solutions for the following challenges using attribute selectors:
 
 1. Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
 2. Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).

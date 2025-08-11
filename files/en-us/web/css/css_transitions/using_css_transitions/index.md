@@ -83,7 +83,7 @@ This example performs a four-second font size transition with a two-second delay
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000ff;
+  background-color: blue;
   transition:
     width 2s,
     height 2s,
@@ -165,7 +165,7 @@ nav {
 a {
   flex: 1;
   background-color: #333;
-  color: #fff;
+  color: white;
   border: 1px solid;
   padding: 0.5rem;
   text-align: center;
@@ -175,7 +175,7 @@ a {
 
 a:hover,
 a:focus {
-  background-color: #fff;
+  background-color: white;
   color: #333;
 }
 ```
@@ -320,7 +320,7 @@ With CSS, you can smooth the styles applied through JavaScript. Add a transition
 
 ```css hidden live-sample___js-transitions
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1.2em / 1.5 Helvetica Neue,

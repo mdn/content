@@ -21,7 +21,7 @@ To complete the task, create new rules to make the links look and behave like li
 
 ```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font:
     1em / 1.4 Helvetica Neue,
@@ -81,7 +81,7 @@ li a {
 li a:hover,
 li a:focus {
   text-decoration: none;
-  color: rgb(255 0 0);
+  color: red;
 }
 ```
 

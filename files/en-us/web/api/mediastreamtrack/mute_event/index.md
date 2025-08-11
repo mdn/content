@@ -49,7 +49,7 @@ musicTrack.addEventListener(
 musicTrack.addEventListener(
   "unmute",
   (event) => {
-    document.getElementById("timeline-widget").style.backgroundColor = "#fff";
+    document.getElementById("timeline-widget").style.backgroundColor = "white";
   },
   false,
 );
@@ -65,7 +65,7 @@ musicTrack.onmute = (event) => {
 };
 
 musicTrack.onunmute = (event) => {
-  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
+  document.getElementById("timeline-widget").style.backgroundColor = "white";
 };
 ```
 

@@ -203,7 +203,7 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -499,7 +499,7 @@ This example shows cubes with popular `perspective-origin` values.
   transform: translateZ(50px);
 }
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
