@@ -6,7 +6,7 @@ browser-compat: css.selectors.headingfunction
 sidebar: cssref
 ---
 
-The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function matches [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) that match the functional notation. In other words, the `:heading()` functional pseudo-class allows you to style all headings that match the functional notation at once, rather than individually.
+The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function represents all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) that match a value calculated using the `An+B` notation. This allows you to style elements at specific heading levels at once, rather than matching and styling them individually.
 
 > [!NOTE]
 > The `:heading()` pseudo-class has the specificity of that of a class. So `:heading() {…}` would have a specificity of [0,1,0], whereas `section:heading() {…}` would have a specificity of [0,1,1].
