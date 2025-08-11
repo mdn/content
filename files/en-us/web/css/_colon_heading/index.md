@@ -30,6 +30,7 @@ The document in this example contains headings at three different levels.
 <h1>Mastering CSS</h1>
 <h2>Chapter 1: Selectors</h2>
 <h3>1.1 Pseudo-classes</h3>
+```
 
 ```css
 :heading {
@@ -37,7 +38,8 @@ The document in this example contains headings at three different levels.
 }
 ```
 
-{{EmbedLiveSample("Basic_example")}}
+{{EmbedLiveSample("styling_all_headings", "", "170")}}
+
 The `:heading` pseudo-class applies the `color` to all the headings in the document.
 
 ## Specifications
