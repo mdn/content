@@ -285,61 +285,7 @@ article {
 
 ## Optimizing `:has()` selectors
 
-The {{cssxref(":has", ":has()")}} pseudo-class is powerful, but it can be expensive in dynamic pages. Browser engines re-evaluate `:has()` selectors when the DOM changes, and certain patterns can trigger large amounts of work.
-
-### Avoid broad anchoring
-
-Anchoring `:has()` to very general selectors like {{cssxref("body")}}, {{cssxref(":root")}}, or {{cssxref("*")}} forces the browser to monitor large portions of the DOM. Any mutation inside that scope can trigger a full re-check.
-
-```css example-bad
-body:has(.sidebar-expanded) {
-  /* styles */
-}
-:root:has(main > article[data-priority="high"]) {
-  /* styles */
-}
-*:has(> img[data-loaded="false"]) {
-  /* styles */
-}
-```
-
-Instead, anchor `:has()` to the most specific ancestor element that logically contains the elements you're checking for.
-
-### Minimize subtree traversals
-
-If the selector inside `:has()` is unconstrained, the browser may need to traverse an entire subtree on each change.
-
-```css example-bad
-.ancestor:has(.foo) {
-  /* styles */
-}
-```
-
-Constrain with combinators to reduce work:
-
-```css example-good
-.ancestor:has(> .foo) {
-  /* direct child */
-}
-.ancestor:has(+ .sibling .foo) {
-  /* descendant of adjacent sibling */
-}
-```
-
-### Be mindful of ancestor traversals
-
-Some patterns cause the browser to search up the ancestor chain for each DOM mutation.
-
-```css example-bad
-.ancestor:has(.foo > *) {
-  /* styles */
-}
-```
-
-Here, any change to `*` inside `.foo` could require checking all ancestors for `.ancestor`.
-
-> [!NOTE]
-> These costs may decrease as browsers optimize `:has()` implementations, but careful selector design remains important.
+The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabilities but requires careful use to avoid performance bottlenecks. For detailed guidance on writing efficient `:has()` selectors, see [Performance considerations in the `:has()` reference documentation](/en-US/docs/Web/CSS/:has#performance_considerations).
 
 ## See also
 
