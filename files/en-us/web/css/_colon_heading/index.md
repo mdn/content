@@ -23,6 +23,8 @@ This pseudo-class matches only elements that are semantically recognized as head
 
 ### Styling all headings
 
+The document in this example contains headings at three different levels.
+
 ```html
 <h1>Mastering CSS</h1>
 <h2>Chapter 1: Selectors</h2>
