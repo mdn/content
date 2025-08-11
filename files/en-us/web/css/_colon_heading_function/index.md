@@ -42,7 +42,7 @@ The `:heading()` pseudo-class function takes a single argument that describes a 
 
 ## Examples
 
-### Keyword example
+### Using keyword parameters
 
 In this example the `odd` keyword is used target the `<h1>`, `<h3>`, and `<h5>` elements while the `even` keyword is used to target the `<h2>`, `<h4>`, and `<h6>` elements.
 
