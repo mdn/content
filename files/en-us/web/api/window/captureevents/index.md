@@ -13,7 +13,7 @@ browser-compat: api.Window.captureEvents
 The **`Window.captureEvents()`** method does nothing.
 
 > [!NOTE]
-> This is an method long removed from the specification. It is kept in browsers to prevent code breakage but does nothing.
+> This method was long removed from the specification. It is kept in browsers to prevent code breakage but does nothing.
 
 ## Syntax
 
