@@ -37,6 +37,7 @@ The document in this example contains headings at three different levels.
 ```
 
 {{EmbedLiveSample("Basic_example")}}
+The `:heading` pseudo-class applies the `color` to all the headings in the document.
 
 ## Specifications
 
