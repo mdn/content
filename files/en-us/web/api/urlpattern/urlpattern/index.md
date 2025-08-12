@@ -38,7 +38,7 @@ new URLPattern(patternString, baseURL, options)
       - : A pattern that matches a URL [hostname](/en-US/docs/Web/API/URL/hostname).
     - `port` {{Optional_Inline}}
       - : A pattern that matches a URL [port](/en-US/docs/Web/API/URL/port).
-        Note that if this is not specified it defaults to `""` (the default port `"443"`), and not he wildcard string (`"*"`)
+        Note that if this is not specified it defaults to `""`, which matches the default port (443).
     - `pathname` {{Optional_Inline}}
       - : A pattern that matches a URL [pathname](/en-US/docs/Web/API/URL/pathname).
     - `search` {{Optional_Inline}}
@@ -67,7 +67,7 @@ new URLPattern(patternString, baseURL, options)
 > [!NOTE]
 > All the URL parts in the `patternObject` properties and the `patternString` are optional.
 > If not specified in those parameters, some values may be [inherited](#inheritance_from_a_baseurl) from the `baseURL`, depending on what other URL-parts are defined.
-> Omitted parts are normalized to wildcards (`*`).
+> Omitted parts are normalized to wildcards (`*`), except for the `port`, which is normalized to the empty string/default port.
 
 ### Exceptions
 
@@ -101,6 +101,7 @@ For example, you must write `about\\:blank` to indicate that the `:` is the prot
 If a base URL is defined, either in `baseURL` when specifying a relative `patternString` or `patternObject.baseURL` when passing a `patternObject`, patterns for URL-parts _may_ be inherited from the base URL.
 
 The `username` and `password` are never inherited from the base URL when creating an `URLPattern`.
+Unless they are explicitly defined they will be normalized to the wildcard value (`"*"`).
 
 In addition, the `URLPattern` will not inherit URL parts from the base URL that are "more specific" than the least-specific part defined in the pattern, where the following lists indicate the order of specificity:
 
