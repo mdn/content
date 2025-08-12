@@ -36,6 +36,7 @@ Before diving into the individual value stages, it's important to understand the
 - Eliminates declarations that are syntactically invalid
 
 Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out. In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
+
 ```css
 p {
   font-size: 1.25em;
@@ -50,16 +51,16 @@ As a result of filtering, each element has zero or more [**declared values**](#d
 
 [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) resolves conflicts when multiple declarations apply to the same property on the same element. [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
 
-For example, if you have the following declarations for `<p class="large">CSS is fun!</p>`, the second declaration wins because it has higher specificity:
+For example, if you have the following declarations for `<p class="large">CSS is fun!</p>`, the second declaration wins because it has higher specificity. Both declarations have author origin, but the second selector has specificity of 0,1,1 while the first has 0,0,1:
 
 ```css
-/* Multiple font-size declarations */
 p {
   font-size: 1em;
-} /* Author origin, specificity: 0,0,1 */
+}
+
 p.large {
   font-size: 1.5em;
-} /* Author origin, specificity: 0,1,1 - wins! */
+}
 ```
 
 After cascading, the browser determines the [**cascaded value**](#cascaded_value) for each property on each element. This value is the one that will be used in the next processing stage; [Defaulting](#defaulting).
@@ -92,21 +93,20 @@ These values are used to determine the final [rendered value](#rendered_values).
 
 A **declared value** is any syntactically valid value from a declaration that applies to an element. An element can have zero or more declared values for each property. These values come from style sheets (author, user, or user-agent) and are identified during the [filtering](#filtering) stage.
 
-For our example `p { font-size: 1.25em; }` for `<p class="large">CSS is fun!</p>`, if multiple stylesheets declare font-size for the same paragraph:
+For our example `p { font-size: 1.25em; }` for `<p class="large">CSS is fun!</p>`, if multiple stylesheets declare font-size for the same paragraph, the user-agent stylesheet might set `font-size: 1em` for paragraphs, while the author stylesheet sets `font-size: 1.25em` for paragraphs and `font-size: 2em` for elements with class "large":
 
 ```css
-/* User-agent stylesheet */
 p {
   font-size: 1em;
-} /* Declared value 1 */
+}
 
-/* Author stylesheet */
 p {
   font-size: 1.25em;
-} /* Declared value 2 */
+}
+
 .large {
   font-size: 2em;
-} /* Declared value 3 */
+}
 ```
 
 Only declarations whose selectors match the element become declared values. In this example, if our `<p>` element has `class="large"`, then all three declarations would be declared values for that element.
@@ -115,11 +115,10 @@ Only declarations whose selectors match the element become declared values. In t
 
 The **cascaded value** is the declared value that wins the [cascade](#cascading). There is at most one cascaded value per property per element.
 
-From our declared values above,
+From our declared values above, the cascaded value would be `font-size: 2em` from the author origin with specificity 0,1,1:
 
 ```css
-/* Result of cascading - Cascaded Value */
-font-size: 2em; /* Author origin, specificity: 0,1,1 */
+font-size: 2em;
 ```
 
 If there are no declared values for a property, there is no cascaded value, which means the value will be determined by the [defaulting](#defaulting) process.
@@ -132,21 +131,17 @@ The **specified value** is the result of the [defaulting](#defaulting) process. 
 2. If there is _no_ [cascaded value](#cascaded_value) and the property is inherited, the specified value is the [computed value](#computed_value) of the parent element.
 3. If there is _no_ [cascaded value](#cascaded_value) and the property is _not_ inherited, the specified value is the property's [initial value](#initial_value).
 
-In our example, since we have a [cascaded value](#cascaded_value) of `1.25em`, this becomes the specified value:
+In our example, since we have a [cascaded value](#cascaded_value) of `2em`, this becomes the specified value:
 
 ```css
-/* Result of defaulting - Specified Value */
 font-size: 2em;
 ```
 
-For properties without [cascaded values](#cascaded_value), the [defaulting](#defaulting) process fills in the gaps:
+For properties without [cascaded values](#cascaded_value), the [defaulting](#defaulting) process fills in the gaps. For example, if `color` is not specified, it inherits from the parent's computed value since it's an inherited property. If `margin` is not specified, it uses its initial value of `0` since it's a non-inherited property:
 
 ```css
-/* Example of inherited property without cascaded value */
-color: inherit; /* if color is not specified, it inherits from parent's computed value as it's inherited property */
-
-/* Example of non-inherited property without cascaded value */
-margin: 0; /* margin uses initial value as it's non-inherited property */
+color: inherit;
+margin: 0;
 ```
 
 #### Initial value
