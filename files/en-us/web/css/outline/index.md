@@ -3,9 +3,8 @@ title: outline
 slug: Web/CSS/outline
 page-type: css-shorthand-property
 browser-compat: css.properties.outline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
@@ -91,7 +90,7 @@ The `outline` property may be specified using one, two, or three of the values l
 - `<'outline-style'>`
   - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentColor` for the others. See {{cssxref("outline-color")}}.
 
 ## Description
 

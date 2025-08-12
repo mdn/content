@@ -3,9 +3,8 @@ title: top
 slug: Web/CSS/top
 page-type: css-property
 browser-compat: css.properties.top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
@@ -81,7 +80,7 @@ When both `top` and {{cssxref("bottom")}} values are specified, there are three 
 top: 3px;
 top: 2.4em;
 top: anchor(bottom);
-top: anchor-size(--myAnchor self-block, 10%);
+top: anchor-size(--my-anchor self-block, 10%);
 
 /* <percentage>s of the height of the containing block */
 top: 10%;

@@ -3,9 +3,8 @@ title: <content-distribution>
 slug: Web/CSS/content-distribution
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-content-distribution
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<content-distribution>`** {{glossary("enumerated")}} value type is used by {{cssxref("justify-content")}} and {{cssxref("align-content")}} properties, and the {{cssxref("place-content")}} shorthand, to distribute a container's extra space among its {{glossary("alignment subject", "alignment subjects")}}.
 

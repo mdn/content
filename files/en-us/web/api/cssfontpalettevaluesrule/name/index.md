@@ -29,7 +29,7 @@ This example first defines an {{cssxref("@import")}} and an {{cssxref("@font-pal
 #### CSS
 
 ```css
-@import url(https://fonts.googleapis.com/css2?family=Bungee+Spice);
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 
 @font-palette-values --Alternate {
   font-family: "Bungee Spice";

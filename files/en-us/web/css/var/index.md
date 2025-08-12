@@ -3,9 +3,8 @@ title: var()
 slug: Web/CSS/var
 page-type: css-function
 browser-compat: css.types.var
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
 
@@ -40,7 +39,7 @@ border-color: var(--color-c);
 }
 
 #example-element {
-  border: 10px solid #000;
+  border: 10px solid black;
   padding: 10px;
 }
 ```
@@ -56,7 +55,7 @@ var(--custom-prop);
 /* With fallback */
 var(--custom-prop,);  /* empty value as fallback */
 var(--custom-prop, initial); /* initial value of the property as fallback */
-var(--custom-prop, #FF0000);
+var(--custom-prop, red);
 var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```

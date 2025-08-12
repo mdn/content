@@ -2,9 +2,8 @@
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
 
@@ -83,7 +82,7 @@ You can change any of the page action properties programmatically using the [`pa
 
 ## Icons
 
-For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/styles/iconography/overview-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
+For details on how to create icons to use with your page action, see [Iconography](https://acorn.firefox.com/latest/foundations/styles/iconography-QEDMXQqj) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

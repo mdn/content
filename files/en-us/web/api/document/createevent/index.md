@@ -71,4 +71,4 @@ are the modern recommended way to create event object instances.
 
 ## See also
 
-- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)

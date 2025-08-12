@@ -1,5 +1,6 @@
 ---
 title: Firefox 59 for developers
+short-title: Firefox 59
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes
 sidebar: firefox
@@ -152,7 +153,7 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
   - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
 
-- The [`contextMenus`](/en-US/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
+- The `contextMenus` API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 - New [`contentScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API enables runtime registration of content scripts.
 - New [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) APIs:
   - `browserAction/pageAction/sidebarAction.set*` functions now accept `null` to undo changes.
@@ -167,7 +168,3 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - New [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) setting "cookieConfig".
 - Support in [`cookies`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API for [first-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - New option `upgradeToSecure` in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
-
-## Older versions
-
-{{Firefox_for_developers}}

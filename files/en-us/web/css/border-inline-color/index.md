@@ -3,9 +3,8 @@ title: border-inline-color
 slug: Web/CSS/border-inline-color
 page-type: css-property
 browser-compat: css.properties.border-inline-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-inline-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -38,7 +37,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

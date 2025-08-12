@@ -1,5 +1,5 @@
 ---
-title: Grid Lines
+title: Grid lines
 slug: Glossary/Grid_Lines
 page-type: glossary-definition
 sidebar: glossarysidebar

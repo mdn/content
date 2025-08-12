@@ -3,9 +3,8 @@ title: mask-position
 slug: Web/CSS/mask-position
 page-type: css-property
 browser-compat: css.properties.mask-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
 
@@ -155,7 +154,7 @@ div {
   margin-bottom: 10px;
   background: blue linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-repeat: no-repeat;
   mask-position: top right;
 }

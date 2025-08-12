@@ -12,11 +12,11 @@ The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function
 {{InteractiveExample("JavaScript Demo: Promise.prototype.catch()")}}
 
 ```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
+const promise = new Promise((resolve, reject) => {
   throw new Error("Uh-oh!");
 });
 
-promise1.catch((error) => {
+promise.catch((error) => {
   console.error(error);
 });
 // Expected output: Error: Uh-oh!

@@ -3,9 +3,8 @@ title: transition
 slug: Web/CSS/transition
 page-type: css-shorthand-property
 browser-compat: css.properties.transition
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
 
@@ -46,7 +45,7 @@ transition: all 1s ease-out;
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -56,7 +55,7 @@ transition: all 1s ease-out;
 
 #default-example:hover > #example-element {
   background-color: #909;
-  color: #fff;
+  color: white;
   margin-right: 40%;
 }
 ```

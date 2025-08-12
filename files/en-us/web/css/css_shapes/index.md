@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-shapes-1/
   - https://drafts.csswg.org/css-shapes-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS shapes** module describes geometric shapes. It also defines CSS properties that can use the shapes to control the geometry of an element's float area; this area can then be applied to exclusions, or specify an element's content area.
 
@@ -58,8 +57,7 @@ img {
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-outside")}}
 
-> [!NOTE]
-> The CSS shapes module introduces the `shape-inside` and `shape-padding` properties that have not yet been implemented.
+The CSS shapes module also introduces the `shape-inside` and `shape-padding` properties. Currently, no browsers support these features.
 
 ### Data types
 
@@ -130,6 +128,7 @@ img {
 
 ## See also
 
+- [Shape generator](/en-US/docs/Web/CSS/CSS_shapes/Shape_generator)
 - [CSS Shapes resources](https://codepen.io/KristopherVanSant/post/css-shapes-resources)
 - [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/) via alistapart.com (2014)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/) via sarasoueidan.com (2013)

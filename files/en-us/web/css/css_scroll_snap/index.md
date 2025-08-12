@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-scroll-snap/
   - https://drafts.csswg.org/css-scroll-snap-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS scroll snap** module provides properties that let you control the panning and scrolling behavior by defining snap positions. Content can be snapped into position as the user scrolls overflowing content within a {{Glossary("scroll container")}}, providing paging and scroll positioning.
 

@@ -3,9 +3,8 @@ title: clip-rule
 slug: Web/CSS/clip-rule
 page-type: css-property
 browser-compat: css.properties.clip-rule
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property determines, when parts of the path overlap other parts, which pixels in a mask's box are inside the clipping shape defined by a [clip path](/en-US/docs/Web/CSS/clip-path) and which are outside.
 
@@ -94,7 +93,7 @@ svg {
 
 #star3 path {
   fill: none;
-  stroke: #000;
+  stroke: black;
   stroke-width: 1;
 }
 ```
@@ -156,10 +155,10 @@ We use the {{cssxref("clip-path")}} property to set the different `<clipPath>` e
 
 ```css
 div:first-of-type {
-  clip-path: url(#star1);
+  clip-path: url("#star1");
 }
 div:last-of-type {
-  clip-path: url(#star2);
+  clip-path: url("#star2");
 }
 ```
 

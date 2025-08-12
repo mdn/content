@@ -188,6 +188,7 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
 Emscripting
 encrypter
@@ -275,6 +276,7 @@ halfwidth
 harissa
 HDCP
 headworn
+highlightable
 HILN
 hissy
 hitbox
@@ -549,6 +551,7 @@ quicklinks
 quickmenu
 qvalues
 QWERTZ
+RAII
 rari
 rasterizes
 RDBMS
@@ -756,6 +759,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables

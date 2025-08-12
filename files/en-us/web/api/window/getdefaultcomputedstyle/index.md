@@ -41,8 +41,8 @@ user rules.
 ### Simple example
 
 ```js
-const elem1 = document.getElementById("elemId");
-const style = getDefaultComputedStyle(elem1);
+const elem = document.getElementById("elemId");
+const style = getDefaultComputedStyle(elem);
 ```
 
 ### Longer example

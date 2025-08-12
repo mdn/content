@@ -2,9 +2,8 @@
 title: Variable fonts
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
 

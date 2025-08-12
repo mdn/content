@@ -186,7 +186,7 @@ Decorate the span to behave like a link:
 .intLink {
   cursor: pointer;
   text-decoration: underline;
-  color: #0000ff;
+  color: blue;
 }
 ```
 

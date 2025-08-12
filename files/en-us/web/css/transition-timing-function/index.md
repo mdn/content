@@ -3,9 +3,8 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 page-type: css-property
 browser-compat: css.properties.transition-timing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
@@ -36,7 +35,7 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -46,7 +45,7 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 
 #default-example:hover > #example-element {
   background-color: #909;
-  color: #fff;
+  color: white;
   margin-right: 40%;
 }
 ```
@@ -300,6 +299,7 @@ const intervalID = setInterval(updateTransition, 10000);
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

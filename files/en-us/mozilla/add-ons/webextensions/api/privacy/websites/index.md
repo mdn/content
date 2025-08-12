@@ -3,9 +3,8 @@ title: privacy.websites
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.websites
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `privacy.websites` property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
@@ -57,10 +56,6 @@ Default values for these properties tend to vary across browsers.
     - `"never"`: tracking protection is off.
     - `"private_browsing"`: tracking protection is on in private browsing windows only.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Set the `hyperlinkAuditingEnabled` property.
@@ -94,6 +89,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.

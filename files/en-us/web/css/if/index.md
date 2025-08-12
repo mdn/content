@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.if
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) allows different values to be set for a property depending on the result of a conditional test. The test can be based on a [style query](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries), a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), or a [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
@@ -16,12 +17,12 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Val
 ```css-nolint
 /* Single <if-test> */
 if(style(--scheme: dark): #eee;)
-if(media(print): #000;)
+if(media(print): black;)
 if(media(width > 700px): 0 auto;)
 if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
 
 /* <if-test> with else */
-if(style(--size: 2xl): 1em; else: 0.25em;)
+if(style(--size: "2xl"): 1em; else: 0.25em;)
 if(media(print): white; else: black;)
 if(media(width < 700px): 0 auto; else: 20px auto)
 if(
@@ -29,8 +30,8 @@ if(
   else: #03045e;
 )
 if(
-  supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
-  else: 3px solid #c0c0c0;
+  supports(color: lch(75% 0 0)): 3px solid lch(75% 0 0);
+  else: 3px solid silver;
 )
 
 /* Multiple <if-test>s */
@@ -239,8 +240,8 @@ For example, the following returns an {{cssxref("color_value/lch()")}} color if 
 
 ```css-nolint
 color: if(
-  supports(color: lch(77.7% 0 0)): lch(77.7% 0 0);
-  else: rgb(192, 192, 192);
+  supports(color: lch(75% 0 0)): lch(75% 0 0);
+  else: rgb(185 185 185);
 )
 ```
 
@@ -275,15 +276,15 @@ Feature queries are really useful inside `if()` statements when you need to vary
 
 The `if()` statement does not gracefully degrade; an explicit fallback needs to be provided for non-supporting browsers.
 
-For example, in this case we provide a static {{cssxref("padding")}} value for browsers that don't support `if()`. Browsers that support `if()` will override the first declaration with the second one, which sets different padding values depending on whether or not the `--size: 2xl` custom property is set.
+For example, in this case we provide a static {{cssxref("padding")}} value for browsers that don't support `if()`. Browsers that support `if()` will override the first declaration with the second one, which sets different padding values depending on whether or not the `--size: "2xl"` custom property is set.
 
 ```css
 padding: 1em;
-padding: if(style(--size: 2xl): 1em; else: 0.25em);
+padding: if(style(--size: "2xl"): 1em; else: 0.25em);
 ```
 
 > [!NOTE]
-> Remember to include the `else` condition. In `if()`-supporting browsers, if no `else` value were included and `--size` was not equal to `2xl`, the padding would be set to `initial`.
+> Remember to include the `else` condition. In `if()`-supporting browsers, if no `else` value were included and `--size` was not equal to `"2xl"`, the padding would be set to `initial`.
 
 ### Whole and partial values
 
@@ -291,8 +292,8 @@ An `if()` function can be set as the value of any CSS property, but it can also 
 
 ```css-nolint
 border: if(
-  supports(color: lch(77.7% 0 0)): 3px solid lch(77.7% 0 0);
-  else: 3px solid #c0c0c0;
+  supports(color: lch(75% 0 0)): 3px solid lch(75% 0 0);
+  else: 3px solid silver;
 );
 ```
 
@@ -301,7 +302,7 @@ However, we could use the `if()` function to determine the {{cssxref("border-col
 ```css-nolint
 border: 3px solid
   if(
-    supports(color: lch(77.7% 0 0)): lch(77.7% 0 0); else: #c0c0c0;
+    supports(color: lch(75% 0 0)): lch(75% 0 0); else: silver;
   );
 ```
 
@@ -390,7 +391,7 @@ section {
   display: flex;
   gap: 16px;
   flex-direction: if(
-    media(orientation:landscape): row;
+    media(orientation: landscape): row;
     else: column;
   )
 }
@@ -401,7 +402,7 @@ Next, we target the `<h2>` element's {{cssxref("::before")}} pseudo-element, set
 ```css-nolint live-sample___basic
 h2::before {
   content: if(
-    style(--show-apple:true): "🍎 ";
+    style(--show-apple: true): "🍎 ";
   );
 }
 ```
@@ -410,7 +411,7 @@ Finally, we target the `<h2>` element itself. We use a feature query `<if-test>`
 
 ```css-nolint live-sample___basic
 h2 {
-    color: if(
+  color: if(
     supports(color: lch(29.57% 43.25 344.44)): lch(29.57% 43.25 344.44);
     else: #792359;
   )

@@ -3,9 +3,8 @@ title: CSS grid layout
 slug: Web/CSS/CSS_grid_layout
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-grid/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS grid layout** module excels at dividing a page into major regions or defining the relationship in terms of size, position, and layering between parts of a control built from HTML primitives.
 

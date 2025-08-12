@@ -1,5 +1,6 @@
 ---
 title: Firefox 105 for developers
+short-title: Firefox 105
 slug: Mozilla/Firefox/Releases/105
 page-type: firefox-release-notes
 sidebar: firefox
@@ -49,7 +50,3 @@ No notable changes.
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ([Firefox bug 1751436](https://bugzil.la/1751436)).
 - An extension's resources can no longer be loaded by other extensions by default. To enable other extensions to load resources they must be listed in the extension's [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) manifest key ([Firefox bug 1711168](https://bugzil.la/1711168)).
-
-## Older versions
-
-{{Firefox_for_developers}}

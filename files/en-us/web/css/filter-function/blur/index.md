@@ -3,9 +3,8 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 page-type: css-function
 browser-compat: css.types.filter-function.blur
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
@@ -70,8 +69,8 @@ The following declarations produce the same effect:
 
 ```css
 filter: blur(1.1px);
-filter: url(#blur11); /* with embedded SVG */
-filter: url(folder/fileName.svg#blur11); /* external svg filter definition */
+filter: url("#blur11"); /* with embedded SVG */
+filter: url("folder/fileName.svg#blur11"); /* external svg filter definition */
 ```
 
 ## Formal syntax
@@ -96,7 +95,7 @@ This example shows three images: the image with a `blur()` filter function appli
   <image
     href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
     xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-    filter="url(#blur)" />
+    filter="url('#blur')" />
 </svg>
 ```
 
@@ -131,7 +130,7 @@ svg:not([height]) {
           <image
             href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
             xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url(#svgBlur)" />
+            filter="url('#svgBlur')" />
         </svg>
       </td>
       <td>

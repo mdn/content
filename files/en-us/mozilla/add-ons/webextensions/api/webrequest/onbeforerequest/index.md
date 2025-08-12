@@ -3,9 +3,8 @@ title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
 
@@ -155,10 +154,6 @@ Events have three functions:
 
     You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ### DNS resolution ordering when BlockingResponse is used
 
 Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzil.la/1466099)
@@ -307,6 +302,10 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

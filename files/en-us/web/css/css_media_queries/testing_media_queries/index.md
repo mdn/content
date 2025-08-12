@@ -3,9 +3,8 @@ title: Testing media queries programmatically
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
 page-type: guide
 browser-compat: api.MediaQueryList
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The {{Glossary("DOM")}} provides features that can test the results of a {{Glossary("media query")}} programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the [query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) or receive notifications when the result changes.
 

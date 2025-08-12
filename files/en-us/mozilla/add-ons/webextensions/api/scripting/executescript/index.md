@@ -3,9 +3,8 @@ title: scripting.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/executeScript
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.executeScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.
 

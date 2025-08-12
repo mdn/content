@@ -3,9 +3,8 @@ title: background-repeat
 slug: Web/CSS/background-repeat
 page-type: css-property
 browser-compat: css.properties.background-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
 
@@ -178,7 +177,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(star-solid.gif);
+  background-image: url("star-solid.gif");
   width: 160px;
   height: 70px;
 }
@@ -206,7 +205,7 @@ div {
 /* Multiple images */
 .seven {
   background-image:
-    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
+    url("star-solid.gif"), url("/shared-assets/images/examples/favicon32.png");
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

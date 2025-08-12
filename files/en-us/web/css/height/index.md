@@ -3,9 +3,8 @@ title: height
 slug: Web/CSS/height
 page-type: css-property
 browser-compat: css.properties.height
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
@@ -41,7 +40,7 @@ height: auto;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -58,7 +57,7 @@ height: 120px;
 height: 10em;
 height: 100vh;
 height: anchor-size(height);
-height: anchor-size(--myAnchor self-block, 250px);
+height: anchor-size(--my-anchor self-block, 250px);
 height: clamp(200px, anchor-size(width));
 
 /* <percentage> value */

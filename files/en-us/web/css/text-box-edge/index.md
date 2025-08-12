@@ -3,9 +3,8 @@ title: text-box-edge
 slug: Web/CSS/text-box-edge
 page-type: css-property
 browser-compat: css.properties.text-box-edge
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-box-edge`** [CSS](/en-US/docs/Web/CSS) property specifies an amount of space to trim from a text element's block container.
 

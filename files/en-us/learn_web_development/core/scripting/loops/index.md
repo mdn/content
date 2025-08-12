@@ -46,7 +46,7 @@ Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} elem
 html {
   width: 100%;
   height: inherit;
-  background: #ddd;
+  background: #dddddd;
 }
 
 canvas {
@@ -702,7 +702,7 @@ Have a look at the [Useful string methods](/en-US/docs/Learn_web_development/Cor
 If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html hidden live-sample___loops-2
-<div class="output" style="height: 100px;overflow: auto;">
+<div class="output">
   <p class="admitted">Admit:</p>
   <p class="refused">Refuse:</p>
 </div>

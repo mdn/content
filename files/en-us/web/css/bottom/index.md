@@ -3,9 +3,8 @@ title: bottom
 slug: Web/CSS/bottom
 page-type: css-property
 browser-compat: css.properties.bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
@@ -76,7 +75,7 @@ When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `a
 /* <length> values */
 bottom: 3px;
 bottom: 2.4em;
-bottom: calc(anchor(--myAnchor 50%) + 5px);
+bottom: calc(anchor(--my-anchor 50%) + 5px);
 bottom: anchor-size(width);
 
 /* <percentage>s of the height of the containing block */

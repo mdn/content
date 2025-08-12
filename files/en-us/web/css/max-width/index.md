@@ -3,9 +3,8 @@ title: max-width
 slug: Web/CSS/max-width
 page-type: css-property
 browser-compat: css.properties.max-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
@@ -42,7 +41,7 @@ max-width: 20ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -53,7 +52,7 @@ max-width: 20ch;
 ```css
 /* <length> value */
 max-width: 3.5em;
-max-width: anchor-size(--myAnchor inline, 245px);
+max-width: anchor-size(--my-anchor inline, 245px);
 max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> value */

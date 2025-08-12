@@ -3,9 +3,8 @@ title: prefix
 slug: Web/CSS/@counter-style/prefix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The {{cssxref('@counter-style')}} rule's **`prefix`** descriptor specifies content that will be added to the beginning of the counter's marker representation.
 
@@ -17,7 +16,7 @@ When the counter value is negative, the `prefix` comes before the negative sign 
 /* <symbol> value: string, image, or identifier */
 prefix: "»";
 prefix: "Page ";
-prefix: url(bullet.png);
+prefix: url("bullet.png");
 ```
 
 ### Values

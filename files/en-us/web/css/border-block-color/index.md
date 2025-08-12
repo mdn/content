@@ -3,9 +3,8 @@ title: border-block-color
 slug: Web/CSS/border-block-color
 page-type: css-property
 browser-compat: css.properties.border-block-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-block-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical block borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -38,7 +37,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

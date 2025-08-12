@@ -3,9 +3,8 @@ title: Overview of shapes
 short-title: Overview
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS Shapes module](/en-US/docs/Web/CSS/CSS_shapes) describes geometric shapes in CSS. This article provides an overview of how you can use shapes to wrap text around floated elements that are not necessarily rectangular.
 
@@ -163,7 +162,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/round-balloon.png");
 }
 ```
 

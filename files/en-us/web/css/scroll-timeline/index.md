@@ -3,9 +3,8 @@ title: scroll-timeline
 slug: Web/CSS/scroll-timeline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-timeline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline` is set on the scroller that will provide the timeline. The starting scroll position represents 0% progress and the ending scroll position represents 100% progress. If the 0% position and 100% position coincide (i.e., the scroll container has no overflow to scroll), the timeline is inactive.
 
@@ -66,8 +65,8 @@ The `scroll-timeline` shorthand property can be applied to a container element a
 
 ### Creating a named scroll progress timeline animation
 
-In this example, a scroll timeline named `--squareTimeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
-This is then applied to the animation on the `#square` element using `animation-timeline: --squareTimeline`.
+In this example, a scroll timeline named `--square-timeline` is defined using the `scroll-timeline-name` property on the element with the ID `container`.
+This is then applied to the animation on the `#square` element using `animation-timeline: --square-timeline`.
 
 #### HTML
 
@@ -82,7 +81,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-The CSS for the container sets it as the source of a scroll timeline named `--squareTimeline` using the `scroll-timeline` property.
+The CSS for the container sets it as the source of a scroll timeline named `--square-timeline` using the `scroll-timeline` property.
 It also sets the scrollbar to use for the timeline as the vertical scrollbar (this is not actually needed as it is the default).
 
 The height of the container is set to `300px`, and the container is also set to create a vertical scrollbar if it overflows (the CSS `height` rule on the `stretcher` element below does make the content overflow its container).
@@ -91,14 +90,14 @@ The height of the container is set to `300px`, and the container is also set to 
 #container {
   height: 300px;
   overflow-y: scroll;
-  scroll-timeline: --squareTimeline y;
+  scroll-timeline: --square-timeline y;
   /* Firefox supports the older "vertical" syntax */
-  scroll-timeline: --squareTimeline vertical;
+  scroll-timeline: --square-timeline vertical;
   position: relative;
 }
 ```
 
-The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `--squareTimeline` timeline named above.
+The CSS below defines a square that rotates according to the timeline provided by the `animation-timeline` property, which is set to the `--square-timeline` timeline named above.
 
 ```css
 #square {
@@ -107,7 +106,7 @@ The CSS below defines a square that rotates according to the timeline provided b
   height: 100px;
   animation-name: rotateAnimation;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timeline: --squareTimeline;
+  animation-timeline: --square-timeline;
   position: absolute;
   bottom: 0;
 }

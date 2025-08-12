@@ -3,9 +3,8 @@ title: block-size
 slug: Web/CSS/block-size
 page-type: css-property
 browser-compat: css.properties.block-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`block-size`** [CSS](/en-US/docs/Web/CSS) property defines the size of an element's block along the [block axis](/en-US/docs/Glossary/Grid_Axis). If the {{cssxref("writing-mode")}} is horizontal, it corresponds to the {{cssxref("height")}}; if the writing mode is vertical, it corresponds to the {{cssxref("width")}}. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
 
@@ -45,7 +44,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -56,7 +55,7 @@ writing-mode: vertical-lr;
 block-size: 300px;
 block-size: 25em;
 block-size: anchor-size(height);
-block-size: calc(anchor-size(--myAnchor block) * 0.75);
+block-size: calc(anchor-size(--my-anchor block) * 0.75);
 
 /* <percentage> values */
 block-size: 75%;

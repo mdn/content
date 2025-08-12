@@ -2,9 +2,8 @@
 title: Visual formatting model
 slug: Web/CSS/CSS_display/Visual_formatting_model
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, the **visual formatting model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and [paged media](/en-US/docs/Web/CSS/CSS_paged_media) such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
 
@@ -205,11 +204,11 @@ body {
 }
 .container {
   background-color: #333;
-  color: #fff;
+  color: white;
 }
 
 .item {
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #999;
   color: #333;
   width: 100px;

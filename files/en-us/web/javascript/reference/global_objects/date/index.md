@@ -131,6 +131,21 @@ The {{jsxref("Date/Date", "Date()")}} constructor can be called with two or more
 
 When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it becomes the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
 
+When attempting to set the local time to a time falling within an offset transition (usually daylight saving time), the exact time is derived using the same behavior as `Temporal`'s [`disambiguation: "compatible"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time) option. That is, if the local time corresponds to two instants, the earlier one is chosen; if the local time does not exist (there is a gap), we go forward by the gap duration.
+
+```js
+// Assume America/New_York local time zone
+// 2024-03-10 02:30 is within the spring-forward transition and does not exist
+// 01:59 (UTC-5) jumps to 03:00 (UTC-4), so 02:30 moves forward by one hour
+console.log(new Date(2024, 2, 10, 2, 30).toString());
+// Sun Mar 10 2024 03:30:00 GMT-0400 (Eastern Daylight Time)
+
+// 2024-11-03 01:30 is within the fall-back transition and exists twice
+// 01:59 (UTC-4) jumps to 01:00 (UTC-5), so the earlier 01:30 (UTC-4) is chosen
+console.log(new Date(2024, 10, 3, 1, 30).toString());
+// Sun Nov 03 2024 01:30:00 GMT-0400 (Eastern Daylight Time)
+```
+
 ### Date time string format
 
 There are many ways to format a date as a string. The JavaScript specification only specifies one format to be universally supported: the [_date time string format_](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format), a simplification of the ISO 8601 calendar date extended format. The format is as follows:

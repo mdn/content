@@ -3,9 +3,8 @@ title: width
 slug: Web/CSS/width
 page-type: css-property
 browser-compat: css.properties.width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
@@ -42,7 +41,7 @@ width: auto;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -61,7 +60,7 @@ The specified value of `width` applies to the content area so long as its value 
 width: 300px;
 width: 25em;
 width: anchor-size(width);
-width: anchor-size(--myAnchor inline, 120%);
+width: anchor-size(--my-anchor inline, 120%);
 
 /* <percentage> value */
 width: 75%;

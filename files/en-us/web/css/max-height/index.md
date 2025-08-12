@@ -3,9 +3,8 @@ title: max-height
 slug: Web/CSS/max-height
 page-type: css-property
 browser-compat: css.properties.max-height
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
 
@@ -42,7 +41,7 @@ max-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -54,7 +53,7 @@ max-height: 10px;
 /* <length> value */
 max-height: 3.5em;
 max-height: anchor-size(height);
-max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
+max-height: calc(anchor-size(--my-anchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;

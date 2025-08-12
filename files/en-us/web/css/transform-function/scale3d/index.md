@@ -3,9 +3,8 @@ title: scale3d()
 slug: Web/CSS/transform-function/scale3d
 page-type: css-function
 browser-compat: css.types.transform-function.scale3d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element in 3D space.
 Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its

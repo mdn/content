@@ -3,9 +3,8 @@ title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
 browser-compat: css.properties.min-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
 
@@ -42,7 +41,7 @@ min-width: 40ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -54,7 +53,7 @@ The element's width is set to the value of `min-width` whenever `min-width` is l
 /* <length> value */
 min-width: 3.5em;
 min-width: anchor-size(width);
-min-width: anchor-size(--myAnchor self-inline, 200%);
+min-width: anchor-size(--my-anchor self-inline, 200%);
 
 /* <percentage> value */
 min-width: 10%;

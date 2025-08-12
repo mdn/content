@@ -3,9 +3,8 @@ title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setBadgeTextColor
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
 
@@ -37,10 +36,6 @@ browser.browserAction.setBadgeTextColor(
 - If `windowId` and `tabId` are both supplied, the function fails and the color is not set.
 - If `windowId` and `tabId` are both omitted, the global badge text color is set instead.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 A badge text color that starts off as red, and turns green when the browser action is clicked:
@@ -69,6 +64,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

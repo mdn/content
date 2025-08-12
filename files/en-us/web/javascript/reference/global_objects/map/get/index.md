@@ -15,13 +15,13 @@ modify it inside the `Map` object.
 {{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.get("bar"));
+console.log(map.get("bar"));
 // Expected output: "foo"
 
-console.log(map1.get("baz"));
+console.log(map.get("baz"));
 // Expected output: undefined
 ```
 

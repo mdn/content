@@ -4,7 +4,7 @@ slug: Web/API/Document_Picture-in-Picture_API/Using
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
@@ -151,7 +151,7 @@ In [our demo](https://mdn.github.io/dom-examples/document-picture-in-picture/), 
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {

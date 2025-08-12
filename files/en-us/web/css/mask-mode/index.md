@@ -3,9 +3,8 @@ title: mask-mode
 slug: Web/CSS/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property is set on the element being masked. It sets whether the mask reference defined by the {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 
@@ -97,7 +96,7 @@ Each `<div>` is provided with the same background and masking image. The only di
 ```css
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
 }
 
 .alpha {

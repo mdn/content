@@ -2,9 +2,8 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this recipe we will create a list group pattern with badges that indicate a count.
 
@@ -68,7 +67,7 @@ body {
 
 .list-group .badge {
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 80%;
   border-radius: 10em;

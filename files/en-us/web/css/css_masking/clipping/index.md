@@ -2,9 +2,8 @@
 title: Introduction to CSS clipping
 slug: Web/CSS/CSS_masking/Clipping
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS clipping enables you to define visible portions of an element while hiding other parts, effectively "clipping" its content within a specific shape or area. With clipping, elements aren't limited to being rendered as rectangles and can be designed in visually engaging ways. This guide explores the {{cssxref("clip-path")}} property along with some examples.
 
@@ -422,7 +421,7 @@ The `id` of the `<clipPath>` is the parameter of the {{cssxref("url_function", "
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
-  clip-path: url(#heart);
+  clip-path: url("#heart");
 }
 ```
 

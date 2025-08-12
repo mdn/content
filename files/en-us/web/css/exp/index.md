@@ -3,9 +3,8 @@ title: exp()
 slug: Web/CSS/exp
 page-type: css-function
 browser-compat: css.types.exp
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that takes an number as an argument and returns the mathematical constant `e` raised to the power of the given number.
 

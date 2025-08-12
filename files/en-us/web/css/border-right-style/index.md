@@ -3,9 +3,8 @@ title: border-right-style
 slug: Web/CSS/border-right-style
 page-type: css-property
 browser-compat: css.properties.border-right-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-right-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's right {{cssxref("border")}}.
 
@@ -46,7 +45,7 @@ border-right-style: inset;
 ```css interactive-example
 #example-element {
   background-color: #eee;
-  color: #000;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -54,7 +53,7 @@ border-right-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 

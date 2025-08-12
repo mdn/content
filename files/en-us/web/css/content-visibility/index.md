@@ -3,9 +3,8 @@ title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
@@ -259,24 +258,24 @@ div {
 @keyframes show {
   0% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 
   100% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 }
 
 @keyframes hide {
   0% {
     content-visibility: visible;
-    color: rgb(0 0 0 / 100%);
+    color: black;
   }
 
   100% {
     content-visibility: hidden;
-    color: rgb(0 0 0 / 0%);
+    color: transparent;
   }
 }
 ```

@@ -3,9 +3,8 @@ title: transition-property
 slug: Web/CSS/transition-property
 page-type: css-property
 browser-compat: css.properties.transition-property
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
 
@@ -36,7 +35,7 @@ transition-property: none;
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -46,7 +45,7 @@ transition-property: none;
 
 #default-example:hover > #example-element {
   background-color: #909;
-  color: #fff;
+  color: white;
   margin-right: 40%;
 }
 ```

@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.color
 sidebar: svgref
 ---
 
-The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
+The **`color`** attribute is used to provide a potential indirect value, `currentColor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
 
 > [!NOTE]
 > As a presentation attribute, `color` also has a CSS property counterpart: {{cssxref("color")}}. When both are specified, the CSS property takes priority.
@@ -48,12 +48,12 @@ svg {
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
-    <rect width="50" height="50" fill="currentcolor" />
+    <rect width="50" height="50" fill="currentColor" />
     <circle
       r="25"
       cx="70"
       cy="70"
-      stroke="currentcolor"
+      stroke="currentColor"
       fill="none"
       stroke-width="5" />
   </g>

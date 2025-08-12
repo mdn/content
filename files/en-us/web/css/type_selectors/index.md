@@ -3,9 +3,8 @@ title: Type selectors
 slug: Web/CSS/Type_selectors
 page-type: css-selector
 browser-compat: css.selectors.type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The CSS **type selector** matches elements by node name. In other words, it selects all elements of the given type within a document.
 
@@ -55,7 +54,7 @@ span {
 In this example the selector will only match `<h1>` elements in the example namespace.
 
 ```css
-@namespace example url(http://www.example.com/);
+@namespace example url("http://www.example.com/");
 example|h1 {
   color: blue;
 }

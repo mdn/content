@@ -3,9 +3,8 @@ title: font-synthesis-weight
 slug: Web/CSS/font-synthesis-weight
 page-type: css-property
 browser-compat: css.properties.font-synthesis-weight
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-synthesis-weight`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not the browser may synthesize the bold typeface when it is missing in a font family.
 
@@ -64,7 +63,7 @@ This example shows turning off synthesis of the bold typeface by the browser in 
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;

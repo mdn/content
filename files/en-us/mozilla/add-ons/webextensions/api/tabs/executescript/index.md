@@ -3,9 +3,8 @@ title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.executeScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects JavaScript code into a page.
 

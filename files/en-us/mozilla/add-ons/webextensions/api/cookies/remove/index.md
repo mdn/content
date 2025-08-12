@@ -3,9 +3,8 @@ title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
 

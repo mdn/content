@@ -3,9 +3,8 @@ title: Shapes from images
 short-title: Image-based shapes
 slug: Web/CSS/CSS_shapes/Shapes_from_images
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In this guide, we will take a look at how we can create a shape from an image file with an alpha channel or even from a CSS Gradient. This is a very flexible way to create shapes. Rather than drawing a path with a complex polygon in CSS, you can create the shape in a graphics program and then use the path created by the pixels less opaque than a threshold value.
 
@@ -40,7 +39,7 @@ body {
 }
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
 }
 ```
 
@@ -74,7 +73,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   shape-margin: 20px;
 }
 ```
@@ -121,7 +120,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-red-20.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-red-20.png");
   shape-image-threshold: 0.2;
 }
 ```
@@ -160,7 +159,7 @@ body {
   float: left;
   width: 400px;
   height: 300px;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   shape-image-threshold: 0.3;
 }
 ```

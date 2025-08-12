@@ -3,9 +3,8 @@ title: Using CSS transforms
 short-title: Using transforms
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
 
@@ -204,7 +203,7 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -500,7 +499,7 @@ This example shows cubes with popular `perspective-origin` values.
   transform: translateZ(50px);
 }
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }

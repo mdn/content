@@ -3,9 +3,8 @@ title: position-area
 slug: Web/CSS/position-area
 page-type: css-property
 browser-compat: css.properties.position-area
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-positioned element to be positioned relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 grid, where the anchoring element is the center cell.
 
@@ -70,7 +69,7 @@ The property value is two `<position-area>` keyterms, or the keyword `none`. If 
 
 The `position-area` property provides an alternative to the `anchor()` function for positioning elements relative to anchors. `position-area` works on the concept of a 3x3 grid of tiles, called the **position-area grid**, with the anchor element being the center tile:
 
-![The position-area grid, as described below](position-area.png)
+![The position-area grid, as described below](/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg)
 
 The grid tiles are broken up into rows and columns:
 
@@ -346,11 +345,11 @@ form {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   opacity: 0.8;
   position-area: top left;

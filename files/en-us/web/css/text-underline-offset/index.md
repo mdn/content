@@ -3,9 +3,8 @@ title: text-underline-offset
 slug: Web/CSS/text-underline-offset
 page-type: css-property
 browser-compat: css.properties.text-underline-offset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-underline-offset`** [CSS](/en-US/docs/Web/CSS) property sets the offset distance of an underline text decoration line (applied using {{cssxref("text-decoration")}}) from its original position.
 
@@ -33,7 +32,7 @@ text-underline-offset: -0.5rem;
 p {
   font: 1.5em sans-serif;
   text-decoration-line: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 

@@ -3,9 +3,8 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 page-type: css-property
 browser-compat: css.properties.transition-delay
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transition-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) when its value changes.
 
@@ -40,7 +39,7 @@ transition-property: margin-right, color;
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -50,7 +49,7 @@ transition-property: margin-right, color;
 
 #default-example:hover > #example-element {
   background-color: #909;
-  color: #fff;
+  color: white;
   margin-right: 40%;
 }
 ```
