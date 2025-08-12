@@ -12,8 +12,8 @@ browser-compat: api.Element.setHTMLUnsafe
 > This method parses its input as HTML, writing the result into the DOM.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
-> For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-> This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
+> You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
 
 The **`setHTMLUnsafe()`** method of the {{domxref("Element")}} interface is used to parse HTML input into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
@@ -53,47 +53,83 @@ None (`undefined`).
 
 ## Description
 
-The **`setHTMLUnsafe()`** method is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally filtering out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
+The **`setHTMLUnsafe()`** method is used to parse a string of HTML into a {{domxref("DocumentFragment")}}, optionally using a sanitizer passed as a parameter to filter out unwanted elements and attributes, and those that don't belong in the context, and then using it to replace the element's subtree in the DOM.
 
-The suffix "Unsafe" in the method name indicates that while the method does allow the input string to be filtered of unwanted HTML entities, it does not enforce the sanitization or removal of potentially unsafe XSS-relevant input, such as {{htmlelement("script")}} elements, and script or event handler content attributes.
-If no sanitizer configuration is specified in the `options.sanitizer` parameter, `setHTMLUnsafe()` is used without any sanitization.
-
-The input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
+Unlike {{domxref("Element.innerHTML")}}, the input HTML may include [declarative shadow roots](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom).
 If the string of HTML defines more than one [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) in a particular shadow host then only the first {{domxref("ShadowRoot")}} is created — subsequent declarations are parsed as `<template>` elements within that shadow root.
 
-`setHTMLUnsafe()` may be used instead of {{domxref("Element.innerHTML")}} in order to parse strings of HTML that may contain declarative shadow roots.
+{{domxref("Element.setHTML()")}} should almost always be used instead of this method — on browsers where it is supported — as it always removes XSS-unsafe HTML entities.
+`setHTMLUnsafe()` may be useful in the rare cases where you _need_ to allow for at least some XSS-unsafe elements or attributes in the input.
+In this case the unsafe elements that aren't needed can still be filtered, which may reduce the overall risk.
 
-`setHTMLUnsafe()` should be instead of {{domxref("Element.innerHTML")}} when parsing potentially unsafe strings of HTML that for whatever reason need to allow for at least some XSS-unsafe elements or attributes (unsafe elements that aren't needed can still be filtered).
-If strings to be injected don't need to contain any unsafe HTML entities, then you should instead use {{domxref("Element.setHTML()")}}.
+### Security considerations
 
-Note that since this method does not necessarily sanitize input strings of XSS-unsafe entities, input strings should also be validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
-If the method is used with both a trusted types and a sanitizer, the input string will be passed through the trusted transformation function before it is sanitized.
+The suffix "Unsafe" in the method name indicates that while the method allows the input string to be filtered of unwanted and XSS-unsafe HTML entities, unlike {{domxref("Element.setHTML()")}} it does not enforce this sanitization.
+In fact, by default no sanitizer is used!
+The method is therefore a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
+
+You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
+
+Note that this may lead to "double-sanitization" of the input — once in the transformation function, and again in the `setHTMLUnsafe()` method.
+The recommendation is to use trusted types to sanitize according to your website policies, because trusted types allow auditing of potential injection sinks.
+If you wish to sanitize the input again by passing a sanitizer to this method, that's up to you!
 
 ## Examples
 
 ### Basic usage
 
-This example shows some of the ways you can use `setHTMLUnsafe()` to inject a string of HTML.
+This example shows some of the ways you can use `setHTMLUnsafe()` to inject HTML markup into the DOM.
+
+To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then pass that object to `setHTMLUnsafe()`.
+Since trusted types are not yet supported on all browsers, we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
 
 ```js
-// Define unsanitized string of HTML
-const unsanitizedString = "abc <script>alert(1)<" + "/script> def";
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
+Commonly implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input as shown below:
+
+```js
+const policy = trustedTypes.createPolicy("my-policy", {
+  createHTML: (input) => DOMPurify.sanitize(input),
+});
+```
+
+Then we use this `policy` object to create a `TrustedHTML` object from the potentially unsafe input string:
+
+```js
+// The potentially malicious string
+const untrustedString = "abc <script>alert(1)<" + "/script> def";
+// Create a TrustedHTML instance using the policy
+const trustedHTML = policy.createHTML(untrustedString);
+```
+
+Now that we have `trustedHTML`, the code below shows how you can use it with `setHTMLUnsafe()`, both with and without a sanitizer.
+
+> [!NOTE]
+> The input may already sanitized by the trusted type policy at this point.
+
+```js
 // Get the target Element with id "target"
 const target = document.getElementById("target");
 
-// setHTML() with no sanitizer
-target.setHTMLUnsafe(unsanitizedString);
+// setHTMLUnsafe() with no sanitizer
+target.setHTMLUnsafe(trustedHTML);
 
 // Define custom Sanitizer and use in setHTMLUnsafe()
 // This allows only elements: div, p, button, script
 const sanitizer1 = new Sanitizer({
   elements: ["div", "p", "button", "script"],
 });
-target.setHTML(unsanitizedString, { sanitizer: sanitizer1 });
+target.setHTMLUnsafe(trustedHTML, { sanitizer: sanitizer1 });
 
 // Define custom SanitizerConfig within setHTMLUnsafe()
 // Removes the <script> element but allows other potentially unsafe entities.
-target.setHTMLUnsafe(unsanitizedString, {
+target.setHTMLUnsafe(trustedHTML, {
   sanitizer: { removeElements: ["script"] },
 });
 ```
@@ -103,6 +139,10 @@ target.setHTMLUnsafe(unsanitizedString, {
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to inject a string of HTML that is not sanitized, and that uses and a custom sanitizer, respectively.
 The original string and injected HTML are logged so you can inspect the results in each case.
+
+> [!NOTE]
+> To simplify the example, the following code injects a string rather than a trusted type.
+> You should not do this in production code.
 
 #### HTML
 
