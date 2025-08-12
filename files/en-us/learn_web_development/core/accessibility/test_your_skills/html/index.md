@@ -1,6 +1,6 @@
 ---
-title: "🚩 Test your skills: HTML accessibility"
-short-title: "🚩 Test: HTML a11y"
+title: "Test your skills: HTML accessibility"
+short-title: "Test: HTML a11y"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
 page-type: learn-module-assessment
 sidebar: learnsidebar

@@ -1,6 +1,6 @@
 ---
-title: "⭐ Test your skills: WAI-ARIA"
-short-title: "⭐ Test: WAI-ARIA"
+title: "Test your skills: WAI-ARIA"
+short-title: "Test: WAI-ARIA"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
 page-type: learn-module-assessment
 sidebar: learnsidebar
