@@ -81,6 +81,8 @@ If you wish to sanitize the input again by passing a sanitizer to this method, t
 
 This example shows some of the ways you can use `setHTMLUnsafe()` to inject HTML markup into the DOM.
 
+#### Set up trusted types
+
 To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then pass that object to `setHTMLUnsafe()`.
 Since trusted types are not yet supported on all browsers, we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
 This acts as a transparent replacement for the trusted types JavaScript API:
@@ -107,6 +109,8 @@ const untrustedString = "abc <script>alert(1)<" + "/script> def";
 // Create a TrustedHTML instance using the policy
 const trustedHTML = policy.createHTML(untrustedString);
 ```
+
+#### Using setHTMLUnsafe() with and without a sanitizer
 
 Now that we have `trustedHTML`, the code below shows how you can use it with `setHTMLUnsafe()`, both with and without a sanitizer.
 
