@@ -10,7 +10,7 @@ browser-compat: api.AnalyserNode.getFloatTimeDomainData
 
 The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a _sample_, the magnitude of the signal at a particular time.
 
-The waveform is encoded as PCM data, which has a nominal range of -1.0 to 1.0, but values can exceed the range such as when down-mixing stereo to mono.
+The waveform is represented as PCM data, which has a nominal range of -1.0 to 1.0, but values can exceed the range such as when down-mixing stereo to mono.
 
 ## Syntax
 
