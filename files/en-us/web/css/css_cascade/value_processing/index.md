@@ -37,11 +37,10 @@ Before diving into the individual value stages, it's important to understand the
 
 Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out. In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
 ```css
-/* Valid declarations become declared values */
 p {
-  font-size: 1.25em; /* Valid */
-  colr: blue; /* Invalid property name - filtered out */
-  font-weight: bold; /* Valid */
+  font-size: 1.25em;
+  colr: blue;
+  font-weight: bold;
 }
 ```
 
