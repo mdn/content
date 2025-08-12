@@ -10,9 +10,9 @@ For every element in a document tree, the browser assigns a value to every CSS p
 
 ## Property values
 
-Every CSS property that has declarations applied to it is set to its [cascaded value](#cascaded_value), which comes from the property declaration that ranks highest in the [cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) based on the [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade).  
+Every CSS property that has declarations applied to it is set to its [cascaded value](#cascaded_value), which comes from the property declaration that ranks highest in the [cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) based on the [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade).
 
-When there are multiple [declared values](#declared_value), with multiple declarations providing the same or different property values for the same element, each property value must still come from a single property name-value pair as only a single value is applied from each property. Even if the value is a comma-separated list of values, that list of values came from a single declaration.  
+When there are multiple [declared values](#declared_value), with multiple declarations providing the same or different property values for the same element, each property value must still come from a single property name-value pair as only a single value is applied from each property. Even if the value is a comma-separated list of values, that list of values came from a single declaration.
 
 To determine which [declared value](#declared_value) is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
 
