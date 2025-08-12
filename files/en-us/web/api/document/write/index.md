@@ -24,11 +24,11 @@ browser-compat: api.Document.write
 > > For all these reasons, use of this method is strongly discouraged.
 
 > [!WARNING]
-> This API parses its input as HTML, writing the result into the DOM.
+> This method parses its input as HTML, writing the result into the DOM.
 > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
-> For this reason it's much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-> This means you can be sure that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
+> You can mitigate this risk by always assigning `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
 
 The **`write()`** method of the {{domxref("Document")}} interface writes text in one or more {{domxref("TrustedHTML")}} or string parameters to a document stream opened by {{domxref("document.open()")}}.
 
@@ -60,10 +60,6 @@ None ({{jsxref("undefined")}}).
 
 `document.write()` parses the markup text in the objects passed as parameters into the open document's object model (DOM), in the order that the parameters are specified.
 
-The passed objects may be {{domxref("TrustedHTML")}} instances or strings.
-It is much safer to pass only {{domxref("TrustedHTML")}} objects into this method, and to [enforce](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) this using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
-The guarantees that the input has been passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup, such as {{htmlelement("script")}} elements and event handler attributes.
-
 Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document (without first calling {{domxref("document.open()")}}) automatically calls {{domxref("document.open()")}}, which will clear the document.
 
 The exception is that if the `document.write()` call is embedded within an inline HTML `<script>` tag, then it will not automatically call `document.open()`:
@@ -82,8 +78,13 @@ Using `document.write()` in [deferred](/en-US/docs/Web/HTML/Reference/Elements/s
 
 In Edge only, calling `document.write()` more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".
 
-Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met.
-For more information, refer to [Intervening against document.write()](https://developer.chrome.com/blog/removing-document-write/).
+### Security considerations
+
+The method is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
+While the method may block {{HTMLElement("script")}} elements from executing when they are injected in some browsers (see [Intervening against document.write()](https://developer.chrome.com/blog/removing-document-write/) for Chrome), it is susceptible to many other ways that attackers can craft HTML to run malicious JavaScript.
+
+You can mitigate these issues by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted type](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
 
 ## Examples
 
