@@ -324,6 +324,26 @@ In addition, there are some pattern representations that parse to the same under
 Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
 
+## Inheritance from a base URL
+
+Both the match patterns defined in {{domxref("URLPattern")}} and the test URLs used in {{domxref("URLPattern.test()")}} and {{domxref("URLPattern.exec()")}} allow the inputs to be specified with an optional base URL (this base URL is a separate parameter when specifying the URL as a string, and a separate property when specifying the URL as an object).
+
+If a base URL is defined then URL-parts _may_ be inherited from the base URL and used to set parts of the pattern or test URL.
+URL resolution is much the same as you would expect when resolving a {{domxref("URL")}} that is specified with a base URL.
+
+The `username` and `password` are never inherited from the base URL.
+
+Only URL parts that are "more specific" than the most-specific part defined in the input will be inherited from the base URL.
+The following lists show the order of specificity:
+
+- `protocol` (most specific), `hostname`, `port`, `pathname`, `search`, `hash`
+- `protocol`, `hostname`, `port`, `username`, `password`
+
+What this means, for example, is that if the `protocol` is specified in the input URL, then nothing is more specific, so nothing will be inherited from the base URL.
+However if the `pathname` part is specified in the input, the `protocol`, `hostname` and `port` may be inherited from the base URL, but the `search` and `hash` will not.
+
+Note that URL components that are not specified in the string/input object or inherited from the base URL will default to the wildcard value (`"*"`) for a `URLPattern` and to the empty string (`""`) for a test URL.
+
 ## Case sensitivity
 
 The URL Pattern API treats many parts of the URL as case-sensitive by default when matching.
@@ -406,12 +426,12 @@ console.log(pattern.hash); // ''
 
 // Prints `true`
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg")
 );
 
 // Prints `false` because the search component does not match
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1")
 );
 ```
 
@@ -464,7 +484,7 @@ console.log(
   pattern.test({
     pathname: "/foo/bar",
     baseURL: "https://example.com/baz",
-  }),
+  })
 );
 
 // Prints `true` as the hostname in the second argument base URL matches.
@@ -684,7 +704,7 @@ const pattern = new URLPattern({
 });
 
 const result = pattern.exec(
-  "http://foo:bar@sub.example.com/product/view?q=12345",
+  "http://foo:bar@sub.example.com/product/view?q=12345"
 );
 
 console.log(result.username.groups.user); // 'foo'

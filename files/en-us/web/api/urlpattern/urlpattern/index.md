@@ -13,16 +13,16 @@ The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}} objec
 ## Syntax
 
 ```js-nolint
-new URLPattern(patternObject)
-new URLPattern(patternObject, options)
-new URLPattern(patternString)
-new URLPattern(patternString, baseURL)
-new URLPattern(patternString, baseURL, options)
+new URLPattern(input)
+new URLPattern(input, options)
+new URLPattern(url)
+new URLPattern(url, baseURL)
+new URLPattern(url, baseURL, options)
 ```
 
 ### Parameters
 
-- `patternObject` {{Optional_Inline}}
+- `input` {{Optional_Inline}}
 
   - : An object that has separate properties for defining the [patterns](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match each part of a URL.
 
@@ -48,14 +48,17 @@ new URLPattern(patternString, baseURL, options)
     - `baseURL` {{Optional_Inline}}
       - : A string that provides an absolute URL from which [undefined less-specific object properties may be inherited](#inheritance_from_a_baseurl).
 
-- `patternString` {{Optional_Inline}}
+- `url` {{Optional_Inline}}
+
   - : A string representing URL patterns to match.
+
     This is formatted as an absolute or relative URL but may contain markup to indicate matching patterns and escape sequences.
     If formatted as a relative URL, then [`baseURL`](#baseurl_2) must also be provided.
+
 - `baseURL` {{Optional_Inline}}
 
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
-    This must be set when `patternString` is a relative URL, and must not be set if `patternObject` is used (`patternObject.baseURL` may be used to provide inherited values for a `patternObject`, but, unlike this property, is never required).
+    This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
 
 - `options` {{Optional_Inline}}
   - : An object providing options for matching the given pattern.
@@ -65,7 +68,7 @@ new URLPattern(patternString, baseURL, options)
         If omitted or set to `false`, matching will be case-sensitive.
 
 > [!NOTE]
-> All the URL parts in the `patternObject` properties and the `patternString` are optional.
+> All the URL parts in the `input` properties and the `url` are optional.
 > If not specified in those parameters, some values may be [inherited](#inheritance_from_a_baseurl) from the `baseURL`, depending on what other URL-parts are defined.
 > Omitted parts are normalized to wildcards (`*`), except for the `port`, which is normalized to the empty string/default port.
 
@@ -73,21 +76,21 @@ new URLPattern(patternString, baseURL, options)
 
 - {{jsxref("TypeError")}}
   - : Indicates one of the following:
-    - The given `patternObject`, `patternString` or `baseURL` is not valid or syntactically correct.
-    - The given `patternString` is relative, but no `baseURL` is provided to form a complete absolute URL.
+    - The given `input`, `url` or `baseURL` is not valid or syntactically correct.
+    - The given `url` is relative, but no `baseURL` is provided to form a complete absolute URL.
     - A `baseURL` is provided, and input is an absolute pattern or a structured object.
 
 ## Description
 
-The `URLPattern` constructor can take either a pattern object, or a pattern string and optional baseURL.
-Both forms can also take an options object argument that specifies additional matching options, such as case sensitivity.
+The `URLPattern` constructor can take either an "input" object or a URL string and optional baseURL.
+Both forms can also take an options object argument that sets additional matching options, such as case sensitivity.
 
 ```js
-new URLPattern(patternObject);
-new URLPattern(patternString, baseURL);
+new URLPattern(input);
+new URLPattern(url, baseURL);
 ```
 
-The pattern object used in the first type of constructor describes the URLs that should be matched by specifying patterns for individual URL parts: `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, `hash`, and `baseURL`.
+The input object used in the first type of constructor describes the URLs that should be matched by specifying patterns for individual URL parts: `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, `hash`, and `baseURL`.
 If the `baseURL` property is provided it will be parsed as a URL and may be used to populate any other properties that are missing (see the following section [Inheritance from a base URL](#inheritance_from_a_baseurl)).
 If the `baseURL` property is missing, then any other missing properties default to the pattern `*` wildcard, which match against any URL.
 
@@ -98,25 +101,18 @@ For example, you must write `about\\:blank` to indicate that the `:` is the prot
 
 ### Inheritance from a BaseURL
 
-If a base URL is defined, either in `baseURL` when specifying a relative `patternString` or `patternObject.baseURL` when passing a `patternObject`, patterns for URL-parts _may_ be inherited from the base URL.
+URL-parts that are more specific than the least-specific part defined in the `url` _may_ be inherited from `baseURL` (or from `input.baseURL` for `input`).
+Intuitively this means that if the `pathname` part is specified in the input, the parts to its left in a URL may be inherited from the base URL (`protocol`, `hostname` and `port`), while the parts to its right may not (`search` and `hash`).
+The `username` and `password` are never inherited from the base URL..
 
-The `username` and `password` are never inherited from the base URL when creating an `URLPattern`.
-Unless they are explicitly defined they will be normalized to the wildcard value (`"*"`).
-
-In addition, the `URLPattern` will not inherit URL parts from the base URL that are "more specific" than the least-specific part defined in the pattern, where the following lists indicate the order of specificity:
-
-- `protocol` (most specific), `hostname`, `port`, `pathname`, `search`, `hash`
-- `protocol`, `hostname`, `port`, `username`, `password`
-
-What this means, for example, is that if the original pattern includes the `protocol` then nothing will be inherited from the base URL.
-However if only the `pathname` part is specified in the original pattern, the `protocol`, `hostname` and `port` may be in inherited from the base URL, but the `search` and `hash` will not.
+For more information see [Inheritance from a BaseURL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) in the API overview.
 
 ### Protocol wildcard affects default port
 
 Just like the other URL parts, the port can be set explicitly and will inherit from the base URL.
 However if omitted it will default to the empty string (default port `443`), rather than the wildcard value.
 
-If you set the wildcard value explicitly on the _protocol_ using the `patternString`, the behaviour is different than if you explicitly set the wildcard on the port:
+If you set the wildcard value explicitly on the _protocol_ using the `url`, the behaviour is different than if you explicitly set the wildcard on the port:
 
 - `"https://example.com:*"` sets the port to the wildcard string ("matches any port").
 - `"https://example.com*"` set the port to the empty string `""` ("matches the default port (443)").
