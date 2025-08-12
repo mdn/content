@@ -105,7 +105,7 @@ The latest code looks (and works) like this, in case you want to compare and con
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

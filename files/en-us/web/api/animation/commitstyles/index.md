@@ -66,7 +66,7 @@ Animations [take precedence over all static styles](/en-US/docs/Web/CSS/CSS_casc
 In newer browsers you do not need to set the [`fill` mode](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) (see the [browser compatibility table](#browser_compatibility) for specific versions).
 
 > [!NOTE]
-> There is no way to feature check for this new behaviour.
+> There is no way to feature check for this new behavior.
 > For now most code should continue to set `fill` as shown in the previous section.
 
 The code below shows how you can animate an element named `animatedElement`, wait on the animation to complete using the {{domxref("Animation.finished","finished")}} property, and then commit the styles to the element with `commitStyles()`.

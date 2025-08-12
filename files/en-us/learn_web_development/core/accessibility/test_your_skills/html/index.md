@@ -22,7 +22,7 @@ To complete the task, update the markup to use appropriate semantic HTML. You do
 ```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
