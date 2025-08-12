@@ -52,7 +52,7 @@ function draw() {
   ctx.fillRect(0, 0, 150, 150); // Draw a Black rectangle with default settings
   ctx.save(); // Save the original default state
 
-  ctx.fillStyle = "#0099FF"; // Make changes to saved settings
+  ctx.fillStyle = "#0099ff"; // Make changes to saved settings
   ctx.fillRect(15, 15, 120, 120); // Draw a Blue rectangle with new settings
   ctx.save(); // Save the current state
 
