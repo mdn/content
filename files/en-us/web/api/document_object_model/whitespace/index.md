@@ -232,7 +232,7 @@ Consider this example (again, we've included an HTML comment that shows the whit
   display: inline-block;
   width: 2em;
   height: 2em;
-  background: #f06;
+  background: #ff0066;
   border: 1px solid;
 }
 ```
