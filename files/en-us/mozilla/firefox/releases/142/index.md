@@ -78,7 +78,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Removed FTP proxy support from WebDriver capabilities ([Firefox bug 1972670](https://bugzil.la/1972670)).
 - Updated the expiry value of all the cookies set via WebDriver BiDi and WebDriver classic (Marionette) to be limited to 400 days ([Firefox bug 1974394](https://bugzil.la/1974394)).
 
-#### WebDriver BiDi -->
+#### WebDriver BiDi
 
 - Implemented the new `emulation.setLocaleOverride` command which allows clients to override a locale in JavaScript APIs ([Firefox bug 1968952](https://bugzil.la/1968952)).
 - Improved setting a proxy with `browsingContext.createUserContext`: added support for host patterns like `.mozilla.org` in `noProxy` property ([Firefox bug 1977180](https://bugzil.la/1977180)) and fixed a bug when setting an http proxy wouldn’t let to navigate to HTTPS URLs ([Firefox bug 1977168](https://bugzil.la/1977168)).
