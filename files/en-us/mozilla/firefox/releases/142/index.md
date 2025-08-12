@@ -87,7 +87,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Marionette
 
-- Updated the Add Cookie command to throw an error when a target cookie has `sameSite=none` and `secure=false` attributes ([Firefox bug 1977205](https://bugzil.la/1977205)).
+- Updated the `WebDriver:AddCookie` command to throw an error when a target cookie has `sameSite=none` and `secure=false` attributes ([Firefox bug 1977205](https://bugzil.la/1977205)).
 - Removed the dialog text value from the `unexpected alert open` error message, since the dialog text is available now via the `data` field ([Firefox bug 1948236](https://bugzil.la/1948236)).
 
 ## Changes for add-on developers
