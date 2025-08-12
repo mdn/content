@@ -18,7 +18,7 @@ To determine which [declared value](#declared_value) is applied, the user agent 
 
 The [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which value should be applied when multiple conflicting styles target the same element. The [cascade algorithm](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) defines how user agents combine property values originating from different sources, scopes, and/or [layers](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascade_layers). When a selector matches an element, the property's [declared value](#declared_value) from the [origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) with the highest precedence gets applied, even if a selector from a lower precedence [origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) or [layers](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascade_layers) has greater {{cssxref("specificity")}}.
 
-Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed_value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial_value) for that element.
+Certain properties inherit values from their parent elements unless explicitly overridden. [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed_value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial_value) for that element.
 
 After applying the [cascading](#cascading) rules and defaulting values step by step, the browser ensures the visual presentation matches the processed CSS.
 
@@ -49,7 +49,7 @@ As a result of filtering, each element has zero or more [**declared values**](#d
 
 ### Cascading
 
-[Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) resolves conflicts when multiple declarations apply to the same property on the same element. [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
+[Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) resolves conflicts when multiple declarations apply to the same property on the same element. [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
 
 For example, if you have the following declarations for `<p class="large">CSS is fun!</p>`, the second declaration wins because it has higher specificity. Both declarations have author origin, but the second selector has specificity of 0,1,1 while the first has 0,0,1:
 
@@ -63,7 +63,7 @@ p.large {
 }
 ```
 
-After cascading, the browser determines the [**cascaded value**](#cascaded_value) for each property on each element. This value is the one that will be used in the next processing stage; [Defaulting](#defaulting).
+After cascading, the browser determines the [**cascaded value**](#cascaded_value) for each property on each element. This value is the one that will be used in the next processing stage; [defaulting](#defaulting).
 
 ### Defaulting
 
