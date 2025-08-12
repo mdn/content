@@ -31,12 +31,11 @@ Before diving into the individual value stages, it's important to understand the
 **Filtering** is the process of identifying all declarations that apply to each element. During this phase, the browser:
 
 - Verifies that declarations belong to active stylesheets
+- Checks that property names are valid and recognized
 - Validates that property values match the expected syntax
-- Eliminates declarations that are syntactically invalid (including unrecognized property names and invalid values)
+- Eliminates declarations that are syntactically invalid
 
-Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out according to [CSS error handling rules](/en-US/docs/Web/CSS/CSS_syntax/Error_handling).
-
-In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
+Only valid declarations become declared values. Declarations with invalid property names or invalid values get filtered out. In this example, only the {{cssxref("font-size")}} and {{cssxref("font-weight")}} declarations are processed. The [CSS parser filters out errors](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors), ignoring or "filtering" out the declaration with the invalid property name:
 
 ```css
 p {
