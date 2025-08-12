@@ -129,7 +129,7 @@ body {
 
 h1 + p {
   font-weight: bold;
-  background-color: #333;
+  background-color: #333333;
   color: white;
   padding: 0.5em;
 }
@@ -170,7 +170,7 @@ body {
 
 h1 ~ p {
   font-weight: bold;
-  background-color: #333;
+  background-color: #333333;
   color: white;
   padding: 0.5em;
 }
