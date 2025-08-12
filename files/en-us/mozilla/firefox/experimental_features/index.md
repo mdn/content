@@ -323,7 +323,7 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
 
-### `matches-elelment` value for `view-transition-name` property
+### `match-element` value for `view-transition-name` property
 
 The CSS {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the `view-transition-name` property gives each selected element a unique internal `view-transition-name`, rather than [having to name them individually](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically). ([Firefox bug 1956141](https://bugzil.la/1956141)).
 

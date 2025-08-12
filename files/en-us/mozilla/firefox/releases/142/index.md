@@ -98,7 +98,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 
-- **`view-transition-name: match-elements`** (Nightly): `layout.css.anchor-positioning.enabled`
+- **`view-transition-name: match-element`** (Nightly): `layout.css.anchor-positioning.enabled`
 
   The CSS {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the `view-transition-name` property gives each selected element a unique internal `view-transition-name`, rather than [having to name them individually](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically). ([Firefox bug 1956141](https://bugzil.la/1956141)).
 
