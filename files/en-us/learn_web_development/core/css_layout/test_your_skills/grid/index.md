@@ -37,7 +37,7 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 .grid > * {
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -177,7 +177,7 @@ body {
   background-color: #4d7298;
   border: 2px solid #77a6b6;
   border-radius: 0.5em;
-  color: #fff;
+  color: white;
   padding: 0.5em;
 }
 
@@ -305,8 +305,8 @@ body {
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
+  background-color: #999999;
+  color: white;
   padding: 0.2em 0.8em;
   border-radius: 0.2em;
   font-size: 80%;

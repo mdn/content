@@ -41,7 +41,7 @@ width: auto;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -60,7 +60,7 @@ The specified value of `width` applies to the content area so long as its value 
 width: 300px;
 width: 25em;
 width: anchor-size(width);
-width: anchor-size(--myAnchor inline, 120%);
+width: anchor-size(--my-anchor inline, 120%);
 
 /* <percentage> value */
 width: 75%;

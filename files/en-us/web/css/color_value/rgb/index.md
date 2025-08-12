@@ -55,7 +55,7 @@ rgb(255 255 255 / 50%)
 
 /* Relative values */
 rgb(from green r g b / 0.5)
-rgb(from #0000FF calc(r + 40) calc(g + 40) b)
+rgb(from #123456 calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 
 /* Legacy 'rgba()' alias */
@@ -210,7 +210,7 @@ body {
 
 ```css
 body {
-  background: repeating-linear-gradient(-45deg, #eee 0 2px, #fff 2px 6px);
+  background: repeating-linear-gradient(-45deg, #eee 0 2px, white 2px 6px);
   padding: 10px;
 }
 

@@ -29,7 +29,7 @@ hr {
 }
 
 hr::after {
-  background: #fff;
+  background: white;
   content: "§";
   padding: 0 4px;
   position: relative;

@@ -154,7 +154,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -163,7 +163,7 @@ body {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -232,7 +232,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -241,7 +241,7 @@ body {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
@@ -347,7 +347,7 @@ body {
     sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .wrapper {
   max-width: 960px;
@@ -361,7 +361,7 @@ h1 {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 
 @media screen and (width >= 600px) {
@@ -432,7 +432,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .wrapper {
@@ -447,7 +447,7 @@ h1 {
 
 .col1,
 .col2 {
-  background-color: #fff;
+  background-color: white;
 }
 
 @media screen and (width >= 600px) {

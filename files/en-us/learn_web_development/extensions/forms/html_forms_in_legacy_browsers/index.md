@@ -78,7 +78,7 @@ If we remove the border on all inputs, we can restore the default appearance for
 input {
   /* This rule turns off the default rendering for the input types that have a border,
      including buttons defined with an input element */
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 input[type="button"] {
   /* Revert the last border declaration */
@@ -90,7 +90,7 @@ input[type="button"] {
 
 One of the big issues with HTML Forms is styling form widgets with CSS. Form controls appearance is browser and operating system specific. For example, the input of color type looks different in Safari, Chrome and Firefox browser, but the color picker widget is the same in all browsers on a device as it opens up the operating system's native color picker.
 
-It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #ccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to.
+It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare `input { font-size: 2rem; }`, it will impact `number`, `date`, and `text`, but not `color` or `range`. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, `[value] { background-color: #cccccc; }` may have been used to target every {{HTMLElement("input")}} with a `value` attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to.
 
 To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as [rebuilding widgets with JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls). But in that case, do not hesitate to [charge your client for such foolishness](https://www.smashingmagazine.com/2011/11/but-the-client-wants-ie-6-support/).
 

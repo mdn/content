@@ -17,7 +17,7 @@ Suppose an image is given to every item with class `tool-btn`:
 
 ```css
 .tool-btn {
-  background: url(myfile.png);
+  background: url("myfile.png");
   display: inline-block;
   height: 20px;
   width: 20px;

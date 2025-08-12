@@ -57,7 +57,7 @@ Just to show how it works, we then define the `stretch` descriptor using a prope
 
 ```js
 // Define a FontFace
-const font = new FontFace("my-font", "url(my-font.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
 });

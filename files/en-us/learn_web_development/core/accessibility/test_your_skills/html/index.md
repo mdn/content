@@ -23,8 +23,8 @@ To complete the task, update the markup to use appropriate semantic HTML. You do
 
 ```css hidden live-sample___html-ally-1 live-sample___html-ally-2 live-sample___html-ally-3 live-sample___html-ally-4
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -321,7 +321,7 @@ It would be arguably better to implement the background header image using CSS b
 
 ```css
 h1 {
-  background: url(https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png)
+  background: url("https://mdn.github.io/shared-assets/images/examples/star-pink_32x32.png")
     no-repeat left;
   padding-left: 50px;
 }

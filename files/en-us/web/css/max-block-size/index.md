@@ -51,7 +51,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -61,7 +61,7 @@ writing-mode: vertical-lr;
 /* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
-max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: anchor-size(--my-anchor self-inline, 250px);
 max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> values */
@@ -164,7 +164,7 @@ After that come the classes `horizontal` and `vertical`, which add the {{cssxref
 .standard-box {
   padding: 4px;
   background-color: #abcdef;
-  color: #000;
+  color: black;
   font:
     16px "Open Sans",
     "Helvetica",

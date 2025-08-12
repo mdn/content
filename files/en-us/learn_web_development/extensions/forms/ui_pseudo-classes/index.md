@@ -118,13 +118,13 @@ input {
 }
 
 input {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 
 input:hover,
 input:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 button {
@@ -442,12 +442,12 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-  background: #eee;
-  border: 1px solid #ccc;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
 }
 
 label:has(+ :disabled) {
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 
@@ -513,7 +513,7 @@ textarea:read-only {
 }
 
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```

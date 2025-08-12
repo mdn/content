@@ -67,15 +67,15 @@ You should use `border`, `border-radius`, `background-image`, and `background-si
 
 ```css
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 10px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-size: cover;
 }
 
 h2 {
   background-color: rgb(0 0 0 / 50%);
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -148,9 +148,9 @@ h2 {
   padding: 0 40px;
   text-align: center;
   background:
-    url(https://mdn.github.io/shared-assets/images/examples/star.png) no-repeat
-      left center,
-    url(https://mdn.github.io/shared-assets/images/examples/star.png) repeat-y
+    url("https://mdn.github.io/shared-assets/images/examples/star.png")
+      no-repeat left center,
+    url("https://mdn.github.io/shared-assets/images/examples/star.png") repeat-y
       right center;
 }
 ```

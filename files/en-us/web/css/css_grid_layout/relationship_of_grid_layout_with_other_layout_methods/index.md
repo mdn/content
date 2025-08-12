@@ -458,7 +458,7 @@ We have given `.box3` position relative and then positioned the sub-item with th
   left: 40px;
   background-color: rgb(255 255 255 / 50%);
   border: 1px solid rgb(0 0 0 / 50%);
-  color: #000;
+  color: black;
   padding: 10px;
 }
 ```

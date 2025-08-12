@@ -77,14 +77,14 @@ The HTML contains three paragraphs to apply our font information to:
 In the CSS, we import a color font from Google Fonts, and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then apply three different `font-palette` values to the paragraphs — `--yellow`, `--blue`, and a new green palette, created using `palette-mix()` to blend the blue and yellow palettes together.
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
-@font-palette-values --blueNabla {
+@font-palette-values --blue-nabla {
   font-family: Nabla;
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
-@font-palette-values --yellowNabla {
+@font-palette-values --yellow-nabla {
   font-family: Nabla;
   base-palette: 7; /* this is Nabla's yellow palette */
 }
@@ -97,15 +97,15 @@ p {
 }
 
 .yellowPalette {
-  font-palette: --yellowNabla;
+  font-palette: --yellow-nabla;
 }
 
 .bluePalette {
-  font-palette: --blueNabla;
+  font-palette: --blue-nabla;
 }
 
 .mixedPalette {
-  font-palette: palette-mix(in lch, --blueNabla 55%, --yellowNabla 45%);
+  font-palette: palette-mix(in lch, --blue-nabla 55%, --yellow-nabla 45%);
 }
 ```
 

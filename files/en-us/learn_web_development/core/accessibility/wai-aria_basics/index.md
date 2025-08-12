@@ -203,7 +203,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -315,7 +315,7 @@ input[type="search"] {
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }
@@ -456,7 +456,7 @@ body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: darkgrey;
 }
 
 body {
@@ -568,7 +568,7 @@ input[type="search"] {
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }
@@ -690,7 +690,7 @@ p {
 section {
   height: 100%;
   padding: 10px;
-  background: #666;
+  background: #666666;
   text-shadow: 1px 1px 1px black;
   color: white;
 }
@@ -855,13 +855,13 @@ function toggleMusician(bool) {
   const instrument = formItems[formItems.length - 1];
   if (bool) {
     instrument.input.disabled = false;
-    instrument.label.style.color = "#000";
+    instrument.label.style.color = "black";
     instrument.input.setAttribute("aria-disabled", "false");
     hiddenAlert.textContent =
       "Instruments played field now enabled; use it to tell us what you play.";
   } else {
     instrument.input.disabled = true;
-    instrument.label.style.color = "#999";
+    instrument.label.style.color = "#999999";
     instrument.input.setAttribute("aria-disabled", "true");
     instrument.input.removeAttribute("aria-label");
     hiddenAlert.textContent = "Instruments played field now disabled.";

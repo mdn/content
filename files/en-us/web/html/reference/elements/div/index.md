@@ -21,8 +21,8 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
 
 ```css interactive-example
 .warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
+  border: 10px ridge red;
+  background-color: yellow;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  background-image: linear-gradient(180deg, white, #ddd 40%, #ccc);
 }
 ```
 

@@ -47,7 +47,7 @@
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
     "@mdn/fred": "0.2.0",
-    "@mdn/yari": "5.0.2",
+    "@mdn/yari": "5.0.3",
     "@octokit/rest": "^22.0.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -58,7 +58,7 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.4.6",
     "gray-matter": "^4.0.3",
-    "yaml": "^2.8.0"
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "cspell": "9.2.0",
@@ -70,7 +70,7 @@
     "node-html-parser": "^7.0.1",
     "parse-diff": "^0.11.1",
     "prettier": "3.6.2",
-    "yaml": "^2.8.0",
+    "yaml": "^2.8.1",
     "yargs": "^18.0.0"
   },
   "packageManager": "yarn@1.22.22"

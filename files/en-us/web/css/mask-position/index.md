@@ -154,7 +154,7 @@ div {
   margin-bottom: 10px;
   background: blue linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-repeat: no-repeat;
   mask-position: top right;
 }

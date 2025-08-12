@@ -55,7 +55,7 @@ writing-mode: vertical-lr;
   display: inline-block;
   border: solid #ce7777 10px;
   background-color: #2b3a55;
-  color: #ffffff;
+  color: white;
   flex-shrink: 0;
 }
 
@@ -73,7 +73,7 @@ margin-block-start: 10px; /* An absolute length */
 margin-block-start: 1em; /* relative to the text size */
 margin-block-start: 5%; /* relative to the nearest block container's width */
 margin-block-start: anchor-size(width);
-margin-block-start: calc(anchor-size(--myAnchor block, 20px) / 3);
+margin-block-start: calc(anchor-size(--my-anchor block, 20px) / 3);
 
 /* Keyword values */
 margin-block-start: auto;

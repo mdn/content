@@ -93,7 +93,7 @@ svg {
 
 #star3 path {
   fill: none;
-  stroke: #000;
+  stroke: black;
   stroke-width: 1;
 }
 ```
@@ -155,10 +155,10 @@ We use the {{cssxref("clip-path")}} property to set the different `<clipPath>` e
 
 ```css
 div:first-of-type {
-  clip-path: url(#star1);
+  clip-path: url("#star1");
 }
 div:last-of-type {
-  clip-path: url(#star2);
+  clip-path: url("#star2");
 }
 ```
 

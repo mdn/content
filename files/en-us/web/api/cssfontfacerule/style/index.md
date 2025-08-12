@@ -23,7 +23,7 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
   font-family: MyHelvetica;
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
+    url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }
 ```

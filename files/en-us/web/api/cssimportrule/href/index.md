@@ -26,7 +26,7 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 `href` property returns the URL of the imported stylesheet.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js

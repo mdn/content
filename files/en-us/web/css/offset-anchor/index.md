@@ -54,8 +54,8 @@ offset-anchor: 20% 80%;
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
   border: 1px solid #ccc;
@@ -181,8 +181,8 @@ section {
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
   border: 1px solid #ccc;

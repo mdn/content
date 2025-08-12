@@ -204,11 +204,11 @@ body {
 }
 .container {
   background-color: #333;
-  color: #fff;
+  color: white;
 }
 
 .item {
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #999;
   color: #333;
   width: 100px;

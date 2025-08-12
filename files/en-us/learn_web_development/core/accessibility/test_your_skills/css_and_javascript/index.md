@@ -23,8 +23,8 @@ To complete the task, create new rules to make the links look and behave like li
 
 ```css hidden live-sample___css-js-ally-1 live-sample___css-js-ally-2 live-sample___css-js-ally-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -55,7 +55,7 @@ body {
 ```css live-sample___css-js-ally-1
 a {
   text-decoration: none;
-  color: #666;
+  color: #666666;
   outline: none;
 }
 
@@ -83,7 +83,7 @@ li a {
 li a:hover,
 li a:focus {
   text-decoration: none;
-  color: rgb(255 0 0);
+  color: red;
 }
 ```
 
@@ -140,7 +140,7 @@ main {
 h1,
 h2,
 p {
-  color: #999;
+  color: #999999;
 }
 
 h1 {

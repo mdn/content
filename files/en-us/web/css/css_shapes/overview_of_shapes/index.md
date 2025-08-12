@@ -162,7 +162,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png);
+  shape-outside: url("https://mdn.github.io/shared-assets/images/examples/round-balloon.png");
 }
 ```
 

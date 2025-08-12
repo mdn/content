@@ -141,7 +141,7 @@ h2 {
 img {
   width: 150px;
   height: 100px;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin: 10px 0;
 }
 

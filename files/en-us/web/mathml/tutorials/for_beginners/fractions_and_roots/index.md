@@ -184,10 +184,7 @@ Here is an exercise to verify whether you understood the relation between a Math
 
 ```css hidden
 math {
-  font-family:
-    Latin Modern Math,
-    STIX Two Math,
-    math;
+  font-family: "Latin Modern Math", "STIX Two Math", math;
   font-size: 200%;
 }
 math .highlight {

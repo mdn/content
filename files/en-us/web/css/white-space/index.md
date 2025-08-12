@@ -247,7 +247,7 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220 220 220);
+  background-color: gainsboro;
   font-size: 16px;
   font-family: monospace;
 }
