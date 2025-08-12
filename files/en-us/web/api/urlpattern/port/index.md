@@ -10,7 +10,7 @@ browser-compat: api.URLPattern.port
 
 The **`port`** read-only property of the {{domxref("URLPattern")}} interface is a string containing the [pattern](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match the port part of a URL.
 
-This is the [normalized value](/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization) of the port pattern passed to the [constructor](/en-US/docs/Web/API/URLPattern/URLPattern).
+This is the [normalized value](/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization) of the port pattern passed to the [constructor](/en-US/docs/Web/API/URLPattern/URLPattern), an [inherited value from a `baseURL`](/en-US/docs/Web/API/URLPattern/URLPattern#inheritance_from_a_baseurl) passed to the constructor, or the default value (`""`), which matches the default port (`443`).
 
 ## Value
 

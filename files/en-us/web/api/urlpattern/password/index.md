@@ -10,7 +10,7 @@ browser-compat: api.URLPattern.password
 
 The **`password`** read-only property of the {{domxref("URLPattern")}} interface is a string containing the [pattern](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match the password part of a URL.
 
-This is the [normalized value](/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization) of the password pattern passed to the [constructor](/en-US/docs/Web/API/URLPattern/URLPattern).
+This is the [normalized value](/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization) of the password pattern passed to the [constructor](/en-US/docs/Web/API/URLPattern/URLPattern) or the default value (`"*"`), which matches any password.
 
 ## Value
 
