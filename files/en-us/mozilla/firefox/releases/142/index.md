@@ -71,13 +71,24 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Removed FTP proxy support from WebDriver capabilities ([Firefox bug 1972670](https://bugzil.la/1972670)).
+- Updated the expiry value of all the cookies set via WebDriver BiDi and WebDriver classic (Marionette) to be limited to 400 days ([Firefox bug 1974394](https://bugzil.la/1974394)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi -->
+
+- Implemented the new `emulation.setLocaleOverride` command which allows clients to override a locale in JavaScript APIs ([Firefox bug 1968952](https://bugzil.la/1968952)).
+- Improved setting a proxy with `browsingContext.createUserContext`: added support for host patterns like `.mozilla.org` in `noProxy` property ([Firefox bug 1977180](https://bugzil.la/1977180)) and fixed a bug when setting an http proxy wouldn’t let to navigate to HTTPS URLs ([Firefox bug 1977168](https://bugzil.la/1977168)).
+- Fixed a bug when `browsingContext.create` would fail after `browsingContext.print` command would be interrupted by tab being closed via `browsingContext.close` command ([Firefox bug 1841125](https://bugzil.la/1841125)).
+- Updated the `session.end` command to resume all requests which were blocked by network interceptions ([Firefox bug 1974426](https://bugzil.la/1974426)).
+
+#### Marionette
+
+- Updated the setting cookie command to throw an error when a target cookie has `sameSite=none` and `secure=false` attributes ([Firefox bug 1977205](https://bugzil.la/1977205)).
+- Removed the dialog text value from the `unexpected alert open` error message, since the dialog text is available now via the `data` field ([Firefox bug 1948236](https://bugzil.la/1948236)).
 
 ## Changes for add-on developers
 
