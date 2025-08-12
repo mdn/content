@@ -24,7 +24,7 @@ After applying the [cascading](#cascading) rules and defaulting values step by s
 
 ## Processing overview
 
-Before diving into the individual value stages, it's important to understand the three main phases that occur in value processing; [Filtering](#filtering), [Cascading](#cascading), and [Defaulting](#defaulting).
+Before diving into the individual value stages, it's important to understand the three main phases that occur in value processing; [filtering](#filtering), [cascading](#cascading), and [defaulting](#defaulting).
 
 ### Filtering
 
