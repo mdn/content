@@ -113,16 +113,18 @@ sidebar:
     children:
       - /Learn_web_development/Core/CSS_layout/Introduction
       - /Learn_web_development/Core/CSS_layout/Floats
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
       - /Learn_web_development/Core/CSS_layout/Positioning
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills/Position
       - /Learn_web_development/Core/CSS_layout/Flexbox
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
       - /Learn_web_development/Core/CSS_layout/Grids
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
       - /Learn_web_development/Core/CSS_layout/Responsive_Design
       - /Learn_web_development/Core/CSS_layout/Media_queries
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-      - type: listSubPages
-        path: /Learn_web_development/Core/CSS_layout/Test_your_skills
-        link: /Learn_web_development/Core/CSS_layout/Test_your_skills
-        details: closed
+      - /Learn_web_development/Core/CSS_layout/Test_your_skills
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed
@@ -173,15 +175,15 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/What_is_accessibility
       - /Learn_web_development/Core/Accessibility/Tooling
       - /Learn_web_development/Core/Accessibility/HTML
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/HTML
       - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
       - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+      - /Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-      - type: listSubPages
-        path: /Learn_web_development/Core/Accessibility/Test_your_skills
-        link: /Learn_web_development/Core/Accessibility/Test_your_skills
-        details: closed
+      - /Learn_web_development/Core/Accessibility/Test_your_skills
   - link: /Learn_web_development/Core/Design_for_developers
     title: Design_for_developers
   - link: /Learn_web_development/Core/Version_control
