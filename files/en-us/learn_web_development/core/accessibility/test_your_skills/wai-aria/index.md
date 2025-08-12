@@ -15,7 +15,7 @@ The aim of this skill test is to help you assess whether you've understood our [
 
 ## WAI-ARIA 1
 
-In our first ARIA task, we present you with a section of non-semantic markup, which is visually meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to understand what it is?
+Our first ARIA task includes a section of non-semantic markup, which is visually meant to be a list. Assuming you are not able to change the elements used, how can you allow screen reader users to understand what it is?
 
 To complete the task, add some WAI-ARIA semantics to make screen readers recognize the `<div>` elements as an unordered list.
 
