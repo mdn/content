@@ -22,7 +22,7 @@ To complete the task, add some WAI-ARIA semantics to make screen readers recogni
 ```css hidden live-sample___aria-1 live-sample___aria-2 live-sample___aria-3
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,

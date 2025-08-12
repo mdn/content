@@ -458,7 +458,7 @@ body {
 
 a:link,
 a:visited {
-  color: #333;
+  color: #333333;
 }
 
 nav ul,
@@ -474,7 +474,7 @@ nav a:visited {
   text-decoration: none;
   display: block;
   padding: 10px;
-  color: #333;
+  color: #333333;
   font-weight: bold;
 }
 
@@ -547,7 +547,7 @@ Add the following to the bottom of your CSS:
   }
 
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin-top: 2em;
   }
 }
@@ -612,7 +612,7 @@ body {
 }
 
 .grid li {
-  border: 1px solid #666;
+  border: 1px solid #666666;
   padding: 10px;
 }
 ```

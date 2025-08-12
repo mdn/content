@@ -58,7 +58,7 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 ```css
 ul {
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   overflow-y: scroll;
   padding: 10px 30px;
 }
