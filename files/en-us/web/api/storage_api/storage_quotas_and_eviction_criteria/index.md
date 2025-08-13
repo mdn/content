@@ -107,13 +107,17 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-Starting with macOS 14 and iOS 17, Safari as a browser app allots up to around 60% of the total disk space for each origin. Other apps that embed web content (WebViews) allot up to around 15% of total disk space per origin. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space). For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
+**Terminology:** In WebKit’s storage policy, a browser app is a dedicated web browser application (e.g., Safari and any WebKit-based third-party browser) that can be set as the system’s default browser. Other apps are non-browser applications that embed web content (for example, apps using WKWebView). The quotas below are enforced by WebKit for apps that use WebKit. 
+
+Starting with macOS 14 and iOS 17, WebKit enforces the following limits for apps that use WebKit: for browser apps (including Safari), an origin quota up to around 60% of total disk; for other apps that embed web content, up to around 15%. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space). For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
 
 For instance, a macOS device with a 1 TiB drive will limit each origin within the Safari web browser to around 600 GiB. Origins running in another app's embedded WebView will be allotted a lesser limit of around 150 GiB.
 
-Like other browsers, the exact limits enforced by the quota may vary as to avoid fingerprinting. Additionally, Safari also enforces an overall quota that stored data across all origins cannot grow beyond: 80% of disk size for browser apps, and up to 20% of disk size for non-browser apps that displays web content. More info on Safari's storage policies can be found on the [WebKit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
+Like other browsers, the exact limits enforced by the quota may vary as to avoid fingerprinting. Additionally, Safari also enforces an overall quota that stored data across all origins cannot grow beyond: 80% of disk size for browser apps, and up to 20% of disk size for non-browser apps that display web content. More info on Safari's storage policies can be found on the [WebKit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
 
 In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
+
+Platform note: On iOS/iPadOS, third-party browsers have historically used WebKit, so these WebKit quotas apply to them as well. In the EU (iOS 17.4+), Apple permits alternative browser engines; in such cases, those browsers’ own engine policies apply instead of WebKit’s. On macOS, non-WebKit browsers (e.g., Chromium/Firefox) use their own storage policies. More info on the EU-specific information can be found on [Apple Developer Support Page](https://developer.apple.com/support/alternative-browser-engines).
 
 ## How to check the available space?
 
