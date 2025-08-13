@@ -29,7 +29,7 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Get changed files
         id: check
