@@ -64,7 +64,7 @@
     "cspell": "9.2.0",
     "cspell-group-by-file-reporter": "^1.0.1",
     "jest": "^30.0.5",
-    "lefthook": "^1.12.2",
+    "lefthook": "^1.12.3",
     "markdownlint-cli2": "0.18.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
