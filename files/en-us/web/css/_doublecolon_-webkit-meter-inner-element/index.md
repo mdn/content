@@ -48,7 +48,7 @@ body {
 #styled::-webkit-meter-inner-element {
   -webkit-appearance: inherit;
   box-sizing: inherit;
-  border: 1px dashed #aaa;
+  border: 1px dashed #aaaaaa;
 }
 ```
 

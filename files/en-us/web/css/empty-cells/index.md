@@ -48,7 +48,7 @@ empty-cells: hide;
 ```css interactive-example
 th,
 td {
-  border: 2px solid #a19;
+  border: 2px solid #aa1199;
   padding: 0.25rem 0.5rem;
 }
 ```

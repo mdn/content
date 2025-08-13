@@ -74,7 +74,7 @@ svg {
 }
 
 path {
-  fill: #f338;
+  fill: #ff333388;
   stroke: black;
 }
 

@@ -59,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -183,7 +183,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -266,7 +266,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {

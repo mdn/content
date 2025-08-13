@@ -59,7 +59,7 @@ In this example, we combine the `display-mode: picture-in-picture` value with th
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {
