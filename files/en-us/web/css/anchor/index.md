@@ -142,7 +142,7 @@ When using `anchor()` to position [popovers](/en-US/docs/Web/HTML/Reference/Glob
 }
 ```
 
-The CSS working group are [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
 
 ### Using `anchor()` inside `calc()`
 
