@@ -17,7 +17,7 @@ The browsing contexts within a group retain references to each other and can the
 
 By default a document opened from a browser context group is opened in the same group whether or not it is cross-origin or same-origin.
 The {{httpheader("Cross-Origin-Opener-Policy")}} can be used to control whether the document is instead opened in its own new browsing context group and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","no code")}} from other contexts (in particular cross-origin contexts).
-The can mitigate the risk of cross-origin attacks and the side-channel attacks referred to as [XS-Leaks](https://xsleaks.dev/).
+This can mitigate the risk of cross-origin attacks and the side-channel attacks referred to as [XS-Leaks](https://xsleaks.dev/).
 
 ## See also
 
