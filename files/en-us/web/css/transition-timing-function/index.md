@@ -44,7 +44,7 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
+  background-color: #990099;
   color: white;
   margin-right: 40%;
 }

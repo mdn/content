@@ -24,7 +24,7 @@ The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opp
   overflow: hidden;
   resize: horizontal;
   width: 9rem;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
 }
 ```
 

@@ -60,7 +60,7 @@ Log:
   height: 200px;
   width: 600px;
   overflow: scroll;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 
@@ -235,7 +235,7 @@ function colorForTouch(touch) {
 ```
 
 The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors.
-For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#a31".
+For example, for a {{domxref("Touch.identifier")}} value of 10, the resulting string is "#aa3311".
 
 #### Copying a touch object
 

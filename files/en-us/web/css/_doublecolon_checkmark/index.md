@@ -41,8 +41,8 @@ select,
 }
 
 select {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
 }
 
@@ -51,8 +51,8 @@ select {
 }
 
 option {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
 }
 

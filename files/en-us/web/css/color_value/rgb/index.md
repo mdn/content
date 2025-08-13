@@ -210,7 +210,7 @@ body {
 
 ```css
 body {
-  background: repeating-linear-gradient(-45deg, #eee 0 2px, white 2px 6px);
+  background: repeating-linear-gradient(-45deg, #eeeeee 0 2px, white 2px 6px);
   padding: 10px;
 }
 

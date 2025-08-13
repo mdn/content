@@ -66,7 +66,7 @@ So for example:
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>
@@ -129,7 +129,7 @@ The `name` and `slot` attributes both default to the empty string, so elements w
   <style>
     p {
       color: white;
-      background-color: #666;
+      background-color: #666666;
       padding: 5px;
     }
   </style>

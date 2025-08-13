@@ -15,7 +15,7 @@ text-shadow: 1px 1px 2px pink;
 ```
 
 ```css interactive-example-choice
-text-shadow: #fc0 1px 0 10px;
+text-shadow: #ffcc00 1px 0 10px;
 ```
 
 ```css interactive-example-choice
@@ -61,7 +61,7 @@ p {
 text-shadow: 1px 1px 2px black;
 
 /* color | offset-x | offset-y | blur-radius */
-text-shadow: #fc0 1px 0 10px;
+text-shadow: #ffcc00 1px 0 10px;
 
 /* offset-x | offset-y | color */
 text-shadow: 5px 5px #558abb;

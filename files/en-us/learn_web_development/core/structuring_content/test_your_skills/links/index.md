@@ -42,7 +42,7 @@ To complete the task, update the links as follows:
 ```css hidden live-sample___links-1
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -122,7 +122,7 @@ To complete the task, update the links as follows:
 ```css hidden live-sample___links-2
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -209,7 +209,7 @@ To complete the task:
 ```css hidden live-sample___links-3
 body {
   background-color: white;
-  color: #333;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
