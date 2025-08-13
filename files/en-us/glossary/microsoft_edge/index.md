@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Edge** is a proprietary, cross-platform {{Glossary("Browser","web browser")}} developed by Microsoft in 2014. Initially known as "Spartan," Edge replaced {{glossary("Microsoft Internet Explorer", "Internet Explorer")}}, which had been Microsoft's primary browser for over 20 years.
+**Edge** is a proprietary, cross-platform {{Glossary("Browser","web browser")}} developed by Microsoft in 2014. Initially known as "Spartan", Edge replaced {{glossary("Microsoft Internet Explorer", "Internet Explorer")}}, which had been Microsoft's primary browser for over 20 years.
 
 Edge is included with Windows 10 and Windows 11, and is also available for macOS, iOS/iPadOS, Android and Linux.
 

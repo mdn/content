@@ -9,20 +9,9 @@ sidebar: glossarysidebar
 
 Chrome, like Chromium, uses a rendering engine called {{Glossary("Blink")}}. On iOS though, due to platform restrictions, Chrome uses Apple's WebKit-based WebView instead of Blink.
 
-## See also
+## Download Chrome
 
-- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) on Wikipedia
-- [Chrome](https://www.google.com/chrome/) on google.com
-- [The Chromium Projects](https://www.chromium.org/)
-- [Chrome for Developers](https://developer.chrome.com/)
-- [Chrome Platform Status](https://chromestatus.com/)
-- [Report Chromium issues](https://bugs.chromium.org/p/chromium/issues/list)
-- Related glossary terms:
-  - {{glossary("Browser")}}
-  - {{glossary("Blink")}}
-  - {{Glossary("Engine/Rendering", "Rendering engine")}}
-  - {{glossary("WebKit")}}
-  - Other browsers: {{glossary("Apple Safari")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}
+Chrome is available on multiple platforms and comes in different versions for different user needs.
 
 ### For Chrome users
 
@@ -38,3 +27,18 @@ If you want to try the latest Chrome features, install one of the pre-stable bui
 
 - [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev)
 - [Chrome Canary for desktop](https://www.google.com/chrome/canary/)
+
+## See also
+
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome) on Wikipedia
+- [Chrome](https://www.google.com/chrome/) on google.com
+- [The Chromium Projects](https://www.chromium.org/)
+- [Chrome for Developers](https://developer.chrome.com/)
+- [Chrome Platform Status](https://chromestatus.com/)
+- [Report Chromium issues](https://bugs.chromium.org/p/chromium/issues/list)
+- Related glossary terms:
+  - {{glossary("Browser")}}
+  - {{glossary("Blink")}}
+  - {{Glossary("Engine/Rendering", "Rendering engine")}}
+  - {{glossary("WebKit")}}
+  - Other browsers: {{glossary("Apple Safari")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}

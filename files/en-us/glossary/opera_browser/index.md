@@ -7,6 +7,14 @@ sidebar: glossarysidebar
 
 **Opera** is a free {{Glossary("Browser","web browser")}} that was released publicly in 1996 and was initially available only for Windows. Opera has used the {{glossary("Blink")}} rendering engine since 2013 (replacing {{glossary("Presto")}}). Opera is also available on mobiles and tablets.
 
+## Download Opera
+
+Opera is available for multiple platforms:
+
+- [Opera for Windows, macOS, and Linux](https://www.opera.com/download)
+- [Opera for Android](https://play.google.com/store/apps/details?id=com.opera.browser)
+- [Opera for iOS](https://apps.apple.com/app/opera-browser-fast-private/id1411869974)
+
 ## See also
 
 - [Opera (web browser)](https://en.wikipedia.org/wiki/Opera_Browser) on Wikipedia
