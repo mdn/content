@@ -121,34 +121,34 @@ h1 {
 }
 #container1,
 #container2 {
-  border: 1px dashed #696;
+  border: 1px dashed #669966;
   padding: 10px;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 #container1 {
   margin-bottom: 190px;
 }
 #container3 {
-  border: 1px dashed #900;
-  background-color: #fdd;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
   padding: 40px 20px 20px;
   width: 330px;
 }
 #container4 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  border: 1px dashed #999966;
+  background-color: #ffffcc;
   padding: 25px 10px 5px;
   margin-bottom: 15px;
 }
 #container5 {
-  border: 1px dashed #996;
-  background-color: #ffc;
+  border: 1px dashed #999966;
+  background-color: #ffffcc;
   margin-top: 15px;
   padding: 5px 10px;
 }
 #container6 {
-  background-color: #ddf;
-  border: 1px dashed #009;
+  background-color: #ddddff;
+  border: 1px dashed #000099;
   padding-left: 20px;
   padding-top: 125px;
   width: 150px;

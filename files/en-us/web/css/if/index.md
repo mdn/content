@@ -16,7 +16,7 @@ The **`if()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Val
 
 ```css-nolint
 /* Single <if-test> */
-if(style(--scheme: dark): #eee;)
+if(style(--scheme: dark): #eeeeee;)
 if(media(print): black;)
 if(media(width > 700px): 0 auto;)
 if(supports(color: lch(7.1% 60.23 300.16)): lch(7.1% 60.23 300.16);)
@@ -193,12 +193,12 @@ if(
 
 A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) `<if-test>` can be used to set a value for a property depending on whether a media query test returns true.
 
-You can use media types. For example, the following `<if-test> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eee` to be returned on non-print media.
+You can use media types. For example, the following `<if-test> : <value>` pair returns a value of `white` on print media, while the `else` clause causes `#eeeeee` to be returned on non-print media.
 
 ```css-nolint
 background-color: if(
   media(print): white;
-  else: #eee;
+  else: #eeeeee;
 )
 ```
 

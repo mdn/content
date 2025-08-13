@@ -58,7 +58,7 @@ offset-anchor: 20% 80%;
     black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   width: 90%;
 }
 
@@ -185,7 +185,7 @@ section {
     black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-bottom: 10px;
 }
 

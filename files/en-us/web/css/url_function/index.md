@@ -81,7 +81,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ```css
 body {
   background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
-    #00d no-repeat fixed;
+    #0000dd no-repeat fixed;
 }
 ```
 
