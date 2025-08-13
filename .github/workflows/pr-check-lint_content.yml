@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get changed files
         id: check
@@ -55,7 +55,7 @@ jobs:
 
       - name: Checkout HEAD
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
