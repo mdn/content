@@ -205,7 +205,7 @@ l10n:
     Compiling_Rust_to_Wasm: 将 Rust 编译为 WebAssembly
     JavaScript_API: 使用 WebAssembly JavaScript API
     Text_format: 理解 WebAssembly 文本格式
-    Text_format_to_Wasm: 将 WebAssembly 文本格式转换
+    Text_format_to_Wasm: 编译 WebAssembly 文本格式
     Loading_and_running: 加载和运行 WebAssembly 代码
     Exported_functions: 导出的 WebAssembly 函数
     JavaScript_interface: JavaScript 接口
