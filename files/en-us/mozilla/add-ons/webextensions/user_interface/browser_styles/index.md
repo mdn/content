@@ -392,7 +392,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item.disabled {
-  color: #999;
+  color: #999999;
 }
 
 .panel-list-item > .icon {

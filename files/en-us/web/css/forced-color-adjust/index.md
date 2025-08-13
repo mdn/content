@@ -59,7 +59,7 @@ By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature,
 ```css
 .box {
   border: 5px solid grey;
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 300px;
   margin: 20px;
   padding: 10px;

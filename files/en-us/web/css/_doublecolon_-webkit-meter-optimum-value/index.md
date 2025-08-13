@@ -54,7 +54,13 @@ body {
 }
 
 #styled::-webkit-meter-optimum-value {
-  background: linear-gradient(to bottom, #7f7, #090 45%, #090 55%, #7f7);
+  background: linear-gradient(
+    to bottom,
+    #77ff77,
+    #009900 45%,
+    #009900 55%,
+    #77ff77
+  );
   height: 100%;
   box-sizing: border-box;
 }

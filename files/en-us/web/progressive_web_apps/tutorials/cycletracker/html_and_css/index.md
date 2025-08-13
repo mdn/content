@@ -210,7 +210,7 @@ We can now style the static HTML using CSS. Our final CSS is:
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
@@ -226,7 +226,7 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -239,13 +239,13 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#eeffee`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#ccffcc`).
 
 We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `white` background color from the unordered list.
 
 ```css
 body {
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
@@ -255,7 +255,7 @@ legend {
 }
 li,
 legend {
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -293,7 +293,7 @@ We can combine the above, putting multiple properties in each selector declarati
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
@@ -309,7 +309,7 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;

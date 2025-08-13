@@ -195,7 +195,7 @@ div {
 
 .child {
   margin: 1rem;
-  background: #0999;
+  background: #00999999;
 }
 
 .stretch {
@@ -223,7 +223,7 @@ div {
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
-- {{cssxref("clamp", "minmax()")}}
+- {{cssxref("minmax", "minmax()")}}
 - SVG {{SVGAttr("height")}} attribute
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

@@ -58,7 +58,12 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Animation.overallProgress")}} property is now supported, allowing developers to track and display progress through an animation. ([Firefox bug 1834878](https://bugzil.la/1834878)).
 - The {{domxref("Animation.commitStyles()")}} method no longer requires [`fill`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to be set on an animation to commit the computed styles after the animation has finished. Note that until more browsers support this change, you should continue to set `fill`. ([Firefox bug 1973203](https://bugzil.la/1973203)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCRtpSender.setParameters()","setParameters()")}} and {{domxref("RTCRtpSender.getParameters()","getParameters()")}} methods of the {{domxref("RTCRtpSender")}} interface now support setting and getting the specific [`codec`](/en-US/docs/Web/API/RTCRtpSender/setParameters#codecs) used for each `encoding`.
+  You can also set a `codec` for each encoding in the [`init.sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) array that's passed to the {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} method of the {{domxref("RTCPeerConnection")}} interface.
+  ([Firefox bug 1894137](https://bugzil.la/1894137)).
+- The {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}, {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}, {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}, {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}, {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}, {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}, {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}} and {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} properties of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1926622](https://bugzil.la/1926622)).
 
 <!-- #### Removals -->
 
@@ -66,13 +71,24 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Removed FTP proxy support from WebDriver capabilities ([Firefox bug 1972670](https://bugzil.la/1972670)).
+- Updated the expiry value of all the cookies set via WebDriver BiDi and WebDriver classic (Marionette) to be limited to 400 days ([Firefox bug 1974394](https://bugzil.la/1974394)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Implemented the new `emulation.setLocaleOverride` command which allows clients to override a locale in JavaScript APIs ([Firefox bug 1968952](https://bugzil.la/1968952)).
+- Improved setting a proxy with `browsingContext.createUserContext`: added support for host patterns like `.mozilla.org` in `noProxy` property ([Firefox bug 1977180](https://bugzil.la/1977180)) and fixed a bug when setting a HTTP proxy wouldn't allow to navigate to HTTPS URLs ([Firefox bug 1977168](https://bugzil.la/1977168)).
+- Fixed a bug where `browsingContext.create` would fail after a `browsingContext.print` command was interrupted by closing a tab with the `browsingContext.close` command ([Firefox bug 1841125](https://bugzil.la/1841125)).
+- Updated the `session.end` command to resume all requests which were blocked by network interceptions ([Firefox bug 1974426](https://bugzil.la/1974426)).
+
+#### Marionette
+
+- Updated the `WebDriver:AddCookie` command to throw an error when a target cookie has `sameSite=none` and `secure=false` attributes ([Firefox bug 1977205](https://bugzil.la/1977205)).
+- Removed the dialog text value from the `unexpected alert open` error message, since the dialog text is available now via the `data` field ([Firefox bug 1948236](https://bugzil.la/1948236)).
 
 ## Changes for add-on developers
 
