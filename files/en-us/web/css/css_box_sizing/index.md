@@ -44,7 +44,6 @@ The CSS box sizing module also introduces the `min-intrinsic-sizing` property. C
 - {{cssxref("min-content")}} value
 - {{cssxref("max-content")}} value
 - {{cssxref("fit-content")}} value
-- {{cssxref("fit-content_function", "fit-content()")}} function
 
 ### Functions
 
