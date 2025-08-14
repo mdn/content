@@ -115,6 +115,19 @@ If the positioned element is placed in a single top-center, bottom-center, or ce
 
 If the positioned element is placed in any other single grid square (say with `position-area: top left`) or is set to span two or more grid squares (for example using `position-area: bottom span-all`), it will align with the specified grid area but behave as if it has a {{cssxref("width")}} of `max-content` set on it. It is being sized according to its containing block size, which is the size imposed on it when it was set to `position: fixed`. It will stretch as wide as the text content, although it may also be constrained by the edge of the `<body>`.
 
+### Using `position-area` to position popovers
+
+When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
+
+```css
+.my-popover {
+  margin: 0;
+  inset: auto;
+}
+```
+
+The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+
 ## Formal definition
 
 {{cssinfo}}
