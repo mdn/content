@@ -225,9 +225,9 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
 ## Examples
 
 ```html
-<button name="button">Press me</button>
-```
 
+<button onclick="this.style.backgroundColor='lightgreen'">Click me</button>
+```
 {{ EmbedLiveSample('Example', 200, 64) }}
 
 ## Technical summary
