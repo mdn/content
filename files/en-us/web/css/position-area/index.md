@@ -117,7 +117,7 @@ If the positioned element is placed in any other single grid square (say with `p
 
 ### Using `position-area` to position popovers
 
-When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that the default styles for popovers may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
+When using `position-area` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
 
 ```css
 .my-popover {
