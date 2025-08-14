@@ -377,5 +377,5 @@ The `Temporal` objects will refuse to construct an instance representing a date/
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl.RelativeTimeFormat")}}
 - {{jsxref("Intl.DurationFormat")}}
-- [Temporal Polyfill by proposal champions](https://github.com/js-temporal/temporal-polyfill#readme) (also available as an [npm package](https://www.npmjs.com/package/@js-temporal/polyfill))
-- [Temporal Polyfill by FullCalendar](https://github.com/fullcalendar/temporal-polyfill#readme) (also available as an [npm package](https://www.npmjs.com/package/temporal-polyfill))
+- [Temporal polyfill by proposal champions](https://www.npmjs.com/package/@js-temporal/polyfill)
+- [Temporal polyfill by FullCalendar](https://www.npmjs.com/package/temporal-polyfill)
