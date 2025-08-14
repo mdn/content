@@ -12,12 +12,12 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 
 ```html interactive-example
 <div class="preference">
-  <label for="cheese">Do you like cheese?</label>
+  <label for="cheese">I like cheese.</label>
   <input type="checkbox" name="cheese" id="cheese" />
 </div>
 
 <div class="preference">
-  <label for="peas">Do you like peas?</label>
+  <label for="peas">I like peas.</label>
   <input type="checkbox" name="peas" id="peas" />
 </div>
 ```
@@ -31,21 +31,54 @@ The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for 
 }
 ```
 
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
+  - : The value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) form control in the same document, [associating the `<label>` with that form control](#associating_a_label_with_a_form_control). Note that its JavaScript reflection property is [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
+
+## Usage notes
+
+### Associating a label with a form control
+
+The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](/en-US/docs/Web/HTML/Guides/Content_categories#labelable). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
+
+Multiple `<label>` elements can be associated with the same form control by having multiple `<label>` elements with the same `for` attribute value, which gives the form control multiple labels.
+
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
 - The label text is not only visually associated with its corresponding text input; it is programmatically associated with it too. This means that, for example, a screen reader will read out the label when the user is focused on the form input, making it easier for an assistive technology user to understand what data should be entered.
 - When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
 
+There are two ways to associate a `<label>` with a form control, commonly referred to as _explicit_ and _implicit_ association.
+
 To explicitly associate a `<label>` element with an `<input>` element, you first need to add the `id` attribute to the `<input>` element. Next, you add the `for` attribute to the `<label>` element, where the value of `for` is the same as the `id` in the `<input>` element.
+
+```html
+<label for="peas">I like peas.</label>
+<input type="checkbox" name="peas" id="peas" />
+```
 
 Alternatively, you can nest the `<input>` directly inside the `<label>`, in which case the `for` and `id` attributes are not needed because the association is implicit:
 
 ```html
 <label>
-  Do you like peas?
+  I like peas.
   <input type="checkbox" name="peas" />
 </label>
 ```
+
+> [!NOTE]
+> A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
+
+These two methods are equivalent, but there are a few considerations:
+
+- While common browser and {{glossary("screen reader")}} combinations support implicit association, not all assistive technologies do.
+- Depending on your design, the type of association may impact stylability. Making the `<label>` and form control sibling elements instead of parent-child means they are separate, adjacent boxes, enabling more customizable layout such as lining them up with grid or flex layout methods.
+- Explicit association requires the form control to have an `id`, which must be unique in the whole document. This is hard especially in a componentized application. Frameworks often provide their own solutions, such as React's [`useId()`](https://react.dev/reference/react/useId), but it still requires extra orchestration to get right.
+
+Generally, we recommend using explicit association with the `for` attribute, to ensure compatibility with external tools and assistive technologies. In fact, you can simultaneously nest _and_ provide `id`/`for` for maximum compatibility.
 
 The form control that a label is labeling is called the _labeled control_ of the label element. Multiple labels can be associated with the same form control:
 
@@ -57,32 +90,11 @@ The form control that a label is labeling is called the _labeled control_ of the
 
 Elements that can be associated with a `<label>` element include {{HTMLElement('button')}}, {{HTMLElement('input')}} (except for `type="hidden"`), {{HTMLElement('meter')}}, {{HTMLElement('output')}}, {{HTMLElement('progress')}}, {{HTMLElement('select')}} and {{HTMLElement('textarea')}}.
 
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
-
-- [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
-  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) for a [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
-
-    > [!NOTE]
-    > To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
-
-    The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
-
-    Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
-
-    > [!NOTE]
-    > A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
-
-## Styling with CSS
-
-There are no special styling considerations for `<label>` elements — structurally they are inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
-
 ## Accessibility
 
 ### Interactive content
 
-Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `label`. Doing so makes it difficult for people to activate the form input associated with the `label`.
+Other than the [implicitly associated](#associating_a_label_with_a_form_control) form control, don't place additional interactive elements such as {{HTMLElement("a", "anchors")}} or {{HTMLElement("button", "buttons")}} inside a `<label>`. Doing so makes it difficult for people to activate the form input associated with the `label`.
 
 **Don't do this:**
 
@@ -96,14 +108,17 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 **Prefer this:**
 
 ```html example-good
+<p>
+  <a href="terms-and-conditions.html">Read our Terms and Conditions</a>
+</p>
 <label for="tac">
   <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the Terms and Conditions
 </label>
-<p>
-  <a href="terms-and-conditions.html">Read our Terms and Conditions</a>
-</p>
 ```
+
+> [!NOTE]
+> It is a good practice to place any necessary context, such as the link to the terms and conditions, before the form control, so that the user can read it before they interact with the control.
 
 ### Headings
 

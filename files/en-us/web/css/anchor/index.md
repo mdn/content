@@ -131,6 +131,19 @@ The below table lists the inset properties, and the `<anchor-side>` parameter va
 | `inset-block-start` and `inset-block-end`   | `start`, `end`, `self-start`, and `self-end`<br>`top` and `bottom` in horizontal writing modes<br>`left` and `right` in vertical writing modes |
 | `inset-inline-start` and `inset-inline-end` | `start`, `end`, `self-start`, and `self-end`<br>`left` and `right` in horizontal writing modes<br>`top` and `bottom` in vertical writing modes |
 
+### Using `anchor()` to position popovers
+
+When using `anchor()` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
+
+```css
+.positionedPopover {
+  margin: 0;
+  inset: auto;
+}
+```
+
+The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+
 ### Using `anchor()` inside `calc()`
 
 When the `anchor()` function refers to a side of the default anchor, you can include a {{cssxref("margin")}} to create spacing between the edges of the anchor and positioned element as needed. Alternatively, you can include the `anchor()` function within a {{cssxref("calc")}} function to add spacing.
