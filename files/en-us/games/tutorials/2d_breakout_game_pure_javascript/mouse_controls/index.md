@@ -47,7 +47,7 @@ This is the latest state of the code to compare against:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

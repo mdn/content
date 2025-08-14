@@ -40,7 +40,7 @@ height: auto;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -57,7 +57,7 @@ height: 120px;
 height: 10em;
 height: 100vh;
 height: anchor-size(height);
-height: anchor-size(--myAnchor self-block, 250px);
+height: anchor-size(--my-anchor self-block, 250px);
 height: clamp(200px, anchor-size(width));
 
 /* <percentage> value */
@@ -195,7 +195,7 @@ div {
 
 .child {
   margin: 1rem;
-  background: #0999;
+  background: #00999999;
 }
 
 .stretch {
@@ -223,7 +223,7 @@ div {
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
-- {{cssxref("clamp", "minmax()")}}
+- {{cssxref("minmax", "minmax()")}}
 - SVG {{SVGAttr("height")}} attribute
 - [Introduction to the CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

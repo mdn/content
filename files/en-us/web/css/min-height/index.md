@@ -42,7 +42,7 @@ min-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -54,7 +54,7 @@ The element's height is set to the value of `min-height` whenever `min-height` i
 /* <length> value */
 min-height: 3.5em;
 min-height: anchor-size(height);
-min-height: anchor-size(--myAnchor block, 200px);
+min-height: anchor-size(--my-anchor block, 200px);
 
 /* <percentage> value */
 min-height: 10%;

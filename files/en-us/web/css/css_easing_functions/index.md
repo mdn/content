@@ -6,13 +6,11 @@ spec-urls: https://drafts.csswg.org/css-easing-2
 sidebar: cssref
 ---
 
-The **CSS easing functions** module defines easing functions, which provide a means to control the transformation of values. The functions defined include linear, cubic bezier, and step easing functions. These easing functions can be applied to animations and transitions. The transformation easing functions can be used to produce animations that mimic physical phenomena such as momentum or to cause the animation to move in discrete steps producing robot-like movement.
+The **CSS easing functions** module defines easing functions, which provide a means to control the transformation of values. The functions defined include linear, cubic bezier, and step easing functions. These easing functions can be applied to animations and transitions.
 
-Gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. Easing functions enable you to control that rate at of change. Cubic bezier easing functions can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts.
+Gradually increasing the speed at which an element moves can give the element a sense of weight as it appears to gather momentum. Easing functions enable you to control the rate of change. Cubic bezier easing functions can be used to produce intuitive user interface elements or convincing cartoon props that behave like their physical counterparts.
 
-Alternatively, you may want an animation to move forwards in distinct steps such as a segmented wheel that rotates such that the segments always appear in the same position. For this, step easing functions can be used.
-
-By default, gradient color changes progress linearly between each pair of color stops. Easing functions enable controlling the rate of change of gradient interpolation, which can be used to produce different visual effects such as suggesting a concave or convex surface, or producing a striped effect.
+Alternatively, you may want an animation to move forward in distinct steps, to create robot-like movement, or the effect of a segmented wheel that rotates such that the segments always appear in the same position. For this, step easing functions can be used.
 
 ## Reference
 
@@ -36,8 +34,8 @@ By default, gradient color changes progress linearly between each pair of color 
 
 ## Guides
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-  - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
+- [CSS value functions: easing functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#easing_functions)
+  - : The CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 ## Related concepts
 
@@ -55,5 +53,5 @@ By default, gradient color changes progress linearly between each pair of color 
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions)
 - {{cssxref("will-change")}} CSS property
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module

@@ -118,7 +118,7 @@ We need to use some CSS to fix this up. You can style a table in any way you wan
 
 ```css hidden live-sample___styled
 /* font import */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
 
 /* spacing */
 table {
@@ -182,7 +182,7 @@ tfoot th {
 /* graphics */
 thead,
 tfoot {
-  background: url(https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/leopardskin.jpg);
+  background: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/leopardskin.jpg");
   color: white;
 }
 
@@ -203,7 +203,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
-  background-image: url(https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/noise.png);
+  background-image: url("https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/noise.png");
 }
 
 table {
@@ -216,7 +216,7 @@ caption {
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  color: #666;
+  color: #666666;
   text-align: right;
   letter-spacing: 1px;
 }
@@ -328,7 +328,7 @@ The table is looking much better already, but we should add some borders to prov
 
 ```css
 tfoot {
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 ```
 
@@ -341,8 +341,8 @@ table {
   min-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 ```
 
@@ -354,7 +354,7 @@ We wanted to dedicate a separate section to showing you how to implement **zebra
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 

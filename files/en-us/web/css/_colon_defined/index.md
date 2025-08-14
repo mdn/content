@@ -64,7 +64,7 @@ custom-element {
 }
 
 code {
-  background: #ccc;
+  background: #cccccc;
 }
 
 #btn {

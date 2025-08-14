@@ -109,7 +109,7 @@ You may have used a CSS property in a specific way to get around older browser i
 ```css
 .box {
   background-color: red; /* fallback for older browsers that don't support gradients */
-  background-image: linear-gradient(to right, #ff0000, #aa0000);
+  background-image: linear-gradient(to right, red, #aa0000);
 }
 ```
 
@@ -201,7 +201,7 @@ If you create very specific selectors, you will often find that you need to dupl
 
 ```css
 article.main p.box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 
@@ -209,7 +209,7 @@ If you then wanted to apply the same rules to something outside of `main`, or to
 
 ```css
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 

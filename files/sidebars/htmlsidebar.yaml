@@ -139,5 +139,9 @@ l10n:
     HTML_Elements: HTML 元素
     Global_attributes: 全局属性
     Attributes: 属性
+    Attributes_element: 按元素划分的属性
+    Attribute_values: 属性值
     Input_types: <code>&lt;input&gt;</code> 类型
+    Script_types: <code>&lt;script&gt;</code> 类型
+    Rel_keywords: <code>rel</code> 关键字
     Guides: 指南

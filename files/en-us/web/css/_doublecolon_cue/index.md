@@ -95,7 +95,7 @@ The following CSS sets the cue style so that the text is white and the backgroun
 
 ```css
 ::cue {
-  color: #fff;
+  color: white;
   background-color: rgb(0 0 0 / 60%);
 }
 ```

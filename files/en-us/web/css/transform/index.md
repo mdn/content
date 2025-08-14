@@ -190,7 +190,7 @@ div {
   transform: rotate(135deg);
 }
 .one {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .two {
   background-color: #d6bb72;

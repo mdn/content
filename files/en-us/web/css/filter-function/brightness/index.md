@@ -78,11 +78,11 @@ This example shows how to apply the `brightness()` filter to a paragraph via the
 
 ```css
 .container {
-  background: url(be_fierce.jpg) no-repeat right / contain #d4d5b2;
+  background: url("be_fierce.jpg") no-repeat right / contain #d4d5b2;
 }
 p {
   backdrop-filter: brightness(150%);
-  text-shadow: 2px 2px #ffffff;
+  text-shadow: 2px 2px white;
 }
 ```
 
@@ -93,7 +93,7 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #000000;
+  color: black;
   font-size: 2rem;
   font-family: sans-serif;
 }

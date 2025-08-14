@@ -41,7 +41,7 @@ max-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -53,7 +53,7 @@ max-height: 10px;
 /* <length> value */
 max-height: 3.5em;
 max-height: anchor-size(height);
-max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
+max-height: calc(anchor-size(--my-anchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;

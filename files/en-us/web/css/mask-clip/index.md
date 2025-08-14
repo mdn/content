@@ -107,7 +107,7 @@ div {
   margin: 10px;
   border: 20px solid #8ca0ff;
   padding: 20px;
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
   mask-size: 100% 100%;
 }
 .content-box {

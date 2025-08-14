@@ -131,7 +131,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -142,7 +142,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -189,7 +189,7 @@ The infobox is given fixed positioning, a {{cssxref("position-anchor")}} propert
 ```css-nolint
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   width: 200px;
   margin: 0 0 10px 0;
