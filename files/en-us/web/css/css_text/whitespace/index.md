@@ -268,7 +268,7 @@ Different {{cssxref("white-space-collapse")}} values skip different steps of thi
 
 - `preserve` and `break-spaces`: The whole algorithm is skipped except for step 3, so no whitespace collapsing or transformation happens.
 - `preserve-spaces`: The whole algorithm is skipped, so whitespace characters at the start and end of lines are preserved.
-- `preserve-breaks`: The algorithm is the same as that of `collapse`.
+- `preserve-breaks`: The same algorithm is applied as with the `collapse` value.
 
 ## How do DOM APIs process whitespace?
 
