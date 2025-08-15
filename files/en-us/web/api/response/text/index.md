@@ -64,7 +64,7 @@ function getData(pageId) {
         throw new Error(`HTTP error, status = ${response.status}`);
       }
       return response.text();
-    )}
+    })
     .then((text) => {
       myArticle.innerText = text;
     });
