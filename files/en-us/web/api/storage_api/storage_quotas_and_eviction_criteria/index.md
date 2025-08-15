@@ -126,7 +126,12 @@ More information on WebKit's storage policies can be found on the [WebKit blog](
 
 In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
-Platform note: On iOS/iPadOS, third-party browsers have historically used WebKit, so these WebKit quotas apply to them as well. In the EU (iOS 17.4+), Apple permits alternative browser engines; in such cases, those browsers’ own engine policies apply instead of WebKit’s. On macOS, non-WebKit browsers (e.g., Chromium/Firefox) use their own storage policies. More info on the EU-specific information can be found on [Apple Developer Support Page](https://developer.apple.com/support/alternative-browser-engines).
+> [!NOTE]
+>  On iOS/iPadOS, third-party browsers have historically had to use WebKit, so these WebKit quotas apply to them as well as Safari. In the EU (iOS 17.4+), Apple permits alternative browser engines; in such cases, those browsers’ own engine policies apply instead of WebKit’s.
+>
+> On macOS, non-WebKit browsers (e.g., Chromium/Firefox) use their own storage policies.
+>
+> More info on the EU-specific information can be found on [Apple Developer Support Page](https://developer.apple.com/support/alternative-browser-engines).
 
 ## How to check the available space?
 
