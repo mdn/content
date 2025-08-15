@@ -1608,10 +1608,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-6.0.28.tgz#e99a2cb1693fec9255c3cf1cfe1b02fcfd0de12d"
   integrity sha512-UE4uV0VK+HfGyXCNdq3Lyy0xNJ6bJI9Y8XtVnnv7+oFda3xtV3PQJIMPHEtC+ou1qrrHdrtaLNQ9cJSj4hi94Q==
 
-"@mdn/fred@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.2.0.tgz#574c2e2def5e7f4d04e4ad18f6c4db36cc64719c"
-  integrity sha512-kXuDlOL/rumZ0OUJgk68hli2wntfu8aW2GBFM6nZ12X8hnnPztGeaXwEBPdngg9Dnw6ETxuk4rbbNA31Yn/XlQ==
+"@mdn/fred@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@mdn/fred/-/fred-0.3.0.tgz#93b161e6e72140f0f1bfd0b913efb80e9c3811f2"
+  integrity sha512-yv2uagKAo6WJvrNpkBrmAd9+BO7V+hgC5ShefBHo9qdMBNCv8Iq+H6nTU/fluy+FxbXASEnCVDnjV3HcqpN4CQ==
   dependencies:
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
@@ -1630,7 +1630,7 @@
     concurrently "^9.2.0"
     cookie-parser "^1.4.7"
     express "^5.0.1"
-    fdir "^6.4.3"
+    fdir "^6.5.0"
     he "^1.2.0"
     http-proxy-middleware "^3.0.3"
     insane "^2.6.2"
@@ -4745,10 +4745,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@^6.4.3, fdir@^6.4.4, fdir@^6.4.6:
-  version "6.4.6"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.6.tgz#2b268c0232697063111bbf3f64810a2a741ba281"
-  integrity sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==
+fdir@^6.4.4, fdir@^6.4.6, fdir@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.5.0.tgz#ed2ab967a331ade62f18d077dae192684d50d350"
+  integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
 
 fecha@^4.2.0:
   version "4.2.3"
