@@ -52,6 +52,8 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API) is fully supported, enabling you to match and parse URLs using a standardized pattern syntax. ([Firefox bug 1731418](https://bugzil.la/1731418)).
+
 #### DOM
 
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
