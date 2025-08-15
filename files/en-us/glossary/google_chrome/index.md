@@ -13,7 +13,7 @@ Chrome, like Chromium, uses a rendering engine called {{Glossary("Blink")}}. On 
 
 Chrome is available on multiple platforms and comes in different versions for different user needs.
 
-### For Chrome users
+### Users
 
 If you're an everyday Chrome user, use one of these links based on your platform or device:
 
@@ -21,7 +21,7 @@ If you're an everyday Chrome user, use one of these links based on your platform
 - [iOS](https://apps.apple.com/us/app/google-chrome/id535886823)
 - [Desktop](https://www.google.com/chrome/) (Windows, macOS, Linux)
 
-### For web developers
+### Web developers
 
 If you want to try the latest Chrome features, install one of the pre-stable builds. Google pushes updates frequently and has designed the distributions to run side-by-side with the stable version. Visit the [Chrome Releases Blog](https://chromereleases.googleblog.com/) to learn what's new.
 

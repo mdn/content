@@ -13,7 +13,7 @@ First released in November 2004, Firefox is customizable with themes, plugins, a
 
 Firefox is available on multiple platforms and comes in different versions for different user needs.
 
-### For Firefox users
+### Users
 
 Use these links to download Firefox for different platforms, devices, or deployment needs:
 
@@ -22,7 +22,7 @@ Use these links to download Firefox for different platforms, devices, or deploym
 - [iOS](https://www.firefox.com/en-US/browsers/mobile/)
 - [Firefox for Enterprise](https://www.firefox.com/en-US/browsers/enterprise/)
 
-### For web developers
+### Web developers
 
 If you want to try the latest Firefox features, install one of the pre-release builds:
 
