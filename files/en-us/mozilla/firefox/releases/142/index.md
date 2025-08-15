@@ -117,10 +117,15 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 
-- **`Integrity-Policy` and `Integrity-Policy-Report-Only`** (Nightly): `security.integrity_policy.enabled`
+- **`Integrity-Policy` and `Integrity-Policy-Report-Only`** for scripts (Nightly): `security.integrity_policy.enabled`
 
-  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
+  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
   ([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+- **`Integrity-Policy` and `Integrity-Policy-Report-Only`** for stylesheets: `security.integrity_policy.stylesheet.enabled`
+
+  The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for stylesheet resources. These allow websites to either enforce or only report violations of the policy, respectively.
+  ([Firefox bug 1974247](https://bugzil.la/1974247)).
 
 These features are shipping in Firefox 142 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
