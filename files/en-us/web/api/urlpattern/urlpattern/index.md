@@ -23,9 +23,11 @@ new URLPattern(url, baseURL, options)
 ### Parameters
 
 - `input` {{Optional_Inline}}
+
   - : An object that has separate properties for defining the [patterns](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match each part of a URL.
 
     The object members can be any (or none) of:
+
     - `protocol` {{Optional_Inline}}
       - : A pattern that matches a URL [protocol](/en-US/docs/Web/API/URL/protocol), such as `http`, `https`, or `"http{s}?"` (to match both https and http).
     - `username` {{Optional_Inline}}
@@ -36,7 +38,6 @@ new URLPattern(url, baseURL, options)
       - : A pattern that matches a URL [hostname](/en-US/docs/Web/API/URL/hostname).
     - `port` {{Optional_Inline}}
       - : A pattern that matches a URL [port](/en-US/docs/Web/API/URL/port).
-        Note that if this is not specified it defaults to `""`, which matches the default port (443).
     - `pathname` {{Optional_Inline}}
       - : A pattern that matches a URL [pathname](/en-US/docs/Web/API/URL/pathname).
     - `search` {{Optional_Inline}}
@@ -54,6 +55,7 @@ new URLPattern(url, baseURL, options)
     If formatted as a relative URL, then [`baseURL`](#baseurl_2) must also be provided.
 
 - `baseURL` {{Optional_Inline}}
+
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
     This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
 
@@ -67,7 +69,7 @@ new URLPattern(url, baseURL, options)
 > [!NOTE]
 > All the URL parts in the `input` properties and the `url` are optional.
 > If not specified in those parameters, some values may be [inherited](#inheritance_from_a_baseurl) from the `baseURL`, depending on what other URL-parts are defined.
-> Omitted parts are normalized to wildcards (`*`), except for the `port`, which is normalized to the empty string/default port.
+> Omitted parts are normalized to wildcards (`*`).
 
 ### Exceptions
 
@@ -104,15 +106,28 @@ The `username` and `password` are never inherited from the base URL..
 
 For more information see [Inheritance from a BaseURL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) in the API overview.
 
-### Protocol wildcard affects default port
+### Hostname in url or baseURL affects default port
 
-Just like the other URL parts, the port can be set explicitly and will inherit from the base URL.
-However if omitted it will default to the empty string (default port `443`), rather than the wildcard value.
+Unlike other URL parts, the port may be implicitly set if you specify an `url` or base URL (either in the `baseURL` parameter or in the object) and don't explicity specify a port.
+In this case the port will be set to the empty string (`""`) and match the default port (`443`).
 
-If you set the wildcard value explicitly on the _protocol_ using the `url`, the behaviour is different than if you explicitly set the wildcard on the port:
+For example, these patterns all set the port pattern to `""`:
 
-- `"https://example.com:*"` sets the port to the wildcard string ("matches any port").
-- `"https://example.com*"` set the port to the empty string `""` ("matches the default port (443)").
+```js
+new URLPattern("https://example.com");
+new URLPattern("https://example.com*");
+new URLPattern("https://example.com/foo");
+new URLPattern({
+  pathname: "/foo/*",
+  baseURL: "https://example.com",
+});
+```
+
+If you don't specify the hostname in an `url` or `baseURL`, the port will default to the wildcard string (`*`):
+
+```js
+new URLPattern({ pathname: "/foo/*" }); // Port omitted, defaults to '*'
+```
 
 ## Examples
 
@@ -162,7 +177,7 @@ Without this the username pattern would be `myusername:mypassword`.
 
 ```js
 const pattern = new URLPattern(
-  "https://myusername\\:mypassword@example.com/some/path",
+  "https://myusername\\:mypassword@example.com/some/path"
 );
 
 console.log(pattern.username); // "myusername"
