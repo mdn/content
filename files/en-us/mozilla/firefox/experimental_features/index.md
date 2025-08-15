@@ -689,22 +689,6 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 - `dom.screenorientation.allow-lock`
   - : Set to `true` to enable.
 
-### Prioritized Task Scheduling API
-
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
-([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 101             | No                  |
-| Beta              | 101             | No                  |
-| Release           | 101             | No                  |
-
-- `dom.enable_web_task_scheduling`
-  - : Set to `true` to enable.
-
 ### Notifications API
 
 Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
@@ -786,10 +770,11 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 ## HTTP
 
-### Integrity-Policy and Integrity-Policy-Report-Only headers
+### Integrity policy for script resources
 
-The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
-When these headers are used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for script resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for scripts or only report violations of the policy, respectively.
+Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
+When `Integrity-Policy` is used, the browser blocks the loading of scripts that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the script resource on the server.
 The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Request/mode#no-cors) from ever being made, such as those from a {{htmlelement("script")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute.
 ([Firefox bug 1976656](https://bugzil.la/1976656)).
 
@@ -801,6 +786,23 @@ The browser will also stop requests in [`no-cors` mode](/en-US/docs/Web/API/Requ
 | Release           | 142           | No                  |
 
 - `security.integrity_policy.enabled`
+  - : Set to `true` to enable.
+
+### Integrity policy for stylesheet resources
+
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for style resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Subresource_Integrity) for styles or only report violations of the policy, respectively.
+Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
+When `Integrity-Policy` is used, the browser blocks the loading of styles referenced in a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet) that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the resource on the server.
+([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `security.integrity_policy.stylesheet.enabled`
   - : Set to `true` to enable.
 
 ### Accept header with MIME type image/jxl
