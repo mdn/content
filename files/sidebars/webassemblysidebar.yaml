@@ -208,6 +208,6 @@ l10n:
     Text_format_to_Wasm: 编译 WebAssembly 文本格式
     Loading_and_running: 加载和运行 WebAssembly 代码
     Exported_functions: 导出的 WebAssembly 函数
-    JavaScript_builtins: JavaScript 内建函数
+    JavaScript_builtins: JavaScript 内置函数
     Imported_string_constants: 导入的全局字符串常量
     JavaScript_interface: JavaScript 接口
