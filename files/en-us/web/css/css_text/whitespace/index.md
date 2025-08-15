@@ -55,7 +55,7 @@ Note that:
 > [!NOTE]
 > [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) supports highlighting text nodes, making it easier to see exactly which nodes contain whitespace characters. Pure whitespace nodes are marked with a "whitespace" label.
 
-Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on, in the [solving problems with whitespace nodes](#solving_problems_with_whitespace_nodes) section.
+Conserving whitespace characters in the DOM is useful in many ways, but it can also make certain layouts more difficult to implement and may cause problems for developers who want to iterate over DOM nodes. We'll look at these issues and some solutions later on, in the [solving common problems with whitespace nodes](#solving_common_problems_with_whitespace_nodes) section.
 
 ## How does CSS process whitespace?
 
