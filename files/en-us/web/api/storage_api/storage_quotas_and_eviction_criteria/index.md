@@ -111,7 +111,7 @@ Webkit imposes different quotas for _browser apps_ and for other applications wh
 
 Starting with macOS 14 and iOS 17:
 
-- For Webkit-based browser apps, each origin can store up to around 60% of total disk
+- For Webkit-based browser apps, each origin can store up to around 60% of total disk.
 - For other Webkit-based apps that embed web content, each origin can store up to around 15%  of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
 
 For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
