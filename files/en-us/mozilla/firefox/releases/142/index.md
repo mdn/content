@@ -59,7 +59,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Animation.commitStyles()")}} method no longer requires [`fill`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to be set on an animation to commit the computed styles after the animation has finished. Note that until more browsers support this change, you should continue to set `fill`. ([Firefox bug 1973203](https://bugzil.la/1973203)).
 - The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) is now supported, providing a standardized mechanism to assign and manage task priorities for an application.
   The supported interfaces include: {{domxref("Scheduler")}}, {{domxref("TaskController")}}, {{domxref("TaskSignal")}}, {{domxref("TaskPriorityChangeEvent")}} (and the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event), and the properties {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}.
-  The {{domxref("Scheduling")}} interface and {{domxref("Navigator.scheduling")}} property are not supported.
+  The {{domxref("Scheduling")}} interface and the {{domxref("Navigator.scheduling")}} property are not supported.
   ([Firefox bug 1966997](https://bugzil.la/1966997)).
 
 #### Media, WebRTC, and Web Audio
