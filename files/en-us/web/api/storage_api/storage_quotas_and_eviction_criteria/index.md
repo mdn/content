@@ -109,7 +109,12 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 Webkit imposes different quotas for _browser apps_ and for other applications which can embed web content (for example, apps that use WKWebView). A browser app is an application that can be set as the system’s default browser. This includes Safari and some other WebKit-based third-party browsers.
 
-Starting with macOS 14 and iOS 17, WebKit enforces the following limits for apps that use WebKit: for browser apps (including Safari), an origin quota up to around 60% of total disk; for other apps that embed web content, up to around 15%. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space). For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
+Starting with macOS 14 and iOS 17:
+
+- For Webkit-based browser apps, each origin can store up to around 60% of total disk
+- For other Webkit-based apps that embed web content, each origin can store up to around 15%  of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
+
+For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
 
 For instance, a macOS device with a 1 TiB drive will limit each origin within the Safari web browser to around 600 GiB. Origins running in another app's embedded WebView will be allotted a lesser limit of around 150 GiB.
 
