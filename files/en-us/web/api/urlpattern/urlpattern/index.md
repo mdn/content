@@ -23,11 +23,9 @@ new URLPattern(url, baseURL, options)
 ### Parameters
 
 - `input` {{Optional_Inline}}
-
   - : An object that has separate properties for defining the [patterns](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match each part of a URL.
 
     The object members can be any (or none) of:
-
     - `protocol` {{Optional_Inline}}
       - : A pattern that matches a URL [protocol](/en-US/docs/Web/API/URL/protocol), such as `http`, `https`, or `"http{s}?"` (to match both https and http).
     - `username` {{Optional_Inline}}
@@ -56,7 +54,6 @@ new URLPattern(url, baseURL, options)
     If formatted as a relative URL, then [`baseURL`](#baseurl_2) must also be provided.
 
 - `baseURL` {{Optional_Inline}}
-
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
     This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
 
@@ -165,7 +162,7 @@ Without this the username pattern would be `myusername:mypassword`.
 
 ```js
 const pattern = new URLPattern(
-  "https://myusername\\:mypassword@example.com/some/path"
+  "https://myusername\\:mypassword@example.com/some/path",
 );
 
 console.log(pattern.username); // "myusername"
