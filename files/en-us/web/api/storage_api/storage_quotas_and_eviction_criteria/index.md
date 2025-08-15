@@ -118,7 +118,11 @@ For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames h
 
 For instance, a macOS device with a 1 TiB drive will limit each origin within the Safari web browser to around 600 GiB. Origins running in another app's embedded WebView will be allotted a lesser limit of around 150 GiB.
 
-Like other browsers, the exact limits enforced by the quota may vary as to avoid fingerprinting. Additionally, Safari also enforces an overall quota that stored data across all origins cannot grow beyond: 80% of disk size for browser apps, and up to 20% of disk size for non-browser apps that display web content. More info on Safari's storage policies can be found on the [WebKit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
+Like other browsers, the exact limits enforced by the quota may vary so as to avoid fingerprinting.
+
+WebKit also enforces an overall quota that stored data across all origins cannot grow beyond 80% of disk size for browser apps, and 20% of disk size for non-browser apps that display web content.
+
+More information on WebKit's storage policies can be found on the [WebKit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
 
 In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
