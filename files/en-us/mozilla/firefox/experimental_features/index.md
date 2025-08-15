@@ -689,22 +689,6 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 - `dom.screenorientation.allow-lock`
   - : Set to `true` to enable.
 
-### Prioritized Task Scheduling API
-
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
-([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 101             | No                  |
-| Beta              | 101             | No                  |
-| Release           | 101             | No                  |
-
-- `dom.enable_web_task_scheduling`
-  - : Set to `true` to enable.
-
 ### Notifications API
 
 Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).

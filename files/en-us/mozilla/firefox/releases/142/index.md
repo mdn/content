@@ -59,6 +59,10 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Selection.getComposedRanges()")}} method is now supported, allowing developers to accurately get selected text ranges across shadow DOM boundaries. In addition, the methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} of the {{domxref("Selection")}} interface have been modified to accept nodes inside a shadow root. ([Firefox bug 1903870](https://bugzil.la/1903870)).
 - The {{domxref("Animation.overallProgress")}} property is now supported, allowing developers to track and display progress through an animation. ([Firefox bug 1834878](https://bugzil.la/1834878)).
 - The {{domxref("Animation.commitStyles()")}} method no longer requires [`fill`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect#fill) to be set on an animation to commit the computed styles after the animation has finished. Note that until more browsers support this change, you should continue to set `fill`. ([Firefox bug 1973203](https://bugzil.la/1973203)).
+- The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) is now supported, providing a standardized mechanism to assign and manage task priorities for an application.
+  The supported interfaces include: {{domxref("Scheduler")}}, {{domxref("TaskController")}}, {{domxref("TaskSignal")}}, {{domxref("TaskPriorityChangeEvent")}} (and the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event), and the properties {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}.
+  The {{domxref("Scheduling")}} interface and the {{domxref("Navigator.scheduling")}} property are not supported.
+  ([Firefox bug 1966997](https://bugzil.la/1966997)).
 
 #### Media, WebRTC, and Web Audio
 
