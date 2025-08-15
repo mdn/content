@@ -60,6 +60,8 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref("RTCIceCandidatePairStats/currentRoundTripTime", "currentRoundTripTime")}}, {{domxref("RTCIceCandidatePairStats/totalRoundTripTime", "totalRoundTripTime")}}, and {{domxref("RTCIceCandidatePairStats/responsesReceived", "responsesReceived")}} properties of the {{domxref("RTCIceCandidatePairStats")}} dictionary are now supported. These return the current round trip time (RTT) and the information needed to calculate the average RTT for the connection.
+  ([Firefox bug 1371391](https://bugzil.la/1371391)).
 - The {{domxref("RTCRtpSender.setParameters()","setParameters()")}} and {{domxref("RTCRtpSender.getParameters()","getParameters()")}} methods of the {{domxref("RTCRtpSender")}} interface now support setting and getting the specific [`codec`](/en-US/docs/Web/API/RTCRtpSender/setParameters#codecs) used for each `encoding`.
   You can also set a `codec` for each encoding in the [`init.sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) array that's passed to the {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} method of the {{domxref("RTCPeerConnection")}} interface.
   ([Firefox bug 1894137](https://bugzil.la/1894137)).
