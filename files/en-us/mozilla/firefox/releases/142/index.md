@@ -50,7 +50,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- The [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API) is fully supported, enabling developers to match and parse URLs using a standardized pattern syntax. ([Firefox bug 1731418](https://bugzil.la/1731418)).
+- The [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API) is fully supported, enabling you to match and parse URLs using a standardized pattern syntax. ([Firefox bug 1731418](https://bugzil.la/1731418)).
 
 #### DOM
 
