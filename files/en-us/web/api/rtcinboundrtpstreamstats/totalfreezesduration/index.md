@@ -8,11 +8,11 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration
 
 {{APIRef("WebRTC")}}
 
-The **`totalFreezesDuration`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary indicates the total time that the video in this stream has spent frozen, in seconds
+The **`totalFreezesDuration`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary indicates the total time that the video in this stream has spent frozen, in seconds.
 
 A freeze is counted if the interval between two rendered frames is equal or greater than the larger of "three times the average duration", or "the average + 150ms", and the time taken between frames is added to the `totalFreezesDuration`.
 
-The average freezes duration can be calculated using `totalFreezesDuration / freezeCount`.
+The average freeze duration can be calculated using `totalFreezesDuration / freezeCount`.
 
 > [!NOTE]
 > The property is undefined for audio streams.

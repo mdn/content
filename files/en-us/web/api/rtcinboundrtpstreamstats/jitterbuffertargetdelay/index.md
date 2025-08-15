@@ -8,10 +8,10 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.jitterBufferTargetDelay
 
 {{APIRef("WebRTC")}}
 
-The **`jitterBufferTargetDelay`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the accumulated target {{glossary("jitter","jitter buffer")}} delay, in seconds
+The **`jitterBufferTargetDelay`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the accumulated target {{glossary("jitter","jitter buffer")}} delay, in seconds.
 
 The target jitter buffer delay is the playout delay that the jitter buffer estimates that it needs to maintain in order to compensate for jitter and ensure smooth playback.
-The estimate is affected by network variability and latency and mechanisms such as AV synchronization, and may be influenced by the developers using the {{domxref("RTCRtpReceiver.jitterBufferTarget")}} property.
+The estimate is affected by network variability and latency as well as mechanisms such as AV synchronization. Developers can influence it by setting the {{domxref("RTCRtpReceiver.jitterBufferTarget")}} property.
 
 The property is updated when {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}} is updated.
 The average target jitter buffer delay is `jitterBufferTargetDelay / jitterBufferEmittedCount`.

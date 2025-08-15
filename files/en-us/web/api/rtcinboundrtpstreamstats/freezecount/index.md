@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.freezeCount
 
 The **`freezeCount`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of video freezes experienced by this receiver.
 
-A freeze is counted if the interval between two rendered frames is equal or greater than the larger of "three times the average duration", or "the average + 150ms".
+A freeze is counted if the interval between two rendered frames is equal to or greater than the larger of "three times the average duration", or "the average + 150ms".
 This ensures that the delay required to increment the freeze count scales appropriately with the frame rate.
 
 > [!NOTE]

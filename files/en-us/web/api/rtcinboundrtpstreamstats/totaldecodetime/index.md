@@ -19,7 +19,7 @@ The number of decoded frames is given in {{domxref("RTCInboundRtpStreamStats.fra
 
 ## Value
 
-An positive number.
+An positive number, in seconds.
 
 ## Specifications
 

@@ -16,7 +16,7 @@ A positive integer.
 
 ## Description
 
-The **`ssrc`** property uniquely identifying the SSRC of the RTP packets whose statistics are covered by this {{domxref("RTCInboundRtpStreamStats")}} object.
+The **`ssrc`** property uniquely identifies the SSRC of the RTP packets whose statistics are covered by this {{domxref("RTCInboundRtpStreamStats")}} object.
 
 A synchronization source might be something like a microphone, or a mixer application that combines multiple sources.
 All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
