@@ -147,6 +147,7 @@ p.custom {
 
 ## See also
 
+- {{cssxref("caret-animation")}}
 - {{cssxref("color")}}
 - {{cssxref("text-emphasis")}}
 - {{cssxref("cursor")}}
