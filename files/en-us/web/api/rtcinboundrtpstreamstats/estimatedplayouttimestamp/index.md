@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: estimatedPlayoutTimestamp property"
 short-title: estimatedPlayoutTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/estimatedPlayoutTimestamp
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.estimatedPlayoutTimestamp
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`estimatedPlayoutTimestamp`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the estimated playout time of this receiver's track.
 

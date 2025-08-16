@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: totalPausesDuration property"
 short-title: totalPausesDuration
 slug: Web/API/RTCInboundRtpStreamStats/totalPausesDuration
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.totalPausesDuration
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`totalPausesDuration`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary indicates the total time that the video in this stream has spent paused, in seconds
 

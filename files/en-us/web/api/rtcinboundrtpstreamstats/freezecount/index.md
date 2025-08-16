@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: freezeCount property"
 short-title: freezeCount
 slug: Web/API/RTCInboundRtpStreamStats/freezeCount
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.freezeCount
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`freezeCount`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of video freezes experienced by this receiver.
 

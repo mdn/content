@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: pauseCount property"
 short-title: pauseCount
 slug: Web/API/RTCInboundRtpStreamStats/pauseCount
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.pauseCount
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`pauseCount`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary indicates the total number of pauses experienced by this receiver.
 
