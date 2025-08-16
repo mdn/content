@@ -10,10 +10,10 @@ spec-urls: https://urlpattern.spec.whatwg.org/
 
 The **URL Pattern API** defines a syntax that is used to create URL pattern matchers.
 These patterns can be matched against URLs or individual URL components.
-The URL Pattern API is used by the {{domxref("URLPattern")}} interface.
 
 ## Concepts and usage
 
+Patterns are specified using the {{domxref("URLPattern")}} interface.
 The pattern syntax is based on the syntax from the [path-to-regexp](https://github.com/pillarjs/path-to-regexp) library.
 Patterns can contain:
 
@@ -26,12 +26,9 @@ Patterns can contain:
   Some APIs prohibit the use of regular expression groups in `URLPattern` objects.
   The {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} property indicates whether or not regular expression groups are used.
 
-You can find details about the syntax in the [pattern syntax](#pattern_syntax)
-section below.
+You can find details about the syntax in the [pattern syntax](#pattern_syntax) section below.
 
 ## Interfaces
-
-The URL Pattern API only has a single related interface:
 
 - {{domxref("URLPattern")}}
   - : Represents a pattern that can match URLs or parts of URLs. The pattern can contain capturing groups that extract parts of the matched URL.
@@ -189,10 +186,9 @@ console.log(pattern.exec("https://example.com/books/123").pathname.groups); // {
 
 ### Group modifiers
 
-Groups can also have modifiers. These are specified after the group name (or
-after the regexp if there is one). There are three modifiers: `?` to make the
-group optional, `+` to make the group repeat one or more times, and `*` to make
-the group repeat zero or more times.
+Groups can also have modifiers.
+These are specified after the group name (or after the regexp if there is one).
+There are three modifiers: `?` to make the group optional, `+` to make the group repeat one or more times, and `*` to make the group repeat zero or more times.
 
 ```js
 // An optional group
@@ -322,13 +318,31 @@ console.log(pattern.test("https://example.com/.png")); // true
 
 ### Pattern normalization
 
-When a pattern is parsed it is automatically normalized to a canonical form. For
-example, unicode characters are percent encoded in the pathname property,
-punycode encoding is used in the hostname, default port numbers are elided,
-paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc. In addition,
-there are some pattern representations that parse to the same underlying
-meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
+When a pattern is parsed it is automatically normalized to a canonical form.
+For example, unicode characters are percent encoded in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc.
+In addition, there are some pattern representations that parse to the same underlying meaning, like `foo` and `{foo}`.
+Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
+
+## Inheritance from a base URL
+
+Both the match patterns defined in {{domxref("URLPattern")}} and the test URLs used in {{domxref("URLPattern.test()")}} and {{domxref("URLPattern.exec()")}} allow the inputs to be specified with an optional base URL (this base URL is a separate parameter when specifying the URL as a string, and a separate property when specifying the URL as an object).
+
+If a base URL is defined then URL-parts _may_ be inherited from the base URL and used to set parts of the pattern or test URL.
+URL resolution is much the same as you would expect when resolving a {{domxref("URL")}} that is specified with a base URL.
+
+The `username` and `password` are never inherited from the base URL.
+
+Only URL parts that are "more specific" than the most-specific part defined in the input will be inherited from the base URL.
+The following lists show the order of specificity:
+
+- `protocol` (most specific), `hostname`, `port`, `pathname`, `search`, `hash`
+- `protocol`, `hostname`, `port`, `username`, `password`
+
+What this means, for example, is that if the `protocol` is specified in the input URL, then nothing is more specific, so nothing will be inherited from the base URL.
+However if the `pathname` part is specified in the input, the `protocol`, `hostname` and `port` may be inherited from the base URL, but the `search` and `hash` will not.
+
+Note that URL components that are not specified in the string/input object or inherited from the base URL will default to the wildcard value (`"*"`) for a `URLPattern` and to the empty string (`""`) for a test URL.
 
 ## Case sensitivity
 
@@ -371,6 +385,7 @@ const pattern = new URLPattern({
 console.log(pattern.hostname); // '{*.}?example.com'
 
 console.log(pattern.protocol); // '*'
+console.log(pattern.port); // '*'
 console.log(pattern.username); // '*'
 console.log(pattern.password); // '*'
 console.log(pattern.pathname); // '*'
@@ -378,10 +393,8 @@ console.log(pattern.search); // '*'
 console.log(pattern.hash); // '*'
 
 console.log(pattern.test("https://example.com/foo/bar")); // true
-
 console.log(pattern.test({ hostname: "cdn.example.com" })); // true
-
-console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // false
+console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // true
 
 // Prints `false` because the hostname component does not match
 console.log(pattern.test("https://cdn-example.com/foo/bar"));
@@ -395,29 +408,26 @@ It "just works" if there is no ambiguity between whether a character is part of 
 
 ```js
 // Construct a URLPattern that matches URLs to CDN servers loading jpg images.
-// URL components not explicitly specified, like search and hash here, result
-// in the empty string similar to the URL() constructor.
+// URL components not explicitly specified result in the wild string ("*")
 const pattern = new URLPattern("https://cdn-*.example.com/*.jpg");
 
 console.log(pattern.protocol); // 'https'
-
 console.log(pattern.hostname); // 'cdn-*.example.com'
-
 console.log(pattern.pathname); // '/*.jpg'
 
-console.log(pattern.username); // ''
-console.log(pattern.password); // ''
-console.log(pattern.search); // ''
-console.log(pattern.hash); // ''
+console.log(pattern.username); // '*'
+console.log(pattern.password); // '*'
+console.log(pattern.search); // '*'
+console.log(pattern.hash); // '*'
 
-// Prints `true`
+// `true`
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg")
 );
 
-// Prints `false` because the search component does not match
+// `true` because the search pattern defaults to wildcard
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1")
 );
 ```
 
@@ -444,15 +454,13 @@ Here `:` is escaped as `\\:`.
 const pattern = new URLPattern("data\\:foo*");
 
 console.log(pattern.protocol); // 'data'
-
 console.log(pattern.pathname); // 'foo*'
-
-console.log(pattern.username); // ''
-console.log(pattern.password); // ''
+console.log(pattern.username); // '*'
+console.log(pattern.password); // '*'
 console.log(pattern.hostname); // ''
 console.log(pattern.port); // ''
-console.log(pattern.search); // ''
-console.log(pattern.hash); // ''
+console.log(pattern.search); // '*'
+console.log(pattern.hash); // '*'
 
 console.log(pattern.test("data:foobar")); // true
 ```
@@ -464,40 +472,47 @@ The following example shows how `test()` and `exec()` can use base URLs.
 ```js
 const pattern = new URLPattern({ hostname: "example.com", pathname: "/foo/*" });
 
-// Prints `true` as the hostname based in the dictionary `baseURL` property
-// matches.
+console.log(pattern.protocol); // '*'
+console.log(pattern.pathname); // '/foo/*'
+console.log(pattern.username); // '*'
+console.log(pattern.password); // '*'
+console.log(pattern.hostname); // 'example.com'
+console.log(pattern.port); // '*'
+console.log(pattern.search); // '*'
+console.log(pattern.hash); // '*'
+
+// `true` as the hostname is inherited from `baseURL` property
+// (so is the protocol, but that is matched by the pattern wildcard)
 console.log(
   pattern.test({
     pathname: "/foo/bar",
     baseURL: "https://example.com/baz",
-  }),
+  })
 );
 
 // Prints `true` as the hostname in the second argument base URL matches.
 console.log(pattern.test("/foo/bar", "https://example.com/baz"));
 
-// Throws because the second argument cannot be passed with a dictionary input.
+// Throws because the second argument cannot be passed with the object input.
 try {
   pattern.test({ pathname: "/foo/bar" }, "https://example.com/baz");
 } catch (e) {}
 
 // The `exec()` method takes the same arguments as `test()`.
 const result = pattern.exec("/foo/bar", "https://example.com/baz");
-
 console.log(result.pathname.input); // '/foo/bar'
-
 console.log(result.pathname.groups[0]); // 'bar'
-
 console.log(result.hostname.input); // 'example.com'
 ```
 
 ### Using base URLs in the URLPattern constructor
 
-The follow example shows how base URLs can also be used to construct the `URLPattern`.
+The following example shows how base URLs can also be used to construct the `URLPattern`.
 Note that the base URL in these cases is treated strictly as a URL and cannot contain any pattern syntax itself.
 
-Also, since the base URL provides a value for every component the resulting `URLPattern` will also have a value for every component, even if it's the empty string.
-This means you do not get the "default to wildcard" behavior.
+Note that the pattern only [inherits URL parts from the base URL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) that are less specific than those in the other properties.
+What this means is that most default to the wildcard string (`"*"`).
+The exception is the port, which is set to the empty string because the hostname is inherited from the base URL ([which has an implied "default port" value](/en-US/docs/Web/API/URLPattern/URLPattern#hostname_in_url_or_baseurl_affects_default_port)).
 
 ```js
 const pattern1 = new URLPattern({
@@ -508,12 +523,11 @@ const pattern1 = new URLPattern({
 console.log(pattern1.protocol); // 'https'
 console.log(pattern1.hostname); // 'example.com'
 console.log(pattern1.pathname); // '/foo/*'
-
-console.log(pattern1.username); // ''
-console.log(pattern1.password); // ''
+console.log(pattern1.username); // '*'
+console.log(pattern1.password); // '*'
 console.log(pattern1.port); // ''
-console.log(pattern1.search); // ''
-console.log(pattern1.hash); // ''
+console.log(pattern1.search); // '*'
+console.log(pattern1.hash); // '*'
 
 // Equivalent to pattern1
 const pattern2 = new URLPattern("/foo/*", "https://example.com");
@@ -535,9 +549,7 @@ const pattern = new URLPattern({ hostname: "*.example.com" });
 const result = pattern.exec({ hostname: "cdn.example.com" });
 
 console.log(result.hostname.groups[0]); // 'cdn'
-
 console.log(result.hostname.input); // 'cdn.example.com'
-
 console.log(result.inputs); // [{ hostname: 'cdn.example.com' }]
 ```
 
@@ -555,9 +567,7 @@ const result = pattern.exec({ pathname: "/store/wanderview/view" });
 console.log(result.pathname.groups.product); // 'store'
 console.log(result.pathname.groups.user); // 'wanderview'
 console.log(result.pathname.groups.action); // 'view'
-
 console.log(result.pathname.input); // '/store/wanderview/view'
-
 console.log(result.inputs); // [{ pathname: '/store/wanderview/view' }]
 ```
 
@@ -573,7 +583,6 @@ console.log(pattern.test({ pathname: "/bar" })); // true
 console.log(pattern.test({ pathname: "/baz" })); // false
 
 const result = pattern.exec({ pathname: "/foo" });
-
 console.log(result.pathname.groups[0]); // 'foo'
 ```
 
@@ -641,7 +650,6 @@ const pattern = new URLPattern({ pathname: "/product/:action*" });
 const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
 
 console.log(result.pathname.groups.action); // 'do/some/thing/cool'
-
 console.log(pattern.test({ pathname: "/product" })); // true
 ```
 
@@ -690,7 +698,7 @@ const pattern = new URLPattern({
 });
 
 const result = pattern.exec(
-  "http://foo:bar@sub.example.com/product/view?q=12345",
+  "http://foo:bar@sub.example.com/product/view?q=12345"
 );
 
 console.log(result.username.groups.user); // 'foo'
