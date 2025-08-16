@@ -122,7 +122,7 @@ Developers would typically use `Integrity-Policy-Report-Only` as a first deploym
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed value is `script`.
+  - : Defines a list of [request destinations](/en-US/docs/Web/API/Request/destination) to be blocked. The only allowed values are `script` and `style`.
 - `sources` {{optional_inline}}
   - : Defines a list of integrity sources. The default and only currently supported value is `inline`. As a result, adding `sources=(inline)` to the header has a similar effect as omitting `sources`.
 - `endpoints` {{optional_inline}}
