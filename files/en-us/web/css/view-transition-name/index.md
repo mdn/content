@@ -183,7 +183,7 @@ We create a custom CSS animation and apply it to the `::view-transition-old(figu
 
 ### Using the `match-element` value
 
-The [View Transitions match-element demo](https://mdn.github.io/dom-examples/view-transitions/match-element/) contains a list of content items in a sidebar with a large main content space beside it. The headings inside the list items can be clicked, which will cause them to animate into the main content space and show all their content.
+This contains a list of content items in a sidebar with a large main content space beside it. The headings inside the list items can be clicked, which will cause them to animate into the main content space and show all their content.
 
 #### HTML
 
@@ -193,35 +193,148 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
 <main class="match-element-applied">
   <ul>
     <li>
-      <h2><a href="#">One</a></h2>
-
-      ...
+      <h2><a href="#">HTML</a></h2>
+      <h3>Hyper Text Markup Language</h3>
+      <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. HTML provides the fundamental building blocks for structuring Web documents and apps.
+      </p>
     </li>
-    <li>...</li>
-
-    ...
+    <li>
+      <h2><a href="#">CSS</a></h2>
+      <h3>Cascading Style Sheets</h3>
+      <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+      </p>
+    </li>
+    <li>
+      <h2><a href="#">SVG</a></h2>
+      <h3>Scalable Vector Graphics</h3>
+      <p>SVG (Scalable Vector Graphics) is an XML-based markup language for describing two-dimensional based vector graphics.
+      </p>
+    </li>
+    <li>
+      <h2><a href="#">JS</a></h2>
+      <h3>JavaScript</h3>
+      <p>JS (JavaScript) is the Web's native programming language. JavaScript is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js.
+      </p>
+    </li>
   </ul>
   <article></article>
 </main>
+<form>
+  <label for="match-element-checkbox"
+    >Apply <code>view-transition-name: match-element</code> to list
+    items?</label
+  >
+  <input type="checkbox" checked id="match-element-checkbox" />
+</form>
 ```
 
 #### CSS
 
 We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the list and the `<article>` side-by-side, and to cause the list items to all take up an equal amount of space in the left-hand column. The list has a fixed width, while the `<article>` takes up the rest of the available horizontal space.
 
+```css hidden
+/* general styles and resets */
+* {
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around
+}
+li h2 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+li p {
+  display: none;
+}
+
+li.active-item p {
+  display: block;
+}
+
+li:nth-child(1) {
+  background-color: #cbc0d3;
+  border: 20px solid #cbc0d3;
+}
+
+li:nth-child(2) {
+  background-color: #efd3d7;
+  border: 20px solid #efd3d7;
+}
+
+li:nth-child(3) {
+  background-color: #feeafa;
+  border: 20px solid #feeafa;
+}
+
+li:nth-child(4) {
+  background-color: #dee2ff;
+  border: 20px solid #dee2ff;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: rgb(0 0 255 / 0.8);
+}
+
+a:hover,
+a:focus {
+  color: rgb(100 100 255);
+}
+
+/* END general styles and resets */
+/* form/checkbox styles */
+form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+/* END form/checkbox styles */
+```
+
 ```css
 main {
-  height: calc(100% - 80px);
+  container-type: inline-size;
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 10px;
+  gap: 2cqw;
   position: relative;
 }
 
 ul {
-  width: 300px;
+  width: 35cqw;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1cqw;
 }
 
 article {
@@ -239,10 +352,14 @@ We also define a rule that selects elements with the `active-item` class. When t
 .active-item {
   position: absolute;
   z-index: 1;
-  translate: 310px;
-  width: calc(100% - 310px);
+  translate: 37cqw;
+  width: calc(100% - 37cqw);
   height: 100%;
 }
+```
+
+```css hidden
+
 ```
 
 By default, all the rendered elements involved in the view transition are animated together in one cross-fade. However, in this case, we don't want this — we want to give each list item an individual movement animation. We can achieve this by applying `view-transition-name: match-element` to every list item:
@@ -253,7 +370,7 @@ By default, all the rendered elements involved in the view transition are animat
 }
 ```
 
-The `match-element-applied` class is applied to the `<main>` element. When looking at the [live demo](https://mdn.github.io/dom-examples/view-transitions/match-element/), you can remove this class by unchecking the checkbox in the bottom-right corner of the UI. This allows you to compare the singular cross-fade animation you get without `view-transition-name: match-element` to the individual movement animations you get when it is applied.
+The `match-element-applied` class is applied to the `<main>` element. You can remove this class by unchecking the checkbox in the bottom-right corner of the UI. This allows you to compare the singular cross-fade animation you get without `view-transition-name: match-element` to the individual movement animations you get when it is applied.
 
 We also use the {{cssxref("::view-transition-group()")}} pseudo-element to apply an {{cssxref("animation-duration")}} to all the view transition groups (signified by the `*` identifier) and give all the old and new snapshots a {{cssxref("height")}} of `100%` to work around differences in their aspect ratios and make the animations look smoother:
 
@@ -273,6 +390,11 @@ html::view-transition-new(*) {
 The demo's JavaScript applies the `active-item` class to the list items when their links are clicked; this is achieved via the `updateActiveItem()` function:
 
 ```js
+const mainElem = document.querySelector("main");
+let prevElem;
+let checkboxElem = document.querySelector("input");
+
+// View transition code
 function updateActiveItem(event) {
   // A reference to the list item containing the link that was clicked
   const clickedElem = event.target.parentElement.parentElement;
@@ -295,6 +417,7 @@ function updateActiveItem(event) {
 }
 
 mainElem.addEventListener("click", (event) => {
+  event.preventDefault() // prevents the iframe scrolling on click
   // Don't do anything unless a link is clicked inside the <main> element
   if (event.target.tagName !== "A") {
     return;
@@ -310,9 +433,17 @@ mainElem.addEventListener("click", (event) => {
     );
   }
 });
+
+// Update class on main to control whether match-element is applied
+
+checkboxElem.addEventListener("change", () => {
+  mainElem.classList.toggle("match-element-applied");
+});
 ```
 
 Running the `updateActiveItem()` function via the `startViewTransition()` function causes the UI changes to animate smoothly.
+
+{{EmbedLiveSample("using_the-match-element_value", "", "400")}}
 
 ## Specifications
 
