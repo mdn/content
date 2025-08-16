@@ -6,7 +6,19 @@ browser-compat: css.properties.backdrop-filter
 sidebar: cssref
 ---
 
-The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect the element or its background needs to be transparent or partially transparent.
+The **`backdrop-filter`** CSS property lets you apply graphical effects such as blurring or color shifting to an element's **backdrop image**, which are the pixels painted behind the element up to its nearest ancestor Backdrop Root. To see the effect, the element (or its background) must be transparent or partially transparent.
+
+> [!NOTE]
+> Filters do not apply to pixels behind the element that originate from outside its nearest ancestor Backdrop Root.
+> A Backdrop Root is the nearest ancestor that is one of:
+>
+> - the root `<html>` element
+> - an element with a `filter` property other than `none`
+> - an element with `opacity` less than 1
+> - an element with `mask`, `mask-image`, `mask-border`, or `clip-path` other than `none`
+> - an element with `backdrop-filter` other than `none`
+> - an element with `mix-blend-mode` other than `normal`
+> - an element with `will-change` specifying any of the above properties
 
 {{InteractiveExample("CSS Demo: backdrop-filter()")}}
 
