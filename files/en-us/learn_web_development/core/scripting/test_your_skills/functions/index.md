@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Functions"
-short-title: Functions
+short-title: "Test: Functions"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions), [Build your own function](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function), and [Function return values](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) articles.
 
@@ -259,3 +261,5 @@ para.textContent = shortNames;
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

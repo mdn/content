@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: JSON"
-short-title: JSON
+short-title: "Test: JSON"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Working with JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON) article.
 
@@ -116,3 +118,5 @@ function displayCatInfo(catString) {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
