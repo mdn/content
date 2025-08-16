@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : Turns a `<button>` element into a command button, controlling the given interactive element; takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-- `form`
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<button>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
