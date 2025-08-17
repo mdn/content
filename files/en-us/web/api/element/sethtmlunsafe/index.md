@@ -34,7 +34,8 @@ setHTMLUnsafe(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed.
-        Note that generally a `"Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
+         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the default (XSS-safe) configuration.
+        Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
         If not specified, no sanitizer is used.
 
 ### Return value
@@ -115,7 +116,7 @@ const trustedHTML = policy.createHTML(untrustedString);
 Now that we have `trustedHTML`, the code below shows how you can use it with `setHTMLUnsafe()`, both with and without a sanitizer.
 
 > [!NOTE]
-> The input may already sanitized by the trusted type policy at this point.
+> The input may already have been sanitized by the trusted type policy at this point.
 
 ```js
 // Get the target Element with id "target"
@@ -141,7 +142,7 @@ target.setHTMLUnsafe(trustedHTML, {
 ### `setHTMLUnsafe()` live example
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
-The code defines buttons that you can click to inject a string of HTML that is not sanitized, and that uses and a custom sanitizer, respectively.
+The code defines buttons that you can click to inject a string of HTML. One button injects the HTML without sanitizing it at all, and the second uses a custom sanitizer than allows `<script>` elements but not other unsafe items.
 The original string and injected HTML are logged so you can inspect the results in each case.
 
 > [!NOTE]
