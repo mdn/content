@@ -478,23 +478,27 @@ l10n:
     Beginners: 初心者向けチュートリアル
     Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
     CSS_styling_basics: CSS スタイル設定の基本
-    CSS_text_styling: CSS テキストの装飾
+    CSS_text_styling: CSS テキスト装飾
     CSS_layout: CSS レイアウト
     Guides: ガイド
+    Anchor_positioning: アンカー位置指定
     Animations: アニメーション
     Backgrounds_and_Borders: 背景と境界
     Resizing_background_images: 背景画像の拡大縮小
     Box alignment: ボックス配置
     Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
     Box_model: ボックスモデル
+    Cascade: カスケード
     Colors: 色
     Color_contrast: "アクセシビリティ: 色のコントラスト"
     Columns: 段組み
     Combinators: 結合子
     Conditional_rules: 条件付きルール
     Containment: コンテナー
+    Custom_properties: カスタムプロパティ
     CSSOM_view: CSSOM view
     Display: 表示方法
+    Filter_effects: フィルター効果
     Flexbox: フレックスボックス
     Fonts: フォント
     Functions: 関数
@@ -505,15 +509,19 @@ l10n:
     Media_queries: メディアクエリー
     Modules: モジュール
     Nesting: 入れ子のスタイルルール
+    Overflow: オーバーフロー
     Overview: 概要
     Positioning: 位置指定
     Properties: プロパティ
     Pseudo-classes: 擬似クラス
     Pseudo-elements: 擬似要素
+    Scroll_anchoring: スクロールアンカリング
     Scroll_snap: スクロールスナップ
     Selectors: セレクター
     Shapes: シェイプ
+    Syntax: 構文
     Text: テキスト
+    Text decoration: テキスト装飾
     Transforms: 座標変換
     Transitions: トランジション
     Tools: ツール
