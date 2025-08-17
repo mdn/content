@@ -107,12 +107,12 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-Webkit imposes different quotas for _browser apps_ and for other applications which can embed web content (for example, apps that use WKWebView). A browser app is an application that can be set as the system’s default browser. This includes Safari and some other WebKit-based third-party browsers.
+Webkit imposes different quotas for _browser apps_ and for other applications which can embed web content (for example, apps that use WKWebView). A browser app is an application that can be set as the system's default browser. This includes Safari and some other WebKit-based third-party browsers.
 
 Starting with macOS 14 and iOS 17:
 
 - For Webkit-based browser apps, each origin can store up to around 60% of total disk.
-- For other Webkit-based apps that embed web content, each origin can store up to around 15%  of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
+- For other Webkit-based apps that embed web content, each origin can store up to around 15% of total disk. If the user has saved the site as a web app on the Home Screen or the Dock, it uses the same origin quota as the browser app (around 60% of disk space).
 
 For instance, a macOS device with a 1 TiB drive will limit each origin within the Safari web browser to around 600 GiB. Origins running in another app's embedded WebView will be allotted a lesser limit of around 150 GiB.
 
@@ -127,7 +127,7 @@ More information on WebKit's storage policies can be found on the [WebKit blog](
 In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
 > [!NOTE]
->  On iOS/iPadOS, third-party browsers have historically had to use WebKit, so these WebKit quotas apply to them as well as Safari. In the EU (iOS 17.4+), Apple permits alternative browser engines; in such cases, those browsers’ own engine policies apply instead of WebKit’s.
+> On iOS/iPadOS, third-party browsers have historically had to use WebKit, so these WebKit quotas apply to them as well as Safari. In the EU (iOS 17.4+), Apple permits alternative browser engines; in such cases, those browsers' own engine policies apply instead of WebKit's.
 >
 > On macOS, non-WebKit browsers (e.g., Chromium/Firefox) use their own storage policies.
 >
