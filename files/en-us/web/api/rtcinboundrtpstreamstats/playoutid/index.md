@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: playoutId property"
 short-title: playoutId
 slug: Web/API/RTCInboundRtpStreamStats/playoutId
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.playoutId
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`playoutId`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the {{domxref("RTCAudioPlayoutStats.id", "id")}} of the {{domxref("RTCAudioPlayoutStats")}} object that corresponds to this stream.
 
