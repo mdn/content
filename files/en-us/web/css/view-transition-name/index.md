@@ -201,19 +201,19 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
     <li>
       <h2><a href="#">CSS</a></h2>
       <h3>Cascading Style Sheets</h3>
-      <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+      <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
       </p>
     </li>
     <li>
       <h2><a href="#">SVG</a></h2>
       <h3>Scalable Vector Graphics</h3>
-      <p>SVG (Scalable Vector Graphics) is an XML-based markup language for describing two-dimensional based vector graphics.
+      <p>Scalable Vector Graphics (SVG) is an XML-based markup language for describing two-dimensional based vector graphics.
       </p>
     </li>
     <li>
       <h2><a href="#">JS</a></h2>
       <h3>JavaScript</h3>
-      <p>JS (JavaScript) is the Web's native programming language. JavaScript is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js.
+      <p>JavaScript (JS) is the web's native programming language. JavaScript is a lightweight, interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for web pages, many non-browser environments, such as Node.js, also use it.
       </p>
     </li>
   </ul>
