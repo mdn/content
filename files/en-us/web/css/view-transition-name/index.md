@@ -183,7 +183,7 @@ We create a custom CSS animation and apply it to the `::view-transition-old(figu
 
 ### Using the `match-element` value
 
-This contains a list of content items in a sidebar with a large main content space beside it. The headings inside the list items can be clicked, which will cause them to animate into the main content space and show all their content.
+This example contains a list of technologies–HTML, CSS, SVG, and JS–that are displayed in a sidebar next to a main content area, which starts out empty. Clicking a technology's heading animates its content into the adjoining content area that shows more details.
 
 #### HTML
 
