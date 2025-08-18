@@ -32,6 +32,8 @@ These pseudo-classes relate to the core identity of elements.
 
 - {{CSSxRef(":defined")}}
   - : Matches any element that is defined.
+- {{CSSxRef(":heading")}}
+  - : Matches any heading element (`<h1>`-`<h6>`).
 
 ## Element display state pseudo-classes
 
@@ -165,6 +167,8 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Matches an element that is the last of its siblings.
 - {{CSSxRef(":only-child")}}
   - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
+- {{CSSXRef(":heading_function", ":heading()")}}
+  - : Uses `An+B` notation to select heading elements (`<h1>`-`<h6>`).
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
@@ -308,6 +312,8 @@ H
 
 - {{CSSxRef(":has-slotted")}}
 - {{CSSxRef(":has", ":has()")}}
+- {{CSSXRef(":heading")}}
+- {{CSSXRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host_function", ":host()")}}
 - {{CSSxRef(":host-context", ":host-context()")}}
