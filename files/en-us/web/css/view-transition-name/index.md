@@ -443,6 +443,10 @@ checkboxElem.addEventListener("change", () => {
 
 Running the `updateActiveItem()` function via the `startViewTransition()` function animates the display of technology details smoothly.
 
+#### Result
+
+Click a technology heading in the sidebar and notice the animation effect of its content into the main content area. The checkbox is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see the default cross-fade instead.
+
 {{EmbedLiveSample("using_the-match-element_value", "", "400")}}
 
 ## Specifications
