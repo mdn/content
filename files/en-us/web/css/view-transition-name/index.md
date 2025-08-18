@@ -441,7 +441,7 @@ checkboxElem.addEventListener("change", () => {
 });
 ```
 
-Running the `updateActiveItem()` function via the `startViewTransition()` function causes the UI changes to animate smoothly.
+Running the `updateActiveItem()` function via the `startViewTransition()` function animates the display of technology details smoothly.
 
 {{EmbedLiveSample("using_the-match-element_value", "", "400")}}
 
