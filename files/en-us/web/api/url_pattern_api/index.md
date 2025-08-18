@@ -422,12 +422,12 @@ console.log(pattern.hash); // '*'
 
 // `true`
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
 );
 
 // `true` because the search pattern defaults to wildcard
 console.log(
-  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1")
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
 );
 ```
 
@@ -487,7 +487,7 @@ console.log(
   pattern.test({
     pathname: "/foo/bar",
     baseURL: "https://example.com/baz",
-  })
+  }),
 );
 
 // Prints `true` as the hostname in the second argument base URL matches.
@@ -508,11 +508,13 @@ console.log(result.hostname.input); // 'example.com'
 ### Using base URLs in the URLPattern constructor
 
 The following example shows how base URLs can also be used to construct the `URLPattern`.
-Note that the base URL in these cases is treated strictly as a URL and cannot contain any pattern syntax itself.
+The base URL is treated strictly as a URL and cannot contain any pattern syntax itself.
 
-Note that the pattern only [inherits URL parts from the base URL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) that are less specific than those in the other properties.
-What this means is that most default to the wildcard string (`"*"`).
-The exception is the port, which is set to the empty string because the hostname is inherited from the base URL ([which has an implied "default port" value](/en-US/docs/Web/API/URLPattern/URLPattern#hostname_in_url_or_baseurl_affects_default_port)).
+The pattern only [inherits URL parts from the base URL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) that are less specific than those in the other properties.
+
+In this case the `pathname` is specified so the protocol and host can be inherited, but not the search, hash, username, or password.
+The properties that are not inherited default to the wildcard string (`"*"`).
+The exception is the port, which is set to the empty string because the _hostname_ is inherited from the base URL ([which has an implied "default port" value](/en-US/docs/Web/API/URLPattern/URLPattern#hostname_in_url_or_baseurl_affects_default_port)).
 
 ```js
 const pattern1 = new URLPattern({
@@ -541,39 +543,54 @@ try {
 
 ### Accessing matched group values
 
-The following example shows how input values that match pattern groups can later be accessed from the `exec()` result object.
-Unnamed groups are assigned index numbers sequentially.
+The following example shows how input values that match pattern groups can later be accessed from the {{domxref("URLPattern/exec","exec()")}} result object.
+
+The `input` property is the string that is matched by the pattern: in this case`cdn.example.com`.
+The `groups` property contains captured groups, indexed by number for unnamed groups, and name for named groups.
+In this case there is just one unnamed group for the wildcard property, with the value `cdn`.
 
 ```js
 const pattern = new URLPattern({ hostname: "*.example.com" });
 const result = pattern.exec({ hostname: "cdn.example.com" });
 
-console.log(result.hostname.groups[0]); // 'cdn'
-console.log(result.hostname.input); // 'cdn.example.com'
-console.log(result.inputs); // [{ hostname: 'cdn.example.com' }]
+console.log(result.hostname); // {"groups": {"0": "cdn"}, "input": "cdn.example.com"}
 ```
 
-### Accessing matched group values using custom names
+### Accessing matched named group values
 
 The following example shows how groups can be given custom names which can be used to accessed the matched value in the result object.
 
+The match patterns in the pattern are indicated by the `:` symbol followed by a name.
+The same names then appear as keys in the `groups` property, with the matching values being the matched part of the test URL.
+The `input` property contains the whole part of the URL that matched the `pathname` pattern.
+
 ```js
-// Construct a URLPattern using matching groups with custom names. These
-// names can then be later used to access the matched values in the result
-// object.
+// Construct a URLPattern using matching groups with custom names.
+
 const pattern = new URLPattern({ pathname: "/:product/:user/:action" });
 const result = pattern.exec({ pathname: "/store/wanderview/view" });
 
-console.log(result.pathname.groups.product); // 'store'
+console.log(result.pathname);
+/*
+{
+    "groups": {
+        "product": "store",
+        "user": "wanderview",
+        "action": "view"
+    },
+    "input": "/store/wanderview/view"
+}
+*/
+
+// These names can then be later used to access the matched values
+// in the result object, such as "user" below.
 console.log(result.pathname.groups.user); // 'wanderview'
-console.log(result.pathname.groups.action); // 'view'
-console.log(result.pathname.input); // '/store/wanderview/view'
-console.log(result.inputs); // [{ pathname: '/store/wanderview/view' }]
 ```
 
-### Custom regular expression groups
+### Regular expression with unnamed group
 
-The following example shows how a matching group can use a custom regular expression.
+The following example shows how a matching group can use a regular expression to match either `/foo` or `/bar` in a test URL.
+The group is unnamed, so will be referenced by an index number in the result.
 
 ```js
 const pattern = new URLPattern({ pathname: "/(foo|bar)" });
@@ -586,9 +603,11 @@ const result = pattern.exec({ pathname: "/foo" });
 console.log(result.pathname.groups[0]); // 'foo'
 ```
 
-### Named group with a custom regular expression
+### Regular expression with a named group
 
 The following example shows how to use a custom regular expression with a named group.
+
+The group is named `type`, and matches a path which is either `/foo` or `/bar`.
 
 ```js
 const pattern = new URLPattern({ pathname: "/:type(foo|bar)" });
@@ -600,6 +619,7 @@ console.log(result.pathname.groups.type); // 'foo'
 ### Making matching groups optional
 
 The following example shows how to make a matching group optional by placing a `?` modifier after it.
+
 For the pathname component this also causes any preceding `/` character to be treated as an optional prefix to the group.
 
 ```js
@@ -612,10 +632,12 @@ const pattern2 = new URLPattern({ pathname: "/product/:action?" });
 
 console.log(pattern2.test({ pathname: "/product/view" })); // true
 console.log(pattern2.test({ pathname: "/product" })); // true
+```
 
-// Wildcards can be made optional as well. This may not seem to make sense
-// since they already match the empty string, but it also makes the prefix
-// `/` optional in a pathname pattern.
+Wildcards can be made optional as well.
+This may not seem to make sense since they already match the empty string, but it also makes the prefix `/` optional in a pathname pattern.
+
+```js
 const pattern3 = new URLPattern({ pathname: "/product/*?" });
 
 console.log(pattern3.test({ pathname: "/product/wanderview/view" })); // true
@@ -626,16 +648,23 @@ console.log(pattern3.test({ pathname: "/product/" })); // true
 ### Making matching groups repeated
 
 The following example shows how a matching group can be made repeated by placing `+` modifier after it.
-In the `pathname` component this also treats the `/` prefix as special.
-It is repeated with the group.
+In the `pathname` component this also treats the `/` prefix as special, so that it effectively the start of the repeating group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/:action+" });
 const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
 
-result.pathname.groups.action; // 'do/some/thing/cool'
+console.log(result.pathname);
+// { "groups": { "action": "do/some/thing/cool" }, "input": "/product/do/some/thing/cool" }
+```
 
+Note that `/product` does not match because it is not followed by `/` and at least one character.
+
+```js
 console.log(pattern.test({ pathname: "/product" })); // false
+console.log(pattern.test({ pathname: "/product/" })); // false
+console.log(pattern.test({ pathname: "/product/do" })); // true
+console.log(pattern.test({ pathname: "/product/do/" })); // false
 ```
 
 ### Making matching groups optional and repeated
@@ -643,35 +672,51 @@ console.log(pattern.test({ pathname: "/product" })); // false
 The following example shows how to make a matching group that is both optional and repeated.
 Do this by placing a `*` modifier after the group.
 Again, the pathname component treats the `/` prefix as special.
+
 It both becomes optional and is also repeated with the group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product/:action*" });
 const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
 
-console.log(result.pathname.groups.action); // 'do/some/thing/cool'
+console.log(result.pathname);
+// { "groups": { "action": "do/some/thing/cool" }, "input": "/product/do/some/thing/cool" }
+```
+
+Note that unlike the previous example, `/product` matches because the repeating segments, including `/` are optional.
+However there must be at least one character to capture after a forward slash to match the repeating group.
+
+```js
 console.log(pattern.test({ pathname: "/product" })); // true
+console.log(pattern.test({ pathname: "/product/" })); // false
+console.log(pattern.test({ pathname: "/product/do" })); // true
+console.log(pattern.test({ pathname: "/product/do/" })); // false
 ```
 
 ### Using a custom prefix or suffix for an optional or repeated modifier
 
-The following example shows how curly braces can be used to denote a custom prefix and/or suffix to be operated on by a subsequent `?`, `*`, or `+` modifier.
+The following example shows how curly braces (a [group delimiter](#group_delimiters)) can be with a named group to denote a custom prefix and/or suffix to be operated on by a subsequent `?`, `*`, or `+` modifier.
+
+For example, `{:subdomain.}*` matches against any subdomain of `example.com` and the domain itself.
+The match is assigned to the named group "subdomain".
 
 ```js
 const pattern = new URLPattern({ hostname: "{:subdomain.}*example.com" });
+const result = pattern.exec({ hostname: "foo.bar.example.com" });
 
 console.log(pattern.test({ hostname: "example.com" })); // true
 console.log(pattern.test({ hostname: "foo.bar.example.com" })); // true
 console.log(pattern.test({ hostname: ".example.com" })); // false
 
-const result = pattern.exec({ hostname: "foo.bar.example.com" });
-
-console.log(result.hostname.groups.subdomain); // 'foo.bar'
+console.log(result.hostname);
+// { "groups": { "subdomain": "foo.bar" }, "input": "foo.bar.example.com" }
 ```
 
 ### Making text optional or repeated without a matching group
 
 The following example shows how curly braces can be used to denote fixed text values as optional or repeated without using a matching group.
+
+The pattern below matches either `/product` or `/products/` but because [group delimiter](#group_delimiters) are non-capturing by default, the result is not found in a corresponding match group.
 
 ```js
 const pattern = new URLPattern({ pathname: "/product{/}?" });
@@ -680,7 +725,6 @@ console.log(pattern.test({ pathname: "/product" })); // true
 console.log(pattern.test({ pathname: "/product/" })); // true
 
 const result = pattern.exec({ pathname: "/product/" });
-
 console.log(result.pathname.groups); // {}
 ```
 
@@ -698,7 +742,7 @@ const pattern = new URLPattern({
 });
 
 const result = pattern.exec(
-  "http://foo:bar@sub.example.com/product/view?q=12345"
+  "http://foo:bar@sub.example.com/product/view?q=12345",
 );
 
 console.log(result.username.groups.user); // 'foo'

@@ -42,18 +42,19 @@ An {{jsxref("object")}} that defines the matching elements and groups, or `null`
 The object has the following properties:
 
 - `inputs`
-
   - : An array containing the inputs passed to the `exec()` function.
     This will either contain a passed `input` object, an an absolute `url` string, or a relative `url` and a `baseURL`.
 
 - `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, and `hash`
-  - : Each URL-part property contains an object with the following properties:
+  - : Named properties for each URL-part.
+    Each property contains an object with the following properties:
     - `input`
       - : The part of the input corresponding to the current URL-part property (which must have matched the pattern).
         This might be the empty string ("").
     - `groups`
       - : An object with properties for each match group in the URL part (if any), and the corresponding matched values in the inputs.
-        The group properties numbered of unnamed match groups (such as the wildcard) and named to match the group for named match groups.
+        The group properties are numbered from 0 for unnamed match groups (such as the wildcard).
+        For named match groups, the property name is the group name.
 
 ### Exceptions
 
@@ -91,7 +92,7 @@ const pattern = new URLPattern("http{s}?://*.example.com/books/:id");
 
 Next we test the URL string `"https://store.example.com/books/123"` against this pattern, and then separately log the objects for each property.
 Note that the `input` shows the input in the URL that matches the pattern.
-In many cases this is the empty string (`""`) because the input URL does not specify the particular URL part (which matches because the corresponding pattern by default uses a wildcard match the URL parts it doesn't specify).
+In many cases this is the empty string (`""`) because the input URL does not specify the particular URL part (this matches the pattern because by default it uses a wildcard match for unspecified URL parts).
 
 ```js
 let match = pattern.exec("https://store.example.com/books/123");
