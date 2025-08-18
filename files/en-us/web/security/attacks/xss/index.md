@@ -203,7 +203,8 @@ However, suppose the template is like this:
 <div \{{ my_input }}></div>
 ```
 
-In this context the browser will treat the `my_input` variable as an HTML attribute. Because Django encodes quotes (`"` → `&quot;`, `'` → `&#x27;`), the payload `onmouseover="alert('XSS')"` will not execute. However, an unquoted payload like `onmouseover=alert(1)` (or using backticks, `onmouseover=alert(`XSS`)`) will still execute, because attribute values need not be quoted and backticks are not escaped by default.
+In this context the browser will treat the `my_input` variable as an HTML attribute. Because Django encodes quotes (`"` → `&quot;`, `'` → `&#x27;`), the payload `onmouseover="alert('XSS')"` will not execute.
+However, an unquoted payload like `onmouseover=alert(1)` (or using backticks, ``onmouseover=alert(`XSS`)``) will still execute, because attribute values need not be quoted and backticks are not escaped by default.
 
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
