@@ -34,7 +34,7 @@ animation-iteration-count: 1.5;
   align-items: center;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   display: flex;
   flex-direction: column;

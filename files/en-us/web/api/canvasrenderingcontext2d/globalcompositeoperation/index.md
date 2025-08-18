@@ -410,7 +410,7 @@ const createInterlace = (size, color1, color2) => {
   return pattern;
 };
 
-const op_8x8 = createInterlace(8, "white", "#eee");
+const op_8x8 = createInterlace(8, "white", "#eeeeee");
 ```
 
 #### Result

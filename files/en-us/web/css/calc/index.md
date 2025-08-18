@@ -38,7 +38,7 @@ width: calc(var(--variable-width) + 20px);
 }
 
 #example-element {
-  border: 10px solid #000;
+  border: 10px solid black;
   padding: 10px;
 }
 ```

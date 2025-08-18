@@ -53,18 +53,18 @@ transform: translateX(calc(cos(-45deg) * 140px))
   width: calc(var(--radius) * 2);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid #666;
+  border: 2px solid #666666;
   background-image:
     radial-gradient(black var(--dot-size), transparent var(--dot-size)),
-    linear-gradient(135deg, #0000ff, #00c9ff, #92fe9d, #e6e6fa, #f0fff0);
+    linear-gradient(135deg, blue, deepskyblue, lightgreen, lavender, honeydew);
 }
 .dot {
   display: block;
   width: var(--dot-size);
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid #666;
-  background-color: #f66;
+  border: 2px solid #666666;
+  background-color: #ff6666;
   transform: translateX(calc(cos(0deg) * var(--radius)))
     translateY(calc(sin(0deg) * var(--radius) * -1));
 }
