@@ -105,7 +105,11 @@ main {
 }
 ```
 
-In this example `:heading(3, 4)` matches the `<h3>` and `<h4>` elements, `:heading(-n + 3)` matches the heading elements in reverse (negatively) from `<h3>`, `:heading(3n + 1)` matches every third (`3n`) heading element from and including the `<h1>` elements, and `:heading(n + 5)` matches the heading elements from `<h5>`.
+In this example:
+- `:heading(3, 4)` matches the `<h3>` and `<h4>` elements
+- `:heading(-n + 3)` matches heading elements in reverse, so `<h3>`, `<h2>`, and `<h1>`
+- `:heading(3n + 1)` matches every third (`3n`) heading element starting from `<h1>`, so this would include `<h1>` and `<h4>`
+- `:heading(n + 5)` matches heading elements starting from `<h5>` and will include `<h6>`
 
 {{EmbedLiveSample("Functional_notation_example", "", "292")}}
 
