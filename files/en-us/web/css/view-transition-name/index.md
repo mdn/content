@@ -6,7 +6,7 @@ browser-compat: css.properties.view-transition-name
 sidebar: cssref
 ---
 
-The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
+The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the [view transition](/en-US/docs/Web/API/View_Transition_API) snapshot that selected elements will participate in. This enables you to animate those elements separately from the rest of the page, which uses the default cross-fade animation during a view transition. You can then define custom animation styles for these elements.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ view-transition-name: unset;
 - {{cssxref("custom-ident")}}
   - : An identifying name that causes the selected element to participate in a separate snapshot from the root snapshot. The `<custom-ident>` cannot be `auto`, `match-element`, `none`, or a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords) value.
 - `match-element`
-  - : The selected element is automatically given a unique identifying name. This name enables the element to be snapshotted separately from all other elements on the page and is not visible to the web document.
+  - : The browser automatically assigns a unique name to the selected element. This name is used to snapshot the element separately from all other elements on the page. (This name is internal and cannot be read from the DOM.)
 - `none`
   - : The selected element will not participate in a separate snapshot, unless it has a parent element with a `view-transition-name` set, in which case it will be snapshotted as part of that element.
 
@@ -185,11 +185,20 @@ We create a custom CSS animation and apply it to the `::view-transition-old(figu
 
 This example contains a list of technologies–HTML, CSS, SVG, and JS–that are displayed in a sidebar next to a main content area, which starts out empty. Clicking a technology's heading animates its content into the adjoining content area that shows more details.
 
+There is also a checkbox, which is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see how the view-transition works without `view-transition-name: match-element`.
+
 #### HTML
 
 The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) and an {{htmlelement("article")}} element. The multiple child {{htmlelement("li")}} elements inside the list each contain an {{htmlelement("a")}} element inside a [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements).
 
 ```html
+<form>
+  <label for="match-element-checkbox"
+    >Apply <code>view-transition-name: match-element</code> to list
+    items?</label
+  >
+  <input type="checkbox" id="match-element-checkbox" checked />
+</form>
 <main class="match-element-applied">
   <ul>
     <li>
@@ -219,13 +228,6 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
   </ul>
   <article></article>
 </main>
-<form>
-  <label for="match-element-checkbox"
-    >Apply <code>view-transition-name: match-element</code> to list
-    items?</label
-  >
-  <input type="checkbox" id="match-element-checkbox" checked />
-</form>
 ```
 
 #### CSS
@@ -440,7 +442,7 @@ Running the `updateActiveItem()` function via the `startViewTransition()` functi
 
 #### Result
 
-Click a technology heading in the sidebar and notice the animation effect of its content into the main content area. The checkbox is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see the default cross-fade instead.
+Click a technology heading in the sidebar and notice the animation effect of its content into the main content area.
 
 {{EmbedLiveSample("using_the-match-element_value", "", "400")}}
 
@@ -455,5 +457,8 @@ Click a technology heading in the sidebar and notice the animation effect of its
 ## See also
 
 - {{cssxref("view-transition-class")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-old()")}}
+- {{cssxref("::view-transition-new()")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)
