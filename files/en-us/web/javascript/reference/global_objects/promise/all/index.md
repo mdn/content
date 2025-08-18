@@ -69,6 +69,22 @@ Promise.all([p1, p2, p3]).then((values) => {
 });
 ```
 
+you can use [parameter destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring):
+
+```js
+const p1 = Promise.resolve(3);
+const p2 = 1337;
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 100);
+});
+
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+```
+
 If the `iterable` contains non-promise values, they will be ignored, but still counted in the returned promise array value (if the promise is fulfilled):
 
 ```js
