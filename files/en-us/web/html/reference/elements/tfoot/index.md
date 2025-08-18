@@ -44,7 +44,7 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -165,7 +165,7 @@ Some basic CSS is used to style and highlight the table foot so that the foot ce
 tfoot {
   border-top: 3px dotted rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tfoot th {
@@ -179,7 +179,7 @@ tfoot td {
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {

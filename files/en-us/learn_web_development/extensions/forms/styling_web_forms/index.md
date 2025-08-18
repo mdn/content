@@ -240,7 +240,7 @@ body {
   font: 1.3rem sans-serif;
   padding: 0.5em;
   margin: 0;
-  background: #222;
+  background: #222222;
 }
 
 form {
@@ -250,7 +250,7 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url("background.jpg");
+  background: white url("background.jpg");
 
   /* we create our grid */
   display: grid;
@@ -349,7 +349,7 @@ The {{HTMLElement("button")}} element is really convenient to style with CSS; yo
 button {
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 5px;
   background: none;
   cursor: pointer;
@@ -362,8 +362,8 @@ button::after {
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 

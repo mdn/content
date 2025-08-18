@@ -439,7 +439,7 @@ The cards are laid out in a flex container:
 @layer warning {
   .warning {
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     background: rgb(255 255 205 / 0.8);
     text-align: center;
     order: -1;

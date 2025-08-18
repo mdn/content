@@ -46,7 +46,7 @@ body {
 [contenteditable] {
   cursor: copy;
   caret-color: magenta;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 :focus {
   outline: dashed magenta 3px;
@@ -95,7 +95,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
 
-The CSS basic user interface module also defines the `caret`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
+The CSS basic user interface module also defines the `caret`, `caret-animation`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
 
 ## Guides
 

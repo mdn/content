@@ -75,7 +75,7 @@ form {
 }
 
 form:focus-within {
-  background: #ff8;
+  background: #ffff88;
   color: black;
 }
 

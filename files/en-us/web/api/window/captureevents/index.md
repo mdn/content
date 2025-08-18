@@ -10,10 +10,7 @@ browser-compat: api.Window.captureEvents
 
 {{APIRef}} {{Deprecated_Header}}
 
-The **`Window.captureEvents()`** method does nothing.
-
-> [!NOTE]
-> This is an method long removed from the specification. It is kept in browsers to prevent code breakage but does nothing.
+The **`Window.captureEvents()`** method does nothing. Its original behavior has been removed from the specification, but the method itself has been retained so as not to break code that calls it.
 
 ## Syntax
 

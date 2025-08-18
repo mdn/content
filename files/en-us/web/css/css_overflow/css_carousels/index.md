@@ -105,8 +105,8 @@ Now it's time to style the list items. The first declarations provide rudimentar
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 li {
   list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
 
   flex: 0 0 100%;
@@ -164,13 +164,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -178,7 +179,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 ```
@@ -423,8 +424,8 @@ li {
   height: 100%;
   width: 200px;
 
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
   margin: 0 10px;
 
@@ -455,13 +456,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -469,7 +471,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 

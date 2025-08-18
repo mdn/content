@@ -169,8 +169,8 @@ The button has a number of declarations that style, but the two we are most inte
 button {
   /* … */
 
-  background-color: #ff0000;
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
+  background-color: rgb(255 0 0 / 90%);
   box-shadow:
     inset 1px 1px 3px rgb(255 255 255 / 40%),
     inset -1px -1px 3px rgb(0 0 0 / 40%);

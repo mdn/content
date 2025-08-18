@@ -47,7 +47,7 @@ block-size: fit-content;
 
 ```css
 .container {
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 10px;
   width: 20em;
 }

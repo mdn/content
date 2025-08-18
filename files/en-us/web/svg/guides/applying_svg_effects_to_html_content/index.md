@@ -48,7 +48,7 @@ For example, you can make a gradient mask for HTML content using SVG and CSS cod
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
 }
 p.target {
@@ -113,7 +113,7 @@ This example demonstrates using SVG to clip HTML content. Notice that even the c
 }
 p {
   width: 300px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: inline-block;
 }
 p.target {

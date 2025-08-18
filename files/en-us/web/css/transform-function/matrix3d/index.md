@@ -156,7 +156,7 @@ a `matrix3d()` transform to it.
   position: absolute;
   backface-visibility: inherit;
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 .front {

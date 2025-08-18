@@ -96,9 +96,9 @@ body {
   gap: 20px;
   padding: 15px;
   background-image: conic-gradient(
-    rgb(0 0 0 / 0) 90deg,
+    transparent 90deg,
     rgb(0 0 0 / 0.05) 90deg 180deg,
-    rgb(0 0 0 / 0) 180deg 270deg,
+    transparent 180deg 270deg,
     rgb(0 0 0 / 0.05) 270deg
   );
   background-size: 30px 30px;
@@ -120,16 +120,16 @@ We declare a [`repeating-linear-gradient`](/en-US/docs/Web/CSS/gradient/repeatin
 img {
   mask-image: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
 .gradient {
   background: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
@@ -725,8 +725,8 @@ img {
   mask-image:
     repeating-linear-gradient(
       to bottom right,
-      #f00 0 20px,
-      #f005 20px 40px,
+      red 0 20px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
@@ -774,8 +774,8 @@ img {
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-linear-gradient(
       to bottom right,
-      #f00 0 20px,
-      #f005 20px 40px,
+      red 0 20px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     none;
@@ -808,8 +808,8 @@ If we reverse the order of the mask layers, we can also get very different resul
   mask-image:
     repeating-linear-gradient(
       to bottom right,
-      #f00 0 20px,
-      #f005 20px 40px,
+      red 0 20px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     ),
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
@@ -819,8 +819,8 @@ If we reverse the order of the mask layers, we can also get very different resul
     url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-linear-gradient(
       to bottom right,
-      #f00 0 20px,
-      #f005 20px 40px,
+      red 0 20px,
+      #ff000055 20px 40px,
       transparent 40px 60px
     );
 }

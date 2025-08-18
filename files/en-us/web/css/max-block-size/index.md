@@ -51,7 +51,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -92,13 +92,13 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
   - : Defines the `max-block-size` as a percentage of the containing block's size in block axis.
 - `none`
   - : No limit on the size of the box.
-- `max-content`
+- {{cssxref("max-content")}}
   - : The intrinsic preferred `max-block-size`.
-- `min-content`
+- {{cssxref("min-content")}}
   - : The intrinsic minimum `max-block-size`.
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e., `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/en-US/docs/Web/CSS/fit-content_function)
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e., `min(max-content, max(min-content, argument))`.
 
 ### How writing-mode affects directionality
@@ -164,7 +164,7 @@ After that come the classes `horizontal` and `vertical`, which add the {{cssxref
 .standard-box {
   padding: 4px;
   background-color: #abcdef;
-  color: #000;
+  color: black;
   font:
     16px "Open Sans",
     "Helvetica",

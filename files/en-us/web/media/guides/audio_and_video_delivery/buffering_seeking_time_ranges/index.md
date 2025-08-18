@@ -150,14 +150,14 @@ We'll use the following CSS to style the buffering display:
 .buffered {
   height: 20px;
   position: relative;
-  background: #555;
+  background: #555555;
   width: 300px;
 }
 
 #buffered-amount {
   display: block;
   height: 100%;
-  background-color: #777;
+  background-color: #777777;
   width: 0;
 }
 
@@ -171,7 +171,7 @@ We'll use the following CSS to style the buffering display:
 #progress-amount {
   display: block;
   height: 100%;
-  background-color: #595;
+  background-color: #559955;
   width: 0;
 }
 ```
