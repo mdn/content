@@ -391,7 +391,7 @@ let checkboxElem = document.querySelector("input");
 
 // View transition code
 function updateActiveItem(event) {
-  // A reference to the list item containing the link that was clicked
+  // Get the list item that contains the clicked link
   const clickedElem = event.target.parentElement.parentElement;
 
   // Set the active-item class on the list item
