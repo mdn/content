@@ -387,7 +387,7 @@ html::view-transition-new(*) {
 
 #### JavaScript
 
-The demo's JavaScript applies the `active-item` class to the list items when their links are clicked; this is achieved via the `updateActiveItem()` function:
+In this example, the `active-item` class is applied to the list items when their links are clicked; this is achieved via the `updateActiveItem()` function:
 
 ```js
 const mainElem = document.querySelector("main");
