@@ -56,7 +56,7 @@ To show how dashes can be offset, we first set up five identical paths, all of w
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">
-  <rect x="10" y="5" width="80" height="30" fill="#EEE" />
+  <rect x="10" y="5" width="80" height="30" fill="#eeeeee" />
   <g stroke="dodgerblue" stroke-width="2" stroke-dasharray="20,3">
     <path d="M 10,10 h 80" />
     <path d="M 10,15 h 80" />

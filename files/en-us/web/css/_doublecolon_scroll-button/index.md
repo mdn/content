@@ -104,7 +104,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 100%;
   height: 100px;
   padding-top: 20px;

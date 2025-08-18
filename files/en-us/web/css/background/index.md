@@ -31,7 +31,7 @@ background: left 5% / 15% 60% repeat-x
 background:
   center / contain no-repeat
     url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+  #eeeeee 35% url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```html interactive-example
@@ -163,7 +163,7 @@ Browsers do not provide any special information on background images to assistiv
 }
 
 .top-banner {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #9999ff repeat-y fixed;
 }
 ```
 

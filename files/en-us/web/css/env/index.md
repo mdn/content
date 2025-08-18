@@ -91,7 +91,7 @@ body {
 
 main {
   flex: 1;
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 1em;
 }
 

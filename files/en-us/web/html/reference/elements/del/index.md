@@ -20,8 +20,8 @@ The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
 ```css interactive-example
 del {
   text-decoration: line-through;
-  background-color: #fbb;
-  color: #555;
+  background-color: #ffbbbb;
+  color: #555555;
 }
 
 ins {

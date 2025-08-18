@@ -48,7 +48,7 @@ transition-property: margin-right, color;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
+  background-color: #990099;
   color: white;
   margin-right: 40%;
 }

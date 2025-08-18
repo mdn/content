@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting")}}
 
 At this point in the course, we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
 
@@ -458,19 +458,15 @@ You can see the equality operator being used just inside the `updateBtn()` funct
 > [!NOTE]
 > Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math).
-
 ## Summary
 
 In this article, we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
 
-In the next article, we'll explore text and how JavaScript allows us to manipulate it.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
 ## See also
 
 - [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting/Test_your_skills/Math", "Learn_web_development/Core/Scripting")}}
