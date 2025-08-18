@@ -48,7 +48,7 @@ The `:heading()` functional pseudo-class only matches heading-level elements and
 
 ### Using keyword parameters
 
-In this example, the `odd` keyword matches headings with odd-numbered levels, so `<h1>` and `<h3>`. The `even` keyword is used to target even-numbered heading levels, `<h2>` and `<h4>`.
+In this example, the `odd` keyword matches headings with odd-numbered levels, which are `<h1>` and `<h3>`. The `even` keyword is used to target even-numbered heading levels, `<h2>` and `<h4>`.
 
 ```html
 <h1>Heading 1</h1>
