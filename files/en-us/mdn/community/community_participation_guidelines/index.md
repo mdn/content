@@ -88,7 +88,7 @@ MDN Community Management assesses the severity of the violation, applies the enf
 
 ### Appeals
 
-If a reported individual believes the decision was unjust, they may appeal through the [appeals process detailed on the community page].
+Once an incident has been investigated and a decision has been communicated to the relevant parties, all have the opportunity to appeal this decision by sending an email to mdn-cpg-report@mozilla.com. 
 Appeals are reviewed by a separate, impartial panel.
 
 ### Documentation and record keeping
