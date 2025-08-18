@@ -36,7 +36,7 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 #example-element {
   background-color: #1766aa;
   margin: 20px;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;

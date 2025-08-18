@@ -22,6 +22,8 @@ let group = await browser.tabGroups.query(
   - : An object containing details of the property values to be matched in returned tab groups.
     - `collapsed` {{optional_inline}}
       - : `boolean`. Whether the returned tab groups are collapsed or expanded in the tab strip.
+        - In Firefox, a collapsed group can contain the active tab. The active tab remains visible and inactive tabs are collapsed.
+        - In Chrome, groups are collapsed completely. If the group contains the active tab when it's collapsed, the active tab is moved to the first tab to the right of the group. If there is no tab to the right of the group, it's moved to the tab immediately to the left of the group.
     - `color` {{optional_inline}}
       - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the color returned tab groups are using.
     - `shared` {{optional_inline}}

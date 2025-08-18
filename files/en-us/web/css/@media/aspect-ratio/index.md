@@ -35,7 +35,7 @@ Note that, when none of the media query conditions are true, the background will
 /* Select aspect ratios 8/5 = 1.6 and above */
 @media (min-aspect-ratio: 8/5) {
   div {
-    background: #99f; /* blue */
+    background: #9999ff; /* blue */
   }
 }
 
@@ -43,14 +43,14 @@ Note that, when none of the media query conditions are true, the background will
 /* Select aspect ratios 3/2 = 1.5 and below */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9f9; /* green */
+    background: #99ff99; /* green */
   }
 }
 
 /* Exact aspect ratio, put it at the bottom to avoid override */
 @media (aspect-ratio: 1/1) {
   div {
-    background: #f99; /* red */
+    background: #ff9999; /* red */
   }
 }
 ```
@@ -66,7 +66,7 @@ Note that, when none of the media query conditions are true, the background will
 
 <iframe
   id="outer"
-  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #99f; } } @media (max-aspect-ratio: 3/2) { div { background: #9f9; } } @media (aspect-ratio: 1/1) { div { background: #f99; } }</style><div id='inner'> Watch this element as you resize iframe viewport's width and height.</div>">
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #9999ff; } } @media (max-aspect-ratio: 3/2) { div { background: #99ff99; } } @media (aspect-ratio: 1/1) { div { background: #ff9999; } }</style><div id='inner'> Watch this element as you resize iframe viewport's width and height.</div>">
 </iframe>
 ```
 

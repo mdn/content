@@ -503,7 +503,7 @@ l10n:
     Building_up_a_basic_demo_with_Babylon.js: 使用 Babylon.js 构建基础演示
     Building_up_a_basic_demo_with_PlayCanvas: 使用 PlayCanvas 构建基础演示
     Building_up_a_basic_demo_with_Three.js: 使用 Three.js 构建基础演示
-    WebXR_guide: WebXR
+    WebXR_guide: WebXR 指南
     3D_collision_detection: 3D 碰撞检测
     Bounding_volume_collision_detection_with_THREE.js: 使用 THREE.js 进行边界体积碰撞检测
     Implementing_game_control_mechanisms: 实现游戏控制机制

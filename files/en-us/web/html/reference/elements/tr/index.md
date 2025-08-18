@@ -59,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -152,7 +152,7 @@ The CSS {{cssxref(":nth-of-type")}} pseudo-class is used to select every `odd` r
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -228,7 +228,7 @@ The CSS is nearly unchanged from the [previous example](#basic_row_setup), excep
 
 ```css
 tr:nth-of-type(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="col"] {

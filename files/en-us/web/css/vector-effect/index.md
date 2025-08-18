@@ -50,7 +50,7 @@ Here, we start with a 200x100 SVG image that contains two rectangles inside a gr
     transform-origin="100 50"
     stroke-width="3"
     stroke="orange"
-    fill="#DEF8">
+    fill="#ddeeff88">
     <rect x=" 60" y="20" width="30" height="60" />
     <rect x="110" y="20" width="30" height="60" class="thinned" />
   </g>
@@ -83,7 +83,7 @@ In this case, we start with a similar SVG image to the one used in the previous 
     transform-origin="100 50"
     stroke-width="3"
     stroke="orange"
-    fill="#DEF8">
+    fill="#ddeeff88">
     <rect
       x=" 60"
       y="20"

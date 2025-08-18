@@ -221,7 +221,7 @@ q::before,
 q::after {
   font-size: larger;
   color: red;
-  background: #ccc;
+  background: #cccccc;
 }
 
 q::before {
@@ -389,7 +389,7 @@ This example demonstrates how an element's contents can be replaced by any type 
 ```css
 div {
   border: 1px solid;
-  background-color: #ccc;
+  background-color: #cccccc;
   min-height: 100px;
   min-width: 100px;
 }
