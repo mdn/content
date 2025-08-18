@@ -90,7 +90,7 @@ Some CSS properties can take a dimension or a percentage value. In this case the
 
 ## Color
 
-The [CSS Color](/en-US/docs/Web/CSS/CSS_color) module defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
+The [CSS color](/en-US/docs/Web/CSS/CSS_color) module defines the {{cssxref("&lt;color&gt;")}} data type, and other types which relate to color in CSS.
 
 - {{cssxref("&lt;color&gt;")}}
   - : Specified as a keyword or a numerical color value.
