@@ -434,7 +434,7 @@ mainElem.addEventListener("click", (event) => {
   }
 });
 
-// Update class on main to control whether match-element is applied
+// Toggle the class on <main> to control whether or not match-element is applied
 
 checkboxElem.addEventListener("change", () => {
   mainElem.classList.toggle("match-element-applied");
