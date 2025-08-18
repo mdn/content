@@ -224,7 +224,7 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
     >Apply <code>view-transition-name: match-element</code> to list
     items?</label
   >
-  <input type="checkbox" checked id="match-element-checkbox" />
+  <input type="checkbox" id="match-element-checkbox" checked />
 </form>
 ```
 
