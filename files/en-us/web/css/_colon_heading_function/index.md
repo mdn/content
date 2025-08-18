@@ -87,23 +87,22 @@ main {
 ```
 
 ```css
-/* targeting headings <h3> & <h4> */
+/* Targets headings <h3> and <h4> */
 :heading(3, 4) {
   font-weight: 100;
 }
-/* targeting heading 3 and the preceding headings <h3>, <h2>, & <h1> */
+/* Targets headings in reverse starting from <h3> */
 :heading(-n + 3) {
   color: tomato;
 }
-/* targeting every 3rd heading-level form the first <h1>, & <h4> */
+/* Targets every third heading starting from <h1> */
 :heading(3n + 1) {
   font-style: italic;
 }
-/* targeting all heading-levels past 5 <h5>, & <h6> */
+/* Targets headings after level 5 */
 :heading(n + 5) {
   color: slateblue;
 }
-```
 
 In this example:
 - `:heading(3, 4)` matches the `<h3>` and `<h4>` elements
