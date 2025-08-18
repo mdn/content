@@ -103,6 +103,7 @@ main {
 :heading(n + 5) {
   color: slateblue;
 }
+```
 
 In this example:
 - `:heading(3, 4)` matches the `<h3>` and `<h4>` elements
