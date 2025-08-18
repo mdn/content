@@ -42,7 +42,7 @@ The `:heading()` pseudo-class function takes a comma-separated list of `An+B` ex
 
 ## Usage notes
 
-The `:heading()` functional pseudo-class only matches heading-level elements and not elements with a [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) attribute nor will it respect the ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) ARIA attribute.
+The `:heading()` functional pseudo-class matches only elements that are semantically recognized as headings. It does not match elements with a [`role="heading"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) attribute, nor does it respect the ['aria-level'](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) ARIA attribute.
 
 ## Examples
 
