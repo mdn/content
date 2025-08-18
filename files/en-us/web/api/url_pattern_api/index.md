@@ -81,23 +81,28 @@ console.log(pattern.test("https://example.com/books/")); // false
 
 Some regex patterns do not work as you may expect:
 
-- Starts with `^` will only match if used at the start of the protocol portion of the URLPattern and is redundant if used.
+- Starts with `^` matches, but remember that the pathname always starts with `/`.
 
   ```js
-  // with `^` in pathname
-  const pattern = new URLPattern({ pathname: "(^b)" });
-  console.log(pattern.test("https://example.com/ba")); // false
-  console.log(pattern.test("https://example.com/xa")); // false
+  // Matches URL where path is exactly "/b"
+  const pattern = new URLPattern({ pathname: "(^/b)" }); //
+  console.log(pattern.test("https://example.com/b")); // true
+  console.log(pattern.test("https://example.com/x")); // false
+
+  // Matches URL where path is /b followed by any number of characters
+  const pattern2 = new URLPattern({ pathname: "(^/b.*)" });
+  console.log(pattern2.test("https://example.com/ba")); // true
+  console.log(pattern2.test("https://example.com/xa")); // false
   ```
+
+  Note that `^` is redundant in the protocol:
 
   ```js
   // with `^` in protocol
   const pattern = new URLPattern({ protocol: "(^https?)" });
   console.log(pattern.test("https://example.com/index.html")); // true
   console.log(pattern.test("xhttps://example.com/index.html")); // false
-  ```
 
-  ```js
   // without `^` in protocol
   const pattern = new URLPattern({ protocol: "(https?)" });
   console.log(pattern.test("https://example.com/index.html")); // true
