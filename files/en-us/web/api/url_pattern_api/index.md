@@ -316,10 +316,35 @@ console.log(pattern.test("https://example.com/folder/image.png")); // true
 console.log(pattern.test("https://example.com/.png")); // true
 ```
 
+### Trailing slashes in pathname are not matched by default
+
+Trailing slashes in a pathname are not automatically matched.
+The example below demonstrates that a `URLPattern` match for a pathname of `/books` will match `https://example.com/books` but not `https://example.com/books/` (and vice versa):
+
+```js
+const patternSlash = new URLPattern({ pathname: "/books/" });
+console.log(patternSlash.test("https://example.com/books")); // false
+console.log(patternSlash.test("https://example.com/books/")); // true
+
+const patternNoSlash = new URLPattern({ pathname: "/books" });
+console.log(patternNoSlash.test("https://example.com/books")); // false
+console.log(patternNoSlash.test("https://example.com/books/")); // true
+```
+
+If you want to match both then you need to use a match pattern that allows either.
+The easiest approach is to use a [group delimiter](#group_delimiters) that contains a forward slash, followed by the optional modifier.
+This will match the pattern with or without a terminating forward slash.
+
+```js
+const patternOptionalSlash = new URLPattern({ pathname: "/books{/}?" });
+console.log(patternOptionalSlash.test("https://example.com/books")); // true
+console.log(patternOptionalSlash.test("https://example.com/books/")); // true
+```
+
 ### Pattern normalization
 
 When a pattern is parsed it is automatically normalized to a canonical form.
-For example, unicode characters are percent encoded in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc.
+For example, Unicode characters are percent encoded in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc.
 In addition, there are some pattern representations that parse to the same underlying meaning, like `foo` and `{foo}`.
 Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
