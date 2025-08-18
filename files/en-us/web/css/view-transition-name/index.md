@@ -316,7 +316,6 @@ form {
   padding: 10px;
   border: 1px solid black;
 }
-/* END form/checkbox styles */
 ```
 
 ```css
