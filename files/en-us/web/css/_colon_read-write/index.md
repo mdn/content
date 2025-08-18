@@ -106,7 +106,7 @@ textarea:read-only {
 }
 
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```

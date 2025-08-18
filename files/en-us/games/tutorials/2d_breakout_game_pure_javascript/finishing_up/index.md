@@ -103,7 +103,7 @@ That's all — the final version of the game is ready and set to go!
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

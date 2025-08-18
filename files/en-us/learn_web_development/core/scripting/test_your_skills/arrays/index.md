@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Arrays"
-short-title: Arrays
+short-title: "Test: Arrays"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 
@@ -247,3 +249,5 @@ const eBirds = birds.filter(startsWithE);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

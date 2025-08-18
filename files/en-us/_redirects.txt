@@ -8528,7 +8528,8 @@
 /en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
-/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/API/Document_Object_Model/Whitespace	/en-US/docs/Web/CSS/CSS_text/Whitespace
+/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/Web/API/DoubleRange	/en-US/docs/Web/API/MediaTrackConstraints
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
 /en-US/docs/Web/API/DynamicsCompressorNode.knee	/en-US/docs/Web/API/DynamicsCompressorNode/knee
@@ -9980,9 +9981,15 @@
 /en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
 /en-US/docs/Web/API/RTCIceTransport/onstatechange	/en-US/docs/Web/API/RTCIceTransport/statechange_event
 /en-US/docs/Web/API/RTCIceTransportState	/en-US/docs/Web/API/RTCIceTransport/state
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/averageRtcpInterval	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsDuplicated	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/sliCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/trackId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCOfferAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCOfferAnswerOptions/voiceActivityDetection	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
@@ -12811,7 +12818,7 @@
 /en-US/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /en-US/docs/Web/Guide/API/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
-/en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -12892,7 +12899,7 @@
 /en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm	/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /en-US/docs/Web/Guide/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
-/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/Web/Guide/Events	/en-US/docs/Web/API/Document_Object_Model/Events
 /en-US/docs/Web/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/API/Document_Object_Model/Events
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/API/Document_Object_Model/Events
@@ -15523,7 +15530,7 @@
 /en-US/docs/Web_development/Writing_forward-compatible_websites	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /en-US/docs/What's_New_in_Deer_Park_Alpha	/en-US/docs/Mozilla/Firefox/Releases/1.5/What_s_new_in_1.5_alpha
 /en-US/docs/What_does_tracking_mean	/en-US/docs/Web/HTTP/Reference/Headers/DNT
-/en-US/docs/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Whitespace_in_the_DOM	/en-US/docs/Web/CSS/CSS_text/Whitespace
 /en-US/docs/WindowEventHandlers.onbeforeprint	/en-US/docs/Web/API/Window/beforeprint_event
 /en-US/docs/WindowEventHandlers.onbeforeunload	/en-US/docs/Web/API/Window/beforeunload_event
 /en-US/docs/WindowEventHandlers.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
