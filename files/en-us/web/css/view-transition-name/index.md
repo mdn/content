@@ -233,7 +233,7 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
 We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the list and the `<article>` side-by-side, and to cause the list items to all take up an equal amount of space in the left-hand column. The list has a fixed width, while the `<article>` takes up the rest of the available horizontal space.
 
 ```css hidden
-/* general styles and resets */
+/* General styles and resets */
 * {
   box-sizing: border-box;
   font-size: 0.9rem;
