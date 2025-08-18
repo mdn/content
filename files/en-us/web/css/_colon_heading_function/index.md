@@ -21,7 +21,7 @@ The **`:heading()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/C
 
 ### Parameters
 
-The `:heading()` pseudo-class function takes a comma-separated list of `An+B` or the keyword values that describes a pattern for matching heading element.
+The `:heading()` pseudo-class function takes a comma-separated list of `An+B` expressions or keyword values that describe a pattern for matching heading elements.
 
 #### Keyword values
 
