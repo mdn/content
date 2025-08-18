@@ -318,7 +318,21 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 | Nightly           | 141           | Yes                 |
 | Developer Edition | 141           | No                  |
 | Beta              | 141           | No                  |
-| Release           | -             | No                  |
+| Release           | 141           | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
+### `match-element` value for `view-transition-name` property
+
+The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | Yes                 |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.
