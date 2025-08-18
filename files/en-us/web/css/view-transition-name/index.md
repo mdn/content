@@ -194,7 +194,7 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
   <ul>
     <li>
       <h2><a href="#">HTML</a></h2>
-      <h3>Hyper Text Markup Language</h3>
+      <h3>HyperText Markup Language</h3>
       <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. HTML provides the fundamental building blocks for structuring Web documents and apps.
       </p>
     </li>
