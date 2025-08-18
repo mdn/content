@@ -412,8 +412,8 @@ function updateActiveItem(event) {
 }
 
 mainElem.addEventListener("click", (event) => {
-  event.preventDefault() // prevents the iframe scrolling on click
-  // Don't do anything unless a link is clicked inside the <main> element
+  event.preventDefault() // Prevent iframe from scrolling when clicked
+  // Do nothing unless a link is clicked inside the <main> element
   if (event.target.tagName !== "A") {
     return;
   }
