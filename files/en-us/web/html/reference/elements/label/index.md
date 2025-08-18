@@ -208,7 +208,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, both the starting and ending tag are mandatory.</td>
+      <td>None, both the starting and ending tags are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
