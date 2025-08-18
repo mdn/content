@@ -306,8 +306,7 @@ a:focus {
   color: rgb(100 100 255);
 }
 
-/* END general styles and resets */
-/* form/checkbox styles */
+/* Form and checkbox styles */
 form {
   position: absolute;
   bottom: 0;
