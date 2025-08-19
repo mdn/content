@@ -176,6 +176,20 @@ fetch("https://example.com/", {
       </td>
     </tr>
     <tr>
+      <td>
+        If <code>body</code> is a {{domxref("ReadableStream")}} and <code>duplex</code> is omitted or not set to <code>"half"</code>, or if an invalid <code>duplex</code> value is provided.
+      </td>
+      <td>
+        <pre class="brush: js">
+const stream = new ReadableStream({ /* ... */ });
+fetch("https://example.com", {
+  method: "POST",
+  body: stream,
+});
+        </pre>
+      </td>
+    </tr>
+    <tr>
       <td>If fetch throws a network error.</td>
       <td></td>
     </tr>
