@@ -104,7 +104,7 @@ body {
 {
   "name": "My First App",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "white",
   "theme_color": "#ff4500"
 }
 ```

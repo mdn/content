@@ -3,9 +3,8 @@ title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
 page-type: css-property
 browser-compat: css.properties.grid-auto-columns
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-auto-columns`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
 

@@ -11,7 +11,7 @@ The author detail page needs to display the information about the specified `Aut
 
 Open **/controllers/authorController.js**.
 
-Add the following lines to the top of the file to `require()` the `Book` module needed by the author detail page (other modules such as "express-async-handler" should already be present).
+Add the following lines to the top of the file to `require()` the `Book` module needed by the author detail page.
 
 ```js
 const Book = require("../models/book");
@@ -21,7 +21,7 @@ Find the exported `author_detail()` controller method and replace it with the fo
 
 ```js
 // Display detail page for a specific Author.
-exports.author_detail = asyncHandler(async (req, res, next) => {
+exports.author_detail = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -40,12 +40,12 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
     author,
     author_books: allBooksByAuthor,
   });
-});
+};
 ```
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Author` and their associated `Book` instances in parallel.
-If no matching author is found an Error object is sent to the Express error handling middleware.
+If no matching author is found, an `Error` object is sent to the Express error handling middleware.
 If the author is found then the retrieved database information is rendered using the "author_detail" template.
 
 ## View

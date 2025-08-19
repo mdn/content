@@ -45,7 +45,7 @@ To style the editor element, the following CSS code is used. The code makes the 
   white-space: pre;
   tab-size: 2;
   caret-color: red;
-  background: #000;
+  background: black;
   line-height: 1.6;
   color: red;
 }

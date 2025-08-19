@@ -145,6 +145,10 @@ The following are all **absolute** length units — they are not relative to any
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 
+Note that `1px` doesn't necessarily equal one physical device pixel. On HD displays, it may span multiple physical pixels.
+Similarly, `1cm` in CSS often doesn't correspond to one hundredth of [SI](https://en.wikipedia.org/wiki/International_System_of_Units) meter. On a large TV screen, it typically is longer than that.
+The lengths are perceptual: `16px` looks roughly the same on a phone, laptop, or TV screen at typical viewing distance.
+
 #### Relative length units
 
 Relative length units are relative to something else. For example:
@@ -354,7 +358,7 @@ In the below example, try changing the value of `opacity` to various decimal val
 
 ```css live-sample___opacity
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   padding: 20px;
@@ -517,7 +521,7 @@ Try changing the alpha channel values to see how it affects the color output.
 
 ```css live-sample___color-rgba
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -619,7 +623,7 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 ```css live-sample___color-hsla
 .wrapper {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   padding: 40px 20px;
 }
 
@@ -666,7 +670,7 @@ In the example below, we are using an image and a gradient as values for the CSS
 }
 
 .image {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
 }
 
 .gradient {
@@ -703,7 +707,7 @@ Try playing around with these values to see how you can push the image around.
 .box {
   height: 200px;
   width: 400px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/big-star.png");
   background-repeat: no-repeat;
   background-position: right 60px;
   margin: 20px auto;

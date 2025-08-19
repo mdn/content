@@ -25,8 +25,8 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const json = await response.json();
-    console.log(json);
+    const result = await response.json();
+    console.log(result);
   } catch (error) {
     console.error(error.message);
   }
@@ -549,8 +549,8 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const json1 = await response.json();
-    const json2 = await response.json(); // will throw
+    const result1 = await response.json();
+    const result2 = await response.json(); // will throw
   } catch (error) {
     console.error(error.message);
   }
@@ -570,8 +570,8 @@ async function getData() {
 
     const response2 = response1.clone();
 
-    const json1 = await response1.json();
-    const json2 = await response2.json();
+    const result1 = await response1.json();
+    const result2 = await response2.json();
   } catch (error) {
     console.error(error.message);
   }

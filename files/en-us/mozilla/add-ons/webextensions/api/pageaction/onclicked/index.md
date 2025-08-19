@@ -3,9 +3,8 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.pageAction.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
@@ -43,10 +42,6 @@ Events have three functions:
         - `button`
           - : An `integer`. Indicates the button used to click the page action icon: `0` for a left-click or a click not associated with a mouse, such as one from the keyboard and `1` for a middle button or wheel click. Note that the right-click is not supported because Firefox consumes that click to display the context menu before this event is triggered.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 When the user clicks the page action, hide it, and navigate the active tab to "<https://giphy.com/explore/cat>":
@@ -63,6 +58,10 @@ browser.pageAction.onClicked.addListener(() => {});
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

@@ -3,9 +3,8 @@ title: "@container"
 slug: Web/CSS/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
@@ -128,7 +127,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -218,7 +217,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     ```
 
 - `snapped`
-  - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
+  - : Queries whether the container is going to be snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
     - `none`
       - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`

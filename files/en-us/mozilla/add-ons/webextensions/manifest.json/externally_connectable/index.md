@@ -3,9 +3,8 @@ title: externally_connectable
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.externally_connectable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

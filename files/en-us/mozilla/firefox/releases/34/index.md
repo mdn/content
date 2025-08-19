@@ -1,5 +1,6 @@
 ---
 title: Firefox 34 for developers
+short-title: Firefox 34
 slug: Mozilla/Firefox/Releases/34
 page-type: firefox-release-notes
 sidebar: firefox
@@ -105,8 +106,8 @@ _No change._
 
 #### Highlights
 
-- New API: [dev/panel](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
-- [jpm](/en-US/docs/Mozilla/Add-ons/SDK/Tools/jpm) beta released.
+- New API: [dev/panel](https://web.archive.org/web/20210517043357/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Low-Level_APIs/dev_panel) enables you to extend the Firefox Developer Tools.
+- [jpm](https://web.archive.org/web/20210221222338/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/Tools/jpm) beta released.
 - `"./my-file"` introduced everywhere as an alias for `require("sdk/self").data.url("my-file")`
 - Added the ability to [attach stylesheets to individual tabs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#manipulating_a_tabs_css).
 
@@ -115,7 +116,3 @@ _No change._
 [GitHub commits made between Firefox 33 and Firefox 34](https://github.com/mozilla/addon-sdk/compare/firefox33...firefox34). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). This will not include any uplifts made after this release entered Aurora.
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: grid
 slug: Web/CSS/grid
 page-type: css-shorthand-property
 browser-compat: css.properties.grid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) that sets all of the explicit and implicit grid properties in a single declaration.
 

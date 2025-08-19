@@ -3,9 +3,8 @@ title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the browser action's title.
 
@@ -39,10 +38,6 @@ let gettingTitle = browser.browserAction.getTitle(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the browser action's title.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code switches the title between "this" and "that" each time the user clicks the browser action:
@@ -63,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

@@ -5,9 +5,10 @@ page-type: css-media-feature
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
 
@@ -71,9 +72,10 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
+- [CSS round display](/en-US/docs/Web/CSS/CSS_round_display) module

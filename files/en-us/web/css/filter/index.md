@@ -3,9 +3,8 @@ title: filter
 slug: Web/CSS/filter
 page-type: css-property
 browser-compat: css.properties.filter
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`filter`** [CSS](/en-US/docs/Web/CSS) property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
 
@@ -50,7 +49,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;

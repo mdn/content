@@ -3,9 +3,8 @@ title: fit-content
 slug: Web/CSS/fit-content
 page-type: css-keyword
 browser-compat: css.properties.width.fit-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fit-content`** keyword is equivalent to {{cssxref("fit-content_function", "fit-content(stretch)")}}. In practice, this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
 
@@ -48,7 +47,7 @@ block-size: fit-content;
 
 ```css
 .container {
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 10px;
   width: 20em;
 }

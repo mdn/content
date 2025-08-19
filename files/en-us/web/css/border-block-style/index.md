@@ -3,9 +3,8 @@ title: border-block-style
 slug: Web/CSS/border-block-style
 page-type: css-property
 browser-compat: css.properties.border-block-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-block-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical block borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}} and {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} and {{cssxref("border-right-style")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -37,8 +36,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

@@ -60,7 +60,7 @@ exports.author_create_post = [
     .toDate(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -81,13 +81,12 @@ exports.author_create_post = [
       });
       return;
     }
-    // Data from form is valid.
 
-    // Save author.
+    // Data from form is valid.
+    // Save and redirect to new author record.
     await author.save();
-    // Redirect to new author record.
     res.redirect(author.url);
-  }),
+  },
 ];
 ```
 

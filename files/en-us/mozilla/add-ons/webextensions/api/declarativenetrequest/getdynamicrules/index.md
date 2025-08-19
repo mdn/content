@@ -3,16 +3,15 @@ title: declarativeNetRequest.getDynamicRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDynamicRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDynamicRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the set of dynamic rules for the extension.
 
 ## Syntax
 
 ```js-nolint
-let gettingDynamicRules = browser.declarativeNetRequest.getDynamicRules();
+let gettingDynamicRules = await browser.declarativeNetRequest.getDynamicRules();
 ```
 
 ### Parameters

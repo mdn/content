@@ -3,9 +3,8 @@ title: display-mode
 slug: Web/CSS/@media/display-mode
 page-type: css-media-feature
 browser-compat: css.at-rules.media.display-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`display-mode`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether a web app is being displayed in a normal browser tab or in some alternative way, such as a standalone app or fullscreen mode.
 
@@ -60,7 +59,7 @@ In this example, we combine the `display-mode: picture-in-picture` value with th
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {

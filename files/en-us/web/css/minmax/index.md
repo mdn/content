@@ -3,9 +3,8 @@ title: minmax()
 slug: Web/CSS/minmax
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
 
@@ -95,9 +94,9 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
   - : A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the `<percentage>` must be treated as `auto`. The {{glossary("user agent")}} may adjust the intrinsic size contributions of the track to the size of the grid container and increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex&gt;")}}
   - : A non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
-- `max-content`
+- {{cssxref("max-content")}}
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
-- `min-content`
+- {{cssxref("min-content")}}
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 - `auto`
   - : As `min`, it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.

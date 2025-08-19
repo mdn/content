@@ -5,7 +5,7 @@ page-type: javascript-error
 sidebar: jssidebar
 ---
 
-The JavaScript exception "WeakSet key (or WeakMap value) 'x' must be an object or an unregistered symbol" occurs when an value of invalid type is used as a key in a {{jsxref("WeakSet")}} or as a value in a {{jsxref("WeakMap")}}.
+The JavaScript exception "WeakSet key (or WeakMap value) 'x' must be an object or an unregistered symbol" occurs when a value of invalid type is used as a key in a {{jsxref("WeakSet")}} or as a value in a {{jsxref("WeakMap")}}.
 
 ## Message
 

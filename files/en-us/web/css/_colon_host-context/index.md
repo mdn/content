@@ -3,9 +3,8 @@ title: :host-context()
 slug: Web/CSS/:host-context
 page-type: css-pseudo-class
 browser-compat: css.selectors.host-context
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
@@ -78,11 +77,11 @@ function init() {
 /* Changes paragraph text color from black to white when
    a .dark-theme class is applied to the document body */
 p {
-  color: #000;
+  color: black;
 }
 
 :host-context(body.dark-theme) p {
-  color: #fff;
+  color: white;
 }
 ```
 

@@ -3,9 +3,8 @@ title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 
@@ -54,6 +53,8 @@ Events have three functions:
 
             Frame IDs are unique for a given tab and process.
 
+        - `parentFrameId`
+          - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
         - `timeStamp`
           - : `number`. The time at which the error occurred, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
         - `error`
@@ -65,10 +66,6 @@ Events have three functions:
     If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array.
 
     If you omit this parameter, the event fires for all transitions.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -88,6 +85,10 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

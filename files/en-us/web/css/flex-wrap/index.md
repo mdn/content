@@ -3,9 +3,8 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 page-type: css-property
 browser-compat: css.properties.flex-wrap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
 
@@ -121,7 +120,7 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 .content,
 .content1,
 .content2 {
-  color: #fff;
+  color: white;
   font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;

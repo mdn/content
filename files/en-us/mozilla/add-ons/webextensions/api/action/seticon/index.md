@@ -3,9 +3,8 @@ title: action.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setIcon
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the icon for the browser action.
 

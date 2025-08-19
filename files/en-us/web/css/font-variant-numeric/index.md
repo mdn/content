@@ -3,9 +3,8 @@ title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
 page-type: css-property
 browser-compat: css.properties.font-variant-numeric
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 

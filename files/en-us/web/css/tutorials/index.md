@@ -2,9 +2,8 @@
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
 page-type: landing-page
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Learning CSS may be a daunting task.
 In order to help you, we have written numerous **tutorials about CSS**.

@@ -3,9 +3,8 @@ title: border-width
 slug: Web/CSS/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-width`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
 
@@ -42,7 +41,7 @@ border-width: 0 4px 8px 12px;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -139,7 +138,7 @@ The `border-width` property may be specified using one, two, three, or four valu
 
 ```css
 #one-value {
-  border: ridge #ccc;
+  border: ridge #cccccc;
   border-width: 6px;
 }
 #two-values {

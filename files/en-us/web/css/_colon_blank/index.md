@@ -5,9 +5,10 @@ page-type: css-pseudo-class
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/selectors/#blank-pseudo
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!NOTE]
 > The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
@@ -54,8 +55,9 @@ textarea:blank {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - {{CSSxRef(":empty")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module

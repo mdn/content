@@ -3,9 +3,8 @@ title: animation-delay
 slug: Web/CSS/animation-delay
 page-type: css-property
 browser-compat: css.properties.animation-delay
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
 
@@ -36,7 +35,7 @@ animation-delay: -2s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;

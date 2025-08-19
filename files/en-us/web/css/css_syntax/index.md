@@ -3,9 +3,8 @@ title: CSS syntax
 slug: Web/CSS/CSS_syntax
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-syntax
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS syntax** module describes, in general terms, the structure and syntax of cascading stylesheets, or CSS. It defines CSS as the language for describing the rendering of structured documents (such as HTML and XML), on the web and elsewhere.
 

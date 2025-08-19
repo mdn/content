@@ -3,9 +3,8 @@ title: y
 slug: Web/CSS/y
 page-type: css-property
 browser-compat: css.properties.y
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`y`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport and nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("y")}} attribute.
 

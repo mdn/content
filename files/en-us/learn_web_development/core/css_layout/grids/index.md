@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout/Test_your_skills/Grid", "Learn_web_development/Core/CSS_layout")}}
 
 CSS grid layout is a two-dimensional layout system for the web. It lets you organize content into rows and columns and offers many features to simplify the creation of complex layouts. This article will explain all you need to know to get started with grid layout.
 
@@ -859,13 +859,11 @@ If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid).
-
 ## Summary
 
-In this overview, we've toured the main features of CSS grid layout. You should be able to start using it in your designs. Next, we'll look at responsive design.
+In this overview, we've toured the main features of CSS grid layout. You should be able to start using it in your designs.
+
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 
@@ -876,4 +874,4 @@ In this overview, we've toured the main features of CSS grid layout. You should 
 - [Grid Garden](https://cssgridgarden.com/)
   - : An educational game to learn and better understand the basics of grid on cssgridgarden.com.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout/Test_your_skills/Grid", "Learn_web_development/Core/CSS_layout")}}

@@ -3,9 +3,8 @@ title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 page-type: css-property
 browser-compat: css.properties.mask-border-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property specifies how the images for the sides and the middle part of the [mask border image](/en-US/docs/Web/CSS/mask-border) are scaled and tiled.
 

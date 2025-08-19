@@ -3,9 +3,8 @@ title: declarativeNetRequest.URLTransform
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/URLTransform
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.URLTransform
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details describing a URL transformation to perform for a redirect rule. This object can be specified at {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform.
 

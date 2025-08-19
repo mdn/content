@@ -3,9 +3,8 @@ title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
 page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
@@ -60,7 +59,7 @@ scroll-margin-inline-start: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -69,7 +68,7 @@ scroll-margin-inline-start: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -135,7 +134,7 @@ Let's walk through the CSS. The outer container is styled like this:
   overflow-x: scroll;
   display: flex;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid black;
   scroll-snap-type: x mandatory;
 }
 ```
@@ -148,8 +147,8 @@ The child elements are styled as follows:
 .scroller > div {
   flex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  background-color: rebeccapurple;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -158,8 +157,8 @@ The child elements are styled as follows:
 }
 
 .scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+  background-color: white;
+  color: rebeccapurple;
 }
 ```
 

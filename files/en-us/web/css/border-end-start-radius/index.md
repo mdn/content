@@ -3,9 +3,8 @@ title: border-end-start-radius
 slug: Web/CSS/border-end-start-radius
 page-type: css-property
 browser-compat: css.properties.border-end-start-radius
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-end-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius depending on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
 
@@ -110,7 +109,7 @@ div {
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
-  background-color: #fff;
+  background-color: white;
   border-end-start-radius: 10px;
 }
 ```

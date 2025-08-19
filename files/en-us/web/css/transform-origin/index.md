@@ -3,9 +3,8 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 page-type: css-property
 browser-compat: css.properties.transform-origin
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`transform-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin for an element's transformations.
 
@@ -77,7 +76,7 @@ transform-origin: bottom right 60px;
   align-items: center;
   justify-content: center;
   background: #f7ebee;
-  color: #000000;
+  color: black;
   font-size: 1.2rem;
   text-transform: uppercase;
 }

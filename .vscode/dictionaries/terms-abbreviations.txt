@@ -188,6 +188,7 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
 Emscripting
 encrypter
@@ -275,6 +276,7 @@ halfwidth
 harissa
 HDCP
 headworn
+highlightable
 HILN
 hissy
 hitbox
@@ -543,12 +545,12 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
 qvalues
 QWERTZ
+RAII
 rari
 rasterizes
 RDBMS
@@ -680,6 +682,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles
@@ -756,6 +759,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables

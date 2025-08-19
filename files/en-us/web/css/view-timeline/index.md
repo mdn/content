@@ -3,9 +3,8 @@ title: view-timeline
 slug: Web/CSS/view-timeline
 page-type: css-shorthand-property
 browser-compat: css.properties.view-timeline
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is used to define a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
 
@@ -73,8 +72,8 @@ The `view-timeline` shorthand property can be applied to a container element as 
 
 ### Creating a named view progress timeline
 
-A view progress timeline named `--subjectReveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
-This is then set as the timeline for the same element using `animation-timeline: --subjectReveal`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
+A view progress timeline named `--subject-reveal` is defined using the `view-timeline` property on a subject element with a `class` of `animation`.
+This is then set as the timeline for the same element using `animation-timeline: --subject-reveal`. The result is that the subject element animates as it moves upwards through the document as it is scrolled.
 
 #### HTML
 
@@ -154,8 +153,8 @@ Last, an animation is specified on the element that animates its opacity and sca
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timeline: --subject-reveal block;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-fill-mode: both;

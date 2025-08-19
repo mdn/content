@@ -3,9 +3,8 @@ title: action.getUserSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getUserSettings
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.getUserSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the user-specified settings for the browser action.
 

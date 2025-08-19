@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.font-synthesis-position
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`font-synthesis-position`** [CSS](/en-US/docs/Web/CSS) property lets you specify whether or not a browser may synthesize the subscript and superscript "position" typefaces when they are missing in a font family, while using {{cssxref("font-variant-position")}} to set the positions.
 
@@ -71,7 +72,7 @@ This example shows turning off synthesis of the superscript and subscript typefa
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 * {
   font-family: "Montserrat", sans-serif;

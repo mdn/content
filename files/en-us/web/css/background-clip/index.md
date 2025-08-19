@@ -3,9 +3,8 @@ title: background-clip
 slug: Web/CSS/background-clip
 page-type: css-property
 browser-compat: css.properties.background-clip
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an element's background extends underneath its border box, padding box, or content box.
 
@@ -41,7 +40,7 @@ text-shadow: none;
   color: white;
   text-shadow: 2px 2px black;
   padding: 20px;
-  border: 10px dashed #333;
+  border: 10px dashed #333333;
   font-size: 2em;
   font-weight: bold;
 }

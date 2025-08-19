@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
 Events are things that happen in the system you are programming, which the system tells you about so your code can react to them.
 For example, if the user clicks a button on a webpage, you might want to react to that action by displaying an information box.
@@ -48,7 +48,7 @@ For example:
 - A video is played, paused, or ends.
 - An error occurs.
 
-You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
+You can gather from this (and from glancing at the [event index](/en-US/docs/Web/API/Document_Object_Model/Events#event_index)) that there are **a lot** of events that can be fired.
 
 To react to an event, you attach an **event listener** to it. This is a code feature that listens out for the event firing. When the event fires, an **event handler** function (referenced by, or contained inside the event listener) is called to respond to the event firing. When such a block of code is set up to run in response to an event, we say we are **registering an event handler**.
 
@@ -395,4 +395,4 @@ In this chapter we've learned what events are, how to listen for events, and how
 
 You've seen by now that elements in a web page can be nested inside other elements. For example, in the [Preventing default behavior](#preventing_default_behavior) example, we have some text boxes, placed inside {{htmlelement("div")}} elements, which in turn are placed inside a {{htmlelement("form")}} element. What happens when a click event listener is attached to the `<form>` element, and the user clicks inside one of the text boxes? The associated event handler function is still fired via a process called _event bubbling_, which is covered in the next lesson.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}

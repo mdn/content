@@ -253,7 +253,7 @@ Applied to the `@font-face` at-rule, the [`font-display`](/en-US/docs/Web/CSS/@f
 ```css
 @font-face {
   font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format("woff");
+  src: url("/path/to/fonts/someFont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

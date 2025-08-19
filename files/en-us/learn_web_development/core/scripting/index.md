@@ -63,8 +63,10 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
   - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
 - [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)
   - : In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
-- [Test your skills: JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills)
-  - : This page lists JavaScript tests you can try so you can verify if you've understood the content in this module.
+
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills).
 
 ## See also
 

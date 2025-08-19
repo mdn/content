@@ -3,9 +3,8 @@ title: min-block-size
 slug: Web/CSS/min-block-size
 page-type: css-property
 browser-compat: css.properties.min-block-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`min-block-size`** [CSS](/en-US/docs/Web/CSS) property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
 
@@ -49,7 +48,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 

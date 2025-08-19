@@ -3,9 +3,8 @@ title: background-color
 slug: Web/CSS/background-color
 page-type: css-property
 browser-compat: css.properties.background-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-color`** [CSS](/en-US/docs/Web/CSS) property sets the background color of an element.
 
@@ -73,7 +72,7 @@ background-color: hsl(50 33% 25%); /* Fully opaque */
 background-color: hsl(50 33% 25% / 75%); /* 75% opaque, i.e. 25% transparent */
 
 /* Special keyword values */
-background-color: currentcolor;
+background-color: currentColor;
 background-color: transparent;
 
 /* Global values */
@@ -139,7 +138,7 @@ This example demonstrates the applying `background-color` to HTML {{HTMLelement(
 
 .example-three {
   background-color: #777799;
-  color: #ffffff;
+  color: white;
 }
 ```
 

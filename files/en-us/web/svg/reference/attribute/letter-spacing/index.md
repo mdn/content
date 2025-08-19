@@ -10,7 +10,7 @@ The **`letter-spacing`** attribute controls spacing between text characters.
 
 If the attribute value is a unitless number (like `128`), the browser processes it as a {{cssxref("length")}} in the current user coordinate system.
 
-If the attribute value has a unit identifier, such as `.25em` or `1%`, then the browser converts the \<length> into its corresponding value in the current user coordinate system.
+If the attribute value has a unit identifier, such as `.25em` or `1%`, then the browser converts the `<length>` into its corresponding value in the current user coordinate system.
 
 > [!NOTE]
 > As a presentation attribute, `letter-spacing` also has a CSS property counterpart: {{cssxref("letter-spacing")}}. When both are specified, the CSS property takes priority.
@@ -21,15 +21,9 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 
-## Example
+## Examples
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+### Controlling SVG letter spacing
 
 ```html
 <svg viewBox="0 0 400 30" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +32,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "30")}}
+{{EmbedLiveSample}}
 
 ## Usage notes
 

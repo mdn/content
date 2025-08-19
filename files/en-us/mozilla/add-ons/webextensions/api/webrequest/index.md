@@ -3,9 +3,8 @@ title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 page-type: webextension-api
 browser-compat: webextensions.api.webRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 
@@ -129,13 +128,13 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 [Additional notes on Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_api).
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

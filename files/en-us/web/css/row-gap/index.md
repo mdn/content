@@ -3,9 +3,8 @@ title: row-gap
 slug: Web/CSS/row-gap
 page-type: css-property
 browser-compat: css.properties.row-gap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.
 

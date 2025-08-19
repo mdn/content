@@ -3,9 +3,8 @@ title: mask-size
 slug: Web/CSS/mask-size
 page-type: css-property
 browser-compat: css.properties.mask-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of specified mask images. Mask image sizes can be fully or partially constrained to preserve their {{glossary("aspect ratio", "intrinsic aspect ratios")}}.
 
@@ -126,7 +125,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("/shared-assets/images/examples/mdn.svg");
 }
 ```
 
@@ -185,7 +184,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -252,7 +251,7 @@ Using the same HTML and CSS as above, with just a different origin box size, thi
 ```css hidden
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 
 .auto div {

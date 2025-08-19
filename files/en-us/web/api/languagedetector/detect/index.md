@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.detect
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`detect()`** method of the {{domxref("LanguageDetector")}} interface detects the closest matching language or languages that a given text string is most likely to be written in.
 
@@ -45,7 +45,7 @@ The last array element returned will always have a `detectedLanguage` value of `
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the language detection operation exceeds the available {{domxref("LanguageDetector.inputQuota", "inputQuota")}}.
 
 ## Examples

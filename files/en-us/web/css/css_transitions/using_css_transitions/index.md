@@ -4,9 +4,8 @@ short-title: Using transitions
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-transitions/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS transitions** provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
 
@@ -84,7 +83,7 @@ This example performs a four-second font size transition with a two-second delay
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000ff;
+  background-color: blue;
   transition:
     width 2s,
     height 2s,
@@ -165,8 +164,8 @@ nav {
 
 a {
   flex: 1;
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   border: 1px solid;
   padding: 0.5rem;
   text-align: center;
@@ -176,8 +175,8 @@ a {
 
 a:hover,
 a:focus {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
 }
 ```
 
@@ -321,8 +320,8 @@ With CSS, you can smooth the styles applied through JavaScript. Add a transition
 
 ```css hidden live-sample___js-transitions
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1.2em / 1.5 Helvetica Neue,
     Helvetica,
@@ -343,7 +342,7 @@ main {
   align-items: center;
   max-width: 660px;
   height: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 20px;
 }
 ```
@@ -353,7 +352,7 @@ main {
   border-radius: 25px;
   width: 50px;
   height: 50px;
-  background: #c00;
+  background: #cc0000;
   position: absolute;
   top: 0;
   left: 0;

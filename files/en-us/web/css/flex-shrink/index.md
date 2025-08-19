@@ -3,9 +3,8 @@ title: flex-shrink
 slug: Web/CSS/flex-shrink
 page-type: css-property
 browser-compat: css.properties.flex-shrink
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, the [flex items can shrink](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#the_flex-shrink_property) to fit according to their `flex-shrink` value. Each flex line's [negative free space](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis#positive_and_negative_free_space) is distributed between the line's flex items that have a `flex-shrink` value greater than `0`.
 
@@ -102,11 +101,11 @@ This example demonstrates how negative free space is distributed based on the it
 
 ```html
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box4" style="background-color:lightsalmon;">D</div>
-  <div class="box5" style="background-color:lightgreen;">E</div>
+  <div class="box1">A</div>
+  <div class="box2">B</div>
+  <div class="box3">C</div>
+  <div class="box4">D</div>
+  <div class="box5">E</div>
 </div>
 ```
 
@@ -124,7 +123,9 @@ We give each flex item a {{cssxref("width")}} of `200px`. As the {{cssxref("flex
   width: 200px;
 }
 
-.box {
+.box1,
+.box2,
+.box3 {
   flex-shrink: 1;
 }
 
@@ -146,6 +147,21 @@ div {
   outline: 1px solid;
   line-height: 4em;
   text-align: center;
+}
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: lightblue;
+}
+.box3 {
+  background-color: yellow;
+}
+.box4 {
+  background-color: lightsalmon;
+}
+.box5 {
+  background-color: lightgreen;
 }
 ```
 

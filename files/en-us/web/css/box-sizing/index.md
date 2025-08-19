@@ -3,9 +3,8 @@ title: box-sizing
 slug: Web/CSS/box-sizing
 page-type: css-property
 browser-compat: css.properties.box-sizing
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`box-sizing`** [CSS](/en-US/docs/Web/CSS) property sets how the total width and height of an element is calculated.
 

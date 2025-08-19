@@ -3,9 +3,8 @@ title: :checked
 slug: Web/CSS/:checked
 page-type: css-pseudo-class
 browser-compat: css.selectors.checked
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}} element) that is checked or toggled to an `on` state.
 
@@ -181,7 +180,7 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 /* Hide expandable content by default */
 .expandable {
   visibility: collapse;
-  background: #ddd;
+  background: #dddddd;
 }
 
 /* Style the button */
@@ -189,7 +188,7 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
   display: inline-block;
   margin-top: 12px;
   padding: 5px 11px;
-  background-color: #ff7;
+  background-color: #ffff77;
   border: 1px solid;
   border-radius: 3px;
 }
@@ -201,7 +200,7 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 
 /* Style the button when the checkbox is checked */
 #expand-toggle:checked ~ #expand-btn {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
