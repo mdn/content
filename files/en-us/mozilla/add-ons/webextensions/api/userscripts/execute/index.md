@@ -10,7 +10,7 @@ browser-compat: webextensions.api.userScripts.execute
 Injects a user script into a target context (e.g., tab or frame).
 
 > [!NOTE]
-> By default, the injected script is executed at `document_idle`, or immediately if the page has already loaded. If the `injectImmediately` property is set to `true`, the script injects without waiting, even if the page has not finished loading.
+> By default, the injected script is executed at `document_idle`, or immediately if the page is loaded. If the `injectImmediately` property is set to `true`, the script injects without waiting, even if the page is loading.
 
 ## Syntax
 
