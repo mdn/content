@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}
 
 We've seen that a web page is composed of _elements_ — headings, paragraphs of text, images, buttons, and so on — and that you can listen for events that happen to these elements. For example, you could add a listener to a button, and it will run when the user clicks the button.
 
@@ -408,21 +408,13 @@ Note that when we click the button, `target` is the button element every time, w
 
 {{embedlivesample("target and currentTarget")}}
 
-The `target` property is commonly used in event delegation, as in our [Event delegation](#event_delegation) example above.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
+The `target` property is commonly used in event delegation, as seen in our [Event delegation](#event_delegation) example above.
 
 ## Summary
 
-You should now know all you need to know about web events at this early stage.
-As mentioned, events are not really part of the core JavaScript — they are defined in browser Web APIs.
+You should now know all you need to know about web events at this early stage. As mentioned, events are not really part of the core JavaScript language — they are defined in browser Web APIs.
 
-Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
-We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
-
-Next up, you'll find a challenge that will test your understanding of the last few topics.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the information we've given you on events.
 
 ## See also
 
@@ -433,4 +425,4 @@ Next up, you'll find a challenge that will test your understanding of the last f
 - [Event order](https://www.quirksmode.org/js/events_order.html)
   - : An excellently detailed discussion of capturing and bubbling by Peter-Paul Koch.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}

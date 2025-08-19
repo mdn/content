@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Strings"
-short-title: Strings
+short-title: "Test: Strings"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Strings
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
 
@@ -224,3 +226,5 @@ const myString = `Using ${theorem}, we can work out that if the two shortest sid
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

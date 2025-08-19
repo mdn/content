@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Variables"
-short-title: Variables
+short-title: "Test: Variables"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
 
@@ -119,3 +121,9 @@ let myAge = 42;
 ```
 
 </details>
+
+## See also
+
+Also check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

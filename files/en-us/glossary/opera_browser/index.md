@@ -13,7 +13,7 @@ Opera is available for multiple platforms:
 
 - [Opera for Windows, macOS, and Linux](https://www.opera.com/download)
 - [Opera for Android](https://play.google.com/store/apps/details?id=com.opera.browser)
-- [Opera for iOS](https://apps.apple.com/app/opera-browser-fast-private/id1411869974)
+- [Opera for iOS](https://apps.apple.com/us/app/opera-ai-browser-with-vpn/id1411869974)
 
 ## See also
 

@@ -133,28 +133,35 @@ sidebar:
       - /Learn_web_development/Core/Scripting/A_first_splash
       - /Learn_web_development/Core/Scripting/What_went_wrong
       - /Learn_web_development/Core/Scripting/Variables
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Variables
       - /Learn_web_development/Core/Scripting/Math
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Math
       - /Learn_web_development/Core/Scripting/Strings
       - /Learn_web_development/Core/Scripting/Useful_string_methods
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Strings
       - /Learn_web_development/Core/Scripting/Arrays
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Arrays
       - /Learn_web_development/Core/Scripting/Silly_story_generator
       - /Learn_web_development/Core/Scripting/Conditionals
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
       - /Learn_web_development/Core/Scripting/Loops
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Loops
       - /Learn_web_development/Core/Scripting/Functions
       - /Learn_web_development/Core/Scripting/Build_your_own_function
       - /Learn_web_development/Core/Scripting/Return_values
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Functions
       - /Learn_web_development/Core/Scripting/Events
       - /Learn_web_development/Core/Scripting/Event_bubbling
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Events
       - /Learn_web_development/Core/Scripting/Image_gallery
       - /Learn_web_development/Core/Scripting/Object_basics
+      - /Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
       - /Learn_web_development/Core/Scripting/DOM_scripting
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
+      - /Learn_web_development/Core/Scripting/Test_your_skills/JSON
       - /Learn_web_development/Core/Scripting/Debugging_JavaScript
-      - type: listSubPages
-        path: /Learn_web_development/Core/Scripting/Test_your_skills
-        link: /Learn_web_development/Core/Scripting/Test_your_skills
-        details: closed
+      - /Learn_web_development/Core/Scripting/Test_your_skills
   - link: /Learn_web_development/Core/Frameworks_libraries
     title: JavaScript_frameworks_and_libraries
     details: closed
