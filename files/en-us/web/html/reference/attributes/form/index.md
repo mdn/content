@@ -27,19 +27,19 @@ The `form` HTML attribute's value must be the `id` of a `<form>` element in the 
 
 ```html
 <form id="form">
-    <input type="text" name="username">
+    <input type="text" name="username" value="david">
 </form>
 <!-- Password input outside the form -->
-<input form="form" type="password" name="password">
+<input form="form" type="password" name="password" value="secret">
 <!-- Select outside the form -->
-<select form="form">
+<select form="form" name="options">
     <option value="A">A</option>
     <option value="B">B</option>
 </select>
 <!-- Textarea outside the form -->
-<textarea rows="4" name="description" form="form"></textarea>
+<textarea rows="4" name="description" form="form">Hello, World!</textarea>
 <!-- Submit button outside the form -->
-<button form="form">Submit</button>
+<button type="submit" form="form">Submit</button>
 ```
 
 ## Specifications
