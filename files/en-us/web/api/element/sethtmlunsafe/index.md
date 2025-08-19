@@ -99,7 +99,7 @@ Using `setHTMLUnsafe()` might be appropriate if:
   While this is still unsafe, it is safer than allowing all of them.
 
 For the last point, consider a situation where your code relies on being able to use unsafe `onclick` handlers.
-The following code shows the effect of different the different methods and sanitizers for this case.
+The following code shows the effect of the different methods and sanitizers for this case.
 
 ```js
 const target = document.querySelector("#target");
@@ -117,9 +117,9 @@ target.innerHTML = input;
 const configSafe = new Sanitizer();
 target.setHTMLUnsafe(input, { sanitizer: configSafe });
 
-// Removes all XSS-unsafe entities except `onerror`
+// Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onerror");
+config.allowAttribute("onclick");
 target.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -196,7 +196,7 @@ target.setHTMLUnsafe(untrustedString, {
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to inject a string of HTML.
-One button injects the HTML without sanitizing it at all, and the second uses a custom sanitizer than allows `<script>` elements but not other unsafe items.
+One button injects the HTML without sanitizing it at all, and the second uses a custom sanitizer that allows `<script>` elements but not other unsafe items.
 The original string and injected HTML are logged so you can inspect the results in each case.
 
 > [!NOTE]
