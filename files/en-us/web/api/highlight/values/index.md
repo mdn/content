@@ -22,6 +22,10 @@ The **`values()`** method of the {{domxref("Highlight")}} interface returns a ne
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object containing each `Range` object in the given `Highlight`, in insertion order.

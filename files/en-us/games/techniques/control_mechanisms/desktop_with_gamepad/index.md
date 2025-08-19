@@ -2,9 +2,8 @@
 title: Desktop gamepad controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_gamepad
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms/Other", "Games/Techniques/Control_mechanisms")}}
 
@@ -47,9 +46,9 @@ To update the state of the gamepad's currently pressed buttons we will need a fu
 function gamepadUpdateHandler() {
   buttonsPressed = [];
   if (controller.buttons) {
-    for (let b = 0; b < controller.buttons.length; b++) {
-      if (controller.buttons[b].pressed) {
-        buttonsPressed.push(b);
+    for (const [i, button] of controller.buttons.entries()) {
+      if (button.pressed) {
+        buttonsPressed.push(i);
       }
     }
   }
@@ -60,17 +59,11 @@ We first reset the `buttonsPressed` array to get it ready to store the latest in
 
 ```js
 function gamepadButtonPressedHandler(button) {
-  let press = false;
-  for (let i = 0; i < buttonsPressed.length; i++) {
-    if (buttonsPressed[i] === button) {
-      press = true;
-    }
-  }
-  return press;
+  return buttonsPressed.includes(button);
 }
 ```
 
-The function takes a button as a parameter; in the loop it checks if the given button's number is among the currently pressed buttons available in the `buttonsPressed` array. If it is, then the function returns `true`; `false` otherwise.
+The function takes a button index as a parameter; it checks if `buttonsPressed` contains the button we are looking for, and returns `true` if it does. This checks if a button is pressed or not.
 
 Next, in the `draw()` function we do two things — execute the `gamepadUpdateHandler()` function to get the current state of pressed buttons on every frame, and use the `gamepadButtonPressedHandler()` function to check the buttons we are interested to see whether they are pressed, and do something if they are:
 
@@ -196,8 +189,8 @@ const GamepadAPI = {
     }
     const axes = [];
     if (c.axes) {
-      for (let a = 0; a < c.axes.length; a++) {
-        axes.push(c.axes[a].toFixed(2));
+      for (const ax of c.axes) {
+        axes.push(ax.toFixed(2));
       }
     }
     GamepadAPI.axes.status = axes;
@@ -219,17 +212,11 @@ const GamepadAPI = {
     // …
     pressed(button, hold) {
       let newPress = false;
-      for (let i = 0; i < GamepadAPI.buttons.status.length; i++) {
-        if (GamepadAPI.buttons.status[i] === button) {
-          newPress = true;
-          if (!hold) {
-            for (let j = 0; j < GamepadAPI.buttons.cache.length; j++) {
-              if (GamepadAPI.buttons.cache[j] === button) {
-                newPress = false;
-              }
-            }
-          }
-        }
+      if (GamepadAPI.buttons.status.includes(button)) {
+        newPress = true;
+      }
+      if (!hold && GamepadAPI.buttons.cache.includes(button)) {
+        newPress = false;
       }
       return newPress;
     },
@@ -239,7 +226,7 @@ const GamepadAPI = {
 };
 ```
 
-It loops through pressed buttons and if the button we're looking for is pressed, then the corresponding boolean variable is set to `true`. If we want to check the button is not held already (so it's a new press), then looping through the cached states from the previous frame does the job — if the button was already pressed, then we ignore the new press and set it to `false`.
+It checks if the button we're looking for is pressed, and if so, the corresponding boolean variable is set to `true`. If we want to check the button is not held already (so it's a new press), then checking the cached states from the previous frame does the job — if the button was already pressed, then we ignore the new press and set it to `false`.
 
 ## Implementation
 

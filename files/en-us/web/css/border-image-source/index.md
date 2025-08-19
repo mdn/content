@@ -3,9 +3,8 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 page-type: css-property
 browser-compat: css.properties.border-image-source
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/border-image).
 
@@ -46,7 +45,7 @@ border-image-source: none;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -63,7 +62,7 @@ The {{cssxref("border-image-slice")}} property is used to divide the source imag
 border-image-source: none;
 
 /* <image> values */
-border-image-source: url(image.jpg);
+border-image-source: url("image.jpg");
 border-image-source: linear-gradient(to top, red, yellow);
 
 /* Global values */

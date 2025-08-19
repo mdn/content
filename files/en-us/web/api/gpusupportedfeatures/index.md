@@ -2,12 +2,10 @@
 title: GPUSupportedFeatures
 slug: Web/API/GPUSupportedFeatures
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUSupportedFeatures
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUSupportedFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that describes additional functionality supported by a {{domxref("GPUAdapter")}}.
 
@@ -50,22 +48,22 @@ The following additional features are defined in WebGPU. Bear in mind that the e
 
 The following properties are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the links below are to the {{jsxref("Set")}} global object reference page).
 
-- {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.size", "size")}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
 The following methods are available to all read-only [`Set`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) (the below links are to the {{jsxref("Set")}} global object reference page).
 
-- {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.has()", "has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the set or not.
-- {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.values()", "values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.keys()", "keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
-- {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.entries()", "entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set, in insertion order.
-- {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.forEach()", "forEach()")}}
   - : Calls a provided callback function once for each value present in the set, in insertion order.
 
 ## Examples

@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: drawIndexedIndirect() method"
 short-title: drawIndexedIndirect()
 slug: Web/API/GPURenderBundleEncoder/drawIndexedIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -25,7 +23,6 @@ drawIndexedIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-
   - : A {{domxref("GPUBuffer")}} containing the `indexCount`, `instanceCount`, `firstIndex`, `baseVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of five 32-bit unsigned integer values representing the values (20 bytes total), given in the same order as the arguments for {{domxref("GPURenderBundleEncoder.drawIndexed()")}}. So for example:
 
     ```js

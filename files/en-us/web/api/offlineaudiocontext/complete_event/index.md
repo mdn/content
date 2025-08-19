@@ -44,7 +44,7 @@ const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.addEventListener("complete", () => {
   console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
+  alert("Song processed and ready to play");
   playBtn.disabled = false;
 });
 ```
@@ -56,7 +56,7 @@ const offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = () => {
   console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
+  alert("Song processed and ready to play");
   playBtn.disabled = false;
 };
 ```

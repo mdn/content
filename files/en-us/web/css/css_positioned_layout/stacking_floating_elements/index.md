@@ -2,9 +2,8 @@
 title: Stacking floating elements
 slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 For floating elements, the stacking order is a bit different. Floating elements are placed between non-positioned elements and positioned elements:
 
@@ -64,14 +63,14 @@ strong {
   height: 200px;
   top: 10px;
   right: 140px;
-  border: 1px dashed #900;
-  background-color: #fdd;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
 }
 
 #sta1 {
   height: 100px;
-  border: 1px dashed #996;
-  background-color: #ffc;
+  border: 1px dashed #999966;
+  background-color: #ffffcc;
   margin: 0px 10px 0px 10px;
   text-align: left;
 }
@@ -81,8 +80,8 @@ strong {
   float: left;
   width: 150px;
   height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  border: 1px dashed #009900;
+  background-color: #ccffcc;
 }
 
 #flo2 {
@@ -90,8 +89,8 @@ strong {
   float: right;
   width: 150px;
   height: 200px;
-  border: 1px dashed #090;
-  background-color: #cfc;
+  border: 1px dashed #009900;
+  background-color: #ccffcc;
 }
 
 #abs2 {
@@ -100,14 +99,14 @@ strong {
   height: 100px;
   top: 80px;
   left: 100px;
-  border: 1px dashed #990;
-  background-color: #fdd;
+  border: 1px dashed #999900;
+  background-color: #ffdddd;
 }
 
 #rel1 {
   position: relative;
-  border: 1px dashed #996;
-  background-color: #cff;
+  border: 1px dashed #999966;
+  background-color: #ccffff;
   margin: 0px 10px 0px 10px;
   text-align: left;
 }

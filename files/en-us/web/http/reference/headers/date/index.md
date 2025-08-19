@@ -1,11 +1,11 @@
 ---
-title: Date
+title: Date header
+short-title: Date
 slug: Web/HTTP/Reference/Headers/Date
 page-type: http-header
 browser-compat: http.headers.Date
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Date`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} contains the date and time at which the message originated.
 

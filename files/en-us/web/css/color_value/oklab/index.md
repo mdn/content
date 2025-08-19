@@ -6,9 +6,8 @@ browser-compat: css.types.color.oklab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklab
   - https://drafts.csswg.org/css-color/#ok-lab
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`oklab()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}, which attempts to mimic how color is perceived by the human eye.
 
@@ -30,7 +29,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 /* Relative values */
 oklab(from green l a b / 0.5)
-oklab(from #0000FF calc(l + 0.1) a b / calc(alpha * 0.9))
+oklab(from #123456 calc(l + 0.1) a b / calc(alpha * 0.9))
 oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 ```
 

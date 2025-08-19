@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainMonthDay.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/from
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.from
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainMonthDay.from()`** static method creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format) string.
 
@@ -21,25 +23,22 @@ Temporal.PlainMonthDay.from(info, options)
 ### Parameters
 
 - `info`
-
   - : One of the following:
-
     - A {{jsxref("Temporal.PlainMonthDay")}} instance, which creates a copy of the instance.
     - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
     - An object containing the following properties (in the order they are retrieved and validated):
-
       - `calendar` {{optional_inline}}
         - : A string that corresponds to the {{jsxref("Temporal/PlainMonthDay/calendarId", "calendarId")}} property. Defaults to `"iso8601"`. All other properties are interpreted in this calendar system (unlike the {{jsxref("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}} constructor, which interprets the values in the ISO calendar system). See [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for a list of commonly supported calendar types.
       - `day`
         - : An integer that corresponds to the {{jsxref("Temporal/PlainMonthDay/day", "day")}} property. Must be positive regardless of the `overflow` option.
       - `era` and `eraYear`
-        - : A string and an integer that can be used instead of `year`. See {{jsxref("Temporal/PlainDate/era", "era")}} and {{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} of `PlainDate`. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If `month` is specified, at least one of `era`+`eraYear` or `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
+        - : A string and an integer that can be used instead of `year`. See {{jsxref("Temporal/PlainDate/era", "era")}} and {{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} of `PlainDate`. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If `month` is specified, at least one of `eraYear` (together with `era`) or `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
       - `month`
-        - : A positive integer that can be used instead of `monthCode`. See {{jsxref("Temporal/PlainDate/month", "month")}} of `PlainDate`. Must be positive regardless of the `overflow` option. If `month` is provided, and the calendar is not `iso8601`, then `year` (or `era` + `eraYear` as a substitution) must be provided too, because the same `month` may map to multiple possible `monthCode` values in different years. At least one of `month` or `monthCode` must be provided. If both `month` and `monthCode` are provided, they must be consistent.
+        - : A positive integer that can be used instead of `monthCode`. See {{jsxref("Temporal/PlainDate/month", "month")}} of `PlainDate`. Must be positive regardless of the `overflow` option. If `month` is provided, and the calendar is not `iso8601`, then `year` (or `eraYear` together with `era` as a substitution) must be provided too, because the same `month` may map to multiple possible `monthCode` values in different years. At least one of `month` or `monthCode` must be provided. If both `month` and `monthCode` are provided, they must be consistent.
       - `monthCode`
         - : Corresponds to the {{jsxref("Temporal/PlainMonthDay/monthCode", "monthCode")}} property. At least one of `month` or `monthCode` must be provided. If both `month` and `monthCode` are provided, they must be consistent.
       - `year`
-        - : An integer used to disambiguate `month` if provided, because for some calendars, the same `month` can mean different `monthCode` in different years. See {{jsxref("Temporal/PlainDate/year", "year")}} of `PlainDate`. If a year is provided, then the `overflow` option validates the month-day in the given year, not just any year. If `month` is specified, at least one of `era`+`eraYear` or `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
+        - : An integer used to disambiguate `month` if provided, because for some calendars, the same `month` can mean different `monthCode` in different years. See {{jsxref("Temporal/PlainDate/year", "year")}} of `PlainDate`. If a year is provided, then the `overflow` option validates the month-day in the given year, not just any year. If `month` is specified, at least one of `eraYear` (together with `era`) or `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:

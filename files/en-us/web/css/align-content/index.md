@@ -3,9 +3,8 @@ title: align-content
 slug: Web/CSS/align-content
 page-type: css-property
 browser-compat: css.properties.align-content
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)'s [cross axis](/en-US/docs/Glossary/Cross_Axis), or a [grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [block-level](/en-US/docs/Glossary/Block-level_content) element's block axis.
 
@@ -52,7 +51,7 @@ align-content: space-around;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -113,7 +112,6 @@ align-content: unset;
   - : The items are packed flush to each other against the edge of the alignment container depending on the flex container's cross-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 - `baseline`, `first baseline`, `last baseline`
-
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
 
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
@@ -152,10 +150,6 @@ In this example, you can switch between three different {{cssxref("display")}} p
 
 #### HTML
 
-```html-nolint hidden
-<div class="wrapper">
-```
-
 ```html
 <section>
   <div class="olive">Olive</div>
@@ -167,46 +161,45 @@ In this example, you can switch between three different {{cssxref("display")}} p
 </section>
 ```
 
-```html-nolint hidden
+```html hidden
 <fieldset class="controls">
-    <legend>Controls</legend>
-    <div class="row">
-      <label for="display">display: </label>
-      <select id="display">
-        <option value="block" selected>block</option>
-        <option value="flex">flex</option>
-        <option value="grid">grid</option>
-      </select>
-    </div>
-    <div class="row">
-      <label for="alignContent">align-content: </label>
-      <select id="alignContent">
-        <option value="normal" selected>normal</option>
-        <option value="start">start</option>
-        <option value="center">center</option>
-        <option value="end">end</option>
-        <option value="flex-start">flex-start</option>
-        <option value="flex-end">flex-end</option>
-        <option value="space-between">space-between</option>
-        <option value="space-around">space-around</option>
-        <option value="space-evenly">space-evenly</option>
-      </select>
-    </div>
-    <p>CSS applied</p>
-    <pre>
+  <legend>Controls</legend>
+  <div class="row">
+    <label for="display">display: </label>
+    <select id="display">
+      <option value="block" selected>block</option>
+      <option value="flex">flex</option>
+      <option value="grid">grid</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="alignContent">align-content: </label>
+    <select id="alignContent">
+      <option value="normal" selected>normal</option>
+      <option value="start">start</option>
+      <option value="center">center</option>
+      <option value="end">end</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+  <p>CSS applied</p>
+  <pre>
 section {
   display: <span id="displayStyle">block</span>;
   align-content: <span id="align">normal</span>
 }
-    </pre>
-  </fieldset>
-</div>
+  </pre>
+</fieldset>
 ```
 
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   font-size: 1.25rem;
   display: flex;
   gap: 1rem;

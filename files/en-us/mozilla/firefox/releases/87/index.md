@@ -1,10 +1,10 @@
 ---
 title: Firefox 87 for developers
+short-title: Firefox 87
 slug: Mozilla/Firefox/Releases/87
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.
 
@@ -18,7 +18,6 @@ This article provides information about the changes in Firefox 87 that will affe
 - Developers can now use the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme) to simulate {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media queries, without having to change the operating system to light or dark mode ([Firefox bug 1679408](https://bugzil.la/1679408) and [Firefox bug 1692272](https://bugzil.la/1692272)).
 - Developers can now use the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes) to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}} ([Firefox bug 1689899](https://bugzil.la/1689899)).
 - Firefox 87 sees a number of [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#rule-display) improvements and bug fixes related to inactive CSS rules:
-
   - The {{cssxref("table-layout")}} property is now marked as inactive for non-table elements ([Firefox bug 1551571](https://bugzil.la/1551571)).
   - The {{cssxref("scroll-padding")}} properties (shorthand and longhand) are now marked as inactive for non-scrollable elements ([Firefox bug 1551577](https://bugzil.la/1551577)).
   - The {{cssxref("text-overflow")}} property was previously incorrectly marked as inactive for some {{cssxref("overflow")}} values ([Firefox bug 1671457](https://bugzil.la/1671457)).
@@ -35,7 +34,6 @@ _No changes._
 #### Removals
 
 - The following Firefox-specific theme-related media features have been disabled for use in web pages ([Firefox bug 787521](https://bugzil.la/787521)):
-
   - `-moz-mac-graphite-theme`
   - `-moz-mac-lion-theme`
   - `-moz-maemo-classic`
@@ -83,7 +81,3 @@ _No changes._
 
 - [nativeMessaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) is now an [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) ([Firefox bug 1630415](https://bugzil.la/1630415)).
 - Added support for querying and setting color management related features with {{WebExtAPIRef("browserSettings.colorManagement")}} ([Firefox bug 1719688](https://bugzil.la/1719688)) and ([Firefox bug 1714428](https://bugzil.la/1714428)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
 browser-compat: css.properties.text-indent
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-indent`** [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block.
 
@@ -54,14 +53,14 @@ text-indent: 3em hanging each-line;
 ```css interactive-example
 section {
   font-size: 1.25em;
-  background-color: #483d8b;
+  background-color: darkslateblue;
   align-items: start;
 }
 
 #example-element {
   text-align: left;
   margin: 0 0 0 3em;
-  background-color: #6a5acd;
+  background-color: slateblue;
   color: white;
 }
 ```
@@ -248,7 +247,6 @@ p {
 
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - Related CSS properties:
-
   - [`text-justify`](/en-US/docs/Web/CSS/text-justify)
   - [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)

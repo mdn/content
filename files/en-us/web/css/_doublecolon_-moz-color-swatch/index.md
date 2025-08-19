@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-moz-color-swatch
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the color selected in an {{HTMLElement("input")}} of `type="color"`.
 
@@ -54,5 +55,4 @@ Not part of any standard.
 ## See also
 
 - Similar pseudo-elements used by other browsers:
-
   - {{cssxref("::-webkit-color-swatch")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)

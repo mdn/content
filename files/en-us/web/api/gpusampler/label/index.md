@@ -3,12 +3,10 @@ title: "GPUSampler: label property"
 short-title: label
 slug: Web/API/GPUSampler/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUSampler.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUSampler")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

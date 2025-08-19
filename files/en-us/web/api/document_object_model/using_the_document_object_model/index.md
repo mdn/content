@@ -28,7 +28,7 @@ It has a DOM tree that looks like this:
 
 ![The DOM as a tree-like representation of a document that has a root and node elements containing content](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Although the above tree is similar to the above document's DOM tree, it's not identical, as [the actual DOM tree preserves whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace).
+Although the above tree is similar to the above document's DOM tree, they're not identical, as the actual DOM tree preserves [whitespace](/en-US/docs/Web/CSS/CSS_text/Whitespace).
 
 When a web browser parses an HTML document, it builds a DOM tree and then uses it to display the document.
 
@@ -48,7 +48,7 @@ Suppose the author wants to change the header of the above document and write tw
     <title>My Document</title>
   </head>
   <body>
-    <input type="button" value="Change this document." onclick="change()" />
+    <input type="button" value="Change this document." />
     <h2>Header</h2>
     <p>Paragraph</p>
   </body>
@@ -58,7 +58,7 @@ Suppose the author wants to change the header of the above document and write tw
 ### JavaScript
 
 ```js
-function change() {
+document.querySelector("input").addEventListener("click", () => {
   // document.getElementsByTagName("h2") returns a NodeList of the <h2>
   // elements in the document, and the first is number 0:
   const header = document.getElementsByTagName("h2").item(0);
@@ -84,7 +84,7 @@ function change() {
   // Put the paragraph on the end of the document by appending it to
   // the body (which is the parent of para)
   para.parentNode.appendChild(newElement);
-}
+});
 ```
 
 {{ EmbedLiveSample('reading_and_modifying_the_tree', 800, 300) }}

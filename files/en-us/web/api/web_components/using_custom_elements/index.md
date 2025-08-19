@@ -110,8 +110,12 @@ If you want to preserve the element's state, you can do so by defining a `connec
 You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
 
 ```js
-connectedMoveCallback() {
-  console.log("Custom move-handling logic here.");
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("Custom move-handling logic here.");
+  }
+  // ...
 }
 ```
 
@@ -498,7 +502,7 @@ class ExpandingList extends HTMLUListElement {
           const nextUl = e.target.nextElementSibling;
 
           // Toggle visible state and update class attribute on ul
-          if (nextUl.style.display == "block") {
+          if (nextUl.style.display === "block") {
             nextUl.style.display = "none";
             nextUl.parentNode.setAttribute("class", "closed");
           } else {

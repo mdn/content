@@ -31,14 +31,11 @@ fetch(resource, options)
 ### Parameters
 
 - `resource`
-
   - : This defines the resource that you wish to fetch. This can either be:
-
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
     - A {{domxref("Request")}} object.
 
 - `options` {{optional_inline}}
-
   - : A {{domxref("RequestInit")}} object containing any custom settings that you want to apply to the request.
 
 ### Return value
@@ -174,6 +171,20 @@ fetch("https://example.com/", {
 fetch("https://example.com/", {
   method: "GET",
   body: new FormData(),
+});
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If <code>body</code> is a {{domxref("ReadableStream")}} and <code>duplex</code> is omitted or not set to <code>"half"</code>, or if an invalid <code>duplex</code> value is provided.
+      </td>
+      <td>
+        <pre class="brush: js">
+const stream = new ReadableStream({ /* ... */ });
+fetch("https://example.com", {
+  method: "POST",
+  body: stream,
 });
         </pre>
       </td>

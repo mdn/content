@@ -44,7 +44,6 @@ The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("El
 ### Obsolete properties
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-
   - : A Boolean value which is `true` if the document has an element currently being displayed in fullscreen mode; otherwise, this returns `false`.
 
     > [!NOTE]
@@ -82,15 +81,13 @@ When the page is loaded, this code is run to set up an event listener to watch f
 
 ```js
 const video = document.getElementById("video");
-document.addEventListener(
-  "keypress",
-  function (e) {
-    if (e.key === "Enter") {
-      toggleFullScreen(video);
-    }
-  },
-  false,
-);
+
+// On pressing ENTER call toggleFullScreen method
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    toggleFullScreen(video);
+  }
+});
 ```
 
 #### Toggling fullscreen mode
@@ -105,14 +102,12 @@ function toggleFullScreen(video) {
     video.requestFullscreen();
   } else {
     // Otherwise exit the full screen
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+    document.exitFullscreen?.();
   }
 }
 ```
 
-This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `fullscreenElement` attribute. In a real-world deployment, at this time, you'll want to check for prefixed versions of this (`mozFullScreenElement`, `msFullscreenElement`, or `webkitFullscreenElement`, for example). If the value is `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode; otherwise, it's the element that's currently in fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.
+This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `fullscreenElement` attribute. If the value is `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode; otherwise, it's the element that's currently in fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.
 
 If fullscreen mode is already active (`fullscreenElement` is not `null`), we call {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}} on the `document` to shut off fullscreen mode.
 

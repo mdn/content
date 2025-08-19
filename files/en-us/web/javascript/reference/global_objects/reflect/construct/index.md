@@ -1,11 +1,11 @@
 ---
 title: Reflect.construct()
+short-title: construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.construct
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.construct()`** static method is like the {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It additionally allows to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
 

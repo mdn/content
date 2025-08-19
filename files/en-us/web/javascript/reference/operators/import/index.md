@@ -3,9 +3,8 @@ title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
 browser-compat: javascript.operators.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
@@ -42,7 +41,8 @@ Returns a promise which:
   - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE]
+> `import()` never synchronously throws an error.
 
 ## Description
 
@@ -111,7 +111,7 @@ import("/my-module.js").then((mod2) => {
 This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
 
 ```js
-import("/my-module.js?t=" + Date.now());
+import(`/my-module.js?t=${Date.now()}`);
 ```
 
 Note that this can lead to memory leaks in a long-running application, because the engine cannot safely garbage-collect any module namespace objects. Currently, there is no way to manually clear the cache of module namespace objects.

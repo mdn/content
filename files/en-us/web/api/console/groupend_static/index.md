@@ -36,6 +36,6 @@ None ({{jsxref("undefined")}}).
 
 - {{domxref("console/group_static", "console.group()")}}
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
-- [Microsoft Edge's documentation for `console.groupEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupend)
+- [Microsoft Edge's documentation for `console.groupEnd()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#groupend)
 - [Node.js documentation for `console.groupEnd()`](https://nodejs.org/docs/latest/api/console.html#consolegroupend)
 - [Google Chrome's documentation for `console.groupEnd()`](https://developer.chrome.com/docs/devtools/console/api/#groupend)

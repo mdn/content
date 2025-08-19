@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.epochMilliseconds
+short-title: epochMilliseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/epochMilliseconds
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.epochMilliseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. It is equivalent to dividing `epochNanoseconds` by `1e6` and flooring the result.
 

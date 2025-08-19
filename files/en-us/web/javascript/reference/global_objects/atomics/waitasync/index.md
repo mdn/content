@@ -1,18 +1,17 @@
 ---
 title: Atomics.waitAsync()
+short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.waitAsync
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning an object with the `value` property containing the string `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero. Otherwise the method returns an object where the `value` property is a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
-The **`Atomics.waitAsync()`** static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
+`Atomics.waitAsync()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory. A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
 
-Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
-
-> [!NOTE]
-> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+This method only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}. It is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread. Because it does not block the whole thread, you still need to be careful not to access the shared memory before the promise settles.
 
 ## Syntax
 

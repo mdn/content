@@ -3,9 +3,8 @@ title: "@supports"
 slug: Web/CSS/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
@@ -45,24 +44,20 @@ In JavaScript, `@supports` can be accessed via the CSS object model interface {{
 
 ## Syntax
 
-The `@supports` at-rule consists of a block of statements with a _supports condition._
-The supports condition is a set of one or more name-value pairs (e.g., `<property>: <value>`).
-
 ```css
 @supports (<supports-condition>) {
   /* If the condition is true, use the CSS in this block. */
 }
-```
 
-The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
-
-```css
 @supports (<supports-condition>) and (<supports-condition>) {
   /* If both conditions are true, use the CSS in this block. */
 }
 ```
 
+The `@supports` at-rule consists of a block of statements with a _supports condition._
+The conditions can be combined by conjunctions (`and`), disjunctions (`or`), and/or negations (`not`).
 The precedence of operators can be defined with parentheses.
+
 Supports conditions can use either a `<property>: <value>` declaration syntax or a `<function()>` syntax.
 The following sections describe the use of each type of supports condition.
 
@@ -200,9 +195,16 @@ The `or` operator creates a new expression from the disjunction of two shorter e
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) or
+  (-webkit-transform-style: preserve) {
+}
 
-@supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
+@supports (transform-style: preserve-3d) or
+  (
+    (-moz-transform-style: preserve-3d) or
+      (-webkit-transform-style: preserve-3d)
+  ) {
+}
 ```
 
 > [!NOTE]
@@ -276,10 +278,12 @@ ul:has(> li li) {
 The following example applies the CSS style if the browser supports the `COLRv1` font technology:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice");
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice";
 
 @supports font-tech(color-COLRv1) {
-  font-family: "Bungee Spice";
+  p {
+    font-family: "Bungee Spice", fantasy;
+  }
 }
 ```
 
@@ -302,8 +306,10 @@ The following example applies the CSS style if the browser supports the `woff2` 
 
 ```css
 @supports font-format(woff2) {
-  font-family: "Open Sans";
-  src: url("open-sans.woff2") format("woff2");
+  p {
+    font-family: "Open Sans", sans-serif;
+    src: url("open-sans.woff2") format("woff2");
+  }
 }
 ```
 

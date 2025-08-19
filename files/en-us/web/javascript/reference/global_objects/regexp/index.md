@@ -3,9 +3,8 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
 
@@ -195,8 +194,8 @@ This displays `"Cruz, Maria"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
@@ -204,13 +203,15 @@ Note that the order of the patterns in the regular expression matters.
 
 ### Using regular expression on multiple lines
 
+By default, the `.` character does not match newlines. To make it match newlines, use the `s` flag (`dotAll` mode).
+
 ```js
 const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
 
-s.match(/yes[^]*day/);
+s.match(/yes.*day/s);
 // Returns ["yes\nmake my day"]
 ```
 
@@ -258,7 +259,7 @@ This example demonstrates how one can separate out Unicode characters from a wor
 
 ```js
 const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+const regex = /[\u0400-\u04ff]+/g;
 
 const match = regex.exec(text);
 console.log(match[0]); // 'Образец'

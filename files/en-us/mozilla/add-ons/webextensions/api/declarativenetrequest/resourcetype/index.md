@@ -3,9 +3,8 @@ title: declarativeNetRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/ResourceType
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The resource type of a request. Comparable to {{WebExtAPIRef('webRequest.ResourceType')}}.
 
@@ -30,7 +29,6 @@ Values of this type are strings. Possible values are:
 - `media`
   - : Resources loaded by a {{HTMLElement("video")}} or {{HTMLElement("audio")}} element.
 - `object`
-
   - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.
 
     Browsers that don't have a dedicated `object_subrequest` type (see browser compatibility below), also label subsequent requests sent by the plugin as `object`.
@@ -38,7 +36,6 @@ Values of this type are strings. Possible values are:
 - `object_subrequest`
   - : Requests sent by plugins.
 - `ping`
-
   - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.

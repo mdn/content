@@ -1,11 +1,11 @@
 ---
 title: Function.prototype.call()
+short-title: call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.call
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 

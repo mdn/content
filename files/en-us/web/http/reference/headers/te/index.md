@@ -1,11 +1,11 @@
 ---
-title: TE
+title: TE header
+short-title: TE
 slug: Web/HTTP/Reference/Headers/TE
 page-type: http-header
 browser-compat: http.headers.TE
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`TE`** {{Glossary("request header")}} specifies the transfer encodings the user agent is willing to accept.
 The transfer encodings are for message compression and chunking of data during transmission.

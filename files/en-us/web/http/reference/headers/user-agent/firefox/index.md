@@ -1,10 +1,10 @@
 ---
 title: Firefox user agent string reference
+short-title: Firefox UA string
 slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post). See also this document on [user agent sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) and this [Hacks blog post](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/).
 
@@ -83,7 +83,7 @@ Linux is a more diverse platform. Your distribution of Linux might include an ex
 | Linux desktop on x86_64 CPU | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
 > [!NOTE]
-> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} (see [Firefox 127.0 Release Notes](https://www.mozilla.org/en-US/firefox/127.0/releasenotes/)).
+> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} (see [Firefox 127.0 Release Notes](https://www.firefox.com/en-US/firefox/127.0/releasenotes/)).
 
 ## Firefox for Android
 

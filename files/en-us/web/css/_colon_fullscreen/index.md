@@ -3,9 +3,8 @@ title: :fullscreen
 slug: Web/CSS/:fullscreen
 page-type: css-pseudo-class
 browser-compat: css.selectors.fullscreen
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element that is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects them all.
 

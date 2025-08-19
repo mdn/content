@@ -1,13 +1,15 @@
 ---
 title: Temporal.Now.instant()
+short-title: instant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Now.instant
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Now.instant()`** static method returns the current time as a {{jsxref("Temporal.Instant")}} object.
 

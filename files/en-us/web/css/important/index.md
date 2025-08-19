@@ -2,9 +2,8 @@
 title: "!important"
 slug: Web/CSS/important
 page-type: css-keyword
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade). A declaration that is not _important_ is called _normal_.
 
@@ -114,14 +113,14 @@ When the `!important` flag is added to a custom property value declaration, it m
 
 ```css
 :root {
-  --myColor: red !important;
-  --myColor: blue;
+  --my-color: red !important;
+  --my-color: blue;
 }
 p {
-  color: var(--myColor);
+  color: var(--my-color);
 }
 blockquote {
-  color: var(--myColor);
+  color: var(--my-color);
   color: purple;
 }
 ```

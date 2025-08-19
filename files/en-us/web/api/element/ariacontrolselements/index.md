@@ -57,7 +57,7 @@ The references to the controlled panels are listed in the button's `aria-control
 ```css
 .panel {
   display: none; /* Initially hidden */
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 5px;
   margin-top: 5px;
 }
@@ -98,10 +98,10 @@ toggleButton.addEventListener("click", () => {
 
   toggleButton.setAttribute("aria-expanded", !isExpanded);
   panel1.style.display = isExpanded ? "none" : "block";
-  panel1.setAttribute("aria-hidden", isExpanded); //true when hidden, false when shown.
+  panel1.setAttribute("aria-hidden", isExpanded); // true when hidden, false when shown.
 
   panel2.style.display = isExpanded ? "none" : "block";
-  panel2.setAttribute("aria-hidden", isExpanded); //true when hidden, false when shown.
+  panel2.setAttribute("aria-hidden", isExpanded); // true when hidden, false when shown.
 });
 ```
 

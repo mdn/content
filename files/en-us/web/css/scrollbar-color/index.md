@@ -3,9 +3,8 @@ title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scrollbar-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the scrollbar track and thumb.
 
@@ -36,7 +35,6 @@ scrollbar-color: unset;
 ### Values
 
 - `<scrollbar-color>`
-
   - : Defines the color of the scrollbar.
 
     <table class="standard-table">
@@ -58,7 +56,8 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-> **Note:** [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
+> [!NOTE]
+> [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
 
 ## Accessibility
 
@@ -83,7 +82,7 @@ When using `scrollbar-color` property with specific color values, authors should
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: #007 #bada55;
+  scrollbar-color: #000077 #bada55;
 }
 ```
 

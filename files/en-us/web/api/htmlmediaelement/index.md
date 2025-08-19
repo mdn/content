@@ -20,7 +20,6 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : An {{domxref("AudioTrackList")}} that lists the {{domxref("AudioTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
 
     > [!NOTE]
@@ -45,7 +44,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
   - : A boolean that sets or returns the remote playback state, indicating whether the media element is allowed to have a remote playback UI.
 - {{domxref("HTMLMediaElement.duration")}} {{ReadOnlyInline}}
-  - : A read-only double-precision floating-point value indicating the total duration of the media in seconds. If no media data is available, the returned value is `NaN`. If the media is of indefinite length (such as streamed live media, a WebRTC call's media, or similar), the value is `+Infinity`.
+  - : A read-only double-precision floating-point value indicating the total duration of the media in seconds. If no media data is available, the returned value is `NaN`. If the media is of indefinite length (such as streamed live media, a WebRTC call's media, or similar), the value is `Infinity`.
 - {{domxref("HTMLMediaElement.ended")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether the media element has finished playing.
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}

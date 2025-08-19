@@ -3,11 +3,12 @@ title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
 page-type: css-selector
 browser-compat: css.selectors.attribute
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
 The CSS **attribute selector** matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.
+
+## Syntax
 
 ```css
 /* <a> elements with a title attribute */
@@ -36,8 +37,6 @@ a[class~="logo"] {
   padding: 2px;
 }
 ```
-
-## Syntax
 
 - `[attr]`
   - : Represents elements with an attribute name of _attr_.

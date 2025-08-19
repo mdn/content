@@ -3,9 +3,8 @@ title: unset
 slug: Web/CSS/unset
 page-type: css-keyword
 browser-compat: css.types.global_keywords.unset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`unset`** CSS keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) if not. In other words, it behaves like the {{cssxref("inherit")}} keyword in the first case, when the property is an [inherited property](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), and like the {{cssxref("initial")}} keyword in the second case, when the property is a [non-inherited property](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties).
 

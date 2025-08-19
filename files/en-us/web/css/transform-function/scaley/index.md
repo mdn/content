@@ -3,9 +3,8 @@ title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 page-type: css-function
 browser-compat: css.types.transform-function.scaleY
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scaleY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
 y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -43,7 +42,8 @@ the function is the identity transform. The scaling is not isotropic, and the an
 `scaleY(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
-> **Note:** `scaleY(sy)` is equivalent to
+> [!NOTE]
+> `scaleY(sy)` is equivalent to
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >

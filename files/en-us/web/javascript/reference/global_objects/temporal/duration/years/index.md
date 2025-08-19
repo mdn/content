@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.years
+short-title: years
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/years
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.years
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`years`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of years in the duration.
 

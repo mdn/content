@@ -25,21 +25,21 @@ A string representing the local part of the element's qualified name.
       xmlns:svg="http://www.w3.org/2000/svg">
 <head>
   <script><![CDATA[
-  function test() {
-    const text = document.getElementById('text');
-    const circle = document.getElementById('circle');
+function test() {
+  const text = document.getElementById("text");
+  const circle = document.getElementById("circle");
 
-    text.value = "<svg:circle> has:\n" +
-                 "localName = '" + circle.localName + "'\n" +
-                 "namespaceURI = '" + circle.namespaceURI + "'";
-  }
+  text.value = `<svg:circle> has:
+localName = "${circle.localName}"
+namespaceURI = "${circle.namespaceURI}"`;
+}
   ]]></script>
 </head>
 <body onload="test()">
   <svg:svg version="1.1"
     width="100px" height="100px"
     viewBox="0 0 100 100">
-    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+    <svg:circle cx="50" cy="50" r="30" fill="#aaaaaa" id="circle"/>
   </svg:svg>
   <textarea id="text" rows="4" cols="55"/>
 </body>

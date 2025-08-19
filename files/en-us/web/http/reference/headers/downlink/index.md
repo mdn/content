@@ -1,13 +1,15 @@
 ---
-title: Downlink
+title: Downlink header
+short-title: Downlink
 slug: Web/HTTP/Reference/Headers/Downlink
 page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Downlink
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Downlink`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) to provide the approximate bandwidth in Mbps of the client's connection to the server.
 

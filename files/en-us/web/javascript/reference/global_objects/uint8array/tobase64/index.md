@@ -1,11 +1,11 @@
 ---
 title: Uint8Array.prototype.toBase64()
+short-title: toBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.toBase64
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toBase64()`** method of {{jsxref("Uint8Array")}} instances returns a [base64](/en-US/docs/Glossary/Base64)-encoded string based on the data in this `Uint8Array` object.
 

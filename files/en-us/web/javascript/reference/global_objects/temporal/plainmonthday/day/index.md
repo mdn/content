@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainMonthDay.prototype.day
+short-title: day
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/day
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.day
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`day`** accessor property of {{jsxref("Temporal.PlainMonthDay")}} instances returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

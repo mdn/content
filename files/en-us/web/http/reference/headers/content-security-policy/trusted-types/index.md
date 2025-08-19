@@ -1,11 +1,11 @@
 ---
-title: "CSP: trusted-types"
+title: "Content-Security-Policy: trusted-types directive"
+short-title: trusted-types
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.trusted-types
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 

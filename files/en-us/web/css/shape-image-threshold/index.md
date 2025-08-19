@@ -3,9 +3,8 @@ title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.
 
@@ -14,7 +13,7 @@ The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alp
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -24,7 +23,7 @@ shape-image-threshold: 0.2;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -34,7 +33,7 @@ shape-image-threshold: 0.4;
 ```css interactive-example-choice
 shape-outside: linear-gradient(
   50deg,
-  rgb(77, 26, 103),
+  rgb(77 26 103),
   transparent 80%,
   transparent
 );
@@ -70,7 +69,7 @@ shape-image-threshold: 0.6;
   margin: 20px;
   background-image: linear-gradient(
     50deg,
-    rgb(77, 26, 103),
+    rgb(77 26 103),
     transparent 80%,
     transparent
   );

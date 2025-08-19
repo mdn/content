@@ -3,9 +3,8 @@ title: fill-opacity
 slug: Web/CSS/fill-opacity
 page-type: css-property
 browser-compat: css.properties.fill-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`fill-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the painting operation (color, gradient, pattern, etc.) applied to SVG shapes or text content elements to fill the element. The property defines the opacity of the element's `fill` only; it does not affect the stroke. If present, it overrides the element's {{SVGAttr("fill-opacity")}} attribute.
 
@@ -32,11 +31,9 @@ fill-opacity: unset;
 The {{cssxref("number")}} and {{cssxref("percentage")}} values denote the opacity of the `fill` of the element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%`, the element is fully transparent. With `1` or `100%`, the element is fully opaque. With values in between, the element is semi-transparent, with content behind the element being visible.
@@ -88,7 +85,7 @@ svg {
   background: repeating-linear-gradient(
     to bottom right,
     transparent 0 10px,
-    #ccc 10px 11px
+    #cccccc 10px 11px
   );
 }
 ```

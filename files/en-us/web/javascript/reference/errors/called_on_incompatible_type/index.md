@@ -2,9 +2,8 @@
 title: "TypeError: X.prototype.y called on incompatible type"
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "called on incompatible target (or object)" occurs when a
 function (on a given object), is called with a `this` not corresponding to
@@ -54,9 +53,9 @@ const mySet = new Set();
 ["bar", "baz"].forEach(mySet.add);
 // mySet.add is a function, but "mySet" is not captured as this.
 
-const myFun = function () {
+function myFun() {
   console.log(this);
-};
+}
 ["bar", "baz"].forEach(myFun.bind);
 // myFun.bind is a function, but "myFun" is not captured as this.
 ```
@@ -68,9 +67,9 @@ const mySet = new Set();
 ["bar", "baz"].forEach(mySet.add.bind(mySet));
 // This works due to binding "mySet" as this.
 
-const myFun = function () {
+function myFun() {
   console.log(this);
-};
+}
 ["bar", "baz"].forEach((x) => myFun.bind(x));
 // This works using the "bind" function. It creates a new function forwarding the argument.
 ```

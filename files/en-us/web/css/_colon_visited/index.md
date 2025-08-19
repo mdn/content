@@ -3,9 +3,8 @@ title: :visited
 slug: Web/CSS/:visited
 page-type: css-pseudo-class
 browser-compat: css.selectors.visited
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) applies once the link has been visited by the user. For privacy reasons, the styles that can be modified using this selector are very limited. The `:visited` pseudo-class applies only to {{htmlelement("a")}} and {{htmlelement("area")}} elements that have an `href` attribute.
 

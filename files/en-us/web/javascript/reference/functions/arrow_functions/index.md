@@ -3,9 +3,8 @@ title: Arrow function expressions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 page-type: javascript-language-feature
 browser-compat: javascript.functions.arrow_functions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), with some semantic differences and deliberate limitations in usage:
 
@@ -400,9 +399,9 @@ const obj = {
 globalThis.num = 42;
 
 // A traditional function to operate on "this"
-const add = function (a, b, c) {
+function add(a, b, c) {
   return this.num + a + b + c;
-};
+}
 
 console.log(add.call(obj, 1, 2, 3)); // 106
 console.log(add.apply(obj, [1, 2, 3])); // 106

@@ -10,60 +10,9 @@ The **`<a>`** [SVG](/en-US/docs/Web/SVG) element creates a hyperlink to other we
 
 SVG's `<a>` element is a container, which means you can create a link around text (like in HTML) but also around any shape.
 
-## Example
+## Usage context
 
-```css hidden
-@namespace svg url(http://www.w3.org/2000/svg);
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- A link around a shape -->
-  <a href="/docs/Web/SVG/Reference/Element/circle">
-    <circle cx="50" cy="40" r="35" />
-  </a>
-
-  <!-- A link around a text -->
-  <a href="/docs/Web/SVG/Reference/Element/text">
-    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
-  </a>
-</svg>
-```
-
-```css
-/* As SVG does not provide a default visual style for links,
-   it's considered best practice to add some */
-
-@namespace svg url(http://www.w3.org/2000/svg);
-/* Necessary to select only SVG <a> elements, and not also HTML's.
-   See warning below */
-
-svg|a:link,
-svg|a:visited {
-  cursor: pointer;
-}
-
-svg|a text,
-text svg|a {
-  fill: blue; /* Even for text, SVG uses fill over color */
-  text-decoration: underline;
-}
-
-svg|a:hover,
-svg|a:active {
-  outline: dotted 1px blue;
-}
-```
-
-{{EmbedLiveSample('Example', 100, 100)}}
-
-> [!WARNING]
-> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
+{{svginfo}}
 
 ## Attributes
 
@@ -95,9 +44,64 @@ svg|a:active {
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage context
+## DOM Interface
 
-{{svginfo}}
+This element implements the {{domxref("SVGAElement")}} interface.
+
+## Example
+
+```css hidden
+@namespace svg url("http://www.w3.org/2000/svg");
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- A link around a shape -->
+  <a href="/docs/Web/SVG/Reference/Element/circle">
+    <circle cx="50" cy="40" r="35" />
+  </a>
+
+  <!-- A link around a text -->
+  <a href="/docs/Web/SVG/Reference/Element/text">
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
+  </a>
+</svg>
+```
+
+```css
+/* As SVG does not provide a default visual style for links,
+   it's considered best practice to add some */
+
+@namespace svg url("http://www.w3.org/2000/svg");
+/* Necessary to select only SVG <a> elements, and not also HTML's.
+   See warning below */
+
+svg|a:link,
+svg|a:visited {
+  cursor: pointer;
+}
+
+svg|a text,
+text svg|a {
+  fill: blue; /* Even for text, SVG uses fill over color */
+  text-decoration: underline;
+}
+
+svg|a:hover,
+svg|a:active {
+  outline: dotted 1px blue;
+}
+```
+
+{{EmbedLiveSample('Example', 100, 100)}}
+
+> [!WARNING]
+> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
 
 ## Specifications
 

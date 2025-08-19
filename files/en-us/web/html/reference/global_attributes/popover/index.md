@@ -1,11 +1,11 @@
 ---
-title: popover
+title: HTML popover global attribute
+short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 page-type: html-attribute
 browser-compat: html.global_attributes.popover
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`popover`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is used to designate an element as a popover element.
 
@@ -14,19 +14,16 @@ The **`popover`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attri
 The `popover` attribute can take one of the following values:
 
 - `"auto"`
-
   - : [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
 
     > [!NOTE]
     > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
 
 - `"hint"` {{experimental_inline}}
-
   - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
     They can be light dismissed and will respond to close requests.
 
 - `"manual"`
-
   - : [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" and are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
 
 ## Description

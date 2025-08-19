@@ -23,7 +23,7 @@ The first `console.log` shows the top-level `style`, the second shows the nested
 ```css
 .foo {
   font-size: 1.2rem;
-  @media (screen) {
+  @media screen {
     color: tomato;
     background-color: darkgrey;
   }

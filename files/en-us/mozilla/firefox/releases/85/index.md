@@ -1,10 +1,10 @@
 ---
 title: Firefox 85 for developers
+short-title: Firefox 85
 slug: Mozilla/Firefox/Releases/85
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
 
@@ -63,7 +63,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

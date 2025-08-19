@@ -1,12 +1,12 @@
 ---
-title: X-Forwarded-Proto
+title: X-Forwarded-Proto header
+short-title: X-Forwarded-Proto
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Forwarded-Proto`** (XFP) {{Glossary("request header")}} is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to a {{Glossary("Proxy_server", "proxy")}} or load balancer.
 

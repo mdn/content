@@ -117,13 +117,7 @@ Try the example by adding a name to the text box. The button will cause the name
 <ul id="nameList"></ul>
 <label for="newName">Enter your Name: </label>
 <input type="text" id="newName" />
-<span
-  role="button"
-  tabindex="0"
-  onclick="handleCommand(event)"
-  onKeyDown="handleCommand(event)"
-  >Add Name</span
->
+<span role="button" tabindex="0">Add Name</span>
 ```
 
 #### CSS
@@ -178,6 +172,10 @@ function handleCommand(event) {
     list.appendChild(listItem);
   }
 }
+
+const btn = document.querySelector("span[role='button']");
+btn.addEventListener("click", handleCommand);
+btn.addEventListener("keydown", handleCommand);
 ```
 
 {{EmbedLiveSample("Basic_button_example")}}
@@ -189,21 +187,9 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 #### HTML
 
 ```html
-<button
-  type="button"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</button>
+<button type="button">Mute Audio</button>
 
-<span
-  role="button"
-  tabindex="0"
-  aria-pressed="false"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Mute Audio
-</span>
+<span role="button" tabindex="0" aria-pressed="false"> Mute Audio </span>
 
 <audio
   id="audio"
@@ -224,7 +210,7 @@ button,
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 ```
 
@@ -261,6 +247,13 @@ function toggleButton(element) {
     audio.play();
   }
 }
+
+const button = document.querySelector("button");
+const spanButton = document.querySelector("span[role='button']");
+button.addEventListener("click", handleBtnClick);
+button.addEventListener("keydown", handleBtnKeyDown);
+spanButton.addEventListener("click", handleBtnClick);
+spanButton.addEventListener("keydown", handleBtnKeyDown);
 ```
 
 #### Result
@@ -291,9 +284,9 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
 - [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset)
-- [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
-- [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
-- [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
 - [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
-- [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
+- [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)
 - [Official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)

@@ -3,9 +3,8 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 page-type: javascript-class
 browser-compat: javascript.builtins.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
 

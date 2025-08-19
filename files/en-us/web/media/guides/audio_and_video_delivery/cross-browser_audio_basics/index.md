@@ -31,7 +31,6 @@ The code below is an example of a basic audio implementation using HTML5:
 
 - Here we define an {{ htmlelement("audio") }} element with multiple sources — we do this as not all browsers support the same audio formats. To ensure reasonable coverage, we should specify at least two different formats. The two formats that will give maximum coverage are mp3 and ogg vorbis.
 - We do this using the {{ htmlelement("source") }} element, which takes the attributes `src` and `type`.
-
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
@@ -422,8 +421,8 @@ Consider this snippet of HTML:
 
 <div id="controls">
   <span id="loading">loading</span>
-  <button id="play" style="display:none">play</button>
-  <button id="pause" style="display:none">pause</button>
+  <button id="play">play</button>
+  <button id="pause">pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -448,53 +447,56 @@ Styled like so:
   background-color: green;
   width: 0;
 }
+
+#play,
+#pause {
+  display: none; /* hide until media is ready */
+}
 ```
 
 Now let's wire this thing up with JavaScript:
 
 ```js
-window.onload = () => {
-  const audio = document.getElementById("my-audio");
-  const play = document.getElementById("play");
-  const pause = document.getElementById("pause");
-  const loading = document.getElementById("loading");
-  const bar = document.getElementById("bar");
+const audio = document.getElementById("my-audio");
+const play = document.getElementById("play");
+const pause = document.getElementById("pause");
+const loading = document.getElementById("loading");
+const bar = document.getElementById("bar");
 
-  function displayControls() {
-    loading.style.display = "none";
-    play.style.display = "block";
-  }
+function displayControls() {
+  loading.style.display = "none";
+  play.style.display = "block";
+}
 
-  // Check that the media is ready before displaying the controls
-  if (audio.paused) {
+// Check that the media is ready before displaying the controls
+if (audio.paused) {
+  displayControls();
+} else {
+  // not ready yet - wait for canplay event
+  audio.addEventListener("canplay", () => {
     displayControls();
-  } else {
-    // not ready yet - wait for canplay event
-    audio.addEventListener("canplay", () => {
-      displayControls();
-    });
-  }
-
-  play.addEventListener("click", () => {
-    audio.play();
-    play.style.display = "none";
-    pause.style.display = "block";
   });
+}
 
-  pause.addEventListener("click", () => {
-    audio.pause();
-    pause.style.display = "none";
-    play.style.display = "block";
-  });
+play.addEventListener("click", () => {
+  audio.play();
+  play.style.display = "none";
+  pause.style.display = "block";
+});
 
-  // Display progress
-  audio.addEventListener("timeupdate", () => {
-    // Sets the percentage
-    bar.style.width = `${Math.floor(
-      (audio.currentTime / audio.duration) * 100,
-    )}%`;
-  });
-};
+pause.addEventListener("click", () => {
+  audio.pause();
+  pause.style.display = "none";
+  play.style.display = "block";
+});
+
+// Display progress
+audio.addEventListener("timeupdate", () => {
+  // Sets the percentage
+  bar.style.width = `${Math.floor(
+    (audio.currentTime / audio.duration) * 100,
+  )}%`;
+});
 ```
 
 You should end up with something like this:
@@ -568,7 +570,7 @@ There are also a couple of events related to buffering:
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
-- [Event reference > Media](/en-US/docs/Web/Events#media)
+- [Event reference > Media](/en-US/docs/Web/API/Document_Object_Model/Events#media)
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 - [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.

@@ -3,9 +3,8 @@ title: mask-position
 slug: Web/CSS/mask-position
 page-type: css-property
 browser-compat: css.properties.mask-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
 
@@ -97,7 +96,7 @@ The equation is:
 
 `(container dimension - mask dimension) * position percentage = dimension offset value`
 
-Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-postion: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
+Given a `100px`-wide mask and a `1000px`-wide origin box, setting `mask-position: 10%;` (the equivalent of `10% 50%`) results in the mask being vertically centered at `90px` from the left edge. The equation is `(1000 - 100) * 10% = 90`. If the left offset had been `0%`, the mask's left edge would be flush to the left of the container (`(1000 - 100) * 0% = 0`).
 
 If the left offset had been `100%`, the mask's right edge would be flush to the right of the container as the left edge of the `100px` wide mask would be `900px` (`(1000 - 100) * 100% = 900`) from the left edge of the container (the `100px` mask width plus `900px` distance from the left edge means the right edge would be `1000px` from the left edge, which is the right edge of the container).
 
@@ -155,7 +154,7 @@ div {
   margin-bottom: 10px;
   background: blue linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-repeat: no-repeat;
   mask-position: top right;
 }
@@ -173,11 +172,17 @@ div {
 
 ## See also
 
+- {{cssxref("background-position")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask-origin")}}
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 - {{cssxref("mask")}} shorthand
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-outset")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - {{cssxref("background-position")}}
 - {{cssxref("&lt;position&gt;")}}

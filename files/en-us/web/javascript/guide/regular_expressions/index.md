@@ -2,9 +2,10 @@
 title: Regular expressions
 slug: Web/JavaScript/Guide/Regular_expressions
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Regular expressions are patterns used to match character combinations in strings.
 In JavaScript, regular expressions are also objects. These patterns are used with the {{jsxref("RegExp/exec", "exec()")}} and {{jsxref("RegExp/test", "test()")}} methods of {{jsxref("RegExp")}}, and with the {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}} methods of {{jsxref("String")}}.
@@ -141,12 +142,15 @@ If you want to look at all the special characters that can be used in regular ex
   </tbody>
 </table>
 
-> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> [!NOTE]
+> [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
-If you need to use any of the special characters literally (actually searching for a `"*"`, for instance), you must escape it by putting a backslash in front of it.
-For instance, to search for `"a"` followed by `"*"` followed by `"b"`, you'd use `/a\*b/` — the backslash "escapes" the `"*"`, making it literal instead of special.
+If you need to use any of the special characters literally (actually searching for a `"*"`, for instance), you should escape it by putting a backslash in front of it. For instance, to search for `"a"` followed by `"*"` followed by `"b"`, you'd use `/a\*b/` — the backslash "escapes" the `"*"`, making it literal instead of special.
+
+> [!NOTE]
+> In many cases, when trying match a special character, you can wrap it in a [character class](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) as an alternative to escaping, for example `/a[*]b/`.
 
 Similarly, if you're writing a regular expression literal and need to match a slash ("/"), you need to escape that (otherwise, it terminates the pattern).
 For instance, to search for the string "/example/" followed by one or more alphabetic characters, you'd use `/\/example\/[a-z]+/i`—the backslashes before each slash make them literal.

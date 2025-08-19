@@ -2,9 +2,8 @@
 title: Browser extensions
 slug: Mozilla/Add-ons/WebExtensions
 page-type: landing-page
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.
 
@@ -20,7 +19,7 @@ The technology for extensions in Firefox is, to a large extent, compatible with 
   - : Discover how to build and publish extensions for Firefox: get the lowdown on developer tools, publication and distribution, and porting on [Extension Workshop](https://extensionworkshop.com/).
 
 > [!NOTE]
-> If you have ideas or questions or need help, you can reach us on the [community forum](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) on [Matrix](https://wiki.mozilla.org/Matrix).
+> If you have ideas or questions or need help, you can reach us on the [community forum](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons Room](https://matrix.to/#/#addons:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## Get started
 

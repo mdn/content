@@ -8,9 +8,8 @@ browser-compat:
   - webextensions.manifest.page_action
   - webextensions.manifest.sidebar_action
   - webextensions.manifest.options_ui
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Your extension can include user interface elements - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
 
@@ -30,7 +29,8 @@ When considering whether to use `browser_style: true`, test your extension with 
 > [!WARNING]
 > When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
 
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
+> [!NOTE]
+> **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
 
 In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on macOS.
 
@@ -392,7 +392,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item.disabled {
-  color: #999;
+  color: #999999;
 }
 
 .panel-list-item > .icon {
@@ -405,7 +405,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
   justify-content: flex-end;
@@ -436,7 +436,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-footer-button > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
 }
@@ -452,7 +452,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button.default {
   background-color: #0996f8;
   box-shadow: 0 1px 0 #0670cc inset;
-  color: #fff;
+  color: white;
 }
 
 .panel-section-footer-button.default:hover {

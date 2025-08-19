@@ -27,16 +27,15 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
   - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible.
     - `Expires`: Sets an absolute expiration date for a given cookie.
     - `Max-Age`: Sets a relative expiration date for a given cookie.
-      > **Note:** `Expires` has been available for longer than `Max-Age`; however, `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client on which the cookie is being set. If the server is set to a different time, this could cause errors.
+      > [!NOTE]
+      > `Expires` has been available for longer than `Max-Age`; however, `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client on which the cookie is being set. If the server is set to a different time, this could cause errors.
 - `Domain`
   - : Cookies should only have a `Domain` set if they need to be accessible on other domains; this should be set to the most restrictive domain possible.
 - `Path`
   - : Cookies should be set to the most restrictive `Path` possible.
 - `SameSite`
-
   - : Forbid sending cookies via cross-origin requests (for example from {{htmlelement("img")}} elements) using `SameSite`. You should use one of the following two values:
-
-    - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in cross-site requests (e.g., embedding images or other resources from other sites) and cross-site navigation (e.g., when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) protection, so use this value if possible.
+    - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in cross-site requests (e.g., embedding images or other resources from other sites) and cross-site navigation (e.g., when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Attacks/CSRF) protection, so use this value if possible.
     - `SameSite=Lax`: Send the cookie in same-site requests and when navigating _to_ your website. This should be used if `Strict` is too restrictive.
 
     Both of the above values are useful in protecting against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks in cases that rely on the user being authenticated.

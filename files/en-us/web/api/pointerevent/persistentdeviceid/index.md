@@ -3,17 +3,16 @@ title: "PointerEvent: persistentDeviceId property"
 short-title: persistentDeviceId
 slug: Web/API/PointerEvent/persistentDeviceId
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PointerEvent.persistentDeviceId
 ---
 
-{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
+{{ APIRef("Pointer Events") }}
 
-The **`persistentDeviceId`** read-only property of the
-{{domxref("PointerEvent")}} interface is a unique identifier for the pointing device generating the `PointerEvent`. This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
+The **`persistentDeviceId`** read-only property of the {{domxref("PointerEvent")}} interface is a unique identifier for the pointing device generating the `PointerEvent`.
+This provides a secure, reliable way to identify multiple pointing devices (such as pens) interacting with the screen simultaneously.
 
-A `persistentDeviceId` persists for the lifetime of a browsing session. To avoid the risk of fingerprinting/tracking, pointing devices are assigned a new `persistentDeviceId` at the start of each session.
+A `persistentDeviceId` persists for the lifetime of a browsing session.
+To avoid the risk of fingerprinting/tracking, pointing devices are assigned a new `persistentDeviceId` at the start of each session.
 
 Pointer events whose generating device could not be identified are assigned a `persistentDeviceId` value of `0`.
 
@@ -22,9 +21,12 @@ Pointer events whose generating device could not be identified are assigned a `p
 An integer, or `0` if the device generating the `PointerEvent` could not be identified.
 
 > [!NOTE]
-> Due to digitizer and pointing device hardware constraints, a `persistentDeviceId` may not be available for all pointer events, particularly with older hardware. For example, the pointing device might not report its hardware ID to the digitizer in time for `pointerdown` to receive a `persistentDeviceId`: it may initially be `0` and change to a valid value for later events in the stroke.
+> Due to digitizer and pointing device hardware constraints, a `persistentDeviceId` may not be available for all pointer events, particularly with older hardware.
+> For example, the pointing device might not report its hardware ID to the digitizer in time for `pointerdown` to receive a `persistentDeviceId`: it may initially be `0` and change to a valid value for later events in the stroke.
 
 ## Examples
+
+### Assign color for each persistentDeviceId
 
 Assuming the following HTML:
 
@@ -32,7 +34,7 @@ Assuming the following HTML:
 <canvas id="inking-surface" width="1280" height="720"></canvas>
 ```
 
-The following JavaScript assigns a different inking color to unique pointers interacting with a canvas:
+The following JavaScript assigns a different inking color to up to three unique pointers interacting with a canvas:
 
 ```js
 const colorBlue = 0;
@@ -41,7 +43,7 @@ const colorYellow = 2;
 const colors = [colorBlue, colorGreen, colorYellow];
 
 const pointerToColorMap = new Map();
-const colorAssignmentIndex = 0;
+let colorAssignmentIndex = 0;
 
 const canvas = document.querySelector("#inking-surface");
 

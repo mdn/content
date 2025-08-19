@@ -200,7 +200,8 @@ The `call` instruction calls a single function, given its index or name. For exa
     i32.add))
 ```
 
-> **Note:** `i32.const` just defines a 32-bit integer and pushes it onto the stack. You could swap out the `i32` for any of the other available types, and change the value of the const to whatever you like (here we've set the value to `42`).
+> [!NOTE]
+> `i32.const` just defines a 32-bit integer and pushes it onto the stack. You could swap out the `i32` for any of the other available types, and change the value of the const to whatever you like (here we've set the value to `42`).
 
 In this example you'll notice an `(export "getAnswerPlus1")` section, declared just after the `func` statement in the second function — this is a shorthand way of declaring that we want to export this function, and defining the name we want to export it as.
 

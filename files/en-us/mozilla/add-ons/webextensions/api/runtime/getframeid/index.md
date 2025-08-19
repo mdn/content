@@ -3,9 +3,8 @@ title: runtime.getFrameId()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getFrameId
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getFrameId
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the frame ID of any window global or frame element when called from a content script or extension page, including background pages.
 

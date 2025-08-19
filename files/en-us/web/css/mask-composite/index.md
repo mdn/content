@@ -3,9 +3,8 @@ title: mask-composite
 slug: Web/CSS/mask-composite
 page-type: css-property
 browser-compat: css.properties.mask-composite
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
 
@@ -82,8 +81,8 @@ div {
   background-color: red;
 
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mdn.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-size: 100% 100%;
 
   mask-composite: subtract;
@@ -96,7 +95,7 @@ div {
 
 ### Value comparison
 
-This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values, along with comparing the effects of [`alpha` and `luminance`](/en-US/Web/SVG/Reference/Attribute/mask-type#mask) mask modes.
+This example demonstrates the `mask-composite` property's four `<compositing-operator>` keyword values, along with comparing the effects of [`alpha` and `luminance`](/en-US/docs/Web/CSS/mask-type) mask modes.
 
 #### HTML
 
@@ -238,11 +237,11 @@ We then apply the heart and circle masks as the comma-separated {{cssxref("mask-
 ```css
 /* apply the mask images */
 tr.alphaMaskType img {
-  mask-image: url(#heartAlpha), url(#circleAlpha);
+  mask-image: url("#heartAlpha"), url("#circleAlpha");
 }
 
 tr.luminanceMaskType img {
-  mask-image: url(#heartLuminance), url(#circleLuminance);
+  mask-image: url("#heartLuminance"), url("#circleLuminance");
 }
 ```
 
@@ -304,4 +303,7 @@ body > img {
 - {{cssxref("mask")}} shorthand
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-mode")}}
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

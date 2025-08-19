@@ -3,9 +3,8 @@ title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getFrame
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), and is uniquely identified by a tab ID and a frame ID.
 
@@ -22,9 +21,7 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-
   - : `object`. Information about the frame to retrieve information about.
-
     - `tabId`
       - : `integer`. The ID of the tab in which the frame is.
     - `processId` {{optional_inline}} {{deprecated_inline}}
@@ -44,10 +41,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 
 If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab or frame ID could not be found, or some other error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -72,6 +65,10 @@ gettingFrame.then(onGot, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#method-getFrame) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

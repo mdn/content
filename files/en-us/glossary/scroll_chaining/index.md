@@ -2,9 +2,8 @@
 title: Scroll chaining
 slug: Glossary/Scroll_chaining
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Scroll chaining** refers to the behavior observed when a user scrolls past the {{Glossary("Scroll_boundary", "Scroll boundary")}} of a scrollable element, causing scrolling on an ancestor element.
 

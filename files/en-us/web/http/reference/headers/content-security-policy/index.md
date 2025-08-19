@@ -1,12 +1,11 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) header
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.
@@ -42,7 +41,6 @@ where `<policy-directive>` consists of:
 Fetch directives control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
-
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
@@ -51,7 +49,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
 
     [Fallback](#fallbacks) for all other fetch directives.
@@ -75,7 +72,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-
   - : Specifies valid sources for JavaScript and WebAssembly resources.
 
     [Fallback](#fallbacks) for `script-src-elem` and `script-src-attr`.
@@ -85,7 +81,6 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
-
   - : Specifies valid sources for stylesheets.
 
     [Fallback](#fallbacks) for `style-src-elem` and `style-src-attr`.
@@ -145,7 +140,6 @@ for example.
 Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
-
   - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
@@ -173,7 +167,6 @@ Reporting directives control the destination URL for CSP violation reports in `C
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
@@ -193,7 +186,9 @@ The `<host-source>` and `<scheme-source>` formats must be unquoted, and all othe
 
 ### 'nonce-\<nonce_value>'
 
-This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
+This value consists of the string `nonce-` followed by a nonce value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
+
+This string is a random value that the server generates for every HTTP response. For example:
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -212,7 +207,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 
 ### '\<hash_algorithm>-<hash_value>'
 
-This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
+This value consists of a string identifying a hash algorithm, followed by `-`, followed by a hash value. The hash value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
 - The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.

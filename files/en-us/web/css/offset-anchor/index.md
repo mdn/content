@@ -3,9 +3,8 @@ title: offset-anchor
 slug: Web/CSS/offset-anchor
 page-type: css-property
 browser-compat: css.properties.offset-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element traveling along an {{cssxref("offset-path")}} that is actually moving along the path.
 
@@ -55,11 +54,11 @@ offset-anchor: 20% 80%;
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   width: 90%;
 }
 
@@ -182,11 +181,11 @@ section {
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-bottom: 10px;
 }
 

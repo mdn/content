@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries-3/
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/mediaqueries-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS media queries** module enables testing and querying of viewport values and browser or device features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and other contexts and languages such as HTML and JavaScript.
 
@@ -62,8 +61,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
 - {{cssxref("@media/width", "width")}}
 
-> [!NOTE]
-> CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: {{cssxref("@media/environment-blending", "environment-blending")}}, {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}, {{cssxref("@media/nav-controls", "nav-controls")}}, {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}, and {{cssxref("@media/video-color-gamut", "video-color-gamut")}}
+The CSS media queries level 5 module also introduces the `environment-blending`, `horizontal-viewport-segments`, `nav-controls`, `vertical-viewport-segments`, and `video-color-gamut` `@media` descriptors. Currently, no browsers support these features.
 
 > [!NOTE]
 > CSS media queries level 4 deprecated three `@media` descriptors: {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, and {{cssxref("@media/device-width", "device-width")}}.
@@ -83,27 +81,21 @@ When designing reusable HTML components, you may also use [container queries](/e
 ## Guides
 
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
 
 - [Learn: Media query fundamentals](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
-
   - : Introduction to media queries and approaches for using them to create responsive designs.
 
 - [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
 
 - [Using media queries for accessibility](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
-
   - : Learn how media queries can help users understand your website better.
 
 - [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
-
   - : Tips and techniques for helping improve web content printer output.
 
 - [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
-
   - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 
 ## Related concepts

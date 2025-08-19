@@ -26,7 +26,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Returns the current finished Promise for this animation.
 - {{domxref("Animation.id")}}
   - : Gets and sets the `String` used to identify the animation.
-- {{domxref("Animation.overallProgress")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Animation.overallProgress")}} {{ReadOnlyInline}}
   - : Returns a number between `0` and `1` indicating the animation's overall progress towards its finished state.
 - {{domxref("Animation.pending")}} {{ReadOnlyInline}}
   - : Indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.

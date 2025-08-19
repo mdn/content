@@ -1,11 +1,11 @@
 ---
-title: autocapitalize
+title: HTML autocapitalize global attribute
+short-title: autocapitalize
 slug: Web/HTML/Reference/Global_attributes/autocapitalize
 page-type: html-attribute
 browser-compat: html.global_attributes.autocapitalize
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`autocapitalize`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether inputted text is automatically capitalized and, if so, in what manner. This is relevant to:
 

@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDate.prototype.dayOfWeek
+short-title: dayOfWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/dayOfWeek
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.dayOfWeek
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`dayOfWeek`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the week of this date. Days in a week are numbered sequentially from `1` to {{jsxref("Temporal/PlainDate/daysInWeek", "daysInWeek")}}, with each number mapping to its name. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. 1 usually represents Monday in the calendar, even when locales using the calendar may consider a different day as the first day of the week (see {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}).
 

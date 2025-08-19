@@ -2,12 +2,9 @@
 title: position-anchor
 slug: Web/CSS/position-anchor
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}{{seecompattable}}
 
 The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
 
@@ -16,7 +13,7 @@ The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anch
 ```css
 /* Single values */
 position-anchor: auto;
-position-anchor: --anchorName;
+position-anchor: --anchor-name;
 
 /* Global values */
 position-anchor: inherit;
@@ -29,11 +26,9 @@ position-anchor: unset;
 ### Values
 
 - `auto`
-
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
 
 - {{cssxref("dashed-ident")}}
-
   - : The name of the anchor element to associate the positioned element with, as listed in the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
 
 ## Description
@@ -211,7 +206,7 @@ body {
 
 ```css
 #anchor1 {
-  anchor-name: --myAnchor1, --myAnchor2;
+  anchor-name: --my-anchor1, --my-anchor2;
 }
 ```
 
@@ -221,7 +216,7 @@ Each of the positioned elements is given a `position-anchor` property with a val
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -231,7 +226,7 @@ Each of the positioned elements is given a `position-anchor` property with a val
 
 ```css
 #infobox1 {
-  position-anchor: --myAnchor1;
+  position-anchor: --my-anchor1;
   position: fixed;
   left: anchor(right);
   align-self: anchor-center;
@@ -239,7 +234,7 @@ Each of the positioned elements is given a `position-anchor` property with a val
 }
 
 #infobox2 {
-  position-anchor: --myAnchor2;
+  position-anchor: --my-anchor2;
   position: fixed;
   bottom: anchor(top);
   justify-self: anchor-center;
@@ -276,12 +271,12 @@ function updateAnchorNames() {
   if (value1 === value2) {
     // If the chosen anchors are both the same, set both anchor
     // names on the same anchor
-    anchors[value1].style.anchorName = "--myAnchor1, --myAnchor2";
+    anchors[value1].style.anchorName = "--my-anchor1, --my-anchor2";
   } else {
     // If they are not the same, set the anchor names separately
     // on each selected anchor
-    anchors[value1].style.anchorName = "--myAnchor1";
-    anchors[value2].style.anchorName = "--myAnchor2";
+    anchors[value1].style.anchorName = "--my-anchor1";
+    anchors[value2].style.anchorName = "--my-anchor2";
   }
 }
 ```

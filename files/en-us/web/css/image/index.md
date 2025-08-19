@@ -3,9 +3,8 @@ title: <image>
 slug: Web/CSS/image
 page-type: css-type
 browser-compat: css.types.image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a two-dimensional image.
 
@@ -69,29 +68,29 @@ Browsers do not provide any special information on background images to assistiv
 ### Valid images
 
 ```css example-good
-url(test.jpg)               /* A <url>, as long as test.jpg is an actual image */
+url("test.jpg")               /* A <url>, as long as test.jpg is an actual image */
 linear-gradient(blue, red)  /* A <gradient> */
 element(#real-id)            /* A part of the webpage, referenced with the element() function,
                                if "real-id" is an existing ID on the page */
-image(ltr 'arrow.png#xywh=0,0,16,16', red)
+image(ltr "arrow.png#xywh=0,0,16,16", red)
                             /* A section 16x16 section of <url>, starting from the top, left of the original
                                image as long as arrow.png is a supported image, otherwise a solid
                                red swatch. If language is rtl, the image will be horizontally flipped. */
-cross-fade(20% url(twenty.png), url(eighty.png))
+cross-fade(20% url("twenty.png"), url("eighty.png"))
                             /* cross faded images, with twenty being 20% opaque
                                and eighty being 80% opaque. */
-image-set('test.jpg' 1x, 'test-2x.jpg' 2x)
+image-set("test.jpg' 1x, 'test-2x.jpg" 2x)
                             /* a selection of images with varying resolutions */
 ```
 
 ### Invalid images
 
 ```css example-bad
-no-url.jpg           /* An image file must be defined using the url() function. */
-url(report.pdf)      /* A file pointed to by the url() function must be an image. */
+"no-url.jpg"           /* An image file must be defined using the url() function. */
+url("report.pdf")      /* A file pointed to by the url() function must be an image. */
 element(#fakeid)     /* An element ID must be an existing ID on the page. */
 image(z.jpg#xy=0,0)  /* The spatial fragment must be written in the format of xywh=#,#,#,# */
-image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolution */
+image-set("cat.jpg" 1x, "dog.jpg" 1x) /* every image in an image set must have a different resolution */
 ```
 
 ## Specifications

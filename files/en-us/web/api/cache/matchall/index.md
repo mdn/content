@@ -27,10 +27,8 @@ matchAll(request, options)
     {{domxref("Cache")}}. This can be a `Request` object or a URL. If this
     argument is omitted, you will get a copy of all responses in this cache.
 - `options` {{optional_inline}}
-
   - : An options object allowing you to set specific control options for the matching
     performed. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. If set to
@@ -54,7 +52,8 @@ matchAll(request, options)
 A {{jsxref("Promise")}} that resolves to an array of all matching responses in the
 {{domxref("Cache")}} object.
 
-> **Note:** {{domxref("Cache.match()")}} is basically identical to
+> [!NOTE]
+> {{domxref("Cache.match()")}} is basically identical to
 > `Cache.matchAll()`, except that rather than resolving with an array of all
 > matching responses, it resolves with the first matching response only (that is,
 > `response[0]`).
@@ -66,11 +65,12 @@ The following example retrieves all responses in the `v1` cache matching the URL
 It then logs the number of matching responses.
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+caches
+  .open("v1")
+  .then((cache) => cache.matchAll("/", { ignoreSearch: true }))
+  .then((responses) => {
     console.log(`Found ${responses.length} matching responses`);
   });
-});
 ```
 
 ## Specifications

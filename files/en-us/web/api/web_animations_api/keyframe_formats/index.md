@@ -20,12 +20,12 @@ There are two different ways to format keyframes:
        {
          // from
          opacity: 0,
-         color: "#fff",
+         color: "white",
        },
        {
          // to
          opacity: 1,
-         color: "#000",
+         color: "black",
        },
      ],
      2000,
@@ -41,7 +41,8 @@ There are two different ways to format keyframes:
    );
    ```
 
-   > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
+   > [!NOTE]
+   > `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
 
    It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
 
@@ -66,7 +67,7 @@ There are two different ways to format keyframes:
    element.animate(
      {
        opacity: [0, 1], // [ from, to ]
-       color: ["#fff", "#000"], // [ from, to ]
+       color: ["white", "black"], // [ from, to ]
      },
      2000,
    );

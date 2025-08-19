@@ -26,7 +26,7 @@ An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
   viewBox="0 0 100 100"
   width="200"
   height="200">
-  <circle r="50" r="50" r="50" fill="gold" id="circle" />
+  <circle r="50" fill="gold" id="circle" />
 </svg>
 ```
 

@@ -20,9 +20,7 @@ A {{domxref("CacheStorage")}} object.
 The following example shows how a window can retrieve cached data.
 
 ```js
-window.caches.open("v1").then((cache) => {
-  return cache.match("/list");
-});
+caches.open("v1").then((cache) => cache.match("/list"));
 ```
 
 ## Specifications

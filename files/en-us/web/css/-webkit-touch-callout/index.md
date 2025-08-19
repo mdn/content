@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-touch-callout
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-webkit-touch-callout` [CSS](/en-US/docs/Web/CSS) property controls the display of the default callout shown when you touch and hold a touch target.
 

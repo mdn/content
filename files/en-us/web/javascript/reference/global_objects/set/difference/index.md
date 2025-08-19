@@ -1,11 +1,11 @@
 ---
 title: Set.prototype.difference()
+short-title: difference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/difference
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.difference
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`difference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements in this set but not in the given set.
 

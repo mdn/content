@@ -3,9 +3,8 @@ title: hyphens
 slug: Web/CSS/hyphens
 page-type: css-property
 browser-compat: css.properties.hyphens
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
 
@@ -31,7 +30,7 @@ hyphens: auto;
 
 ```css interactive-example
 #example-element {
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   text-align: left;
   width: 7rem;

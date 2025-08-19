@@ -3,9 +3,8 @@ title: storage.StorageArea.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.storage.StorageArea.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when one or more items in a storage area change, returning details for the keys that changed. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
 
@@ -37,9 +36,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `changes`
       - : `object`. Object describing the change. This contains one property for each key that changed. The property name is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
 

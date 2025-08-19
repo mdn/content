@@ -17,7 +17,7 @@ media in seconds.
 A double-precision floating-point value indicating the duration of the media in
 seconds. If no media data is available, the value `NaN` is returned. If the
 element's media doesn't have a known duration—such as for live media streams—the value
-of `duration` is `+Infinity`.
+of `duration` is `Infinity`.
 
 ## Examples
 

@@ -1,13 +1,15 @@
 ---
 title: Temporal.Duration.prototype.weeks
+short-title: weeks
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/weeks
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Duration.weeks
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`weeks`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of weeks in the duration.
 

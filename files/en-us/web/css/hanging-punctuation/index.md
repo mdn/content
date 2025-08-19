@@ -3,9 +3,8 @@ title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
 page-type: css-property
 browser-compat: css.properties.hanging-punctuation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hanging-punctuation`** [CSS](/en-US/docs/Web/CSS) property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
 
@@ -41,9 +40,7 @@ The `hanging-punctuation` property may be specified with one, two, or three spac
 - `none`
   - : No character hangs.
 - `first`
-
   - : An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to:
-
     - all characters in the Unicode categories [Ps](https://unicodeplus.com/category/Ps), [Pf](https://unicodeplus.com/category/Pf), [Pi](https://unicodeplus.com/category/Pi)
     - the quote marks `U+0027` APOSTROPHE (`'`) and `U+0022` QUOTATION MARK (`"`).
 

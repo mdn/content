@@ -1,10 +1,10 @@
 ---
 title: Firefox 117 for developers
+short-title: Firefox 117
 slug: Mozilla/Firefox/Releases/117
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 117 that affect developers. Firefox 117 was released on August 29, 2023.
 
@@ -70,7 +70,3 @@ No notable changes.
   Holding down the <kbd>Shift</kbd> key accelerates the moving and resizing actions when using these key combinations ([Firefox bug 1262782](https://bugzil.la/1262782)).
 
 - Properties that are not supported in highlight pseudo-elements ([`::highlight()`](/en-US/docs/Web/CSS/::highlight), [`::target-text`](/en-US/docs/Web/CSS/::target-text), [`::spelling-error`](/en-US/docs/Web/CSS/::spelling-error), [`::grammar-error`](/en-US/docs/Web/CSS/::grammar-error), and [`::selection`](/en-US/docs/Web/CSS/::selection)) are now reported in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/#page-inspector) CSS rules panel ([Firefox bug 1842157](https://bugzil.la/1842157)).
-
-## Older versions
-
-{{Firefox_for_developers}}

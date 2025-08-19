@@ -17,14 +17,7 @@ Open **/controllers/genreController.js**, and add the following line at the top 
 const { body, validationResult } = require("express-validator");
 ```
 
-> [!NOTE]
-> This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
->
-> ```js
-> const validator = require("express-validator");
-> const body = validator.body;
-> const validationResult = validator.validationResult;
-> ```
+Note that `require("express-validator")` is just a function call that returns an object, and we [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) the two properties, `body` and `validationResult`, from the object, so we can use them as variables directly.
 
 ## Controller—get route
 
@@ -37,9 +30,6 @@ exports.genre_create_get = (req, res, next) => {
   res.render("genre_form", { title: "Create Genre" });
 };
 ```
-
-Note that this replaces the placeholder asynchronous handler that we added in the [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#genre_controller) with a "normal" express route handler function.
-We don't need the `asyncHandler()` wrapper for this route, because it doesn't contain any code that can throw an exception.
 
 ## Controller—post route
 
@@ -55,7 +45,7 @@ exports.genre_create_post = [
     .escape(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -66,26 +56,27 @@ exports.genre_create_post = [
       // There are errors. Render the form again with sanitized values/error messages.
       res.render("genre_form", {
         title: "Create Genre",
-        genre: genre,
+        genre,
         errors: errors.array(),
       });
       return;
-    } else {
-      // Data from form is valid.
-      // Check if Genre with same name already exists.
-      const genreExists = await Genre.findOne({ name: req.body.name })
-        .collation({ locale: "en", strength: 2 })
-        .exec();
-      if (genreExists) {
-        // Genre exists, redirect to its detail page.
-        res.redirect(genreExists.url);
-      } else {
-        await genre.save();
-        // New genre saved. Redirect to genre detail page.
-        res.redirect(genre.url);
-      }
     }
-  }),
+
+    // Data from form is valid.
+    // Check if Genre with same name already exists.
+    const genreExists = await Genre.findOne({ name: req.body.name })
+      .collation({ locale: "en", strength: 2 })
+      .exec();
+    if (genreExists) {
+      // Genre exists, redirect to its detail page.
+      res.redirect(genreExists.url);
+      return;
+    }
+
+    // New genre. Save and redirect to its detail page.
+    await genre.save();
+    res.redirect(genre.url);
+  },
 ];
 ```
 
@@ -112,7 +103,7 @@ After specifying the validators we create a middleware function to extract any v
 
 ```js
 // Process request after validation and sanitization.
-asyncHandler(async (req, res, next) => {
+async (req, res, next) => {
   // Extract the validation errors from a request.
   const errors = validationResult(req);
 
@@ -123,15 +114,14 @@ asyncHandler(async (req, res, next) => {
     // There are errors. Render the form again with sanitized values/error messages.
     res.render("genre_form", {
       title: "Create Genre",
-      genre: genre,
+      genre,
       errors: errors.array(),
     });
     return;
-  } else {
-    // Data from form is valid.
-    // …
   }
-});
+  // Data from form is valid.
+  // …
+};
 ```
 
 If the genre name data is valid then we perform a case-insensitive search to see if a `Genre` with the same name already exists (as we don't want to create duplicate or near duplicate records that vary only in letter case, such as: "Fantasy", "fantasy", "FaNtAsY", and so on).
@@ -149,11 +139,11 @@ const genreExists = await Genre.findOne({ name: req.body.name })
 if (genreExists) {
   // Genre exists, redirect to its detail page.
   res.redirect(genreExists.url);
-} else {
-  await genre.save();
-  // New genre saved. Redirect to genre detail page.
-  res.redirect(genre.url);
 }
+
+// New genre. Save and redirect to its detail page.
+await genre.save();
+res.redirect(genre.url);
 ```
 
 This same pattern is used in all our post controllers: we run validators (with sanitizers), then check for errors and either re-render the form with error information or save the data.

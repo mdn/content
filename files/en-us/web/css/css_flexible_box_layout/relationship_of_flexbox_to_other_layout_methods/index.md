@@ -1,12 +1,12 @@
 ---
 title: Relationship of flexbox to other layout methods
+short-title: Flexbox and other layouts
 slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 page-type: guide
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-In this article we will take a look at how flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
+In this article, we will take a look at how flexbox fits in with all the other CSS modules. We'll find out which specifications you also need to take notice of if you want to learn flexbox, and find out why flexbox is different to some other modules.
 
 ## The box alignment module
 

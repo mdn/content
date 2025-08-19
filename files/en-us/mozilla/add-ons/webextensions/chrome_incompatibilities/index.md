@@ -2,9 +2,8 @@
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The WebExtension APIs aim to provide compatibility across all the main browsers, so extensions should run on any browser with minimal changes.
 
@@ -13,12 +12,10 @@ However, there are significant differences between Chrome (and Chromium-based br
 - Support for WebExtension APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) on the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
 - Extension API namespace:
-
   - **In Firefox and Safari:** Extension APIs are accessed under the `browser` namespace. The `chrome` namespace is also supported for compatibility with Chrome.
   - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
 
 - Asynchronous APIs:
-
   - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
   - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932)) Callbacks are supported in Manifest V3 for backward compatibility.
 
@@ -143,16 +140,15 @@ When calling `tabs.remove()`:
 #### WebRequest API
 
 - **In Firefox:**
-
   - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
   - The `activeTab` permission does not allow for intercepting network requests in the current tab. (See [bug 1617479](https://bugzil.la/1617479))
   - Events are not fired for system requests (for example, extension upgrades or search bar suggestions).
-
     - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
   - If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's `manifest.json` file must contain a [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key with the URL of the extension page.
 
-    > **Note:** _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
+    > [!NOTE]
+    > _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
 
   - Some of the `browser.webRequest.*` APIs allow for returning Promises that resolves `webRequest.BlockingResponse` asynchronously.
 

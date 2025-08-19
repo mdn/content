@@ -138,11 +138,10 @@ button.switch {
   border: 2px solid black;
   display: inline-block;
   margin-right: 0.25em;
-  line-height: 20px;
   vertical-align: middle;
   text-align: center;
   font:
-    12px "Open Sans",
+    12px / 20px "Open Sans",
     "Arial",
     serif;
 }
@@ -154,13 +153,13 @@ button.switch span {
 
 [role="switch"][aria-checked="false"] :first-child,
 [role="switch"][aria-checked="true"] :last-child {
-  background: #262;
-  color: #eef;
+  background: #226622;
+  color: #eeeeff;
 }
 
 [role="switch"][aria-checked="false"] :last-child,
 [role="switch"][aria-checked="true"] :first-child {
-  color: #bbd;
+  color: #bbbbdd;
 }
 
 label.switch {

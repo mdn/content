@@ -1,10 +1,10 @@
 ---
 title: Firefox 12 for developers
+short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
@@ -119,7 +119,3 @@ Mozilla has been working on integrating its own Web developer tools that complem
 ### Other changes
 
 - The editor component (known as Midas) now only accepts events from privileged code.
-
-## See also
-
-{{Firefox_for_developers}}

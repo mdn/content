@@ -2,9 +2,8 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a web page. It can read and modify page content using the standard [Web APIs](/en-US/docs/Web/API). Content script behavior is similar to scripts that are part of a website, such as those loaded using the {{HTMLElement("script")}} element). However, content scripts can only access page content when [host permissions for the web page's origin are granted](#permissions).
 
@@ -30,7 +29,8 @@ Using methods (1) and (2), you can only load scripts into pages whose URLs can b
 
 Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like `about:debugging` or `about:addons`).
 
-> **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
+> [!NOTE]
+> [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
 > Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
 
 ### Persistence
@@ -340,7 +340,6 @@ To create the connection:
 
 - One side listens for connections using [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
 - The other side calls:
-
   - [`tabs.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (if connecting to a content script)
   - [`runtime.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (if connecting to a background script)
 
@@ -380,7 +379,6 @@ The corresponding background script:
 
 - Listens for connection attempts from the content script
 - When receiving a connection attempt:
-
   - Stores the port in a variable named `portFromCS`
   - Sends the content script a message using the port
   - Starts listening to messages received on the port, and logs them
@@ -506,12 +504,12 @@ For a complete working example of this, [visit the demo page on GitHub](https://
 
 ## Using `eval()` in content scripts
 
-> **Note:** `eval()` not available in Manifest V3.
+> [!NOTE]
+> `eval()` not available in Manifest V3.
 
 - In Chrome
   - : {{jsxref("Global_Objects/eval", "eval")}} always runs code in the context of the **content script**, not in the context of the page.
 - In Firefox
-
   - : If you call `eval()`, it runs code in the context of the **content script**.
 
     If you call `window.eval()`, it runs code in the context of the **page**.

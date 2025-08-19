@@ -409,9 +409,7 @@
         "/docs/Web/API/Document_Object_Model/Reflected_attributes",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_Object_Model/Transforming_with_XSLT",
         "/docs/Web/API/Document_Object_Model/Events",
-        "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
       ],
       "interfaces": [
@@ -445,6 +443,7 @@
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
+        "QuotaExceededError",
         "Range",
         "StaticRange",
         "Text",
@@ -897,6 +896,23 @@
         "HTMLElement: dragstart",
         "HTMLElement: drop"
       ]
+    },
+    "HTML Sanitizer API": {
+      "overview": ["HTML Sanitizer API"],
+      "guides": [
+        "/docs/Web/API/HTML_Sanitizer_API/Using_the_HTML_Sanitizer_API"
+      ],
+      "interfaces": ["Sanitizer", "SanitizerConfig"],
+      "methods": [
+        "Element.setHTMLUnsafe()",
+        "Element.setHTML()",
+        "ShadowRoot.setHTMLUnsafe()",
+        "ShadowRoot.setHTML()",
+        "Document.parseHTMLUnsafe_static()",
+        "Document.parseHTML_static()"
+      ],
+      "properties": [],
+      "events": []
     },
     "Idle Detection API": {
       "overview": ["Idle Detection API"],
@@ -1360,6 +1376,7 @@
         "CSPViolationReportBody",
         "DeprecationReportBody",
         "InterventionReportBody",
+        "IntegrityViolationReportBody",
         "Report",
         "ReportBody",
         "ReportingObserver",
@@ -1380,7 +1397,8 @@
       "overview": ["Screen Capture API"],
       "guides": [
         "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
-        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture",
+        "/docs/Web/API/Screen_Capture_API/Captured_Surface_Control"
       ],
       "interfaces": [
         "BrowserCaptureMediaStreamTrack",
@@ -1560,6 +1578,14 @@
       "properties": ["Response.body"],
       "events": []
     },
+    "Summarizer API": {
+      "overview": ["Summarizer API"],
+      "guides": ["/docs/Web/API/Summarizer_API/Using"],
+      "interfaces": ["Summarizer", "CreateMonitor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "SVG": {
       "overview": ["SVG API"],
       "guides": ["/docs/Web/SVG"],
@@ -1700,6 +1726,14 @@
         "Element: touchmove",
         "Element: touchcancel"
       ]
+    },
+    "Translator and Language Detector APIs": {
+      "overview": ["Translator and Language Detector APIs"],
+      "guides": ["/docs/Web/API/Translator_and_Language_Detector_APIs/Using"],
+      "interfaces": ["CreateMonitor", "LanguageDetector", "Translator"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Trusted Types API": {
       "overview": ["Trusted Types API"],
@@ -1867,7 +1901,6 @@
         "/docs/Web/API/Web_Audio_API/Using_AudioWorklet",
         "/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode",
         "/docs/Web/API/Web_Audio_API/Simple_synth",
-        "/docs/Web/API/Web_Audio_API/Tools",
         "/docs/Web/API/Web_Audio_API/Using_IIR_filters",
         "/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API",
         "/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics"

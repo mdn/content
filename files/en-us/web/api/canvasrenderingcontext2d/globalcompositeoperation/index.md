@@ -193,7 +193,6 @@ window.onload = () => {
   lightMix();
   colorSphere();
   runComposite();
-  return;
 };
 ```
 
@@ -202,8 +201,8 @@ And this code, `runComposite()`, handles the bulk of the work, relying on a numb
 ```js
 function createCanvas() {
   const canvas = document.createElement("canvas");
-  canvas.style.background = `url(${op_8x8.data})`;
-  canvas.style.border = "1px solid #000";
+  canvas.style.background = `url(${JSON.stringify(op_8x8.data)})`;
+  canvas.style.border = "1px solid black";
   canvas.style.margin = "5px";
   canvas.width = width / 2;
   canvas.height = height / 2;
@@ -236,7 +235,7 @@ function runComposite() {
     ctx.globalCompositeOperation = "source-over";
     ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
+    ctx.fillStyle = "white";
     ctx.font = "14px arial";
     ctx.fillText(pop, 5, height / 2 - 5);
     ctx.restore();
@@ -247,7 +246,7 @@ function runComposite() {
     ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
     ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
+    ctx.fillStyle = "white";
     ctx.font = "14px arial";
     ctx.fillText("existing content", 5, height / 2 - 5);
     ctx.restore();
@@ -258,7 +257,7 @@ function runComposite() {
     ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
     ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
+    ctx.fillStyle = "white";
     ctx.font = "14px arial";
     ctx.fillText("new content", 5, height / 2 - 5);
     ctx.restore();
@@ -282,20 +281,20 @@ const lightMix = () => {
   ctx.save();
   ctx.globalCompositeOperation = "lighter";
   ctx.beginPath();
-  ctx.fillStyle = "rgb(255 0 0 / 100%)";
+  ctx.fillStyle = "red";
   ctx.arc(100, 200, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.beginPath();
-  ctx.fillStyle = "rgb(0 0 255 / 100%)";
+  ctx.fillStyle = "blue";
   ctx.arc(220, 200, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.beginPath();
-  ctx.fillStyle = "rgb(0 255 0 / 100%)";
+  ctx.fillStyle = "lime";
   ctx.arc(160, 100, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.restore();
   ctx.beginPath();
-  ctx.fillStyle = "#f00";
+  ctx.fillStyle = "red";
   ctx.fillRect(0, 0, 30, 30);
   ctx.fill();
 };
@@ -318,9 +317,9 @@ const colorSphere = (element) => {
       oTop + halfWidth,
     );
     const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
-    gradient.addColorStop(0, "rgb(0 0 0 / 0%)");
-    gradient.addColorStop(0.7, `rgb(${color.R} ${color.G} ${color.B} / 100%)`);
-    gradient.addColorStop(1, "rgb(255 255 255 / 100%)");
+    gradient.addColorStop(0, "transparent");
+    gradient.addColorStop(0.7, `rgb(${color.R} ${color.G} ${color.B})`);
+    gradient.addColorStop(1, "white");
     ctx.beginPath();
     ctx.moveTo(oLeft + halfWidth, oTop);
     ctx.lineTo(oLeft + halfWidth, oTop + halfWidth);
@@ -332,7 +331,7 @@ const colorSphere = (element) => {
     ctx.translate(-(oLeft + halfWidth), -(oTop + halfWidth));
   }
   ctx.beginPath();
-  ctx.fillStyle = "#00f";
+  ctx.fillStyle = "blue";
   ctx.fillRect(15, 15, 30, 30);
   ctx.fill();
   return ctx.canvas;
@@ -387,7 +386,7 @@ Color.HSV_RGB = (o) => {
       case 5:
         R = V;
         G = A;
-        B = B;
+        // B remains unchanged
         break;
     }
   }
@@ -411,7 +410,7 @@ const createInterlace = (size, color1, color2) => {
   return pattern;
 };
 
-const op_8x8 = createInterlace(8, "#FFF", "#eee");
+const op_8x8 = createInterlace(8, "white", "#eeeeee");
 ```
 
 #### Result

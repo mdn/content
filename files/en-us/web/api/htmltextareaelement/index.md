@@ -106,6 +106,10 @@ function autoGrow(field) {
     field.style.height = `${field.scrollHeight}px`;
   }
 }
+
+document.querySelector("textarea").addEventListener("keyup", (e) => {
+  autoGrow(e.target);
+});
 ```
 
 #### CSS
@@ -124,7 +128,7 @@ textarea.no-scrollbars {
 <form>
   <fieldset>
     <legend>Your comments</legend>
-    <p><textarea class="no-scrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><textarea class="no-scrollbars"></textarea></p>
     <p><input type="submit" value="Send" /></p>
   </fieldset>
 </form>
@@ -182,7 +186,7 @@ Decorate the span to behave like a link:
 .intLink {
   cursor: pointer;
   text-decoration: underline;
-  color: #0000ff;
+  color: blue;
 }
 ```
 

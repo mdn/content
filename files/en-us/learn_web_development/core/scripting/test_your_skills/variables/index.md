@@ -1,55 +1,129 @@
 ---
 title: "Test your skills: Variables"
-short-title: Variables
+short-title: "Test: Variables"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Variables 1
+## Interactive challenge
 
-In this task we want you to:
+First of all, we are giving you a fun, interactive variables challenge created by our [learning partner](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds), [Scrimba](https://scrimba.com/home).
 
-- Declare a variable called `myName`.
-- Initialize `myName` with a suitable value, on a separate line (you can use your actual name, or something else).
-- Declare a variable called `myAge` and initialize it with a value, on the same line.
+Watch the embedded scrim, and complete the task on the timeline (the little ghost icon) by following the instructions and editing the code. When you are done, you can resume watching the scrim to check how the teacher's solution matches up with yours.
 
-Try updating the live code below to recreate the finished example:
+<scrim-inline url="https://scrimba.com/learn-javascript-c0v/~011" scrimtitle="Variables practice" survey="true"></scrim-inline>
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
+## Task 1
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) to work in your own editor or in an online editor.
+To complete this task, add a new line to correct the value stored in the existing `myName` variable to your own name.
 
-## Variables 2
+<!-- Code shared across examples -->
 
-In this task you need to add a new line to correct the value stored in the existing `myName` variable to your own name.
+```html hidden live-sample___variables-1 live-sample___variables-2
+<section></section>
+```
 
-Try updating the live code below to recreate the finished example:
+```css hidden live-sample___variables-1 live-sample___variables-2
+* {
+  box-sizing: border-box;
+}
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
+p {
+  color: purple;
+  margin: 0.5em 0;
+}
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) to work in your own editor or in an online editor.
+<!-- Example-specific code -->
 
-## Variables 3
+```js live-sample___variables-1
+let myName = "Paul";
 
-The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. How can you fix the problem and correct the output?
+// Don't edit the code above here!
 
-Try updating the live code below to recreate the finished example:
+// Add your code here
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
+// Don't edit the code below here!
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) to work in your own editor or in an online editor.
+const section = document.querySelector("section");
+const para = document.createElement("p");
+para.textContent = myName;
+section.appendChild(para);
+```
+
+{{ EmbedLiveSample("variables-1", "100%", 60) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished JavaScript should look something like this:
+
+```js
+// ...
+// Don't edit the code above here!
+
+myName = "Chris";
+
+// Don't edit the code below here!
+// ...
+```
+
+</details>
+
+## Task 2
+
+The final task for now — in this case you are provided with some existing code, which has two errors present in it. The results panel should be outputting the name `Chris`, and a statement about how old Chris will be in 20 years' time. We want you to fix the problem and correct the output.
+
+```js live-sample___variables-2
+// Fix the following code
+
+const myName = "Default";
+myName = "Chris";
+
+let myAge = "42";
+
+// Don't edit the code below here!
+
+const section = document.querySelector("section");
+const para1 = document.createElement("p");
+const para2 = document.createElement("p");
+para1.textContent = myName;
+para2.textContent = `In 20 years, I will be ${myAge + 20}`;
+section.appendChild(para1);
+section.appendChild(para2);
+```
+
+{{ EmbedLiveSample("variables-2", "100%", 60) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished JavaScript should look something like this:
+
+```js
+// Turn the const into a let, so the value can be changed
+let myName = "Default";
+myName = "Chris";
+
+// myAge needs to have a number datatype
+let myAge = 42;
+
+// Don't edit the code below here!
+// ...
+```
+
+</details>
+
+## See also
+
+Also check out [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

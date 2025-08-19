@@ -1,10 +1,10 @@
 ---
 title: Using CSS nesting
+short-title: Using nesting
 slug: Web/CSS/CSS_nesting/Using_CSS_nesting
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
@@ -24,26 +24,26 @@ There are certain instances where using the `&` nesting selector can be necessar
 
 ```css
 /* Without nesting selector */
-parent {
+.parent {
   /* parent styles */
-  child {
+  .child {
     /* child of parent styles */
   }
 }
 
 /* With nesting selector */
-parent {
+.parent {
   /* parent styles */
-  & child {
+  & .child {
     /* child of parent styles */
   }
 }
 
 /* the browser will parse both of these as */
-parent {
+.parent {
   /* parent styles */
 }
-parent child {
+.parent .child {
   /* child of parent styles */
 }
 ```
@@ -392,7 +392,7 @@ With the following CSS:
 ```css
 .foo {
   background-color: silver;
-  @media (screen) {
+  @media screen {
     color: tomato;
   }
   color: black;

@@ -2,9 +2,8 @@
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
@@ -270,7 +269,7 @@ const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // Select descriptions that contains 'en' or 'ed' words endings:
 const enEdSelection = fruitsWithDescription.filter((description) =>
-  /(en|ed)\b/.test(description),
+  /(?:en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]

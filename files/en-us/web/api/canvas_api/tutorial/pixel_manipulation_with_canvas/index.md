@@ -10,16 +10,8 @@ Until now we haven't looked at the actual pixels of our canvas. With the `ImageD
 
 ## The ImageData object
 
-The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object. It contains the following read-only attributes:
-
-- `width`
-  - : The width of the image in pixels.
-- `height`
-  - : The height of the image in pixels.
-- `data`
-  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (included).
-
-The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
+The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object.
+Its `data` property returns a {{jsxref("Uint8ClampedArray")}} (or {{jsxref("Float16Array")}} if requested) which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
 The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height` × `width` × 4) - 1.
 
@@ -60,7 +52,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgb(0 0 0 / 0%)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent.
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 
@@ -83,14 +75,38 @@ This method returns an `ImageData` object representing the pixel data for the ar
 
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
-### A color picker
+## Creating a color picker
 
-In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
+In this example, we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor.
+For this, we need the current position of the mouse, then we look up the pixel data at that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides.
+Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
+Clicking on the image will do the same operation but uses the selected color.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Hovered color</th>
+      <th>Selected color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <canvas id="canvas" width="300" height="227"></canvas>
+      </td>
+      <td class="color-cell" id="hovered-color"></td>
+      <td class="color-cell" id="selected-color"></td>
+    </tr>
+  </tbody>
+</table>
+```
 
 ```js
 const img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 img.addEventListener("load", () => {
@@ -100,7 +116,7 @@ img.addEventListener("load", () => {
 const hoveredColor = document.getElementById("hovered-color");
 const selectedColor = document.getElementById("selected-color");
 
-function pick(event, destination) {
+const pick = (event, destination) => {
   const bounding = canvas.getBoundingClientRect();
   const x = event.clientX - bounding.left;
   const y = event.clientY - bounding.top;
@@ -112,17 +128,33 @@ function pick(event, destination) {
   destination.textContent = rgbColor;
 
   return rgbColor;
-}
+};
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
 canvas.addEventListener("click", (event) => pick(event, selectedColor));
 ```
 
-The code's usage is demonstrated in the following live example:
+```css hidden
+body {
+  font-family: sans-serif;
+}
+.color-cell {
+  color: white;
+}
+th {
+  width: 30%;
+}
+td {
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+```
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
+Hover your cursor anywhere over the image to see the result in the "Hovered color" column.
+Click anywhere in the image to see the result in the "Selected color" column.
 
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-picker.js).
+{{embedlivesample("creating_a_color_picker", , 300)}}
 
 ## Painting pixel data into a context
 
@@ -140,18 +172,37 @@ For example, to paint the entire image represented by `myImageData` to the top l
 ctx.putImageData(myImageData, 0, 0);
 ```
 
-### Grayscaling and inverting colors
+## Grayscaling and inverting colors
 
-In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function subtracts each color from the max value 255. The grayscale function uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
+In this example, we iterate over all pixels to change their values, then we put the modified pixel array back onto the canvas using [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData).
+The `invert` function subtracts each color from the max value, `255`.
+The `grayscale` function uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example.
+See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
+
+```html
+<canvas id="canvas" width="300" height="227"></canvas>
+<form>
+  <input type="radio" id="original" name="color" value="original" checked />
+  <label for="original">Original</label>
+
+  <input type="radio" id="grayscale" name="color" value="grayscale" />
+  <label for="grayscale">Grayscale</label>
+
+  <input type="radio" id="inverted" name="color" value="inverted" />
+  <label for="inverted">Inverted</label>
+
+  <input type="radio" id="sepia" name="color" value="sepia" />
+  <label for="sepia">Sepia</label>
+</form>
+```
 
 ```js
-const img = new Image();
-img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
   ctx.drawImage(img, 0, 0);
 };
@@ -185,6 +236,22 @@ const grayscale = () => {
   ctx.putImageData(imageData, 0, 0);
 };
 
+const sepia = () => {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    let r = data[i], // red
+      g = data[i + 1], // green
+      b = data[i + 2]; // blue
+
+    data[i] = Math.min(Math.round(0.393 * r + 0.769 * g + 0.189 * b), 255);
+    data[i + 1] = Math.min(Math.round(0.349 * r + 0.686 * g + 0.168 * b), 255);
+    data[i + 2] = Math.min(Math.round(0.272 * r + 0.534 * g + 0.131 * b), 255);
+  }
+  ctx.putImageData(imageData, 0, 0);
+};
+
 const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
   input.addEventListener("change", (evt) => {
@@ -193,6 +260,8 @@ for (const input of inputs) {
         return invert();
       case "grayscale":
         return grayscale();
+      case "sepia":
+        return sepia();
       default:
         return original();
     }
@@ -200,62 +269,72 @@ for (const input of inputs) {
 }
 ```
 
-The code's usage is demonstrated in the following live example:
+Click different options to view the result in action.
 
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
-
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/color-manipulation.js).
+{{embedlivesample("grayscaling_and_inverting_colors", , 300)}}
 
 ## Zooming and anti-aliasing
 
-With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn onto to be able to have a side by side comparison
+With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas, and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom in on our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn to allow a side by side comparison.
 
-We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
-
-```js
-zoomCtx.drawImage(
-  canvas,
-  Math.min(Math.max(0, x - 5), img.width - 10),
-  Math.min(Math.max(0, y - 5), img.height - 10),
-  10,
-  10,
-  0,
-  0,
-  200,
-  200,
-);
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Smoothing enabled = true</th>
+      <th>Smoothing enabled = false</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <canvas id="canvas" width="300" height="227"></canvas>
+      </td>
+      <td>
+        <canvas id="smoothed" width="200" height="200"></canvas>
+      </td>
+      <td>
+        <canvas id="pixelated" width="200" height="200"></canvas>
+      </td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-Zoom example:
+```css hidden
+body {
+  font-family: monospace;
+}
+```
+
+We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below.
+Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200:
 
 ```js
 const img = new Image();
 img.crossOrigin = "anonymous";
-img.src = "./assets/rhino.jpg";
+img.src = "/shared-assets/images/examples/rhino.jpg";
 img.onload = () => {
-  draw(this);
+  draw(img);
 };
 
-function draw(img) {
+const draw = (image) => {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(image, 0, 0);
 
-  const smoothedZoomCtx = document
-    .getElementById("smoothed-zoom")
-    .getContext("2d");
-  smoothedZoomCtx.imageSmoothingEnabled = true;
+  const smoothCtx = document.getElementById("smoothed").getContext("2d");
+  smoothCtx.imageSmoothingEnabled = true;
 
-  const pixelatedZoomCtx = document
-    .getElementById("pixelated-zoom")
-    .getContext("2d");
-  pixelatedZoomCtx.imageSmoothingEnabled = false;
+  const pixelatedCtx = document.getElementById("pixelated").getContext("2d");
+  pixelatedCtx.imageSmoothingEnabled = false;
 
   const zoom = (ctx, x, y) => {
     ctx.drawImage(
       canvas,
-      Math.min(Math.max(0, x - 5), img.width - 10),
-      Math.min(Math.max(0, y - 5), img.height - 10),
+      Math.min(Math.max(0, x - 5), image.width - 10),
+      Math.min(Math.max(0, y - 5), image.height - 10),
       10,
       10,
       0,
@@ -268,17 +347,13 @@ function draw(img) {
   canvas.addEventListener("mousemove", (event) => {
     const x = event.layerX;
     const y = event.layerY;
-    zoom(smoothedZoomCtx, x, y);
-    zoom(pixelatedZoomCtx, x, y);
+    zoom(smoothCtx, x, y);
+    zoom(pixelatedCtx, x, y);
   });
-}
+};
 ```
 
-The code's usage is demonstrated in the following live example:
-
-{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
-
-Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.html), [JavaScript](https://github.com/mdn/dom-examples/blob/main/canvas/pixel-manipulation/image-smoothing.js).
+{{embedlivesample("zooming_and_anti-aliasing", , 300)}}
 
 ## Saving images
 
