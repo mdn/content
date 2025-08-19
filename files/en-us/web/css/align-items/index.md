@@ -120,7 +120,7 @@ align-items: unset;
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 
 - `stretch`
-  - : Items whose cross-size is `auto` have their used size set to the length necessary to be as close to filling the container as possible, respecting the items' width and height limits.
+  - : Items whose cross-size is `auto` have their used size set to the length necessary to be as close to filling the container as possible, respecting the items' width and height limits. For non-auto-sized items, this value falls back to `flex-start`, and to `self-start` or `self-end` if the box has also specified `baseline`, `first baseline`, or `last baseline` as {{cssxref("align-content")}}.
 
 - `anchor-center`
   - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
