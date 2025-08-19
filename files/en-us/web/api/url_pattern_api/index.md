@@ -21,7 +21,7 @@ Patterns can contain:
 - Wildcards (`/posts/*`) that match any character.
 - Named groups (`/books/:id`) which extract a part of the matched URL.
 - Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional or be matched multiple times.
-- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex regex matches with a few [limitations](#regex_matchers_limitations).
+- {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex regex matches.
   _Note that the parentheses are not part of the regex but instead define their contents as a regex._
   Some APIs prohibit the use of regular expression groups in `URLPattern` objects.
   The {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} property indicates whether or not regular expression groups are used.
