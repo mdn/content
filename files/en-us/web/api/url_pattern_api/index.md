@@ -176,8 +176,7 @@ The `URLPattern` engine matches the test string against the `pathname` pattern, 
 The engine continues matching the test URL at the unconsumed character `b`, but there is nothing left in the pattern to match it against, which causes the match to fail.
 
 For the match to work the pattern has to consume all the characters in the test string.
-To consume the `b` characer you could add it to the end of the expression, or a `.` to match any character.
-Instead we append `.*` to consume any characters after the lookahead assertion:
+To consume the `b` character you could add `b` to the end of the expression, a `.` to match any character, or `.*` to match all characters after the lookahead assertion:
 
 ```js example-good
 // positive-lookahead
@@ -187,7 +186,7 @@ console.log(pattern1.test("https://example.com/ax")); // false
 ```
 
 The next example shows a negative lookahead match for `/a` which is not followed by `b`.
-Note that the assertion is followed by `.*` to consume the character.
+Note that the assertion is followed by `.*` to consume the character matched by the assertion.
 
 ```js
 // negative-lookahead - matches /a<not b><anything>
@@ -197,7 +196,7 @@ console.log(pattern2.test("https://example.com/ax")); // true
 ```
 
 The following example shows a positive lookbehind match that matches on a pathname like `/ba`.
-The pattern matches `/`, then any character (`.`) to consume the `b`, followed by the assertion that the previous character was a `b`, and then an `a`.
+The pattern matches `/`, then `.` to consume the next character, followed by the assertion that the previous character was a `b`, and then an `a`.
 
 ```js
 // positive-lookbehind
@@ -207,7 +206,7 @@ console.log(pattern.test("https://example.com/xa")); // false
 ```
 
 This example shows a negative lookbehind match that matches on a pathname like `/<not b>a`.
-The pattern matches `/`, then any character (`.`) to consume the `x`, followed by the assertion that the previous character was not `b`, and then an `a`.
+The pattern matches `/`, then `.` to consume the next character (`x`), followed by the assertion that the previous character was not `b`, and then an `a`.
 
 ```js
 // negative-lookbehind
@@ -233,7 +232,7 @@ Some other regex patterns may not work as you may expect:
 ### Unnamed and named groups
 
 Groups can either be named or unnamed. Named groups are specified by prefixing the group name with a colon (`:`).
-Regexp groups that are not prefixed by a colon and a name are unnamed. Unnamed groups are numerically indexed in the match result based on their order in the pattern.
+Regex groups that are not prefixed by a colon and a name are unnamed. Unnamed groups are numerically indexed in the match result based on their order in the pattern.
 
 ```js
 // A named group
@@ -250,7 +249,7 @@ console.log(pattern.exec("https://example.com/books/123").pathname.groups); // {
 ### Group modifiers
 
 Groups can also have modifiers.
-These are specified after the group name (or after the regexp if there is one).
+These are specified after the group name (or after the regex if there is one).
 There are three modifiers: `?` to make the group optional, `+` to make the group repeat one or more times, and `*` to make the group repeat zero or more times.
 
 ```js
