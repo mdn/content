@@ -3,9 +3,8 @@ title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser is about to start a navigation event.
 
@@ -58,10 +57,6 @@ Events have three functions:
 - `timeStamp`
   - : `number`. The time when the browser is about to start the navigation, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Logs the target URLs for `onBeforeNavigate`, if the target's hostname contains "example.com" or starts with "developer".
@@ -79,6 +74,10 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.

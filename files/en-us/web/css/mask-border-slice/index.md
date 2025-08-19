@@ -3,9 +3,8 @@ title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 page-type: css-property
 browser-compat: css.properties.mask-border-slice
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image set by {{cssxref("mask-border-source")}} into regions. These regions are used to form the components of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
 

@@ -3,9 +3,8 @@ title: break-before
 slug: Web/CSS/break-before
 page-type: css-property
 browser-compat: css.properties.break-before
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`break-before`** [CSS](/en-US/docs/Web/CSS) property sets how page, column, or region breaks should behave before a generated box. If there is no generated box, the property is ignored.
 

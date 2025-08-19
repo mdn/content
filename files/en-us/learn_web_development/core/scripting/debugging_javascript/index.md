@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 
 In this lesson, we will return to the subject of debugging JavaScript (which we first looked at in [What went wrong?](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong)). Here we will delve deeper into techniques for tracking down errors, but also look at how to code defensively and handle errors in your code, avoiding problems in the first place.
 
@@ -178,7 +178,7 @@ The main feature of such tools is the ability to add breakpoints to code — the
 
 Let's explore using breakpoints:
 
-1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
+1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on the line number in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
 2. Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
 
 ![Firefox debugger with a breakpoint](breakpoint.png)
@@ -262,20 +262,20 @@ function inchesToMeters(num) {
 
    ```js
    function inchesToMeters(num) {
-     if (typeof num === "number" && !isNaN(num)) {
-       const mVal = (num * 2.54) / 100;
-       const m2dp = mVal.toFixed(2);
-       return m2dp;
-     } else {
+     if (typeof num !== "number" || Number.isNaN(num)) {
        console.log("A number was not provided. Please correct the input.");
+       return undefined;
      }
+     const mVal = (num * 2.54) / 100;
+     const m2dp = mVal.toFixed(2);
+     return m2dp;
    }
    ```
 
 7. Now if you try the first two scenarios again, you'll see our slightly more useful message returned, to give you an idea of what needs to be done to fix the problem. You could put anything in there that you like, including trying to run code to correct the value of `num`, but this is not advised — this function has one simple purpose, and you should handle correcting the value somewhere else in the system.
 
    > [!NOTE]
-   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("isNaN()", "!isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, as weirdly, `typeof NaN` returns `"number"`!
+   > In the `if()` statement, we first test whether the data type of `num` is `"number"` using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, but we also test whether {{jsxref("Number.isNaN", "Number.isNaN(num)")}} returns `false`. We have to do this to defend against the specific case of `num` being set to `NaN`, because `typeof NaN` still returns `"number"`!
 
 8. However, if you try the third scenario again, you will still get the "Uncaught ReferenceError: height is not defined" error thrown at you. You can't fix the fact that a value is not available from inside a function that is trying to use the value.
 
@@ -364,4 +364,4 @@ So that's JavaScript debugging and error handling. Simple huh? Maybe not so simp
 
 That's it for the Dynamic scripting with JavaScript module; congratulations on reaching the end! In the next module we'll help you explore JavaScript frameworks and libraries.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}

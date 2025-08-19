@@ -3,9 +3,8 @@ title: stroke-linecap
 slug: Web/CSS/stroke-linecap
 page-type: css-property
 browser-compat: css.properties.stroke-linecap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stroke-linecap`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the end of open subpaths of [SVG](/en-US/docs/Web/SVG) elements' unclosed strokes. If present, it overrides the element's {{SVGAttr("stroke-linecap")}} attribute.
 
@@ -58,7 +57,7 @@ We first set up a light-gray rectangle. Then, in a group, three paths are define
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">
-  <rect x="10" y="5" width="80" height="30" fill="#DDD" />
+  <rect x="10" y="5" width="80" height="30" fill="#dddddd" />
   <g stroke="dodgerblue" stroke-width="7">
     <path d="M 10,10 h 80" />
     <path d="M 10,20 h 80" />

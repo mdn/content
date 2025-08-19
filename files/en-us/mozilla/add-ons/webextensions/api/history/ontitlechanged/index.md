@@ -3,9 +3,8 @@ title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.history.onTitleChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the title of a page visited by the user is recorded. To listen for visits to a page you use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent. Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The `history.onTitleChanged` event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
 
@@ -39,10 +38,6 @@ Events have three functions:
     - `title`
       - : `String`. Title of the page visited.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for title change events, and log the ID, URL, and title of the visited pages.
@@ -58,6 +53,10 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

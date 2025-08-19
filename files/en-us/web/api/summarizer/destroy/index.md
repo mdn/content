@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.destroy
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`destroy()`** method of the {{domxref("Summarizer")}} interface destroys the `Summarizer` instance it is called on. It makes sense to destroy `Summarizer` objects if they are no longer going to be used, as they tie up significant resources in their handling.
 

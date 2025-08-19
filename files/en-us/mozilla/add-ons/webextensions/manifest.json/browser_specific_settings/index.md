@@ -3,9 +3,8 @@ title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -32,7 +31,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
         <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "58.0"
   }
 }
@@ -81,14 +80,14 @@ To support Firefox for Android without specifying a version range, the `gecko_an
 The extension ID must be one of the following:
 
 - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- A string formatted like an email address: `extensionname@example.org`
+- A string formatted like an email address: `extensionname@example.org` However, use of an `@string` format is recommended.
 
 The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
 
 For example:
 
 ```json
-"id": "extensionname@example.org"
+"id": "@extension-name.developer-name"
 ```
 
 ```json
@@ -104,6 +103,10 @@ Safari stores its browser-specific settings in the `safari` sub-key, which has t
 - `strict_max_version`
   - : Maximum version of Safari to support.
 
+### Chrome properties
+
+Chrome doesn't use this key and ignores it if present in an extension's `manifest.json` file.
+
 ## Examples
 
 Example with all possible keys. Note that most extensions omit `strict_max_version` and `update_url`.
@@ -111,7 +114,7 @@ Example with all possible keys. Note that most extensions omit `strict_max_versi
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"

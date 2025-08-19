@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-transforms/
   - https://drafts.csswg.org/css-transforms-2/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS transforms** module defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
 
@@ -518,7 +517,7 @@ legend {
 button {
   font-size: 18px;
   border-radius: 50%;
-  border: #ccc solid 1px;
+  border: #cccccc solid 1px;
   padding: 0;
   width: 26px;
   height: 26px;

@@ -3,9 +3,8 @@ title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 page-type: css-property
 browser-compat: css.properties.aspect-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified {{glossary("aspect ratio")}} is used in the calculation of auto sizes and some other layout functions.
 

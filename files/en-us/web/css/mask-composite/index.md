@@ -3,9 +3,8 @@ title: mask-composite
 slug: Web/CSS/mask-composite
 page-type: css-property
 browser-compat: css.properties.mask-composite
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
 
@@ -82,8 +81,8 @@ div {
   background-color: red;
 
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+    url("https://mdn.github.io/shared-assets/images/examples/mdn.svg"),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
   mask-size: 100% 100%;
 
   mask-composite: subtract;
@@ -238,11 +237,11 @@ We then apply the heart and circle masks as the comma-separated {{cssxref("mask-
 ```css
 /* apply the mask images */
 tr.alphaMaskType img {
-  mask-image: url(#heartAlpha), url(#circleAlpha);
+  mask-image: url("#heartAlpha"), url("#circleAlpha");
 }
 
 tr.luminanceMaskType img {
-  mask-image: url(#heartLuminance), url(#circleLuminance);
+  mask-image: url("#heartLuminance"), url("#circleLuminance");
 }
 ```
 

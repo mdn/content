@@ -3,9 +3,8 @@ title: mask-type
 slug: Web/CSS/mask-type
 page-type: css-property
 browser-compat: css.properties.mask-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property applies to the SVG {{svgElement("mask")}} element. It defines whether to use the _luminance_ (brightness) or _alpha_ (transparency) content of the mask. This property may be overridden by the {{cssxref("mask-mode")}} property. The `mask-type` property has no effect on image or gradient masks.
 
@@ -137,11 +136,11 @@ mask#luminanceMask {
 }
 
 img.alphaMaskType {
-  mask-image: url(#alphaMask);
+  mask-image: url("#alphaMask");
 }
 
 img.luminanceMaskType {
-  mask-image: url(#luminanceMask);
+  mask-image: url("#luminanceMask");
 }
 ```
 

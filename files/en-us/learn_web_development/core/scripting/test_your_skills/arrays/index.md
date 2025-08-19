@@ -1,16 +1,17 @@
 ---
 title: "Test your skills: Arrays"
-short-title: Arrays
+short-title: "Test: Arrays"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 
 > [!NOTE]
-> For Tasks 1–4, you can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Interactive challenge
 
@@ -27,16 +28,9 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 
 This task gives you some basic array practice:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an array of three items, and store it in a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
-3. Next, modify the first two items in the array using bracket notation and assignment.
-4. Finally, add a new item to the beginning of the array.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create an array of three items, and store it in a variable called `myArray`. The items can be anything you want — how about your favorite foods or bands?
+2. Next, modify the first two items in the array using bracket notation and assignment.
+3. Finally, add a new item to the beginning of the array.
 
 <!-- Code shared across examples -->
 
@@ -95,16 +89,9 @@ Now let's move on to another task. Here you are provided with a string to work w
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
-3. Store the length of the array in a variable called `arrayLength`.
-4. Store the last item in the array in a variable called `lastItem`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
+2. Store the length of the array in a variable called `arrayLength`.
+3. Store the last item in the array in a variable called `lastItem`.
 
 ```js live-sample___arrays-2
 const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
@@ -151,20 +138,13 @@ let lastItem = myArray[arrayLength - 1];
 
 For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Remove the last item in the array.
-3. Add two new names to the end of the array.
-4. Iterate over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
-5. Finally, join the array items together in a single string called `myString`, with a separator of `"-"`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Remove the last item in the array.
+2. Add two new names to the end of the array.
+3. Iterate over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
+4. Finally, join the array items together in a single string called `myString`, with a separator of `"-"`.
 
 ```js live-sample___arrays-3
-let myArray = [
+const myArray = [
   "Ryu",
   "Ken",
   "Chun-Li",
@@ -180,7 +160,7 @@ let myArray = [
 // Don't edit the code below here!
 
 const section = document.querySelector("section");
-let para1 = document.createElement("p");
+const para1 = document.createElement("p");
 para1.textContent = myString;
 section.appendChild(para1);
 ```
@@ -193,7 +173,7 @@ section.appendChild(para1);
 Your finished JavaScript should look something like this:
 
 ```js
-let myArray = [
+const myArray = [
   "Ryu",
   "Ken",
   "Chun-Li",
@@ -209,12 +189,12 @@ myArray.pop();
 myArray.push("Zangief");
 myArray.push("Ibuki");
 
-myArray.forEach(function (element, index) {
-  let newElement = `${element} (${index})`;
+myArray.forEach((element, index) => {
+  const newElement = `${element} (${index})`;
   myArray[index] = newElement;
 });
 
-let myString = myArray.join(" - ");
+const myString = myArray.join(" - ");
 
 // Don't edit the code below here!
 // ...
@@ -228,17 +208,10 @@ For this array task, we provide you with a starting array listing the names of s
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
-3. Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
+1. Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
+2. Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
 
 If it works, you should see `"Emus,Egrets"` appear in the page.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/arrays/arrays4-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```js live-sample___arrays-4
 const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"];
@@ -276,3 +249,5 @@ const eBirds = birds.filter(startsWithE);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

@@ -3,9 +3,8 @@ title: background-position-y
 slug: Web/CSS/background-position-y
 page-type: css-property
 browser-compat: css.properties.background-position-y
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-position-y`** [CSS](/en-US/docs/Web/CSS) property sets the initial vertical position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
@@ -123,7 +122,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
-  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
@@ -151,7 +150,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: seagreen;
-  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png");
   background-repeat: no-repeat;
   background-position-x: right 20px;
   background-position-y: bottom 10px;

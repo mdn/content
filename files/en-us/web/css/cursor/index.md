@@ -3,9 +3,8 @@ title: cursor
 slug: Web/CSS/cursor
 page-type: css-property
 browser-compat: css.properties.cursor
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if any, to show when the mouse pointer is over an element.
 
@@ -70,21 +69,21 @@ cursor: pointer;
 cursor: zoom-out;
 
 /* URL with mandatory keyword fallback */
-cursor: url(hand.cur), pointer;
+cursor: url("hand.cur"), pointer;
 
 /* URL and coordinates, with mandatory keyword fallback */
 cursor:
-  url(cursor_1.png) 4 12,
+  url("cursor_1.png") 4 12,
   auto;
 cursor:
-  url(cursor_2.png) 2 2,
+  url("cursor_2.png") 2 2,
   pointer;
 
 /* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
 cursor:
-  url(cursor_1.svg) 4 5,
-  url(cursor_2.svg),
-  /* …, */ url(cursor_n.cur) 5 5,
+  url("cursor_1.svg") 4 5,
+  url("cursor_2.svg"),
+  /* …, */ url("cursor_n.cur") 5 5,
   progress;
 
 /* Global values */

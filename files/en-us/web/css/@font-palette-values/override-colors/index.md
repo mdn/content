@@ -3,9 +3,8 @@ title: override-colors
 slug: Web/CSS/@font-palette-values/override-colors
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.override-colors
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
@@ -19,22 +18,16 @@ override-colors: <index of color> <color>;
 override-colors: 0 red;
 
 /* using hex-color */
-override-colors: 0 #f00;
+override-colors: 0 #ff0000;
 
 /* using rgb */
 override-colors: 0 rgb(255 0 0);
 
 /* overriding multiple colors */
 override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
-
-/* overriding multiple colors with readability */
-override-colors:
-  0 #f00,
-  1 #0f0,
-  2 #00f;
+  0 red,
+  1 green,
+  2 blue;
 ```
 
 The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
@@ -92,7 +85,7 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
   font-family: "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24)
+  src: url("https://fonts.gstatic.com/l/font?kit=Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabts6diywYkdG3gjD0U&skey=a373f7129eaba270&v=v24")
     format("woff2");
 }
 

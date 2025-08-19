@@ -3,9 +3,8 @@ title: "@keyframes"
 slug: Web/CSS/@keyframes
 page-type: css-at-rule
 browser-compat: css.at-rules.keyframes
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than [transitions](/en-US/docs/Web/CSS/CSS_transitions).
 
@@ -114,13 +113,13 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ```css
 @keyframes important1 {
-  from {
+  0% {
     margin-top: 50px;
   }
   50% {
     margin-top: 150px !important; /* ignored */
   }
-  to {
+  100% {
     margin-top: 100px;
   }
 }

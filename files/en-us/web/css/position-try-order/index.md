@@ -3,9 +3,8 @@ title: position-try-order
 slug: Web/CSS/position-try-order
 page-type: css-property
 browser-compat: css.properties.position-try-order
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various fallback options that result in an available position-try fallback being used to set an anchor-positioned element's position, instead of its initial position settings.
 
@@ -125,7 +124,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   margin: 90px auto;
 }
 ```
@@ -134,7 +133,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -163,7 +162,7 @@ We initially position the element above its anchor, and then give it our custom 
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 
   bottom: anchor(top);
   margin-bottom: 10px;

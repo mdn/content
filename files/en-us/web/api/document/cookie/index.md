@@ -96,7 +96,7 @@ document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 showBtn.addEventListener("click", () => {
   output.textContent = `> ${document.cookie}`;
 });
-cleanBtn.addEventListener("click", () => {
+clearBtn.addEventListener("click", () => {
   output.textContent = "";
 });
 ```

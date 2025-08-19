@@ -21,15 +21,15 @@ sidebar: htmlsidebar
   padding: 0 20px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  color: white;
+  text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: rgb(220 0 0 / 100%);
+  background-color: tomato;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 20%),
     rgb(0 0 0 / 20%) 30%,
-    rgb(0 0 0 / 0%)
+    transparent
   );
   box-shadow:
     inset 2px 2px 3px rgb(255 255 255 / 60%),
@@ -37,7 +37,7 @@ sidebar: htmlsidebar
 }
 
 .styled:hover {
-  background-color: rgb(255 0 0 / 100%);
+  background-color: red;
 }
 
 .styled:active {
@@ -237,13 +237,13 @@ The below example shows a very basic drawing app created using a {{htmlelement("
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #cccccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #cccccc;
   width: 150px;
   height: 75px;
   padding: 5px;

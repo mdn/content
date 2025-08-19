@@ -3,9 +3,8 @@ title: translate
 slug: Web/CSS/translate
 page-type: css-property
 browser-compat: css.properties.translate
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`translate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify translation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
 

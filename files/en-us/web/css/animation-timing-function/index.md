@@ -3,9 +3,8 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 page-type: css-property
 browser-compat: css.properties.animation-timing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how an animation progresses through the duration of each cycle.
 
@@ -42,7 +41,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-play-state: paused;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -579,6 +578,7 @@ The following image shows graphs of all the `step()` function values used in thi
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
 - JavaScript {{domxref("AnimationEvent")}} API
 - [Cubic bézier generation tool](https://cubic-bezier.com/)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

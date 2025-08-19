@@ -2,9 +2,8 @@
 title: Snake case
 slug: Glossary/Snake_case
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Snake case** is a way of writing phrases without spaces, where spaces are replaced with underscores `_`, and the words are typically all lower case. It's often stylized as "snake_case" to remind the reader of its appearance.
 

@@ -3,9 +3,8 @@ title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
 browser-compat: css.at-rules.scope
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
@@ -259,11 +258,11 @@ If you wrote the theme CSS like so, you'd run into trouble:
 
 ```css
 .light-theme {
-  background: #ccc;
+  background: #cccccc;
 }
 
 .dark-theme {
-  background: #333;
+  background: #333333;
 }
 
 .light-theme p {
@@ -282,7 +281,7 @@ To fix this, you can use `@scope` as follows:
 ```css
 @scope (.light-theme) {
   :scope {
-    background: #ccc;
+    background: #cccccc;
   }
   p {
     color: black;
@@ -291,7 +290,7 @@ To fix this, you can use `@scope` as follows:
 
 @scope (.dark-theme) {
   :scope {
-    background: #333;
+    background: #333333;
   }
   p {
     color: white;

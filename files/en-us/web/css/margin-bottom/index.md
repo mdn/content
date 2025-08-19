@@ -3,9 +3,8 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 page-type: css-property
 browser-compat: css.properties.margin-bottom
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
@@ -73,7 +72,7 @@ margin-bottom: 10px; /* An absolute length */
 margin-bottom: 1em; /* relative to the text size */
 margin-bottom: 5%; /* relative to the nearest block container's width */
 margin-bottom: anchor-size(width);
-margin-bottom: calc(anchor-size(--myAnchor self-block, 20px) / 3);
+margin-bottom: calc(anchor-size(--my-anchor self-block, 20px) / 3);
 
 /* Keyword values */
 margin-bottom: auto;

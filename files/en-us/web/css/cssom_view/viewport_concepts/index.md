@@ -2,9 +2,8 @@
 title: Viewport concepts
 slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 

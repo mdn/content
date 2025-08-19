@@ -5,38 +5,26 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`br`** statement branches to a loop, block, or if.
+The **`br`** statement branches to a [`loop`](/en-US/docs/WebAssembly/Reference/Control_flow/loop), a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), or an [`if`](/en-US/docs/WebAssembly/Reference/Control_flow/if...else) statement.
 
-Other variants of `br` are `br_if` for branching on condition, and `br_table` for branching to different blocks based on an argument.
+Other variants of `br` include [`br_if`](/en-US/docs/WebAssembly/Reference/Control_flow/br_if) and [`br_table`](/en-US/docs/WebAssembly/Reference/Control_flow/br_table).
 
 {{InteractiveExample("Wat Demo: br", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  ;; import the browser console object, you'll need to pass this in from JavaScript
+  ;; Import the browser console object, which you'll need to pass in from JavaScript
   (import "console" "log" (func $log (param i32)))
 
-  ;; create a global variable and initialize it to 0
-  (global $i (mut i32) (i32.const 0))
-
   (func
-    (loop $my_loop
+    (block $my_block
 
-      ;; add one to $i
-      global.get $i
-      i32.const 1
-      i32.add
-      global.set $i
+      ;; Break out of the block
+      ;; If this is removed, the code will throw an error when it reaches `unreachable`
+      br $my_block
 
-      ;; log the current value of $i
-      global.get $i
-      call $log
-
-      ;; if $i is less than 10 branch to loop
-      global.get $i
-      i32.const 10
-      i32.lt_s
-      br_if $my_loop
+      ;; The code will never reach this point since we broke out of the block
+      unreachable
 
     )
   )
@@ -67,5 +55,3 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `br`        | `0x0c`        |
-| `br_if`     | `0x0d`        |
-| `br_table`  | `0x0e`        |

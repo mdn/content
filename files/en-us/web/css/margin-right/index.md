@@ -3,9 +3,8 @@ title: margin-right
 slug: Web/CSS/margin-right
 page-type: css-property
 browser-compat: css.properties.margin-right
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
@@ -69,7 +68,7 @@ margin-right: 20px; /* An absolute length */
 margin-right: 1em; /* relative to the text size */
 margin-right: 5%; /* relative to the nearest block container's width */
 margin-right: anchor-size(self-block);
-margin-right: calc(anchor-size(--myAnchor height, 20px) / 4);
+margin-right: calc(anchor-size(--my-anchor height, 20px) / 4);
 
 /* Keyword values */
 margin-right: auto;

@@ -52,7 +52,7 @@ window.sharedStorage
   .set("ab-testing-group", "0", {
     ignoreIfPresent: true,
   })
-  .then(console.log("Set operation completed"));
+  .then(() => console.log("Set operation completed"));
 ```
 
 ## Specifications

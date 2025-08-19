@@ -3,9 +3,8 @@ title: "@starting-style"
 slug: Web/CSS/@starting-style
 page-type: css-at-rule
 browser-compat: css.at-rules.starting-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e., when an element is first displayed on a previously loaded page.
 
@@ -263,7 +262,7 @@ html {
 
 /* Transition for the popover's backdrop */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -280,7 +279,7 @@ html {
 so specify a standalone starting-style block. */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -330,17 +329,18 @@ const sectionElem = document.querySelector("section");
 
 btn.addEventListener("click", createColumn);
 
-function randomColor() {
+function randomBackground() {
   function randomNum() {
     return Math.floor(Math.random() * 255);
   }
+  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
 
-  return `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
 }
 
 function createColumn() {
   const divElem = document.createElement("div");
-  divElem.style.backgroundColor = randomColor();
+  divElem.style.background = randomBackground();
 
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "✖";
@@ -400,11 +400,6 @@ div {
   flex: 1;
   border: 1px solid gray;
   position: relative;
-  background: linear-gradient(
-    to right,
-    rgb(255 255 255 / 0%),
-    rgb(255 255 255 / 50%)
-  );
   opacity: 1;
   scale: 1 1;
 

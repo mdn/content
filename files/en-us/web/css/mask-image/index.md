@@ -3,9 +3,8 @@ title: mask-image
 slug: Web/CSS/mask-image
 page-type: css-property
 browser-compat: css.properties.mask-image
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is used as the mask layer for an element, hiding sections of the element on which the masking image is set based on the alpha channel of the mask image and, depending on the {{cssxref("mask-mode")}} property value, the luminance of the mask image's colors.
 
@@ -16,14 +15,14 @@ The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is 
 mask-image: none;
 
 /* <mask-source> value */
-mask-image: url(masks.svg#mask1);
+mask-image: url("masks.svg#mask1");
 
 /* <image> values */
-mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
-mask-image: image(url(mask.png), skyblue);
+mask-image: linear-gradient(black, transparent);
+mask-image: image(url("mask.png"), skyblue);
 
 /* Multiple values */
-mask-image: url(mask.png), linear-gradient(black 25%, transparent 35%);
+mask-image: url("mask.png"), linear-gradient(black 25%, transparent 35%);
 
 /* Global values */
 mask-image: inherit;
@@ -136,7 +135,7 @@ We use `mask-star.svg` as a mask image on our first image:
 
 ```css
 img:first-of-type {
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -167,7 +166,7 @@ img {
   mask-position: center;
   mask-repeat: no-repeat;
   mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    url("https://mdn.github.io/shared-assets/images/examples/mask-star.svg"),
     repeating-radial-gradient(transparent 0 5px, black 5px 10px);
 }
 ```
@@ -245,16 +244,16 @@ We apply a different `<mask>` to each `<img>`. No part of the last image, with t
 
 ```css
 #green {
-  mask-image: url(#greenMask);
+  mask-image: url("#greenMask");
 }
 #stroke {
-  mask-image: url(#strokeMask);
+  mask-image: url("#strokeMask");
 }
 #both {
-  mask-image: url(#bothMask);
+  mask-image: url("#bothMask");
 }
 #alphaMode {
-  mask-image: url(#black);
+  mask-image: url("#black");
 }
 
 body:has(:checked) img {

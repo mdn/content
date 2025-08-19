@@ -3,9 +3,8 @@ title: Using the multi-keyword syntax with CSS display
 short-title: Using multi-keyword syntax
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
@@ -39,7 +38,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: flex;
   justify-content: space-between;
 }
@@ -68,7 +67,7 @@ body {
 }
 
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: inline-flex;
 }
 ```
@@ -107,7 +106,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   gap: 10px;
 }
 
@@ -253,7 +252,7 @@ p {
 }
 .inline-block {
   background-color: rgb(0 0 0 / 0.4);
-  color: #fff;
+  color: white;
   padding: 10px;
   display: inline-block;
 }

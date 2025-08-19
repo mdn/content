@@ -3,9 +3,8 @@ title: i18n.getSystemUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getSystemUILanguage
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getSystemUILanguage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the current UI locale of the operating system. This is different from {{WebExtAPIRef('i18n.getUILanguage')}}, which returns the UI locale of the web browser.
 

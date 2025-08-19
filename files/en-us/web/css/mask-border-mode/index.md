@@ -3,9 +3,8 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 page-type: css-property
 spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-border-mode`** [CSS](/en-US/docs/Web/CSS) property specifies the blending mode used in a [mask border](/en-US/docs/Web/CSS/mask-border).
 
@@ -45,7 +44,7 @@ mask-border-mode: unset;
 
 ## Browser compatibility
 
-This property is not supported by any browser yet.
+Currently, no browsers support this feature.
 
 ## See also
 
@@ -58,3 +57,4 @@ This property is not supported by any browser yet.
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
 - {{cssxref("mask-mode")}}
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module

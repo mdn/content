@@ -3,9 +3,8 @@ title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets information about all open windows, passing them into a callback.
 
@@ -31,10 +30,6 @@ let gettingAll = browser.windows.getAll(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('windows.Window')}} objects, representing all windows that match the given criteria. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -63,6 +58,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-getAll) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

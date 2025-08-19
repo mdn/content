@@ -282,6 +282,10 @@ Some examples include:
 - JavaScript (a trademark of Oracle Corporation, it should always be written as trademarked)
 - Python, TypeScript, Django, and other programming languages and framework names
 
+Some tool names and projects have their own branded capitalization rules. These might require names that are all lower case ("npm" or "webpack"), all upper case ("UNIX", "GNOME", "VIM"), or mixed case ("TypeScript", "macOS", or "jQuery").
+
+The branded capitalization from the official website or documentation should always be used, even at the start of a sentence. If you are uncomfortable with a sentence starting with a lowercase letter, we recommend rewording to avoid the problem. For example, you might say "You can use the npm package manager to..." instead of "npm allows you to...".
+
 ### Contractions
 
 Our writing style tends to be casual, so you should feel free to use contractions (e.g., "don't", "can't", "shouldn't"), if you prefer.

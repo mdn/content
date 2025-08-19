@@ -3,9 +3,8 @@ title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 page-type: css-function
 spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`device-cmyk()`** functional notation is used to express CMYK colors in a device dependent way, specifying the cyan, magenta, yellow, and black components.
 
@@ -42,7 +41,7 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

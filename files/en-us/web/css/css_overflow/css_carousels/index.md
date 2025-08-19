@@ -3,9 +3,8 @@ title: Creating CSS carousels
 short-title: Creating carousels
 slug: Web/CSS/CSS_overflow/CSS_carousels
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features enabling the creation of flexible and accessible pure-CSS carousels with browser-generated and developer-styled scroll buttons and scroll markers. This guide explains how to create a carousel using these features.
 
@@ -20,7 +19,7 @@ Users can move through the items by clicking or activating navigational buttons 
 - **scroll markers**
   - : A series of button or link icons, each representing one or more items depending on how many items are shown at each scroll position within the carousel.
 
-![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](carousel.png)
+![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](/shared-assets/images/diagrams/css/carousels/carousel.svg)
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
@@ -106,8 +105,8 @@ Now it's time to style the list items. The first declarations provide rudimentar
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 li {
   list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
 
   flex: 0 0 100%;
@@ -165,13 +164,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -179,7 +179,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 ```
@@ -210,12 +210,12 @@ First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, e
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 ```
 
@@ -262,7 +262,7 @@ Next, the list's `::scroll-marker-group` pseudo-element is positioned relative t
 ```css live-sample___first-example
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 
@@ -424,8 +424,8 @@ li {
   height: 100%;
   width: 200px;
 
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   padding: 20px;
   margin: 0 10px;
 
@@ -456,13 +456,14 @@ ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
-  color: rgb(0 0 0 / 0.7);
+  color: black;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 ul::scroll-button(*):hover,
 ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
+  opacity: 1;
 }
 
 ul::scroll-button(*):active {
@@ -470,7 +471,7 @@ ul::scroll-button(*):active {
 }
 
 ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
+  opacity: 0.2;
   cursor: unset;
 }
 
@@ -483,12 +484,12 @@ ul::scroll-button(right) {
 }
 
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-button(*) {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
 }
 
 ul::scroll-button(left) {
@@ -507,7 +508,7 @@ ul {
 
 ul::scroll-marker-group {
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
   display: flex;

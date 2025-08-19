@@ -3,9 +3,8 @@ title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.setPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.
 
@@ -29,10 +28,6 @@ browser.pageAction.setPopup(
         If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("pageAction.onClicked")}} events.
 
         If `null` is passed here, the popup is reset to the popup that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -58,6 +53,10 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-setPopup) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.

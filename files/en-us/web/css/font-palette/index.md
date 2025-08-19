@@ -3,9 +3,8 @@ title: font-palette
 slug: Web/CSS/font-palette
 page-type: css-property
 browser-compat: css.properties.font-palette
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-palette`** [CSS](/en-US/docs/Web/CSS) property allows specifying one of the many palettes contained in a [color font](https://www.colorfonts.wtf/) that a user agent may use for the font. Users can also override the values in a palette or create a new palette by using the [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule.
 
@@ -77,25 +76,25 @@ The HTML contains a single paragraph of text to animate:
 In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla](https://nabla.typearture.com/) from [Google Fonts](https://fonts.google.com/?coloronly=true), and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then create {{cssxref("@keyframes")}} that animate between these two palettes, and apply this animation to our paragraph.
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
-@font-palette-values --blueNabla {
+@font-palette-values --blue-nabla {
   font-family: Nabla;
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
-@font-palette-values --greyNabla {
+@font-palette-values --grey-nabla {
   font-family: Nabla;
   base-palette: 3; /* this is Nabla's grey palette */
 }
 
 @keyframes animate-palette {
   from {
-    font-palette: --greyNabla;
+    font-palette: --grey-nabla;
   }
 
   to {
-    font-palette: --blueNabla;
+    font-palette: --blue-nabla;
   }
 }
 

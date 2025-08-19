@@ -30,8 +30,8 @@ textarea {
   max-width: 100%;
   line-height: 1.5;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px #999;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 1px #999999;
 }
 
 label {

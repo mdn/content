@@ -3,9 +3,8 @@ title: CSS fonts
 slug: Web/CSS/CSS_fonts
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-fonts/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS fonts** module defines font-related properties and how font resources are loaded. It lets you define the style of a font, such as its family, size and weight, and the glyph variants to use when multiple are available for a single character.
 
@@ -68,11 +67,11 @@ The specification also defines the `font-width` property, which is not yet suppo
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
-The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors, which are not yet supported by any browser.
+The CSS fonts module also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors. Currently, no browsers support these features.
 
 - At-rule: {{cssxref("@font-feature-values")}}
-  - : Descriptor:
-    - {{cssxref("@font-feature-values/font-display", "font-display")}}
+
+The CSS fonts module also defines the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor. Currently, no browsers support this feature.
 
 - At-rule: {{cssxref("@font-palette-values")}}
   - : Descriptors:

@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - deprecated
 browser-compat: css.properties.page-break-after
+sidebar: cssref
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-after")}} property.

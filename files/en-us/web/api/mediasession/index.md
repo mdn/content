@@ -28,7 +28,7 @@ For example, a smartphone might have a standard panel in its lock screen that pr
   - : Indicates to the user agent whether the user's microphone is considered to be currently muted.
 - {{domxref("MediaSession.setPositionState", "setPositionState()")}}
   - : Sets the current playback position and speed of the media currently being presented.
-- {{domxref("MediaSession.setScreenshareActive", "setScreenshareActive()")}}
+- {{domxref("MediaSession.setScreenshareActive", "setScreenshareActive()")}} {{experimental_inline}}
   - : Indicates to the user agent the screenshare capture state desired by the page.
 
 ## Examples

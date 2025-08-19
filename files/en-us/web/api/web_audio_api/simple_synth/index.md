@@ -129,13 +129,13 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 }
 
 .key:hover {
-  background-color: #eef;
+  background-color: #eeeeff;
 }
 
 .key:active,
 .active {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .octave {

@@ -22,7 +22,7 @@ The header is optional in responses to a {{HTTPMethod("HEAD")}} request as these
 When present it indicates the value that would have applied to the corresponding response to a {{HTTPMethod("GET")}} message, if that `GET` request did not include a preferred `Transfer-Encoding`.
 
 > [!WARNING]
-> HTTP/2 disallows all uses of the `Transfer-Encoding` header other than the HTTP/2 specific value `"trailers"`.
+> HTTP/2 disallows all uses of the `Transfer-Encoding` header.
 > HTTP/2 and later provide more efficient mechanisms for data streaming than chunked transfer.
 > Usage of the header in HTTP/2 may likely result in a specific `protocol error`.
 
@@ -105,5 +105,4 @@ Developer Network\r\n
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Content-Length")}}
-- Header fields that regulate the use of trailers: {{HTTPHeader("TE")}} (requests) and {{HTTPHeader("Trailer")}} (responses).
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

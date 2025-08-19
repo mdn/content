@@ -3,9 +3,8 @@ title: permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

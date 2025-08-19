@@ -8,9 +8,8 @@ browser-compat:
   - webextensions.manifest.page_action
   - webextensions.manifest.sidebar_action
   - webextensions.manifest.options_ui
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Your extension can include user interface elements - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - that are specified by:
 
@@ -393,7 +392,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item.disabled {
-  color: #999;
+  color: #999999;
 }
 
 .panel-list-item > .icon {
@@ -406,7 +405,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
   justify-content: flex-end;
@@ -437,7 +436,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-footer-button > .text-shortcut {
-  color: #808080;
+  color: gray;
   font-family: "Lucida Grande", caption;
   font-size: 0.847em;
 }
@@ -453,7 +452,7 @@ button.panel-section-tabs-button {
 .panel-section-footer-button.default {
   background-color: #0996f8;
   box-shadow: 0 1px 0 #0670cc inset;
-  color: #fff;
+  color: white;
 }
 
 .panel-section-footer-button.default:hover {

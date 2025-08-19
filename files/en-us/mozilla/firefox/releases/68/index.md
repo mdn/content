@@ -1,5 +1,6 @@
 ---
 title: Firefox 68 for developers
+short-title: Firefox 68
 slug: Mozilla/Firefox/Releases/68
 page-type: firefox-release-notes
 sidebar: firefox
@@ -65,7 +66,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 - The {{CSSxRef("line-clamp", "-webkit-line-clamp")}} property has been implemented for compatibility with other browsers ([Firefox bug 866102](https://bugzil.la/866102)).
 - Support has been added for the {{CSSxRef("::marker")}} pseudo-element ([Firefox bug 205202](https://bugzil.la/205202)) and animation for `::marker` pseudos ([Firefox bug 1538618](https://bugzil.la/1538618))
-- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}} to be a computed value (except for the {{cssxref("color")}} property) ([Firefox bug 760345](https://bugzil.la/760345)).
+- We changed {{CSSxRef("color_value#currentcolor_keyword", "currentColor")}} to be a computed value (except for the {{cssxref("color")}} property) ([Firefox bug 760345](https://bugzil.la/760345)).
 - Support has been fixed for the `ch` length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ([Firefox bug 282126](https://bugzil.la/282126))
 - The {{CSSxRef("counter-set")}} property has been implemented. ([Firefox bug 1518201](https://bugzil.la/1518201)).
 - We now implement list numbering using a built-in "list-item" counter; this fixes list numbering bugs ([Firefox bug 288704](https://bugzil.la/288704)).
@@ -107,7 +108,7 @@ _No changes._
 
 #### DOM events
 
-- [Firefox for Android](/en-US/docs/Mozilla/Firefox_for_Android) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
+- [Firefox for Android](https://firefox-source-docs.mozilla.org/mobile/android/index.html) no longer incorrectly sends a {{domxref("Window.resize_event", "resize")}} event until after the first frame is painted; this improves web compatibility with sites that don't expect this event to occur ([Firefox bug 1528052](https://bugzil.la/1528052)).
 - The dispatching of events for non-primary mouse buttons has been made to more closely follow the specification; the {{domxref("Element.click_event", "click")}} event is no longer sent when non-primary buttons are clicked, instead using {{domxref("Element.auxclick_event", "auxclick")}}. In addition, {{domxref("Element.dblclick_event", "dblclick")}} no longer fires for non-primary buttons ([Firefox bug 1379466](https://bugzil.la/1379466)).
 - The proprietary `mozPressure` property has been deprecated, and will now trigger a warning in the console ([Firefox bug 1165211](https://bugzil.la/1165211)).
 
@@ -178,7 +179,3 @@ _No changes._
 ## See also
 
 - Hacks release post: [Firefox 68: BigInts, Contrast Checks, and the QuantumBar](https://hacks.mozilla.org/2019/07/firefox-68-bigints-contrast-checks-and-the-quantumbar/)
-
-## Older versions
-
-{{Firefox_for_developers}}

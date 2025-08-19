@@ -6,9 +6,8 @@ browser-compat: css.types.color.oklch
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklch
   - https://drafts.csswg.org/css-color/#ok-lab
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`oklch()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}. `oklch()` is the cylindrical form of {{CSSXref("color_value/oklab", "oklab()")}}, using the same `L` axis, but with polar Chroma (`C`) and Hue (`h`) coordinates.
 
@@ -22,7 +21,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
 /* Relative values */
 oklch(from green l c h / 0.5)
-oklch(from #0000FF calc(l + 0.1) c h)
+oklch(from #123456 calc(l + 0.1) c h)
 oklch(from hsl(180 100% 50%) calc(l - 0.1) c h)
 oklch(from var(--aColor) l c h / calc(alpha - 0.1))
 ```

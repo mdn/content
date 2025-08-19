@@ -3,9 +3,8 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 page-type: css-property
 browser-compat: css.properties.animation-play-state
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-play-state`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation is running or paused.
 
@@ -31,7 +30,7 @@ animation-play-state: running;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;

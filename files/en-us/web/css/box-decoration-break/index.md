@@ -3,9 +3,8 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 page-type: css-property
 browser-compat: css.properties.box-decoration-break
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
@@ -35,12 +34,12 @@ box-decoration-break: clone;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #6f6f6f, #000);
+  background: linear-gradient(to bottom right, #6f6f6f, black);
   color: white;
   box-shadow:
     8px 8px 10px 0 #ff1492,
-    -5px -5px 5px 0 #00f,
-    5px 5px 15px 0 #ff0;
+    -5px -5px 5px 0 blue,
+    5px 5px 15px 0 yellow;
   padding: 0 1em;
   border-radius: 16px;
   border-style: solid;

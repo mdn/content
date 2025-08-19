@@ -3,9 +3,8 @@ title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 
@@ -155,10 +154,6 @@ Events have three functions:
 
     You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under `https://httpbin.org/`.
@@ -250,6 +245,10 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

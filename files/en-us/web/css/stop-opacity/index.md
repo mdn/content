@@ -3,9 +3,8 @@ title: stop-opacity
 slug: Web/CSS/stop-opacity
 page-type: css-property
 browser-compat: css.properties.stop-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of a given color gradient stop in the SVG {{SVGElement("stop")}} element within an SVG gradient. If present, it overrides the element's {{SVGAttr("stop-opacity")}} attribute.
 
@@ -109,7 +108,7 @@ svg {
 
 ```css
 polygon {
-  stroke: #333;
+  stroke: #333333;
   stroke-width: 1px;
 }
 polygon:nth-of-type(1) {

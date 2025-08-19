@@ -2,9 +2,8 @@
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
