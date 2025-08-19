@@ -995,6 +995,45 @@ By convention, JavaScript objects that fire events have corresponding "onevent" 
 
 To set event handler code, you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed, the handler can be replaced by assigning another function to the same property.
 
+#### Interaction with addEventListener() and HTML on… attributes
+
+- The onevent IDL property (for example, `element.onclick`) and the HTML `on…` content attribute (for example, `<button onclick="…">`) both target the same single handler slot. The last assignment wins and replaces the previous callback in that slot.
+- Handlers added with {{domxref("EventTarget.addEventListener", "addEventListener()")}} are independent. Using `onevent` does not remove or replace listeners added with `addEventListener()`, and vice versa.
+- Dispatch order follows event phase first, then registration time within the same phase:
+  - Capturing listeners (`addEventListener(type, listener, { capture: true })`) run before non-capturing listeners.
+  - The `onevent` handler is a non-capturing (bubbling) listener.
+  - Within a phase, listeners run in the order they were registered. The `onevent` handler is registered the first time it becomes non-null; later reassignments change only its callback, not its position in the order.
+
+Behavior in common scenarios (assume the same target and event type):
+
+- Onevent set in JavaScript, then `addEventListener()` called
+  - Replacement: No replacement either way; both are active.
+  - Order (bubbling phase): `onevent` runs before later `addEventListener()` listeners.
+
+- Onevent set in HTML, then `addEventListener()` called
+  - Replacement: No replacement either way; both are active.
+  - Order (bubbling phase): `onevent` (from HTML) runs before later `addEventListener()` listeners.
+
+- `addEventListener()` called, then onevent set in JavaScript
+  - Replacement: Only replaces any prior `onevent` callback; does not affect existing listeners.
+  - Order (bubbling phase): previously added listeners run first; `onevent` runs after, because it was registered later.
+
+- `addEventListener()` called, then onevent set in HTML
+  - Replacement: Only replaces any prior `onevent` callback; does not affect existing listeners.
+  - Order (bubbling phase): previously added listeners run first; `onevent` runs after, unless it was already present in the initial markup.
+
+- Onevent set in JavaScript, then onevent set in HTML
+  - Replacement: The HTML assignment replaces the JavaScript `onevent` callback (single slot; last assignment wins).
+  - Order: Unchanged relative to other listeners; the `onevent` slot keeps the position it got when first set non-null.
+
+- Onevent set in HTML, then onevent set in JavaScript
+  - Replacement: The JavaScript assignment replaces the HTML `onevent` callback (single slot; last assignment wins).
+  - Order: Unchanged relative to other listeners; the `onevent` slot keeps the position it got when first set non-null.
+
+Notes:
+
+- A listener that calls `event.stopImmediatePropagation()` prevents later listeners for the same target and phase (including `onevent`) from running. Options like `once`, `passive`, and `capture` apply only to `addEventListener()`.
+
 The following example shows how to set a `greet()` function for the `click` event using the `onclick` property.
 
 ```js
