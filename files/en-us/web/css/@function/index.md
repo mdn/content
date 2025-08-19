@@ -72,10 +72,10 @@ The function is called by using {{cssxref("&lt;dashed-function>")}} syntax, whic
 
 ### Passing comma-containing values as arguments
 
-In the next example, the `--max-plus-x()` function expects to be passed a comma-separated list of values and a single value as arguments. It uses the CSS {{cssxref("max()")}} function to determine which of the list of values is the largest, adds it to the single value, then returns the result.
+In the next example, the `--max-plus-x()` function expects to be passed a comma-separated list of lengths and a single length as arguments. It uses the CSS {{cssxref("max()")}} function to determine which of the list of lengths is the largest, adds it to the single length, then returns the result.
 
 ```css
-@function --max-plus-x(--list, --x) {
+@function --max-plus-x(--list <length>#, --x <length>) {
   result: calc(max(var(--list)) + var(--x));
 }
 ```
