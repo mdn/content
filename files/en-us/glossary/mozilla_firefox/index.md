@@ -33,7 +33,7 @@ If you want to try the latest Firefox features, install one of the pre-release b
 ## See also
 
 - [Firefox](https://en.wikipedia.org/wiki/Firefox) on Wikipedia
-- [Firefox Release Notes](https://www.mozilla.org/en-US/firefox/releases/)
+- [Firefox Release Notes](https://www.firefox.com/en-US/releases/)
 - [Firefox Source Docs](https://firefox-source-docs.mozilla.org/)
 - [Firefox developer documentation](/en-US/docs/Mozilla/Firefox) on MDN Web Docs
 - [SpiderMonkey](https://spidermonkey.dev/) JavaScript and WebAssembly engine
