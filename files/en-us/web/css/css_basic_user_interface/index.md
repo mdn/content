@@ -46,7 +46,7 @@ body {
 [contenteditable] {
   cursor: copy;
   caret-color: magenta;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 :focus {
   outline: dashed magenta 3px;

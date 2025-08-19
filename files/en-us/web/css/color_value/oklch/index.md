@@ -21,7 +21,7 @@ oklch(59.69% 0.156 49.77 / .5)
 
 /* Relative values */
 oklch(from green l c h / 0.5)
-oklch(from #0000FF calc(l + 0.1) c h)
+oklch(from #123456 calc(l + 0.1) c h)
 oklch(from hsl(180 100% 50%) calc(l - 0.1) c h)
 oklch(from var(--aColor) l c h / calc(alpha - 0.1))
 ```

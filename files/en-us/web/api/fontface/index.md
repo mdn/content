@@ -43,7 +43,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
   - : A string that retrieves or sets the _range of unicode code points_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
 - {{domxref("FontFace.variant")}} {{non-standard_inline}}
   - : A string that retrieves or sets the _variant_ of the font.
-- {{domxref("FontFace.variationSettings")}} {{Experimental_Inline}}
+- {{domxref("FontFace.variationSettings")}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 - {{domxref("FontFace.weight")}}
   - : A string that contains the _weight_ of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.

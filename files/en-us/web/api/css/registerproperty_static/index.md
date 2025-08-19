@@ -77,7 +77,7 @@ works, but that it doesn't with the unregistered property!
 ```css
 .registered {
   --my-color: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--my-color));
+  background-image: linear-gradient(to right, white, var(--my-color));
   transition: --my-color 1s ease-in-out;
 }
 
@@ -88,7 +88,7 @@ works, but that it doesn't with the unregistered property!
 
 .unregistered {
   --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  background-image: linear-gradient(to right, white, var(--unregistered));
   transition: --unregistered 1s ease-in-out;
 }
 

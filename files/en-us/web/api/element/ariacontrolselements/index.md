@@ -57,7 +57,7 @@ The references to the controlled panels are listed in the button's `aria-control
 ```css
 .panel {
   display: none; /* Initially hidden */
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 5px;
   margin-top: 5px;
 }

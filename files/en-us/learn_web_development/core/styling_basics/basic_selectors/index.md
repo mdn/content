@@ -193,7 +193,7 @@ body {
 }
 
 .notebox {
-  border: 4px solid #666;
+  border: 4px solid #666666;
   padding: 0.5em;
   margin: 0.5em;
 }

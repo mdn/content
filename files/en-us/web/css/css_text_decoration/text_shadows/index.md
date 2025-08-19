@@ -180,7 +180,7 @@ p {
 }
 
 .opaque {
-  color: rgb(0 0 0);
+  color: black;
 }
 
 .semitransparent {
@@ -188,11 +188,11 @@ p {
 }
 
 .transparent {
-  color: rgb(0 0 0 / 0);
+  color: transparent;
 }
 
 .white {
-  color: rgb(255 255 255);
+  color: white;
 }
 
 .semi-white {

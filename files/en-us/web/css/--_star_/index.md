@@ -48,8 +48,8 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ```css
 :root {
-  --first-color: #16f;
-  --second-color: #ff7;
+  --first-color: #1166ff;
+  --second-color: #ffff77;
 }
 
 #firstParagraph {
@@ -63,7 +63,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 }
 
 #container {
-  --first-color: #290;
+  --first-color: #229900;
 }
 
 #thirdParagraph {

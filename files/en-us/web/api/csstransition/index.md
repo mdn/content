@@ -33,7 +33,7 @@ The transition in the following example changes the width of the box on hover. C
 ```css
 .box {
   background-color: #165baa;
-  color: #fff;
+  color: white;
   width: 100px;
   height: 100px;
   transition: width 4s;

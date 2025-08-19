@@ -76,7 +76,7 @@ jobs:
           process_gcloudignore: false
 
       - name: Checkout (mdn/content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content

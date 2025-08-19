@@ -74,8 +74,8 @@ svg {
 }
 
 path {
-  fill: #f338;
-  stroke: #000;
+  fill: #ff333388;
+  stroke: black;
 }
 
 path:last-of-type {

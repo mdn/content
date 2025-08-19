@@ -163,7 +163,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
 .ad {
   height: 96px;
   padding: 6px;
-  border-color: #555;
+  border-color: #555555;
   border-style: solid;
   border-width: 1px;
 }
@@ -464,7 +464,7 @@ The `loadRandomAd()` function simulates loading an ad and adding it to the page.
 function loadRandomAd(replaceBox) {
   const ads = [
     {
-      bgcolor: "#cec",
+      bgcolor: "#cceecc",
       title: "Eat Green Beans",
       body: "Make your mother proud—they're good for you!",
     },
@@ -479,7 +479,7 @@ function loadRandomAd(replaceBox) {
       body: "Love really does make the world go round…",
     },
     {
-      bgcolor: "#fee",
+      bgcolor: "#ffeeee",
       title: "Flexbox Florist",
       body: "When life's layout gets complicated, send flowers.",
     },

@@ -128,15 +128,15 @@ In this example, we'll draw a background of four different colored squares. On t
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = "#FD0";
+  ctx.fillStyle = "#ffdd00";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = "#6C0";
+  ctx.fillStyle = "#66cc00";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = "#09F";
+  ctx.fillStyle = "#0099ff";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = "#F30";
+  ctx.fillStyle = "#ff3300";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = "#FFF";
+  ctx.fillStyle = "white";
 
   // set transparency value
   ctx.globalAlpha = 0.2;
@@ -287,7 +287,7 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -386,12 +386,12 @@ function draw() {
   ctx.clearRect(0, 0, 150, 150);
 
   // Draw guides
-  ctx.strokeStyle = "#09f";
+  ctx.strokeStyle = "#0099ff";
   ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // Set line styles
-  ctx.strokeStyle = "#000";
+  ctx.strokeStyle = "black";
   ctx.lineWidth = 10;
 
   // check input
@@ -517,13 +517,13 @@ function draw() {
   // Create gradients
   const linGrad = ctx.createLinearGradient(0, 0, 0, 150);
   linGrad.addColorStop(0, "#00ABEB");
-  linGrad.addColorStop(0.5, "#fff");
+  linGrad.addColorStop(0.5, "white");
   linGrad.addColorStop(0.5, "#26C000");
-  linGrad.addColorStop(1, "#fff");
+  linGrad.addColorStop(1, "white");
 
   const linGrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  linGrad2.addColorStop(0.5, "#000");
-  linGrad2.addColorStop(1, "rgb(0 0 0 / 0%)");
+  linGrad2.addColorStop(0.5, "black");
+  linGrad2.addColorStop(1, "transparent");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = linGrad;
@@ -561,22 +561,22 @@ function draw() {
   const radGrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
   radGrad.addColorStop(0, "#A7D30C");
   radGrad.addColorStop(0.9, "#019F62");
-  radGrad.addColorStop(1, "rgb(1 159 98 / 0%)");
+  radGrad.addColorStop(1, "transparent");
 
   const radGrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
   radGrad2.addColorStop(0, "#FF5F98");
   radGrad2.addColorStop(0.75, "#FF0188");
-  radGrad2.addColorStop(1, "rgb(255 1 136 / 0%)");
+  radGrad2.addColorStop(1, "transparent");
 
   const radGrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
   radGrad3.addColorStop(0, "#00C9FF");
   radGrad3.addColorStop(0.8, "#00B5E2");
-  radGrad3.addColorStop(1, "rgb(0 201 255 / 0%)");
+  radGrad3.addColorStop(1, "transparent");
 
   const radGrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
   radGrad4.addColorStop(0, "#F4F201");
   radGrad4.addColorStop(0.8, "#E4C700");
-  radGrad4.addColorStop(1, "rgb(228 199 0 / 0%)");
+  radGrad4.addColorStop(1, "transparent");
 
   // draw shapes
   ctx.fillStyle = radGrad4;
@@ -615,7 +615,7 @@ function draw() {
   // Create gradients
   const conicGrad1 = ctx.createConicGradient(2, 62, 75);
   conicGrad1.addColorStop(0, "#A7D30C");
-  conicGrad1.addColorStop(1, "#fff");
+  conicGrad1.addColorStop(1, "white");
 
   const conicGrad2 = ctx.createConicGradient(0, 187, 75);
   // we multiply our values by Math.PI/180 to convert degrees to radians

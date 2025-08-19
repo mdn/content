@@ -184,7 +184,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
   padding: 0.1em 2.5em 0.2em 0.5em;
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
@@ -219,11 +219,11 @@ We don't need an extra element to design the down arrow; instead, we're using th
   width: 2em;
   padding-top: 0.1em;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 ```
@@ -253,7 +253,7 @@ Next, let's style the list of options:
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -270,8 +270,8 @@ For the options, we need to add a `highlight` class to be able to identify the v
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -324,7 +324,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -357,11 +357,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -372,7 +372,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -391,8 +391,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -445,7 +445,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -478,11 +478,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -493,7 +493,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -512,8 +512,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -566,7 +566,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -599,11 +599,11 @@ So here's the result with our three states ([check out the source code here](/en
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -614,7 +614,7 @@ So here's the result with our three states ([check out the source code here](/en
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -633,8 +633,8 @@ So here's the result with our three states ([check out the source code here](/en
 }
 
 .select .highlight {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -825,7 +825,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -858,11 +858,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -873,7 +873,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -892,8 +892,8 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1122,7 +1122,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -1155,11 +1155,11 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1170,7 +1170,7 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1189,8 +1189,8 @@ Check out the [full source code](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1451,7 +1451,7 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -1484,11 +1484,11 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1499,7 +1499,7 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1518,8 +1518,8 @@ Check out the [source code here](/en-US/docs/Learn_web_development/Extensions/Fo
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -1776,7 +1776,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
   width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
+  border: 0.2em solid black; /* 2px */
   border-radius: 0.4em; /* 4px */
 
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
@@ -1809,11 +1809,11 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 
   text-align: center;
 
-  border-left: 0.2em solid #000;
+  border-left: 0.2em solid black;
   border-radius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .select .optList {
@@ -1824,7 +1824,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
   padding: 0;
 
   background: #f0f0f0;
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
@@ -1843,8 +1843,8 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 }
 
 .select .highlight {
-  background: #000;
-  color: #ffffff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -2040,7 +2040,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
@@ -2053,13 +2053,13 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: 0.2em solid #000;
+  border: 0.2em solid black;
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   width: 100%;
 }
 ```

@@ -91,7 +91,7 @@ In this example, we have four boxes each containing the same text. For the purpo
 p {
   margin: 1rem;
   width: 120px;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
   font-size: 1.5rem;
   hyphens: auto;
 }

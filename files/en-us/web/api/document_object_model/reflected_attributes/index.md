@@ -190,7 +190,7 @@ Setting the attribute value restores the relationship between the attribute and 
 Continuing the example from above:
 
 ```js
-inputElement.setAttribute("aria-labelledby", "input1");
+inputElement.setAttribute("aria-labelledby", "label_1");
 
 attributeValue = inputElement.getAttribute("aria-labelledby");
 console.log(attributeValue);

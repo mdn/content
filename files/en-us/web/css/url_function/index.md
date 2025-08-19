@@ -49,7 +49,7 @@ border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* As a parameter in another CSS function */
 background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
+mask-image: image(url(mask.png), skyblue, linear-gradient(black, transparent));
 
 /* as part of a non-shorthand multiple value */
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
@@ -81,7 +81,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ```css
 body {
   background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
-    #00d no-repeat fixed;
+    #0000dd no-repeat fixed;
 }
 ```
 

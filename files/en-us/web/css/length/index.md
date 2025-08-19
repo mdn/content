@@ -230,13 +230,13 @@ html {
 .outer {
   width: 100%;
   height: 50px;
-  background-color: #eee;
+  background-color: #eeeeee;
   position: relative;
 }
 
 .inner {
   height: 50px;
-  background-color: #999;
+  background-color: #999999;
   box-shadow:
     inset 3px 3px 5px rgb(255 255 255 / 50%),
     inset -3px -3px 5px rgb(0 0 0 / 50%);

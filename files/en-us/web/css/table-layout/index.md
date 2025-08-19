@@ -59,12 +59,12 @@ width: 100%;
 
 ```css interactive-example
 table {
-  border: 1px solid #139;
+  border: 1px solid #113399;
 }
 
 th,
 td {
-  border: 2px solid #a19;
+  border: 2px solid #aa1199;
   padding: 0.25rem 0.5rem;
 }
 ```

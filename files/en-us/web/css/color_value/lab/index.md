@@ -23,7 +23,7 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 /* Relative values */
 lab(from green l a b / 0.5)
-lab(from #0000FF calc(l + 10) a b)
+lab(from #123456 calc(l + 10) a b)
 lab(from hsl(180 100% 50%) calc(l - 10) a b)
 ```
 

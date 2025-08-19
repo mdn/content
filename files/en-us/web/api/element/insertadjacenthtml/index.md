@@ -133,7 +133,7 @@ Your own application code should use a third party library such as the "DOMPurif
 
 ```js
 const policy = trustedTypes.createPolicy("some-content-policy", {
-  createHTML: (input) => {
+  createHTML(input) {
     return input; // Do not do this in your own code!
     // Instead do something like:
     // return DOMPurify.sanitize(input);

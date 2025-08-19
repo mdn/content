@@ -152,7 +152,7 @@ The `.boxLeft` class, used to style the box on the left, sets up the color of th
 .boxRight {
   background-color: hwb(270deg 63% 13%);
   outline: 4px dashed #6e1478;
-  color: hsl(0deg 100% 100%);
+  color: hsl(0deg 95% 95%);
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #8f8;
@@ -168,7 +168,7 @@ Finally, the `.boxRight` class sets several styles on the box that's drawn to th
 
 - The `background-color` is set using {{CSSXref("color_value/hwb", "hwb()")}} functional notation — `hwb(270deg 63% 13%)`. This is a medium purple color.
 - The box's `outline` is used to specify that the box should be enclosed in a four-pixel thick dashed line whose color is a somewhat deeper purple using the six-digit {{cssxref("hex-color")}} `#6e1478`.
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 100% 100%)`. This is one of many ways to specify the color white.
+- The foreground (text) color is specified by setting the {{cssxref("color")}} property using {{CSSXref("color_value/hsl", "hsl()")}} functional notation — `hsl(0deg 95% 95%)`. This is a very light pinkish color.
 - We add a green wavy line under the text with the {{cssxref("text-decoration")}} shorthand, along with the longhand component for browser compatibility. We used the 3-digit {{cssxref("hex-color")}} `#8f8`, which is the equivalent of `#88ff88`.
 - Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`, a {{cssxref("named-color")}} value.
 

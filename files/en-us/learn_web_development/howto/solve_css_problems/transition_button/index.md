@@ -50,7 +50,7 @@ button {
 ```css live-sample___transition-button
 .fade {
   background-color: #db1f48;
-  color: #fff;
+  color: white;
   transition: background-color 1s;
 }
 

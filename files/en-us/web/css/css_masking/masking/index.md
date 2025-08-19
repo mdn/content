@@ -45,8 +45,8 @@ body {
   gap: 20px;
   padding: 15px;
   background-image:
-    linear-gradient(to right, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%),
-    linear-gradient(to bottom, rgb(0 0 0 / 0) 50%, rgb(0 0 0 / 0.05) 50%);
+    linear-gradient(to right, transparent 50%, rgb(0 0 0 / 0.05) 50%),
+    linear-gradient(to bottom, transparent 50%, rgb(0 0 0 / 0.05) 50%);
   background-size: 20px 20px;
 }
 div,
@@ -67,10 +67,10 @@ In this case, the top-right corner of the mask is fully opaque, the top-left qua
 
 ```css live-sample___gradient1
 .applied-mask {
-  mask-image: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  mask-image: conic-gradient(black 90deg, transparent 270deg);
 }
 .mask-source {
-  background: conic-gradient(rgb(0 0 0 / 1) 90deg, rgb(0 0 0 / 0) 270deg);
+  background: conic-gradient(black 90deg, transparent 270deg);
 }
 ```
 
@@ -84,16 +84,16 @@ With alpha masks, the color of the mask doesn't matter, only the transparency. I
 .applied-mask {
   mask-image: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }
 .mask-source {
   background: repeating-linear-gradient(
     to bottom right,
-    #f00 0 20px,
-    #f005 20px 40px,
+    red 0 20px,
+    #ff000055 20px 40px,
     transparent 40px 60px
   );
 }

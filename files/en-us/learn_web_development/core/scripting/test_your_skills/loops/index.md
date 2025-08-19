@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Loops"
-short-title: Loops
+short-title: "Test: Loops"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops) article.
 
@@ -199,3 +201,5 @@ do {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

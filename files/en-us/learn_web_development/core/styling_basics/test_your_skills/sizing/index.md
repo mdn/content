@@ -50,7 +50,7 @@ body {
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
@@ -178,7 +178,7 @@ body {
   padding: 1em;
 }
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   margin-bottom: 1em;
   width: 500px;
 }

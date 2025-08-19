@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: mdn-content
           ref: main
@@ -27,7 +27,7 @@ jobs:
           node-version-file: "mdn-content/.nvmrc"
 
       - name: Checkout webref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: w3c/webref
           path: webref

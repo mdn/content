@@ -114,9 +114,9 @@ The `border-image-outset` property may be specified as one, two, three, or four 
 ```css
 #outset {
   width: 10rem;
-  background: #cef;
+  background: #cceeff;
   border: 1.4rem solid;
-  border-image: radial-gradient(#ff2, #55f) 40;
+  border-image: radial-gradient(#ffff22, #5555ff) 40;
   border-image-outset: 1.5; /* 1.5 × 1.4rem = 2.1rem */
   margin: 2.1rem;
 }

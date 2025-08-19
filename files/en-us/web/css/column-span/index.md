@@ -50,7 +50,7 @@ column-span: all;
 #example-element {
   background-color: rebeccapurple;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 ```
 

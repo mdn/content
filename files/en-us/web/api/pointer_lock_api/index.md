@@ -234,7 +234,7 @@ The `canvasDraw()` function draws the ball in the current `x` and `y` positions:
 function canvasDraw() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#f00";
+  ctx.fillStyle = "red";
   ctx.beginPath();
   ctx.arc(x, y, RADIUS, 0, degToRad(360), true);
   ctx.fill();

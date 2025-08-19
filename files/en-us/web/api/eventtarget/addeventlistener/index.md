@@ -586,7 +586,7 @@ also available to the event handler when using an arrow function.
 .demo-logs {
   width: 530px;
   height: 16rem;
-  background-color: #ddd;
+  background-color: #dddddd;
   overflow-x: auto;
   padding: 1rem;
 }

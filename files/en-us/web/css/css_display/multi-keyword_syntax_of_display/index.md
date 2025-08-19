@@ -38,7 +38,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: flex;
   justify-content: space-between;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   display: inline-flex;
 }
 ```
@@ -106,7 +106,7 @@ body {
   font: 1.2em / 1.5 sans-serif;
 }
 .flex {
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   gap: 10px;
 }
 
@@ -252,7 +252,7 @@ p {
 }
 .inline-block {
   background-color: rgb(0 0 0 / 0.4);
-  color: #fff;
+  color: white;
   padding: 10px;
   display: inline-block;
 }

@@ -44,7 +44,7 @@ box-shadow:
 #example-element {
   margin: 20px auto;
   padding: 0;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   width: 80%;
   text-align: center;
 }

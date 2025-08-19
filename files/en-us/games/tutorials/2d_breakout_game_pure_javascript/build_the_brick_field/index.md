@@ -109,7 +109,7 @@ At this point, the game has got a little more interesting again:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

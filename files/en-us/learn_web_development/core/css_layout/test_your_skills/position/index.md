@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Positioning"
-short-title: Positioning
+short-title: "Test: Positioning"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 The aim of this skill test is to help you assess whether you understand [positioning in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
 
@@ -47,7 +49,7 @@ body {
 
 .container {
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .target {
@@ -141,7 +143,7 @@ body {
 .container {
   height: 400px;
   padding: 0.5em;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   overflow: auto;
 }
 
@@ -181,3 +183,5 @@ We're testing your understanding of `position: fixed` with a slightly different 
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

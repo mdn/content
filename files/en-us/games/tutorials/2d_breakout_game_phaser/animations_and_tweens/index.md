@@ -103,7 +103,7 @@ const destroyTween = this.tweens.add({
     scaleX: 0,
     scaleY: 0,
   },
-  onComplete: () => {
+  onComplete() {
     brick.destroy();
   },
 });
@@ -277,7 +277,7 @@ class ExampleScene extends Phaser.Scene {
         scaleX: 0,
         scaleY: 0,
       },
-      onComplete: () => {
+      onComplete() {
         brick.destroy();
       },
     });

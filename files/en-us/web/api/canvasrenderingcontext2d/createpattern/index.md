@@ -102,7 +102,7 @@ patternCanvas.width = 50;
 patternCanvas.height = 50;
 
 // Give the pattern a background color and draw an arc
-patternContext.fillStyle = "#fec";
+patternContext.fillStyle = "#ffeecc";
 patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
 patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
 patternContext.stroke();

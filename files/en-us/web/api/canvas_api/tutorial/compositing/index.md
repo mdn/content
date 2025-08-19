@@ -61,7 +61,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),
@@ -147,7 +147,7 @@ function draw() {
 function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "white";
     ctx.translate(
       75 - Math.floor(Math.random() * 150),
       75 - Math.floor(Math.random() * 150),

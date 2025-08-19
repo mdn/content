@@ -123,7 +123,7 @@ See how your code compares to the live sample below:
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;

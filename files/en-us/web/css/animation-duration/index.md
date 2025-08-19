@@ -38,7 +38,7 @@ animation-duration: 0s;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;

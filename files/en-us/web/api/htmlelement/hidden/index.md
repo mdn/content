@@ -56,7 +56,7 @@ The content is styled using the CSS below.
     Helvetica,
     Arial,
     sans-serif;
-  border: 1px solid #22d;
+  border: 1px solid #2222dd;
   padding: 12px;
   width: 500px;
   text-align: center;

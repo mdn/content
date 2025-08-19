@@ -600,7 +600,7 @@ ul {
   font-family: sans-serif;
   display: flex;
   list-style: none;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 li {
@@ -609,14 +609,14 @@ li {
 
 .links-list a {
   background-color: rgb(179 57 81);
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 1em 2em;
 }
 
 .links-list a:hover {
   background-color: rgb(66 28 40);
-  color: #fff;
+  color: white;
 }
 ```
 

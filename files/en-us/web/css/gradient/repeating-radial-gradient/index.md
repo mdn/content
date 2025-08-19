@@ -21,10 +21,10 @@ background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
 ```css interactive-example-choice
 background: repeating-radial-gradient(
   circle at 100%,
-  #333,
-  #333 10px,
-  #eee 10px,
-  #eee 20px
+  #333333,
+  #333333 10px,
+  #eeeeee 10px,
+  #eeeeee 20px
 );
 ```
 

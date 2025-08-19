@@ -85,7 +85,7 @@ svg {
   background: repeating-linear-gradient(
     to bottom right,
     transparent 0 10px,
-    #ccc 10px 11px
+    #cccccc 10px 11px
   );
 }
 ```

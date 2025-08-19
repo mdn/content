@@ -258,11 +258,11 @@ If you wrote the theme CSS like so, you'd run into trouble:
 
 ```css
 .light-theme {
-  background: #ccc;
+  background: #cccccc;
 }
 
 .dark-theme {
-  background: #333;
+  background: #333333;
 }
 
 .light-theme p {
@@ -281,7 +281,7 @@ To fix this, you can use `@scope` as follows:
 ```css
 @scope (.light-theme) {
   :scope {
-    background: #ccc;
+    background: #cccccc;
   }
   p {
     color: black;
@@ -290,7 +290,7 @@ To fix this, you can use `@scope` as follows:
 
 @scope (.dark-theme) {
   :scope {
-    background: #333;
+    background: #333333;
   }
   p {
     color: white;

@@ -107,21 +107,21 @@ The rules for the other colors all have more specific selectors, so they overrid
 
     ```css
     strong {
-      color: #f00; /* red */
-      background-color: #ddf; /* pale blue */
+      color: #ff0000; /* red */
+      background-color: #ddddff; /* pale blue */
       font: 200% serif;
     }
 
     .carrot {
-      color: #fa0; /* orange */
+      color: #ffaa00; /* orange */
     }
 
     .spinach {
-      color: #080; /* dark green */
+      color: #008800; /* dark green */
     }
 
     p {
-      color: #00f; /* blue */
+      color: #0000ff; /* blue */
     }
     ```
 
@@ -234,7 +234,7 @@ The challenges on page [Tables](/en-US/docs/Learn_web_development/Core/Styling_b
 
     ```css
     #demo-table tbody td {
-      border: 1px solid #7a7;
+      border: 1px solid #77aa77;
     }
     ```
 
@@ -279,7 +279,7 @@ The challenges on page [Media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media
     // JavaScript demonstration
     function doDemo(button) {
       const square = document.getElementById("square");
-      square.style.backgroundColor = "#fa4";
+      square.style.backgroundColor = "#ffaa44";
       square.style.marginLeft = "20em";
       button.setAttribute("disabled", "true");
       setTimeout(clearDemo, 2000, button);

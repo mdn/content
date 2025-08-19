@@ -78,8 +78,8 @@ main {
   background-color: white;
   background-image: repeating-linear-gradient(
     to right,
-    rgb(0 0 0 / 0%) 0px,
-    rgb(0 0 0 / 0%) 19px,
+    transparent 0px,
+    transparent 19px,
     rgb(0 0 0 / 50%) 20px
   );
 }
@@ -100,8 +100,8 @@ div > div {
   background-color: yellow;
   background-image: repeating-linear-gradient(
     to right,
-    rgb(0 0 0 / 0%) 0px,
-    rgb(0 0 0 / 0%) 19px,
+    transparent 0px,
+    transparent 19px,
     rgb(0 0 0 / 50%) 20px
   );
 }

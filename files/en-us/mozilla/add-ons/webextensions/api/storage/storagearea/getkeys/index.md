@@ -49,7 +49,7 @@ Retrieve keys of all items in storage.local and log the result.
 browser.storage.local
   .getKeys()
   .then((keys) => console.log(keys)) // [ "kitten", "monster" ]
-  .catch((err) => console.error(`Error: ${error}`));
+  .catch((err) => console.error(`Error: ${err}`));
 ```
 
 {{WebExtExamples}}

@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Conditionals"
-short-title: Conditionals
+short-title: "Test: Conditionals"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) article.
 
@@ -222,3 +224,5 @@ if (machineActive) {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

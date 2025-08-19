@@ -188,6 +188,7 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
 Emscripting
 encrypter
@@ -544,7 +545,6 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
@@ -682,6 +682,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles
@@ -758,6 +759,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables

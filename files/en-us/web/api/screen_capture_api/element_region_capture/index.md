@@ -78,7 +78,7 @@ body {
 
 video,
 #demo > p {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin: 0;
 }
 

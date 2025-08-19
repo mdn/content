@@ -23,7 +23,7 @@ color(display-p3 1 0.5 0 / .5);
 
 /* Relative values */
 color(from green srgb r g b / 0.5)
-color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
+color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 ```
 
 ### Values

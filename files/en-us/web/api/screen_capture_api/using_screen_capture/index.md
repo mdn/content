@@ -315,7 +315,7 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
 
 ```css
 #video {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   width: 98%;
   max-width: 860px;
 }

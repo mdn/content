@@ -46,7 +46,7 @@ body {
 
 .box {
   flex: 1;
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 0.5em;
   font-size: 140%;
   padding: 20px;
@@ -55,14 +55,14 @@ body {
 
 ```css live-sample___opacity
 .box1 {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   opacity: 0.5;
 }
 
 .box2 {
   background-color: rgb(0 0 0 / 0.5);
-  color: #fff;
+  color: white;
 }
 ```
 

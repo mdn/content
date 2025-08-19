@@ -28,7 +28,7 @@ column-rule-style: double;
 
 ```css interactive-example-choice
 column-rule-style: ridge;
-column-rule-color: #88f;
+column-rule-color: #8888ff;
 ```
 
 ```html interactive-example

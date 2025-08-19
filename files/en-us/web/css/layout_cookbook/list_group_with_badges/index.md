@@ -48,13 +48,13 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 0.5em;
   width: 20em;
 }
 
 .list-group li {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   padding: 0.5em;
   display: flex;
   justify-content: space-between;
@@ -67,7 +67,7 @@ body {
 
 .list-group .badge {
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 80%;
   border-radius: 10em;
