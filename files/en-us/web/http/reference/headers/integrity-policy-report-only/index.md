@@ -42,22 +42,17 @@ Integrity-Policy-Report-Only: blocked-destinations=(<destination>),sources=(<sou
 The header values are defined as structured field dictionaries with the following keys:
 
 - `blocked-destinations`
-
   - : A list of [request destinations](/en-US/docs/Web/API/Request/destination) that must include valid integrity metadata.
     Allowed values are:
-
     - `script`
       - : Script resources.
     - `style`
       - : Stylesheet resources.
 
 - `sources` {{optional_inline}}
-
   - : A list of integrity sources that must include integrity metadata.
     Allowed values are:
-
     - `inline`
-
       - : The integrity metadata source is inline to the content, such as the [integrity attribute](/en-US/docs/Web/API/HTMLScriptElement/integrity).
         This is the default.
 
