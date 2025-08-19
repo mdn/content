@@ -53,20 +53,9 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It define a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-When nested inside sectioning content (such as `<article>`, `<section>`, or `<main>`), it loses its landmark status and behaves like a non-semantic container. See [Accessibility](#accessibility) for details.
-
-> [!WARNING]
-> **Avoid nested `<header>` for semantics**
-> While valid HTML, it provides no structural meaning inside sections. Prefer:
-
-```html
-<section aria-labelledby="section-heading">
-  <h2 id="section-heading">Heading</h2>
-  <!-- Content -->
-</section>
-```
+Otherwise, when nested within said elements, it loses its landmark status and behaves like a non-semantic container. See [Accessibility](#accessibility) for details.
 
 ### Historical Usage
 
@@ -78,15 +67,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element.
 
-When placed inside sectioning content such as {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, or {{HTMLElement('aside')}}:
-
-- It is **not** exposed as a landmark to assistive technologies
-- It receives a [`generic` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
-- It **cannot** be labeled with `aria-label` or `aria-labelledby`
-
-This behavior aligns with the WAI-ARIA specification and is visible in browser accessibility trees using developer tools.
+When placed inside an {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, or {{HTMLElement('aside')}} element, the `<header>` element has the [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) role instead, and is no longer considered a landmark. In this case, it cannot be labeled with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Examples
 
