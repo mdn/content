@@ -67,100 +67,158 @@ The segment wildcard is non-greedy, meaning that it will match the shortest poss
 
 ### Regex matchers
 
-Instead of using the default match rules for a group, you can use a regex for each group by including a regex in parentheses.
-This regex defines the matching rules for the group. Below is an example of a regex matcher on a named group that constrains the group to only match if it contains one or more digits:
+Instead of using the default match rules for a group, you can specify a regex for each group by specifying it in parentheses.
+This regex defines the matching rules for the group.
+Below is an example of a regex matcher on a named group that constrains the group to only match if it contains one or more digits:
 
 ```js
-const pattern = new URLPattern("/books/:id(\\d+)", "https://example.com");
-console.log(pattern.test("https://example.com/books/123")); // true
-console.log(pattern.test("https://example.com/books/abc")); // false
-console.log(pattern.test("https://example.com/books/")); // false
+const pattern1 = new URLPattern("/books/:id(\\d+)", "https://example.com");
+console.log(pattern1.test("https://example.com/books/123")); // true
+console.log(pattern1.test("https://example.com/books/abc")); // false
+console.log(pattern1.test("https://example.com/books/")); // false
 ```
 
-### Regex matchers limitations
+You can also use regex when constructing a `URLPattern` with the object syntax.
 
-Some regex patterns do not work as you may expect:
+```js
+const pattern2 = new URLPattern({ pathname: "/books/:id(\\d+)" });
+console.log(pattern2.test("https://example.com/books/123")); // true
+console.log(pattern2.test("https://example.com/books/abc")); // false
+console.log(pattern2.test("https://example.com/books/")); // false
+```
 
-- Starts with `^` matches, but remember that the pathname always starts with `/`.
+#### Pathname matching
 
-  ```js
-  // Matches URL where path is exactly "/b"
-  const pattern = new URLPattern({ pathname: "(^/b)" }); //
-  console.log(pattern.test("https://example.com/b")); // true
-  console.log(pattern.test("https://example.com/x")); // false
+The `pathname` URL-part always starts with `/`.
+If you omit the `/` in your regular expression the match will fail.
+The example below
 
-  // Matches URL where path is /b followed by any number of characters
-  const pattern2 = new URLPattern({ pathname: "(^/b.*)" });
-  console.log(pattern2.test("https://example.com/ba")); // true
-  console.log(pattern2.test("https://example.com/xa")); // false
-  ```
+```js example-bad
+// Doesn't match, because omits the `/`
+const pattern1 = new URLPattern({ pathname: "(b.*)" });
+console.log(pattern1.test("https://example.com/b")); // false
+console.log(pattern1.test("https://example.com/ba")); // false
+```
 
-  Note that `^` is redundant in the protocol:
+The following examples include the `/`:
 
-  ```js
-  // with `^` in protocol
-  const pattern = new URLPattern({ protocol: "(^https?)" });
-  console.log(pattern.test("https://example.com/index.html")); // true
-  console.log(pattern.test("xhttps://example.com/index.html")); // false
+```js example-good
+// Matches URL where path is exactly "/b"
+const pattern2 = new URLPattern({ pathname: "(/b)" });
+console.log(pattern2.test("https://example.com/b")); // true
+console.log(pattern2.test("https://example.com/ba")); // false
 
-  // without `^` in protocol
-  const pattern = new URLPattern({ protocol: "(https?)" });
-  console.log(pattern.test("https://example.com/index.html")); // true
-  console.log(pattern.test("xhttps://example.com/index.html")); // false
-  ```
+// Matches URL where path is /b followed by any number of characters
+const pattern3 = new URLPattern({ pathname: "(/b.*)" });
+console.log(pattern3.test("https://example.com/b")); // true
+console.log(pattern3.test("https://example.com/ba")); // true
+```
 
-- Ends with `$` will only match if used at the end of the hash portion of the URLPattern and is redundant if used.
+#### Start and end of line anchors
 
-  ```js
-  // with `$` in pathname
-  const pattern = new URLPattern({ pathname: "(path$)" });
-  console.log(pattern.test("https://example.com/path")); // false
-  console.log(pattern.test("https://example.com/other")); // false
-  ```
+The start of line anchor (`^`) and end-of line anchor (`$`) are used to anchor patterns to the start and end of the test string, respectively.
+While these can be specified for the start and end of an URL-part they are redundant.
+This is because all URL-parts are implicitly preceded by the `^` anchor, and followed by the `$` anchor.
 
-  ```js
-  // with `$` in hash
-  const pattern = new URLPattern({ hash: "(hash$)" });
-  console.log(pattern.test("https://example.com/#hash")); // true
-  console.log(pattern.test("xhttps://example.com/#otherhash")); // false
-  ```
+The following code demonstrates that it doesn't matter whether or not `^` is specified.
+The example uses a pattern in the `protocol` URL-part, but the other parts of the URL behave the same.
 
-  ```js
-  // without `$` in hash
-  const pattern = new URLPattern({ hash: "(hash)" });
-  console.log(pattern.test("https://example.com/#hash")); // true
-  console.log(pattern.test("xhttps://example.com/#otherhash")); // false
-  ```
+```js
+// with `^` in protocol
+const pattern1 = new URLPattern({ protocol: "(^https?)" });
+console.log(pattern1.test("https://example.com/index.html")); // true
 
-- Lookaheads, and lookbehinds will never match any portion of the URLPattern.
+// without `^` in protocol
+const pattern2 = new URLPattern({ protocol: "(https?)" });
+console.log(pattern2.test("https://example.com/index.html")); // true
+```
 
-  ```js
-  // lookahead
-  const pattern = new URLPattern({ pathname: "(a(?=b))" });
-  console.log(pattern.test("https://example.com/ab")); // false
-  console.log(pattern.test("https://example.com/ax")); // false
-  ```
+The code below demonstrates that it doesn't matter whether or not `$` is specified.
 
-  ```js
-  // negative-lookahead
-  const pattern = new URLPattern({ pathname: "(a(?!b))" });
-  console.log(pattern.test("https://example.com/ab")); // false
-  console.log(pattern.test("https://example.com/ax")); // false
-  ```
+```js
+// with `$` in pathname
+const pattern1 = new URLPattern({ pathname: "(/path$)" });
+console.log(pattern1.test("https://example.com/path")); // true
 
-  ```js
-  // lookbehind
-  const pattern = new URLPattern({ pathname: "((?<=b)a)" });
-  console.log(pattern.test("https://example.com/ba")); // false
-  console.log(pattern.test("https://example.com/xa")); // false
-  ```
+// without `$` in pathname
+const pattern2 = new URLPattern({ pathname: "(/path)" });
+console.log(pattern2.test("https://example.com/path")); // true
 
-  ```js
-  // negative-lookbehind
-  const pattern = new URLPattern({ pathname: "((?<!b)a)" });
-  console.log(pattern.test("https://example.com/ba")); // false
-  console.log(pattern.test("https://example.com/xa")); // false
-  ```
+// with `$` in hash
+const pattern3 = new URLPattern({ hash: "(/hash$)" });
+console.log(pattern3.test("https://example.com/#hash")); // true
+
+// without `$` in hash
+const pattern4 = new URLPattern({ hash: "(/hash)" });
+console.log(pattern4.test("https://example.com/#hash")); // true
+```
+
+#### Lookahead and lookbehind assertions
+
+Lookahead and lookbehind asserts allow you to specify that text ahead or behind the current parsing position matches a particular pattern, without that match being captured, or the characters being consumed.
+
+There are four types of assertions:
+
+- `(?=...)`: A positive lookahead assertion specifies a pattern than the following characters must match.
+- `(?!...)`: A negative lookahead assertion specifies a pattern than the following characters must not match.
+- `(?<=...)`: A positive lookbehind assertion specifies a pattern than the preceding characters must match.
+- `(?<!...)`: A negative lookbehind assertion specifies a pattern than the preceding characters must not match.
+
+Lookahead and lookbehind assertions do not match intuitively.
+For example, you would expect the following lookahead assertion to match a `pathname` of `/ab`, but this is not what happens.
+
+```js example-bad
+const pattern = new URLPattern({ pathname: "(/a(?=b))" });
+console.log(pattern.test("https://example.com/ab")); // false
+```
+
+The `URLPattern` engine matches the test string against the `pathname` pattern, first finding the match for `/a` and then asserts that the next character in the test URL is `b` — but not consuming it.
+The engine continues matching the test URL at the unconsumed character `b`, but there is nothing left in the pattern to match it against, which causes the match to fail.
+
+For the match to work the pattern has to consume all the characters in the test string.
+To consume the `b` characer you could add it to the end of the expression, or a `.` to match any character.
+Instead we append `.*` to consume any characters after the lookahead assertion:
+
+```js example-good
+// positive-lookahead
+const pattern1 = new URLPattern({ pathname: "(/a(?=b).*)" });
+console.log(pattern1.test("https://example.com/ab")); // true
+console.log(pattern1.test("https://example.com/ax")); // false
+```
+
+The next example shows a negative lookahead match for `/a` which is not followed by `b`.
+Note that the assertion is followed by `.*` to consume the character.
+
+```js
+// negative-lookahead - matches /a<not b><anything>
+const pattern2 = new URLPattern({ pathname: "(/a(?!b).*)" });
+console.log(pattern2.test("https://example.com/ab")); // false
+console.log(pattern2.test("https://example.com/ax")); // true
+```
+
+The following example shows a positive lookbehind match that matches on a pathname like `/ba`.
+The pattern matches `/`, then any character (`.`) to consume the `b`, followed by the assertion that the previous character was a `b`, and then an `a`.
+
+```js
+// positive-lookbehind
+const pattern = new URLPattern({ pathname: "(/.(?<=b)a)" });
+console.log(pattern.test("https://example.com/ba")); // true
+console.log(pattern.test("https://example.com/xa")); // false
+```
+
+This example shows a negative lookbehind match that matches on a pathname like `/<not b>a`.
+The pattern matches `/`, then any character (`.`) to consume the `x`, followed by the assertion that the previous character was not `b`, and then an `a`.
+
+```js
+// negative-lookbehind
+const pattern4 = new URLPattern({ pathname: "(/.*(?<!b)a)" });
+console.log(pattern4.test("https://example.com/ba")); // false
+console.log(pattern4.test("https://example.com/xa")); // true
+```
+
+#### Other regex matcher limitations
+
+Some other regex patterns may not work as you may expect:
 
 - Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
 
