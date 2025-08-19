@@ -18,17 +18,8 @@ Environment variables provide values that can be used on the page based on infor
 
 ## Guides
 
-- [Using environment variables](/en-US/docs/Web/CSS/CSS_cascade/CSS_environment_variables/Using_environment_variables)
+- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
   - : Overview of what environment variables are, browser defined environment variables, and how to use the `env()` function.
-
-- [User agent environment variables](/en-US/docs/Web/CSS/CSS_cascade/CSS_environment_variables/User-agent_environment_variables)
-  - : A list of predefined user agent environment variables
-
-- [Detect the virtual keyboard geometry using CSS environment variables]
-  - : Demonstrates using the `keyboard-inset-*` environment variables with the {{domxref("VirtualKeyboard")}} interface.
-
-- [CSS reference functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#reference_functions)
-  - : The CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
 ## Related concepts
 
@@ -42,6 +33,6 @@ Environment variables provide values that can be used on the page based on infor
 
 ## See also
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) guide
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) guide.
 - [CSS properties and values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
