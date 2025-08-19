@@ -185,20 +185,11 @@ We create a custom CSS animation and apply it to the `::view-transition-old(figu
 
 This example contains a list of technologies–HTML, CSS, SVG, and JS–that are displayed in a sidebar next to a main content area, which starts out empty. Clicking a technology's heading animates its content into the adjoining content area that shows more details.
 
-There is also a checkbox, which is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see how the view-transition works without `view-transition-name: match-element`.
-
 #### HTML
 
 The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) and an {{htmlelement("article")}} element. The multiple child {{htmlelement("li")}} elements inside the list each contain an {{htmlelement("a")}} element inside a [heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements).
 
 ```html
-<form>
-  <label for="match-element-checkbox"
-    >Apply <code>view-transition-name: match-element</code> to list
-    items?</label
-  >
-  <input type="checkbox" id="match-element-checkbox" checked />
-</form>
 <main class="match-element-applied">
   <ul>
     <li>
@@ -228,6 +219,13 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
   </ul>
   <article></article>
 </main>
+```
+
+```html hidden
+<form>
+  <label for="match-element-checkbox">Apply <code>match-element</code> to list items?</label>
+  <input type="checkbox" id="match-element-checkbox" checked />
+</form>
 ```
 
 #### CSS
@@ -442,6 +440,8 @@ Running the `updateActiveItem()` function via the `startViewTransition()` functi
 #### Result
 
 Click a technology heading in the sidebar and notice the animation effect of its content into the main content area.
+
+There is also a checkbox, which is selected by default, so `view-transition-name: match-element` is applied. Uncheck the checkbox and click a heading again to see how the view-transition works without `view-transition-name: match-element`.
 
 {{EmbedLiveSample("using_the-match-element_value", "", "400")}}
 
