@@ -57,8 +57,6 @@ section:has(.featured) {
 
 ### Result
 
-The `<section>` containing the `.featured` article will have a blue border, and the `.featured` article itself will have a light blue background, while the other `<section>` will remain unaffected.
-
 {{EmbedLiveSample('Selecting a parent element', , 200)}}
 
 ### With the sibling combinator
