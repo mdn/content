@@ -14,36 +14,30 @@ There are two ways in which the callback may be called: _synchronous_ and _async
 Understanding whether the callback is synchronously or asynchronously called is particularly important when analyzing side effects. Consider the following example:
 
 ```js
+let value = 1;
+
+doSomething(() => {
+  value = 2;
+});
+
+console.log(value); // 1 or 2?
+```
+
+If `doSomething` calls the callback synchronously, then the last statement would log `2` because `value = 2` is synchronously executed; otherwise, if the callback is asynchronous, the last statement would log `1` because `value = 2` is only executed after the `console.log` statement.
+
+Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to {{domxref("Window.setTimeout", "setTimeout()")}} and {{jsxref("Promise.prototype.then()")}}. For example, here are example implementations of `doSomething` that call the callback synchronously and asynchronously:
+
+```js
+// Synchronous
 function doSomething(callback) {
   callback();
 }
 
-let value = 1;
-
-doSomething(() => {
-  value = 2;
-});
-
-console.log(value); // 2
-```
-
-If `doSomething` calls the callback synchronously, then the last statement would log `2` because `value = 2` is synchronously executed; otherwise, In this asynchronous version, the callback runs later, so when console.log executes, the assignment `value = 2` hasn’t happened yet — 1 is printed. Here is an example of an asynchronous callback:
-
-```js
+// Asynchronous
 function doSomething(callback) {
   setTimeout(callback, 0);
 }
-
-let value = 1;
-
-doSomething(() => {
-  value = 2;
-});
-
-console.log(value); // 1
 ```
-
-Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to {{domxref("Window.setTimeout", "setTimeout()")}} and {{jsxref("Promise.prototype.then()")}}.
 
 The [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing) guide has more information on the timing of asynchronous callbacks.
 
