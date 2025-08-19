@@ -74,7 +74,7 @@ You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objec
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
 
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
-It should be unnecessary to additionally pass a sanitizer to the method when using `TrustedHTML`.
+You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
 If for any reason you can't use `TrustedHTML` (or even better, `setHTML()`) then the next safest option is to use `setHTMLUnsafe()` with the XSS-safe default {{domxref("Sanitizer")}}.
 
@@ -97,7 +97,7 @@ Using `setHTMLUnsafe()` might be appropriate if:
   While this is still unsafe, it is safer than allowing all of them.
 
 For the last point, consider a situation where your code relies on being able to use unsafe `onclick` handlers.
-The following code shows the effect of different the different methods and sanitizers on this case.
+The following code shows the effect of the different methods and sanitizers on this case.
 
 ```js
 const shadow = document.querySelector("#host").shadowRoot;
@@ -115,9 +115,9 @@ shadow.innerHTML = input;
 const configSafe = new Sanitizer();
 shadow.setHTMLUnsafe(input, { sanitizer: configSafe });
 
-// Removes all XSS-unsafe entities except `onerror`
+// Removes all XSS-unsafe entities except `onclick`
 const configLessSafe = new Sanitizer();
-config.allowAttribute("onerror");
+config.allowAttribute("onclick");
 shadow.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 ```
 
@@ -204,7 +204,7 @@ shadow.setHTMLUnsafe(untrustedString, {
 
 This example provides a "live" demonstration of the method when called with different sanitizers.
 The code defines buttons that you can click to inject a string of HTML.
-One button injects the HTML without sanitizing it at all, and the second uses a custom sanitizer than allows `<script>` elements but not other unsafe items.
+One button injects the HTML without sanitizing it at all, and the second uses a custom sanitizer that allows `<script>` elements but not other unsafe items.
 The original string and injected HTML are logged so you can inspect the results in each case.
 
 > [!NOTE]

@@ -76,7 +76,7 @@ You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objec
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
 
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
-It should be unnecessary to additionally pass a sanitizer to the method when using `TrustedHTML`.
+You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
 If for any reason you can't use `TrustedHTML` (or even better, `setHTML()`) then the next safest option is to use `setHTMLUnsafe()` with the XSS-safe default {{domxref("Sanitizer")}}.
 

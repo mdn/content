@@ -36,8 +36,9 @@ Document.parseHTMLUnsafe(input, options)
     - `sanitizer` {{optional_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed.
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the default (XSS-safe) configuration.
-        Note that generally a `"Sanitizer` is expected than the to be more efficient than a `SanitizerConfig` if the configuration is to reused.
         If not specified, no sanitizer is used.
+        
+        Note that generally a `Sanitizer` is expected than the to be more efficient than a `SanitizerConfig` if the configuration is to reused.
 
 ### Return value
 
@@ -74,7 +75,7 @@ You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objec
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
 
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
-It should be unnecessary to additionally pass a sanitizer to the method when using `TrustedHTML`.
+You should not need to pass a sanitizer to the method when using `TrustedHTML`.
 
 If for any reason you can't use `TrustedHTML` (or even better, `setHTML()`) then the next safest option is to use `setHTMLUnsafe()` with the XSS-safe default {{domxref("Sanitizer")}}.
 
