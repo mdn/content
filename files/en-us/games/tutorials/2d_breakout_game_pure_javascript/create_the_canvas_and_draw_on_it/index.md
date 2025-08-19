@@ -27,7 +27,7 @@ The HTML document structure is quite minimal, as the game will be rendered entir
         margin: 0;
       }
       canvas {
-        background: #eee;
+        background: #eeeeee;
         display: block;
         margin: 0 auto;
       }
@@ -109,7 +109,7 @@ Here's the full source code of the first lesson, running live:
 
 ```css
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 

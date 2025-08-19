@@ -90,7 +90,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css live-sample___carousel-example live-sample___carousel-example_final
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 100%;
   height: 200px;
   padding-top: 20px;

@@ -156,7 +156,7 @@ Assume the following basic HTML:
 #demo-logs {
   width: 90%;
   height: 100px;
-  background-color: #ddd;
+  background-color: #dddddd;
   overflow-x: auto;
   padding: 10px;
   margin-top: 10px;

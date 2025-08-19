@@ -157,7 +157,7 @@ i:nth-of-type(7n + 1) {
 }
 .ground {
   bottom: 0;
-  background-image: linear-gradient(to top, white 97%, 99%, #bbb 100%);
+  background-image: linear-gradient(to top, white 97%, 99%, #bbbbbb 100%);
   background-position: center 580px;
   animation: snowfall linear 300s forwards;
   border: 1px solid grey;

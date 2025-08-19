@@ -241,8 +241,8 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  border: 3px solid #333;
-  background-color: #999;
+  border: 3px solid #333333;
+  background-color: #999999;
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
@@ -251,7 +251,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 ```
 

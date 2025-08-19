@@ -216,7 +216,7 @@ caption {
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  color: #666;
+  color: #666666;
   text-align: right;
   letter-spacing: 1px;
 }
@@ -328,7 +328,7 @@ The table is looking much better already, but we should add some borders to prov
 
 ```css
 tfoot {
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 ```
 
@@ -341,8 +341,8 @@ table {
   min-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 ```
 
@@ -354,7 +354,7 @@ We wanted to dedicate a separate section to showing you how to implement **zebra
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
