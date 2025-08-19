@@ -8,7 +8,7 @@ browser-compat: api.Highlight.priority
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The `priority` property of the {{domxref("Highlight")}} interface is a {{jsxref("Number")}} used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher `priority` number have preference over those with a lower `priority`.
+The `priority` property of the {{domxref("Highlight")}} interface is a number used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher `priority` number have preference over those with a lower `priority`.
 
 It is possible to create {{domxref("Range")}} objects that overlap in a document.
 
