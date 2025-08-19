@@ -8,7 +8,7 @@ browser-compat: api.URLPattern.URLPattern
 
 {{APIRef("URLPattern API")}} {{AvailableInWorkers}}
 
-The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}} object representing the url pattern defined by the parameters.
+The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}} object representing the URLs that will be matched by this pattern.
 
 ## Syntax
 
@@ -23,11 +23,9 @@ new URLPattern(url, baseURL, options)
 ### Parameters
 
 - `input` {{Optional_Inline}}
-
   - : An object that has separate properties for defining the [patterns](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match each part of a URL.
 
     The object members can be any (or none) of:
-
     - `protocol` {{Optional_Inline}}
       - : A pattern that matches a URL [protocol](/en-US/docs/Web/API/URL/protocol), such as `http`, `https`, or `"http{s}?"` (to match both https and http).
     - `username` {{Optional_Inline}}
@@ -48,14 +46,12 @@ new URLPattern(url, baseURL, options)
       - : A string that provides an absolute URL from which [undefined less-specific object properties may be inherited](#inheritance_from_a_baseurl).
 
 - `url` {{Optional_Inline}}
-
   - : A string representing URL patterns to match.
 
-    This is formatted as an absolute or relative URL but may contain markup to indicate matching patterns and escape sequences.
+    This is formatted as an absolute or relative URL but may contain markup to indicate [matching patterns](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) and escape sequences.
     If formatted as a relative URL, then [`baseURL`](#baseurl_2) must also be provided.
 
 - `baseURL` {{Optional_Inline}}
-
   - : A string that provides an absolute URL from which [undefined less-specific URL-parts may be inherited](#inheritance_from_a_baseurl)
     This must be set when `url` is a relative URL, and must not be set if `input` is used (`input.baseURL` may be used to provide inherited values for a `input`, but, unlike this property, is never required).
 
@@ -91,24 +87,23 @@ new URLPattern(url, baseURL);
 
 The input object used in the first type of constructor describes the URLs that should be matched by specifying patterns for individual URL parts: `protocol`, `username`, `password`, `hostname`, `port`, `pathname`, `search`, `hash`, and `baseURL`.
 If the `baseURL` property is provided it will be parsed as a URL and may be used to populate any other properties that are missing (see the following section [Inheritance from a base URL](#inheritance_from_a_baseurl)).
-If the `baseURL` property is missing, then any other missing properties default to the pattern `*` wildcard, which match against any URL.
+Properties that are omitted or not filled by the `baseURL` property default to the wildcard string (`*`), which match against any corresponding value in a URL.
 
-The second type of constructor takes a URL string that contains patterns embedded in it.
-The string may specify an absolute or relative URL: if the pattern is relative, then `baseURL` must be provided as the second argument.
-Note that it may be necessary to escape some characters in the URL string if it is ambiguous whether the character is separating different URL components or is part of a pattern.
-For example, you must write `about\\:blank` to indicate that the `:` is the protocol suffix and not the start of a `:blank` named group pattern.
+The second type of constructor takes a URL string that may contain patterns embedded in it.
+The string may specify an absolute or relative URL — if the pattern is relative, then `baseURL` must be provided as the second argument.
+Note that it may be necessary to [escape some characters](#escaping_special_characters) in the URL string if it is ambiguous whether the character is separating different URL components or is part of a pattern.
 
 ### Inheritance from a BaseURL
 
 URL-parts that are more specific than the least-specific part defined in the `url` _may_ be inherited from `baseURL` (or from `input.baseURL` for `input`).
 Intuitively this means that if the `pathname` part is specified in the input, the parts to its left in a URL may be inherited from the base URL (`protocol`, `hostname` and `port`), while the parts to its right may not (`search` and `hash`).
-The `username` and `password` are never inherited from the base URL..
+The `username` and `password` are never inherited from the base URL.
 
 For more information see [Inheritance from a BaseURL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) in the API overview.
 
-### Hostname in url or baseURL affects default port
+### Hostname in `url` or `baseURL` affects default port
 
-Unlike other URL parts, the port may be implicitly set if you specify an `url` or base URL (either in the `baseURL` parameter or in the object) and don't explicity specify a port.
+Unlike other URL parts, the port may be implicitly set if you specify an `url` or base URL (either in the `baseURL` parameter or in the object) and don't explicitly specify a port.
 In this case the port will be set to the empty string (`""`) and match the default port (`443`).
 
 For example, these patterns all set the port pattern to `""`:
@@ -129,7 +124,47 @@ If you don't specify the hostname in an `url` or `baseURL`, the port will defaul
 new URLPattern({ pathname: "/foo/*" }); // Port omitted, defaults to '*'
 ```
 
+#### Escaping special characters
+
+The [pattern syntax](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) includes a number of characters that can occur naturally in URLs, such as:
+
+- `?` indicates both an optional character or group in a pattern and the search part of a URL.
+- `:` indicates the start of a named group in a pattern and a separator for username and password, or a hostname and a port.
+
+If you're constructing a `URLPattern` using the [`url`](#url) string parameter these special characters are assumed to be part of the pattern syntax (if there is any ambiguity).
+If you are using the characters to represent parts of the URL then you will need to escape them, by preceding the characters with `\\` (or avoid the problem by constructing `URLPattern` using the object syntax).
+
+For example, the following pattern escapes the `?` character, which makes this pattern match a search URL-part of "fred"
+
+```js
+console.log(new URLPattern("https://example.com/*\\?fred"));
+```
+
+Similarly, the [Match the username and password](#match_the_username_and_password) example below shows a case where the `:` separator needs to be escaped.
+
 ## Examples
+
+### Default pattern
+
+This code demonstrates that URL-parts that are not supplied in an URL or [inherited from a base URL](#inheritance_from_a_baseurl) default to the wildcard value.
+
+```js
+console.log(new URLPattern());
+console.log(new URLPattern({}));
+/*
+{
+  protocol: "*",
+  username: "*",
+  password: "*",
+  hostname: "*",
+  port: "*",
+  pathname: "*",
+  search: "*",
+  hash: "*",
+  hasRegExpGroups: false,
+};
+*/
+```
 
 ### Matching a pathname
 
@@ -177,7 +212,7 @@ Without this the username pattern would be `myusername:mypassword`.
 
 ```js
 const pattern = new URLPattern(
-  "https://myusername\\:mypassword@example.com/some/path"
+  "https://myusername\\:mypassword@example.com/some/path",
 );
 
 console.log(pattern.username); // "myusername"
