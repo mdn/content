@@ -32,5 +32,4 @@ For more information see the "cumulative number of packets lost" section in {{RF
 
 - {{domxref("RTCInboundRtpStreamStats.ssrc")}}
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost")}}
-- {{domxref("RTCInboundRtpStreamStats.packetsLost", "packetsLost")}}
-- {{domxref("RTCInboundRtpStreamStats.packetsLost", "packetsDiscarded")}}
+- {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}
