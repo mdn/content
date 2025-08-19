@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.alpha
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
 The **`alpha`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{htmlelement("input")}} element's [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) attribute, which indicates whether the CSS color's alpha component can be manipulated by the end user and does not have to be fully opaque. It is only relevant to [color](/en-US/docs/Web/HTML/Reference/Elements/input/color) controls.
 
@@ -21,9 +21,9 @@ A boolean value.
 ```
 
 ```js
-let fileInput = document.getElementById("color-picker");
+const colorInput = document.getElementById("color-picker");
 
-if (fileInput.alpha) {
+if (colorInput.alpha) {
   // Color values contain an alpha component
 } else {
   // We have fully opaque color values

@@ -24,7 +24,7 @@ Some properties only apply to input element types that support the corresponding
   - : A boolean that represents the element's [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) attribute, indicating whether the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
 
 - {{domxref("HTMLInputElement.colorSpace", "colorSpace")}}
-  - : A string that represents the element's [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute, indicating indicating the {{glossary("color space")}} of the serialized CSS color (sRGB or display-p3).
+  - : A string that represents the element's [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute, indicating the {{glossary("color space")}} of the serialized CSS color (sRGB or display-p3).
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
   - : A string that represents the default value as originally specified in the HTML that created this object.
