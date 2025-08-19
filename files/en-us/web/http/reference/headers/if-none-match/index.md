@@ -1,11 +1,11 @@
 ---
-title: If-None-Match
+title: If-None-Match header
+short-title: If-None-Match
 slug: Web/HTTP/Reference/Headers/If-None-Match
 page-type: http-header
 browser-compat: http.headers.If-None-Match
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`If-None-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 The server returns the requested resource in {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the ones in the `If-None-Match` header.

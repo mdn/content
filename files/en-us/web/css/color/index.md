@@ -3,11 +3,10 @@ title: color
 slug: Web/CSS/color
 page-type: css-property
 browser-compat: css.properties.color
+sidebar: cssref
 ---
 
-{{CSSRef}}
-
-The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
+The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentColor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: color")}}
 
@@ -20,7 +19,7 @@ color: #00a400;
 ```
 
 ```css interactive-example-choice
-color: rgb(214, 122, 127);
+color: rgb(214 122 127);
 ```
 
 ```css interactive-example-choice
@@ -28,7 +27,7 @@ color: hsl(30deg 82% 43%);
 ```
 
 ```css interactive-example-choice
-color: hsla(237deg 74% 33% / 61%);
+color: hsl(237deg 74% 33% / 61%);
 ```
 
 ```css interactive-example-choice
@@ -63,7 +62,7 @@ For an overview of using color in HTML, see [Applying color to HTML elements usi
 
 ```css
 /* Keyword values */
-color: currentcolor;
+color: currentColor;
 
 /* <named-color> values */
 color: red;
@@ -118,8 +117,8 @@ Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradie
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
-  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
+- [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+  - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentColor` is treated as `inherit`.
 
 ## Accessibility
 

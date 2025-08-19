@@ -27,12 +27,12 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 `styleSheet` property returns the imported stylesheet.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].styleSheet); //returns a CSSStyleSheet object
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].styleSheet); // A CSSStyleSheet
 ```
 
 ## Specifications

@@ -3,9 +3,8 @@ title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -32,7 +31,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
         <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "58.0"
   }
 }
@@ -54,7 +53,7 @@ Firefox stores browser-specific settings in these sub-keys:
 - `gecko` for the desktop version of Firefox.
 - `gecko_android` for the Android version of Firefox.
 
-The `gecko` subkey supports these properties:
+The `gecko` sub-key supports these properties:
 
 - `id`
   - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
@@ -65,7 +64,7 @@ The `gecko` subkey supports these properties:
 - `update_url`
   - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e., not through AMO).
 
-The `gecko_android` subkey supports these properties:
+The `gecko_android` sub-key supports these properties:
 
 - `strict_min_version`
   - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
@@ -74,21 +73,21 @@ The `gecko_android` subkey supports these properties:
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
-To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
+To support Firefox for Android without specifying a version range, the `gecko_android` sub-key must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
 #### Extension ID format
 
 The extension ID must be one of the following:
 
 - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- A string formatted like an email address: `extensionname@example.org`
+- A string formatted like an email address: `extensionname@example.org` However, use of an `@string` format is recommended.
 
 The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
 
 For example:
 
 ```json
-"id": "extensionname@example.org"
+"id": "@extension-name.developer-name"
 ```
 
 ```json
@@ -97,12 +96,16 @@ For example:
 
 ### Safari properties
 
-Safari stores its browser-specific settings in the `safari` subkey, which has these properties:
+Safari stores its browser-specific settings in the `safari` sub-key, which has these properties:
 
 - `strict_min_version`
   - : Minimum version of Safari to support.
 - `strict_max_version`
   - : Maximum version of Safari to support.
+
+### Chrome properties
+
+Chrome doesn't use this key and ignores it if present in an extension's `manifest.json` file.
 
 ## Examples
 
@@ -111,7 +114,7 @@ Example with all possible keys. Note that most extensions omit `strict_max_versi
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"

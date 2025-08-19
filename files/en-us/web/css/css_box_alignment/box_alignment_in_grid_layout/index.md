@@ -2,9 +2,8 @@
 title: Box alignment in grid layout
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. On this page, we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 

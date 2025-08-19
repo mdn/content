@@ -2,11 +2,10 @@
 title: Create the Canvas and draw on it
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
 This is the **1st step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
@@ -28,7 +27,7 @@ The HTML document structure is quite minimal, as the game will be rendered entir
         margin: 0;
       }
       canvas {
-        background: #eee;
+        background: #eeeeee;
         display: block;
         margin: 0 auto;
       }
@@ -62,7 +61,7 @@ Let's see an example piece of code that prints a red square on the canvas. Add t
 ```js
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 ```
@@ -110,7 +109,7 @@ Here's the full source code of the first lesson, running live:
 
 ```css
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 
@@ -120,7 +119,7 @@ const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+ctx.fillStyle = "red";
 ctx.fill();
 ctx.closePath();
 
@@ -146,4 +145,4 @@ ctx.closePath();
 
 Now we've set up the basic HTML and learned a bit about canvas, lets continue to the second chapter and work out how to [Move the ball in our game](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

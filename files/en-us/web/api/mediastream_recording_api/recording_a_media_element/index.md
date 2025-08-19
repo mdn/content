@@ -211,7 +211,9 @@ startButton.addEventListener(
         downloadButton.href = stream;
         preview.captureStream =
           preview.captureStream || preview.mozCaptureStream;
-        return new Promise((resolve) => (preview.onplaying = resolve));
+        return new Promise((resolve) => {
+          preview.onplaying = resolve;
+        });
       })
       .then(() => startRecording(preview.captureStream(), recordingTimeMS))
       .then((recordedChunks) => {
@@ -270,7 +272,7 @@ When put all together with the rest of the HTML and the CSS not shown above, it 
 
 {{EmbedLiveSample('Example_of_recording_a_media_element', '600', '440', , , , 'camera;microphone')}}
 
-You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
+You can also open this example in the playground using the "Play" button, which allows you to look at the combined code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
 
 ## See also
 

@@ -3,9 +3,8 @@ title: 415 Unsupported Media Type
 slug: Web/HTTP/Reference/Status/415
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`415 Unsupported Media Type`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server refused to accept the request because the message {{Glossary("HTTP Content", "content")}} format is not supported.
 

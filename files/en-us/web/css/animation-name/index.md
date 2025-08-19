@@ -3,9 +3,8 @@ title: animation-name
 slug: Web/CSS/animation-name
 page-type: css-property
 browser-compat: css.properties.animation-name
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`animation-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@keyframes")}} at-rules that describe the animation to apply to an element. Multiple `@keyframes` at-rules are specified as a comma-separated list of names. If the specified name does not match any `@keyframes` at-rule, no properties are animated.
 
@@ -37,7 +36,7 @@ animation-name: bounce;
   animation-timing-function: ease-in;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;

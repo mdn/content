@@ -3,9 +3,8 @@ title: list-style
 slug: Web/CSS/list-style
 page-type: css-shorthand-property
 browser-compat: css.properties.list-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the list style properties at once.
 

@@ -1,11 +1,11 @@
 ---
-title: Accept-Post
+title: Accept-Post header
+short-title: Accept-Post
 slug: Web/HTTP/Reference/Headers/Accept-Post
 page-type: http-header
 spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept-Post`** {{Glossary("response header")}} advertises which [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) are accepted by the server in a {{HTTPMethod("POST")}} request.
 For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415", "415 Unsupported Media Type")}} and an `Accept-Post` header referencing one or more supported media types.

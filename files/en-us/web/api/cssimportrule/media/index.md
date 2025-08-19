@@ -28,12 +28,12 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 the `mediaText` property with a value of `screen`.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); //returns a MediaList
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].media); // A MediaList
 ```
 
 ### Setting the media property
@@ -41,7 +41,7 @@ console.log(myRules[0].media); //returns a MediaList
 To change the `media` attribute of the associated stylesheet, set the value of `media` to a string containing the new value.
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
+const myRules = document.styleSheets[0].cssRules;
 myRules[0].media = "print";
 ```
 

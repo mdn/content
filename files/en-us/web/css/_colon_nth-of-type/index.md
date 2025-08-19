@@ -3,9 +3,8 @@ title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 
@@ -41,15 +40,17 @@ dd:nth-of-type(even) {
 
 ## Syntax
 
-The `nth-of-type` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
-
-See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
-
 ```css-nolint
 :nth-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```
+
+### Parameters
+
+The `:nth-of-type()` pseudo-class is specified with a single argument, which represents the pattern for matching elements.
+
+See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
 ## Examples
 

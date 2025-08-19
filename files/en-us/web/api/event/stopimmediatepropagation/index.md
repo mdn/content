@@ -19,6 +19,14 @@ If several listeners are attached to the same element for the same event type, t
 stopImmediatePropagation()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ### Comparing event-stopping functions
@@ -54,17 +62,17 @@ The example below has three buttons inside of three nested divs. Each button has
 div {
   display: inline-block;
   padding: 10px;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: white;
+  border: 2px solid black;
   margin: 10px;
 }
 
 button {
   width: 100px;
-  color: #008;
+  color: #000088;
   padding: 5px;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: white;
+  border: 2px solid black;
   border-radius: 30px;
   margin: 5px;
 }

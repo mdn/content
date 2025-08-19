@@ -3,9 +3,8 @@ title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 page-type: javascript-statement
 browser-compat: javascript.statements.async_generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`async function*`** declaration creates a {{Glossary("binding")}} of a new async generator function to a given name.
 
@@ -24,7 +23,7 @@ let str = "";
 
 async function generate() {
   for await (const val of foo()) {
-    str = str + val;
+    str += val;
   }
   console.log(str);
 }
@@ -50,7 +49,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > Async generator functions do not have arrow function counterparts.
 
-> **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space). However, there cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function*` declaration.
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space). However, there cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function*` declaration.
 
 ### Parameters
 
@@ -71,7 +71,7 @@ When a promise is yielded from an async generator, the iterator result promise's
 
 ```js
 async function* foo() {
-  yield Promise.reject(1);
+  yield Promise.reject(new Error("failed"));
 }
 
 foo()
@@ -79,7 +79,7 @@ foo()
   .catch((e) => console.error(e));
 ```
 
-`1` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
+`Error: failed` will be logged, because if the yielded promise rejects, the iterator result will reject as well. The `value` property of an async generator's resolved result will not be another promise.
 
 `async function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 

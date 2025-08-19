@@ -2,9 +2,8 @@
 title: "SyntaxError: import declarations may only appear at top level of a module"
 slug: Web/JavaScript/Reference/Errors/import_decl_module_top_level
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "import declarations may only appear at top level of a module" occurs when an import declaration is not at the top level of a module. This might be because the import declaration is nested in other constructs (functions, blocks, etc.), or more often because the current file is not treated as a module.
 

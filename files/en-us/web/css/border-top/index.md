@@ -3,9 +3,8 @@ title: border-top
 slug: Web/CSS/border-top
 page-type: css-shorthand-property
 browser-compat: css.properties.border-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-top`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/border).
 
@@ -28,7 +27,7 @@ border-top: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+border-top: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
@@ -41,8 +40,8 @@ border-top: 4mm ridge rgba(211, 220, 50, 0.6);
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;

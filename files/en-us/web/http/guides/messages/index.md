@@ -2,9 +2,8 @@
 title: HTTP messages
 slug: Web/HTTP/Guides/Messages
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP messages** are the mechanism used to exchange data between a server and a client in the HTTP protocol.
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
@@ -48,9 +47,9 @@ Let's look at the following example HTTP `POST` request that's sent after a user
 POST /users HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 50
+Content-Length: 49
 
-name=FirstName%20LastName&email=bsmth%40example.com
+name=FirstName+LastName&email=bsmth%40example.com
 ```
 
 The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above) is called a "request-line" and is made of three parts:
@@ -111,7 +110,7 @@ In the [form submission example](#http_requests) above, they are the following l
 ```http
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 50
+Content-Length: 49
 ```
 
 In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
@@ -133,7 +132,7 @@ Only `PATCH`, `POST`, and `PUT` requests have a body.
 In the [form submission example](#http_requests), this part is the body:
 
 ```http
-name=FirstName%20LastName&email=bsmth%40example.com
+name=FirstName+LastName&email=bsmth%40example.com
 ```
 
 The body in the form submission request contains a relatively small amount of information as `key=value` pairs, but a request body could contain other types of data that the server expects:

@@ -5,8 +5,8 @@ Assemblée
 Aéro
 bezje
 canadien
-Català
 Ceci
+Clima
 communiqué
 Congrès
 contenido
@@ -19,6 +19,7 @@ deutsches
 Dezember
 dezembro
 Donnerstag
+dulce
 démonstration
 erkennst
 español
@@ -44,13 +45,16 @@ ijsland
 indomable
 İstanbul
 JOURS
+leche
 lepiej
+Mago
 Mais
 Majestatis
 minuto
 minutos
 Moin
 Montag
+Muertos
 Musée
 napisem
 narysowaną
@@ -62,7 +66,6 @@ oscuro
 partes
 partout
 pasado
-Português
 présenté
 puede
 quand
@@ -71,7 +74,6 @@ quinto
 Repetitio
 resh
 réservé
-résumé
 s'écrase
 schon
 Schonheit

@@ -16,10 +16,10 @@ The **`navigate`** event of the {{domxref("Navigation")}} interface is fired whe
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("navigate", (event) => {});
+```js-nolint
+addEventListener("navigate", (event) => { })
 
-onnavigate = (event) => {};
+onnavigate = (event) => { }
 ```
 
 ## Event type
@@ -100,4 +100,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

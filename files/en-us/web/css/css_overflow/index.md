@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-overflow/
   - https://drafts.csswg.org/css-overflow-4/
   - https://drafts.csswg.org/css-overflow-5/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS overflow** module properties enable you to handle scrollable overflow in visual media.
 
@@ -76,53 +75,6 @@ The example includes options to change the values for the `overflow-clip-margin`
     Rubber Duckie, I'm awfully fond of you
       </pre>
 </article>
-
-<script>
-  const pre = document.querySelector("pre");
-  const val = document.getElementById("overflowValue");
-  const check = document.getElementById("wide");
-  const ocm = document.getElementById("ocm");
-  const scrollL = document.getElementById("scrollL");
-  const scrollT = document.getElementById("scrollT");
-
-  val.addEventListener("change", () => {
-    if (pre.classList.contains("wide")) {
-      pre.className = `wide ${val.value}`;
-    } else {
-      pre.className = `${val.value}`;
-    }
-    scrollExample();
-    clipMargin();
-  });
-
-  wide.addEventListener("change", () => {
-    pre.classList.toggle("wide");
-    scrollExample();
-  });
-
-  ocm.addEventListener("change", () => {
-    clipMargin();
-  });
-
-  scrollL.addEventListener("change", () => {
-    scrollExample();
-  });
-  scrollT.addEventListener("change", () => {
-    scrollExample();
-  });
-
-  function scrollExample() {
-    pre.scrollTo({
-      top: scrollT.value,
-      left: scrollL.value * 2,
-      behavior: "smooth",
-    });
-  }
-
-  function clipMargin() {
-    pre.style.overflowClipMargin = `${ocm.value}em`;
-  }
-</script>
 ```
 
 ```css hidden live-sample___overflow
@@ -211,6 +163,53 @@ article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
 }
 ```
 
+```js hidden live-sample___overflow
+const pre = document.querySelector("pre");
+const val = document.getElementById("overflowValue");
+const check = document.getElementById("wide");
+const ocm = document.getElementById("ocm");
+const scrollL = document.getElementById("scrollL");
+const scrollT = document.getElementById("scrollT");
+
+val.addEventListener("change", () => {
+  if (pre.classList.contains("wide")) {
+    pre.className = `wide ${val.value}`;
+  } else {
+    pre.className = `${val.value}`;
+  }
+  scrollExample();
+  clipMargin();
+});
+
+wide.addEventListener("change", () => {
+  pre.classList.toggle("wide");
+  scrollExample();
+});
+
+ocm.addEventListener("change", () => {
+  clipMargin();
+});
+
+scrollL.addEventListener("change", () => {
+  scrollExample();
+});
+scrollT.addEventListener("change", () => {
+  scrollExample();
+});
+
+function scrollExample() {
+  pre.scrollTo({
+    top: scrollT.value,
+    left: scrollL.value * 2,
+    behavior: "smooth",
+  });
+}
+
+function clipMargin() {
+  pre.style.overflowClipMargin = `${ocm.value}em`;
+}
+```
+
 {{EmbedLiveSample("overflow", "", "400px")}}
 
 A link is included in the content box above to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will scroll only if the enumerated `<overflow>` value creates a scroll container.
@@ -231,8 +230,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 
-> [!NOTE]
-> The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
+The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. Currently, no browsers support these features.
 
 ### Selectors and pseudo-elements
 

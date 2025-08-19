@@ -1,11 +1,11 @@
 ---
 title: Atomics.store()
+short-title: store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.store
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.store()`** static
 method stores a given value at the given position in the array and returns that value.

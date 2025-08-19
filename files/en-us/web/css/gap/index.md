@@ -3,9 +3,8 @@ title: gap
 slug: Web/CSS/gap
 page-type: css-shorthand-property
 browser-compat: css.properties.gap
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
 
@@ -54,7 +53,7 @@ gap: calc(20px + 10%);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -261,7 +260,7 @@ If the container has a fixed size set, then gap percentage value calculations ar
 
 ```css hidden
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
   flex-flow: column;
 }
@@ -317,7 +316,7 @@ If size is not explicitly set on the container, then the percentage gap behaves 
 
 ```css hidden
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
 }
 

@@ -20,8 +20,6 @@ The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", 
 
 ## Instance properties
 
-- {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns an object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
 - {{domxref("PaymentRequestEvent.methodData","methodData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of objects containing payment method identifiers for the payment methods that the website accepts and any associated payment method specific data.
 - {{domxref("PaymentRequestEvent.modifiers","modifiers")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -62,7 +60,7 @@ self.addEventListener("paymentrequest", async (e) => {
   // Preserve the event for future use
   payment_request_event = e;
 
-  // ...
+  // …
 });
 ```
 

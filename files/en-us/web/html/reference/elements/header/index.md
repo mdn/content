@@ -3,9 +3,8 @@ title: "<header>: The Header element"
 slug: Web/HTML/Reference/Elements/header
 page-type: html-element
 browser-compat: html.elements.header
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 
@@ -40,7 +39,7 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
     bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
     fantasy;
   color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+  text-shadow: black 2px 2px 0.2rem;
 }
 
 header > h1 {

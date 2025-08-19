@@ -16,10 +16,10 @@ The **`dblclick`** event fires when a pointing device button (such as a mouse's 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dblclick", (event) => {});
+```js-nolint
+addEventListener("dblclick", (event) => { })
 
-ondblclick = (event) => {};
+ondblclick = (event) => { }
 ```
 
 ## Event type
@@ -107,7 +107,7 @@ card.addEventListener("dblclick", (e) => {
 
 ```css
 aside {
-  background: #fe9;
+  background: #ffee99;
   border-radius: 1em;
   display: inline-block;
   padding: 1em;

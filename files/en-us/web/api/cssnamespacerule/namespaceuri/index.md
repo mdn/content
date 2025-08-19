@@ -19,12 +19,12 @@ A string containing a URI.
 The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a `CSSNamespaceRule`. The value of the `namespaceURI` property will be `http://www.w3.org/1999/xhtml`.
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace url("http://www.w3.org/1999/xhtml");
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); //http://www.w3.org/1999/xhtml
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].namespaceURI); // 'http://www.w3.org/1999/xhtml'
 ```
 
 ## Specifications

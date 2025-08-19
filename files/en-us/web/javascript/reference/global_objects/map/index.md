@@ -3,9 +3,8 @@ title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 page-type: javascript-class
 browser-compat: javascript.builtins.Map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
 Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
@@ -13,26 +12,26 @@ Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may b
 {{InteractiveExample("JavaScript Demo: Map", "taller")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", 1);
-map1.set("b", 2);
-map1.set("c", 3);
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
 
-console.log(map1.get("a"));
+console.log(map.get("a"));
 // Expected output: 1
 
-map1.set("a", 97);
+map.set("a", 97);
 
-console.log(map1.get("a"));
+console.log(map.get("a"));
 // Expected output: 97
 
-console.log(map1.size);
+console.log(map.size);
 // Expected output: 3
 
-map1.delete("b");
+map.delete("b");
 
-console.log(map1.size);
+console.log(map.size);
 // Expected output: 2
 ```
 
@@ -376,7 +375,7 @@ const myMap = new Map();
 
 const keyString = "a string";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // setting the values
 myMap.set(keyString, "value associated with 'a string'");
@@ -392,7 +391,7 @@ console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
 console.log(myMap.get("a string")); // "value associated with 'a string'", because keyString === 'a string'
 console.log(myMap.get({})); // undefined, because keyObj !== {}
-console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
+console.log(myMap.get(() => {})); // undefined, because keyFunc !== () => {}
 ```
 
 ### Using NaN as Map keys

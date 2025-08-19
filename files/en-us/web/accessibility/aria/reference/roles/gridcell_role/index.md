@@ -1,11 +1,13 @@
 ---
 title: "ARIA: gridcell role"
+short-title: gridcell
 slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#gridcell
 sidebar: accessibilitysidebar
 ---
 
-The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
+The `gridcell` role is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
 
 ```html
 <div role="gridcell">Potato</div>
@@ -148,6 +150,10 @@ Support for `gridcell` and certain `gridcell` related ARIA roles and properties 
 
 The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Reference/Elements/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [The Table element](/en-US/docs/Web/HTML/Reference/Elements/table)
@@ -157,4 +163,3 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
 - [The Table header element](/en-US/docs/Web/HTML/Reference/Elements/th)
 - [The Table Data Cell element](/en-US/docs/Web/HTML/Reference/Elements/td)
-- [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)

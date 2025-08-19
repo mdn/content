@@ -1,11 +1,11 @@
 ---
-title: exportparts
+title: HTML exportparts global attribute
+short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 page-type: html-attribute
 browser-compat: html.global_attributes.exportparts
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) allows you to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
 
@@ -100,7 +100,7 @@ We style parts of the `<card-component>` shadow tree using the {{cssxref("::part
 
 ### Nested component
 
-Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component; in this case, the `<card-wrapper>` component. We then export the parts from the nested component that we want to make styleable from outside the component's shadow tree with the `exportparts` attribute.
+Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component; in this case, the `<card-wrapper>` component. We then export the parts from the nested component that we want to make stylable from outside the component's shadow tree with the `exportparts` attribute.
 
 #### HTML
 

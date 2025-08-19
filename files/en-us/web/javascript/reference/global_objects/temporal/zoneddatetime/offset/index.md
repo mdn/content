@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.offset
+short-title: offset
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/offset
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.offset
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`offset`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [offset](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:mm` (or `±HH:mm:ss.sssssssss` with as much subminute precision as necessary). This offset is guaranteed to be valid for the given instant and time zone at construction time.
 

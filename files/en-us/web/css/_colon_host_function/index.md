@@ -3,9 +3,8 @@ title: :host()
 slug: Web/CSS/:host_function
 page-type: css-pseudo-class
 browser-compat: css.selectors.hostfunction
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:host()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host. **`:host()`** has no effect when used outside a shadow DOM.
 
@@ -104,7 +103,7 @@ shadowRoot.appendChild(span);
 style.textContent =
   "span:hover { text-decoration: underline; }" +
   ":host-context(h1) { font-style: italic; }" +
-  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ':host-context(h1)::after { content: " - no links in headers!" }' +
   ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
   ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";

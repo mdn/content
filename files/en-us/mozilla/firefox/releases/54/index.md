@@ -1,10 +1,10 @@
 ---
 title: Firefox 54 for developers
+short-title: Firefox 54
 slug: Mozilla/Firefox/Releases/54
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.
 
@@ -19,7 +19,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 - {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_shapes) ([Firefox bug 1247229](https://bugzil.la/1247229)).
 - Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}} as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ([Firefox bug 1340309](https://bugzil.la/1340309)).
-- {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance")}}`: none;` set on them are now non-replaced elements, for compatibility with other browsers ([Firefox bug 605985](https://bugzil.la/605985)).
+- {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance: none")}} set on them are now non-replaced elements, for compatibility with other browsers ([Firefox bug 605985](https://bugzil.la/605985)).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ([Firefox bug 1330962](https://bugzil.la/1330962)). This is now fixed.
 - When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See [Firefox bug 910022](https://bugzil.la/910022) for more information. Note that this is still disabled in Linux due to lack of contrast (see [Firefox bug 1338283](https://bugzil.la/1338283) for progress on this).
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) now send the {{domxref("Element/animationcancel_event", "animationcancel")}} event as expected when an animation aborts prematurely ([Firefox bug 1302648](https://bugzil.la/1302648)).
@@ -50,7 +50,6 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
 - Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
-
   - If this object exists on another origin to the constructor call, the {{domxref("Request.referrer")}} is stripped out.
   - If this object has a {{domxref("Request.mode")}} of `navigate`, the `mode` value is converted to `same-origin`.
 
@@ -72,7 +71,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 #### Encrypted MediaExtensions API
 
 - The `MediaKeySession.keySystem` string has been removed from the specification, and as such we've taken it out of Firefox 54 ([Firefox bug 1335555](https://bugzil.la/1335555)).
-- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://www.w3.org/TR/encrypted-media/#clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
+- Support has been added for the VP9 codec in encrypted streams using [Clear Key](https://w3c.github.io/encrypted-media/#dfn-clear-key) and [Widevine](https://www.widevine.com/) ([Firefox bug 1338064](https://bugzil.la/1338064)).
 - Previously, MSE was only allowed to use WebM/VP8 video if the system was considered "fast enough." Now playback of VP8-encoded `webm/video` media is always supported, regardless of system performance.
 
 #### WebRTC
@@ -88,7 +87,3 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### HTTP
 
 - HTTP/1 Pipelining support has been removed in Firefox 54. Maintaining it as we make the move into a new world full of HTTP/2 and other substantial, standardized improvements to networking performance is not worthwhile given pipelining's compatibility and performance issues. The `network.http.pipelining` preference (as well as the other preferences that start with "network.http.pipelining") is now ignored. See [Firefox bug 1340655](https://bugzil.la/1340655) for further information.
-
-## Older versions
-
-{{Firefox_for_developers}}

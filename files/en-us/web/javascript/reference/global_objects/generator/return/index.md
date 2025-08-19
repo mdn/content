@@ -1,11 +1,11 @@
 ---
 title: Generator.prototype.return()
+short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.return
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`return()`** method of {{jsxref("Generator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 
@@ -131,9 +131,9 @@ function* gen() {
   }
 }
 
-const g1 = gen();
-g1.next(); // { value: 1, done: false }
-g1.return("early return"); // { value: 'cleanup', done: true }
+const generator = gen();
+generator.next(); // { value: 1, done: false }
+generator.return("early return"); // { value: 'cleanup', done: true }
 ```
 
 ## Specifications

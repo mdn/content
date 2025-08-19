@@ -1,5 +1,6 @@
 ---
-title: aria-disabled
+title: "ARIA: aria-disabled attribute"
+short-title: aria-disabled
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
@@ -64,12 +65,12 @@ function onClick(event) {
 
 function toggleDisabled(element, status, update) {
   if (status) {
-    //element.input.disabled = false;
+    // element.input.disabled = false;
     element.setAttribute("aria-disabled", "false");
     update.textContent = "The element is now enabled.";
     element.addEventListener("click", onClick);
   } else {
-    //element.input.disabled = true;
+    // element.input.disabled = true;
     element.setAttribute("aria-disabled", "true");
     update.textContent = "The element is now disabled.";
     element.removeEventListener("click", onClick);
@@ -88,7 +89,6 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Values
 
 - `true`
-
   - : The element is disabled
 
 - `false`

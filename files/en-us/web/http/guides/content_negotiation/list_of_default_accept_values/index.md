@@ -1,10 +1,10 @@
 ---
 title: List of default Accept values
+short-title: Default Accept values
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This article documents the default values for the HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header for specific inputs and browser versions.
 

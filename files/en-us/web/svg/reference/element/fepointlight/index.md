@@ -40,7 +40,7 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
         result="spotlight"
         specularConstant="1.5"
         specularExponent="80"
-        lighting-color="#FFF">
+        lighting-color="white">
         <fePointLight x="50" y="50" z="220" />
       </feSpecularLighting>
       <feComposite
@@ -60,7 +60,7 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    filter="url(#spotlight)" />
 </svg>
 ```
 

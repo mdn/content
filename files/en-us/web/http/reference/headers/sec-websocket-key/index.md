@@ -1,12 +1,12 @@
 ---
-title: Sec-WebSocket-Key
+title: Sec-WebSocket-Key header
+short-title: Sec-WebSocket-Key
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Key
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Key
 spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.1
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **Sec-WebSocket-Key** {{glossary("request header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to allow a client (user agent) to confirm that it "really wants" to request that an HTTP client is upgraded to become a WebSocket.
 

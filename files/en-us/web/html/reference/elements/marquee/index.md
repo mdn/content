@@ -5,9 +5,10 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.marquee
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
@@ -50,9 +51,15 @@ The HTML `<marquee>` element is deprecated and its use is strongly discouraged. 
   width="250"
   height="200"
   behavior="alternate"
-  style="border:solid">
+  class="outlined">
   <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
+```
+
+```css
+.outlined {
+  border: solid;
+}
 ```
 
 ### Result

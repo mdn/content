@@ -2,9 +2,8 @@
 title: User agent
 slug: Glossary/User_agent
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A user agent is a computer program representing a person, for example, a {{Glossary("Browser","browser")}} in a {{Glossary("World Wide Web", "Web")}} context.
 
@@ -25,5 +24,4 @@ A typical user agent string looks like this: `"Mozilla/5.0 (Windows NT 10.0; Win
 - Related glossary terms:
   - {{Glossary("Browser")}}
 - HTTP Headers
-
   - {{HTTPHeader("User-agent")}}

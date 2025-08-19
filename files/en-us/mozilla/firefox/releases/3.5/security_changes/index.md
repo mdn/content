@@ -2,9 +2,9 @@
 title: Security changes in Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Security_changes
 page-type: guide
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
 This article covers security-related changes in Firefox 3.5.
 
 ## Changes to chrome registration
@@ -15,9 +15,9 @@ Fixing this bug was accomplished by adding a new `URI_IS_LOCAL_RESOURCE` flag to
 
 ## Private browsing
 
-Firefox 3.5 implements private browsing, a mode in which cookies, history, and other potentially private information isn't saved permanently on the user's computer. Extensions and other add-ons may support the private browsing feature, detecting when it's in use so they can avoid saving private information while private browsing mode is enabled. See [Supporting private browsing mode](/en-US/Supporting_private_browsing_mode) for details.
+Firefox 3.5 implements private browsing, a mode in which cookies, history, and other potentially private information isn't saved permanently on the user's computer. Extensions and other add-ons may support the private browsing feature, detecting when it's in use so they can avoid saving private information while private browsing mode is enabled. See [Supporting private browsing mode](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode) for details.
 
-Plug-ins can detect whether or not private browsing mode is in effect by using the [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) function to check the current value of the `NPNVprivateModeBool` variable.
+Plug-ins can detect whether or not private browsing mode is in effect by using the [`NPN_GetValue()`](https://web.archive.org/web/20210308202622/https://developer.mozilla.org/en-US/docs/Archive/Plugins/Reference/NPN_GetValue) function to check the current value of the `NPNVprivateModeBool` variable.
 
 ## New certificate error handling
 
@@ -29,4 +29,4 @@ Embedders needing to provide custom certificate error pages can now do so by sup
 
 ## See also
 
-- [Firefox 3.5 for developers](/en-US/Firefox%203.5%20for%20developers)
+- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)

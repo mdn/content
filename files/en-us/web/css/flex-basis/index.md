@@ -3,14 +3,13 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 page-type: css-property
 browser-compat: css.properties.flex-basis
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-grow`, `flex-shrink`, and `flex-basis` declarations. We have separated them here as this document is about one of the shorthand components: the `flex-basis` property.
+> It is recommended to use the {{cssxref("flex")}} shorthand with a keyword value like `auto` or `initial` instead of setting `flex-basis` on its own. The [keyword values](/en-US/docs/Web/CSS/flex#values) expand to reliable combinations of {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, and `flex-basis`, which help to achieve the commonly desired flex behaviors.
 
 {{InteractiveExample("CSS Demo: flex-basis")}}
 
@@ -43,7 +42,7 @@ flex-basis: 200px;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -87,8 +86,10 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ### Values
 
-- `<'width'>`
+- `content`
+  - : Indicates automatic sizing, based on the flex item's content.
 
+- `<'width'>`
   - : Any of the following units:
     - {{cssxref("&lt;length&gt;")}} sets an absolute value.
     - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area. Percentage values of `flex-basis` are resolved against the flex container. If the flex container's size is indefinite, the used value for `flex-basis` is `content`.
@@ -96,10 +97,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
     - {{cssxref("max-content")}} sets the intrinsic preferred width.
     - {{cssxref("min-content")}} sets the intrinsic minimum width.
     - {{cssxref("fit-content")}} sets the maximum possible size of a containing block's content area, bounded by the `min-content` and `max-content` values, and calculated based on the content of the current element.
-
-- `content`
-
-  - : Indicates automatic sizing, based on the flex item's content.
 
 ## Formal definition
 
@@ -159,7 +156,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
   top: 100%;
   margin-top: 10px;
   width: 100%;
-  color: #333;
+  color: #333333;
   font-size: 12px;
 }
 

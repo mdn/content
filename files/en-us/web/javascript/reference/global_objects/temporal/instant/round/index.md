@@ -1,13 +1,15 @@
 ---
 title: Temporal.Instant.prototype.round()
+short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/round
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.round
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`round()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant rounded to the given unit.
 

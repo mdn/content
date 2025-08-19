@@ -4,9 +4,8 @@ slug: Web/CSS/line-style
 page-type: css-type
 browser-compat: css.types.line-style
 spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/CSS_multicol_layout) properties:
 
@@ -24,10 +23,6 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 - {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
 
 ## Syntax
-
-```css
-<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
-```
 
 ### Values
 
@@ -56,6 +51,10 @@ The `<line-style>` enumerated type is specified using one of the values listed b
 
 > [!NOTE]
 > When `<outline-style>` is used as the value type for {{cssxref("outline")}} and {{cssxref("outline-style")}} properties, it is similar to `<line-style>`, but does not support `hidden` and includes the `auto` value. When `auto` is set, the user-agent defined `<line-style>` value is used.
+
+## Formal syntax
+
+{{CSSSyntaxRaw(`<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset`)}}
 
 ## Examples
 
@@ -154,7 +153,7 @@ p + p {
   columns: 3;
   column-gap: 20px;
   column-rule: double 7px;
-  border-color: #000000;
+  border-color: black;
 }
 .none p {
   border-style: none;
@@ -208,50 +207,12 @@ Notice that the black border is not always black.
 
 This example demonstrates line-style and color choice. With some `<line-style>` keyword values, the color of the line may not be what you expect. To create the required "3D" effect of `groove`, `ridge`, `inset`, and `outset` styles when displaying these values in black or white, user agents use different color calculations than any other color-line combinations.
 
-#### HTML
-
-This example uses multiple {{HTMLElement( "div" )}} elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
-
-```html-nolint hidden
-<section>
-```
-
-```html
-<div style="border-color: #000000"></div>
-```
-
-```html hidden
-<div style="border-color: #000001"></div>
-<div style="border-color: #ffffff"></div>
-
-<div style="border-color: #ff00ff"></div>
-<div style="border-color: #ffff00"></div>
-<div style="border-color: #00ffff"></div>
-
-<div style="border-color: #cc33cc"></div>
-<div style="border-color: #cccc33"></div>
-<div style="border-color: #33cccc"></div>
-
-<div style="border-color: #ff0000"></div>
-<div style="border-color: #00ff00"></div>
-<div style="border-color: #0000ff"></div>
-
-<div style="border-color: #cc3333"></div>
-<div style="border-color: #33cc33"></div>
-<div style="border-color: #3333cc"></div>
-
-<div style="border-color: #993333"></div>
-<div style="border-color: #339933"></div>
-<div style="border-color: #333399"></div>
-</section>
-```
-
 #### CSS
 
 The four sides of each `<div>` have a different `<line-style>` value, and each list item has a different {{cssxref("color_value", "&lt;color>")}} value. We use [generated content](/en-US/docs/Web/CSS/content) to display the CSS declared inline.
 
-```css hidden
-section {
+```css hidden live-sample___line_style_colors
+body {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -260,20 +221,40 @@ section {
 }
 ```
 
-```css
+```css live-sample___line_style_colors
 div {
   border-width: 10px;
   border-style: inset groove ridge outset;
   padding: 5px;
 }
-div::before {
-  content: attr(style);
+```
+
+#### JavaScript
+
+The JavaScript dynamically creates {{HTMLElement( "div" )}} elements, each with a different `border-color` set.
+
+```js live-sample___line_style_colors
+// prettier-ignore
+const colors = [
+  "#000000", "#000001", "#ffffff",
+  "#ff00ff", "#ffff00", "#00ffff",
+  "#cc33cc", "#cccc33", "#33cccc",
+  "#ff0000", "#00ff00", "#0000ff",
+  "#cc3333", "#33cc33", "#3333cc",
+  "#993333", "#339933", "#333399",
+];
+
+for (const c of colors) {
+  const div = document.createElement("div");
+  div.style.borderColor = c;
+  div.textContent = c;
+  document.body.appendChild(div);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Line_style_colors", "500", "400")}}
+{{EmbedLiveSample("line_style_colors", "500", "200")}}
 
 Notice that the almost-black color of `#000001` may be different from the actual black, and the contrast between the dark and light edges is more noticeable when using lighter colors.
 

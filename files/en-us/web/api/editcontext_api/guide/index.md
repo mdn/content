@@ -45,7 +45,7 @@ To style the editor element, the following CSS code is used. The code makes the 
   white-space: pre;
   tab-size: 2;
   caret-color: red;
-  background: #000;
+  background: black;
   line-height: 1.6;
   color: red;
 }
@@ -122,7 +122,7 @@ function render(text, selectionStart, selectionEnd) {
 
   // Code to render the text selection is omitted for brevity.
   // See "Rendering the selection", below.
-  // ...
+  // …
 }
 ```
 
@@ -210,12 +210,12 @@ To render the selection, the demo app uses the {{domxref("Selection.setBaseAndEx
 
 ```js
 function render(text, selectionStart, selectionEnd) {
-  // ...
+  // …
   // The beginning of the render function is omitted for brevity.
 
   // Convert the start/end offsets to a DOM selection.
   const { anchorNode, anchorOffset, extentNode, extentOffset } =
-    fromOffsetsToSelection(selectionStart, selectionEnd);
+    fromOffsetsToSelection(selectionStart, selectionEnd, editorEl);
 
   // Render the selection in the editor element.
   document

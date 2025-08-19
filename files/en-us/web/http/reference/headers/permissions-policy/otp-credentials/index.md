@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: otp-credentials"
+title: "Permissions-Policy: otp-credentials directive"
+short-title: otp-credentials
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/otp-credentials
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.otp-credentials
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `otp-credentials` directive controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
 

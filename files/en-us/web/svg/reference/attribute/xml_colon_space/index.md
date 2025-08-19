@@ -41,16 +41,13 @@ You can use this attribute with any SVG element.
 </table>
 
 - `default`
-
   - : With this value set, whitespace characters will be processed in this order:
-
     1. All newline characters are removed.
     2. All tab characters are converted into space characters.
     3. All leading and trailing space characters are removed.
     4. All contiguous space characters are collapsed into a single space character.
 
 - `preserve`
-
   - : This value tells the user agent to convert all newline and tab characters into spaces. Then, it draws all space characters (including leading, trailing and multiple consecutive space characters).
 
     For example, the string "a&nbsp;&nbsp;&nbsp;b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").

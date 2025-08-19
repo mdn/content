@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.column
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the individual columns generated when a container is set to display its content in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). The `::column` pseudo-element enables applying styles that do not affect the layout to these generated fragments.
 
@@ -146,8 +147,8 @@ li {
   width: 200px;
   text-align: left;
 
-  background-color: #eee;
-  outline: 1px solid #ddd;
+  background-color: #eeeeee;
+  outline: 1px solid #dddddd;
   padding: 0 20px;
   margin: 0 10px;
 }

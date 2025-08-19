@@ -2,9 +2,8 @@
 title: Grid template areas
 slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In the [grid layout using line-based placement guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement), we looked at grid lines and how to position items against those lines. When you use CSS grid layout, you always have lines, and this can be a straightforward way to place items on your grid. However, there is an alternate method to use for positioning items on the grid which you can use alone or in combination with line-based placement. This method involves placing our items using named template areas. You will see very quickly why we sometimes call this the ascii-art method of grid layout!
 
@@ -290,7 +289,7 @@ For our layout above, we might like to have a very basic layout at narrow widths
 We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout, we keep the nine-column track grid, redefining where items are placed using `grid-template-areas`.
 
 ```css
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .wrapper {
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
@@ -299,7 +298,7 @@ We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_
       "sd sd sd  ft  ft   ft   ft   ft   ft";
   }
 }
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .wrapper {
     grid-template-areas:
       "hd hd hd   hd   hd   hd   hd   hd hd"
@@ -468,7 +467,7 @@ The {{cssxref("grid")}} shorthand goes a step further and also sets properties u
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-flow")}}
 
-You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware than when doing so you will reset the other values set by the property.
+You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand. Just be aware that when doing so you will reset the other values set by the property.
 
 ```css
 .wrapper {

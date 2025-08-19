@@ -5,9 +5,10 @@ page-type: css-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-y
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
 
@@ -50,7 +51,7 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 
 ## Formal syntax
 
-{{CSSSyntaxRaw(`-webkit-mask-repeat-y = repeat | no-repeat | space | round`)}}
+{{CSSSyntaxRaw(`-webkit-mask-repeat-y = [ repeat | no-repeat | space | round ]#`)}}
 
 ## Examples
 

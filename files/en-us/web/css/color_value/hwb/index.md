@@ -6,9 +6,8 @@ browser-compat: css.types.color.hwb
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-HWB
   - https://drafts.csswg.org/css-color/#the-hwb-notation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`hwb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 
@@ -53,7 +52,7 @@ hwb(194 0% 0% / .5)
 
 /* Relative values */
 hwb(from green h w b / 0.5)
-hwb(from #0000FF h calc(w + 30) b)
+hwb(from #123456 h calc(w + 30) b)
 hwb(from lch(40% 70 240deg) h w calc(b - 30))
 ```
 
@@ -80,19 +79,15 @@ hwb(H W B[ / A])
 The parameters are as follows:
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
 
 - `W`
-
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `B`
-
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness. `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `A` {{optional_inline}}
-
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
 > [!NOTE]
@@ -110,19 +105,15 @@ hwb(from <color> H W B[ / A])
 The parameters are as follows:
 
 - `from <color>`
-
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 
 - `H`
-
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle.
 
 - `W`
-
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `B`
-
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's blackness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no blackness. `100%` represents full blackness if `W` is `0`, otherwise both the `W` and `B` values are normalized.
 
 - `A` {{optional_inline}}

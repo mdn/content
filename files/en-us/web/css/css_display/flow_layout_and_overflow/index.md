@@ -2,9 +2,8 @@
 title: Flow layout and overflow
 slug: Web/CSS/CSS_display/Flow_layout_and_overflow
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When there is more content than can fit into a container, an overflow situation occurs. Understanding how overflow behaves is important in dealing with any element with a constrained size in CSS. This guide explains how overflow works when working with normal flow.
 The HTML is the same in each example, so it's visible in the first section, and hidden in others for brevity.
@@ -165,8 +164,7 @@ body {
 
 As we have already learned, using any of these values, other than the default of `visible`, will create a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
-> [!NOTE]
-> In the [Working Draft of Overflow Level 3](https://www.w3.org/TR/css-overflow-3/), there is an additional value `overflow: clip`. This acts like `overflow: hidden`, however it does not allow for programmatic scrolling, the box becomes non-scrollable. In addition it does not create a block formatting context.
+`overflow: clip` acts like `overflow: hidden`, but it does not allow programmatic scrolling; the box becomes non-scrollable. It also does not create a block formatting context.
 
 The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/docs/Web/CSS/overflow-x) and [`overflow-y`](/en-US/docs/Web/CSS/overflow-y) properties. If you specify only one value for overflow, this value is used for both axes. However, you can specify both values in which case the first is used for `overflow-x` and therefore the horizontal direction, and the second for `overflow-y` and the vertical direction. In the below example, I have only specified `overflow-y: scroll` so we do not get the unwanted horizontal scrollbar.
 
@@ -259,7 +257,7 @@ body {
 
 ### Block-Axis Overflow
 
-The [Overflow Level 3](https://www.w3.org/TR/css-overflow-3/) specification adds a `block-ellipsis` property ([previously called `block-overflow`](https://github.com/w3c/csswg-drafts/commit/20b15b4d66b0fdfa8406f1ce28604128f02ee7bb)). This property enables adding an ellipsis (or custom strings) when text overflows in the block dimension, although there is no browser support for this at the time of writing.
+The [Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis) specification adds a `block-ellipsis` property ([previously called `block-overflow`](https://github.com/w3c/csswg-drafts/commit/20b15b4d66b0fdfa8406f1ce28604128f02ee7bb)). This property enables adding an ellipsis (or custom strings) when text overflows in the block dimension, although there is no browser support for this at the time of writing.
 
 This is useful in the situation where you have a listing of articles, for example, and you display the listings in fixed height boxes which only take a limited amount of text. It may not be obvious to the reader that there is more content to click through to when clicking the box or the title. An ellipsis indicates clearly the fact there is more content. The specification would allow a string of content or a regular ellipsis to be inserted.
 

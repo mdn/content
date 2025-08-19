@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("blur", (event) => {});
+```js-nolint
+addEventListener("blur", (event) => { })
 
-onblur = (event) => {};
+onblur = (event) => { }
 ```
 
 ## Event type
@@ -53,8 +53,8 @@ This example changes the appearance of a document when it loses focus. It uses {
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  background: #dddddd;
+  color: #555555;
 }
 ```
 

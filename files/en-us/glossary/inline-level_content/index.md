@@ -2,9 +2,8 @@
 title: Inline-level content
 slug: Glossary/Inline-level_content
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In CSS, content that participates in inline layout is called **inline-level content**. Most text sequences, replaced elements, and generated content are inline-level by default.
 
@@ -32,11 +31,11 @@ In this example, the {{HTMLElement("p")}} element contains some text. Within tha
 body {
   margin: 0;
   padding: 4px;
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 
 .highlight {
-  background-color: #ee3;
+  background-color: #eeee33;
 }
 ```
 

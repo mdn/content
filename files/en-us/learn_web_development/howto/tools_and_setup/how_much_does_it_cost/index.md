@@ -2,9 +2,8 @@
 title: How much does it cost to do something on the Web?
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 Getting involved on the Web isn't as cheap as it looks. In this article we discuss how much you may have to spend, and why.
 
@@ -78,7 +77,7 @@ Because FTP is inherently insecure, you should make sure to use SFTP — the sec
 
 ## Browsers
 
-You either already have a browser or can get one for free. If necessary, download Firefox [here](https://www.mozilla.org/en-US/firefox/all/) or Google Chrome [here](https://www.google.com/chrome/).
+You either already have a browser or can get one for free. If necessary, download [Firefox](https://www.firefox.com/en-US/download/all/) or [Google Chrome](https://www.google.com/chrome/).
 
 ## Web access
 

@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDateTime.prototype.minute
+short-title: minute
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/minute
 page-type: javascript-instance-accessor-property
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.minute
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`minute`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a integer from 0 to 59 representing the minute component of this time.
 

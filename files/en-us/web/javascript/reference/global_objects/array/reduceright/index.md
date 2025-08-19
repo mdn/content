@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
 
@@ -14,13 +14,13 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
 
 ```js interactive-example
-const array1 = [
+const array = [
   [0, 1],
   [2, 3],
   [4, 5],
 ];
 
-const result = array1.reduceRight((accumulator, currentValue) =>
+const result = array.reduceRight((accumulator, currentValue) =>
   accumulator.concat(currentValue),
 );
 
@@ -147,7 +147,7 @@ const randInt = (max) => Math.floor(Math.random() * max);
 const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
 };
-const mult3 = (callback, x) => {
+const mul3 = (callback, x) => {
   setTimeout(callback, randInt(1000), x * 3);
 };
 const sub2 = (callback, x) => {
@@ -163,7 +163,7 @@ const div4 = (callback, x) => {
   setTimeout(callback, randInt(1000), x / 4);
 };
 
-const computation = waterfall(add5, mult3, sub2, split, add, div4);
+const computation = waterfall(add5, mul3, sub2, split, add, div4);
 computation(console.log, 5); // Logs 14
 
 // same as:
@@ -173,7 +173,7 @@ const computation2 = (input, callback) => {
   const f5 = (x, y) => add(f6, x, y);
   const f4 = (x) => split(f5, x);
   const f3 = (x) => sub2(f4, x);
-  const f2 = (x) => mult3(f3, x);
+  const f2 = (x) => mul3(f3, x);
   add5(f2, input);
 };
 ```

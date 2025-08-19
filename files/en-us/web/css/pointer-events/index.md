@@ -3,9 +3,8 @@ title: pointer-events
 slug: Web/CSS/pointer-events
 page-type: css-property
 browser-compat: css.properties.pointer-events
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
 
@@ -34,7 +33,7 @@ pointer-events: fill; /* SVG-only */
       <a href="#">example link</a>
     </p>
     <p>
-      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <a xlink:href="#">
           <circle
             cx="50"
@@ -99,7 +98,6 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 - `auto`
   - : The element behaves as it would if the `pointer-events` property were not specified. In SVG content, this value and the value `visiblePainted` have the same effect.
 - `none`
-
   - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targetable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to or from the descendant during the event capture and [bubble](/en-US/docs/Web/API/Event/bubbles) phases.
 
     > [!NOTE]

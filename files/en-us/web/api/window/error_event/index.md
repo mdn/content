@@ -16,10 +16,10 @@ This event is only generated for script errors thrown synchronously, such as dur
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (message, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => { }
 ```
 
 > [!NOTE]
@@ -60,7 +60,6 @@ When canceled, the error won't appear in the console, but the current script wil
 The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
 - `message`
-
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
 
     > [!NOTE]

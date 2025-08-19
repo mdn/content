@@ -1,10 +1,10 @@
 ---
 title: Firefox 126 for developers
+short-title: Firefox 126
 slug: Mozilla/Firefox/Releases/126
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 126 that affect developers. Firefox 126 was released on [May 14, 2024](https://whattrainisitnow.com/release/?version=126).
 
@@ -43,7 +43,6 @@ No notable changes.
 - The [`URL.parse()`](/en-US/docs/Web/API/URL/parse_static) static method is now supported for creating [`URL`](/en-US/docs/Web/API/URL) objects. This returns `null` if the passed parameters do not define a valid `URL`, and can hence be used as a non-throwing alternative to creating `URL` object with the [`URL` constructor](/en-US/docs/Web/API/URL/URL) ([Firefox bug 1823354](https://bugzil.la/1823354)).
 - The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) is now supported, allowing a web application to request that the screen not be dimmed or locked while it is active. This is particularly useful for navigation and reading applications, as well as other applications where the screen may not receive regular tactile input when in use that would typically keep it awake. The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}. This allows you to request a {{domxref("WakeLockSentinel")}}, which can be used to monitor the status of the wake lock and release it manually ([Firefox bug 1589554](https://bugzil.la/1589554), [Firefox bug 1874849](https://bugzil.la/1874849)).
 - All [`RTCIceCandidate`](/en-US/docs/Web/API/RTCIceCandidate) properties and methods are now supported and match the specification, with the exception of the unimplemented `relayProtocol` and `url` properties. The following changes were made to the properties of `RTCIceCandidate`:
-
   - The following properties were made read-only: [`candidate`](/en-US/docs/Web/API/RTCIceCandidate/candidate), [`sdpMid`](/en-US/docs/Web/API/RTCIceCandidate/sdpMid), [`sdpMLineIndex`](/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex), and [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment).
   - The following properties were added: [`foundation`](/en-US/docs/Web/API/RTCIceCandidate/foundation), [`component`](/en-US/docs/Web/API/RTCIceCandidate/component), [`priority`](/en-US/docs/Web/API/RTCIceCandidate/priority), [`address`](/en-US/docs/Web/API/RTCIceCandidate/address), [`protocol`](/en-US/docs/Web/API/RTCIceCandidate/protocol), [`port`](/en-US/docs/Web/API/RTCIceCandidate/port), [`type`](/en-US/docs/Web/API/RTCIceCandidate/type), [`tcpType`](/en-US/docs/Web/API/RTCIceCandidate/tcpType), [`relatedAddress`](/en-US/docs/Web/API/RTCIceCandidate/relatedAddress), [`relatedPort`](/en-US/docs/Web/API/RTCIceCandidate/relatedPort), and [`usernameFragment`](/en-US/docs/Web/API/RTCIceCandidate/usernameFragment).
 
@@ -70,7 +69,7 @@ No notable changes.
 
 - Added the `contexts` argument to the `network.addIntercept` command to limit the interception of network requests to particular top-level browsing contexts ([Firefox bug 1882260](https://bugzil.la/1882260)).
 - Both the commands `session.subscribe` and `session.unsubscribe` now raise an `invalid argument` error when the value of the arguments `events` or `contexts` are empty arrays ([Firefox bug 1887871](https://bugzil.la/1887871)).
-- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behaviour. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1879503](https://bugzil.la/1879503)).
+- Updated the implementation of the `storage.getCookies` command to align with the Gecko default cookie behavior. This allows the removal of the user value for the preference `network.cookie.cookieBehavior`, which was only expected to be set for our CDP implementation ([Firefox bug 1879503](https://bugzil.la/1879503)).
 - Removed the `ownership` and `sandbox` arguments for the `browsingContext.locateNodes` command because they are no longer necessary ([Firefox bug 1884935](https://bugzil.la/1884935)).
 - Improved error message for the `session.new` command when no capabilities are specified ([Firefox bug 1838152](https://bugzil.la/1838152)).
 
@@ -93,7 +92,3 @@ These features are newly shipped in Firefox 126 but are disabled by default. To 
 - **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
 
   You can use the {{cssxref("basic-shape/shape","shape()")}} function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the {{cssxref("basic-shape/path","path()")}} function ([Firefox bug 1823463](https://bugzil.la/1823463) for `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for `shape()` function support in `offset-path`, [Firefox bug 1884425](https://bugzil.la/1884425) for `shape()` interpolation support).
-
-## Older versions
-
-{{Firefox_for_developers}}

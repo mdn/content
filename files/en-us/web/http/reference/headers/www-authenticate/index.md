@@ -1,11 +1,11 @@
 ---
-title: WWW-Authenticate
+title: WWW-Authenticate header
+short-title: WWW-Authenticate
 slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 page-type: http-header
 browser-compat: http.headers.WWW-Authenticate
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** {{Glossary("response header")}} advertises the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) methods (or {{Glossary("challenge", "challenges")}}) that might be used to gain access to a specific resource.
 

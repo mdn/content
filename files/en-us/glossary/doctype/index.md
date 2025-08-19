@@ -2,9 +2,8 @@
 title: Doctype
 slug: Glossary/Doctype
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In {{Glossary("HTML")}}, the **doctype** is the required `<!doctype html>` preamble found at the top of all documents. Its sole purpose is to prevent a {{Glossary("browser")}} from switching into so-called ["quirks mode"](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) when rendering a document; that is, the `<!doctype html>` doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.
 

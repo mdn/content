@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: end() method"
 short-title: end()
 slug: Web/API/GPURenderPassEncoder/end
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.end
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`end()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface completes recording of the current render pass command sequence.
@@ -41,7 +39,7 @@ The following criteria must be met when calling **`end()`**, otherwise a {{domxr
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `end()` is called in an appropriate place to end the render pass.
 
 ```js
-// ...
+// …
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
@@ -74,7 +72,7 @@ passEncoder.end();
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

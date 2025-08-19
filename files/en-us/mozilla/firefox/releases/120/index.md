@@ -1,10 +1,10 @@
 ---
 title: Firefox 120 for developers
+short-title: Firefox 120
 slug: Mozilla/Firefox/Releases/120
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 was released on [November 21, 2023](https://whattrainisitnow.com/release/?version=120).
 
@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 120 that affect d
 ### CSS
 
 - The {{CSSXref("color_value/light-dark", "light-dark()")}} CSS Color function is now supported. This allows the setting of a colors for both light & dark without the need for `prefers-color-scheme` media feature ([Firefox bug 1856999](https://bugzil.la/1856999)).
-- The [`lh` and `rlh`](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
+- The [`lh`](/en-US/docs/Web/CSS/length#lh) and [`rlh`](/en-US/docs/Web/CSS/length#rlh) line height units are now supported. These allow setting properties relative to the line height of an element, for example, precisely aligning background decoration with multiline text ([Firefox bug 1310170](https://bugzil.la/1310170)).
 
 #### Removals
 
@@ -26,9 +26,7 @@ This article provides information about the changes in Firefox 120 that affect d
 ### JavaScript
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
-
   - Numeric dashed dates which do not meet the formal ISO standard are now accepted ([Firefox bug 1557650](https://bugzil.la/1557650)), including:
-
     - `"01-12-1999"` (month first)
     - `"1999-1-5"` (single-digit month or day)
     - `"10000-01-12"` (year > 9999)
@@ -38,7 +36,6 @@ This article provides information about the changes in Firefox 120 that affect d
     These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
   - Requirements for characters directly following numbers have been loosened to accept new formats ([Firefox bug 449921](https://bugzil.la/449921)), including:
-
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`
@@ -74,7 +71,3 @@ This article provides information about the changes in Firefox 120 that affect d
 ## Changes for add-on developers
 
 - Although {{domxref("PointerEvent.getCoalescedEvents()")}} has been restricted to secure contexts ([Firefox bug 1858434](https://bugzil.la/1858434)), content scripts can use this method in documents that aren't a secure context ([Firefox bug 1870498](https://bugzil.la/1870498)).
-
-## Older versions
-
-{{Firefox_for_developers}}

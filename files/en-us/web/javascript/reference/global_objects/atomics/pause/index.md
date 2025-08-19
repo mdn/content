@@ -1,11 +1,11 @@
 ---
 title: Atomics.pause()
+short-title: pause()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/pause
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.pause
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.pause()`** static method provides a micro-wait primitive that hints to the CPU that the caller is spinning while waiting on access to a shared resource. This allows the system to reduce the resources allocated to the core (such as power) or thread, without yielding the current thread.
 

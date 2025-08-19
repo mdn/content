@@ -3,9 +3,8 @@ title: <blend-mode>
 slug: Web/CSS/blend-mode
 page-type: css-type
 browser-compat: css.types.blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 
@@ -387,7 +386,7 @@ div {
   width: 300px;
   height: 300px;
   background:
-    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png")
       no-repeat center,
     linear-gradient(to bottom, blue, orange);
 }

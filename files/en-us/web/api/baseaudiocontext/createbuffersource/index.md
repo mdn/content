@@ -64,7 +64,7 @@ const myArrayBuffer = audioCtx.createBuffer(
 
 button.onclick = () => {
   // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
+  // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
     // This gives us the actual ArrayBuffer that contains the data
     const nowBuffering = myArrayBuffer.getChannelData(channel);

@@ -4,9 +4,8 @@ short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
 page-type: html-attribute
 browser-compat: html.elements.input.pattern
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
 
@@ -47,7 +46,7 @@ The `pattern` attribute is an attribute of the {{HTMLElement("input/text", "text
 
 The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
-The pattern's regular expression is compiled with the [`'v'` flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class). This makes the regular expression [unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), and also changes how character classes are interpreted. This allows character class set intersection and subtraction operations, and in addition to `]` and `\`, the following characters must be escaped using a `\` backslash if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Before mid-2023, the `'u'` flag was specified instead; If you're updating older code, [this document outlines the differences](https://github.com/tc39/proposal-regexp-v-flag#how-is-the-v-flag-different-from-the-u-flag).
+The pattern's regular expression is compiled with the [`'v'` flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class). This makes the regular expression [unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), and also changes how character classes are interpreted. This allows character class set intersection and subtraction operations, and in addition to `]` and `\`, the following characters must be escaped using a `\` backslash if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Before mid-2023, the `'u'` flag was specified instead; If you're updating older code, read the [`unicodeSets`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) reference.
 
 The pattern's regular expression must match the entire input's `value`, rather than matching a substring - as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
@@ -154,7 +153,7 @@ div {
 
 p {
   font-size: 80%;
-  color: #999;
+  color: #999999;
 }
 
 input + span {

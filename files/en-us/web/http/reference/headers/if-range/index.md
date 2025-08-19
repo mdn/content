@@ -1,11 +1,11 @@
 ---
-title: If-Range
+title: If-Range header
+short-title: If-Range
 slug: Web/HTTP/Reference/Headers/If-Range
 page-type: http-header
 browser-compat: http.headers.If-Range
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`If-Range`** {{Glossary("request header")}} makes a range request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 If the condition is fulfilled, a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests) is issued, and the server sends back a {{HTTPStatus("206", "206 Partial Content")}} response with part (or parts) of the resource in the body.

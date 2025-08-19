@@ -3,9 +3,8 @@ title: clear
 slug: Web/CSS/clear
 page-type: css-property
 browser-compat: css.properties.clear
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clear`** [CSS](/en-US/docs/Web/CSS) property sets whether an element must be moved below (cleared) [floating](/en-US/docs/Web/CSS/float) elements that precede it. The `clear` property applies to floating and non-floating elements.
 
@@ -52,14 +51,14 @@ clear: both;
 
 .floated-left {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: left;
 }
 
 .floated-right {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: right;
   height: 150px;
@@ -155,7 +154,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -201,7 +200,7 @@ p {
   float: right;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -251,7 +250,7 @@ p {
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {

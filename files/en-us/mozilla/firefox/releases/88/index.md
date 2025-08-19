@@ -1,10 +1,10 @@
 ---
 title: Firefox 88 for developers
+short-title: Firefox 88
 slug: Mozilla/Firefox/Releases/88
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
@@ -63,7 +63,3 @@ _No changes._
 ## Changes for add-on developers
 
 - `url` can now be used to limit the properties for which the {{WebExtAPIRef("tabs.onUpdated")}} event is triggered ([Firefox bug 1680279](https://bugzil.la/1680279)).
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: flood-color
 slug: Web/CSS/flood-color
 page-type: css-property
 browser-compat: css.properties.flood-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flood-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the current filter primitive subregion in {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements within a {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("flood-color")}} attribute.
 
@@ -18,7 +17,7 @@ The **`flood-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of t
 /* <color> values */
 flood-color: red;
 flood-color: hsl(120deg 75% 25% / 60%);
-flood-color: currentcolor;
+flood-color: currentColor;
 
 /* Global values */
 flood-color: inherit;
@@ -31,7 +30,6 @@ flood-color: unset;
 ### Values
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : The flood's color. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 ## Formal definition
@@ -89,7 +87,7 @@ We then apply different flood color values to the `<feFlood>` elements using the
   flood-color: rebeccapurple;
 }
 #flood2 feFlood {
-  flood-color: #f36;
+  flood-color: #ff3366;
 }
 ```
 

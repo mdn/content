@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: end() method"
 short-title: end()
 slug: Web/API/GPUComputePassEncoder/end
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.end
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`end()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface completes recording of the current compute pass command sequence.
@@ -41,7 +39,7 @@ In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-de
 ```js
 const BUFFER_SIZE = 1000;
 
-// ...
+// …
 
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
@@ -69,7 +67,7 @@ commandEncoder.copyBufferToBuffer(
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

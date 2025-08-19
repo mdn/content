@@ -2,9 +2,8 @@
 title: What are browser developer tools?
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
@@ -20,12 +19,10 @@ The devtools live inside your browser in a subwindow that looks roughly like thi
 How do you pull it up? Three ways:
 
 - **_Keyboard:_**
-
   - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
   - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
-
   - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Opera**: _Developer ➤ Developer tools_

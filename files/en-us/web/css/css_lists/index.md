@@ -3,9 +3,8 @@ title: CSS lists and counters
 slug: Web/CSS/CSS_lists
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-lists/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS lists and counters** module enables styling and positioning of list item bullets and manipulating their values with a combination of strings, counters, and other features.
 
@@ -45,7 +44,6 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 ## Guides
 
 - [Consistent list indentation](/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
-
   - : Explains how to achieve consistent list indentation across different browsers.
 
 - [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
@@ -54,7 +52,6 @@ There is also a `marker-side` property, which is yet to be fully defined or impl
 ## Related concepts
 
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)
-
   - {{cssxref("@counter-style")}} at-rule
   - [`<counter-style-name>`](/en-US/docs/Web/CSS/@counter-style#counter-style-name) data type
   - [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values) data type

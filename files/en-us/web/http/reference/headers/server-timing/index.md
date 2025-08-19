@@ -1,11 +1,11 @@
 ---
-title: Server-Timing
+title: Server-Timing header
+short-title: Server-Timing
 slug: Web/HTTP/Reference/Headers/Server-Timing
 page-type: http-header
 browser-compat: http.headers.Server-Timing
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Server-Timing`** {{Glossary("response header")}} communicates one or more performance metrics about the request-response cycle to the user agent.
 It is used to surface backend server timing metrics (for example, database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the {{domxref("PerformanceServerTiming")}} interface.

@@ -3,9 +3,8 @@ title: text-wrap-mode
 slug: Web/CSS/text-wrap-mode
 page-type: css-property
 browser-compat: css.properties.text-wrap-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("white-space")}} shorthand.
 

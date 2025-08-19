@@ -3,9 +3,8 @@ title: "@starting-style"
 slug: Web/CSS/@starting-style
 page-type: css-at-rule
 browser-compat: css.at-rules.starting-style
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e., when an element is first displayed on a previously loaded page.
 
@@ -40,7 +39,8 @@ To avoid unexpected behavior, [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 `@starting-style` is especially useful when creating entry and exit transitions for elements displayed in the {{glossary("top layer")}} (such as [popovers](/en-US/docs/Web/API/Popover_API) and modal {{htmlelement("dialog")}}s), elements that are changing to and from `display: none`, and elements when first added to or removed from the DOM.
 
-> **Note:** `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+> [!NOTE]
+> `@starting-style` is only relevant to CSS transitions. When using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to implement such effects, `@starting-style` is not needed. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
 
 There are two ways to use `@starting-style`: as a standalone rule or nested within a ruleset.
 
@@ -262,7 +262,7 @@ html {
 
 /* Transition for the popover's backdrop */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -279,7 +279,7 @@ html {
 so specify a standalone starting-style block. */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -329,17 +329,18 @@ const sectionElem = document.querySelector("section");
 
 btn.addEventListener("click", createColumn);
 
-function randomColor() {
+function randomBackground() {
   function randomNum() {
     return Math.floor(Math.random() * 255);
   }
+  const baseColor = `${randomNum()} ${randomNum()} ${randomNum()}`;
 
-  return `rgb(${randomNum()} ${randomNum()} ${randomNum()})`;
+  return `linear-gradient(to right, rgb(${baseColor} / 0), rgb(${baseColor} / 0.5))`;
 }
 
 function createColumn() {
   const divElem = document.createElement("div");
-  divElem.style.backgroundColor = randomColor();
+  divElem.style.background = randomBackground();
 
   const closeBtn = document.createElement("button");
   closeBtn.textContent = "✖";
@@ -399,11 +400,6 @@ div {
   flex: 1;
   border: 1px solid gray;
   position: relative;
-  background: linear-gradient(
-    to right,
-    rgb(255 255 255 / 0%),
-    rgb(255 255 255 / 50%)
-  );
   opacity: 1;
   scale: 1 1;
 
