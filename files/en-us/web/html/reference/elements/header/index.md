@@ -55,7 +55,7 @@ header > time {
 
 When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It define a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-Otherwise, when nested within said elements, it loses its landmark status and behaves like a non-semantic container. See [Accessibility](#accessibility) for details.
+Otherwise, when nested within said elements, it loses its landmark status and represents a group of introductory or navigational aids for the surrounding section. It usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
