@@ -9,10 +9,10 @@ browser-compat: api.QuotaExceededError
 
 The **`QuotaExceededError`** interface represents an error when a requested operation would exceed a system-imposed storage quota.
 
-It is a subclass of {{domxref("DOMException")}} and contains additional properties such as `quota` and `requested`.
-
 > [!NOTE]
-> In browser versions before this interface was implemented, it was a regular `DOMException`.
+> In browser versions before this interface was implemented, it was a regular `DOMException`. The subclassing allows for extra information like `quota` and `requested` to be included.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -20,6 +20,8 @@ It is a subclass of {{domxref("DOMException")}} and contains additional properti
   - : Creates a `QuotaExceededError` object.
 
 ## Instance properties
+
+_Also inherits properties from its ancestor {{domxref("DOMException")}}._
 
 - {{domxref("QuotaExceededError.quota")}} {{ReadOnlyInline}}
   - : Returns the system-defined storage limit (in bytes) that was exceeded.
