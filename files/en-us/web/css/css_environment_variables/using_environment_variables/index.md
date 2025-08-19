@@ -50,8 +50,8 @@ The [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_AP
 - `titlebar-area-*`
   - : The `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` variables define the area that would generally be occupied by the title bar in an installed web application running on a desktop environment. Use the `titlebar-area-*` variables to ensure content doesn't overlap with the window control buttons (that is, minimize, maximize, and close).
 
-- `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
-  - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's position and size, specifically its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
+- `keyboard-inset-*`
+  - : The `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height` variables provide information about the on-screen virtual keyboard's position and size, specifically its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
 You may have noticed that all the previous variable names include the physical terms of left, right, top, bottom, height, and width. Logical equivalents are not needed because the variable names refer to the physical properties of the device hardware rather than the displayed website.
 
