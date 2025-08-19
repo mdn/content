@@ -38,6 +38,7 @@ The document in this example contains headings at three different levels.
   color: tomato;
 }
 ```
+
 The `:heading` pseudo-class applies the `color` to all the headings in the document:
 
 {{EmbedLiveSample("styling_all_headings", "", "170")}}

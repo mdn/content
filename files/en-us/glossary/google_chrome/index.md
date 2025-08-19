@@ -35,7 +35,7 @@ If you want to try the latest Chrome features, install one of the pre-stable bui
 - [The Chromium Projects](https://www.chromium.org/)
 - [Chrome for Developers](https://developer.chrome.com/)
 - [Chrome Platform Status](https://chromestatus.com/)
-- [Report Chromium issues](https://bugs.chromium.org/p/chromium/issues/list)
+- [Report Chromium issues](https://issues.chromium.org/issues)
 - Related glossary terms:
   - {{glossary("Browser")}}
   - {{glossary("Blink")}}

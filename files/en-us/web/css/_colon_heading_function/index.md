@@ -106,6 +106,7 @@ main {
 ```
 
 In this example:
+
 - `:heading(3, 4)` matches the `<h3>` and `<h4>` elements
 - `:heading(-n + 3)` matches heading elements in reverse, so `<h3>`, `<h2>`, and `<h1>`
 - `:heading(3n + 1)` matches every third (`3n`) heading element starting from `<h1>`, so this would include `<h1>` and `<h4>`
