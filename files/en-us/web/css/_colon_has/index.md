@@ -37,7 +37,7 @@ Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements
 
 ### Selecting a parent element
 
-The `:has()` pseudo-class is commonly used to select a parent element based on the presence of a specific child element. This example shows how to style a `<section>` element when it contains a child with the `featured` class.
+You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
 
 ```html
 <section>
@@ -50,20 +50,16 @@ The `:has()` pseudo-class is commonly used to select a parent element based on t
 ```
 
 ```css
-/* Selects a <section> that contains a .featured element */
 section:has(.featured) {
   border: 2px solid blue;
-}
-
-/* Bonus: Style the featured child differently */
-section:has(.featured) .featured {
-  background-color: lightblue;
 }
 ```
 
 ### Result
 
-The `<section>` containing the `.featured` article will have a blue border, and the `.featured` article itself will have a light blue background, while the other `<section>` will remain unaffected. {{EmbedLiveSample('Selecting_a_parent_element', 600, 200)}}
+The `<section>` containing the `.featured` article will have a blue border, and the `.featured` article itself will have a light blue background, while the other `<section>` will remain unaffected.
+
+{{EmbedLiveSample('Selecting a parent element', , 200)}}
 
 ### With the sibling combinator
 
