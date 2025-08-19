@@ -122,7 +122,7 @@ With this adjustment, the `--transparent(var(--base-color), 50%)` value will now
 
 ### Specifying default values
 
-You can also specify default values for parameters, after a colon at the end of its definition. For example:
+You can also specify default values for parameters, after a colon at the end of their definition. For example:
 
 ```css
 @function --transparent(--color <color>, --alpha <number>: 0.8) returns <color> {
