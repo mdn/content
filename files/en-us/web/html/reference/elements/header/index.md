@@ -69,7 +69,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element.
 
-When placed inside an {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, or {{HTMLElement('aside')}} element, the `<header>` element has the [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) role instead, and is no longer considered a landmark. In this case, it cannot be labeled with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
+When placed inside an {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, {{HTMLElement('aside')}}, or an element with the same ARIA role as these elements' implicit ARIA role, the `<header>` element has the [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) role instead, and is no longer considered a landmark. In this case, it cannot be labeled with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Examples
 
