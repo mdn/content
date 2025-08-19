@@ -20,7 +20,7 @@ Common browsers include:
 - [Web browser](https://en.wikipedia.org/wiki/Web_browser) on Wikipedia
 - {{HTTPHeader("User-agent")}} HTTP request header
 - Browser download links:
-  - [Apple Safari](https://support.apple.com/downloads/safari)
+  - [Apple Safari](https://www.apple.com/safari/) (Safari is not a downloadable browser)
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
   - [Mozilla Firefox](https://www.firefox.com/en-US/)

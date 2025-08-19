@@ -148,12 +148,12 @@ dataProvider.prototype = {
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor === "application/x-moz-file-promise") {
+  getFlavorData(transferable, flavor, data, dataLen) {
+    if (flavor === "application/x-moz-file-promise") {
       const urlPrimitive = {};
       const dataSize = {};
 
-      aTransferable.getTransferData(
+      transferable.getTransferData(
         "application/x-moz-file-promise-url",
         urlPrimitive,
         dataSize,
@@ -164,7 +164,7 @@ dataProvider.prototype = {
       console.log(`URL file original is = ${url}`);
 
       const namePrimitive = {};
-      aTransferable.getTransferData(
+      transferable.getTransferData(
         "application/x-moz-file-promise-dest-filename",
         namePrimitive,
         dataSize,
@@ -176,7 +176,7 @@ dataProvider.prototype = {
       console.log(`target filename is = ${name}`);
 
       const dirPrimitive = {};
-      aTransferable.getTransferData(
+      transferable.getTransferData(
         "application/x-moz-file-promise-dir",
         dirPrimitive,
         dataSize,
