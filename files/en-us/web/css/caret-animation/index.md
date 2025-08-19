@@ -44,16 +44,61 @@ The `caret-animation` property is specified as one of the keyword values listed 
 
 ## Examples
 
+### Basic `caret-animation` usage
+
+This example shows the difference between having `caret-animation` set to `auto` versus `manual` on an editable element.
+
+#### HTML
+
+The markup features two {{htmlelement("p")}} elements with [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) set to make them editable.
+
+```html live-sample___caret-animation-basic
+<p contenteditable="true">
+  My caret animates because <code>caret-animation</code> is set to
+  <code>auto</code>.
+</p>
+<p contenteditable="true">
+  My caret doesn't animate because <code>caret-animation</code> is set to
+  <code>manual</code>.
+</p>
+```
+
+#### CSS
+
+The CSS sets the {{cssxref("caret-color")}} value to `red`. It then gives the first paragraph a `caret-animation` value of `auto` and the second paragraph a `caret-animation` value of `manual`.
+
+```css live-sample___caret-animation-basic
+p {
+  caret-color: red;
+}
+
+p:first-of-type {
+  caret-animation: auto;
+}
+
+p:last-of-type {
+  caret-animation: manual;
+}
+```
+
+#### Result
+
+The rendered result looks like so:
+
+{{EmbedLiveSample('caret-animation-basic', 'auto', 100)}}
+
+Try focusing the two paragraphs to see the difference in caret behavior.
+
 ### Creating a custom caret animation
 
 In this example, a custom caret animation is applied to an editable paragraph and a text input.
 
 #### HTML
 
-The markup features a {{htmlelement("p")}} element containing text and two basic text {{htmlelement("input")}} elements. The `<p>` element has the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set on it to make it editable. The first two elements have a `class` of `custom-caret` set on them, to enable targetting them with custom caret styles.
+The markup features a {{htmlelement("p")}} element and two text {{htmlelement("input")}} elements. The `<p>` element has the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set on it to make it editable. The paragraph and first text input have a `class` of `custom-caret` set on them.
 
-```html live-sample___caret-animation
-<p contenteditable="" class="custom-caret">
+```html live-sample___caret-animation-custom
+<p contenteditable="true" class="custom-caret">
   This paragraph has a custom animation applied to it, plus
   <code>caret-animation: manual</code> to stop the default caret blinking and
   allow the smooth animation to be seen.
@@ -69,23 +114,23 @@ The markup features a {{htmlelement("p")}} element containing text and two basic
 
 #### CSS
 
-In the CSS, we first define a set of {{cssxref("@keyframes")}} that change the {{cssxref("caret-color")}} from a transparent dark blue to a fully opaque dark blue.
+We first define a set of {{cssxref("@keyframes")}} that change the {{cssxref("caret-color")}} from `transparent` to `darkblue`.
 
-```css live-sample___caret-animation
+```css live-sample___caret-animation-custom
 @keyframes custom-caret-animation {
   from {
-    caret-color: rgb(25 25 112 / 0);
+    caret-color: transparent;
   }
 
   to {
-    caret-color: rgb(25 25 112 / 1);
+    caret-color: darkblue;
   }
 }
 ```
 
-We then style the `<p>` and the first `<input>` with a custom animation based on the `@keyframes`, a dark blue {{cssxref("caret-color")}}, and a `caret-animation` value of `manual` to turn the default caret blinking behavior off.
+We then style the `<p>` and the first `<input>` with the custom `@keyframes` animation, a {{cssxref("caret-color")}}, and a `caret-animation` value of `manual` to turn the default caret blinking behavior off.
 
-```css hidden live-sample___caret-animation
+```css hidden live-sample___caret-animation-custom
 body {
   display: flex;
   flex-direction: column;
@@ -96,10 +141,10 @@ input {
 }
 ```
 
-```css live-sample___caret-animation
+```css live-sample___caret-animation-custom
 .custom-caret {
   animation: custom-caret-animation infinite linear alternate 0.75s;
-  caret-color: rgb(25 25 112 / 1);
+  caret-color: darkblue;
   caret-animation: manual;
 }
 
@@ -113,7 +158,7 @@ input {
 
 The rendered result looks like so:
 
-{{EmbedLiveSample('Making_a_heading_span_columns', 'auto', 260)}}
+{{EmbedLiveSample('caret-aniamtion-custom', 'auto', 260)}}
 
 Try focusing the first two elements to see what the custom caret animation looks like. To compare it with the default blinking caret, you can focus the third element.
 
