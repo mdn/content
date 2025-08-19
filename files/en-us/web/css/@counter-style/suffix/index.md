@@ -14,7 +14,7 @@ The **`suffix`** descriptor of the {{cssxref("@counter-style")}} rule specifies 
 /* <symbol> value: string, image, or identifier  */
 suffix: "";
 suffix: ") ";
-suffix: url(bullet.png);
+suffix: url("bullet.png");
 ```
 
 ### Values

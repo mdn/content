@@ -92,7 +92,7 @@ margin: 2px 1em 0 auto;
 /* anchor-size() values */
 margin: 5% anchor-size(width);
 margin: calc(anchor-size(width) / 4) 1em 0
-  anchor-size(--myAnchor self-inline, 50px);
+  anchor-size(--my-anchor self-inline, 50px);
 
 /* Keyword values */
 margin: auto;

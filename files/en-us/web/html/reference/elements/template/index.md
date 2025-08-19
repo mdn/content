@@ -133,10 +133,10 @@ The result is the original HTML table, with two new rows appended to it via Java
 
 ```css hidden
 table {
-  background: #000;
+  background: black;
 }
 table td {
-  background: #fff;
+  background: white;
 }
 ```
 

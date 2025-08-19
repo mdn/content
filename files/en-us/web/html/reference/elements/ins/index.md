@@ -29,7 +29,7 @@ ins {
 }
 
 del {
-  background-color: #fbb;
+  background-color: #ffbbbb;
 }
 
 ins {

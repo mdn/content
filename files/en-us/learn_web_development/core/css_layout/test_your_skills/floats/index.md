@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Floats"
-short-title: Floats
+short-title: "Test: Floats"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 The aim of this skill test is to help you assess whether you understand [floats in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) using the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
 
@@ -44,7 +46,7 @@ body {
   height: 150px;
   border-radius: 5px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   padding: 1em;
 }
 
@@ -114,7 +116,7 @@ body {
   height: 150px;
   border-radius: 5px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   padding: 1em;
 }
 
@@ -181,13 +183,13 @@ body {
   border-radius: 5px;
   background-color: rgb(207 232 220);
   padding: 1em;
-  color: #fff;
+  color: white;
 }
 
 .box {
   background-color: rebeccapurple;
   padding: 10px;
-  color: #fff;
+  color: white;
 }
 
 .float {
@@ -214,3 +216,5 @@ Other methods might be to use `overflow` or a clearfix hack, however the learnin
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

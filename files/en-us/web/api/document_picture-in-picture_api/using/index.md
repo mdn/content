@@ -151,7 +151,7 @@ In [our demo](https://mdn.github.io/dom-examples/document-picture-in-picture/), 
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {

@@ -67,12 +67,12 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 ```css
 .exampleOne {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: right;
 }
 
 .exampleTwo {
-  -webkit-mask-image: url(mask.png);
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-position-x: 25%;
 }
 ```

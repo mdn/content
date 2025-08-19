@@ -36,7 +36,7 @@ It may be necessary to move an element around, even though you can position it w
 
 ```css hidden
 svg {
-  background-color: #bff;
+  background-color: #bbffff;
 }
 ```
 
@@ -77,7 +77,7 @@ Transformations can be concatenated easily just by separating them with spaces. 
 
 ```css hidden
 svg {
-  background-color: #bff;
+  background-color: #bbffff;
 }
 ```
 

@@ -62,7 +62,7 @@ Where a `<frequency-percentage>` is specified as an allowable type, this means t
 
 ## Browser compatibility
 
-No browser currently supports this feature.
+Currently, no browsers support this feature.
 
 ## See also
 

@@ -39,7 +39,7 @@ This example adds rules in an extra stylesheet added to the document, returned a
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
 h2 {
   font-family: "Nabla", fantasy;

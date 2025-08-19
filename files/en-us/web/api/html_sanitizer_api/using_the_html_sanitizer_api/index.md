@@ -18,12 +18,12 @@ For example, the following code will remove all XSS-unsafe elements and attribut
 
 ```js
 const untrustedString = "abc <script>alert(1)<" + "/script> def";
-const someTargetElement = document.getElementById("target");
+const someElement = document.getElementById("target");
 
 // someElement.innerHTML = untrustedString;
 someElement.setHTML(untrustedString);
 
-console.log(target.innerHTML); // abc def
+console.log(someElement.innerHTML); // abc def
 ```
 
 The other XSS-safe methods, {{domxref('ShadowRoot.setHTML()')}} and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}, are used in the same way.
@@ -54,7 +54,7 @@ For example, in the following sanitizer all safe elements are allowed, and we fu
 
 ```js
 const untrustedString = '<button onclick="alert(1)">Button text</button>';
-const someTargetElement = document.getElementById("target");
+const someElement = document.getElementById("target");
 
 sanitizerOne = Sanitizer(); // Default sanitizer
 sanitizerOne.allowElement({ name: "button", attributes: ["onclick"] });
@@ -211,7 +211,7 @@ targetElement.setHTML("This <b>highlighting</b> isn't needed", {
 });
 
 // Log the result
-targetElement.log(targetElement.innerHTML); // This highlighting isn't needed
+console.log(targetElement.innerHTML); // This highlighting isn't needed
 ```
 
 As with elements and attributes, you can also specify the replacement elements with a namespace, or use the {{domxref("Sanitizer.replaceElementWithChildren()")}} method:

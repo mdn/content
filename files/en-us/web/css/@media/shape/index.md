@@ -72,9 +72,10 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
+- [CSS round display](/en-US/docs/Web/CSS/CSS_round_display) module

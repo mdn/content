@@ -70,7 +70,7 @@ When `getUserInfo()` is called, the browser will make a request to the specified
 
 ### Basic `IdentityProvider.getUserInfo()` usage
 
-The following example shows how the {{domxref("IdentityProvider.getUserInfo_static", "getUserInfo()")}} method can be used to return information on a previously-signed in user from a specific IdP.
+The following example shows how the `IdentityProvider.getUserInfo()` method can be used to return information on a previously-signed in user from a specific IdP.
 
 ```js
 // Iframe displaying a page from the https://idp.example origin

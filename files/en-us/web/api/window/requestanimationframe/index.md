@@ -55,7 +55,7 @@ in the callback list. You should not make any assumptions about its value. You c
 > While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
 > The spec doesn't specify the overflowing behavior, so browsers have divergent behaviors. When overflowing, the value would either wrap around to 0, to a negative value, or fail with an error.
 > Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
-> Note that it would however take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
+> Note, however, that it would take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
 
 ## Examples
 
@@ -89,7 +89,7 @@ requestAnimationFrame(step);
 The following three examples illustrate different approaches to setting the zero point in time,
 the baseline for calculating the progress of your animation in each frame. If you
 want to synchronize to an external clock, such as {{domxref("BaseAudioContext.currentTime")}},
-the highest precision available is the duration of a single frame, 16.67ms @60hz. The
+the highest precision available is the duration of a single frame, 16.67ms @60Hz. The
 callback's timestamp argument represents the end of the previous frame, so the soonest
 your newly calculated value(s) will be rendered is in the next frame.
 
@@ -135,7 +135,9 @@ function animate(timestamp) {
 This example animates using {{domxref("performance.now()")}} instead of the callback's
 timestamp value. You might use this to achieve slightly higher synchronization
 precision, though the extra degree of precision is variable and not much of an increase.
-Note: This example does not allow you to synchronize animation callbacks reliably.
+
+> [!NOTE]
+> This example does not allow you to synchronize animation callbacks reliably.
 
 ```js
 const zero = performance.now();

@@ -156,9 +156,9 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
     For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid division by zero.
 
-- `max-content`
+- {{cssxref("max-content")}}
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
-- `min-content`
+- {{cssxref("min-content")}}
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 
 ## Formal syntax

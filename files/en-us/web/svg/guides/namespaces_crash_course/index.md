@@ -81,7 +81,7 @@ As an aside, it's useful to know that namespace prefixes can also be used for el
   <body>
     <h1>SVG embedded inline in XHTML</h1>
     <svg:svg width="300px" height="200px">
-      <svg:circle cx="150" cy="100" r="50" fill="#ff0000" />
+      <svg:circle cx="150" cy="100" r="50" fill="red" />
     </svg:svg>
   </body>
 </html>

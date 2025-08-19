@@ -14,7 +14,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 - The {{HTMLElement("meter")}} element is now supported.
 - Support for the HTML Microdata API has been added. ([bug 591467](https://bugzil.la/591467))
-- {{HTMLElement("canvas")}} now supports the CSS `currentcolor` in all case. ([Firefox bug 629882](https://bugzil.la/629882))
+- {{HTMLElement("canvas")}} now supports the CSS `currentColor` in all case. ([Firefox bug 629882](https://bugzil.la/629882))
 - {{HTMLElement("input")}} now allows filtering based on arbitrary mimetypes in `accept` ([Firefox bug 565274](https://bugzil.la/565274)).
 - Two new attributes, `width` and `height` have been added to the {{HTMLElement("input")}} element ([bug 683855](https://bugzil.la/683855)).
 

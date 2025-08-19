@@ -366,19 +366,19 @@ const express = require("express");
 const app = express();
 
 // An example middleware function
-function aMiddlewareFunction(req, res, next) {
+function middlewareFunction(req, res, next) {
   // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
 // Function added with use() for all routes and verbs
-app.use(aMiddlewareFunction);
+app.use(middlewareFunction);
 
 // Function added with use() for a specific route
-app.use("/some-route", aMiddlewareFunction);
+app.use("/some-route", middlewareFunction);
 
 // A middleware function added for a specific HTTP verb and route
-app.get("/", aMiddlewareFunction);
+app.get("/", middlewareFunction);
 
 app.listen(3000);
 ```

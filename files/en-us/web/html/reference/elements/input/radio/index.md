@@ -273,7 +273,7 @@ input {
   width: 16px;
   height: 16px;
 
-  border: 2px solid #999;
+  border: 2px solid #999999;
   transition: 0.2s all linear;
   margin-right: 5px;
 
@@ -297,7 +297,7 @@ legend {
 
 button:hover,
 button:focus {
-  color: #999;
+  color: #999999;
 }
 
 button:active {

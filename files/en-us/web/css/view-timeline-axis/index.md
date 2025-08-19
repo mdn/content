@@ -49,7 +49,7 @@ Allowed values for `view-timeline-axis` are:
 
 ### Defining the axis of the view progress timeline
 
-In this example, a view progress timeline named `--subjectReveal` is defined using the `view-timeline-name` property on a subject element with a class of "animation". This timeline is then applied to the animation on the same element, using `animation-timeline: --subjectReveal;`.
+In this example, a view progress timeline named `--subject-reveal` is defined using the `view-timeline-name` property on a subject element with a class of "animation". This timeline is then applied to the animation on the same element, using `animation-timeline: --subject-reveal;`.
 
 To demonstrate the effect of `view-timeline-axis`, a horizontal (non-default) scrollbar is used in this example to drive the animation.
 
@@ -98,7 +98,7 @@ The HTML for the example is shown below.
 
 #### CSS
 
-In the CSS, we set the `subject` element as the source of a view progress timeline named `--subjectReveal` using the `view-timeline-name` property.
+In the CSS, we set the `subject` element as the source of a view progress timeline named `--subject-reveal` using the `view-timeline-name` property.
 The scroll axis is set using `view-timeline-axis: x;` (Chromium) and `view-timeline-axis: horizontal;` (Firefox) — this causes the _horizontal scrollbar_ position of the scrolling ancestor element to determine the animation timeline.
 
 The `content` ancestor element is made to overflow horizontally by laying out its contents using `display: flex;` and `flex-flow: column wrap;`.
@@ -132,7 +132,7 @@ p {
 }
 
 .animation {
-  view-timeline-name: --subjectReveal;
+  view-timeline-name: --subject-reveal;
   /* Chromium supports the new x/y syntax */
   view-timeline-axis: x;
   /* Firefox still supports the old horizontal/vertical syntax */
@@ -140,7 +140,7 @@ p {
 
   animation-name: appear;
   animation-fill-mode: both;
-  animation-timeline: --subjectReveal;
+  animation-timeline: --subject-reveal;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
 }
 

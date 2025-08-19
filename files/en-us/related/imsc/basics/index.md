@@ -176,16 +176,16 @@ The more expanded example below gives you an idea what you can do with IMSC afte
       <style xml:id="alignStart" tts:textAlign="start"/>
       <style xml:id="alignCenter" tts:textAlign="center"/>
       <style xml:id="alignEnd" tts:textAlign="end"/>
-      <style xml:id="textWhite" tts:color="#FFFFFF"/>
+      <style xml:id="textWhite" tts:color="white"/>
       <style xml:id="titleHeading" tts:fontSize="300%"/>
-      <style xml:id="spanDefaultStyle" tts:backgroundColor="#000000" tts:color="#FFFFFF"/>
+      <style xml:id="spanDefaultStyle" tts:backgroundColor="black" tts:color="white"/>
       <style xml:id="monoFont" tts:fontFamily="Lucida Console, Monaco, monospace"/>
       <style xml:id="sansserifFont" tts:fontFamily="Impact, Charcoal, sans-serif"/>
       <style xml:id="comicFont" tts:fontFamily="Comic Sans MS, cursive, sans-serif"/>
-      <style xml:id="blueText" tts:color="#00FFFF" tts:backgroundColor="#000000"/>
-      <style xml:id="limeText" tts:color="#00FF00" tts:backgroundColor="#000000"/>
-      <style xml:id="fuchsiaText" tts:color="#FF00FF" tts:backgroundColor="#000000"/>
-      <style xml:id="yellowText" tts:color="#FFFF00" tts:backgroundColor="#000000"/>
+      <style xml:id="blueText" tts:color="cyan" tts:backgroundColor="black"/>
+      <style xml:id="limeText" tts:color="lime" tts:backgroundColor="black"/>
+      <style xml:id="fuchsiaText" tts:color="magenta" tts:backgroundColor="black"/>
+      <style xml:id="yellowText" tts:color="yellow" tts:backgroundColor="black"/>
     </styling>
     <layout>
       <region xml:id="rTop" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before"/>

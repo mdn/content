@@ -99,7 +99,7 @@ The {{SVGElement('circle')}} has `stroke="context-stroke"` and `fill="context-fi
   <style>
     path {
       stroke-width: 2px;
-      marker: url(#circle);
+      marker: url("#circle");
     }
   </style>
   <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z"

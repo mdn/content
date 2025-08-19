@@ -8,6 +8,68 @@ sidebar: cssref
 
 The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the cosine of a number, which is a value between `-1` and `1`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians. That is, `cos(45deg)`, `cos(0.125turn)`, and `cos(3.14159 / 4)` all represent the same value, approximately `0.707`.
 
+{{InteractiveExample("CSS Demo: cos()")}}
+
+```css interactive-example-choice
+transform: translateX(calc(cos(0deg) * 140px))
+  translateY(calc(sin(0deg) * -140px));
+```
+
+```css interactive-example-choice
+transform: translateX(calc(cos(90deg) * 140px))
+  translateY(calc(sin(90deg) * -140px));
+```
+
+```css interactive-example-choice
+transform: translateX(calc(cos(135deg) * 140px))
+  translateY(calc(sin(135deg) * -140px));
+```
+
+```css interactive-example-choice
+transform: translateX(calc(cos(180deg) * 140px))
+  translateY(calc(sin(180deg) * -140px));
+```
+
+```css interactive-example-choice
+transform: translateX(calc(cos(-45deg) * 140px))
+  translateY(calc(sin(-45deg) * -140px));
+```
+
+```html interactive-example
+<div class="circle">
+  <span class="dot" id="example-element"></span>
+</div>
+```
+
+```css interactive-example
+:root {
+  --radius: 140px;
+  --dot-size: 10px;
+}
+.circle {
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  width: calc(var(--radius) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  background-image:
+    radial-gradient(black var(--dot-size), transparent var(--dot-size)),
+    linear-gradient(135deg, blue, deepskyblue, lightgreen, lavender, honeydew);
+}
+.dot {
+  display: block;
+  width: var(--dot-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #666666;
+  background-color: #ff6666;
+  transform: translateX(calc(cos(0deg) * var(--radius)))
+    translateY(calc(sin(0deg) * var(--radius) * -1));
+}
+```
+
 ## Syntax
 
 ```css

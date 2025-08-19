@@ -71,12 +71,12 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  background-color: #aaaaaa; /* or add it to the track */
 }
 
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: black;
 }
 ```
 

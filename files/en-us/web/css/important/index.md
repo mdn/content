@@ -113,14 +113,14 @@ When the `!important` flag is added to a custom property value declaration, it m
 
 ```css
 :root {
-  --myColor: red !important;
-  --myColor: blue;
+  --my-color: red !important;
+  --my-color: blue;
 }
 p {
-  color: var(--myColor);
+  color: var(--my-color);
 }
 blockquote {
-  color: var(--myColor);
+  color: var(--my-color);
   color: purple;
 }
 ```

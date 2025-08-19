@@ -146,7 +146,7 @@ Let's start with some simple rectangles.
 2. Next, add the following lines to the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(255 0 0)";
+   ctx.fillStyle = "red";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -155,7 +155,7 @@ Let's start with some simple rectangles.
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(0 255 0)";
+   ctx.fillStyle = "green";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
@@ -211,7 +211,7 @@ We'll be using some common methods and properties across all of the below sectio
 A typical, simple path-drawing operation would look something like so:
 
 ```js
-ctx.fillStyle = "rgb(255 0 0)";
+ctx.fillStyle = "red";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -233,7 +233,7 @@ Let's draw an equilateral triangle on the canvas.
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
    ```js
-   ctx.fillStyle = "rgb(255 0 0)";
+   ctx.fillStyle = "red";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```

@@ -28,21 +28,21 @@ This property is a shorthand for the following CSS properties:
 mask: none;
 
 /* Image values */
-mask: url(mask.png); /* Raster image used as mask */
-mask: url(masks.svg#star); /* SVG used as mask */
+mask: url("mask.png"); /* Raster image used as mask */
+mask: url("masks.svg#star"); /* SVG used as mask */
 
 /* Combined values */
-mask: url(masks.svg#star) luminance; /* Luminance mask */
-mask: url(masks.svg#star) 40px 20px; /* Mask positioned 40px from the top and 20px from the left */
-mask: url(masks.svg#star) 0 0/50px 50px; /* Mask with a width and height of 50px */
-mask: url(masks.svg#star) repeat-x; /* Horizontally-repeated mask */
-mask: url(masks.svg#star) stroke-box; /* Mask extends to the inside edge of the stroke box */
-mask: url(masks.svg#star) exclude; /* Mask combined with background using non-overlapping parts */
+mask: url("masks.svg#star") luminance; /* Luminance mask */
+mask: url("masks.svg#star") 40px 20px; /* Mask positioned 40px from the top and 20px from the left */
+mask: url("masks.svg#star") 0 0/50px 50px; /* Mask with a width and height of 50px */
+mask: url("masks.svg#star") repeat-x; /* Horizontally-repeated mask */
+mask: url("masks.svg#star") stroke-box; /* Mask extends to the inside edge of the stroke box */
+mask: url("masks.svg#star") exclude; /* Mask combined with background using non-overlapping parts */
 
 /* Multiple masks */
 mask:
-  url(masks.svg#star) left / 16px repeat-y,
-  /* 16px-wide mask on the left side */ url(masks.svg#circle) right / 16px
+  url("masks.svg#star") left / 16px repeat-y,
+  /* 16px-wide mask on the left side */ url("masks.svg#circle") right / 16px
     repeat-y; /* 16px-wide mask against right side */
 
 /* Global values */

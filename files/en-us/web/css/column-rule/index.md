@@ -94,7 +94,7 @@ The `column-rule` property is specified as one, two, or three of the values list
 ### Example 1
 
 ```css
-/* Same as "medium dotted currentcolor" */
+/* Same as "medium dotted currentColor" */
 p.foo {
   column-rule: dotted;
 }
@@ -104,7 +104,7 @@ p.bar {
   column-rule: solid blue;
 }
 
-/* Same as "8px solid currentcolor" */
+/* Same as "8px solid currentColor" */
 p.baz {
   column-rule: solid 8px;
 }
@@ -131,9 +131,9 @@ p.abc {
 ```css
 .content-box {
   padding: 0.3em;
-  background: #ff7;
+  background: #ffff77;
   column-count: 3;
-  column-rule: inset 2px #33f;
+  column-rule: inset 2px #3333ff;
 }
 ```
 

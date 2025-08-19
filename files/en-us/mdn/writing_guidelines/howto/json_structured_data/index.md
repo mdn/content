@@ -72,7 +72,7 @@ An entry in `GroupData.json` has the following structure:
     > [!NOTE]
     > The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
 - `"events"`
-  - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
+  - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_.
     > [!NOTE]
     > The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
 

@@ -5,11 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
 
-This is the first of 16 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). After completing this tutorial you can find the source code for this section at [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
-
-Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML — the Phaser framework will generate the required {{htmlelement("canvas")}} element.
+This is the first of 16 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
 
 ## The game's HTML
 
@@ -28,53 +26,100 @@ The HTML document structure is quite simple, as the game will be rendered entire
       }
     </style>
     <script src="js/phaser.min.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
-  <body>
-    <script>
-      const game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
-        preload,
-        create,
-        update,
-      });
-      function preload() {}
-      function create() {}
-      function update() {}
-    </script>
-  </body>
+  <body></body>
 </html>
+```
+
+And create a new `js` directory in the same location as your `index.html` file, and create a new file called `script.js` inside it. This is where we will write the JavaScript code that controls the game. Initially it should contain the following:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  preload() {}
+  create() {}
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+};
+
+const game = new Phaser.Game(config);
 ```
 
 ## Downloading the Phaser code
 
-Next, we need to go through the process of downloading the Phaser source code and applying it to our HTML document. This tutorial uses Phaser V2 — it won't work with the current version on Phaser (V3). The V2 library is still available on the Phaser download page, below the links for the V3 download.
+Next, we need to go through the process of downloading the Phaser source code and applying it to our HTML document. This tutorial uses Phaser v3 (v3.90.0 as of the time of writing, though newer minor versions should work the same).
 
 1. Go to the [Phaser download page](https://phaser.io/download/stable).
-2. Choose an option that suits you best — we recommend the _min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway. **Please make sure to use Phaser version 2 as that's what this tutorial was written for.**
-3. Save the Phaser code inside a `/js` directory in the same location as your `index.html` file.
-4. Update the `src` value of the first {{htmlelement("script")}} element as shown above.
+2. Choose an option that suits you best—we recommend the _phaser.min.js_ option as it keeps the source code smaller, and you are unlikely to go through the source code anyway.
+3. Save the Phaser code in the `js` directory. If you use another file name, make sure to update the `src` value of the first {{htmlelement("script")}} element in the HTML accordingly.
 
 ## Walking through what we have so far
 
-At this point we have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the header to reset the default `margin` and `padding`. We also have a {{htmlelement("script")}} element to apply the Phaser source code to the page. The body contains a second {{htmlelement("script")}} element, where we will write the JavaScript code to render the game and control it.
+At this point, we have a `charset` defined, {{htmlelement("title")}}, and some basic CSS in the header to reset the default `margin` and `padding`. We also have a {{htmlelement("script")}} element to apply the Phaser source code to the page. The body contains a second {{htmlelement("script")}} element, where we will write the JavaScript code to render the game and control it.
 
-The {{htmlelement("canvas")}} element is generated automatically by the framework. We are initializing it by creating a new `Phaser.Game` object and assigning it to the game variable. The parameters are:
+The {{htmlelement("canvas")}} element is generated automatically by the framework. We are initializing it by creating a new `Phaser.Game` object and assigning it to the `game` variable. The parameters are:
 
+- The rendering method. The available options are `AUTO`, `CANVAS`, `WEBGL`, `HEADLESS`. We can set either `CANVAS` or `WEBGL` explicitly or use `AUTO` to let Phaser decide which one to use. It usually uses WebGL if available in the browser, falling back to Canvas 2D if not. The last option, `HEADLESS`, is used for server-side rendering or testing, which is not relevant for this tutorial.
 - The width and height to set the {{htmlelement("canvas")}} to.
-- The rendering method. The three options are `AUTO`, `CANVAS` and `WEBGL`. We can set one of the latter two explicitly or use `AUTO` to let Phaser decide which one to use. It usually uses WebGL if available in the browser, falling back to Canvas 2D if not.
-- The `id` of the {{htmlelement("canvas")}} to use for rendering if one already exists on the page (we've specified null because we want Phaser to create its own.)
-- The names to use for Phaser's three key functions that load and start the game, and update the game loop on every frame; we will use the same names to keep it clean.
+- The scene to add to the game. In this case, we are creating a new class called `ExampleScene` that extends `Phaser.Scene`. This class implements the methods that Phaser calls at different stages of the game lifecycle. We'll fill in these methods among them later:
   - `preload` takes care of preloading the assets
   - `create` is executed once when everything is loaded and ready
   - `update` is executed on every frame.
 
+## Running the application
+
+To run the app, you cannot directly open the `index.html` file, because later we will be loading external assets, which will be blocked by the browser's [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+
+To fix the problem, you need to run a local web server to serve the HTML files and the image files. [As the official document of Phaser suggests](https://docs.phaser.io/phaser/getting-started/set-up-dev-environment#installing-a-web-server), we have a lot of options to run a local web server. We also have our own [tutorials for setting up a local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)—use any option you prefer. For example, if you choose to use the Python HTTP server, then open a terminal, navigate to the directory where your `index.html` file is located, and run the following command:
+
+```bash
+python3 -m http.server
+```
+
+This will start a simple HTTP server on port 8000. Then, open your web browser and navigate to `http://localhost:8000/index.html`.
+
 ## Compare your code
 
-Here's the full source code of the first lesson, running live in a JSFiddle:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/h6cwzv2b/","","400")}}
+```html hidden
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
+```
+
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+```js hidden
+class ExampleScene extends Phaser.Scene {
+  preload() {}
+  create() {}
+  update() {}
+}
+
+const config = {
+  type: Phaser.CANVAS,
+  width: 480,
+  height: 320,
+  scene: ExampleScene,
+};
+
+const game = new Phaser.Game(config);
+```
+
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
 Now we've set up the basic HTML and learned a bit about Phaser initialization, let's continue to the second lesson and learn about [scaling](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
