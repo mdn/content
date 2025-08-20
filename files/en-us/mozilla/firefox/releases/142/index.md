@@ -30,7 +30,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} blocks no longer inherits the scope start
   selector's [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
-  This makes the behavior of `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) without adding unexpected specificity (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
+  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
   ([Firefox bug 1975531](https://bugzil.la/1975531)).
 
 <!-- #### Removals -->
