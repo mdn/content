@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS environment variables** module defines the concept of environment variables and the {{cssxref("env")}} function. Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/--*) and the {{cssxref("var")}} function, except that they are globally defined. Environment variables can be defined either by the user agent or the developer.
 
-Environment variables provide values that can be used on the page based on information the user agent has special access to, such as the size of the titlebar, dynamic keyboard, and safe area insets. The safe area insets define a rectangle that is guaranteed to be visible on non-rectangular displays, based on its insets from the edges of the viewport. You can include the user-agent sizes in your styles, enabling you to modify the layout of essential content based on the available space inside the safe area rectangle, next to a visible dynamic keyboard, or adjacent to a visible title bar.
+Environment variables provide values that can be used on the page based on information the user agent has access to, such as the size of the titlebar, dynamic keyboard, and safe area insets. Safe area insets define a rectangle that is guaranteed to be visible on non-rectangular displays, based on its distance from the edges of the viewport. You can include the user-agent sizes in your styles, enabling you to modify the layout of essential content based on the available space inside the safe area rectangle, next to a visible dynamic keyboard, or adjacent to a visible title bar.
 
 ## Reference
 

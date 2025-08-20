@@ -5,15 +5,15 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env) with [the `var()` function](#the_env_function).
+The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env) with [the `env()` function](#the_env_function).
 
 ## What are environment variables?
 
 CSS environment variables are global variables; globally scoped to the entire document. They are defined by the user agent. Environment variables are special values provided by the browser or operating system that help your styles adapt to the user's device or context. They are accessed using the `env()` function.
 
-Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/--*) and the {{cssxref("var")}} function, but are globally defined and scoped. This means they are always scoped to the entire document, unlike custom properties, which are scoped to elements and are mutable.
+Environment variables work similarly to [custom properties](/en-US/docs/Web/CSS/--*) and the {{cssxref("var()")}} function, but are globally defined and scoped. This means they are always scoped to the entire document, unlike custom properties, which are scoped to elements. In addition, environment variables are read-only, whereas custom properties are mutable.
 
-Similar to custom properties, environment variables are case sensitive. Unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
+Similar to custom properties, environment variables are case-sensitive. Unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
 
 ### History
 
@@ -24,10 +24,10 @@ Apple first introduced environment variables in the iOS Safari browser to enable
 Common issues that can be solved by using environment variables include:
 
 - Device notifications covering up sections of the app user interface.
-- Handling viewport size changes when dynamic keyboards are shown and hidden
+- Handling viewport size changes when dynamic keyboards are shown and hidden.
 - Positioning elements where the title bar would have been on [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) once they are installed and ensuring that content stays clear of the window control buttons. This is especially an issue on desktop browsers.
 
-## Browser defined environment variables
+## Browser-defined environment variables
 
 The CSS environment variables specification defines a few case-sensitive variables, including:
 
@@ -57,7 +57,7 @@ You may have noticed that all the previous variable names include the physical t
 
 ## The `env()` function
 
-The {{cssxref("env")}} function is used to substitute the value of an environment variable into a CSS context. The `env()` function can be used in place of any part of a value in any property on any element, or any part of a value in any descriptor on any at-rule, including within custom property values. It can be used wherever a CSS value is allowed.
+The {{cssxref("env")}} function is used to insert the value of an environment variable into a CSS context. The `env()` function can be used in place of any part of a value in any property on any element, or any part of a value in any descriptor on any at-rule, including within custom property values. It can be used wherever a CSS value is allowed.
 
 The basic syntax is as follows:
 
@@ -82,7 +82,7 @@ If a property or descriptor contains syntactically valid `env()` functions, it i
 
 ## Using environment variables with `env()`
 
-We can use environment variables to ensure that a fixed app toolbar is not obscured by notifications appearing at the bottom of the device. In devices that display notifications at the bottom of the screen, the user agent will set the value of the `safe-area-inset-bottom` environment variable to be the distance from the height of what is blocking the viewport to the bottom of the viewport; in our example, this is likely the height of any visible notifications. On a rectangular desktop monitor, the `safe-area-inset-bottom` is generally `0`. We will use this value to create space at the bottom of the viewport for the notification to display without obscuring the content.
+We can use environment variables to ensure that a fixed app toolbar is not obscured by notifications appearing at the bottom of the device. In devices that display notifications at the bottom of the screen, the user agent will set the value of the `safe-area-inset-bottom` environment variable to be the distance from the top of what is blocking the viewport to the bottom of the viewport; in our example, this is likely the height of any visible notifications. On a rectangular desktop monitor, the `safe-area-inset-bottom` is generally `0`. We will use this value to create space at the bottom of the viewport for the notification to display without obscuring the content.
 
 Our {{htmlelement("body")}} has two children; the {{htmlelement("main")}} contains our entire application other than the {{htmlelement("footer")}} toolbar.
 
@@ -90,7 +90,6 @@ Our {{htmlelement("body")}} has two children; the {{htmlelement("main")}} contai
 <body>
   <main>Application</main>
   <footer>Toolbar</footer>
-</body>
 </body>
 ```
 
@@ -106,7 +105,7 @@ body {
 main {
   flex: 1;
   padding: 1em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 ```
 
@@ -145,7 +144,7 @@ footer::after {
 }
 ```
 
-The bottom padding of the footer will extend beyond `1em` on devices that have the `safe-area-inset-bottom` environment variable with a value greater than `0`. This CSS provides added padding growing the footer as needed, be it because of notifications, a device notch in the screen, or because the device doesn't have square corners.
+The bottom padding of the footer will extend beyond `1em` on devices that have the `safe-area-inset-bottom` environment variable with a value greater than `0`. This CSS provides extra padding to grow the footer as needed, be it because of notifications, a device notch in the screen, or because the device doesn't have square corners.
 
 {{EmbedLiveSample("Using environment variables with env", "200", "500")}}
 
