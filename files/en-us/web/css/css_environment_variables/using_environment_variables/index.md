@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env) with [the `env()` function](#the_env_function).
+The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env_example) with [the `env()` function](#the_env_function).
 
 ## What are environment variables?
 
@@ -80,7 +80,7 @@ The syntax of the fallback is similar to the custom properties syntax in that it
 
 If a property or descriptor contains syntactically valid `env()` functions, it is assumed to be valid at parse time. It is only syntax-checked at computed-time, after the `env()` functions have been substituted with their browser-provided values. If the environment variable passed as the first parameter is not a recognized environment variable name, the fallback value is used. The fallback can be another environment variable, even with its own fallback. If no fallback was provided, the property or descriptor containing the `env()` function is invalid at computed-value time.
 
-## Using environment variables with `env()`
+## Using environment variables with `env()` example
 
 We can use environment variables to ensure that a fixed app toolbar is not obscured by notifications appearing at the bottom of the device. In devices that display notifications at the bottom of the screen, the user agent will set the value of the `safe-area-inset-bottom` environment variable to be the distance from the top of what is blocking the viewport to the bottom of the viewport; in our example, this is likely the height of any visible notifications. On a rectangular desktop monitor, the `safe-area-inset-bottom` is generally `0`. We will use this value to create space at the bottom of the viewport for the notification to display without obscuring the content.
 
@@ -146,7 +146,7 @@ footer::after {
 
 The bottom padding of the footer will extend beyond `1em` on devices that have the `safe-area-inset-bottom` environment variable with a value greater than `0`. This CSS provides extra padding to grow the footer as needed, be it because of notifications, a device notch in the screen, or because the device doesn't have square corners.
 
-{{EmbedLiveSample("Using environment variables with env", "200", "500")}}
+{{EmbedLiveSample("Using environment variables with env example", "200", "500")}}
 
 In the future, we may see support for developer-defined environment variables, but this has not yet been defined or implemented.
 
