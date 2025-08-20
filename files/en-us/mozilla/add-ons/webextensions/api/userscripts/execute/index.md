@@ -23,24 +23,23 @@ let executeUserScript = browser.userScripts.execute(
 ### Parameters
 
 - `injection`
-  - : An `array` of InjectionUserScript objects each specifying what user scripts to inject, where, and how.
-
-    It contains the following properties:
+  - : An array of objects specifying what user scripts to inject, where, and how.
     - `injectImmediately` {{optional_inline}}
-      - : `boolean`. If set to `true`, the injection will be triggered as soon as possible in the target context. This doesn't guarantee that the injection will be injected before the page finishes loading, as the page may have already loaded before the script has reached the target.
+      - : `boolean`. If set to `true`, the injection is triggered as soon as possible in the target context. This doesn't guarantee that the injection occurs before the page finishes loading, as the page may load before the script has reached the target.
 
     - `js`
       - : `array` of {{WebExtAPIRef("userScripts.ScriptSource")}}. The scripts to inject into matching pages.
     - `target`
-      - : An `InjectionTarget` object that defines the target context in which {{WebExtAPIRef("userScripts.execute")}} injects a script. Properties include:
+      - : An object that defines the target context scripts are injected into.
+` ``
         - `allFrames` {{optional_inline}}
           - : `boolean`. If set to `true`, the script is injected into all available frames. Defaults to `false`, in which the script is only injected into the top frame.
         - `documentIds` {{optional_inline}}
-          - : `Array of string`. The ID of the specific document to inject into. Must not be specified if `frameIds` is set.
+          - : `array` of `string`. The IDs of the documents to inject into. Must not be specified if `frameIds` is set.
         - `frameIds` {{optional_inline}}
-          - : `Array of numbers`. The ID of a specific frame to inject into. Must not be specified if `documentIds` is set.
+          - : `array` of `integer`. The IDs of the frames to inject into. Must not be specified if `documentIds` is set.
         - `tabId`
-          - : `number`. The ID of a specific tab to inject into.
+          - : `integer`. The ID of a tab to inject into.
     - `world` {{optional_inline}}
       - : {{WebExtAPIRef("userScripts.ExecutionWorld")}}. The execution environment to use to run the scripts. Defaults to `"USER_SCRIPT"`.
     - `worldId` {{optional_inline}}
@@ -48,14 +47,14 @@ let executeUserScript = browser.userScripts.execute(
 
 ### Return Value
 
-A {{JSxRef("Promise")}} fulfilled with an array of `InjectionResult` objects which symbolizes the outcome of a user script injection. Each object contains:
+A {{JSxRef("Promise")}} fulfilled with an array of objects describing the outcome of the injection with these properties:
 
 - `documentId`
-  - : `string`. Document ID that is associated with the injection.
+  - : `string`. Document ID associated with the injection.
 - `error` {{optional_inline}}
   - : `string`. Error message if any. This is mutually exclusive with `result`
 - `frameId`
-  - : `number`. Frame ID that is associated with the injection.
+  - : `integer`. Frame ID associated with the injection.
 - `result` {{optional_inline}}
   - : `string`. Result of the script injection if any. This is mutually exclusive with `error`
 
