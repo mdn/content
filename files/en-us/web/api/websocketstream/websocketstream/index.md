@@ -29,7 +29,7 @@ new WebSocketStream(url, options)
     - `protocols` {{optional_inline}}
       - : A single string or an array of strings representing the sub-protocol(s) that the client would like to use, for example `"amqp"` or `"mqtt"`. Subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be custom names jointly understood by the client and the server. A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value. If it is omitted, an empty array is used by default. If `protocols` is included, the connection will only be established if the server reports that it has selected one of these sub-protocols.
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} belonging to an {{domxref("AbortController")}}, which can be used to abort the connection *before the handshake*. This is specifically intended to make it easy to implement connection timeouts. As such, it does nothing after the connection is established.
+      - : An {{domxref("AbortSignal")}}, which can be used to abort the connection before the [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) has completed (that is, before the {{domxref("WebSocketStream.opened", "opened")}} promise resolves). This is primarily intended to help implement connection timeouts. As such, it does nothing after the connection is established.
 
 
 ### Exceptions
