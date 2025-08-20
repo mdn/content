@@ -57,7 +57,8 @@ Either one of these promises rejects if the navigation has failed for some reaso
   - : Thrown if the `history` option is set to `push`, and any of the following special circumstances are true:
     - The browser is currently showing the initial `about:blank` document.
     - The `url`'s scheme is `javascript`.
-
+- `TypeError`
+  - : Thrown if the URL specified is a `javascript:` URL. For security reasons, this API explicitly disallows `javascript:` URLs.
 ## Examples
 
 ### Set up home button
