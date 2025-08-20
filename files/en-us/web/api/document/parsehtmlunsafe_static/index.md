@@ -37,7 +37,7 @@ Document.parseHTMLUnsafe(input, options)
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object which defines what elements of the input will be allowed or removed.
         This can also be a string with the value `"default"`, which applies a `Sanitizer` with the default (XSS-safe) configuration.
         If not specified, no sanitizer is used.
-        
+
         Note that generally a `Sanitizer` is expected than the to be more efficient than a `SanitizerConfig` if the configuration is to reused.
 
 ### Return value

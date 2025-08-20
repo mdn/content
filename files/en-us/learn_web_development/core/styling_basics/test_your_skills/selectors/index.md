@@ -348,7 +348,7 @@ ul {
 }
 
 li {
-  margin: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 a {

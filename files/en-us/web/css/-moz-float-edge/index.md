@@ -57,7 +57,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 .box {
   display: block;
   height: 5px;
-  margin: 0.5em auto 0.5em auto;
+  margin: 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;

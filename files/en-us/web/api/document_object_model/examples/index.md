@@ -282,7 +282,7 @@ thead {
   font-weight: bold;
 }
 td {
-  padding: 2px 10px 2px 10px;
+  padding: 2px 10px;
 }
 
 .odd {
