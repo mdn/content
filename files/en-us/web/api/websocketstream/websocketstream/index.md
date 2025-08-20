@@ -45,7 +45,7 @@ The most basic example takes the URL of a WebSocket server as an argument:
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}:
+A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}. The following example will time out if the connection is not established within 5 seconds:
 
 ```js
 const queueWSS = new WebSocketStream("wss://example.com/queue", {
