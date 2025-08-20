@@ -13,7 +13,7 @@ The **`-webkit-text-fill-color`** [CSS](/en-US/docs/Web/CSS) property specifies 
 ```css
 /* <color> values */
 -webkit-text-fill-color: red;
--webkit-text-fill-color: #000000;
+-webkit-text-fill-color: #123456;
 -webkit-text-fill-color: rgb(100 200 0);
 
 /* Global values */

@@ -31,8 +31,8 @@ To complete the task:
 
 ```css hidden live-sample___images-1 live-sample___images-2 live-sample___images-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,

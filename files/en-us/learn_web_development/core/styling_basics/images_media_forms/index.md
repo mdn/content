@@ -234,24 +234,24 @@ label {
 ```css live-sample___form
 input[type="text"],
 input[type="email"] {
-  border: 2px solid #000;
-  margin: 0 0 1em 0;
+  border: 2px solid black;
+  margin-bottom: 1em;
   padding: 10px;
   width: 80%;
 }
 
 input[type="submit"] {
-  border: 3px solid #333;
-  background-color: #999;
+  border: 3px solid #333333;
+  background-color: #999999;
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 ```
 

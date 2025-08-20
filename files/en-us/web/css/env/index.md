@@ -6,7 +6,7 @@ browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to insert the value of a user-agent-defined environment variable into your CSS.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS.
 
 ## Syntax
 
@@ -24,28 +24,42 @@ env(viewport-segment-width 0 0, 40%);
 
 ### Parameters
 
-The `env()` function takes two parameters — an identifying name for the variable to be accessed (sometimes with additional identifying values) and a fallback value:
+The `env()` function's syntax is as follows:
 
-- Identifying names
-  - : A {{cssxref("&lt;custom-ident>")}} representing a variable name. The valid identifying names are as follows. Unlike other CSS properties, user-agent-defined property names are case-sensitive.
-    - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
-      - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
-    - `safe-area-max-inset-top`, `safe-area-max-inset-right`, `safe-area-max-inset-bottom`, `safe-area-max-inset-left`
-      - : The safe area maximum inset environment variables represent the static maximum value of their dynamic `safe-area-inset-*` variable counterpart.
-    - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
-      - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e., minimize, maximize, and close).
-    - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
-      - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
-    - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
-      - : The `viewport-segment-*` variables provide information about the logical viewport segments that comprise the current device's viewport, in the case of foldable of hinged devices. This includes a segment's width and height, and the offset positions of its top, right, bottom, and left edges. These variables are related to the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), which can be used to create responsive designs that work well on foldable or hinged devices.
-        > [!NOTE]
-        > The viewport segment variables need to have two additional integers specified, which define the segment for which to return the value. See [Placing content inside specific viewport segments](#placing_content_inside_specific_viewport_segments) for details.
-- Fallback value
-  - : A {{cssxref("&lt;length-percentage>")}} specifying the value to return if the specified environment variable name/data is invalid or unavailable.
+```plain
+env(<environment-variable-name>, <fallback>)
+```
 
-### Return value
+The `<environment-variable-name>` can be one of the following:
 
-A {{cssxref("&lt;length-percentage>")}}.
+
+- `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
+  - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
+- `safe-area-max-inset-top`, `safe-area-max-inset-right`, `safe-area-max-inset-bottom`, `safe-area-max-inset-left`
+  - : The safe area maximum inset environment variables represent the static maximum value of their dynamic `safe-area-inset-*` variable counterpart.
+- `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
+  - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e., minimize, maximize, and close).
+- `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
+  - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
+- `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
+  - : The `viewport-segment-*` variables provide information about the logical viewport segments that comprise the current device's viewport, in the case of foldable of hinged devices. This includes a segment's width and height, and the offset positions of its top, right, bottom, and left edges. These variables are related to the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), which can be used to create responsive designs that work well on foldable or hinged devices.
+    > [!NOTE]
+    > The viewport segment variables need to have two additional integers specified, which define the segment for which to return the value. See [Placing content inside specific viewport segments](#placing_content_inside_specific_viewport_segments) for details.
+
+> [!NOTE]
+> Like other CSS custom property names, user agent-defined environment variable names are case-sensitive.
+
+## Description
+
+The `env()` function inserts the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+
+In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g., in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
+
+Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` values defined in the specification can be used to help ensure content is visible even to viewers using non‑rectangular displays.
+
+For example, a common issue solved by `env()` is that of device notifications covering up some of the app user interface. By positioning fixed elements using `env()` you can ensure that they display in a safe area of the viewport.
+
+Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, developers can position elements where the title bar would have been and ensure that content stays clear of the window control buttons.
 
 ## Formal syntax
 
@@ -163,7 +177,7 @@ body {
 
 main {
   flex: 1;
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 1em;
 }
 
@@ -283,7 +297,9 @@ main {
 
 ## See also
 
-- {{CSSxRef("var", "var(…)")}}
+- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
+- {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

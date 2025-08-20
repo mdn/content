@@ -171,12 +171,12 @@ Your final result should look like the image below:
 
 ```css live-sample___position
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   height: 350px;
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
 }
 ```
@@ -190,7 +190,7 @@ Use `background-position` with the `center` keyword and a percentage:
 
 ```css
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/purple-star.png");
   background-repeat: no-repeat;
   background-position: center 20%;
 }

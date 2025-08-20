@@ -187,7 +187,7 @@ undefined the default is `info`. The value is treated case-insensitively.
 ### Preferences object
 
 A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
-"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
+"about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/firefox-main/source/modules/libpref/init/all.js) file.
 
 An example of a preference object:
 

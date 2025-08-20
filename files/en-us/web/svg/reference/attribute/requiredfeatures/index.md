@@ -766,20 +766,20 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 
 ```css
 .ko {
-  fill: #900;
+  fill: #990000;
 }
 
 .ok {
-  fill: #060;
+  fill: #006600;
 }
 
 rect {
-  stroke: #000;
+  stroke: black;
   stroke-width: 2px;
 }
 
 text {
-  fill: #fff;
+  fill: white;
   font: 12px sans-serif;
 }
 ```

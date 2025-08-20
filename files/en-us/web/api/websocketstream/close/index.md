@@ -51,7 +51,7 @@ const wss = new WebSocketStream(wsURL);
 
 setTimeout(() => {
   wss.close({
-    code: 1000,
+    closeCode: 1000,
     reason: "That's all folks",
   });
 }, 10000);

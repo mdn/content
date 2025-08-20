@@ -260,7 +260,7 @@ If the container has a fixed size set, then gap percentage value calculations ar
 
 ```css hidden
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
   flex-flow: column;
 }
@@ -316,7 +316,7 @@ If size is not explicitly set on the container, then the percentage gap behaves 
 
 ```css hidden
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
 }
 

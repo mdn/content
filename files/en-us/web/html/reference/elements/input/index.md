@@ -895,7 +895,7 @@ It is possible to target different types of form controls based on their [`type`
 input[type="password"] {
 }
 
-/* matches a form control whose valid values are limited to a range of values*/
+/* matches a form control whose valid values are limited to a range of values */
 input[min][max] {
 }
 

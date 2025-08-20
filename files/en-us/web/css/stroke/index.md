@@ -68,7 +68,7 @@ Via CSS, we then apply a dusky purple color to the rectangle and a red to the ci
 
 ```css
 rect {
-  stroke: hsl(270deg 50% 40%);
+  stroke: rebeccapurple;
 }
 circle {
   stroke: red;
@@ -100,7 +100,7 @@ The pattern is then referenced in the CSS with a URL value pointing to the ID of
 ```css
 rect,
 circle {
-  stroke: url(#star);
+  stroke: url("#star");
 }
 ```
 
@@ -131,7 +131,7 @@ In the CSS, we apply that SVG gradient to the rectangle using a URL value pointi
 
 ```css
 rect {
-  stroke: url(#greenwhite);
+  stroke: url("#greenwhite");
 }
 circle {
   stroke: linear-gradient(90deg, green, white);
@@ -180,11 +180,11 @@ We then write CSS to add a marker to both paths, and also to have a dusky purple
 
 ```css
 path {
-  stroke: hsl(270deg 50% 40%);
-  marker: url(#circle);
+  stroke: rebeccapurple;
+  marker: url("#circle");
 }
 path:nth-of-type(2) {
-  stroke: url(#orangered);
+  stroke: url("#orangered");
 }
 marker circle {
   stroke: context-stroke;

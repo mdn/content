@@ -6,25 +6,29 @@ browser-compat: html.elements.input.type_color
 sidebar: htmlsidebar
 ---
 
-{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
-
-Only basic hexadecimal colors (without alpha channel) are allowed though CSS colors has more formats, e.g., color names, functional notations and a hexadecimal format with an alpha channel.
+{{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in a [CSS color value](/en-US/docs/Web/CSS/color_value) format.
 
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Choose your monster's colors:</p>
+<p>Choose your colors:</p>
 
 <div>
-  <input type="color" id="head" name="head" value="#e66465" />
-  <label for="head">Head</label>
+  <input type="color" id="foreground" name="foreground" value="#e66465" />
+  <label for="foreground">Foreground color</label>
 </div>
 
 <div>
-  <input type="color" id="body" name="body" value="#f6b73c" />
-  <label for="body">Body</label>
+  <input
+    type="color"
+    id="background"
+    name="background"
+    value="oklab(50% 0.1 0.1 / 0.5)"
+    colorspace="display-p3"
+    alpha />
+  <label for="background">Background color</label>
 </div>
 ```
 
@@ -43,10 +47,22 @@ input {
 
 ## Value
 
-The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
+A [CSS color value](/en-US/docs/Web/CSS/color_value).
 
 > [!NOTE]
-> Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g., `#009900aa`) will also result in the color being set to `#000000`.
+> Historically, only basic hexadecimal colors (without alpha channel) were allowed. Now, any CSS color format, including named colors, functional notations, and hexadecimal colors with an alpha channel, can be used. The default value is `#000000` (black) if a `value` is omitted or is invalid.
+
+## Additional attributes
+
+In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) and the [input attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) common to all {{HTMLElement("input")}} elements, the `color` input also supports the following attributes:
+
+- `alpha` {{experimental_inline}}
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute, if present, indicates the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
+
+- `colorspace` {{experimental_inline}}
+  - : Defines the the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
+    - `"limited-srgb"`: The color is in the {{glossary("RGB". "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
 
@@ -54,15 +70,22 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 
 ### Providing a default color
 
-You can update the example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color:
+You can update the example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color.
 
 ```html
 <input type="color" value="#ff0000" />
+<input
+  type="color"
+  id="body"
+  name="body"
+  value="oklab(50% 0.1 0.1 / 0.5)"
+  colorspace="display-p3"
+  alpha />
 ```
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
 
-If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `hsl()` ), you'll have to convert them to hexadecimal before setting the `value`.
+If you don't specify a value or if the value is invalid or otherwise not supported by the browser, the value defaults to `#000000`, which is opaque black.
 
 ### Tracking color changes
 
@@ -188,8 +211,7 @@ The final result looks like this:
     <tr>
       <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A 7-character string specifying a
-        {{cssxref("&lt;color&gt;")}} in lower-case hexadecimal notation
+        Any CSS {{cssxref("&lt;color&gt;")}} value in any notation.
       </td>
     </tr>
     <tr>
@@ -208,7 +230,12 @@ The final result looks like this:
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><code>list</code> and <code>value</code></td>
+      <td>
+        <a href="/en-US/docs/Web/API/HTMLInputElement/alpha"><code>alpha</a></code>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/colorSpace"><code>colorSpace</code></a>,
+        <a href="/en-US/docs/Web/API/HTMLInputElement/list"><code>list</code></a>, and
+        <a href="/en-US/docs/Web/API/HTMLInputElement/value"><code>value</code></a>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>

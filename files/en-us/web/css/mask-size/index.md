@@ -125,7 +125,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("/shared-assets/images/examples/mdn.svg");
 }
 ```
 
@@ -184,7 +184,7 @@ div {
   width: 200px;
   height: 400px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 ```
 
@@ -251,7 +251,7 @@ Using the same HTML and CSS as above, with just a different origin box size, thi
 ```css hidden
 div {
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 }
 
 .auto div {

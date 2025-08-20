@@ -17,7 +17,7 @@ The **`stop-color`** [CSS](/en-US/docs/Web/CSS) property defines the color to us
 /* <color> values */
 stop-color: red;
 stop-color: hsl(120deg 75% 25% / 60%);
-stop-color: currentcolor;
+stop-color: currentColor;
 
 /* Global values */
 stop-color: inherit;
@@ -54,22 +54,22 @@ We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement(
 <svg viewBox="0 0 264 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="myGradient1">
-      <stop offset="25%" stop-color="#000" />
-      <stop offset="40%" stop-color="#fff" />
-      <stop offset="60%" stop-color="#fff" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="25%" stop-color="black" />
+      <stop offset="40%" stop-color="white" />
+      <stop offset="60%" stop-color="white" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
     <linearGradient id="myGradient2">
-      <stop offset="25%" stop-color="#000" />
-      <stop offset="40%" stop-color="#fff" />
-      <stop offset="60%" stop-color="#fff" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="25%" stop-color="black" />
+      <stop offset="40%" stop-color="white" />
+      <stop offset="60%" stop-color="white" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
     <linearGradient id="myGradient3">
-      <stop offset="25%" stop-color="#000" />
-      <stop offset="40%" stop-color="#fff" />
-      <stop offset="60%" stop-color="#fff" />
-      <stop offset="75%" stop-color="#333" />
+      <stop offset="25%" stop-color="black" />
+      <stop offset="40%" stop-color="white" />
+      <stop offset="60%" stop-color="white" />
+      <stop offset="75%" stop-color="#333333" />
     </linearGradient>
   </defs>
   <rect x="2" y="10" width="80" height="80" fill="url('#myGradient1')" />
@@ -92,7 +92,7 @@ svg {
 
 ```css
 rect {
-  stroke: #333;
+  stroke: #333333;
   stroke-width: 1px;
 }
 
@@ -114,10 +114,10 @@ rect {
 }
 #myGradient3 {
   stop:first-of-type {
-    stop-color: hsl(0deg 100% 50%);
+    stop-color: hsl(0deg 90% 50%);
   }
   stop:last-of-type {
-    stop-color: hsl(20deg 100% 50%);
+    stop-color: hsl(20deg 60% 50%);
   }
 }
 ```

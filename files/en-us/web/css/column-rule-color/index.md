@@ -23,7 +23,7 @@ column-rule-color: hsl(120 80% 40% / 0.6);
 ```
 
 ```css interactive-example-choice
-column-rule-color: currentcolor;
+column-rule-color: currentColor;
 ```
 
 ```html interactive-example

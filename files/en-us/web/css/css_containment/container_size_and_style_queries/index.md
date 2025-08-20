@@ -232,7 +232,7 @@ In this case, other color values equivalent to sRGB `blue` (such as the hexadeci
 @property --accent-color {
   syntax: "<color>";
   inherits: true;
-  initial-value: #00f;
+  initial-value: #0000ff;
 }
 ```
 
@@ -259,10 +259,10 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
       <label for="blue">--theme: blue</label>
     </li>
     <li>
-      <input type="radio" name="selection" value="currentcolor" id="other" />
+      <input type="radio" name="selection" value="currentColor" id="other" />
       <label for="other">Other</label>
       <label for="color">color:</label>
-      <input text="checkbox" name="selection" value="currentcolor" id="color" />
+      <input text="checkbox" name="selection" value="currentColor" id="color" />
     </li>
   </ol>
 </fieldset>
@@ -290,13 +290,13 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`).
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `red`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `red` is equal to `rgb(255 0 0)`, `#ff0000`, and `#f00`).
 
 ```css
 @property --theme {
   syntax: "<color>";
   inherits: true;
-  initial-value: #f00;
+  initial-value: red;
 }
 ```
 
@@ -307,13 +307,13 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `red` (such as `#ff0000`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
   output {
     outline: 5px dotted var(--theme);
-    color: #777;
+    color: #777777;
   }
 }
 ```
@@ -338,7 +338,7 @@ The second style query states that when `--theme` is equivalent to `red`, the `<
 
 {{EmbedLiveSample('example','100%','200')}}
 
-Try entering different color values into the text box. You may notice that values that are sRGB equivalents of `red` will make the `<output>` red — as it matches `style(--theme: red)` — while removing the outline, because `style(--theme)` returns false if the element's value for `--theme` is the same as the initial value for `--theme` defined by the `@property` at-rule. Any non-red sRGB valid color value, including `currentcolor` or `hsl(180 100% 50%)`, etc., makes the first style query return true; they are values that are different from the `initial-value`.
+Try entering different color values into the text box. You may notice that values that are sRGB equivalents of `red` will make the `<output>` red — as it matches `style(--theme: red)` — while removing the outline, because `style(--theme)` returns false if the element's value for `--theme` is the same as the initial value for `--theme` defined by the `@property` at-rule. Any non-red sRGB valid color value, including `currentColor` or `hsl(180 100% 50%)`, etc., makes the first style query return true; they are values that are different from the `initial-value`.
 
 Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid `<color>` values. Valid values for the {{cssxref("color")}} property that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) for this custom property, and will be ignored.
 

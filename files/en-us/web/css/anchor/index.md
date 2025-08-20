@@ -18,13 +18,13 @@ top: calc(anchor(bottom) + 10px)
 inset-block-end: anchor(start);
 
 /* side of named anchor */
-top: anchor(--myAnchor bottom);
-inset-block-end: anchor(--myAnchor start);
+top: anchor(--my-anchor bottom);
+inset-block-end: anchor(--my-anchor start);
 
 /* side of named anchor with fallback */
-top: anchor(--myAnchor bottom, 50%);
-inset-block-end: anchor(--myAnchor start, 200px);
-left: calc(anchor(--myAnchor right, 0%) + 10px);
+top: anchor(--my-anchor bottom, 50%);
+inset-block-end: anchor(--my-anchor start, 200px);
+left: calc(anchor(--my-anchor right, 0%) + 10px);
 ```
 
 ### Parameters
@@ -130,6 +130,19 @@ The below table lists the inset properties, and the `<anchor-side>` parameter va
 | `left` and `right`                          | `left`, `right`, `start`, `end`, `self-start`, `self-end`                                                                                      |
 | `inset-block-start` and `inset-block-end`   | `start`, `end`, `self-start`, and `self-end`<br>`top` and `bottom` in horizontal writing modes<br>`left` and `right` in vertical writing modes |
 | `inset-inline-start` and `inset-inline-end` | `start`, `end`, `self-start`, and `self-end`<br>`left` and `right` in horizontal writing modes<br>`top` and `bottom` in vertical writing modes |
+
+### Using `anchor()` to position popovers
+
+When using `anchor()` to position [popovers](/en-US/docs/Web/HTML/Reference/Global_attributes/popover), be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those:
+
+```css
+.positionedPopover {
+  margin: 0;
+  inset: auto;
+}
+```
+
+The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
 
 ### Using `anchor()` inside `calc()`
 
@@ -285,7 +298,7 @@ We also include some filler text around the two `<div>` elements to make the {{h
 
 #### CSS
 
-We declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property. We then associate it with the positioned element by setting the same value for its {{cssxref("position-anchor")}} property. `top: anchor(--myAnchor bottom)` positions the infobox's top edge flush to the bottom edge of its anchor, while `left: anchor(right)` positions the infobox's left edge flush to the right edge of its anchor. This provides an initial position that will be overwritten when different values are selected from the drop-down menus.
+We declare the `anchor` `<div>` as an anchor element by setting an anchor name on it via the {{cssxref("anchor-name")}} property. We then associate it with the positioned element by setting the same value for its {{cssxref("position-anchor")}} property. `top: anchor(--my-anchor bottom)` positions the infobox's top edge flush to the bottom edge of its anchor, while `left: anchor(right)` positions the infobox's left edge flush to the right edge of its anchor. This provides an initial position that will be overwritten when different values are selected from the drop-down menus.
 
 ```css hidden
 .anchor {
@@ -328,7 +341,7 @@ form div:last-child {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -337,13 +350,13 @@ form div:last-child {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
-  top: anchor(--myAnchor bottom);
+  position-anchor: --my-anchor;
+  top: anchor(--my-anchor bottom);
   left: anchor(right);
 }
 ```
@@ -359,7 +372,7 @@ const leftSelect = document.querySelector("#left-anchor-side");
 
 topSelect.addEventListener("change", (e) => {
   const anchorSide = e.target.value;
-  infobox.style.top = `anchor(--myAnchor ${anchorSide})`;
+  infobox.style.top = `anchor(--my-anchor ${anchorSide})`;
 });
 
 leftSelect.addEventListener("change", (e) => {
@@ -417,7 +430,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -432,13 +445,13 @@ The anchors are each given a different {{cssxref("anchor-name")}} value, a {{css
 }
 
 #anchor1 {
-  anchor-name: --myAnchor1;
+  anchor-name: --my-anchor1;
   top: 50px;
   left: 100px;
 }
 
 #anchor2 {
-  anchor-name: --myAnchor2;
+  anchor-name: --my-anchor2;
   top: 200px;
   left: 350px;
 }
@@ -448,12 +461,12 @@ The anchor-positioned element, with its `position` set to `fixed`, is associated
 
 ```css
 .infobox {
-  position-anchor: --myAnchor1;
+  position-anchor: --my-anchor1;
   position: fixed;
-  top: anchor(--myAnchor1 100%);
-  left: anchor(--myAnchor1 100%);
-  bottom: anchor(--myAnchor2 0%);
-  right: anchor(--myAnchor2 0%);
+  top: anchor(--my-anchor1 100%);
+  left: anchor(--my-anchor1 100%);
+  bottom: anchor(--my-anchor2 0%);
+  right: anchor(--my-anchor2 0%);
 }
 ```
 

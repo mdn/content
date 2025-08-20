@@ -113,13 +113,13 @@ Declarations in a keyframe qualified with `!important` are ignored.
 
 ```css
 @keyframes important1 {
-  from {
+  0% {
     margin-top: 50px;
   }
   50% {
     margin-top: 150px !important; /* ignored */
   }
-  to {
+  100% {
     margin-top: 100px;
   }
 }

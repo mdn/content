@@ -61,7 +61,7 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
   padding: 2px;
   border-radius: 8px;
   width: var(--width, calc(sibling-index() * 30px));
-  color: #fff;
+  color: white;
   background-color: hsl(
     calc(360deg / sibling-count() * sibling-index()) 50% 50%
   );
@@ -109,7 +109,7 @@ This example demonstrates how to dynamically increase the width of each {{htmlel
 ```css
 li {
   width: calc(sibling-index() * 50px);
-  background-color: #faa;
+  background-color: #ffaaaa;
 }
 ```
 

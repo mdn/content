@@ -133,7 +133,7 @@ The collision detection of the ball is now checked on every frame, with every br
 
 ```css hidden
 canvas {
-  background: #eee;
+  background: #eeeeee;
 }
 button {
   display: block;
