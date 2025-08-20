@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}
 
 Links (also known as hyperlinks) are really important — they are what makes the Web _a web_.
 This article shows the syntax required to make a link, and discusses link best practices.
@@ -466,12 +466,8 @@ Here are a few other sample `mailto` URLs:
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links).
-
 ## Summary
 
-That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, you're going to work through a couple of challenges that will test your comprehension of the topics you've covered so far.
+That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on links.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content/Test_your_skills/Links", "Learn_web_development/Core/Structuring_content")}}
