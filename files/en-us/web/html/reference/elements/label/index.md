@@ -38,9 +38,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
   - : The value is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) form control in the same document, [associating the `<label>` with that form control](#associating_a_label_with_a_form_control). Note that its JavaScript reflection property is [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
-- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
-  - : The value of `form` attribute must be an `id` of a [`form`](/en-US/docs/Web/HTML/Reference/Elements/form) element which this element is associated with.
-
 ## Usage notes
 
 ### Associating a label with a form control
