@@ -578,7 +578,7 @@
       "properties": [
         "File.webkitRelativePath",
         "HTMLInputElement.webkitdirectory",
-        "HTMLinputElement.webkitEntries"
+        "HTMLInputElement.webkitEntries"
       ],
       "events": []
     },
