@@ -54,6 +54,8 @@ When used as an attribute for `<output>` element, its name and value are **not**
 
 ## Examples
 
+### Basic example
+
 The following example shows how form-associated elements can be associated to a `<form>` element using the `form` attribute, even if they are not explicitly nested inside it. All of the form-associated elements shown in this example are linked to `loginForm` `<form>` element, either directly nesting the element inside the form or by using the `form` attribute, such as `password input`, `select`, `textarea`, and `submit button`. When the form is submitted, all these element's data and names will be included.
 
 ```html
@@ -68,6 +70,19 @@ The following example shows how form-associated elements can be associated to a 
 </select>
 <textarea form="loginForm" rows="4" name="description">Hello, World!</textarea>
 <button form="loginForm" type="submit">Submit</button>
+```
+
+### Element associated with a different form
+
+The following example has two `<form>` elements: `parentForm` and `targetForm`. The `button` inside `parentForm` has its `form` attribute set to `targetForm`, overriding the nearest ancestor `parentForm`. When the submit button is triggered, it submits `targetForm` along with its nested elements.
+
+```html
+<form id="targetForm">
+  <input type="text" name="targetInput"/>
+</form>
+<form id="parentForm">
+  <button form="targetForm" type="submit">Submit target form</button>
+</form>
 ```
 
 ## Specifications
