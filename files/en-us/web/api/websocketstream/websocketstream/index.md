@@ -54,8 +54,6 @@ const queueWSS = new WebSocketStream("wss://example.com/queue", {
 });
 ```
 
-and the connect will timeout after 5 seconds.
-
 If you're connecting to localhost, it's likely to succeed or fail almost instantly, so this will have no effect.
 
 You can use the {{domxref("WebSocketStream.close()")}} method to close a connection.
