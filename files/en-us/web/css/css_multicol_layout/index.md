@@ -213,7 +213,7 @@ article {
   flex-wrap: wrap;
 }
 p {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
   line-height: 1.4;
 }
 .breakInside * {
@@ -250,7 +250,7 @@ legend {
 }
 blockquote {
   border: 2px dashed red;
-  margin-bottom: 0.25em;
+  margin: 0 0 0.25em 0;
 }
 blockquote p {
   margin-bottom: 0;

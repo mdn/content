@@ -195,7 +195,7 @@ Treating first paragraphs differently from subsequent paragraphs can be done usi
 ```css
 p {
   text-align: justify;
-  margin-top: 1em;
+  margin: 1em 0 0 0;
 }
 p + p {
   text-indent: 2em;

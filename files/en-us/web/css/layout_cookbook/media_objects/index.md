@@ -131,7 +131,7 @@ img {
 }
 
 p {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
 }
 
 @media (width >= 500px) {

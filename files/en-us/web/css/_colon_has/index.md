@@ -113,11 +113,11 @@ h2 {
 ```css
 h1,
 h2 {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 h1:has(+ h2) {
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0;
 }
 ```
 
@@ -188,11 +188,11 @@ h3 {
 h1,
 h2,
 h3 {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 :is(h1, h2, h3):has(+ :is(h2, h3, h4)) {
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0;
 }
 ```
 
@@ -206,7 +206,7 @@ This selector could have also been written as:
 
 ```css
 :is(h1, h2, h3):has(+ h2, + h3, + h4) {
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0;
 }
 ```
 
