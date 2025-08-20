@@ -7,39 +7,67 @@ browser-compat:
   - html.elements.button.form
   - html.elements.fieldset.form
   - html.elements.input.form
-  - html.elements.label.form
-  - html.elements.meter.form
   - html.elements.object.form
   - html.elements.output.form
-  - html.elements.progress.form
   - html.elements.select.form
   - html.elements.textarea.form
 sidebar: htmlsidebar
 ---
 
-The `form` HTML attribute indicates the `<form>` element with which the current element is associated. This attribute requires the `id` of a `<form>` element in the same document. This attribute applies to the following elements: `<button>`, `<fieldset>`, `<input>`, `<label>`, `<meter>`, `<object>`, `<output>`, `<progress>`, `<select>`, and `<textarea>`.
+The `form` HTML attribute associates a form-associated elements with a `form` element. This attribute requires the `id` of a `<form>` element in the same document. This attribute applies to the following elements: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
 ## Values
 
 The `form` HTML attribute's value must be the `id` of a `<form>` element in the same document. This links the current element with the specified `<form>`.
 
-## Examples
+## Usage Notes
+
+The `form` attribute allows form-associated elements to be associated with a `<form>` element even if they are not nested inside it. This means the element's nearest ancestor `<form>` can be overridden and associated with a different form. When the associated form is submitted, its data will be included in the submission.
 
 ```html
-<form id="form">
-    <input type="text" name="username" value="david">
+<form id="externalForm"></form>
+<form id="internalForm">
+  <input form="externalForm" type="text" name="username">
 </form>
-<!-- Password input outside the form -->
-<input form="form" type="password" name="password" value="secret">
-<!-- Select outside the form -->
-<select form="form" name="options">
+```
+
+When used on a `<fieldset>` element, it does **not** automatically associate its nested elements with the provided `form` element. Each nested element needs its own `form` attribute or must be nested inside the form. You can check which elements are associated with a form via JavaScript, using [HTMLFormElement.elements](/en-US/docs/Web/API/HTMLFormElement/elements).
+
+```html
+<form id="exampleForm"></form>
+
+<fieldset form="exampleForm">
+  <input form="exampleForm" type="text" id="exampleIn"/>
+</fieldset>
+```
+
+When used as an attribute for `<output>` element, its name and value are **not** submitted with the form.
+
+```html
+<form id="calcForm">
+  <input id="a" value="2"/>
+  <input id="b" value="3"/>
+</form>
+
+<output name="result" for="a b" form="calcForm">5</output>
+```
+
+## Examples
+
+The following example shows how form-associated elements can be associated to a `<form>` element using the `form` attribute, even if they are not explicitly nested inside it. All of the form-associated elements shown in this example are linked to `loginForm` `<form>` element, either directly nesting the element inside the form or by using the `form` attribute, such as `password input`, `select`, `textarea`, and `submit button`. When the form is submitted, all these element's data and names will be included.
+
+```html
+<form id="loginForm">
+    <input type="text" name="username">
+</form>
+
+<input form="loginForm" type="password" name="password">
+<select form="loginForm" name="options">
     <option value="A">A</option>
     <option value="B">B</option>
 </select>
-<!-- Textarea outside the form -->
-<textarea rows="4" name="description" form="form">Hello, World!</textarea>
-<!-- Submit button outside the form -->
-<button type="submit" form="form">Submit</button>
+<textarea form="loginForm" rows="4" name="description">Hello, World!</textarea>
+<button form="loginForm" type="submit">Submit</button>
 ```
 
 ## Specifications
