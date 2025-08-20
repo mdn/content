@@ -59,7 +59,7 @@ section {
 
 #example-element {
   text-align: left;
-  margin: 0 0 0 3em;
+  margin-left: 3em;
   background-color: slateblue;
   color: white;
 }
@@ -195,7 +195,7 @@ Treating first paragraphs differently from subsequent paragraphs can be done usi
 ```css
 p {
   text-align: justify;
-  margin: 1em 0 0 0;
+  margin-top: 1em;
 }
 p + p {
   text-indent: 2em;
