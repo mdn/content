@@ -51,11 +51,11 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
-    - The requested URL was invalid.
-    - The requested URL included credentials (username and password).
-    - The {{domxref("RequestInit")}} object passed as the vlaue of `options` included properties with invalid values.
-    - The request was blocked by a permissions policy.
-    - There was a network error (for example, because the device did not have connectivity).
+    - The requested URL is invalid.
+    - The requested URL includes credentials (username and password).
+    - The {{domxref("RequestInit")}} object passed as the value of `options` included properties with invalid values.
+    - The request is blocked by a permissions policy.
+    - There is a network error (for example, because the device does not have connectivity).
 
 ## Examples
 
