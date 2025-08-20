@@ -1,6 +1,6 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Stable)
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
 page-type: firefox-release-notes
 sidebar: firefox
