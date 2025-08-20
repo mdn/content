@@ -2,7 +2,7 @@
 title: Firefox 141 for developers
 short-title: Firefox 141 (Stable)
 slug: Mozilla/Firefox/Releases/141
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
