@@ -138,7 +138,7 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_
 
 ## Shape data types
 
-These data types define different shapes for various purposes.
+The [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and CSS borders and box decorations modules define shape data types:
 
 - {{cssxref("&lt;basic-shape>")}}
   - : Describes shape functions used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
