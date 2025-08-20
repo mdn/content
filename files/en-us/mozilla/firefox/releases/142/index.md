@@ -26,12 +26,9 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{HTMLElement('object')}} element no longer supports the deprecated `codebase` attribute. Use the [`data`](/en-US/docs/Web/HTML/Reference/Elements/object#data) attribute instead. (See [Firefox bug 1973900](https://bugzil.la/1973900) for more details.)
 
-### CSS
+<!-- ### CSS -->
 
-- The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} blocks no longer inherits the scope start
-  selector's [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
-  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
-  ([Firefox bug 1975531](https://bugzil.la/1975531)).
+<!-- No notable changes. -->
 
 <!-- #### Removals -->
 
