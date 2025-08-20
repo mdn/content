@@ -204,7 +204,7 @@ See the reference documentation for {{domxref("RequestInit", "", "mode")}} for m
 
 ### Including credentials
 
-In the context of an HTTP request, a credential is an extra piece of data sent along with the request, that the server may use to authenticate the user. All the following items are considered to be credentials:
+In the context of the Fetch API, a credential is an extra piece of data sent along with the request that the server may use to authenticate the user. All the following items are considered to be credentials:
 
 - HTTP cookies
 - {{glossary("TLS")}} client certificates
