@@ -195,25 +195,39 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
     <li>
       <h2><a href="#">HTML</a></h2>
       <h3>HyperText Markup Language</h3>
-      <p>HyperText Markup Language (HTML) is the most basic building block of the web. It defines the meaning and structure of web content. HTML provides the fundamental building blocks for structuring web documents and apps.
+      <p>
+        HyperText Markup Language (HTML) is the most basic building block of the
+        web. It defines the meaning and structure of web content. HTML provides
+        the fundamental building blocks for structuring web documents and apps.
       </p>
     </li>
     <li>
       <h2><a href="#">CSS</a></h2>
       <h3>Cascading Style Sheets</h3>
-      <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+      <p>
+        Cascading Style Sheets (CSS) is a stylesheet language used to describe
+        the presentation of a document written in HTML or XML (including XML
+        dialects such as SVG, MathML or XHTML). CSS describes how elements
+        should be rendered on screen, on paper, in speech, or on other media.
       </p>
     </li>
     <li>
       <h2><a href="#">SVG</a></h2>
       <h3>Scalable Vector Graphics</h3>
-      <p>Scalable Vector Graphics (SVG) is an XML-based markup language for describing two-dimensional based vector graphics.
+      <p>
+        Scalable Vector Graphics (SVG) is an XML-based markup language for
+        describing two-dimensional based vector graphics.
       </p>
     </li>
     <li>
       <h2><a href="#">JS</a></h2>
       <h3>JavaScript</h3>
-      <p>JavaScript (JS) is the web's native programming language. JavaScript is a lightweight, interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for web pages, many non-browser environments, such as Node.js, also use it.
+      <p>
+        JavaScript (JS) is the web's native programming language. JavaScript is
+        a lightweight, interpreted (or just-in-time compiled) programming
+        language with first-class functions. While it is most well-known as the
+        scripting language for web pages, many non-browser environments, such as
+        Node.js, also use it.
       </p>
     </li>
   </ul>
@@ -223,7 +237,9 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
 
 ```html hidden
 <form>
-  <label for="match-element-checkbox">Apply <code>match-element</code> to list items?</label>
+  <label for="match-element-checkbox"
+    >Apply <code>match-element</code> to list items?</label
+  >
   <input type="checkbox" id="match-element-checkbox" checked />
 </form>
 ```
@@ -249,7 +265,7 @@ body {
   height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content:space-around
+  justify-content: space-around;
 }
 li h2 {
   margin: 0;
@@ -411,7 +427,7 @@ function updateActiveItem(event) {
 }
 
 mainElem.addEventListener("click", (event) => {
-  event.preventDefault() // Prevent iframe from scrolling when clicked
+  event.preventDefault(); // Prevent iframe from scrolling when clicked
   // Do nothing unless a link is clicked inside the <main> element
   if (event.target.tagName !== "A") {
     return;
