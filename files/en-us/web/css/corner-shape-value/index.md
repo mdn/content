@@ -30,7 +30,7 @@ Keyword values:
   - : Defines a quarter of a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
 
 > [!NOTE]
-> Different corner shapes can be smoothly animated between. When one or both of them are expressed using keywords, the `superellipse()` equivalents of those keywords are interpolated between.
+> You can smoothly animate between different keyword corner shapes as the animation interpolates between their `superellipse()` equivalents.
 
 ## Formal syntax
 
