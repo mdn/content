@@ -52,5 +52,5 @@ console.log(request.duplex); // "half"
 
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - {{domxref("Request.Request", "Request()")}} constructor
-- {{domxref("RequestInit.duplex")}} in request options
-- [Using ReadableStreams with fetch](/en-US/docs/Web/API/Streams_API/Using_readable_streams#streams_with_fetch)
+- [`RequestInit.duplex`](/en-US/docs/Web/API/RequestInit#duplex) in request options
+- [Consuming a fetch as a stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#consuming_a_fetch_as_a_streamh)
