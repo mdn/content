@@ -67,6 +67,9 @@ function getData(pageId) {
     })
     .then((text) => {
       myArticle.innerText = text;
+    })
+    .catch((error) => {
+      myArticle.innerText = `Error: ${error.message}`;
     });
 }
 ```
