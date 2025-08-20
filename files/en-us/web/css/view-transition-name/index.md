@@ -237,9 +237,9 @@ The {{htmlelement("main")}} element contains an [unordered list](/en-US/docs/Web
 
 ```html hidden
 <form>
-  <label for="match-element-checkbox"
-    >Apply <code>match-element</code> to list items?</label
-  >
+  <label for="match-element-checkbox">
+    Apply <code>match-element</code> to list items?
+  </label>
   <input type="checkbox" id="match-element-checkbox" checked />
 </form>
 ```
