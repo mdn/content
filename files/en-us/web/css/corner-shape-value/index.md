@@ -10,24 +10,27 @@ The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/doc
 
 ## Syntax
 
+The `<corner-shape-value>` data type can take a keyword value that describes a common `superellipse()` corner shape, or a {{cssxref("superellipse()")}} function that defines a custom shape.
+
 ### Values
 
-The `<corner-shape-value>` data type can take one of the keyword values listed below, which define common shapes, or a {{cssxref("superellipse()")}} function, which can be used to define a custom shape.
+- Keywords for common `superellipse()` values
+  - : The available keyword values are as follows:
+    - `bevel`
+      - : Defines a straight, diagonal corner, which is neither convex nor concave. The `bevel` keyword is equivalent to `superellipse(0)`.
+    - `notch`
+      - : Defines a concave (90-degree) square corner. The `notch` keyword is equivalent to `superellipse(-infinity)`.
+    - `round`
+      - : Defines a convex quarter-ellipse, which is the standard rounded corner created by {{cssxref("border-radius")}} without a `corner-shape` applied. This is the default (initial) value for all `corner-shape` properties. The `round` keyword is equivalent to `superellipse(1)`.
+    - `scoop`
+      - : Defines a concave quarter-ellipse. The `scoop` keyword is equivalent to `superellipse(-1)`.
+    - `square`
+      - : Defines a 90-degree convex square corner, which is the default corner shape when no `border-radius` (or `border-radius: 0`) is applied. The `square` keyword is equivalent to `superellipse(infinity)`.
+    - `squircle`
+      - : Defines a quarter of a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
 
-Keyword values:
-
-- `bevel`
-  - : Defines a straight, diagonal corner, which is neither convex nor concave. The `bevel` keyword is equivalent to `superellipse(0)`.
-- `notch`
-  - : Defines a concave (90-degree) square corner. The `notch` keyword is equivalent to `superellipse(-infinity)`.
-- `round`
-  - : Defines a convex quarter-ellipse, which is the standard rounded corner created by {{cssxref("border-radius")}} without a `corner-shape` applied. This is the default (initial) value for all `corner-shape` properties. The `round` keyword is equivalent to `superellipse(1)`.
-- `scoop`
-  - : Defines a concave quarter-ellipse. The `scoop` keyword is equivalent to `superellipse(-1)`.
-- `square`
-  - : Defines a 90-degree convex square corner, which is the default corner shape when no `border-radius` (or `border-radius: 0`) is applied. The `square` keyword is equivalent to `superellipse(infinity)`.
-- `squircle`
-  - : Defines a quarter of a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
+- {{cssxref("superellipse()")}}
+  - : Defines a custom corner superellipse shape.
 
 > [!NOTE]
 > You can smoothly animate between different keyword corner shapes as the animation interpolates between their `superellipse()` equivalents.
@@ -40,31 +43,43 @@ Keyword values:
 
 ### `<corner-shape-value>` value comparison
 
-In this example, we provide a {{htmlelement("select")}} picker allowing you to set different `corner-shape` values on a container to compare the effects of different `<corner-shape-value>` values. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, we provide a {{htmlelement("select")}} picker and an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider allowing you to set different `corner-shape-value` and {{cssxref("border-radius")}} values on a container to compare their effects. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
-  <label for="corner-shape-choice">Choose a corner-shape value:</label>
-  <select id="corner-shape-choice">
-    <optgroup label="Keywords">
-      <option value="square">square | superellipse(infinity)</option>
-      <option selected value="squircle">squircle | superellipse(2)</option>
-      <option value="round">round | superellipse(1)</option>
-      <option value="bevel">bevel | superellipse(0)</option>
-      <option value="scoop">scoop | superellipse(-1)</option>
-      <option value="notch">notch | superellipse(-infinity)</option>
-    </optgroup>
-    <optgroup label="Functions">
-      <option>superellipse(3)</option>
-      <option>superellipse(1.5)</option>
-      <option>superellipse(0.5)</option>
-      <option>superellipse(-0.5)</option>
-      <option>superellipse(-1.5)</option>
-      <option>superellipse(-3)</option>
-    </optgroup>
-  </select>
+  <div>
+    <label for="corner-shape-choice">Choose a corner-shape value:</label>
+    <select id="corner-shape-choice">
+      <optgroup label="Keywords">
+        <option value="square">square | superellipse(infinity)</option>
+        <option selected value="squircle">squircle | superellipse(2)</option>
+        <option value="round">round | superellipse(1)</option>
+        <option value="bevel">bevel | superellipse(0)</option>
+        <option value="scoop">scoop | superellipse(-1)</option>
+        <option value="notch">notch | superellipse(-infinity)</option>
+      </optgroup>
+      <optgroup label="Functions">
+        <option>superellipse(3)</option>
+        <option>superellipse(1.5)</option>
+        <option>superellipse(0.5)</option>
+        <option>superellipse(-0.5)</option>
+        <option>superellipse(-1.5)</option>
+        <option>superellipse(-3)</option>
+      </optgroup>
+    </select>
+  </div>
+  <div>
+    <label for="radius-slider">Choose a border-radius value:</label>
+    <input
+      type="range"
+      id="radius-slider"
+      min="0"
+      value="45"
+      max="90"
+      step="1" />
+  </div>
 </form>
-<div></div>
+<section></section>
 ```
 
 ```css hidden live-sample___value-comparison
@@ -77,7 +92,7 @@ body {
   margin: 20px auto;
 }
 
-div {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +103,12 @@ select {
   padding: 3px 5px;
 }
 
-div {
+form div:nth-of-type(2) {
+  margin-top: 5px;
+  display: flex;
+}
+
+section {
   width: 100%;
   height: 180px;
   background-color: orange;
@@ -99,26 +119,32 @@ div {
   );
 }
 
-div {
+section {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 30px;
 }
 ```
 
 ```js hidden live-sample___value-comparison
-const rectangle = document.querySelector("div");
+const rectangle = document.querySelector("section");
 const select = document.querySelector("select");
+const range = document.getElementById("radius-slider");
 
-function setCornerShape() {
+function setCorners() {
   rectangle.style.cornerShape = select.value;
-  rectangle.innerHTML = `<code>corner-shape: ${select.value}</code>`;
+  const brValue = `${range.value}px`;
+  rectangle.style.borderRadius = brValue;
+  rectangle.innerHTML = `<div><code>corner-shape: ${select.value}</code><br><code>border-radius: ${brValue}</code></div>`;
 }
 
-select.addEventListener("change", setCornerShape);
-setCornerShape();
+select.addEventListener("change", setCorners);
+range.addEventListener("input", setCorners);
+setCorners();
 ```
 
-{{EmbedLiveSample("value-comparison", "100%", "270")}}
+{{EmbedLiveSample("value-comparison", "100%", "300")}}
+
+> [!NOTE]
+> See also our [superellipse() value comparison](/en-US/docs/Web/CSS/superellipse#superellipse_value_comparison) example.
 
 ## Specifications
 

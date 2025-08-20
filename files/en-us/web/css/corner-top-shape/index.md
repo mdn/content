@@ -12,6 +12,13 @@ You can set corner shapes individually and other combinations of corner shapes u
 
 If a visible `border-radius` is not applied to a container's top-edge corners, `corner-top-shape` will have no effect on them.
 
+## Constituent properties
+
+The `corner-top-shape` property is a shorthand for the following physical properties:
+
+- {{cssxref("corner-top-left-shape")}}
+- {{cssxref("corner-top-right-shape")}}
+
 ## Syntax
 
 ```css

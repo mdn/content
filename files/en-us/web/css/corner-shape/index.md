@@ -17,14 +17,16 @@ The `corner-shape` property is a shorthand for the following physical properties
 - {{cssxref("corner-bottom-left-shape")}}
 - {{cssxref("corner-bottom-right-shape")}}
 
-and the following logical properties:
+### Other related properties
+
+The following logical properties also exist to define a single corner shape based on its position relative to a container's block and inline axes:
 
 - {{cssxref("corner-start-start-shape")}}
 - {{cssxref("corner-start-end-shape")}}
 - {{cssxref("corner-end-start-shape")}}
 - {{cssxref("corner-end-end-shape")}}
 
-The `corner-shape` property can also be considered to be a shorthand for the following physical and logical shorthand properties, each of which target two corners along one edge of the box:
+The following physical and logical shorthand properties each define the shape of two corners along one edge of a container:
 
 - {{cssxref("corner-top-shape")}}
 - {{cssxref("corner-right-shape")}}
@@ -240,35 +242,47 @@ Note how most of the set styles follow the shape of the `<div>` resulting from i
 
 ### Comparing `corner-shape` values
 
-In this example, we provide a {{htmlelement("select")}} picker allowing you to set different `corner-shape` values on a container to compare the effects.
+In this example, we provide a {{htmlelement("select")}} picker and an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider allowing you to set different `corner-shape` values and {{cssxref("border-radius")}} values on a container to compare the effects.
 
 #### HTML
 
-The markup for this example contains a `<select>` element from which different `corner-shape` values can be selected, and a {{htmlelement("div")}} element to apply those values to. The select {{htmlelement("option")}} elements provide multiple keyword and function value choices, broken into two groups using {{htmlelement("optgroup")}} elements. In the case of the keyword values, we've also included the {{cssxref("superellipse()")}} value equivalent for each one, separated by a pipe character.
+The markup for this example contains a `<select>` element from which different `corner-shape` values can be selected, an `<input type="range">` element to select different `border-radius` values, and a {{htmlelement("section")}} element to apply those values to. The select {{htmlelement("option")}} elements provide multiple keyword and {{cssxref("superellipse()")}} value choices, broken into two groups using {{htmlelement("optgroup")}} elements. In the case of the keyword values, we've also included the `superellipse()` value equivalent for each one, separated by a pipe character.
 
 ```html live-sample___corner-shape-select
 <form>
-  <label for="corner-shape-choice">Choose a corner-shape value:</label>
-  <select id="corner-shape-choice">
-    <optgroup label="Keywords">
-      <option value="square">square | superellipse(infinity)</option>
-      <option selected value="squircle">squircle | superellipse(2)</option>
-      <option value="round">round | superellipse(1)</option>
-      <option value="bevel">bevel | superellipse(0)</option>
-      <option value="scoop">scoop | superellipse(-1)</option>
-      <option value="notch">notch | superellipse(-infinity)</option>
-    </optgroup>
-    <optgroup label="Functions">
-      <option>superellipse(3)</option>
-      <option>superellipse(1.5)</option>
-      <option>superellipse(0.5)</option>
-      <option>superellipse(-0.5)</option>
-      <option>superellipse(-1.5)</option>
-      <option>superellipse(-3)</option>
-    </optgroup>
-  </select>
+  <div>
+    <label for="corner-shape-choice">Choose a corner-shape value:</label>
+    <select id="corner-shape-choice">
+      <optgroup label="Keywords">
+        <option value="square">square | superellipse(infinity)</option>
+        <option selected value="squircle">squircle | superellipse(2)</option>
+        <option value="round">round | superellipse(1)</option>
+        <option value="bevel">bevel | superellipse(0)</option>
+        <option value="scoop">scoop | superellipse(-1)</option>
+        <option value="notch">notch | superellipse(-infinity)</option>
+      </optgroup>
+      <optgroup label="Functions">
+        <option>superellipse(3)</option>
+        <option>superellipse(1.5)</option>
+        <option>superellipse(0.5)</option>
+        <option>superellipse(-0.5)</option>
+        <option>superellipse(-1.5)</option>
+        <option>superellipse(-3)</option>
+      </optgroup>
+    </select>
+  </div>
+  <div>
+    <label for="radius-slider">Choose a border-radius value:</label>
+    <input
+      type="range"
+      id="radius-slider"
+      min="0"
+      value="45"
+      max="90"
+      step="1" />
+  </div>
 </form>
-<div></div>
+<section></section>
 ```
 
 > [!NOTE]
@@ -276,7 +290,7 @@ The markup for this example contains a `<select>` element from which different `
 
 #### CSS
 
-We give the `<div>` and `<select>` some basic styles, which we've hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} and a `border-radius` of 30 pixels to the `<div>`.
+We give the `<section>` and form elements some basic styles, which we've hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} to the `<section>`.
 
 ```css hidden live-sample___corner-shape-select
 html {
@@ -288,7 +302,7 @@ body {
   margin: 20px auto;
 }
 
-div {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,7 +313,12 @@ select {
   padding: 3px 5px;
 }
 
-div {
+form div:nth-of-type(2) {
+  margin-top: 5px;
+  display: flex;
+}
+
+section {
   width: 100%;
   height: 180px;
   background-color: orange;
@@ -312,53 +331,68 @@ div {
 ```
 
 ```css live-sample___corner-shape-select
-div {
+section {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 30px;
 }
 ```
 
 ```js hidden live-sample___corner-shape-select
-const rectangle = document.querySelector("div");
+const rectangle = document.querySelector("section");
 const select = document.querySelector("select");
+const range = document.getElementById("radius-slider");
 
-function setCornerShape() {
+function setCorners() {
   rectangle.style.cornerShape = select.value;
-  rectangle.innerHTML = `<code>corner-shape: ${select.value}</code>`;
+  const brValue = `${range.value}px`;
+  rectangle.style.borderRadius = brValue;
+  rectangle.innerHTML = `<div><code>corner-shape: ${select.value}</code><br><code>border-radius: ${brValue}</code></div>`;
 }
 
-select.addEventListener("change", setCornerShape);
-setCornerShape();
+select.addEventListener("change", setCorners);
+range.addEventListener("input", setCorners);
+setCorners();
 ```
 
 #### Result
 
 The rendered result looks like this:
 
-{{EmbedLiveSample("corner-shape-select", "100%", "270")}}
+{{EmbedLiveSample("corner-shape-select", "100%", "300")}}
 
 Try selecting different values to see how this affects the shape of the corners.
 
-### `superellipse()` range slider
+### `superellipse()` value comparison
 
-In this example, we provide an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider allowing you to cycle through many different `corner-shape` {{cssxref("superellipse()")}} values.
+In this example, we provide two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) sliders allowing you to cycle through many different `corner-shape` {{cssxref("superellipse()")}} values and {{cssxref("border-radius")}} values to compare the effects of each on a container.
 
 #### HTML
 
-The markup for this example contains an `<input type="range">` element from which different `corner-shape` `superellipse()` values can be selected, and a {{htmlelement("div")}} element to apply those values to.
+The markup for this example contains two `<input type="range">` elements from which different `corner-shape` `superellipse()` and `border-radius` values can be selected, and a {{htmlelement("section")}} element to apply those values to.
 
 ```html live-sample___superellipse-slider
 <form>
-  <label for="superellipse-slider">Choose a superellipse() value:</label>
-  <input
-    type="range"
-    id="superellipse-slider"
-    min="-5"
-    value="0"
-    max="5"
-    step="0.1" />
+  <div>
+    <label for="superellipse-slider">Choose a superellipse() value:</label>
+    <input
+      type="range"
+      id="superellipse-slider"
+      min="-5"
+      value="0"
+      max="5"
+      step="0.1" />
+  </div>
+  <div>
+    <label for="radius-slider">Choose a border-radius value:</label>
+    <input
+      type="range"
+      id="radius-slider"
+      min="0"
+      value="45"
+      max="90"
+      step="1" />
+  </div>
 </form>
-<div></div>
+<section></section>
 ```
 
 > [!NOTE]
@@ -366,7 +400,7 @@ The markup for this example contains an `<input type="range">` element from whic
 
 #### CSS
 
-We give the `<div>` element some basic styles, which we've mostly hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} and a `border-radius` of 30 pixels to it.
+We give the `<section>` element some basic styles, which we've mostly hidden for brevity. Most notably, we apply a {{cssxref("box-shadow")}} to it.
 
 ```css hidden live-sample___superellipse-slider
 html {
@@ -378,14 +412,19 @@ body {
   margin: 20px auto;
 }
 
-div {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
 
-div {
+form div {
+  margin-top: 5px;
+  display: flex;
+}
+
+section {
   width: 100%;
   height: 180px;
   background-color: orange;
@@ -398,31 +437,34 @@ div {
 ```
 
 ```css live-sample___superellipse-slider
-div {
+section {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 30px;
 }
 ```
 
 ```js hidden live-sample___superellipse-slider
-const rectangle = document.querySelector("div");
-const range = document.querySelector("input");
+const rectangle = document.querySelector("section");
+const superEllipseRange = document.getElementById("superellipse-slider");
+const borderRadiusRange = document.getElementById("radius-slider");
 
-function setSuperEllipse() {
-  const seValue = `superellipse(${range.value})`;
+function setCorners() {
+  const seValue = `superellipse(${superEllipseRange.value})`;
   rectangle.style.cornerShape = seValue;
-  rectangle.innerHTML = `<code>corner-shape: ${seValue}</code>`;
+  const brValue = `${borderRadiusRange.value}px`;
+  rectangle.style.borderRadius = brValue;
+  rectangle.innerHTML = `<div><code>corner-shape: ${seValue}</code><br><code>border-radius: ${brValue}</code></div>`;
 }
 
-range.addEventListener("input", setSuperEllipse);
-setSuperEllipse();
+superEllipseRange.addEventListener("input", setCorners);
+borderRadiusRange.addEventListener("input", setCorners);
+setCorners();
 ```
 
 #### Result
 
 The rendered result looks like this:
 
-{{EmbedLiveSample("superellipse-slider", "100%", "270")}}
+{{EmbedLiveSample("superellipse-slider", "100%", "300")}}
 
 Try selecting different values to see how this affects the shape of the corners.
 

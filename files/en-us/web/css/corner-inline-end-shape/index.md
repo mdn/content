@@ -12,6 +12,13 @@ You can set corner shapes individually and other combinations of corner shapes u
 
 If a visible `border-radius` is not applied to a container's inline-end-edge corners, `corner-inline-end-shape` will have no effect on them.
 
+## Constituent properties
+
+The `corner-inline-end-shape` property is a shorthand for the following physical properties:
+
+- {{cssxref("corner-start-end-shape")}}
+- {{cssxref("corner-end-end-shape")}}
+
 ## Syntax
 
 ```css

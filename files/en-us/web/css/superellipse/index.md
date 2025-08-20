@@ -53,20 +53,32 @@ A negative or positive superellipse would appear symmetrical to a superellipse w
 
 ### `superellipse()` value comparison
 
-In this example, we provide an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider allowing you to cycle through many different `corner-shape` {{cssxref("superellipse()")}} values to compare the effects of each. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#superellipse_range_slider) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, we provide two [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) sliders allowing you to cycle through many different `corner-shape` `superellipse()` values and {{cssxref("border-radius")}} values to compare the effects of each on a container. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#superellipse_value_comparison) along with other related examples on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
-  <label for="superellipse-slider">Choose a superellipse() value:</label>
-  <input
-    type="range"
-    id="superellipse-slider"
-    min="-5"
-    value="0"
-    max="5"
-    step="0.1" />
+  <div>
+    <label for="superellipse-slider">Choose a superellipse() value:</label>
+    <input
+      type="range"
+      id="superellipse-slider"
+      min="-5"
+      value="0"
+      max="5"
+      step="0.1" />
+  </div>
+  <div>
+    <label for="radius-slider">Choose a border-radius value:</label>
+    <input
+      type="range"
+      id="radius-slider"
+      min="0"
+      value="45"
+      max="90"
+      step="1" />
+  </div>
 </form>
-<div></div>
+<section></section>
 ```
 
 ```css hidden live-sample___value-comparison
@@ -79,14 +91,20 @@ body {
   margin: 20px auto;
 }
 
-div {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 100%;
   margin-top: 20px;
 }
 
-div {
+form div {
+  margin-top: 5px;
+  display: flex;
+}
+
+section {
   width: 100%;
   height: 180px;
   background-color: orange;
@@ -97,27 +115,33 @@ div {
   );
 }
 
-div {
+section {
   box-shadow: 1px 1px 3px gray;
-  border-radius: 30px;
 }
 ```
 
 ```js hidden live-sample___value-comparison
-const rectangle = document.querySelector("div");
-const range = document.querySelector("input");
+const rectangle = document.querySelector("section");
+const superEllipseRange = document.getElementById("superellipse-slider");
+const borderRadiusRange = document.getElementById("radius-slider");
 
-function setSuperEllipse() {
-  const seValue = `superellipse(${range.value})`;
+function setCorners() {
+  const seValue = `superellipse(${superEllipseRange.value})`;
   rectangle.style.cornerShape = seValue;
-  rectangle.innerHTML = `<code>corner-shape: ${seValue}</code>`;
+  const brValue = `${borderRadiusRange.value}px`;
+  rectangle.style.borderRadius = brValue;
+  rectangle.innerHTML = `<div><code>corner-shape: ${seValue}</code><br><code>border-radius: ${brValue}</code></div>`;
 }
 
-range.addEventListener("input", setSuperEllipse);
-setSuperEllipse();
+superEllipseRange.addEventListener("input", setCorners);
+borderRadiusRange.addEventListener("input", setCorners);
+setCorners();
 ```
 
-{{EmbedLiveSample("value-comparison", "100%", "270")}}
+{{EmbedLiveSample("value-comparison", "100%", "300")}}
+
+> [!NOTE]
+> See also our [&lt;corner-shape-value> value comparison](/en-US/docs/Web/CSS/corner-shape-value#corner-shape-value_value_comparison) example.
 
 ## Specifications
 

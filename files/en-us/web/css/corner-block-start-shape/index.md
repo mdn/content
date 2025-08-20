@@ -12,6 +12,13 @@ You can set corner shapes individually and other combinations of corner shapes u
 
 If a visible `border-radius` is not applied to a container's block-start-edge corners, `corner-block-start-shape` will have no effect on them.
 
+## Constituent properties
+
+The `corner-block-start-shape` property is a shorthand for the following physical properties:
+
+- {{cssxref("corner-start-start-shape")}}
+- {{cssxref("corner-start-end-shape")}}
+
 ## Syntax
 
 ```css
