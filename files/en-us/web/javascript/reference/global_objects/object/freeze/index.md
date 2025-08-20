@@ -166,9 +166,9 @@ const obj1 = {
 };
 
 Object.freeze(obj1);
-obj1.internal.a = "aValue";
+obj1.internal.a = "value";
 
-obj1.internal.a; // 'aValue'
+obj1.internal.a; // 'value'
 ```
 
 To be a constant object, the entire reference graph (direct and indirect references to

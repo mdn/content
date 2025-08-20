@@ -37,14 +37,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfi
 This example registers a content script that injects the file `"script.js"`:
 
 ```js
-const aScript = {
+const script = {
   id: "a-script",
   js: ["script.js"],
   matches: ["https://example.com/*"],
 };
 
 try {
-  await browser.scripting.registerContentScripts([aScript]);
+  await browser.scripting.registerContentScripts([script]);
 } catch (err) {
   console.error(`failed to register content scripts: ${err}`);
 }

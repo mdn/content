@@ -53,6 +53,8 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - The [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API) is fully supported, enabling you to match and parse URLs using a standardized pattern syntax. ([Firefox bug 1731418](https://bugzil.la/1731418)).
+- The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) now fully supports the {{domxref("HTMLInputElement.webkitdirectory")}} (and corresponding HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute) and {{domxref("File.webkitRelativePath")}} properties on Firefox Android.
+  This lets you configure an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element to accept directories instead of files ([Firefox bug 1973726](https://bugzil.la/1973726)).
 
 #### DOM
 
@@ -113,7 +115,7 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
 
-- **`:heading`** and **`:heading()`**: `layout.css.anchor-positioning.enabled`
+- **`:heading`** and **`:heading()`**: `layout.css.heading-selector.enabled`
 
   The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 

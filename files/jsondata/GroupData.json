@@ -443,6 +443,7 @@
         "NodeIterator",
         "NodeList",
         "ProcessingInstruction",
+        "QuotaExceededError",
         "Range",
         "StaticRange",
         "Text",
@@ -577,7 +578,7 @@
       "properties": [
         "File.webkitRelativePath",
         "HTMLInputElement.webkitdirectory",
-        "HTMLinputElement.webkitEntries"
+        "HTMLInputElement.webkitEntries"
       ],
       "events": []
     },

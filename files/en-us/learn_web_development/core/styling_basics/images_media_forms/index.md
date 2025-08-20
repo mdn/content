@@ -235,7 +235,7 @@ label {
 input[type="text"],
 input[type="email"] {
   border: 2px solid black;
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
   padding: 10px;
   width: 80%;
 }

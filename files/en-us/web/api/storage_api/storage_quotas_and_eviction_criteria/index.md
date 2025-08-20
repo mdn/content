@@ -122,7 +122,7 @@ Like other browsers, the exact limits enforced by the quota may vary so as to av
 
 WebKit also enforces an overall quota that stored data across all origins cannot grow beyond 80% of disk size for browser apps, and 20% of disk size for non-browser apps that display web content.
 
-More information on WebKit's storage policies can be found on the [WebKit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
+More information on WebKit's storage policies can be found on the [WebKit blog](https://webkit.org/blog/14403/updates-to-storage-policy/).
 
 In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 

@@ -87,6 +87,11 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     Defaults to `same-origin`.
 
+- `duplex` {{optional_inline}} {{experimental_inline}}
+  - : Controls duplex behavior of the request. If this is present it must have the value `half`, meaning that the browser must send the entire request before processing the response.
+
+    This option must be present when [`body`](#body) is a {{domxref("ReadableStream")}}.
+
 - `headers` {{optional_inline}}
   - : Any headers you want to add to your request, contained
     within a {{domxref("Headers")}} object or an object literal whose keys are the names of headers and whose values are the header values.

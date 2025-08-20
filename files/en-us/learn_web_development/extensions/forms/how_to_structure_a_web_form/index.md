@@ -375,7 +375,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    }
 
    button {
-     margin: 20px 0 0 0;
+     margin-top: 20px;
    }
 
    label {
