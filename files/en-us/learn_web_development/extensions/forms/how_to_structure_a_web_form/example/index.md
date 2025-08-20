@@ -148,7 +148,7 @@ input:focus {
 }
 
 button {
-  margin: 20px 0 0 0;
+  margin-top: 20px;
 }
 
 label {

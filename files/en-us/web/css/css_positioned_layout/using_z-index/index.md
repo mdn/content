@@ -86,7 +86,7 @@ strong {
   top: 30px;
   border: 1px dashed #669966;
   background-color: #ccffcc;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #rel2 {
@@ -97,7 +97,7 @@ strong {
   left: 20px;
   border: 1px dashed #669966;
   background-color: #ccffcc;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 
 #abs2 {
@@ -116,7 +116,7 @@ strong {
   height: 70px;
   border: 1px dashed #999966;
   background-color: #ffffcc;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px;
 }
 ```
 

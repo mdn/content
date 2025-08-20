@@ -424,7 +424,7 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 
 dl > div {
   background: white;
-  padding: 24px 0 0 0;
+  padding-top: 24px;
 }
 
 dt {
@@ -449,7 +449,7 @@ dd {
     Arial,
     sans-serif;
   margin: 0;
-  padding: 0 0 0 12px;
+  padding-left: 12px;
   white-space: nowrap;
 }
 
@@ -513,7 +513,7 @@ p {
 ```css
 .bulb {
   position: sticky;
-  inset: 50px 100px 50px 100px;
+  inset: 50px 100px;
 }
 
 div {

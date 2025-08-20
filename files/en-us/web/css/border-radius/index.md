@@ -202,7 +202,7 @@ The `border-radius` property is specified as:
 For example:
 
 ```css
-border-radius: 1em/5em;
+border-radius: 1em / 5em;
 
 /* It is equivalent to: */
 border-top-left-radius: 1em 5em;
@@ -250,7 +250,7 @@ The styles applied to each `<pre>` element are included as the element's content
 <pre id="example-3">
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 </pre>
 
 <pre id="example-4">
@@ -299,7 +299,7 @@ pre#example-2 {
 pre#example-3 {
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 }
 
 pre#example-4 {

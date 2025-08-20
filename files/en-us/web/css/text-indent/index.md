@@ -59,7 +59,7 @@ section {
 
 #example-element {
   text-align: left;
-  margin: 0 0 0 3em;
+  margin-left: 3em;
   background-color: slateblue;
   color: white;
 }

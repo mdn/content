@@ -642,7 +642,7 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
-- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
+- IndexedDB [interface files](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 
