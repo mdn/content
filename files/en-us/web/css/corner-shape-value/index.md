@@ -25,7 +25,7 @@ Keyword values:
 - `scoop`
   - : Defines a concave quarter-ellipse. The `scoop` keyword is equivalent to `superellipse(-1)`.
 - `square`
-  - : Defines a convex (90-degree) square corner, which is the default shape of a container corner when no `border-radius` is applied. The `square` keyword is equivalent to `superellipse(infinity)`.
+  - : Defines a 90-degree convex square corner, which is the default corner shape when no `border-radius` (or `border-radius: 0`) is applied. The `square` keyword is equivalent to `superellipse(infinity)`.
 - `squircle`
   - : Defines a quarter of a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
 
