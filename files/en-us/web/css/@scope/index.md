@@ -129,8 +129,9 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 }
 ```
 
-If you want, you can explicitly prepend `:scope` or prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect if you find these representations easier to understand.
-The three rules in the following block are equivalent in what they select, but note that they differ in specificity, see [Specificity in @scope](#specificity_in_scope) for details:
+In fact, `:scope` is implicitly prepended to all scoped style rules. If you want, you can explicitly prepend `:scope` or prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect if you find these representations easier to understand.
+
+The three rules in the following block are all equivalent in what they select:
 
 ```css
 @scope (.feature) {
@@ -194,18 +195,6 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the implicit context (calculated as `:where(:scope)`) which has zero specificity.
-In the following example, `& img` is essentially equivalent to `:where(:scope) img`.
-Because `:where()` always has zero specificity, the only specificity comes from `img` (i.e., 0-0-1):
-
-```css
-@scope (figure, #primary) {
-  & img {
-    /* … */
-  }
-}
-```
-
 However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
 
 ```css
@@ -217,20 +206,31 @@ However, if you decide to explicitly prepend the `:scope` pseudo-class to your s
 }
 ```
 
-### The difference between `:scope` and `&` inside `@scope`
-
-Inside an `@scope` rule, both bare selectors and `&` are treated as if `:where(:scope)` were prepended, meaning they select the scope root with zero specificity.
-By contrast, using `:scope` explicitly selects the scope root with class specificity.
+When using the `&` selector inside a `@scope` block, `&` represents the scope root selector; it is internally calculated as that selector wrapped inside an {{cssxref(":is", ":is()")}} pseudo-class function. So for example, in:
 
 ```css
-@scope (.feature) {
-  /* Selects any <img> inside the scope root, with zero specificity */
+@scope (figure, #primary) {
   & img {
     /* … */
   }
+}
+```
 
-  /* Same selection, but adds specificity 0-1-0 */
-  :scope img {
+`& img` is equivalent to `:is(figure, #primary) img`. Since `:is()` takes the specificity of its most specific argument (`#primary`, in this case), the specificity of the scoped `& img` selector is therefore 1-0-0 + 0-0-1 = 1-0-1.
+
+### The difference between `:scope` and `&` inside `@scope`
+
+`:scope` represents the matched scope root, whereas `&` represents the selector used to match the scope root. Because of this, it is possible to chain `&` multiple times. However, you can only use `:scope` once — you can't match a scope root inside a scope root.
+
+```css
+@scope (.feature) {
+  /* Selects a .feature inside the matched root .feature */
+  & & {
+    /* … */
+  }
+
+  /* Doesn't work */
+  :scope :scope {
     /* … */
   }
 }
@@ -370,7 +370,7 @@ div {
 
 The above code renders like this:
 
-{{EmbedLiveSample("Basic style inside scope roots", "100%", "150")}}
+{{ EmbedLiveSample("Basic style inside scope roots", "100%", "150") }}
 
 ### Scope roots and scope limits
 
@@ -481,7 +481,7 @@ In our CSS, we have two `@scope` blocks:
 
 In the rendered code, note how all of the `<img>` elements are styled with the thick border and golden background, except for the one inside the `<figure>` element (labeled "My infographic").
 
-{{EmbedLiveSample("Scope roots and scope limits", "100%", "400")}}
+{{ EmbedLiveSample("Scope roots and scope limits", "100%", "400") }}
 
 ## Specifications
 
