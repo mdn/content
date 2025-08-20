@@ -29,7 +29,8 @@ new WebSocketStream(url, options)
     - `protocols` {{optional_inline}}
       - : A single string or an array of strings representing the sub-protocol(s) that the client would like to use, for example `"amqp"` or `"mqtt"`. Subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be custom names jointly understood by the client and the server. A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value. If it is omitted, an empty array is used by default. If `protocols` is included, the connection will only be established if the server reports that it has selected one of these sub-protocols.
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} belonging to an {{domxref("AbortController")}} that you want to use to close the WebSocket connection.
+      - : An {{domxref("AbortSignal")}}, which can be used to abort the connection before the [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) has completed (that is, before the {{domxref("WebSocketStream.opened", "opened")}} promise resolves). This is primarily intended to help implement connection timeouts. As such, it does nothing after the connection is established.
+
 
 ### Exceptions
 
@@ -44,29 +45,29 @@ The most basic example takes the URL of a WebSocket server as an argument:
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}:
+A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}. The following example will time out if the connection is not established within 5 seconds:
 
 ```js
-const controller = new AbortController();
 const queueWSS = new WebSocketStream("wss://example.com/queue", {
   protocols: ["amqp", "mqtt"],
-  signal: controller.signal,
+  signal: AbortSignal.timeout(5000),
 });
 ```
 
-At a later time, {{domxref("AbortController.abort()")}} can be called when required to close the connection:
+If you're connecting to localhost, it's likely to succeed or fail almost instantly, so this will have no effect.
 
-```js
-controller.abort();
-```
+You can use the {{domxref("WebSocketStream.close()")}} method to close a connection.
 
-Alternatively, you can use the {{domxref("WebSocketStream.close()")}} method to close a connection, however this is mainly needed if you wish to specify a custom code and/or reason for the server to report.
+`WritableStream.close()` and `WritableStreamDefaultWriter.close()` from the `writable` of the fulfilled `opened` `Promise` also closes the connection.
 
 See [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream) for a complete example with full explanation.
 
 ## Specifications
 
-Not currently a part of any specification. See https://github.com/whatwg/websockets/pull/48 for standardization progress.
+Not currently a part of any specification. See https://github.com/whatwg/websockets/pull/48 for standardization progress. 
+
+[WebSocketStream API design](https://docs.google.com/document/d/1La1ehXw76HP6n1uUeks-WJGFgAnpX2tCjKts7QFJ57Y/edit?pli=1&tab=t.0).
+
 
 ## Browser compatibility
 
