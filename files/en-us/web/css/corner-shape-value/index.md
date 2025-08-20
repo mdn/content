@@ -132,3 +132,4 @@ setCornerShape();
 
 - {{cssxref("corner-shape")}}
 - {{cssxref("superellipse()")}}
+- {{cssxref("border-radius")}} property
