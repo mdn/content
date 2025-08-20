@@ -140,6 +140,8 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Values_
 
 These data types define different shapes for various purposes.
 
+- {{cssxref("&lt;basic-shape>")}}
+  - : Describes shape functions used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 - {{cssxref("&lt;corner-shape-value>")}}
   - : Describes the shape of a container corner. It is used by the shorthand {{cssxref("corner-shape")}} property and its [constituent properties](/en-US/docs/Web/CSS/corner-shape#constituent_properties) to specify the shape to apply to affected container corners.
 
