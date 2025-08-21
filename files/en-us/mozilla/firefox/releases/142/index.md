@@ -1,26 +1,17 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Beta)
+short-title: Firefox 142 (Stable)
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.
-Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 142 was released on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
-
 ### HTML
-
-<!-- No notable changes. -->
 
 #### Removals
 
@@ -33,25 +24,9 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
   ([Firefox bug 1975531](https://bugzil.la/1975531)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -78,12 +53,6 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 1894137](https://bugzil.la/1894137)).
 - The {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}, {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}, {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}, {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}, {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}, {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}, {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}} and {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} properties of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1926622](https://bugzil.la/1926622)).
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -107,10 +76,6 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
