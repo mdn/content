@@ -176,7 +176,7 @@ The default behavior for {{cssxref("align-self")}} is to inherit from the grid c
 
 ## Justifying items on the inline axis
 
-Whereas `align-items` and `align-self` align items on the block axis, {{cssxref("justify-items")}} and {{cssxref("justify-self")}} aline items on the inline axis. The values you can choose from are similar to the `normal`, `stretch`, {{cssxref("self-position")}} and {{cssxref("baseline-position")}} values of the `align-self` property, along with `left` and `right`. Values include:
+Whereas `align-items` and `align-self` align items on the block axis, {{cssxref("justify-items")}} and {{cssxref("justify-self")}} align items on the inline axis. The values you can choose from are similar to the `normal`, `stretch`, {{cssxref("self-position")}} and {{cssxref("baseline-position")}} values of the `align-self` property, along with `left` and `right`. Values include:
 
 - `normal`
 - `start`
