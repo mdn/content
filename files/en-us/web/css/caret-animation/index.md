@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`caret-animation`** [CSS](/en-US/docs/Web/CSS) property is used to enable or disable the blinking behavior of the **insertion caret**, the visible marker that appears in editable elements to indicate where the next character will be inserted or deleted.
 
-A `caret-animation` value of `manual` can be set to stop the caret from blinking, which is useful when you want to apply a custom animation to the caret. In addition, it may benefit users with [vestibular motion disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders) to set `caret-animation: manual` in a [user stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user_stylesheets) or a [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query.
+When applying a custom animation to the caret, you should stop the default blinking so that it doesn't interfere with the animation.
 
 ## Syntax
 
