@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Audio and video"
-short-title: Audio and video
+short-title: "Test: Audio and video"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how to [embed video and audio content in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
@@ -135,3 +137,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}

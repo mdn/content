@@ -71,7 +71,7 @@ strong {
   height: 100px;
   border: 1px dashed #999966;
   background-color: #ffffcc;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px;
   text-align: left;
 }
 
@@ -107,7 +107,7 @@ strong {
   position: relative;
   border: 1px dashed #999966;
   background-color: #ccffff;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px;
   text-align: left;
 }
 ```

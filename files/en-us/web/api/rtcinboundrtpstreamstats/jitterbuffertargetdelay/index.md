@@ -16,7 +16,7 @@ The estimate is affected by network variability and latency as well as mechanism
 The property is updated when {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}} is updated.
 The average target jitter buffer delay is `jitterBufferTargetDelay / jitterBufferEmittedCount`.
 
-The property can be compared to the average of the {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferMinimumDelay")}} to determine the effects of external factors on the target, such as the configured `jitterBufferTarget` hint.
+The property can be compared to the average of the {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}} to determine the effects of external factors on the target, such as the configured `jitterBufferTarget` hint.
 
 ## Value
 
@@ -33,5 +33,5 @@ A positive number, in seconds.
 ## See also
 
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
-- {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferMinimumDelay")}}
+- {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferDelay")}}

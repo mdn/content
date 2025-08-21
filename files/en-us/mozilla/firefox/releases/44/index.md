@@ -207,7 +207,7 @@ _No change._
 
 ### XPCOM
 
-- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/mozilla-central/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
+- The `nsIDOMWindow` interface is now empty. Its contents were either no longer used, had moved elsewhere, or were only used from C++. The items available from C++ code now reside in the [nsPIDOMWindow](https://searchfox.org/firefox-main/source/dom/base/nsPIDOMWindow.h) interface ([Firefox bug 1216401](https://bugzil.la/1216401)).
 
 ### Other
 

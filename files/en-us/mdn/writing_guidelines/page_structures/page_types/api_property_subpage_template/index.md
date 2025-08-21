@@ -98,7 +98,7 @@ _If you need more than a couple of paragraphs, this should be added in a "Descri
 A \{{domxref("SomeDataType" }}.
 
 _Normally just the data type, and allowed values for that data type if relevant._
-_If the property has different setter and getter behaviour, these should normally be covered in separate sentences._
+_If the property has different setter and getter behavior, these should normally be covered in separate sentences._
 
 _In some cases you may want to say more about what the data type represents._
 _This is acceptable, but should not duplicate information from the "Description" section (you should include information about what the value means there)._

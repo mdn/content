@@ -10,16 +10,8 @@ Until now we haven't looked at the actual pixels of our canvas. With the `ImageD
 
 ## The ImageData object
 
-The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object. It contains the following read-only attributes:
-
-- `width`
-  - : The width of the image in pixels.
-- `height`
-  - : The height of the image in pixels.
-- `data`
-  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (included).
-
-The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
+The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object.
+Its `data` property returns a {{jsxref("Uint8ClampedArray")}} (or {{jsxref("Float16Array")}} if requested) which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
 The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height` × `width` × 4) - 1.
 

@@ -19,7 +19,7 @@ There's one last essential concept about functions for us to discuss — return 
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>What returns values are.</li>
+          <li>What return values are.</li>
           <li>How to use the return values of existing functions.</li>
           <li>Adding return values to your own functions.</li>
         </ul>
