@@ -5,11 +5,11 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-In CSS, the _intrinsic size_ of an element is the size it would be based purely on its content without taking into account the effects of the context it appears in. For example, the sizing applied by CSS [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties. An element's intrinsic sizes are represented by its {{cssxref("min-content")}} and {{cssxref("max-content")}} sizes.
+In CSS, the **intrinsic size** of an element is the size it would have based purely on its content, without taking into account the effects of the layout context it appears in. This is the opposite of an element's {{glossary("extrinsic size")}}, which is determined by external constraints such as container size. An element's intrinsic sizes are represented by its {{cssxref("min-content")}} and {{cssxref("max-content")}} sizes.
 
-Inline elements are sized intrinsically: [sizing](/en-US/docs/Web/CSS/CSS_box_sizing) and [box](/en-US/docs/Web/CSS/CSS_box_model) properties including {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, and {{cssxref("padding-block")}} and {{cssxref("margin-block")}} have no impact on them (though {{cssxref("margin-inline")}} and {{cssxref("padding-inline")}} do).
+Inline elements are sized intrinsically. CSS [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties such as {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("padding-block")}}, and {{cssxref("margin-block")}} have no impact on their layout (though {{cssxref("margin-inline")}} and {{cssxref("padding-inline")}} do affect spacing within a line).
 
-For example, the minimum intrinsic size of the inline {{htmlelement("span")}} element is the minimum size it would have if it was floated (with no other CSS box properties applied), inside a container with an inline-size of `0px`. The maximum intrinsic size is the opposite. It is the size the same `<span>` would have if its container's inline size were infinite.
+For example, the minimum intrinsic size of the inline {{htmlelement("span")}} element is the smallest size it would have if it were floated (with no other CSS box properties applied) in a container with `inline-size: 0`. The maximum intrinsic size is the opposite; it's the size the same `<span>` would have when placed in a container with an infinite `inline-size`.
 
 Intrinsic size has the same meaning for images as for text — the size at which the images are displayed if no CSS is applied to change the rendering.
 
@@ -32,7 +32,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('minimum intrinsic size', '100%', '220') }}
+{{EmbedLiveSample('minimum intrinsic size', '100%', '220')}}
 
 ## Maximum intrinsic size
 
@@ -54,7 +54,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('maximum intrinsic size', '100%', '200') }}
+{{EmbedLiveSample('maximum intrinsic size', '100%', '200')}}
 
 ## See also
 
