@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env_example) with [the `env()` function](#the_env_function).
+The [CSS environment variables module](/en-US/docs/Web/CSS/CSS_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser-defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env_example) with [the `env()` function](#the_env_function).
 
 ## What are environment variables?
 
@@ -32,7 +32,7 @@ Common issues that can be solved by using environment variables include:
 The CSS environment variables specification defines a few case-sensitive variables, including:
 
 - `preferred-text-scale`
-  - : The `preferred-text-scale` environment variable represents the user's preferred text scale factor. This is the adjustment made to the "default" font size of the operating system or user agent. On devices and browsers where {{cssxref("text-size-adjust")}} has an effect, this is the scale factor applied by `text-size-adjust: auto.` For example, if `text-size-adjust:auto` would cause the text size to double, then `env(preferred-text-scale)` would resolve to `2`.
+  - : The `preferred-text-scale` environment variable represents the user's preferred text scale factor. This is the adjustment made to the "default" font size of the operating system or user agent. On devices and browsers where {{cssxref("text-size-adjust")}} has an effect, this is the scale factor applied by `text-size-adjust: auto`. For example, if `text-size-adjust: auto` would cause the text size to double, then `env(preferred-text-scale)` would resolve to `2`.
 
 - `safe-area-inset-*`
   - : The four safe area inset environment variables - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, and `safe-area-inset-left` - define a rectangular safe area by its top, right, bottom, and left insets from the edge of the viewport. It is safe to place content inside this area without having it cut off by the shape of a non‑rectangular display. For rectangular, unobstructed viewports, such as regular desktop and laptop monitors, these four values are all equal to `0`. For non-rectangular displays — including rounded-corner devices with full-size screens and rounded or [round-display](/en-US/docs/Web/CSS/CSS_round_display) smart watches — these four values, set by the user agent, form a rectangle such that all content inside the rectangle is visible and unobstructed.
@@ -66,7 +66,7 @@ env( <environment-variable-name> )
 env( <environment-variable-name>, <fallback-value> )
 ```
 
-The function accepts a case-sensitive [environment variable name](#browser_defined_environment_variables) and an optional, but generally recommended, fallback value.
+The function accepts a case-sensitive [environment variable name](#browser-defined_environment_variables) and an optional, but generally recommended, fallback value.
 
 ```css
 line-height: env(preferred-text-scale, 2);
@@ -74,7 +74,7 @@ margin: env(safe-area-inset-top, 0) env(safe-area-inset-right, auto)
   env(safe-area-inset-bottom, 3em) env(safe-area-inset-left, auto);
 ```
 
-The first argument is the [name of the environment variable](#browser_defined_environment_variables) to be substituted. The argument after the comma, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. In these examples, if the `preferred-text-scale` environment variable doesn't exist in a browser, the {{cssxref("line-height")}} will be set to `2`. And, if the browser doesn't have `safe-area-inset-*` values, the {{cssxref("margin")}} will be set to `margin: 0 auto 3em auto`.
+The first argument is the [name of the environment variable](#browser-defined_environment_variables) to be substituted. The argument after the comma, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. In these examples, if the `preferred-text-scale` environment variable doesn't exist in a browser, the {{cssxref("line-height")}} will be set to `2`. And, if the browser doesn't have `safe-area-inset-*` values, the {{cssxref("margin")}} will be set to `margin: 0 auto 3em auto`.
 
 The syntax of the fallback is similar to the custom properties syntax in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the property value or descriptor doesn't support commas, the value is not valid.
 
@@ -153,7 +153,7 @@ In the future, we may see support for developer-defined environment variables, b
 ## See also
 
 - {{cssxref("var")}}
-- {{cssxref("@media/shape", "@media `shape` descriptor")}}
+- [`@media` `shape` descriptor](/en-US/docs/Web/CSS/@media/shape)
 - [CSS environment_variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
 - [CSS round display](/en-US/docs/Web/CSS/CSS_round_display) module
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
