@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Forms and buttons"
-short-title: Forms and buttons
+short-title: "Test: Forms and buttons"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how [HTML forms and buttons](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms) work.
 
@@ -451,3 +453,5 @@ Your finished HTML should look something like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}

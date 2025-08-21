@@ -49,28 +49,26 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
       - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
       - /Learn_web_development/Core/Structuring_content/Lists
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
       - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Advanced_text_features
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
       - /Learn_web_development/Core/Structuring_content/Creating_links
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
       - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
       - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
       - /Learn_web_development/Core/Structuring_content/HTML_images
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
       - /Learn_web_development/Core/Structuring_content/HTML_video_and_audio
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
       - /Learn_web_development/Core/Structuring_content/Mozilla_splash_page
       - /Learn_web_development/Core/Structuring_content/HTML_table_basics
       - /Learn_web_development/Core/Structuring_content/Table_accessibility
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
-      - link: /Learn_web_development/Core/Structuring_content/Test_your_skills
-        details: closed
-        children:
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
-          - /Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons
+      - /Learn_web_development/Core/Structuring_content/Test_your_skills
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
