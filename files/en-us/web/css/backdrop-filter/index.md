@@ -18,7 +18,7 @@ The **`backdrop-filter`** CSS property lets you apply graphical effects such as 
 > - an element with `mask`, `mask-image`, `mask-border`, or `clip-path` other than `none`
 > - an element with `backdrop-filter` other than `none`
 > - an element with `mix-blend-mode` other than `normal`
-> - an element with `will-change` specifying any of the above properties
+> - an element with `will-change` specifying any of the previous properties
 
 {{InteractiveExample("CSS Demo: backdrop-filter()")}}
 
