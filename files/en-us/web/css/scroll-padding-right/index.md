@@ -3,9 +3,8 @@ title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
 page-type: css-property
 browser-compat: css.properties.scroll-padding-right
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-padding-right` property defines offsets for the right of the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.
 
@@ -60,7 +59,7 @@ scroll-padding-right: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -69,7 +68,7 @@ scroll-padding-right: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

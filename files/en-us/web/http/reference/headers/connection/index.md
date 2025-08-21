@@ -4,9 +4,8 @@ short-title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
 page-type: http-header
 browser-compat: http.headers.Connection
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Connection`** header controls whether the network connection stays open after the current transaction finishes.
 If the value sent is `keep-alive`, the connection is persistent and not closed, allowing subsequent requests to the same server on the same connection.

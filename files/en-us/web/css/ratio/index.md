@@ -4,9 +4,8 @@ slug: Web/CSS/ratio
 page-type: css-type
 browser-compat: css.types.ratio
 spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the proportional relationship between two values. It mostly represents the aspect ratio, which relates width to height. For example, the `<ratio>` is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
 
@@ -34,7 +33,7 @@ Two ratios are compared using the quotients' numeric values. For example, 16/16 
 ### Use in a media query
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) {
+@media screen and (aspect-ratio >= 16/9) {
   /* … */
 }
 ```

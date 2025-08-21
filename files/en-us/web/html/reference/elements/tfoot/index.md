@@ -3,9 +3,8 @@ title: "<tfoot>: The Table Foot element"
 slug: Web/HTML/Reference/Elements/tfoot
 page-type: html-element
 browser-compat: html.elements.tfoot
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the foot of a table with information about the table's columns. This is usually a summary of the columns, e.g., a sum of the given numbers in a column.
 
@@ -45,7 +44,7 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of tab
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -85,23 +84,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : Specifies the horizontal alignment of each foot cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : Defines the background color of each foot cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each foot cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of each foot cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
-
   - : Does nothing. It was originally intended to specify the number of characters to offset the foot cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
-
   - : Specifies the vertical alignment of each foot cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
@@ -171,7 +165,7 @@ Some basic CSS is used to style and highlight the table foot so that the foot ce
 tfoot {
   border-top: 3px dotted rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tfoot th {
@@ -185,7 +179,7 @@ tfoot td {
 thead {
   border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {

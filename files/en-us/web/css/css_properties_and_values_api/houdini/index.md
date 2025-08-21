@@ -2,11 +2,8 @@
 title: CSS Houdini
 slug: Web/CSS/CSS_properties_and_values_API/Houdini
 page-type: guide
-status:
-  - experimental
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 **CSS Houdini** is a set of APIs that expose parts of the CSS engine. This makes it easier for developers to create extensions for CSS. These extensions might be to polyfill features that are not yet available in a browser, experiment with new ways of doing layout, or add creative borders or other effects.
 
@@ -66,8 +63,7 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 - [Typed OM API Guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 
-## External resources
+## See also
 
-- [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
 - [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)

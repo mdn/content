@@ -3,9 +3,8 @@ title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-color-scheme
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
 A user indicates their preference through an operating system setting (e.g., light or dark mode) or a user agent setting.
@@ -52,7 +51,7 @@ div.box {
   display: inline-block;
   padding: 1em;
   margin: 6px;
-  outline: 2px solid #000;
+  outline: 2px solid black;
   width: 12em;
   height: 2em;
   vertical-align: middle;
@@ -63,14 +62,14 @@ Theme A (brown) uses a light color scheme by default, but will switch to a dark 
 
 ```css
 .theme-a {
-  background: #dca;
-  color: #731;
+  background: #ddccaa;
+  color: #773311;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
-    background: #753;
-    color: #dcb;
-    outline: 5px dashed #000;
+    background: #775533;
+    color: #ddccbb;
+    outline: 5px dashed black;
   }
 }
 ```
@@ -79,14 +78,14 @@ Theme B (blue) uses a dark color scheme by default, but will switch to a light s
 
 ```css
 .theme-b {
-  background: #447;
-  color: #bbd;
+  background: #444477;
+  color: #bbbbdd;
 }
 @media (prefers-color-scheme: light) {
   .theme-b.adaptive {
-    background: #bcd;
-    color: #334;
-    outline: 5px dotted #000;
+    background: #bbccdd;
+    color: #333344;
+    outline: 5px dotted black;
   }
 }
 ```
@@ -161,7 +160,7 @@ for (let img of document.querySelectorAll("img")) {
 ## See also
 
 - {{cssxref("color-scheme")}} property
-- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#color-scheme)
+- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
 - {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [Video: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)

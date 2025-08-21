@@ -3,9 +3,8 @@ title: ::before
 slug: Web/CSS/::before
 page-type: css-pseudo-element
 browser-compat: css.selectors.before
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) that is the first child of the selected element. It is often used to add cosmetic content to an element with the {{cssxref("content")}} property. It is inline by default.
 
@@ -13,7 +12,7 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 ```css interactive-example
 a {
-  color: #0000ff;
+  color: blue;
   text-decoration: none;
 }
 
@@ -61,6 +60,8 @@ If the [`content`](/en-US/docs/Web/CSS/content) property is not specified, has a
 
 > [!NOTE]
 > The [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) specification introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation `:before`, introduced in CSS2.
+
+By default, the `::before` and `::after` pseudo-elements share the same stacking context as their parent. If no {{cssxref("z-index")}} is explicitly set, the `::after` pseudo-element's generated content will appear above the `::before` pseudo-element's generated content because `::after` is rendered later in the DOM flow.
 
 ## Accessibility
 

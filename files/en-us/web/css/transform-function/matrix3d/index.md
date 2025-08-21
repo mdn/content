@@ -3,9 +3,8 @@ title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
 page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -66,13 +65,13 @@ transform: matrix3d(
 
 ## Syntax
 
-The `matrix3d()` function is specified with 16 values. They are described in the column-major order.
-
 ```css
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 ```
 
 ### Values
+
+The `matrix3d()` function is specified with 16 values. They are described in the column-major order.
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
   _a3_ _b3_ _c3_ _d3_
@@ -157,7 +156,7 @@ a `matrix3d()` transform to it.
   position: absolute;
   backface-visibility: inherit;
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 .front {
@@ -211,7 +210,7 @@ Another `transform3d()` example, which implements an animated combined translate
 
 #### CSS
 
-```css-nolint
+```css
 html {
   width: 100%;
 }
@@ -237,7 +236,7 @@ body {
 }
 
 @keyframes MotionScale {
-  from {
+  0% {
     /*
       Identity matrix is used as basis here.
       The matrix below describes the
@@ -247,6 +246,7 @@ body {
         Translates every Z point by 0
         Scales down by 10%
     */
+    /* prettier-ignore */
     transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
@@ -255,6 +255,7 @@ body {
     );
   }
   50% {
+    /* prettier-ignore */
     transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
@@ -262,8 +263,9 @@ body {
       0, 0, 0, 0.9
     );
   }
-  to {
-     transform: matrix3d(
+  100% {
+    /* prettier-ignore */
+    transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
       0, 0, 1, 0,

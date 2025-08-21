@@ -3,9 +3,8 @@ title: sqrt()
 slug: Web/CSS/sqrt
 page-type: css-function
 browser-compat: css.types.sqrt
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`sqrt()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of a number.
 

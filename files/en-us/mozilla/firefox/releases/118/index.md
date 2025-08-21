@@ -1,10 +1,10 @@
 ---
 title: Firefox 118 for developers
+short-title: Firefox 118
 slug: Mozilla/Firefox/Releases/118
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 118 that affect developers. Firefox 118 was released on September 26, 2023.
 
@@ -65,7 +65,3 @@ No notable changes.
 ### Removals
 
 - Support for [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) in the manifest keys [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) for Manifest V3 extensions has been removed ([Firefox bug 1830711](https://bugzil.la/1830711)). See [Browser Styles' Manifest v3 migration](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for information about transitioning from `browser_style` in Manifest V3 extensions.
-
-## Older versions
-
-{{Firefox_for_developers}}

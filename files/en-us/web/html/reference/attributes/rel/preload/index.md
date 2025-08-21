@@ -3,9 +3,8 @@ title: rel=preload
 slug: Web/HTML/Reference/Attributes/rel/preload
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.preload
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute lets you declare fetch requests in the
 HTML's {{htmlelement("head")}}, specifying resources that your page will need very soon, which you want to start loading early in the page lifecycle,
@@ -67,7 +66,8 @@ Many content types can be preloaded. The possible `as` attribute values are:
 - `style`: CSS stylesheet.
 - `track`: WebVTT file.
 
-> **Note:** `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
+> [!NOTE]
+> `font` and `fetch` preloading requires the `crossorigin` attribute to be set; see [CORS-enabled fetches](#cors-enabled_fetches) below.
 
 > [!NOTE]
 > There's more detail about these values and the web features they expect to be consumed by in the HTML spec — see [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type). Also note that the full list of values the `as` attribute can take is governed by the Fetch spec — see [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination).
@@ -150,12 +150,12 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
     rel="preload"
     href="bg-image-narrow.png"
     as="image"
-    media="(max-width: 600px)" />
+    media="(width <= 600px)" />
   <link
     rel="preload"
     href="bg-image-wide.png"
     as="image"
-    media="(min-width: 601px)" />
+    media="(width > 600px)" />
 
   <link rel="stylesheet" href="main.css" />
 </head>
@@ -165,13 +165,13 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
   </header>
 
   <script>
-    const mediaQueryList = window.matchMedia("(max-width: 600px)");
+    const mediaQueryList = window.matchMedia("(width <= 600px)");
     const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = "url(bg-image-narrow.png)";
+      header.style.backgroundImage = 'url("bg-image-narrow.png")';
     } else {
-      header.style.backgroundImage = "url(bg-image-wide.png)";
+      header.style.backgroundImage = 'url("bg-image-wide.png")';
     }
   </script>
 </body>

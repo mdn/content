@@ -1,10 +1,10 @@
 ---
 title: Firefox 70 for developers
+short-title: Firefox 70
 slug: Mozilla/Firefox/Releases/70
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.
 
@@ -33,7 +33,6 @@ This article provides information about the changes in Firefox 70 that will affe
 ### HTML
 
 - Firefox can now suggest securely-generated passwords to the user in the following situations:
-
   - An {{HTMLelement("input")}} element has the `autocomplete="new-password"` attribute value.
   - The user opens the context menu on any password input element, even if it is not intended for new passwords.
 
@@ -42,7 +41,6 @@ This article provides information about the changes in Firefox 70 that will affe
 - Opacity values like for {{cssxref("opacity")}} or {{SVGAttr("stop-opacity")}} can now be percentages ([Firefox bug 1562086](https://bugzil.la/1562086)).
 - {{cssxref("grid-auto-columns")}} and {{cssxref("grid-auto-rows")}} now accept multiple track-size values ([Firefox bug 1339672](https://bugzil.la/1339672)).
 - A number of text-related CSS properties have been enabled by default ([Firefox bug 1573631](https://bugzil.la/1573631)):
-
   - {{cssxref("text-decoration-thickness")}}.
   - {{cssxref("text-underline-offset")}}.
   - {{cssxref("text-decoration-skip-ink")}}. The default value is `auto`, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.
@@ -83,7 +81,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - The {{domxref("History.back","back()")}}, {{domxref("History.forward","forward()")}}, and {{domxref("History.go","go()")}} methods are now asynchronous. Add a listener to the {{domxref("Window/popstate_event", "popstate")}} event to get notification that navigation has completed [Firefox bug 1563587](https://bugzil.la/1563587).
 - We've added support {{DOMxRef("DOMMatrix")}}, {{DOMxRef("DOMPoint")}}, etc. in web workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
-- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, {{domxref("Document.captureEvents")}}, and {{domxref("Document.clear")}} ([Firefox bug 1558570](https://bugzil.la/1558570), [Firefox bug 1558571](https://bugzil.la/1558571)).
+- A few more members have been moved from {{domxref("HTMLDocument")}} to {{domxref("Document")}}, including {{domxref("Document.all")}}, {{domxref("Document.clear")}}, `Document.captureEvents`, and {{domxref("Document.clear")}} ([Firefox bug 1558570](https://bugzil.la/1558570), [Firefox bug 1558571](https://bugzil.la/1558571)).
 - [Notification](/en-US/docs/Web/API/Notifications_API) permission can no longer be requested from inside a cross-origin {{htmlelement("iframe")}} ([Firefox bug 1560741](https://bugzil.la/1560741)).
 
 #### Media, Web Audio, and WebRTC
@@ -92,7 +90,6 @@ This article provides information about the changes in Firefox 70 that will affe
 - The {{domxref("RTCPeerConnection.setRemoteDescription()")}} method can now be called with no parameters. This is another "perfect negotiation" update ([Firefox bug 1568292](https://bugzil.la/1568292)).
 - {{domxref("MediaTrackSupportedConstraints.groupId")}} is now supported, and returns `true` since the {{domxref("MediaTrackConstraints.groupId")}} property is now supported ([Firefox bug 1561254](https://bugzil.la/1561254)).
 - Several new Web Audio API features have been implemented/updated:
-
   - {{domxref("AudioContext.getOutputTimestamp()")}} implemented ([Firefox bug 1324545](https://bugzil.la/1324545)).
   - {{domxref("AudioContext.baseLatency")}} and {{domxref("AudioContext.outputLatency")}} implemented ([Firefox bug 1324552](https://bugzil.la/1324552)).
   - {{domxref("MediaElementAudioSourceNode.mediaElement")}} and {{domxref("MediaStreamAudioSourceNode.mediaStream")}} implemented ([Firefox bug 1350973](https://bugzil.la/1350973)).
@@ -124,7 +121,6 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - Added a new parameter to the [`topSites.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) method that causes the method to return the list of pages that appear when the user opens a new tab ([Firefox bug 1568617](https://bugzil.la/1568617)).
 - The [`privacy.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) property's `webRTCIPHandlingPolicy` sub-property's permitted values have been amended (in [Firefox bug 1452713](https://bugzil.la/1452713)) to match the behavior seen in Chrome as follows:
-
   - `disable_non_proxied_udp` previously prevented the use of WebRTC if no proxy was configured. Now a proxy is always used if one is configured, but otherwise a non-proxied connection is permitted.
   - `proxy_only` can be used to provide the old behavior; this has the effect of only allowing ICE negotiation over TURN on TCP using a proxy; no other connections are allowed.
 
@@ -136,14 +132,9 @@ The following [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/th
 
 - `images` property `headerURL`, themes should now use `theme_frame`.
 - `colors` properties:
-
   - `accentcolor`, themes should now use `frame`.
   - `textcolor`, themes should now use `tab_background_text`.
 
 ## See also
 
 - Hacks release post: [Firefox 70 — a bountiful release for all](https://hacks.mozilla.org/2019/10/firefox-70-a-bountiful-release-for-all/)
-
-## Older versions
-
-{{Firefox_for_developers}}

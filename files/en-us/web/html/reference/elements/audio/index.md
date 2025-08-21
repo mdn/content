@@ -3,9 +3,8 @@ title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Reference/Elements/audio
 page-type: html-element
 browser-compat: html.elements.audio
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
@@ -34,26 +33,21 @@ The content inside the opening and closing `<audio></audio>` tags is shown as a 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
-
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
     > [!NOTE]
     > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Guides/Autoplay) for additional information about how to properly use autoplay.
 
 - `controls`
-
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
 - `controlslist`
-
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
-
     - `anonymous`
       - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the resource will be _tainted_, and its usage restricted.
     - `use-credentials`
@@ -62,7 +56,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     When not present, the resource is fetched without a CORS request (i.e., without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `disableremoteplayback`
-
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See the proposed [Remote Playback API specification](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
     In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
@@ -72,9 +65,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `muted`
   - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
 - `preload`
-
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
-
     - `none`: Indicates that the audio should not be preloaded.
     - `metadata`: Indicates that only audio metadata (e.g., length) is fetched.
     - `auto`: Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
@@ -468,7 +459,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -495,7 +486,6 @@ This example includes multiple `<source>` elements. The browser tries to load th
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-
   - [Media container formats (file types)](/en-US/docs/Web/Media/Guides/Formats/Containers)
   - [Guide to audio codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs)
 

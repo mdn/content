@@ -210,7 +210,7 @@ button,
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 ```
 
@@ -284,9 +284,9 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
 - [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset)
-- [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
-- [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
-- [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
 - [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
-- [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
+- [Notes on Using ARIA in HTML](https://w3c.github.io/using-aria/)
 - [Official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)

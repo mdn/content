@@ -3,9 +3,8 @@ title: color-interpolation-filters
 slug: Web/CSS/color-interpolation-filters
 page-type: css-property
 browser-compat: css.properties.color-interpolation-filters
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color-interpolation-filters`** [CSS](/en-US/docs/Web/CSS) property specifies the color space for imaging operations performed via SVG filter effects. If explicitly declared, the value of the CSS property overrides any value given in the element's {{SVGAttr("color-interpolation-filters")}} attribute.
 

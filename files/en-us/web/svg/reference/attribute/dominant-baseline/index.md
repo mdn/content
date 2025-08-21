@@ -65,7 +65,7 @@ text {
       <th scope="row">Value</th>
       <td>
         <code>auto</code>
-        <a href="https://www.w3.org/TR/css3-values/#comb-one">|</a>
+        <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar">|</a>
         <code>text-bottom</code> | <code>alphabetic</code> |
         <code>ideographic</code> | <code>middle</code> | <code>central</code> |
         <code>mathematical</code> | <code>hanging</code> | <code>text-top</code>
@@ -83,7 +83,6 @@ text {
 </table>
 
 - `auto`
-
   - : If this property occurs on a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 
     If the {{SVGAttr("writing-mode")}} is horizontal, then the value of the dominant-baseline component is `alphabetic`. Otherwise, if the {{SVGAttr("writing-mode")}} is vertical, then the value of the dominant-baseline component is `central`.

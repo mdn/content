@@ -3,9 +3,8 @@ title: "<details>: The Details disclosure element"
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 
@@ -22,7 +21,7 @@ A disclosure widget is typically presented onscreen using a small triangle that 
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -38,7 +37,7 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```
@@ -58,19 +57,18 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `open`
-
   - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
     > [!NOTE]
     > You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
 
 - `name`
-
   - : This attribute enables multiple `<details>` elements to be connected, with only one open at a time. This allows developers to easily create UI features such as accordions without scripting.
 
     The `name` attribute specifies a group name — give multiple `<details>` elements the same `name` value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. If multiple grouped `<details>` elements are given the `open` attribute, only the first one in the source order will be rendered open.
 
-    > **Note:** `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
+    > [!NOTE]
+    > `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
 
 ## Events
 
@@ -182,7 +180,7 @@ details {
 details > summary {
   padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
+  background-color: #dddddd;
   border: none;
   box-shadow: 3px 3px 4px black;
   cursor: pointer;
@@ -190,14 +188,14 @@ details > summary {
 
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+  background-color: #dddddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
 
 details:open > summary {
-  background-color: #ccf;
+  background-color: #ccccff;
 }
 ```
 

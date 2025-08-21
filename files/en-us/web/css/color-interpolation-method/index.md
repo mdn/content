@@ -4,9 +4,8 @@ slug: Web/CSS/color-interpolation-method
 page-type: css-type
 browser-compat: css.types.color.color-mix
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
 
@@ -25,15 +24,12 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### Values
 
 - `<rectangular-color-space>`
-
   - : One of the keywords `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz`, `xyz-d50`, or `xyz-d65`.
 
 - `<polar-color-space>`
-
   - : One of the keywords `hsl`, `hwb`, `lch`, or `oklch`.
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-
   - : The algorithm for hue interpolation. It defaults to `shorter hue`.
 
 - `<custom-color-space>`

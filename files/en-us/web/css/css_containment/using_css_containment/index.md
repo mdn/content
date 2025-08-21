@@ -1,10 +1,10 @@
 ---
 title: Using CSS containment
+short-title: Using containment
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS containment improves the performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent from the rest of the content, rendering can be optimized and performance improved.
 

@@ -2,8 +2,6 @@
 title: Using the Popover API
 slug: Web/API/Popover_API/Using
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -49,6 +47,20 @@ You can see how the previous code snippet renders in our [Basic declarative popo
 
 When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} so it will sit on top of all other page content.
 
+### `command` and `commandfor`
+
+The [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) and [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) attributes provide very similar functionality to `popovertarget` and `popovertargetaction`, but with a more general design aimed at providing other functionality beyond popover commands, including custom commands.
+
+The previous code snippet could be rewritten like this:
+
+```html live-sample___command-commandfor
+<button commandfor="mypopover" command="show-popover">Show popover</button>
+<button commandfor="mypopover" command="hide-popover">Hide popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+{{EmbedLiveSample("command-commandfor", "100%", "100")}}
+
 ## auto state, and "light dismiss"
 
 When a popover element is set with `popover` or `popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
@@ -57,7 +69,8 @@ When a popover element is set with `popover` or `popover="auto"` as shown above,
 - The popover can also be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
 - Usually, only one `auto` popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
 
-> **Note:** `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
+> [!NOTE]
+> `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
 
 Auto state is useful when you only want to show a single popover at once. Perhaps you have multiple teaching UI messages that you want to show, but don't want the display to start getting cluttered and confusing, or perhaps you are showing status messages where the new status overrides any previous status.
 
@@ -93,6 +106,30 @@ In this state:
 - Multiple independent popovers can be shown simultaneously.
 
 You can see this behavior in action in our [Multiple manual popovers example](https://mdn.github.io/dom-examples/popover-api/multiple-manual/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/multiple-manual)).
+
+## The `beforetoggle` and `toggle` events
+
+You can respond to a popover being shown or hidden using the [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) events:
+
+- `beforetoggle` is fired just before a popover is shown or hidden. This can be used for example to prevent the popover being shown or hidden (using {{domxref("Event.preventDefault()")}}), to add animation classes to a popover to animate it, or to cleanup the state of a popover after it has been used.
+- `toggle` is fired just after a popover is shown or hidden. This is generally used to run other code in response to a popover toggle state changing.
+
+Both of these events have a {{domxref("ToggleEvent")}} event object. This event has the following features in addition to those inherited from the default {{domxref("Event")}} object:
+
+- The {{domxref("ToggleEvent.oldState", "oldState")}} and {{domxref("ToggleEvent.newState", "newState")}} properties indicate which state the popover has just transitioned from and to, allowing you to respond specifically to a popover opening or closing.
+- The {{domxref("ToggleEvent.source", "source")}} property contains a reference to the HTML popover control element that initiated the toggle, allowing you to run different code in response to the toggle event depending on which control initiated it.
+
+Typical usage might look something like this:
+
+```js
+const popover = document.getElementById("mypopover");
+
+popover.addEventListener("toggle", (e) => {
+  console.log(e.newState);
+});
+```
+
+See the previous reference links for more information and examples.
 
 ## Showing popovers via JavaScript
 
@@ -397,6 +434,8 @@ For example, you could use a combination of {{cssxref("anchor()")}} function val
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
 }
@@ -406,9 +445,13 @@ Or you could use a {{cssxref("position-area")}} property:
 
 ```css
 .my-popover {
+  margin: 0;
+  inset: auto;
   position-area: top;
 }
 ```
+
+When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
 
 See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
@@ -494,7 +537,7 @@ to take effect, as the specificity is the same */
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0%);
+  background-color: transparent;
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -512,7 +555,7 @@ so this starting-style rule cannot be nested */
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 }
 ```
@@ -613,7 +656,7 @@ html {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0%);
+    background-color: transparent;
   }
 
   100% {

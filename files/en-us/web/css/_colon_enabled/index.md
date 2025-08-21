@@ -3,9 +3,8 @@ title: :enabled
 slug: Web/CSS/:enabled
 page-type: css-pseudo-class
 browser-compat: css.selectors.enabled
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:enabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus.
 
@@ -71,11 +70,11 @@ The following example makes the color of text and button {{htmlElement("input")}
 
 ```css
 input:enabled {
-  color: #2b2;
+  color: #22bb22;
 }
 
 input:disabled {
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 

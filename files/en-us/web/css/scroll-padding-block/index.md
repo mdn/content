@@ -3,9 +3,8 @@ title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-block
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The `scroll-padding-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the block dimension.
 
@@ -57,7 +56,7 @@ scroll-padding-block: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -66,7 +65,7 @@ scroll-padding-block: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

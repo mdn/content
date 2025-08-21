@@ -3,9 +3,8 @@ title: inset-block-start
 slug: Web/CSS/inset-block-start
 page-type: css-property
 browser-compat: css.properties.inset-block-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inset-block-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -73,7 +72,7 @@ writing-mode: vertical-lr;
 inset-block-start: 3px;
 inset-block-start: 2.4em;
 inset-block-start: anchor(end);
-inset-block-start: calc(anchor-size(--myAnchor height, 70px) * 2);
+inset-block-start: calc(anchor-size(--my-anchor height, 70px) * 2);
 
 /* <percentage>s of the width or height of the containing block */
 inset-block-start: 10%;

@@ -1,11 +1,11 @@
 ---
 title: Symbol.matchAll
+short-title: matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
 

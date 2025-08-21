@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.summarizeStreaming
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`summarizeStreaming()`** method of the {{domxref("Summarizer")}} interface generates a new summary as a {{domxref("ReadableStream")}}.
 
@@ -44,7 +44,7 @@ A {{domxref("ReadableStream")}} containing the generated summary.
   - : Thrown if the output summary was filtered by the user agent, for example because it was detected to be harmful, inaccurate, or nonsensical.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the summarize operation exceeds the available {{domxref("Summarizer.inputQuota", "inputQuota")}}.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `summarizeStreaming()` call failed for any other reason, or a reason the user agent did not wish to disclose.

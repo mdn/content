@@ -2,9 +2,8 @@
 title: Deep copy
 slug: Glossary/Deep_copy
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **deep copy** of an object is a copy whose properties do not share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you can be assured you're not causing the other object to change too. That behavior contrasts with the behavior of a {{Glossary("shallow copy")}}, in which changes to nested properties in the source or the copy may cause the other object to change too.
 

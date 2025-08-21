@@ -3,9 +3,8 @@ title: src
 slug: Web/CSS/@font-face/src
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.src
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
@@ -13,10 +12,9 @@ The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies
 
 ```css
 /* <url> values */
-src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
-src: url(path/to/font.woff); /* Relative URL */
-src: url("path/to/font.woff"); /* Quoted URL */
-src: url(path/to/svgFont.svg#example); /* Fragment identifying font */
+src: url("https://example.com/path/to/font.woff"); /* Absolute URL */
+src: url("path/to/font.woff"); /* Relative URL */
+src: url("path/to/svgFont.svg#example"); /* Fragment identifying font */
 
 /* <font-face-name> values */
 src: local(font); /* Unquoted name */
@@ -25,17 +23,17 @@ src: local("font"); /* Quoted name */
 src: local("some font"); /* Quoted name containing a space */
 
 /* <tech(<font-tech>)> values */
-src: url(path/to/fontCOLRv1.otf) tech(color-COLRv1);
-src: url(path/to/fontCOLR-svg.otf) tech(color-SVG);
+src: url("path/to/fontCOLRv1.otf") tech(color-COLRv1);
+src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* <format(<font-format>)> values */
-src: url(path/to/font.woff) format("woff");
-src: url(path/to/font.otf) format("opentype");
+src: url("path/to/font.woff") format("woff");
+src: url("path/to/font.otf") format("opentype");
 
 /* Multiple resources */
 src:
-  url(path/to/font.woff) format("woff"),
-  url(path/to/font.otf) format("opentype");
+  url("path/to/font.woff") format("woff"),
+  url("path/to/font.otf") format("opentype");
 
 /* Multiple resources with font format and technologies */
 src:
@@ -46,7 +44,6 @@ src:
 ### Values
 
 - `url()`
-
   - : Specifies an external reference consisting of a {{cssxref("url_value", "&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
@@ -59,7 +56,6 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
-
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 
@@ -101,9 +97,9 @@ If the font file is a container for multiple fonts, a fragment identifier is inc
 
 ```css
 /* WhichFont is the PostScript name of a font in the font file */
-src: url(collection.otc#WhichFont);
+src: url("collection.otc#WhichFont");
 /* WhichFont is the element id of a font in the SVG Font file */
-src: url(fonts.svg#WhichFont);
+src: url("fonts.svg#WhichFont");
 ```
 
 ### Font formats
@@ -175,7 +171,7 @@ The example below shows how to define two font faces with the same font family. 
 @font-face {
   font-family: MainText;
   src:
-    local(Futura-Medium),
+    local("Futura-Medium"),
     url("FuturaMedium.woff") format("woff"),
     url("FuturaMedium.otf") format("opentype");
 }
@@ -184,8 +180,8 @@ The example below shows how to define two font faces with the same font family. 
 @font-face {
   font-family: MainText;
   src:
-    local(Gill Sans Bold) /* full font name */,
-    local(GillSans-Bold) /* postscript name */,
+    local("Gill Sans Bold") /* full font name */,
+    local("GillSans-Bold") /* postscript name */,
     url("GillSansBold.woff") format("woff"),
     url("GillSansBold.otf") format("opentype"),
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
@@ -194,7 +190,7 @@ The example below shows how to define two font faces with the same font family. 
 
 /* Using the regular font face */
 p {
-  font-family: MainText;
+  font-family: MainText, sans-serif;
 }
 
 /* Font-family is inherited, but bold fonts are used */
@@ -219,7 +215,7 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 
 /* Using the font face */
 p {
-  font-family: "Trickster";
+  font-family: "Trickster", fantasy;
 }
 ```
 
@@ -270,7 +266,7 @@ The block of CSS inside `@supports` will be applied if the user agent supports `
   }
 
   .colored_text {
-    font-family: "Trickster";
+    font-family: "Trickster", fantasy;
   }
 }
 ```

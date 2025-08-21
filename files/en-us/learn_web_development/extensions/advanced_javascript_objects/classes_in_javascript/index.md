@@ -168,7 +168,7 @@ class Student extends Person {
 }
 ```
 
-In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
+In this class declaration, `#year` is a [private field](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
 
 ```js
 const summers = new Student("Summers", 2);
@@ -180,13 +180,13 @@ summers.#year; // SyntaxError
 ```
 
 > [!NOTE]
-> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> Code run in the Chrome console can access private elements outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
-Private data properties must be declared in the class declaration, and their names start with `#`.
+Private fields must be declared in the class declaration, and their names start with `#`.
 
 ### Private methods
 
-You can have private methods as well as private data properties. Just like private data properties, their names start with `#`, and they can only be called by the object's own methods:
+You can have private methods as well as private fields. Just like private fields, private methods' names start with `#`, and they can only be called by the object's own methods:
 
 ```js
 class Example {

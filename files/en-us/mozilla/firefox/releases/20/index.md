@@ -1,10 +1,10 @@
 ---
 title: Firefox 20 for developers
+short-title: Firefox 20
 slug: Mozilla/Firefox/Releases/20
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.
 
@@ -27,7 +27,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### CSS
 
 - [CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) is now available by default in pre-release builds only (excluding beta versions). It can be enabled in release and beta versions by setting the `layout.css.flexbox.enabled` about:config preference to `true`.
-- The `mask-type` property from the [CSS Masking specification](https://www.w3.org/TR/css-masking-1/#the-mask-type) has been added ([Firefox bug 793617](https://bugzil.la/793617)).
+- The [`mask-type`](/en-US/docs/Web/CSS/mask-type) property has been added ([Firefox bug 793617](https://bugzil.la/793617)).
 - Experimental support for the {{cssxref(":scope")}} pseudo-class has been added. Enabled by default in Aurora and Nightly, it can be enabled in release and beta versions by setting the `layout.css.scope-pseudo.enabled` about:config preference to `true` ([Firefox bug 648722](https://bugzil.la/648722)).
 
 ### DOM/APIs
@@ -71,7 +71,3 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 
 - [Firefox 20 Release Notes](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/20.0/releasenotes/)
 - [Add-on Compatibility for Firefox 20](https://blog.mozilla.org/addons/2013/03/20/compatibility-for-firefox-20/)
-
-### Older versions
-
-{{Firefox_for_developers}}

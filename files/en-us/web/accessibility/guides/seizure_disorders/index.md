@@ -50,7 +50,7 @@ Nausea, vertigo (or dizziness), and disorientation are very nonspecific symptoms
 
 Although "flashing" and "blinking" are sometimes used interchangeably, they are not the same. According to the W3C, blinking is a distraction problem, whereas flashing refers to content that occurs more than 3 times per second, and which is sufficiently large and bright. [Section 508](https://www.section508.gov/content/guide-accessible-web-design-development/#flashing) prohibits flickering effects with a frequency greater than 3 Hz (flickers per second) and lower than 55 Hz. The Epilepsy Foundation's article ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions) notes that _"Generally, flashing lights between the frequencies of five to 30 flashes per second (Hertz) are most likely to trigger seizures. In order to be safe, the consensus recommends that photosensitive individuals should not be exposed to flashes greater than three per second."_ For some people, however, flashing/blinking can cause symptoms at less than 3 Hz.
 
-It's important to note that not all flashing and blinking is bad. NASA, in its document titled, ["Blinking, Flashing, and Temporal Response"](https://colorusage.arc.nasa.gov/flashing.php) notes that blinking and flashing can be powerful tools for drawing attention—as is necessary for warning buttons (this assumes that users can still see the screen while elements are flashing, which is not always true). For some users, blinking buttons also caution that they must be used sparingly, and with care. As it applies to web design, systems that alert company employees to danger by "hijacking" the screen to provide a flashing warning of emergency need to take into consideration the rate, size, and luminosity changes on the screen as these warnings are flashed.
+It's important to note that not all flashing and blinking is bad. NASA, in its document titled, ["Blinking, Flashing, and Temporal Response"](https://web.archive.org/web/20250215094718/https://colorusage.arc.nasa.gov/flashing.php) notes that blinking and flashing can be powerful tools for drawing attention—as is necessary for warning buttons (this assumes that users can still see the screen while elements are flashing, which is not always true). For some users, blinking buttons also caution that they must be used sparingly, and with care. As it applies to web design, systems that alert company employees to danger by "hijacking" the screen to provide a flashing warning of emergency need to take into consideration the rate, size, and luminosity changes on the screen as these warnings are flashed.
 
 ### Flashing and flickering—how is danger quantified?
 
@@ -64,7 +64,7 @@ Certain colors, and/or combinations of colors, also matter. ["Certain Colors Mor
 
 [WCAG 2.3.1 general flash and red flash thresholds](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) are defined as follows:
 
-- A **general flash** is defined as a pair of opposing changes in [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
+- A **general flash** is defined as a pair of opposing changes in [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80, and where "a pair of opposing changes" is an increase followed by a decrease, or a decrease followed by an increase;
 - A **red flash** is defined as any pair of opposing transitions involving a saturated red.
 
 These standards are based on earlier research. In 2004, The Epilepsy Foundation of America convened a workshop developed a [consensus](https://pubmed.ncbi.nlm.nih.gov/16146438/) on photosensitive seizures, stating _"A flash is a potential hazard if it has luminance at least 20 cd/m<sup>2</sup>, occurs at a frequency of least 3 Hz, and occupies a solid visual angle of at least 0.006 steradians (about 10% of the central visual field or 25% of screen area at typical viewing distances)."_ The transition to or from a saturated red is important and constitutes a risk on its own: "_Irrespective of luminance, a transition to or from a saturated red is also considered a risk._"
@@ -178,11 +178,9 @@ Controlling exposure to the page is key to ensuring that someone susceptible to 
 
 If you believe you may have an image or animation that may cause seizures, control access to it by first displaying a warning about the content, and then putting it in a location where the user must opt in to it, such as clicking a button, or ensuring that the link to the page has a distinct and obvious warning.
 
-Consider using metadata such as `<meta name="robots" content="noindex, nofollow">` so that the page is not indexed by search engines.
-
-#### Do Not Index, Do Not Follow
-
-By not indexing the page, the likelihood that users will stumble upon it via search will be reduced.
+Consider setting crawl directives for search engines to hint that they shouldn't include potentially harmful resources in their search indexes.
+You can do this using metadata in a [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) element with restrictive rules like `noindex, nofollow`.
+By not indexing the page (`noindex`) and not following links on the page (`nofollow`), the likelihood that users will stumble upon it via search will be reduced:
 
 ```html
 <html lang="en">
@@ -191,6 +189,12 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
     <meta name="robots" content="noindex, nofollow" />
   </head>
 </html>
+```
+
+For non-HTML resources, you can set crawl directives in a {{httpheader("X-Robots-Tag")}} HTTP response header:
+
+```http
+X-Robots-Tag: noindex
 ```
 
 ### Animated GIFs
@@ -208,7 +212,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 
 As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to `<video controls>`, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by Kirupa, ["Toggling Animations On and Off"](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa uses the `animation-play-state` in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
 
-[`animation-play-state`](https://www.w3.org/TR/css-animations-1/#animation-play-state) is a CSS property that sets whether an animation is running or paused.
+[`animation-play-state`](/en-US/docs/Web/CSS/animation-play-state) is a CSS property that sets whether an animation is running or paused.
 
 ```css
 div {
@@ -338,7 +342,7 @@ An example of a format that has no controls available to the user is a gif file.
 
 #### Set user expectations
 
-Give users a heads-up as to what will happen before they click on that link. Describe the animation that is to follow. See [WCAG 2.1 Success Criterion 3.2.5 Change on Request](https://www.w3.org/TR/WCAG21/#change-on-request).
+Give users a heads-up as to what will happen before they click on that link. Describe the animation that is to follow. See [WCAG 2.2 Success Criterion 3.2.5 Change on Request](https://w3c.github.io/wcag/guidelines/22/#change-on-request).
 
 #### Keep it small
 
@@ -350,14 +354,12 @@ If you are designing for a game or VR that uses an ocular mask, **or CAN be used
 
 Normally, higher contrast is a good thing when it comes to accessibility. The greater the contrast of a text color to its background (technically called _luminosity contrast ratio,_ according to W3.org's page on [Colors with Good Contrast](https://www.w3.org/WAI/perspective-videos/contrast/), the easier such content is to read. Users with low vision are especially appreciative of efforts to ensure high contrast of text against its background. When the content is animated, however, **_reducing_** contrast is actually a way to reduce the likelihood that the animated content will cause seizures. Drop the contrast ratio if three flashes within one second are detected.
 
-The contrast ratio is defined in [WCAG 2.1](https://www.w3.org/TR/WCAG21/) as follows:
+The contrast ratio is defined in [WCAG 2.2](https://w3c.github.io/wcag/guidelines/22/) as follows:
 
 - _contrast ratio_
-
   - : (L1 + 0.05) / (L2 + 0.05), where
-
-    - L1 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the lighter of the colors, and
-    - L2 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the darker of the colors.
+    - L1 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the lighter of the colors, and
+    - L2 is the [relative luminance](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) of the darker of the colors.
 
 It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFs, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated GIFs, for example, start with one that has a lower contrast ratio.
 
@@ -428,8 +430,8 @@ Use the {{HTMLElement('link')}} element, alongside with and together with the at
 **{{CSSxref('@import')}}** is also a way to incorporate style sheets, but it is not quite as well supported as the {{HTMLElement('link')}} element.
 
 ```css
-@import url(alternate1.css);
-@import url(alternate2.css);
+@import "alternate1.css";
+@import "alternate2.css";
 ```
 
 By using alternate style sheets (remember to add the titles) you are setting it up for users to be able to use their browsers to choose alternate styles.
@@ -512,9 +514,7 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 }
 ```
 
-From W3.org's page on [Media Queries 4](https://www.w3.org/TR/mediaqueries-4/):
-
-The `update` media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
+The [`update`](/en-US/docs/Web/CSS/@media/update) media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
 
@@ -546,15 +546,9 @@ Section 4.2 from the CSSWG.org drafts integrates with the [event loop](https://h
 
 #### Personalization Help and Support
 
-The requirement for the `literal` property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
+The requirement for the `literal` property is taken from [WAI-Adapt: Help and Support](https://w3c.github.io/adapt/help/#literal-explanation).
 
 **Requirement:** Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The `literal` property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.
-
-#### Transitions (for CSS and SVG)
-
-The following is from the [Web Animations model](https://www.w3.org/TR/web-animations-1/) CSSWG.org drafts
-
-The Web Animations model is intended to provide the features necessary for expressing [CSS Transitions](https://drafts.csswg.org/web-animations/#biblio-css-transitions-1), [CSS Animations](https://drafts.csswg.org/web-animations/#biblio-css-animations-1), and [SVG](https://drafts.csswg.org/web-animations/#biblio-svg11).
 
 ## See also
 
@@ -614,19 +608,10 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 ### W3C
 
-- [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
-- [Personalization Semantics Explainer 1.0](https://www.w3.org/TR/personalization-semantics-1.0/). Working Draft
+- [WAI-Adapt Explainer](https://w3c.github.io/adapt/)
 - [WAI-Adapt: Tools Module](https://www.w3.org/TR/adapt-tools/) Working Draft
 - [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) Understanding WCAG 2.0 (Older, but contains some explanations of references made in the WCAG 2.1 criteria)
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
 - [Understanding Success Criteria 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-- [Web Animations Model](https://www.w3.org/TR/web-animations-1/) W3C Working Draft
-- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/#relativeluminancedef) definition of relative luminance
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
-
-## Contributors
-
-Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/task-forces/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](http://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
-
-We are _all_ in tremendous gratitude to the Trace Research & Development Center for making their amazing tool, the [Photosensitive Epilepsy Analysis Tool (PEAT)](https://trace.umd.edu/peat/) for free.
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://w3c.github.io/wcag/guidelines/22/#dfn-relative-luminance) definition of relative luminance

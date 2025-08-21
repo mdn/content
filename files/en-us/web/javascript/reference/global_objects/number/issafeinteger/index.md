@@ -1,11 +1,11 @@
 ---
 title: Number.isSafeInteger()
+short-title: isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isSafeInteger
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.isSafeInteger()`** static method determines whether the provided value is a number that is a _safe integer_.
 

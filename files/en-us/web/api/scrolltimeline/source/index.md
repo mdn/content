@@ -3,12 +3,10 @@ title: "ScrollTimeline: source property"
 short-title: source
 slug: Web/API/ScrollTimeline/source
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ScrollTimeline.source
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
 The **`source`** read-only property of the
 {{domxref("ScrollTimeline")}} interface returns a reference to the scrollable element (_scroller_) whose scroll position is driving the progress of the timeline and therefore the animation.

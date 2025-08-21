@@ -3,9 +3,8 @@ title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 page-type: css-property
 browser-compat: css.properties.scrollbar-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scrollbar-width`** property allows the author to set the desired thickness of an element's scrollbars when they are shown.
 

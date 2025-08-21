@@ -53,17 +53,17 @@ We add a bit of CSS, including `:valid` and `:invalid` styles for our button:
 ```css
 input[type="submit"],
 button {
-  background-color: #33a;
+  background-color: #3333aa;
   border: none;
   font-size: 1.3rem;
   padding: 5px 10px;
   color: white;
 }
 button:invalid {
-  background-color: #a33;
+  background-color: #aa3333;
 }
 button:valid {
-  background-color: #3a3;
+  background-color: #33aa33;
 }
 ```
 

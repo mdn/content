@@ -11,27 +11,14 @@ browser-compat: api.Document.cookie
 The {{domxref("Document")}} property `cookie` lets you read and write [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) associated with the document.
 It serves as a getter and setter for the actual values of the cookies.
 
-## Syntax
+## Value
 
-### Read all cookies accessible from this location
-
-```js
-allCookies = document.cookie;
-```
-
-In the code above `allCookies` is a string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
+A string containing a semicolon-separated list of all cookies (i.e., `key=value` pairs).
 Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact, {{RFC(6265)}} mandates a single space after each semicolon, but some user agents may not abide by this.
 
-### Write a new cookie
-
-```js
-document.cookie = newCookie;
-```
-
-In the code above, `newCookie` is a string of form `key=value`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
+You can also assign to this property a string of the form `"key=value"`, specifying the cookie to set/update. Note that you can only set/update a single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value pair, each preceded by a semicolon separator:
-
   - `;domain=domain` (e.g., `example.com` or `subdomain.example.com`): The host to which the cookie will be sent.
     If not specified, this defaults to the host portion of the current document location and the cookie is not available on subdomains.
     If a domain is specified, subdomains are always included.
@@ -56,7 +43,6 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
   - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Guides/Cookies#define_where_cookies_are_sent) for more information).
 
   - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)).
-
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
       This is sufficient for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks.
       This is the default value in modern browsers.
@@ -68,7 +54,6 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
-
   - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
   - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server.
     If the server omits the path attribute the "directory" of the request URI is used.
@@ -111,7 +96,7 @@ document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 showBtn.addEventListener("click", () => {
   output.textContent = `> ${document.cookie}`;
 });
-cleanBtn.addEventListener("click", () => {
+clearBtn.addEventListener("click", () => {
   output.textContent = "";
 });
 ```
@@ -319,27 +304,27 @@ Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12
 - [RFC 2965](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
   Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
 
-The reason for the [syntax](#syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
+The reason for the asymmetry between getting and setting the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
 
-### The server tells the client to store a cookie
+- The server tells the client to store a cookie:
 
-```bash
-HTTP/1.0 200 OK
-Content-type: text/html
-Set-Cookie: cookie_name1=cookie_value1
-Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
+  ```http
+  HTTP/1.0 200 OK
+  Content-type: text/html
+  Set-Cookie: cookie_name1=cookie_value1
+  Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 
-[content of the page here]
-```
+  [content of the page here]
+  ```
 
-### The client sends back to the server its cookies previously stored
+- The client sends back to the server its cookies previously stored:
 
-```bash
-GET /sample_page.html HTTP/1.1
-Host: www.example.org
-Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
-Accept: */*
-```
+  ```http
+  GET /sample_page.html HTTP/1.1
+  Host: www.example.org
+  Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
+  Accept: */*
+  ```
 
 ## Specifications
 

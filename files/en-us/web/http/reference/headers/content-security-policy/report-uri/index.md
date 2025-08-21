@@ -6,9 +6,10 @@ page-type: http-csp-directive
 status:
   - deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > [!WARNING]
 > The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
@@ -78,7 +79,6 @@ The report JSON object has a single top-level property, `"csp-report"`, which co
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
-
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Violations originating from external files are not included in the report.
 
@@ -138,7 +138,7 @@ As you can see, the report includes the full path to the violating resource in `
 This is not always the case.
 For example, if `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, only the origin,
 (`http://anothercdn.example.com`) in order to prevent leaking sensitive information about cross-origin resources.
-The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this behavior.
+The CSP specification [gives an explanation](https://w3c.github.io/webappsec-csp/#security-violation-reports) of this behavior.
 
 ### CSP violation report with Content-Security-Policy-Report-Only
 

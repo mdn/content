@@ -3,9 +3,8 @@ title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 page-type: javascript-statement
 browser-compat: javascript.statements.for_await_of
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for await...of`** statement creates a loop iterating over [async iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) as well as [sync iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). This statement can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
@@ -58,6 +57,14 @@ If the `for await...of` loop exited early (e.g., a `break` statement is encounte
 - `for await...of` can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules). Even when the iterable is sync, the loop still awaits the return value for every iteration, leading to slower execution due to repeated promise unwrapping.
 - If the `iterable` is a sync iterable that yields promises, `for await...of` would produce a sequence of resolved values, while `for...of` would produce a sequence of promises. (However, beware of error handling and cleanup — see [Iterating over sync iterables and generators](#iterating_over_sync_iterables_and_generators))
 - For `for await...of`, the `variable` can be the identifier `async` (e.g., `for await (async of foo)`); `for...of` forbids this case.
+
+Like `for...of`, if you use a `using` declaration, then the variable cannot be called `of`:
+
+```js-nolint example-bad
+for await (using of of []); // SyntaxError
+```
+
+This is to avoid syntax ambiguity with the valid code `for await (using of [])`, before `using` was introduced.
 
 ## Examples
 

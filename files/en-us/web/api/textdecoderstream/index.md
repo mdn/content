@@ -30,8 +30,7 @@ It is the streaming equivalent of {{domxref("TextDecoder")}}.
 
 ## Examples
 
-- [Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
-- [An example of fetch request streams which uses `TextDecoderStream`](https://glitch.com/~fetch-request-stream).
+[Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
 
 ## Specifications
 
@@ -46,3 +45,4 @@ It is the streaming equivalent of {{domxref("TextDecoder")}}.
 - {{domxref("TextEncoderStream")}}
 - [Streams API Concepts](/en-US/docs/Web/API/Streams_API/Concepts)
 - [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)
+- [Streaming requests with the fetch API](https://developer.chrome.com/docs/capabilities/web-apis/fetch-streaming-requests), developer.chrome.com (2020)

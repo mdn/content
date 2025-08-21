@@ -12,11 +12,13 @@ It contains non-hierarchical data to identify a resource within the scope of the
 
 ## Syntax
 
-The query is indicated by the first question mark (`?`) character and is terminated by a number sign (`#`) or the end of the URI:
-
-```plain
-https://example.com/collection?<query>
+```url
+?query
 ```
+
+- `query`
+  - : A sequence of any characters, except for the `#` character, which starts the [fragment](/en-US/docs/Web/URI/Reference/Fragment).
+    The exact format of the query is defined by the resource itself.
 
 ## Description
 

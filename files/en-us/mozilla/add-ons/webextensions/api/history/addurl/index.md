@@ -3,9 +3,8 @@ title: history.addUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
 
@@ -22,9 +21,7 @@ let addingUrl = browser.history.addUrl(
 ### Parameters
 
 - `details`
-
   - : `object`. Object containing the URL to add.
-
     - `url`
       - : `string`. The URL to add.
     - `title` {{optional_inline}}
@@ -37,10 +34,6 @@ let addingUrl = browser.history.addUrl(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the item has been added.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -97,6 +90,10 @@ browser.history
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.

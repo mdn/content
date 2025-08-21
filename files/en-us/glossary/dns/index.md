@@ -2,9 +2,8 @@
 title: DNS
 slug: Glossary/DNS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **DNS** (Domain Name System) is a hierarchical and decentralized naming system for Internet connected resources. DNS maintains a list of {{Glossary("domain name","domain names")}} along with the resources, such as IP addresses, that are associated with them.
 

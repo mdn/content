@@ -3,9 +3,8 @@ title: overflow-anchor
 slug: Web/CSS/overflow-anchor
 page-type: css-property
 browser-compat: css.properties.overflow-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) property provides a way to opt out of the browser's scroll anchoring behavior, which adjusts scroll position to minimize content shifts.
 
@@ -155,5 +154,5 @@ To prevent scroll anchoring in a document, use the `overflow-anchor` property.
 
 ## See also
 
-- [Understanding scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
+- [Overview of scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
 - [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module

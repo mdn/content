@@ -57,15 +57,17 @@ sidebar:
       - type: listSubPages
         path: /Web/HTML/Reference/Elements/script/type
         tags: html-attribute-value
+        link: /Web/HTML/Reference/Elements/script/type
         title: Script_types
         details: closed
         code: true
       - type: listSubPages
         path: /Web/HTML/Reference/Elements/meta/name
-        tags: html-attribute-value
-        title: Meta_names
+        depth: 2
+        link: /Web/HTML/Reference/Elements/meta/name
         details: closed
         code: true
+      - link: /Web/HTML/Reference/Elements/meta/http-equiv
   - title: Attribute_values
     details: closed
     children:
@@ -89,9 +91,8 @@ l10n:
     Attributes: Attributes
     Attributes_element: Attributes by element
     Attribute_values: Attribute values
-    Input_types: <code>&lt;input&gt;</code> types
-    Script_types: <code>&lt;script&gt;</code> types
-    Meta_names: <code>&lt;meta&gt;</code> names
+    Input_types: <code>&lt;input&gt;</code> type
+    Script_types: <code>&lt;script&gt;</code> type
     Rel_keywords: <code>rel</code> keywords
     Guides: Guides
   fr:
@@ -106,7 +107,11 @@ l10n:
     HTML_Elements: 要素
     Global_attributes: グローバル属性
     Attributes: 属性
+    Attributes_element: 要素別の属性
+    Attribute_values: 属性値
     Input_types: <code>&lt;input&gt;</code> 型
+    Script_types: <code>&lt;script&gt;</code> 型
+    Rel_keywords: <code>rel</code> キーワード
     Guides: ガイド
   ko:
     Reference: "참고서:"
@@ -134,5 +139,9 @@ l10n:
     HTML_Elements: HTML 元素
     Global_attributes: 全局属性
     Attributes: 属性
+    Attributes_element: 按元素划分的属性
+    Attribute_values: 属性值
     Input_types: <code>&lt;input&gt;</code> 类型
+    Script_types: <code>&lt;script&gt;</code> 类型
+    Rel_keywords: <code>rel</code> 关键字
     Guides: 指南

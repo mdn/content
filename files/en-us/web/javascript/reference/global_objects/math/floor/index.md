@@ -1,11 +1,11 @@
 ---
 title: Math.floor()
+short-title: floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.floor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.floor()`** static method always rounds down and returns the largest integer less than or equal to a given number.
 

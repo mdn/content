@@ -4,9 +4,8 @@ short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 page-type: html-attribute
 browser-compat: html.elements.input.accept
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 

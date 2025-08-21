@@ -5,7 +5,7 @@ page-type: guide
 sidebar: xmlsidebar
 ---
 
-This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
+This article provides some XPath code snippets — examples of how to implement a few **utility functions**. These functions are based on standard interfaces that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
 ### Node-specific evaluator function
 
@@ -14,17 +14,17 @@ The following custom utility function can be used to evaluate XPath expressions 
 #### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
 ```js
-// Evaluate an XPath expression aExpression against a given DOM node
-// or Document object (aNode), returning the results as an array
+// Evaluate an XPath expression `expr` against a given DOM node
+// or Document object `node`, returning the results as an array
 // thanks wanderingstan at morethanwarm dot mail dot com for the
 // initial work.
-function evaluateXPath(aNode, aExpr) {
+function evaluateXPath(node, expr) {
   const xpe = new XPathEvaluator();
   const nsResolver =
-    aNode.ownerDocument === null
-      ? aNode.documentElement
-      : aNode.ownerDocument.documentElement;
-  const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
+    node.ownerDocument === null
+      ? node.documentElement
+      : node.ownerDocument.documentElement;
+  const result = xpe.evaluate(expr, node, nsResolver, 0, null);
   const found = [];
   let res;
   while ((res = result.iterateNext())) found.push(res);

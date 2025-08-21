@@ -3,9 +3,8 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`WeakMap`** is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Guide/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
@@ -168,7 +167,7 @@ thing.showPrivate();
 // 1
 ```
 
-This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties):
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements):
 
 ```js
 class Thing {
@@ -270,7 +269,6 @@ This only works if your function's input is an object. Moreover, even if the inp
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) by Nick Fitzgerald (2014)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

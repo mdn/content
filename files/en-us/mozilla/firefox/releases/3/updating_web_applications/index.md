@@ -2,9 +2,8 @@
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 There are a number of changes in the upcoming Firefox 3 that may affect your website or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
@@ -86,10 +85,10 @@ The same-origin policy for file: URIs has changed in Firefox 3. This may affect 
 
 ## JavaScript changes
 
-Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your website or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
+Firefox 3 supports [JavaScript 1.8](https://web.archive.org/web/20210224081539/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8). One important change that may require updates to your website or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
 
 ## See also
 
 - [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
-- [New in JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8)
+- [New in JavaScript 1.8](https://web.archive.org/web/20210224081539/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8)
 - [Updating extensions for Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/Updating_extensions)

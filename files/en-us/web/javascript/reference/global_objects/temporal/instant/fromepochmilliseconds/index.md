@@ -1,13 +1,15 @@
 ---
 title: Temporal.Instant.fromEpochMilliseconds()
+short-title: fromEpochMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/fromEpochMilliseconds
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.Instant.fromEpochMilliseconds
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.Instant.fromEpochMilliseconds()`** static method creates a new `Temporal.Instant` object from the number of milliseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 

@@ -1,18 +1,18 @@
 ---
 title: Symbol.toPrimitive
+short-title: toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.toPrimitive
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.toPrimitive`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.toPrimitive`. All [type coercion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) algorithms look up this symbol on objects for the method that accepts a preferred type and returns a primitive representation of the object, before falling back to using the object's `valueOf()` and `toString()` methods.
 
 {{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   [Symbol.toPrimitive](hint) {
     if (hint === "number") {
       return 42;
@@ -21,7 +21,7 @@ const object1 = {
   },
 };
 
-console.log(+object1);
+console.log(+object);
 // Expected output: 42
 ```
 

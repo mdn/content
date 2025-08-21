@@ -1,11 +1,11 @@
 ---
 title: Number.prototype.toFixed()
+short-title: toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.toFixed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toFixed()`** method of {{jsxref("Number")}} values returns a string representing this number using [fixed-point notation](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) with the specified number of decimal places.
 

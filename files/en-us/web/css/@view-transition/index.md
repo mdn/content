@@ -3,9 +3,8 @@ title: "@view-transition"
 slug: Web/CSS/@view-transition
 page-type: css-at-rule
 browser-compat: css.at-rules.view-transition
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@view-transition`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to opt in the current and destination documents to undergo a [view transition](/en-US/docs/Web/API/View_Transition_API), in the case of a cross-document navigation.
 
@@ -22,9 +21,7 @@ For a cross-document view transition to work, the current and destination docume
 ### Descriptors
 
 - `navigation`
-
   - : Specifies the effect this at-rule will have on the document's view transition behavior. Possible values are:
-
     - `auto`: The document will undergo a view transition when taking part in a navigation, provided the navigation is same-origin, without cross-origin redirects, and its {{domxref("NavigateEvent.navigationType", "navigationType")}} is `traverse`, `push`, or `replace`. In the case of `push` or `replace`, the navigation must be initiated by a user interacting with the page content, not by a browser UI feature.
 
     - `none`: The document will not undergo a view transition.

@@ -16,7 +16,13 @@ There are three broad categories of page types on MDN, though some page types fa
 
 ## Creating a new page
 
-To create new pages on MDN, you need to use GitHub — have a look at our [content repo](https://github.com/mdn/content) section about [adding a new document](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document) for more instructions.
+Adding a new document is relatively straightforward, especially if you can start by copying an `index.md` file from a similar topic.
+There are a few things to keep in mind:
+
+- Documents are written in Markdown in an `index.md` file.
+- For example, if you're creating a new document for a HTTP header called `foo`, create a new folder at `files/en-us/web/http/reference/headers/foo` and put the Markdown file in this folder (`files/en-us/web/http/reference/headers/foo/index.md`).
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
+  You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ## How to use the templates
 

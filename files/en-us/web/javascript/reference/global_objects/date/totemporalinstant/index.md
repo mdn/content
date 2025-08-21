@@ -1,13 +1,15 @@
 ---
 title: Date.prototype.toTemporalInstant()
+short-title: toTemporalInstant()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTemporalInstant
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Date.toTemporalInstant
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`toTemporalInstant()`** method of {{jsxref("Date")}} instances returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 

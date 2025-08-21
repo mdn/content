@@ -3,9 +3,8 @@ title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.register
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use this function to register one or more content scripts.
 
@@ -24,14 +23,11 @@ let registering = browser.contentScripts.register(
 ### Parameters
 
 - `contentScriptOptions`
-
   - : `object`. A `RegisteredContentScriptOptions` object representing the content scripts to register. It has similar syntax to the objects in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key array. The differences are:
-
     - property names use {{Glossary("camel_case", "camel case")}}, rather than underscores ({{Glossary("snake_case", "snake case")}}) — for example, `excludeMatches`, not `exclude_matches`.
     - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
     The `RegisteredContentScriptOptions` object has the following properties:
-
     - `allFrames` {{optional_inline}}
       - : Same as [`all_frames` in the `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#all_frames) key.
     - `cookieStoreId` {{optional_inline}}
@@ -62,10 +58,6 @@ let registering = browser.contentScripts.register(
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object that you can use to unregister the content scripts.
 
 Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -99,3 +91,7 @@ const scriptObj = await browser.contentScripts.register({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

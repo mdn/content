@@ -3,9 +3,8 @@ title: border-block-start-width
 slug: Web/CSS/border-block-start-width
 page-type: css-property
 browser-compat: css.properties.border-block-start-width
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-block-start-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of the logical block-start border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
@@ -42,7 +41,7 @@ writing-mode: vertical-lr;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;

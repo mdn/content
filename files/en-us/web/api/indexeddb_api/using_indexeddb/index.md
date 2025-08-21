@@ -60,7 +60,7 @@ request.onsuccess = (event) => {
 };
 ```
 
-Which of the two functions, `onsuccess()` or `onerror()`, gets called? If everything succeeds, a success event (that is, a DOM event whose `type` property is set to `"success"`) is fired with `request` as its `target`. Once it is fired, the `onsuccess()` function on `request` is triggered with the success event as its argument. Otherwise, if there was any problem, an error event (that is, a DOM event whose `type` property is set to `"error"`) is fired at `request`. This triggers the `onerror()` function with the error event as its argument.
+If the request succeeds, the {{domxref("IDBRequest.success_event", "success")}} event is fired, and the function assigned to `onsuccess` is called. If the request fails, the {{domxref("IDBRequest.error_event", "error")}} event is fired, and the function assigned to `onerror` is called.
 
 The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see [How much data can be stored? on the Browser storage quotas and eviction criteria page](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).)
 
@@ -642,7 +642,7 @@ Further reading for you to find out more information if desired.
 
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Indexed Database API Specification](https://w3c.github.io/IndexedDB/)
-- IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
+- IndexedDB [interface files](https://searchfox.org/firefox-main/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) in the Firefox source code
 
 ### Tutorials and guides
 

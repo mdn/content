@@ -20,13 +20,9 @@ encodingInfo(configuration)
 ### Parameters
 
 - `configuration`
-
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaEncodingConfiguration in the spec -->
-
     - `type`
-
       - : The type of media being tested. This takes one of two values:
-
         - `record`
           - : Represents a configuration for recording of media, e.g., using {{domxref("MediaRecorder")}}.
         - `webrtc`
@@ -35,10 +31,8 @@ encodingInfo(configuration)
           - : The synonym of `webrtc` to be used in Firefox.
 
     - `video`
-
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
-
         - `contentType`
           - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
@@ -51,10 +45,8 @@ encodingInfo(configuration)
           - : The number of frames making up one second of video playback.
 
     - `audio`
-
       - : Configuration object for an audio media source.
         This has the following properties: <!-- AudioConfiguration in the spec -->
-
         - `contentType`
           - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`

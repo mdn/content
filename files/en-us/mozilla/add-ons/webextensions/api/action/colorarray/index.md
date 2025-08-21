@@ -3,9 +3,8 @@ title: action.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/action/ColorArray
 page-type: webextension-api-type
 browser-compat: webextensions.api.action.ColorArray
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 ## Type
 

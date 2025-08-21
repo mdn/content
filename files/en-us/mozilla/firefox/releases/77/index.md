@@ -1,10 +1,10 @@
 ---
 title: Firefox 77 for developers
+short-title: Firefox 77
 slug: Mozilla/Firefox/Releases/77
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).
 
@@ -17,7 +17,6 @@ This article provides information about the changes in Firefox 77 that will affe
 - Firefox Developer Edition offers a [Compatibility panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) in the Page Inspector, to show the browsers supported by the CSS properties used on the page. ([Firefox bug 1625134](https://bugzil.la/1625134))
 - The Debugger has a [Settings menu in its toolbar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar); the only menu option (yet) is **Disable JavaScript**. ([Firefox bug 1630957](https://bugzil.la/1630957))
 - The [Network Monitor toolbar](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) has an **Actions** menu for managing log data ([Firefox bug 1459175](https://bugzil.la/1459175)):
-
   - **Persist Logs**
   - **Import HAR File**
   - **Save All as HAR**
@@ -74,7 +73,3 @@ This article provides information about the changes in Firefox 77 that will affe
 
 - Use of the `unlimitedStorage` permission no longer results in a prompt during extension installation or update. See [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) for more information. ([Firefox bug 1630413](https://bugzil.la/1630413))
 - Changes related to [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) mean that when setting [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.
-
-## Older versions
-
-{{Firefox_for_developers}}

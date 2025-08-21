@@ -8,6 +8,18 @@ sidebar: svgref
 
 The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate an attribute of an element over time.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+This element only includes global attributes.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGAnimateElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -33,10 +45,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Usage notes
-
-This element implements the {{domxref("SVGAnimateElement")}} interface.
 
 ## Accessibility concerns
 

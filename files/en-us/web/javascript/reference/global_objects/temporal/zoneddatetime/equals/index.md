@@ -1,13 +1,15 @@
 ---
 title: Temporal.ZonedDateTime.prototype.equals()
+short-title: equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/equals
 page-type: javascript-instance-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.equals
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`equals()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}), and `false` otherwise. They are compared both by their instant values, time zones, and their calendars, so two date-times from different calendars or time zones may be considered equal by {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}} but not by `equals()`.
 

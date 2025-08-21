@@ -3,9 +3,8 @@ title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-device-pixel-ratio
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`-webkit-device-pixel-ratio`** is a non-standard Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) which is an alternative to the standard [`resolution`](/en-US/docs/Web/CSS/@media/resolution) media feature.
 

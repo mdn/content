@@ -3,9 +3,8 @@ title: inset()
 slug: Web/CSS/basic-shape/inset
 page-type: css-function
 browser-compat: css.types.basic-shape.inset
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`inset()`** [CSS](/en-US/docs/Web/CSS) function defines a rectangle at the specified inset distances from each side of the reference box. It is a basic shape function used to define one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
 
@@ -35,11 +34,11 @@ clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -54,7 +53,6 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 ### Values
 
 - `<length-percentage>{1,4}`
-
   - : When all of the four arguments are supplied they represent the top, right, bottom, and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, which let you set all
     four insets with one, two, or four values.
 

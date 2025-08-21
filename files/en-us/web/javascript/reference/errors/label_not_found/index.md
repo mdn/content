@@ -2,9 +2,8 @@
 title: "SyntaxError: label not found"
 slug: Web/JavaScript/Reference/Errors/Label_not_found
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "label not found" occurs when a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement references a label that does not exist on any statement that contains the `break` or `continue` statement.
 

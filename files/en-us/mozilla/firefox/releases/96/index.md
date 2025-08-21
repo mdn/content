@@ -1,10 +1,10 @@
 ---
 title: Firefox 96 for developers
+short-title: Firefox 96
 slug: Mozilla/Firefox/Releases/96
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 96 that affect developers. Firefox 96 was released on January 11, 2022.
 
@@ -65,7 +65,3 @@ No notable changes.
 ## Changes for add-on developers
 
 - Added {{WebExtAPIRef("runtime.getFrameId")}} that gets the frame ID of any window global or frame element from a content script ([Firefox bug 1733104](https://bugzil.la/1733104)).
-
-## Older versions
-
-{{Firefox_for_developers}}

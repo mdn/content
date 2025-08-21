@@ -1,16 +1,16 @@
 ---
 title: Using CSS anchor positioning
+short-title: Using anchor positioning
 slug: Web/CSS/CSS_anchor_positioning/Using
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS anchor positioning** module defines features that allow you to tether elements together. Elements can be defined as **anchor elements** and **anchor-positioned elements**. Anchor-positioned elements can be bound to anchor elements. The anchor-positioned elements can then have their size and position set relative to the size and location of the anchor elements to which they are bound.
 
 CSS anchor positioning also provides CSS-only mechanisms for specifying multiple alternative positions for an anchor-positioned element. For example, if a tooltip is anchored to a form field but the tooltip would otherwise be rendered offscreen in its default position settings, the browser can try rendering it in a different suggested position so it is placed onscreen, or, alternatively, hide it altogether if desired.
 
-This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ## Fundamental concepts
 
@@ -49,7 +49,7 @@ To declare an element as an anchor with CSS, you need to set an anchor name on i
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: fit-content;
 }
 ```
@@ -60,7 +60,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -70,7 +70,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
 }
 ```
 
@@ -121,17 +121,14 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-name>`
-
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
     > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
-
   - : Specifies the position relative to a side, or sides, of the anchor. Valid values include the `center` of the anchor, physical (`top`, `left`, etc.) or logical (`start`, `self-end`, etc.) sides of the anchor, or a `<percentage>` between the start (`0%`) and end (`100%`) of the axis of the inset property `anchor()` is set on. If a value is used that is not [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the inset property on which the `anchor()` function is set, the fallback value is used.
 
 - `<fallback>`
-
   - : A {{cssxref("length-percentage")}} defining the distance to use as a fallback value if the element is not absolutely or fixed positioned, if the `<anchor-side>` value used is not compatible with the inset property on which the `anchor()` function is set, or if the anchor element doesn't exist.
 
 The return value of the `anchor()` function is a length value calculated based on the position of the anchor. If you set a length or percentage directly on an anchor-positioned element's inset property, it is positioned as if it were not bound to the anchor element. This is the same behavior seen if the `<anchor-side>` value is incompatible with the inset property on which it is set and the fallback is used. These two declarations are equivalent:
@@ -215,7 +212,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -225,7 +222,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -234,7 +231,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   inset-block-start: anchor(end);
   inset-inline-start: anchor(self-end);
@@ -257,7 +254,7 @@ The positioned element is `5px` below and `5px` to the right of the anchor eleme
 
 The {{cssxref("position-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `position-area` property works on the concept of a 3x3 grid of tiles, with the anchor element being the center tile. The `position-area` property can be used to position the anchor positioned element in any of the nine tiles, or have it span across two or three tiles.
 
-![The position-area grid, as described below](position-area.png)
+![The position-area grid, as described below](/shared-assets/images/diagrams/css/anchor-positioning/position-area.svg)
 
 The grid tiles are broken up into rows and columns:
 
@@ -358,7 +355,7 @@ Let's demonstrate some of these values; this example uses the same HTML and base
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -390,7 +387,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -400,7 +397,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
 }
 ```
@@ -478,7 +475,7 @@ This example uses the same HTML and base CSS as the previous example. The infobo
   border-radius: 10px;
   border: 1px solid black;
   padding: 3px;
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -489,7 +486,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -499,7 +496,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   top: calc(anchor(bottom) + 5px);
   justify-self: anchor-center;
 }
@@ -603,7 +600,7 @@ Let's look at an example. The HTML and base CSS are the same as in the previous 
 }
 
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 
 body {
@@ -614,7 +611,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -624,7 +621,7 @@ body {
 ```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: right;
   margin-left: 5px;
   width: calc(anchor-size(width) * 5);
@@ -660,7 +657,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 left: anchor-size(width);
-inset-inline-end: anchor-size(--myAnchor height, 100px);
+inset-inline-end: anchor-size(--my-anchor height, 100px);
 ```
 
 This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
@@ -673,7 +670,7 @@ You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function with
 
 ```css
 margin-left: calc(anchor-size(width) / 4);
-margin-block-start: anchor-size(--myAnchor self-block, 20px);
+margin-block-start: anchor-size(--my-anchor self-block, 20px);
 ```
 
 This can be useful in cases where you want to set an anchor-positioned element's margin to be always equal to the same percentage of the anchor element's width, even when the width changes.
@@ -737,7 +734,7 @@ body {
   align-content: center;
   color: darkblue;
   background-color: azure;
-  outline: 1px solid #ddd;
+  outline: 1px solid #dddddd;
   font-size: 1rem;
   text-align: center;
 }
@@ -745,14 +742,14 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   width: 100px;
   height: 100px;
   transition: 1s all;
 }
 
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: absolute;
   height: 100px;
   width: 100px;
@@ -787,7 +784,7 @@ Try tabbing to the anchor or hovering over it with the mouse pointer, and note h
 ## See also
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [Learn: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

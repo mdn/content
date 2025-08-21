@@ -2,9 +2,8 @@
 title: A typical HTTP session
 slug: Web/HTTP/Guides/Session
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:
 
@@ -28,7 +27,6 @@ With TCP the default port, for an HTTP server on a computer, is port 80. Other p
 Once the connection is established, the user-agent can send the request (a user-agent is typically a web browser, but can be anything else, a crawler, for example). A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided into three blocks:
 
 1. The first line contains a request method followed by its parameters:
-
    - the path of the document, as an absolute URL without the protocol or domain name
    - the HTTP protocol version
 

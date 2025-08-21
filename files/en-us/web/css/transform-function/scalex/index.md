@@ -3,9 +3,8 @@ title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 page-type: css-function
 browser-compat: css.types.transform-function.scaleX
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scaleX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element along the
 x-axis (horizontally). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
@@ -43,7 +42,8 @@ the function is the identity transform. The scaling is not isotropic, and the an
 `scaleX(-1)` defines an [axial symmetry](https://en.wikipedia.org/wiki/Axial_symmetry), with a vertical axis passing through the origin (as specified by the {{cssxref("transform-origin")}}
 property).
 
-> **Note:** `scaleX(sx)` is equivalent to
+> [!NOTE]
+> `scaleX(sx)` is equivalent to
 > `scale(sx, 1)` or
 > `scale3d(sx, 1, 1)`.
 

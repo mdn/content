@@ -1,11 +1,11 @@
 ---
 title: Promise.race()
+short-title: race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.race
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.race()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise settles with the eventual state of the first promise that settles.
 

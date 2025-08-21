@@ -3,9 +3,8 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
 browser-compat: css.properties.mix-blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
 
@@ -599,7 +598,7 @@ html,
 body {
   height: 100%;
   box-sizing: border-box;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .grid {
@@ -626,7 +625,7 @@ body {
 .cell {
   margin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
+  background-color: white;
   overflow: hidden;
   text-align: center;
 }
@@ -647,8 +646,8 @@ body {
 .container {
   position: relative;
   background:
-    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
-    linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
+    linear-gradient(to right, black 0%, transparent 50%, white 100%),
+    linear-gradient(to bottom, yellow 0%, magenta 50%, cyan 100%);
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -657,19 +656,19 @@ body {
 .R {
   transform-origin: center;
   transform: rotate(-30deg);
-  fill: url(#red);
+  fill: url("#red");
 }
 
 .G {
   transform-origin: center;
   transform: rotate(90deg);
-  fill: url(#green);
+  fill: url("#green");
 }
 
 .B {
   transform-origin: center;
   transform: rotate(210deg);
-  fill: url(#blue);
+  fill: url("#blue");
 }
 
 .isolate .group {
@@ -829,7 +828,7 @@ This example uses `mix-blend-mode` to blend text color with the background color
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap";
 
 .container {
   background-color: blue;

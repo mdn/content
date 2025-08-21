@@ -311,7 +311,7 @@ input[type="text"] {
   border-radius: 0;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   font:
     1.6rem/1.25 Arial,
@@ -320,7 +320,7 @@ body {
   max-width: 68rem;
   width: 100%;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -339,7 +339,7 @@ body {
   text-transform: capitalize;
 }
 .btn.toggle-btn {
-  border-color: #d3d3d3;
+  border-color: lightgray;
   border-width: 1px;
 }
 .btn.toggle-btn[aria-pressed="true"] {
@@ -349,14 +349,14 @@ body {
 .btn__danger {
   background-color: #ca3c3c;
   border-color: #bd2130;
-  color: #fff;
+  color: white;
 }
 .btn__filter {
   border-color: lightgrey;
 }
 .btn__primary {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 .btn-group {
   display: flex;
@@ -391,7 +391,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -405,7 +405,7 @@ body {
 /* End global styles */
 /* General app styles */
 .todoapp {
-  background: #fff;
+  background: white;
   box-shadow:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
@@ -413,7 +413,7 @@ body {
   padding: 1rem;
   position: relative;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -441,7 +441,7 @@ body {
   text-align: center;
 }
 .input__lg {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 2rem;
 }
 .input__lg:focus-visible {
@@ -456,7 +456,7 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -523,7 +523,7 @@ body {
 }
 .c-cb > label::before {
   background: transparent;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   content: "";
   position: absolute;
 }
