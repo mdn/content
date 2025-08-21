@@ -31,7 +31,6 @@ let executeUserScript = browser.userScripts.execute(
       - : `array` of {{WebExtAPIRef("userScripts.ScriptSource")}}. The scripts to inject into matching pages.
     - `target`
       - : An object that defines the target context scripts are injected into.
-` ``
         - `allFrames` {{optional_inline}}
           - : `boolean`. If set to `true`, the script is injected into all available frames. Defaults to `false`, in which the script is only injected into the top frame.
         - `documentIds` {{optional_inline}}
