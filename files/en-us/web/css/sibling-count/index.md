@@ -10,7 +10,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the total number of direct child DOM elements of the parent element on which it is used.
+The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the total number of direct child DOM elements on the element on which it is used.
 
 > [!NOTE]
 > The {{CSSxRef("counter()")}} function provides a similar result but it returns a `<string>`, while `sibling-count()` returns an `<integer>` which can be used for calculations.
