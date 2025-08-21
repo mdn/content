@@ -31,7 +31,6 @@ new WebSocketStream(url, options)
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}, which can be used to abort the connection before the [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) has completed (that is, before the {{domxref("WebSocketStream.opened", "opened")}} promise resolves). This is primarily intended to help implement connection timeouts. As such, it does nothing after the connection is established.
 
-
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
@@ -64,10 +63,9 @@ See [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API
 
 ## Specifications
 
-Not currently a part of any specification. See https://github.com/whatwg/websockets/pull/48 for standardization progress. 
+Not currently a part of any specification. See https://github.com/whatwg/websockets/pull/48 for standardization progress.
 
 [WebSocketStream API design](https://docs.google.com/document/d/1La1ehXw76HP6n1uUeks-WJGFgAnpX2tCjKts7QFJ57Y/edit?pli=1&tab=t.0).
-
 
 ## Browser compatibility
 

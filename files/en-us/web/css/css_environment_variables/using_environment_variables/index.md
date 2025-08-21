@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS environment variables module](/en-US/docs/Web/CSS/css_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env_example) with [the `env()` function](#the_env_function).
+The [CSS environment variables module](/en-US/docs/Web/CSS/CSS_environment_variables) introduces the concept of environment variables in CSS and defines the {{cssxref("env")}} function to enable using environment variables. In this guide, we look at [what environment variables are](#what_are_environment_variables), the [environment variables defined by the browser](#browser_defined_environment_variables), and [how to use environment variables](#using_environment_variables_with_env_example) with [the `env()` function](#the_env_function).
 
 ## What are environment variables?
 
