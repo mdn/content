@@ -45,20 +45,25 @@ We include a {{htmlelement("ul")}} container and several {{htmlelement("li")}} e
   <li>Two</li>
   <li>Three</li>
   <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
 #### CSS
 
-We set the {{CSSxRef("column-count")}} of the container to be equal to the quantity of direct children it contains. We also set every odd element to have a {{CSSxRef("background-color")}} to better demonstrate the resulting effect.
+We divided the {{CSSxRef("width")}} of each list item by the number of direct children the list contains. We also set every odd element to have a {{CSSxRef("background-color")}} to better demonstrate the resulting effect.
 
 ```css
 ul {
-  column-count: sibling-count();
-  text-align: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: center;
+  display: flex;
+}
+
+li {
+  width: calc(100% / sibling-count());
 }
 
 li:nth-of-type(odd) {
