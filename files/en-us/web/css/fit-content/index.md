@@ -24,7 +24,7 @@ block-size: fit-content;
 
 ## Description
 
-This keyword is only valid with sizing properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-width")}}, and {{cssxref("max-width")}}. When used on these properties, the calculated size refers to the element's [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box).
+This keyword is used with sizing properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-width")}}, and {{cssxref("max-width")}}. When used on these properties, the calculated size refers to the element's [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box).
 
 When `fit-content` is set, the element grows or shrinks to fit its content, but stops expanding after the relevant dimension reaches the size limit of its container.
 
