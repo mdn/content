@@ -41,5 +41,5 @@ _Also inherits properties from its ancestor {{domxref("DOMException")}}._
 ## See also
 
 - {{domxref("DOMException")}}
-- {{domxref("navigator.storage.estimate()")}}
+- {{domxref("StorageManager.estimate()")}}
 - [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)

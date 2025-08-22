@@ -2,9 +2,13 @@
 title: :heading
 slug: Web/CSS/:heading
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.heading
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`:heading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) in a document. This allows you to style all headings at once, rather than matching and styling them individually.
 

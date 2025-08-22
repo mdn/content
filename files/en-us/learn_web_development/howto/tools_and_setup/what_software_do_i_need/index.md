@@ -42,10 +42,6 @@ You'll need tools to:
 
 Nearly all operating systems by default include a text editor and a browser, which you can use to view websites. As a result, you usually only need to acquire software for transferring files to your web server.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
-
 ## Dig deeper
 
 ### Creating and editing webpages

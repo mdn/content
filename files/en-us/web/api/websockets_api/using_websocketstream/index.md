@@ -99,7 +99,7 @@ Alternatively you can use the {{domxref("WebSocketStream.close()")}} method to c
 
 ```js
 wss.close({
-  code: 4000,
+  closeCode: 4000,
   reason: "Night draws to a close",
 });
 ```
@@ -211,7 +211,7 @@ Finally, we add an event listener to the close button that closes the connection
 ```js
 closeBtn.addEventListener("click", () => {
   wss.close({
-    code: 1000,
+    closeCode: 1000,
     reason: "That's all folks",
   });
 
@@ -274,7 +274,7 @@ if (!("WebSocketStream" in self)) {
 
   closeBtn.addEventListener("click", () => {
     wss.close({
-      code: 1000,
+      closeCode: 1000,
       reason: "That's all folks",
     });
 

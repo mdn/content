@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Values and units"
-short-title: Values and units
+short-title: "Test: Values and units"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 
@@ -197,3 +199,5 @@ Use `background-position` with the `center` keyword and a percentage:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

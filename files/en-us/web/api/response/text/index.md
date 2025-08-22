@@ -59,9 +59,17 @@ function getData(pageId) {
   console.log(pageId);
   const myRequest = new Request(`${pageId}.txt`);
   fetch(myRequest)
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.text();
+    })
     .then((text) => {
       myArticle.innerText = text;
+    })
+    .catch((error) => {
+      myArticle.innerText = `Error: ${error.message}`;
     });
 }
 ```

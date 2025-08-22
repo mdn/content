@@ -192,7 +192,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
     }
     h4 span {
       background: #217ac0;
-      padding: 2px 6px 2px 6px;
+      padding: 2px 6px;
     }
     h4 span {
       border: 1px solid #cee9f9;
