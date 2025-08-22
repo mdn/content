@@ -43,7 +43,7 @@ The `form` attribute can be used to associate a form control nested in one `<for
 In this case, the username will be submitted when the `externalForm` is submitted, while the `internalForm` has no associated form controls.
 The `form` attribute only associates the element on which it is set. When used on a `<fieldset>` element it only associates the `<fieldset>`; it does **not** automatically associate the form controls nested within that `<fieldset>`.
 
-In this example, the `<fieldset> and`username` `<input>`are associate with the`exampleForm`, but the`password` is not:
+In this example, the `<fieldset>` and `username` `<input>` are associated with the`exampleForm`, but the`password` is not:
 
 ```html
 <form id="exampleForm"></form>
