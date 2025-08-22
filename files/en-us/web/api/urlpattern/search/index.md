@@ -28,6 +28,7 @@ const pattern = new URLPattern({
   search: "q=baby",
 });
 console.log(pattern.search); // "q=baby"
+console.log(pattern.test("https://example.com/shoes?q=baby")); // true
 ```
 
 ## Specifications

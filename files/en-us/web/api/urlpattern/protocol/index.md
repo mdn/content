@@ -26,6 +26,7 @@ This pattern matches any URL that has the `http` or `https` protocol.
 ```js
 const pattern = new URLPattern({ protocol: "http{s}?" });
 console.log(pattern.protocol); // 'http{s}?'
+console.log(pattern.test("https://example.com/shoes?q=baby")); // true
 ```
 
 ## Specifications

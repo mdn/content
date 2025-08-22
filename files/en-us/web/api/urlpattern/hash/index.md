@@ -26,6 +26,7 @@ This pattern matches any fragment that starts with `books/` and ends with an arb
 ```js
 const pattern = new URLPattern("https://example.org#books/:id");
 console.log(pattern.hash); // 'books/:id'
+console.log(pattern.test("https://example.org#books/123")); // true
 ```
 
 ## Specifications

@@ -26,6 +26,7 @@ This pattern matches any URL that starts with `/books/`, followed by an integer.
 ```js
 const pattern = new URLPattern({ pathname: "/books/:id(\\d)" });
 console.log(pattern.pathname); // "/books/:id(\\d)"
+console.log(pattern.test("https://example.com/books/8")); // true
 ```
 
 ## Specifications

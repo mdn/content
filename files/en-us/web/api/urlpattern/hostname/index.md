@@ -26,6 +26,7 @@ This pattern matches any hostname that is a direct subdomain of `example.org`.
 ```js
 const pattern = new URLPattern("https://*.example.org");
 console.log(pattern.hostname); // '*.example.org'
+console.log(pattern.test("https://horses.example.org")); // true
 ```
 
 ## Specifications

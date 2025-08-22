@@ -26,6 +26,7 @@ This pattern matches the passwords `correct-horse-battery` and `correct-horse-ba
 ```js
 const pattern = new URLPattern({ password: "correct-horse-battery{-staple}?" });
 console.log(pattern.password); // 'correct-horse-battery{-staple}?'
+console.log(pattern.test("https://user:correct-horse-battery@example.com")); // true
 ```
 
 ## Specifications
