@@ -6,15 +6,7 @@ browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
-
-In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g., in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
-
-Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` values defined in the specification can be used to help ensure content is visible even to viewers using non‑rectangular displays.
-
-For example, a common issue solved by `env()` is that of device notifications covering up some of the app user interface. By positioning fixed elements using `env()` you can ensure that they display in a safe area of the viewport.
-
-Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, they can position elements where the title bar would have been and ensure that content stays clear of the window control buttons.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a user-agent defined environment variable into your CSS.
 
 ## Syntax
 
@@ -32,7 +24,15 @@ env(safe-area-inset-bottom, 0.5vh);
 env(safe-area-inset-left, 1.4rem);
 ```
 
-### Values
+### Parameters
+
+The `env()` function's syntax is as follows:
+
+```plain
+env(<environment-variable-name>, <fallback>)
+```
+
+The `<environment-variable-name>` can be one of the following:
 
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
@@ -44,7 +44,19 @@ env(safe-area-inset-left, 1.4rem);
   - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
 > [!NOTE]
-> Unlike other CSS properties, user agent-defined property names are case-sensitive.
+> Like other CSS custom property names, user agent-defined environment variable names are case-sensitive.
+
+## Description
+
+The `env()` function inserts the value of a user-agent defined environment variable into your CSS, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+
+In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (e.g., in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
+
+Originally provided by the iOS browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` values defined in the specification can be used to help ensure content is visible even to viewers using non‑rectangular displays.
+
+For example, a common issue solved by `env()` is that of device notifications covering up some of the app user interface. By positioning fixed elements using `env()` you can ensure that they display in a safe area of the viewport.
+
+Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, developers can position elements where the title bar would have been and ensure that content stays clear of the window control buttons.
 
 ## Formal syntax
 
@@ -211,7 +223,9 @@ main {
 
 ## See also
 
-- {{CSSxRef("var", "var(…)")}}
+- [Using environment variables](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables)
+- [CSS environment variables](/en-US/docs/Web/CSS/CSS_environment_variables) module
+- {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

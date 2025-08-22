@@ -1,58 +1,37 @@
 ---
 title: Firefox 142 for developers
-short-title: Firefox 142 (Beta)
+short-title: Firefox 142 (Stable)
 slug: Mozilla/Firefox/Releases/142
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 142 that affect developers.
-Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 142 was released on [August 19, 2025](https://whattrainisitnow.com/release/?version=142).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
-
 ### HTML
-
-<!-- No notable changes. -->
 
 #### Removals
 
 - The {{HTMLElement('object')}} element no longer supports the deprecated `codebase` attribute. Use the [`data`](/en-US/docs/Web/HTML/Reference/Elements/object#data) attribute instead. (See [Firefox bug 1973900](https://bugzil.la/1973900) for more details.)
 
-<!-- ### CSS -->
+### CSS
 
-<!-- No notable changes. -->
+- The [`&` selector](/en-US/docs/Web/CSS/Nesting_selector) inside {{cssxref("@scope")}} no longer inherits the [specificity of the scope start selector](/en-US/docs/Web/CSS/@scope#specificity_in_scope).
+  This makes `&` selectors in `@scope` consistent with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting), avoiding unexpected specificity differences (see [CSS nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)).
+  ([Firefox bug 1975531](https://bugzil.la/1975531)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
 - The [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API) is fully supported, enabling you to match and parse URLs using a standardized pattern syntax. ([Firefox bug 1731418](https://bugzil.la/1731418)).
+- The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) now fully supports the {{domxref("HTMLInputElement.webkitdirectory")}} (and corresponding HTML [`webkitdirectory`](/en-US/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) attribute) and {{domxref("File.webkitRelativePath")}} properties on Firefox Android.
+  This lets you configure an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element to accept directories instead of files ([Firefox bug 1973726](https://bugzil.la/1973726)).
 
 #### DOM
 
@@ -72,12 +51,6 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
   You can also set a `codec` for each encoding in the [`init.sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) array that's passed to the {{domxref("RTCPeerConnection/addTransceiver","addTransceiver()")}} method of the {{domxref("RTCPeerConnection")}} interface.
   ([Firefox bug 1894137](https://bugzil.la/1894137)).
 - The {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}, {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}, {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}, {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}, {{domxref("RTCInboundRtpStreamStats.keyFramesDecoded", "keyFramesDecoded")}}, {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}, {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}, {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}} and {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} properties of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1926622](https://bugzil.la/1926622)).
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -103,21 +76,17 @@ Firefox 142 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Cookies created with {{WebExtAPIRef("cookies.set()")}} in Nightly are now validated, and invalid cookies are rejected. The implementation in Nightly is to enable monitoring for any issues. The intention is to enforce validation in all channels in a future release. ([Firefox bug 1976197](https://bugzil.la/1976197))
 - Adds the {{WebExtAPIRef("browserAction.onUserSettingsChanged")}} and {{WebExtAPIRef("action.onUserSettingsChanged")}} events that listen for changes in the user-specified settings that affect an extension's action. ([Firefox bug 1828220](https://bugzil.la/1828220))
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
-
 ## Experimental web features
 
 - **`anchor-size()`** (Nightly): `layout.css.anchor-positioning.enabled`
 
   The CSS {{CSSXRef("anchor-size")}} function enables setting anchor-positioned element's size, position, and margins relative to the dimensions of anchor elements. ([Firefox bug 1972610](https://bugzil.la/1972610)).
 
-- **`:heading`** and **`:heading()`**: `layout.css.anchor-positioning.enabled`
+- **`:heading`** and **`:heading()`**: `layout.css.heading-selector.enabled`
 
   The CSS {{CSSXRef(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once rather than targeting them individually. The {{CSSXRef(":heading_function", ":heading()")}} functional pseudo-class allows you to style heading elements that match the [`<An+B>`](/en-US/docs/Web/CSS/:heading_function#functional_notation) notation. ([Firefox bug 1974386](https://bugzil.la/1974386)).
 
-- **`view-transition-name: match-element`** (Nightly): `layout.css.anchor-positioning.enabled`
+- **`view-transition-name: match-element`** (Nightly): `dom.viewTransitions.enabled`
 
   The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
 
