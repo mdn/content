@@ -26,6 +26,9 @@ A `::scroll-marker` is generated on an element when the `::scroll-marker`'s {{cs
 
 The scroll container's `::scroll-marker-group` pseudo-element automatically contains any `::scroll-marker` pseudo-elements generated on the scroll container or its descendants. This allows them to be positioned and laid out as a group and is typically used when creating a CSS carousel to create a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
 
+> [!NOTE]
+> Alternatively, a scroll marker group can be created from an existing element container using {{cssxref("scroll-target-group")}}; any contained {{htmlelement("a")}} elements with fragment identifiers linking to sections of the page automatically behave like scroll markers.
+
 Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
 
 ## Examples
@@ -189,6 +192,7 @@ To improve user experience, we set a different color on the markers on {{cssxref
 ## See also
 
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
