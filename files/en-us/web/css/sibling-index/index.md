@@ -126,7 +126,7 @@ This example demonstrates how to create an ordered list using `sibling-index()`,
 We include a {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
 
 ```html
-<nav arial-label="Ordered list">
+<nav aria-label="Ordered list">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>
