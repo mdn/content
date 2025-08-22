@@ -155,16 +155,16 @@ console.log(pattern4.test("https://example.com/#hash")); // true
 
 #### Lookahead and lookbehind assertions
 
-Lookahead and lookbehind asserts allow you to specify that text ahead or behind the current parsing position matches a particular pattern, without that match being captured, or the characters being consumed.
+[Lookahead](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) and [lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) asserts allow you to specify that text ahead or behind the current parsing position matches a particular pattern, without that match being captured, or the characters being consumed.
 
 There are four types of assertions:
 
-- `(?=...)`: A positive lookahead assertion specifies a pattern than the following characters must match.
-- `(?!...)`: A negative lookahead assertion specifies a pattern than the following characters must not match.
-- `(?<=...)`: A positive lookbehind assertion specifies a pattern than the preceding characters must match.
-- `(?<!...)`: A negative lookbehind assertion specifies a pattern than the preceding characters must not match.
+- `(?=...)`: A positive lookahead assertion specifies a pattern that the following characters must match.
+- `(?!...)`: A negative lookahead assertion specifies a pattern that the following characters must not match.
+- `(?<=...)`: A positive lookbehind assertion specifies a pattern that the preceding characters must match.
+- `(?<!...)`: A negative lookbehind assertion specifies a pattern that the preceding characters must not match.
 
-Lookahead and lookbehind assertions do not match intuitively.
+Be careful when using lookahead and lookbehind assertions with `URLPattern`, as there is some behavior you may find unintuitive.
 For example, you would expect the following lookahead assertion to match a `pathname` of `/ab`, but this is not what happens.
 
 ```js example-bad
@@ -406,10 +406,10 @@ console.log(patternOptionalSlash.test("https://example.com/books/")); // true
 ### Pattern normalization
 
 When a pattern is parsed it is automatically normalized to a canonical form.
-For example, Unicode characters are percent encoded in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc.
+For example, Unicode characters are [percent-encoded](/en-US/docs/Glossary/Percent-encoding) in the pathname property, punycode encoding is used in the hostname, default port numbers are elided, paths like `/foo/./bar/` are collapsed to `/foo/bar`, etc.
 In addition, there are some pattern representations that parse to the same underlying meaning, like `foo` and `{foo}`.
 Such cases are normalized to the simplest form.
-In this case `{foo}` gets changed to `foo`.
+In this case `{foo}` is normalized to `foo`, for example.
 
 ## Inheritance from a base URL
 
@@ -632,9 +632,9 @@ try {
 
 The following example shows how input values that match pattern groups can later be accessed from the {{domxref("URLPattern/exec","exec()")}} result object.
 
-The `input` property is the string that is matched by the pattern: in this case`cdn.example.com`.
+The `input` property is the string that is matched by the pattern: in this case it's `cdn.example.com`.
 The `groups` property contains captured groups, indexed by number for unnamed groups, and name for named groups.
-In this case there is just one unnamed group for the wildcard property, with the value `cdn`.
+In this case, there is only one unnamed group for the wildcard property, with the value `cdn`.
 
 ```js
 const pattern = new URLPattern({ hostname: "*.example.com" });

@@ -26,6 +26,7 @@ This pattern matches only if the username part of the URL is `admin`.
 ```js
 const pattern = new URLPattern({ username: "admin" });
 console.log(pattern.username); // "admin"
+console.log(pattern.test("http://admin:password@example.com/")); // true
 ```
 
 ## Specifications

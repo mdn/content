@@ -29,6 +29,7 @@ This pattern matches any URL that has the port `80`, `443`, or `8080`.
 ```js
 const pattern = new URLPattern({ port: "(80|443|8080)" });
 console.log(pattern.port); // "(80|443|8080)"
+console.log(pattern.test("http://example.com:8080/")); // true
 ```
 
 ## Specifications

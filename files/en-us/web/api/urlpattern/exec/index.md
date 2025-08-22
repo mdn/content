@@ -50,7 +50,7 @@ The object has the following properties:
     Each property contains an object with the following properties:
     - `input`
       - : The part of the input corresponding to the current URL-part property (which must have matched the pattern).
-        This might be the empty string ("").
+        This might be the empty string (`""`).
     - `groups`
       - : An object with properties for each match group in the URL part (if any), and the corresponding matched values in the inputs.
         The group properties are numbered from 0 for unnamed match groups (such as the wildcard).
