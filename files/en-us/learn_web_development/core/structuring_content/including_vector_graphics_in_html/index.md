@@ -187,7 +187,9 @@ This is definitely not the best method to choose:
 
 In this exercise we'd like you to have a go at playing with some SVG. Press the **Play** button to open the next example in the MDN Playground and edit it there.
 
-You can also go to the [SVG Element Reference](/en-US/docs/Web/SVG/Reference/Element), find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.
+Go to the [SVG Element Reference](/en-US/docs/Web/SVG/Reference/Element) to see what other elements you can use that bring a lot of built-in functionality.
+There are other shapes you can try, like ellipses, or you can experiment with [patterns](/en-US/docs/Web/SVG/Reference/Element/pattern), or even [filter effects](/en-US/docs/Web/SVG/Reference/Element/filter).
+This section is all about your research skills, trying something new, and having some fun.
 
 If you get stuck and can't get your code working, you can always reset it using the _Reset_ button in the Playground.
 
