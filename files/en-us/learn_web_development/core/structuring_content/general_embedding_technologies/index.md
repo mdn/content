@@ -49,26 +49,20 @@ With the history lesson out of the way, let's move on and see how to use some of
 
 In this article we are going to jump straight into an exercise, to immediately give you an idea of what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available.
 
-1. First of all, press the **Play** button to open the next example in the MDN Playground and edit it there.
-2. First, we'll look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+1. First of all, open the [MDN Playground](/en-US/play).
+2. Now we'll look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
    1. Go to YouTube and find a video you like.
    2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
    3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
    4. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
-3. For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the example:
+3. For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the Playground:
    1. Go to Google Maps and find a map you like.
-   2. Click on the "Hamburger Menu" (three horizontal lines) in the top left of the UI.
+   2. Click on the "hamburger menu" (three horizontal lines) in the top left of the UI.
    3. Select the _Share or embed map_ option.
    4. Select the _Embed a map_ option, which will give you some `<iframe>` code — copy it.
    5. Paste it into the _HTML_ pane in the Playground, and see what the result is in the output.
 
 If you make a mistake, you can always reset it using the _Reset_ button in the Playground.
-
-```html live-sample___embedding
-
-```
-
-{{ EmbedLiveSample('embedding', 700, 60) }}
 
 ## iframes in detail
 
