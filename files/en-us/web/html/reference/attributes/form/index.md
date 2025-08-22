@@ -66,8 +66,8 @@ When used as an attribute for `<output>` element, its name and value are **not**
 
 ```html
 <form id="calcForm">
-  <label>First number: <input id="a" value="2" type="number" />
-  <label>Second number: <input id="b" value="3" type="number"/>
+  <label>First number: <input id="a" value="2" type="number" /></label>
+  <label>Second number: <input id="b" value="3" type="number"/></label>
   <label>Sum: <output name="result" for="a b" form="calcForm">5</output></label>
 </form>
 
@@ -81,16 +81,19 @@ This example demonstrates how form-associated elements can be associated to a `<
 
 ```html
 <form id="loginForm">
-  <input type="text" name="username" />
+  <label>Username: <input type="text" name="username" /></label>
 </form>
 
-<input form="loginForm" type="password" name="password" />
+<label>Password: <input form="loginForm" type="password" name="password" /></label>
+<label>
+Choose an option:
 <select form="loginForm" name="options">
   <option value="A">A</option>
   <option value="B">B</option>
 </select>
-<textarea form="loginForm" rows="4" name="description">Hello, World!</textarea>
-<button form="loginForm" type="submit">Submit</button>
+</label>
+<label>Description: <textarea form="loginForm" rows="4" name="description">Hello, World!</textarea></label>
+<button form="loginForm" type="submit" name="submitLogin" value="Login">Submit</button>
 ```
 
 ### Element associated with a different form
@@ -102,7 +105,7 @@ This example demonstrates how an element's `form` attribute can associate the el
   <input type="text" name="targetInput" />
 </form>
 <form id="parentForm">
-  <button form="targetForm" type="submit">Submit target form</button>
+  <button form="targetForm" type="submit" name="submitTarget" value="Target">Submit target form</button>
 </form>
 ```
 
