@@ -58,7 +58,7 @@ In this article, we'll build a simple contact form. Let's make a rough sketch.
 
 Our form will contain three text fields and one button. We are asking the user for their name, their email and the message they want to send. Hitting the button will send their data to a web server.
 
-## Active learning: Implementing our form HTML
+## Implementing our form HTML
 
 Ok, let's have a go at creating the HTML for our form. We will use the following HTML elements: {{HTMLelement("form")}}, {{HTMLelement("label")}}, {{HTMLelement("input")}}, {{HTMLelement("textarea")}}, and {{HTMLelement("button")}}.
 
