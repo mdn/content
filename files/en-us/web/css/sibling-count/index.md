@@ -17,8 +17,8 @@ The **`sibling-count()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 
 ## Syntax
 
-```css
---total-sibling-elements: sibling-count();
+```css-nolint
+sibling-count()
 ```
 
 ### Parameters

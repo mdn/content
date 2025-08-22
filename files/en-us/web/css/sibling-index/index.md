@@ -73,10 +73,8 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 
 ## Syntax
 
-```css
-li {
-  width: calc(sibling-index() * 100px);
-}
+```css-nolint
+sibling-index()
 ```
 
 ### Parameters
