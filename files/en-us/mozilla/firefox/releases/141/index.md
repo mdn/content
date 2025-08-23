@@ -1,8 +1,8 @@
 ---
 title: Firefox 141 for developers
-short-title: Firefox 141 (Stable)
+short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -52,7 +52,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 
 #### General
 
-- Removed the experimental CDP (Chrome DevTools Protocol) implementation from Firefox. With it we also removed the support for the `remote.active-protocols` preference. More details on this topic can be found on [fxdx.dev](https://fxdx.dev/cdp-retirement-in-firefox/) ([Firefox bug 1882096](https://bugzil.la/1882096)).
+- Removed the experimental CDP (Chrome DevTools Protocol) implementation from Firefox. With it we also removed the support for the `remote.active-protocols` preference. More details on this topic can be found on [Firefox Developer Experience](https://fxdx.dev/cdp-retirement-in-firefox/) ([Firefox bug 1882096](https://bugzil.la/1882096)).
 - Removed the temporary `remote.system-access-check.enabled` preference. This preference can no longer be used to disable system access checks when using WebDriver in Firefox's chrome scope during testing ([Firefox bug 1955007](https://bugzil.la/1955007)).
 
 #### WebDriver BiDi

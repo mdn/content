@@ -83,7 +83,7 @@ Linux is a more diverse platform. Your distribution of Linux might include an ex
 | Linux desktop on x86_64 CPU | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
 > [!NOTE]
-> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} (see [Firefox 127.0 Release Notes](https://www.mozilla.org/en-US/firefox/127.0/releasenotes/)).
+> In Firefox 127.0 and later, 32-bit x86 will now be reported as x86_64 in Firefox's User-Agent string, {{domxref("navigator.platform")}}, and {{domxref("navigator.oscpu")}} (see [Firefox 127.0 Release Notes](https://www.firefox.com/en-US/firefox/127.0/releasenotes/)).
 
 ## Firefox for Android
 

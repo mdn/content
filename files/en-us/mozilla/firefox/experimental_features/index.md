@@ -295,7 +295,7 @@ The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the
 
 Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
-This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+This will allow users to, for example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
 Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
@@ -318,7 +318,21 @@ The CSS {{CSSXRef(":active-view-transition")}} pseudo-class enables you to style
 | Nightly           | 141           | Yes                 |
 | Developer Edition | 141           | No                  |
 | Beta              | 141           | No                  |
-| Release           | -             | No                  |
+| Release           | 141           | No                  |
+
+- `dom.viewTransitions.enabled`
+  - : Set to `true` to enable.
+
+### `match-element` value for `view-transition-name` property
+
+The {{CSSXRef("view-transition-name", "match-element", "#match-element")}} value of the CSS {{CSSXRef("view-transition-name")}} property [automatically](/en-US/docs/Web/CSS/view-transition-name#specifying_view-transition-name_values_automatically) assigns a unique internal `view-transition-name` to each selected element, rather than having to name them individually. ([Firefox bug 1956141](https://bugzil.la/1956141)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | Yes                 |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
 
 - `dom.viewTransitions.enabled`
   - : Set to `true` to enable.

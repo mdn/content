@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: totalFreezesDuration property"
 short-title: totalFreezesDuration
 slug: Web/API/RTCInboundRtpStreamStats/totalFreezesDuration
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`totalFreezesDuration`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary indicates the total time that the video in this stream has spent frozen, in seconds.
 

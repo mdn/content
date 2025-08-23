@@ -21,4 +21,4 @@ Edge used EdgeHTML as its {{Glossary("Engine/Rendering", "rendering engine")}} u
   - {{Glossary("Blink")}}
   - {{Glossary("Trident")}}
   - {{Glossary("WebKit")}}
-  - Other browsers: {{glossary("Google Chrome")}}, {{glossary("Microsoft Edge")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}
+  - Other browsers: {{glossary("Apple Safari")}}, {{glossary("Google Chrome")}}, {{glossary("Mozilla Firefox")}}, {{glossary("Opera Browser")}}

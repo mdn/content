@@ -174,7 +174,7 @@ As seen in the previous `render()` function code example, each token is given a 
   font-style: italic;
   color: rgb(127 230 127);
   border: 1px dashed #8c8c8c;
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0;
 }
 
 .token-quoteStart,

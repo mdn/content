@@ -48,7 +48,7 @@ Around 2006–2007, Mozilla started work on an experimental 3D canvas implementa
 
 This article will focus mainly on 2D canvas, as raw WebGL code is very complex. We will however show how to use a WebGL library to create a 3D scene more easily, and you can find a tutorial covering raw WebGL elsewhere — see [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
-## Active learning: Getting started with a \<canvas>
+## Getting started with a \<canvas>
 
 If you want to create a 2D _or_ 3D scene on a web page, you need to start with an HTML {{htmlelement("canvas")}} element. This element is used to define the area on the page into which the image will be drawn. This is as simple as including the element on the page:
 

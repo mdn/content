@@ -140,7 +140,7 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .octave {
   display: inline-block;
-  padding: 0 6px 0 0;
+  padding-right: 6px;
 }
 
 .settingsBar {

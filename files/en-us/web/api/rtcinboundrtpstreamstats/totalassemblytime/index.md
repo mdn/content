@@ -3,10 +3,12 @@ title: "RTCInboundRtpStreamStats: totalAssemblyTime property"
 short-title: totalAssemblyTime
 slug: Web/API/RTCInboundRtpStreamStats/totalAssemblyTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`totalAssemblyTime`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total time spent assembling successfully decoded video frames that were transported in multiple RTP packets.
 

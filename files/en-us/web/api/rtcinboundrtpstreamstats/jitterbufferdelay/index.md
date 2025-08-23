@@ -38,5 +38,5 @@ A positive number, in seconds.
 ## See also
 
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferEmittedCount", "jitterBufferEmittedCount")}}
-- {{domxref("RTCInboundRtpStreamStats.jitterBufferDelay", "jitterBufferMinimumDelay")}}
+- {{domxref("RTCInboundRtpStreamStats.jitterBufferMinimumDelay", "jitterBufferMinimumDelay")}}
 - {{domxref("RTCInboundRtpStreamStats.jitterBufferTargetDelay", "jitterBufferTargetDelay")}}

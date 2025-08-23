@@ -24,7 +24,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.concealmentEvents", "concealmentEvents")}}
   - : A positive integer that indicates the number of concealment events, where a single event is counted for all consecutive concealed samples following a non-concealed sample.
     _Undefined for video streams._
-- {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}}
+- {{domxref("RTCInboundRtpStreamStats.estimatedPlayoutTimestamp", "estimatedPlayoutTimestamp")}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that indicates the estimated playout time of this receiver's track.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}
   - : A positive integer value that indicates the number of RTP Forward Error Correction (FEC) packets which have been received for this source, for which the error correction payload was discarded.
@@ -33,7 +33,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.frameHeight", "frameHeight")}}
   - : A positive integer that indicates the height of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
-- {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}}
+- {{domxref("RTCInboundRtpStreamStats.framesAssembledFromMultiplePackets", "framesAssembledFromMultiplePackets")}} {{experimental_inline}}
   - : A positive integer that indicates the total number of correctly decoded frames for this RTP stream that consist of more than one RTP packet.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
@@ -48,7 +48,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.frameWidth", "frameWidth")}}
   - : A positive integer that indicates the width of the last decoded frame, in pixels.
     _Undefined for audio streams and before the first frame is decoded._
-- {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}}
+- {{domxref("RTCInboundRtpStreamStats.freezeCount", "freezeCount")}} {{experimental_inline}}
   - : A positive integer that indicates the total number of video freezes experienced by this receiver.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.headerBytesReceived", "headerBytesReceived")}}
@@ -75,10 +75,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     This is the value of the corresponding {{domxref("RTCRtpTransceiver.mid")}} unless that is null, in which case the statistic property is not present.
 - {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}
   - : A positive integer that indicates the total number of RTP packets discarded by the jitter buffer due to late or early-arrival.
-- {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}}
+- {{domxref("RTCInboundRtpStreamStats.pauseCount", "pauseCount")}} {{experimental_inline}}
   - : A positive integer that indicates the number of video pauses experienced by this receiver.
     _Undefined for audio streams._
-- {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}}
+- {{domxref("RTCInboundRtpStreamStats.playoutId", "playoutId")}} {{experimental_inline}}
   - : A string that identifies the corresponding {{domxref("RTCAudioPlayoutStats")}} for an audio stream.
     _Undefined for video streams._
 - {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}}
@@ -90,7 +90,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.silentConcealedSamples", "silentConcealedSamples")}}
   - : A positive integer that indicates the number of silent concealed samples.
     _Undefined for video streams._
-- {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}}
+- {{domxref("RTCInboundRtpStreamStats.totalAssemblyTime", "totalAssemblyTime")}} {{experimental_inline}}
   - : A number that indicates the total time spent assembling successfully decoded video frames that were transported in multiple RTP packets, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy", "totalAudioEnergy")}}
@@ -99,13 +99,13 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}
   - : A number that indicates the total time spent decoding frames in this stream, in seconds.
     _Undefined for audio streams._
-- {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}}
+- {{domxref("RTCInboundRtpStreamStats.totalFreezesDuration", "totalFreezesDuration")}} {{experimental_inline}}
   - : A positive number that indicates the total time that the stream has spent frozen, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalInterFrameDelay", "totalInterFrameDelay")}}
   - : A positive number that indicates the total time spent between consecutively rendered frames, recorded just after a frame has been rendered.
     _Undefined for audio streams._
-- {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}}
+- {{domxref("RTCInboundRtpStreamStats.totalPausesDuration", "totalPausesDuration")}} {{experimental_inline}}
   - : A positive number that indicates the total time that the stream has spent with paused video, in seconds.
     _Undefined for audio streams._
 - {{domxref("RTCInboundRtpStreamStats.totalProcessingDelay", "totalProcessingDelay")}}
@@ -140,12 +140,12 @@ Their primary purpose is to examine the error resiliency of the connection, as t
 These statistics are measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
 
 - {{domxref("RTCInboundRtpStreamStats.packetsReceived", "packetsReceived")}}
-  - : The total number of RTP packets received for this [synchronizing source (SSRC)](#ssrc), including retransmissions.
+  - : The total number of RTP packets received for this [synchronizing source (SSRC)](/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc), including retransmissions.
 - {{domxref("RTCInboundRtpStreamStats.packetsLost", "packetsLost")}}
-  - : The total number of RTP packets lost for this [synchronizing source (SSRC)](#ssrc).
+  - : The total number of RTP packets lost for this [synchronizing source (SSRC)](/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc).
     Note that this can be negative, as more packets may be received than the receiver expects.
 - {{domxref("RTCInboundRtpStreamStats.jitter", "jitter")}}
-  - : Packet jitter for this [synchronizing source (SSRC)](#ssrc), measured in seconds.
+  - : Packet jitter for this [synchronizing source (SSRC)](/en-US/docs/Web/API/RTCInboundRtpStreamStats/ssrc), measured in seconds.
 
 ### Common RTP stream statistics
 
