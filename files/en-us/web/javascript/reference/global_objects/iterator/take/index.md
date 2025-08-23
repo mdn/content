@@ -37,11 +37,14 @@ The following example creates an iterator that yields terms in the Fibonacci seq
 
 ```js
 function* fibonacci() {
+  let last = 0;
   let current = 1;
   let next = 1;
   while (true) {
     yield current;
-    [current, next] = [next, current + next];
+    last = current;
+    current = next;
+    next += last;
   }
 }
 
