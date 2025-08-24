@@ -36,14 +36,14 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Negative Z face for a cube-mapped texture.
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image level and level _n_ is the n-th mipmap reduction level.
+- `internalformat`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how the texture should be stored after it's loaded.
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture in texels.
 - `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture in texels.
 - `border`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
-- `internalformat`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how the texture should be stored after it's loaded.
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. In WebGL 1, this must be the same as `internalformat`.
 - `type`

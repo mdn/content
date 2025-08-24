@@ -45,12 +45,30 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, offs
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture in texels.
 - `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture in texels.
-- `internalformat`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how the texture should be stored after it's loaded.
 - `format`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. In WebGL 1, this must be the same as `internalformat`.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. Possible values:
+    - `gl.ALPHA`: Discards the red, green and blue components and reads the alpha component.
+    - `gl.RGB`: Discards the alpha components and reads the red, green and blue components.
+    - `gl.RGBA`: Red, green, blue and alpha components are read from the color buffer.
+    - `gl.LUMINANCE`: Each color component is a luminance component, alpha is 1.0.
+    - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
+
+    When using the {{domxref("EXT_sRGB")}} extension:
+    - `ext.SRGB_EXT`
+    - `ext.SRGB_ALPHA_EXT`
+
+    When using a {{domxref("WebGL2RenderingContext")}}, the following values are available additionally:
+    - `gl.RED`
+    - `gl.RED_INTEGER`
+    - `gl.RG`
+    - `gl.RG_INTEGER`
+    - `gl.RGB_INTEGER`
+    - `gl.RGBA_INTEGER`
+    - `gl.DEPTH_COMPONENT`
+    - `gl.DEPTH_STENCIL`
+
 - `type`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the size of each integer element in the raw texel data. For the combinations of `internalformat`, `format`, and `type` available, see {{domxref("WebGLRenderingContext.texImage2D()")}}.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the size of each integer element in the raw texel data. For the combinations of `format` and `type` available, see {{domxref("WebGLRenderingContext.texImage2D()")}}.
 
 The texture source can be provided in one of three ways: from an {{jsxref("ArrayBuffer")}} (possibly shared) using `srcData` and `srcOffset`; from a DOM pixel `source`; or, in WebGL 2, from `gl.PIXEL_UNPACK_BUFFER` using `offset`.
 
