@@ -10,6 +10,8 @@ The **`::highlight()`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements
 
 A custom highlight is a collection of {{domxref("Range")}} objects and is registered on a webpage using the {{domxref("HighlightRegistry")}}.
 
+The `::highlight()` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/Pseudo-elements#highlight_pseudo-elements_inheritance) section.
+
 ## Allowable properties
 
 Only certain CSS properties can be used with `::highlight()`:
