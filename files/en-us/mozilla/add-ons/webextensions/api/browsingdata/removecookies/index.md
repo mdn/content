@@ -3,9 +3,8 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCookies
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the browser's cookies.
 

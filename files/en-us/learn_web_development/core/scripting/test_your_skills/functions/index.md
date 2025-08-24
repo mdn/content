@@ -1,18 +1,17 @@
 ---
 title: "Test your skills: Functions"
-short-title: Functions
+short-title: "Test: Functions"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions), [Build your own function](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function), and [Function return values](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) articles.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions), [Build your own function](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function), and [Function return values](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) articles.
 
 > [!NOTE]
-> For Tasks 1–4, you can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## DOM manipulation: considered useful
 
@@ -32,15 +31,8 @@ Watch the embedded scrim, and complete the task on the timeline (the little ghos
 
 To complete our first functions task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Define a function—`chooseName()`—that prints a random name from the provided array (`names`) into the provided paragraph (`para`).
-3. Call the `chooseName()` function once.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Define a function—`chooseName()`—that prints a random name from the provided array (`names`) into the provided paragraph (`para`).
+2. Call the `chooseName()` function once.
 
 <!-- Code shared across examples -->
 
@@ -103,23 +95,13 @@ chooseName();
 
 ## Task 2
 
-This task requires you to define a function that draws onto a `<canvas>` element.
+This task requires you to create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a function that draws a rectangle on the provided `<canvas>` (reference variable `canvas`, context available in `ctx`), based on the five provided input variables:
-   - `x` — the x coordinate of the rectangle.
-   - `y` — the y coordinate of the rectangle.
-   - `width` — the width of the rectangle.
-   - `height` — the height of the rectangle.
-   - `color` — the color of the rectangle.
-
-> [!CALLOUT]
->
-> You can [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+- `x` — the x coordinate of the rectangle.
+- `y` — the y coordinate of the rectangle.
+- `width` — the width of the rectangle.
+- `height` — the height of the rectangle.
+- `color` — the color of the rectangle.
 
 ```html hidden live-sample___functions-2
 <canvas width="240" height="160"></canvas>
@@ -174,16 +156,9 @@ In this task, you return to the problem posed in Task 1, with the aim of making 
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Refactor the code that generates the random number into a separate function called `random()`, which takes as parameters two generic bounds that the random number should be between, and returns the result.
-3. Update the `chooseName()` function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.
-4. Print the returned result into the paragraph (`para`)'s `textContent`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Refactor the code that generates the random number into a separate function called `random()`, which takes as parameters two generic bounds that the random number should be between, and returns the result.
+2. Update the `chooseName()` function so that it makes use of the random number function, takes the array to choose from as a parameter (making it more flexible), and returns the result.
+3. Print the returned result into the paragraph (`para`)'s `textContent`.
 
 ```js live-sample___functions-3
 const names = [
@@ -241,16 +216,7 @@ para.textContent = chooseItem(names);
 
 In this task, we have an array of names, and we're using {{jsxref("Array.filter()")}} to get an array containing only the names shorter than 5 characters. The filter is currently being passed a named function `isShort()`. This checks the length of the name, returning `true` if the name is less than 5 characters long, and `false` otherwise.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Update the code so that the functionality inside `isShort()` is instead included directly inside the `filter()` call as an arrow function. See how compact you can make it.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions4-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, update the code so that the functionality inside `isShort()` is instead included directly inside the `filter()` call as an arrow function. See how compact you can make it.
 
 ```js live-sample___functions-4
 const names = [
@@ -295,3 +261,5 @@ para.textContent = shortNames;
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

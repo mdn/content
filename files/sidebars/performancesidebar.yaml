@@ -24,16 +24,35 @@ sidebar:
   - type: listSubPages
     path: /Learn_web_development/Extensions/Performance
     includeParent: true
-    title: Learn web performance
+    title: Learn_web_performance
     details: closed
   - type: section
     title: Reference
   - type: listSubPages
     path: /Web/API/Performance_API
     includeParent: true
-    title: Performance APIs
+    title: PerformanceAPIs
     details: open
   - type: section
-    title: Related APIs
+    title: RelatedAPIs
   - /Web/API/Beacon_API
   - /Web/API/Intersection_Observer_API
+l10n:
+  en-US:
+    Tutorials: Tutorials
+    Learn_web_performance: Learn web performance
+    Reference: Reference
+    PerformanceAPIs: Performance APIs
+    RelatedAPIs: Related_APIs
+  ja:
+    Tutorials: チュートリアル
+    Learn_web_performance: ウェブパフォーマンスの学習
+    Reference: リファレンス
+    PerformanceAPIs: パフォーマンス API
+    RelatedAPIs: 関連 API
+  zh-CN:
+    Tutorials: 教程
+    Learn_web_performance: 学习 Web 性能
+    Reference: 参考
+    PerformanceAPIs: 性能 API
+    RelatedAPIs: 相关的 API

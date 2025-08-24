@@ -3,9 +3,8 @@ title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 
@@ -54,6 +53,8 @@ Events have three functions:
 
             Frame IDs are unique for a given tab and process.
 
+        - `parentFrameId`
+          - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
         - `timeStamp`
           - : `number`. The time at which the error occurred, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
         - `error`

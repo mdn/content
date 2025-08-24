@@ -421,7 +421,7 @@ The `id` of the `<clipPath>` is the parameter of the {{cssxref("url_function", "
   width: 200px;
   height: 200px;
   background: linear-gradient(rebeccapurple, magenta) blue;
-  clip-path: url(#heart);
+  clip-path: url("#heart");
 }
 ```
 

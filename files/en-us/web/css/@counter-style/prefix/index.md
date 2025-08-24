@@ -16,7 +16,7 @@ When the counter value is negative, the `prefix` comes before the negative sign 
 /* <symbol> value: string, image, or identifier */
 prefix: "»";
 prefix: "Page ";
-prefix: url(bullet.png);
+prefix: url("bullet.png");
 ```
 
 ### Values

@@ -12,7 +12,7 @@ In CSS, **`::before`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 
 ```css interactive-example
 a {
-  color: #0000ff;
+  color: blue;
   text-decoration: none;
 }
 

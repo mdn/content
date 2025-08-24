@@ -1,18 +1,17 @@
 ---
 title: "Test your skills: Object basics"
-short-title: Objects
+short-title: "Test: Objects"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Object basics 1
 
@@ -20,16 +19,9 @@ In this task you are provided with an object literal, and we want you to do some
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Store the value of the `name` property inside the `catName` variable, using bracket notation.
-3. Run the `greeting()` method using dot notation (it will log the greeting to the console).
-4. Update the `color` property value to `black`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Store the value of the `name` property inside the `catName` variable, using bracket notation.
+2. Run the `greeting()` method using dot notation (it will log the greeting to the console).
+3. Update the `color` property value to `black`.
 
 <!-- Code shared across examples -->
 
@@ -102,8 +94,7 @@ In our next task, we want you to have a go at creating your own object literal t
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an object literal called `band`, which contains the following properties:
+1. Create an object literal called `band`, which contains the following properties:
    - `name`: A string representing the band name.
    - `nationality`: A string representing the country the band comes from.
    - `genre`: What type of music the band plays.
@@ -115,13 +106,7 @@ To complete the task:
      - `released`: A number representing the year the album was released.
        > [!NOTE]
        > Include at least two albums in the `albums` array.
-3. Write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+2. Write a string to the variable `bandInfo`, which will contain a small biography detailing their name, nationality, years active, and style, and the title and release date of their first album.
 
 ```js live-sample___objects-2
 let bandInfo;
@@ -190,16 +175,9 @@ In this task, we want you to return to the `cat` object literal from Object basi
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser's console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
-3. Write your own object called `cat2`, which has the same structure and `greeting()` method, but a different `name`, `breed`, and `color`.
-4. Call both `greeting()` methods to check that they log appropriate greetings to the console.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser's console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
+2. Write your own object called `cat2`, which has the same structure and `greeting()` method, but a different `name`, `breed`, and `color`.
+3. Call both `greeting()` methods to check that they log appropriate greetings to the console.
 
 ```js live-sample___objects-3
 const cat = {
@@ -248,15 +226,8 @@ In the code you wrote for Task 3, the `greeting()` method and properties are def
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create a JavaScript class that defines cat instances
-3. Use your class along with the `new` keyword to create the `cat` and `cat2` instances.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/object-basics/object-basics4-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Create a JavaScript class that defines cat instances
+2. Use your class along with the `new` keyword to create the `cat` and `cat2` instances.
 
 ```js live-sample___objects-4
 const cat = {
@@ -310,3 +281,5 @@ const cat2 = new Cat("Elfie", "Aphrodite Giant", "ginger");
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}

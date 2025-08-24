@@ -3,9 +3,8 @@ title: browserSettings.tlsVersionRestrictionConfig
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/tlsVersionRestrictionConfig
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.tlsVersionRestrictionConfig
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to read the highest and lowest versions of TLS supported by the browser.
 

@@ -156,7 +156,7 @@ input:hover,
 input:focus,
 textarea:hover,
 textarea:focus {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 button {
@@ -170,7 +170,7 @@ input:read-only,
 textarea:read-only {
   border: 0;
   box-shadow: none;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 
 textarea:read-write {

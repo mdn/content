@@ -3,9 +3,8 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageArea
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 StorageArea is an object representing a storage area.
 
@@ -19,6 +18,8 @@ Values of this type are objects.
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
   - : Stores one or more items in the storage area. If an item already exists, its value will be updated.
 - {{WebExtAPIRef("storage.StorageArea.setAccessLevel()")}}

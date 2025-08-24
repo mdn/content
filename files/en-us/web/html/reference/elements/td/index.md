@@ -47,7 +47,7 @@ td {
 
 th[scope="col"] {
   background-color: #505050;
-  color: #fff;
+  color: white;
 }
 
 th[scope="row"] {
@@ -59,7 +59,7 @@ td {
 }
 
 tr:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 table {
@@ -126,7 +126,7 @@ The following attributes are deprecated and should not be used. They are documen
 - The `<td>` may only be used within a {{HTMLElement("tr")}} element.
 - When using the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes to span data cells across multiple columns and rows, cells without these attributes defined (with a default value of `1`) are automatically fitted into free available spaces in the table structure that span 1x1 cells, as illustrated in the following figure:
 
-  ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+  ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](/shared-assets/images/diagrams/html/table/column-row-span.png)
 
   > [!NOTE]
   > These attributes must not be used to overlap cells.
@@ -183,7 +183,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {
@@ -254,7 +254,7 @@ The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classe
 tr:first-of-type td:last-of-type {
   width: 60px;
   background-color: #505050;
-  color: #fff;
+  color: white;
   font-weight: bold;
   text-align: center;
 }
@@ -266,7 +266,7 @@ th {
 }
 
 tr:nth-of-type(odd) td {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 tr th[scope="row"] {

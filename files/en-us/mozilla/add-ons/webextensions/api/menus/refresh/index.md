@@ -3,9 +3,8 @@ title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 page-type: webextension-api-function
 browser-compat: webextensions.api.menus.refresh
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Refreshes a menu that's being shown.
 

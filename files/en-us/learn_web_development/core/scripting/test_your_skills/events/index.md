@@ -1,18 +1,17 @@
 ---
 title: "Test your skills: Events"
-short-title: Events
+short-title: "Test: Events"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Events
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) article.
 
 > [!NOTE]
-> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## DOM manipulation: considered useful
 
@@ -24,16 +23,7 @@ We haven't explicitly taught this yet in the course, but you'll have seen some e
 
 Our first events-related task involves a {{htmlelement("button")}} that, when clicked, updates its text label. The HTML should not be changed; just the JavaScript.
 
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an event listener that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+To complete the task, create an event listener that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
 
 ```css hidden live-sample___events-1
 p {
@@ -92,22 +82,14 @@ btn.addEventListener("click", () => {
 
 Now we'll look at keyboard events.
 
-To complete this task:
+To complete this task, create an event listener that moves the circle around the provided canvas when the WASD keys are pressed on the keyboard. The circle is drawn with the function `drawCircle()`, which takes the following parameters as inputs:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create an event listener that moves the circle around the provided canvas when the WASD keys are pressed on the keyboard. The circle is drawn with the function `drawCircle()`, which takes the following parameters as inputs:
-   - `x` — the x coordinate of the circle.
-   - `y` — the y coordinate of the circle.
-   - `size` — the radius of the circle.
+- `x` — the x coordinate of the circle.
+- `y` — the y coordinate of the circle.
+- `size` — the radius of the circle.
 
 > [!WARNING]
 > When testing your code, you will have to focus on the canvas before trying out your keyboard commands (for example, click on it, or tab to it with the keyboard). Otherwise they won't work.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html hidden live-sample___events-2
 <canvas width="480" height="320" tabindex="0"> </canvas>
@@ -182,20 +164,9 @@ window.addEventListener("keydown", (e) => {
 
 ## Events 3
 
-In the next events-related task tests your knowledge of event bubbling.
-
-To complete this task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Set an event listener on the `<button>`s' parent element (`<div class="button-bar"> … </div>`) which, when invoked by clicking any of the buttons, will set the background of the `button-bar` to the color contained in the button's `data-color` attribute.
+In the next events-related task tests your knowledge of event bubbling. We'd like you to set an event listener on the `<button>`s' parent element (`<div class="button-bar"> … </div>`) which, when invoked by clicking any of the buttons, will set the background of the `button-bar` to the color contained in the button's `data-color` attribute.
 
 We want you to solve this without looping through all the buttons and giving each one their own event listener.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```html hidden live-sample___events-3
 <div class="button-bar">
@@ -252,3 +223,5 @@ buttonBar.addEventListener("click", setColor);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

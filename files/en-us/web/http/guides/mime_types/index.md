@@ -227,21 +227,21 @@ As a multipart document format, it consists of different parts, delimited by a b
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
 
 ```http
-Content-Type: multipart/form-data; boundary=aBoundaryString
+Content-Type: multipart/form-data; boundary=boundaryString
 (other headers associated with the multipart document as a whole)
 
---aBoundaryString
+--boundaryString
 Content-Disposition: form-data; name="myFile"; filename="img.jpg"
 Content-Type: image/jpeg
 
 (data)
---aBoundaryString
+--boundaryString
 Content-Disposition: form-data; name="myField"
 
 (data)
---aBoundaryString
+--boundaryString
 (more subparts)
---aBoundaryString--
+--boundaryString--
 ```
 
 The following `<form>`:

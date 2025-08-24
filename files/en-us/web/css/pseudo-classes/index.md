@@ -32,6 +32,8 @@ These pseudo-classes relate to the core identity of elements.
 
 - {{CSSxRef(":defined")}}
   - : Matches any element that is defined.
+- {{CSSxRef(":heading")}}
+  - : Matches any heading element (`<h1>`-`<h6>`).
 
 ## Element display state pseudo-classes
 
@@ -165,6 +167,8 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Matches an element that is the last of its siblings.
 - {{CSSxRef(":only-child")}}
   - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
+- {{CSSXRef(":heading_function", ":heading()")}}
+  - : Uses `An+B` notation to select heading elements (`<h1>`-`<h6>`).
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
@@ -239,6 +243,15 @@ These pseudo-classes relate to pages in a printed document and are used with the
 - `:blank`
   - : Represents a blank page in a printed document.
 
+## View transition pseudo-classes
+
+These pseudo-classes relate to elements involved in a [view transition](/en-US/docs/Web/API/View_Transition_API).
+
+- {{cssxref(":active-view-transition")}}
+  - : Matches the root element of a document when a [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
+  - : Matches the root element of a document when a specified [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
+
 ## Syntax
 
 ```css
@@ -256,6 +269,8 @@ Pseudo-classes defined by a set of CSS specifications include the following:
 A
 
 - {{CSSxRef(":active")}}
+- {{CSSxRef(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
@@ -297,6 +312,8 @@ H
 
 - {{CSSxRef(":has-slotted")}}
 - {{CSSxRef(":has", ":has()")}}
+- {{CSSXRef(":heading")}}
+- {{CSSXRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host_function", ":host()")}}
 - {{CSSxRef(":host-context", ":host-context()")}}

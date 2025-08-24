@@ -3,9 +3,8 @@ title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.insertCSS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Injects CSS into a page.
 

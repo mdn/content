@@ -3,9 +3,8 @@ title: declarativeNetRequest.RuleCondition
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleCondition
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details of the condition that determines whether a rule matches a request, as the `condition` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 

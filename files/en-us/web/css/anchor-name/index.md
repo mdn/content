@@ -125,7 +125,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -139,7 +139,7 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -148,7 +148,7 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   left: anchor(right);
   top: anchor(top);
@@ -227,7 +227,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -237,7 +237,7 @@ Each of the two positioned elements are associated with the anchor element by se
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -246,7 +246,7 @@ Each of the two positioned elements are associated with the anchor element by se
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
 }
 
@@ -334,7 +334,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;

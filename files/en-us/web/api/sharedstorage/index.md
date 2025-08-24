@@ -34,7 +34,7 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 ```js
 window.sharedStorage
   .set("ab-testing-group", "0")
-  .then(console.log("Value saved to shared storage"));
+  .then(() => console.log("Value saved to shared storage"));
 ```
 
 ## Specifications

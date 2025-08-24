@@ -118,7 +118,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   width: 175px;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -126,7 +126,7 @@ section {
 
 header {
   padding: 0.7rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #cccccc;
 }
 
 main {

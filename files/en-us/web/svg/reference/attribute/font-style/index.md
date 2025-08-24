@@ -17,15 +17,9 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 
-## Example
+## Examples
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
+### Controlling SVG font style
 
 ```html
 <svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +28,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "250", "30")}}
+{{EmbedLiveSample}}
 
 ## Usage notes
 

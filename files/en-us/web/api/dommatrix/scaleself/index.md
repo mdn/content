@@ -51,8 +51,8 @@ This SVG contains two semi-opaque squares, one red and one blue, each positioned
 
 ```html
 <svg viewBox="0 0 50 50" height="200">
-  <rect width="25" height="25" fill="#f009" />
-  <rect id="transformed" width="25" height="25" fill="#00f9" />
+  <rect width="25" height="25" fill="#ff000099" />
+  <rect id="transformed" width="25" height="25" fill="#0000ff99" />
 </svg>
 ```
 

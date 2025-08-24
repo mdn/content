@@ -1016,7 +1016,7 @@ td {
 th {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: white;
   vertical-align: bottom;
 }
 

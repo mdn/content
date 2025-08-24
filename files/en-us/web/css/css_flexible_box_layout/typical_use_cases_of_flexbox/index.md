@@ -42,7 +42,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -93,7 +93,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -132,7 +132,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
@@ -398,7 +398,7 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
 .wrapper > * {
   padding: 10px;
   border: none;
-  color: #fff;
+  color: white;
 }
 .wrapper > input[type="text"] {
   background-color: rgb(96 139 168 / 0.5);
@@ -407,10 +407,10 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
 }
 .wrapper input[type="submit"] {
   background-color: rgb(96 139 168);
-  color: #fff;
+  color: white;
 }
 .wrapper label {
-  background-color: #666;
+  background-color: #666666;
 }
 ```
 

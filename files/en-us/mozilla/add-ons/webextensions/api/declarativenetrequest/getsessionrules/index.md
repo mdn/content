@@ -3,9 +3,8 @@ title: declarativeNetRequest.getSessionRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getSessionRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the active set of session-scoped rules for the extension.
 

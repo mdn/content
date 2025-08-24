@@ -3,9 +3,8 @@ title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisited
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}} object is passed to the listener. This event fires before the page has loaded.
 

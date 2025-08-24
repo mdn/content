@@ -3,9 +3,8 @@ title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.topSites.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets an array containing information about pages that the user has visited often and recently.
 

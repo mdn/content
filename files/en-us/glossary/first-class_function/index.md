@@ -1,5 +1,5 @@
 ---
-title: First-class Function
+title: First-class function
 slug: Glossary/First-class_Function
 page-type: glossary-definition
 sidebar: glossarysidebar

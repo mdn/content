@@ -489,7 +489,7 @@ fieldset {
 
 #container {
   /* Default value */
-  --base-color: #ff0000;
+  --base-color: red;
 
   display: flex;
   width: 100vw;

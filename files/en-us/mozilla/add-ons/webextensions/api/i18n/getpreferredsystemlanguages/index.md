@@ -3,9 +3,8 @@ title: i18n.getPreferredSystemLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getPreferredSystemLanguages
 page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getPreferredSystemLanguages
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the preferred locales of the operating system. This is different from the locales set in the browser; to get those, use {{WebExtAPIRef('i18n.getAcceptLanguages')}}.
 

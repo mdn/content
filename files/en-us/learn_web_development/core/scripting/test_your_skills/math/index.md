@@ -1,18 +1,17 @@
 ---
 title: "Test your skills: Math"
-short-title: Math
+short-title: "Test: Math"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of the tests on this page is to assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+
+The aim of the tests on this page is to help you assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
-> If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Math 1
 
@@ -22,20 +21,13 @@ Finally, you'll write a test to prove that this value is an even number.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Create four variables that contain numbers. Call the variables something sensible.
-3. Add the first two variables together and store the result in another variable.
-4. Subtract the fourth variable from the third and store the result in another variable.
-5. Multiply the results from steps **2** and **3** and store the result in a variable called `finalResult`.
-6. Check if `finalResult` is an even number using one of the [arithmetic operators](/en-US/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators). Store the result (`0` for even, `1` for odd) in a variable called `evenOddResult`.
+1. Create four variables that contain numbers. Call the variables something sensible.
+2. Add the first two variables together and store the result in another variable.
+3. Subtract the fourth variable from the third and store the result in another variable.
+4. Multiply the results from steps **2** and **3** and store the result in a variable called `finalResult`.
+5. Check if `finalResult` is an even number using one of the [arithmetic operators](/en-US/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators). Store the result (`0` for even, `1` for odd) in a variable called `evenOddResult`.
 
 To pass this test, `finalResult` should have a value of `48` and `evenOddResult` should have a value of `0`.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math1-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 <!-- Code shared across examples -->
 
@@ -117,18 +109,11 @@ You need to take the calculations, multiply them, and format the result to two d
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Multiply `result` and `result2` and assign the result back to `result` (use assignment shorthand).
-3. Format `result` so that it has two decimal places and store it in a variable called `finalResult`.
-4. Check the data type of `finalResult` using `typeof`. If it's a `string`, convert it to a `number` type and store the result in a variable called `finalNumber`.
+1. Multiply `result` and `result2` and assign the result back to `result` (use assignment shorthand).
+2. Format `result` so that it has two decimal places and store it in a variable called `finalResult`.
+3. Check the data type of `finalResult` using `typeof`. If it's a `string`, convert it to a `number` type and store the result in a variable called `finalNumber`.
 
 To pass this test, `finalNumber` should have a result of `4633.33`. You might need to consider operator precedence and add or modify some parentheses to the input expressions to get the correct output.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
 
 ```js live-sample___math-2
 // Final result should be 4633.33
@@ -184,15 +169,8 @@ In the final task for this article, we want you to write some tests.
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. There are three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made.
-3. Store the results of those tests in variables called `weightComparison`, `heightComparison`, and `pwdMatch`, respectively.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. There are three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made.
+2. Store the results of those tests in variables called `weightComparison`, `heightComparison`, and `pwdMatch`, respectively.
 
 ```js live-sample___math-3
 // Statement 1: The elephant weighs less than the mouse
@@ -252,3 +230,5 @@ const pwdMatch = pwd1 === pwd2;
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

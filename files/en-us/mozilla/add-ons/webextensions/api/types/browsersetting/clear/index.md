@@ -2,9 +2,8 @@
 title: clear()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 page-type: webextension-api-function
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use `BrowserSetting.clear()` to clear any changes the extension has made to the browser setting. The browser setting will revert to its previous value.
 

@@ -3,9 +3,8 @@ title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 page-type: webextension-api
 browser-compat: webextensions.api.browserAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Read and modify attributes of and listen to clicks on the browser toolbar button defined with the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key.
 
@@ -68,6 +67,8 @@ With the `browserAction` API, you can:
 
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
+- {{WebExtAPIRef("browserAction.onUserSettingsChanged")}}
+  - : Fired when a change occurs in the user-specified settings that affect an extension's browser action.
 
 {{WebExtExamples("h2")}}
 

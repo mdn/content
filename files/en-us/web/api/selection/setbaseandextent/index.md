@@ -90,7 +90,7 @@ We also have a button that when pressed invokes a function that runs the `setBas
 ```
 
 > [!NOTE]
-> There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
+> There is intentionally no [whitespace](/en-US/docs/Web/CSS/CSS_text/Whitespace#working_with_whitespace_in_the_dom) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
 
 The JavaScript looks like so:
 

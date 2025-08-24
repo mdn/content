@@ -99,7 +99,7 @@ main {
 
 label[for="file"] {
   background-color: lightgrey;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 progress {

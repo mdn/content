@@ -110,7 +110,7 @@ form:valid {
 }
 
 input:required {
-  border-color: #800000;
+  border-color: maroon;
   border-width: 3px;
 }
 

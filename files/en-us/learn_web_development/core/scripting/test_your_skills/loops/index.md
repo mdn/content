@@ -1,17 +1,17 @@
 ---
 title: "Test your skills: Loops"
-short-title: Loops
+short-title: "Test: Loops"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
 
-The aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops) article.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+
+The aim of this skill test is to help you assess whether you've understood our [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops) article.
 
 > [!NOTE]
-> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
->
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## DOM manipulation: considered useful
 
@@ -21,14 +21,7 @@ We haven't explicitly taught this yet in the course, but you'll have seen some e
 
 ## Loops 1
 
-In our first looping task we want you to create a basic loop.
-
-To complete the task:
-
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Write a loop that iterates through all the items in the provided `myArray` and prints them out on the screen inside list items ([`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) elements). They should be appended to the provided `list`.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+In our first looping task we want you to write a basic loop that iterates through all the items in the provided `myArray` and prints them out on the screen inside list items ([`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) elements). They should be appended to the provided `list`.
 
 <!-- Code shared across examples -->
 
@@ -95,16 +88,9 @@ You are given three variables to begin with:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Write a loop that iterates through the (`phonebook`) array and searches for the provided `name`. You should use a type of loop that you've not used in the previous task.
-3. If the `name` is found, write it and the associated `number` into the `textContent` of the provided paragraph (`para`), in the form "&lt;name>'s number is &lt;number>." After that, exit the loop before it has run its course.
-4. If none of the objects contain the `name`, print "Name not found in the phonebook" into the `textContent` of the provided paragraph.
-
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops2-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+1. Write a loop that iterates through the (`phonebook`) array and searches for the provided `name`. You should use a type of loop that you've not used in the previous task.
+2. If the `name` is found, write it and the associated `number` into the `textContent` of the provided paragraph (`para`), in the form "&lt;name>'s number is &lt;number>." After that, exit the loop before it has run its course.
+3. If none of the objects contain the `name`, print "Name not found in the phonebook" into the `textContent` of the provided paragraph.
 
 ```js live-sample___loops-2
 const name = "Mustafa";
@@ -166,15 +152,10 @@ You are provided with the following:
 
 To complete the task:
 
-1. Click **"Play"** in the code block below to edit the example in the MDN Playground. You should use a type of loop that you've not used in the previous two tasks.
-2. Write a loop that iterates through every number from `500` down to `2` (1 is not counted as a prime number), and runs the provided `isPrime()` function on each one.
-3. For each number that isn't a prime number, continue on to the next loop iteration. For each one that _is_ a prime number, add it to the paragraph's `textContent` along with some kind of separator.
+1. Write a loop that iterates through every number from `500` down to `2` (1 is not counted as a prime number), and runs the provided `isPrime()` function on each one.
+2. For each number that isn't a prime number, continue on to the next loop iteration. For each one that _is_ a prime number, add it to the paragraph's `textContent` along with some kind of separator.
 
-> [!CALLOUT]
->
-> You can also [download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/loops/loops3-download.html) to work in your own editor or in an online editor.
-
-If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the live output.
+You should use a type of loop that you've not used in the previous two tasks.
 
 ```js live-sample___loops-3
 let i = 500;
@@ -220,3 +201,5 @@ do {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

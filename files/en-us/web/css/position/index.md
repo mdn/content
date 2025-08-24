@@ -423,15 +423,15 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 }
 
 dl > div {
-  background: #fff;
-  padding: 24px 0 0 0;
+  background: white;
+  padding-top: 24px;
 }
 
 dt {
   background: #b8c1c8;
   border-bottom: 1px solid #989ea4;
   border-top: 1px solid #717d85;
-  color: #fff;
+  color: white;
   font:
     bold 18px/21px Helvetica,
     Arial,
@@ -449,12 +449,12 @@ dd {
     Arial,
     sans-serif;
   margin: 0;
-  padding: 0 0 0 12px;
+  padding-left: 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 ```
 
@@ -513,12 +513,13 @@ p {
 ```css
 .bulb {
   position: sticky;
-  inset: 50px 100px 50px 100px;
+  inset: 50px 100px;
 }
 
 div {
   /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px
+    no-repeat;
 }
 ```
 

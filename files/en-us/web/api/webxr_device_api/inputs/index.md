@@ -147,7 +147,7 @@ xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
   inputSourceList.forEach((source) => {
-    switch (source) {
+    switch (source.handedness) {
       case "left":
         leftHandSource = source;
         break;

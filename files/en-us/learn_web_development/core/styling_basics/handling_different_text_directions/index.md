@@ -98,7 +98,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
 }
@@ -161,7 +161,7 @@ body {
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   width: 100px;
@@ -205,7 +205,7 @@ The property mapped to `width` when in a horizontal writing mode is called {{css
 }
 
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 0.5em;
   margin: 10px;
   inline-size: 100px;
@@ -252,7 +252,7 @@ You can also see that the {{htmlelement("Heading_Elements", "h2")}} has a black 
 ```css live-sample___logical-mbp
 .wrapper {
   display: flex;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
 }
 
 .box {
@@ -320,7 +320,7 @@ Change the writing mode on this example to `vertical-rl` to see what happens to 
 .box {
   margin: 10px;
   padding: 0.5em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   inline-size: 200px;
   writing-mode: horizontal-tb;
 }

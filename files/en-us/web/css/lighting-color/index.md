@@ -17,7 +17,7 @@ The **`lighting-color`** [CSS](/en-US/docs/Web/CSS) property defines the color o
 /* <color> values */
 lighting-color: red;
 lighting-color: hsl(120deg 75% 25% / 60%);
-lighting-color: currentcolor;
+lighting-color: currentColor;
 
 /* Global values */
 lighting-color: inherit;
@@ -77,7 +77,7 @@ svg {
   background-image: repeating-linear-gradient(
     45deg,
     transparent 0 9px,
-    #ccc 0px 10px
+    #cccccc 0px 10px
   );
 }
 
@@ -101,7 +101,7 @@ feDiffuseLighting {
 }
 
 feSpecularLighting {
-  lighting-color: #f09;
+  lighting-color: #ff0099;
 }
 ```
 
