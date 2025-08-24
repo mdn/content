@@ -37,7 +37,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how the texture should be stored after it's loaded.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how the texture should be stored after it's loaded. See below for available values.
 - `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture in texels.
 - `height`
@@ -45,7 +45,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
 - `border`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
 - `format`
-  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. In WebGL 1, this must be the same as `internalformat`.
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying how each integer element in the raw texel data should be interpreted as color components. In WebGL 1, this must be the same as `internalformat`. See below for available values.
 - `type`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the size of each integer element in the raw texel data.
 
