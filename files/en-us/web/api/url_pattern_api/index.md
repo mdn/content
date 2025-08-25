@@ -597,7 +597,7 @@ console.log(result.hostname.input); // 'example.com'
 The following example shows how base URLs can also be used to construct the `URLPattern`.
 The base URL is treated strictly as a URL and cannot contain any pattern syntax itself.
 
-The pattern only [inherits URL parts from the base URL](/en-US/docs/Web/API/URL_Pattern_API#inheritance_from_a_base_url) that are less specific than those in the other properties.
+The pattern only [inherits URL parts from the base URL](#inheritance_from_a_base_url) that are less specific than those in the other properties.
 
 In this case the `pathname` is specified so the protocol and host can be inherited, but not the search, hash, username, or password.
 The properties that are not inherited default to the wildcard string (`"*"`).

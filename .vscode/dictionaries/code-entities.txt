@@ -140,6 +140,8 @@ Crsel
 cryptomining
 csiso
 csrfmiddlewaretoken
+css.selectors.headingfunction
+css.selectors.hostfunction
 CSS_RGBCOLOR
 csslint
 cssref

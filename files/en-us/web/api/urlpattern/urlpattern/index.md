@@ -191,7 +191,7 @@ let pattern4 = new URLPattern({
 let pattern5 = new URLPattern({
   pathname: "/books/:id",
   baseURL: "https://example.com/some/path/?search=3#param=1",
-  //More-specific URL parts are discarded
+  // More-specific URL parts are discarded
 });
 ```
 
@@ -269,14 +269,14 @@ const pattern = new URLPattern({
 });
 
 console.log(pattern);
-//protocol: https
-//username: *
-//password: *
-//hostname: example.com
-//port:
-//pathname: /some/path
-//search: *
-//hash: *
+// protocol: https
+// username: *
+// password: *
+// hostname: example.com
+// port:
+// pathname: /some/path
+// search: *
+// hash: *
 ```
 
 ## Specifications
