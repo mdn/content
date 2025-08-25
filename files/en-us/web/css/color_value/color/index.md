@@ -380,6 +380,7 @@ The output is as follows:
 
 ## See also
 
+- {{CSSXref("color")}} property
 - [The `<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
