@@ -38,26 +38,27 @@ new WebSocketStream(url, options)
 
 ## Examples
 
+### Creating a `WebSocketStream`
+
 The most basic example takes the URL of a WebSocket server as an argument:
 
 ```js
 const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
-A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}. The following example will time out if the connection is not established within 5 seconds:
+### Creating a `WebSocketStream` with a connection timeout
+
+The following example uses the `signal` option to implement a timeout if the connection is not established within 5 seconds:
 
 ```js
 const queueWSS = new WebSocketStream("wss://example.com/queue", {
-  protocols: ["amqp", "mqtt"],
   signal: AbortSignal.timeout(5000),
 });
 ```
 
-If you're connecting to localhost, it's likely to succeed or fail almost instantly, so this will have no effect.
+Note that if you're connecting to localhost, it's likely to succeed or fail before the connection attempt times out.
 
-You can use the {{domxref("WebSocketStream.close()")}} method to close a connection.
-
-`WritableStream.close()` and `WritableStreamDefaultWriter.close()` from the `writable` of the fulfilled `opened` `Promise` also closes the connection.
+Once the connection is established, `signal` has no effect: to close a connection that's already established, call the {{domxref("WebSocketStream.close()")}} method. Closing the underlying {{domxref("WritableStream")}} or {{domxref("WritableStreamDefaultWriter")}} also closes the socket.
 
 See [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream) for a complete example with full explanation.
 
