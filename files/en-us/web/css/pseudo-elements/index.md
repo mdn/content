@@ -214,7 +214,7 @@ First, we have some HTML that includes two nested {{htmlelement("div")}} element
 </div>
 ```
 
-Next we include some CSS, which selects the parent and child `<div>` elements separately and gives them different {{cssxref("color")}} values, and selects the parent and child's selected text ({{cssxref("::selection")}}), giving each a different {{cssxref("background-color")}} as well as setting a different text `color` on the parent selection.
+Next we include some CSS, which selects the parent and child `<div>` elements separately and gives them different {{cssxref("color")}} values, and selects the parent and child's selected text ({{cssxref("::selection")}}). This gives each `<div>` a different {{cssxref("background-color")}} and sets a different text `color` on the parent selection.
 
 ```css live-sample___highlight_inheritance
 /* Style for the parent element */
