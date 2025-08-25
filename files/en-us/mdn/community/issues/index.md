@@ -120,7 +120,7 @@ Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issu
 
 - The MDN Web Docs **content** (in English) in the [mdn/content](https://github.com/mdn/content) repository
 - The MDN Web Docs **translated content** in the [mdn/translated-content](https://github.com/mdn/translated-content) repository
-- The MDN Web Docs **frontend** in the [mdn/yari](https://github.com/mdn/yari) repository
+- The MDN Web Docs **frontend** in the [mdn/fred](https://github.com/mdn/fred) repository
 
 Each repository includes useful information to guide you on how to contribute.
 For more information, see [our main GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
