@@ -12,6 +12,7 @@ The **Compression Streams API** provides a JavaScript API for compressing and de
 Built in compression means that JavaScript applications will not need to include a compression library, which makes the download size of the application smaller.
 
 The Fetch API's {{domxref("Response")}} can be used to convert streams to:
+
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("Blob")}}
 - {{jsxref("Uint8Array")}}
