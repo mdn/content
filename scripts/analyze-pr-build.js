@@ -538,6 +538,7 @@ yargs(hideBin(process.argv))
         });
     },
     async (argv) => {
+      console.log({ argv });
       const directory = argv._.shift();
       const {
         prefix,

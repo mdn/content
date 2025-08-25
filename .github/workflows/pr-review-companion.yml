@@ -106,7 +106,7 @@ jobs:
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
-          node scripts/analyze-pr-build.js \
+          time node scripts/analyze-pr-build.js \
             --prefix="$PREFIX" \
             --analyze-flaws \
             --analyze-dangerous-content \

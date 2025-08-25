@@ -29,7 +29,7 @@ The general step-by-step process for creating a page would be:
    git checkout main
    git pull mdn main
    # Run "yarn" again to ensure you've
-   # installed the latest Yari dependency.
+   # installed the latest dependency.
    yarn
    git checkout -b my-add
    ```
@@ -74,7 +74,7 @@ For example, let's say you want to move the entire
    git checkout main
    git pull mdn main
    # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
+   # installed the latest dependency.
    yarn
    git checkout -b my-move
    ```
@@ -136,7 +136,7 @@ entire `/en-US/Web/HTTP/Guides/Authentication` tree, you'd perform the following
    git checkout main
    git pull mdn main
    # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
+   # installed the latest dependency.
    yarn
    git checkout -b my-delete
    ```
