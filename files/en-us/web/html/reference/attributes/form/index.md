@@ -30,7 +30,7 @@ The `form` attribute takes as its value the `id` of a `<form>` element in the sa
 
 While setting the attribute value to the `id` of the nearest ancestor `<form>` isn't necessary, explicitly defining the association between the form control and its form ensures the association isn't disassociated if scripts or malformed HTML result in that specific `<form>` not being the nearest form ancestor of the control.
 
-The `form` attribute can be used to associate a form control nested in one `<form>` with another `<form>`. 
+The `form` attribute can be used to associate a form control nested in one `<form>` with another `<form>`.
 
 In this code example, the username `<input>` is nested within the `internalForm`, but the `form` attribute disassociates the control from it's ancestor form in which it is nested, and associates it with the `externalForm` instead:
 
