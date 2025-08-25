@@ -19,12 +19,12 @@ For example, if an event handler calls a top-level function, which then calls a 
 In the following snippet:
 
 ```js
-setTimeout(function lib_func() {
-  slow_function();
+setTimeout(function libFunc() {
+  slowFunction();
 });
 ```
 
-`sourceFunctionName` would report `lib_func`, not `slow_function`.
+`sourceFunctionName` would report `libFunc`, not `slowFunction`.
 
 ## Value
 

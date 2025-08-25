@@ -2,9 +2,8 @@
 title: Wrapping and breaking text
 slug: Web/CSS/CSS_text/Wrapping_breaking_text
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This guide explains the various ways in which overflowing text can be managed in CSS.
 
@@ -149,7 +148,7 @@ In the example below there is a checkbox and label. Let's say, you want the labe
 ```css live-sample___word-break-checkbox
 .field {
   inline-size: 150px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-block-end: 1em;
   padding: 10px;
 }

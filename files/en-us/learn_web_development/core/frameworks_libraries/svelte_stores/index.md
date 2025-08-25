@@ -121,18 +121,18 @@ Let's now create our `Alert` component and see how we can read values from the s
 
    ```svelte
    <script>
-     import { alert } from '../stores.js'
-     import { onDestroy } from 'svelte'
+     import { alert } from "../stores.js";
+     import { onDestroy } from "svelte";
 
-     let alertContent = ''
+     let alertContent = "";
 
-     const unsubscribe = alert.subscribe((value) => alertContent = value)
+     const unsubscribe = alert.subscribe((value) => (alertContent = value));
 
-     onDestroy(unsubscribe)
+     onDestroy(unsubscribe);
    </script>
 
    {#if alertContent}
-   <div on:click={() => alertContent = ''}>
+   <div on:click={() => (alertContent = "")}>
      <p>{ alertContent }</p>
    </div>
    {/if}
@@ -149,7 +149,7 @@ Let's now create our `Alert` component and see how we can read values from the s
      align-items: center;
      border-radius: 0.2rem;
      background-color: #565656;
-     color: #fff;
+     color: white;
      font-weight: 700;
      padding: 0.5rem 1.4rem;
      font-size: 1.5rem;
@@ -157,11 +157,11 @@ Let's now create our `Alert` component and see how we can read values from the s
      opacity: 95%;
    }
    div p {
-     color: #fff;
+     color: white;
    }
    div svg {
      height: 1.6rem;
-     fill: currentcolor;
+     fill: currentColor;
      width: 1.4rem;
      margin-right: 0.5rem;
    }
@@ -236,11 +236,11 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
 
    ```svelte
    <script>
-     import { alert } from '../stores.js'
+     import { alert } from "../stores.js";
    </script>
 
    {#if $alert}
-   <div on:click={() => $alert = ''}>
+   <div on:click={() => $alert = ""}>
      <p>{ $alert }</p>
    </div>
    {/if}
@@ -398,7 +398,7 @@ In our case, just adding a `role="alert"` to the `<div>` container will do the t
 <div role="alert" on:click={() => visible = false}>
 ```
 
-In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/vision/) for macOS and iOS, among other options.
+In general, testing your applications using screen readers is a good idea, not only to discover accessibility issues but also to get used to how visually impaired people use the Web. You have several options, like [NVDA](https://www.nvaccess.org/) for Windows, [ChromeVox](https://support.google.com/chromebook/answer/7031755) for Chrome, [Orca](https://wiki.gnome.org/Projects/Orca) on Linux, and [VoiceOver](https://www.apple.com/accessibility/features/?vision) for macOS and iOS, among other options.
 
 To learn more about detecting and fixing accessibility issues, check out our [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) module.
 
@@ -420,7 +420,8 @@ First we need some way for our `Todos` component to give back the updated to-dos
    <Todos bind:todos />
    ```
 
-   > **Note:** `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
+   > [!NOTE]
+   > `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
 
 3. Go back to your app, try adding some to-dos, then go to your developer tools web console. You'll see that every modification we make to our to-dos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
 
@@ -451,7 +452,7 @@ So let's start by using a regular writable store to save our to-dos.
      $todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
    </script>
 
@@ -515,6 +516,7 @@ Usually you don't implement stores from scratch; instead you'd use the writable 
 
 ```js
 import { writable } from "svelte/store";
+
 function myStore() {
   const { subscribe, set, update } = writable(0);
 
@@ -567,7 +569,7 @@ Moreover, because web storage only supports saving string values, we will have t
 
      return {
        subscribe,
-       set: (value) => {
+       set(value) {
          localStorage.setItem(key, toString(value)); // save also to local storage as a string
          return set(value);
        },
@@ -608,10 +610,10 @@ Moreover, because web storage only supports saving string values, we will have t
 
    ```svelte
    <script>
-     import Todos from './components/Todos.svelte'
-     import Alert from './components/Alert.svelte'
+     import Todos from "./components/Todos.svelte";
+     import Alert from "./components/Alert.svelte";
 
-     import { todos } from './stores.js'
+     import { todos } from "./stores.js";
    </script>
 
    <Alert />
@@ -632,7 +634,7 @@ Svelte stores provide a very simple and lightweight, but extremely powerful, way
 
 Let's change the subject now and do something fun and different: add an animation to our alerts. Svelte provides a whole module to define [transitions](https://learn.svelte.dev/tutorial/transition) and [animations](https://learn.svelte.dev/tutorial/animate) so we can make our user interfaces more appealing.
 
-A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change. The `svelte/transition` module exports seven functions: `fade`, `blur`, `fly`, `slide`, `scale`, `draw`, and `crossfade`.
+A transition is applied with the [transition:fn](https://svelte.dev/docs/element-directives#transition-fn) directive, and is triggered by an element entering or leaving the DOM as a result of a state change.
 
 Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelte` file and import the `fly` function from the `svelte/transition` module.
 

@@ -3,9 +3,8 @@ title: <absolute-size>
 slug: Web/CSS/absolute-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-absolute-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<absolute-size>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes the absolute size keywords. This data type is used in the {{cssxref("font")}} shorthand and {{cssxref("font-size")}} properties.
 
@@ -22,31 +21,24 @@ The font size keywords are mapped to the deprecated HTML `size` attribute. See t
 The `<absolute-size>` data type is defined using a keyword value chosen from the list below.
 
 - `xx-small`
-
   - : An absolute size 60% the size of `medium`. Mapped to the deprecated `size="1"`.
 
 - `x-small`
-
   - : An absolute size 75% the size of `medium`.
 
 - `small`
-
   - : An absolute size 89% the size of `medium`. Mapped to the deprecated `size="2"`.
 
 - `medium`
-
   - : A user's preferred font size. This value is used as the reference middle value. Mapped to `size="3"`.
 
 - `large`
-
   - : An absolute size 20% larger than `medium`. Mapped to the deprecated `size="4"`.
 
 - `x-large`
-
   - : An absolute size 50% larger than `medium`. Mapped to the deprecated `size="5"`.
 
 - `xx-large`
-
   - : An absolute size twice the size of `medium`. Mapped to the deprecated `size="6"`.
 
 - `xxx-large`

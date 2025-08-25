@@ -17,6 +17,8 @@ There are tools, APIs, and best practices that help us measure and improve web p
 
 ## Web performance guides
 
+The [Performance guides](/en-US/docs/Web/Performance/Guides) are resources that describe how browsers work, what affects performance, and how to measure, optimize, and monitor performance across various aspects of your application.
+
 - [Performance fundamentals](/en-US/docs/Web/Performance/Guides/Fundamentals)
   - : Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 - [Populating the page: how browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)

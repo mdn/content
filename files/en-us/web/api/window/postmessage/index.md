@@ -14,7 +14,7 @@ Normally, scripts on different pages are allowed to access each other if and onl
 
 Furthermore, an accessing script must have obtained the window object of the accessed document beforehand. This can occur through methods such as [`window.open()`](/en-US/docs/Web/API/Window/open) for popups or [`iframe.contentWindow`](/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) for iframes.
 
-Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
+Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow = window.opener`), and then dispatch a {{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The receiving window is then free to [handle this event](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) as needed. The arguments passed to `window.postMessage()` (_i.e.,_ the "message") are [exposed to the receiving window through the event object](#the_dispatched_event).
 
 ## Syntax
 
@@ -31,9 +31,11 @@ postMessage(message, options)
 - `message`
   - : Data to be dispatched to the other window. The data is serialized using the {{domxref("Web_Workers_API/Structured_clone_algorithm", "structured clone algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
 - `targetOrigin` {{optional_Inline}}
-  - : Specifies the [origin](/en-US/docs/Glossary/Origin) the recipient window must have in order to receive the event. In order for the event to be dispatched, the origin must match exactly (including scheme, hostname, and port). If omitted, then defaults to the origin that is calling the method. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. `*` may also be provided, which means the message can be dispatched to a listener with any origin.
+  - : Specifies the [origin](/en-US/docs/Glossary/Origin) the recipient window must have in order to receive the event. In order for the event to be dispatched, the origin must match exactly (including scheme, hostname, and port). If omitted, it defaults to `"/"`, which is the origin that is calling the method. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. `*` may also be provided, which means the message can be dispatched to a listener with any origin.
     > [!NOTE]
     > Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose data to a malicious site.
+    >
+    > Because [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URLs have opaque origins, in order to send messages to a context with a `data:` URL, you must specify `"*"`.
 - `transfer` {{optional_inline}}
   - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
 - `options` {{optional_inline}}
@@ -159,7 +161,7 @@ window.addEventListener("message", (event) => {
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
   event.source.postMessage(
-    "hi there yourself! the secret response " + "is: rheeeeet!",
+    "hi there yourself! the secret response is: rheeeeet!",
     event.origin,
   );
 });

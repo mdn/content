@@ -3,9 +3,8 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.linear-gradient
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 
@@ -20,14 +19,20 @@ background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 ```
 
 ```css interactive-example-choice
-background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+background: linear-gradient(
+  to left,
+  #333333,
+  #333333 50%,
+  #eeeeee 75%,
+  #333333 75%
+);
 ```
 
 ```css interactive-example-choice
 background:
-  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  linear-gradient(217deg, rgb(255 0 0 / 0.8), transparent 70.71%),
+  linear-gradient(127deg, rgb(0 255 0 / 0.8), transparent 70.71%),
+  linear-gradient(336deg, rgb(0 0 255 / 0.8), transparent 70.71%);
 ```
 
 ```html interactive-example
@@ -86,7 +91,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ### Values
 
 - `<side-or-corner>`
-
   - : The position of the gradient line's starting point. If specified, it consists of the word `to` and up to two keywords: one indicates the horizontal side (`left` or `right`), and the other the vertical side (`top` or `bottom`). The order of the side keywords does not matter. If unspecified, it defaults to `to bottom`.
 
     The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg`, respectively. The other values are translated into an angle.

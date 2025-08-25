@@ -1,5 +1,6 @@
 ---
-title: aria-disabled
+title: "ARIA: aria-disabled attribute"
+short-title: aria-disabled
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
@@ -88,7 +89,6 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Values
 
 - `true`
-
   - : The element is disabled
 
 - `false`

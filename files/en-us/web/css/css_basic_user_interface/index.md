@@ -3,9 +3,8 @@ title: CSS basic user interface
 slug: Web/CSS/CSS_basic_user_interface
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-ui/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS basic user interface** module lets you define the rendering and functionality of features related to the user interface including outline properties, visual feedback to pointing device and keyboard, and altering the default appearance of UI widgets.
 
@@ -47,7 +46,7 @@ body {
 [contenteditable] {
   cursor: copy;
   caret-color: magenta;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 :focus {
   outline: dashed magenta 3px;
@@ -85,15 +84,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - {{CSSxRef("accent-color")}}
 - {{CSSxRef("appearance")}}
-
-- {{CSSxRef("caret")}}, shorthand for:
-  - {{CSSxRef("caret-color")}}
-  - {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret-animation")}}
+- {{CSSxRef("caret-color")}}
 - {{CSSxRef("cursor")}}
-- {{CSSxRef("nav-down")}}
-- {{CSSxRef("nav-left")}}
-- {{CSSxRef("nav-right")}}
-- {{CSSxRef("nav-up")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}
@@ -102,6 +95,8 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{CSSxRef("pointer-events")}}
 - {{CSSxRef("resize")}}
 - {{CSSxRef("user-select")}}
+
+The CSS basic user interface module also defines the `caret`, `caret-shape`, `nav-down`, `nav-left`, `nav-right`, and `nav-up` properties. Currently, no browsers support these features.
 
 ## Guides
 

@@ -1,11 +1,11 @@
 ---
 title: Map.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Map")}} instances executes a provided function once per each key/value
 pair in this map, in insertion order.

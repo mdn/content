@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 In the last article, we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
@@ -168,7 +168,7 @@ class Student extends Person {
 }
 ```
 
-In this class declaration, `#year` is a [private data property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
+In this class declaration, `#year` is a [private field](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements). We can construct a `Student` object, and it can use `#year` internally, but if code outside the object tries to access `#year` the browser throws an error:
 
 ```js
 const summers = new Student("Summers", 2);
@@ -180,13 +180,13 @@ summers.#year; // SyntaxError
 ```
 
 > [!NOTE]
-> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> Code run in the Chrome console can access private elements outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
-Private data properties must be declared in the class declaration, and their names start with `#`.
+Private fields must be declared in the class declaration, and their names start with `#`.
 
 ### Private methods
 
-You can have private methods as well as private data properties. Just like private data properties, their names start with `#`, and they can only be called by the object's own methods:
+You can have private methods as well as private fields. Just like private fields, private methods' names start with `#`, and they can only be called by the object's own methods:
 
 ```js
 class Example {
@@ -206,12 +206,10 @@ myExample.somePublicMethod(); // 'You called me?'
 myExample.#somePrivateMethod(); // SyntaxError
 ```
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript).
-
 ## Summary
 
 In this article, we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+Next, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on Object-oriented JavaScript so far.
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

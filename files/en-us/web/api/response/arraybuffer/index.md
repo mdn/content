@@ -28,7 +28,7 @@ A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
@@ -100,14 +100,21 @@ The {{domxref("Response.Response","Response()")}} constructor accepts
 {{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
 {{domxref("File")}} into other formats.
 
+```html
+<input type="file" />
+```
+
 ```js
 function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-```
 
-```html
-<input type="file" onchange="readFile(this.files[0])" />
+document
+  .querySelector("input[type=file]")
+  .addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    const buffer = readFile(file);
+  });
 ```
 
 ## Specifications

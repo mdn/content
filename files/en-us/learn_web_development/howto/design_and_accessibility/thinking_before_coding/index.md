@@ -2,9 +2,8 @@
 title: How do I start to design my website?
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article covers the all-important first step of every project: define what you want to accomplish with it.
 
@@ -32,10 +31,6 @@ So when you get an idea and want to turn it into a website, there are a few ques
 - What needs to be done, and in what order, to reach my goals?
 
 All of this is called _project ideation_ and is a necessary first step to reach your goal, whether you are a beginner or an experienced developer.
-
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 

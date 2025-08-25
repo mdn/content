@@ -17,8 +17,7 @@ The matching is done using depth-first pre-order traversal of the document's nod
 If the specified selector matches an ID that is incorrectly used more than once in the
 document, the first element with that ID is returned.
 
-[CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) will never return
-any elements, as specified in the [Selectors API](https://www.w3.org/TR/selectors-api/#grammar).
+[CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) will never return any elements.
 
 ## Syntax
 
@@ -29,7 +28,6 @@ querySelector(selectors)
 ### Parameters
 
 - `selectors`
-
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.

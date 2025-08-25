@@ -5,23 +5,24 @@ page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.rtc
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic (`<rtc>`) annotations.
 
 {{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+<ruby lang="zh-Hant">
   <rbc>
     <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
     <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
     <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
     <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
   </rbc>
-  <rtc xml:lang="en" style="ruby-position: over;">
+  <rtc lang="en">
     <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
   </rtc>
 </ruby>
@@ -30,6 +31,11 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
 ```css interactive-example
 ruby {
   font-size: 2em;
+  ruby-position: under;
+}
+
+rtc {
+  ruby-position: over;
 }
 ```
 
@@ -42,11 +48,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 ```html
 <div class="info">
   <ruby>
-    <rtc>
-      <rb>旧</rb><rt>jiù</rt>
-      <rb>金</rb><rt>jīn</rt>
-      <rb>山</rb><rt>shān</rt>
-    </rtc>
+    <rbc>
+      <rb>旧</rb><rt>jiù</rt> <rb>金</rb><rt>jīn</rt> <rb>山</rb><rt>shān</rt>
+    </rbc>
     <rtc>San Francisco</rtc>
   </ruby>
 </div>

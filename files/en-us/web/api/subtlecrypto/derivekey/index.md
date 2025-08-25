@@ -99,7 +99,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 #### ECDH
 
-ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_.
+ECDH (Elliptic Curve Diffie–Hellman) is a _key-agreement algorithm_.
 It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
 They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
 
@@ -247,7 +247,7 @@ This is followed by another two elements for displaying the ciphertext after Ali
 ```css hidden
 input {
   display: block;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px;
 }
 #results {
   margin-top: 20px;
@@ -519,7 +519,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: "HKDF",
-      salt: salt,
+      salt,
       info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },

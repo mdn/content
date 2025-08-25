@@ -3,9 +3,8 @@ title: text-anchor
 slug: Web/CSS/text-anchor
 page-type: css-property
 browser-compat: css.properties.text-anchor
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-anchor`** [CSS](/en-US/docs/Web/CSS) property aligns a box containing a string of text where the wrapping area is determined from the {{cssxref("inline-size")}} property, and the text is then placed relative to the anchor point of the element, which is defined using the {{SVGAttr('x')}} and {{SVGAttr('y')}} (or {{SVGAttr('dx')}} and {{SVGAttr('dy')}}) attributes. If present, the value of the CSS property overrides any value of the element's {{SVGAttr("text-anchor")}} attribute.
 
@@ -29,15 +28,12 @@ text-anchor: unset;
 ### Values
 
 - `start`
-
   - : Aligns the text such that the inline start of the text string is aligned with the anchor point. This alignment is relative to the writing direction of the text; thus, for example, in right-to-left top-to-bottom writing, the text will be placed to the left of the anchor point. If the text's inline direction is vertical, as with many Asian languages, the top edge of the text is aligned with the anchor point.
 
 - `middle`
-
   - : Aligns the text such that the center (middle) of the text string's inline box is aligned with the anchor point.
 
 - `end`
-
   - : Aligns the text such that the inline end of the text string is aligned with the anchor point. This alignment is relative to the writing direction of the text; thus, for example, in right-to-left top-to-bottom writing, the text will be placed to the right of the anchor point. If the text's inline direction is vertical, as with many Asian languages, the bottom edge of the text is aligned with the anchor point.
 
 ## Formal definition

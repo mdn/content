@@ -10,6 +10,20 @@ The **`<clipPath>`** [SVG](/en-US/docs/Web/SVG) element defines a clipping path,
 
 A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+- {{SVGAttr("clipPathUnits")}}
+  - : Defines the coordinate system for the contents of the `<clipPath>` element.
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+
+## DOM Interface
+
+This element implements the {{domxref("SVGClipPathElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -67,16 +81,6 @@ A clipping path is conceptually equivalent to a custom viewport for the referenc
 
 By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions. For example, a circle with a radius of `10` which is clipped to a circle with a radius of `5` will not receive "click" events outside the smaller radius.
 
-## Attributes
-
-- {{SVGAttr("clipPathUnits")}}
-  - : Defines the coordinate system for the contents of the `<clipPath>` element.
-    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
-
-## Usage context
-
-{{svginfo}}
-
 ## Specifications
 
 {{Specifications}}
@@ -87,5 +91,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
 
 ## Related
 
-- Other clipping and masking SVG elements: {{SVGElement("mask")}}
-- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}
+- {{SVGElement("mask")}}
+- CSS {{cssxref("clip-path")}} property
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/CSS_masking/Clipping) module

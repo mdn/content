@@ -1,11 +1,11 @@
 ---
 title: Function.prototype.call()
+short-title: call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.call
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
@@ -112,7 +112,7 @@ Take {{jsxref("Array.prototype.slice()")}}, for example, which you want to use f
 ```js
 const slice = Array.prototype.slice;
 
-// ...
+// …
 
 slice.call(arguments);
 ```
@@ -124,7 +124,7 @@ Note that you can't save `slice.call` and call it as a plain function, because t
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.call.bind(unboundSlice);
 
-// ...
+// …
 
 slice(arguments);
 ```

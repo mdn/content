@@ -3,9 +3,8 @@ title: stop-opacity
 slug: Web/CSS/stop-opacity
 page-type: css-property
 browser-compat: css.properties.stop-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of a given color gradient stop in the SVG {{SVGElement("stop")}} element within an SVG gradient. If present, it overrides the element's {{SVGAttr("stop-opacity")}} attribute.
 
@@ -34,11 +33,9 @@ stop-opacity: unset;
 The `<opacity-value>` is a {{cssxref("number")}} or {{cssxref("percentage")}} denoting the opacity of the SVG gradient `<stop>` element.
 
 - {{cssxref("number")}}
-
   - : A numeric value between `0` and `1`, inclusive.
 
 - {{cssxref("percentage")}}
-
   - : A percentage value between `0%` and `100%`, inclusive.
 
 With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the element is the full opacity of the `stop-color` value, which may or may not be partially opaque.
@@ -111,7 +108,7 @@ svg {
 
 ```css
 polygon {
-  stroke: #333;
+  stroke: #333333;
   stroke-width: 1px;
 }
 polygon:nth-of-type(1) {

@@ -2,9 +2,8 @@
 title: MathML
 slug: Glossary/MathML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **MathML** (an {{glossary("XML")}} application) is an open standard for representing mathematical expressions in webpages. In 1998 the W3C first recommended MathML for representing mathematical expressions in the {{glossary("browser")}}. MathML has other applications also including scientific content and voice synthesis.
 

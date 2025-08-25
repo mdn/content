@@ -6,9 +6,10 @@ status:
   - deprecated
   - non-standard
 browser-compat: css.properties.box-flex
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
 > This is a property for controlling parts of the XUL box model. It does not match either the old CSS flexible box layout Module drafts for `box-flex` (which were based on this property) or the behavior of `-webkit-box-flex` (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
@@ -70,37 +71,29 @@ A trick to make all content elements in a containing box the same size, is to gi
 ### Setting box-flex
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>-moz-box-flex example</title>
-    <style>
-      div.example {
-        display: -moz-box;
-        display: -webkit-box;
-        border: 1px solid black;
-        width: 100%;
-      }
-      div.example > p:nth-child(1) {
-        -moz-box-flex: 1; /* Mozilla */
-        -webkit-box-flex: 1; /* WebKit */
-        border: 1px solid black;
-      }
-      div.example > p:nth-child(2) {
-        -moz-box-flex: 0; /* Mozilla */
-        -webkit-box-flex: 0; /* WebKit */
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="example">
-      <p>I will expand to fill extra space</p>
-      <p>I will not expand</p>
-    </div>
-  </body>
-</html>
+<div class="example">
+  <p>I will expand to fill extra space</p>
+  <p>I will not expand</p>
+</div>
+```
+
+```css
+div.example {
+  display: -moz-box;
+  display: -webkit-box;
+  border: 1px solid black;
+  width: 100%;
+}
+div.example > p:nth-child(1) {
+  -moz-box-flex: 1; /* Mozilla */
+  -webkit-box-flex: 1; /* WebKit */
+  border: 1px solid black;
+}
+div.example > p:nth-child(2) {
+  -moz-box-flex: 0; /* Mozilla */
+  -webkit-box-flex: 0; /* WebKit */
+  border: 1px solid black;
+}
 ```
 
 ## Specifications

@@ -2,9 +2,8 @@
 title: Color picker tool
 slug: Web/CSS/CSS_colors/Color_picker_tool
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 This tool lets you pick a color in the sRGB {{glossary("color space")}} and converts it between various CSS [color formats](/en-US/docs/Web/CSS/color_value), helping you understand the syntax of the following sRGB color notations:
 
@@ -18,7 +17,7 @@ When you select a color, it gets displayed in four standard CSS color formats. C
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt")}} data type is supported in CSS.
+The generated color values can be used anywhere the {{cssxref("color_value", "&lt;color&gt;")}} data type is supported in CSS.
 
 ## See also
 

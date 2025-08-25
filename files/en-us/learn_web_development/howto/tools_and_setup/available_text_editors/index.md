@@ -2,9 +2,8 @@
 title: What text editors are available?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 
@@ -81,7 +80,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://webchat.freenode.net/?channels=brackets" rel="external"
+        <a href="https://irc.com/?channels=brackets" rel="external"
           >IRC</a
         >
       </td>
@@ -110,17 +109,6 @@ Here are some popular editors:
       </td>
       <td><a href="https://help.panic.com/nova/">eBook</a></td>
       <td><a href="https://extensions.panic.com/">Yes</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
-      <td>Closed source</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://www.codelobster.com/forum/index.php" rel="external">Forum</a >, <a href="mailto:support@codelobster.com">Email</a>
-      </td>
-      <td><a href="https://www.codelobsteride.com/help/">Online Manual</a></td>
-      <td>Yes</td>
     </tr>
     <tr>
       <td>
@@ -261,7 +249,7 @@ Here are some popular editors:
       <td>Mac</td>
       <td>
         <a href="https://x.com/macromates">Twitter</a>,
-        <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
+        <a href="https://irc.com/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>
@@ -345,9 +333,9 @@ Here are some popular editors:
   </tbody>
 </table>
 
-## Active Learning
+## Installing and using a text editor
 
-In this active learning section, we would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
+We would like you to try using and/or installing a text editor of your choice. Your computer may already be installed with one of the editors suggested above (e.g., Gedit if you use GNOME desktop, Kate if you use KDE etc.), if not then you should try installing one or more text editors of your choosing.
 
 Try digging through the settings of your editor and read the manual or documentation to see what its capabilities are. In particular (if possible in your editor), try to:
 
@@ -439,7 +427,6 @@ When you install a new text editor, your OS will probably continue to open text 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
 - Linux
-
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](https://userbase.kde.org/System_Settings/File_Associations)

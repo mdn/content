@@ -3,9 +3,8 @@ title: :open
 slug: Web/CSS/:open
 page-type: css-pseudo-class
 browser-compat: css.selectors.open
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has open and closed states, only when it is currently in the open state.
 
@@ -136,8 +135,7 @@ select {
   font-size: 100%;
   padding: 5px;
   border: 1px solid black;
-  background-color: white;
-  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,5 15,5 10,15'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,5 15,5 10,15'/%3E%3C/svg%3E")
     no-repeat right 3px center / 1em 1em;
 }
 
@@ -155,7 +153,7 @@ When the `<select>` is opened, we use the `:open` pseudo-class to set a differen
 ```css
 select:open {
   background-color: #f8f2dc;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,15 10,5 15,15'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,15 10,5 15,15'/%3E%3C/svg%3E");
 }
 
 label:has(select:open) {

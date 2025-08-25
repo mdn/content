@@ -3,9 +3,8 @@ title: Subgrid
 slug: Web/CSS/CSS_grid_layout/Subgrid
 page-type: guide
 browser-compat: css.properties.grid-template-columns.subgrid
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module includes a `subgrid` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does and gives some use cases and design patterns that the feature solves.
 
@@ -246,7 +245,7 @@ body {
 
 .subitem {
   background-color: #d9480f;
-  color: #fff;
+  color: white;
   border-radius: 5px;
 }
 ```
@@ -312,7 +311,7 @@ body {
 
 .subitem {
   background-color: #d9480f;
-  color: #fff;
+  color: white;
   border-radius: 5px;
 }
 ```

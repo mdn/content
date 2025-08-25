@@ -2,9 +2,8 @@
 title: Building up a basic demo with A-Frame
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 The [WebXR](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) and augmented reality (AR) experiences inside web browsers.
 To make this easier, Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language that allows web developers to build 3D VR landscapes using a familiar approach, and which follows game development coding principles.
@@ -136,9 +135,9 @@ We've also defined a cursor for the given camera, using the `cursor-*` attribute
 The basic light types in A-Frame are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Add the new code below your previous additions — this uses the standard `<a-light>` element:
 
 ```html
-<a-light type="directional" color="#FFF" intensity="0.5" position="-1 1 2">
+<a-light type="directional" color="white" intensity="0.5" position="-1 1 2">
 </a-light>
-<a-light type="ambient" color="#FFF"></a-light>
+<a-light type="ambient" color="white"></a-light>
 ```
 
 The directional light has a white color, its intensity is set to `0.5`, and it is placed at position `-1 1 2`. The ambient light only needs a color, which is also white.
@@ -262,10 +261,10 @@ Everything is rendered properly and animating — congratulations on building yo
 
   <a-light
     type="directional"
-    color="#FFF"
+    color="white"
     intensity="0.5"
     position="-1 1 2"></a-light>
-  <a-light type="ambient" color="#FFF"></a-light>
+  <a-light type="ambient" color="white"></a-light>
 
   <a-camera position="0 1 4">
     <a-cursor color="#0095DD" opacity="0.5" scale="2 2 2"> </a-cursor>
@@ -288,23 +287,6 @@ Everything is rendered properly and animating — congratulations on building yo
       dur: 2000; loop: true; easing: linear;">
   </a-entity>
 </a-scene>
-
-<script>
-  const scene = document.querySelector("a-scene");
-  const cylinder = document.createElement("a-cylinder");
-  cylinder.setAttribute("color", "#FF9500");
-  cylinder.setAttribute("height", "2");
-  cylinder.setAttribute("radius", "0.75");
-  cylinder.setAttribute("position", "3 1 0");
-  scene.appendChild(cylinder);
-  let t = 0;
-  function render() {
-    t += 0.01;
-    requestAnimationFrame(render);
-    cylinder.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-  }
-  render();
-</script>
 ```
 
 ```css hidden live-sample___a-frame-animation
@@ -315,6 +297,23 @@ body {
   height: 100%;
   font-size: 0;
 }
+```
+
+```js live-sample___a-frame-animation
+const scene = document.querySelector("a-scene");
+const cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
+scene.appendChild(cylinder);
+let t = 0;
+function render() {
+  t += 0.01;
+  requestAnimationFrame(render);
+  cylinder.setAttribute("position", `3 ${Math.sin(t * 2) + 1} 0`);
+}
+render();
 ```
 
 {{embedlivesample("a-frame-animation", "", "400px")}}

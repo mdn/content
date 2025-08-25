@@ -5,9 +5,10 @@ page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-box-image
+sidebar: cssref
 ---
 
-{{CSSRef}} {{ Non-standard_header() }}
+{{ Non-standard_header() }}
 
 The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) property sets the mask image for an element's border box.
 
@@ -31,17 +32,17 @@ The values includes the `<image>` to be used as the mask border, and optionally 
 -webkit-mask-box-image: none;
 
 /* image */
--webkit-mask-box-image: url(image.png);
+-webkit-mask-box-image: url("image.png");
 
 /* image edge-offset */
--webkit-mask-box-image: url(image.png) 10 20 20 10;
--webkit-mask-box-image: url(image.png) 10px 20px 20px 10px;
+-webkit-mask-box-image: url("image.png") 10 20 20 10;
+-webkit-mask-box-image: url("image.png") 10px 20px 20px 10px;
 
 /* image repeat-style */
--webkit-mask-box-image: url(image.png) space repeat;
+-webkit-mask-box-image: url("image.png") space repeat;
 
 /* image edge-offset repeat-style */
--webkit-mask-box-image: url(image.png) 10px 20px 20px 10px space repeat;
+-webkit-mask-box-image: url("image.png") 10px 20px 20px 10px space repeat;
 
 /* Global values */
 -webkit-mask-box-image: inherit;
@@ -101,7 +102,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ```css
 .example-two {
-  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100px 100px 0px 0px round round;
 }
 ```
 

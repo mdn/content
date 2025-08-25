@@ -3,7 +3,7 @@ title: Solve common JavaScript problems
 short-title: Common JavaScript problems
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
-sidebar: learnsidebar
+sidebar: learn-how-to
 ---
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -206,4 +206,4 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 
 ### Web APIs
 
-- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#doing_some_basic_dom_manipulation)

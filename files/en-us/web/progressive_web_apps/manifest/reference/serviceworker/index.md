@@ -6,9 +6,10 @@ status:
   - experimental
   - non-standard
 browser-compat: manifests.webapp.serviceworker
+sidebar: pwasidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{SeeCompatTable}}{{Non-standard_header}}
 
 The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} for more details.
 
@@ -17,18 +18,14 @@ The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-
 `serviceworker` objects may contain the following values:
 
 - `scope` {{experimental_inline}} {{non-standard_inline}}
-
   - : A string representing the service worker's registration scope.
 
 - `src` {{experimental_inline}} {{non-standard_inline}}
-
   - : A string representing the URL to download the service worker script from.
 
 - `use_cache` {{experimental_inline}} {{non-standard_inline}}
-
   - : A boolean that sets how the HTTP cache is used for service worker script resources during updates.
     It provides equivalent functionality to certain values of the `updateViaCache` option provided when a service worker is registered via JavaScript using {{domxref("ServiceWorkerContainer.register()")}}.
-
     - `true`: The HTTP cache will be queried for imports, but the main script will always be updated from the network. If no fresh entry is found in the HTTP cache for the imports, they're fetched from the network. Equivalent to `updateViaCache: "imports"`.
     - `false`: The HTTP cache will not be used for the main script or its imports. All service worker script resources will be updated from the network. Equivalent to `updateViaCache: "none"`.
 

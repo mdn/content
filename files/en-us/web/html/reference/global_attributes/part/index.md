@@ -1,11 +1,11 @@
 ---
-title: part
+title: HTML part global attribute
+short-title: part
 slug: Web/HTML/Reference/Global_attributes/part
 page-type: html-attribute
 browser-compat: html.global_attributes.part
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`part`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) contains a space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 

@@ -1,13 +1,13 @@
 ---
 title: CSS selectors and combinators
+short-title: Selectors and combinators
 slug: Web/CSS/CSS_selectors/Selectors_and_combinators
 page-type: guide
 spec-urls:
   - https://drafts.csswg.org/selectors/
   - https://drafts.csswg.org/css-pseudo/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 CSS selectors are used to define a pattern of the elements that you want to select for applying a set of CSS rules on the selected elements. Combinators define the relationship between the selectors. Using various selectors and combinators, you can precisely select and style the desired elements based on their type, attributes, state, or relationship to other elements.
 

@@ -56,6 +56,8 @@ setActionHandler(type, callback)
       - : Turn the user's active camera on or off.
     - `togglemicrophone`
       - : Mute or unmute the user's microphone.
+    - `togglescreenshare`
+      - : Turn the user's active screenshare on or off.
 - `callback`
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`

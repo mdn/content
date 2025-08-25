@@ -1,13 +1,15 @@
 ---
-title: Sec-CH-UA-Full-Version
+title: Sec-CH-UA-Full-Version header
+short-title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version
 page-type: http-header
 status:
   - deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
+{{Deprecated_Header}}{{SecureContext_Header}}
 
 > [!NOTE]
 > This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.

@@ -1,13 +1,15 @@
 ---
-title: "Permissions-Policy: gamepad"
+title: "Permissions-Policy: gamepad directive"
+short-title: gamepad
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/gamepad
 page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.gamepad
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `gamepad` directive controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 

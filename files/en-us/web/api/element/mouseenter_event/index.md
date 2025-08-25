@@ -16,10 +16,10 @@ Note that "moving into an element" refers to the element's position in the DOM t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseenter", (event) => {});
+```js-nolint
+addEventListener("mouseenter", (event) => { })
 
-onmouseenter = (event) => {};
+onmouseenter = (event) => { }
 ```
 
 ## Event type
@@ -125,7 +125,7 @@ Styling the `div` to make it more visible.
 #mouseTarget {
   box-sizing: border-box;
   width: 15rem;
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 ```
 
@@ -144,7 +144,7 @@ mouseTarget.addEventListener("mouseenter", (e) => {
 });
 
 mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
+  mouseTarget.style.border = "1px solid #333333";
   leaveEventCount++;
   addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });

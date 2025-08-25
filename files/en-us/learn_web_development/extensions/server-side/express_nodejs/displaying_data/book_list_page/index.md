@@ -15,14 +15,14 @@ Open **/controllers/bookController.js**. Find the exported `book_list()` control
 
 ```js
 // Display list of all books.
-exports.book_list = asyncHandler(async (req, res, next) => {
+exports.book_list = async (req, res, next) => {
   const allBooks = await Book.find({}, "title author")
     .sort({ title: 1 })
     .populate("author")
     .exec();
 
   res.render("book_list", { title: "Book List", book_list: allBooks });
-});
+};
 ```
 
 The route handler calls the `find()` function on the `Book` model, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields), and sorting the results by the title alphabetically using the `sort()` method.

@@ -3,9 +3,8 @@ title: omnibox.onDeleteSuggestion
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onDeleteSuggestion
 page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onDeleteSuggestion
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired whenever the user deletes a suggestion.
 A suggestion can be deleted when the property `deletable` of a {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} is set to true.

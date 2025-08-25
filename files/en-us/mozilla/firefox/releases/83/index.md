@@ -1,10 +1,10 @@
 ---
 title: Firefox 83 for developers
+short-title: Firefox 83
 slug: Mozilla/Firefox/Releases/83
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
@@ -48,7 +48,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

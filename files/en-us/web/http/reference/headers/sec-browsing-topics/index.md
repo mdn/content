@@ -1,14 +1,16 @@
 ---
-title: Sec-Browsing-Topics
+title: Sec-Browsing-Topics header
+short-title: Sec-Browsing-Topics
 slug: Web/HTTP/Reference/Headers/Sec-Browsing-Topics
 page-type: http-header
 status:
   - experimental
   - non-standard
 browser-compat: http.headers.Sec-Browsing-Topics
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.

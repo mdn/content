@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.scroll-marker
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`::scroll-marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be generated inside any element and represents its scroll marker. All elements can have a `::scroll-marker` pseudo-element, which is placed into the {{cssxref("::scroll-marker-group")}} of the nearest {{glossary("scroll container")}} ancestor. A scroll marker behaves like an anchor ({{htmlelement("a")}} element) whose scroll target is the marker's originating element — and scrolls the scroll container to that element when activated.
 
@@ -75,7 +76,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css live-sample___creating-scroll-markers live-sample___custom-numbering
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   height: 100px;
   padding-top: 20px;
@@ -144,7 +145,7 @@ li::scroll-marker {
   text-decoration: none;
   border: 2px solid rgb(0 0 0 / 0.15);
   border-radius: 0.5em;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
@@ -164,7 +165,7 @@ To improve user experience, we set a different color on the markers on {{cssxref
 
 ```css live-sample___custom-numbering
 ::scroll-marker:hover {
-  background-color: #dcc;
+  background-color: #ddcccc;
 }
 
 ::scroll-marker:target-current {

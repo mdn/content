@@ -21,9 +21,7 @@ createPolicy(policyName, policyOptions)
 - `policyName`
   - : A string with the name of the policy.
 - `policyOptions` {{optional_inline}}
-
   - : User-defined functions for converting strings into trusted values.
-
     - `createHTML(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
     - `createScript(input[,args])`
@@ -62,7 +60,7 @@ The default policy logs a message to the console to remind the developer to refa
 
 ```js
 trustedTypes.createPolicy("default", {
-  createScriptURL: (s, type, sink) => {
+  createScriptURL(s, type, sink) {
     console.log("Please refactor.");
     return `${s}?default-policy-used&type=${encodeURIComponent(
       type,

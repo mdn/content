@@ -1,10 +1,10 @@
 ---
 title: Firefox 10 for developers
+short-title: Firefox 10
 slug: Mozilla/Firefox/Releases/10
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
@@ -47,7 +47,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Full Screen API
 
 - Support for {{ domxref("Document/fullscreenEnabled", "document.fullscreenEnabled") }} has been added.
-- The new {{ cssxref(":-moz-full-screen-ancestor") }} property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
+- The new `:-moz-full-screen-ancestor` property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
 
 #### Battery API
 
@@ -55,8 +55,8 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### Canvas
 
-- The [`createPattern()`](/en-US/docs/Web/API/CanvasRenderingContext2D#createpattern%28%29) method now throws an exception if a zero-sized source canvas is specified.
-- If you use a non-finite value for any of the numeric parameters to [`putImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D#putimagedata%28%29), the call is now silently ignored instead of throwing an exception, in keeping with the specification.
+- The [`createPattern()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern) method now throws an exception if a zero-sized source canvas is specified.
+- If you use a non-finite value for any of the numeric parameters to [`putImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData), the call is now silently ignored instead of throwing an exception, in keeping with the specification.
 
 #### WebGL
 
@@ -65,26 +65,26 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### Web Workers
 
-- The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
+- The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 - The [`Worker()`](/en-US/docs/Web/API/Worker/Worker) constructor now accepts [data URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 #### IndexedDB
 
 Great progress has been made to update IndexedDB to the latest draft specification. This effort will continue in Firefox 11.
 
-- The [`IDBIndex.count()`](/en-US/docs/Web/API/IDBIndex#count) and [`IDBObjectStore.count()`](/en-US/docs/Web/API/IDBObjectStore#count) methods have been added.
-- The [`IDBCursor.advance()`](/en-US/docs/Web/API/IDBCursor#advance) method has been added.
-- When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore#createindex) or [`IDBDatabase.createObjectStore()`](/en-US/docs/Web/API/IDBDatabase#createobjectstore), Gecko will not fire an exception anymore, but ignore it.
-- When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
+- The [`IDBIndex.count()`](/en-US/docs/Web/API/IDBIndex/count) and [`IDBObjectStore.count()`](/en-US/docs/Web/API/IDBObjectStore/count) methods have been added.
+- The [`IDBCursor.advance()`](/en-US/docs/Web/API/IDBCursor/advance) method has been added.
+- When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex) or [`IDBDatabase.createObjectStore()`](/en-US/docs/Web/API/IDBDatabase/createObjectStore), Gecko will not fire an exception anymore, but ignore it.
+- When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction/abort) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
 - The methods [`IDBObjectStore.delete()`](/en-US/docs/Web/API/IDBObjectStore/delete) and [`IDBCursor.delete()`](/en-US/docs/Web/API/IDBCursor/delete) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
-- The method `IDBDatabase.setVersion()` has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The `IDBVersionChangeRequest` interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
+- The method `IDBDatabase.setVersion()` has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory/open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The `IDBVersionChangeRequest` interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
 - When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
-- The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29) method has been added.
+- The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory/deleteDatabase) method has been added.
 - Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.
 
 #### Other
 
-- When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/en-US/docs/Web/API/DOMParser#parsing_a_svg_document) when given a string with SVG.
+- When the proper MIME type is passed, `image/svg+xml`, the `DOMParser` now creates a `SVGDocument` when given a string with SVG.
 - In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.
 - The ESC key no longer incorrectly results in the {{ domxref("Element.keydown_event", "onkeydown") }} handler incorrectly getting called.
 - The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
@@ -96,8 +96,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms#3d_specific_css_properties) for details.
 - Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: `-moz-isolation` and `-moz-plaintext`. The `-moz-isolation` value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with `unicode-bidi:-moz-isolation` behaves like a {{ HTMLElement("bdi") }} element. The `-moz-plaintext` indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.
 - The CSS {{ cssxref("gradient/linear-gradient") }} and {{ cssxref("gradient/repeating-linear-gradient") }} properties have been updated to support the new `to` syntax and the _magic corner_ algorithm. This allows to give a precise color on the corner of a gradient-filled box.
-- The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one [has been corrected](/en-US/docs/Web/CSS/text-overflow#gecko_notes).
-- Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements [has been fixed](/en-US/docs/Web/CSS/position#gecko_notes). **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
+- The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one has been corrected.
+- Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements has been fixed. **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 - Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 
 ### SVG
@@ -116,19 +116,19 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ## Changes for Mozilla and add-on developers
 
-For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10).
+For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Releases/10/Updating_add-ons).
 
 > [!NOTE]
-> The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
+> The old [`PRBool`](https://web.archive.org/web/20210224213411/https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR/Reference/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
 
 ### Manifests
 
-- Support for [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictcompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
+- Support for [`<em:strictCompatibility>`](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests#strictcompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
 - If you wish to revert to the old behavior — that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
 ### XUL
 
-- Bootstrapped add-ons using a `chrome.manifest` file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
+- Bootstrapped add-ons using a `chrome.manifest` file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](https://web.archive.org/web/20210519000929/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
 
 ### XPConnect
 
@@ -149,17 +149,3 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 - The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See [Firefox bug 559505](https://bugzil.la/559505) for progress on removing the last vestiges of RDF being required.
 - The `--disable-smil` build option has been removed.
-
-### See also
-
-- [Firefox 9 for developers](/en-US/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/en-US/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/en-US/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/1.5)

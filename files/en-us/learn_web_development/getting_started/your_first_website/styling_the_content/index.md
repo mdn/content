@@ -225,6 +225,8 @@ In each of the sections that follow:
 
 ## Changing the page color
 
+Add the following:
+
 ```css
 html {
   background-color: #00539f;
@@ -234,6 +236,8 @@ html {
 This rule sets a background color for the entire page. Change the color code to the color you chose in [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_theme_color).
 
 ## Styling the body
+
+Next, add this rule:
 
 ```css
 body {
@@ -254,6 +258,8 @@ The above code sets new values for several properties of the {{htmlelement("body
 - `border: 5px solid black;`: This sets values for the width, style, and color of the border. In this case, it's a 5-pixel-wide solid black border around all sides of the body.
 
 ## Positioning and styling the main page title
+
+Now add this:
 
 ```css
 h1 {
@@ -276,6 +282,8 @@ Finally, `text-shadow` applies a shadow to the text content of the element:
 - The fourth value sets the base color of the shadow.
 
 ## Centering the image
+
+Finally, insert this rule:
 
 ```css
 img {

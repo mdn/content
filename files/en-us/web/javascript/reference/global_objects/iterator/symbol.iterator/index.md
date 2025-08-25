@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype[Symbol.iterator]()
+short-title: "[Symbol.iterator]()"
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.@@iterator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.iterator]()`** method of {{jsxref("Iterator")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.
 

@@ -3,12 +3,10 @@ title: "ImageCapture: grabFrame() method"
 short-title: grabFrame()
 slug: Web/API/ImageCapture/grabFrame
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ImageCapture.grabFrame
 ---
 
-{{APIRef("Image Capture API")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}
 
 The **`grabFrame()`** method of the
 {{domxref("ImageCapture")}} interface takes a snapshot of the live video in a

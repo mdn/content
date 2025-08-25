@@ -1,11 +1,11 @@
 ---
 title: Math.clz32()
+short-title: clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.clz32
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.clz32()`** static method returns the number of leading zero bits in the 32-bit binary representation of a number.
 

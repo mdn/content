@@ -9,6 +9,10 @@ browser-compat: api.SharedStorage
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
 
+> [!WARNING]
+> This feature is currently opposed by one browser vendor.
+> See the [Standards positions](#standards_positions) section below for details.
+
 The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access while preserving privacy (i.e., without relying on tracking cookies).
 
 ## Concepts and usage
@@ -260,6 +264,13 @@ For extensive demos, see the [Shared Storage API demo site](https://shared-stora
 ## Specifications
 
 {{Specifications}}
+
+### Standards positions
+
+One browser vendor [opposes](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
+
+- Mozilla (Firefox): [Negative](https://github.com/mozilla/standards-positions/issues/646)
 
 ## Browser compatibility
 

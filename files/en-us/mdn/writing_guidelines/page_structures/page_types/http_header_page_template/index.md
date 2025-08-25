@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -16,28 +17,30 @@ sidebar: mdnsidebar
 >
 > ```md
 > ---
-> title: NameOfTheHeader
-> slug: Web/HTTP/Headers/NameOfTheHeader
+> title: NameOfTheHeader header
+> short-title: NameOfTheHeader
+> slug: Web/HTTP/Reference/Headers/NameOfTheHeader
 > page-type: http-header
 > status:
 >   - deprecated
 >   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
-> sidebar: httpsidebar
+> sidebar: http
 > ---
 > ```
 >
 > - **title**
->   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
+>   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader header_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _title_ of `Cache-Control header`.
+> - **short-title**
+>   - : A short title used in breadcrumbs and sidebars. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header has a _short-title_ of `Cache-Control`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Reference/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) slug is `Web/HTTP/Reference/Headers/Cache-Control`.
 > - **page-type**
 >   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value `path.to.feature.NameOfTheHeader` with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
 >
@@ -48,7 +51,7 @@ sidebar: mdnsidebar
 >     For these cases, remove the browser-compat key and value.
 >
 > - **sidebar**
->   - : This is always `httpsidebar`.
+>   - : This is always `http`.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
@@ -137,6 +140,7 @@ feel free to include multiple definition lists, subsections, and explanations as
 ## Description
 
 If there is too much content to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
+This is a good place to note whether real-world patterns differ from what's specified if widely-deployed implementations deviate from what's described in specifications.
 
 ## Examples
 

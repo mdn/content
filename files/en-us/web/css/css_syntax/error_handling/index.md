@@ -1,10 +1,10 @@
 ---
 title: CSS error handling
+short-title: Error handling
 slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
@@ -43,7 +43,7 @@ Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}}
 
 ```css
 @import "assets/fonts.css" layer(fonts);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url("http://www.w3.org/2000/svg");
 ```
 
 If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. [Block at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#block_at-rules) like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
@@ -78,13 +78,13 @@ When it comes to CSS properties and values within a declaration block, if either
 
 This example contains an error. The parser ignores the error (and the comments), seeks forward until it encounters a semi-colon, then restarts parsing:
 
-```css-nolint bad
+```css-nolint example-bad
 p {
-/* Invalid syntax due to  missing semi-colon */
+  /* Invalid syntax due to missing semi-colon */
   border-color: red
   background-color: green;
 
-/* Valid syntax but likely a logic error */
+  /* Valid syntax but likely a logic error */
   border-width: 100vh;
 }
 ```

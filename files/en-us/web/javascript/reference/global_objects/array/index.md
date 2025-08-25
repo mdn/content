@@ -3,9 +3,8 @@ title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 
@@ -485,7 +484,8 @@ console.log(removedItem);
 // Orange
 ```
 
-> **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
+> [!NOTE]
+> `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
 
 ### Remove multiple items from the end of an array
 
@@ -528,7 +528,8 @@ console.log(removedItem);
 // Apple
 ```
 
-> **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
+> [!NOTE]
+> `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
 
 ### Remove multiple items from the beginning of an array
 

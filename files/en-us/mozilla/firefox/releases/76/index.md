@@ -1,10 +1,10 @@
 ---
 title: Firefox 76 for developers
+short-title: Firefox 76
 slug: Mozilla/Firefox/Releases/76
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
 
@@ -40,7 +40,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 ### CSS
 
-- Firefox now supports [CSS colors level 4 system colors](https://www.w3.org/TR/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
+- Firefox now supports [CSS colors level 4 system colors](https://drafts.csswg.org/css-color-4/#typedef-system-color) ([Firefox bug 1590894](https://bugzil.la/1590894)).
 
 ### SVG
 
@@ -82,7 +82,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

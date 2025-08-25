@@ -1,11 +1,11 @@
 ---
 title: Intl.PluralRules() constructor
+short-title: Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.PluralRules()`** constructor creates {{jsxref("Intl.PluralRules")}} objects.
 
@@ -17,16 +17,15 @@ new Intl.PluralRules(locales)
 new Intl.PluralRules(locales, options)
 ```
 
-> **Note:** `Intl.PluralRules()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.PluralRules()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
-
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `type`
@@ -37,7 +36,6 @@ new Intl.PluralRules(locales, options)
           - : For ordinal number (referring to the ordering or ranking of things, e.g., "1st", "2nd", "3rd" in English).
 
     `Intl.PluralRules` also supports the `Intl.NumberFormat()` [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) (see `Intl.NumberFormat()` for details):
-
     - `minimumIntegerDigits`
     - `minimumFractionDigits`
     - `maximumFractionDigits`

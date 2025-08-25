@@ -252,11 +252,11 @@ A date and time control is created using the {{HTMLElement("input")}} element an
 ```
 
 ```css hidden live-sample___date1
-input:invalid + span:after {
+input:invalid + span::after {
   content: " ✖";
 }
 
-input:valid + span:after {
+input:valid + span::after {
   content: " ✓";
 }
 ```
@@ -371,10 +371,6 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 {{EmbedLiveSample('Color picker control','100%','50')}}
 
 Clicking a color control generally displays the operating system's default color-picking functionality for you to choose. The value returned is always a lowercase 6-value hexadecimal color.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML5 controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls).
 
 ## Summary
 

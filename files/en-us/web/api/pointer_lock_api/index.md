@@ -154,7 +154,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)) to show you how to use it to set up a simple control system. This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.
+We've written a [pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)) to show you how to use it to set up a simple control system. This demo uses JavaScript to draw a ball on top of a {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.
 
 We set initial x and y positions on the canvas:
 
@@ -221,12 +221,10 @@ function updatePosition(e) {
   }
   tracker.textContent = `X position: ${x}, Y position: ${y}`;
 
-  if (!animation) {
-    animation = requestAnimationFrame(() => {
-      animation = null;
-      canvasDraw();
-    });
-  }
+  animation ??= requestAnimationFrame(() => {
+    animation = null;
+    canvasDraw();
+  });
 }
 ```
 
@@ -236,7 +234,7 @@ The `canvasDraw()` function draws the ball in the current `x` and `y` positions:
 function canvasDraw() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#f00";
+  ctx.fillStyle = "red";
   ctx.beginPath();
   ctx.arc(x, y, RADIUS, 0, degToRad(360), true);
   ctx.fill();

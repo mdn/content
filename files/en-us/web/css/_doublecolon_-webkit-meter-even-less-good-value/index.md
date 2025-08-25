@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - non-standard
 browser-compat: css.selectors.-webkit-meter-even-less-good-value
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`::-webkit-meter-even-less-good-value`** styles the {{htmlelement("meter")}} element when the value and the optimum attributes fall outside the low-high range, but in opposite zones. To illustrate, it applies when _value_ < _low_ < _high_ < _optimum_ or _value_ > _high_ > _low_ > _optimum_.
 
@@ -51,7 +52,13 @@ body {
 }
 
 #styled::-webkit-meter-even-less-good-value {
-  background: linear-gradient(to bottom, #f77, #900 45%, #900 55%, #f77);
+  background: linear-gradient(
+    to bottom,
+    #ff7777,
+    #990000 45%,
+    #990000 55%,
+    #ff7777
+  );
   height: 100%;
   box-sizing: border-box;
 }

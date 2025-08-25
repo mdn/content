@@ -3,9 +3,8 @@ title: margin-block
 slug: Web/CSS/margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.margin-block
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
@@ -56,7 +55,7 @@ writing-mode: vertical-lr;
   display: inline-block;
   border: solid #ce7777 10px;
   background-color: #2b3a55;
-  color: #ffffff;
+  color: white;
   flex-shrink: 0;
 }
 

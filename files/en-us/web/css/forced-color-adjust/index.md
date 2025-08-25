@@ -3,9 +3,8 @@ title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`forced-color-adjust`** [CSS](/en-US/docs/Web/CSS) property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
 
@@ -29,11 +28,11 @@ The `forced-color-adjust` property's value must be one of the following keywords
 ### Values
 
 - `auto`
-  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default.
+  - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
 - `none`
   - : The element's colors are not automatically adjusted by the {{Glossary("user agent")}} in forced colors mode.
 - `preserve-parent-color`
-  - : In forced colors mode, if the {{cssxref("color")}} property inherits from its parent (i.e., there is no [cascaded value](/en-US/docs/Web/CSS/CSS_cascade/Cascade) or the cascaded value is `currentcolor`, {{cssxref("inherit")}}, or another keyword that inherits from the parent), then it computes to the [used color](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of its parent's `color` property. In all other cases, it behaves the same as `none`.
+  - : In forced colors mode, if the {{cssxref("color")}} property inherits from its parent (i.e., there is no [cascaded value](/en-US/docs/Web/CSS/CSS_cascade/Cascade) or the cascaded value is `currentColor`, {{cssxref("inherit")}}, or another keyword that inherits from the parent), then it computes to the [used color](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of its parent's `color` property. In all other cases, it behaves the same as `none`.
 
 ## Usage notes
 
@@ -60,7 +59,7 @@ By using the {{cssxref("@media/forced-colors", "forced-colors")}} media feature,
 ```css
 .box {
   border: 5px solid grey;
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 300px;
   margin: 20px;
   padding: 10px;

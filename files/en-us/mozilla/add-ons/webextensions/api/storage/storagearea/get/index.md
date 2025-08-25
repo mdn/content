@@ -3,9 +3,8 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves one or more items from the storage area.
 

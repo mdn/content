@@ -32,7 +32,7 @@ This function is an XSLT-specific addition to XPath. It is not a part of the cor
 
 ## Specifications
 
-[XSLT 1.0 12.2](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-key)
+[XSLT 1.0 12.2](https://www.w3.org/TR/xslt-10/#function-key)
 
 ## Gecko support
 

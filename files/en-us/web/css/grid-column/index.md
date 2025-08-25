@@ -3,9 +3,8 @@ title: grid-column
 slug: Web/CSS/grid-column
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-column
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-column`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
@@ -48,12 +47,12 @@ grid-column: 1 / span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -114,7 +113,6 @@ Each `<grid-line>` value can be specified as:
 - `auto`
   - : Is a keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
-
   - : If there is a named line with the name `<custom-ident>-start`/`<custom-ident>-end`, it contributes the first such line to the grid item's placement.
 
     > [!NOTE]
@@ -123,7 +121,6 @@ Each `<grid-line>` value can be specified as:
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
 - `<integer> && <custom-ident>?`
-
   - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
@@ -131,7 +128,6 @@ Each `<grid-line>` value can be specified as:
     An {{cssxref("integer")}} value of `0` is invalid.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Contributes a grid span to the grid item's placement such that the corresponding edge of the grid item's grid area is n lines from the opposite edge.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.

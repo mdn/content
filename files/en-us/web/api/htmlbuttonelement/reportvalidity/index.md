@@ -53,17 +53,17 @@ We add a bit of CSS, including `:valid` and `:invalid` styles for our button:
 ```css
 input[type="submit"],
 button {
-  background-color: #33a;
+  background-color: #3333aa;
   border: none;
   font-size: 1.3rem;
   padding: 5px 10px;
   color: white;
 }
 button:invalid {
-  background-color: #a33;
+  background-color: #aa3333;
 }
 button:valid {
-  background-color: #3a3;
+  background-color: #33aa33;
 }
 ```
 
@@ -87,7 +87,7 @@ exampleButton.addEventListener("invalid", () => {
 
 exampleButton.addEventListener("click", (e) => {
   e.preventDefault();
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     breakOrFixButton("fixed");
   } else {
     breakOrFixButton("error");
@@ -97,7 +97,7 @@ exampleButton.addEventListener("click", (e) => {
 
 const breakOrFixButton = () => {
   const state = toggleButton();
-  if (state == "error") {
+  if (state === "error") {
     exampleButton.setCustomValidity("This is a custom error message");
   } else {
     exampleButton.setCustomValidity("");
@@ -105,7 +105,7 @@ const breakOrFixButton = () => {
 };
 
 const toggleButton = () => {
-  if (exampleButton.value == "error") {
+  if (exampleButton.value === "error") {
     exampleButton.value = "fixed";
     exampleButton.innerHTML = "No error";
   } else {

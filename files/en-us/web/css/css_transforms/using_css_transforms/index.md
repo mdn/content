@@ -1,10 +1,10 @@
 ---
 title: Using CSS transforms
+short-title: Using transforms
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 By modifying the coordinate space, **CSS transforms** change the shape and position of the affected content without disrupting the normal document flow. This guide provides an introduction to using transforms.
 
@@ -33,11 +33,14 @@ Here is an unaltered image of the MDN logo:
 Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 
 ```html
-<img
-  style="rotate: 90deg;
-      transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN Logo" />
+<img src="logo.png" alt="MDN Logo" />
+```
+
+```css
+img {
+  rotate: 90deg;
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -47,11 +50,14 @@ Here is the MDN logo rotated 90 degrees from its bottom-left corner.
 Here is the MDN logo, skewed by 10 degrees and translated by 150 pixels on the X-axis.
 
 ```html
-<img
-  style="transform: skewX(10deg) translateX(150px);
-            transform-origin: bottom left;"
-  src="logo.png"
-  alt="MDN logo" />
+<img src="logo.png" alt="MDN logo" />
+```
+
+```css
+img {
+  transform: skewX(10deg) translateX(150px);
+  transform-origin: bottom left;
+}
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}
@@ -82,7 +88,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers250">
+          <div class="cube perspective-250">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -94,7 +100,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
       </td>
       <td>
         <div class="container">
-          <div class="cube pers350">
+          <div class="cube perspective-350">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -112,7 +118,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
     <tr>
       <td>
         <div class="container">
-          <div class="cube pers500">
+          <div class="cube perspective-500">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -124,7 +130,7 @@ The HTML below creates four copies of the same box, with the perspective set at 
       </td>
       <td>
         <div class="container">
-          <div class="cube pers650">
+          <div class="cube perspective-650">
             <div class="face front">1</div>
             <div class="face back">2</div>
             <div class="face right">3</div>
@@ -145,19 +151,19 @@ The CSS establishes classes that can be used to set the perspective to different
 
 ```css
 /* Shorthand classes for different perspective values */
-.pers250 {
+.perspective-250 {
   perspective: 250px;
 }
 
-.pers350 {
+.perspective-350 {
   perspective: 350px;
 }
 
-.pers500 {
+.perspective-500 {
   perspective: 500px;
 }
 
-.pers650 {
+.perspective-650 {
   perspective: 650px;
 }
 
@@ -197,7 +203,7 @@ The CSS establishes classes that can be used to set the perspective to different
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -493,7 +499,7 @@ This example shows cubes with popular `perspective-origin` values.
   transform: translateZ(50px);
 }
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
@@ -516,7 +522,7 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Make the layout a little nicer */
 section {
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

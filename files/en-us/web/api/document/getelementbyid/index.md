@@ -38,16 +38,9 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 ### HTML
 
 ```html
-<html lang="en">
-  <head>
-    <title>getElementById example</title>
-  </head>
-  <body>
-    <p id="para">Some text here</p>
-    <button onclick="changeColor('blue');">blue</button>
-    <button onclick="changeColor('red');">red</button>
-  </body>
-</html>
+<p id="para">Some text here</p>
+<button>blue</button>
+<button>red</button>
 ```
 
 ### JavaScript
@@ -57,6 +50,12 @@ function changeColor(newColor) {
   const elem = document.getElementById("para");
   elem.style.color = newColor;
 }
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    changeColor(event.target.textContent.toLowerCase());
+  });
+});
 ```
 
 ### Result
@@ -70,27 +69,17 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 ### Example
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="parent-id">
-      <p>hello word1</p>
-      <p id="test1">hello word2</p>
-      <p>hello word3</p>
-      <p>hello word4</p>
-    </div>
-    <script>
-      const parentDOM = document.getElementById("parent-id");
-      const test1 = parentDOM.getElementById("test1");
-      // throw error
-      // Uncaught TypeError: parentDOM.getElementById is not a function
-    </script>
-  </body>
-</html>
+<div id="parent-id">
+  <p>hello word1</p>
+  <p id="test1">hello word2</p>
+  <p>hello word3</p>
+  <p>hello word4</p>
+</div>
+```
+
+```js
+const parentDOM = document.getElementById("parent-id");
+const test1 = parentDOM.getElementById("test1");
 ```
 
 If there is no element with the given `id`, this function returns `null`. Note that the `id` parameter is case-sensitive, so `document.getElementById("Main")` will return `null` instead of the element `<div id="main">` because "M" and "m" are different for the purposes of this method.

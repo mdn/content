@@ -3,9 +3,8 @@ title: list-style-position
 slug: Web/CSS/list-style-position
 page-type: css-property
 browser-compat: css.properties.list-style-position
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the position of the {{cssxref("::marker")}} relative to a list item.
 

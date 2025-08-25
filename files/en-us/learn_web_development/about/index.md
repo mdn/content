@@ -22,7 +22,7 @@ In addition, Mozilla talks to industry professionals every day, and we regularly
 - Gaps in the knowledge of how browsers fundamentally work, how they surface information, and the interactivity you get for free. This causes solutions to be overcomplicated and often inaccessible.
 - Limited problem-solving, teamwork, research, and other vital soft skills.
 
-As a result, we created a curriculum to help guide people towards learning a better skillset, making them more employable, and enabling them to build a better, more accessible, more responsible web of tomorrow. We want them to have the best possible chance of success. We [launched the MDN Curriculum in early 2024](/en-US/blog/mdn-curriculum-launch/).
+As a result, we created a curriculum to help guide people towards learning a better skill set, making them more employable, and enabling them to build a better, more accessible, more responsible web of tomorrow. We want them to have the best possible chance of success. We [launched the MDN Curriculum in early 2024](/en-US/blog/mdn-curriculum-launch/).
 
 However, we quickly received feedback that users found it confusing having two learning resources on MDN, with the curriculum/learning pathway in one place and the learning content in another place. as a result, we [merged the Curriculum into the learning area in December 2024](/en-US/docs/Learn_web_development/Changelog#december_2024).
 

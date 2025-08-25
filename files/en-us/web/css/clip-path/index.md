@@ -3,9 +3,8 @@ title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
 browser-compat: css.properties.clip-path
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
@@ -79,7 +78,7 @@ section {
 clip-path: none;
 
 /* <clip-source> values */
-clip-path: url(resources.svg#c1);
+clip-path: url("resources.svg#c1");
 
 /* <geometry-box> values */
 clip-path: margin-box;
@@ -120,9 +119,7 @@ The `clip-path` property is specified as one or a combination of the values list
 - `<clip-source>`
   - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : Defines an inset rectangle.
     - {{cssxref("basic-shape/circle","circle()")}}
@@ -141,9 +138,7 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
 - `<geometry-box>`
-
   - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
-
     - `margin-box`
       - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) as the reference box.
     - `border-box`
@@ -313,11 +308,11 @@ We then set the `id` of the `<clipPath>` as the `<clip-source>`. We center the t
 
 ```css
 .window {
-  clip-path: url(#window);
+  clip-path: url("#window");
 }
 
 .cross {
-  clip-path: url(#cross);
+  clip-path: url("#cross");
   align-content: center;
 }
 ```
@@ -337,13 +332,14 @@ This example demonstrates the various values of the `clip-path` property clippin
 The HTML includes an `<img>` that will be clipped, a star-shaped `<clipPath>`, and a {{htmlelement("select")}} element to choose a `clip-path` property value from.
 
 ```html
-<img id="clipped"
+<img
+  id="clipped"
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
 <svg height="0" width="0">
   <defs>
     <clipPath id="star">
-      <path d="M100,0 42,180 196,70 4,70 158,180z">
+      <path d="M100,0 42,180 196,70 4,70 158,180z" />
     </clipPath>
   </defs>
 </svg>
@@ -372,7 +368,7 @@ The initial rendering includes the star as the `clip-path` source.
 ```css
 #clipped {
   margin-bottom: 20px;
-  clip-path: url(#star);
+  clip-path: url("#star");
 }
 ```
 
@@ -420,6 +416,7 @@ Select different options to change the `clip-path` value.
 - {{CSSxRef("mask")}}
 - {{CSSxRef("filter")}}
 - {{cssxref("background-clip")}}
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
 - [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
 - SVG {{SVGAttr("clip-path")}} attribute
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

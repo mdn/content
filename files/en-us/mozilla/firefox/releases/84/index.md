@@ -1,10 +1,10 @@
 ---
 title: Firefox 84 for developers
+short-title: Firefox 84
 slug: Mozilla/Firefox/Releases/84
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
 
@@ -73,7 +73,3 @@ _No changes._
 ## Changes for add-on developers
 
 - The [`browsingData.remove()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove) API now supports removing a subset of data types by `cookieStoreId`.
-
-## Older versions
-
-{{Firefox_for_developers}}

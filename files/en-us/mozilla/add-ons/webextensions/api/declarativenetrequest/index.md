@@ -3,9 +3,8 @@ title: declarativeNetRequest
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
 page-type: webextension-api
 browser-compat: webextensions.api.declarativeNetRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This API enables extensions to specify conditions and actions that describe how network requests should be handled. These declarative rules enable the browser to evaluate and modify network requests without notifying extensions about individual network requests.
 
@@ -169,6 +168,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 ## Types
 
+- {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}
+  - : The response header to match for the request, declared in the [`rule.condition.excludedResponseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#excludedresponseheaders) array or [`rule.condition.responseHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#responseheaders) array.
 - {{WebExtAPIRef("declarativeNetRequest.MatchedRule")}}
   - : Details of a matched rule.
 - {{WebExtAPIRef("declarativeNetRequest.ModifyHeaderInfo")}}
@@ -228,7 +229,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
   - : Returns the set of session-scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
-  - : Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
+  - : Checks if a regular expression is supported as a [`declarativeNetRequest.RuleCondition.regexFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleCondition#regexfilter) rule condition.
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
   - : Configures how the action count for tabs are handled.
 - {{WebExtAPIRef("declarativeNetRequest.testMatchOutcome()")}}

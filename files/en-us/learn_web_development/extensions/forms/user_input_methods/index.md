@@ -41,11 +41,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 `handleKeyDown` and `handleKeyUp` are functions defining the control logic to be executed when the `keydown` and `keyup` events are fired.
 
 > [!NOTE]
-> Have a look at the [Events reference](/en-US/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> See the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events) guide and the {{domxref("KeyboardEvent")}} reference to find out more about keyboard events.
 
 ### Mouse
 
-You can also capture mouse and other pointer events. The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/en-US/docs/Web/API/Element/click_event), [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event), [`mouseup`](/en-US/docs/Web/API/Element/mouseup_event), and [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/en-US/docs/Web/Events).
+You can also capture mouse and other pointer events. The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/en-US/docs/Web/API/Element/click_event), [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event), [`mouseup`](/en-US/docs/Web/API/Element/mouseup_event), and [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [DOM events](/en-US/docs/Web/API/Document_Object_Model/Events#event_index) guide.
 
 When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below). You can also [use CSS to test for pointer device](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries#use_of_pointing_devices) support.
 
@@ -112,11 +112,13 @@ The [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) API enables users 
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.
-</div>
+<div draggable="true">This text <strong>may</strong> be dragged.</div>
+```
+
+```js
+document.querySelector("div").addEventListener("dragstart", (event) => {
+  event.dataTransfer.setData("text/plain", "This text may be dragged.");
+});
 ```
 
 in which we:

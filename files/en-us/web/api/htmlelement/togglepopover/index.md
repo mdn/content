@@ -35,15 +35,11 @@ A boolean (`force`) or an options object:
     - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
     - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
 - `options` {{optional_inline}}
-
   - : An object that can contain the following properties:
-
     - `force` {{optional_inline}}
       - : A boolean; see the `force` description above.
     - `source` {{optional_inline}}
-
       - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the toggle action, that is, its control element. Establishing a relationship between a popover and its invoker using the `source` option has two useful effects:
-
         - The browser places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
         - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
@@ -95,7 +91,7 @@ First we check whether popovers are supported, and if they aren't we hide the po
 const instructions = document.getElementById("instructions");
 const popover = document.getElementById("mypopover");
 
-if (!HTMLElement.prototype.hasOwnProperty("popover")) {
+if (!Object.hasOwn(HTMLElement.prototype, "popover")) {
   popover.innerText = "";
   instructions.innerText = "Popovers not supported";
 }
@@ -105,7 +101,7 @@ If popovers are supported we add a listener for the `h` key to be pressed, and u
 We also log whether the popup was open or closed after the call, but only if a `true` or `false` was returned.
 
 ```js
-if (HTMLElement.prototype.hasOwnProperty("popover")) {
+if (Object.hasOwn(HTMLElement.prototype, "popover")) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "h") {
       const popupOpened = popover.togglePopover();

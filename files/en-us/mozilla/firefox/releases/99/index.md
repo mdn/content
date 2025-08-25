@@ -1,10 +1,10 @@
 ---
 title: Firefox 99 for developers
+short-title: Firefox 99
 slug: Mozilla/Firefox/Releases/99
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 99 that will affect developers. Firefox 99 was released on April 5, 2022.
 
@@ -44,6 +44,4 @@ No notable changes.
 
 ## Changes for add-on developers
 
-## Older versions
-
-{{Firefox_for_developers}}
+No notable changes.

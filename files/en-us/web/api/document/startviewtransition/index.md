@@ -37,36 +37,69 @@ A {{domxref("ViewTransition")}} object instance.
 
 ## Examples
 
-### Basic usage
+### Using a same-document view transition
 
-In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transition API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
+In this same-document view transition, we check if the browser supports view transitions.
+If there's no support, we set the background color using a fallback method which is applied immediately.
+Otherwise, we can safely call `document.startViewTransition()` with animation rules that we define in CSS.
+
+```html
+<main>
+  <section></section>
+  <button id="change-color">Change color</button>
+</main>
+```
+
+We are setting the `animation-duration` to 2 seconds using the {{CSSXRef("::view-transition-group")}} pseudo-element.
+
+```css
+html {
+  --bg: indigo;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section {
+  background-color: var(--bg);
+  height: 60px;
+  border-radius: 5px;
+}
+::view-transition-group(root) {
+  animation-duration: 2s;
+}
+```
 
 ```js
-function updateView(event) {
-  // Handle the difference in whether the event is fired on the <a> or the <img>
-  let targetIdentifier;
-  if (event.target.firstChild === null) {
-    targetIdentifier = event.target;
-  } else {
-    targetIdentifier = event.target.firstChild;
-  }
-
-  const displayNewImage = () => {
-    const mainSrc = `${targetIdentifier.src.split("_th.jpg")[0]}.jpg`;
-    galleryImg.src = mainSrc;
-    galleryCaption.textContent = targetIdentifier.alt;
-  };
-
+const colors = ["darkred", "darkslateblue", "darkgreen"];
+const colBlock = document.querySelector("section");
+let count = 0;
+const updateColour = () => {
+  colBlock.style = `--bg: ${colors[count]}`;
+  count = count !== colors.length - 1 ? ++count : 0;
+};
+const changeColor = () => {
   // Fallback for browsers that don't support View Transitions:
   if (!document.startViewTransition) {
-    displayNewImage();
+    updateColour();
     return;
   }
 
   // With View Transitions:
-  const transition = document.startViewTransition(() => displayNewImage());
-}
+  const transition = document.startViewTransition(() => {
+    updateColour();
+  });
+};
+const changeColorButton = document.querySelector("#change-color");
+changeColorButton.addEventListener("click", changeColor);
+changeColorButton.addEventListener("keypress", changeColor);
 ```
+
+If view transitions are supported, clicking the button will transition the color from one to another over 2 seconds.
+Otherwise, the background color is set using a fallback method, without any animation.
+
+{{EmbedLiveSample('color_change', '100%', '120')}}
 
 ## Specifications
 
@@ -78,4 +111,6 @@ function updateView(event) {
 
 ## See also
 
+- {{CSSXRef(":active-view-transition")}} pseudo-class
+- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

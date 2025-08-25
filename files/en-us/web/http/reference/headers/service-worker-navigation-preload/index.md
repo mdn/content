@@ -1,11 +1,11 @@
 ---
-title: Service-Worker-Navigation-Preload
+title: Service-Worker-Navigation-Preload header
+short-title: Service-Worker-Navigation-Preload
 slug: Web/HTTP/Reference/Headers/Service-Worker-Navigation-Preload
 page-type: http-header
 browser-compat: http.headers.Service-Worker-Navigation-Preload
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Service-Worker-Navigation-Preload`** {{Glossary("request header")}} indicates that the request was the result of a {{domxref("Window/fetch", "fetch()")}} operation made during service worker navigation preloading.
 It allows a server to respond with a different resource than for a normal `fetch()`.

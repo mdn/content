@@ -12,9 +12,10 @@ browser-compat:
   - css.selectors.-webkit-scrollbar-track-piece
   - css.selectors.-webkit-scrollbar-corner
   - css.selectors.-webkit-resizer
+sidebar: cssref
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has scrollable overflow.
 
@@ -70,12 +71,12 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  background-color: #aaaaaa; /* or add it to the track */
 }
 
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: black;
 }
 ```
 

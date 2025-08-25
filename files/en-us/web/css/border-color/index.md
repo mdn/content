@@ -3,9 +3,8 @@ title: border-color
 slug: Web/CSS/border-color
 page-type: css-shorthand-property
 browser-compat: css.properties.border-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-color`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
 
@@ -20,11 +19,11 @@ border-color: red #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+border-color: red rgb(170 50 220 / 0.6) green;
 ```
 
 ```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+border-color: red yellow green hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -41,8 +40,8 @@ border-color: red yellow green transparent;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

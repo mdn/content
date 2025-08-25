@@ -3,9 +3,8 @@ title: direction
 slug: Web/CSS/direction
 page-type: css-property
 browser-compat: css.properties.direction
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!WARNING]
 > Where possible, authors are encouraged to avoid using the `direction` CSS property and use the HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute instead.
@@ -43,7 +42,7 @@ direction: rtl;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex: 1;

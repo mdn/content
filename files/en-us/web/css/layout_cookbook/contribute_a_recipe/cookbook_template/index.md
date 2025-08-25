@@ -2,9 +2,8 @@
 title: Cookbook template
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 > [!NOTE]
 > This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
@@ -62,6 +61,6 @@ _Include this is there are any specific things to watch out for in regard to acc
 
 ## See also
 
-- _Links of link of related properties: {{Cssxref("example-property")}}_
+- _Links of link of related properties: `example-property`_
 - _Links to article showing how to use the property in context: "Using … article"_
 - _Very good external links. Don't be afraid of external links, but they should be outstanding, and not only mention minor details._

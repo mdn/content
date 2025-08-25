@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Test_your_skills/JSON", "Learn_web_development/Core/Scripting")}}
 
 JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
 
@@ -47,7 +47,7 @@ A JSON string can be stored in its own file, which is basically just a text file
 
 As described above, JSON is a string whose format very much resembles JavaScript object literal format.
 The following is a valid JSON string representing an object.
-Note how it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
+Note that it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
 
 ```json
 {
@@ -154,9 +154,12 @@ As mentioned earlier, any JSON is a valid JavaScript literal (object, array, num
 
 Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
-You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://json-validate.com)
+You can validate JSON using an application like [JSONLint](https://jsonlint.com/) or [JSON-validate](https://www.json-validate.com/)
 
-## Active learning: Working through a JSON example
+> [!NOTE]
+> Now you've read through this section, you might also want to supplement your learning with Scrimba's [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial, which provides some useful guidance around basic JSON syntax and how to view JSON request data inside your browser's devtools.
+
+## Working through a JSON example
 
 So, let's work through an example to show how we could make use of some JSON formatted data on a website.
 
@@ -175,7 +178,7 @@ The latter contains some simple CSS to style our page, while the former contains
 </section>
 
 <script>
-...
+// JavaScript goes here
 </script>
 ```
 
@@ -279,7 +282,7 @@ function populateHeroes(obj) {
 
 To start with, we store the `members` property of the JavaScript object in a new variable. This array contains multiple objects that contain the information for each hero.
 
-Next, we use a [for...of loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_for...of_loop) to loop through each object in the array. For each one, we:
+Next, we use a [`for...of` loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_for...of_loop) to iterate through each object in the array. For each one, we:
 
 1. Create several new elements: an `<article>`, an `<h2>`, three `<p>`s, and a `<ul>`.
 2. Set the `<h2>` to contain the current hero's `name`.
@@ -343,15 +346,11 @@ let myString = JSON.stringify(myObj);
 myString;
 ```
 
-Here we're creating a JavaScript object, then checking what it contains, then converting it to a JSON string using `stringify()` — saving the return value in a new variable — then checking it again.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: JSON](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON).
+Here we're creating a JavaScript object, checking what it contains, converting it to a JSON string using `stringify()` — saving the return value in a new variable — then checking it again.
 
 ## Summary
 
-In this lesson, we've introduced you to using JSON in your programs, including how to create and parse JSON, and how to access data locked inside it. In the next article, we'll look at practical techniques for debugging JavaScript and handling errors.
+In this lesson, we've introduced you to using JSON in your programs, including how to create and parse JSON, and how to access data locked inside it. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 
@@ -360,4 +359,4 @@ In this lesson, we've introduced you to using JSON in your programs, including h
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Test_your_skills/JSON", "Learn_web_development/Core/Scripting")}}

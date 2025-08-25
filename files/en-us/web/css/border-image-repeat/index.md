@@ -3,9 +3,8 @@ title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 page-type: css-property
 browser-compat: css.properties.border-image-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the images for the sides and the middle part of the [border image](/en-US/docs/Web/CSS/border-image) are scaled and tiled. The middle region can be displayed by using the keyword "fill" in the {{cssxref("border-image-slice")}} property.
 
@@ -46,7 +45,7 @@ border-image-repeat: round stretch;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;

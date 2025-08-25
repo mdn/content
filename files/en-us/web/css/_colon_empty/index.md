@@ -3,9 +3,8 @@ title: :empty
 slug: Web/CSS/:empty
 page-type: css-pseudo-class
 browser-compat: css.selectors.empty
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
 

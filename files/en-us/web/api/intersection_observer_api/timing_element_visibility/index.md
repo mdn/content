@@ -163,7 +163,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
 .ad {
   height: 96px;
   padding: 6px;
-  border-color: #555;
+  border-color: #555555;
   border-style: solid;
   border-width: 1px;
 }
@@ -199,7 +199,7 @@ That brings us to the JavaScript code which makes everything work. Let's start w
 let contentBox;
 
 let nextArticleID = 1;
-const visibleAds = new Set();
+let visibleAds = new Set();
 let previouslyVisibleAds = null;
 
 let adObserver;
@@ -265,7 +265,7 @@ function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
-      visibleAds = [];
+      visibleAds = new Set();
       previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
@@ -464,7 +464,7 @@ The `loadRandomAd()` function simulates loading an ad and adding it to the page.
 function loadRandomAd(replaceBox) {
   const ads = [
     {
-      bgcolor: "#cec",
+      bgcolor: "#cceecc",
       title: "Eat Green Beans",
       body: "Make your mother proud—they're good for you!",
     },
@@ -479,7 +479,7 @@ function loadRandomAd(replaceBox) {
       body: "Love really does make the world go round…",
     },
     {
-      bgcolor: "#fee",
+      bgcolor: "#ffeeee",
       title: "Flexbox Florist",
       body: "When life's layout gets complicated, send flowers.",
     },

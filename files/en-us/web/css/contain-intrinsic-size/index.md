@@ -3,9 +3,8 @@ title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 page-type: css-shorthand-property
 browser-compat: css.properties.contain-intrinsic-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
 

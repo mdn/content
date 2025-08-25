@@ -22,12 +22,9 @@ write(data)
 ### Parameters
 
 - `data`
-
   - : Can be one of the following:
-
     - The file data to write, in the form of an {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref('Blob')}}, or string.
     - An object containing the following properties:
-
       - `type`
         - : A string that is one of `"write"`, `"seek"`, or `"truncate"`.
       - `data`
@@ -45,7 +42,7 @@ A {{jsxref('Promise')}} that returns `undefined`.
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the new size of the file is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - {{jsxref("TypeError")}}
   - : Thrown if `data` is undefined, or if `position` or `size` aren't valid.

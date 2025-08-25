@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.getUTCDate()
+short-title: getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDate
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to universal time.
 

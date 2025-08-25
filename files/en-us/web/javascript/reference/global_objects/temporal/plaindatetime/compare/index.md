@@ -1,13 +1,15 @@
 ---
 title: Temporal.PlainDateTime.compare()
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/compare
 page-type: javascript-static-method
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.compare
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainDateTime.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then comparing their times if the dates are the same.
 
@@ -26,7 +28,7 @@ Temporal.PlainDateTime.compare(dateTime1, dateTime2)
 
 ### Return value
 
-Returns `-1` if `dateTime1` comes before `dateTime2`, `0` if they are the same, and `1` if `dateTime2` comes after. They are compared by their underlying date and time values, ignoring their calendars.
+Returns `-1` if `dateTime1` comes before `dateTime2`, `0` if they are the same, and `1` if `dateTime1` comes after `dateTime2`. They are compared by their underlying date and time values, ignoring their calendars.
 
 ## Examples
 

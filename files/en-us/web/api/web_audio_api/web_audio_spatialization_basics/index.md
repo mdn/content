@@ -207,7 +207,7 @@ const outerBound = 1.5;
 Let's create a function that takes the direction we want to move as a parameter, and both modifies the CSS transform and updates the position and orientation values of our panner node properties to change the sound as appropriate.
 
 To start with let's take a look at our left, right, up and down values as these are pretty straightforward.
-We'll move the boombox along these axis and update the appropriate position.
+We'll move the boombox along these axes and update the appropriate position.
 
 ```js
 function moveBoombox(direction) {
@@ -474,7 +474,7 @@ function moveBoombox(direction, prevMove) {
 
 ## Wiring up our controls
 
-Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
+Wiring up our control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
 
 ```js
 // for each of our controls, move the boombox and change the position values
@@ -572,7 +572,6 @@ The values can be hard to manipulate sometimes and depending on your use case it
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
 Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).
-There is also a [CodePen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
 If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles.
 We rolled our own in this article to give you an idea of how it works, but you'll save a lot of time by taking advantage of work others have done before you.

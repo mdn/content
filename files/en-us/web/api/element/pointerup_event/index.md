@@ -16,10 +16,10 @@ This behavior is different from {{domxref("Element/mouseup_event", "mouseup")}} 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerup", (event) => {});
+```js-nolint
+addEventListener("pointerup", (event) => { })
 
-onpointerup = (event) => {};
+onpointerup = (event) => { }
 ```
 
 ## Event type
@@ -92,7 +92,6 @@ para.onpointerup = (event) => {
 ## See also
 
 - Related events
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

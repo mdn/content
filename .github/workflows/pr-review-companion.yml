@@ -33,7 +33,7 @@ jobs:
     if: github.event.workflow_run.conclusion == 'success'
     steps:
       - name: "Download artifact"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           pattern: build
           path: build
@@ -69,12 +69,14 @@ jobs:
           path: "build"
           destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
           resumable: false
-          concurrency: 500
+          headers: |-
+            cache-control: no-store
           parent: false
+          concurrency: 500
           process_gcloudignore: false
 
       - name: Checkout (mdn/content)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content

@@ -3,9 +3,8 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
 
@@ -51,7 +50,7 @@ backface-visibility: hidden;
   height: 100%;
   position: absolute;
   backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0 / 0.4);
   font-size: 60px;
   color: white;
 }
@@ -61,18 +60,18 @@ backface-visibility: hidden;
 }
 
 .back {
-  background: rgb(230, 0, 0);
+  background: rgb(230 0 0);
   color: white;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 0.6);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -208,7 +207,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
 }
 
 .back {
-  background: rgb(0 255 0 / 100%);
+  background: lime;
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }

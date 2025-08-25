@@ -5,15 +5,16 @@ page-type: css-at-rule
 status:
   - experimental
 browser-compat: css.at-rules.position-try
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`@position-try`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define a custom position try fallback option, which can be used to define positioning and alignment for anchor-positioned elements. One or more sets of position try fallback options can be applied to the anchored element via the {{cssxref("position-try-fallbacks")}} property or {{cssxref("position-try")}} shorthand. When the positioned element is moved to a position where it starts to overflow its containing block or the viewport, the browser will select the first position try fallback option it finds that places the positioned element fully back on-screen.
 
 Each position option is named with a {{cssxref("dashed-ident")}} and contains a descriptor list specifying declarations that define information such as inset position, margin, sizing, and self-alignment. The `<dashed-ident>` is used to reference the custom position option in the {{cssxref("position-try-fallbacks")}} property and {{cssxref("position-try")}} shorthand.
 
-For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
+For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
 ## Syntax
 
@@ -130,7 +131,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
   position: absolute;
   top: 100px;
   left: 350px;
@@ -141,7 +142,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -160,13 +161,13 @@ Finally, the left and right position options are given a narrower {{cssxref("wid
 @position-try --custom-left {
   position-area: left;
   width: 100px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 
 @position-try --custom-bottom {
   top: anchor(bottom);
   justify-self: anchor-center;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
   position-area: none;
 }
 
@@ -185,16 +186,15 @@ Finally, the left and right position options are given a narrower {{cssxref("wid
 
 The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name` to associate the two together, and it is tethered to the anchor's top edge using an {{cssxref("position-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom position options are then referenced in the {{cssxref("position-try-fallbacks")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
 
-```css-nolint
+```css
 .infobox {
   position: fixed;
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position-area: top;
   width: 200px;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   position-try-fallbacks:
-    --custom-left, --custom-bottom,
-    --custom-right, --custom-bottom-right;
+    --custom-left, --custom-bottom, --custom-right, --custom-bottom-right;
 }
 ```
 
@@ -234,5 +234,5 @@ In some cases, we need to set values inside the custom position options to turn 
 - The {{cssxref("anchor-size()")}} function
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - {{domxref("CSSPositionTryRule")}}

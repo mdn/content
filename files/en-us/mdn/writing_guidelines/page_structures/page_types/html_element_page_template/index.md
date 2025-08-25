@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -17,7 +18,7 @@ sidebar: mdnsidebar
 > ```md
 > ---
 > title: "<NameOfTheElement>: The NameOfTheElement element"
-> slug: Web/HTML/Element/NameOfTheElement
+> slug: Web/HTML/Reference/Elements/NameOfTheElement
 > page-type: html-element
 > status:
 >   - deprecated
@@ -34,8 +35,8 @@ sidebar: mdnsidebar
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
->     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
->     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _slug_ of `Web/HTML/Element/video`.
+>     This will be formatted like `Web/HTML/Reference/Elements/NameOfTheElement`, where the element name is in _lower case_.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _slug_ of `Web/HTML/Reference/Elements/video`.
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**

@@ -3,9 +3,8 @@ title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
 page-type: css-function
 browser-compat: css.types.basic-shape.ellipse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types).
 
@@ -35,11 +34,11 @@ clip-path: ellipse(closest-side farthest-side);
 
 ```css interactive-example
 #default-example {
-  background: #fe9;
+  background: #ffee99;
 }
 
 #example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
   width: 100%;
   height: 100%;
 }
@@ -57,9 +56,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 ### Values
 
 - `<shape-radius>`
-
   - : Two radii, x and y in that order. These may be a {{cssxref("length")}}, or a {{cssxref("percentage")}} or values `closest-side` and `farthest-side`.
-
     - `closest-side`
       - : Uses the length from the center of the shape to the closest side of the reference box. For ellipses, this is the closest side in the radius dimension.
     - `farthest-side`

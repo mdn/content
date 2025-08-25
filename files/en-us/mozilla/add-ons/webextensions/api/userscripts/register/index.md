@@ -3,9 +3,8 @@ title: userScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.register
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers user scripts for the extension.
 
@@ -20,7 +19,6 @@ let registeredUserScript = browser.userScripts.register(
 ### Parameters
 
 - `scripts`
-
   - : `array` of {{WebExtAPIRef("userScripts.RegisteredUserScript")}}. Details of user scripts to register.
 
     Each {{WebExtAPIRef("userScripts.RegisteredUserScript")}} object must contain the `js` property as a non-empty array and a non-empty array in either `matches` or `includeGlobs`.

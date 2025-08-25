@@ -3,9 +3,8 @@ title: "<header>: The Header element"
 slug: Web/HTML/Reference/Elements/header
 page-type: html-element
 browser-compat: html.elements.header
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 
@@ -40,7 +39,7 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
     bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
     fantasy;
   color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+  text-shadow: black 2px 2px 0.2rem;
 }
 
 header > h1 {
@@ -54,11 +53,9 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It define a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
-
-Otherwise, it is a `section` in the accessibility tree, and usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+Otherwise, when nested within said elements, it loses its landmark status and represents a group of introductory or navigational aids for the surrounding section. It usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
@@ -70,7 +67,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element.
+
+When placed inside an {{HTMLElement('article')}}, {{HTMLElement('main')}}, {{HTMLElement('section')}}, {{HTMLElement('nav')}}, {{HTMLElement('aside')}}, or an element with the same ARIA role as these elements' implicit ARIA role, the `<header>` element has the [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) role instead, and is no longer considered a landmark. In this case, it cannot be labeled with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ## Examples
 

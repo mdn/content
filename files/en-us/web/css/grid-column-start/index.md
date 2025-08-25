@@ -3,9 +3,8 @@ title: grid-column-start
 slug: Web/CSS/grid-column-start
 page-type: css-property
 browser-compat: css.properties.grid-column-start
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`grid-column-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the {{glossary("grid areas", "grid area")}}.
 
@@ -48,12 +47,12 @@ grid-column-start: span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -97,7 +96,6 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - `auto`
   - : A keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of `1`.
 - `<custom-ident>`
-
   - : If there is a named line with the name `<custom-ident>-start`, it contributes the first such line to the grid item's placement.
 
     > [!NOTE]
@@ -106,7 +104,6 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
 - `<integer> && <custom-ident>?`
-
   - : Contributes the nth grid line to the grid item's placement. If a negative integer is given, it counts in reverse, starting from the end edge of the explicit grid.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
@@ -114,14 +111,13 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
     An {{cssxref("integer")}} value of `0` is invalid.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Contributes a grid span to the grid item's placement, such that the column start edge of the grid item's grid area is n lines from the end edge.
 
     If a name is given as a `<custom-ident>`, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
 
     If the \<integer> is omitted, it defaults to `1`. Negative integers and `0` are invalid.
 
-    The `<custom-ident>` cannot take the `span` value.
+    The `<custom-ident>` cannot take the `span` and `auto` values.
 
 ## Formal definition
 

@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Attribute/baseProfile
 page-type: svg-attribute
 status:
   - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
+browser-compat: svg.elements.svg.baseProfile
 sidebar: svgref
 ---
 
@@ -53,3 +53,7 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

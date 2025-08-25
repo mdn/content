@@ -16,7 +16,6 @@ sidebar:
   - link: /Web/Progressive_web_apps/Tutorials/CycleTracker
     details: closed
     children:
-      - /Web/Progressive_web_apps/Tutorials/CycleTracker
       - /Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
       - /Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
       - /Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
@@ -25,7 +24,6 @@ sidebar:
   - link: /Web/Progressive_web_apps/Tutorials/js13kGames
     details: closed
     children:
-      - /Web/Progressive_web_apps/Tutorials/js13kGames
       - /Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
       - /Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
       - /Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
@@ -43,3 +41,10 @@ sidebar:
   - /Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
   - type: section
     link: /Web/Progressive_web_apps/Reference
+  - /Web/Progressive_web_apps/Manifest
+  - type: listSubPages
+    path: /Web/Progressive_web_apps/Manifest/Reference
+    link: /Web/Progressive_web_apps/Manifest/Reference
+    title: Manifest members
+    details: closed
+    code: true

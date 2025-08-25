@@ -40,15 +40,11 @@ Otherwise, this function returns `false`.
 In the following example, we create a new `FontFace` and add it to the `FontFaceSet`:
 
 ```js
-const font = new FontFace(
-  "molot",
-  "url(https://interactive-examples.mdn.mozilla.net/media/fonts/molot.woff2)",
-  {
-    style: "normal",
-    weight: "400",
-    stretch: "condensed",
-  },
-);
+const font = new FontFace("molot", 'url("/shared-assets/fonts/molot.woff2")', {
+  style: "normal",
+  weight: "400",
+  stretch: "condensed",
+});
 
 document.fonts.add(font);
 ```

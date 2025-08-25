@@ -33,7 +33,7 @@ As this rule lives in the last stylesheet added to the document, it will be the 
 ```
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   body {
     color: blue;
   }

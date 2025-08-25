@@ -3,9 +3,8 @@ title: "<wbr>: The Line Break Opportunity element"
 slug: Web/HTML/Reference/Elements/wbr
 page-type: html-element
 browser-compat: html.elements.wbr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
 
@@ -25,7 +24,7 @@ The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opp
   overflow: hidden;
   resize: horizontal;
   width: 9rem;
-  border: 2px dashed #999;
+  border: 2px dashed #999999;
 }
 ```
 
@@ -92,7 +91,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

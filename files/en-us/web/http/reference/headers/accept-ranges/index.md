@@ -1,11 +1,11 @@
 ---
-title: Accept-Ranges
+title: Accept-Ranges header
+short-title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 page-type: http-header
 browser-compat: http.headers.Accept-Ranges
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept-Ranges`** {{Glossary("response header")}} is used by the server to advertise its support for [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests), allowing clients to request part or several parts of a resource.
 The value of this header indicates the unit that can be used to define a range.

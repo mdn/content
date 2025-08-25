@@ -42,7 +42,8 @@ elm.setAttribute("class", "my-class");
 const myClass = elm.getAttribute("class");
 ```
 
-> **Note:** `class` is the name of an **HTML Attribute**, while
+> [!NOTE]
+> `class` is the name of an **HTML Attribute**, while
 > `className` is the name of a **DOM Property**.
 
 ## Specifications

@@ -3,16 +3,15 @@ title: all
 slug: Web/CSS/all
 page-type: css-shorthand-property
 browser-compat: css.properties.all
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`all`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
 
 {{InteractiveExample("CSS Demo: all")}}
 
 ```css interactive-example-choice
-/*no all property*/
+/* no all property */
 ```
 
 ```css interactive-example-choice

@@ -3,9 +3,8 @@ title: font-size
 slug: Web/CSS/font-size
 page-type: css-property
 browser-compat: css.properties.font-size
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
 
@@ -81,21 +80,17 @@ font-size: unset;
 ### Values
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-
   - : [Absolute-size](/en-US/docs/Web/CSS/absolute-size) keywords, based on the user's default font size (which is `medium`).
 
 - `larger`, `smaller`
-
   - : [Relative-size](/en-US/docs/Web/CSS/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
     For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
 
 - {{cssxref("&lt;percentage&gt;")}}
-
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
     > [!NOTE]
     > To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
@@ -195,7 +190,7 @@ In this example, the words "outer inner outer" are all displayed at 25.6px (assu
 
 ### Ex
 
-Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://www.w3.org/TR/css-fonts-3/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
+Like the `em` unit, an element's `font-size` set using the `ex` unit is computed or dynamic. It behaves in exactly the same way, except that when setting the `font-size` property using `ex` units, the `font-size` equals the x-height of the [first available font](https://drafts.csswg.org/css-fonts/#first-available-font) used on the page. The number value multiplies the element's inherited `font-size` and the `font-size` compounds relatively.
 
 See the W3C Editor's Draft for a more detailed description of [font-relative length units](https://drafts.csswg.org/css-values-4/#font-relative-length) such as `ex`.
 

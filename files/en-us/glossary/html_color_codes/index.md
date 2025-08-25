@@ -2,9 +2,8 @@
 title: HTML color codes
 slug: Glossary/html_color_codes
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **HTML color codes** is a _defacto_ general term used to describe the earliest-available methods for specifying colors on web pages. This includes HTML color names such as `black`, `purple`, and `aqua`, and hexadecimal notations such as `#000000`, `#800080`, and `#00ffff`. These were originally defined in HTML specifications — see for example the [HTML 3.2 color definitions](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) of the original 16 HTML colors.
 

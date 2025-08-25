@@ -13,7 +13,7 @@ Global attributes may be specified on all [MathML elements](/en-US/docs/Web/Math
 
 In addition to the basic MathML global attributes, the following global attributes also exist:
 
-- The [event handler](/en-US/docs/Web/Events/Event_handlers) attributes such as **`onclick`**, **`onfocus`**, etc.
+- The [event handler](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) attributes such as **`onclick`**, **`onfocus`**, etc.
 - The [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) attribute for making MathML element a hyperlink.
 
 ## List of global attributes
@@ -45,7 +45,7 @@ In addition to the basic MathML global attributes, the following global attribut
 - [`scriptlevel`](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel)
   - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values) for accepted values and mapping.
 - [`style`](/en-US/docs/Web/MathML/Reference/Global_attributes/style)
-  - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{MathMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
+  - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{HTMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
 - [`tabindex`](/en-US/docs/Web/MathML/Reference/Global_attributes/tabindex)
   - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:
     - a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
