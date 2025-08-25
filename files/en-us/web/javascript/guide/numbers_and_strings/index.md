@@ -83,6 +83,21 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 1E3    // 1000
 ```
 
+### Numeric separators
+
+For all literal syntaxes shown above, an underscore (`_`) can be inserted between digits to improve readability.
+
+```js-nolint
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+```
+
+See the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) for more details about number literals.
+
 ## Number object
 
 The built-in {{jsxref("Number")}} object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
