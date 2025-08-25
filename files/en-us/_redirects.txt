@@ -5169,7 +5169,7 @@
 /en-US/docs/Learn/CSS/Basics/Selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /en-US/docs/Learn/CSS/Basics/Syntax	/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /en-US/docs/Learn/CSS/Building_blocks	/en-US/docs/Learn_web_development/Core/Styling_basics
-/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects	/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
@@ -5264,8 +5264,8 @@
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Values	/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units	/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /en-US/docs/Learn/CSS/Styling_boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
-/en-US/docs/Learn/CSS/Styling_boxes/A_cool_information_box	/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
-/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/en-US/docs/Learn/CSS/Styling_boxes/A_cool_information_box	/en-US/docs/Learn_web_development/Core/Styling_basics
+/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects	/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /en-US/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 /en-US/docs/Learn/CSS/Styling_boxes/Borders	/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
@@ -5791,7 +5791,7 @@
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /en-US/docs/Learn_web_development/Core/Structuring_content/The_head_metadata_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
-/en-US/docs/Learn_web_development/Core/Styling_basics/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
+/en-US/docs/Learn_web_development/Core/Styling_basics/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Attribute_selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors
 /en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Combinators	/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators
 /en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Pseudo-classes_and_pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
@@ -5799,6 +5799,7 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
+/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper	/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_form_elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms
 /en-US/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images

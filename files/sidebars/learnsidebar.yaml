@@ -50,12 +50,12 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
       - /Learn_web_development/Core/Structuring_content/Lists
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
-      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Advanced_text_features
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
+      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
+      - /Learn_web_development/Core/Structuring_content/Structuring_documents
       - /Learn_web_development/Core/Structuring_content/Creating_links
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
       - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
       - /Learn_web_development/Core/Structuring_content/HTML_images
       - /Learn_web_development/Core/Structuring_content/Test_your_skills/Images
@@ -99,7 +99,6 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Debugging_CSS
       - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
       - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
       - /Learn_web_development/Core/Styling_basics/Test_your_skills
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling

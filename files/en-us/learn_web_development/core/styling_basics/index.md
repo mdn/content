@@ -54,8 +54,6 @@ Before starting this module, you should have a basic work environment set up (as
   - : This challenge provides a number of related exercises that must be completed in order to create the final design — a business card/gamer card/social media profile.
 - [Challenge: Creating fancy letterheaded paper](/en-US/docs/Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper) <sup>Challenge</sup>
   - : If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this challenge you will create an online template to achieve such a look.
-- [Challenge: A cool-looking box](/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>Challenge</sup>
-  - : In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
 
 ## Test your skills
 
