@@ -26,6 +26,9 @@ A scroll container's **`::scroll-marker-group`** pseudo-element represents a **s
 
 The scroll container must have its {{cssxref("scroll-marker-group")}} property set to a non-`none` value for the `::scroll-marker-group` pseudo-element to be generated. The {{cssxref("scroll-marker-group")}} value determines where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
 
+> [!NOTE]
+> Alternatively, a scroll marker group can be created from an existing element container using {{cssxref("scroll-target-group")}}.
+
 It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When positioning the group at the start of the content, put it at the beginning of the tab order using `before`. When positioning the group at the end of the content, put it at the end of the tab order using `after`.
 
 Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
@@ -185,6 +188,7 @@ ul::scroll-marker-group {
 ## See also
 
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::column")}}

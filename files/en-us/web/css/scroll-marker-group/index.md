@@ -12,6 +12,9 @@ sidebar: cssref
 
 The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's contents in the default visual and tabbing order.
 
+> [!NOTE]
+> A scroll marker group can be created from an existing element container using {{cssxref("scroll-target-group")}}.
+
 ## Syntax
 
 ```css
@@ -179,6 +182,7 @@ Note the placement of the scroll marker group. Check out how the keyboard tabbin
 
 ## See also
 
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
