@@ -200,15 +200,15 @@ To solve this challenge we are expecting you to create a simple website project,
 
 Later on, you will need to include the following URLs in your page.
 
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png`: [The site logo](https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg`: [Full-size version of the first sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1_th.jpg`: [Thumbnail of the first sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1_th.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2.jpg`: [Full-size version of the second sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2_th.jpg`: [Thumbnail of the second sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2_th.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3.jpg`: [Full-size version of the third sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3_th.jpg`: [Thumbnail of the third sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3_th.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4.jpg`: [Full-size version of the fourth sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4.jpg)
-- `https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4_th.jpg`: [Thumbnail of the fourth sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4_th.jpg)
+- `dove.png`: [The site logo](https://mdn.github.io/shared-assets/images/examples/learn/birds/dove.png)
+- `favorite-bird-1.jpg`: [Full-size version of the first sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1.jpg)
+- `favorite-bird-1_th.jpg`: [Thumbnail of the first sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-1_th.jpg)
+- `favorite-bird-2.jpg`: [Full-size version of the second sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2.jpg)
+- `favorite-bird-2_th.jpg`: [Thumbnail of the second sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-2_th.jpg)
+- `favorite-bird-3.jpg`: [Full-size version of the third sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3.jpg)
+- `favorite-bird-3_th.jpg`: [Thumbnail of the third sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-3_th.jpg)
+- `favorite-bird-4.jpg`: [Full-size version of the fourth sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4.jpg)
+- `favorite-bird-4_th.jpg`: [Thumbnail of the fourth sidebar image](https://mdn.github.io/shared-assets/images/examples/learn/birds/favorite-bird-4_th.jpg)
 
 ## Project brief
 
