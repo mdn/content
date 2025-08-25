@@ -6,26 +6,28 @@ browser-compat: css.properties.width.min-content
 sidebar: cssref
 ---
 
-The `min-content` sizing keyword represents the minimum {{glossary("intrinsic size")}} of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
+The `min-content` sizing keyword represents the [minimum intrinsic size](/en-US/docs/Glossary/Intrinsic_Size#minimum_intrinsic_size) of an element.
+The keyword shrinks the element to the smallest possible size without causing avoidable overflow of its content.
+For text content, this keyword causes the content to wrap at every opportunity (such as spaces between words), and the element will be only as wide as the longest word.
 
 The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `min-content`.
 
 ## Syntax
 
 ```css
-/* Used as a length */
+/* Used as a length value */
 width: min-content;
 inline-size: min-content;
 height: min-content;
 block-size: min-content;
 
-/* used in grid tracks */
+/* Used in grid tracks */
 grid-template-columns: 200px 1fr min-content;
 ```
 
 ## Examples
 
-### Using min-content for box sizing
+### Sizing boxes with min-content
 
 #### HTML
 
