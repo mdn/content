@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.VisualViewport.scroll_event
 ---
 
-{{APIRef("Visual Viewport")}}
+{{APIRef("CSSOM view")}}
 
 The **`scroll`** event of the {{domxref("VisualViewport")}} interface is fired when the visual viewport is scrolled. This allows you to position elements relative to the visual viewport as it is scrolled, which would normally be anchored to the layout viewport.
 

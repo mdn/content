@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Screen.width
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view")}}
 
 The **`Screen.width`** read-only property returns the width of
 the screen in CSS pixels.
