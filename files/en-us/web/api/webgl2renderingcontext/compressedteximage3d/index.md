@@ -67,7 +67,7 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
-- {{domxref("WebGL2RenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}

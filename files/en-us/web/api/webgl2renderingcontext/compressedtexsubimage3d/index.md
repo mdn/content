@@ -89,7 +89,7 @@ gl.compressedTexSubImage3D(
 ## See also
 
 - [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
-- {{domxref("WebGL2RenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
 - {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
 - {{domxref("WEBGL_compressed_texture_s3tc")}}

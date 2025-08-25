@@ -97,7 +97,7 @@ gl.texImage3D(
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGL2RenderingContext.texSubImage3D()")}}
 - {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
-- {{domxref("WebGL2RenderingContext.copyTexImage3D()")}}
+- {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
 - {{domxref("WEBGL_depth_texture")}}
 - {{domxref("OES_texture_float")}}
