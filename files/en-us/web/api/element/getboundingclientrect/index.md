@@ -63,6 +63,11 @@ properties (these can be obtained using {{domxref("window.scrollY")}} and
 {{domxref("window.scrollX")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
 
+> [!WARNING]
+> CSS property [`zoom`](/en-US/docs/Web/CSS/zoom) affects the `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, and `height` properties of the {{domxref("DOMRect")}} returned by this method.
+>
+> Inconsistent behavior exists across different browsers: In Safari, the returned {{domxref("DOMRect")}} properties may not match those in Firefox and Chrome. To align results, you may need to multiply the returned properties by the zoom factor.
+
 ## Examples
 
 ### Basic
