@@ -110,9 +110,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}. ([Firefox bug 1953557](https://bugzil.la/1953557)).
 
-  > [!NOTE]
-  > The preference for this feature depends upon the element-backed pseudo-element being targeted, for example: [`::details-content`](/en-US/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element).
-
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
   {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
