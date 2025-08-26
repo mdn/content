@@ -12,7 +12,7 @@ The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CS
 
 The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A fractional value is represented by a `.` followed by one or more decimal digits, and may be appended to an integer. A `<number>` can also end with the letter `e` or `E` followed by an integer, which indicates a base-ten exponent in scientific notation. There is no unit associated with numbers.
 
-As with integers, the first character of the number can be immediately preceded by - or + to indicate the number's sign; whether the number is positive or negative.
+As with integers, the first character of the number can be immediately preceded by - or + to indicate the number's sign: whether the number is positive or negative.
 
 ## Interpolation
 
