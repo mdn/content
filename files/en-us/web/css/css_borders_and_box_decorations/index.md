@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **CSS borders and box decorations** module provides properties for adding borders, rounded corners, and box shadows to elements. This module extends borders and box decorations introduced in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module, adding {{cssxref("corner-shape")}} and border-shape properties, logical {{cssxref("border-radius")}} properties, longhand properties for the {{cssxref("box-shadow")}} property, as well as properties to create partial borders.
 
-### Borders and box decorations in action
+## Borders and box decorations in action
 
 Select a `superellipse()` value from the drop down menu to change the border shape. Use the slider to change the border radius size. Toggle the checkbox to hide and show the box shadow.
 
