@@ -60,9 +60,7 @@ In this example, the `<fieldset>` and `username` `<input>` are associated with t
   <label
     >Username: <input form="exampleForm" type="text" name="username"
   /></label>
-  <label
-  >Password: <input type="password" name="password"
-  /></label>
+  <label>Password: <input type="password" name="password" /></label>
 </fieldset>
 ```
 
