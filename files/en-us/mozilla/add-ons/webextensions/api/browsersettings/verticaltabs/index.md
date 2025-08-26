@@ -13,11 +13,9 @@ A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that represe
 Set the setting to `false`, reverting to horizontal tabs:
 
 ```js
-
-  browser.browserSettings.verticalTabs
-    .set({ value: false })
-    .then((result) => console.log(`Tabs setting was modified: ${result}`));
-
+browser.browserSettings.verticalTabs
+  .set({ value: false })
+  .then((result) => console.log(`Tabs setting was modified: ${result}`));
 ```
 
 {{WebExtExamples}}
