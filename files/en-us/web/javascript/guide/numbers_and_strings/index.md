@@ -96,7 +96,7 @@ For all literal syntaxes shown above, an underscore (`_`) can be inserted betwee
 1_000_000_000_000_000_000_000n
 ```
 
-See the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) for more details about number literals.
+See the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) reference for more details about number literals.
 
 ## Number object
 
