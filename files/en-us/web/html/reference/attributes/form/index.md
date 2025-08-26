@@ -24,11 +24,11 @@ The `id` of the `<form>` element, within the same document, with which the eleme
 
 By default, form controls are associated with their nearest ancestor {{htmlelement("form")}} element, while form controls that are not nested within a `<form>` are not associated with any form. The `form` attribute enables overriding these default behaviors. When a form is submitted, the names and values of the `<form>` element's associated controls are submitted, whether or not the form controls are physically nested within that `<form>`.
 
-The `form` attribute of the {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements allows you to specify an explicit form owner, enabling you to associate the form control on which it is applied located anywhere within a document with any `<form>` element located in the same document. The attribute makes this possible even if the control is not nested in a `<form>` or if it's nested in a different `<form>`. 
+The `form` attribute of the {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements allows you to specify an explicit form owner, enabling you to associate the form control on which it is applied located anywhere within a document with any `<form>` element located in the same document. The attribute makes this possible even if the control is not nested in a `<form>` or if it's nested in a different `<form>`.
 
 The `form` attribute takes as its value the `id` of a `<form>` element in the same document, thereby associating the form control on which it is set with that `<form>`. All other values set as the value of `form` attribute are ignored.
 
-While setting the attribute value to the `id` of the nearest ancestor `<form>` isn't necessary, explicitly defining the association between a form control and its nearest ancestor form ensures the form control will not be disassociated  from its form if scripts or malformed HTML result in that specific `<form>` not being the nearest form ancestor of the control.
+While setting the attribute value to the `id` of the nearest ancestor `<form>` isn't necessary, explicitly defining the association between a form control and its nearest ancestor form ensures the form control will not be disassociated from its form if scripts or malformed HTML result in that specific `<form>` not being the nearest form ancestor of the control.
 
 ### Associating with a non-ancestor form
 
