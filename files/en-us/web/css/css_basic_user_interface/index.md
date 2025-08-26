@@ -10,7 +10,7 @@ The **CSS basic user interface** module lets you define the rendering and functi
 
 Basic user interface properties can be used to improve user experience and accessibility by providing visual cues to elements that are being interacted with, including styling mouse cursors and keyboard directional focus navigation, and styling caret cursors when an editable element has focus. The module provides for providing outlines to focused (or not) elements without impacting an element's [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model) dimensions and styling. This UI module also enables the styling of user interface controls.
 
-### Basic user interface in action
+## Basic user interface in action
 
 To view how basic user interface properties can alter the appearance of UI features, interact with the elements in this sample. Note that some features in this sample improve usability while others harm user experience.
 
