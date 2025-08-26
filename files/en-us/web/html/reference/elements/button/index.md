@@ -57,24 +57,24 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 
 - `command`
-  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+  - : Specifies the action to be performed on an element being controlled by a control `<button>` specified via the `commandfor` attribute. The possible values are:
     - `"show-modal"`
-      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method on the dialog element.
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.showModal()")}} method on the `<dialog>` element.
     - `"close"`
-      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method on the dialog element.
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.close()")}} method on the `<dialog>` element.
     - `"request-close"`
-      - : The button will request to close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the [`.requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) method on the dialog element.
+      - : The button will trigger a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} element on a {{htmlelement("dialog")}} element to request that the browser dismiss it, followed by a {{domxref("HTMLDialogElement.close_event", "close")}} event. This differs from the `close` command in that authors can call {{domxref("Event.preventDefault()")}} on the `cancel` event to prevent the `<dialog>` from closing. If the dialog is already closed, no action will be taken. This is a declarative equivalent of calling the {{domxref("HTMLDialogElement.requestClose()")}} method on the `<dialog>` element.
     - `"show-popover"`
-      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"show"`. This is a declarative equivalent of calling the [`.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover) method on the popover element.
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `show` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.showPopover()")}} method on the popover element.
     - `"hide-popover"`
-      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"hide"`. This is a declarative equivalent of calling the [`.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover) method on the popover element.
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `hide` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.hidePopover()")}} method on the popover element.
     - `"toggle-popover"`
-      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"toggle"`. This is a declarative equivalent of calling the [`.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) method on the popover element.
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details. This is equivalent to setting a value of `toggle` for the [`popovertargetaction`](#popovertargetaction) attribute, and also provides a declarative equivalent to calling the {{domxref("HTMLElement.togglePopover()")}} method on the popover element.
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor`
-  - : Turns a `<button>` element into a command button, controlling the given interactive element; takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
+  - : Turns a `<button>` element into a command button, controlling a given interactive element by issuing the command specified in the button's [`command`](#command) attribute. The `commandfor` attribute takes the ID of the element to control as its value. This is a more general version of [`popovertarget`](#popovertarget).
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
