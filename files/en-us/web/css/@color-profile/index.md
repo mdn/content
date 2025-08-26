@@ -3,9 +3,8 @@ title: "@color-profile"
 slug: Web/CSS/@color-profile
 page-type: css-at-rule
 spec-urls: https://www.w3.org/TR/css-color-5/#at-profile
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) defines and names a color profile which can later be used in the {{cssxref("color_value/color", "color()")}} function to specify a color.
 
@@ -45,7 +44,7 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 
 ## Examples
 
-This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).
+This example demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterization data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR). This example is from the specification.
 
 The `src` descriptor specifies the URL to retrieve the color-profile information from.
 
@@ -64,4 +63,8 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ## Browser compatibility
 
-There is no browser implementing this feature.
+Currently, no browsers support this feature.
+
+## See also
+
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module

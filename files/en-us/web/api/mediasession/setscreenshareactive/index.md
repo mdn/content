@@ -3,10 +3,12 @@ title: "MediaSession: setScreenshareActive() method"
 short-title: setScreenshareActive()
 slug: Web/API/MediaSession/setScreenshareActive
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.MediaSession.setScreenshareActive
 ---
 
-{{APIRef("Media Session API")}}
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The **`setScreenshareActive()`** method of the {{domxref("MediaSession")}} interface is used to indicate to the user agent whether the user's screenshare is considered to be active.
 

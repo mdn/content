@@ -9,13 +9,16 @@ spec-urls: https://w3c.github.io/ServiceWorker/
 
 Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests, and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
+> [!NOTE]
+> Service workers are a type of web worker. See [Web workers](/en-US/docs/Web/API/Web_Workers_API) for general information about worker types and use cases.
+
 ## Service worker concepts and usage
 
 A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registered against an origin and a path. It takes the form of a JavaScript file that can control the web page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).
 
 Service workers run in a worker context: they therefore have no DOM access and run on a different thread to the main JavaScript that powers your app. They are non-blocking and designed to be fully asynchronous. As a consequence, APIs such as synchronous [XHR](/en-US/docs/Web/API/XMLHttpRequest) and [Web Storage](/en-US/docs/Web/API/Web_Storage_API) can't be used inside a service worker.
 
-Service workers can't import JavaScript modules dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#browser_compatibility) will throw an error if it is called in a service worker global scope. Static imports using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement are allowed.
+Service workers can't import JavaScript modules dynamically, and [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw an error if it is called in a service worker global scope. Static imports using the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statement are allowed.
 
 Service workers are only available in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts): this means that their document is served over HTTPS, although browsers also treat `http://localhost` as a secure context, to facilitate local development. HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs.
 

@@ -3,9 +3,8 @@ title: padding-top
 slug: Web/CSS/padding-top
 page-type: css-property
 browser-compat: css.properties.padding-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`padding-top`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on the top of an element.
 

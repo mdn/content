@@ -2,9 +2,8 @@
 title: Creating vertical form controls
 slug: Web/CSS/CSS_writing_modes/Vertical_controls
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The guide explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref("direction")}} properties to create and configure vertical form controls. This includes:
 

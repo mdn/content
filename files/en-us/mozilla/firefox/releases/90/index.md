@@ -1,5 +1,6 @@
 ---
 title: Firefox 90 for developers
+short-title: Firefox 90
 slug: Mozilla/Firefox/Releases/90
 page-type: firefox-release-notes
 sidebar: firefox
@@ -71,7 +72,3 @@ This article provides information about the changes in Firefox 90 that will affe
 
 - The `matrix` URI scheme is now supported and can be defined as a protocol within the [`protocol_handlers`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) key in an extensions [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 - Starting with this version, the [Cache API](/en-US/docs/Web/API/Cache) can be used in the extension pages and worker globals. For more details, see ([Firefox bug 1575625](https://bugzil.la/1575625)).
-
-## Older versions
-
-{{Firefox_for_developers}}

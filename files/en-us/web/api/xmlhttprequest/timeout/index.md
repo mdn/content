@@ -8,7 +8,7 @@ browser-compat: api.XMLHttpRequest.timeout
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the number of milliseconds a request can take before automatically being terminated. The default value is 0, which means there is no timeout. Timeout shouldn't be used for synchronous XMLHttpRequests requests used in a {{Glossary('document environment')}} or it will throw an `InvalidAccessError` exception. When a timeout happens, a [timeout](/en-US/docs/Web/API/XMLHttpRequest/timeout_event) event is fired.
+The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the number of milliseconds a request can take before automatically being terminated. The default value is 0, which means there is no timeout. Timeout shouldn't be used for synchronous XMLHttpRequests requests used in a {{Glossary('document environment')}} or it will throw an `InvalidAccessError` exception. When a timeout happens, a [timeout](/en-US/docs/Web/API/XMLHttpRequestEventTarget/timeout_event) event is fired.
 
 > [!NOTE]
 > You may not use a timeout for synchronous requests with an owning window.

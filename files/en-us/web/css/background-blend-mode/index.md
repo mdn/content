@@ -3,9 +3,8 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 page-type: css-property
 browser-compat: css.properties.background-blend-mode
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
 

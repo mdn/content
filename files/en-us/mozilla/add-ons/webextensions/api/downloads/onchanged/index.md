@@ -3,9 +3,8 @@ title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).
 
@@ -72,10 +71,6 @@ The `downloadDelta` object has the following properties available:
 - `exists` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `exists` status.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log a message when downloads complete:
@@ -91,6 +86,10 @@ browser.downloads.onChanged.addListener(handleChanged);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.

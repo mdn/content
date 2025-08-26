@@ -51,7 +51,7 @@ dispatchEvent(event)
 
 ## Example
 
-See [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
+See [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events).
 
 ## Specifications
 

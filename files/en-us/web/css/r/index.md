@@ -3,9 +3,8 @@ title: r
 slug: Web/CSS/r
 page-type: css-property
 browser-compat: css.properties.r
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`r`** [CSS](/en-US/docs/Web/CSS) property defines the radius of a circle. It can only be used with the SVG {{SVGElement("circle")}} element. If present, it overrides the circle's {{SVGAttr("r")}} attribute.
 

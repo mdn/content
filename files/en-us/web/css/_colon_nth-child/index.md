@@ -3,9 +3,8 @@ title: :nth-child()
 slug: Web/CSS/:nth-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 

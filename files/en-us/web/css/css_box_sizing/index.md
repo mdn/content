@@ -5,9 +5,8 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-sizing-4/
   - https://drafts.csswg.org/css-sizing-3/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box sizing** module enables developers to specify how elements fit their content or fit into a particular layout context. It defines sizing, minimum sizing, and maximum sizing properties, and also extends the CSS sizing properties with keywords that represent content-based {{glossary("intrinsic size")}} and context-based [extrinsic](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) size.
 
@@ -37,8 +36,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - {{cssxref("min-width")}}
 - {{cssxref("width")}}
 
-> [!NOTE]
-> The CSS box sizing module introduces the `min-intrinsic-sizing` property that has not yet been implemented.
+The CSS box sizing module also introduces the `min-intrinsic-sizing` property. Currently, no browsers support this feature.
 
 ### Data types and values
 
@@ -46,10 +44,6 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 - {{cssxref("min-content")}} value
 - {{cssxref("max-content")}} value
 - {{cssxref("fit-content")}} value
-- {{cssxref("fit-content_function", "fit-content()")}} function
-
-> [!NOTE]
-> The CSS box sizing module introduces the `stretch` and `contain` keywords as sizing values that have not yet been implemented on the box sizing properties.
 
 ### Functions
 

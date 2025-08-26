@@ -13,7 +13,7 @@ The **`getMappedRange()`** method of the
 
 This can only happen once the `GPUBuffer` has been successfully mapped with {{domxref("GPUBuffer.mapAsync()")}} (this can be checked via {{domxref("GPUBuffer.mapState")}}). While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
 
-When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again.
+When you have finished working with the `GPUBuffer` values, call {{domxref("GPUBuffer.unmap()")}} to unmap it, making it accessible to the GPU again. A `TypeError` is thrown if an attempt is made to detach the {{jsxref("ArrayBuffer")}} in any way other than via {{domxref("GPUBuffer.unmap()")}}, such as by calling {{jsxref("ArrayBuffer/transfer", "transfer()")}}.
 
 ## Syntax
 
@@ -41,11 +41,6 @@ The following criteria must be met when calling **`getMappedRange()`**, otherwis
 - `offset` is a multiple of 8.
 - The total range to be mapped (`size` if specified, or mapped range length - `offset` if not) is a multiple of 4.
 - The total range is inside the bounds of the mapped range and does not overlap with the {{jsxref("ArrayBuffer")}} ranges specified by any other active `getMappedRange()` calls.
-
-### Exceptions
-
-- `TypeError` {{domxref("DOMException")}}
-  - : Thrown if an attempt is made to detach the {{jsxref("ArrayBuffer")}} in any way other than via {{domxref("GPUBuffer.unmap()")}}.
 
 ## Examples
 

@@ -4,9 +4,8 @@ slug: Web/CSS/hue-interpolation-method
 page-type: css-type
 browser-compat: css.types.gradient.conic-gradient.hue_interpolation_method
 spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<hue-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the algorithm used for interpolation between {{CSSXref("&lt;hue&gt;")}} values.
 The interpolation method specifies how to find a midpoint between two hue values based on a color wheel.

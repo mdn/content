@@ -1,10 +1,9 @@
 ---
-title: Flex Item
+title: Flex item
 slug: Glossary/Flex_Item
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
 

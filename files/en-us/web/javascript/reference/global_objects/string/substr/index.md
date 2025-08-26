@@ -66,16 +66,16 @@ Although you are encouraged to avoid using `substr()`, there is no trivial way t
 <!-- cSpell:ignore ozilla -->
 
 ```js
-const aString = "Mozilla";
+const string = "Mozilla";
 
-console.log(aString.substr(0, 1)); // 'M'
-console.log(aString.substr(1, 0)); // ''
-console.log(aString.substr(-1, 1)); // 'a'
-console.log(aString.substr(1, -1)); // ''
-console.log(aString.substr(-3)); // 'lla'
-console.log(aString.substr(1)); // 'ozilla'
-console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2)); // ''
+console.log(string.substr(0, 1)); // 'M'
+console.log(string.substr(1, 0)); // ''
+console.log(string.substr(-1, 1)); // 'a'
+console.log(string.substr(1, -1)); // ''
+console.log(string.substr(-3)); // 'lla'
+console.log(string.substr(1)); // 'ozilla'
+console.log(string.substr(-20, 2)); // 'Mo'
+console.log(string.substr(20, 2)); // ''
 ```
 
 ## Specifications

@@ -3,9 +3,8 @@ title: mask-clip
 slug: Web/CSS/mask-clip
 page-type: css-property
 browser-compat: css.properties.mask-clip
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
 
@@ -108,7 +107,7 @@ div {
   margin: 10px;
   border: 20px solid #8ca0ff;
   padding: 20px;
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/mdn.svg");
   mask-size: 100% 100%;
 }
 .content-box {

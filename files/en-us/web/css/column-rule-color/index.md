@@ -3,9 +3,8 @@ title: column-rule-color
 slug: Web/CSS/column-rule-color
 page-type: css-property
 browser-compat: css.properties.column-rule-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the line drawn between columns in a multi-column layout.
 
@@ -24,7 +23,7 @@ column-rule-color: hsl(120 80% 40% / 0.6);
 ```
 
 ```css interactive-example-choice
-column-rule-color: currentcolor;
+column-rule-color: currentColor;
 ```
 
 ```html interactive-example

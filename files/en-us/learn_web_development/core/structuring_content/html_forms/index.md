@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}
 
 HTML forms and buttons are powerful tools for interacting with a website's users. Most commonly, they provide users with controls to manipulate a user interface (UI) or input data when required.
 
@@ -492,10 +492,10 @@ In short, don't decide between using either client-side or server-side validatio
 
 That's all for now. There's a lot more to know about forms, but for now, we've given you enough of an understanding to move forward in your studies.
 
-Next up, we will have a look at how to debug problems in your HTML code.
+Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on HTML forms.
 
 ## See also
 
 - [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}

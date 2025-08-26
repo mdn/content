@@ -1,5 +1,6 @@
 ---
 title: Firefox 57 (Quantum) for developers
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 page-type: firefox-release-notes
 sidebar: firefox
@@ -108,7 +109,7 @@ _No changes._
 
 ### Other
 
-- Firefox [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
+- Firefox [headless mode](https://web.archive.org/web/20210604151145/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) now includes a `-screenshot` flag that allows you to take website screenshots directly from the command line ([Firefox bug 1378010](https://bugzil.la/1378010)).
 
 ## Removals from the web platform
 
@@ -118,7 +119,7 @@ _No changes._
 
 ### APIs
 
-- Mozilla's proprietary [Social API](/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
+- Mozilla's proprietary [Social API](https://web.archive.org/web/20210509145412/https://developer.mozilla.org/en-US/docs/Archive/Social_API) has been completely removed ([Firefox bug 1388902](https://bugzil.la/1388902)).
 
 ### SVG
 
@@ -217,7 +218,3 @@ The following APIs have been added or extended:
 
 - [`windows`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
   - `allowScriptsToClose` option in [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
-
-## Older versions
-
-{{Firefox_for_developers}}

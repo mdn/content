@@ -3,9 +3,8 @@ title: CSS box alignment
 slug: Web/CSS/CSS_box_alignment
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-align/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **CSS box alignment** module specifies CSS features relating to the alignment of boxes within their containers. It defines the alignment of the various CSS box layout models including block layout, table layout, flexible box layout (flexbox), and grid layout, creating a consistent alignment method across all of CSS.
 

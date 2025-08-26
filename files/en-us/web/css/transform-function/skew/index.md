@@ -3,9 +3,8 @@ title: skew()
 slug: Web/CSS/transform-function/skew
 page-type: css-function
 browser-compat: css.types.transform-function.skew
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`skew()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element on the 2D
 plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.

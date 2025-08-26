@@ -3,9 +3,8 @@ title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Make a connection between different contexts inside the extension.
 
@@ -41,10 +40,6 @@ let port = browser.runtime.connect(
 ### Return value
 
 {{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's `onDisconnect` event is fired if the extension does not exist.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -102,6 +97,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

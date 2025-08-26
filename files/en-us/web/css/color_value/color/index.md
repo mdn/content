@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-color-5/#color-function
   - https://drafts.csswg.org/css-color-5/#relative-color-function
   - https://drafts.csswg.org/css-color/#color-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`color()`** functional notation allows a color to be specified in a particular, specified {{glossary("color space")}} rather than the implicit sRGB color space that most of the other color functions operate in.
 
@@ -24,7 +23,7 @@ color(display-p3 1 0.5 0 / .5);
 
 /* Relative values */
 color(from green srgb r g b / 0.5)
-color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
+color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 ```
 
 ### Values
@@ -381,6 +380,7 @@ The output is as follows:
 
 ## See also
 
+- {{CSSXref("color")}} property
 - [The `<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)

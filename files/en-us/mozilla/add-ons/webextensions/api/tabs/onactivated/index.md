@@ -3,9 +3,8 @@ title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onActivated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to {{WebExtAPIRef("tabs.onUpdated")}} events to be notified when a URL is set.
 

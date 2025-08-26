@@ -1,5 +1,6 @@
 ---
 title: Firefox 113 for developers
+short-title: Firefox 113
 slug: Mozilla/Firefox/Releases/113
 page-type: firefox-release-notes
 sidebar: firefox
@@ -76,7 +77,3 @@ No notable changes.
 - Support for animated [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) (AV1 Image Format files) images.
   Previously, they would display as still images with no way for web pages to detect this and fall back to another format.
   ([Firefox bug 1825580](https://bugzil.la/1825580)).
-
-## Older versions
-
-{{Firefox_for_developers}}

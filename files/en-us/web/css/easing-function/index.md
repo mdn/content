@@ -3,9 +3,8 @@ title: <easing-function>
 slug: Web/CSS/easing-function
 page-type: css-type
 browser-compat: css.types.easing-function
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function that describes the rate at which a value changes.
 
@@ -217,7 +216,8 @@ selectElem.addEventListener("change", () => {
 
 ## See also
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
-- [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou (2011)
+- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
 - [`linear()` easing generator](https://linear-easing-generator.netlify.app/) by Jake Archibald
+- [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou

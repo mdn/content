@@ -3,9 +3,8 @@ title: :has()
 slug: Web/CSS/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The functional **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the [relative selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector) that are passed as an argument match at least one element when anchored against this element. This pseudo-class presents a way of selecting a parent element or a previous sibling element with respect to a reference element by taking a [relative selector list](/en-US/docs/Web/CSS/Selector_list#relative_selector_list) as an argument.
 
@@ -35,6 +34,30 @@ The `:has()` pseudo-class cannot be nested within another `:has()`.
 Pseudo-elements are also not valid selectors within `:has()` and pseudo-elements are not valid anchors for `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
 ## Examples
+
+### Selecting a parent element
+
+You may be looking for a "parent [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)", which allows you to go up the DOM tree and select the parent of a specific element. The `:has()` pseudo-class does that by using `parent:has(child)` (for any parent) or `parent:has(> child)` (for direct parent). This example shows how to style a `<section>` element when it contains a child with the `featured` class.
+
+```html
+<section>
+  <article class="featured">Featured content</article>
+  <article>Regular content</article>
+</section>
+<section>
+  <article>Regular content</article>
+</section>
+```
+
+```css
+section:has(.featured) {
+  border: 2px solid blue;
+}
+```
+
+### Result
+
+{{EmbedLiveSample('Selecting a parent element', , 200)}}
 
 ### With the sibling combinator
 

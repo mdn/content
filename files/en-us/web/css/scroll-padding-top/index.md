@@ -3,9 +3,8 @@ title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
 page-type: css-property
 browser-compat: css.properties.scroll-padding-top
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`scroll-padding-top`** property defines offsets for the top of the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.
 
@@ -57,7 +56,7 @@ scroll-padding-top: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -66,7 +65,7 @@ scroll-padding-top: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```

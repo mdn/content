@@ -3,9 +3,8 @@ title: Basic concepts of scroll snap
 short-title: Basic concepts
 slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 page-type: guide
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
 
@@ -45,7 +44,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -55,7 +54,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -125,7 +124,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -135,7 +134,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -198,7 +197,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -208,7 +207,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -254,7 +253,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -264,7 +263,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -306,7 +305,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -316,7 +315,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -325,8 +324,8 @@ body {
   position: sticky;
   top: 0;
   min-height: 40px;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
 }
@@ -374,7 +373,7 @@ body {
 }
 
 .scroller {
-  border: 4px solid #333;
+  border: 4px solid #333333;
   width: 300px;
 }
 
@@ -384,7 +383,7 @@ body {
 }
 
 .scroller section:nth-child(odd) {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 

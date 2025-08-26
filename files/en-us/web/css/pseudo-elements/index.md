@@ -7,9 +7,8 @@ spec-urls:
   - https://drafts.csswg.org/css-position-4/
   - https://drafts.csswg.org/css-shadow-parts/
   - https://w3c.github.io/webvtt/
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s).
 
@@ -193,6 +192,96 @@ You can chain some pseudo-element selectors together to style pseudo-elements ne
 
 Check out the individual pseudo-element reference pages for examples and browser compatibility information.
 
+## Highlight pseudo-elements inheritance
+
+[Highlight pseudo-elements](#highlight_pseudo-elements), such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance).
+
+When you apply styles to highlight pseudo-elements, they inherit from both:
+
+1. Their parent elements (following normal inheritance).
+2. The highlight pseudo-elements of their parent elements (following highlight inheritance).
+
+This means that if you style both a parent element's highlight pseudo-element and a child element's highlight pseudo-element, the child's highlighted text will combine properties from both sources.
+
+Here is a concrete example.
+
+First, we have some HTML that includes two nested {{htmlelement("div")}} elements. Some of the included text content is contained directly inside the parent `<div>`, and some is nested inside the child `<div>`.
+
+```html live-sample___highlight_inheritance
+<div class="parent">
+  Parent text
+  <div class="child">Child text</div>
+</div>
+```
+
+Next we include some CSS, which selects the parent and child `<div>` elements separately and gives them different {{cssxref("color")}} values, and selects the parent and child's selected text ({{cssxref("::selection")}}). This gives each `<div>` a different {{cssxref("background-color")}} and sets a different text `color` on the parent selection.
+
+```css live-sample___highlight_inheritance
+/* Style for the parent element */
+.parent {
+  color: blue;
+}
+
+/* Style for the parent's selected text */
+.parent::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* Style for the child element */
+.child {
+  color: green;
+}
+
+/* Style for the child's selected text */
+.child::selection {
+  background-color: orange;
+}
+```
+
+The example renders as follows:
+
+{{EmbedLiveSample("highlight_inheritance", , "150")}}
+
+Try selecting the text in both the parent and child elements. Notice that:
+
+1. When you select the parent text, it uses the yellow background and red text color defined in `.parent::selection`.
+2. When you select the child text, it uses:
+   - The orange background from `.child::selection`.
+   - The red text color inherited from the parent's `::selection` pseudo-element.
+
+This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element.
+
+[CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
+
+```css
+:root {
+  --selection-color: lightgreen;
+}
+
+::selection {
+  color: var(--selection-color);
+}
+
+.blue {
+  --selection-color: blue;
+}
+```
+
+When using the universal selector with highlight pseudo-elements, it prevents highlight inheritance. For example:
+
+```css
+/* This prevents highlight inheritance */
+*::selection {
+  color: lightgreen;
+}
+
+/* Prefer this to allow inheritance */
+:root::selection {
+  color: lightgreen;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -203,3 +292,4 @@ Check out the individual pseudo-element reference pages for examples and browser
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [Inheritance changes for CSS selection styling](https://developer.chrome.com/blog/selection-styling) - Detailed explanation of the highlight pseudo-elements inheritance model changes in Chrome 134

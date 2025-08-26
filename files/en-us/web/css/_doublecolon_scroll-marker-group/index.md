@@ -5,9 +5,10 @@ page-type: css-pseudo-element
 status:
   - experimental
 browser-compat: css.selectors.scroll-marker-group
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is generated inside a {{glossary("scroll container")}} and contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on descendants of the scroll container.
 
@@ -89,7 +90,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css live-sample___carousel-example live-sample___carousel-example_final
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 100%;
   height: 200px;
   padding-top: 20px;
@@ -154,7 +155,7 @@ The list's `::scroll-marker-group` pseudo-element is positioned relative to the 
 
 ```css live-sample___carousel-example_final
 ul {
-  anchor-name: --myCarousel;
+  anchor-name: --my-carousel;
 }
 
 ul::scroll-marker-group {
@@ -163,7 +164,7 @@ ul::scroll-marker-group {
   gap: 20px;
 
   position: absolute;
-  position-anchor: --myCarousel;
+  position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
 }

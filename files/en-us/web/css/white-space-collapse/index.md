@@ -3,9 +3,8 @@ title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 page-type: css-property
 browser-compat: css.properties.white-space-collapse
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
@@ -35,7 +34,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 ### Values
 
 - `collapse`
-  - : White space sequences are [collapsed](#collapsing_of_white_space).
+  - : White space sequences are [collapsed](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation).
 - `preserve`
   - : White space sequences and segment break characters are preserved.
 - `preserve-breaks`
@@ -53,19 +52,6 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 > [!NOTE]
 > The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
-
-## Collapsing of white space
-
-User agents handle white space collapsing as follows:
-
-- Tabs are generally converted to spaces.
-- If segment breaks are to be collapsed:
-  - Sequences of segment breaks are collapsed down to a single segment break.
-  - They are converted to spaces in the case of languages that separate words with spaces (like English), or removed altogether in the case of languages that do not separate words with spaces (like Chinese).
-- If spaces are to be collapsed:
-  - Spaces or tabs before or after segment breaks are removed.
-  - Sequences of spaces are converted, or "collapsed", to a single space.
-- When spaces are preserved, sequences of spaces are treated as non-breaking except that they will soft-wrap at the end of each sequence — i.e., the next line will always start with the next non-space character. In the case of the `break-spaces` value however, a soft wrap could potentially occur after each space, so the next line may start with one or more spaces.
 
 ## Formal definition
 
@@ -121,7 +107,7 @@ User agents handle white space collapsing as follows:
 h2 {
   font-size: 1.6rem;
   font-family: monospace;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #cccccc;
 }
 ```
 
@@ -141,3 +127,4 @@ h2 {
 
 - Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap-mode")}}: The {{CSSxRef("white-space")}} property.
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)

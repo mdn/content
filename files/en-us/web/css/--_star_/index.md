@@ -3,9 +3,8 @@ title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 page-type: css-property
 browser-compat: css.properties.custom-property
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 Property names that are prefixed with `--`, like `--example-name`, represent _custom properties_ that contain a value that can be used in other declarations using the {{cssxref("var", "var()")}} function.
 
@@ -17,7 +16,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ```css
 --some-keyword: left;
---some-color: #0000ff;
+--some-color: #123456;
 --some-complex-value: 3px 6px rgb(20 32 54);
 ```
 
@@ -49,8 +48,8 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ```css
 :root {
-  --first-color: #16f;
-  --second-color: #ff7;
+  --first-color: #1166ff;
+  --second-color: #ffff77;
 }
 
 #firstParagraph {
@@ -64,7 +63,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 }
 
 #container {
-  --first-color: #290;
+  --first-color: #229900;
 }
 
 #thirdParagraph {

@@ -3,9 +3,8 @@ title: anchor-name
 slug: Web/CSS/anchor-name
 page-type: css-property
 browser-compat: css.properties.anchor-name
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`anchor-name`** [CSS](/en-US/docs/Web/CSS) property enables defining an element as an **anchor element** by giving it one or more identifying **anchor names**. Each name can then be set as the value of a positioned element's {{cssxref("position-anchor")}} property to associate it with the anchor.
 
@@ -126,7 +125,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -140,7 +139,7 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -149,7 +148,7 @@ We associate the second `<div>` with the anchor element by setting its anchor na
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
   left: anchor(right);
   top: anchor(top);
@@ -228,7 +227,7 @@ body {
 
 ```css
 .anchor {
-  anchor-name: --myAnchor;
+  anchor-name: --my-anchor;
 }
 ```
 
@@ -238,7 +237,7 @@ Each of the two positioned elements are associated with the anchor element by se
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -247,7 +246,7 @@ Each of the two positioned elements are associated with the anchor element by se
 
 ```css
 .infobox {
-  position-anchor: --myAnchor;
+  position-anchor: --my-anchor;
   position: fixed;
 }
 
@@ -335,7 +334,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;

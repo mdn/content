@@ -54,11 +54,13 @@ currentTime = performance.timeOrigin + performance.now();
 
 ### Ticking during sleep
 
-The specification (Level 2) requires that `performance.now()` should tick during sleep. It appears that only Firefox on Windows, and Chromiums on Windows keep ticking during sleep. Relevant browser bugs for other operating systems:
+The specification (Level 2) requires that `performance.now()` should tick when the operating system sleeps or the browser process freezes in any other way. It appears that only browsers on Windows keep ticking during sleep. Relevant browser bugs for other operating systems:
 
 - Chrome/Chromium ([bug](https://crbug.com/1206450))
 - Firefox ([bug](https://bugzil.la/1709767))
 - Safari/WebKit ([bug](https://webkit.org/b/225610))
+
+Depending on your use case, this divergence may or may not be significant. For example, if you are timing short operations such as loading an image, during which time the system is unlikely to sleep, this may not cause any issues. If you are timing a long operation, you may find {{jsxref("Date.now()")}} more useful to avoid these limitations, since the high precision of `performance.now()` may not be as critical anyway.
 
 More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601).
 

@@ -1,5 +1,6 @@
 ---
 title: Firefox 76 for developers
+short-title: Firefox 76
 slug: Mozilla/Firefox/Releases/76
 page-type: firefox-release-notes
 sidebar: firefox
@@ -81,7 +82,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

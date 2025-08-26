@@ -3,9 +3,8 @@ title: ::backdrop
 slug: Web/CSS/::backdrop
 page-type: css-pseudo-element
 browser-compat: css.selectors.backdrop
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}.
 
@@ -96,10 +95,10 @@ We add a background to the backdrop, creating a colorful donut using [CSS gradie
   background-image:
     radial-gradient(
       circle,
-      #fff 0 5vw,
+      white 0 5vw,
       transparent 5vw 20vw,
-      #fff 20vw 22.5vw,
-      #eee 22.5vw
+      white 20vw 22.5vw,
+      #eeeeee 22.5vw
     ),
     conic-gradient(
       #272b66 0 50grad,

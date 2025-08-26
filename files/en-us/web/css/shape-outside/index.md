@@ -3,9 +3,8 @@ title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
 browser-compat: css.properties.shape-outside
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`shape-outside`** [CSS](/en-US/docs/Web/CSS) property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than rectangular boxes.
 
@@ -20,7 +19,7 @@ shape-outside: ellipse(130px 140px at 20% 20%);
 ```
 
 ```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+shape-outside: url("/shared-assets/images/examples/round-balloon.png");
 ```
 
 ```css interactive-example-choice
@@ -81,10 +80,10 @@ shape-outside: circle() border-box;
 shape-outside: margin-box ellipse();
 
 /* <url> value */
-shape-outside: url(image.png);
+shape-outside: url("image.png");
 
 /* <gradient> value */
-shape-outside: linear-gradient(45deg, #fff 150px, red 150px);
+shape-outside: linear-gradient(45deg, white 150px, red 150px);
 
 /* Global values */
 shape-outside: inherit;

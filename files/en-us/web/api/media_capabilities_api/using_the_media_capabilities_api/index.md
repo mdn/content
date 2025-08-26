@@ -112,7 +112,7 @@ The error can be due to the `type` not being one of the two possible values, the
 ```js
 navigator.mediaCapabilities
   .decodingInfo(videoConfiguration)
-  .then(console.log("It worked"))
+  .then(() => console.log("It worked"))
   .catch((error) => console.error(`It failed: ${error}`));
 ```
 

@@ -3,9 +3,8 @@ title: mask-repeat
 slug: Web/CSS/mask-repeat
 page-type: css-property
 browser-compat: css.properties.mask-repeat
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`mask-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
 
@@ -175,7 +174,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -206,7 +205,7 @@ div {
   height: 250px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
   mask-size: 100px 100px;
 
   mask-repeat: round space;
@@ -272,7 +271,7 @@ div {
   height: 180px;
   background-image: linear-gradient(red, blue);
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
 
   mask-size: 50px 50px;
   mask-position: bottom right;

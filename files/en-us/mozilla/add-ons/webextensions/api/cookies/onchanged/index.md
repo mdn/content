@@ -3,9 +3,8 @@ title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.cookies.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
 

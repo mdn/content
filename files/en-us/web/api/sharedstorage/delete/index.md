@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 ```js
 window.sharedStorage
   .delete("ab-testing-group")
-  .then(console.log("Value deleted"));
+  .then(() => console.log("Value deleted"));
 ```
 
 ## Specifications

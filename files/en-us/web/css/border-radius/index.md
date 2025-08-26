@@ -3,9 +3,8 @@ title: border-radius
 slug: Web/CSS/border-radius
 page-type: css-shorthand-property
 browser-compat: css.properties.border-radius
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 
@@ -203,7 +202,7 @@ The `border-radius` property is specified as:
 For example:
 
 ```css
-border-radius: 1em/5em;
+border-radius: 1em / 5em;
 
 /* It is equivalent to: */
 border-top-left-radius: 1em 5em;
@@ -251,7 +250,7 @@ The styles applied to each `<pre>` element are included as the element's content
 <pre id="example-3">
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 </pre>
 
 <pre id="example-4">
@@ -300,7 +299,7 @@ pre#example-2 {
 pre#example-3 {
   background: gold;
   border: ridge gold;
-  border-radius: 13em/3em;
+  border-radius: 13em / 3em;
 }
 
 pre#example-4 {

@@ -3,9 +3,8 @@ title: font-variant
 slug: Web/CSS/font-variant
 page-type: css-shorthand-property
 browser-compat: css.properties.font-variant
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the font variants for a font.
 

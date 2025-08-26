@@ -3,9 +3,8 @@ title: :last-child
 slug: Web/CSS/:last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-child
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element among a group of sibling elements.
 

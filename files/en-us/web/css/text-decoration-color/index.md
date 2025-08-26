@@ -3,9 +3,8 @@ title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 page-type: css-property
 browser-compat: css.properties.text-decoration-color
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
 
@@ -59,7 +58,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 
 ```css
 /* <color> values */
-text-decoration-color: currentcolor;
+text-decoration-color: currentColor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
 text-decoration-color: rgb(255 128 128 / 50%);

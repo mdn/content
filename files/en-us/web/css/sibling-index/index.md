@@ -5,9 +5,10 @@ page-type: css-function
 status:
   - experimental
 browser-compat: css.types.sibling-index
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns an integer representing the position of the current element in the DOM tree relative to all its sibling elements. The returned value is the index number of the contextual child's position among all the sibling elements within a parent element, with the first child returning `1` and the last child, returning {{domxref("Element.children")}}.length.
 
@@ -60,7 +61,7 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
   padding: 2px;
   border-radius: 8px;
   width: var(--width, calc(sibling-index() * 30px));
-  color: #fff;
+  color: white;
   background-color: hsl(
     calc(360deg / sibling-count() * sibling-index()) 50% 50%
   );
@@ -72,10 +73,8 @@ The **`sibling-index()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/
 
 ## Syntax
 
-```css
-li {
-  width: calc(sibling-index() * 100px);
-}
+```css-nolint
+sibling-index()
 ```
 
 ### Parameters
@@ -108,7 +107,7 @@ This example demonstrates how to dynamically increase the width of each {{htmlel
 ```css
 li {
   width: calc(sibling-index() * 50px);
-  background-color: #faa;
+  background-color: #ffaaaa;
 }
 ```
 
@@ -125,7 +124,7 @@ This example demonstrates how to create an ordered list using `sibling-index()`,
 We include a {{htmlelement("nav")}} container and several children {{htmlelement("div")}} elements.
 
 ```html
-<nav arial-label="Ordered list">
+<nav aria-label="Ordered list">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>

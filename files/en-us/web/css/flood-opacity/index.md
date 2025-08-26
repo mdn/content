@@ -3,9 +3,8 @@ title: flood-opacity
 slug: Web/CSS/flood-opacity
 page-type: css-property
 browser-compat: css.properties.flood-opacity
+sidebar: cssref
 ---
-
-{{CSSRef}}
 
 The **`flood-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the current filter primitive subregion in {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements within a {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("flood-opacity")}} attribute.
 
@@ -82,7 +81,7 @@ svg {
   background-image: repeating-linear-gradient(
     45deg,
     transparent 0 9px,
-    #ccc 0px 10px
+    #cccccc 0px 10px
   );
 }
 rect {

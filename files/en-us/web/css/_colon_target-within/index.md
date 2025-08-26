@@ -5,9 +5,10 @@ page-type: css-pseudo-class
 status:
   - experimental
 spec-urls: https://drafts.csswg.org/selectors/#target-within-pseudo
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`:target-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that is a target element or _contains_ an element that is a target. A target element is a unique element with an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) matching the URL's fragment. In other words, it represents an element that is itself matched by the {{CSSxRef(":target")}} pseudo-class or has a descendant that is matched by `:target`. (This includes descendants in [shadow trees](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).)
 
@@ -85,8 +86,9 @@ p:target i {
 
 ## Browser compatibility
 
-Currently, no browsers have implemented this feature.
+Currently, no browsers support this feature.
 
 ## See also
 
 - {{CSSxRef(":target")}}
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
