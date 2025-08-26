@@ -34,7 +34,7 @@ While setting the attribute value to the `id` of the nearest ancestor `<form>` i
 
 The `form` attribute can be used to associate a form control nested in one `<form>` with another `<form>`.
 
-In this code example, the username `<input>` is nested within the `internalForm`, but the `form` attribute disassociates the control from it's ancestor form in which it is nested, and associates it with the `externalForm` instead:
+In this code example, the username `<input>` is nested within the `internalForm`, but the `form` attribute disassociates the control from its ancestor form in which it is nested, and associates it with the `externalForm` instead:
 
 ```html
 <form id="externalForm"></form>
@@ -60,7 +60,9 @@ In this example, the `<fieldset>` and `username` `<input>` are associated with t
   <label
     >Username: <input form="exampleForm" type="text" name="username"
   /></label>
-  <label>Password: <input type="password" name="password" /></label>
+  <label
+  >Password: <input type="password" name="password"
+  /></label>
 </fieldset>
 ```
 
@@ -116,7 +118,7 @@ Hello, World!</textarea
 
 ### Element associated with a different form
 
-This example demonstrates how an element's `form` attribute can associate the element with a form while dissociating itself from it's closest ancestor form. We have two `<form>` elements: `parentForm` and `targetForm`. The `<button>` inside `parentForm` has its `form` attribute set to `targetForm`, disassociating it from the nearest ancestor `parentForm`, while associating it with the target form. When the submit button is activated, it submits the `targetForm`, not its `parentForm` ancestor.
+This example demonstrates how an element's `form` attribute can associate the element with a form while dissociating itself from its closest ancestor form. We have two `<form>` elements: `parentForm` and `targetForm`. The `<button>` inside `parentForm` has its `form` attribute set to `targetForm`, disassociating it from the nearest ancestor `parentForm`, while associating it with the target form. When the submit button is activated, it submits the `targetForm`, not its `parentForm` ancestor.
 
 ```html
 <form id="targetForm">
