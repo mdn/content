@@ -1,23 +1,25 @@
 ---
-title: "XMLHttpRequest: abort event"
-short-title: abort
-slug: Web/API/XMLHttpRequest/abort_event
+title: "XMLHttpRequestEventTarget: loadend event"
+short-title: loadend
+slug: Web/API/XMLHttpRequestEventTarget/loadend_event
 page-type: web-api-event
-browser-compat: api.XMLHttpRequest.abort_event
+browser-compat:
+  - api.XMLHttpRequest.loadend_event
+  - api.XMLHttpRequestUpload.loadend_event
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The `abort` event is fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
+The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}} or {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("abort", (event) => { })
+addEventListener("loadend", (event) => { })
 
-onabort = (event) => { }
+onloadend = (event) => { }
 ```
 
 ## Event type
@@ -39,7 +41,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-### Live example
+### Usage with XMLHttpRequest
 
 #### HTML
 
@@ -112,21 +114,41 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("/shared-assets/images/examples/balloon.jpg");
+  runXHR(
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("https://example.com/some-path");
+  runXHR("http://i-dont-exist");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR("/shared-assets/images/examples/balloon.jpg").abort();
+  runXHR(
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  ).abort();
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### Usage with XMLHttpRequestUpload
+
+You can use the `loadend` event to detect the (successful or not) termination of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
+
+```js
+// When the upload is finished, we hide the progress bar.
+xhr.upload.addEventListener("loadend", (event) => {
+  progressBar.classList.remove("visible");
+  if (event.loaded !== 0) {
+    // Successful termination
+    log.textContent = "Upload finished.";
+  }
+  abortButton.disabled = true;
+});
+```
 
 ## Specifications
 
@@ -138,5 +160,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## See also
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
+- Related events: {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}, {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
 - [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
