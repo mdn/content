@@ -377,7 +377,13 @@ l10n:
     Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
+    Beginners: 初学者教程
+    Adding_interactivity: 你的第一个网站：添加交互
+    Dynamic_scripting_with_JavaScript: 使用 JavaScript 添加脚本交互
+    JavaScript_frameworks_and_libraries: JavaScript 框架和库
     Intermediate: 中级
+    Asynchronous_JavaScript: 异步 JavaScript
+    Client-side_web_APIs: 客户端 web API
     Language_overview: 语言概述
     Data_structures: JavaScript 数据结构
     Equality: 如何正确判断相等性

@@ -150,7 +150,7 @@ body {
 }
 
 video::backdrop {
-  background-color: #448;
+  background-color: #444488;
 }
 button {
   display: block;

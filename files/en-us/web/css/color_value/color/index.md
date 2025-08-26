@@ -23,7 +23,7 @@ color(display-p3 1 0.5 0 / .5);
 
 /* Relative values */
 color(from green srgb r g b / 0.5)
-color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
+color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 ```
 
 ### Values
@@ -380,6 +380,7 @@ The output is as follows:
 
 ## See also
 
+- {{CSSXref("color")}} property
 - [The `<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)

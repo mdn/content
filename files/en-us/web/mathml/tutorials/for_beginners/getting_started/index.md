@@ -106,11 +106,11 @@ The `<mrow>` element is a generic container that performs similar layout but can
 </math>
 ```
 
-### Active learning: nested expressions
+### Your turn: Writing nested expressions
 
 As an exercise, figure out how to write the following expressions using only the MathML elements we've seen so far. If you are stuck or want to verify the solution, check the source code of the example.
 
-```html hidden
+```html hidden live-sample___nested-expressions
 <ol>
   <li>
     "one half" plus "two third":
@@ -165,7 +165,7 @@ As an exercise, figure out how to write the following expressions using only the
 </ol>
 ```
 
-{{ EmbedLiveSample('Active_learning_nested_expressions', 700, 200, "", "") }}
+{{ EmbedLiveSample('nested_expressions', 700, 200, "", "") }}
 
 ## Summary
 

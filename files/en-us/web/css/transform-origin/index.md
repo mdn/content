@@ -76,7 +76,7 @@ transform-origin: bottom right 60px;
   align-items: center;
   justify-content: center;
   background: #f7ebee;
-  color: #000000;
+  color: black;
   font-size: 1.2rem;
   text-transform: uppercase;
 }

@@ -44,7 +44,7 @@ The state of ARIA technology has always depended on the community. If you notice
  <tbody>
   <tr>
    <td>Apple Safari</td>
-   <td><a href="https://www.webkit.org/reporting-bugs/">File WebKit.org bugs</a></td>
+   <td><a href="https://webkit.org/reporting-bugs/">File WebKit.org bugs</a></td>
    <td></td>
   </tr>
   <tr>

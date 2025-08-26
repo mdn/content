@@ -10,7 +10,7 @@ sidebar: cssref
 
 The properties in the **CSS filter effects** module let you define a way of processing an element's rendering before the element is displayed in the document. Examples of such effects include blurring and changing the intensity of the color of an element.
 
-### Filter effects in action
+## Filter effects in action
 
 Play with the various sliders to apply filter effects to the image below.
 

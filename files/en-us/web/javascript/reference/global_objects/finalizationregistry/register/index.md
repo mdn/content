@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.FinalizationRegistry.register
 sidebar: jsref
 ---
 
-The **`register()`** method of {{jsxref("FinalizationRegistry")}} instances registers an value with this `FinalizationRegistry` so that if the value is garbage-collected, the registry's callback may get called.
+The **`register()`** method of {{jsxref("FinalizationRegistry")}} instances registers a value with this `FinalizationRegistry` so that if the value is garbage-collected, the registry's callback may get called.
 
 ## Syntax
 

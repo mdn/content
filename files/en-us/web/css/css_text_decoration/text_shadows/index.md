@@ -1,5 +1,6 @@
 ---
 title: Introduction to text shadows
+short-title: Text shadows
 slug: Web/CSS/CSS_text_decoration/Text_shadows
 page-type: guide
 sidebar: cssref
@@ -179,7 +180,7 @@ p {
 }
 
 .opaque {
-  color: rgb(0 0 0);
+  color: black;
 }
 
 .semitransparent {
@@ -187,11 +188,11 @@ p {
 }
 
 .transparent {
-  color: rgb(0 0 0 / 0);
+  color: transparent;
 }
 
 .white {
-  color: rgb(255 255 255);
+  color: white;
 }
 
 .semi-white {

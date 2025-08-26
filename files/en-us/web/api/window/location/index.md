@@ -318,7 +318,7 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
 ```css
 span.intLink {
   cursor: pointer;
-  color: #0000ff;
+  color: blue;
   text-decoration: underline;
 }
 ```

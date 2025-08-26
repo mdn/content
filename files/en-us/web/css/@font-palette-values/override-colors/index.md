@@ -18,7 +18,7 @@ override-colors: <index of color> <color>;
 override-colors: 0 red;
 
 /* using hex-color */
-override-colors: 0 #f00;
+override-colors: 0 #ff0000;
 
 /* using rgb */
 override-colors: 0 rgb(255 0 0);

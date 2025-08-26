@@ -247,7 +247,7 @@ This is followed by another two elements for displaying the ciphertext after Ali
 ```css hidden
 input {
   display: block;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px;
 }
 #results {
   margin-top: 20px;

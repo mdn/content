@@ -87,7 +87,7 @@ We then apply different flood color values to the `<feFlood>` elements using the
   flood-color: rebeccapurple;
 }
 #flood2 feFlood {
-  flood-color: #f36;
+  flood-color: #ff3366;
 }
 ```
 

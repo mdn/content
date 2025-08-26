@@ -517,7 +517,7 @@ legend {
 button {
   font-size: 18px;
   border-radius: 50%;
-  border: #ccc solid 1px;
+  border: #cccccc solid 1px;
   padding: 0;
   width: 26px;
   height: 26px;

@@ -207,17 +207,17 @@ class Secret {
   }
 }
 
-const aSecret = new Secret("123456");
-console.log(aSecret.secret); // [REDACTED]
+const secret = new Secret("123456");
+console.log(secret.secret); // [REDACTED]
 // Looks like a no-op forwarding...
-const proxy = new Proxy(aSecret, {});
+const proxy = new Proxy(secret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
 This is because when the proxy's `get` trap is invoked, the `this` value is the `proxy` instead of the original `secret`, so `#secret` is not accessible. To fix this, use the original `secret` as `this`:
 
 ```js
-const proxy = new Proxy(aSecret, {
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     // By default, it looks like Reflect.get(target, prop, receiver)
     // which has a different value of `this`
@@ -237,8 +237,8 @@ class Secret {
   }
 }
 
-const aSecret = new Secret();
-const proxy = new Proxy(aSecret, {
+const secret = new Secret();
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     const value = target[prop];
     if (value instanceof Function) {

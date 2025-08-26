@@ -153,7 +153,7 @@ p + p {
   columns: 3;
   column-gap: 20px;
   column-rule: double 7px;
-  border-color: #000000;
+  border-color: black;
 }
 .none p {
   border-style: none;

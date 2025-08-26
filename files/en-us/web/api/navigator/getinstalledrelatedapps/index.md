@@ -32,7 +32,7 @@ Defining the relationship is done in a different way depending on the type of ap
   - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
   - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.
 
-See [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps) for more details on how to handle each one of these cases.
+See [Is your app installed? getInstalledRelatedApps() will tell you!](https://developer.chrome.com/docs/capabilities/get-installed-related-apps) for more details on how to handle each one of these cases.
 
 > [!NOTE]
 > Most supporting browsers provide their own install UI when an installable PWA is detected, which won't appear if it is already installed — see [Making PWAs installable > Installation from the web](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_the_web). This can be suppressed using the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which could also be combined with `getInstalledRelatedApps()` to suppress it based on a platform-specific app being available. See [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt#responding_to_platform-specific_apps_being_installed) for further useful information.
@@ -105,4 +105,4 @@ if (psApp && doesVersionSendPushMessages(psApp.version)) {
 
 ## See also
 
-- [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps)
+- [Is your app installed? getInstalledRelatedApps() will tell you!](https://developer.chrome.com/docs/capabilities/get-installed-related-apps)

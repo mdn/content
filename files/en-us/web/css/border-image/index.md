@@ -148,7 +148,7 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 ```css
 #bitmap {
   width: 200px;
-  background-color: #ffa;
+  background-color: #ffffaa;
   border: 36px solid orange;
   margin: 30px;
   padding: 10px;
@@ -178,7 +178,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #gradient {
   width: 200px;
   border: 30px solid;
-  border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
+  border-image: repeating-linear-gradient(45deg, #ff3333, #33bbff, #ff3333 30px)
+    60;
   padding: 20px;
 }
 ```

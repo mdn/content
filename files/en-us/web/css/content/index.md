@@ -214,14 +214,14 @@ This example inserts differently colored quotation marks around quotes.
 
 ```css
 q {
-  color: #00f;
+  color: blue;
 }
 
 q::before,
 q::after {
   font-size: larger;
-  color: #f00;
-  background: #ccc;
+  color: red;
+  background: #cccccc;
 }
 
 q::before {
@@ -389,7 +389,7 @@ This example demonstrates how an element's contents can be replaced by any type 
 ```css
 div {
   border: 1px solid;
-  background-color: #ccc;
+  background-color: #cccccc;
   min-height: 100px;
   min-width: 100px;
 }

@@ -211,13 +211,13 @@ tbody td {
 }
 
 tbody td {
-  border: 1px solid #000;
+  border: 1px solid black;
   text-align: right;
   color: #767676;
 }
 
 tbody td[role="gridcell"] {
-  color: #000;
+  color: black;
 }
 
 tbody td[role="gridcell"]:hover,

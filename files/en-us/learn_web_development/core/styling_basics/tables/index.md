@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article explains how to make HTML tables look good, with some specific table styling techniques highlighted.
 
@@ -216,7 +216,7 @@ caption {
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
-  color: #666;
+  color: #666666;
   text-align: right;
   letter-spacing: 1px;
 }
@@ -328,7 +328,7 @@ The table is looking much better already, but we should add some borders to prov
 
 ```css
 tfoot {
-  border-top: 1px solid #999;
+  border-top: 1px solid #999999;
 }
 ```
 
@@ -341,8 +341,8 @@ table {
   min-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 ```
 
@@ -354,7 +354,7 @@ We wanted to dedicate a separate section to showing you how to implement **zebra
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
@@ -392,4 +392,4 @@ Before moving on, we thought we'd provide you with a quick list of the most usef
 
 With styling tables now behind us, we need something else to occupy our time. The next article explores debugging CSS — how to solve problems such as layouts not looking like they should, or properties not applying when you think they should. This includes information on using browser DevTools to find solutions to your problems.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

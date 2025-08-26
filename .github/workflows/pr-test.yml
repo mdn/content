@@ -29,35 +29,62 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Get changed files
         id: check
         run: |
           # Use the GitHub API to get the list of changed files
-          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
           DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
-          # filter out files that are not markdown files
-          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
-          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> "$GITHUB_OUTPUT"
+          FILTERED_MD_FILES=$(echo "$DIFF_DOCUMENTS" | egrep -i "^files/.*\.md$" || true)
+          FILTERED_IMAGE_FILES=$(echo "$DIFF_DOCUMENTS" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" || true)
 
-          # filter out files that are not attachments
-          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
-          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> "$GITHUB_OUTPUT"
+          HAS_MD_FILES=false
+          HAS_IMAGE_FILES=false
+
+          # Check if we actually have content (not just empty strings)
+          if [ -n "${FILTERED_MD_FILES// /}" ]; then  # Remove all spaces and check if anything remains
+            HAS_MD_FILES=true
+            EOF_MD="$(openssl rand -hex 8)"
+            echo "GIT_DIFF_CONTENT<<${EOF_MD}" >> "$GITHUB_OUTPUT"
+            echo "${FILTERED_MD_FILES}" >> "$GITHUB_OUTPUT"
+            echo "${EOF_MD}" >> "$GITHUB_OUTPUT"
+          else
+            echo "GIT_DIFF_CONTENT=" >> "$GITHUB_OUTPUT"
+          fi
+
+          if [ -n "${FILTERED_IMAGE_FILES// /}" ]; then  # Remove all spaces and check if anything remains
+            HAS_IMAGE_FILES=true
+            EOF_IMG="$(openssl rand -hex 8)"
+            echo "GIT_DIFF_FILES<<${EOF_IMG}" >> "$GITHUB_OUTPUT"
+            echo "${FILTERED_IMAGE_FILES}" >> "$GITHUB_OUTPUT"
+            echo "${EOF_IMG}" >> "$GITHUB_OUTPUT"
+          else
+            echo "GIT_DIFF_FILES=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # Set the boolean outputs
+          echo "HAS_MD_FILES=${HAS_MD_FILES}" >> "$GITHUB_OUTPUT"
+          echo "HAS_IMAGE_FILES=${HAS_IMAGE_FILES}" >> "$GITHUB_OUTPUT"
+          if [ "${HAS_MD_FILES}" = "true" ] || [ "${HAS_IMAGE_FILES}" = "true" ]; then
+            echo "HAS_FILES=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js environment
-        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
+        if: steps.check.outputs.HAS_FILES == 'true'
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
+        if: steps.check.outputs.HAS_FILES == 'true'
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -65,7 +92,7 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: steps.check.outputs.GIT_DIFF_CONTENT
+        if: steps.check.outputs.HAS_MD_FILES == 'true'
         env:
           GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
 
@@ -109,8 +136,16 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
-          yarn rari build --no-basic --json-issues --data-issues $ARGS
+
+          # Read into array, one filename per line
+          readarray -t files_to_build <<< "$GIT_DIFF_CONTENT"
+
+          ARGS=()
+          for file in "${files_to_build[@]}"; do
+            ARGS+=("-f" "$PWD/$file")
+          done
+
+          yarn rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
           yarn yari-render-html
 
           echo "Disk usage size of the build"
@@ -126,7 +161,7 @@ jobs:
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
       - name: Merge static assets with built documents
-        if: steps.check.outputs.GIT_DIFF_CONTENT
+        if: steps.check.outputs.HAS_MD_FILES == 'true'
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
@@ -134,17 +169,17 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: steps.check.outputs.GIT_DIFF_CONTENT
+        if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: steps.check.outputs.GIT_DIFF_FILES
+        if: steps.check.outputs.HAS_IMAGE_FILES == 'true'
         env:
           GIT_DIFF_FILES: ${{ steps.check.outputs.GIT_DIFF_FILES }}
         run: |
-          echo $GIT_DIFF_FILES
+          readarray -t files_to_check <<< "$GIT_DIFF_FILES"
 
           export CONTENT_ROOT=$(pwd)/files
-          yarn filecheck $GIT_DIFF_FILES
+          yarn filecheck "${files_to_check[@]}"

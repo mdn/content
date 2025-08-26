@@ -174,7 +174,7 @@ Once the render tree is built, layout commences. The render tree identified whic
 
 On the web page, almost everything is a box. Different devices and different desktop preferences mean an unlimited number of differing viewport sizes. In this phase, taking the viewport size into consideration, the browser determines what the sizes of all the different boxes are going to be on the screen. Taking the size of the viewport as its base, layout generally starts with the body, laying out the sizes of all the body's descendants, with each element's box model properties, providing placeholder space for replaced elements it doesn't know the dimensions of, such as our image.
 
-The first time the size and position of each node is determined is called _layout_. Subsequent recalculations of are called _reflows_. In our example, suppose the initial layout occurs before the image is returned. Since we didn't declare the dimensions of our image, there will be a reflow once the image dimensions are known.
+The first time the size and position of each node is determined is called _layout_. Subsequent recalculations of _layout_ are called _reflows_. In our example, suppose the initial layout occurs before the image is returned. Since we didn't declare the dimensions of our image, there will be a reflow once the image dimensions are known.
 
 ### Paint
 

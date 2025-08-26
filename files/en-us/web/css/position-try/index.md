@@ -110,7 +110,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a {{cssxre
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;

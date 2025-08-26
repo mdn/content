@@ -52,7 +52,7 @@ caption-side: bottom;
 table {
   font-size: 1.2rem;
   text-align: left;
-  color: #000;
+  color: black;
 }
 
 th,
@@ -61,16 +61,16 @@ td {
 }
 
 caption {
-  background: #fc3;
+  background: #ffcc33;
   padding: 0.5rem 1rem;
 }
 
 tr {
-  background: #eee;
+  background: #eeeeee;
 }
 
 tr:nth-child(even) {
-  background: #ccc;
+  background: #cccccc;
 }
 ```
 

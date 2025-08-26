@@ -20,7 +20,7 @@ A number.
 ```js
 // if there is not adequate bit depth
 // choose a simpler color
-document.style.color = window.screen.pixelDepth > 8 ? "#FAEBD7" : "#FFFFFF";
+document.style.color = window.screen.pixelDepth > 8 ? "#FAEBD7" : "white";
 ```
 
 ## Specifications

@@ -28,7 +28,7 @@ browser.omnibox.setDefaultSuggestion({
 });
 ```
 
-You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a [search of mozilla-central](https://searchfox.org/mozilla-central/search) using the term entered by the user:
+You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a [search of mozilla-central](https://searchfox.org/firefox-main/search) using the term entered by the user:
 
 ```js
 browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {

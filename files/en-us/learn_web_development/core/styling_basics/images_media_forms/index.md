@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}
 
 In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 
@@ -234,24 +234,24 @@ label {
 ```css live-sample___form
 input[type="text"],
 input[type="email"] {
-  border: 2px solid #000;
-  margin: 0 0 1em 0;
+  border: 2px solid black;
+  margin-bottom: 1em;
   padding: 10px;
   width: 80%;
 }
 
 input[type="submit"] {
-  border: 3px solid #333;
-  background-color: #999;
+  border: 3px solid #333333;
+  background-color: #999999;
   border-radius: 5px;
   padding: 10px 2em;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 ```
 
@@ -331,19 +331,15 @@ textarea {
 > [!NOTE]
 > Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However, if you want to take a look at an example, check out [Normalize.css](https://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images).
-
 ## Summary
 
 This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS.
 
-In the next article, we'll learn how to style HTML tables.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on handling images and form elements in CSS.
 
 ## See also
 
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics/Test_your_skills/Images", "Learn_web_development/Core/Styling_basics")}}

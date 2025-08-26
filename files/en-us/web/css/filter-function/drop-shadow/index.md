@@ -58,7 +58,7 @@ drop-shadow(5px 5px 15px red)
 
 /* The order of color and length values can be changed */
 /* drop-shadow( <color> <length> <length> <length> ) */
-drop-shadow(#e23 0.5rem 0.5rem 1rem)
+drop-shadow(#ee2233 0.5rem 0.5rem 1rem)
 
 /* Pass multiple drop-shadows to a filter to stack them */
 drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
@@ -101,7 +101,7 @@ div {
   height: 100px;
   width: 190px;
   vertical-align: top;
-  background-color: #222;
+  background-color: #222222;
 
   color: lime;
 }

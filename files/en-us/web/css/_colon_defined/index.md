@@ -64,7 +64,7 @@ custom-element {
 }
 
 code {
-  background: #ccc;
+  background: #cccccc;
 }
 
 #btn {
@@ -91,7 +91,7 @@ custom-element:defined {
 custom-element:not(:defined)::before {
   content: "Loading...";
   position: absolute;
-  inset: 0 0 0 0;
+  inset: 0;
   align-content: center;
   text-align: center;
   font-size: 2rem;

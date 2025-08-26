@@ -3,12 +3,10 @@ title: "Navigator: platform property"
 short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.platform
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user's browser is running.
 

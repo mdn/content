@@ -48,7 +48,7 @@ By default, subframes of subframes are not allocated a quota and so cannot use `
 
 When quotas are exceeded, a `QuotaExceededError` is thrown when the {{domxref('Window.fetchLater()','fetchLater()')}} method is called to initiate the deferred request.
 
-Permissions Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
+Permissions Policy checks are not discernible from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
 
 Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they embed third-party JavaScript.
 

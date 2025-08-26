@@ -18,7 +18,7 @@ mask-image: none;
 mask-image: url("masks.svg#mask1");
 
 /* <image> values */
-mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
+mask-image: linear-gradient(black, transparent);
 mask-image: image(url("mask.png"), skyblue);
 
 /* Multiple values */

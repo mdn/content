@@ -43,7 +43,7 @@ button {
   border: 1px solid rgb(255 255 255 / 70%);
   box-shadow: 0px 0px 1px 2px rgb(0 0 0 / 20%);
   font-size: 14px;
-  color: rgb(255 255 255 / 100%);
+  color: white;
 }
 
 #video,
@@ -231,7 +231,7 @@ Clearing the photo box involves creating an image, then converting it into a for
 ```js live-sample___photo-capture live-sample___photo-capture-with-filters
 function clearPhoto() {
   const context = canvas.getContext("2d");
-  context.fillStyle = "#AAA";
+  context.fillStyle = "#aaaaaa";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   const data = canvas.toDataURL("image/png");
@@ -241,7 +241,7 @@ function clearPhoto() {
 clearPhoto();
 ```
 
-We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
+We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#aaaaaa` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
 
 Last in this function, we convert the canvas into a PNG image and call {{domxref("Element.setAttribute", "photo.setAttribute()")}} to make our captured still box display the image.
 

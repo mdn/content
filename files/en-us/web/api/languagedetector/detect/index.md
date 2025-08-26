@@ -45,7 +45,7 @@ The last array element returned will always have a `detectedLanguage` value of `
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the language detection operation exceeds the available {{domxref("LanguageDetector.inputQuota", "inputQuota")}}.
 
 ## Examples

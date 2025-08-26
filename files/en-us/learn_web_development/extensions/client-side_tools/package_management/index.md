@@ -391,7 +391,7 @@ npm run dev
 
 This should start Vite and start the same local development server, as we saw before.
 
-Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
+Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/commands/npm-run/), although in most cases your own scripts will run just fine.
 
 This particular one may look unnecessary — `npm run dev` is more characters to type than `npx vite`, but it is a form of _abstraction_. It allows us to add more work to the `dev` command in the future, such as setting environment variables, generating temporary files, etc., without complicating the command.
 

@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS _Box model_. You'll get an understanding of how it works and the terminology that relates to it.
 
@@ -600,7 +600,7 @@ ul {
   font-family: sans-serif;
   display: flex;
   list-style: none;
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 li {
@@ -609,27 +609,23 @@ li {
 
 .links-list a {
   background-color: rgb(179 57 81);
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 1em 2em;
 }
 
 .links-list a:hover {
   background-color: rgb(66 28 40);
-  color: #fff;
+  color: white;
 }
 ```
 
 {{EmbedLiveSample("inline-block-nav")}}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model).
-
 ## Summary
 
 That's most of what you need to understand about the box model. You may want to return to this lesson in the future if you ever find yourself confused about how big boxes are in your layout.
 
-In the next article, we'll take a look at how CSS handles conflicts — when multiple rules select the same element, which styles are applied?
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on the CSS box model.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors", "Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics")}}

@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content")}}
 
 Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! It may not surprise you that HTML has a convenient set of elements that allows us to define different types of list. On the web, we have three types of lists: unordered, ordered, and description lists. This lesson shows you how to use the different types.
 
@@ -317,12 +317,8 @@ Your finished HTML should look like this:
 
 </details>
 
-## Test your skills!
-
-You've reached the end of this set of three articles about basic HTML semantic elements, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: HTML text basics](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
-
 ## Summary
 
-That's it for lists. Next we'll move on to a higher-level discussion. We've shown how to implement some individual page features, but what about structuring a whole HTML page? Structuring documents is next.
+That's it for lists. Next we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on HTML text basics.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content")}}

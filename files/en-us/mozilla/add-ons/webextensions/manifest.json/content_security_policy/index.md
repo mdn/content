@@ -70,7 +70,7 @@ In Manifest V2, a source for a script directive is considered secure if it meets
 
 The `{{CSP("object-src")}}` directive may be required in some browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin) and should be set to a secure source such as `'none'` if needed. This may be necessary for browsers up until 2022.
 
-- In Firefox, `"object-src"` it optional from Firefox 106. In earlier versions, if `"object-src"` isn't specified, `"content_security_policy"` is ignored and the default CSP used.
+- In Firefox, `"object-src"` is optional from Firefox 106. In earlier versions, if `"object-src"` isn't specified, `"content_security_policy"` is ignored and the default CSP is used.
 - In Chrome, `"object-src"` is required. If it's missing or deemed insecure, the default (`"object-src 'self'"`) is used and a warning message logged.
 - In Safari, there is no requirement for `"object-src"`.
 

@@ -60,7 +60,7 @@ Converting an element to an anchor-positioned element requires two steps: It nee
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -222,7 +222,7 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -387,7 +387,7 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -486,7 +486,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -611,7 +611,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -734,7 +734,7 @@ body {
   align-content: center;
   color: darkblue;
   background-color: azure;
-  outline: 1px solid #ddd;
+  outline: 1px solid #dddddd;
   font-size: 1rem;
   text-align: center;
 }

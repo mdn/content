@@ -52,7 +52,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) is now supported.
+- [`RTCInboundRtpStreamStats.trackIdentifier`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/trackIdentifier) is now supported.
   This allows developers to associate `inbound-rtp` statistics with a particular track when using {{domxref("RTCPeerConnection.getStats()")}}.
   (For more information see [Firefox bug 1804676](https://bugzil.la/1804676).)
 

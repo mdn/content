@@ -210,7 +210,7 @@ button,
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 ```
 

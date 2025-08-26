@@ -106,7 +106,7 @@ img {
 }
 
 .card {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border-radius: 3px;
 
   display: grid;
@@ -129,8 +129,8 @@ img {
 }
 
 .card footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   padding: 0.5rem;
 }
 ```

@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Sizing"
-short-title: Sizing
+short-title: "Test: Sizing"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this skill test is to help you assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
 
@@ -50,7 +52,7 @@ body {
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
@@ -109,7 +111,7 @@ body {
 }
 
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   width: 400px;
   margin-bottom: 1em;
 }
@@ -178,7 +180,7 @@ body {
   padding: 1em;
 }
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   margin-bottom: 1em;
   width: 500px;
 }
@@ -202,3 +204,5 @@ img {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

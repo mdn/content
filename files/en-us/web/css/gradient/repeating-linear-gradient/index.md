@@ -182,7 +182,7 @@ body {
 ```css hidden
 div {
   height: 50vh;
-  color: #330;
+  color: #333300;
   font-weight: bolder;
   padding-left: 1.5rem;
 }

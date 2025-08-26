@@ -132,7 +132,7 @@ p {
   min-width: 195px;
   min-height: 99px;
   margin-right: 10px;
-  background-color: #eee; /* Placeholder background */
+  background-color: #eeeeee; /* Placeholder background */
 }
 
 .controls {

@@ -57,11 +57,7 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(0 0 0 / 0%),
-    rgb(0 0 0 / 25%)
-  );
+  background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));
 }
 
 .simple {
@@ -95,7 +91,7 @@ You can also specify multiple box shadows in a single `box-shadow` declaration, 
 </article>
 ```
 
-```css-nolint
+```css
 p {
   margin: 0;
 }
@@ -104,20 +100,17 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(0 0 0 / 0%),
-    rgb(0 0 0 / 25%)
-  );
+  background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 25%));
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
 }
 ```
 
@@ -144,7 +137,7 @@ button {
   line-height: 2;
   border-radius: 10px;
   border: none;
-  background-image: linear-gradient(to bottom right, #777, #ddd);
+  background-image: linear-gradient(to bottom right, #777777, #dddddd);
   box-shadow:
     1px 1px 1px black,
     inset 2px 3px 5px rgb(0 0 0 / 30%),
@@ -153,7 +146,7 @@ button {
 
 button:focus,
 button:hover {
-  background-image: linear-gradient(to bottom right, #888, #eee);
+  background-image: linear-gradient(to bottom right, #888888, #eeeeee);
 }
 
 button:active {

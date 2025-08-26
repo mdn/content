@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Math"
-short-title: Math
+short-title: "Test: Math"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 The aim of the tests on this page is to help you assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math) article.
 
@@ -228,3 +230,5 @@ const pwdMatch = pwd1 === pwd2;
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

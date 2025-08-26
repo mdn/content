@@ -129,18 +129,18 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 }
 
 .key:hover {
-  background-color: #eef;
+  background-color: #eeeeff;
 }
 
 .key:active,
 .active {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 
 .octave {
   display: inline-block;
-  padding: 0 6px 0 0;
+  padding-right: 6px;
 }
 
 .settingsBar {

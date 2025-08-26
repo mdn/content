@@ -25,12 +25,12 @@ Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). 
 ## Syntax
 
 ```js-nolint
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(commandName, showDefaultUI, valueArgument)
 ```
 
 ### Parameters
 
-- `aCommandName`
+- `commandName`
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument.
@@ -132,9 +132,9 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `AutoUrlDetect`
       - : Changes the browser auto-link behavior.
 
-- `aShowDefaultUI`
+- `showDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
-- `aValueArgument`
+- `valueArgument`
   - : For commands which require an input argument, is a string providing that information. For example, `insertImage` requires the URL of the image to insert. Specify `null` if no argument is needed.
 
 ### Return value

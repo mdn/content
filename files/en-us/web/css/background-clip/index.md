@@ -40,7 +40,7 @@ text-shadow: none;
   color: white;
   text-shadow: 2px 2px black;
   padding: 20px;
-  border: 10px dashed #333;
+  border: 10px dashed #333333;
   font-size: 2em;
   font-weight: bold;
 }

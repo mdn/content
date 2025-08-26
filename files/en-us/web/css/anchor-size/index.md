@@ -239,7 +239,7 @@ body {
   align-content: center;
   color: darkblue;
   background-color: azure;
-  outline: 1px solid #ddd;
+  outline: 1px solid #dddddd;
   font-size: 1rem;
   text-align: center;
 }

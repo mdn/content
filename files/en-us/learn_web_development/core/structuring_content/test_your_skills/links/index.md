@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Links"
-short-title: Links
+short-title: "Test: Links"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}
 
 The aim of this skill test is to help you assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
@@ -41,8 +43,8 @@ To complete the task, update the links as follows:
 
 ```css hidden live-sample___links-1
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -121,8 +123,8 @@ To complete the task, update the links as follows:
 
 ```css hidden live-sample___links-2
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -208,8 +210,8 @@ To complete the task:
 
 ```css hidden live-sample___links-3
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
   font:
     1em / 1.4 Helvetica Neue,
     Helvetica,
@@ -252,3 +254,5 @@ Your finished HTML should look like this:
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}

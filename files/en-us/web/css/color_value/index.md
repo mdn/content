@@ -459,6 +459,7 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}}: the property defining transparency at the element level
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
+- {{CSSXref("color_value/color")}} function
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

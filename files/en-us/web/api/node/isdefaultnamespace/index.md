@@ -48,14 +48,14 @@ Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;:
 ```js
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  const aHtmlElt = document.querySelector("output");
-  const aSvgElt = document.querySelector("svg");
+  const htmlElt = document.querySelector("output");
+  const svgElt = document.querySelector("svg");
 
   const result = document.getElementsByTagName("output");
-  result[0].value = aHtmlElt.isDefaultNamespace(""); // true
-  result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
-  result[2].value = aSvgElt.isDefaultNamespace(""); // false
-  result[3].value = aSvgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // true
+  result[0].value = htmlElt.isDefaultNamespace(""); // true
+  result[1].value = htmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
+  result[2].value = svgElt.isDefaultNamespace(""); // false
+  result[3].value = svgElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // true
 });
 ```
 

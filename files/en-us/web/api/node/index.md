@@ -82,7 +82,7 @@ _In addition to the properties below, `Node` inherits properties from its parent
     a document, returns `null`.
 - {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
   - : Returns a `Node` that is the parent of this node. If there is no such
-    node, like if this node is the top of the tree or if doesn't participate in a tree,
+    node — for example, if this node is the top of the tree, or if it doesn't participate in a tree —
     this property returns `null`.
 - {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has

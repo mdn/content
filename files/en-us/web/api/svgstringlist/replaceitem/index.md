@@ -32,9 +32,9 @@ The string that was added the list.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SVGStringList")}} corresponds to a read-only attribute or when the object itself is read-only.
-- {{domxref("DOMException")}} `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown when the index is out of bounds for the list.
 
 ## Specifications

@@ -59,7 +59,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fbe;
+  background: #ffbbee;
   touch-action: none;
 }
 ```

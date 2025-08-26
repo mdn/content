@@ -33,7 +33,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-left` and th
   position-area: left;
   width: 20%;
   max-width: 200px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 ```
 

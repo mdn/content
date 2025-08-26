@@ -56,7 +56,7 @@ body {
 .page-header,
 .page-footer {
   background-color: rgb(75 70 74);
-  color: #fff;
+  color: white;
   padding: 20px;
 }
 
@@ -123,7 +123,7 @@ body {
 .page-header,
 .page-footer {
   background-color: rgb(75 70 74);
-  color: #fff;
+  color: white;
   padding: 20px;
 
   flex-grow: 0;

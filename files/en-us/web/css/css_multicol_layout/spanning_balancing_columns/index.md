@@ -49,7 +49,7 @@ body {
 h2 {
   column-span: all;
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -93,7 +93,7 @@ body {
 h2 {
   column-span: all;
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -148,7 +148,7 @@ article {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
   column-span: all;
 }
 ```
@@ -189,7 +189,7 @@ body {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 img {
   max-width: 100%;
@@ -227,7 +227,7 @@ body {
 }
 h2 {
   background-color: #4d4e53;
-  color: #fff;
+  color: white;
 }
 img {
   max-width: 100%;

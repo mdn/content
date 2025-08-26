@@ -78,7 +78,7 @@ This garden is 200 pixel wide (yes, it's a tiny one), and the ball is in the cen
   position: relative;
   width: 200px;
   height: 200px;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   border-radius: 10px;
 }
 

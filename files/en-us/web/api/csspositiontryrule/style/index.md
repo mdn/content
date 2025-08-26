@@ -22,7 +22,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and t
 @position-try --custom-bottom {
   top: anchor(bottom);
   min-width: 100px;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 ```
 

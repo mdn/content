@@ -182,7 +182,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;

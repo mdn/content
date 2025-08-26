@@ -1,10 +1,12 @@
 ---
 title: "Test your skills: Events"
-short-title: Events
+short-title: "Test: Events"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Events
 page-type: learn-module-assessment
 sidebar: learnsidebar
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 The aim of this skill test is to help you assess whether you've understood our [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) article.
 
@@ -221,3 +223,5 @@ buttonBar.addEventListener("click", setColor);
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

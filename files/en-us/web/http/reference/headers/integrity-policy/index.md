@@ -3,16 +3,20 @@ title: Integrity-Policy header
 short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Integrity-Policy
 sidebar: http
 ---
 
+{{SeeCompatTable}}
+
 The HTTP **`Integrity-Policy`** response header allows website administrators to ensure that all resources the user agent loads (of a certain type) have [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity) guarantees.
 
-When set the user agent will block requests on specified [request destinations](/en-US/docs/Web/API/Request/destination) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
+When set the user agent will block requests on specified [request destinations](#blocked-destinations) that omit integrity metadata, and will also block requests in [no-cors](/en-US/docs/Web/API/Request/mode#no-cors) mode from ever being made.
 
 Violation reports may also be sent to if the header includes a reporting endpoint name that matches an endpoint declared using the {{HTTPHeader("Reporting-Endpoints")}} header.
-Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [ReportingObserver](/en-US/docs/Web/API/ReportingObserver).
+Reports are generated using the [Reporting API](/en-US/docs/Web/API/Reporting_API), and may also be observed in the page for which the integrity policy is being enforced, using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
 The format of the report body is given by the {{domxref("IntegrityViolationReportBody")}} dictionary (a JSON-serialized form of this body is sent in POSTs to reporting server endpoints).
 
 This helps guard against content manipulation of fetched subresources.
@@ -43,6 +47,8 @@ The header values are defined as structured field dictionaries with the followin
     Allowed values are:
     - `script`
       - : Script resources.
+    - `style`
+      - : Stylesheet resources.
 
 - `sources` {{optional_inline}}
   - : A list of integrity sources that must include integrity metadata.

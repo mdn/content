@@ -202,7 +202,7 @@ article {
   widows: 3;
   orphans: 3;
   gap: 1em;
-  column-rule: 2px dashed #666;
+  column-rule: 2px dashed #666666;
   height: 50em;
 }
 .title {

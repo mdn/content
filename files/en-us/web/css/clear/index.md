@@ -154,7 +154,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -200,7 +200,7 @@ p {
   float: right;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -250,7 +250,7 @@ p {
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {

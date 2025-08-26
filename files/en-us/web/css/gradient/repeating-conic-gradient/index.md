@@ -151,7 +151,7 @@ div {
 
 ```css
 div {
-  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(white 0 9deg, black 9deg 18deg);
 }
 ```
 

@@ -38,13 +38,13 @@ The `scrollLeft` property can be set, which causes the element to scroll to the 
 #container {
   width: 100px;
   height: 100px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   overflow-x: scroll;
 }
 
 #content {
   width: 250px;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 

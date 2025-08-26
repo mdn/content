@@ -29,7 +29,7 @@ An origin will be cleared if it fulfills the following conditions:
 
 ## What data is cleared?
 
-Firefox will clear the [following data](https://searchfox.org/mozilla-central/rev/622dbd3409610ad3f71b56c9a6a92da905dab0aa/toolkit/components/antitracking/PurgeTrackerService.jsm#209-225):
+Firefox will clear the [following data](https://searchfox.org/firefox-main/rev/9767e215f62521af8168bfb6fb4275755868f0db/toolkit/components/antitracking/PurgeTrackerService.jsm#209-225):
 
 - Network cache and image cache
 - Cookies

@@ -9,6 +9,9 @@ spec-urls: https://w3c.github.io/ServiceWorker/
 
 Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests, and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
+> [!NOTE]
+> Service workers are a type of web worker. See [Web workers](/en-US/docs/Web/API/Web_Workers_API) for general information about worker types and use cases.
+
 ## Service worker concepts and usage
 
 A service worker is an event-driven [worker](/en-US/docs/Web/API/Worker) registered against an origin and a path. It takes the form of a JavaScript file that can control the web page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how your app behaves in certain situations (the most obvious one being when the network is not available).

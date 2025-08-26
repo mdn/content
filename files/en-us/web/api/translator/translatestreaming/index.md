@@ -36,7 +36,7 @@ A {{domxref("ReadableStream")}} containing the generated translation.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the translation operation exceeds the available {{domxref("Translator.inputQuota", "inputQuota")}}.
 
 ## Examples

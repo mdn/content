@@ -1,0 +1,158 @@
+---
+title: "XMLHttpRequestEventTarget: error event"
+short-title: error
+slug: Web/API/XMLHttpRequestEventTarget/error_event
+page-type: web-api-event
+browser-compat:
+  - api.XMLHttpRequest.error_event
+  - api.XMLHttpRequestUpload.error_event
+---
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+
+The `error` event is fired when the request encountered an error.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener("error", (event) => { })
+
+onerror = (event) => { }
+```
+
+## Event type
+
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}} {{ReadOnlyInline}}
+  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+- {{domxref("ProgressEvent.loaded", "loaded")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The proportion of work done can be calculated by dividing the value of this property by `total`. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+- {{domxref("ProgressEvent.total", "total")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
+
+## Examples
+
+### Usage with XMLHttpRequest
+
+#### HTML
+
+```html
+<div class="controls">
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
+</div>
+
+<textarea readonly class="event-log"></textarea>
+```
+
+```css hidden
+.event-log {
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
+}
+
+input {
+  width: 11rem;
+  margin: 0.5rem;
+}
+```
+
+#### JavaScript
+
+```js
+const xhrButtonSuccess = document.querySelector(".xhr.success");
+const xhrButtonError = document.querySelector(".xhr.error");
+const xhrButtonAbort = document.querySelector(".xhr.abort");
+const log = document.querySelector(".event-log");
+
+function handleEvent(e) {
+  log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+}
+
+function addListeners(xhr) {
+  xhr.addEventListener("loadstart", handleEvent);
+  xhr.addEventListener("load", handleEvent);
+  xhr.addEventListener("loadend", handleEvent);
+  xhr.addEventListener("progress", handleEvent);
+  xhr.addEventListener("error", handleEvent);
+  xhr.addEventListener("abort", handleEvent);
+}
+
+function runXHR(url) {
+  log.textContent = "";
+
+  const xhr = new XMLHttpRequest();
+  addListeners(xhr);
+  xhr.open("GET", url);
+  xhr.send();
+  return xhr;
+}
+
+xhrButtonSuccess.addEventListener("click", () => {
+  runXHR("example-image.jpg");
+});
+
+xhrButtonError.addEventListener("click", () => {
+  runXHR("https://example.com/notfound.jpg");
+});
+
+xhrButtonAbort.addEventListener("click", () => {
+  runXHR("example-image.jpg").abort();
+});
+```
+
+#### Result
+
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### Usage with XMLHttpRequestUpload
+
+You can use the `error` event to detect a problem with the upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
+
+```js
+// In case of an error we hide the progress bar
+// Note that this event can be listened to on the xhr object too
+function errorAction(event) {
+  progressBar.classList.remove("visible");
+  log.textContent = `Upload failed: ${event.type}`;
+}
+xhr.upload.addEventListener("error", errorAction);
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- Related events: {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

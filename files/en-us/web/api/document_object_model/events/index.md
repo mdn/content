@@ -1054,6 +1054,14 @@ This event handler can then be removed like this:
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
 
+### Interaction of multiple event handlers
+
+The `onevent` IDL property (for example, `element.onclick = ...`) and the HTML `onevent` content attribute (for example, `<button onclick="...">`) both target the same single handler slot. HTML loads before JavaScript could access the same element, so usually JavaScript replaces what's specified in HTML. Handlers added with {{domxref("EventTarget.addEventListener", "addEventListener()")}} are independent. Using `onevent` does not remove or replace listeners added with `addEventListener()`, and vice versa.
+
+When an event is dispatched, listeners are called in phases. There are two phases: _capture_ and _bubble_. In the capture phase, the event starts from the highest ancestor element and moves down the DOM tree until it reaches the target. In the bubble phase, the event moves in the opposite direction. Event listeners by default listen in the bubble phase, and they can listen in the capturing phase by specifying `capture: true` with `addEventListener()`. Within a phase, listeners run in the order they were registered. The `onevent` handler is registered the first time it becomes non-null; later reassignments change only its callback, not its position in the order.
+
+Calling {{domxref("Event.stopPropagation()")}} prevents calling listeners on other elements later in the propagation chain. {{domxref("Event.stopImmediatePropagation()")}} also prevents calling remaining listeners on the same element.
+
 ## Specifications
 
 {{Specifications}}

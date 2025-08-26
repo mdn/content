@@ -10,7 +10,7 @@ sidebar: cssref
 
 The **CSS animations** module lets you animate the values of CSS properties, such as background-position and transform, over time by using keyframes. Each keyframe describes how the animated element should render at a given time during the animation sequence. You can use the properties in the animations module to control the duration, number of repetitions, delayed start, and other aspects of an animation.
 
-### Animations in action
+## Animations in action
 
 To view the animation in the box below, click the checkbox 'Play the animation' or hover the cursor over the box. When the animating is active, the cloud at the top changes shape, snowflakes fall, and the snow level at the bottom rises. To pause the animation, uncheck the checkbox or move your cursor away from the box.
 
@@ -145,7 +145,7 @@ i:nth-of-type(7n + 1) {
 .cloud {
   width: 100%;
   height: 150px;
-  background: #ffffff;
+  background: white;
   border-radius: 0 0 90px 33% / 0 0 45px 50px;
   box-shadow:
     5px 15px 15px white,
@@ -157,7 +157,7 @@ i:nth-of-type(7n + 1) {
 }
 .ground {
   bottom: 0;
-  background-image: linear-gradient(to top, #fff 97%, 99%, #bbb 100%);
+  background-image: linear-gradient(to top, white 97%, 99%, #bbbbbb 100%);
   background-position: center 580px;
   animation: snowfall linear 300s forwards;
   border: 1px solid grey;

@@ -32,7 +32,7 @@ text-underline-offset: -0.5rem;
 p {
   font: 1.5em sans-serif;
   text-decoration-line: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 

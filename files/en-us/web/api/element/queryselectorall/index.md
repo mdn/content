@@ -158,7 +158,7 @@ In this example the HTML contains:
 div {
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 3px #20b2aa solid;
+  border: 3px lightseagreen solid;
   border-radius: 5px;
   font-family: monospace;
 }

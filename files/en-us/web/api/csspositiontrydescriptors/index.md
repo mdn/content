@@ -115,7 +115,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and t
 @position-try --custom-right {
   position-area: right;
   width: 100px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 ```
 

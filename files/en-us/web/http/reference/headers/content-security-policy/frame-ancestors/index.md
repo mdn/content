@@ -15,6 +15,9 @@ Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options",
 > **`frame-ancestors`** allows you to specify what parent source may embed a page.
 > This differs from **`frame-src`**, which allows you to specify where iframes in a page may be loaded from.
 
+> [!NOTE]
+> The **`frame-ancestors`** directive [checks each ancestor](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options). If any ancestor doesn't match, the load is cancelled. Therefore all ancestors should be allowed by the **`frame-ancestors`** directive of leaf frames when using nested frames.
+
 <table class="properties">
   <tbody>
     <tr>

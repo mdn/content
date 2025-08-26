@@ -11,7 +11,7 @@ browser-compat: api.HTMLDialogElement.requestClose
 The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interface requests to close the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 
-This method differs from the {{domxref("HTMLDialogElement.close()")}} method in that it fires a `cancel` event before firing the `close` event.
+This method differs from the {{domxref("HTMLDialogElement.close()")}} method in that it fires a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event before firing the {{domxref("HTMLDialogElement.close_event", "close")}} event.
 Authors can call {{domxref("Event.preventDefault()")}} in the handler for the `cancel` event to prevent the dialog from closing.
 
 This method exposes the same behavior as the dialog's internal close watcher.

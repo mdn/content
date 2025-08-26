@@ -22,7 +22,7 @@ The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, ca
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -38,7 +38,7 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```

@@ -92,7 +92,7 @@ You can use the {{domxref("DOMParser")}} to create an XML document from a string
 
 ```js
 const parser = new DOMParser();
-const doc = parser.parseFromString(aStr, "text/xml");
+const doc = parser.parseFromString(str, "text/xml");
 ```
 
 ### Performing the transformation

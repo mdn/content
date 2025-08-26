@@ -547,7 +547,7 @@ body {
   max-width: 800px;
 }
 .wrapper li {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 
 .wrapper li img {

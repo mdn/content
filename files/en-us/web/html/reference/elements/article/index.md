@@ -32,7 +32,7 @@ The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-conta
 .forecast {
   margin: 0;
   padding: 0.3rem;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .forecast > h1,

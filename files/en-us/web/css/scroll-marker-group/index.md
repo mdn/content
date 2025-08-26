@@ -109,7 +109,7 @@ Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to ma
 ```css
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   scroll-snap-align: start;
   text-align: center;

@@ -160,6 +160,19 @@ try {
 }
 ```
 
+Before starting a payment flow, you can determine whether SPC is available by calling the {{domxref('PaymentRequest.securePaymentConfirmationAvailability_static', 'PaymentRequest.securePaymentConfirmationAvailability()')}} static method. For example:
+
+```js
+async function spcSupport() {
+  const support = await PaymentRequest.securePaymentConfirmationAvailability();
+  if (support === "available") {
+    // Commence SPC payment flow
+  } else {
+    // Fallback to traditional flows
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}

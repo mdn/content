@@ -43,7 +43,7 @@ animation-delay: 1s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -200,7 +200,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  border-top: 100px solid #cccccc;
   height: 300px;
 }
 

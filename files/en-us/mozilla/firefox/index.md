@@ -5,9 +5,9 @@ page-type: landing-page
 sidebar: firefox
 ---
 
-[Firefox](https://www.firefox.com/en-US/) is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.
+[Firefox](https://www.firefox.com/en-US/) is Mozilla's popular web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in web technologies, and powerful development tools, Firefox is a great choice for both web developers and end users.
 
-Firefox is an open source project; much of the code is contributed by our huge community of volunteers. Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.
+Firefox is an open-source project; much of the code is contributed by our huge community of volunteers. Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.
 
 Learn how to create add-ons for [Firefox](https://www.firefox.com/en-US/), how to develop and build Firefox itself, and how the internals of Firefox and its subprojects work.
 
@@ -26,7 +26,7 @@ Firefox is available in five **channels**.
 
 ### Firefox Nightly
 
-Each night we build Firefox from the latest code in [mozilla-central](https://hg-edge.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
+Each night we build Firefox from the latest code in [mozilla-central](https://hg-edge.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting-edge features while they're still under active development.
 
 [Download Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly)
 

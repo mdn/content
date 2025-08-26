@@ -84,7 +84,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -157,7 +157,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -223,7 +223,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -311,7 +311,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -322,18 +322,18 @@ body {
 @position-try --custom-left {
   position-area: left;
   width: 100px;
-  margin: 0 10px 0 0;
+  margin-right: 10px;
 }
 
 @position-try --custom-bottom {
   position-area: bottom;
-  margin: 10px 0 0 0;
+  margin-top: 10px;
 }
 
 @position-try --custom-right {
   position-area: right;
   width: 100px;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 
 @position-try --custom-bottom-right {
@@ -344,16 +344,15 @@ body {
 
 Once our custom try fallback options are created, we can include them in the position list by referencing their names:
 
-```css-nolint
+```css
 .infobox {
   position: fixed;
   position-anchor: --my-anchor;
   position-area: top;
   width: 200px;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   position-try-fallbacks:
-    --custom-left, --custom-bottom,
-    --custom-right, --custom-bottom-right;
+    --custom-left, --custom-bottom, --custom-right, --custom-bottom-right;
 }
 ```
 
@@ -440,7 +439,7 @@ We include a custom try fallback option — `--custom-bottom` — which position
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;
@@ -570,7 +569,7 @@ body {
 .infobox {
   color: darkblue;
   background-color: azure;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 10px;
   border-radius: 10px;
   font-size: 1rem;

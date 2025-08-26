@@ -10,7 +10,7 @@ The **CSS generated content** module defines how an element's content can be rep
 
 Generated content can be used for content replacement, in which case the content of a DOM node is replaced with a CSS `<image>`. The CSS generated content also enables generating language-specific quotes, creating custom list item numbers and bullets, and visually adding content by generating content on select pseudo-elements as anonymous replaced elements.
 
-### Generated content in action
+## Generated content in action
 
 ```html hidden live-sample___generated_content
 <div></div>

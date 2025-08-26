@@ -135,9 +135,9 @@ We've also defined a cursor for the given camera, using the `cursor-*` attribute
 The basic light types in A-Frame are directional and ambient. The first type is a directional light placed somewhere on the scene while the second one reflects the light from the first type, so it looks more natural; this can be set globally. Add the new code below your previous additions — this uses the standard `<a-light>` element:
 
 ```html
-<a-light type="directional" color="#FFF" intensity="0.5" position="-1 1 2">
+<a-light type="directional" color="white" intensity="0.5" position="-1 1 2">
 </a-light>
-<a-light type="ambient" color="#FFF"></a-light>
+<a-light type="ambient" color="white"></a-light>
 ```
 
 The directional light has a white color, its intensity is set to `0.5`, and it is placed at position `-1 1 2`. The ambient light only needs a color, which is also white.
@@ -261,10 +261,10 @@ Everything is rendered properly and animating — congratulations on building yo
 
   <a-light
     type="directional"
-    color="#FFF"
+    color="white"
     intensity="0.5"
     position="-1 1 2"></a-light>
-  <a-light type="ambient" color="#FFF"></a-light>
+  <a-light type="ambient" color="white"></a-light>
 
   <a-camera position="0 1 4">
     <a-cursor color="#0095DD" opacity="0.5" scale="2 2 2"> </a-cursor>

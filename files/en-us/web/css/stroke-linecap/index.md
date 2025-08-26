@@ -57,7 +57,7 @@ We first set up a light-gray rectangle. Then, in a group, three paths are define
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">
-  <rect x="10" y="5" width="80" height="30" fill="#DDD" />
+  <rect x="10" y="5" width="80" height="30" fill="#dddddd" />
   <g stroke="dodgerblue" stroke-width="7">
     <path d="M 10,10 h 80" />
     <path d="M 10,20 h 80" />

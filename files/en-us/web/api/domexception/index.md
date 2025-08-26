@@ -31,7 +31,7 @@ Each exception has a **name**, which is a short "PascalCase"-style string identi
 
 Common error names are listed here. Some APIs define their own sets of names, so this is not necessarily a complete list.
 
-Note that the following deprecated historical errors don't have an error name but instead have only a legacy constant code value and a legacy constant name:
+The following deprecated historical errors don't have an error name but instead have only a legacy constant code value and a legacy constant name:
 
 - Legacy code value: `2`, legacy constant name: `DOMSTRING_SIZE_ERR`
 - Legacy code value: `6`, legacy constant name: `NO_DATA_ALLOWED_ERR`
@@ -54,10 +54,10 @@ Note that the following deprecated historical errors don't have an error name bu
   - : The object cannot be found here. (Legacy code value: `8` and legacy constant name: `NOT_FOUND_ERR`)
 - `NotSupportedError`
   - : The operation is not supported. (Legacy code value: `9` and legacy constant name: `NOT_SUPPORTED_ERR`)
-- `InvalidStateError`
-  - : The object is in an invalid state. (Legacy code value: `11` and legacy constant name: `INVALID_STATE_ERR`)
 - `InUseAttributeError`
   - : The attribute is in use. (Legacy code value: `10` and legacy constant name: `INUSE_ATTRIBUTE_ERR`)
+- `InvalidStateError`
+  - : The object is in an invalid state. (Legacy code value: `11` and legacy constant name: `INVALID_STATE_ERR`)
 - `SyntaxError`
   - : The string did not match the expected pattern. (Legacy code value: `12` and legacy constant name: `SYNTAX_ERR`)
 - `InvalidModificationError`
@@ -76,8 +76,8 @@ Note that the following deprecated historical errors don't have an error name bu
   - : The operation was aborted. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
 - `URLMismatchError` {{experimental_inline}}
   - : The given URL does not match another URL. (Legacy code value: `21` and legacy constant name: `URL_MISMATCH_ERR`)
-- `QuotaExceededError` {{experimental_inline}}
-  - : The quota has been exceeded. (Legacy code value: `22` and legacy constant name: `QUOTA_EXCEEDED_ERR`)
+- {{domxref("QuotaExceededError")}}
+  - : The quota has been exceeded. (Legacy code value: `22` and legacy constant name: `QUOTA_EXCEEDED_ERR`) It is a proper interface that derives from `DOMException`.
 - `TimeoutError`
   - : The operation timed out. (Legacy code value: `23` and legacy constant name: `TIMEOUT_ERR`)
 - `InvalidNodeTypeError` {{experimental_inline}}

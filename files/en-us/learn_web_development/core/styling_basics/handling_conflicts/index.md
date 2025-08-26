@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade", "Learn_web_development/Core/Styling_basics")}}
 
 The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 
@@ -171,7 +171,7 @@ The `color` property is an inherited property. So, the `color` property value is
 ```css live-sample___inheritance
 .main {
   color: rebeccapurple;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   padding: 1em;
 }
 
@@ -313,7 +313,7 @@ This behavior helps avoid repetition in your CSS. A common practice is to define
 ```css live-sample___mixing-rules
 h2 {
   font-size: 2em;
-  color: #000;
+  color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -507,16 +507,12 @@ Conflicting declarations will be applied in the following order, with later ones
 > [!NOTE]
 > The order of precedence is inverted for styles flagged with `!important`. It makes sense for web developers' stylesheets to override user stylesheets, so the design can be kept as intended; however, sometimes users have good reasons to override web developer styles, as mentioned above, and this can be achieved by using `!important` in their rules.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade).
-
 ## Summary
 
 If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS.
 
 If you didn't fully understand the cascade, specificity, and inheritance, then don't worry! This is definitely the most complicated thing we've covered so far in the course and is something that even professional web developers sometimes find tricky. We'd advise that you return to this article a few times as you continue through the course, and keep thinking about it.
 
-Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue.
+Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue. Next, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on the cascade.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model", "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade", "Learn_web_development/Core/Styling_basics")}}

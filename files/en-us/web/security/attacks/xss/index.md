@@ -203,7 +203,8 @@ However, suppose the template is like this:
 <div \{{ my_input }}></div>
 ```
 
-In this context the browser will treat the `my_input` variable as an HTML attribute. If `my_input` is `onmouseover="alert('XSS')"`, the output encoding provided by Django won't prevent the attack.
+In this context the browser will treat the `my_input` variable as an HTML attribute. Because Django encodes quotes (`"` → `&quot;`, `'` → `&#x27;`), the payload `onmouseover="alert('XSS')"` will not execute.
+However, an unquoted payload like `onmouseover=alert(1)` (or using backticks, ``onmouseover=alert(`XSS`)``) will still execute, because attribute values need not be quoted and backticks are not escaped by default.
 
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
@@ -218,7 +219,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
   <div class=\{{ my_class }}>...</div>
   ```
 
-  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover="alert('XSS!')"`. To prevent the attack, quote the placeholder:
+  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover=alert(1)`. To prevent the attack, quote the placeholder:
 
   ```django example-good
     <div class="\{{ my_class }}">...</div>

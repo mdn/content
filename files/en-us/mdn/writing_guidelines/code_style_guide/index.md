@@ -112,39 +112,6 @@ These guidelines should be followed to ensure that the code examples you write d
 - **Set the width to 100%**: The main content pane on MDN Web Docs is about 700px wide on desktop, so the embedded code examples must look OK at that width.
 - **Set height below 700px**: We recommend keeping this height for the rendered code example width for maximum onscreen legibility.
 
-### Color in the rendered code example
-
-Use keywords for primary and other "basic" colors, for example:
-
-```css example-good
-color: black;
-color: white;
-color: red;
-```
-
-Use `rgb()` for more complex colors (including semi-transparent ones):
-
-```css example-good
-color: rgb(0 0 0 / 50%);
-color: rgb(248 242 230);
-```
-
-For hex colors, use the short form where relevant:
-
-```css example-good
-color: #058ed9;
-color: #a39a92c1;
-color: #ff0;
-color: #fbfa;
-```
-
-As opposed to:
-
-```css-nolint example-bad
-color: #ffff00;
-color: #ffbbffaa;
-```
-
 ### Highlight examples as good or bad
 
 You'll notice on this page that the code blocks that represent good practices to follow are rendered with a green check mark in the right corner, and the code blocks that demonstrate bad practices are rendered with a white cross in a red circle.

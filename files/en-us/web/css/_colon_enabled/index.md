@@ -70,11 +70,11 @@ The following example makes the color of text and button {{htmlElement("input")}
 
 ```css
 input:enabled {
-  color: #2b2;
+  color: #22bb22;
 }
 
 input:disabled {
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 

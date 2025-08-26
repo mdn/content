@@ -71,16 +71,16 @@ that contain characters which must be escaped in CSS -->
 
 ```css
 .red {
-  color: #f33;
+  color: #ff3333;
 }
 
 .yellow-bg {
-  background: #ffa;
+  background: #ffffaa;
 }
 
 .fancy {
   font-weight: bold;
-  text-shadow: 4px 4px 3px #77f;
+  text-shadow: 4px 4px 3px #7777ff;
 }
 ```
 
