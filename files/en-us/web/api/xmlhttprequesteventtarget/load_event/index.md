@@ -1,23 +1,25 @@
 ---
-title: "XMLHttpRequest: progress event"
-short-title: progress
-slug: Web/API/XMLHttpRequest/progress_event
+title: "XMLHttpRequestEventTarget: load event"
+short-title: load
+slug: Web/API/XMLHttpRequestEventTarget/load_event
 page-type: web-api-event
-browser-compat: api.XMLHttpRequest.progress_event
+browser-compat:
+  - api.XMLHttpRequest.load_event
+  - api.XMLHttpRequestUpload.load_event
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`progress`** event is fired periodically when a request receives more data.
+The `load` event is fired when an {{domxref("XMLHttpRequest")}} transaction completes successfully.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("progress", (event) => { })
+addEventListener("load", (event) => { })
 
-onprogress = (event) => { }
+onload = (event) => { }
 ```
 
 ## Event type
@@ -39,7 +41,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-### Live example
+### Usage with XMLHttpRequest
 
 #### HTML
 
@@ -112,25 +114,34 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  );
+  runXHR("image.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("http://i-dont-exist");
+  runXHR("https://somewhere.org/i-dont-exist");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  ).abort();
+  runXHR("image.jpg").abort();
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### Usage with XMLHttpRequestUpload
+
+You can use the `load` event to detect the successful termination of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
+
+```js
+// When the upload is finished, we hide the progress bar.
+xhr.upload.addEventListener("load", (event) => {
+  progressBar.classList.remove("visible");
+  log.textContent = "Upload finished.";
+  abortButton.disabled = true;
+});
+```
 
 ## Specifications
 
@@ -142,5 +153,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## See also
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- Related events: {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}, {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
 - [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

@@ -1,23 +1,25 @@
 ---
-title: "XMLHttpRequest: loadend event"
-short-title: loadend
-slug: Web/API/XMLHttpRequest/loadend_event
+title: "XMLHttpRequestEventTarget: loadstart event"
+short-title: loadstart
+slug: Web/API/XMLHttpRequestEventTarget/loadstart_event
 page-type: web-api-event
-browser-compat: api.XMLHttpRequest.loadend_event
+browser-compat:
+  - api.XMLHttpRequest.loadstart_event
+  - api.XMLHttpRequestUpload.loadstart_event
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
+The **`loadstart`** event is fired when a request has started to load data.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("loadend", (event) => { })
+addEventListener("loadstart", (event) => { })
 
-onloadend = (event) => { }
+onloadstart = (event) => { }
 ```
 
 ## Event type
@@ -39,7 +41,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-### Live example
+### Usage with XMLHttpRequest
 
 #### HTML
 
@@ -112,25 +114,36 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  );
+  runXHR("example-image.jpg");
 });
 
 xhrButtonError.addEventListener("click", () => {
-  runXHR("http://i-dont-exist");
+  runXHR("https://example.com/notfound.jpg");
 });
 
 xhrButtonAbort.addEventListener("click", () => {
-  runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
-  ).abort();
+  runXHR("example-image.jpg").abort();
 });
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### Usage with XMLHttpRequestUpload
+
+You can use the `loadstart` event to detect the beginning of an upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
+
+```js
+// When the upload starts, we display the progress bar
+xhr.upload.addEventListener("loadstart", (event) => {
+  progressBar.classList.add("visible");
+  progressBar.value = 0;
+  progressBar.max = event.total;
+  log.textContent = "Uploading (0%)…";
+  abortButton.disabled = false;
+});
+```
 
 ## Specifications
 
@@ -142,5 +155,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## See also
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- Related events: {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}, {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
 - [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
