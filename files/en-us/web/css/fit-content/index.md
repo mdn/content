@@ -24,7 +24,7 @@ block-size: fit-content;
 
 ## Description
 
-This keyword is used with sizing properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-width")}}, and {{cssxref("max-width")}}. When used on these properties, the calculated size refers to the element's [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box).
+This keyword is used with sizing properties such as {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("block-size")}}, {{cssxref("inline-size")}}, {{cssxref("min-width")}}, and {{cssxref("max-width")}}. When used on these properties, the calculated size refers to the element's [content box](/en-US/docs/Web/CSS/box-edge#content-box).
 
 When `fit-content` is set, the element grows or shrinks to fit its content, but stops expanding after the relevant dimension reaches the size limit of its container.
 
@@ -34,7 +34,7 @@ The `fit-content` size is calculated using the following formula:
 min(max-content, max(min-content, stretch))
 ```
 
-where, [`stretch`](/en-US/docs/Web/CSS/width#stretch) matches the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). The keyword is essentially equivalent to `fit-content(stretch)`.
+where, [`stretch`](/en-US/docs/Web/CSS/width#stretch) matches the element's [margin box](/en-US/docs/Web/CSS/box-edge#margin-box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). The keyword is essentially equivalent to `fit-content(stretch)`.
 
 You can enable animations to and from `fit-content` using the {{cssxref("interpolate-size")}} property and the {{cssxref("calc-size()")}} function.
 
