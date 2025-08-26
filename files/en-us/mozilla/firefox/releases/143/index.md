@@ -57,7 +57,7 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### Removals
 
 - The deprecated {{domxref("CompositionEvent.locale")}} property is no longer supported.
-  ([Firefox bug 1700969](https://bugzil.la/1700969))
+  ([Firefox bug 1700969](https://bugzil.la/1700969)).
 
 <!-- ### WebAssembly -->
 
