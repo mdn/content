@@ -20,15 +20,17 @@ The `form` HTML attribute associates a form-associated element with a {{htmlelem
 
 The `id` of the `<form>` element, within the same document, with which the element should be associated.
 
-## Usage Notes
+## Usage notes
 
-By default, form controls are associated with their nearest ancestor {{htmlelement("form")}} element, and form controls that are not nested within a `<form>` are not associated with any form. The `form` attribute enables overriding these default behaviors.
+By default, form controls are associated with their nearest ancestor {{htmlelement("form")}} element, while form controls that are not nested within a `<form>` are not associated with any form. The `form` attribute enables overriding these default behaviors. When a form is submitted, the names and values of the `<form>` element's associated controls are submitted, whether or not the form controls are physically nested within that `<form>`.
 
-The `form` attribute of the {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} element allows you to specify an explicit form owner, enabling you to associate a listed form control from anywhere within a document with any `<form>` element in the same document, even if the control is not nested in a `<form>` or nested in a different `<form>`. When a form is submitted, the names and values of the `<form>` element's associated controls are submitted, whether or not the form controls are physically nested within that `<form>`.
+The `form` attribute of the {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements allows you to specify an explicit form owner, enabling you to associate the form control on which it is applied located anywhere within a document with any `<form>` element located in the same document. The attribute makes this possible even if the control is not nested in a `<form>` or if it's nested in a different `<form>`. 
 
-The `form` attribute takes as its value the `id` of a `<form>` element in the same document, thereby associating the form control on which it is set with that `<form>`. All other values are ignored.
+The `form` attribute takes as its value the `id` of a `<form>` element in the same document, thereby associating the form control on which it is set with that `<form>`. All other values set as the value of `form` attribute are ignored.
 
-While setting the attribute value to the `id` of the nearest ancestor `<form>` isn't necessary, explicitly defining the association between the form control and its form ensures the association isn't disassociated if scripts or malformed HTML result in that specific `<form>` not being the nearest form ancestor of the control.
+While setting the attribute value to the `id` of the nearest ancestor `<form>` isn't necessary, explicitly defining the association between a form control and its nearest ancestor form ensures the form control will not be disassociated  from its form if scripts or malformed HTML result in that specific `<form>` not being the nearest form ancestor of the control.
+
+### Associating with a non-ancestor form
 
 The `form` attribute can be used to associate a form control nested in one `<form>` with another `<form>`.
 
@@ -44,9 +46,11 @@ In this code example, the username `<input>` is nested within the `internalForm`
 
 In this case, the username will be submitted when the `externalForm` is submitted, while the `internalForm` has no associated form controls.
 
-The `form` attribute only associates the element on which it is set. When used on a `<fieldset>` element it only associates the `<fieldset>`; it does **not** automatically associate the form controls nested within that `<fieldset>`.
+### Non-inheritance of the `form` attribute
 
-In this example, the `<fieldset>` and `username` `<input>` are associated with the`exampleForm`, and included in the {{domxref("HTMLFormControlsCollection")}} of the {{domxref("HTMLFormElement.elements")}} property, but the`password` is not, while only the `username` will be included when the `exampleForm` is submitted:
+The `form` attribute only associates the element on which it is set. The attribute is not inherited. For example, when the `form` attribute is set on a `<fieldset>` element it only associates the `<fieldset>`; it does **not** automatically associate the form controls nested within that `<fieldset>`.
+
+In this example, the `<fieldset>` and `username` `<input>` are associated with the`exampleForm`, and included in the {{domxref("HTMLFormControlsCollection")}} of the {{domxref("HTMLFormElement.elements")}} property, but the`password` is not. Only the `username` will be included when the `exampleForm` is submitted:
 
 ```html
 <form id="exampleForm"></form>
@@ -61,6 +65,9 @@ In this example, the `<fieldset>` and `username` `<input>` are associated with t
 ```
 
 Each nested element needs its own `form` attribute or must be nested inside the form. You can check which elements are associated with a form via JavaScript, using [HTMLFormElement.elements](/en-US/docs/Web/API/HTMLFormElement/elements).
+
+### Form submission
+
 Including the `form` attribute does not mean the element will be submitted with the form. Only submittable elements, including `<button>`, `<input>`, `<select>`, and `<textarea`>, have their name and values submitted when their associated `<form>` is submitted.
 
 In this case, even though the `<output>` is implicitly then explicitly associated with the `calcForm`, the `result` is not submitted along with `a` and `b` when `calcForm` is submitted.
@@ -109,7 +116,7 @@ Hello, World!</textarea
 
 ### Element associated with a different form
 
-This example demonstrates how an element's `form` attribute can associate the element with a form while dissociating itself from it's closest ancestor form. We have two `<form>` elements: `parentForm` and `targetForm`. The `<button>` inside `parentForm` has its `form` attribute set to `targetForm`, disassociating it from the nearest ancestor `parentForm` while associating it with the target form. When the submit button is activated, it submits `targetForm`, not its `parentForm` ancestor.
+This example demonstrates how an element's `form` attribute can associate the element with a form while dissociating itself from it's closest ancestor form. We have two `<form>` elements: `parentForm` and `targetForm`. The `<button>` inside `parentForm` has its `form` attribute set to `targetForm`, disassociating it from the nearest ancestor `parentForm`, while associating it with the target form. When the submit button is activated, it submits the `targetForm`, not its `parentForm` ancestor.
 
 ```html
 <form id="targetForm">
