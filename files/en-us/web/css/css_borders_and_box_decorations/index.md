@@ -6,7 +6,7 @@ spec-urls: https://drafts.csswg.org/css-borders-4/
 sidebar: cssref
 ---
 
-The **CSS borders and box decorations** module provides properties for adding borders, rounded corners, and box shadows to elements. This module extends borders and box decorations introduced in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module, adding {{cssxref("corner-shape")}} and border-shape properties, logical {{cssxref("border-radius")}} properties, longhand properties for the {{cssxref("box-shadow")}} property, as well as properties to create partial borders.
+The **CSS borders and box decorations** module provides properties for adding borders, shaped corners, and box shadows to elements. This module extends borders and box decorations introduced in the [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module, adding {{cssxref("corner-shape")}} and `border-shape` properties, logical {{cssxref("border-radius")}} properties, longhand properties for the {{cssxref("box-shadow")}} property, and properties to create partial borders.
 
 ## Borders and box decorations in action
 
@@ -119,7 +119,7 @@ function setCornerShape() {
 }
 
 select.addEventListener("change", setCornerShape);
-range.addEventListener("change", setCornerShape);
+range.addEventListener("input", setCornerShape);
 setCornerShape();
 ```
 
@@ -198,7 +198,7 @@ setCornerShape();
 - {{cssxref("corner-top-right-shape")}}
 - {{cssxref("corner-top-shape")}}
 
-The CSS borders and box decorations module level 4 also introduces the `border-shape`, `border-limit`, and `border-clip` properties, along with the `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` longhand properties. Currently, no browsers support these features. The module also introduces component properties for the well supported {{cssxref("border-radius")}} and {{cssxref("box-shadow")}} properties, including `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, and `box-shadow-spread`. These component properties are not-yet supported either.
+The CSS borders and box decorations module level 4 also introduces the `border-shape`, `border-limit`, and `border-clip` properties, along with the `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` longhand properties. Currently, no browsers support these features. The module also introduces component properties for the well supported {{cssxref("border-radius")}} and {{cssxref("box-shadow")}} properties, including `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, and `box-shadow-spread`. These component properties are also as yet unsupported.
 
 ### Data types
 
