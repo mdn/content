@@ -23,7 +23,7 @@ Users can move through the items by clicking or activating navigational buttons 
 
 A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list while moving the item at the other end out of view.
 
-Creating carousels with JavaScript can be quite brittle and challenging to implement. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
+Carousels can be quite brittle and challenging to implement with JavaScript. They require scripts to associate scroll markers with the items they represent while continuously updating the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls has to be added in.
 
 Fortunately, we can create accessible carousels with associated controls without the use of JavaScript, using CSS carousel features.
 
@@ -246,7 +246,7 @@ Scroll markers are a group of buttons, each one of which scrolls the carousel to
 In this section, we will add scroll markers to the carousel, which involves three main features:
 
 - The {{cssxref("scroll-marker-group")}} property is set on the scroll container element. It needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated; its value specifies where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, before the scroll buttons, while `after` puts it at the end.
-- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
+- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together, contain, and lay out scroll markers.
 - {{cssxref("::scroll-marker")}} pseudo-elements exist inside the children and {{cssxref("::column")}} fragments of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 
 To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus and layout box order; this means it comes after the scroll buttons:
@@ -258,7 +258,7 @@ ul {
 ```
 
 > [!NOTE]
-> Alternatively, a scroll marker group can be created from an existing element container using {{cssxref("scroll-target-group")}}.
+> Alternatively, a scroll marker group container can be created from an existing element containing a set of {{htmlelement("a")}} elements using {{cssxref("scroll-target-group")}}.
 
 Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll button's, except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
@@ -300,7 +300,7 @@ li::scroll-marker:target-current {
 ```
 
 > [!NOTE]
-> Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group with the keyboard, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
+> Accessibility-wise, the scroll marker group container and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group with the keyboard, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
 
 ## Single page carousel final result
 
@@ -522,7 +522,7 @@ ul::scroll-marker-group {
 
 ### Column scroll markers
 
-The CSS for creating the scroll markers in this demo is nearly identical to the [previous demo](#creating_scroll_markers), except that the selectors are different — the scroll markers are created on the generated `::column` scroll markers rather than the list items (note how we are including two pseudo-elements here, to generate scroll markers on the generated columns).
+The CSS for creating the scroll markers in this demo is nearly identical to the [previous demo](#creating_scroll_markers), except that the selectors are different — the scroll markers are created on the generated `::column` pseudo-elements rather than the list items (note how we are including two pseudo-elements here, to generate scroll markers on the generated columns).
 
 ```css live-sample___second-example
 ul::column::scroll-marker {

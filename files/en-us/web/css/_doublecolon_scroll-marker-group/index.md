@@ -22,16 +22,16 @@ The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Description
 
-A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group**. This is a container that automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on itself or its descendants. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel to provide a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
+A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group container**. This is a container that automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on itself or its descendants. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel to provide a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
 
-The scroll container must have its {{cssxref("scroll-marker-group")}} property set to a non-`none` value for the `::scroll-marker-group` pseudo-element to be generated. The {{cssxref("scroll-marker-group")}} value determines where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
+The scroll container must have its {{cssxref("scroll-marker-group")}} property set to a non-`none` value for the `::scroll-marker-group` pseudo-element to be generated. The {{cssxref("scroll-marker-group")}} value determines where the scroll marker group container appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
 
 > [!NOTE]
-> Alternatively, a scroll marker group can be created from an existing element container using {{cssxref("scroll-target-group")}}.
+> Alternatively, a scroll marker group container can be created from an existing element containing a set of {{htmlelement("a")}} elements using {{cssxref("scroll-target-group")}}.
 
-It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When positioning the group at the start of the content, put it at the beginning of the tab order using `before`. When positioning the group at the end of the content, put it at the end of the tab order using `after`.
+It is a best practice to match the visual rendering position of the scroll marker group container with the tab order. When positioning the group at the start of the content, put it at the beginning of the tab order using `before`. When positioning the group at the end of the content, put it at the end of the tab order using `after`.
 
-Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
+Accessibility-wise, the scroll marker group container and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
 
 ## Examples
 
@@ -148,9 +148,9 @@ li::scroll-marker:target-current {
 
 {{EmbedLiveSample("carousel-example", "100%", "280px")}}
 
-### Positioning the scroll marker group with anchor-positioning
+### Positioning the scroll marker group container with anchor-positioning
 
-This example extends the previous one, demonstrating the use of [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) to position the scroll marker group relative to the carousel.
+This example extends the previous one, demonstrating the use of [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) to position the scroll marker group container relative to the carousel.
 
 #### CSS
 

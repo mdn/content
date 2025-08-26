@@ -6,7 +6,7 @@ browser-compat: css.properties.scroll-target-group
 sidebar: cssref
 ---
 
-The **`scroll-target-group`** [CSS](/en-US/docs/Web/CSS) property specifies whether a container element is a scroll marker group.
+The **`scroll-target-group`** [CSS](/en-US/docs/Web/CSS) property specifies whether a container element is a scroll marker group container.
 
 ## Syntax
 
@@ -28,20 +28,20 @@ The `scroll-target-group` property is specified as one of the keyword values lis
 ### Values
 
 - `auto`
-  - : The element is a scroll marker group.
+  - : The element is a scroll marker group container.
 - `none`
-  - : The element is not a scroll marker group.
+  - : The element is not a scroll marker group container.
 
 ## Description
 
-Setting `scroll-target-group: auto` on a container element denotes it as a scroll marker group, which is a group of navigation items that allow you to navigate between elements on a page (such as carousel items or article sections) and are highlighted to indicate which element is currently in view.
+Setting `scroll-target-group: auto` on a container element denotes it as a **scroll marker group container**, which groups together a set of navigation items that allow you to navigate between elements on a page (such as carousel items or article sections) and are highlighted to indicate which element is currently in view.
 
 Any {{htmlelement("a")}} elements with fragment identifiers inside the container are automatically set as scroll markers. The anchor element whose scroll target is currently in view can be styled via the {{cssxref(":target-current")}} pseudo-class.
 
-Scroll marker groups created using `scroll-target-group` behave in a very similar way to those created using the {{cssxref("scroll-marker-group")}} property, with some differences:
+Scroll marker group containers created using `scroll-target-group` behave in a very similar way to those created using the {{cssxref("scroll-marker-group")}} property, with some differences:
 
-- `scroll-marker-group` automatically creates a set of pseudo-elements to represent the group ({{cssxref("::scroll-marker-group")}}) and markers (one or more instances of {{cssxref("::scroll-marker")}}), and they automatically have the expected navigation associations made with the {{glossary("scroll container")}} the group is generated on. This is quicker to set up, and you don't need to create markup for the group and markers, but creating your own markup and setting it as a scroll marker group via `scroll-target-group` provides more control and flexibility.
-- A group generated with `scroll-marker-group` automatically has [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics applied to it, meaning that it behaves like a single item in the tab index, and you can move between scroll markers using cursor keys. The markers of a group specified using `scroll-target-group` behave like individual links by default, but you have the flexibility of providing alternative semantics and behavior if wished.
+- `scroll-marker-group` automatically creates a set of pseudo-elements to represent the group container ({{cssxref("::scroll-marker-group")}}) and markers (one or more instances of {{cssxref("::scroll-marker")}}), and they automatically have the expected navigation associations made with the {{glossary("scroll container")}} the group container is generated on. This is quicker to set up, and you don't need to create markup for the container and markers, but creating your own markup and setting it as a scroll marker group container via `scroll-target-group` provides more control and flexibility.
+- A group container generated with `scroll-marker-group` automatically has [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics applied to it, meaning that it behaves like a single item in the tab index, and you can move between scroll markers using cursor keys. The markers specified using `scroll-target-group` behave like individual links by default, but you have the flexibility of providing alternative semantics and behavior if wished.
 
 ## Formal definition
 
@@ -201,7 +201,7 @@ Our markup has a series of {{htmlelement("section")}} elements containing conten
 
 #### CSS
 
-We've hidden most of the styling for brevity. Most pertinently to this example, we've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group and trigger the browser's algorithm for calculating which `<a>` element is the `:target-current` at any moment in time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a {{cssxref("color")}} of red so that it is clearly visible.
+We've hidden most of the styling for brevity. Most pertinently to this example, we've set `scroll-target-group: auto` on the `<ol>` to turn it into a scroll marker group container and trigger the browser's algorithm for calculating which `<a>` element is the `:target-current` at any moment in time (that is, which link's target is currently in view). We then style the `:target-current` pseudo-class with a {{cssxref("color")}} of red so that it is clearly visible.
 
 ```css hidden live-sample___basic-usage
 body {
@@ -267,7 +267,7 @@ This example shows how to create [CSS carousel](/en-US/docs/Web/CSS/CSS_overflow
 
 #### HTML
 
-The markup has IDs set on the list items that define each page, and an ordered list added that we'll turn into a scroll marker group using CSS.
+The markup has IDs set on the list items that define each page, and an ordered list added that we'll turn into a scroll marker group container using CSS.
 
 ```html live-sample___carousel
 <h1>CSS carousel single item per page</h1>
@@ -295,9 +295,9 @@ The markup has IDs set on the list items that define each page, and an ordered l
 
 #### CSS
 
-We create the scroll marker group and scroll markers by setting `scroll-target-group` on the `<ol>` element. The rest of the code for styling the scroll marker group and scroll markers is very similar, except that we are targeting elements of our own choosing (`<ol>` and `<a>`) rather than the {{cssxref("::scroll-marker-group")}} and {{cssxref("::scroll-marker")}} pseudo-elements.
+We create the scroll marker group container and scroll markers by setting `scroll-target-group` on the `<ol>` element. The rest of the code for styling these is very similar, except that we are targeting elements of our own choosing (`<ol>` and `<a>`) rather than the {{cssxref("::scroll-marker-group")}} and {{cssxref("::scroll-marker")}} pseudo-elements.
 
-We complete the code by targeting some styles on the `:target-current`, `a:hover`, and `a:focus` states to indicate which page is currently being shown and which links are being hovered/focused.
+We complete the code by setting some styles on the `:target-current`, `a:hover`, and `a:focus` states to indicate which page is currently being shown and which links are being hovered/focused.
 
 ```css hidden live-sample___carousel
 /* General styles */
