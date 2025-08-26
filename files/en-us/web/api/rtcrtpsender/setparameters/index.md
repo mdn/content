@@ -28,7 +28,7 @@ setParameters(parameters)
       - : An array of objects, each specifying the parameters for a single codec that could be used to encode the track's media.
         The properties of the objects include:
         - `active`
-          - : Setting this value `true` (the default) causes this encoding to be sent, while `false` stops it from being sent and used (but does not cause the SSRC to be removed). RTCRtpCodec
+          - : Setting this value `true` (the default) causes this encoding to be sent, while `false` stops it from being sent and used (but does not cause the SSRC to be removed).
 
         - `codec` {{optional_inline}}
           - : Selects the [media codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) that is used for this encoding's RTP stream.
