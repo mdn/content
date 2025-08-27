@@ -91,9 +91,11 @@ path {
 
 #tunnel {
   background:
-    url("/shared-assets/bg-tunnel-border-left.svg") repeat-y,
-    url("/shared-assets/bg-tunnel-border-right.svg") repeat-y 100% 100%,
-    url("/shared-assets/bg-tunnel-specks.png"),
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-border-left.svg")
+      repeat-y,
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-border-right.svg")
+      repeat-y 100% 100%,
+    url("/shared-assets/images/examples/web-animations/bg-tunnel-specks.png"),
     #6c373f;
   margin: 0 auto;
   height: calc(100% + 300px);
@@ -243,7 +245,8 @@ In this example, the white rabbit has an animation that causes it to go down a r
 
 ```css hidden live-sample___follow_the_white_rabbit
 #rabbit {
-  background: url("/shared-assets/park5_rabbit.png") 0 0 / 100% 100%;
+  background: url("/shared-assets/images/examples/web-animations/park5_rabbit.png")
+    0 0 / 100% 100%;
   cursor: pointer;
   position: absolute;
   top: 15%;
@@ -271,8 +274,8 @@ body {
 
 .foreground {
   height: 100%;
-  background: url("/shared-assets/bg_park5_2.png") no-repeat 100% 100% / 100%
-    auto;
+  background: url("/shared-assets/images/examples/web-animations/bg_park5_2.png")
+    no-repeat 100% 100% / 100% auto;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -281,7 +284,8 @@ body {
 }
 
 .background {
-  background: url("/shared-assets/bg_park5_1.png") no-repeat 0 0 / 100% auto;
+  background: url("/shared-assets/images/examples/web-animations/bg_park5_1.png")
+    no-repeat 0 0 / 100% auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -349,63 +353,69 @@ In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking
     <div id="red-queen-and-alice">
       <img
         id="red-queen-and-alice-sprite"
-        src="/shared-assets/sprite_running-alice-queen_small.png"
-        srcset="/shared-assets/sprite_running-alice-queen.png 2x"
+        src="/shared-assets/images/examples/web-animations/sprite_running-alice-queen_small.png"
+        srcset="
+          /shared-assets/images/examples/web-animations/sprite_running-alice-queen.png 2x
+        "
         alt="Alice and the Red Queen running to stay in place." />
     </div>
   </div>
   <div class="scenery" id="foreground1">
     <img
       id="palm3"
-      src="/shared-assets/palm3_small.png"
-      srcset="/shared-assets/palm3.png 2x"
+      src="/shared-assets/images/examples/web-animations/palm3_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm3.png 2x"
       alt="" />
   </div>
   <div class="scenery" id="foreground2">
     <img
       id="bush"
-      src="/shared-assets/bush_small.png"
-      srcset="/shared-assets/bush.png 2x"
+      src="/shared-assets/images/examples/web-animations/bush_small.png"
+      srcset="/shared-assets/images/examples/web-animations/bush.png 2x"
       alt="" />
     <img
       id="w_rook_upright"
-      src="/shared-assets/w_rook_upright_small.png"
-      srcset="/shared-assets/w_rook_upright.png 2x"
+      src="/shared-assets/images/examples/web-animations/w_rook_upright_small.png"
+      srcset="
+        /shared-assets/images/examples/web-animations/w_rook_upright.png 2x
+      "
       alt="" />
   </div>
   <div class="scenery" id="background1">
     <img
       id="r_pawn_upright"
-      src="/shared-assets/r_pawn_upright_small.png"
-      srcset="/shared-assets/r_pawn_upright.png 2x"
+      src="/shared-assets/images/examples/web-animations/r_pawn_upright_small.png"
+      srcset="
+        /shared-assets/images/examples/web-animations/r_pawn_upright.png 2x
+      "
       alt="" />
     <img
       id="w_rook"
-      src="/shared-assets/w_rook_small.png"
-      srcset="/shared-assets/w_rook.png 2x"
+      src="/shared-assets/images/examples/web-animations/w_rook_small.png"
+      srcset="/shared-assets/images/examples/web-animations/w_rook.png 2x"
       alt="" />
     <img
       id="palm1"
-      src="/shared-assets/palm1_small.png"
-      srcset="/shared-assets/palm1.png 2x"
+      src="/shared-assets/images/examples/web-animations/palm1_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm1.png 2x"
       alt="" />
   </div>
   <div class="scenery" id="background2">
     <img
       id="r_pawn"
-      src="/shared-assets/r_pawn_small.png"
-      srcset="/shared-assets/r_pawn.png 2x"
+      src="/shared-assets/images/examples/web-animations/r_pawn_small.png"
+      srcset="/shared-assets/images/examples/web-animations/r_pawn.png 2x"
       alt="" />
 
     <img
       id="r_knight"
-      src="/shared-assets/r_knight_small.png"
-      srcset="/shared-assets/r_knight.png 2x"
+      src="/shared-assets/images/examples/web-animations/r_knight_small.png"
+      srcset="/shared-assets/images/examples/web-animations/r_knight.png 2x"
       alt="" />
     <img
       id="palm2"
-      src="/shared-assets/palm2_small.png"
-      srcset="/shared-assets/palm2.png 2x"
+      src="/shared-assets/images/examples/web-animations/palm2_small.png"
+      srcset="/shared-assets/images/examples/web-animations/palm2.png 2x"
       alt="" />
   </div>
 </div>
@@ -519,14 +529,16 @@ img {
 }
 
 .earth {
-  background: #eb125d url("/shared-assets/bg_earth.jpg") repeat-x 0 0 / 100%
-    auto;
+  background: #eb125d
+    url("/shared-assets/images/examples/web-animations/bg_earth.jpg") repeat-x 0
+    0 / 100% auto;
   bottom: 0;
 }
 
 .sky {
-  background: #246e89 url("/shared-assets/bg_sky.jpg") repeat-x 100% 100% / auto
-    100%;
+  background: #246e89
+    url("/shared-assets/images/examples/web-animations/bg_sky.jpg") repeat-x
+    100% 100% / auto 100%;
   top: 0;
 }
 

@@ -39,7 +39,8 @@ In the following example, we can sync all new animated cats by giving them all t
 ```css
 /* All cats have the same dimensions and the same sprite for a background image. */
 .cat {
-  background: url("cat_sprite.png") -600px 0 no-repeat;
+  background: url("/shared-assets/images/examples/web-animations/cat_sprite.png") -600px
+    0 no-repeat;
   height: 150px;
   width: 100%;
 }
