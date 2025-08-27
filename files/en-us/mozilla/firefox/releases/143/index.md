@@ -26,7 +26,7 @@ Firefox 143 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The {{cssxref("::details-content")}} pseudo-element is now enabled by default, which lets you style the content of the {{htmlElement("details")}} element.
+- The {{cssxref("::details-content")}} pseudo-element is now enabled by default. It lets you style the content of the {{htmlElement("details")}} element.
   ([Firefox bug 1941406](https://bugzil.la/1941406)).
 
 <!-- #### Removals -->

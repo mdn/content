@@ -283,8 +283,8 @@ Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elemen
 
 This will allow users to, for example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
-Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)`.
-The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this.
+Currently, only support for `::details-content::first-letter` can be parsed using `@supports(::details-content::first-letter)`.
+The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element, so there is no way for testing this.
 ([Firefox bug 1953557](https://bugzil.la/1953557), [Firefox bug 1941406](https://bugzil.la/1941406)).
 
 | Release channel   | Version added | Enabled by default? |
