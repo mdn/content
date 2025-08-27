@@ -95,11 +95,11 @@ For more examples check out the [Sending and Receiving Binary Data](/en-US/docs/
 
 `XMLHttpRequest` provides the ability to listen to various events that can occur while the request is being processed. This includes periodic progress notifications, error notifications, and so forth.
 
-Support for DOM {{domxref("XMLHttpRequest/progress_event", "progress")}} event monitoring of `XMLHttpRequest` transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The actual events you can monitor to determine the state of an ongoing transfer are:
+Support for DOM {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}} event monitoring of `XMLHttpRequest` transfers follows the [specification for progress events](https://xhr.spec.whatwg.org/#interface-progressevent): these events implement the {{domxref("ProgressEvent")}} interface. The actual events you can monitor to determine the state of an ongoing transfer are:
 
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}
   - : The amount of data that has been retrieved has changed.
-- {{domxref("XMLHttpRequest/load_event", "load")}}
+- {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}
   - : The transfer is complete; all data is now in the `response`
 
 ```js

@@ -11,34 +11,31 @@ browser-compat: api.XMLHttpRequestEventTarget
 
 You don't use `XMLHttpRequestEventTarget` directly; instead you interact with the sub classes.
 
-## Inheritance for `XMLHttpRequest`
+## Events
 
-{{InheritanceDiagram("XMLHttpRequest")}}
+The following events are made available to {{domxref("XMLHttpRequest")}} and {{domxref("XMLHttpRequestUpload")}}:
 
-The following events are made available to {{domxref("XMLHttpRequest")}}:
-
-- {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- {{domxref("XMLHttpRequest/error_event", "error")}}
-- {{domxref("XMLHttpRequest/load_event", "load")}}
-- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
-- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
-- {{domxref("XMLHttpRequest/progress_event", "progress")}}
-- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
-- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
-
-## Inheritance for `XMLHttpRequestUpload`
-
-{{InheritanceDiagram("XMLHttpRequestUpload")}}
-
-The following events are made available to {{domxref("XMLHttpRequestUpload")}}:
-
-- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
-- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
-- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
-- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
-- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
-- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
-- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
+- {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
+  - : Fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
+    Also available via the `onabort` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}
+  - : Fired when the request encountered an error.
+    Also available via the `onerror` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}
+  - : Fired when a request transaction completes successfully.
+    Also available via the `onload` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}
+  - : Fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}} or {{domxref("XMLHttpRequestEventTarget/error_event", "error")}}).
+    Also available via the `onloadend` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}
+  - : Fired when a request has started to load data.
+    Also available via the `onloadstart` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}
+  - : Fired periodically when a request receives more data.
+    Also available via the `onprogress` event handler property.
+- {{domxref("XMLHttpRequestEventTarget/timeout_event", "timeout")}}
+  - : Fired when progress is terminated due to preset time expiring.
+    Also available via the `ontimeout` event handler property.
 
 ## Specifications
 

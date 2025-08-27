@@ -1,9 +1,11 @@
 ---
-title: "XMLHttpRequest: error event"
+title: "XMLHttpRequestEventTarget: error event"
 short-title: error
-slug: Web/API/XMLHttpRequest/error_event
+slug: Web/API/XMLHttpRequestEventTarget/error_event
 page-type: web-api-event
-browser-compat: api.XMLHttpRequest.error_event
+browser-compat:
+  - api.XMLHttpRequest.error_event
+  - api.XMLHttpRequestUpload.error_event
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -39,7 +41,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-### Live example
+### Usage with XMLHttpRequest
 
 #### HTML
 
@@ -126,7 +128,21 @@ xhrButtonAbort.addEventListener("click", () => {
 
 #### Result
 
-{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+{{ EmbedLiveSample('Usage with XMLHttpRequest', '100%', '150px') }}
+
+### Usage with XMLHttpRequestUpload
+
+You can use the `error` event to detect a problem with the upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
+
+```js
+// In case of an error we hide the progress bar
+// Note that this event can be listened to on the xhr object too
+function errorAction(event) {
+  progressBar.classList.remove("visible");
+  log.textContent = `Upload failed: ${event.type}`;
+}
+xhr.upload.addEventListener("error", errorAction);
+```
 
 ## Specifications
 
@@ -138,5 +154,5 @@ xhrButtonAbort.addEventListener("click", () => {
 
 ## See also
 
-- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- Related events: {{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequestEventTarget/load_event", "load")}}, {{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}, {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}, {{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}
 - [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
