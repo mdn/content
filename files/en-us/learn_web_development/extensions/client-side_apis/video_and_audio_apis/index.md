@@ -58,14 +58,6 @@ This creates a video player inside the browser like so:
   <source
     src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.webm"
     type="video/webm" />
-  <p>
-    Your browser doesn't support HTML5 video. Here is a
-    <a
-      href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4"
-      >link to the video</a
-    >
-    instead.
-  </p>
 </video>
 ```
 
@@ -83,14 +75,6 @@ You can review what all the HTML features do in the article linked above; for ou
   <source
     src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.webm"
     type="video/webm" />
-  <p>
-    Your browser doesn't support HTML5 video. Here is a
-    <a
-      href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4"
-      >link to the video</a
-    >
-    instead.
-  </p>
 </video>
 ```
 
@@ -115,7 +99,6 @@ Our finished example will look (and function) something like the following:
     <source
       src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.webm"
       type="video/webm" />
-    <!-- fallback content here -->
   </video>
   <div class="controls">
     <button class="play" data-icon="P" aria-label="play pause toggle"></button>
@@ -411,7 +394,6 @@ To get started with this example, follow these steps:
            <source
              src="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/video/sintel-short.webm"
              type="video/webm" />
-           <!-- fallback content here -->
          </video>
          <div class="controls">
            <button

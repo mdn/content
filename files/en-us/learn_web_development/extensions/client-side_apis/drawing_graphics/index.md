@@ -219,6 +219,7 @@ Let's start by creating our own canvas template to create future experiments in.
 
 1. First, create a directory on your local hard drive called `canvas-template`.
 2. Create a new file in the directory called `index.html` and save the following contents inside it:
+
    ```html live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
    <!DOCTYPE html>
    <html lang="en-US">
@@ -235,21 +236,26 @@ Let's start by creating our own canvas template to create future experiments in.
        </canvas>
      </body>
    </html>
+   ```
+
 3. Create a new file inside the directory called `style.css` and save the following CSS rule in it:
+
    ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
    body {
      margin: 0;
      overflow: hidden;
    }
+   ```
+
 4. Create a new file inside the directory called `script.js`. Leave this file blank for now.
 
 5. Now open `script.js` and add the following lines of JavaScript:
 
-    ```js
-    const canvas = document.querySelector(".myCanvas");
-    const width = (canvas.width = window.innerWidth);
-    const height = (canvas.height = window.innerHeight);
-    ```
+   ```js
+   const canvas = document.querySelector(".myCanvas");
+   const width = (canvas.width = window.innerWidth);
+   const height = (canvas.height = window.innerHeight);
+   ```
 
    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
 
