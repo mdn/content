@@ -536,7 +536,7 @@ As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "r
 
 When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
 
-The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
+The most common use of this is to add a different style onto the checkbox or radio button when it is checked, in cases where you've removed the system default styling with [`appearance: none;`](/en-US/docs/Web/CSS/appearance) and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Styling checkboxes and radio buttons using `appearance`](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#styling_checkboxes_and_radio_buttons_using_appearance).
 
 As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 

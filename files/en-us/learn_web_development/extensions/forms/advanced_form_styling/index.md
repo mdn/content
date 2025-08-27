@@ -196,46 +196,13 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 ```
 
-### Styling checkboxes and radio buttons
+### Styling checkboxes and radio buttons using `appearance`
 
-Styling a checkbox or a radio button is tricky by default. The sizes of checkboxes and radio buttons are not meant to be changed with their default designs, and browsers react very differently when you try.
+Styling a checkbox or a radio button is tricky by default. The sizes of checkbox and radio button default styles are not meant to be changed, and browsers react very differently when you try. Some increase the size of the control, and some keep the control the same size and add extra space around it.
 
-For example, consider this simple test case:
+A much better approach is to remove the default appearance of checkboxes and radio buttons altogether with {{cssxref("appearance", "appearance: none;")}}, and then add your own styles to their various states.
 
-```html
-<label
-  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
->
-<label
-  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
->
-```
-
-```css
-span {
-  display: inline-block;
-  background: red;
-}
-
-input[type="checkbox"] {
-  width: 100px;
-  height: 100px;
-}
-```
-
-Different browsers handle the checkbox and span differently, often ugly ways:
-
-| Browser                             | Rendering                                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Firefox 71 (macOS)                  | ![Rounded corners and 1px light grey border](firefox-mac-checkbox.png)                                 |
-| Firefox 57 (Windows 10)             | ![Rectangular corners with 1px medium grey border](firefox-windows-checkbox.png)                       |
-| Chrome 77 (macOS), Safari 13, Opera | ![Rounded corner with 1px medium grey border](chrome-mac-checkbox.png)                                 |
-| Chrome 63 (Windows 10)              | ![Rectangular borders with slightly greyish background instead of white.](chrome-windows-checkbox.png) |
-| Edge 16 (Windows 10)                | ![Rectangular borders with slightly greyish background instead of white.](edge-checkbox.png)           |
-
-#### Using appearance: none on radios/checkboxes
-
-As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref("appearance", "appearance: none;")}}. Let's take this example HTML:
+Let's take this example HTML:
 
 ```html live-sample___checkboxes-styled
 <form>
@@ -264,7 +231,7 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 </form>
 ```
 
-Now, let's style these with a custom checkbox design. Let's start by unstyling the original check boxes:
+Let's style these with a custom checkbox design. We'll start by removing the original check box styles:
 
 ```css live-sample___checkboxes-styled
 input[type="checkbox"] {
@@ -272,7 +239,7 @@ input[type="checkbox"] {
 }
 ```
 
-We can use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkbox as its state changes:
+We can then use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkboxes as their state changes:
 
 ```css live-sample___checkboxes-styled
 input[type="checkbox"] {
@@ -320,8 +287,6 @@ We've also created a couple of other examples to give you more ideas:
 
 - [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html): Custom radio button styling.
 - [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
-
-If you view these checkboxes in a browser that doesn't support {{cssxref("appearance")}}, your custom design will be lost, but they will still look like checkboxes and be usable.
 
 ## What can be done about the "ugly" elements?
 
