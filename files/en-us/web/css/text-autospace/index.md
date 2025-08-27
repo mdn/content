@@ -6,7 +6,7 @@ browser-compat: css.properties.text-autospace
 sidebar: cssref
 ---
 
-The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space when transition between Chinese/Japanese/Korean (CJK) and non-CJK characters.
+The **`text-autospace`** [CSS](/en-US/docs/Web/CSS) property allows you to specify the space applied between Chinese/Japanese/Korean (CJK) and non-CJK characters.
 
 ## Syntax
 
@@ -31,21 +31,24 @@ text-autospace: unset;
 ### Values
 
 - `normal`
-  - : does XYZ
+  - : Has the same effect as applying both [`ideograph-alpha`](#ideograph-alpha) and [`ideograph-numeric`](#ideograph-numeric) values.
 - `no-autospace`
   - : No automatic space is inserted.
 - `insert`
-  - : abc
+  - : If there are no spaces between the _ideograph_ and _non-ideographic_ scripts the user agent automatically inserts the correct spacing.
 - `replace`
-  - : abc
+  - : If there are spaces between the _ideograph_ and _non-ideographic_ scripts, such as [U+0020](/en-US/docs/Glossary/Whitespace), the user agent automatically replaces it with the correct spacing.
 - `ideograph-alpha`
-  - : abc
+  - : Creates extra spacing between _ideographs_ and _non-ideographic letters_ but not _non-ideographic numbers_.
 - `ideograph-numeric`
-  - : abc
+  - : Creates extra spacing between _ideographs_ and _non-ideographic numbers_ but not _non-ideographic letters_.
 - `punctuation`
-  - : abc
+  - : Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions.
 - `auto`
-  - : abc
+  - : The spacing applied is chosen by the user agent, different user agents may pick different values.
+
+> [!NOTE]
+> This property is in additive with the {{CSSXRef("word-spacing")}} and {{CSSXRef("letter-spacing")}} properties. The amount of spacing contributed by the `letter-spacing` setting is added to the spacing created by `text-autospace`. The same applies to `word-spacing`.
 
 ## Formal definition
 
@@ -57,21 +60,95 @@ text-autospace: unset;
 
 ## Example
 
-here is an example XYZ
+This example shows the difference between the different values of `text-autospace`. Try changing the value of the select field to change the value applied to the text using multiple scripts.
 
-```html
-
+```html hidden
+<form>
+  <label for="autospace">Choose value for <code>text-autospace:</code></label>
+  <select name="autospace" id="autospace">
+    <option selected value="no-autospace">no-autospace</option>
+    <option value="normal">normal</option>
+    <option value="ideograph-alpha">ideograph-alpha</option>
+    <option value="ideograph-numeric">ideograph-numeric</option>
+  </select>
+</form>
+<div class="unsupported"><code>text-autospace</code> is not supported in your browser.</div>
 ```
 
-```css hidden
-
+```html
+<main>
+  <figure class="no-autospace">
+    <figcaption>
+      <code>text-autospace: <span id="autospace-value">no-autospace</span>;</code>
+    </figcaption>
+    <div>
+      <p>HTML超文本标记语言</p>
+      <p>42四十二</p>
+    </div>
+  </figure>
+</main>
 ```
 
 ```css
-
+.no-autospace {
+  text-autospace: no-autospace;
+}
+.auto {
+  text-autospace: auto;
+}
+.normal {
+  text-autospace: normal;
+}
+.ideograph-alpha {
+  text-autospace: ideograph-alpha;
+}
+.ideograph-numeric {
+  text-autospace:ideograph-numeric ;
+}
 ```
 
-{{EmbedLiveSample("Example", 200, 150)}}
+```css hidden
+figure {
+  margin: 1rem;
+  div {
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: sans-serif;
+    border: tomato solid 1px;
+  }
+  p {
+    margin: 0;
+  } 
+}
+main {
+ max-width: max-content;
+}
+@supports not (text-autospace: normal) {
+  form {
+    display: none;
+  }
+  .unsupported {
+    color: red;
+  }
+}
+@supports (text-autospace: normal) {
+  .unsupported {
+    display: none;
+  }
+}
+```
+
+```js hidden
+const chose = document.querySelector("#autospace");
+const fig = document.querySelector("figure");
+const codeValue = document.querySelector("#autospace-value");
+chose.addEventListener("change", (e) => {
+  fig.className = e.target.value;
+  codeValue.innerText = e.target.value;
+});
+```
+
+{{EmbedLiveSample("Example", 200, 200)}}
 
 ## Specifications
 
