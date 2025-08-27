@@ -40,7 +40,7 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
 
 ### `<corner-shape-value>` value comparison
 
-In this example, we provide a {{htmlelement("select")}} picker and an [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider allowing you to set different `corner-shape-value` and {{cssxref("border-radius")}} values on a container to compare their effects. We've hidden the code for the example here, for brevity, but you can find a [full explanation of it](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
+In this example, we provide a drop-down menu allowing you to select different `corner-shape-value` values and a slider that updates the container's {{cssxref("border-radius")}}. This enables visualizing the effect of the different keywords and `superellipse()` parameter values. We've hidden the code for the example for brevity, but you can find a [full explanation of `corner-shape` values](/en-US/docs/Web/CSS/corner-shape#comparing_corner-shape_values) along with other related examples on the {{cssxref("corner-shape")}} reference page.
 
 ```html hidden live-sample___value-comparison
 <form>
