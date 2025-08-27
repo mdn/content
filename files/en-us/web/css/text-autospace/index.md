@@ -123,7 +123,7 @@ figure {
   }
 }
 main {
- max-width: max-content;
+  max-width: max-content;
 }
 @supports not (text-autospace: normal) {
   form {
