@@ -130,7 +130,7 @@ In the context of a `@scope` block, the {{cssxref(":scope")}} pseudo-class repre
 ```
 
 If you want, you can explicitly prepend `:scope` or prepend the [nesting](/en-US/docs/Web/CSS/CSS_nesting) selector (`&`) to get the same effect if you find these representations easier to understand.
-The three rules in the following block are equivalent in what they select, but note that they differ in specificity, see [Specificity in @scope](#specificity_in_scope) for details:
+In the following code snippet, the three rules select the same element, but differ in specificity (see [Specificity in @scope](#specificity_in_scope) for details):
 
 ```css
 @scope (.feature) {
