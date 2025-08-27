@@ -32,6 +32,20 @@ text-autospace: unset;
 
 - `normal`
   - : does XYZ
+- `no-autospace`
+  - : No automatic space is inserted.
+- `insert`
+  - : abc
+- `replace`
+  - : abc
+- `ideograph-alpha`
+  - : abc
+- `ideograph-numeric`
+  - : abc
+- `punctuation`
+  - : abc
+- `auto`
+  - : abc
 
 ## Formal definition
 
@@ -70,3 +84,5 @@ here is an example XYZ
 ## See also
 
 - {{cssxref('text-spacing-trim')}}
+- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
+- [CSS Text](/en-US/docs/Web/CSS/CSS_text) module
