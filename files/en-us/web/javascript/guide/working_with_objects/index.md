@@ -309,7 +309,7 @@ function showProps(obj, objName) {
 There is no native way to list inherited properties. However, this can be achieved with the following function:
 
 ```js
-function listAllInheritedProperties(myObj) {
+function listAllProperties(myObj) {
   let objectToInspect = myObj;
   let result = [];
 
