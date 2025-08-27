@@ -72,7 +72,9 @@ This example shows the difference between the different values of `text-autospac
     <option value="ideograph-numeric">ideograph-numeric</option>
   </select>
 </form>
-<div class="unsupported"><code>text-autospace</code> is not supported in your browser.</div>
+<div class="unsupported">
+  <code>text-autospace</code> is not supported in your browser.
+</div>
 ```
 
 ```html
