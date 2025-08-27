@@ -306,10 +306,10 @@ function showProps(obj, objName) {
 }
 ```
 
-There is no native way to list inherited non-enumerable properties. However, this can be achieved with the following function:
+There is no native way to list inherited properties. However, this can be achieved with the following function:
 
 ```js
-function listAllProperties(myObj) {
+function listAllInheritedProperties(myObj) {
   let objectToInspect = myObj;
   let result = [];
 
