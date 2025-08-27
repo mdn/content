@@ -273,11 +273,11 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_V
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
-- {{CSSxRef("ray", "ray()")}}
-  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
 
 ### Other shape functions
 
+- {{CSSxRef("ray", "ray()")}}
+  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
 - {{CSSxRef("superellipse()")}}
   - : Defines the curvature of an ellipse, and is used to specify [corner shapes](/en-US/docs/Web/CSS/corner-shape).
 

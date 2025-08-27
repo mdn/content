@@ -14,7 +14,9 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
 
 ### Values
 
-- Keywords for common `superellipse()` values
+- {{cssxref("superellipse()")}}
+  - : Defines a custom corner superellipse shape.
+- Keywords
   - : The available keyword values are as follows:
     - `bevel`
       - : Defines a straight, diagonal corner, which is neither convex nor concave. The `bevel` keyword is equivalent to `superellipse(0)`.

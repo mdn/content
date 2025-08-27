@@ -22,18 +22,58 @@ superellipse(-infinity)
 
 ### Parameters
 
-- `K`
+- {{cssxref("&lt;number>")}}
   - : A number in the range of `-infinity` to `infinity`, inclusive.
 
 ### Return value
 
 A superellipse shape.
 
-This is calculated using a modified version of the equation that defines a circle:
+## Description
 
-x<sup>2</sup> + y<sup>2</sup> = 1
+The `superellipse()` function returns a superellipse shape, which is used to specify {{cssxref("corner-shape")}} values. The superellipse shape is calculated using a modified version of the equation that defines a circle:
 
-A circle is defined by all the points `(x,y)` that satisfy the equation, and a given ellipse can be produced by scaling this shape along the x and/or y axis. A superellipse is created by replacing the 2 exponent in each case with 2<sup>K</sup>, `K` being the argument passed to `superellipse()`, which modifies the curvature of the ellipse.
+<math display="block">
+  <mrow>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mrow>
+</math>
+
+The `x` and `y` variables refer to the `x` and `y` coordinates of points on the circle's circumference; a circle is defined by all the points `(x,y)` that satisfy the equation, and a given ellipse can be produced by scaling this shape along the x and/or y axis. A superellipse is created by replacing the 2 exponent in each case with 2<sup>K</sup>, `K` being the argument passed to `superellipse()`, which modifies the curvature of the ellipse:
+
+<math display="block">
+  <mrow>
+    <msup>
+      <mi>x</mi>
+      <msup>
+        <mn>2</mn>
+        <mi>K</mi>
+      </msup>
+    </msup>
+    <mo>+</mo>
+    <msup>
+      <mi>y</mi>
+      <msup>
+        <mn>2</mn>
+        <mi>K</mi>
+      </msup>
+    </msup>
+    <mo>=</mo>
+    <mn>1</mn>
+  </mrow>
+</math>
+
+The following diagram illustrates different `superellipse()` values for the top right corner of a container: `infinity`, `1`, `0`, `-1`, and `-infinity`:
 
 ![Line diagram illustrating the ellipses created using different K values, as described subsequently](superellipse-param.svg)
 
@@ -69,13 +109,7 @@ In this example, we provide two [`<input type="range">`](/en-US/docs/Web/HTML/Re
   </div>
   <div>
     <label for="radius-slider">Choose a border-radius value:</label>
-    <input
-      type="range"
-      id="radius-slider"
-      min="0"
-      value="45"
-      max="90"
-      step="1" />
+    <input type="range" id="radius-slider" min="0" value="45" max="90" />
   </div>
 </form>
 <section></section>
