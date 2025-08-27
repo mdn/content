@@ -206,7 +206,7 @@ Because `:where()` always has zero specificity, the only specificity comes from 
 }
 ```
 
-However, if you decide to explicitly prepend the `:scope` pseudo-class to your scoped selectors, you'll need to factor it in when calculating their specificity. `:scope`, like all regular pseudo-classes, has a specificity of 0-1-0. For example:
+If you explicitly prepend the `:scope` pseudo-class to the selectors inside the `@scope` block, you need to factor in its specificity. Like other pseudo-classes, `:scope` has a specificity of `0-1-0`. In the following example, `:scope img` has a specificity of `0-1-1`:
 
 ```css
 @scope (.article-body) {
