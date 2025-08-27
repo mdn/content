@@ -239,12 +239,11 @@ Let's start by creating our own canvas template to create future experiments in.
     > [!NOTE]
     > We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we haven't included the `width` and `height` attributes for now (we will set them using JavaScript in a subsequent section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
 3. Create a new file inside the directory called `style.css` and save the following CSS rule in it:
-    ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-    ```
+   ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
+   body {
+     margin: 0;
+     overflow: hidden;
+   }
 4. Create a new file inside the directory called `script.js`. Leave this file blank for now.
 
 5. Now open `script.js` and add the following lines of JavaScript:
