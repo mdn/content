@@ -52,7 +52,7 @@ When filtering is complete, every element has zero or more [declared values](#de
 
 [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) resolves conflicts when multiple declarations apply to the same property on the same element. [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) sorts declarations using [the cascade sorting order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order) algorithm.
 
-For example, if you have the following declarations for `<p class="large">CSS is fun!</p>`, the second declaration wins because it has higher specificity. Both declarations have author origin, but the second selector has specificity of 0,1,1 while the first has 0,0,1:
+For example, both {{cssxref("font-size")}} declarations match `<p class="large">CSS is fun!</p>`, but the second declaration gets applied because it has higher {{cssxref("specificity")}}. Both declarations have author origin, but the second selector has specificity of `0-1-1` while the first has `0-0-1`:
 
 ```css
 p {
