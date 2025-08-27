@@ -70,13 +70,14 @@ After cascading, the browser determines the [**cascaded value**](#cascaded_value
 ### Defaulting
 
 **Defaulting** ensures every property on every element has a value. This involves applying default property values when no CSS declarations explicitly set that property value.
-The CSS parser sets a value by:
+This involves:
 
-- Using **inherited values** for [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)
-- Using **initial values** for [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)
-- Applying **explicit defaulting keywords** ([`initial`](/en-US/docs/Web/CSS/initial), [`inherit`](/en-US/docs/Web/CSS/inherit), [`unset`](/en-US/docs/Web/CSS/unset), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer))
+- Setting **inherited values** for [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)
+- Setting **initial values** for [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)
 
 As a result of defaulting, every property is guaranteed to have a [specified value](#specified_value).
+
+Note that explicit defaulting keywords ([`initial`](/en-US/docs/Web/CSS/initial), [`inherit`](/en-US/docs/Web/CSS/inherit), [`unset`](/en-US/docs/Web/CSS/unset), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)) are also resolved to their corresponding values to determine the [specified value](#specified_value).
 
 ## Processing stages
 
