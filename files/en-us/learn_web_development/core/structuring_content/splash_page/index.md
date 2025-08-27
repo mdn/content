@@ -71,6 +71,13 @@ To solve this challenge we are expecting you to create a simple website project,
              diversity and adaptability make beetles one of the most successful
              groups of insects on Earth.
            </p>
+
+           <p class="copyright">
+             Image by URSchmidt - Own work, CC BY-SA 4.0,
+             <a href="https://commons.wikimedia.org/w/index.php?curid=70137401"
+               >https://commons.wikimedia.org/w/index.php?curid=70137401</a
+             >.
+           </p>
          </section>
          <section id="true_bugs">
            <h2>True Bugs (Hemiptera)</h2>
@@ -92,6 +99,24 @@ To solve this challenge we are expecting you to create a simple website project,
              pests that weaken plants by draining their sap. Certain bugs, like
              bed bugs and kissing bugs, can also affect humans directly by
              biting or transmitting diseases.
+           </p>
+
+           <p class="copyright">
+             Image created by user B. Schoenmakers at Waarneming.nl, a source of
+             nature observations in the Netherlands. - This image is uploaded as
+             image number 29046158 at Waarneming.nl, a source of nature
+             observations in the Netherlands.This tag does not indicate the
+             copyright status of the attached work. A normal copyright tag is
+             still required. See Commons:Licensing for more information., This
+             site now requires authentication, however, the same image and
+             copyright information is also available via
+             <a href="https://world.observation.org/foto/view/29046158"
+               >https://world.observation.org/foto/view/29046158</a
+             >
+             since it uses the same data, CC BY 3.0,
+             <a href="https://commons.wikimedia.org/w/index.php?curid=92410673"
+               >https://commons.wikimedia.org/w/index.php?curid=92410673</a
+             >.
            </p>
          </section>
          <section id="butterflies_moths">
@@ -116,6 +141,13 @@ To solve this challenge we are expecting you to create a simple website project,
              importance make them a favorite group for nature enthusiasts and
              scientists alike.
            </p>
+
+           <p class="copyright">
+             Image by Didier Descouens - Own work, CC BY-SA 4.0,
+             <a href="https://commons.wikimedia.org/w/index.php?curid=19303857"
+               >https://commons.wikimedia.org/w/index.php?curid=19303857</a
+             >.
+           </p>
          </section>
          <section id="flies_mosquitos">
            <h2>Flies & Mosquitoes (Diptera)</h2>
@@ -138,6 +170,19 @@ To solve this challenge we are expecting you to create a simple website project,
              their negative reputation, flies and mosquitoes are essential in
              ecosystems, serving as pollinators and as a major food source for
              many animals.
+           </p>
+
+           <p class="copyright">
+             Image created by user Dick Belgers at Waarneming.nl, a source of
+             nature observations in the Netherlands. - This image is uploaded as
+             image number 5105758 at Waarneming.nl, a source of nature
+             observations in the Netherlands.This tag does not indicate the
+             copyright status of the attached work. A normal copyright tag is
+             still required. See Commons:Licensing for more information., CC BY
+             3.0,
+             <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
+               >https://commons.wikimedia.org/w/index.php?curid=27659589</a
+             >.
            </p>
          </section>
          <section id="bees_wasps_ants">
@@ -162,6 +207,13 @@ To solve this challenge we are expecting you to create a simple website project,
              some species feared, they are vital players in natural and
              agricultural systems.
            </p>
+
+           <p class="copyright">
+             Image by Trounce - Own work, CC BY-SA 2.5,
+             <a href="https://commons.wikimedia.org/w/index.php?curid=1997709"
+               >https://commons.wikimedia.org/w/index.php?curid=1997709</a
+             >.
+           </p>
          </section>
          <section id="spiders">
            <h2>Spiders (Araneae)</h2>
@@ -182,6 +234,13 @@ To solve this challenge we are expecting you to create a simple website project,
              they help control insect populations, including pests. They play a
              crucial role in balancing ecosystems, making them one of the most
              important non-insect “bugs” people commonly encounter.
+           </p>
+
+           <p class="copyright">
+             Image by AJC ajcann.wordpress.com from UK, CC BY-SA 2.0
+             <a href="https://creativecommons.org/licenses/by-sa/2.0"
+               >https://creativecommons.org/licenses/by-sa/2.0</a
+             >, via Wikimedia Commons.
            </p>
          </section>
        </main>
@@ -206,6 +265,10 @@ To solve this challenge we are expecting you to create a simple website project,
      text-align: center;
    }
 
+   .copyright {
+     font-size: 0.8em;
+   }
+
    /* nav menu */
 
    ul {
@@ -222,11 +285,16 @@ To solve this challenge we are expecting you to create a simple website project,
      flex: auto;
    }
 
+   nav a {
+     font-size: 1.2em;
+     padding: 0 20px;
+   }
+
+   /* General link styles */
+
    a {
      text-decoration: none;
      color: red;
-     font-size: 1.2em;
-     padding: 0 20px;
    }
 
    a:hover,
@@ -279,11 +347,11 @@ To solve this challenge we are expecting you to create a simple website project,
 Later on, you will need to include the following URLs in your page.
 
 - `bee.png`: [Image for the "Bees, Wasps, Ants (Hymenoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.png).
-- `beetle.png`: [Image for the "Beetles (Coleoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.png).
-- `butterfly.png`: [Image for the "Butterflies & Moths (Lepidoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/buterfly.png).
-- `mosquito.png`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.png).
-- `spider.png`: [Image for the "Spiders (Araneae)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.png).
-- `true_bug.png`: [Image for the "True Bugs (Hemiptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.png).
+- `beetle.jpg`: [Image for the "Beetles (Coleoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.jpg).
+- `butterfly.jpg`: [Image for the "Butterflies & Moths (Lepidoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/buterfly.jpg).
+- `mosquito.jpg`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg).
+- `spider.jpg`: [Image for the "Spiders (Araneae)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.jpg).
+- `true_bug.jpg`: [Image for the "True Bugs (Hemiptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.jpg).
 - `bug_video_640.mp4`: [header video](https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4).
 
 ## Project brief
@@ -372,7 +440,7 @@ Your finished HTML should look something like this:
         <figure>
           <img
             src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.png"
-            alt="A black, six-legged, shield-shaped beetle"
+            alt="A black six-legged beetle with a shield-shaped body and long antennae"
             width="250"
             height="180" />
           <figcaption>A shiny, black beetle.</figcaption>
@@ -395,17 +463,24 @@ Your finished HTML should look something like this:
           beetle are major agricultural pests. Their diversity and adaptability
           make beetles one of the most successful groups of insects on Earth.
         </p>
+
+        <p class="copyright">
+          Image by URSchmidt - Own work, CC BY-SA 4.0,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=70137401"
+            >https://commons.wikimedia.org/w/index.php?curid=70137401</a
+          >.
+        </p>
       </section>
       <section id="true_bugs">
         <h2>🪳 True Bugs (Hemiptera)</h2>
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.png"
-            alt="A green, six-legged beetle with fairly long antennae"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.jpg"
+            alt="A green, six-legged beetle with fairly long antennae and stripy markings"
             width="250"
             height="180" />
-          <figcaption>A shield bug.</figcaption>
+          <figcaption>A green stripey bug.</figcaption>
         </figure>
 
         <p>
@@ -426,14 +501,32 @@ Your finished HTML should look something like this:
           and kissing bugs, can also affect humans directly by biting or
           transmitting diseases.
         </p>
+
+        <p class="copyright">
+          Image created by user B. Schoenmakers at Waarneming.nl, a source of
+          nature observations in the Netherlands. - This image is uploaded as
+          image number 29046158 at Waarneming.nl, a source of nature
+          observations in the Netherlands.This tag does not indicate the
+          copyright status of the attached work. A normal copyright tag is still
+          required. See Commons:Licensing for more information., This site now
+          requires authentication, however, the same image and copyright
+          information is also available via
+          <a href="https://world.observation.org/foto/view/29046158"
+            >https://world.observation.org/foto/view/29046158</a
+          >
+          since it uses the same data, CC BY 3.0,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=92410673"
+            >https://commons.wikimedia.org/w/index.php?curid=92410673</a
+          >.
+        </p>
       </section>
       <section id="butterflies_moths">
         <h2>🦋 Butterflies & Moths (Lepidoptera)</h2>
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/butterfly.png"
-            alt="A butterfly with large white, black, and orange wings"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/butterfly.jpg"
+            alt="A butterfly with large black and orange wings"
             width="250"
             height="180" />
           <figcaption>A typical butterfly.</figcaption>
@@ -457,14 +550,21 @@ Your finished HTML should look something like this:
           bats, and other animals. Their beauty and ecological importance make
           them a favorite group for nature enthusiasts and scientists alike.
         </p>
+
+        <p class="copyright">
+          Image by Didier Descouens - Own work, CC BY-SA 4.0,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=19303857"
+            >https://commons.wikimedia.org/w/index.php?curid=19303857</a
+          >.
+        </p>
       </section>
       <section id="flies_mosquitos">
         <h2>🦟 Flies & Mosquitoes (Diptera)</h2>
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.png"
-            alt="A grey flying insect with long legs and a sharp proboscis"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg"
+            alt="A hairy flying insect with long legs"
             width="250"
             height="180" />
           <figcaption>A mosquito.</figcaption>
@@ -488,17 +588,29 @@ Your finished HTML should look something like this:
           negative reputation, flies and mosquitoes are essential in ecosystems,
           serving as pollinators and as a major food source for many animals.
         </p>
+
+        <p class="copyright">
+          Image created by user Dick Belgers at Waarneming.nl, a source of
+          nature observations in the Netherlands. - This image is uploaded as
+          image number 5105758 at Waarneming.nl, a source of nature observations
+          in the Netherlands.This tag does not indicate the copyright status of
+          the attached work. A normal copyright tag is still required. See
+          Commons:Licensing for more information., CC BY 3.0,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=27659589"
+            >https://commons.wikimedia.org/w/index.php?curid=27659589</a
+          >.
+        </p>
       </section>
       <section id="bees_wasps_ants">
         <h2>🐝 Bees, Wasps, Ants (Hymenoptera)</h2>
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.png"
-            alt="A black and yellow striped flying insect with six legs"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.jpg"
+            alt="A furry black and yellow striped flying insect with six legs"
             width="250"
             height="180" />
-          <figcaption>A honeybee.</figcaption>
+          <figcaption>A bumblebee.</figcaption>
         </figure>
 
         <p>
@@ -518,13 +630,20 @@ Your finished HTML should look something like this:
           nutrients. While stings and aggressive behaviors make some species
           feared, they are vital players in natural and agricultural systems.
         </p>
+
+        <p class="copyright">
+          Image by Trounce - Own work, CC BY-SA 2.5,
+          <a href="https://commons.wikimedia.org/w/index.php?curid=1997709"
+            >https://commons.wikimedia.org/w/index.php?curid=1997709</a
+          >.
+        </p>
       </section>
       <section id="spiders">
         <h2>🕷️ Spiders (Araneae)</h2>
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.png"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.jpg"
             alt="A black bodied spider with eight legs, feelers, and jaws"
             width="250"
             height="180" />
@@ -547,6 +666,13 @@ Your finished HTML should look something like this:
           help control insect populations, including pests. They play a crucial
           role in balancing ecosystems, making them one of the most important
           non-insect “bugs” people commonly encounter.
+        </p>
+
+        <p class="copyright">
+          Image by AJC ajcann.wordpress.com from UK, CC BY-SA 2.0
+          <a href="https://creativecommons.org/licenses/by-sa/2.0"
+            >https://creativecommons.org/licenses/by-sa/2.0</a
+          >, via Wikimedia Commons.
         </p>
       </section>
     </main>
