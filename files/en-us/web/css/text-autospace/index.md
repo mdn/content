@@ -105,7 +105,7 @@ This example shows the difference between the different values of `text-autospac
   text-autospace: ideograph-alpha;
 }
 .ideograph-numeric {
-  text-autospace:ideograph-numeric ;
+  text-autospace: ideograph-numeric;
 }
 ```
 
