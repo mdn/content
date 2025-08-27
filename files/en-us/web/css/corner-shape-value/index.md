@@ -29,9 +29,6 @@ The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} fu
     - `squircle`
       - : Defines a quarter of a "squircle", which is a convex curve in between `round` and `square`. The `squircle` keyword is equivalent to `superellipse(2)`.
 
-- {{cssxref("superellipse()")}}
-  - : Defines a custom corner superellipse shape.
-
 > [!NOTE]
 > You can smoothly animate between different keyword corner shapes as the animation interpolates between their `superellipse()` equivalents.
 
