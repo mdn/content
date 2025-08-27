@@ -193,9 +193,9 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
 }
 ```
 
-When using the `&` selector inside a `@scope` block, `&` represents the implicit context (calculated as `:where(:scope)`) which has zero specificity.
-In the following example, `& img` is essentially equivalent to `:where(:scope) img`.
-Because `:where()` always has zero specificity, the only specificity comes from `img` (i.e., 0-0-1):
+The `&` nesting selector, when prepended to a selector inside an `@scope` block, represents the implicit scope context (`:where(:scope)`), which has zero specificity.
+In the following example, `& img` is equivalent to writing `:where(:scope) img`.
+Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, the only specificity comes from `img` (`0-0-1`).
 
 ```css
 @scope (figure, #primary) {
