@@ -90,6 +90,7 @@ The value processing stages are:
 - [Specified value](#specified_value)
 - [Computed value](#computed_value)
 - [Used value](#used_value)
+- [Actual value](#actual_value)
 
 These values are used to determine the final [rendered value](#rendered_values).
 
