@@ -257,118 +257,108 @@ We set the `<span>` to `position: relative` so that we can set the generated con
 Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below (press the **Play** button to run the example in MDN Playground and edit the source code).
 
 ```html hidden live-sample___required-optional-generated
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>:required and :optional with generated content</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 460px;
-      }
+<form>
+  <fieldset>
+    <legend>Feedback form</legend>
 
-      fieldset {
-        padding: 10px 30px 0;
-      }
+    <p>Required fields are labelled with "required".</p>
+    <div>
+      <label for="fname">First name: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">Last name: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>Submit</button></div>
+  </fieldset>
+</form>
+```
 
-      legend {
-        color: white;
-        background: black;
-        padding: 5px 10px;
-      }
+```css hidden live-sample___required-optional-generated
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      fieldset > div {
-        margin-bottom: 20px;
-        display: flex;
-        flex-flow: row wrap;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
 
-      button,
-      label,
-      input {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 5px;
-        height: 30px;
-      }
+fieldset {
+  padding: 10px 30px 0;
+}
 
-      input {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
-      }
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
 
-      input:hover,
-      input:focus {
-        background-color: #eee;
-      }
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-      input + span {
-        position: relative;
-      }
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
 
-      input:required + span::after {
-        font-size: 0.7rem;
-        position: absolute;
-        content: "required";
-        color: white;
-        background-color: black;
-        padding: 5px 10px;
-        top: -26px;
-        left: -70px;
-      }
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
 
-      button {
-        width: 60%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+input:hover,
+input:focus {
+  background-color: #eee;
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Feedback form</legend>
+input + span {
+  position: relative;
+}
 
-        <p>Required fields are labelled with "required".</p>
-        <div>
-          <label for="fname">First name: </label>
-          <input id="fname" name="fname" type="text" required />
-          <span></span>
-        </div>
-        <div>
-          <label for="lname">Last name: </label>
-          <input id="lname" name="lname" type="text" required />
-          <span></span>
-        </div>
-        <div>
-          <label for="email"
-            >Email address (include if you want a response):
-          </label>
-          <input id="email" name="email" type="email" />
-          <span></span>
-        </div>
-        <div><button>Submit</button></div>
-      </fieldset>
-    </form>
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___required-optional-generated
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("required-optional-generated", "100%", 430, , , , , "allow-forms")}}
@@ -435,138 +425,128 @@ As before, we set the `<span>`s to `position: relative` so that we can position 
 You can try it below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___valid-invalid
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>:valid and :invalid example</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 460px;
-      }
+<form>
+  <fieldset>
+    <legend>Feedback form</legend>
 
-      fieldset {
-        padding: 10px 30px 0;
-      }
+    <p>Required fields are labelled with "required".</p>
+    <div>
+      <label for="fname">First name: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">Last name: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>Submit</button></div>
+  </fieldset>
+</form>
+```
 
-      legend {
-        color: white;
-        background: black;
-        padding: 5px 10px;
-      }
+```css hidden live-sample___valid-invalid
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      fieldset > div {
-        margin-bottom: 20px;
-        display: flex;
-        flex-flow: row wrap;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
 
-      button,
-      label,
-      input {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 5px;
-        height: 30px;
-      }
+fieldset {
+  padding: 10px 30px 0;
+}
 
-      input {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
-      }
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
 
-      input:hover,
-      input:focus {
-        background-color: #eee;
-      }
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-      input + span {
-        position: relative;
-      }
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
 
-      input:required + span::after {
-        font-size: 0.7rem;
-        position: absolute;
-        content: "required";
-        color: white;
-        background-color: black;
-        padding: 5px 10px;
-        top: -26px;
-        left: -70px;
-      }
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
 
-      input + span::before {
-        position: absolute;
-        right: -20px;
-        top: 5px;
-      }
+input:hover,
+input:focus {
+  background-color: #eee;
+}
 
-      input:invalid {
-        border: 2px solid red;
-      }
+input + span {
+  position: relative;
+}
 
-      input:invalid + span::before {
-        content: "✖";
-        color: red;
-      }
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
 
-      input:valid + span::before {
-        content: "✓";
-        color: green;
-      }
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
 
-      button {
-        width: 60%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+input:invalid {
+  border: 2px solid red;
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Feedback form</legend>
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
 
-        <p>Required fields are labelled with "required".</p>
-        <div>
-          <label for="fname">First name: </label>
-          <input id="fname" name="fname" type="text" required />
-          <span></span>
-        </div>
-        <div>
-          <label for="lname">Last name: </label>
-          <input id="lname" name="lname" type="text" required />
-          <span></span>
-        </div>
-        <div>
-          <label for="email"
-            >Email address (include if you want a response):
-          </label>
-          <input id="email" name="email" type="email" />
-          <span></span>
-        </div>
-        <div><button>Submit</button></div>
-      </fieldset>
-    </form>
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___valid-invalid
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("valid-invalid", "100%", 430, , , , , "allow-forms")}}
@@ -627,155 +607,139 @@ input:out-of-range + span::after {
 This is a similar story to what we had before in the `:required` example, except that here we've split out the declarations that apply to any `::after` content into a separate rule, and given the separate `::after` content for `:required` and `:out-of-range` states their own content and styling. You can try it here (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___out-of-range
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>:out-of-range example</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 460px;
-      }
+<form>
+  <fieldset>
+    <legend>Feedback form</legend>
 
-      fieldset {
-        padding: 10px 30px 0;
-      }
+    <p>Required fields are labelled with "required".</p>
+    <div>
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="age">Age (must be 12+): </label>
+      <input id="age" name="age" type="number" min="12" max="120" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>Submit</button></div>
+  </fieldset>
+</form>
+```
 
-      legend {
-        color: white;
-        background: black;
-        padding: 5px 10px;
-      }
+```css hidden live-sample___out-of-range
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      fieldset > div {
-        margin-bottom: 20px;
-        display: flex;
-        flex-flow: row wrap;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
 
-      button,
-      label,
-      input {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 5px;
-        height: 30px;
-      }
+fieldset {
+  padding: 10px 30px 0;
+}
 
-      input {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
-      }
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
 
-      input:hover,
-      input:focus {
-        background-color: #eee;
-      }
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-      input + span {
-        position: relative;
-      }
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
 
-      input + span::after {
-        font-size: 0.7rem;
-        position: absolute;
-        padding: 5px 10px;
-        top: -26px;
-      }
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
 
-      input:required + span::after {
-        color: white;
-        background-color: black;
-        content: "required";
-        left: -70px;
-      }
+input:hover,
+input:focus {
+  background-color: #eee;
+}
 
-      input:out-of-range + span::after {
-        color: white;
-        background-color: red;
-        width: 155px;
-        content: "Outside allowable value range";
-        left: -182px;
-      }
+input + span {
+  position: relative;
+}
 
-      input + span::before {
-        position: absolute;
-        right: -20px;
-        top: 5px;
-      }
+input + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  padding: 5px 10px;
+  top: -26px;
+}
 
-      input:invalid {
-        border: 2px solid red;
-      }
+input:required + span::after {
+  color: white;
+  background-color: black;
+  content: "required";
+  left: -70px;
+}
 
-      input:invalid + span::before {
-        content: "✖";
-        color: red;
-      }
+input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 155px;
+  content: "Outside allowable value range";
+  left: -182px;
+}
 
-      input:valid + span::before {
-        content: "✓";
-        color: green;
-      }
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
 
-      button {
-        width: 60%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+input:invalid {
+  border: 2px solid red;
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Feedback form</legend>
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
 
-        <p>Required fields are labelled with "required".</p>
-        <div>
-          <label for="name">Name: </label>
-          <input id="name" name="name" type="text" required />
-          <span></span>
-        </div>
-        <div>
-          <label for="age">Age (must be 12+): </label>
-          <input
-            id="age"
-            name="age"
-            type="number"
-            min="12"
-            max="120"
-            required />
-          <span></span>
-        </div>
-        <div>
-          <label for="email"
-            >Email address (include if you want a response):
-          </label>
-          <input id="email" name="email" type="email" />
-          <span></span>
-        </div>
-        <div><button>Submit</button></div>
-      </fieldset>
-    </form>
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___out-of-range
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("out-of-range", "100%", 430, , , , , "allow-forms")}}
@@ -886,150 +850,137 @@ It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to le
 You can see the example in action below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___enabled-disabled-shipping
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>:enabled and :disabled demo — shipping form</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 460px;
-      }
+<form>
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <div>
+      <label for="name1">Name: </label>
+      <input id="name1" name="name1" type="text" required />
+    </div>
+    <div>
+      <label for="address1">Address: </label>
+      <input id="address1" name="address1" type="text" required />
+    </div>
+    <div>
+      <label for="pcode1">Zip/postal code: </label>
+      <input id="pcode1" name="pcode1" type="text" required />
+    </div>
+  </fieldset>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <div>
+      <label for="billing-checkbox">Same as shipping address:</label>
+      <input type="checkbox" id="billing-checkbox" checked />
+    </div>
+    <div>
+      <label for="name" class="billing-label">Name: </label>
+      <input id="name" name="name" type="text" disabled required />
+    </div>
+    <div>
+      <label for="address2" class="billing-label">Address: </label>
+      <input id="address2" name="address2" type="text" disabled required />
+    </div>
+    <div>
+      <label for="pcode2" class="billing-label">Zip/postal code: </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
+    </div>
+  </fieldset>
 
-      fieldset {
-        padding: 10px 30px 0;
-        margin-bottom: 20px;
-      }
+  <div><button>Submit</button></div>
+</form>
+```
 
-      legend {
-        color: white;
-        background: black;
-        padding: 5px 10px;
-      }
+```css hidden live-sample___enabled-disabled-shipping
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      fieldset > div {
-        margin-bottom: 20px;
-        display: flex;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
 
-      button,
-      label,
-      input[type="text"] {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 5px;
-        height: 30px;
-      }
+fieldset {
+  padding: 10px 30px 0;
+  margin-bottom: 20px;
+}
 
-      input {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
-      }
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
 
-      input:hover,
-      input:focus {
-        background-color: #eee;
-      }
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+}
 
-      input[type="text"]:disabled {
-        background: #eee;
-        border: 1px solid #ccc;
-      }
+button,
+label,
+input[type="text"] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
 
-      label:has(+ :disabled) {
-        color: #aaa;
-      }
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
 
-      button {
-        width: 60%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+input:hover,
+input:focus {
+  background-color: #eee;
+}
 
-  <body>
-    <form>
-      <fieldset id="shipping">
-        <legend>Shipping address</legend>
-        <div>
-          <label for="name1">Name: </label>
-          <input id="name1" name="name1" type="text" required />
-        </div>
-        <div>
-          <label for="address1">Address: </label>
-          <input id="address1" name="address1" type="text" required />
-        </div>
-        <div>
-          <label for="pcode1">Zip/postal code: </label>
-          <input id="pcode1" name="pcode1" type="text" required />
-        </div>
-      </fieldset>
-      <fieldset id="billing">
-        <legend>Billing address</legend>
-        <div>
-          <label for="billing-checkbox">Same as shipping address:</label>
-          <input type="checkbox" id="billing-checkbox" checked />
-        </div>
-        <div>
-          <label for="name" class="billing-label">Name: </label>
-          <input id="name" name="name" type="text" disabled required />
-        </div>
-        <div>
-          <label for="address2" class="billing-label">Address: </label>
-          <input id="address2" name="address2" type="text" disabled required />
-        </div>
-        <div>
-          <label for="pcode2" class="billing-label">Zip/postal code: </label>
-          <input id="pcode2" name="pcode2" type="text" disabled required />
-        </div>
-      </fieldset>
+input[type="text"]:disabled {
+  background: #eee;
+  border: 1px solid #ccc;
+}
 
-      <div><button>Submit</button></div>
-    </form>
+label:has(+ :disabled) {
+  color: #aaa;
+}
 
-    <script>
-      // Wait for the page to finish loading
-      document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-          // Attach `change` event listener to checkbox
-          document
-            .getElementById("billing-checkbox")
-            .addEventListener("change", toggleBilling);
-        },
-        false,
-      );
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
 
-      function toggleBilling() {
-        // Select the billing text fields
-        let billingItems = document.querySelectorAll(
-          '#billing input[type="text"]',
-        );
+```js hidden live-sample___enabled-disabled-shipping
+// Wait for the page to finish loading
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false,
+);
 
-        // Toggle the billing text fields
-        for (let i = 0; i < billingItems.length; i++) {
-          billingItems[i].disabled = !billingItems[i].disabled;
-        }
-      }
+function toggleBilling() {
+  // Select the billing text fields
+  let billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+  // Toggle the billing text fields
+  for (let i = 0; i < billingItems.length; i++) {
+    billingItems[i].disabled = !billingItems[i].disabled;
+  }
+}
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("enabled-disabled-shipping", "100%", 580, , , , , "allow-forms")}}
@@ -1070,140 +1021,130 @@ textarea:read-write {
 The full example looks like this (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___readonly-confirmation
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>:read-only demo — confirmation form</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 460px;
-      }
-
-      fieldset {
-        padding: 10px 30px 0;
-        margin-bottom: 20px;
-      }
-
-      legend {
-        color: white;
-        background: black;
-        padding: 5px 10px;
-      }
-
-      fieldset > div {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      button,
-      label,
-      input[type="text"],
-      textarea {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        padding: 5px;
-        height: 30px;
-      }
-
-      input[type="text"],
-      textarea {
-        width: 50%;
-      }
-
-      textarea {
-        height: 110px;
-        resize: none;
-      }
-
-      label {
-        width: 40%;
-      }
-
-      input:hover,
-      input:focus,
-      textarea:hover,
-      textarea:focus {
-        background-color: #eee;
-      }
-
-      button {
-        width: 60%;
-        margin: 20px auto;
-      }
-
-      input:read-only,
-      textarea:read-only {
-        border: 0;
-        box-shadow: none;
-        background-color: white;
-      }
-
-      textarea:read-write {
-        box-shadow: inset 1px 1px 3px #ccc;
-        border-radius: 5px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <form>
-      <fieldset>
-        <legend>Check shipping details</legend>
-        <div>
-          <label for="name">Name: </label>
-          <input id="name" name="name" type="text" value="Mr Soft" readonly />
-        </div>
-        <div>
-          <label for="address">Address: </label>
-          <textarea id="address" name="address" readonly>
+<form>
+  <fieldset>
+    <legend>Check shipping details</legend>
+    <div>
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text" value="Mr Soft" readonly />
+    </div>
+    <div>
+      <label for="address">Address: </label>
+      <textarea id="address" name="address" readonly>
 23 Elastic Way,
 Viscous,
 Bright Ridge,
 CA
 </textarea
-          >
-        </div>
-        <div>
-          <label for="pcode">Zip/postal code: </label>
-          <input id="pcode" name="pcode" type="text" value="94708" readonly />
-        </div>
-      </fieldset>
+      >
+    </div>
+    <div>
+      <label for="pcode">Zip/postal code: </label>
+      <input id="pcode" name="pcode" type="text" value="94708" readonly />
+    </div>
+  </fieldset>
 
-      <fieldset>
-        <legend>Final instructions</legend>
-        <div>
-          <label for="sms-confirm">Send confirmation by SMS?</label>
-          <input id="sms-confirm" name="sms-confirm" type="checkbox" />
-        </div>
-        <div>
-          <label for="instructions">Any special instructions?</label>
-          <textarea id="instructions" name="instructions"></textarea>
-        </div>
-      </fieldset>
+  <fieldset>
+    <legend>Final instructions</legend>
+    <div>
+      <label for="sms-confirm">Send confirmation by SMS?</label>
+      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+    </div>
+    <div>
+      <label for="instructions">Any special instructions?</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+  </fieldset>
 
-      <div><button type="button">Amend details</button></div>
-      <div><button type="submit">Submit</button></div>
-    </form>
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+  <div><button type="button">Amend details</button></div>
+  <div><button type="submit">Submit</button></div>
+</form>
+```
+
+```css hidden live-sample___readonly-confirmation
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+label,
+input[type="text"],
+textarea {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+}
+
+input[type="text"],
+textarea {
+  width: 50%;
+}
+
+textarea {
+  height: 110px;
+  resize: none;
+}
+
+label {
+  width: 40%;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  background-color: #eee;
+}
+
+button {
+  width: 60%;
+  margin: 20px auto;
+}
+
+input:read-only,
+textarea:read-only {
+  border: 0;
+  box-shadow: none;
+  background-color: white;
+}
+
+textarea:read-write {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+```
+
+```js hidden live-sample___readonly-confirmation
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("readonly-confirmation", "100%", 660, , , , , "allow-forms")}}
@@ -1249,74 +1190,64 @@ input[type="radio"]:checked::before {
 You can try it out here (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-styled
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Radio buttons styled</title>
-    <style>
-      input[type="radio"] {
-        appearance: none;
-      }
+<form>
+  <fieldset>
+    <legend>Choose your favourite fruit</legend>
 
-      input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        border: 2px solid gray;
-        /* Adjusts the position of the checkboxes on the text baseline */
-        vertical-align: -2px;
-        outline: none;
-      }
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="cherry" />
+        Cherry
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="banana" />
+        Banana
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="strawberry" />
+        Strawberry
+      </label>
+    </p>
+  </fieldset>
+</form>
+```
 
-      input[type="radio"]::before {
-        display: block;
-        content: " ";
-        width: 10px;
-        height: 10px;
-        border-radius: 6px;
-        background-color: red;
-        font-size: 1.2em;
-        transform: translate(3px, 3px) scale(0);
-        transform-origin: center;
-        transition: all 0.3s ease-in;
-      }
+```css hidden live-sample___radios-styled
+input[type="radio"] {
+  appearance: none;
+}
 
-      input[type="radio"]:checked::before {
-        transform: translate(3px, 3px) scale(1);
-        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
-      }
-    </style>
-  </head>
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  outline: none;
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Choose your favourite fruit</legend>
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
 
-        <p>
-          <label>
-            <input type="radio" name="fruit" value="cherry" />
-            Cherry
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="radio" name="fruit" value="banana" />
-            Banana
-          </label>
-        </p>
-        <p>
-          <label>
-            <input type="radio" name="fruit" value="strawberry" />
-            Strawberry
-          </label>
-        </p>
-      </fieldset>
-    </form>
-  </body>
-</html>
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
 ```
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
@@ -1369,94 +1300,83 @@ This provides a little "Default" label on the item that was originally selected 
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-default
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Radio buttons :checked, :default</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-      }
+<form>
+  <fieldset>
+    <legend>Choose your favourite fruit</legend>
 
-      input[type="radio"] {
-        -webkit-appearance: none;
-        appearance: none;
-      }
+    <p>
+      <input type="radio" name="fruit" value="cherry" id="cherry" />
+      <label for="cherry">Cherry</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="banana" id="banana" checked />
+      <label for="banana">Banana</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+      <label for="strawberry">Strawberry</label>
+      <span></span>
+    </p>
+  </fieldset>
+</form>
+```
 
-      input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        border: 2px solid gray;
-        /* Adjusts the position of the checkboxes on the text baseline */
-        vertical-align: -2px;
-        outline: none;
-      }
+```css hidden live-sample___radios-checked-default
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      input[type="radio"]::before {
-        display: block;
-        content: " ";
-        width: 10px;
-        height: 10px;
-        border-radius: 6px;
-        background-color: red;
-        font-size: 1.2em;
-        transform: translate(3px, 3px) scale(0);
-        transform-origin: center;
-        transition: all 0.3s ease-in;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
 
-      input[type="radio"]:checked::before {
-        transform: translate(3px, 3px) scale(1);
-        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
-      }
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
-      input ~ span {
-        position: relative;
-      }
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  outline: none;
+}
 
-      input:default ~ span::after {
-        font-size: 0.7rem;
-        position: absolute;
-        content: "Default";
-        color: white;
-        background-color: black;
-        padding: 5px 10px;
-        right: -65px;
-        top: -3px;
-      }
-    </style>
-  </head>
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Choose your favourite fruit</legend>
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
 
-        <p>
-          <input type="radio" name="fruit" value="cherry" id="cherry" />
-          <label for="cherry">Cherry</label>
-          <span></span>
-        </p>
-        <p>
-          <input type="radio" name="fruit" value="banana" id="banana" checked />
-          <label for="banana">Banana</label>
-          <span></span>
-        </p>
-        <p>
-          <input type="radio" name="fruit" value="strawberry" id="strawberry" />
-          <label for="strawberry">Strawberry</label>
-          <span></span>
-        </p>
-      </fieldset>
-    </form>
-  </body>
-</html>
+input ~ span {
+  position: relative;
+}
+
+input:default ~ span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Default";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  right: -65px;
+  top: -3px;
+}
 ```
 
 {{EmbedLiveSample("radios-checked-default", "100%", 200, , , , , "allow-forms")}}
@@ -1485,94 +1405,83 @@ This creates a fun little animated outline on the radio buttons, which hopefully
 See the live result below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___radios-checked-indeterminate
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Radio buttons :checked, :indeterminate</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-      }
+<form>
+  <fieldset>
+    <legend>Choose your favourite fruit</legend>
 
-      input[type="radio"] {
-        -webkit-appearance: none;
-        appearance: none;
-      }
+    <p>
+      <input type="radio" name="fruit" value="cherry" id="cherry" />
+      <label for="cherry">Cherry</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="banana" id="banana" />
+      <label for="banana">Banana</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+      <label for="strawberry">Strawberry</label>
+      <span></span>
+    </p>
+  </fieldset>
+</form>
+```
 
-      input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        border: 2px solid gray;
-        /* Adjusts the position of the checkboxes on the text baseline */
-        vertical-align: -2px;
-        outline: none;
-      }
+```css hidden live-sample___radios-checked-indeterminate
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      input[type="radio"]::before {
-        display: block;
-        content: " ";
-        width: 10px;
-        height: 10px;
-        border-radius: 6px;
-        background-color: red;
-        font-size: 1.2em;
-        transform: translate(3px, 3px) scale(0);
-        transform-origin: center;
-        transition: all 0.3s ease-in;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
 
-      input[type="radio"]:checked::before {
-        transform: translate(3px, 3px) scale(1);
-        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
-      }
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
-      input[type="radio"]:indeterminate {
-        border: 2px solid red;
-        animation: 0.4s linear infinite alternate border-pulse;
-      }
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  outline: none;
+}
 
-      @keyframes border-pulse {
-        from {
-          border: 2px solid red;
-        }
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
 
-        to {
-          border: 6px solid red;
-        }
-      }
-    </style>
-  </head>
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
 
-  <body>
-    <form>
-      <fieldset>
-        <legend>Choose your favourite fruit</legend>
+input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-pulse;
+}
 
-        <p>
-          <input type="radio" name="fruit" value="cherry" id="cherry" />
-          <label for="cherry">Cherry</label>
-          <span></span>
-        </p>
-        <p>
-          <input type="radio" name="fruit" value="banana" id="banana" />
-          <label for="banana">Banana</label>
-          <span></span>
-        </p>
-        <p>
-          <input type="radio" name="fruit" value="strawberry" id="strawberry" />
-          <label for="strawberry">Strawberry</label>
-          <span></span>
-        </p>
-      </fieldset>
-    </form>
-  </body>
-</html>
+@keyframes border-pulse {
+  from {
+    border: 2px solid red;
+  }
+
+  to {
+    border: 6px solid red;
+  }
+}
 ```
 
 {{EmbedLiveSample("radios-checked-indeterminate", "100%", 200, , , , , "allow-forms")}}

@@ -508,53 +508,43 @@ If the `validity.typeMismatch` property returns `false`, we call the `setCustomV
 You can try it out below (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___custom-error-message
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Simple custom error message</title>
-    <style>
-      input:invalid {
-        border: 2px dashed red;
-      }
+<form>
+  <label for="mail"
+    >I would like you to provide me with an email address:</label
+  >
+  <input type="email" id="mail" name="mail" />
+  <button>Submit</button>
+</form>
+```
 
-      input:valid {
-        border: 2px solid black;
-      }
-      form {
-        margin: 3rem 0;
-      }
-    </style>
-  </head>
+```css hidden live-sample___custom-error-message
+input:invalid {
+  border: 2px dashed red;
+}
 
-  <body>
-    <form>
-      <label for="mail"
-        >I would like you to provide me with an email address:</label
-      >
-      <input type="email" id="mail" name="mail" />
-      <button>Submit</button>
-    </form>
+input:valid {
+  border: 2px solid black;
+}
+form {
+  margin: 3rem 0;
+}
+```
 
-    <script>
-      const email = document.getElementById("mail");
+```js hidden live-sample___custom-error-message
+const email = document.getElementById("mail");
 
-      email.addEventListener("input", function (event) {
-        if (email.validity.typeMismatch) {
-          email.setCustomValidity("I am expecting an email address!");
-        } else {
-          email.setCustomValidity("");
-        }
-      });
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I am expecting an email address!");
+  } else {
+    email.setCustomValidity("");
+  }
+});
 
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("custom-error-message", "100%", 120, , , , , "allow-forms")}}
@@ -742,139 +732,128 @@ The `showError()` function uses various properties of the input's `validity` obj
 Here is the live result (press the **Play** button to run the example in MDN Playground and edit the source code):
 
 ```html hidden live-sample___detailed-custom-validation
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Detailed custom validation</title>
-    <style>
-      body {
-        font: 1em sans-serif;
-        width: 200px;
-        padding: 0;
-        margin: 0 auto;
-      }
+<form novalidate>
+  <p>
+    <label for="mail">
+      <span>Please enter an email address:</span>
+      <input type="email" id="mail" name="mail" required minlength="8" />
+      <span class="error" aria-live="polite"></span>
+    </label>
+  </p>
+  <button>Submit</button>
+</form>
+```
 
-      p * {
-        display: block;
-      }
+```css hidden live-sample___detailed-custom-validation
+body {
+  font: 1em sans-serif;
+  width: 200px;
+  padding: 0;
+  margin: 0 auto;
+}
 
-      input[type="email"] {
-        -webkit-appearance: none;
-        appearance: none;
+p * {
+  display: block;
+}
 
-        width: 100%;
-        border: 1px solid #333;
-        margin: 0;
+input[type="email"] {
+  -webkit-appearance: none;
+  appearance: none;
 
-        font-family: inherit;
-        font-size: 90%;
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
 
-        box-sizing: border-box;
-      }
+  font-family: inherit;
+  font-size: 90%;
 
-      /* This is our style for the invalid fields */
-      input:invalid {
-        border-color: #900;
-        background-color: #fdd;
-      }
+  box-sizing: border-box;
+}
 
-      input:focus:invalid {
-        outline: none;
-      }
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
 
-      /* This is the style of our error messages */
-      .error {
-        width: 100%;
-        padding: 0;
+input:focus:invalid {
+  outline: none;
+}
 
-        font-size: 80%;
-        color: white;
-        background-color: #900;
-        border-radius: 0 0 5px 5px;
+/* This is the style of our error messages */
+.error {
+  width: 100%;
+  padding: 0;
 
-        box-sizing: border-box;
-      }
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
 
-      .error.active {
-        padding: 0.3em;
-      }
-    </style>
-  </head>
+  box-sizing: border-box;
+}
 
-  <body>
-    <form novalidate>
-      <p>
-        <label for="mail">
-          <span>Please enter an email address:</span>
-          <input type="email" id="mail" name="mail" required minlength="8" />
-          <span class="error" aria-live="polite"></span>
-        </label>
-      </p>
-      <button>Submit</button>
-    </form>
+.error.active {
+  padding: 0.3em;
+}
+```
 
-    <script>
-      // There are many ways to pick a DOM node; here we get the form itself and the email
-      // input box, as well as the span element into which we will place the error message.
-      const form = document.getElementsByTagName("form")[0];
+```js hidden live-sample___detailed-custom-validation
+// There are many ways to pick a DOM node; here we get the form itself and the email
+// input box, as well as the span element into which we will place the error message.
+const form = document.getElementsByTagName("form")[0];
 
-      const email = document.getElementById("mail");
-      const emailError = document.querySelector("#mail + span.error");
+const email = document.getElementById("mail");
+const emailError = document.querySelector("#mail + span.error");
 
-      email.addEventListener("input", function (event) {
-        // Each time the user types something, we check if the
-        // form fields are valid.
+email.addEventListener("input", function (event) {
+  // Each time the user types something, we check if the
+  // form fields are valid.
 
-        if (email.validity.valid) {
-          // In case there is an error message visible, if the field
-          // is valid, we remove the error message.
-          emailError.innerHTML = ""; // Reset the content of the message
-          emailError.className = "error"; // Reset the visual state of the message
-        } else {
-          // If there is still an error, show the correct error
-          showError();
-        }
-      });
+  if (email.validity.valid) {
+    // In case there is an error message visible, if the field
+    // is valid, we remove the error message.
+    emailError.innerHTML = ""; // Reset the content of the message
+    emailError.className = "error"; // Reset the visual state of the message
+  } else {
+    // If there is still an error, show the correct error
+    showError();
+  }
+});
 
-      form.addEventListener("submit", function (event) {
-        // if the form contains valid data, we let it submit
+form.addEventListener("submit", function (event) {
+  // if the form contains valid data, we let it submit
 
-        if (!email.validity.valid) {
-          // If it isn't, we display an appropriate error message
-          showError();
-          // Then we prevent the form from being sent by canceling the event
-          event.preventDefault();
-        }
-      });
+  if (!email.validity.valid) {
+    // If it isn't, we display an appropriate error message
+    showError();
+    // Then we prevent the form from being sent by canceling the event
+    event.preventDefault();
+  }
+});
 
-      function showError() {
-        if (email.validity.valueMissing) {
-          // If the field is empty
-          // display the following error message.
-          emailError.textContent = "You need to enter an email address.";
-        } else if (email.validity.typeMismatch) {
-          // If the field doesn't contain an email address
-          // display the following error message.
-          emailError.textContent =
-            "Entered value needs to be an email address.";
-        } else if (email.validity.tooShort) {
-          // If the data is too short
-          // display the following error message.
-          emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
-        }
+function showError() {
+  if (email.validity.valueMissing) {
+    // If the field is empty
+    // display the following error message.
+    emailError.textContent = "You need to enter an email address.";
+  } else if (email.validity.typeMismatch) {
+    // If the field doesn't contain an email address
+    // display the following error message.
+    emailError.textContent = "Entered value needs to be an email address.";
+  } else if (email.validity.tooShort) {
+    // If the data is too short
+    // display the following error message.
+    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
+  }
 
-        // Set the styling appropriately
-        emailError.className = "error active";
-      }
+  // Set the styling appropriately
+  emailError.className = "error active";
+}
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-      });
-    </script>
-  </body>
-</html>
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("detailed-custom-validation", "100%", 150, , , , , "allow-forms")}}

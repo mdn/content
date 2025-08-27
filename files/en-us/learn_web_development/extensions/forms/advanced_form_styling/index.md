@@ -95,89 +95,79 @@ input {
 The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right.
 
 ```html hidden live-sample___appearance-tester
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Appearance Tester</title>
-    <style>
-      body {
-        margin: 20px auto;
-        max-width: 800px;
-        justify-content: space-around;
-      }
-
-      body,
-      form > div {
-        display: flex;
-      }
-
-      form > div {
-        margin-bottom: 20px;
-      }
-
-      .appearance input {
-        appearance: none;
-      }
-    </style>
-  </head>
-
-  <body>
+<div>
+  <form>
     <div>
-      <form>
-        <div>
-          <label for="search1">search: </label>
-          <input id="search1" name="search1" type="search" />
-        </div>
-        <div>
-          <label for="text1">text: </label>
-          <input id="text1" name="text1" type="text" />
-        </div>
-        <div>
-          <label for="date1">date: </label>
-          <input id="date1" name="date1" type="datetime-local" />
-        </div>
-        <div>
-          <label for="radio1">radio: </label>
-          <input id="radio1" name="radio1" type="radio" />
-        </div>
-        <div>
-          <label for="checkbox1">checkbox: </label>
-          <input id="checkbox1" name="checkbox1" type="checkbox" />
-        </div>
-        <div><input type="submit" value="submit" /></div>
-        <div><input type="button" value="button" /></div>
-      </form>
+      <label for="search1">search: </label>
+      <input id="search1" name="search1" type="search" />
     </div>
-    <div class="appearance">
-      <form>
-        <div>
-          <label for="search2">search: </label>
-          <input id="search2" name="search2" type="search" />
-        </div>
-        <div>
-          <label for="text2">text: </label>
-          <input id="text2" name="text2" type="text" />
-        </div>
-        <div>
-          <label for="date2">date: </label>
-          <input id="date2" name="date2" type="datetime-local" />
-        </div>
-        <div>
-          <label for="radio2">radio: </label>
-          <input id="radio2" name="radio2" type="radio" />
-        </div>
-        <div>
-          <label for="checkbox2">checkbox: </label>
-          <input id="checkbox2" name="checkbox2" type="checkbox" />
-        </div>
-        <div><input type="submit" value="submit" /></div>
-        <div><input type="button" value="button" /></div>
-      </form>
+    <div>
+      <label for="text1">text: </label>
+      <input id="text1" name="text1" type="text" />
     </div>
-  </body>
-</html>
+    <div>
+      <label for="date1">date: </label>
+      <input id="date1" name="date1" type="datetime-local" />
+    </div>
+    <div>
+      <label for="radio1">radio: </label>
+      <input id="radio1" name="radio1" type="radio" />
+    </div>
+    <div>
+      <label for="checkbox1">checkbox: </label>
+      <input id="checkbox1" name="checkbox1" type="checkbox" />
+    </div>
+    <div><input type="submit" value="submit" /></div>
+    <div><input type="button" value="button" /></div>
+  </form>
+</div>
+<div class="appearance">
+  <form>
+    <div>
+      <label for="search2">search: </label>
+      <input id="search2" name="search2" type="search" />
+    </div>
+    <div>
+      <label for="text2">text: </label>
+      <input id="text2" name="text2" type="text" />
+    </div>
+    <div>
+      <label for="date2">date: </label>
+      <input id="date2" name="date2" type="datetime-local" />
+    </div>
+    <div>
+      <label for="radio2">radio: </label>
+      <input id="radio2" name="radio2" type="radio" />
+    </div>
+    <div>
+      <label for="checkbox2">checkbox: </label>
+      <input id="checkbox2" name="checkbox2" type="checkbox" />
+    </div>
+    <div><input type="submit" value="submit" /></div>
+    <div><input type="button" value="button" /></div>
+  </form>
+</div>
+```
+
+```css hidden live-sample___appearance-tester
+body {
+  margin: 20px auto;
+  max-width: 800px;
+  justify-content: space-around;
+}
+
+body,
+form > div {
+  display: flex;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+.appearance input {
+  appearance: none;
+}
 ```
 
 {{EmbedLiveSample("appearance-tester", '100%', 350)}}
@@ -647,120 +637,109 @@ label[for="file"]:active {
 You can see the result of the above CSS styling in the live example below.
 
 ```html hidden live-sample___styled-file-picker
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Styled file picker example</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet" />
-    <style>
-      body {
-        font-family: "Josefin Sans", sans-serif;
-        margin: 20px auto;
-        max-width: 400px;
-      }
+<form>
+  <div>
+    <label for="file">Choose a file to upload</label>
+    <input id="file" name="file" type="file" multiple />
+    <ul id="file-list"></ul>
+  </div>
+  <div><button>Submit?</button></div>
+</form>
+```
 
-      form > div {
-        margin-bottom: 20px;
-      }
+```css hidden live-sample___styled-file-picker
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
-      button,
-      label,
-      input {
-        display: block;
-        font-family: inherit;
-        font-size: 100%;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 5px;
-        height: 30px;
-      }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 400px;
+}
 
-      input[type="file"] {
-        height: 0;
-        padding: 0;
-        opacity: 0;
-      }
+form > div {
+  margin-bottom: 20px;
+}
 
-      label[for="file"] {
-        box-shadow: 1px 1px 3px #ccc;
-        background: linear-gradient(to bottom, #eee, #ccc);
-        border: 1px solid rgb(169, 169, 169);
-        border-radius: 5px;
-        text-align: center;
-        line-height: 1.5;
-      }
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
 
-      label[for="file"]:hover {
-        background: linear-gradient(to bottom, #fff, #ddd);
-      }
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
 
-      label[for="file"]:active {
-        box-shadow: inset 1px 1px 3px #ccc;
-      }
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
 
-      button {
-        width: 60%;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
 
-  <body>
-    <form>
-      <div>
-        <label for="file">Choose a file to upload</label>
-        <input id="file" name="file" type="file" multiple />
-        <ul id="file-list"></ul>
-      </div>
-      <div><button>Submit?</button></div>
-    </form>
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}
 
-    <script>
-      const fileInput = document.querySelector("#file");
-      const fileList = document.querySelector("#file-list");
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
 
-      fileInput.addEventListener("change", updateFileList);
+```js hidden live-sample___styled-file-picker
+const fileInput = document.querySelector("#file");
+const fileList = document.querySelector("#file-list");
 
-      function updateFileList() {
-        while (fileList.firstChild) {
-          fileList.removeChild(fileList.firstChild);
-        }
+fileInput.addEventListener("change", updateFileList);
 
-        let curFiles = fileInput.files;
+function updateFileList() {
+  while (fileList.firstChild) {
+    fileList.removeChild(fileList.firstChild);
+  }
 
-        if (!(curFiles.length === 0)) {
-          console.log("test");
-          for (let i = 0; i < curFiles.length; i++) {
-            const listItem = document.createElement("li");
-            listItem.textContent =
-              "File name: " +
-              curFiles[i].name +
-              "; file size " +
-              returnFileSize(curFiles[i].size) +
-              ".";
-            fileList.appendChild(listItem);
-          }
-        }
-      }
+  let curFiles = fileInput.files;
 
-      function returnFileSize(number) {
-        if (number < 1024) {
-          return number + "bytes";
-        } else if (number >= 1024 && number < 1048576) {
-          return (number / 1024).toFixed(1) + "KB";
-        } else if (number >= 1048576) {
-          return (number / 1048576).toFixed(1) + "MB";
-        }
-      }
-    </script>
-  </body>
-</html>
+  if (!(curFiles.length === 0)) {
+    console.log("test");
+    for (let i = 0; i < curFiles.length; i++) {
+      const listItem = document.createElement("li");
+      listItem.textContent =
+        "File name: " +
+        curFiles[i].name +
+        "; file size " +
+        returnFileSize(curFiles[i].size) +
+        ".";
+      fileList.appendChild(listItem);
+    }
+  }
+}
+
+function returnFileSize(number) {
+  if (number < 1024) {
+    return number + "bytes";
+  } else if (number >= 1024 && number < 1048576) {
+    return (number / 1024).toFixed(1) + "KB";
+  } else if (number >= 1048576) {
+    return (number / 1048576).toFixed(1) + "MB";
+  }
+}
 ```
 
 {{EmbedLiveSample("styled-file-picker", '100%', 200)}}
