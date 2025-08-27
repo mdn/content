@@ -120,7 +120,7 @@ figure {
   }
   p {
     margin: 0;
-  } 
+  }
 }
 main {
  max-width: max-content;
