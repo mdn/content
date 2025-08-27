@@ -2,7 +2,9 @@
 title: CSS basic user interface
 slug: Web/CSS/CSS_basic_user_interface
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-ui/
+spec-urls:
+  - https://drafts.csswg.org/css-ui-3/
+  - https://drafts.csswg.org/css-ui/
 sidebar: cssref
 ---
 
