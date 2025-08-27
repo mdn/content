@@ -210,6 +210,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     The `sizes` attribute also accepts the following keyword values:
     - `auto`
       - : `auto` can replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to [prevent the browser assuming a default width of 300px](https://html.spec.whatwg.org/multipage/images.html#sizes-attributes:attr-dim-width).
+      - : For better backward compatibility with browsers that do not support the `auto` keyword, you can include fallback sizes before `auto` in the `sizes` attribute.
+
+      **Example:**
+
+      ```html
+      <img
+        loading="lazy"
+        width="200"
+        height="200"
+        sizes="(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px), auto"
+        srcset="
+        swing-200.jpg   200w,
+        swing-400.jpg   400w,
+        swing-800.jpg   800w,
+        swing-1600.jpg 1600w
+        src="swing-400.jpg" alt="Kettlebell Swing" />
+
+      ```
 
 - `src`
   - : The image {{glossary("URL")}}. Mandatory for the `<img>` element. On {{glossary("Browser", "browsers")}} supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x`, unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors.
