@@ -40,7 +40,149 @@ The situation started to improve when browsers began to support the {{htmlelemen
 
 The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) module:
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
+```html hidden live-sample___bouncing-balls
+<h1>bouncing balls</h1>
+<canvas></canvas>
+```
+
+```css hidden live-sample___bouncing-balls
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+
+  color: transparent;
+  text-shadow: 0 0 4px white;
+}
+```
+
+```js hidden live-sample___bouncing-balls
+// set up canvas
+
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+
+// function to generate random number
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// function to generate random RGB color value
+
+function randomRGB() {
+  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+}
+
+class Ball {
+  constructor(x, y, velX, velY, color, size) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+    this.color = color;
+    this.size = size;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+
+  update() {
+    if (this.x + this.size >= width) {
+      this.velX = -Math.abs(this.velX);
+    }
+
+    if (this.x - this.size <= 0) {
+      this.velX = Math.abs(this.velX);
+    }
+
+    if (this.y + this.size >= height) {
+      this.velY = -Math.abs(this.velY);
+    }
+
+    if (this.y - this.size <= 0) {
+      this.velY = Math.abs(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+
+  collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball)) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
+      }
+    }
+  }
+}
+
+const balls = [];
+
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size,
+  );
+
+  balls.push(ball);
+}
+
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
+```
+
+{{EmbedLiveSample("bouncing-balls", '100%', 500)}}
 
 Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the below example shows a simple rotating WebGL cube:
 
@@ -73,49 +215,65 @@ The fallback should provide useful alternative content to the canvas content. Fo
 
 ### Creating and sizing our canvas
 
-Let's start by creating our own canvas that we draw future experiments on to.
+Let's start by creating our own canvas template to create future experiments in.
 
-1. First make a local copy of the [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) directory. It contains three files:
-   - "index.html"
-   - "script.js"
-   - "style.css"
-2. Open "index.html", and add the following code into it, just below the opening {{htmlelement("body")}} tag:
+1. First, create a directory on your local hard drive called `canvas-template`.
+2. Create a new file in the directory called `index.html` and save the following contents inside it:
+    ```html live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
+    <!DOCTYPE html>
+    <html lang="en-US">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Canvas</title>
+        <script src="script.js" defer></script>
+        <link href="style.css" rel="stylesheet" />
+      </head>
+      <body>
+        <canvas class="myCanvas">
+          <p>Add suitable fallback here.</p>
+        </canvas>
+      </body>
+    </html>
+    ```
+    > [!NOTE]
+    > We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we haven't included the `width` and `height` attributes for now (we will set them using JavaScript in a subsequent section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
+3. Create a new file inside the directory called `style.css` and save the following CSS rule in it:
+    ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    ```
+4. Create a new file inside the directory called `script.js`. Leave this file blank for now.
 
-   ```html
-   <canvas class="myCanvas">
-     <p>Add suitable fallback here.</p>
-   </canvas>
-   ```
+5. Now open `script.js` and add the following lines of JavaScript:
 
-   We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we have removed the `width` and `height` attributes for now (you could add them back in if you wanted, but we will set them using JavaScript in a below section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
+    ```js
+    const canvas = document.querySelector(".myCanvas");
+    const width = (canvas.width = window.innerWidth);
+    const height = (canvas.height = window.innerHeight);
+    ```
 
-3. Now open "script.js" and add the following lines of JavaScript:
+    Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
 
-   ```js
-   const canvas = document.querySelector(".myCanvas");
-   const width = (canvas.width = window.innerWidth);
-   const height = (canvas.height = window.innerHeight);
-   ```
-
-   Here we have stored a reference to the canvas in the `canvas` constant. In the second line we set both a new constant `width` and the canvas' `width` property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant `height` and the canvas' `height` property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!
-
-   You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
+    You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
 
 > [!NOTE]
-> You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.
+> You should generally set the size of the canvas using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image, the canvas could become pixelated/distorted.
 
 ### Getting the canvas context and final setup
 
 We need to do one final thing before we can consider our canvas template finished. To draw onto the canvas we need to get a special reference to the drawing area called a context. This is done using the {{domxref("HTMLCanvasElement.getContext()")}} method, which for basic usage takes a single string as a parameter representing the type of context you want to retrieve.
 
-In this case we want a 2d canvas, so add the following JavaScript line below the others in "script.js":
+In this case we want a 2d canvas, so add the following JavaScript line below the others in `script.js`:
 
 ```js
 const ctx = canvas.getContext("2d");
 ```
 
 > [!NOTE]
-> Other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
+> Other context values you could choose include `webgl` for WebGL, `webgpu` for WebGPU, etc., but we won't need those in this article.
 
 So that's it — our canvas is now primed and ready for drawing on! The `ctx` variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.
 
@@ -142,15 +300,15 @@ Drawing shapes tends to be done using the rectangle shape primitive, or by traci
 
 Let's start with some simple rectangles.
 
-1. First of all, take a copy of your newly coded canvas template (or make a local copy of the [1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) directory if you didn't follow the above steps).
-2. Next, add the following lines to the bottom of your JavaScript:
+1. First of all, make a copy of your newly coded canvas template directory.
+2. Add the following lines to the bottom of your JavaScript file:
 
    ```js
    ctx.fillStyle = "red";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
-   If you save and refresh, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).
+   If you load your HTML in the browser, you should see a red rectangle has appeared on your canvas. Its top left corner is 50 pixels away from the top and left of the canvas edge (as defined by the first two parameters), and it is 100 pixels wide and 150 pixels tall (as defined by the third and fourth parameters).
 
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
@@ -189,16 +347,38 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 
 Now you should see that your white outline has become much thicker! That's it for now. At this point your example should look like this:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
+```js hidden live-sample___2-canvas-rectangles
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-> [!NOTE]
-> The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.fillRect(50, 50, 100, 150);
+
+ctx.fillStyle = "rgb(0,255,0)";
+ctx.fillRect(75, 75, 100, 100);
+
+ctx.fillStyle = "rgba(255,0,255,0.75)";
+ctx.fillRect(25, 100, 175, 50);
+
+ctx.strokeStyle = "rgb(255,255,255)";
+ctx.lineWidth = 5;
+ctx.strokeRect(25, 25, 175, 200);
+```
+
+{{EmbedLiveSample("2-canvas-rectangles", '100%', 250)}}
+
+You can press the **Play** button to open the example in MDN Playground and edit the source code.
 
 ### Drawing paths
 
 If you want to draw anything more complex than a rectangle, you need to draw a path. Basically, this involves writing code to specify exactly what path the pen should move along on your canvas to trace the shape you want to draw. Canvas includes functions for drawing straight lines, circles, Bézier curves, and more.
 
-Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)), in which to draw the new example.
+Start the section off by making a fresh copy of your canvas template in which to draw the new example.
 
 We'll be using some common methods and properties across all of the below sections:
 
@@ -299,17 +479,50 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
 That's it for now; your final example should look like this:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
+```js hidden live-sample___3_canvas_paths
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-> [!NOTE]
-> The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.beginPath();
+ctx.moveTo(50, 50);
+ctx.lineTo(150, 50);
+const triHeight = 50 * Math.tan(degToRad(60));
+ctx.lineTo(100, 50 + triHeight);
+ctx.lineTo(50, 50);
+ctx.fill();
+
+ctx.fillStyle = "rgb(0,0,255)";
+ctx.beginPath();
+ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
+ctx.fill();
+
+ctx.fillStyle = "yellow";
+ctx.beginPath();
+ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+ctx.lineTo(200, 106);
+ctx.fill();
+```
+
+{{EmbedLiveSample("3_canvas_paths", '100%', 200)}}
+
+You can press the **Play** button to open the example in MDN Playground and edit the source code.
 
 > [!NOTE]
 > To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
 ### Text
 
-Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) in which to draw the new example.
+Canvas also has features for drawing text. Let's explore these briefly. Start by making another fresh copy of your canvas template in which to draw the new example.
 
 Text is drawn using two methods:
 
@@ -337,20 +550,38 @@ ctx.fillText("Canvas text", 50, 150);
 canvas.setAttribute("aria-label", "Canvas text");
 ```
 
-Here we draw two lines of text, one outline and the other stroke. The final example should look like so:
+Here we draw two lines of text, one outline and the other stroke. The example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
+```js hidden live-sample___4-canvas-text
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-> [!NOTE]
-> The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
-Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+ctx.strokeStyle = "white";
+ctx.lineWidth = 1;
+ctx.font = "36px arial";
+ctx.strokeText("Canvas text", 50, 50);
+
+ctx.fillStyle = "red";
+ctx.font = "48px georgia";
+ctx.fillText("Canvas text", 50, 150);
+
+canvas.setAttribute("aria-label", "Canvas text");
+```
+
+{{EmbedLiveSample("4-canvas-text", '100%', 180)}}
+
+Press the **Play** button to open the example in MDN Playground and edit the source code. Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Drawing images onto canvas
 
 It is possible to render external images onto your canvas. These can be simple images, frames from videos, or the content of other canvases. For the moment we'll just look at the case of using some simple images on our canvas.
 
-1. As before, make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) in which to draw the new example.
+1. As before, make another fresh copy of your canvas template in which to draw the new example.
 
    Images are drawn onto canvas using the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method. The simplest version takes three parameters — a reference to the image you want to render, and the X and Y coordinates of the image's top left corner.
 
@@ -358,7 +589,8 @@ It is possible to render external images onto your canvas. These can be simple i
 
    ```js
    const image = new Image();
-   image.src = "firefox.png";
+   image.src =
+     "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png";
    ```
 
    Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
@@ -369,12 +601,12 @@ It is possible to render external images onto your canvas. These can be simple i
    image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
    ```
 
-   If you load your example in the browser now, you should see the image embedded in the canvas.
+   If you load your example in the browser now, you should see the image embedded in the canvas, albeit rather large.
 
 4. But there's more! What if we want to display only a part of the image, or to resize it? We can do both with the more complex version of `drawImage()`. Update your `ctx.drawImage()` line like so:
 
    ```js
-   ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
+   ctx.drawImage(image, 0, 0, 512, 512, 50, 40, 185, 185);
    ```
 
    - The first parameter is the image reference, as before.
@@ -391,10 +623,28 @@ It is possible to render external images onto your canvas. These can be simple i
 
 The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
+```js hidden live-sample___5-canvas-images
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-> [!NOTE]
-> The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+const image = new Image();
+image.src =
+  "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png";
+image.addEventListener("load", () =>
+  ctx.drawImage(image, 0, 0, 512, 512, 50, 40, 185, 185),
+);
+
+canvas.setAttribute("aria-label", "Firefox Logo");
+```
+
+{{EmbedLiveSample("5-canvas-images", '100%', 260)}}
+
+Press the **Play** button to open the example in MDN Playground and edit the source code.
 
 ## Loops and animations
 
@@ -406,7 +656,7 @@ Playing with loops in canvas is rather fun — you can run canvas commands insid
 
 Let's build an example.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
+1. Make another fresh copy of your canvas template.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
 
    ```js
@@ -463,16 +713,51 @@ Let's build an example.
 
 That's it! The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/index.html", '100%', 550)}}
+```js hidden live-sample___6-canvas-for-loop
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-At this point, we'd like to encourage you to play with the example and make it your own! For example:
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+ctx.translate(width / 2, height / 2);
+
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let length = 250;
+let moveOffset = 20;
+
+for (let i = 0; i < length; i++) {
+  ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
+  ctx.beginPath();
+  ctx.moveTo(moveOffset, moveOffset);
+  ctx.lineTo(moveOffset + length, moveOffset);
+  const triHeight = (length / 2) * Math.tan(degToRad(60));
+  ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
+  ctx.lineTo(moveOffset, moveOffset);
+  ctx.fill();
+
+  length--;
+  moveOffset += 0.7;
+  ctx.rotate(degToRad(5));
+}
+```
+
+{{EmbedLiveSample("6-canvas-for-loop", '100%', 550)}}
+
+Press the **Play** button to open the example in MDN Playground and edit the source code. We'd like to encourage you to play with the example and make it your own! For example:
 
 - Draw rectangles or arcs instead of triangles, or even embed images.
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
-
-> [!NOTE]
-> The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
 
 ### Animations
 
@@ -485,7 +770,7 @@ There are a few JavaScript functions that will allow you to run functions repeat
 
 The browser works out complex details such as making the animation run at a consistent speed, and not wasting resources animating things that can't be seen.
 
-To see how it works, let's quickly look again at our Bouncing Balls example ([see it live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html), and also see [the source code](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)). The code for the loop that keeps everything moving looks like this:
+To see how it works, let's quickly look again at our [Bouncing Balls example](#frame_bouncing-balls). The code for the loop that keeps everything moving looks like this:
 
 ```js
 function loop() {
@@ -525,9 +810,9 @@ In general, the process of doing a canvas animation involves the following steps
 
 Now let's create our own simple animation — we'll get a character from a certain rather awesome retro computer game to walk across the screen.
 
-1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
+1. Make another fresh copy of our canvas template and open it in your code editor.
 
-2. Update the inner HTML to reflect the image:
+2. Update the fallback HTML to reflect the image:
 
    ```html
    <canvas class="myCanvas">
@@ -545,7 +830,8 @@ Now let's create our own simple animation — we'll get a character from a certa
 
    ```js
    const image = new Image();
-   image.src = "walk-right.png";
+   image.src =
+     "https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/walk-right.png";
    image.onload = draw;
    ```
 
@@ -627,18 +913,196 @@ Now let's create our own simple animation — we'll get a character from a certa
 
 That's it! The final example should look like so:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
+```js hidden live-sample___7-canvas-walking-animation
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+const ctx = canvas.getContext("2d");
 
-> [!NOTE]
-> The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+ctx.translate(width / 2, height / 2);
+
+const image = new Image();
+image.src =
+  "https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/walk-right.png";
+image.onload = draw;
+
+let sprite = 0;
+let posX = 0;
+
+function draw() {
+  ctx.fillRect(-(width / 2), -(height / 2), width, height);
+  ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
+
+  if (posX % 13 === 0) {
+    if (sprite === 5) {
+      sprite = 0;
+    } else {
+      sprite++;
+    }
+  }
+
+  if (posX > width / 2) {
+    let newStartPos = -(width / 2 + 102);
+    posX = Math.ceil(newStartPos);
+    console.log(posX);
+  } else {
+    posX += 2;
+  }
+
+  window.requestAnimationFrame(draw);
+}
+```
+
+{{EmbedLiveSample("7-canvas-walking-animation", '100%', 260)}}
+
+You can press the **Play** button to open the example in MDN Playground and edit the source code.
 
 ### A simple drawing application
 
 As a final animation example, we'd like to show you a very simple drawing application, to illustrate how the animation loop can be combined with user input (like mouse movement, in this case). We won't get you to walk through and build this one; we'll just explore the most interesting parts of the code.
 
-The example can be found on GitHub as [8_canvas_drawing_app](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app), and you can play with it live below:
+```html hidden live-sample___8-canvas-drawing-app
+<div class="toolbar">
+  <input type="color" aria-label="select pen color" value="#ff0000" />
+  <div>
+    <input
+      type="range"
+      min="2"
+      max="50"
+      value="30"
+      aria-label="select pen size" /><span class="output">30</span>
+  </div>
+  <button>Clear canvas</button>
+</div>
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
+<canvas class="myCanvas">
+  <p>Add suitable fallback here.</p>
+</canvas>
+```
+
+```css hidden live-sample___8-canvas-drawing-app
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.toolbar {
+  height: 75px;
+  background: #ccc;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar div {
+  margin: 0 20px;
+  flex: 3;
+}
+
+input[type="color"],
+button {
+  flex: 1;
+}
+
+input[type="range"] {
+  width: calc(100% - 20px);
+}
+
+output {
+  width: 20px;
+}
+
+span {
+  position: relative;
+  bottom: 5px;
+}
+```
+
+```js hidden live-sample___8-canvas-drawing-app
+const canvas = document.querySelector(".myCanvas");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight - 85);
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
+
+const colorPicker = document.querySelector('input[type="color"]');
+const sizePicker = document.querySelector('input[type="range"]');
+const output = document.querySelector(".output");
+const clearBtn = document.querySelector("button");
+
+// covert degrees to radians
+function degToRad(degrees) {
+  return (degrees * Math.PI) / 180;
+}
+
+// update sizepicker output value
+
+sizePicker.addEventListener(
+  "input",
+  () => (output.textContent = sizePicker.value),
+);
+
+// store mouse pointer coordinates, and whether the button is pressed
+let curX;
+let curY;
+let pressed = false;
+
+// update mouse pointer coordinates
+document.addEventListener("mousemove", (e) => {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+});
+
+canvas.addEventListener("mousedown", () => (pressed = true));
+
+canvas.addEventListener("mouseup", () => (pressed = false));
+
+clearBtn.addEventListener("click", () => {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+});
+
+function draw() {
+  if (pressed) {
+    ctx.fillStyle = colorPicker.value;
+    ctx.beginPath();
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
+    ctx.fill();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+```
+
+You can play with the example live below; you can also click the **Play** button to open it in the MDN Playground, where you can edit the source code:
+
+{{EmbedLiveSample("8-canvas-drawing-app", '100%', 600)}}
 
 Let's look at the most interesting parts. First of all, we keep track of the mouse's X and Y coordinates and whether it is being clicked or not with three variables: `curX`, `curY`, and `pressed`. When the mouse moves, we fire a function set as the `onmousemove` event handler, which captures the current X and Y values. We also use `onmousedown` and `onmouseup` event handlers to change the value of `pressed` to `true` when the mouse button is pressed, and back to `false` again when it is released.
 
