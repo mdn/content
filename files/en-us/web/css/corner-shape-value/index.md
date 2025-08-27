@@ -10,7 +10,7 @@ The **`<corner-shape-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/doc
 
 ## Syntax
 
-The `<corner-shape-value>` data type can take a keyword value that describes a common `superellipse()` corner shape, or a {{cssxref("superellipse()")}} function that defines a custom shape.
+The `<corner-shape-value>` data type can take a {{cssxref("superellipse()")}} function that defines a custom shape, or one of six keyword values that describe common `superellipse()` corner shapes.
 
 ### Values
 
