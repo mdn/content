@@ -219,25 +219,22 @@ Let's start by creating our own canvas template to create future experiments in.
 
 1. First, create a directory on your local hard drive called `canvas-template`.
 2. Create a new file in the directory called `index.html` and save the following contents inside it:
-    ```html live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
-    <!DOCTYPE html>
-    <html lang="en-US">
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Canvas</title>
-        <script src="script.js" defer></script>
-        <link href="style.css" rel="stylesheet" />
-      </head>
-      <body>
-        <canvas class="myCanvas">
-          <p>Add suitable fallback here.</p>
-        </canvas>
-      </body>
-    </html>
-    ```
-    > [!NOTE]
-    > We have added a `class` to the `<canvas>` element so it will be easier to select if we have multiple canvases on the page, but we haven't included the `width` and `height` attributes for now (we will set them using JavaScript in a subsequent section). Canvases with no explicit width and height default to 300 pixels wide by 150 pixels high.
+   ```html live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Canvas</title>
+       <script src="script.js" defer></script>
+       <link href="style.css" rel="stylesheet" />
+     </head>
+     <body>
+       <canvas class="myCanvas">
+         <p>Add suitable fallback here.</p>
+       </canvas>
+     </body>
+   </html>
 3. Create a new file inside the directory called `style.css` and save the following CSS rule in it:
    ```css live-sample___2-canvas-rectangles live-sample___3_canvas_paths live-sample___4-canvas-text live-sample___5-canvas-images live-sample___6-canvas-for-loop live-sample___7-canvas-walking-animation
    body {
