@@ -8,11 +8,11 @@ spec-urls:
 sidebar: cssref
 ---
 
-The **CSS positioned layout** module defines coordinate-based positioning and offsetting schemes of CSS and the properties used to position and stack elements on a web page. The module is best known for defining the basic positioning methods, including relative positioning, sticky positioning, absolute positioning, and fixed positioning. It also defines how positioned elements are painted and layered, which helps clarify stacking behavior and visual order.
+The **CSS positioned layout** module defines the coordinate-based positioning and offsetting schemes available in CSS and the properties used to position and stack elements on a web page. The module is best known for defining the basic positioning methods, including relative positioning, sticky positioning, absolute positioning, and fixed positioning. It also defines how positioned elements are painted and layered, clarifying stacking behavior and visual order.
 
-The positioned layout module defines the various {{glossary("inset properties")}}. These are logical properties that enable developing with internationalization and responsiveness in mind.
+The positioned layout module defines the physical, logical, and shorthand {{glossary("inset properties")}}. The logical properties enable developing with internationalization and responsiveness in mind.
 
-Like all CSS modules, this module impacts and is impacted by other modules. This module describing how positioning interacts with other layout modules, such as [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), while other modules, such as [CSS anchor positioning](), build upon this module to enable positioning elements relative to other elements and layers.
+Like all CSS modules, this module impacts and is impacted by other modules. This module describes how positioning interacts with other layout modules such as [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout). Other modules, such as [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), build upon this module to enable positioning elements relative to other elements and layers.
 
 ## Reference
 
