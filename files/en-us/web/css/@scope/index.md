@@ -137,11 +137,11 @@ In the following code snippet, the three rules select the same element, but diff
     /* … */
   }
 
-  :scope img {
+  & img {
     /* … */
   }
 
-  & img {
+  :scope img {
     /* … */
   }
 }
@@ -182,7 +182,8 @@ In the following code snippet, the three rules select the same element, but diff
 
 ### Specificity in `@scope`
 
-Including a ruleset inside a `@scope` block does not affect the specificity of its selector, regardless of the selectors used inside the scope root and limit. For example:
+Inside an `@scope` rule, both bare selectors and `&` are treated as if `:where(:scope)` were prepended, meaning they select the scope root with zero specificity.
+Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, the only specificity comes from `img` (`0-0-1`).
 
 ```css
 @scope (.article-body) {
@@ -190,45 +191,21 @@ Including a ruleset inside a `@scope` block does not affect the specificity of i
   img {
     /* … */
   }
-}
-```
 
-The `&` nesting selector, when prepended to a selector inside an `@scope` block, represents the implicit scope context (`:where(:scope)`), which has zero specificity.
-In the following example, `& img` is equivalent to writing `:where(:scope) img`.
-Because [`:where()`](/en-US/docs/Web/CSS/:where) has zero specificity, the only specificity comes from `img` (`0-0-1`).
-
-```css
-@scope (figure, #primary) {
+  /* & img also has a specificity of 0-0-1 */
   & img {
     /* … */
   }
 }
 ```
 
-If you explicitly prepend the `:scope` pseudo-class to the selectors inside the `@scope` block, you need to factor in its specificity. Like other pseudo-classes, `:scope` has a specificity of `0-1-0`. In the following example, `:scope img` has a specificity of `0-1-1`:
+By contrast, using `:scope` explicitly selects the scope root with class specificity.
+Like other pseudo-classes, `:scope` has a specificity of `0-1-0`.
+In the following example, `:scope img` has a specificity of `0-1-1`:
 
 ```css
 @scope (.article-body) {
   /* :scope img has a specificity of 0-1-0 + 0-0-1 = 0-1-1 */
-  :scope img {
-    /* … */
-  }
-}
-```
-
-### The difference between `:scope` and `&` inside `@scope`
-
-Inside an `@scope` rule, both bare selectors and `&` are treated as if `:where(:scope)` were prepended, meaning they select the scope root with zero specificity.
-By contrast, using `:scope` explicitly selects the scope root with class specificity.
-
-```css
-@scope (.feature) {
-  /* Selects any <img> inside the scope root, with zero specificity */
-  & img {
-    /* … */
-  }
-
-  /* Same selection, but adds specificity 0-1-0 */
   :scope img {
     /* … */
   }
