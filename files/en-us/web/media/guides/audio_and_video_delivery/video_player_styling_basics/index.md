@@ -7,11 +7,7 @@ sidebar: mediasidebar
 
 In the previous [Cross browser video player article](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
 
-## Preliminary modifications from the original example
-
-This section summarizes the modifications that were made to the original video player example to make the styling task easier, before the bulk of the work was started.
-
-### HTML markup
+## HTML markup
 
 There are a few changes that were made to the HTML markup shown in the previous article. The custom video controls and {{htmlelement("progress")}} element are now contained within {{htmlelement("div") }} elements, rather than residing inside unordered list items.
 
@@ -67,15 +63,7 @@ The markup for the custom controls now looks as follows:
 </figure>
 ```
 
-### Related CSS alteration
-
-The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
-
-This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
-
-### JavaScript
-
-As mentioned above, a `data-state` attribute is used in various places for styling purposes and these are set using JavaScript. Specific implementations will be mentioned at appropriate places below.
+A `data-state` attribute is used in various places for styling purposes and these are set using JavaScript. Specific implementations will be mentioned at appropriate places below.
 
 ## Styling
 
@@ -84,27 +72,12 @@ The resultant video player style used here is rather basic — this is intention
 > [!NOTE]
 > In some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
 
-```css live-sample___video-player-styled
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-body {
-  color: #666666;
-  background-color: #cccccc;
+```css hidden live-sample___video-player-styled
+:root {
+  color: #333333;
   font-family:
     "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
     "Helvetica", sans-serif;
-}
-h1 {
-  color: #666666;
-  font-size: 1.25rem;
-  text-align: center;
-  margin: 0;
-  padding: 0.5rem 0;
 }
 a {
   color: #0095dd;
@@ -115,133 +88,46 @@ a:focus {
   color: #2255aa;
   text-decoration: underline;
 }
+figure {
+  max-width: 64rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #666666;
+}
 figcaption {
   display: block;
   font-size: 0.75rem;
-  color: #fff;
+  color: white;
+  margin-top: 0.5rem;
 }
 video {
   width: 100%;
-}
-
-/* controls */
-.controls,
-.controls > * {
-  padding: 0;
-  margin: 0;
-}
-
-/* fullscreen */
-html:-ms-fullscreen {
-  width: 100%;
-}
-:-webkit-full-screen {
-  background-color: transparent;
-}
-video:-webkit-full-screen + .controls {
-  background: #ccc; /* required for Chrome which doesn't heed the transparent value set above */
-}
-video:-webkit-full-screen + .controls progress {
-  margin-top: 0.5rem;
-}
-
-/* hide controls on fullscreen with WebKit */
-figure[data-fullscreen="true"] video::-webkit-media-controls {
-  display: none !important;
-}
-figure[data-fullscreen="true"] {
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  max-height: 100%;
-}
-figure[data-fullscreen="true"] video {
-  height: auto;
-}
-figure[data-fullscreen="true"] figcaption {
-  display: none;
-}
-figure[data-fullscreen="true"] .controls {
-  position: absolute;
-  bottom: 2%;
-  width: 100%;
-  z-index: 2147483647;
-}
-figure[data-fullscreen="true"] .controls li {
-  width: 5%;
-}
-figure[data-fullscreen="true"] .controls .progress {
-  width: 68%;
 }
 ```
 
 ### Basic styling
 
-The HTML video and its controls are all contained within a {{htmlelement("figure") }} element, which is given a maximum width and height (based on the dimensions of the video used) and centered within the page:
-
-```css live-sample___video-player-styled
-figure {
-  max-width: 64rem;
-  width: 100%;
-  max-height: 30.875rem;
-  height: 100%;
-  margin: 1.25rem auto;
-  padding: 1.051%;
-  background-color: #666666;
-}
-```
-
-The video controls container itself also needs some styling so that it is set up the correct way:
+The video controls container itself needs some styling so that it is set up the correct way:
 
 ```css live-sample___video-player-styled
 .controls {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  background: transparent;
   width: 100%;
-  height: 8.0971659919028340080971659919028%; /* of figure's height */
+  height: 2rem;
   position: relative;
 }
 ```
 
-The height of the `.controls` class is set to be (a very precise!) percentage of the enclosing {{htmlelement("figure") }} element (this was worked out with experimentation based on the required button height). Its position is also specifically set to `relative`, which is required for its responsiveness (more on that later).
+The position is set to `relative`, which is required for its responsiveness (more on that later).
 
-As mentioned earlier, a `data-state` attribute is now used to indicate whether the video controls are visible or not and these also need to be styled:
+As mentioned earlier, a `data-state` attribute is used to indicate whether the video controls are visible or not and it needs corresponding CSS declarations:
 
 ```css live-sample___video-player-styled
 .controls[data-state="hidden"] {
   display: none;
-}
-
-.controls[data-state="visible"] {
-  display: block;
-}
-```
-
-There are a number of properties that also need to be set for all elements within the video controls:
-
-```css live-sample___video-player-styled
-.controls > * {
-  float: left;
-  width: 3.90625%;
-  height: 100%;
-  margin-left: 0.1953125%;
-  display: block;
-}
-
-.controls > *:first-child {
-  margin-left: 0;
-}
-```
-
-All elements are floated left, as they are to be aligned next to one another, and each element is set to have a `width` of nearly 4% (again the actual value was calculated based on the required dimensions of the buttons), and a `height` of 100%. A value for `margin-left` is also set, but the first element (in this case the play/pause button) has this property overridden by the value 0.
-
-The {{htmlelement("div") }} container for the {{htmlelement("progress") }} element also requires some specific settings; it is set to be much wider than the other child elements and its cursor value is set to be pointer:
-
-```css live-sample___video-player-styled
-.controls .progress {
-  cursor: pointer;
-  width: 75.390625%;
 }
 ```
 
@@ -253,20 +139,23 @@ Each button has some basic styling:
 
 ```css live-sample___video-player-styled
 .controls button {
+  width: 2rem;
+  height: 2rem;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   border: none;
   cursor: pointer;
-  text-indent: -99999px;
-  background: transparent;
+  color: transparent;
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 ```
 
-By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.
+Each button is set to be `2rem` in width and height. By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image. Furthermore, there's some label text that should not be visible on screen, so the text color is set to transparent.
 
 The `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
 
@@ -327,17 +216,27 @@ When the `data-state` of the button is changed, the appropriate image will also 
 
 ### Progress bar
 
+The {{htmlelement("div") }} container for the {{htmlelement("progress") }} element has its {{cssxref("flex-grow")}} enabled, so that it grows to fill up the remaining space in the controls. It also displays a pointer cursor to indicate it is interactive.
+
+```css live-sample___video-player-styled
+.controls .progress {
+  flex-grow: 1;
+  cursor: pointer;
+  height: 80%;
+}
+```
+
 The {{htmlelement("progress") }} element has the following basic style set up:
 
 ```css live-sample___video-player-styled
 .controls progress {
   display: block;
   width: 100%;
-  height: 81%;
-  margin-top: 0.125rem;
+  height: 100%;
   border: none;
   color: #0095dd;
   border-radius: 2px;
+  margin: 0 auto;
 }
 ```
 
@@ -355,29 +254,44 @@ There are some browser-specific properties that need to be set to ensure that Fi
 }
 ```
 
-Although the same properties are set to the same value, these rules need to be defined separately, otherwise Chrome ignores it.
+Although the same properties are set to the same value, these rules need to be defined separately, or the whole declaration may become valid if one selector isn't recognized.
 
-## Responsive styling
+### Fullscreen
 
-Now that the player has its basic look and feel taken care of, some other styling changes — involving media queries — need to be made in order to make it responsive.
+Now we style the controls for fullscreen mode. Because the `<figure>` element is the one put in fullscreen, we can target it using the {{cssxref(":fullscreen")}} pseudo-class. We do a few things:
 
-The player currently works fairly well until displayed on a "medium" screen (e.g., 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
+- Make the `figure` take up the whole screen with `height: 100%`
+- Make the controls bar stick to the bottom while the video stays centered using flexbox
+- Make the container transparent to show the native backdrop color
+- Hide the `figcaption`
+- Restore the background color for the controls row to ensure our black buttons are still visible when the backdrop is black.
 
 ```css live-sample___video-player-styled
-@media screen and (width <= 64em) {
-  figure {
-    padding-left: 0;
-    padding-right: 0;
-    height: auto;
-  }
-
-  .controls {
-    height: 1.876rem;
-  }
+figure:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+figure:fullscreen video {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+figure:fullscreen figcaption {
+  display: none;
+}
+figure:fullscreen .controls {
+  background-color: #666666;
 }
 ```
 
-This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to be changed:
+### Responsive styling
+
+Now that the player has its basic look and feel taken care of, some other styling changes — involving media queries — need to be made in order to make it responsive.
+
+We want to customize the controls layout when it is viewed on a smaller screen (680px/42.5em), so a breakpoint is defined here. We tweak the sizing and position properties for the buttons and progress bar so they are arranged differently:
 
 ```css live-sample___video-player-styled
 @media screen and (width <= 42.5em) {
@@ -385,11 +299,8 @@ This works well enough until it is viewed on a smaller screen (680px/42.5em), so
     height: auto;
   }
 
-  .controls > * {
-    display: block;
-    width: 16.6667%;
-    margin-left: 0;
-    height: 2.5rem;
+  .controls button {
+    width: calc(100% / 6);
     margin-top: 2.5rem;
   }
 
@@ -397,22 +308,16 @@ This works well enough until it is viewed on a smaller screen (680px/42.5em), so
     position: absolute;
     top: 0;
     width: 100%;
-    float: none;
     margin-top: 0;
+    height: 2rem;
   }
 
   .controls .progress progress {
     width: 98%;
-    margin: 0 auto;
-  }
-
-  .controls button {
-    background-position: center center;
   }
 
   figcaption {
     text-align: center;
-    margin-top: 0.5rem;
   }
 }
 ```
@@ -437,6 +342,8 @@ const fullscreen = document.getElementById("fs");
 
 // Hide the default controls
 video.controls = false;
+// Display the user defined video controls
+videoControls.setAttribute("data-state", "visible");
 ```
 
 ### Control visibility
@@ -499,7 +406,7 @@ mute.addEventListener("click", (e) => {
 });
 ```
 
-You might have noticed that there are new handlers where the `play` and `pause` events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right-clicking on the HTML video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as `play` and `pause` — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. To ensure this, a new click handler needs to be defined for the play/pause button so that it too raises the `play` and `pause` events:
+You might have noticed that there are new handlers where the `play` and `pause` events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right-clicking on the HTML video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as `play` and `pause` — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. Our click also raises the `play` and `pause` events when calling the `play()` and `pause()` methods, so nothing needs to change here:
 
 ```js live-sample___video-player-styled
 playPause.addEventListener("click", (e) => {
@@ -571,33 +478,20 @@ if (!document?.fullscreenEnabled) {
   fullscreen.style.display = "none";
 }
 fullscreen.addEventListener("click", (e) => {
-  handleFullscreen();
-});
-function handleFullscreen() {
   if (document.fullscreenElement !== null) {
     // The document is in fullscreen mode
     document.exitFullscreen();
-    setFullscreenData(false);
+    // Set the fullscreen button's 'data-state' which allows the
+    // correct button image to be set via CSS
+    fullscreen.setAttribute("data-state", "go-fullscreen");
   } else {
     // The document is not in fullscreen mode
     videoContainer.requestFullscreen();
-    setFullscreenData(true);
+    fullscreen.setAttribute("data-state", "cancel-fullscreen");
   }
-}
-function setFullscreenData(state) {
-  videoContainer.setAttribute("data-fullscreen", state);
-  // Set the fullscreen button's 'data-state' which allows the
-  // correct button image to be set via CSS
-  fullscreen.setAttribute(
-    "data-state",
-    `${state ? "cancel" : "go"}-fullscreen`,
-  );
-}
-document.addEventListener("fullscreenchange", (e) => {
-  setFullscreenData(!!document.fullscreenElement);
 });
 ```
 
 ## Result
 
-{{EmbedLiveSample("video-player-styled", "", 600)}}
+{{EmbedLiveSample("video-player-styled", "", 400)}}

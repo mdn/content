@@ -9,7 +9,7 @@ This article describes a basic HTML video player that uses the Media and Fullscr
 
 Our example video player displays a clip from an open source movie called [Tears of Steel](https://mango.blender.org/about/), and includes typical video controls.
 
-## HTML Markup
+## HTML markup
 
 To start off with, let's take a look at the HTML that makes up the player.
 
@@ -69,7 +69,7 @@ The custom control set will also support this functionality, with the addition o
 Once again the HTML is quite straightforward, using an unordered list with `list-style-type:none` set to enclose the controls, each of which is a list item with `float:left`. For the progress bar, the `progress` element is taken advantage of. This list is inserted after the {{ htmlelement("video") }} element, but inside the {{ htmlelement("figure") }} element (this is important for the fullscreen functionality, which is explained later on).
 
 ```html live-sample___video-player
-<ul id="video-controls" class="controls">
+<ul id="video-controls" class="controls" data-state="hidden">
   <li><button id="play-pause" type="button">Play/Pause</button></li>
   <li><button id="stop" type="button">Stop</button></li>
   <li class="progress">
@@ -117,9 +117,8 @@ As mentioned earlier, the browser's default controls now need to be disabled, an
 ```js live-sample___video-player
 // Hide the default controls
 video.controls = false;
-
 // Display the user defined video controls
-videoControls.style.display = "block";
+videoControls.setAttribute("data-state", "visible");
 ```
 
 With that done, a variable pointing to each of the buttons is now required:
@@ -261,69 +260,32 @@ if (!document?.fullscreenEnabled) {
 }
 ```
 
-The fullscreen button needs to actually do something. Like the other buttons, a `click` event handler is attached that calls a user-defined function `handleFullscreen`:
+The fullscreen button needs to actually do something. Like the other buttons, a `click` event handler is attached that toggles fullscreen mode:
 
 ```js live-sample___video-player
 fullscreen.addEventListener("click", (e) => {
-  handleFullscreen();
-});
-```
-
-The `handleFullscreen` function is defined as follows:
-
-```js live-sample___video-player
-function handleFullscreen() {
   if (document.fullscreenElement !== null) {
     // The document is in fullscreen mode
     document.exitFullscreen();
-    setFullscreenData(false);
   } else {
     // The document is not in fullscreen mode
     videoContainer.requestFullscreen();
-    setFullscreenData(true);
   }
-}
+});
 ```
 
 If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
 
-Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
-
-```js live-sample___video-player
-function setFullscreenData(state) {
-  videoContainer.setAttribute("data-fullscreen", state);
-}
-```
-
-This is used to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the _Esc_ key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the `setFullscreenData()` function to ensure the control styling is correct:
-
-```js live-sample___video-player
-document.addEventListener("fullscreenchange", (e) => {
-  setFullscreenData(!!document.fullscreenElement);
-});
-```
-
 ## Result
 
-The CSS part is quite basic for this tutorial and there isn't much to remark on, so it is hidden, but you can click "Play" to see the full source code. In the next part, [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), we will explore some more interesting CSS techniques.
+The CSS part is hidden for this tutorial, but you can click "Play" to see the full source code. In the next part, [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics), we will explore some interesting CSS techniques used here, and also add new CSS to make the player look nicer.
 
-```css live-sample___video-player
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-body {
+```css hidden live-sample___video-player
+:root {
   color: #333333;
   font-family:
     "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
     "Helvetica", sans-serif;
-}
-h1 {
-  color: #333333;
-  font-size: 1.25rem;
 }
 a {
   color: #0095dd;
@@ -337,8 +299,8 @@ a:focus {
 figure {
   max-width: 64rem;
   width: 100%;
-  height: auto;
-  margin: 1.25rem 0 0;
+  margin: 0;
+  padding: 0;
 }
 figcaption {
   display: block;
@@ -346,31 +308,28 @@ figcaption {
 }
 video {
   width: 100%;
-  height: auto;
 }
 
 /* controls */
-.controls,
-.controls li {
-  padding: 0;
-  margin: 0;
-}
 .controls {
-  display: none;
+  display: flex;
+  gap: 6px;
   list-style-type: none;
   overflow: hidden;
-  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.controls[data-state="hidden"] {
+  display: none;
 }
 .controls li {
-  float: left;
-  width: 10%;
-  margin-left: 0.3%;
-}
-.controls li:first-child {
-  margin-left: 0;
+  width: max(10%, 3rem);
+  margin: 0;
+  padding: 0;
 }
 .controls .progress {
-  width: 38%;
+  flex-grow: 1;
   cursor: pointer;
 }
 .controls button {
@@ -383,57 +342,30 @@ video {
 .controls progress {
   display: block;
   width: 100%;
-  height: 1.25rem;
-  margin-top: 0.125rem;
+  height: 100%;
   border: 1px solid #aaa;
   overflow: hidden;
-  border-radius: 5px;
-}
-.controls progress span {
-  width: 0%;
-  height: 100%;
-  display: inline-block;
-  background-color: #2a84cd;
+  border-radius: 2px;
 }
 
 /* fullscreen */
-html:-ms-fullscreen {
-  width: 100%;
-}
-:-webkit-full-screen {
-  background-color: transparent;
-}
-/* hide controls on fullscreen with WebKit */
-figure[data-fullscreen="true"] video::-webkit-media-controls {
-  display: none !important;
-}
-figure[data-fullscreen="true"] {
+figure:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100%;
 }
-figure[data-fullscreen="true"] video {
-  height: auto;
+figure:fullscreen video {
+  margin-top: auto;
+  margin-bottom: auto;
 }
-figure[data-fullscreen="true"] figcaption {
+figure:fullscreen figcaption {
   display: none;
-}
-figure[data-fullscreen="true"] .controls {
-  position: absolute;
-  bottom: 2%;
-  width: 100%;
-  z-index: 2147483647;
-}
-figure[data-fullscreen="true"] .controls li {
-  width: 5%;
-}
-figure[data-fullscreen="true"] .controls .progress {
-  width: 68%;
 }
 ```
 
-{{EmbedLiveSample("video-player", "", 600)}}
+{{EmbedLiveSample("video-player", "", 400)}}
 
 ## See also
 

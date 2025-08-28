@@ -89,7 +89,9 @@ In addition to adding the `<track>` elements, we have also added a new button to
   <button id="vol-inc" type="button" data-state="vol-up">Vol+</button>
   <button id="vol-dec" type="button" data-state="vol-down">Vol-</button>
   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
-  <button id="subtitles" type="button" data-state="subtitles">CC</button>
+  <button id="subtitles" type="button" data-state="subtitles">
+    <span>CC</span>
+  </button>
 </div>
 ```
 
@@ -104,26 +106,11 @@ In addition to adding the `<track>` elements, we have also added a new button to
 ### CSS changes
 
 ```css hidden live-sample___video-player-with-captions
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-body {
-  color: #666666;
-  background-color: #cccccc;
+:root {
+  color: #333333;
   font-family:
     "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
     "Helvetica", sans-serif;
-}
-h1 {
-  color: #666666;
-  font-size: 1.25rem;
-  text-align: center;
-  margin: 0;
-  padding: 0.5rem 0;
 }
 a {
   color: #0095dd;
@@ -138,115 +125,47 @@ figure {
   position: relative;
   max-width: 64rem;
   width: 100%;
-  height: 100%;
-  max-height: 30.875rem;
-  margin: 1.25rem auto;
-  padding: 1.051%;
+  margin: 0;
+  padding: 0;
   background-color: #666666;
 }
 figcaption {
   display: block;
   font-size: 0.75rem;
-  color: #fff;
+  color: white;
+  margin-top: 0.5rem;
 }
 video {
   width: 100%;
 }
-
-/* controls */
-.controls,
-.controls > * {
-  padding: 0;
-  margin: 0;
-}
-
-/* fullscreen */
-html:-ms-fullscreen {
-  width: 100%;
-}
-:-webkit-full-screen {
-  background-color: transparent;
-}
-video:-webkit-full-screen + .controls {
-  background: #ccc; /* required for Chrome which doesn't heed the transparent value set above */
-}
-video:-webkit-full-screen + .controls progress {
-  margin-top: 0.5rem;
-}
-
-/* hide controls on fullscreen with WebKit */
-figure[data-fullscreen="true"] video::-webkit-media-controls {
-  display: none !important;
-}
-figure[data-fullscreen="true"] {
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  max-height: 100%;
-}
-figure[data-fullscreen="true"] video {
-  height: auto;
-}
-figure[data-fullscreen="true"] figcaption {
-  display: none;
-}
-figure[data-fullscreen="true"] .controls {
-  position: absolute;
-  bottom: 2%;
-  width: 100%;
-  z-index: 2147483647;
-}
-figure[data-fullscreen="true"] .controls li {
-  width: 5%;
-}
-figure[data-fullscreen="true"] .controls .progress {
-  width: 68%;
-}
 .controls {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  background: transparent;
   width: 100%;
-  height: 8.0971659919028340080971659919028%; /* of figure's height */
+  height: 2rem;
   position: relative;
 }
 .controls[data-state="hidden"] {
   display: none;
 }
-.controls[data-state="visible"] {
-  display: block;
-}
-.controls > * {
-  float: left;
-  width: 3.30625%;
-  height: 100%;
-  margin-left: 0.1953125%;
-  display: block;
-}
-.controls > *:first-child {
-  margin-left: 0;
-}
-.controls .progress {
-  cursor: pointer;
-  width: 75.390625%;
-}
 .controls button {
+  width: 2rem;
+  height: 2rem;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   border: none;
   cursor: pointer;
-  text-indent: -99999px;
-  background: transparent;
+  color: transparent;
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .controls button:hover,
-.controls button:focus,
-.subtitles-menu li button:hover,
-.subtitles-menu li button:focus,
-.subtitles-menu li button[data-state="active"] {
+.controls button:focus {
   opacity: 0.5;
 }
 .controls button[data-state="play"] {
@@ -276,15 +195,19 @@ figure[data-fullscreen="true"] .controls .progress {
 .controls button[data-state="cancel-fullscreen"] {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFNDZDNDg2MEEzMjFFMjExOTBEQkQ4OEMzRUMyQjhERCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCM0M2OUNCOUE0MDcxMUUyQjgwQkYzQzhCMDZBRTU1NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMzlFNDkzMUE0MDcxMUUyQjgwQkYzQzhCMDZBRTU1NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQzQ0QwNDBBMDJBNEUyMTFCOTZEQzYyRDgyRUVBOUZDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU0NkM0ODYwQTMyMUUyMTE5MERCRDg4QzNFQzJCOEREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+1VELOwAAAadJREFUeNrs2EtOwzAQBuAEOAEIKsQluAAbGqSGHRIrEKveoQEWNOF0SFyGZ6GkwowlWwpm7IwdT8kiI/2LWk39yY4faiqESPpcG0nPq/fARE5xM0btrIGw7fQ4gJeQJ8gRI24MeYac+wIvICv5fcgrE1Li3lUftUZSgAeQhXpQMCGbOJ03yC51BM8gSyYkhpN95b7voA+yQtpukLbMgjsNWSRUZKXa/2wQBjJzjVwosA1ZNdowoMwtFRcKtCHNzzagsDybk/ZlItCGpAJJuK5AjVx1ANYuHAb0PYsPIZsdtpgt9RvRzuIEWa1dp1hYtqBOU3zf0qEvUK/uVmBqotI0/ffb1XBhHYBIlQyL5Dr2NlNGBBZcJ0kZAVhwniQP6qgLrS/II9dJMoF8RhhBee06jj3FGK72ANYIchwLiOFkByeQOQFYqCv9koL0BeYOnK65AzgzfgtDZqFACk7XHdI2Q9pakVTgxAPnW7lruinAfcgHE86FfIHsUUdwCvlmwmFIubde+b6DU/V3BAeuiVxoXMgqHq3hwjLyulEP98EBOAB/148AAwA7RI/R8UopbwAAAABJRU5ErkJggg==");
 }
+.controls .progress {
+  flex-grow: 1;
+  cursor: pointer;
+  height: 80%;
+}
 .controls progress {
   display: block;
   width: 100%;
-  height: 81%;
-  margin-top: 0.125rem;
+  height: 100%;
   border: none;
-  overflow: hidden;
-  border-radius: 2px;
   color: #0095dd;
+  border-radius: 2px;
+  margin: 0 auto;
 }
 .controls progress::-moz-progress-bar {
   background-color: #0095dd;
@@ -293,68 +216,72 @@ figure[data-fullscreen="true"] .controls .progress {
 .controls progress::-webkit-progress-value {
   background-color: #0095dd;
 }
-@media screen and (width <= 64em) {
-  figure {
-    padding-left: 0;
-    padding-right: 0;
-    height: auto;
-  }
-  .controls {
-    height: 1.876rem;
-  }
+figure:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+figure:fullscreen video {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+figure:fullscreen figcaption {
+  display: none;
+}
+figure:fullscreen .controls {
+  background-color: #666666;
 }
 @media screen and (width <= 42.5em) {
   .controls {
     height: auto;
   }
-  .controls > * {
-    display: block;
-    width: 14.5667%;
-    margin-left: 0;
-    height: 2.5rem;
+
+  .controls button {
+    width: calc(100% / 7);
     margin-top: 2.5rem;
   }
+
   .controls .progress {
     position: absolute;
     top: 0;
     width: 100%;
-    float: none;
     margin-top: 0;
+    height: 2rem;
   }
+
   .controls .progress progress {
     width: 98%;
-    margin: 0 auto;
   }
-  .controls button {
-    background-position: center center;
-  }
-  .controls button[data-state="subtitles"] {
-    width: 10%;
-    height: 2.2rem;
-  }
-  .subtitles-menu {
-    bottom: 42%;
-  }
+
   figcaption {
     text-align: center;
-    margin-top: 0.5rem;
   }
 }
 ```
 
-The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.
+There's almost no change to the CSS from the previous version, except one place where we replace `width: calc(100% / 6)` with `width: calc(100% / 7)` to account for the new button. We also set `position: relative` on the figure, so the subtitle menu popup could be positioned relative to it.
 
 No image is used for the captions button, so it is styled as:
 
 ```css live-sample___video-player-with-captions
 .controls button[data-state="subtitles"] {
-  height: 85%;
-  text-indent: 0;
-  font-size: 1rem;
+  padding: 2px;
+}
+.controls button[data-state="subtitles"] span {
+  max-width: 100%;
+  width: 2rem;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #666666;
-  background: black;
-  border-radius: 2px;
+  background-color: black;
+  border-radius: 4px;
 }
 ```
 
@@ -466,30 +393,17 @@ if (!document?.fullscreenEnabled) {
   fullscreen.style.display = "none";
 }
 fullscreen.addEventListener("click", (e) => {
-  handleFullscreen();
-});
-function handleFullscreen() {
   if (document.fullscreenElement !== null) {
     // The document is in fullscreen mode
     document.exitFullscreen();
-    setFullscreenData(false);
+    // Set the fullscreen button's 'data-state' which allows the
+    // correct button image to be set via CSS
+    fullscreen.setAttribute("data-state", "go-fullscreen");
   } else {
     // The document is not in fullscreen mode
     videoContainer.requestFullscreen();
-    setFullscreenData(true);
+    fullscreen.setAttribute("data-state", "cancel-fullscreen");
   }
-}
-function setFullscreenData(state) {
-  videoContainer.setAttribute("data-fullscreen", state);
-  // Set the fullscreen button's 'data-state' which allows the
-  // correct button image to be set via CSS
-  fullscreen.setAttribute(
-    "data-state",
-    `${state ? "cancel" : "go"}-fullscreen`,
-  );
-}
-document.addEventListener("fullscreenchange", (e) => {
-  setFullscreenData(!!document.fullscreenElement);
 });
 ```
 
@@ -603,8 +517,8 @@ We also added some rudimentary styling for the newly created subtitles menu:
 .subtitles-menu {
   display: none;
   position: absolute;
-  bottom: 14.8%;
-  right: 20px;
+  bottom: 3rem;
+  right: 0;
   background: #666666;
   list-style-type: none;
   margin: 0;
@@ -671,7 +585,7 @@ Then this specific 'voice' will be stylable like so:
 
 ## Result
 
-{{EmbedLiveSample("video-player-with-captions", "", 600)}}
+{{EmbedLiveSample("video-player-with-captions", "", 400)}}
 
 ## Browser compatibility
 
