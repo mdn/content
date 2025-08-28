@@ -43,7 +43,7 @@ As mentioned above, we need to make use of the new HTML `<track>` element to add
 <figure id="videoContainer">
 ```
 
-```html
+```html live-sample___video-player-with-captions
 <video id="video" controls preload="metadata">
   <source src="/shared-assets/videos/sintel-short.mp4" type="video/mp4" />
   <source src="/shared-assets/videos/sintel-short.webm" type="video/webm" />
@@ -76,7 +76,7 @@ As you can see, each `<track>` element has the following attributes set:
 
 In addition to adding the `<track>` elements, we have also added a new button to control the subtitles menu that we will build. As a consequence, the video controls now look as follows:
 
-```html
+```html live-sample___video-player-with-captions
 <div id="video-controls" class="controls" data-state="hidden">
   <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
@@ -102,8 +102,6 @@ In addition to adding the `<track>` elements, we have also added a new button to
 ```
 
 ### CSS changes
-
-The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.
 
 ```css hidden live-sample___video-player-with-captions
 html,
@@ -161,11 +159,55 @@ video {
   padding: 0;
   margin: 0;
 }
+
+/* fullscreen */
+html:-ms-fullscreen {
+  width: 100%;
+}
+:-webkit-full-screen {
+  background-color: transparent;
+}
+video:-webkit-full-screen + .controls {
+  background: #ccc; /* required for Chrome which doesn't heed the transparent value set above */
+}
+video:-webkit-full-screen + .controls progress {
+  margin-top: 0.5rem;
+}
+
+/* hide controls on fullscreen with WebKit */
+figure[data-fullscreen="true"] video::-webkit-media-controls {
+  display: none !important;
+}
+figure[data-fullscreen="true"] {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+}
+figure[data-fullscreen="true"] video {
+  height: auto;
+}
+figure[data-fullscreen="true"] figcaption {
+  display: none;
+}
+figure[data-fullscreen="true"] .controls {
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+  z-index: 2147483647;
+}
+figure[data-fullscreen="true"] .controls li {
+  width: 5%;
+}
+figure[data-fullscreen="true"] .controls .progress {
+  width: 68%;
+}
 .controls {
   overflow: hidden;
   background: transparent;
   width: 100%;
-  height: 7%; /* of figure's height */
+  height: 8.0971659919028340080971659919028%; /* of figure's height */
   position: relative;
 }
 .controls[data-state="hidden"] {
@@ -244,89 +286,24 @@ video {
   border-radius: 2px;
   color: #0095dd;
 }
-.controls progress[data-state="fake"] {
-  background: #e6e6e6;
-  height: 65%;
-}
-.controls progress span {
-  width: 0%;
-  height: 100%;
-  display: inline-block;
-  background-color: #2a84cd;
-}
 .controls progress::-moz-progress-bar {
   background-color: #0095dd;
 }
+
 .controls progress::-webkit-progress-value {
   background-color: #0095dd;
 }
-
-/* fullscreen */
-html:-ms-fullscreen {
-  width: 100%;
-}
-:-webkit-full-screen {
-  background-color: transparent;
-}
-video:-webkit-full-screen + .controls {
-  background: #ccc; /* required for Chrome which doesn't heed the transparent value set above */
-}
-video:-webkit-full-screen + .controls progress {
-  margin-top: 0.5rem;
-}
-
-/* hide controls on fullscreen with WebKit */
-figure[data-fullscreen="true"] video::-webkit-media-controls {
-  display: none !important;
-}
-figure[data-fullscreen="true"] {
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  max-height: 100%;
-}
-figure[data-fullscreen="true"] video {
-  height: auto;
-}
-figure[data-fullscreen="true"] figcaption {
-  display: none;
-}
-figure[data-fullscreen="true"] .controls {
-  position: absolute;
-  bottom: 2%;
-  width: 100%;
-  z-index: 2147483647;
-}
-figure[data-fullscreen="true"] .controls li {
-  width: 5%;
-}
-figure[data-fullscreen="true"] .controls .progress {
-  width: 68%;
-}
-
-/* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 64em) {
   figure {
     padding-left: 0;
     padding-right: 0;
     height: auto;
   }
   .controls {
-    /* we want the buttons to be proportionally bigger, so give their parent a set height */
     height: 1.876rem;
   }
-  .controls button[data-state="subtitles"] {
-    font-size: 0.6875rem;
-  }
-  .subtitles-menu {
-    right: 0;
-  }
-  .subtitles-menu li button {
-    font-size: 0.6875rem;
-  }
 }
-@media screen and (max-width: 42.5em) {
+@media screen and (width <= 42.5em) {
   .controls {
     height: auto;
   }
@@ -338,7 +315,6 @@ figure[data-fullscreen="true"] .controls .progress {
     margin-top: 2.5rem;
   }
   .controls .progress {
-    /*display:table-subtitle;*/ /* this trick doesn't work as elements are floated and the layout doesn't work */
     position: absolute;
     top: 0;
     width: 100%;
@@ -365,6 +341,8 @@ figure[data-fullscreen="true"] .controls .progress {
   }
 }
 ```
+
+The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.
 
 No image is used for the captions button, so it is styled as:
 
@@ -402,6 +380,43 @@ const fullscreen = document.getElementById("fs");
 
 // Hide the default controls
 video.controls = false;
+// Display the user defined video controls
+videoControls.setAttribute("data-state", "visible");
+function changeButtonState(type) {
+  if (type === "play-pause") {
+    // Play/Pause button
+    if (video.paused || video.ended) {
+      playPause.setAttribute("data-state", "play");
+    } else {
+      playPause.setAttribute("data-state", "pause");
+    }
+  } else if (type === "mute") {
+    // Mute button
+    mute.setAttribute("data-state", video.muted ? "unmute" : "mute");
+  }
+}
+video.addEventListener("play", () => {
+  changeButtonState("play-pause");
+});
+
+video.addEventListener("pause", () => {
+  changeButtonState("play-pause");
+});
+
+stop.addEventListener("click", (e) => {
+  video.pause();
+  video.currentTime = 0;
+  progress.value = 0;
+
+  // Update the play/pause button's 'data-state' which allows the
+  // correct button image to be set via CSS
+  changeButtonState("play-pause");
+});
+
+mute.addEventListener("click", (e) => {
+  video.muted = !video.muted;
+  changeButtonState("mute");
+});
 playPause.addEventListener("click", (e) => {
   if (video.paused || video.ended) {
     video.play();
@@ -409,6 +424,44 @@ playPause.addEventListener("click", (e) => {
     video.pause();
   }
 });
+function checkVolume(dir) {
+  if (dir) {
+    const currentVolume = Math.floor(video.volume * 10) / 10;
+    if (dir === "+" && currentVolume < 1) {
+      video.volume += 0.1;
+    } else if (dir === "-" && currentVolume > 0) {
+      video.volume -= 0.1;
+    }
+
+    // If the volume has been turned off, also set it as muted
+    // Note: can only do this with the custom control set as when the 'volumechange' event is raised,
+    // there is no way to know if it was via a volume or a mute change
+    video.muted = currentVolume <= 0;
+  }
+  changeButtonState("mute");
+}
+
+function alterVolume(dir) {
+  checkVolume(dir);
+}
+video.addEventListener("volumechange", () => {
+  checkVolume();
+});
+progress.addEventListener("click", (e) => {
+  const rect = progress.getBoundingClientRect();
+  const pos = (e.pageX - rect.left) / progress.offsetWidth;
+  video.currentTime = pos * video.duration;
+});
+
+video.addEventListener("loadedmetadata", () => {
+  progress.setAttribute("max", video.duration);
+});
+video.addEventListener("timeupdate", () => {
+  if (!progress.getAttribute("max"))
+    progress.setAttribute("max", video.duration);
+  progress.value = video.currentTime;
+});
+
 if (!document?.fullscreenEnabled) {
   fullscreen.style.display = "none";
 }
@@ -469,6 +522,7 @@ We have added the button, but before we make it do anything, we need to build th
 All we need to do is to go through the video's `textTracks`, reading their properties and building the menu up from there:
 
 ```js live-sample___video-player-with-captions
+const subtitleMenuButtons = [];
 let subtitlesMenu;
 if (video.textTracks) {
   const df = document.createDocumentFragment();
@@ -493,7 +547,6 @@ This code creates a {{ domxref("documentFragment") }}, which is used to hold an 
 The creation of each list item and button is done by the `createMenuItem()` function, which is defined as follows:
 
 ```js live-sample___video-player-with-captions
-const subtitleMenuButtons = [];
 function createMenuItem(id, lang, label) {
   const listItem = document.createElement("li");
   const button = listItem.appendChild(document.createElement("button"));

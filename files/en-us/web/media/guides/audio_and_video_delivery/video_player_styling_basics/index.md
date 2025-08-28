@@ -337,8 +337,6 @@ The {{htmlelement("progress") }} element has the following basic style set up:
   margin-top: 0.125rem;
   border: none;
   color: #0095dd;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 ```
@@ -365,7 +363,7 @@ Now that the player has its basic look and feel taken care of, some other stylin
 
 The player currently works fairly well until displayed on a "medium" screen (e.g., 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
 
-```css
+```css live-sample___video-player-styled
 @media screen and (width <= 64em) {
   figure {
     padding-left: 0;
@@ -381,7 +379,7 @@ The player currently works fairly well until displayed on a "medium" screen (e.g
 
 This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to be changed:
 
-```css
+```css live-sample___video-player-styled
 @media screen and (width <= 42.5em) {
   .controls {
     height: auto;
@@ -445,7 +443,7 @@ video.controls = false;
 
 The first change is simple: the `data-state` for showing the video controls when JavaScript is available to the browser now needs to be set, to replace the manual `videoControls.style.display = "block"`:
 
-```js
+```js live-sample___video-player-styled
 // Display the user defined video controls
 videoControls.setAttribute("data-state", "visible");
 ```
@@ -458,7 +456,7 @@ This section looks at the JavaScript required for implementing the button functi
 
 Now that the buttons actually look like buttons and have images that indicate what they do, some changes need to be made so that the "dual functionality" buttons (such as the play/pause button) are in the correct "state" and display the correct image. In order to facilitate this, a new function is defined called `changeButtonState()`, which accepts a type variable indicating the button's functionality:
 
-```js
+```js live-sample___video-player-styled
 function changeButtonState(type) {
   if (type === "play-pause") {
     // Play/Pause button
@@ -476,7 +474,7 @@ function changeButtonState(type) {
 
 This function is then called by the relevant event handlers:
 
-```js
+```js live-sample___video-player-styled
 video.addEventListener("play", () => {
   changeButtonState("play-pause");
 });
@@ -517,7 +515,7 @@ playPause.addEventListener("click", (e) => {
 
 The `alterVolume()` function, called when the player's volume buttons are clicked, also changes — it now calls a new function called `checkVolume()`:
 
-```js
+```js live-sample___video-player-styled
 function checkVolume(dir) {
   if (dir) {
     const currentVolume = Math.floor(video.volume * 10) / 10;
@@ -542,17 +540,17 @@ function alterVolume(dir) {
 
 This new `checkVolume()` function does the same thing as the `alterVolume()` but it also sets the state of the mute button depending on the video's current volume setting. `checkVolume()` is also called when the `volumechange` event is raised:
 
-```js
+```js live-sample___video-player-styled
 video.addEventListener("volumechange", () => {
   checkVolume();
 });
 ```
 
-#### Progress bar
+#### Fullscreen
 
-A small change also needs to be made to the click handler for the {{ htmlelement("progress") }} element. Since the enclosing {{htmlelement("figure") }} element now has `position:relative` set on it, the calculations made by this click handler are incorrect. It now also needs to take into account the offset position of the parent element:
+The [Progress bar](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#progress) and [Full screen](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) implementations hasn't changed.
 
-```js
+```js hidden live-sample___video-player-styled
 progress.addEventListener("click", (e) => {
   const rect = progress.getBoundingClientRect();
   const pos = (e.pageX - rect.left) / progress.offsetWidth;
@@ -562,13 +560,13 @@ progress.addEventListener("click", (e) => {
 video.addEventListener("loadedmetadata", () => {
   progress.setAttribute("max", video.duration);
 });
-```
 
-#### Fullscreen
+video.addEventListener("timeupdate", () => {
+  if (!progress.getAttribute("max"))
+    progress.setAttribute("max", video.duration);
+  progress.value = video.currentTime;
+});
 
-The [FullScreen implementation](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) hasn't changed.
-
-```js hidden live-sample___video-player-styled
 if (!document?.fullscreenEnabled) {
   fullscreen.style.display = "none";
 }
