@@ -184,7 +184,9 @@ window.addEventListener("pageshow", () => {
 });
 ```
 
-See the [web.dev article on the bfcache](https://web.dev/articles/bfcache#close-open-connections) for more context on this issue.
+If you run our example, try navigating to a different page, then back to the example. In Chrome, you should see that the example starts the connection again, and keeps its original context: so, for example, it remembers the count of exchanged messages.
+
+See the [web.dev article on the bfcache](https://web.dev/articles/bfcache#close-open-connections) for more context on bfcache compatibility and the WebSockets API.
 
 ## Security considerations
 
