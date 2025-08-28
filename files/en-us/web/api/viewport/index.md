@@ -24,7 +24,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ### Basic `Viewport.segments` usage
 
-This snippet will loop through each segment in the viewport, and log a string to the console detailing the index number, width, and height.
+This snippet will loop through each segment in the viewport, and log a string to the console detailing the index number, width, and height of each one.
 
 ```js
 const segments = window.viewport.segments;
