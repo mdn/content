@@ -210,9 +210,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element. For example, an `em` value is relative to the root font size, not the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
 
     The `auto` keyword can replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image. Since the intrinsic size of the image is not yet known, `width` and `height` attributes (or CSS equivalents) should also be specified to prevent the browser from assuming the default image width of 300px.
-    For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute.
-
-    **Example:**
+    
+    For better backward compatibility with browsers that do not support `auto`, you can include fallback sizes after `auto` in the `sizes` attribute:
 
     ```html
     <img
