@@ -108,7 +108,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Allow pseudo-elements after element-backed pseudo-elements**
 
-  Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+  Work has begun on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+  ([Firefox bug 1953557](https://bugzil.la/1953557)).
+
+  > [!NOTE]
+  > This feature depends on support for the element-backed pseudo-element being targeted, for example: [`::details-content`](/en-US/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element), which is behind the `layout.css.details-content.enabled` preference.
 
 - **`MutationEvent` on path to removal**: `dom.mutation_events.enabled`
 
