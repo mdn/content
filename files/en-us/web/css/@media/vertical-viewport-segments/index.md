@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`vertical-viewport-segments`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) detects whether the device has a specified number of viewport segments laid out vertically.
 
-This media feature is part of the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), which can be used to create responsive designs that work well on devices with a single display separated out into logically separate viewport segments, such as foldable or hinged devices.
+Part of the [Viewport segments API](/en-US/docs/Web/API/Viewport_segments_API), the `vertical-viewport-segments` feature can be used to create responsive designs that work well on multi-viewport devices — devices with a display that is divided into logically separate viewport segments, such as foldable or hinged devices.
 
 ## Syntax
 
