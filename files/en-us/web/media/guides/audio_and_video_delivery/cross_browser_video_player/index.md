@@ -365,7 +365,7 @@ figure:fullscreen figcaption {
 }
 ```
 
-{{EmbedLiveSample("video-player", "", 400)}}
+{{EmbedLiveSample("video-player", "", 400, "", "", "", "fullscreen")}}
 
 ## See also
 

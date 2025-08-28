@@ -494,4 +494,4 @@ fullscreen.addEventListener("click", (e) => {
 
 ## Result
 
-{{EmbedLiveSample("video-player-styled", "", 400)}}
+{{EmbedLiveSample("video-player-styled", "", 400, "", "", "", "fullscreen")}}

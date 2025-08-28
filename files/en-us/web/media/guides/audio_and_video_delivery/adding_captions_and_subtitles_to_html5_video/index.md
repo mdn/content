@@ -585,4 +585,4 @@ Then this specific 'voice' will be stylable like so:
 
 ## Result
 
-{{EmbedLiveSample("video-player-with-captions", "", 400)}}
+{{EmbedLiveSample("video-player-with-captions", "", 400, "", "", "", "fullscreen")}}
