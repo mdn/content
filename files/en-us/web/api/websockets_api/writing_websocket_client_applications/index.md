@@ -60,7 +60,7 @@ On an error, the connection is closed and the `close` event will be fired.
 
 ## Sending messages
 
-We've already seen that once the connection is estalished, we can use the {{domxref("WebSocket.send()", "send()")}} method to send messages to the server:
+We've already seen that once the connection is established, we can use the {{domxref("WebSocket.send()", "send()")}} method to send messages to the server:
 
 ```js
 websocket.addEventListener("open", () => {
