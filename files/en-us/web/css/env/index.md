@@ -67,15 +67,15 @@ Another use case for `env()` variables is for desktop [Progressive web apps](/en
 
 ## Description
 
-Environment variables are declared in CSS using the `env()` function, in a similar fashion to the {{cssxref("var", "var()")}} function and [custom properties](/en-US/docs/Web/CSS/--*). The difference is that, as well as being user-agent-defined rather than author-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared.
+The `env()` function is used to insert the value of a globally-scoped, [user-agent-defined environment variable](/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) into your CSS. The `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)).
 
-In addition, unlike custom properties, which cannot be used outside of declarations, the `env()` function can be used in place of any part of a property value, or any part of a descriptor (for example, in [Media query rules](/en-US/docs/Web/CSS/@media)). As the spec evolves, it may also be usable in other places such as selectors.
+The function accepts a case-sensitive {{cssxref("&lt;custom-ident>")}} as its first argument, equal to the [name of the environment variable](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_environment_variables/Using_environment_variables#browser-defined_environment_variables) to be substituted. The second argument, if provided, is the fallback value, which is used if the environment variable referenced in the first argument does not exist. The fallback can be another environment variable, even with its own fallback. 
 
-### Placing content in a safe content area
+The syntax of the fallback is similar to the custom properties syntax in that it allows for multiple commas. Anything between the first comma and the end of the function is considered the fallback value. However, if the property value or descriptor doesn't support commas, the value is not valid.
 
-Originally provided by the iOS Safari browser to allow developers to place their content in a safe area of the viewport, the `safe-area-inset-*` variables can be used to help ensure content is visible even to viewers using non‑rectangular displays.
+A property or descriptor containing a syntactically valid `env()` function is assumed to be valid at parse time. It is only syntax-checked at compute time, after each `env()` function has been substituted with its browser-provided value (or the fallback value if the environment variable passed as the first parameter is not a recognized environment variable name). If no fallback is provided, the property or descriptor containing the `env()` function is invalid at computed-value time.
 
-For example, a common issue solved by these variables is that of device notifications covering up some of the app user interface. By positioning fixed elements using `env()` you can ensure that they display in a safe area of the viewport.
+The `env()` function can be used to [position fixed elements to ensure they display in a safe area of the viewport.](#example_section), [Place PWA content away from window control buttons](#another_example), and even [place content inside specific viewport segments on foldable viewports](#usage_moved_to_examples).
 
 To tell the browser to use the whole available space on the screen, and so enabling us to use the `env()` variables, we need to add a new viewport meta value:
 
